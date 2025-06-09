@@ -1,7 +1,5 @@
 package awakenedOne.util;
 
-import awakenedOne.cards.AbstractAwakenedCard;
-import awakenedOne.powers.AwakenedPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -204,7 +202,4 @@ public class Wiz {
         return 0;
     }
 
-    public static int awakenedAmt() {
-        return pwrAmt(AbstractDungeon.player, AwakenedPower.POWER_ID);
-    }
 }

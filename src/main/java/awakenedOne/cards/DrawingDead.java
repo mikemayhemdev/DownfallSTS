@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.actions.EchoACardAction;
 import expansioncontent.expansionContentMod;
 
 import static awakenedOne.AwakenedOneMod.HexCurse;
@@ -43,8 +44,18 @@ public class DrawingDead extends AbstractAwakenedCard {
         }
     }
 
+
+    @Override
+    public void triggerWhenDrawn() {
+        if(upgraded){
+            this.flash();
+            atb(new ConjureAction(false));
+        }
+    }
+
+
     public void upp() {
         //upgradeSecondMagic(1);
-        this.isEthereal = false;
+       // this.isEthereal = false;
     }
 }

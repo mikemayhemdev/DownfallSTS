@@ -33,8 +33,7 @@ public class SerpentIdolPowerAction extends AbstractGameAction {
                 if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {// 33
                     for (int i = 0; i < this.count; i++) {
                         AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeStatEquivalentCopy();// 34
-                        //disCard.setCostForTurn(0);// 36
-
+                        disCard.setCostForTurn(0);// 36
                         disCard.current_x = -1000.0F * Settings.scale;// 38
                         if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {// 39
                             AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 40

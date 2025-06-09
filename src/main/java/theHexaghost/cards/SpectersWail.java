@@ -1,6 +1,5 @@
 package theHexaghost.cards;
 
-import awakenedOne.powers.DoubleDamageOncePower;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -62,10 +61,6 @@ public class SpectersWail extends AbstractHexaCard implements HexaPurpleTextInte
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, damages, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
         }else {
             AbstractDungeon.actionManager.addToBottom(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(this.baseDamage), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
-        }
-
-        if (AbstractDungeon.player.hasPower(DoubleDamageOncePower.POWER_ID)) {
-            this.addToTop(new ReducePowerAction(AbstractDungeon.player, AbstractDungeon.player, DoubleDamageOncePower.POWER_ID, 1));
         }
 
         atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VigorPower.POWER_ID));

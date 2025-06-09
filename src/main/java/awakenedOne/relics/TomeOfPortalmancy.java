@@ -1,7 +1,6 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.powers.UltimateHexDebuff;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Color;
@@ -40,12 +39,10 @@ public class TomeOfPortalmancy extends CustomRelic {
 
             while (var2.hasNext()) {
                 AbstractMonster mo = (AbstractMonster) var2.next();
-                if (!mo.isDead) {
-                    if (!mo.hasPower(UltimateHexDebuff.POWER_ID)) {
+                if (!mo.isDead && !mo.isDying) {
                         HexCurse(AMOUNT, mo, AbstractDungeon.player);
                         this.addToBot(new VFXAction(new GiantEyeEffect(mo.hb.cX, mo.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
                         this.addToTop(new RelicAboveCreatureAction(mo, this));
-                    }
                 }
             }
 

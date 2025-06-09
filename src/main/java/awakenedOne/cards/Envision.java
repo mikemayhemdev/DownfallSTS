@@ -14,7 +14,7 @@ public class Envision extends AbstractAwakenedCard {
 
     public Envision() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 2;
+        baseBlock = 4;
         this.tags.add(AwakenedOneMod.DELVE);
     }
 

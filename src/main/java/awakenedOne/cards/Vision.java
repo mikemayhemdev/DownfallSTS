@@ -38,5 +38,6 @@ public class Vision extends AbstractAwakenedCard {
 
     public void upp() {
         //upgradeBaseCost(0);
+        upgradeMagicNumber(1);
     }
 }

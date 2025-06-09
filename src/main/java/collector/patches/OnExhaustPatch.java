@@ -1,6 +1,5 @@
 package collector.patches;
 
-import awakenedOne.cards.OnOtherCardExhaustInDiscard;
 import collector.cards.OnOtherCardExhaustInHand;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -23,11 +22,6 @@ public class OnExhaustPatch {
         for (AbstractCard other : AbstractDungeon.player.hand.group) {
             if (other instanceof OnOtherCardExhaustInHand) {
                 ((OnOtherCardExhaustInHand) other).onOtherCardExhaustWhileInHand(c);
-            }
-        }
-        for (AbstractCard other : AbstractDungeon.player.discardPile.group) {
-            if (other instanceof OnOtherCardExhaustInDiscard) {
-                ((OnOtherCardExhaustInDiscard) other).onOtherCardExhaustWhileInDiscard(c);
             }
         }
     }

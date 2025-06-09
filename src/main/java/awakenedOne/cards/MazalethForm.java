@@ -1,6 +1,5 @@
 package awakenedOne.cards;
 
-import awakenedOne.powers.MazalethFormPower;
 import awakenedOne.powers.ReverseRitualPower;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;

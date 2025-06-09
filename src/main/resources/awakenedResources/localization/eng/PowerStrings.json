@@ -50,18 +50,6 @@
       " damage to ALL enemies."
     ]
   },
-  "awakened:IntoNothingPower": {
-    "NAME": "Into Nothing",
-    "DESCRIPTIONS": [
-      "The first #b0 cost card you play each turn is played twice.",
-      "The first #b",
-      " 0 cost cards you play each turn are played twice.",
-      " NL This effect can be triggered #b",
-      " more times this turn.",
-      " more time this turn.",
-      " NL This effect cannot be triggered again this turn."
-    ]
-  },
   "awakened:PrimacyPower": {
     "NAME": "Primacy",
     "DESCRIPTIONS": [
@@ -96,22 +84,6 @@
     "DESCRIPTIONS": [
       "Whenever you play a Spell, gain #b",
       " temporary #yStrength [REMOVE_SPACE]."
-    ]
-  },
-  "awakened:MazalethFormPower": {
-    "NAME": "Awakened Form",
-    "DESCRIPTIONS": [
-      "The first #yAttack you play each turn deals double damage.",
-      "The first #b",
-      " #yAttacks you play each turn deal double damage."
-    ]
-  },
-  "awakened:DoubleDamageOncePower": {
-    "NAME": "Doubled Damage",
-    "DESCRIPTIONS": [
-      "The next Attack you play this turn deals double damage.",
-      "The next #b",
-      " Attacks you play this turn deal double damage."
     ]
   },
   "awakened:InvasionPower": {
@@ -149,13 +121,6 @@
     "DESCRIPTIONS": [
       "Whenever you are #yDrained [REMOVE_SPACE], loses #b",
       " HP."
-    ]
-  },
-  "awakened:HexMasterPower": {
-    "NAME": "Hex Master",
-    "DESCRIPTIONS": [
-      "Whenever you attack an enemy with #yHex [REMOVE_SPACE], apply #b",
-      " #yHex to them."
     ]
   },
   "awakened:DarkIncantationRitualPower": {

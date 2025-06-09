@@ -350,6 +350,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
     public ArrayList<AbstractCard> getThisTurnCards() {
+        if (chosenArchetype == null) {
+            return new ArrayList<>();
+        }
         return chosenArchetype.getThisTurnCards();
     }
 

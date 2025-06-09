@@ -53,14 +53,6 @@
     "NAME": "Spellshield",
     "DESCRIPTION": "Whenever you play a Spell, gain !M! Block."
   },
-  "awakened:Curiosity": {
-    "NAME": "Curiosity",
-    "DESCRIPTION": "not used."
-  },
-  "awakened:Hex": {
-    "NAME": "Hex",
-    "DESCRIPTION": "not used"
-  },
   "awakened:DarkEcho": {
     "NAME": "Dark Echo",
     "DESCRIPTION": "At the end of your turn, deal !D! damage to ALL enemies, increased by Strength."
@@ -97,10 +89,6 @@
     "NAME": "Demon Glyph",
     "DESCRIPTION": "Ethereal. NL Gain !awakened:m2! Dexterity. NL Gain !M! awakened:Manaburn."
   },
-  "awakened:Accumulate": {
-    "NAME": "Accumulate",
-    "DESCRIPTION": "not used."
-  },
   "awakened:TakeFlight": {
     "NAME": "Take Flight",
     "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain !M! bronze:Blur."
@@ -112,10 +100,6 @@
   "awakened:Peck": {
     "NAME": "Peck",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
-  },
-  "awakened:EyeScratch": {
-    "NAME": "Scratch Out",
-    "DESCRIPTION": "not used."
   },
   "awakened:Extension": {
     "NAME": "Extension",
@@ -141,26 +125,14 @@
     "NAME": "Last Ditch Effort",
     "DESCRIPTION": "Gain !B! Block. NL If a *Void is in hand, draw !M! additional cards next turn."
   },
-  "awakened:Willpower": {
-    "NAME": "Willpower",
-    "DESCRIPTION": "not used."
-  },
-  "awakened:SeverFate": {
-    "NAME": "Sever Fate",
-    "DESCRIPTION": "not used"
-  },
   "awakened:Reviscerate": {
     "NAME": "Reviscerate",
     "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less for each Power played this turn."
   },
-  "awakened:StitchUp": {
-    "NAME": "Stitch Up",
-    "DESCRIPTION": "At the end of combat, heal !M! HP. NL Exhaust."
-  },
   "awakened:DrawingDead": {
-    "NAME": "Summoning Altar",
-    "DESCRIPTION": "Ethereal. NL Whenever you play a Power card while this is in hand, awakened:Conjure.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a Power card while this is in hand, awakened:Conjure.",
+    "NAME": "Altar",
+    "DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power card while this is in hand, awakened:Conjure.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL When drawn and whenever you play a Power card while this is in hand, awakened:Conjure.",
     "EXTENDED_DESCRIPTION": [
       "I must play Power cards to use this card."
     ]
@@ -173,23 +145,6 @@
     "NAME": "Thaumaturgy",
     "DESCRIPTION": "Whenever you gain Strength, gain !M! Block."
   },
-  "awakened:Screech": {
-    "NAME": "Screech",
-    "DESCRIPTION": "not used",
-    "UPGRADE_DESCRIPTION": "Retain. NL Apply !M! Vulnerable."
-  },
-  "awakened:Revitalize": {
-    "NAME": "Revitalize",
-    "DESCRIPTION": "not used"
-  },
-  "awakened:SoulStrike": {
-    "NAME": "Soul Strike",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage !M! times. NL Exhaust."
-  },
-  "awakened:Disintegrate": {
-    "NAME": "Disintegrate",
-    "DESCRIPTION": "not used."
-  },
   "awakened:ShroudOfMiasma": {
     "NAME": "Shroud of Miasma",
     "DESCRIPTION": "Whenever you apply awakened:Manaburn or awakened:Hex to an enemy, gain !M! Block."
@@ -201,10 +156,6 @@
   "awakened:KnifesEdge": {
     "NAME": "Knife's Edge",
     "DESCRIPTION": "Gain !M! Strength. NL Add a *Void into your discard pile."
-  },
-  "awakened:Haemomancy": {
-    "NAME": "Haemomancy",
-    "DESCRIPTION": "not used."
   },
   "awakened:Vision": {
     "NAME": "Vision",
@@ -221,8 +172,7 @@
   },
   "awakened:DesperatePrayer": {
   "NAME": "Desperate Prayer",
-  "DESCRIPTION": "Shuffle a random Power into your draw pile. NL It costs 0.",
-  "UPGRADE_DESCRIPTION": "Shuffle a random Upgraded Power into your draw pile. NL It costs 0."
+  "DESCRIPTION": "Shuffle a random Power card into your draw pile. NL It costs 0."
 },
   "awakened:BirdsEye": {
     "NAME": "Byrd's Eye",
@@ -241,40 +191,9 @@
     "NAME": "Primacy",
     "DESCRIPTION": "The first !M! times you gain Strength each turn, draw a card."
   },
-  "awakened:Inspiration": {
-    "NAME": "Inspiration",
-    "DESCRIPTION": "not used not used not used",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL If the last card you played was a Power, gain an *Insight+."
-  },
-  "awakened:Fortitude": {
-    "NAME": "Fortitude",
-    "DESCRIPTION": "not used not used not used"
-  },
-  "awakened:Eclipse": {
-    "NAME": "",
-    "DESCRIPTION": "not used."
-  },
-  "awakened:Debilitate": {
-    "NAME": "Debilitate",
-    "DESCRIPTION": "not used."
-  },
   "awakened:RisingChant": {
     "NAME": "Rising Chant",
     "DESCRIPTION": "Whenever you activate a awakened:Chant effect, draw an additional card next turn."
-  },
-  "awakened:Dogma": {
-    "NAME": "Dogma",
-    "DESCRIPTION": "not used."
-  },
-  "awakened:EssenceOfPower": {
-    "NAME": "Essence of Power",
-    "DESCRIPTION": "not used",
-    "UPGRADE_DESCRIPTION": "Obtain a Power Potion. NL Exhaust."
-  },
-  "awakened:ChimeraBlessing": {
-    "NAME": "Chimera Blessing",
-    "DESCRIPTION": "not used.",
-    "UPGRADE_DESCRIPTION": "Choose 1 of 3 random sneckomod:Offclass Powers to gain."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
@@ -383,7 +302,7 @@
   },
   "awakened:TheTower": {
     "NAME": "The Tower",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each *Void and Spell in your exhaust pile."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! extra damage for each exhausted *Void and Spell."
   },
   "awakened:ArcaneNesting": {
     "NAME": "Arcane Nesting",
@@ -419,8 +338,8 @@
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",
-    "DESCRIPTION": "Add *Aphotic *Shield to the Spell Pile for the rest of combat. NL awakened:Conjure. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to the Spell Pile for the rest of combat. NL awakened:Conjure. NL Exhaust."
+    "DESCRIPTION": "Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure. NL Exhaust."
   },
   "awakened:Bloodthirst": {
     "NAME": "Bloodthirst",
@@ -434,17 +353,13 @@
     "NAME": "Split Wide",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy, gain !M! temporary Strength. NL Exhaust."
   },
-  "awakened:PhoenixFlame": {
-    "NAME": "Phoenix Flame",
-    "DESCRIPTION": "not used"
-  },
   "awakened:SheerTerror": {
     "NAME": "Sheer Terror",
     "DESCRIPTION": "Apply !M! awakened:Hex. NL awakened:Hex cannot be removed from this enemy for the rest of the turn."
   },
   "awakened:Deathwish": {
     "NAME": "Deathwish",
-    "DESCRIPTION": "Add *Deathcoil to the Spell Pile for the rest of combat. NL awakened:Conjure. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add *Deathcoil to the Spell Pile for the rest of combat. NL awakened:Conjure. NL Exhaust."
+    "DESCRIPTION": "Add *Deathcoil to the Spell Pile. NL awakened:Conjure. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add *Deathcoil to the Spell Pile. NL awakened:Conjure. NL Exhaust."
   }
 }

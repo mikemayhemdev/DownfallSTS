@@ -13,18 +13,19 @@ public class DesperatePrayer extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public DesperatePrayer() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
         c.modifyCostForCombat(-999);
-        if (upgraded) {
-            c.upgrade();
-        }
+//        if (upgraded) {
+//            c.upgrade();
+//        }
         shuffleIn(c);
     }
 
     public void upp() {
+        upgradeBaseCost(0);
     }
 }
