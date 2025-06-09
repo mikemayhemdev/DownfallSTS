@@ -1,11 +1,17 @@
 package awakenedOne.cards;
 
+import awakenedOne.AwakenedOneMod;
+import awakenedOne.actions.AddSpellCardAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import gremlin.actions.DuplicatePowerAction;
 
 import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.att;
 
 public class Vision extends AbstractAwakenedCard {
     public final static String ID = makeID(Vision.class.getSimpleName());
@@ -13,15 +19,24 @@ public class Vision extends AbstractAwakenedCard {
 
     public Vision() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.exhaust = true;
+        //this.exhaust = true;
+        baseMagicNumber = magicNumber = 1;
+        this.tags.add(AwakenedOneMod.DELVE);
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
-        AbstractDungeon.actionManager.addToBottom(new DuplicatePowerAction(p, 1));
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new SelectCardsInHandAction(1, cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
+            for (AbstractCard q : cards) {
+                AbstractCard q2 = q.makeStatEquivalentCopy();
+                //q2.updateCost(-99);
+                for (int i = 0; i < magicNumber; i++) {
+                    att(new AddSpellCardAction(q2));
+                }
+            }
+        }));
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        //upgradeBaseCost(0);
     }
 }

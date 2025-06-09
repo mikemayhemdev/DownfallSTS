@@ -24,6 +24,6 @@ public class Envision extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(3);
     }
 }

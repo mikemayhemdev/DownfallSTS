@@ -1,5 +1,6 @@
 package awakenedOne.powers;
 
+import automaton.cards.goodstatus.IntoTheVoid;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
@@ -18,7 +19,7 @@ public class InvasionPower extends AbstractAwakenedPower {
 
     @Override
     public void onExhaust(AbstractCard card) {
-        if (card.cardID == VoidCard.ID){
+        if (card instanceof VoidCard || card instanceof IntoTheVoid){
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnergizedBluePower(AbstractDungeon.player, amount)));
             applyToSelf(new DrawCardNextTurnPower(AbstractDungeon.player, amount));

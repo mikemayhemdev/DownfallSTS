@@ -17,7 +17,7 @@ public class Victuals extends AbstractAwakenedCard {
     public Victuals() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 8;
-        magicNumber = baseMagicNumber = 1;
+        magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -37,7 +37,8 @@ public class Victuals extends AbstractAwakenedCard {
 
     @Override
     public void chant() {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, magicNumber), magicNumber));
+        //addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, magicNumber), magicNumber));
+
         checkOnChant();
     }
 
@@ -48,7 +49,7 @@ public class Victuals extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(3);
         upgradeMagicNumber(1);
     }
 }

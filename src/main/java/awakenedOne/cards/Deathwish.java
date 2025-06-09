@@ -18,7 +18,7 @@ public class Deathwish extends AbstractAwakenedCard {
     // intellij stuff attack, all_enemy, common, 7, 3, , , ,
 
     public Deathwish() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         cardsToPreview = new DeathCoil();
         this.exhaust = true;
         this.tags.add(AwakenedOneMod.DELVE);

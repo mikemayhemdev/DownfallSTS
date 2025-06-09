@@ -246,6 +246,30 @@ public abstract class AbstractAwakenedCard extends CustomCard {
             AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
         }
 
+//        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+//            if (c instanceof AbstractAwakenedCard) {
+//                ((AbstractAwakenedCard) c).onChant();
+//            }
+//        }
+//
+//        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+//            if (c instanceof AbstractAwakenedCard) {
+//                ((AbstractAwakenedCard) c).onChant();
+//            }
+//        }
+//
+//        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
+//            if (c instanceof AbstractAwakenedCard) {
+//                ((AbstractAwakenedCard) c).onChant();
+//            }
+//        }
+//
+//        for (AbstractCard c : AbstractDungeon.player.limbo.group) {
+//            if (c instanceof AbstractAwakenedCard) {
+//                ((AbstractAwakenedCard) c).onChant();
+//            }
+//        }
+
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
             if (c instanceof AbstractAwakenedCard) {
                 ((AbstractAwakenedCard) c).onChant();

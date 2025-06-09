@@ -95,7 +95,7 @@
   },
   "awakened:FadeOut": {
     "NAME": "Demon Glyph",
-    "DESCRIPTION": "Ethereal. NL Gain !awakened:m2! Dexterity. NL At the start of your turn, gain !M! awakened:Manaburn."
+    "DESCRIPTION": "Ethereal. NL Gain !awakened:m2! Dexterity. NL Gain !M! awakened:Manaburn."
   },
   "awakened:Accumulate": {
     "NAME": "Accumulate",
@@ -139,7 +139,7 @@
   },
   "awakened:LastDitchEffort": {
     "NAME": "Last Ditch Effort",
-    "DESCRIPTION": "Gain !B! Block. NL If a *Void is in hand, draw !M! cards next turn."
+    "DESCRIPTION": "Gain !B! Block. NL If a *Void is in hand, draw !M! additional cards next turn."
   },
   "awakened:Willpower": {
     "NAME": "Willpower",
@@ -158,8 +158,12 @@
     "DESCRIPTION": "At the end of combat, heal !M! HP. NL Exhaust."
   },
   "awakened:DrawingDead": {
-    "NAME": "Drawing Dead",
-    "DESCRIPTION": "Draw !M! cards. NL Apply !awakened:m2! awakened:Hex."
+    "NAME": "Summoning Altar",
+    "DESCRIPTION": "Ethereal. NL Whenever you play a Power card while this is in hand, awakened:Conjure.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a Power card while this is in hand, awakened:Conjure.",
+    "EXTENDED_DESCRIPTION": [
+      "I must play Power cards to use this card."
+    ]
   },
   "awakened:Envision": {
     "NAME": "Envision",
@@ -204,11 +208,12 @@
   },
   "awakened:Vision": {
     "NAME": "Vision",
-    "DESCRIPTION": "Gain an gremlin:Echo of a Power card in your hand next turn. NL Exhaust."
+    "DESCRIPTION": "Choose a card in hand. Add a copy of that card to the Spell Pile until it is refreshed.",
+    "UPGRADE_DESCRIPTION": "Choose a card in hand. Add !M! copies of that card to the Spell Pile until it is refreshed."
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Fetch a card from your discard pile."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy has awakened:Manaburn, trigger it."
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
@@ -216,13 +221,13 @@
   },
   "awakened:DesperatePrayer": {
   "NAME": "Desperate Prayer",
-  "DESCRIPTION": "Shuffle a random Power into your draw pile.",
-  "UPGRADE_DESCRIPTION": "Shuffle a random Upgraded Power into your draw pile."
+  "DESCRIPTION": "Shuffle a random Power into your draw pile. NL It costs 0.",
+  "UPGRADE_DESCRIPTION": "Shuffle a random Upgraded Power into your draw pile. NL It costs 0."
 },
   "awakened:BirdsEye": {
     "NAME": "Byrd's Eye",
-    "DESCRIPTION": "Fetch a Power from your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Fetch a Power from your draw pile."
+    "DESCRIPTION": "Fetch a Power card from your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Fetch a Power card from your draw pile."
   },
   "awakened:DarkPower": {
     "NAME": "Initiation",
@@ -255,7 +260,7 @@
   },
   "awakened:RisingChant": {
     "NAME": "Rising Chant",
-    "DESCRIPTION": "Whenever you activate a awakened:Chant effect, draw a card next turn."
+    "DESCRIPTION": "Whenever you activate a awakened:Chant effect, draw an additional card next turn."
   },
   "awakened:Dogma": {
     "NAME": "Dogma",
@@ -357,7 +362,7 @@
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
-    "DESCRIPTION": "Whenever you are awakened:Drained, apply !M! awakened:Manaburn to ALL enemies."
+    "DESCRIPTION": "Whenever you Exhaust a card, apply !M! awakened:Manaburn to ALL enemies."
   },
   "awakened:MysticOrder": {
     "NAME": "Mystic Order",
@@ -374,11 +379,11 @@
   },
   "awakened:Victuals": {
     "NAME": "Victuals",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain !M! expansioncontent:Plated *Armor."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Draw !M! cards."
   },
   "awakened:TheTower": {
     "NAME": "The Tower",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL If you refreshed your Spell Pile this turn, repeat twice."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each *Void and Spell in your exhaust pile."
   },
   "awakened:ArcaneNesting": {
     "NAME": "Arcane Nesting",
@@ -414,8 +419,8 @@
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",
-    "DESCRIPTION": "Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure. NL Exhaust."
+    "DESCRIPTION": "Add *Aphotic *Shield to the Spell Pile for the rest of combat. NL awakened:Conjure. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to the Spell Pile for the rest of combat. NL awakened:Conjure. NL Exhaust."
   },
   "awakened:Bloodthirst": {
     "NAME": "Bloodthirst",
@@ -439,7 +444,7 @@
   },
   "awakened:Deathwish": {
     "NAME": "Deathwish",
-    "DESCRIPTION": "Add *Deathcoil to the Spell Pile. NL awakened:Conjure. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add *Deathcoil to the Spell Pile. NL awakened:Conjure. NL Exhaust."
+    "DESCRIPTION": "Add *Deathcoil to the Spell Pile for the rest of combat. NL awakened:Conjure. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add *Deathcoil to the Spell Pile for the rest of combat. NL awakened:Conjure. NL Exhaust."
   }
 }

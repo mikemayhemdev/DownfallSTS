@@ -18,7 +18,7 @@ public class AphoticFount extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public AphoticFount() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
         cardsToPreview = new AphoticShield();
         this.tags.add(AwakenedOneMod.DELVE);

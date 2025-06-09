@@ -26,7 +26,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
         setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
         this.tags.add(expansionContentMod.STUDY_GUARDIAN);
         this.tags.add(expansionContentMod.STUDY);
-        this.baseDamage = 5;
+        this.baseDamage =   4;
         this.isMultiDamage = true;
         this.baseDownfallMagic = 10;
         this.magicNumber = this.baseMagicNumber = 2;
@@ -52,7 +52,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(1);
+            upgradeDamage(2);
         }
     }
 }

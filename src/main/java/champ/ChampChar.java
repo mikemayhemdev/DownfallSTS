@@ -187,13 +187,13 @@ public class ChampChar extends CustomPlayer {
                 currentIdle = "IdleBerserker";
                 break;
             }
-            case NeutralStance
-                    .STANCE_ID: {
-                this.stateData.setMix(currentIdle, "Idle", 0.5F);
-                this.state.setAnimation(0, "Idle", true);
-                currentIdle = "Idle";
-                break;
-            }
+//            case NeutralStance
+//                    .STANCE_ID: {
+//                this.stateData.setMix(currentIdle, "Idle", 0.5F);
+//                this.state.setAnimation(0, "Idle", true);
+//                currentIdle = "Idle";
+//                break;
+//            }
             case UltimateStance
                     .STANCE_ID: {
                 this.stateData.setMix(currentIdle, "IdleUltimate", 0.5F);
@@ -201,9 +201,13 @@ public class ChampChar extends CustomPlayer {
                 currentIdle = "IdleUltimate";
                 break;
             }
+            default: {
+                this.stateData.setMix(currentIdle, "Idle", 0.5F);
+                this.state.setAnimation(0, "Idle", true);
+                currentIdle = "Idle";
+                break;
+            }
         }
-
-
     }
 
     @Override

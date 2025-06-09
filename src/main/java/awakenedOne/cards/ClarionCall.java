@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import automaton.cards.goodstatus.IntoTheVoid;
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
@@ -24,6 +25,7 @@ public class ClarionCall extends AbstractAwakenedCard {
     public ClarionCall() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 5;
+        cardsToPreview = new VoidCard();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -49,7 +51,7 @@ public class ClarionCall extends AbstractAwakenedCard {
     public static boolean checkVoid() {
         boolean hasVoid = false;
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c instanceof VoidCard) {
+            if (c instanceof VoidCard || c instanceof IntoTheVoid) {
                 hasVoid = true;
             }
         }

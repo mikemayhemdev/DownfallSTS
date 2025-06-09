@@ -18,13 +18,13 @@ public class DesperatePrayer extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
-        if (upgraded)
+        c.modifyCostForCombat(-999);
+        if (upgraded) {
             c.upgrade();
-
+        }
         shuffleIn(c);
     }
 
     public void upp() {
-
     }
 }

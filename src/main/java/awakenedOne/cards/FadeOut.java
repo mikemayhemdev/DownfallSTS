@@ -18,7 +18,7 @@ public class FadeOut extends AbstractAwakenedCard {
 
     public FadeOut() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 4;
         baseSecondMagic = secondMagic = 3;
         this.isEthereal = true;
     }
@@ -32,13 +32,13 @@ public class FadeOut extends AbstractAwakenedCard {
         //this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.secondMagic), this.secondMagic));
         this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.secondMagic), this.secondMagic));
 
-        this.addToBot(new ApplyPowerAction(p, p, new NihilPower(p, this.magicNumber), this.magicNumber));
-        //this.addToBot(new ApplyPowerAction(p, p, new ManaburnPower(p, this.magicNumber*2), this.magicNumber*2));
+        //this.addToBot(new ApplyPowerAction(p, p, new NihilPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new ManaburnPower(p, this.magicNumber), this.magicNumber));
     }
 
     public void upp() {
         //this.isEthereal = false;
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
         upgradeSecondMagic(1);
     }
 

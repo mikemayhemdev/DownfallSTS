@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import automaton.cards.goodstatus.IntoTheVoid;
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -32,7 +33,7 @@ public class Nihilism extends AbstractAwakenedCard {
     public static boolean checkVoid() {
         boolean hasVoid = false;
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c instanceof VoidCard) {
+            if (c instanceof VoidCard || c instanceof IntoTheVoid) {
                 hasVoid = true;
             }
         }

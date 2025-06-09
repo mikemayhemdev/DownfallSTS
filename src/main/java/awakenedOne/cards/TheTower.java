@@ -1,10 +1,14 @@
 package awakenedOne.cards;
 
+import automaton.cards.goodstatus.IntoTheVoid;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,7 +23,10 @@ public class TheTower extends AbstractAwakenedCard {
 
     public TheTower() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = 8;
+        baseDamage = 6;
+        this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber;
+        cardsToPreview = new VoidCard();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -32,32 +39,61 @@ public class TheTower extends AbstractAwakenedCard {
             }
         }
 
-        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+       this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+//
+//        if (ConjureAction.refreshedthisturn == true) {
+//            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+//                if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
+//                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new ExplosionSmallEffect(monster.hb.cX, monster.hb.cY), 0.1F));
+//                }
+//            }
+//            this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+//            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+//                if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
+//                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new ExplosionSmallEffect(monster.hb.cX, monster.hb.cY), 0.1F));
+//                }
+//            }
+//            this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+//        }
 
-        if (ConjureAction.refreshedthisturn == true) {
-            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
-                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new ExplosionSmallEffect(monster.hb.cX, monster.hb.cY), 0.1F));
-                }
+    }
+
+
+    public void calculateCardDamage(AbstractMonster mo) {
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += this.magicNumber * countCards();
+        super.calculateCardDamage(mo);
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+    }
+
+
+    public static int countCards() {
+        int statusCount = 0;
+        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
+            if (c instanceof AbstractSpellCard || c instanceof VoidCard || c instanceof IntoTheVoid) {
+                statusCount++;
             }
-            this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
-                    AbstractDungeon.actionManager.addToBottom(new VFXAction(new ExplosionSmallEffect(monster.hb.cX, monster.hb.cY), 0.1F));
-                }
-            }
-            this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         }
+        return statusCount;
+    }
 
+    public void applyPowers() {
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += this.magicNumber * countCards();
+        super.applyPowers();
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
     }
 
 
-    public void triggerOnGlowCheck() {
-        this.glowColor = ConjureAction.refreshedthisturn ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
+//    public void triggerOnGlowCheck() {
+//        this.glowColor = ConjureAction.refreshedthisturn ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+//    }
 
     @Override
     public void upp() {
         upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 }

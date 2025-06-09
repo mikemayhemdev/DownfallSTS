@@ -16,7 +16,7 @@ public class Intensify extends AbstractAwakenedCard {
 
     public Intensify() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseBlock = 5;
+        baseBlock = 6;
         this.tags.add(AwakenedOneMod.DELVE);
     }
 

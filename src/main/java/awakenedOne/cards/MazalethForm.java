@@ -6,6 +6,7 @@ import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.CuriosityPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
@@ -23,6 +24,7 @@ public class MazalethForm extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        applyToSelf(new StrengthPower(p, secondMagic));
         applyToSelfTop(new CuriosityPower(p, secondMagic));
         applyToSelf(new ReverseRitualPower(-magicNumber));
     }
