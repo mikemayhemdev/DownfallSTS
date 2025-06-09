@@ -11,7 +11,7 @@
     "NAME": "Spellshield",
     "DESCRIPTIONS": [
       "Whenever you play a Spell, gain #b",
-      " #yBlock."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "awakened:RisingChantPower": {

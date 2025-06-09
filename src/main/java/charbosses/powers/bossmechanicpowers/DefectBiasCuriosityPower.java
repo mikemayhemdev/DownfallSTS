@@ -32,7 +32,7 @@ public class DefectBiasCuriosityPower extends AbstractBossMechanicPower {
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3]);
+        this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3]);
     }
 
 //    @Override

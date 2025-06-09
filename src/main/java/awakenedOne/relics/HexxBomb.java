@@ -4,8 +4,10 @@ import awakenedOne.AwakenedOneMod;
 import awakenedOne.powers.ManaburnPower;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
+import collector.CollectorCollection;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -54,6 +56,11 @@ public class HexxBomb extends CustomRelic{
             }
         }
 
+    }
+
+    @Override
+    public boolean canSpawn() {
+        return Settings.isEndless || (AbstractDungeon.floorNum <= 53);
     }
 
 
