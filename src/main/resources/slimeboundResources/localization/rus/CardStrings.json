@@ -17,8 +17,8 @@
     "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL Уменьшает стоимость случ. slimeboundmod:Рывка в руке до 0 в этом бою."
   },
   "Slimebound:ComboTackle": {
-    "NAME": "Стремительный рывок",
-    "DESCRIPTION": "Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL Вы берёте !M! карты."
+    "NAME": "Резкий рывок",
+    "DESCRIPTION": "{@@}Наносит !D! урона. NL Вы получите !SlimeboundSelfharm! урона. NL Вы берёте !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}."
   },
   "Slimebound:CorrosiveSpit": {
     "NAME": "Едкий плевок",
@@ -39,8 +39,8 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "Быстрый перекус",
-    "DESCRIPTION": "Вы берёте !M! карту и сжигаете карту в руке. NL Добавляет в руку N карт *Лизь, где N - стоимость сожжёной карты. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Вы берёте !M! карты и сжигаете карту в руке. NL Добавляет в руку N карт *Лизь, где N - стоимость сожжёной карты. NL Сжигается."
+    "DESCRIPTION": "Вы берёте карту. NL Сжигает карту в руке и добавляет в руку N карт *Лизь, где N - стоимость сожжёной карты. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "{@@}Вы берёте !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}. NL Сжигает карту в руке и добавляет в руку N карт *Лизь, где N - стоимость сожжёной карты. NL Сжигается."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Разделяй и властвуй",
@@ -48,12 +48,12 @@
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Окунуть в слизь",
-    "DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости. NL Следующая атака не отнимает slimeboundmod:Липкость у этого врага."
+    "DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости. NL Следующая Атака по этому врагу не отнимает у него slimeboundmod:Липкость."
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "Облик двойника",
     "DESCRIPTION": "Первая карта в этом ходу, направленная на врага, разыгрывается дважды.",
-    "UPGRADE_DESCRIPTION": "Даёт [E] каждый ход. NL Первая карта в этом ходу, направленная на врага, разыгрывается дважды.",
+    "UPGRADE_DESCRIPTION": "Даёт [E] в начале вашего хода. NL Первая карта в этом ходу, направленная на врага, разыгрывается дважды.",
     "EXTENDED_DESCRIPTION": [
       "Нужно... Здоровье..."
     ]
@@ -68,7 +68,7 @@
   },
   "Slimebound:FirmFortitude": {
     "NAME": "Ликвидировать",
-    "DESCRIPTION": "Не может быть разыграна, если у вас отрицательная Сила. NL Вы теряете 2 Силы. NL Даёт !M! slimeboundmod:Могущества."
+    "DESCRIPTION": "Отнимает 2 Силы. NL Даёт !M! slimeboundmod:Могущества."
   },
   "Slimebound:FlameTackle": {
     "NAME": "Пламенный рывок",
@@ -76,7 +76,7 @@
   },
   "Slimebound:FormOfPuddle": {
     "NAME": "Форма лужицы",
-    "DESCRIPTION": "Даёт 1 Неосязаемости. NL Сжигается."
+    "DESCRIPTION": "Эфирная. NL Даёт 1 Неосязаемости. NL Сжигается."
   },
   "Slimebound:ForwardTackle": {
     "NAME": "Рывок вперед",
@@ -99,11 +99,11 @@
   },
   "Slimebound:Grow": {
     "NAME": "Рост",
-    "DESCRIPTION": "Вы теряете 1 слот для Слизней. NL Даёт !M! Силы и !M! Ловкости."
+    "DESCRIPTION": "Отнимает слот для Слизней. NL Даёт !M! Силы и !M! Ловкости."
   },
   "Slimebound:GrowthPunch": {
     "NAME": "Растущий кулак",
-    "DESCRIPTION": "Наносит !D! урона. NL Даёт !B! Защиты. NL При slimeboundmod:Пожирании - усиливает эффекты этой карты на !M! в этом бою."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Наносит !D! урона. NL При slimeboundmod:Пожирании - усиливает эффекты этой карты на !M! в этом бою."
   },
   "Slimebound:HauntingLick": {
     "NAME": "Навязчивый лизь",
@@ -123,16 +123,16 @@
   "Slimebound:LeadByExample": {
     "NAME": "Показать пример",
     "DESCRIPTION": "Первая разыгранная карта за ход, направленная на врага, также slimeboundmod:Приказывает слизням.",
-    "UPGRADE_DESCRIPTION": "Первые !M! разыгранные карты за ход, направленные на врага, также slimeboundmod:Приказывают слизням."
+    "UPGRADE_DESCRIPTION": "{@@}Первые !M! разыгранн{!M!|@=ых|&11,&12,&13,&14=ых|&1=ая|&2,&3,&4=ые} карт{!M!|@=|&11,&12,&13,&14=|&1=а|&2,&3,&4=ы} за ход, направленн{!M!|@=ых|&11,&12,&13,&14=ых|&1=ая|&2,&3,&4=ые} на врага, также slimeboundmod:Приказывают слизням."
   },
   "Slimebound:LeechEnergy": {
     "NAME": "Энергия пиявки",
     "DESCRIPTION": "Наносит !D! урона. При slimeboundmod:Пожирании - даёт [E] и вы берёте карту.",
-    "UPGRADE_DESCRIPTION": "Наносит !D! урона. При slimeboundmod:Пожирании - даёт [E] и вы берёте !M! карты."
+    "UPGRADE_DESCRIPTION": "{@@}Наносит !D! урона. При slimeboundmod:Пожирании - даёт [E] и вы берёте !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}."
   },
   "Slimebound:LeechLife": {
     "NAME": "Жизнь пиявки",
-    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. Восполняет ОЗ равное урону, нанесённому по ОЗ врага. NL Сжигается."
+    "DESCRIPTION": "Эфирная. NL Наносит !D! урона. Восполняет ОЗ равное нанесённому урону по ОЗ. NL Сжигается."
   },
   "Slimebound:LeechingTouch": {
     "NAME": "Энергия пиявки",
@@ -140,8 +140,8 @@
   },
   "Slimebound:LevelUp": {
     "NAME": "Повысить уровень",
-    "DESCRIPTION": "Даёт !M! slimeboundmod:Могущество.",
-    "UPGRADE_DESCRIPTION": "Даёт !M! slimeboundmod:Могущество и 1 слот для Слизней."
+    "DESCRIPTION": "Даёт !M! slimeboundmod:Могущества.",
+    "UPGRADE_DESCRIPTION": "Даёт !M! slimeboundmod:Могущества и 1 слот для Слизней."
   },
   "Slimebound:Lick": {
     "NAME": "Лизь",
@@ -150,14 +150,14 @@
   },
   "Slimebound:LivingWall": {
     "NAME": "Живая стена",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Накладывает !slime! slimeboundmod:Липкости в ответ на каждую атаку в этом ходу."
+    "DESCRIPTION": "Даёт !B! Защиты. NL Накладывает !slime! slimeboundmod:Липкости в ответ на атакующих в этом ходу."
   },
   "Slimebound:MassFeed": {
     "NAME": "Сожрать всех",
     "DESCRIPTION": "Наносит !D! урона ВСЕМ врагам. NL Увеличивает Макс. ОЗ на !M!, если Казнит врага. NL Сжигается."
   },
   "Slimebound:MassRepurpose": {
-    "NAME": "Массовое переназначение",
+    "NAME": "Общий сбор",
     "DESCRIPTION": "slimeboundmod:Поглощает ВСЕХ слизней и призывает случ. slimeboundmod:Специалиста за каждого из них. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Поглощает ВСЕХ слизней и призывает случ. slimeboundmod:Специалиста за каждого из них. Также slimeboundmod:Приказывает им. NL Сжигается."
   },
@@ -167,9 +167,9 @@
     "UPGRADE_DESCRIPTION": "Накладывает !M! Слабости и !slime! slimeboundmod:Липкости на ВСЕХ врагов. NL Вы берёте карту. NL Сжигается."
   },
   "Slimebound:MinionMaster": {
-    "NAME": "Повелитель миньонов",
-    "DESCRIPTION": "Когда вы разыгрываете карту с slimeboundmod:Приказом, дополнительно slimeboundmod:Приказывает ещё 1 раз.",
-    "UPGRADE_DESCRIPTION": "Начальная. NL Когда вы разыгрываете карту с slimeboundmod:Приказом, дополнительно slimeboundmod:Приказывает ещё 1 раз."
+    "NAME": "Хозяин",
+    "DESCRIPTION": "Когда вы разыгрываете карту с slimeboundmod:Приказом, дополнительно slimeboundmod:Приказывает ещё раз.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL Когда вы разыгрываете карту с slimeboundmod:Приказом, дополнительно slimeboundmod:Приказывает ещё раз."
   },
   "Slimebound:Nibble": {
     "NAME": "Лизь-нуть",
@@ -178,26 +178,26 @@
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "Комбо Раз-два",
-    "DESCRIPTION": "Наносит !D! урона. NL Возвращается из стопки сброса в руку, когда вы используете slimeboundmod:Призыв.",
-    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL slimeboundmod:Приказывает. NL Возвращается из стопки сброса в руку, когда вы используете slimeboundmod:Призыв."
+    "DESCRIPTION": "Наносит !D! урона. NL slimeboundmod:Приказывает. NL Возвращается в руку из стопки сброса, когда вы используете slimeboundmod:Призыв.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL slimeboundmod:Приказывает дважды. NL Возвращается в руку из стопки сброса, когда вы используете slimeboundmod:Призыв."
   },
   "Slimebound:OozeBath": {
     "NAME": "Слизневая ванна",
-    "DESCRIPTION": "Накладывает !M! slimeboundmod:Липкости на выбранного врага в начале каждого его хода. NL Сжигается.",
+    "DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости на выбранного врага в начале каждого его хода. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Утраивает, наложенную на врага, slimeboundmod:Липкость. NL Сжигается."
   },
   "Slimebound:Overexert": {
     "NAME": "Перенапряжение",
-    "DESCRIPTION": "Даёт 4 slimeboundmod:Могущества. NL slimeboundmod:Поглощает ВСЕХ слизней через !M! хода.",
-    "UPGRADE_DESCRIPTION": "Даёт 4 slimeboundmod:Могущества. NL slimeboundmod:Приказывает дважды. NL slimeboundmod:Поглощает ВСЕХ слизней через !M! хода."
+    "DESCRIPTION": "{@@}Даёт 5 slimeboundmod:Могущества. NL slimeboundmod:Поглощает ВСЕХ слизней через !M! ход{!M!|@=ов|&11,&12,&13,&14=ов|&1=|&2,&3,&4=а}.",
+    "UPGRADE_DESCRIPTION": "{@@}Даёт 5 slimeboundmod:Могущества. NL slimeboundmod:Приказывает дважды. NL slimeboundmod:Поглощает ВСЕХ слизней через !M! ход{!M!|@=ов|&11,&12,&13,&14=ов|&1=|&2,&3,&4=а}."
   },
   "Slimebound:Prepare": {
     "NAME": "Приготовиться",
-    "DESCRIPTION": "Даёт !B! Защиты. NL Вы получите [E] и возьмёте !M! карты в след. ходу. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Вы получите [E] и возьмёте !M! карты в след. ходу. NL Оставьте до !M! карт в этом ходу. Сжигается."
+    "DESCRIPTION": "{@@}Даёт !B! Защиты. NL Вы получите [E] и возьмёте !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы} в след. ходу. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "{@@}Вы получите [E] и возьмёте !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы} в след. ходу. NL Оставьте до !M! карт{!M!|@=|&11=|&1=ы} в этом ходу. Сжигается."
   },
   "Slimebound:PrepareCrush": {
-    "NAME": "Приготовиться: Крушить",
+    "NAME": "Подготовка слизня",
     "DESCRIPTION": "Вы получите *СЛИЗЕНЬ: *КРУШИТЬ!!!, [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "Вы получите *СЛИЗЕНЬ: *КРУШИТЬ!!!+, [E] [E] [E] [E] и !M! Силы в след. ходу. NL Сжигается.",
     "EXTENDED_DESCRIPTION": [
@@ -206,29 +206,29 @@
   },
   "Slimebound:PressTheAttack": {
     "NAME": "Начать наступление",
-    "DESCRIPTION": "Наносит !D! урона. При slimeboundmod:Пожирании - slimeboundmod:Приказывает.",
-    "UPGRADE_DESCRIPTION": "Наносит !D! урона. При slimeboundmod:Пожирании - slimeboundmod:Приказывает дважды."
+    "DESCRIPTION": "Наносит !D! урона. slimeboundmod:Приказывает.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! урона. slimeboundmod:Приказывает дважды."
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "Защищать босса",
     "DESCRIPTION": "Предотвращает получение урона от след. атаки врага, slimeboundmod:Поглощая первого слизня.",
-    "UPGRADE_DESCRIPTION": "Предотвращает получение урона от 2 след. атак врага, slimeboundmod:Поглощая первого слизня."
+    "UPGRADE_DESCRIPTION": "Предотвращает получение урона от 2 след. атак врага, slimeboundmod:Поглощая первых слизней."
   },
   "Slimebound:RainOfGoop": {
     "NAME": "Дождь из слизи",
-    "DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости на случ. врага !M! раза.",
-    "UPGRADE_DESCRIPTION": "Накладывает !slime! slimeboundmod:Липкости на случ. врага !M! раз."
+    "DESCRIPTION": "{@@}Накладывает !slime! slimeboundmod:Липкости на случ. врага !M! раз{!M!|@=|&12,&13,&14=|&2,&3,&4=а}.",
+    "UPGRADE_DESCRIPTION": "{@@}Накладывает !slime! slimeboundmod:Липкости на случ. врага !M! раз{!M!|@=|&12,&13,&14=|&2,&3,&4=а}."
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "Воодушевить",
-    "DESCRIPTION": "Наносит !D! урона. NL След. !M! карты, разыгранные в этом ходу, slimeboundmod:Приказывают."
+    "DESCRIPTION": "{@@}Наносит !D! урона. NL След. !M! карт{!M!|@=|&11,&12,&13,&14=|&1=а|&2,&3,&4=ы}, разыгранн{!M!|@=ых|&11,&12,&13,&14=ых|&1=ая|&2,&3,&4=ые} в этом ходу, slimeboundmod:Приказывают."
   },
   "Slimebound:Recollect": {
     "NAME": "Пересобрать",
     "DESCRIPTION": "Даёт !B! Защиты. NL expansioncontent:Воскрешает случ. slimeboundmod:Лизь.",
     "UPGRADE_DESCRIPTION": "Даёт !B! Защиты. NL expansioncontent:Воскрешает 2 случ. slimeboundmod:Лизя.",
     "EXTENDED_DESCRIPTION": [
-      "Не были... Сожжены..."
+      "Не... Сожжены..."
     ]
   },
   "Slimebound:Recycling": {
@@ -244,16 +244,16 @@
   "Slimebound:Replication": {
     "NAME": "Репликация",
     "DESCRIPTION": "Выберите карту в руке. NL Добавляет её копию на верх стопки добора. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "Выберите карту в руке. NL Добавляет её копию в руку. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Выберите карту в руке. NL Добавляет в руку её копию. NL Сжигается.",
     "EXTENDED_DESCRIPTION": [
-      " чтобы добавить её копию в руку.",
+      " чтобы добавить в руку её копию.",
       " чтобы добавить её копию на верх стопки добора."
     ]
   },
   "Slimebound:Repurpose": {
     "NAME": "Переназначение",
     "DESCRIPTION": "slimeboundmod:Поглощает первого слизня. Призывает случ. slimeboundmod:Специалиста. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Поглощает первого слизня. Призывает случ. slimeboundmod:Специалиста. NL Также slimeboundmod:Приказывает. NL Сжигается."
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Поглощает первого слизня. Призывает случ. slimeboundmod:Специалиста. NL slimeboundmod:Приказывает. NL Сжигается."
   },
   "Slimebound:RollThrough": {
     "NAME": "Прокатиться",
@@ -301,8 +301,8 @@
   },
   "Slimebound:SlimeTap": {
     "NAME": "Липкое касание",
-    "DESCRIPTION": "slimeboundmod:Поглощает первого слизня - даёт [E] и вы берёте !M! карты. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Поглощает первого слизня - даёт [E] [E] и вы берёте !M! карты. NL Сжигается.",
+    "DESCRIPTION": "{@@}slimeboundmod:Поглощает первого слизня, даёт [E] и вы берёте !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "{@@}slimeboundmod:Поглощает первого слизня, даёт [E] [E] и вы берёте !M! карт{!M!|@=|&11,&12,&13,&14=|&1=у|&2,&3,&4=ы}. NL Сжигается.",
     "EXTENDED_DESCRIPTION": [
       "Нужны... слизни..."
     ]
@@ -313,16 +313,16 @@
   },
   "Slimebound:Split": {
     "NAME": "Призыв",
-    "DESCRIPTION": "slimeboundmod:Призывает случ. Слизня."
+    "DESCRIPTION": "slimeboundmod:Призывает slimeboundmod:Слизня-громилу. NL slimeboundmod:Приказывает."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Призыв: Громила",
-    "DESCRIPTION": "slimeboundmod:Призывает slimeboundmod:Слизня-громилу. NL slimeboundmod:Приказывает !M! раза. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Призывает slimeboundmod:Слизня-громилу. NL slimeboundmod:Приказывает 3 раза. NL Сжигается."
+    "DESCRIPTION": "{@@}slimeboundmod:Призывает slimeboundmod:Слизня-громилу. NL slimeboundmod:Приказывает !M! раз{!M!|@=|&12,&13,&14=|&2,&3,&4=а}.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Призывает slimeboundmod:Слизня-громилу. NL slimeboundmod:Приказывает 3 раза."
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Призыв: Крушитель",
-    "DESCRIPTION": "slimeboundmod:Призывает slimeboundmod:Слизня-крушителя. NL slimeboundmod:Приказывает !M! раза. NL Сжигается.",
+    "DESCRIPTION": "{@@}slimeboundmod:Призывает slimeboundmod:Слизня-крушителя. NL slimeboundmod:Приказывает !M! раз{!M!|@=|&12,&13,&14=|&2,&3,&4=а}. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Призывает slimeboundmod:Слизня-крушителя. NL slimeboundmod:Приказывает 3 раза. NL Сжигается."
   },
   "Slimebound:SplitGreed": {
@@ -331,13 +331,13 @@
   },
   "Slimebound:SplitLeeching": {
     "NAME": "Призыв: Пиявка",
-    "DESCRIPTION": "slimeboundmod:Призывает slimeboundmod:Слизня-пиявку. NL slimeboundmod:Приказывает !M! раза. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Призывает slimeboundmod:Слизня-пиявку. NL slimeboundmod:Приказывает 3 раза. NL Сжигается."
+    "DESCRIPTION": "{@@}slimeboundmod:Призывает slimeboundmod:Слизня-пиявку. NL slimeboundmod:Приказывает !M! раз{!M!|@=|&12,&13,&14=|&2,&3,&4=а}.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Призывает slimeboundmod:Слизня-пиявку. NL slimeboundmod:Приказывает 3 раза."
   },
   "Slimebound:SplitMire": {
     "NAME": "Призыв: Болотник",
-    "DESCRIPTION": "slimeboundmod:Призывает slimeboundmod:Болотного_слизня. NL slimeboundmod:Приказывает !M! раза. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Призывает slimeboundmod:Болотного_слизня. NL slimeboundmod:Приказывает 3 раза. NL Сжигается."
+    "DESCRIPTION": "{@@}slimeboundmod:Призывает slimeboundmod:Болотного_слизня. NL slimeboundmod:Приказывает !M! раз{!M!|@=|&12,&13,&14=|&2,&3,&4=а}.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Призывает slimeboundmod:Болотного_слизня. NL slimeboundmod:Приказывает 3 раза."
   },
   "Slimebound:SplitScrap": {
     "NAME": "Воскресить Мусорщика",
@@ -345,8 +345,8 @@
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "Призыв: Специалист",
-    "DESCRIPTION": "slimeboundmod:Призывает 1 из 3 выбранного slimeboundmod:Специалиста. NL Сжигается.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Призывает 1 из 3 выбранного slimeboundmod:Специалиста. NL slimeboundmod:Приказывает. NL Сжигается."
+    "DESCRIPTION": "Выберите и slimeboundmod:Призовите 1 из 3 slimeboundmod:Специалистов. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Выберите и slimeboundmod:Призовите 1 из 3 slimeboundmod:Специалистов. NL slimeboundmod:Приказывает. NL Сжигается."
   },
   "Slimebound:Strike_Slimebound": {
     "NAME": "Удар",
@@ -358,8 +358,8 @@
   },
   "Slimebound:TagTeam": {
     "NAME": "Командный удар",
-    "DESCRIPTION": "Наносит !D! урона. NL slimeboundmod:Призывает случ. Слизня. NL slimeboundmod:Приказывает !M! раза.",
-    "UPGRADE_DESCRIPTION": "Наносит !D! урона. NL slimeboundmod:Призывает случ. slimeboundmod:Специалиста. NL slimeboundmod:Приказывает !M! раза."
+    "DESCRIPTION": "{@@}Наносит !D! урона. NL slimeboundmod:Призывает случ. Слизня. NL slimeboundmod:Приказывает !M! раз{!M!|@=|&12,&13,&14=|&2,&3,&4=а}.",
+    "UPGRADE_DESCRIPTION": "{@@}Наносит !D! урона. NL slimeboundmod:Призывает случ. slimeboundmod:Специалиста. NL slimeboundmod:Приказывает !M! раз{!M!|@=|&12,&13,&14=|&2,&3,&4=а}."
   },
   "Slimebound:Teamwork": {
     "NAME": "Командная работа",
@@ -380,7 +380,7 @@
     "DESCRIPTION": "expansioncontent:Воскрешает все карты slimeboundmod:Лизь. NL Сжигается.",
     "UPGRADE_DESCRIPTION": "expansioncontent:Воскрешает все карты slimeboundmod:Лизь.",
     "EXTENDED_DESCRIPTION": [
-      "Не были... Сожжены..."
+      "Не... Сожжены..."
     ]
   }
 }

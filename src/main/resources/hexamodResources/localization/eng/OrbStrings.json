@@ -3,7 +3,7 @@
     "NAME": "Searing Ghostflame",
     "DESCRIPTION": [
       "#yIgnited [REMOVE_SPACE]. ",
-	  "#yIgnites when #b" ,
+	  "#yIgnites when #b",
 	  " #yAttack is played.",
 	  " #yAttacks are played.",
 	  "#yIgnites when #b2 #yAttacks are played while on it.",
@@ -16,7 +16,7 @@
     "NAME": "Crushing Ghostflame",
     "DESCRIPTION": [
       "#yIgnited [REMOVE_SPACE]. ",
-	  "#yIgnites when #b" ,
+	  "#yIgnites when #b",
 	  " #ySkill is played.",
 	  " #ySkills are played.",
 	  "#yIgnites when #b2 #ySkills are played while on it.",
@@ -62,8 +62,3 @@
     ]
   }
 }
-
-
-
-
-

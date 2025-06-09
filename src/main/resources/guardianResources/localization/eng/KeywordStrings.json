@@ -13,7 +13,7 @@
       "stasis"
     ],
     "PROPER_NAME": "Stasis",
-    "DESCRIPTION": "A card in Stasis stays there for amount of turns equal to its cost plus #b1 [REMOVE_SPACE]. NL When it exits, it is returned to your hand and costs #b0 until played."
+    "DESCRIPTION": "A card in Stasis stays there for amount of turns equal to its cost + #b1 [REMOVE_SPACE]. NL When it exits, it is returned to your hand and costs #b0 until played."
   },
   {
     "NAMES": [

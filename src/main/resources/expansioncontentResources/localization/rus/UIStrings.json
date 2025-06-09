@@ -1,10 +1,10 @@
 {
   "downfall:PropertiesMod": {
     "TEXT": [
-      "Applied properties.",
-      "Additional properties: ",
-      "Additional properties for this turn: ",
-      " NL Also for this turn: ",
+      "Применённые свойства.",
+      "Дополнительные свойства: ",
+      "Дополнительные свойства для этого хода: ",
+      " NL Также для этого хода: ",
       ", ",
       ".",
       "#y",
@@ -40,7 +40,7 @@
   },
   "downfall:UnplayableMod": {
     "TEXT": [
-      "Немграбельная. NL ",
+      "Неиграбельная. NL ",
       "Я не могу разыграть эту карту.",
       "Я не могу разыграть эту карту в этом ходу."
     ]

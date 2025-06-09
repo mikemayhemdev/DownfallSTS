@@ -11,26 +11,29 @@
   "Gremlin:Bang": {
     "NAME": "Bang",
     "DESCRIPTIONS": [
-      "The next attack you play consumes all stacks of #yWiz and deals #b", " additional damage."
+      "The next attack you play consumes all stacks of #yWiz and deals #b",
+      " additional damage."
     ]
   },
   "Gremlin:Bashed": {
     "NAME": "Bashed",
     "DESCRIPTIONS": [
-      "Whenever you gain #yBlock this turn, loses #b", " HP."
+      "Whenever you gain #yBlock this turn, loses #b",
+      " HP."
     ]
   },
   "Gremlin:BubbleBarrier": {
     "NAME": "Bubble Barrier",
     "DESCRIPTIONS": [
-      "Whenever you play a card this turn, gain #b", " #yBlock [REMOVE_SPACE]."
+      "Whenever you play a card this turn, gain #b",
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "Gremlin:CongaLine": {
     "NAME": "Conga Line",
     "DESCRIPTIONS": [
       "At the start of your turn, gain ",
-      "and #ySwap to the next Gremlin."
+      " and #ySwap to the next Gremlin."
     ]
   },
   "Gremlin:Crippled": {
@@ -43,7 +46,8 @@
   "Gremlin:Encore": {
     "NAME": "Encore",
     "DESCRIPTIONS": [
-      "#yWiz deals #b", " additional damage."
+      "#yWiz deals #b",
+      " additional damage."
     ]
   },
   "Gremlin:Enthusiasm": {
@@ -188,7 +192,9 @@
   "Gremlin:Wiz": {
     "NAME": "Wiz",
     "DESCRIPTIONS": [
-      "Charging up. NL Need #b", " more stack.", " more stacks.",
+      "Charging up. NL Need #b",
+      " more stack.",
+      " more stacks.",
       "Ready to fire."
     ]
   },

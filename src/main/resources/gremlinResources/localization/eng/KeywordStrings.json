@@ -23,35 +23,40 @@
   },
   {
     "NAMES": [
-      "fat gremlin", "fat_gremlin"
+      "fat gremlin",
+      "fat_gremlin"
     ],
     "PROPER_NAME": "Fat Gremlin",
     "DESCRIPTION": "After you play an attack, apply #b1 #yWeak to all targets."
   },
   {
     "NAMES": [
-      "gremlin wizard", "gremlin_wizard"
+      "gremlin wizard",
+      "gremlin_wizard"
     ],
     "PROPER_NAME": "Gremlin Wizard",
     "DESCRIPTION": "After you play a skill, gain #b1 #yWiz [REMOVE_SPACE]."
   },
   {
     "NAMES": [
-      "mad gremlin", "mad_gremlin"
+      "mad gremlin",
+      "mad_gremlin"
     ],
     "PROPER_NAME": "Mad Gremlin",
     "DESCRIPTION": "Gain #b2 #yTemporary #yStrength when attacked."
   },
   {
     "NAMES": [
-      "shield gremlin", "shield_gremlin"
+      "shield gremlin",
+      "shield_gremlin"
     ],
     "PROPER_NAME": "Shield Gremlin",
     "DESCRIPTION": "After you play a skill, gain #b2 #yBlock [REMOVE_SPACE]."
   },
   {
     "NAMES": [
-      "sneaky gremlin", "sneaky_gremlin"
+      "sneaky gremlin",
+      "sneaky_gremlin"
     ],
     "PROPER_NAME": "Sneaky Gremlin",
     "DESCRIPTION": "0 cost Attacks deal #b2 additional damage. After you play an Attack, deal #b2 damage to a random enemy."

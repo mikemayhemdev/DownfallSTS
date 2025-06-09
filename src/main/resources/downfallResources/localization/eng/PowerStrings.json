@@ -43,7 +43,9 @@
   "downfall:SpotWeakness": {
     "NAME": "Spot Weakness",
     "DESCRIPTIONS": [
-      "Every turn in which you play an attack card with this power active, this enemy gains #b"," #yStrength. Currently it will gain #b", " #yStrength [REMOVE_SPACE]."
+      "Every turn in which you play an attack card with this power active, this enemy gains #b",
+      " #yStrength. Currently it will gain #b",
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "downfall:FearNoEvil": {
@@ -176,7 +178,7 @@
   "downfall:NeowAncientConstruct": {
     "NAME": "Ancient Construct",
     "DESCRIPTIONS": [
-      "Neow gains #b2 #yArtifact at the end of her turn if she has no #yArtifact [REMOVE_SPACE]."
+      "Neow gains #b2 #yArtifacts at the end of her turn if she has no #yArtifact [REMOVE_SPACE]."
     ]
   },
   "downfall:DefectCuriosity": {

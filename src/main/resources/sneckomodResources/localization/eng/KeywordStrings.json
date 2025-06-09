@@ -4,20 +4,23 @@
     "NAMES": [
       "snekproof"
     ],
-    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+    "DESCRIPTION": "Snekproof cards aren't affected by #yConfusion and cannot be #yMuddled.",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   },
   {
-  "PROPER_NAME": "Suit",
-  "NAMES": [
-  "suit",
-  "suits"
-],
-  "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+    "PROPER_NAME": "Suit",
+    "NAMES": [
+      "suit",
+      "suits"
+    ],
+    "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits.",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   },
   {
     "PROPER_NAME": "Overflow",
     "NAMES": [
-      "Overflow", "overflow"
+      "Overflow",
+      "overflow"
     ],
     "DESCRIPTION": "Overflow effects activate if you have more than #b5 cards in hand."
   },
@@ -49,7 +52,8 @@
     "NAMES": [
       "identify"
     ],
-    "DESCRIPTION": "Replace an #yUnidentified card with its current random card permanently. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+    "DESCRIPTION": "Replace an #yUnidentified card with its current random card permanently.",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   },
   {
     "PROPER_NAME": "Venom",
