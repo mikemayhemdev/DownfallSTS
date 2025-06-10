@@ -25,7 +25,7 @@ public class MazalethForm extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new StrengthPower(p, secondMagic));
         applyToSelfTop(new CuriosityPower(p, secondMagic));
-        applyToSelf(new ReverseRitualPower(-magicNumber));
+        applyToSelf(new ReverseRitualPower(magicNumber));
     }
 
     @Override

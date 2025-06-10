@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class ReverseRitualPower extends AbstractAwakenedPower {
     // intellij stuff buff
-    public static final String NAME = PrimacyPower.class.getSimpleName();
+    public static final String NAME = ReverseRitualPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
 
 
@@ -18,6 +18,7 @@ public class ReverseRitualPower extends AbstractAwakenedPower {
         super(NAME, PowerType.DEBUFF, false, AbstractDungeon.player, null, amount);
         updateDescription();
         this.canGoNegative = false;
+        priority = -99;
     }
 
 

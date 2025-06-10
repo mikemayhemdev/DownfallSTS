@@ -25,18 +25,18 @@ public class OnLoseEnergyPowerPatch {
             }
         }
 
+        for (AbstractRelic p : AbstractDungeon.player.relics) {
+            if (p instanceof OnLoseEnergyRelic) {
+                ((OnLoseEnergyRelic) p).LoseEnergyAction(e);
+            }
+        }
+
         for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
             if (!m2.isDead && !m2.isDying) {
                 for (AbstractPower p : m2.powers) {
                     if (p instanceof OnLoseEnergyPower) {
                         ((OnLoseEnergyPower) p).LoseEnergyAction(e);
                     }
-                }
-            }
-
-            for (AbstractRelic p : AbstractDungeon.player.relics) {
-                if (p instanceof OnLoseEnergyRelic) {
-                    ((OnLoseEnergyRelic) p).LoseEnergyAction(e);
                 }
             }
         }

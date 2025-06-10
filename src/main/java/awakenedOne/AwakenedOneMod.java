@@ -322,7 +322,7 @@ public class AwakenedOneMod implements
     //source of the Hex or if it's the player directly applying Hex. This is helpful for mostly Snecko relevant things.
     public static void HexCurse(int begone, AbstractCreature m, AbstractCreature source) {
         //if (!(m.hasPower(UltimateHexDebuff.POWER_ID))) {
-        atb(new ApplyPowerAction(m, source, new EnemyHexedPower(m, begone), begone));
+        atb(new ApplyPowerAction(m, AbstractDungeon.player, new EnemyHexedPower(m, begone), begone));
         // }
     }
 

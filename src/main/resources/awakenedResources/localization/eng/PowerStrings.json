@@ -106,7 +106,7 @@
     "NAME": "Shroud of Miasma",
     "DESCRIPTIONS": [
       "Whenever you apply #yManaburn or #yHex to an enemy, gain #b",
-      " #Block."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "awakened:StrengthReturnPower": {
@@ -143,7 +143,8 @@
     "DESCRIPTIONS": [
       "Gains #b",
       " #yManaburn at the start of its turn."
-    ],
+    ]
+  },
     "awakened:ReverseRitualPower": {
       "NAME": "Awakened Form",
       "DESCRIPTIONS": [
@@ -158,6 +159,5 @@
         "#yHex cannot be removed from this enemy for the next #b",
         " turns."
       ]
-    }
   }
 }

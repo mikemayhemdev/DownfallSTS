@@ -21,7 +21,7 @@
   },
   "awakened:AphoticShield": {
     "NAME": "Aphotic Shield",
-    "DESCRIPTION": "Retain. NL Gain !M! expansioncontent:Plated *Armor."
+    "DESCRIPTION": "Retain. NL Gain !M! expansioncontent:Plated *Armor. NL Exhaust."
   },
   "awakened:ESPSpell": {
     "NAME": "ESP",

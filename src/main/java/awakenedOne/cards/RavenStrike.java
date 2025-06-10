@@ -22,13 +22,15 @@ public class RavenStrike extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
         //this.addToBot(new BetterDiscardPileToHandAction(1));
+
         if (!m.isDead && !m.isDying) {
             for (AbstractPower power : m.powers) {
                 if (power instanceof OnLoseEnergyPower) {
-                    ((OnLoseEnergyPower) p).LoseEnergyAction(1);
+                    ((OnLoseEnergyPower) power).LoseEnergyAction(1);
                 }
             }
         }
+
     }
 
     @Override
