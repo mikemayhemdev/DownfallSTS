@@ -15,7 +15,7 @@ public class LibrarianPower extends AbstractAwakenedPower {
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
+    public void atStartOfTurn() {
         flash();
         for (int i = 0; i < amount; i++) {
             atb(new ConjureAction(false));

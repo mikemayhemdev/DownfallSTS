@@ -1,18 +1,19 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.cards.tokens.Ceremony;
+import awakenedOne.actions.ConjureAction;
+import awakenedOne.cards.tokens.spells.BurningStudy;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
+import static awakenedOne.util.Wiz.att;
 
 public class RippedDoll extends CustomRelic {
 
@@ -24,7 +25,7 @@ public class RippedDoll extends CustomRelic {
 
     public RippedDoll() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
-        AbstractCard q = new Ceremony();
+        AbstractCard q = new BurningStudy();
         //q.upgrade();
         tips.add(new CardPowerTip(q));
     }
@@ -32,7 +33,8 @@ public class RippedDoll extends CustomRelic {
     @Override
     public void atBattleStart() {
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        this.addToTop(new MakeTempCardInHandAction(new Ceremony(), 1, false));
+        //this.addToTop(new MakeTempCardInHandAction(new Ceremony(), 1, false));
+        att(new ConjureAction(false, false, true));
     }
 
     @Override

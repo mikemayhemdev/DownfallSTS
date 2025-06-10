@@ -1,5 +1,6 @@
 package awakenedOne.actions;
 
+import awakenedOne.cards.tokens.spells.BurningStudy;
 import awakenedOne.powers.DarkIncantationRitualPower;
 import awakenedOne.powers.FeathersinksPower;
 import awakenedOne.ui.OrbitingSpells;
@@ -23,6 +24,8 @@ public class ConjureAction extends AbstractGameAction {
 
     private boolean choose;
     private boolean ontop;
+    private boolean bstudy;
+
     public static boolean refreshedthisturn = false;
     public static ArrayList<AbstractCard> conjuredCards = new ArrayList();
 
@@ -32,11 +35,19 @@ public class ConjureAction extends AbstractGameAction {
     public ConjureAction(boolean choose) {
         this.choose = choose;
         ontop = false;
+        bstudy = false;
     }
 
     public ConjureAction(boolean choose, boolean drawpile) {
         this.choose = choose;
         ontop = drawpile;
+        bstudy = false;
+    }
+
+    public ConjureAction(boolean choose, boolean drawpile, boolean starterrelic) {
+        this.choose = choose;
+        ontop = drawpile;
+        bstudy = starterrelic;
     }
 
     @Override
@@ -72,6 +83,9 @@ public class ConjureAction extends AbstractGameAction {
             });
             if (!choose) {
                 AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
+                if (bstudy) {
+                    tar = new BurningStudy();
+                }
                 if (ontop == false) {
                     addToTop(new MakeTempCardInHandAction(tar));
                 }
