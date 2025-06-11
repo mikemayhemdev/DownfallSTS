@@ -1,11 +1,17 @@
 package awakenedOne.cards;
 
+import awakenedOne.powers.DarkIncantationRitualPower;
 import awakenedOne.powers.ReverseRitualPower;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.city.Byrd;
 import com.megacrit.cardcrawl.powers.CuriosityPower;
+import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
@@ -18,20 +24,18 @@ public class MazalethForm extends AbstractAwakenedCard {
     public MazalethForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         tags.add(BaseModCardTags.FORM);
-        baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 3;
+        baseMagicNumber = magicNumber = 1;
+        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new StrengthPower(p, secondMagic));
-        applyToSelfTop(new CuriosityPower(p, secondMagic));
-        applyToSelf(new ReverseRitualPower(magicNumber));
+        CardCrawlGame.sound.playA("VO_CULTIST_1A", -.1f);
+        AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, Byrd.DIALOG[0], true));
+        applyToSelf(new RitualPower(p, magicNumber, true));
+        applyToSelf(new DarkIncantationRitualPower(magicNumber));
     }
 
-    @Override
     public void upp() {
-        //isEthereal = false;
-       // upgradeSecondMagic(1);
-        upgradeMagicNumber(-1);
+        isEthereal = false;
     }
 }

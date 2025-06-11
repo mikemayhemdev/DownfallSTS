@@ -2,6 +2,8 @@ package gremlin.patches;
 
 import awakenedOne.relics.StrengthBooster;
 import basemod.ReflectionHacks;
+import champ.powers.CounterPower;
+import champ.relics.PowerArmor;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import gremlin.relics.ImpeccablePecs;
 import gremlin.relics.MagicalMallet;
 import javassist.CtBehavior;
@@ -39,6 +42,21 @@ public class ApplyPowerPatch {
 //                ((StrengthBooster)(AbstractDungeon.player.getRelic(StrengthBooster.ID))).onTrigger(powerToApply.amount);
 //            }
 //        }
+
+//        if (AbstractDungeon.player.hasRelic(PowerArmor.ID)) {
+//            AbstractPower powerToApply = ReflectionHacks.getPrivate(__instance, ApplyPowerAction.class, "powerToApply");
+//            if (__instance.target != null && __instance.target.isPlayer && powerToApply.ID.equals(VigorPower.POWER_ID)) {
+//                ((PowerArmor)(AbstractDungeon.player.getRelic(PowerArmor.ID))).onTrigger(powerToApply.amount);
+//            }
+//        }
+//
+//        if (AbstractDungeon.player.hasRelic(PowerArmor.ID)) {
+//            AbstractPower powerToApply = ReflectionHacks.getPrivate(__instance, ApplyPowerAction.class, "powerToApply");
+//            if (__instance.target != null && __instance.target.isPlayer && powerToApply.ID.equals(CounterPower.POWER_ID)) {
+//                ((PowerArmor)(AbstractDungeon.player.getRelic(PowerArmor.ID))).onTrigger2(powerToApply.amount);
+//            }
+//        }
+
 
     }
 

@@ -1,9 +1,11 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
 
@@ -27,12 +29,52 @@ public class Middens extends AbstractAwakenedCard {
 
         ArrayList<AbstractCard> qCardList = new ArrayList<>();
 
+        boolean multipletypes = false;
+        AbstractCard checker = null;
+
         for (AbstractCard c : p.discardPile.group) {
             if (c.type == CardType.STATUS) {
                 qCardList.add(c);
+                checker = c;
             }
         }
 
+        for (AbstractCard c : qCardList) {
+            if (c.name != checker.name) {
+                multipletypes = true;
+            }
+        }
+
+
+
+        if (!multipletypes) {
+            ArrayList<AbstractCard> syntheticSockets = new ArrayList<>();
+            syntheticSockets.addAll(qCardList);
+
+            if (!syntheticSockets.isEmpty()) {
+                int vibe = magicNumber;
+                if (vibe > syntheticSockets.size()) {
+                    vibe = syntheticSockets.size();
+                    if (!syntheticSockets.isEmpty()) {
+                        for (int i = 0; i < this.magicNumber; i++) {
+                            if (!syntheticSockets.isEmpty()) {
+                                if (p.hand.size() < BaseMod.MAX_HAND_SIZE) {
+                                    AbstractCard selecteda = syntheticSockets.get((AbstractDungeon.cardRandomRng.random(syntheticSockets.size() - 1)));
+                                    p.discardPile.removeCard(selecteda);
+                                    p.hand.addToHand(selecteda);
+                                    selecteda.lighten(false);
+                                    selecteda.unhover();
+                                    selecteda.applyPowers();
+                                    syntheticSockets.remove(selecteda);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        if (multipletypes) {
             ArrayList<AbstractCard> syntheticSockets = new ArrayList<>();
             syntheticSockets.addAll(qCardList);
 
@@ -50,13 +92,15 @@ public class Middens extends AbstractAwakenedCard {
                             if (!syntheticSockets.isEmpty()) {
                                 for (int i = 0; i < this.magicNumber; i++) {
                                     if (!syntheticSockets.isEmpty()) {
-                                        AbstractCard selecteda = selectedCards.get(i);
-                                        p.discardPile.removeCard(selecteda);
-                                        p.hand.addToHand(selecteda);
-                                        selecteda.lighten(false);
-                                        selecteda.unhover();
-                                        selecteda.applyPowers();
-                                        syntheticSockets.remove(selecteda);
+                                        if (p.hand.size() < BaseMod.MAX_HAND_SIZE) {
+                                            AbstractCard selecteda = selectedCards.get(i);
+                                            p.discardPile.removeCard(selecteda);
+                                            p.hand.addToHand(selecteda);
+                                            selecteda.lighten(false);
+                                            selecteda.unhover();
+                                            selecteda.applyPowers();
+                                            syntheticSockets.remove(selecteda);
+                                        }
                                     }
                                 }
                             }
@@ -64,6 +108,8 @@ public class Middens extends AbstractAwakenedCard {
                 ));
             }
         }
+
+    }
 
     @Override
     public void upp() {

@@ -37,7 +37,7 @@ public class Darkleech extends AbstractSpellCard {
             HexCurse(magicNumber, m, p);
         }
         else {
-            AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
+            //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
             AbstractDungeon.getMonsters().monsters.stream().filter(m2 -> !m2.isDead && !m2.isDying).forEach(m2 -> {
                 this.addToBot(new VFXAction(new GiantEyeEffect(m2.hb.cX, m2.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
                 HexCurse(magicNumber, m2, p);

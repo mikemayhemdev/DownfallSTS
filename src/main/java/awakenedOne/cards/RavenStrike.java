@@ -17,6 +17,7 @@ public class RavenStrike extends AbstractAwakenedCard {
     public RavenStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -30,6 +31,16 @@ public class RavenStrike extends AbstractAwakenedCard {
                 }
             }
         }
+
+//        if (upgraded) {
+//            if (!m.isDead && !m.isDying) {
+//                for (AbstractPower power : m.powers) {
+//                    if (power instanceof OnLoseEnergyPower) {
+//                        ((OnLoseEnergyPower) power).LoseEnergyAction(1);
+//                    }
+//                }
+//            }
+//        }
 
     }
 

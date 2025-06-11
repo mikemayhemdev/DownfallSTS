@@ -58,15 +58,14 @@
     "DESCRIPTION": "At the end of your turn, deal !D! damage to ALL enemies, increased by Strength."
   },
   "awakened:CawCaw": {
-    "NAME": "Magus Incantation",
-    "DESCRIPTION": "The first time you refresh your Spells each turn, gain !M! Ritual."
+    "NAME": "Fleeting Curiosity",
+    "DESCRIPTION": "Whenever you play a Power card, gain !awakened:m2! Strength. NL At the end of your turn, lose !M! Strength."
   },
   "awakened:Librarian": {
     "NAME": "The Magician",
     "DESCRIPTION": "At the start of your turn, awakened:Conjure.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, awakened:Conjure."
   },
-
   "awakened:Ceremony": {
     "NAME": "Ceremony",
     "DESCRIPTION": "Retain. NL Gain !M! Strength."
@@ -185,7 +184,7 @@
   },
   "awakened:Ensorcelate": {
     "NAME": "Ensorcelate",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure !M! times."
+    "DESCRIPTION": "Gain !B! Block. NL Choose !M! cards to awakened:Conjure."
   },
   "awakened:Primacy": {
     "NAME": "Primacy",
@@ -197,7 +196,8 @@
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
-    "DESCRIPTION": "Deal !D! damage to a random enemy 2X times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy 2X times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy 2X+2 times. NL Exhaust."
   },
   "awakened:Murder": {
     "NAME": "Murder",
@@ -219,7 +219,8 @@
   },
   "awakened:MazalethForm": {
     "NAME": "Awakened Form",
-    "DESCRIPTION": "Whenever you play a Power card, gain !awakened:m2! Strength. NL At the end of your turn, lose !M! Strength."
+    "DESCRIPTION": "Ethereal. NL Now and the first time you refresh your Spells each turn, gain !M! Ritual.",
+    "UPGRADE_DESCRIPTION": "Now and first time you refresh your Spells each turn, gain !M! Ritual."
   },
   "awakened:Planeswalk": {
     "NAME": "Planeswalk",
@@ -338,8 +339,8 @@
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",
-    "DESCRIPTION": "Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure. NL Exhaust."
+    "DESCRIPTION": "Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure it. NL Exhaust."
   },
   "awakened:Bloodthirst": {
     "NAME": "Bloodthirst",
@@ -359,7 +360,7 @@
   },
   "awakened:Deathwish": {
     "NAME": "Deathwish",
-    "DESCRIPTION": "Add *Deathcoil to the Spell Pile. NL awakened:Conjure. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add *Deathcoil to the Spell Pile. NL awakened:Conjure. NL Exhaust."
+    "DESCRIPTION": "Add *Deathcoil to the Spell Pile. NL awakened:Conjure it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add *Deathcoil to the Spell Pile. NL awakened:Conjure it. NL Exhaust."
   }
 }

@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
 
+import static champ.ChampMod.vigor;
+
 public class OnDeathEveryoneVigor extends AbstractPower {
     public static final String POWER_ID = downfallMod.makeID("OnDeathEveryoneVigor");
     public static final String NAME = CardCrawlGame.languagePack.getPowerStrings(POWER_ID).NAME;
@@ -40,7 +42,8 @@ public class OnDeathEveryoneVigor extends AbstractPower {
     @Override
     public void onDeath() {
         flash();
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, this.owner, new VigorPower(AbstractDungeon.player, amount), amount));
+        vigor(amount);
+        //addToBot(new ApplyPowerAction(AbstractDungeon.player, this.owner, new VigorPower(AbstractDungeon.player, amount), amount));
         for(AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
             if (!m.isDying && !m.isDead) {
                 addToBot(new ApplyPowerAction(m, this.owner, new MonsterVigor(m, amount), amount));

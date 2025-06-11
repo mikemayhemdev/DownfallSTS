@@ -11,9 +11,6 @@ import downfall.downfallMod;
 import hermit.characters.hermit;
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
-
-/// This relic exists to quickgrab its description, images, and texts to replace blue candle while playing evil mode, like hecktoplasm.
-/// Do not remove it. Also, it doesn't work, the real patch uses an override. But still, don't touch this.
 public class BlackCandle extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("BlackCandle");
@@ -40,17 +37,17 @@ public class BlackCandle extends CustomRelic {
         }
     }
 
-    public boolean canPlay(AbstractCard card) {
-        if (card.type == AbstractCard.CardType.CURSE) {
-            return true;
-        }else{
-            return card.canPlay(card);
-        }
-    }
+//    public boolean canPlay(AbstractCard card) {
+//        if (card.type == AbstractCard.CardType.CURSE) {
+//            return true;
+//        } else {
+//            return card.canPlay(card);
+//        }
+//    }
 
     public boolean canSpawn() {
-        return false;
-        //(evilMode || (AbstractDungeon.player instanceof hermit));
+       // return false;
+        return (evilMode || (AbstractDungeon.player instanceof hermit));
     }
 
     public AbstractRelic makeCopy() {

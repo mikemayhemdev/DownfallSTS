@@ -32,6 +32,8 @@ public class QuickStudy extends AbstractExpansionCard {
         for (AbstractCard q : CardLibrary.getAllCards()) {
             if (q.rarity != CardRarity.SPECIAL && q.hasTag(expansionContentMod.STUDY)) {
 
+                if(q.hasTag(CardTags.HEALING)){continue;}
+
                 if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                     if(q.hasTag(STUDY_SLIMEBOSS)){continue;}
                 }

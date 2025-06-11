@@ -28,7 +28,8 @@ public class AphoticFount extends AbstractAwakenedCard {
         AbstractCard card = new AphoticShield();
         spellCards.add(new OrbitingSpells.CardRenderInfo(card));
         updateTimeOffsets();
-        atb(new ConjureAction(false));
+
+        atb(new ConjureAction(false, false, true, new AphoticShield()));
     }
 
     @Override

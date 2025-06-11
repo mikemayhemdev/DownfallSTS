@@ -17,6 +17,7 @@ public class FeatherWhirl extends AbstractAwakenedCard {
         super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 2;
         this.exhaust = true;
+        baseMagicNumber = magicNumber = 0;
     }
 
  public void use(AbstractPlayer p, AbstractMonster m) {
@@ -25,11 +26,12 @@ public class FeatherWhirl extends AbstractAwakenedCard {
                this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
             }
             return true;
-        }));
+        }, magicNumber));
     }
 
 
     public void upp() {
-        upgradeDamage(2);
+        //upgradeDamage(2);
+        upgradeMagicNumber(2);
     }
 }

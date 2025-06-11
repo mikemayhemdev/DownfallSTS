@@ -25,6 +25,7 @@ public class ConjureAction extends AbstractGameAction {
     private boolean choose;
     private boolean ontop;
     private boolean bstudy;
+    AbstractCard pick;
 
     public static boolean refreshedthisturn = false;
     public static ArrayList<AbstractCard> conjuredCards = new ArrayList();
@@ -36,18 +37,21 @@ public class ConjureAction extends AbstractGameAction {
         this.choose = choose;
         ontop = false;
         bstudy = false;
+        pick = null;
     }
 
     public ConjureAction(boolean choose, boolean drawpile) {
         this.choose = choose;
         ontop = drawpile;
         bstudy = false;
+        pick = null;
     }
 
-    public ConjureAction(boolean choose, boolean drawpile, boolean starterrelic) {
+    public ConjureAction(boolean choose, boolean drawpile, boolean starterrelic, AbstractCard summon) {
         this.choose = choose;
         ontop = drawpile;
         bstudy = starterrelic;
+        pick = summon;
     }
 
     @Override
@@ -84,7 +88,7 @@ public class ConjureAction extends AbstractGameAction {
             if (!choose) {
                 AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
                 if (bstudy) {
-                    tar = new BurningStudy();
+                    tar = pick;
                 }
                 if (ontop == false) {
                     addToTop(new MakeTempCardInHandAction(tar));
@@ -102,7 +106,7 @@ public class ConjureAction extends AbstractGameAction {
                 }
                 ArrayList<AbstractCard> actualChoices = new ArrayList<>();
                 availableCards.forEach(q -> actualChoices.add(q.card.makeStatEquivalentCopy()));
-                addToTop(new SelectCardsCenteredAction(actualChoices, "Choose a Spell to add into your hand.", (cards) -> {
+                addToTop(new SelectCardsCenteredAction(actualChoices, "", (cards) -> {
                     AbstractCard q = cards.get(0);
                     addToTop(new MakeTempCardInHandAction(q));
                     addToTop(new RemoveSpellCardAction(q));

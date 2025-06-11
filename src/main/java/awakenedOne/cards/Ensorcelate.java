@@ -22,7 +22,7 @@ public class Ensorcelate extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         for (int i = 0; i < magicNumber; i++) {
-            atb(new ConjureAction(false));
+            atb(new ConjureAction(true));
         }
     }
 

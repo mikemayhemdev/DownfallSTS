@@ -147,8 +147,8 @@ public class WanderingSpecter extends AbstractImageEvent {
                                 AbstractDungeon.getCurrRoom().addRelicToRewards(new BlueCandle());
                             }
                             if (EvilModeCharacterSelect.evilMode || (AbstractDungeon.player instanceof hermit)) {
-                                AbstractDungeon.getCurrRoom().addRelicToRewards(new BlueCandle());
-                                //AbstractDungeon.getCurrRoom().addRelicToRewards(new BlackCandle());
+                               //AbstractDungeon.getCurrRoom().addRelicToRewards(new BlueCandle());
+                                AbstractDungeon.getCurrRoom().addRelicToRewards(new BlackCandle());
                             }
                             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
                             AbstractDungeon.combatRewardScreen.open();

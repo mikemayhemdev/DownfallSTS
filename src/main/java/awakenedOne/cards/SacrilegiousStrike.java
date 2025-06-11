@@ -23,6 +23,7 @@ public class SacrilegiousStrike extends AbstractAwakenedCard {
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = false;
+        tags.add(CardTags.STRIKE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

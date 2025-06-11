@@ -27,7 +27,7 @@ public class Thunderbolt extends AbstractSpellCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        if(AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)){
+        if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
             target = CardTarget.ALL_ENEMY;
         }
     }
@@ -39,7 +39,7 @@ public class Thunderbolt extends AbstractSpellCard {
             vfx(new LightningEffect(m.hb.cX, m.hb.cY));
             dmg(m, AbstractGameAction.AttackEffect.NONE);}
         else {
-            AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
+            //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
             this.addToBot(new VFXAction(new ReaperEffect()));
             this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         }

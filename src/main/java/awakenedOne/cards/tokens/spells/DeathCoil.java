@@ -27,7 +27,7 @@ public class DeathCoil extends AbstractSpellCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        if(AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)){
+        if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)){
             target = CardTarget.ALL_ENEMY;
         }
     }
@@ -41,7 +41,7 @@ public class DeathCoil extends AbstractSpellCard {
             dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
             this.addToBot(new ApplyPowerAction(m, p, new ManaburnPower(m, this.magicNumber), this.magicNumber));
         } else {
-            AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
+            //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
             this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if (!monster.isDead && !monster.isDying) {

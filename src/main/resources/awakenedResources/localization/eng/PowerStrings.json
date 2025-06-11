@@ -124,7 +124,7 @@
     ]
   },
   "awakened:DarkIncantationRitualPower": {
-    "NAME": "Magus Incantation",
+    "NAME": "Awakened Form",
     "DESCRIPTIONS": [
       "The first time you refresh your Spells each turn, gain #b",
       " #yRitual [REMOVE_SPACE]."
@@ -146,7 +146,7 @@
     ]
   },
     "awakened:ReverseRitualPower": {
-      "NAME": "Awakened Form",
+      "NAME": "Ruined Ritual",
       "DESCRIPTIONS": [
         "At the end of your turn, lose #b",
         " #yStrength [REMOVE_SPACE]."

@@ -15,7 +15,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import downfall.util.TextureLoader;
+
+import static hermit.util.Wiz.pwrAmt;
 
 public class CounterPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -83,9 +86,7 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
     public void stackPower(int stackAmount) {
         if (AbstractDungeon.player.hasRelic(PowerArmor.ID))
             if (amount + stackAmount > PowerArmor.CAP_RESOLVE_ETC) {
-                PowerArmor PowerArmorInstance = new PowerArmor();
-                PowerArmorInstance.flash();
-                addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, PowerArmorInstance));
+                ((PowerArmor)(AbstractDungeon.player.getRelic(PowerArmor.ID))).onTrigger((stackAmount - (PowerArmor.CAP_RESOLVE_ETC - amount)));
                 stackAmount = (PowerArmor.CAP_RESOLVE_ETC - amount);
             }
         super.stackPower(stackAmount);

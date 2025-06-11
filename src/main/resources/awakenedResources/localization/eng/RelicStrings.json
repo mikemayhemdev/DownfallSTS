@@ -78,7 +78,7 @@
     "NAME": "Zener Deck",
     "FLAVOR": "“One, two, three, all eyes should be on me.”",
     "DESCRIPTIONS": [
-      "At the start of combat, add #yESP to the Spell Pile."
+      "At the start of combat, add #yESP to the Spell Pile and #yawakened:Conjure it."
     ]
   },
   "awakened:CawingCask": {

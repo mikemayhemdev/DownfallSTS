@@ -65,6 +65,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
+import static hermit.util.Wiz.pwrAmt;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -566,6 +567,11 @@ public class ChampMod implements
 
 
     public static void vigor(int begone) {
+        //this breaks if the player somehow goes from 0 vigor to over 10
+        //this is possible with Gladiator Form or Masterful Slash
+        //decided to write a patch because of this
+
+        ///VigorCounterPowerArmorPatch
 
         AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
             @Override
@@ -574,10 +580,8 @@ public class ChampMod implements
                 int x = begone;
                 if (AbstractDungeon.player.hasRelic(PowerArmor.ID) && AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
                     if (x + AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount > PowerArmor.CAP_RESOLVE_ETC) {
-                        PowerArmor PowerArmorInstance = new PowerArmor();
-                        PowerArmorInstance.flash();
-                        addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, PowerArmorInstance));
                         x = PowerArmor.CAP_RESOLVE_ETC - AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
+                        ((PowerArmor)(AbstractDungeon.player.getRelic(PowerArmor.ID))).onTrigger(begone - x);
                     }
                 }
                 AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, x), x));

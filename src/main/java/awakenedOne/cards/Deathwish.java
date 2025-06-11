@@ -28,7 +28,7 @@ public class Deathwish extends AbstractAwakenedCard {
         AbstractCard card = new DeathCoil();
         spellCards.add(new OrbitingSpells.CardRenderInfo(card));
         updateTimeOffsets();
-        atb(new ConjureAction(false));
+        atb(new ConjureAction(false, false, true, new DeathCoil()));
     }
 
     public void upp() {

@@ -11,6 +11,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import hermit.powers.BigShotPower;
 
+import static champ.ChampMod.vigor;
+
 
 public class VigorPatch {
     public static int  isActive=0;
@@ -23,7 +25,6 @@ public class VigorPatch {
         public static void Prefix(GameActionManager m)
         {
             if (m.actions.isEmpty() && m.preTurnActions.isEmpty() && m.cardQueue.isEmpty() && isActive > 0) {
-
                 VigorPatch.thisRun = true;
             }
         }
@@ -38,7 +39,8 @@ public class VigorPatch {
                         AbstractPlayer p = AbstractDungeon.player;
                         AbstractPower pow = AbstractDungeon.player.getPower(BigShotPower.POWER_ID);
                         pow.flash();
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VigorPower(p, pow.amount), pow.amount));
+                        vigor(pow.amount);
+                        //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new VigorPower(p, pow.amount), pow.amount));
                     }
                     thisRun = false;
                     isActive -= 1;
