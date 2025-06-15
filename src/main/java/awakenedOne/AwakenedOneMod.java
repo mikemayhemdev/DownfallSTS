@@ -333,7 +333,6 @@ public class AwakenedOneMod implements
         ConjureAction.conjuresThisCombat = 0;
         OnLoseEnergyPowerPatch.EnergyLostThisCombat = 0;
         ConjureAction.refreshedthisturn = false;
-
     }
 
     public void onVictory() {

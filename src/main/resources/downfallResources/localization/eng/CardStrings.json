@@ -13,7 +13,7 @@
   },
   "downfall:Haunted": {
     "NAME": "Haunted",
-    "DESCRIPTION": "Ethereal. Unplayable. NL Whenever another card is *Exhausted when this is in hand, take 2 damage."
+    "DESCRIPTION": "Ethereal. Unplayable. NL Whenever another card is *Exhausted when this is in hand, take !M! damage."
   },
   "downfall:Malfunctioning": {
     "NAME": "Flawed",
