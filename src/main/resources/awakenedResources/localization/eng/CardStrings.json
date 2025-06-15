@@ -220,7 +220,7 @@
   "awakened:MazalethForm": {
     "NAME": "Awakened Form",
     "DESCRIPTION": "Ethereal. NL Now and the first time you refresh your Spells each turn, gain !M! Ritual.",
-    "UPGRADE_DESCRIPTION": "Now and first time you refresh your Spells each turn, gain !M! Ritual."
+    "UPGRADE_DESCRIPTION": "Now and the first time you refresh your Spells each turn, gain !M! Ritual."
   },
   "awakened:Planeswalk": {
     "NAME": "Planeswalk",
