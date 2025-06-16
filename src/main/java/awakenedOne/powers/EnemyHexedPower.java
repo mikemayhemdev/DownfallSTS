@@ -1,7 +1,10 @@
 package awakenedOne.powers;
 
 import awakenedOne.relics.StrengthBooster;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -38,31 +41,11 @@ public class EnemyHexedPower extends AbstractAwakenedPower {
         return damage;
     }
 
-//    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
-//        if (0 >= this.amount) {
-//            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
-//            //Hexx Bomb trigger
-//            if(AbstractDungeon.player.hasRelic(HexxBomb.ID)) {
-//                AbstractDungeon.player.getRelic(HexxBomb.ID).onTrigger();
-//            }
-//        }
-//    }
-
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL) {
             this.flashWithoutSound();
-            if (this.amount != 0) {
-//                //Hexx Bomb trigger
-//                if(AbstractDungeon.player.hasRelic(HexxBomb.ID)) {
-//                    AbstractDungeon.player.getRelic(HexxBomb.ID).onTrigger();
-//                }
-            }
             if (!owner.hasPower(SheerTerrorPower.POWER_ID)) {
-                this.amount = 0;
-                this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
-                //       if (AbstractDungeon.player.hasPower(HexMasterPower.POWER_ID)) {
-                //                HexCurse(AbstractDungeon.player.getPower(HexMasterPower.POWER_ID).amount, this.owner, AbstractDungeon.player);
-                //            }
+                addToBot(new ReducePowerAction(this.owner, this.owner, this, this.amount));
             }
         }
         return damageAmount;

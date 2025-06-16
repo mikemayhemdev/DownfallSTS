@@ -126,9 +126,9 @@
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
-    "DESCRIPTION": "Deal damage equal to your Block, twice.",
+    "DESCRIPTION": "Deal damage equal to your Block, twice. NL *Berserker champ:Combo: You can't gain Block from cards next turn.",
     "EXTENDED_DESCRIPTION": [
-      "Deal damage equal to your Block ( !D! ) twice."
+      "Deal damage equal to your Block ( !D! ) twice. NL *Berserker champ:Combo: You can't gain Block from cards next turn."
     ]
   },
   "champ:FalseCounter": {
@@ -189,7 +189,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Gain 2 Weak. NL *Berserker champ:Combo: Don't gain Weak."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL *Defensive champ:Combo: You can't play *Attacks next turn."
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",

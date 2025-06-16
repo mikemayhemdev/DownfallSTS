@@ -31,7 +31,6 @@ public class RageAmulet extends CustomRelic {
     public static final String ID = ChampMod.makeID("RageAmulet");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("CrystallizedMud.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("CrystallizedMud.png"));
-    private boolean triggeredThisTurn = false;
     int remainingVigor = 0;
     private static final int VIGREQ = 8;
     public RageAmulet() {

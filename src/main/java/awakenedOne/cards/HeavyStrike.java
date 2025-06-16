@@ -18,19 +18,16 @@ public class HeavyStrike extends AbstractAwakenedCard {
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     //carrionmaker
     public HeavyStrike() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 10;
-        this.exhaust = true;
-
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         int count = (int) AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
                 .filter(card -> card instanceof AbstractSpellCard)
                 .count();
 
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count+1; i++) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
         this.initializeDescription();

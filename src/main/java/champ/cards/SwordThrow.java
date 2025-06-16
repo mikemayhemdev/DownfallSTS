@@ -2,6 +2,7 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.EntangleNextTurnPower;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,16 +26,15 @@ public class SwordThrow extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) dmg(m, AbstractGameAction.AttackEffect.SMASH);
-        if (!bcombo()) applyToSelf(new WeakPower(p,2, false));
-       // if (bcombo()) atb(new ReducePowerAction(p,p,WeakPower.POWER_ID,2));
+        if (dcombo()) applyToSelf(new EntangleNextTurnPower(1));
     }
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = bcombo() ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        glowColor = dcombo() ? Color.RED.cpy() : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(4);
     }
 }
