@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
 import hermit.characters.hermit;
+import hermit.patches.EnumPatch;
+
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 public class BlackCandle extends CustomRelic {
@@ -30,7 +32,7 @@ public class BlackCandle extends CustomRelic {
         if (card.type == AbstractCard.CardType.CURSE) {
             if (card.cost == -2) {
                 this.flash();
-                this.addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, AbstractGameAction.AttackEffect.FIRE));
+                this.addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, EnumPatch.HERMIT_GHOSTFIRE));
                 card.exhaust = true;
                 action.exhaustCard = true;
             }

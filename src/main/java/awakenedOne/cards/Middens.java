@@ -2,6 +2,8 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import basemod.BaseMod;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,6 +12,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
 
 import java.util.ArrayList;
+import java.util.stream.Collectors;
+
+import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.att;
 
 public class Middens extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Middens.class.getSimpleName());
@@ -40,7 +46,7 @@ public class Middens extends AbstractAwakenedCard {
         }
 
         for (AbstractCard c : qCardList) {
-            if (c.name != checker.name && (c.uuid != checker.uuid)) {
+            if (c.name != checker.name) {
                 multipletypes = true;
             }
         }
@@ -48,29 +54,20 @@ public class Middens extends AbstractAwakenedCard {
 
 
         if (!multipletypes) {
-            ArrayList<AbstractCard> syntheticSockets = new ArrayList<>();
-            syntheticSockets.addAll(qCardList);
-
-            if (!syntheticSockets.isEmpty()) {
-                int vibe = magicNumber;
-                if (vibe > syntheticSockets.size()) {
-                    vibe = syntheticSockets.size();
-                    if (!syntheticSockets.isEmpty()) {
-                        for (int i = 0; i < this.magicNumber; i++) {
-                            if (!syntheticSockets.isEmpty()) {
-                                if (p.hand.size() < BaseMod.MAX_HAND_SIZE) {
-                                    AbstractCard selecteda = syntheticSockets.get((AbstractDungeon.cardRandomRng.random(syntheticSockets.size() - 1)));
-                                    p.discardPile.removeCard(selecteda);
-                                    p.hand.addToHand(selecteda);
-                                    selecteda.lighten(false);
-                                    selecteda.unhover();
-                                    selecteda.applyPowers();
-                                    syntheticSockets.remove(selecteda);
-                                }
-                            }
+            for (int i = 0; i < this.magicNumber; i++) {
+                atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        ArrayList<AbstractCard> valid = new ArrayList<>();
+                        valid.addAll(AbstractDungeon.player.drawPile.group.stream().filter(q -> q.type == CardType.STATUS).collect(Collectors.toList()));
+                        if (!valid.isEmpty()) {
+                            AbstractCard selecteda = valid.get(AbstractDungeon.cardRandomRng.random(valid.size() - 1));
+                            p.discardPile.removeCard(selecteda);
+                            p.hand.addToHand(selecteda);
                         }
                     }
-                }
+                });
             }
         }
 

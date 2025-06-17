@@ -3,6 +3,7 @@ package awakenedOne.cards;
 import automaton.actions.EasyXCostAction;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.actions.ModifyMagicAction;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ModifyBlockAction;
 import com.megacrit.cardcrawl.actions.defect.ReinforcedBodyAction;
@@ -37,7 +38,7 @@ public class ArcaneNesting extends AbstractAwakenedCard {
     @Override
     public void triggerOnCardPlayed(AbstractCard card) {
         if (card.type == CardType.POWER && AbstractDungeon.player.hand.contains(this)) {
-            this.flash();
+            flash(Color.BLUE.cpy());
             blck();
         }
     }
