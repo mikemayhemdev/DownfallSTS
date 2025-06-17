@@ -40,7 +40,7 @@ public class Middens extends AbstractAwakenedCard {
         }
 
         for (AbstractCard c : qCardList) {
-            if (c.name != checker.name) {
+            if (c.name != checker.name && (c.uuid != checker.uuid)) {
                 multipletypes = true;
             }
         }

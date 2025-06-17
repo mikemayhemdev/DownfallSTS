@@ -389,9 +389,10 @@
     "DESCRIPTIONS": [
       "BUG! You should not see this",
       "Next turn, gain #b",
-      " ",
-      ".",
-      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field."
+      " #y",
+      " [REMOVE_SPACE].",
+      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field.",
+      "finalized text should look like this: Next turn, gain #b7 #yVigor [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowStayAt1Hp": {

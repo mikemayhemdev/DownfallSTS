@@ -58,6 +58,6 @@ public class TheBrokenSeal extends CustomRelic {
     }
 
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + MAX_HP + DESCRIPTIONS[1] + STR + DESCRIPTIONS[2] + DEX + DESCRIPTIONS[3] + INTENSITY + DESCRIPTIONS[4];
+        return DESCRIPTIONS[0] + MAX_HP + DESCRIPTIONS[1] + STR + DESCRIPTIONS[2] + DESCRIPTIONS[3] + DESCRIPTIONS[4];
     }
 }

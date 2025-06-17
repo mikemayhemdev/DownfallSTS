@@ -48,9 +48,9 @@ public class TheNestAwakened extends AbstractImageEvent {
         }
 
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.35F);
-        } else {
             this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.25F);
+        } else {
+            this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.20F);
         }
 
         this.imageEventText.setDialogOption(OPTIONS[3] + hpAmt + OPTIONS[4], new EyeOfTheOccult());

@@ -15,7 +15,7 @@ public class StrengthBooster extends CustomRelic {
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("StrengthBooster.png"));
 
     public StrengthBooster() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.FLAT);
     }
 
     //Paper Crow / Paper Krow
