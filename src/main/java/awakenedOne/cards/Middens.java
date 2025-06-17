@@ -61,7 +61,7 @@ public class Middens extends AbstractAwakenedCard {
                         isDone = true;
                         ArrayList<AbstractCard> valid = new ArrayList<>();
                         valid.addAll(AbstractDungeon.player.drawPile.group.stream().filter(q -> q.type == CardType.STATUS).collect(Collectors.toList()));
-                        if (!valid.isEmpty()) {
+                        if (!valid.isEmpty() && (p.hand.size() < BaseMod.MAX_HAND_SIZE)) {
                             AbstractCard selecteda = valid.get(AbstractDungeon.cardRandomRng.random(valid.size() - 1));
                             p.discardPile.removeCard(selecteda);
                             p.hand.addToHand(selecteda);
