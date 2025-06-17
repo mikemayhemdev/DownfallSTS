@@ -158,7 +158,7 @@
   },
   "awakened:Vision": {
     "NAME": "Vision",
-    "DESCRIPTION": "Choose a card in hand. Add a copy of that card to the Spell Pile until it is refreshed.",
+    "DESCRIPTION": "Choose a card in hand. Add !M! copy of that card to the Spell Pile until it is refreshed.",
     "UPGRADE_DESCRIPTION": "Choose a card in hand. Add !M! copies of that card to the Spell Pile until it is refreshed."
   },
   "awakened:RavenStrike": {

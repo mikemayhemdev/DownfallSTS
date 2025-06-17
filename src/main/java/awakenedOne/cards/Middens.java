@@ -51,8 +51,6 @@ public class Middens extends AbstractAwakenedCard {
             }
         }
 
-
-
         if (!multipletypes) {
             for (int i = 0; i < this.magicNumber; i++) {
                 atb(new AbstractGameAction() {
@@ -60,11 +58,10 @@ public class Middens extends AbstractAwakenedCard {
                     public void update() {
                         isDone = true;
                         ArrayList<AbstractCard> valid = new ArrayList<>();
-                        valid.addAll(AbstractDungeon.player.drawPile.group.stream().filter(q -> q.type == CardType.STATUS).collect(Collectors.toList()));
+                        valid.addAll(AbstractDungeon.player.discardPile.group.stream().filter(q -> q.type == CardType.STATUS).collect(Collectors.toList()));
                         if (!valid.isEmpty() && (p.hand.size() < BaseMod.MAX_HAND_SIZE)) {
-                            AbstractCard selecteda = valid.get(AbstractDungeon.cardRandomRng.random(valid.size() - 1));
-                            p.discardPile.removeCard(selecteda);
-                            p.hand.addToHand(selecteda);
+                            p.discardPile.removeCard(valid.get(0));
+                            p.hand.addToHand((valid.get(0)));
                         }
                     }
                 });
