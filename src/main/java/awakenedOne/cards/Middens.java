@@ -62,6 +62,7 @@ public class Middens extends AbstractAwakenedCard {
                         if (!valid.isEmpty() && (p.hand.size() < BaseMod.MAX_HAND_SIZE)) {
                             p.discardPile.removeCard(valid.get(0));
                             p.hand.addToHand((valid.get(0)));
+                            valid.remove(0);
                         }
                     }
                 });

@@ -1,6 +1,7 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.spells.ESPSpell;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
@@ -8,6 +9,7 @@ import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
 
 import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.util.Wiz.att;
 
 public class ZenerDeck extends CustomRelic {
 
@@ -20,6 +22,12 @@ public class ZenerDeck extends CustomRelic {
     public ZenerDeck() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
         this.tips.add(new CardPowerTip(new ESPSpell()));
+    }
+
+    @Override
+    public void atBattleStart() {
+        flash();
+        att(new ConjureAction(false, false, true, new ESPSpell()));
     }
 
     @Override
