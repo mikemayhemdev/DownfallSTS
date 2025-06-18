@@ -122,8 +122,9 @@
     "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Gain [E]."
   },
   "awakened:LastDitchEffort": {
-    "NAME": "Singularity",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! awakened:Hex."
+    "NAME": "Swoop",
+    "DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile."
   },
   "awakened:Reviscerate": {
     "NAME": "Reviscerate",
@@ -267,7 +268,7 @@
     "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Next turn, lose [E]. NL Exhaust."
   },
   "awakened:SingularityShield": {
-    "NAME": "Swoop",
+    "NAME": "Singularity Shield",
     "DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile."
   },

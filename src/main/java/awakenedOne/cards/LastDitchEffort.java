@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+import com.megacrit.cardcrawl.powers.ReboundPower;
 
 import static awakenedOne.util.Wiz.applyToSelf;
 
@@ -17,20 +18,18 @@ public class LastDitchEffort extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public LastDitchEffort() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        baseBlock = 7;
-        this.baseMagicNumber = 1;
-        this.magicNumber = this.baseMagicNumber;
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 5;
     }
+
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-
+        this.addToBot(new ApplyPowerAction(p, p, new ReboundPower(p), 1));
     }
 
     @Override
     public void upp() {
-        upgradeBlock(2);
-        upgradeMagicNumber(1);
+        upgradeBlock(3);
     }
 }
