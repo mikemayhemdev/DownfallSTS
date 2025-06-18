@@ -1,12 +1,19 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.powers.FlarePower;
+import awakenedOne.powers.NextPowerBlockPower;
+import awakenedOne.powers.VoidRefundPower;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.actions.HandSelectAction;
+import hermit.util.Wiz;
 
-import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.applyToSelf;
 
 public class Pluck extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Pluck.class.getSimpleName());
@@ -14,18 +21,18 @@ public class Pluck extends AbstractAwakenedCard {
 
     public Pluck() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 1;
-        this.baseMagicNumber = 2;
-        this.magicNumber = this.baseMagicNumber;
+        baseDamage = 9;
+        this.baseMagicNumber = this.magicNumber = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        atb(new DrawCardAction(p, this.magicNumber));
+        applyToSelf(new NextPowerBlockPower(this.magicNumber));
     }
 
     @Override
     public void upp() {
+        upgradeDamage(1);
         upgradeMagicNumber(1);
     }
 }

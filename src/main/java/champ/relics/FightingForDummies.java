@@ -29,7 +29,8 @@ public class FightingForDummies extends CustomRelic {
 
     @Override
     public void onPlayerEndTurn() {
-        if (AbstractDungeon.player.stance instanceof NeutralStance){
+        if (AbstractDungeon.player.stance instanceof NeutralStance) {
+            this.flash();
             addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, 1), 1));
         }
     }

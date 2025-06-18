@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.HexCurse;
+import static awakenedOne.util.Wiz.atb;
 
 public class ForTheHexAction extends AbstractGameAction {
     private AbstractMonster m;
@@ -17,7 +18,8 @@ public class ForTheHexAction extends AbstractGameAction {
 
     public void update() {
         if (this.m != null && this.m.getIntentBaseDmg() >= 0) {
-            HexCurse(amount, m, AbstractDungeon.player);
+            //HexCurse(amount, m, AbstractDungeon.player);
+            atb(new ConjureAction(false));
         }
         this.isDone = true;
     }

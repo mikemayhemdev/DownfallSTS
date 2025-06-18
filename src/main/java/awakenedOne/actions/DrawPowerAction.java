@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import hermit.actions.ReduceCostActionFixed;
 
 import java.util.Iterator;
 
@@ -60,6 +61,7 @@ public class DrawPowerAction extends AbstractGameAction{
                         p.drawPile.group.remove(card);
                         p.drawPile.addToTop(card);
                         this.addToBot(new DrawCardAction(1));
+                        this.addToBot(new ReduceCostActionFixed(card.uuid, -1));
                     }
                 }
             }

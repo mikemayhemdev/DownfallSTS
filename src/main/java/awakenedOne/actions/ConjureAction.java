@@ -3,6 +3,7 @@ package awakenedOne.actions;
 import awakenedOne.cards.tokens.spells.BurningStudy;
 import awakenedOne.powers.DarkIncantationRitualPower;
 import awakenedOne.powers.FeathersinksPower;
+import awakenedOne.powers.RisingChantPower;
 import awakenedOne.ui.OrbitingSpells;
 import awakenedOne.util.Wiz;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
@@ -66,13 +67,14 @@ public class ConjureAction extends AbstractGameAction {
                     if ((OrbitingSpells.spellCards.isEmpty())) {
                         awaken(5);
                         OrbitingSpells.refreshSpells();
+
                         for (OrbitingSpells.CardRenderInfo c : OrbitingSpells.spellCards) {
                             c.card.upgrade();
                         }
+
                         if (AbstractDungeon.player.hasPower(DarkIncantationRitualPower.POWER_ID) && refreshedthisturn == false) {
-                            for (int i = 0; i < AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount; i++) {
-                                applyToSelf(new RitualPower(AbstractDungeon.player, 1, true));
-                            }
+                            applyToSelf(new RitualPower(AbstractDungeon.player, AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount, true));
+                            AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).onSpecificTrigger();
                         }
 
                         //On Refresh...

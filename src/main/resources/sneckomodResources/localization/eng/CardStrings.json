@@ -147,8 +147,8 @@
   },
   "sneckomod:OverwhelmingPresence": {
     "NAME": "Overwhelming",
-    "DESCRIPTION": "The first time you play an sneckomod:Offclass card each turn, draw a card next turn.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you play an sneckomod:Offclass card each turn, draw a card next turn."
+    "DESCRIPTION": "Ethereal. NL The first time you play an sneckomod:Offclass card each turn, draw an additional card next turn.",
+    "UPGRADE_DESCRIPTION": "The first time you play an sneckomod:Offclass card each turn, draw an additional card next turn."
   },
   "sneckomod:RiskySword": {
     "NAME": "Risky Sword",

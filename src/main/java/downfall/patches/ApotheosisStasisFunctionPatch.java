@@ -1,6 +1,7 @@
 package downfall.patches;
 
 import automaton.FunctionHelper;
+import awakenedOne.ui.OrbitingSpells;
 import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
@@ -36,6 +37,7 @@ public class ApotheosisStasisFunctionPatch {
                     }
                     FunctionHelper.genPreview();
                 }
+                OrbitingSpells.upgradeall();
             }
         }
     }

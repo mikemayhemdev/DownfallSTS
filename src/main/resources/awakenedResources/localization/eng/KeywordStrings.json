@@ -19,7 +19,7 @@
     "NAMES": [
       "chant"
     ],
-    "DESCRIPTION": "Chant effects activate during play if you played a Power while this card was in hand."
+    "DESCRIPTION": "Chant effects activate if the last card you played in combat was a Power card."
   },
 
   {

@@ -13,7 +13,6 @@ import gremlin.powers.EncorePower;
 import gremlin.powers.WizPower;
 
 import static gremlin.GremlinMod.WIZARD_GREMLIN;
-import static hermit.util.Wiz.removePower;
 
 public class Encore extends AbstractGremlinCard {
     public static final String ID = getID("Encore");

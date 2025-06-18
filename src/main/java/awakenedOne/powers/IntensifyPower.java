@@ -15,7 +15,7 @@ public class IntensifyPower extends AbstractAwakenedPower {
     public static final String POWER_ID = makeID(NAME);
 
     public IntensifyPower(int amount) {
-        super(NAME, PowerType.BUFF, true, AbstractDungeon.player, null, amount);
+        super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {

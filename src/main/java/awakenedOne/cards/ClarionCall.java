@@ -2,6 +2,8 @@ package awakenedOne.cards;
 
 import automaton.cards.goodstatus.IntoTheVoid;
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.powers.IntensifyPower;
+import awakenedOne.powers.VoidRefundPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
@@ -25,46 +27,11 @@ public class ClarionCall extends AbstractAwakenedCard {
     public ClarionCall() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 5;
-        cardsToPreview = new VoidCard();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        if (checkVoid()) {
-            this.addToTop(new DrawCardAction(AbstractDungeon.player, 1));
-            this.addToTop(new GainEnergyAction(1));
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    ArrayList<AbstractCard> valid = new ArrayList<>();
-                    valid.addAll(AbstractDungeon.player.hand.group.stream().filter(q -> q instanceof VoidCard).collect(Collectors.toList()));
-                    if (!valid.isEmpty()) {
-                        att(new ExhaustSpecificCardAction(valid.get(AbstractDungeon.cardRandomRng.random(valid.size()-1)), AbstractDungeon.player.hand));
-                    }
-                }
-            });
-        }
-    }
-
-
-    public static boolean checkVoid() {
-        boolean hasVoid = false;
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c instanceof VoidCard || c instanceof IntoTheVoid) {
-                hasVoid = true;
-            }
-        }
-        return hasVoid;
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        if (checkVoid()) {
-            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        } else {
-            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        }
+        applyToSelf(new VoidRefundPower(p, 1));
     }
 
     @Override

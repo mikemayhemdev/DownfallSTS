@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ForTheHexAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,9 +18,9 @@ public class MagicStrike extends AbstractAwakenedCard {
 
     public MagicStrike() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 4;
+        baseDamage = 3;
         tags.add(CardTags.STRIKE);
-        baseMagicNumber = magicNumber = 1;
+        this.tags.add(AwakenedOneMod.DELVE);
        // baseSecondMagic = secondMagic = 1;
     }
 
@@ -44,7 +45,6 @@ public class MagicStrike extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(1);
+        upgradeDamage(3);
     }
 }

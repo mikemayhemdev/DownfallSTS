@@ -61,7 +61,7 @@
 },
 "hermit:Drained": {
         "NAME": "Drained",
-        "DESCRIPTIONS": ["Gain #b", " less Energy next turn."]
+        "DESCRIPTIONS": ["Gain #b", " less [E] next turn."]
 },
 "hermit:DeterminationPower": {
         "NAME": "Determination",

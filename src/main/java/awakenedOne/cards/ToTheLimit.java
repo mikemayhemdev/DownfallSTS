@@ -21,11 +21,11 @@ public class ToTheLimit extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (this.chant) {
+        if (isChantActive(this)) {
             chant();
         }
 
-        if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!isChantActive(this)) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);
@@ -40,7 +40,7 @@ public class ToTheLimit extends AbstractAwakenedCard {
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        this.glowColor = isChantActive(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {

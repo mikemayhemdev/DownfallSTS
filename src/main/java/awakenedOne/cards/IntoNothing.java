@@ -2,8 +2,10 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.relics.KTRibbon;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -12,6 +14,7 @@ import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.*;
 
 public class IntoNothing extends AbstractAwakenedCard {
@@ -27,19 +30,26 @@ public class IntoNothing extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         HexCurse(magicNumber, m, p);
-       // atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
-//        blck();
-//        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-//            if ((!monster.isDead) && (!monster.isDying)) {
-//                HexCurse(magicNumber, monster, p);
-//                applyToEnemy(monster, new WeakPower(monster, magicNumber, false));
-//            }
-//        }
+        if (isChantActive(this)) {
+            chant();
+        }
+
+        if ((!isChantActive(this)) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
+                chant();
+                awaken(1);
+            }
+        }
+
+    }
+
+    @Override
+    public void chant() {
         atb(new ConjureAction(false));
+        checkOnChant();
     }
 
     public void upp() {
-        upgradeBlock(2);
         upgradeMagicNumber(1);
     }
 }

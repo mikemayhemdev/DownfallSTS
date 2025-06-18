@@ -11,7 +11,7 @@ public class SheerTerrorPower extends AbstractAwakenedPower {
     public static final String POWER_ID = makeID(NAME);
 
     public SheerTerrorPower(AbstractCreature owner, int amount) {
-        super(NAME, PowerType.DEBUFF, false, owner, null, amount);
+        super(NAME, PowerType.DEBUFF, true, owner, null, amount);
 
         if (this.amount <= 0) {
             this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));

@@ -6,6 +6,7 @@ import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
@@ -46,7 +47,15 @@ public class AbyssBlade extends CustomRelic implements OnLoseEnergyRelic {
             flash();
             stopPulse();
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToBot(new GainEnergyAction(1));
+
+            if (!AbstractDungeon.actionManager.turnHasEnded) {
+                addToTop(new GainEnergyAction(1));
+            }
+
+            if (AbstractDungeon.actionManager.turnHasEnded) {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnergizedBluePower(AbstractDungeon.player, 1)));
+            }
+
             addToBot(new DrawCardAction(AbstractDungeon.player, 1));
             this.counter = 1;
         }

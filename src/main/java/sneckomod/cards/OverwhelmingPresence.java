@@ -10,10 +10,10 @@ public class OverwhelmingPresence extends AbstractSneckoCard {
     public final static String ID = makeID("OverwhelmingPresence");
 
     public OverwhelmingPresence() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         //baseMagicNumber = magicNumber = 1;
         SneckoMod.loadJokeCardImage(this, "OverwhelmingPresence.png");
-        this.isInnate = false;
+        this.isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -23,7 +23,9 @@ public class OverwhelmingPresence extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            this.isEthereal = false;
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

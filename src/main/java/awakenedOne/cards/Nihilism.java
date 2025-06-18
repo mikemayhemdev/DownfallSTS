@@ -1,53 +1,43 @@
 package awakenedOne.cards;
 
-import automaton.cards.goodstatus.IntoTheVoid;
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-
-import static awakenedOne.util.Wiz.applyToSelf;
+import hermit.actions.HandSelectAction;
+import hermit.util.Wiz;
 
 public class Nihilism extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Nihilism.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
+    public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
     public Nihilism() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
-        this.baseMagicNumber = 2;
-        this.magicNumber = this.baseMagicNumber;
-        cardsToPreview = new VoidCard();
+        baseDamage = 6;
+        this.baseMagicNumber = this.magicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        if (checkVoid()) {
-        applyToSelf(new StrengthPower(p, magicNumber));
-    }
-    }
-    public static boolean checkVoid() {
-        boolean hasVoid = false;
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c instanceof VoidCard || c instanceof IntoTheVoid) {
-                hasVoid = true;
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
+        Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {
+            for (AbstractCard c : list)
+            {
+                Wiz.att(new ExhaustSpecificCardAction(c,Wiz.p().hand));
+                if (c.type == CardType.POWER) {
+                    Wiz.atb(new DrawCardAction(magicNumber));
+                }
+
             }
-        }
-        return hasVoid;
+            list.clear();
+        }, null, uiStrings.TEXT[0],false,false,false));
     }
 
-    @Override
-    public void triggerOnGlowCheck() {
-        if (checkVoid()) {
-            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        } else {
-            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        }
-    }
 
     @Override
     public void upp() {

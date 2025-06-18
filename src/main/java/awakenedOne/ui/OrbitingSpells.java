@@ -57,6 +57,12 @@ public class OrbitingSpells {
 
     }
 
+    public static void upgradeall() {
+        for (CardRenderInfo c : spellCards) {
+            c.card.upgrade();
+        }
+    }
+
     public static void empty() {
         spellCards.clear();
         update();

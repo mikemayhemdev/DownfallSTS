@@ -1,11 +1,13 @@
 package awakenedOne.cards;
 
 import awakenedOne.powers.SheerTerrorPower;
+import awakenedOne.relics.KTRibbon;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,6 +18,8 @@ import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 
 import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.ui.AwakenButton.awaken;
+import static awakenedOne.util.Wiz.atb;
 
 public class SheerTerror extends AbstractAwakenedCard {
     public final static String ID = makeID(SheerTerror.class.getSimpleName());
@@ -23,7 +27,7 @@ public class SheerTerror extends AbstractAwakenedCard {
 
     public SheerTerror() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         //this.exhaust = true;
     }
@@ -35,9 +39,31 @@ public class SheerTerror extends AbstractAwakenedCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(0.3F, 0.2F, 0.4F, 1.0F), ShockWaveEffect.ShockWaveType.CHAOTIC), 1.0F));
 
             HexCurse(magicNumber, m, p);
-            this.addToBot(new ApplyPowerAction(m, p, new SheerTerrorPower(m, 1), 1, true, AbstractGameAction.AttackEffect.POISON));
 
+
+        if (isChantActive(this)) {
+            this.addToBot(new ApplyPowerAction(m, p, new SheerTerrorPower(m, 1), 1, true, AbstractGameAction.AttackEffect.POISON));
+            chant();
+        }
+
+        if ((!isChantActive(this)) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
+                this.addToBot(new ApplyPowerAction(m, p, new SheerTerrorPower(m, 1), 1, true, AbstractGameAction.AttackEffect.POISON));
+                chant();
+                awaken(1);
+            }
+        }
     }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = isChantActive(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
+    @Override
+    public void chant() {
+        checkOnChant();
+    }
+
 
     public void upp() {
         //upgradeMagicNumber(1);

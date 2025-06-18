@@ -17,9 +17,8 @@
   "awakened:RisingChantPower": {
     "NAME": "Rising Chant",
     "DESCRIPTIONS": [
-      "Whenever you activate a #yChant effect, draw #b",
-      " card next turn.",
-      " cards next turn."
+      "Whenever you activate a #yChant effect, gain #b",
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "awakened:ThaumaturgyPower": {
@@ -27,6 +26,21 @@
     "DESCRIPTIONS": [
       "Whenever you gain #yStrength [REMOVE_SPACE], gain #b",
       " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:RageExhaustPower": {
+    "NAME": "Mystic Order",
+    "DESCRIPTIONS": [
+      "Whenever you #yExhaust a card this turn, gain #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:NextPowerBlockPower": {
+    "NAME": "Divination",
+    "DESCRIPTIONS": [
+      "The next time you play a #yPower card, draw #b",
+      " card.",
+      " cards."
     ]
   },
   "awakened:SacramentPower": {
@@ -82,8 +96,9 @@
   "awakened:EmpressPower": {
     "NAME": "The Empress",
     "DESCRIPTIONS": [
-      "Whenever you play a Spell, gain #b",
-      " temporary #yStrength [REMOVE_SPACE]."
+      "Whenever you play a Spell, draw an additional card next turn.",
+      "Whenever you play a Spell, draw #b",
+      " additional cards next turn."
     ]
   },
   "awakened:InvasionPower": {
@@ -98,7 +113,7 @@
   "awakened:SongOfSorrowPower": {
     "NAME": "Song of Sorrow",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust a card, apply #b",
+      "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], apply #b",
       " #yManaburn to ALL enemies."
     ]
   },
@@ -136,6 +151,23 @@
       "Whenever you are #yDrained [REMOVE_SPACE], gain #b",
       " #yBlock and #b",
       " #yStrength [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:VoidRefundPower": {
+    "NAME": "Clarion Call",
+    "DESCRIPTIONS": [
+      "The next time you are #yDrained [REMOVE_SPACE], gain [E] and draw a card.",
+      "The next time you are #yDrained [REMOVE_SPACE], gain #b",
+      " [E] and draw #b",
+      " cards."
+    ]
+  },
+  "awakened:EntanglePowersPower": {
+    "NAME": "Sacrilege",
+    "DESCRIPTIONS": [
+      "You cannot play #yPower cards this turn.",
+      "You cannot play #yPower cards for the next #b",
+      " turns."
     ]
   },
   "awakened:NihilPower": {

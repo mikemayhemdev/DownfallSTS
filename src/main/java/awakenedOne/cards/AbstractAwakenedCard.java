@@ -7,6 +7,7 @@ import awakenedOne.relics.CursedBlessing;
 import awakenedOne.relics.KTRibbon;
 import awakenedOne.util.CardArtRoller;
 import basemod.abstracts.CustomCard;
+import champ.powers.DancingMasterPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
@@ -48,7 +49,6 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     public int baseSecondDamage = -1;
     public boolean upgradedSecondDamage;
     public boolean isSecondDamageModified;
-    public boolean chant = false;
 
     public AbstractAwakenedCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, AwakenedOneChar.Enums.AWAKENED_BLUE);
@@ -213,18 +213,23 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     public void chant() {
     }
 
-    public void triggerWhenDrawn() {
-        this.chant = false;
+//    public void triggerWhenDrawn() {
+//        this.chant = false;
+//    }
+
+
+    public boolean isChantActive(AbstractCard source) {
+        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1)).type == CardType.POWER) {
+            return true;
+        } else {
+            return false;
+        }
     }
 
-    public void triggerOnCardPlayed(AbstractCard card) {
-        if (card.type == CardType.POWER && AbstractDungeon.player.hand.contains((AbstractCard)this))
-            this.chant = true;
-    }
 
-    public void onMoveToDiscard() {
-        this.chant = false;
-    }
+//    public void onMoveToDiscard() {
+//        this.chant = false;
+//    }
 
     //
 
@@ -235,7 +240,8 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     //Whenever a Chant effect activates, do this!!!
     public static void checkOnChant() {
         if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
-            applyToSelf(new DrawCardNextTurnPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
+            applyToSelf(new StrengthPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
+            AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
         }
 
         if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {

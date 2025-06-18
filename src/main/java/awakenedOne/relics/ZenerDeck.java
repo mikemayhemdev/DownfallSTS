@@ -7,9 +7,11 @@ import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.att;
+import static awakenedOne.util.Wiz.atb;
 
 public class ZenerDeck extends CustomRelic {
 
@@ -26,8 +28,8 @@ public class ZenerDeck extends CustomRelic {
 
     @Override
     public void atBattleStart() {
-        flash();
-        att(new ConjureAction(false, false, true, new ESPSpell()));
+        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        atb(new ConjureAction(false, false, true, new ESPSpell()));
     }
 
     @Override

@@ -1,6 +1,7 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -16,41 +17,20 @@ public class LastDitchEffort extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public LastDitchEffort() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 7;
-        this.baseMagicNumber = 2;
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        baseBlock = 6;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        cardsToPreview = new VoidCard();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        if (checkVoid()) {
-            applyToSelf(new DrawCardNextTurnPower(p, magicNumber));
-        }
-    }
 
-    public static boolean checkVoid() {
-        boolean hasVoid = false;
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c instanceof VoidCard) {
-                hasVoid = true;
-            }
-        }
-        return hasVoid;
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        if (checkVoid()) {
-            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-        } else {
-            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-        }
     }
 
     @Override
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
+        upgradeMagicNumber(1);
     }
 }

@@ -1,11 +1,16 @@
 package awakenedOne.cards;
 
+import awakenedOne.patches.OnLoseEnergyPowerPatch;
 import awakenedOne.powers.ManaburnPower;
 import awakenedOne.powers.OnLoseEnergyPower;
+import awakenedOne.relics.OnLoseEnergyRelic;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.isInCombat;
@@ -16,54 +21,44 @@ public class RavenStrike extends AbstractAwakenedCard {
 
     public RavenStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 7;
         tags.add(CardTags.STRIKE);
+        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        //this.addToBot(new BetterDiscardPileToHandAction(1));
 
-        if (!m.isDead && !m.isDying) {
-            for (AbstractPower power : m.powers) {
-                if (power instanceof OnLoseEnergyPower) {
-                    ((OnLoseEnergyPower) power).LoseEnergyAction(1);
+        if (this.costForTurn > 0 && !this.freeToPlay() && !this.freeToPlayOnce) {
+            OnLoseEnergyPowerPatch.EnergyLostThisCombat = OnLoseEnergyPowerPatch.EnergyLostThisCombat + this.costForTurn;
+
+            for (AbstractPower playerPower : AbstractDungeon.player.powers) {
+                if (playerPower instanceof OnLoseEnergyPower) {
+                    ((OnLoseEnergyPower) playerPower).LoseEnergyAction(this.costForTurn);
                 }
             }
-        }
 
-//        if (upgraded) {
-//            if (!m.isDead && !m.isDying) {
-//                for (AbstractPower power : m.powers) {
-//                    if (power instanceof OnLoseEnergyPower) {
-//                        ((OnLoseEnergyPower) power).LoseEnergyAction(1);
-//                    }
-//                }
-//            }
-//        }
+            for (AbstractRelic relic : AbstractDungeon.player.relics) {
+                if (relic instanceof OnLoseEnergyRelic) {
+                    ((OnLoseEnergyRelic) relic).LoseEnergyAction(this.costForTurn);
+                }
+            }
 
-    }
-
-    @Override
-    public void triggerOnGlowCheck() {
-        boolean hasStr = false;
-        if (isInCombat()) {
-            for (AbstractMonster m : monsterList()) {
-                if (m.hasPower(ManaburnPower.POWER_ID)) {
-                    if (m.getPower(ManaburnPower.POWER_ID).amount > 0) {
-                        hasStr = true;
-                        break;
+            for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
+                if (!m2.isDead && !m2.isDying) {
+                    for (AbstractPower power : m2.powers) {
+                        if (power instanceof OnLoseEnergyPower) {
+                            ((OnLoseEnergyPower) power).LoseEnergyAction(this.costForTurn);
+                        }
                     }
                 }
             }
-
-            glowColor = (hasStr) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
         }
     }
 
 
     @Override
     public void upp() {
-        upgradeDamage(3);
+        this.exhaust = false;
     }
 }

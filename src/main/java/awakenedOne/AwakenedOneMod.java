@@ -9,6 +9,7 @@ import awakenedOne.cards.cardvars.ThirdMagicNumber;
 import awakenedOne.events.BackToBasicsAwakened;
 import awakenedOne.events.TheNestAwakened;
 import awakenedOne.events.WingStatueAwakened;
+import awakenedOne.patches.OnCreateCardSubscriber;
 import awakenedOne.patches.OnLoseEnergyPowerPatch;
 import awakenedOne.potions.CultistsDelight;
 import awakenedOne.potions.SacramentalWine;
@@ -332,6 +333,7 @@ public class AwakenedOneMod implements
         OrbitingSpells.atBattleStart();
         ConjureAction.conjuresThisCombat = 0;
         OnLoseEnergyPowerPatch.EnergyLostThisCombat = 0;
+        OnCreateCardSubscriber.CardsCreatedThisCombat = 0;
         ConjureAction.refreshedthisturn = false;
     }
 

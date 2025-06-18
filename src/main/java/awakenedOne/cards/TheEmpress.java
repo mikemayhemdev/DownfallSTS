@@ -12,16 +12,15 @@ public class TheEmpress extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public TheEmpress() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-            applyToSelfTop(new EmpressPower(p, magicNumber));
+            applyToSelfTop(new EmpressPower(p, 1));
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeBaseCost(1);
     }
 }

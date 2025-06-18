@@ -16,8 +16,8 @@ public class Manastorm extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public Manastorm() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 4;
+        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        baseDamage = 10;
         this.tags.add(AwakenedOneMod.DELVE);
     }
 
@@ -34,6 +34,6 @@ public class Manastorm extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(4);
     }
 }

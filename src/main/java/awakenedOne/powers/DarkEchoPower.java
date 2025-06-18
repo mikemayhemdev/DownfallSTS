@@ -41,7 +41,6 @@ public class DarkEchoPower extends TwoAmountPower implements OnPowersModifiedSub
             this.amount2 = 4 + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
         else this.amount2 = 4;
         this.type = PowerType.BUFF;
-        this.isTurnBased = true;
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
 

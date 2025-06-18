@@ -18,18 +18,18 @@ public class Victuals extends AbstractAwakenedCard {
 
     public Victuals() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 8;
+        baseBlock = 9;
         magicNumber = baseMagicNumber = 2;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
 
-        if (this.chant) {
+        if (isChantActive(this)) {
             chant();
         }
 
-        if ((!this.chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!isChantActive(this)) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);
@@ -46,7 +46,7 @@ public class Victuals extends AbstractAwakenedCard {
 
 
     public void triggerOnGlowCheck() {
-        this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        this.glowColor = isChantActive(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     @Override

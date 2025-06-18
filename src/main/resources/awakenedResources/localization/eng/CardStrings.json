@@ -13,7 +13,7 @@
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
-    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Next turn, gain [E]. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Gain [E]. NL Exhaust."
   },
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
@@ -39,11 +39,12 @@
   },
   "awakened:MagicStrike": {
     "NAME": "Magic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, apply !M! awakened:Hex."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, awakened:Conjure."
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL This turn, your next Spell is played twice."
+    "DESCRIPTION": "awakened:Conjure. NL This turn, your next Spell is played twice.",
+    "UPGRADE_DESCRIPTION": "awakened:Conjure. NL This turn, your next !M! Spells are played twice."
   },
   "awakened:QuickMove": {
     "NAME": "Peck",
@@ -72,8 +73,7 @@
   },
   "awakened:TalonRake": {
     "NAME": "Talon Rake",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure."
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
@@ -102,11 +102,12 @@
   },
   "awakened:Extension": {
     "NAME": "Extension",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a Power from your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Draw a Power card from your draw pile. NL It costs 1 less this combat."
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL The next time you play a Power card, draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you play a Power card, draw !M! cards."
   },
   "awakened:FlareShot": {
     "NAME": "Flare Shot",
@@ -114,24 +115,24 @@
   },
   "awakened:ClarionCall": {
     "NAME": "Clarion Call",
-    "DESCRIPTION": "Deal !D! damage. NL If a *Void is in hand, gain [E] and draw a card, then Exhaust it."
+    "DESCRIPTION": "Deal !D! damage. NL The next time you are awakened:Drained, gain [E] and draw a card."
   },
   "awakened:Recitation": {
     "NAME": "Recitation",
-    "DESCRIPTION": "Deal !D! damage. NL If the last card you played was a Power, gain [E]."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Gain [E]."
   },
   "awakened:LastDitchEffort": {
-    "NAME": "Last Ditch Effort",
-    "DESCRIPTION": "Gain !B! Block. NL If a *Void is in hand, draw !M! additional cards next turn."
+    "NAME": "Swoop",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! awakened:Hex."
   },
   "awakened:Reviscerate": {
     "NAME": "Reviscerate",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less for each Power played this turn."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less [E] for each Power card played this turn."
   },
   "awakened:DrawingDead": {
     "NAME": "Altar",
-    "DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power card while this is in hand, awakened:Conjure.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL When drawn and whenever you play a Power card while this is in hand, awakened:Conjure.",
+    "DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power card while this is in hand, draw !M! card next turn.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power card while this is in hand, draw !M! cards next turn.",
     "EXTENDED_DESCRIPTION": [
       "I must play Power cards to use this card."
     ]
@@ -163,7 +164,8 @@
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy has awakened:Manaburn, trigger it."
+    "DESCRIPTION": "Deal !D! damage. NL Playing this card counts as losing equivalent [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Playing this card counts as losing equivalent [E]."
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
@@ -192,7 +194,7 @@
   },
   "awakened:RisingChant": {
     "NAME": "Rising Chant",
-    "DESCRIPTION": "Whenever you activate a awakened:Chant effect, draw an additional card next turn."
+    "DESCRIPTION": "Whenever you activate a awakened:Chant effect, gain !M! Strength."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
@@ -211,7 +213,7 @@
   },
   "awakened:TheEmpress": {
     "NAME": "The Empress",
-    "DESCRIPTION": "Whenever you play a Spell, gain !M! temporary Strength."
+    "DESCRIPTION": "Whenever you play a Spell, draw an additional card next turn."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
@@ -228,7 +230,7 @@
   },
   "awakened:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if a *Void is in hand."
+    "DESCRIPTION": "Deal !D! damage. NL Deals double damage if a *Void is in hand."
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
@@ -249,7 +251,7 @@
   },
   "awakened:IntoNothing": {
     "NAME": "From the Abyss",
-    "DESCRIPTION": "Apply !M! awakened:Hex. NL awakened:Conjure."
+    "DESCRIPTION": "Apply !M! awakened:Hex. NL awakened:Chant: awakened:Conjure."
   },
   "awakened:HeavyStrike": {
     "NAME": "Carrionmaker",
@@ -266,7 +268,7 @@
   },
   "awakened:SingularityShield": {
     "NAME": "Singularity Shield",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Apply !M! awakened:Hex."
+    "DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile."
   },
   "awakened:DarkPortal": {
     "NAME": "Reality Rift",
@@ -274,7 +276,7 @@
   },
   "awakened:Nihilism": {
     "NAME": "Nihilism",
-    "DESCRIPTION": "Deal !D! damage. NL If a *Void is in hand, gain !M! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. NL If it was a Power card, draw !M! cards."
   },
   "awakened:Slaughter": {
     "NAME": "To the Slaughter",
@@ -282,15 +284,15 @@
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
-    "DESCRIPTION": "Whenever you Exhaust a card, apply !M! awakened:Manaburn to ALL enemies."
+    "DESCRIPTION": "Whenever you Exhaust a *Void, apply !M! awakened:Manaburn to ALL enemies."
   },
   "awakened:MysticOrder": {
     "NAME": "Mystic Order",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! Ritual. NL Exhaust."
+    "DESCRIPTION": "Whenever you Exhaust a card this turn, gain !M! Block."
   },
   "awakened:SacrilegiousStrike": {
     "NAME": "Sacrilegious Strike",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL awakened:Chant: Gain !M! Frail and Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL You can't play any Power cards next turn."
   },
   "awakened:ToTheLimit": {
     "NAME": "To the Limit",
@@ -303,7 +305,7 @@
   },
   "awakened:TheTower": {
     "NAME": "The Tower",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! extra damage for each exhausted *Void and Spell."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each card created this combat."
   },
   "awakened:ArcaneNesting": {
     "NAME": "Arcane Nesting",
@@ -314,8 +316,8 @@
   },
   "awakened:Middens": {
     "NAME": "Middens",
-    "DESCRIPTION": "Gain !B! Block. NL Fetch !M! Status card from your discard pile.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Fetch !M! Status cards from your discard pile."
+    "DESCRIPTION": "Gain !B! Block. NL Fetch !M! Status card from your draw or discard pile.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Fetch !M! Status cards from your draw or discard pile."
   },
   "awakened:Caw": {
     "NAME": "Caw",
@@ -348,7 +350,8 @@
   },
   "awakened:Procession": {
     "NAME": "Procession",
-    "DESCRIPTION":  "Shuffle ALL your cards and !M! *Voids into your draw pile. NL Draw !awakened:m2! cards. NL Exhaust."
+    "DESCRIPTION":  "Draw cards until your hand is full. NL Place !M! *Voids on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Draw cards until your hand is full. NL Place !M! *Voids on top of your draw pile. NL Exhaust."
   },
   "awakened:SplitWide": {
     "NAME": "Split Wide",
@@ -356,7 +359,7 @@
   },
   "awakened:SheerTerror": {
     "NAME": "Sheer Terror",
-    "DESCRIPTION": "Apply !M! awakened:Hex. NL awakened:Hex cannot be removed from this enemy for the rest of the turn."
+    "DESCRIPTION": "Apply !M! awakened:Hex. NL awakened:Chant: awakened:Hex cannot be removed from this enemy for the rest of the turn."
   },
   "awakened:Deathwish": {
     "NAME": "Deathwish",

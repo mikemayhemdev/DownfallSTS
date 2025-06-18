@@ -25,12 +25,12 @@ public class ExNihilo extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        if (chant) {
+        if (isChantActive(this)) {
             AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new NihilAction((AbstractCreature)m, (AbstractCreature)p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
             checkOnChant();
         }
 
-        if ((!chant) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!isChantActive(this)) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new NihilAction((AbstractCreature)m, (AbstractCreature)p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
                 checkOnChant();
@@ -46,7 +46,7 @@ public class ExNihilo extends AbstractAwakenedCard {
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        this.glowColor = isChantActive(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     @Override

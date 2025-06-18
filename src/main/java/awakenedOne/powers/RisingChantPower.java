@@ -1,6 +1,9 @@
 package awakenedOne.powers;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class RisingChantPower extends AbstractAwakenedPower {
     // intellij stuff buff
@@ -12,13 +15,12 @@ public class RisingChantPower extends AbstractAwakenedPower {
     }
 
     public void updateDescription() {
-        if (this.amount == 0) {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        }
+    }
 
-        if (this.amount != 0) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2];
-        }
+    @Override
+    public void onSpecificTrigger() {
+        flash();
     }
 
 }
