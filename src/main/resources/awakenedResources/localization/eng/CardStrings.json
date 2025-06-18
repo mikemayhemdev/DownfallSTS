@@ -132,8 +132,8 @@
   },
   "awakened:DrawingDead": {
     "NAME": "Altar",
-    "DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power card while this is in hand, draw !M! card next turn.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power card while this is in hand, draw !M! cards next turn.",
+    "DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power card while this is in hand, draw !M! additional card next turn.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power card while this is in hand, draw !M! additional cards next turn.",
     "EXTENDED_DESCRIPTION": [
       "I must play Power cards to use this card."
     ]
