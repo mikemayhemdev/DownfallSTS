@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -13,8 +14,8 @@ public class RageExhaustPower extends AbstractAwakenedPower {
     public static final String NAME = RageExhaustPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
 
-    public RageExhaustPower(int amount) {
-        super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
+    public RageExhaustPower(AbstractCreature owner, int amount) {
+        super(NAME, PowerType.BUFF, false, owner, null, amount);
     }
 
 //    @Override

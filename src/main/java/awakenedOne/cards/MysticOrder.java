@@ -1,15 +1,10 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import awakenedOne.powers.RageExhaustPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.RagePower;
-import com.megacrit.cardcrawl.powers.RitualPower;
-import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
-
-import static awakenedOne.util.Wiz.applyToSelf;
 
 public class MysticOrder extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(MysticOrder.class.getSimpleName());
