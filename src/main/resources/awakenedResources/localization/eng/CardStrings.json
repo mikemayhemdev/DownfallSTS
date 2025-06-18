@@ -178,8 +178,8 @@
 },
   "awakened:BirdsEye": {
     "NAME": "Byrd's Eye",
-    "DESCRIPTION": "Fetch a Power card from your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Fetch a Power card from your draw pile."
+    "DESCRIPTION": "Put a Power card from your draw pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put a Power card from your draw pile into your hand."
   },
   "awakened:DarkPower": {
     "NAME": "Initiation",
@@ -274,7 +274,7 @@
   },
   "awakened:DarkPortal": {
     "NAME": "Reality Rift",
-    "DESCRIPTION": "Fetch a card from your discard pile and add a *Void there. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Put a card from your discard pile into your hand and add a *Void there. NL It costs 0 this turn. NL Exhaust."
   },
   "awakened:Nihilism": {
     "NAME": "Nihilism",
@@ -318,8 +318,12 @@
   },
   "awakened:Middens": {
     "NAME": "Middens",
-    "DESCRIPTION": "Gain !B! Block. NL Fetch !M! Status card from your draw or discard pile.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Fetch !M! Status cards from your draw or discard pile."
+    "DESCRIPTION": "Gain !B! Block. NL Put !M! Status card from your draw or discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put !M! Status cards from your draw or discard pile into your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "Select a card to move to your hand.",
+      "Select cards to move to your hand."
+    ]
   },
   "awakened:Caw": {
     "NAME": "Caw",

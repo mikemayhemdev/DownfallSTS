@@ -39,42 +39,24 @@ public class Middens extends AbstractAwakenedCard {
         public void use(AbstractPlayer p, AbstractMonster m) {
             blck();
             atb(new MultiGroupSelectAction(
-                    "",
+                    cardStrings.EXTENDED_DESCRIPTION[magicNumber == 1 ? 0 : 1],
                     (cards, groups) -> {
                         Collections.reverse(cards);
                         cards.forEach(c -> att(new AbstractGameAction() {
                             public void update() {
                                 isDone = true;
                                 if (p.hand.size() >= BaseMod.MAX_HAND_SIZE) {
+                                    if (groups.get(c) == p.drawPile)
+                                        p.drawPile.moveToDiscardPile(c);
                                     p.createHandIsFullDialog();
-                                } else {
+                                } else
                                     p.hand.moveToHand(c, groups.get(c));
-                                    p.hand.removeTopCard();
-                                    p.hand.addToBottom(c);
-                                    p.hand.refreshHandLayout();
-                                    p.hand.applyPowers();
-                                    c.returnToHand = true;
-                                    OnlyReturnOncePatch.cardsToOnlyReturnOnce.add(c);
-                                }
                             }
                         }));
                     },
                     magicNumber, false, c -> c.type == CardType.STATUS, CardGroup.CardGroupType.DRAW_PILE, CardGroup.CardGroupType.DISCARD_PILE
             ));
-        }
 
-        @SpirePatch(clz= UseCardAction.class, method="update")
-        public static class OnlyReturnOncePatch {
-            public static ArrayList<AbstractCard> cardsToOnlyReturnOnce = new ArrayList<>();
-
-            @SpireInsertPatch(rloc=57)
-            public static void Insert(UseCardAction __instance) {
-                AbstractCard targetCard = ReflectionHacks.getPrivate(__instance, UseCardAction.class, "targetCard");
-                if (cardsToOnlyReturnOnce.contains(targetCard)) {
-                    targetCard.returnToHand = false;
-                    cardsToOnlyReturnOnce.remove(targetCard);
-                }
-            }
         }
 
     @Override
