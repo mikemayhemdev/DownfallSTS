@@ -147,8 +147,8 @@
   },
   "sneckomod:OverwhelmingPresence": {
     "NAME": "Overwhelming",
-    "DESCRIPTION": "Ethereal. NL The first time you play an sneckomod:Offclass card each turn, draw an additional card next turn.",
-    "UPGRADE_DESCRIPTION": "The first time you play an sneckomod:Offclass card each turn, draw an additional card next turn."
+    "DESCRIPTION": "Ethereal. NL The first time you play an sneckomod:Offclass card each turn, draw a card.",
+    "UPGRADE_DESCRIPTION": "The first time you play an sneckomod:Offclass card each turn, draw a card."
   },
   "sneckomod:RiskySword": {
     "NAME": "Risky Sword",
@@ -606,7 +606,8 @@
   },
   "sneckomod:Lacerate": {
     "NAME": "Lacerate",
-    "DESCRIPTION": "Apply !M! sneckomod:Venom to ALL enemies. NL Gain a *Crippling *Cloud. NL Exhaust."
+    "DESCRIPTION": "Apply !M! sneckomod:Venom to ALL enemies. NL Gain a *Crippling *Cloud. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! sneckomod:Venom to ALL enemies. NL Gain a *Crippling *Cloud+. NL Exhaust."
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Serpentine Sleuth",

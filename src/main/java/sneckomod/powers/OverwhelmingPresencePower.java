@@ -53,7 +53,7 @@ public class OverwhelmingPresencePower extends AbstractPower implements Cloneabl
         if (hasTriggeredThisTurn = false) {
             if (card.color != AbstractDungeon.player.getCardColor() && !card.purgeOnUse) {
                 this.flash();
-                this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, this.amount), this.amount));
+                addToBot(new DrawCardAction(amount));
             }
         }
     }

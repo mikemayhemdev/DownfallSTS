@@ -30,7 +30,6 @@ public class SingularityShield extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(2);
-        upgradeMagicNumber(1);
+        upgradeBlock(3);
     }
 }

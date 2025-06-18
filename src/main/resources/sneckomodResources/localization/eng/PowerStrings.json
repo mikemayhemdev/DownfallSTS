@@ -42,9 +42,9 @@
   "sneckomod:OverwhelmingPresencePower": {
     "NAME": "Overwhelming Presence",
     "DESCRIPTIONS": [
-      "The first time you play an #yOffclass card each turn, draw additional #b1 card next turn.",
-      "The first time you play an #yOffclass card each turn, draw additional #b ",
-      " cards next turn."
+      "The first time you play an #yOffclass card each turn, draw #b1 card.",
+      "The first time you play an #yOffclass card each turn, draw #b ",
+      " cards."
     ]
   },
   "sneckomod:SerpentsNestPower": {

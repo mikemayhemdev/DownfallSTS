@@ -122,7 +122,7 @@
     "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Gain [E]."
   },
   "awakened:LastDitchEffort": {
-    "NAME": "Swoop",
+    "NAME": "Singularity",
     "DESCRIPTION": "Gain !B! Block. NL Apply !M! awakened:Hex."
   },
   "awakened:Reviscerate": {
@@ -164,8 +164,8 @@
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Playing this card counts as losing equivalent [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Playing this card counts as losing equivalent [E]."
+    "DESCRIPTION": "Deal !D! damage. NL Playing this card counts as losing [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Playing this card counts as losing [E]."
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
@@ -267,8 +267,9 @@
     "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Next turn, lose [E]. NL Exhaust."
   },
   "awakened:SingularityShield": {
-    "NAME": "Singularity Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile."
+    "NAME": "Swoop",
+    "DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile."
   },
   "awakened:DarkPortal": {
     "NAME": "Reality Rift",
@@ -350,8 +351,7 @@
   },
   "awakened:Procession": {
     "NAME": "Procession",
-    "DESCRIPTION":  "Draw cards until your hand is full. NL Place !M! *Voids on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Draw cards until your hand is full. NL Place !M! *Voids on top of your draw pile. NL Exhaust."
+    "DESCRIPTION":  "Draw cards until your hand is full. NL Place !M! *Voids on top of your draw pile. NL Exhaust."
   },
   "awakened:SplitWide": {
     "NAME": "Split Wide",

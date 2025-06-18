@@ -18,7 +18,7 @@ public class LastDitchEffort extends AbstractAwakenedCard {
 
     public LastDitchEffort() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        baseBlock = 6;
+        baseBlock = 7;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }

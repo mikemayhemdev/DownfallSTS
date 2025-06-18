@@ -24,7 +24,7 @@ public class TheTower extends AbstractAwakenedCard {
 
     public TheTower() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
-        baseDamage = 6;
+        baseDamage = 10;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
     }
