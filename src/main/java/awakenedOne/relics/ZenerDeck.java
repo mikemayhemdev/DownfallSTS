@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.att;
 
 public class ZenerDeck extends CustomRelic {
 
@@ -29,7 +29,7 @@ public class ZenerDeck extends CustomRelic {
     @Override
     public void atBattleStart() {
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        atb(new ConjureAction(false, false, true, new ESPSpell()));
+        att(new ConjureAction(false, false, true, new ESPSpell()));
     }
 
     @Override
