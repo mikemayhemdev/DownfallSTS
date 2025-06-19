@@ -19,7 +19,7 @@ public class SingularityShield extends AbstractAwakenedCard {
 
     public SingularityShield() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        baseBlock = 7;
+        baseBlock = 6;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
     }
@@ -31,7 +31,7 @@ public class SingularityShield extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(3);
         upgradeMagicNumber(1);
     }
 }

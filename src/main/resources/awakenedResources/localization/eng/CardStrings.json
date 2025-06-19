@@ -132,8 +132,8 @@
   },
   "awakened:DrawingDead": {
     "NAME": "Altar",
-    "DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power card while this is in hand, draw !M! additional card next turn.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power card while this is in hand, draw !M! additional cards next turn.",
+    "DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power while this is in hand, draw !M! additional card next turn.",
+    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power while this is in hand, draw !M! additional cards next turn.",
     "EXTENDED_DESCRIPTION": [
       "I must play Power cards to use this card."
     ]
@@ -269,12 +269,11 @@
   },
   "awakened:SingularityShield": {
     "NAME": "Singularity Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! awakened:Hex."
   },
   "awakened:DarkPortal": {
     "NAME": "Reality Rift",
-    "DESCRIPTION": "Put a card from your discard pile into your hand and add a *Void there. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Put a card from your discard pile into your hand, add a *Void there. NL It costs 0 this turn. NL Exhaust."
   },
   "awakened:Nihilism": {
     "NAME": "Nihilism",

@@ -36,10 +36,9 @@ public class RageExhaustPower extends AbstractAwakenedPower {
         this.addToBot(new GainBlockAction(this.owner, this.amount, Settings.FAST_MODE));
     }
 
-    public void atEndOfTurn(boolean isPlayer) {
-        if (isPlayer) {
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
-        }
+    @Override
+    public void atStartOfTurn() {
+        this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
 
     public void updateDescription() {
