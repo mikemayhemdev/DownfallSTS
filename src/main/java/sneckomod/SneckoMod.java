@@ -474,7 +474,6 @@ public class SneckoMod implements
 
                 //Awakened One Cards
                 c.cardID.equals(Retaliation.ID) ||
-                c.cardID.equals(DrawingDead.ID) ||
                 c.cardID.equals(SingularityShield.ID) ||
                 c.cardID.equals(Deathwish.ID) ||
                 c.cardID.equals(IntoNothing.ID) ||
@@ -513,7 +512,7 @@ public class SneckoMod implements
                         c.cardID.equals(FollowThrough.ID) ||
                         c.cardID.equals(FeatherVeil.ID) ||
                         c.cardID.equals(DarkPower.ID) ||
-                        c.cardID.equals(MazalethForm.ID) ||
+                        c.cardID.equals(CawCaw.ID) ||
                         c.cardID.equals(FadeOut.ID) ||
                         c.cardID.equals(SacrilegiousStrike.ID) ||
                         c.cardID.equals(Unleash.ID) ||
