@@ -19,7 +19,8 @@ public class LastDitchEffort extends AbstractAwakenedCard {
 
     public LastDitchEffort() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 5;
+        baseBlock = 8;
+        this.exhaust = true;
     }
 
 
@@ -30,6 +31,6 @@ public class LastDitchEffort extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(3);
+        this.exhaust = false;
     }
 }

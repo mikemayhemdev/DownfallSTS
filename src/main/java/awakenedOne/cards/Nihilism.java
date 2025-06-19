@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.actions.HandSelectAction;
 import hermit.util.Wiz;
 
+import static awakenedOne.util.Wiz.att;
+
 public class Nihilism extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Nihilism.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
@@ -28,7 +30,7 @@ public class Nihilism extends AbstractAwakenedCard {
         Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {
             for (AbstractCard c : list)
             {
-                Wiz.att(new ExhaustSpecificCardAction(c,Wiz.p().hand));
+                Wiz.p().hand.moveToExhaustPile(c);
                 if (c.type == CardType.POWER) {
                     Wiz.atb(new DrawCardAction(magicNumber));
                 }

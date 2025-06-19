@@ -2,6 +2,7 @@ package expansioncontent.cards;
 
 import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.relics.KTRibbon;
+import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -41,11 +42,11 @@ public class TakeFlight extends AbstractExpansionCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if (isChantActive(this)) {
+            if (Wiz.isChantActive()) {
                 chant();
             }
 
-            if (!isChantActive(this)) {
+            if (!Wiz.isChantActive()) {
                 if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                     chant();
                     awaken(1);
@@ -56,10 +57,10 @@ public class TakeFlight extends AbstractExpansionCard {
         }
 
         if (!AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if (isChantActive(this)) {
+            if (Wiz.isChantActive()) {
                 chant();
             }
-            if (!isChantActive(this)) {
+            if (!Wiz.isChantActive()) {
                 addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new RegenPower((AbstractCreature)AbstractDungeon.player, this.magicNumber), this.magicNumber));
             }
         }

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
 import static awakenedOne.ui.AwakenButton.awaken;
+import static awakenedOne.util.Wiz.isChantActive;
 
 
 public class Hymn extends AbstractAwakenedCard {
@@ -22,11 +23,11 @@ public class Hymn extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
 
-        if (isChantActive(this)) {
+        if (isChantActive()) {
             chant();
         }
 
-        if ((!isChantActive(this)) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!isChantActive()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);

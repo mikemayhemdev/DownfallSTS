@@ -477,6 +477,7 @@ public class SneckoMod implements
                 c.cardID.equals(SingularityShield.ID) ||
                 c.cardID.equals(Deathwish.ID) ||
                 c.cardID.equals(IntoNothing.ID) ||
+                c.cardID.equals(FadeOut.ID) ||
                 c.cardID.equals(MirePit.ID) ||
                 c.cardID.equals(Sludge.ID) ||
                 c.cardID.equals(SongOfSorrow.ID) ||

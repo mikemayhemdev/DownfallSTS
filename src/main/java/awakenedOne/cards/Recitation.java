@@ -3,6 +3,7 @@ package awakenedOne.cards;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.FollowUpPowersAction;
 import awakenedOne.relics.KTRibbon;
+import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -28,11 +29,11 @@ public class Recitation extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
 
-        if (isChantActive(this)) {
+        if (Wiz.isChantActive()) {
             chant();
         }
 
-        if ((!isChantActive(this)) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!Wiz.isChantActive()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);

@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.powers.SheerTerrorPower;
 import awakenedOne.relics.KTRibbon;
+import awakenedOne.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -41,12 +42,12 @@ public class SheerTerror extends AbstractAwakenedCard {
             HexCurse(magicNumber, m, p);
 
 
-        if (isChantActive(this)) {
+        if (Wiz.isChantActive()) {
             this.addToBot(new ApplyPowerAction(m, p, new SheerTerrorPower(m, 1), 1, true, AbstractGameAction.AttackEffect.POISON));
             chant();
         }
 
-        if ((!isChantActive(this)) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!Wiz.isChantActive()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 this.addToBot(new ApplyPowerAction(m, p, new SheerTerrorPower(m, 1), 1, true, AbstractGameAction.AttackEffect.POISON));
                 chant();

@@ -1,7 +1,10 @@
 package awakenedOne.cards;
 
+import automaton.actions.RepeatCardAction;
+import automaton.cards.FunctionCard;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.actions.ConjureAction;
 import awakenedOne.powers.RisingChantPower;
 import awakenedOne.relics.CursedBlessing;
 import awakenedOne.relics.KTRibbon;
@@ -44,6 +47,7 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     public int baseThirdMagic = -1;
     public boolean upgradedThirdMagic;
     public boolean isThirdMagicModified;
+    public boolean vibe = false;
 
     public int secondDamage;
     public int baseSecondDamage = -1;
@@ -216,16 +220,6 @@ public abstract class AbstractAwakenedCard extends CustomCard {
 //    public void triggerWhenDrawn() {
 //        this.chant = false;
 //    }
-
-
-    public boolean isChantActive(AbstractCard source) {
-        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && ((AbstractCard)AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2)).type == CardType.POWER) {
-            return true;
-        } else {
-            return false;
-        }
-    }
-
 
 
     public boolean isChantActiveGlow(AbstractCard source) {

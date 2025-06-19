@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.actions.GashCawAction;
 import awakenedOne.relics.KTRibbon;
+import awakenedOne.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.ui.AwakenButton.awaken;
+import static awakenedOne.util.Wiz.isChantActive;
 
 public class Caw extends AbstractAwakenedCard {
     public final static String ID = makeID(Caw.class.getSimpleName());
@@ -32,11 +34,11 @@ public class Caw extends AbstractAwakenedCard {
         }
         dmg(m, AbstractGameAction.AttackEffect.NONE);
 
-        if (isChantActive(this)) {
+        if (Wiz.isChantActive()) {
            chant();
         }
 
-        if ((!isChantActive(this)) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!Wiz.isChantActive()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);

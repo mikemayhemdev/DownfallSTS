@@ -1,5 +1,6 @@
 package awakenedOne.util;
 
+import automaton.cards.FunctionCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -121,6 +122,17 @@ public class Wiz {
         }
         return hasbasics;
     }
+
+
+    public static boolean isChantActive() {
+        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() > 1) {
+            if (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).type == AbstractCard.CardType.POWER) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     public static void atb(AbstractGameAction action) {
         AbstractDungeon.actionManager.addToBottom(action);
