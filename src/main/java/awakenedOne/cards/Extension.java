@@ -14,7 +14,7 @@ public class Extension extends AbstractAwakenedCard {
 
     public Extension() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 9;
+        baseDamage = 10;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -23,6 +23,6 @@ public class Extension extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(4);
     }
 }

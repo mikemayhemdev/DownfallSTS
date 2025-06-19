@@ -3,7 +3,6 @@ package awakenedOne.powers;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class NihilPower extends AbstractAwakenedPower {
 

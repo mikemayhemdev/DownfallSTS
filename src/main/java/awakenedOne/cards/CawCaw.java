@@ -1,15 +1,9 @@
 package awakenedOne.cards;
 
-import awakenedOne.powers.DarkIncantationRitualPower;
 import awakenedOne.powers.ReverseRitualPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.monsters.city.Byrd;
 import com.megacrit.cardcrawl.powers.CuriosityPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;

@@ -1,13 +1,10 @@
 package awakenedOne.powers;
 
-import automaton.cards.goodstatus.IntoTheVoid;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class SongOfSorrowPower extends AbstractAwakenedPower {
+public class SongOfSorrowPower extends AbstractAwakenedPower implements OnLoseEnergyPower {
     // intellij stuff buff
     public static final String NAME = SongOfSorrowPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
@@ -16,27 +13,13 @@ public class SongOfSorrowPower extends AbstractAwakenedPower {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
     }
 
-//    @Override
-//    public void LoseEnergyAction(int gained) {
-//        this.flash();
-//        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-//            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-//                if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
-//                    this.addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new ManaburnPower(monster, amount*gained), amount*gained));
-//                }
-//            }
-//        }
-//    }
-
     @Override
-    public void onExhaust(AbstractCard card) {
-        if (card instanceof VoidCard || card instanceof IntoTheVoid) {
-            this.flash();
-            if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-                for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                    if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
-                        this.addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new ManaburnPower(monster, amount), amount));
-                    }
+    public void LoseEnergyAction(int gained) {
+        this.flash();
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                if ((!monster.isDead) && (!monster.isDying) && !monster.halfDead) {
+                    this.addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new ManaburnPower(monster, amount*gained), amount*gained));
                 }
             }
         }

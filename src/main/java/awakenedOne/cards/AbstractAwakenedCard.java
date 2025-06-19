@@ -1,16 +1,12 @@
 package awakenedOne.cards;
 
-import automaton.actions.RepeatCardAction;
-import automaton.cards.FunctionCard;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.actions.ConjureAction;
 import awakenedOne.powers.RisingChantPower;
 import awakenedOne.relics.CursedBlessing;
 import awakenedOne.relics.KTRibbon;
 import awakenedOne.util.CardArtRoller;
 import basemod.abstracts.CustomCard;
-import champ.powers.DancingMasterPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
@@ -25,7 +21,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import java.util.ArrayList;

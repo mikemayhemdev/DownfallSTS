@@ -1,15 +1,10 @@
 package awakenedOne.cards;
 
-import automaton.cards.goodstatus.IntoTheVoid;
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.actions.ConjureAction;
-import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import awakenedOne.patches.OnCreateCardSubscriber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;

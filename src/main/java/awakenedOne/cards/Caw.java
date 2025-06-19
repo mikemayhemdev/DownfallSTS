@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.ui.AwakenButton.awaken;
-import static awakenedOne.util.Wiz.isChantActive;
 
 public class Caw extends AbstractAwakenedCard {
     public final static String ID = makeID(Caw.class.getSimpleName());

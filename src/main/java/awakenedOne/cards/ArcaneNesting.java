@@ -1,24 +1,15 @@
 package awakenedOne.cards;
 
-import automaton.actions.EasyXCostAction;
-import awakenedOne.actions.ConjureAction;
-import awakenedOne.actions.ModifyMagicAction;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ModifyBlockAction;
-import com.megacrit.cardcrawl.actions.defect.ReinforcedBodyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DexterityPower;
 import expansioncontent.expansionContentMod;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.atb;
 
 
 public class ArcaneNesting extends AbstractAwakenedCard {

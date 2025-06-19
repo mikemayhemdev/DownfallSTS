@@ -1,17 +1,10 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.relics.EyeOfTheOccult;
-import awakenedOne.relics.KTRibbon;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ReboundPower;
-import hermit.actions.ReduceCostActionFixed;
 
 import static awakenedOne.AwakenedOneMod.HexCurse;
-import static awakenedOne.ui.AwakenButton.awaken;
 
 public class SingularityShield extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(SingularityShield.class.getSimpleName());

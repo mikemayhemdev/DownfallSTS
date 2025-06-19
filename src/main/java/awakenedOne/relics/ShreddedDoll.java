@@ -27,20 +27,8 @@ public class ShreddedDoll extends CustomRelic implements OnAwakenRelic {
 
         //Shredded Doll
 
-    //    AbstractCard q = new Ceremony();
-//        q.upgrade();
-      //  tips.add(new CardPowerTip(q));
     }
 
-//    @Override
-//    public void atBattleStart() {
-//        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-//        flash();
-//        AbstractCard c = new Ceremony();
-////        c.upgrade();
-//        this.addToTop(new MakeTempCardInHandAction(c, 1, false));
-//  //      this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RitualPower(AbstractDungeon.player, 1, true)));
-//    }
 
 
     @Override

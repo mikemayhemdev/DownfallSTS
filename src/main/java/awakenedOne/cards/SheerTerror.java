@@ -7,12 +7,8 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
@@ -20,7 +16,6 @@ import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
 import static awakenedOne.AwakenedOneMod.HexCurse;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.ui.AwakenButton.awaken;
-import static awakenedOne.util.Wiz.atb;
 
 public class SheerTerror extends AbstractAwakenedCard {
     public final static String ID = makeID(SheerTerror.class.getSimpleName());

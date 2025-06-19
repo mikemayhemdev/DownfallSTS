@@ -5,11 +5,7 @@
 package awakenedOne.powers;
 
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
 
 public class EntanglePowersPower extends AbstractAwakenedPower {
     public static final String NAME = EntanglePowersPower.class.getSimpleName();

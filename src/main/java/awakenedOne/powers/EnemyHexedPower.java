@@ -2,15 +2,9 @@ package awakenedOne.powers;
 
 import awakenedOne.relics.StrengthBooster;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import downfall.powers.NeowInvulnerablePower;
-
-import static awakenedOne.AwakenedOneMod.HexCurse;
 
 public class EnemyHexedPower extends AbstractAwakenedPower {
     // intellij stuff buff

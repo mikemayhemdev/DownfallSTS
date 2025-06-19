@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
-
 package awakenedOne.effects;
 
 import com.badlogic.gdx.Gdx;

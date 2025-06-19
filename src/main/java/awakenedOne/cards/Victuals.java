@@ -2,12 +2,10 @@ package awakenedOne.cards;
 
 import awakenedOne.relics.KTRibbon;
 import awakenedOne.util.Wiz;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.*;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.ui.AwakenButton.awaken;

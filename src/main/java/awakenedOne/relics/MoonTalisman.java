@@ -149,6 +149,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
             AbstractCard cardInDeck = AbstractDungeon.player.masterDeck.getSpecificCard(card);
 
             //Note: This is the only source of this modifier on the entire character.
+            //If you detect this modifier being used, it's almost definitely from this bottle.
             CardModifierManager.addModifier(cardInDeck, new ConjureMod());
 
             cardRemoved = false;

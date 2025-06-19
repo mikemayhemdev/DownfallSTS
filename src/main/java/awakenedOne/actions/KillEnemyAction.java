@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.*;
 
-
 public class KillEnemyAction extends AbstractGameAction {
     private final AbstractMonster m;
 

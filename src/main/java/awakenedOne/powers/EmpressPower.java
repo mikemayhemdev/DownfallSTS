@@ -1,14 +1,10 @@
 package awakenedOne.powers;
 
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class EmpressPower extends AbstractAwakenedPower {
     // intellij stuff buff

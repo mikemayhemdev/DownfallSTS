@@ -676,11 +676,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         int totalIntentDmg = -1;
         for (AbstractCard c : this.hand.group) {
             AbstractBossCard cB = (AbstractBossCard) c;
-            if (cB.intentDmg > 0 && (!cB.bossDarkened || AbstractDungeon.player.hasRelic(RunicDome.ID))) {
-                if (totalIntentDmg == -1) {
-                    totalIntentDmg = 0;
+            if (cB.type == AbstractCard.CardType.ATTACK) {
+                if (cB.intentDmg > 0 && (!cB.bossDarkened || AbstractDungeon.player.hasRelic(RunicDome.ID))) {
+                    if (totalIntentDmg == -1) {
+                        totalIntentDmg = 0;
+                    }
+                    totalIntentDmg += cB.intentDmg;
                 }
-                totalIntentDmg += cB.intentDmg;
             }
         }
         return totalIntentDmg;

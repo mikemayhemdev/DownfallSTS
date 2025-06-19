@@ -1,33 +1,15 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.powers.ManaburnPower;
-import awakenedOne.powers.OnLoseEnergyPower;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.localization.RelicStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.RitualPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.BottledFlame;
-import com.megacrit.cardcrawl.relics.DuVuDoll;
-
-import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.atb;
 
 public class CursedBlessing extends CustomRelic {
 

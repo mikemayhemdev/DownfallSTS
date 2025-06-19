@@ -1,17 +1,10 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.powers.FlarePower;
 import awakenedOne.powers.NextPowerBlockPower;
-import awakenedOne.powers.VoidRefundPower;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import hermit.actions.HandSelectAction;
-import hermit.util.Wiz;
 
 import static awakenedOne.util.Wiz.applyToSelf;
 

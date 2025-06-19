@@ -1,11 +1,9 @@
 package awakenedOne.cards;
 
 import awakenedOne.patches.OnLoseEnergyPowerPatch;
-import awakenedOne.powers.ManaburnPower;
 import awakenedOne.powers.OnLoseEnergyPower;
 import awakenedOne.relics.OnLoseEnergyRelic;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -13,7 +11,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.isInCombat;
 
 public class RavenStrike extends AbstractAwakenedCard {
     public final static String ID = makeID(RavenStrike.class.getSimpleName());

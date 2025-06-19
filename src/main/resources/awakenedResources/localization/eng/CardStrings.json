@@ -285,7 +285,7 @@
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
-    "DESCRIPTION": "Whenever you Exhaust a *Void, apply !M! awakened:Manaburn to ALL enemies."
+    "DESCRIPTION": "Whenever you are awakened:Drained, apply !M! awakened:Manaburn to ALL enemies."
   },
   "awakened:MysticOrder": {
     "NAME": "Mystic Order",

@@ -1,7 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
 package awakenedOne.powers;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

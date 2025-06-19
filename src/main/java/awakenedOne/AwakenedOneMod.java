@@ -1,6 +1,5 @@
 package awakenedOne;
 
-import automaton.AutomatonMod;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.cards.cardvars.SecondDamage;
@@ -19,19 +18,14 @@ import awakenedOne.relics.*;
 import awakenedOne.ui.AwakenedIcon;
 import awakenedOne.ui.OrbitingSpells;
 import awakenedOne.util.CardFilter;
-import awakenedOne.util.Wiz;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
-import champ.ChampChar;
-import champ.events.BackToBasicsChamp;
-import champ.events.Colosseum_Evil_Champ;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.icons.CustomIconHelper;
 import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
@@ -39,37 +33,19 @@ import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
-import com.megacrit.cardcrawl.events.city.Colosseum;
 import com.megacrit.cardcrawl.events.city.Nest;
 import com.megacrit.cardcrawl.events.exordium.GoldenWing;
-import com.megacrit.cardcrawl.events.exordium.Sssserpent;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import downfall.downfallMod;
-import downfall.events.Serpent_Evil;
-import downfall.events.TheNest_Evil;
 import downfall.util.CardIgnore;
-import downfall.util.TextureLoader;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import sneckomod.OffclassHelper;
-import sneckomod.SneckoMod;
-import sneckomod.TheSnecko;
-import sneckomod.cards.unknowns.AbstractUnknownCard;
-import sneckomod.events.BackToBasicsSnecko;
-import sneckomod.events.D8;
-import sneckomod.events.Serpent_Snecko;
-import sneckomod.events.SuspiciousHouse;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -78,7 +54,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static awakenedOne.util.Wiz.atb;
-import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer

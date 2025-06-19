@@ -2,9 +2,6 @@ package awakenedOne.ui;
 
 import awakenedOne.powers.OnAwakenPower;
 import awakenedOne.relics.OnAwakenRelic;
-import awakenedOne.util.TexLoader;
-import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;

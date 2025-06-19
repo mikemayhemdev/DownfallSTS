@@ -113,7 +113,7 @@
   "awakened:SongOfSorrowPower": {
     "NAME": "Song of Sorrow",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], apply #b",
+      "Whenever you are #yDrained [REMOVE_SPACE], apply #b",
       " #yManaburn to ALL enemies."
     ]
   },

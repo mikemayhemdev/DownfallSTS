@@ -1,10 +1,8 @@
 package awakenedOne.events;
 
-
 import awakenedOne.potions.CultistsDelight;
 import awakenedOne.relics.EyeOfTheOccult;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -18,7 +16,6 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.relics.BrokenWingStatue;
-import downfall.util.RareCardReward;
 
 public class TheNestAwakened extends AbstractImageEvent {
     public static final String ID = "awakened:Nest";

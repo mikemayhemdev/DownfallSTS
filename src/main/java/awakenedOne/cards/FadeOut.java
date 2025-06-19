@@ -1,7 +1,6 @@
 package awakenedOne.cards;
 
 import awakenedOne.powers.ManaburnPower;
-import awakenedOne.powers.NihilPower;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;

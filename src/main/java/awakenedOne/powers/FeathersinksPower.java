@@ -5,9 +5,6 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.ShiftingPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import sneckomod.actions.AceOfWandsAction;
 
 public class FeathersinksPower extends AbstractAwakenedPower {
     // intellij stuff buff

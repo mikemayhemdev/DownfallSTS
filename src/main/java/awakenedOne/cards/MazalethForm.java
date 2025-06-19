@@ -1,21 +1,17 @@
 package awakenedOne.cards;
 
 import awakenedOne.powers.DarkIncantationRitualPower;
-import awakenedOne.powers.ReverseRitualPower;
 import basemod.helpers.BaseModCardTags;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.city.Byrd;
-import com.megacrit.cardcrawl.powers.CuriosityPower;
 import com.megacrit.cardcrawl.powers.RitualPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
-import static awakenedOne.util.Wiz.applyToSelfTop;
 
 public class MazalethForm extends AbstractAwakenedCard {
     public final static String ID = makeID(MazalethForm.class.getSimpleName());
