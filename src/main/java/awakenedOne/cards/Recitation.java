@@ -42,7 +42,7 @@ public class Recitation extends AbstractAwakenedCard {
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = isChantActive(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     @Override

@@ -148,7 +148,7 @@ public abstract class AbstractExpansionCard extends AbstractDownfallCard {
     public void afterlife() {}
 
     public boolean isChantActive(AbstractCard source) {
-        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1)).type == CardType.POWER) {
+        if (!(AbstractDungeon.actionManager.cardsPlayedThisCombat.size()>=2) && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2)).type == CardType.POWER) {
             return true;
         } else {
             return false;

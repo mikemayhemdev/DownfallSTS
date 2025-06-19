@@ -475,7 +475,6 @@ public class SneckoMod implements
                 //Awakened One Cards
                 c.cardID.equals(Retaliation.ID) ||
                 c.cardID.equals(DrawingDead.ID) ||
-                c.cardID.equals(MagicStrike.ID) ||
                 c.cardID.equals(SingularityShield.ID) ||
                 c.cardID.equals(Deathwish.ID) ||
                 c.cardID.equals(IntoNothing.ID) ||

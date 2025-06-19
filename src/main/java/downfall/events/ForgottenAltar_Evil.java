@@ -48,11 +48,14 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
             this.goldCost = 50;
         }
 
+        if (this.goldCost > AbstractDungeon.player.gold) {
+            this.goldCost = AbstractDungeon.player.gold;
+        }
+
         if (AbstractDungeon.player.gold >= goldCost) {
             this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldCost + OPTIONSALT[1] + (this.hpLoss + 10) + OPTIONSALT[2]);
         } else {
             this.imageEventText.setDialogOption(OPTIONSALT[3] + this.goldCost + OPTIONSALT[4], true);
-
         }
 
         this.imageEventText.setDialogOption(OPTIONS[2] + 5 + OPTIONS[3] + this.hpLoss + OPTIONS[4]);

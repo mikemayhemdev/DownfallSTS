@@ -273,7 +273,7 @@
   },
   "awakened:DarkPortal": {
     "NAME": "Reality Rift",
-    "DESCRIPTION": "Put a card from your discard pile into your hand, add a *Void there. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Swap a card in your discard pile with a *Void. NL It costs 0 this turn. NL Exhaust."
   },
   "awakened:Nihilism": {
     "NAME": "Nihilism",
