@@ -43,8 +43,7 @@
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
-    "DESCRIPTION": "awakened:Conjure. NL This turn, your next Spell is played twice.",
-    "UPGRADE_DESCRIPTION": "awakened:Conjure. NL This turn, your next !M! Spells are played twice."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL This turn, your next Spell is played twice."
   },
   "awakened:QuickMove": {
     "NAME": "Peck",
@@ -132,11 +131,7 @@
   },
   "awakened:DrawingDead": {
     "NAME": "Altar",
-    "DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power while this is in hand, draw !M! additional card next turn.",
-    "UPGRADE_DESCRIPTION": "Unplayable. Ethereal. NL Whenever you play a Power while this is in hand, draw !M! additional cards next turn.",
-    "EXTENDED_DESCRIPTION": [
-      "I must play Power cards to use this card."
-    ]
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust a card. NL If it was a Power card, awakened:Conjure."
   },
   "awakened:Envision": {
     "NAME": "Envision",
@@ -204,8 +199,8 @@
   },
   "awakened:Murder": {
     "NAME": "Murder",
-    "DESCRIPTION": "Deal !D! damage. NL Strength affects this card !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Strength affects this card !M! times."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
   },
   "awakened:ExNihilo": {
     "NAME": "Nihil",

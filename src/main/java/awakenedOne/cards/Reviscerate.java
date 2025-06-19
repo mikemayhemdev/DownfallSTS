@@ -12,7 +12,7 @@ public class Reviscerate extends AbstractAwakenedCard {
 
     public Reviscerate() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 7;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
     }

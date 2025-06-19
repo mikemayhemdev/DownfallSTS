@@ -21,7 +21,7 @@ public class Nihilism extends AbstractAwakenedCard {
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
     public Nihilism() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 7;
         this.baseMagicNumber = this.magicNumber = 2;
     }
 

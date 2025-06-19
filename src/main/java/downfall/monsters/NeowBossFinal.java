@@ -153,7 +153,7 @@ public class NeowBossFinal extends AbstractMonster {
         // halfDead = true;
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
 
-        int beatAmount = 3; //a19 healing, a18 healing is this -1
+        int beatAmount = 2; //a19 healing, a18 healing is this -1
 //        if (AbstractDungeon.ascensionLevel >= 19) {
 //            beatAmount += 1;
 //        }
@@ -254,7 +254,7 @@ public class NeowBossFinal extends AbstractMonster {
 
 
                 if (!this.hasPower(NeowInvulnerablePower.POWER_ID)) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 1)));
                 }
 
                 if (AbstractDungeon.ascensionLevel >= 19) {
@@ -280,11 +280,11 @@ public class NeowBossFinal extends AbstractMonster {
                         break;
                     case 1:
                         if (AbstractDungeon.ascensionLevel >= 19) {
-                            AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 100));
+                            AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 50));
                             //this effectively makes her HP 700 - Not factoring in God of Life.
                         }
                         if (AbstractDungeon.ascensionLevel < 19) {
-                            AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 75));
+                            AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 30));
                             //this pre a19 version effectively makes her hp 675, and 625 pre a4 - Not factoring in God of Life.
                         }
 

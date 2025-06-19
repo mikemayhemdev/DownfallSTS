@@ -19,14 +19,16 @@ public class Intensify extends AbstractAwakenedCard {
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(AwakenedOneMod.DELVE);
+        baseBlock = 5;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         atb(new ConjureAction(false));
-        applyToSelf(new IntensifyPower(this.magicNumber));
+        applyToSelf(new IntensifyPower(1));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBlock(3);
     }
 }
