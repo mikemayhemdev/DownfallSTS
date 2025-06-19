@@ -2,16 +2,23 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.CounterPower;
+import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 
+import java.util.Iterator;
+
+import static awakenedOne.AwakenedOneMod.HexCurse;
 import static champ.ChampMod.loadJokeCardImage;
 
 public class TornadoPunch extends AbstractChampCard {
@@ -44,13 +51,17 @@ public class TornadoPunch extends AbstractChampCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         //if (upgraded) techique();
         allDmg(AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        if (dcombo())
-            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                if ((!monster.isDead)) {
-                    //atb(new ApplyPowerAction(p, p, new CounterPower(magicNumber), magicNumber));
-                    atb(new GainBlockAction(p, block));
+        if (dcombo()){
+            Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+            while (var2.hasNext()) {
+                AbstractMonster mo = (AbstractMonster) var2.next();
+                if (!mo.isDead && !mo.isDying) {
+                    blck();
                 }
             }
+        }
+
     }
 
     @Override

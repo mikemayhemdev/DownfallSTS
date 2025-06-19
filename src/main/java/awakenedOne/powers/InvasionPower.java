@@ -31,7 +31,7 @@ public class InvasionPower extends AbstractAwakenedPower {
         if (amount == 1) {
             description = DESCRIPTIONS[0];
         } else {
-            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[1] + amount + DESCRIPTIONS[2] + amount + DESCRIPTIONS[3];
         }
     }
 }

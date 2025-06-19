@@ -37,7 +37,7 @@ public class DrawingDead extends AbstractAwakenedCard {
             for (AbstractCard c : list)
             {
                 Wiz.p().hand.moveToExhaustPile(c);
-                if (c.type == CardType.POWER) {
+                if (c.type == CardType.STATUS || c.type == CardType.CURSE) {
                     atb(new ConjureAction(false));
                 }
 

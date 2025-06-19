@@ -8,6 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import java.util.Iterator;
+
 import static awakenedOne.util.Wiz.atb;
 
 public class Manastorm extends AbstractAwakenedCard {
@@ -24,8 +26,11 @@ public class Manastorm extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
 
-        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            if ((!monster.isDead)) {
+        Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+        while (var2.hasNext()) {
+            AbstractMonster mo = (AbstractMonster) var2.next();
+            if (!mo.isDead && !mo.isDying) {
                 atb(new ConjureAction(false));
             }
         }

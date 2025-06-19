@@ -5,6 +5,7 @@ import awakenedOne.actions.ConjureAction;
 import awakenedOne.powers.IntensifyPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.expansionContentMod;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
@@ -18,13 +19,15 @@ public class Intensify extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        this.tags.add(AwakenedOneMod.DELVE);
         baseBlock = 5;
+        this.tags.add(AwakenedOneMod.DELVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new ConjureAction(false));
+        if (upgraded) {
+            atb(new ConjureAction(false));
+        }
         applyToSelf(new IntensifyPower(1));
     }
 

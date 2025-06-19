@@ -43,7 +43,8 @@
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL This turn, your next Spell is played twice."
+    "DESCRIPTION": "Gain !B! Block. NL This turn, your next Spell is played twice.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL This turn, your next Spell is played twice."
   },
   "awakened:QuickMove": {
     "NAME": "Peck",
@@ -131,7 +132,7 @@
   },
   "awakened:DrawingDead": {
     "NAME": "Altar",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust a card. NL If it was a Power card, awakened:Conjure."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust a card. NL If it was a Status or Curse card, awakened:Conjure."
   },
   "awakened:Envision": {
     "NAME": "Envision",
@@ -312,8 +313,8 @@
   },
   "awakened:Middens": {
     "NAME": "Middens",
-    "DESCRIPTION": "Gain !B! Block. NL Put !M! Status card from your draw or discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put !M! Status cards from your draw or discard pile into your hand.",
+    "DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse card from your draw or discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse cards from your draw or discard pile into your hand.",
     "EXTENDED_DESCRIPTION": [
       "Select a card to move to your hand.",
       "Select cards to move to your hand."

@@ -59,8 +59,7 @@ public class DrawPowerAction extends AbstractGameAction{
                         this.p.createHandIsFullDialog();
                     } else {
                         p.drawPile.group.remove(card);
-                        p.drawPile.addToTop(card);
-                        this.addToBot(new DrawCardAction(1));
+                        p.hand.addToTop(card);
                         this.addToBot(new ReduceCostActionFixed(card.uuid, -1));
                     }
                 }

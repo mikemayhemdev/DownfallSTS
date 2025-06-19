@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.att;
 
 public class Extension extends AbstractAwakenedCard {
     public final static String ID = makeID(Extension.class.getSimpleName());
@@ -19,7 +19,7 @@ public class Extension extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        atb(new DrawPowerAction(1));
+        att(new DrawPowerAction(1));
     }
 
     public void upp() {

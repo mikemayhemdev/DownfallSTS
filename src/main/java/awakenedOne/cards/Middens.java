@@ -42,7 +42,7 @@ public class Middens extends AbstractAwakenedCard {
                             }
                         }));
                     },
-                    magicNumber, false, c -> c.type == CardType.STATUS, CardGroup.CardGroupType.DRAW_PILE, CardGroup.CardGroupType.DISCARD_PILE
+                    magicNumber, false, c -> c.type == CardType.STATUS || c.type == CardType.CURSE, CardGroup.CardGroupType.DRAW_PILE, CardGroup.CardGroupType.DISCARD_PILE
             ));
 
         }
