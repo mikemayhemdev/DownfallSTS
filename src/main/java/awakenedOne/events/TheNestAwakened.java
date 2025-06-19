@@ -31,8 +31,6 @@ public class TheNestAwakened extends AbstractImageEvent {
 
     private CUR_SCREEN screen;
 
-    private AbstractCard dagger;
-
     public TheNestAwakened () {
         super(NAME, DESCRIPTIONS[0], "images/events/theNest.jpg");
         this.noCardsInRewards = true;
@@ -147,8 +145,7 @@ public class TheNestAwakened extends AbstractImageEvent {
 
                 logMetricGainGold(ID, "Returned Statue", this.goldAmt);
                 logMetricObtainRelic(ID, "Returned Statue", r);
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(this.dagger, (float)Settings.WIDTH * 0.3F, (float)Settings.HEIGHT / 2.0F));
-                this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
+               this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                 this.imageEventText.clearAllDialogs();
                 this.imageEventText.setDialogOption(OPTIONS[2]);
                 this.screen = CUR_SCREEN.GIFTSTAGE4;
