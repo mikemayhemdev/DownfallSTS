@@ -39,7 +39,7 @@ public class Encircle extends AbstractChampCard {
         allDmg(AbstractGameAction.AttackEffect.NONE);
 
         for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-            if ((!monster.isDead)) {
+            if ((!monster.isDeadOrEscaped())) {
                 atb(new DrawCardAction(magicNumber));
             }
         }

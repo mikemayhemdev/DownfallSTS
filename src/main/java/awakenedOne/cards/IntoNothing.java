@@ -21,7 +21,6 @@ public class IntoNothing extends AbstractAwakenedCard {
     public IntoNothing() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
-       // baseBlock = 5;
         this.tags.add(AwakenedOneMod.DELVE);
     }
 
@@ -38,6 +37,10 @@ public class IntoNothing extends AbstractAwakenedCard {
             }
         }
 
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
 
     @Override

@@ -111,16 +111,12 @@ public class BurdenOfKnowledge extends CustomRelic {
         }
     }
 
-    public void atBattleStart() {
+    public void atPreBattle() {
         this.flash();
         this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new MasterRealityPower(AbstractDungeon.player)));
         this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -2), -2));
         this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, -2), -2));
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        AbstractDungeon.player.hasRelic(Enchiridion.ID);
-        {
-            this.addToBot(new ArmamentsAction(true));
-        }
     }
 
     public AbstractRelic makeCopy() {

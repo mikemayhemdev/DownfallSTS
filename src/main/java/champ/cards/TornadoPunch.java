@@ -56,7 +56,7 @@ public class TornadoPunch extends AbstractChampCard {
 
             while (var2.hasNext()) {
                 AbstractMonster mo = (AbstractMonster) var2.next();
-                if (!mo.isDead && !mo.isDying) {
+                if (!mo.isDeadOrEscaped()) {
                     blck();
                 }
             }

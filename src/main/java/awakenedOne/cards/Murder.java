@@ -14,7 +14,7 @@ public class Murder extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1
 
     public Murder() {
-        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = 4;
         this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;

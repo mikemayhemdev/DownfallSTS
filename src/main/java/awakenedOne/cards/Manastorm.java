@@ -30,7 +30,7 @@ public class Manastorm extends AbstractAwakenedCard {
 
         while (var2.hasNext()) {
             AbstractMonster mo = (AbstractMonster) var2.next();
-            if (!mo.isDead && !mo.isDying) {
+            if (!mo.isDeadOrEscaped()) {
                 atb(new ConjureAction(false));
             }
         }
