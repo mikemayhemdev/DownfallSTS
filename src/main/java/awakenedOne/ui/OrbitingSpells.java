@@ -10,6 +10,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
 
 import java.util.ArrayList;
 
@@ -70,6 +71,9 @@ public class OrbitingSpells {
 
 
     public static void addSpellCard(AbstractCard card) {
+        if (AbstractDungeon.player.hasPower(MasterRealityPower.POWER_ID)) {
+            card.upgrade();
+        }
         spellCards.add(new CardRenderInfo(card));
         updateTimeOffsets();
     }
