@@ -59,6 +59,6 @@ public class HeavyStrike extends AbstractAwakenedCard {
 
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(4);
     }
 }

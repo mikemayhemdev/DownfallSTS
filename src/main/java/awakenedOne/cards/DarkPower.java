@@ -1,9 +1,12 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.cards.tokens.Ceremony;
 import awakenedOne.relics.KTRibbon;
 import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,8 +22,7 @@ public class DarkPower extends AbstractAwakenedCard {
     public DarkPower() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 8;
-        this.baseMagicNumber = 4;
-        this.magicNumber = this.baseMagicNumber;
+        this.cardsToPreview = new Ceremony();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -40,8 +42,11 @@ public class DarkPower extends AbstractAwakenedCard {
 
     @Override
     public void chant() {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, magicNumber), magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseStrengthPower(AbstractDungeon.player, magicNumber), magicNumber));
+        AbstractCard c = new Ceremony();
+        if (upgraded) {
+            c.upgrade();
+        }
+        Wiz.atb(new MakeTempCardInHandAction(c, 1));
         checkOnChant();
     }
 
@@ -52,7 +57,7 @@ public class DarkPower extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(3);
-        upgradeMagicNumber(1);
+        upgradeBlock(2);
+        this.cardsToPreview.upgrade();
     }
 }

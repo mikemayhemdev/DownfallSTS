@@ -43,8 +43,7 @@
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
-    "DESCRIPTION": "Gain !B! Block. NL This turn, your next Spell is played twice.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL This turn, your next Spell is played twice."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL This turn, your next Spell is played twice."
   },
   "awakened:QuickMove": {
     "NAME": "Peck",
@@ -52,7 +51,7 @@
   },
   "awakened:InResponse": {
     "NAME": "Spellshield",
-    "DESCRIPTION": "Whenever you play a Spell, gain !M! Block."
+    "DESCRIPTION": "Whenever you play a Spell, gain !M! Block. NL awakened:Conjure."
   },
   "awakened:DarkEcho": {
     "NAME": "Dark Echo",
@@ -152,7 +151,7 @@
   },
   "awakened:KnifesEdge": {
     "NAME": "Knife's Edge",
-    "DESCRIPTION": "Gain !M! Strength. NL Add a *Void into your discard pile."
+    "DESCRIPTION": "Gain !M! Strength. NL Add !awakened:m2! *Voids in your discard pile."
   },
   "awakened:Vision": {
     "NAME": "Vision",
@@ -179,7 +178,8 @@
   },
   "awakened:DarkPower": {
     "NAME": "Initiation",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain !M! temporary Strength."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain a *Ceremony.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain a *Ceremony+."
   },
   "awakened:Ensorcelate": {
     "NAME": "Ensorcelate",
@@ -210,7 +210,7 @@
   },
   "awakened:TheEmpress": {
     "NAME": "The Empress",
-    "DESCRIPTION": "Whenever you play a Spell, draw an additional card next turn."
+    "DESCRIPTION": "Whenever you play a non-Spell Power card, awakened:Conjure."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",

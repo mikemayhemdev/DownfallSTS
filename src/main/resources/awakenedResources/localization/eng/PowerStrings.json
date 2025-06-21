@@ -96,9 +96,9 @@
   "awakened:EmpressPower": {
     "NAME": "The Empress",
     "DESCRIPTIONS": [
-      "Whenever you play a Spell, draw an additional card next turn.",
-      "Whenever you play a Spell, draw #b",
-      " additional cards next turn."
+      "Whenever you play a non-Spell #yPower card, #yConjure.",
+      "Whenever you play a non-Spell #yPower card, #yConjure #b",
+      " times."
     ]
   },
   "awakened:InvasionPower": {

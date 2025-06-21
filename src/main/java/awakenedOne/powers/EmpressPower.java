@@ -1,10 +1,12 @@
 package awakenedOne.powers;
 
+import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
+
+import static awakenedOne.util.Wiz.atb;
 
 public class EmpressPower extends AbstractAwakenedPower {
     // intellij stuff buff
@@ -15,12 +17,11 @@ public class EmpressPower extends AbstractAwakenedPower {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
     }
 
-
     @Override
     public void onAfterCardPlayed(AbstractCard card) {
-        if (card instanceof AbstractSpellCard) {
+        if (card.type == AbstractCard.CardType.POWER && !(card instanceof AbstractSpellCard)) {
             flash();
-            applyToSelf(new DrawCardNextTurnPower(AbstractDungeon.player, amount));
+            atb(new ConjureAction(false));
         }
     }
 

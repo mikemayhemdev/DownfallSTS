@@ -19,7 +19,7 @@ public class Manastorm extends AbstractAwakenedCard {
 
     public Manastorm() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 10;
+        baseDamage = 12;
         this.tags.add(AwakenedOneMod.DELVE);
     }
 

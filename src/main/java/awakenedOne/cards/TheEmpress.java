@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import awakenedOne.AwakenedOneMod;
 import awakenedOne.powers.EmpressPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -13,6 +14,7 @@ public class TheEmpress extends AbstractAwakenedCard {
 
     public TheEmpress() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.tags.add(AwakenedOneMod.DELVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,5 +1,7 @@
 package awakenedOne.cards;
 
+import awakenedOne.AwakenedOneMod;
+import awakenedOne.actions.ConjureAction;
 import awakenedOne.powers.InResponsePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -15,11 +17,11 @@ public class InResponse extends AbstractAwakenedCard {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         //baseSecondMagic = secondMagic = 2;
         baseMagicNumber = magicNumber = 2;
-        //this.tags.add(AwakenedOneMod.DELVE);
+        this.tags.add(AwakenedOneMod.DELVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-     //   addToBot(new ConjureAction(false));
+        addToBot(new ConjureAction(false));
         applyToSelf(new InResponsePower(magicNumber));
     }
 

@@ -14,14 +14,15 @@ public class KnifesEdge extends AbstractAwakenedCard {
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
     public KnifesEdge() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
+        baseSecondMagic = secondMagic = 2;
         cardsToPreview = new VoidCard();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new StrengthPower(p, magicNumber));
-        addToBot(new MakeTempCardInDiscardAction(new VoidCard(), 1));
+        addToBot(new MakeTempCardInDiscardAction(new VoidCard(), secondMagic));
     }
 
     public void upp() {
