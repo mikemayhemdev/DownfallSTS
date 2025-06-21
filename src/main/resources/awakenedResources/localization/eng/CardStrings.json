@@ -51,7 +51,7 @@
   },
   "awakened:InResponse": {
     "NAME": "Spellshield",
-    "DESCRIPTION": "Whenever you play a Spell, gain !M! Block. NL awakened:Conjure."
+    "DESCRIPTION": "awakened:Conjure. NL Whenever you play a Spell, gain !M! Block."
   },
   "awakened:DarkEcho": {
     "NAME": "Dark Echo",
@@ -151,7 +151,7 @@
   },
   "awakened:KnifesEdge": {
     "NAME": "Knife's Edge",
-    "DESCRIPTION": "Gain !M! Strength. NL Add !awakened:m2! *Voids in your discard pile."
+    "DESCRIPTION": "Gain !M! Strength. NL Add !awakened:m2! *Voids into your discard pile."
   },
   "awakened:Vision": {
     "NAME": "Vision",
