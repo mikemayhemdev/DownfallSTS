@@ -8,7 +8,7 @@ public class DarkIncantationRitualPower extends AbstractAwakenedPower {
     public static final String POWER_ID = makeID(NAME);
 
     public DarkIncantationRitualPower(int amount) {
-        super(NAME, PowerType.BUFF, true, AbstractDungeon.player, null, amount);
+        super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
     }
 
     @Override

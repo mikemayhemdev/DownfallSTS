@@ -14,7 +14,7 @@ public class ShroudOfMiasma extends AbstractAwakenedCard {
     //Shroud of Miasma
 
     public ShroudOfMiasma() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
     }
 

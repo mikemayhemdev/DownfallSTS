@@ -1,11 +1,9 @@
 package downfall.patches;
 
 import automaton.AutomatonChar;
-import automaton.potions.BurnAndBuffPotion;
 import automaton.relics.BronzeIdol;
 import automaton.relics.DecasWashers;
 import automaton.relics.DonusWashers;
-import automaton.relics.MakeshiftBattery;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.relics.*;
 import champ.ChampChar;
@@ -14,7 +12,6 @@ import champ.relics.DeflectingBracers;
 import champ.relics.DuelingGlove;
 import collector.CollectorChar;
 import collector.cards.WhirlingFlame;
-import collector.potions.TempHPPotion;
 import collector.relics.*;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -22,40 +19,28 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import downfall.cards.curses.*;
 import downfall.downfallMod;
-import downfall.events.HeartEvent;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
-import expansioncontent.potions.BossPotion;
 import expansioncontent.relics.StudyCardRelic;
 import gremlin.characters.GremlinCharacter;
-import gremlin.potions.WizPotion;
-import gremlin.relics.ImpeccablePecs;
 import gremlin.relics.PricklyShields;
 import gremlin.relics.SupplyScroll;
 import guardian.characters.GuardianCharacter;
-import guardian.potions.BlockOnCardUsePotion;
 import guardian.relics.BottledAnomaly;
 import guardian.relics.GemstoneGun;
 import guardian.relics.PocketSentry;
-import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.relics.BloodyTooth;
 import hermit.relics.BrassTacks;
 import hermit.relics.RyeStalk;
 import slimebound.characters.SlimeboundCharacter;
-import slimebound.potions.ThreeZeroPotion;
 import slimebound.relics.PreparedRelic;
 import slimebound.relics.StickyStick;
-import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
-import sneckomod.cards.unknowns.UnknownClass;
-import sneckomod.potions.MuddlingPotion;
 import sneckomod.relics.BlankCard;
 import sneckomod.relics.SneckoTalon;
 import sneckomod.relics.SuperSneckoEye;
 import theHexaghost.TheHexaghost;
-import theHexaghost.potions.SoulburnPotion;
-import champ.potions.CounterstrikePotion;
 import theHexaghost.relics.BolsterEngine;
 import theHexaghost.relics.Sixitude;
 
@@ -148,7 +133,6 @@ public class BanSharedContentPatch {
                 AbstractDungeon.srcColorlessCardPool.removeCard(TakeFlight.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(Virus.ID);
 
-
                 AbstractDungeon.curseCardPool.removeCard(Aged.ID);
                 AbstractDungeon.curseCardPool.removeCard(Icky.ID);
                 AbstractDungeon.curseCardPool.removeCard(Bewildered.ID);
@@ -167,6 +151,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.srcCurseCardPool.removeCard(Scatterbrained.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(Sapped.ID);
             }
+
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {
                 AbstractDungeon.colorlessCardPool.removeCard(SuperPrepareCrush.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(SuperPrepareCrush.ID);
