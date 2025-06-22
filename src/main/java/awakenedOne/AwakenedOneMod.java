@@ -24,6 +24,8 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -136,7 +138,16 @@ public class AwakenedOneMod implements
 
 
     public static String makeBetaCardPath(String resourcePath) {
-        return "awakenedResources/images/cards/joke/" + resourcePath;
+        String textureString = "awakenedResources/images/joke/" + resourcePath + ".png";
+        FileHandle h = Gdx.files.internal(textureString);
+        if (!h.exists()) {
+            textureString = "awakenedResources/images/cards/programmerart/" + resourcePath + ".png";
+            h = Gdx.files.internal(textureString);
+        }
+        if (!h.exists()) {
+            textureString = "awakenedResources/images/ui/missing.png";
+        }
+        return textureString;
     }
 
     public static void loadJokeCardImage(AbstractCard card, String img) {

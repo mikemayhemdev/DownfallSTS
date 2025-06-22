@@ -85,7 +85,7 @@
   },
   "awakened:FadeOut": {
     "NAME": "Demon Glyph",
-    "DESCRIPTION": "Ethereal. NL Gain !awakened:m2! Dexterity. NL Gain !M! awakened:Manaburn."
+    "DESCRIPTION": "Ethereal. NL Gain !awakened:m2! Strength and Dexterity. NL At the start of your turn, gain !M! awakened:Manaburn."
   },
   "awakened:TakeFlight": {
     "NAME": "Take Flight",
@@ -154,7 +154,7 @@
     "DESCRIPTION": "Gain !M! Strength. NL Add !awakened:m2! *Voids into your discard pile."
   },
   "awakened:Vision": {
-    "NAME": "Vision",
+    "NAME": "Double Vision",
     "DESCRIPTION": "Choose a card in hand. Add !M! copy of that card to the Spell Pile until it is refreshed.",
     "UPGRADE_DESCRIPTION": "Choose a card in hand. Add !M! copies of that card to the Spell Pile until it is refreshed."
   },
