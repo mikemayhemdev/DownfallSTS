@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import com.megacrit.cardcrawl.vfx.combat.ReaperEffect;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.vfx;
 
@@ -22,6 +23,7 @@ public class Thunderbolt extends AbstractSpellCard {
         super(ID, 1, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 13;
         baseSecondDamage = 2;
+        loadJokeCardImage(this, ID+".png");
     }
 
     @Override

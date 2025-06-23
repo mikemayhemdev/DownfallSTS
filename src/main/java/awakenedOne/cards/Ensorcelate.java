@@ -5,6 +5,7 @@ import awakenedOne.actions.ConjureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.atb;
 
@@ -17,6 +18,7 @@ public class Ensorcelate extends AbstractAwakenedCard {
         baseBlock = 4;
         baseMagicNumber = magicNumber = 2;
         this.tags.add(AwakenedOneMod.DELVE);
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

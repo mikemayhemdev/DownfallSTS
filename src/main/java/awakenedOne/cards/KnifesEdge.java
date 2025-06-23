@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
 
@@ -18,6 +19,7 @@ public class KnifesEdge extends AbstractAwakenedCard {
         baseMagicNumber = magicNumber = 2;
         baseSecondMagic = secondMagic = 2;
         cardsToPreview = new VoidCard();
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

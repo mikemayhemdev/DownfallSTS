@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+
 public class FeatherVeil extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(FeatherVeil.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
@@ -16,6 +18,7 @@ public class FeatherVeil extends AbstractAwakenedCard {
         baseBlock = 10;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

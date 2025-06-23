@@ -15,6 +15,7 @@ import hermit.powers.Drained;
 
 import java.util.Iterator;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeID;
 
 public class MirePit extends AbstractAwakenedCard {
@@ -25,6 +26,7 @@ public class MirePit extends AbstractAwakenedCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = 7;
         this.exhaust = true;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

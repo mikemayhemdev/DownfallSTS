@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.util.Wiz.*;
 
 public class ClarionCall extends AbstractAwakenedCard {
@@ -16,6 +17,7 @@ public class ClarionCall extends AbstractAwakenedCard {
     public ClarionCall() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 5;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

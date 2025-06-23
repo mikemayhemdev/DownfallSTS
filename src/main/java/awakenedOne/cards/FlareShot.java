@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.util.Wiz.applyToSelf;
 
 public class FlareShot extends AbstractAwakenedCard {
@@ -17,6 +18,7 @@ public class FlareShot extends AbstractAwakenedCard {
         baseDamage = 7;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

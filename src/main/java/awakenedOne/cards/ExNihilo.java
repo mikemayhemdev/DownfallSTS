@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.ui.AwakenButton.awaken;
 
 
@@ -21,6 +22,7 @@ public class ExNihilo extends AbstractAwakenedCard {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 3;
         this.exhaust = true;
+        loadJokeCardImage(this, ID+".png");
     }
 
 

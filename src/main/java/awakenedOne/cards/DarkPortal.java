@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+
 public class DarkPortal extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(DarkPortal.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
@@ -19,6 +21,7 @@ public class DarkPortal extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
         cardsToPreview = new VoidCard();
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

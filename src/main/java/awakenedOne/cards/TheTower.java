@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 
 import java.util.Iterator;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+
 public class TheTower extends AbstractAwakenedCard {
 
     public final static String ID = AwakenedOneMod.makeID(TheTower.class.getSimpleName());
@@ -22,6 +24,7 @@ public class TheTower extends AbstractAwakenedCard {
         baseDamage = 10;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

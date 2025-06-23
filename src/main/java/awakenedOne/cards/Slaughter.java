@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+
 
 public class Slaughter extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Slaughter.class.getSimpleName());
@@ -18,6 +20,7 @@ public class Slaughter extends AbstractAwakenedCard {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 4;
         this.cardsToPreview = new Ceremony();
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

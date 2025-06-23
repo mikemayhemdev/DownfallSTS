@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.atb;
 
@@ -18,6 +19,7 @@ public class Planeswalk extends AbstractAwakenedCard {
         baseBlock = 7;
         this.cardsToPreview = new VoidCard();
         baseMagicNumber = magicNumber = 2;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

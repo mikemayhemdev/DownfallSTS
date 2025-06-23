@@ -9,8 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 
-import static awakenedOne.AwakenedOneMod.HexCurse;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.*;
 
@@ -22,6 +21,7 @@ public class IntoNothing extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
         this.tags.add(AwakenedOneMod.DELVE);
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

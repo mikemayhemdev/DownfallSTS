@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
 import static awakenedOne.util.Wiz.atb;
@@ -19,6 +20,7 @@ public class Intensify extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = 7;
         this.tags.add(AwakenedOneMod.DELVE);
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

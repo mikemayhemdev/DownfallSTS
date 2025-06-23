@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.actions.HandSelectAction;
 import hermit.util.Wiz;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.util.Wiz.att;
 
 public class Nihilism extends AbstractAwakenedCard {
@@ -19,10 +20,12 @@ public class Nihilism extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
+
     public Nihilism() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
         this.baseMagicNumber = this.magicNumber = 2;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

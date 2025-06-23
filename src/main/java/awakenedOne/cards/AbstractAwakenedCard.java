@@ -25,6 +25,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import java.util.ArrayList;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.util.Wiz.*;
 
 public abstract class AbstractAwakenedCard extends CustomCard {
@@ -61,7 +62,6 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         name = originalName = cardStrings.NAME;
         initializeTitle();
         initializeDescription();
-
         if (textureImg.contains("ui/missing.png")) {
             if (CardLibrary.getAllCards() != null && !CardLibrary.getAllCards().isEmpty()) {
                 CardArtRoller.computeCard(this);

@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BlurPower;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.applyToSelf;
 
@@ -21,6 +22,7 @@ public class TakeFlight extends AbstractAwakenedCard {
         baseBlock = 13;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

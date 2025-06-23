@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeID;
 
 public class Procession extends AbstractAwakenedCard {
@@ -19,6 +20,7 @@ public class Procession extends AbstractAwakenedCard {
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         cardsToPreview = new VoidCard();
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

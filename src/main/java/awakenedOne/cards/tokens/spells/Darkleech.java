@@ -10,8 +10,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 
-import static awakenedOne.AwakenedOneMod.HexCurse;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
 
 public class Darkleech extends AbstractSpellCard {
@@ -21,6 +20,7 @@ public class Darkleech extends AbstractSpellCard {
     public Darkleech() {
         super(ID, 0, CardType.SKILL, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
+        loadJokeCardImage(this, ID+".png");
     }
 
     @Override

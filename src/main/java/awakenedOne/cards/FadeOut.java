@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.FastingEffect;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeID;
 
 public class FadeOut extends AbstractAwakenedCard {
@@ -21,6 +22,7 @@ public class FadeOut extends AbstractAwakenedCard {
         baseMagicNumber = magicNumber = 4;
         baseSecondMagic = secondMagic = 3;
         this.isEthereal = true;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

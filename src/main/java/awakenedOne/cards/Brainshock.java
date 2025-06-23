@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeID;
 
 public class Brainshock extends AbstractAwakenedCard {
@@ -18,6 +19,7 @@ public class Brainshock extends AbstractAwakenedCard {
         baseDamage = 14;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.city.Byrd;
 import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.vfx.MegaSpeechBubble;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.applyToSelf;
 
@@ -22,6 +23,7 @@ public class MazalethForm extends AbstractAwakenedCard {
         tags.add(BaseModCardTags.FORM);
         baseMagicNumber = magicNumber = 1;
         isEthereal = true;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

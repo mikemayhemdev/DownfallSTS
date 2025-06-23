@@ -10,6 +10,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+
 public class Psalm extends AbstractAwakenedCard {
 
     public final static String ID = AwakenedOneMod.makeID(Psalm.class.getSimpleName());
@@ -19,6 +21,7 @@ public class Psalm extends AbstractAwakenedCard {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = 4;
         selfRetain = true;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

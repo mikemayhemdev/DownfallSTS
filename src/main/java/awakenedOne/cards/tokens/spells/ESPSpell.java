@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.atb;
 
@@ -14,6 +15,7 @@ public class ESPSpell extends AbstractSpellCard {
     public ESPSpell() {
         super(ID, 0, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
+        loadJokeCardImage(this, ID+".png");
     }
 
 

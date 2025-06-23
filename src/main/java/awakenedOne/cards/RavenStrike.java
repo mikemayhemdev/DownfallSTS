@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeID;
 
 public class RavenStrike extends AbstractAwakenedCard {
@@ -21,6 +22,7 @@ public class RavenStrike extends AbstractAwakenedCard {
         baseDamage = 7;
         tags.add(CardTags.STRIKE);
         this.exhaust = true;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

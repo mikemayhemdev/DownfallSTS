@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ReboundPower;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+
 
 public class LastDitchEffort extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(LastDitchEffort.class.getSimpleName());
@@ -15,6 +17,7 @@ public class LastDitchEffort extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
         this.exhaust = true;
+        loadJokeCardImage(this, ID+".png");
     }
 
 

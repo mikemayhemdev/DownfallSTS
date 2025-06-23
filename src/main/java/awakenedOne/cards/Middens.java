@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.Collections;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.util.Wiz.atb;
 import static awakenedOne.util.Wiz.att;
 
@@ -22,6 +23,7 @@ public class Middens extends AbstractAwakenedCard {
         baseBlock = 4;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
+        loadJokeCardImage(this, ID+".png");
     }
 
         public void use(AbstractPlayer p, AbstractMonster m) {

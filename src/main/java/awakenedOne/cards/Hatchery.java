@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+
 public class Hatchery extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Hatchery.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
@@ -14,6 +16,7 @@ public class Hatchery extends AbstractAwakenedCard {
     public Hatchery() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 5;
+        loadJokeCardImage(this, ID+".png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

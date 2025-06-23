@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.att;
 
@@ -18,6 +19,7 @@ public class FeatherWhirl extends AbstractAwakenedCard {
         baseDamage = 2;
         this.exhaust = true;
         baseMagicNumber = magicNumber = 0;
+        loadJokeCardImage(this, ID+".png");
     }
 
  public void use(AbstractPlayer p, AbstractMonster m) {
