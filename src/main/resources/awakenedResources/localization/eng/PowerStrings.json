@@ -171,10 +171,17 @@
     ]
   },
   "awakened:NihilPower": {
+    "NAME": "Dominus",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yManaburn at the start of your turn."
+    ]
+  },
+  "awakened:NihilRetriggerPower": {
     "NAME": "Nihil",
     "DESCRIPTIONS": [
-      "Gains #b",
-      " #yManaburn at the start of its turn."
+      "Loses HP equal to its #yManaburn at the start of its turn",
+      " times."
     ]
   },
     "awakened:ReverseRitualPower": {

@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -90,8 +91,8 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
             card = AbstractDungeon.player.masterDeck.group.get(cardIndex);
             if (card != null) {
                 MoonTalismanPatch.inBottleTalisman.set(card, true);
-                setDescriptionAfterLoading();
             }
+            setDescriptionAfterLoading();
         }
     }
 
@@ -111,7 +112,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
             }
         }
         AbstractDungeon.gridSelectScreen.open(tmp,
-                1, DESCRIPTIONS[1] + name + ".",
+                1, DESCRIPTIONS[1] + name + LocalizedStrings.PERIOD,
                 false, false, false, false);
     }
 
@@ -122,8 +123,8 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
             if (cardInDeck != null) {
                 AbstractCard copy = cardInDeck.makeStatEquivalentCopy();
 
-                        CardModifierManager.removeModifiersById(cardInDeck, ConjureMod.ID, true);
-                        MoonTalismanPatch.inBottleTalisman.set(cardInDeck, false);
+                CardModifierManager.removeModifiersById(cardInDeck, ConjureMod.ID, true);
+                MoonTalismanPatch.inBottleTalisman.set(cardInDeck, false);
 
 //                for (AbstractRelic r : AbstractDungeon.player.relics) {
 //                    if (r instanceof MoonTalisman) {
@@ -133,7 +134,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
                 AbstractDungeon.topLevelEffectsQueue.add(new ShowCardBrieflyEffect(copy));
 
                 CardCrawlGame.sound.play("CARD_EXHAUST");
-                AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(copy, (float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2)));
+                AbstractDungeon.topLevelEffects.add(new PurgeCardEffect(copy, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
             }
         }
     }
@@ -141,8 +142,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
     @Override
     public void update() {
         super.update();
-
-        if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+        if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && card.uuid == null) {
             cardSelected = true;
             card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
 
@@ -169,10 +169,10 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
 
         boolean cardExists = false;
 
-        if (cardSelected) {
             if (card != null) {
                 for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
                     if (c.uuid == card.uuid) {
+                        cardSelected = true;
                         cardExists = true;
                         break;
                     }
@@ -184,10 +184,13 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
                 tips.clear();
                 this.description = this.DESCRIPTIONS[4];
                 this.grayscale = true;
+                tips.add(new PowerTip(name, description));
                 initializeTips();
+                return;
             }
 
             if (cardExists) {
+                cardRemoved = false;
                 this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
                 this.grayscale = false;
                 tips.clear();
@@ -195,7 +198,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
                 initializeTips();
             }
         }
-    }
+
 
     @Override
     public AbstractRelic makeCopy() {

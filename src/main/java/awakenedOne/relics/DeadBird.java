@@ -18,7 +18,7 @@ import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
 import static hermit.util.Wiz.getLowestHealthEnemy;
 
-public class DeadBird extends CustomRelic implements OnReceivePowerRelic {
+public class DeadBird extends CustomRelic {
 
     public static final String ID = AwakenedOneMod.makeID("DeadBird");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("DeadBird.png")); //TODO: Images
@@ -35,15 +35,17 @@ public class DeadBird extends CustomRelic implements OnReceivePowerRelic {
     //damage
     private static final int AMOUNT = 4;
 
-    @Override
-    public boolean onReceivePower(AbstractPower var1, AbstractCreature var2) {
+    public void update() {
+        super.update();
+
+        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
             this.counter = AMOUNT + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+        }
 
         if (this.counter < AMOUNT) {
             this.counter = AMOUNT;
         }
 
-        return true;
     }
 
 

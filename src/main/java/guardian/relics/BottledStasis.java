@@ -121,7 +121,7 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
     public void update() {
         super.update();
 
-        if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+        if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && card.uuid == null) {
             cardSelected = true;
             card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             BottledStasisPatch.inBottledStasis.set(card, true);

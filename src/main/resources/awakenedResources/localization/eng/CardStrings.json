@@ -205,8 +205,8 @@
   },
   "awakened:ExNihilo": {
     "NAME": "Nihil",
-    "DESCRIPTION": "awakened:Chant: Deal !D! damage. NL Apply awakened:Manaburn equal to unblocked damage dealt every turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "awakened:Chant: Deal !D! damage. NL Apply awakened:Manaburn equal to unblocked damage dealt every turn."
+    "DESCRIPTION": "Ethereal. NL awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns. NL Exhaust."
   },
   "awakened:TheEmpress": {
     "NAME": "The Empress",
