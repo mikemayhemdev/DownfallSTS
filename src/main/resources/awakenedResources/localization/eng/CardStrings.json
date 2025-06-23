@@ -368,6 +368,6 @@
   },
   "awakened:SiphonEnergy": {
     "NAME": "Siphon",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy had awakened:Hex, draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL If the last card played this combat was a Spell, draw !M! cards."
   }
 }
