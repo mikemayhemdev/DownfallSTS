@@ -25,7 +25,6 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import java.util.ArrayList;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.util.Wiz.*;
 
 public abstract class AbstractAwakenedCard extends CustomCard {
@@ -43,7 +42,6 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     public int baseThirdMagic = -1;
     public boolean upgradedThirdMagic;
     public boolean isThirdMagicModified;
-    public boolean vibe = false;
 
     public int secondDamage;
     public int baseSecondDamage = -1;

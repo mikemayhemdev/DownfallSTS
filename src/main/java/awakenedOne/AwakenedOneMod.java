@@ -152,6 +152,13 @@ public class AwakenedOneMod implements
 
     public static void loadJokeCardImage(AbstractCard card, String img) {
         if (card instanceof AbstractAwakenedCard) {
+            String textureString = "awakenedResources/images/joke/" + card.cardID;
+            FileHandle h = Gdx.files.internal(textureString);
+            if (!h.exists()) {
+                textureString = "awakenedResources/images/cards/programmerart/" + card.cardID;
+                h = Gdx.files.internal(textureString);
+            }
+            img = textureString;
             ((AbstractAwakenedCard) card).betaArtPath = img;
         }
         Texture cardTexture;
