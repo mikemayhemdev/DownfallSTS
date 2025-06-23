@@ -392,13 +392,15 @@ public class SneckoMod implements
                 c.cardID.equals(SadisticNature.ID) ||
                 //Gremlins Cards
                 c.cardID.equals(Jeer.ID) ||
-                c.cardID.equals(Pickpocket.ID) ||
+                        c.cardID.equals(Jeer.ID) ||
+                        c.cardID.equals(Jeer.ID) ||
                 c.cardID.equals(Heckle.ID) ||
                 c.cardID.equals(ToeStub.ID) ||
                 //Champ Cards
                 c.cardID.equals(ViciousMockery.ID) ||
                 c.cardID.equals(Taunt.ID) ||
                 c.cardID.equals(FaceSlap.ID) ||
+                c.cardID.equals(Shatter.ID) ||
                 c.cardID.equals(SetATrap.ID) ||
                 c.cardID.equals(CheapShot.ID) ||
                 //Slime Boss Cards
@@ -491,6 +493,7 @@ public class SneckoMod implements
         || (
                 //False Positives
                         c.cardID.equals(SwordThrow.ID) ||
+                        c.cardID.equals(ShieldThrow.ID) ||
                         c.cardID.equals(HyperBeam_Guardian.ID) ||
                         c.cardID.equals(HoleUp.ID) ||
                         c.cardID.equals(Quickdraw.ID) ||
@@ -512,7 +515,6 @@ public class SneckoMod implements
                         c.cardID.equals(GremlinMeal.ID) ||
                         c.cardID.equals(FollowThrough.ID) ||
                         c.cardID.equals(FeatherVeil.ID) ||
-                        c.cardID.equals(DarkPower.ID) ||
                         c.cardID.equals(CawCaw.ID) ||
                         c.cardID.equals(FadeOut.ID) ||
                         c.cardID.equals(SacrilegiousStrike.ID) ||
