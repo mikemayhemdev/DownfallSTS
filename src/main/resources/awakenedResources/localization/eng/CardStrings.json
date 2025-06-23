@@ -151,7 +151,7 @@
   },
   "awakened:KnifesEdge": {
     "NAME": "Knife's Edge",
-    "DESCRIPTION": "Gain !M! Strength. NL Add !awakened:m2! *Voids into your discard pile."
+    "DESCRIPTION": "Gain !awakened:m2! Strength. NL Add !M! *Voids into your discard pile."
   },
   "awakened:Vision": {
     "NAME": "Double Vision",
@@ -206,7 +206,7 @@
   "awakened:ExNihilo": {
     "NAME": "Nihil",
     "DESCRIPTION": "Ethereal. NL awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Ethereal. NL awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns."
   },
   "awakened:TheEmpress": {
     "NAME": "The Empress",

@@ -81,8 +81,8 @@ public class ExNihilo extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        this.isEthereal = false;
-        //this.exhaust = false;
+        //this.isEthereal = false;
+        this.exhaust = false;
     }
 
     private static class OfferingEnemyEffect extends AbstractGameEffect {

@@ -22,11 +22,11 @@ public class KnifesEdge extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new StrengthPower(p, magicNumber));
-        addToBot(new MakeTempCardInDiscardAction(new VoidCard(), secondMagic));
+        addToBot(new MakeTempCardInDiscardAction(new VoidCard(), magicNumber));
+        applyToSelf(new StrengthPower(p, secondMagic));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
     }
 }
