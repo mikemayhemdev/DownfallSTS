@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
 import static awakenedOne.ui.AwakenButton.awaken;
 
 public class DarkPower extends AbstractAwakenedCard {
@@ -24,7 +25,7 @@ public class DarkPower extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 8;
         this.cardsToPreview = new Ceremony();
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -5,8 +5,7 @@ import awakenedOne.powers.LibrarianPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.applyToSelf;
 
 public class Librarian extends AbstractAwakenedCard {
@@ -16,7 +15,7 @@ public class Librarian extends AbstractAwakenedCard {
     public Librarian() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.tags.add(AwakenedOneMod.DELVE);
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

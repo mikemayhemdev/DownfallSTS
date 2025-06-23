@@ -9,8 +9,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.expansionContentMod;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 
 
 public class ArcaneNesting extends AbstractAwakenedCard {
@@ -22,7 +21,7 @@ public class ArcaneNesting extends AbstractAwakenedCard {
         super(ID, -2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = 4;
         tags.add(expansionContentMod.UNPLAYABLE);
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

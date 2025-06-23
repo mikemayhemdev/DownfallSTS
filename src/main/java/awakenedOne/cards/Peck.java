@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
 
 public class Peck extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Peck.class.getSimpleName());
@@ -15,7 +16,7 @@ public class Peck extends AbstractAwakenedCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 1;
         baseBlock = 7;
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

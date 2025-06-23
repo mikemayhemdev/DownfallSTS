@@ -15,8 +15,7 @@ import expansioncontent.expansionContentMod;
 import hermit.actions.HandSelectAction;
 import hermit.util.Wiz;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.applyToSelf;
 import static awakenedOne.util.Wiz.atb;
 
@@ -30,7 +29,7 @@ public class DrawingDead extends AbstractAwakenedCard {
         baseBlock = 6;
         this.tags.add(AwakenedOneMod.DELVE);
         selfRetain = true;
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

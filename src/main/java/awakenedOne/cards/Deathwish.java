@@ -8,8 +8,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
 import static awakenedOne.ui.OrbitingSpells.updateTimeOffsets;
 import static awakenedOne.util.Wiz.atb;
@@ -23,7 +22,7 @@ public class Deathwish extends AbstractAwakenedCard {
         cardsToPreview = new DeathCoil();
         this.exhaust = true;
         this.tags.add(AwakenedOneMod.DELVE);
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -7,8 +7,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
 import static awakenedOne.util.Wiz.att;
 
@@ -21,7 +20,7 @@ public class Vision extends AbstractAwakenedCard {
         //this.exhaust = true;
         baseMagicNumber = magicNumber = 1;
         this.tags.add(AwakenedOneMod.DELVE);
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

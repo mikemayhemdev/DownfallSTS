@@ -6,8 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 
 public class DarknessFalls extends AbstractAwakenedCard {
     public final static String ID = makeID(DarknessFalls.class.getSimpleName());
@@ -21,7 +20,7 @@ public class DarknessFalls extends AbstractAwakenedCard {
         this.baseSecondMagic = 2;
         this.secondMagic = this.baseSecondMagic;
         this.isInnate = false;
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

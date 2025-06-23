@@ -4,8 +4,7 @@ import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static awakenedOne.AwakenedOneMod.HexCurse;
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+import static awakenedOne.AwakenedOneMod.*;
 
 public class SingularityShield extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(SingularityShield.class.getSimpleName());
@@ -16,7 +15,7 @@ public class SingularityShield extends AbstractAwakenedCard {
         baseBlock = 6;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

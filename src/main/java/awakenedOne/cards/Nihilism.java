@@ -13,6 +13,7 @@ import hermit.actions.HandSelectAction;
 import hermit.util.Wiz;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
 import static awakenedOne.util.Wiz.att;
 
 public class Nihilism extends AbstractAwakenedCard {
@@ -25,7 +26,7 @@ public class Nihilism extends AbstractAwakenedCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
         this.baseMagicNumber = this.magicNumber = 2;
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

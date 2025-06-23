@@ -8,8 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 
 public class Ceremony extends AbstractAwakenedCard {
     public final static String ID = makeID(Ceremony.class.getSimpleName());
@@ -22,7 +21,7 @@ public class Ceremony extends AbstractAwakenedCard {
         selfRetain = true;
         this.baseSecondMagic = 2;
         this.secondMagic = this.baseSecondMagic;
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

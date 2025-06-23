@@ -8,8 +8,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.powers.NextTurnPowerPower;
 import hermit.util.Wiz;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 
 public class SacrilegiousStrike extends AbstractAwakenedCard {
     public final static String ID = makeID(SacrilegiousStrike.class.getSimpleName());
@@ -21,7 +20,7 @@ public class SacrilegiousStrike extends AbstractAwakenedCard {
         baseBlock = 12;
         this.exhaust = false;
         tags.add(CardTags.STRIKE);
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

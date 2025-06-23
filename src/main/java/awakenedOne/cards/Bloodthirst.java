@@ -10,8 +10,7 @@ import com.megacrit.cardcrawl.vfx.StarBounceEffect;
 import com.megacrit.cardcrawl.vfx.combat.ViolentAttackEffect;
 import expansioncontent.actions.BloodthirstAction;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 
 public class Bloodthirst extends AbstractAwakenedCard {
     public final static String ID = makeID(Bloodthirst.class.getSimpleName());
@@ -21,7 +20,7 @@ public class Bloodthirst extends AbstractAwakenedCard {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 16;
         tags.add(CardTags.HEALING);
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -5,8 +5,7 @@ import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.applyToSelf;
 
 public class Invasion extends AbstractAwakenedCard {
@@ -16,7 +15,7 @@ public class Invasion extends AbstractAwakenedCard {
     public Invasion() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         cardsToPreview = new VoidCard();
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

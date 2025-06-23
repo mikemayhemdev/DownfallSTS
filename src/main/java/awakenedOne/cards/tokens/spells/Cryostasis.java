@@ -10,8 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.FrostOrbActivateEffect;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
 
 public class Cryostasis extends AbstractSpellCard {
@@ -22,7 +21,7 @@ public class Cryostasis extends AbstractSpellCard {
         super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
         baseBlock = 6;
         baseMagicNumber = magicNumber = 1;
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     @Override

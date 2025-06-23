@@ -10,8 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.Iterator;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 
 public class MagicStrike extends AbstractAwakenedCard {
     public final static String ID = makeID(MagicStrike.class.getSimpleName());
@@ -23,7 +22,7 @@ public class MagicStrike extends AbstractAwakenedCard {
         tags.add(CardTags.STRIKE);
         this.tags.add(AwakenedOneMod.DELVE);
        // baseSecondMagic = secondMagic = 1;
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

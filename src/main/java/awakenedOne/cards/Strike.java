@@ -4,8 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 
 public class Strike extends AbstractAwakenedCard {
     public final static String ID = makeID(Strike.class.getSimpleName());
@@ -16,7 +15,7 @@ public class Strike extends AbstractAwakenedCard {
         baseDamage = 6;
         tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(CardTags.STRIKE);
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

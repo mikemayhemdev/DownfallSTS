@@ -9,8 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 
 public class Sludge extends AbstractAwakenedCard {
     public final static String ID = makeID(Sludge.class.getSimpleName());
@@ -22,7 +21,7 @@ public class Sludge extends AbstractAwakenedCard {
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
         cardsToPreview = new VoidCard();
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
 import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.isChantActive;
 
@@ -19,7 +20,7 @@ public class Hymn extends AbstractAwakenedCard {
     public Hymn() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseBlock = 4;
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

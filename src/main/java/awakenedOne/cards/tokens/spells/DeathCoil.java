@@ -12,8 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
 import hermit.powers.Drained;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
 
 public class DeathCoil extends AbstractSpellCard {
     public final static String ID = makeID(DeathCoil.class.getSimpleName());
@@ -23,7 +22,7 @@ public class DeathCoil extends AbstractSpellCard {
         super(ID, 0, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 4;
-        loadJokeCardImage(this, ID+".png");
+        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
     }
 
     @Override
