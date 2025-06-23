@@ -1,10 +1,15 @@
 package awakenedOne.cards;
 
+import automaton.actions.RepeatCardAction;
+import automaton.cards.FunctionCard;
+import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import awakenedOne.powers.EnemyHexedPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
@@ -23,15 +28,29 @@ public class SiphonEnergy extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        if (m.hasPower(EnemyHexedPower.POWER_ID)) {
-            this.addToBot(new DrawCardAction(magicNumber));
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2) instanceof AbstractSpellCard) {
+                    atb(new DrawCardAction(AbstractDungeon.player, magicNumber));
+                }
+            }
+        });
+    }
 
+    @Override
+    public void triggerOnGlowCheck() {
+        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1) instanceof AbstractSpellCard) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
     }
 
     @Override
     public void upp() {
-        //upgradeDamage(3);
+        upgradeDamage(1);
         upgradeMagicNumber(1);
     }
 }
