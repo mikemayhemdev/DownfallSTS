@@ -33,7 +33,7 @@
   },
   "champ:SwordSigil": {
     "NAME": "Sigil of Victory",
-    "DESCRIPTION": "Trigger your current Stance's *Skill champ:Bonus !M! times."
+    "DESCRIPTION": "Trigger your current *Stance's *Skill champ:Bonus !M! times."
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
@@ -142,7 +142,7 @@
   },
   "champ:Lariat": {
     "NAME": "Lariat",
-    "DESCRIPTION": "Gain !B! Block X times. NL Trigger your Stance's *Skill champ:Bonus X times."
+    "DESCRIPTION": "Gain !B! Block X times. NL Trigger your *Stance's *Skill champ:Bonus X times."
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",
@@ -158,7 +158,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "Gain !M! Vigor. NL Apply !DM! Weak. NL Trigger your Stance's *Skill champ:Bonus.",
+    "DESCRIPTION": "Gain !M! Vigor. NL Apply !DM! Weak. NL Trigger your current *Stance's *Skill champ:Bonus.",
     "EXTENDED_DESCRIPTION": [
       "Berserker champ:Combo: Gain !M! temporary Strength. NL ",
       "Defensive champ:Combo: Gain !M! temporary Dexterity."

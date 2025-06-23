@@ -5,6 +5,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.city.Champ;
 import com.megacrit.cardcrawl.powers.DexterityPower;
@@ -43,6 +44,12 @@ public class ViciousMockery extends AbstractChampCard {
         derp.add(Champ.DIALOG[2]);
         derp.add(Champ.DIALOG[3]);
         return derp.get(MathUtils.random(derp.size() - 1));
+    }
+
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        this.keywords.add(GameDictionary.STANCE.NAMES[0].toLowerCase());
     }
 
     public void upp() {

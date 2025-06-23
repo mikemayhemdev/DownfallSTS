@@ -351,7 +351,7 @@
   },
   "awakened:Procession": {
     "NAME": "Procession",
-    "DESCRIPTION":  "Draw cards until your hand is full. NL Place !M! *Voids on top of your draw pile. NL Exhaust."
+    "DESCRIPTION":  "Draw cards until your hand is full. NL Add !M! *Voids into your discard pile. NL Exhaust."
   },
   "awakened:SplitWide": {
     "NAME": "Split Wide",
@@ -365,5 +365,9 @@
     "NAME": "Deathwish",
     "DESCRIPTION": "Add *Deathcoil to the Spell Pile. NL awakened:Conjure it. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Innate. NL Add *Deathcoil to the Spell Pile. NL awakened:Conjure it. NL Exhaust."
+  },
+  "awakened:SiphonEnergy": {
+    "NAME": "Siphon",
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy had awakened:Hex, draw !M! cards."
   }
 }

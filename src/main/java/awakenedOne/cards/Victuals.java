@@ -52,6 +52,5 @@ public class Victuals extends AbstractAwakenedCard {
     @Override
     public void upp() {
         upgradeBlock(3);
-        upgradeMagicNumber(1);
     }
 }
