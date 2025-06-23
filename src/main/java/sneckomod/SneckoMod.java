@@ -392,8 +392,10 @@ public class SneckoMod implements
                 c.cardID.equals(SadisticNature.ID) ||
                 //Gremlins Cards
                 c.cardID.equals(Jeer.ID) ||
-                        c.cardID.equals(Jeer.ID) ||
-                        c.cardID.equals(Jeer.ID) ||
+                c.cardID.equals(AggressiveDefense.ID) ||
+                c.cardID.equals(Dazzle.ID) ||
+                c.cardID.equals(Exacerbate.ID) ||
+                c.cardID.equals(BrokenShin.ID) ||
                 c.cardID.equals(Heckle.ID) ||
                 c.cardID.equals(ToeStub.ID) ||
                 //Champ Cards
