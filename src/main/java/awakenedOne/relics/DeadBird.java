@@ -37,10 +37,7 @@ public class DeadBird extends CustomRelic implements OnReceivePowerRelic {
 
     @Override
     public boolean onReceivePower(AbstractPower var1, AbstractCreature var2) {
-
-        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
             this.counter = AMOUNT + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-        }
 
         if (this.counter < AMOUNT) {
             this.counter = AMOUNT;

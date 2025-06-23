@@ -16,7 +16,6 @@ public class Pandemonium extends AbstractExpansionCard {
 
     public Pandemonium() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        tags.add(expansionContentMod.STUDY);
         baseMagicNumber = magicNumber = 1;
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_power.png", "expansioncontentResources/images/1024/bg_boss_power.png");
         loadJokeCardImage(this, "Pandemonium.png");
