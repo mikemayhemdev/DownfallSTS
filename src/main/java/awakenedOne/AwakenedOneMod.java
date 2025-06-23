@@ -138,10 +138,10 @@ public class AwakenedOneMod implements
 
 
     public static String makeBetaCardPath(String resourcePath) {
-        String textureString = "awakenedResources/images/joke/" + resourcePath + ".png";
+        String textureString = "awakenedResources/images/joke/" + resourcePath;
         FileHandle h = Gdx.files.internal(textureString);
         if (!h.exists()) {
-            textureString = "awakenedResources/images/cards/programmerart/" + resourcePath + ".png";
+            textureString = "awakenedResources/images/cards/programmerart/" + resourcePath;
             h = Gdx.files.internal(textureString);
         }
         if (!h.exists()) {
