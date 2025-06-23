@@ -22,7 +22,7 @@ public class MagicStrike extends AbstractAwakenedCard {
         tags.add(CardTags.STRIKE);
         this.tags.add(AwakenedOneMod.DELVE);
        // baseSecondMagic = secondMagic = 1;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(MagicStrike.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -18,7 +18,7 @@ public class Pluck extends AbstractAwakenedCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 10;
         this.baseMagicNumber = this.magicNumber = 1;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Pluck.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

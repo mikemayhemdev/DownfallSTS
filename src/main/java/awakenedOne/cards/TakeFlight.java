@@ -23,7 +23,7 @@ public class TakeFlight extends AbstractAwakenedCard {
         baseBlock = 13;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(TakeFlight.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

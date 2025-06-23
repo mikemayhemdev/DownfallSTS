@@ -15,7 +15,7 @@ public class RisingChant extends AbstractAwakenedCard {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(RisingChant.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

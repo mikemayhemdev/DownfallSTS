@@ -18,7 +18,7 @@ public class Planeswalk extends AbstractAwakenedCard {
         baseBlock = 7;
         this.cardsToPreview = new VoidCard();
         baseMagicNumber = magicNumber = 2;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Planeswalk.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -20,7 +20,7 @@ public class Hymn extends AbstractAwakenedCard {
     public Hymn() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         baseBlock = 4;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Hymn.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

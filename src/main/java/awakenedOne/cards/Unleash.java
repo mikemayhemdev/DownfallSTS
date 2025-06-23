@@ -17,7 +17,7 @@ public class Unleash extends AbstractAwakenedCard {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.selfRetain = true;
         this.exhaust = true;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath( "Unleash.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

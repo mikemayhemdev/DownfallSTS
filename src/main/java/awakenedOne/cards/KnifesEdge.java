@@ -18,7 +18,7 @@ public class KnifesEdge extends AbstractAwakenedCard {
         baseMagicNumber = magicNumber = 2;
         baseSecondMagic = secondMagic = 2;
         cardsToPreview = new VoidCard();
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(KnifesEdge.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

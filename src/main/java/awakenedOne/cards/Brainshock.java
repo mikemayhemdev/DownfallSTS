@@ -18,7 +18,7 @@ public class Brainshock extends AbstractAwakenedCard {
         baseDamage = 14;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Brainshock.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

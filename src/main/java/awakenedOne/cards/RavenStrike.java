@@ -21,7 +21,7 @@ public class RavenStrike extends AbstractAwakenedCard {
         baseDamage = 7;
         tags.add(CardTags.STRIKE);
         this.exhaust = true;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(RavenStrike.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

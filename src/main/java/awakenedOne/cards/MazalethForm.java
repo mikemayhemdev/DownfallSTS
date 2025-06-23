@@ -22,7 +22,7 @@ public class MazalethForm extends AbstractAwakenedCard {
         tags.add(BaseModCardTags.FORM);
         baseMagicNumber = magicNumber = 1;
         isEthereal = true;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(MazalethForm.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -16,7 +16,7 @@ public class Primacy extends AbstractAwakenedCard {
         //this.isEthereal = true;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Primacy.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

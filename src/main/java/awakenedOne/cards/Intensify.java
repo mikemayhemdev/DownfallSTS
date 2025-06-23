@@ -19,7 +19,7 @@ public class Intensify extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = 7;
         this.tags.add(AwakenedOneMod.DELVE);
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath("Intensify.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

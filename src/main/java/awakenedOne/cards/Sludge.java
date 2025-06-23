@@ -21,7 +21,7 @@ public class Sludge extends AbstractAwakenedCard {
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
         cardsToPreview = new VoidCard();
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Sludge.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

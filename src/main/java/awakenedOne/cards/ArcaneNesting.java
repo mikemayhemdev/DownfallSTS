@@ -21,7 +21,7 @@ public class ArcaneNesting extends AbstractAwakenedCard {
         super(ID, -2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = 4;
         tags.add(expansionContentMod.UNPLAYABLE);
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(ArcaneNesting.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

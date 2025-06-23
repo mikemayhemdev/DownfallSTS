@@ -23,7 +23,7 @@ public class ExNihilo extends AbstractAwakenedCard {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = 3;
         this.exhaust = true;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(ExNihilo.class.getSimpleName() + ".png"));
     }
 
 

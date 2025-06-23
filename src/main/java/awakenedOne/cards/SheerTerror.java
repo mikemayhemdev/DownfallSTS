@@ -25,7 +25,7 @@ public class SheerTerror extends AbstractAwakenedCard {
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         //this.exhaust = true;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(SheerTerror.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

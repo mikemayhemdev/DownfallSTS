@@ -20,7 +20,7 @@ public class Darkleech extends AbstractSpellCard {
     public Darkleech() {
         super(ID, 0, CardType.SKILL, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Darkleech.class.getSimpleName() + ".png"));
     }
 
     @Override

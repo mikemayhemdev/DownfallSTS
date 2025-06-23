@@ -16,7 +16,7 @@ public class Envision extends AbstractAwakenedCard {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 4;
         this.tags.add(AwakenedOneMod.DELVE);
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Envision.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

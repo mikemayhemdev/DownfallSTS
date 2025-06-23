@@ -20,7 +20,7 @@ public class SacrilegiousStrike extends AbstractAwakenedCard {
         baseBlock = 12;
         this.exhaust = false;
         tags.add(CardTags.STRIKE);
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(SacrilegiousStrike.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

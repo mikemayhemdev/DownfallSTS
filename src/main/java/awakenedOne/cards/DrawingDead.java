@@ -29,7 +29,7 @@ public class DrawingDead extends AbstractAwakenedCard {
         baseBlock = 6;
         this.tags.add(AwakenedOneMod.DELVE);
         selfRetain = true;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(DrawingDead.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

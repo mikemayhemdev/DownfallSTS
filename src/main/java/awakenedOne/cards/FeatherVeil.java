@@ -19,7 +19,7 @@ public class FeatherVeil extends AbstractAwakenedCard {
         baseBlock = 10;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath( FeatherVeil.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -16,7 +16,7 @@ import static awakenedOne.util.Wiz.atb;
 
 public class AphoticFount extends AbstractAwakenedCard {
 
-    public final static String ID = AwakenedOneMod.makeID(AphoticFount.class.getSimpleName());
+    public final static String ID = AwakenedOneMod.makeID(ArcaneNesting.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public AphoticFount() {
@@ -24,7 +24,7 @@ public class AphoticFount extends AbstractAwakenedCard {
         this.exhaust = true;
         cardsToPreview = new AphoticShield();
         this.tags.add(AwakenedOneMod.DELVE);
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(ArcaneNesting.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

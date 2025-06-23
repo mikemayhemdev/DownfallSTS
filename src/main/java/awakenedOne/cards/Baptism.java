@@ -19,7 +19,7 @@ public class Baptism extends AbstractAwakenedCard {
         exhaust = true;
         cardsToPreview = new VoidCard();
         this.tags.add(CardTags.HEALING);
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Baptism.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

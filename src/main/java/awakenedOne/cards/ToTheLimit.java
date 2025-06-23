@@ -19,7 +19,7 @@ public class ToTheLimit extends AbstractAwakenedCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         this.exhaust = true;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(ToTheLimit.class.getSimpleName() + "ToTheLimit.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

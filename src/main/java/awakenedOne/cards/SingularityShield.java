@@ -15,7 +15,7 @@ public class SingularityShield extends AbstractAwakenedCard {
         baseBlock = 6;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(SingularityShield.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

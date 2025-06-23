@@ -18,7 +18,7 @@ public class LastDitchEffort extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
         this.exhaust = true;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(LastDitchEffort.class.getSimpleName() + ".png"));
     }
 
 

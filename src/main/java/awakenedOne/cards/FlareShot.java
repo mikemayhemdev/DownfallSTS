@@ -19,7 +19,7 @@ public class FlareShot extends AbstractAwakenedCard {
         baseDamage = 7;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(FlareShot.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

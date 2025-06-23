@@ -22,7 +22,7 @@ public class Spew extends AbstractAwakenedCard {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 12;
         this.cardsToPreview = new VoidCard();
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Spew.class.getSimpleName() + ".png"));
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {

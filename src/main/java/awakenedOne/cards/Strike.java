@@ -15,7 +15,7 @@ public class Strike extends AbstractAwakenedCard {
         baseDamage = 6;
         tags.add(CardTags.STARTER_STRIKE);
         this.tags.add(CardTags.STRIKE);
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Strike.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

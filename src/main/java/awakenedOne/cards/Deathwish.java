@@ -22,7 +22,7 @@ public class Deathwish extends AbstractAwakenedCard {
         cardsToPreview = new DeathCoil();
         this.exhaust = true;
         this.tags.add(AwakenedOneMod.DELVE);
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Deathwish.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -18,7 +18,7 @@ public class InResponse extends AbstractAwakenedCard {
         //baseSecondMagic = secondMagic = 2;
         baseMagicNumber = magicNumber = 2;
         this.tags.add(AwakenedOneMod.DELVE);
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(InResponse.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

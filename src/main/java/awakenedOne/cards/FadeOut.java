@@ -21,7 +21,7 @@ public class FadeOut extends AbstractAwakenedCard {
         baseMagicNumber = magicNumber = 4;
         baseSecondMagic = secondMagic = 3;
         this.isEthereal = true;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(FadeOut.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

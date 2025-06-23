@@ -21,7 +21,7 @@ public class Ceremony extends AbstractAwakenedCard {
         selfRetain = true;
         this.baseSecondMagic = 2;
         this.secondMagic = this.baseSecondMagic;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Ceremony.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

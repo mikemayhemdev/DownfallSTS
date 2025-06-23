@@ -19,7 +19,7 @@ public class Procession extends AbstractAwakenedCard {
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         cardsToPreview = new VoidCard();
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Procession.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

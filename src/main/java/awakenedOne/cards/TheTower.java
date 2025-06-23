@@ -25,7 +25,7 @@ public class TheTower extends AbstractAwakenedCard {
         baseDamage = 10;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(TheTower.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

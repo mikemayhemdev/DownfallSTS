@@ -17,7 +17,7 @@ public class Ensorcelate extends AbstractAwakenedCard {
         baseBlock = 4;
         baseMagicNumber = magicNumber = 2;
         this.tags.add(AwakenedOneMod.DELVE);
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Ensorcelate.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

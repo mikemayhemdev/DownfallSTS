@@ -24,7 +24,7 @@ public class Caw extends AbstractAwakenedCard {
         baseDamage = 3;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Caw.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

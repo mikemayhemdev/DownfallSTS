@@ -21,7 +21,7 @@ public class Cryostasis extends AbstractSpellCard {
         super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
         baseBlock = 6;
         baseMagicNumber = magicNumber = 1;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Cryostasis.class.getSimpleName() + ".png"));
     }
 
     @Override

@@ -18,7 +18,7 @@ public class FeatherWhirl extends AbstractAwakenedCard {
         baseDamage = 2;
         this.exhaust = true;
         baseMagicNumber = magicNumber = 0;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(FeatherWhirl.class.getSimpleName() + ".png"));
     }
 
  public void use(AbstractPlayer p, AbstractMonster m) {

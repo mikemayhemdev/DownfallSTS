@@ -22,7 +22,7 @@ public class Thunderbolt extends AbstractSpellCard {
         super(ID, 1, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 13;
         baseSecondDamage = 2;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Thunderbolt.class.getSimpleName() + ".png"));
     }
 
     @Override

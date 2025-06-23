@@ -22,7 +22,7 @@ public class DeathCoil extends AbstractSpellCard {
         super(ID, 0, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 4;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(DeathCoil.class.getSimpleName() + ".png"));
     }
 
     @Override

@@ -15,7 +15,7 @@ public class Invasion extends AbstractAwakenedCard {
     public Invasion() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         cardsToPreview = new VoidCard();
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Invasion.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

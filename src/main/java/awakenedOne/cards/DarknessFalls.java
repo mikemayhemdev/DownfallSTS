@@ -20,7 +20,7 @@ public class DarknessFalls extends AbstractAwakenedCard {
         this.baseSecondMagic = 2;
         this.secondMagic = this.baseSecondMagic;
         this.isInnate = false;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(DarknessFalls.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

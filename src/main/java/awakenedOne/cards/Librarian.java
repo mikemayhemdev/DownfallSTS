@@ -15,7 +15,7 @@ public class Librarian extends AbstractAwakenedCard {
     public Librarian() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.tags.add(AwakenedOneMod.DELVE);
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Librarian.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

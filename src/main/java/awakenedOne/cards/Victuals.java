@@ -19,7 +19,7 @@ public class Victuals extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 9;
         magicNumber = baseMagicNumber = 2;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath("Victuals.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

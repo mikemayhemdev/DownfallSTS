@@ -16,7 +16,7 @@ public class BurningStudy extends AbstractSpellCard {
     public BurningStudy() {
         super(ID, 1, CardType.POWER, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
-        loadJokeCardImage(this, makeBetaCardPath(ID + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(BurningStudy.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
