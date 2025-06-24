@@ -194,7 +194,7 @@
   "downfall:DefectBiasCuriosity": {
     "NAME": "Bias",
     "DESCRIPTIONS": [
-      "Defect starts combat with #b4 #yFocus and gains #b1 more whenever you play a #yPower card, but also loses #b1 #yFocus at the end of their turn.",
+      "Defect starts combat with #b4 #yFocus and gains #b1 more whenever you play a #yPower card, but also loses #b1 #yFocus at the start of their turn.",
       "Defect loses #b",
       " #yFocus",
       " at the end of their turn."

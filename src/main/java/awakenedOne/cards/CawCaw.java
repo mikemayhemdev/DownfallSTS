@@ -15,8 +15,8 @@ public class CawCaw extends AbstractAwakenedCard {
 
     public CawCaw() {
         super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
-        baseSecondMagic = secondMagic = 1;
+        baseMagicNumber = magicNumber = 2;
+        baseSecondMagic = secondMagic = 2;
         loadJokeCardImage(this, makeBetaCardPath(CawCaw.class.getSimpleName() + ".png"));
     }
 
@@ -27,7 +27,6 @@ public class CawCaw extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
-        upgradeSecondMagic(1);
+        upgradeMagicNumber(-1);
     }
 }

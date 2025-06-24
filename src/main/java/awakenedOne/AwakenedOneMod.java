@@ -278,7 +278,7 @@ public class AwakenedOneMod implements
 
     public void addPotions() {
         BaseMod.addPotion(CultistsDelight.class, Color.BLUE, Color.NAVY, Color.YELLOW, CultistsDelight.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
-        BaseMod.addPotion(SacramentalWine.class, Color.PURPLE, Color.VIOLET, Color.MAROON, SacramentalWine.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
+        BaseMod.addPotion(SacramentalWine.class, Color.NAVY, Color.VIOLET, Color.MAROON, SacramentalWine.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
         BaseMod.addPotion(SneckoPowersPotion.class, Color.CYAN, Color.TAN, Color.BLUE, SneckoPowersPotion.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
 
         if (Loader.isModLoaded("widepotions")) {

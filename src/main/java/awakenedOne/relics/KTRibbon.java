@@ -3,10 +3,14 @@ package awakenedOne.relics;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
+import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
@@ -14,8 +18,6 @@ import static awakenedOne.AwakenedOneMod.makeRelicPath;
 public class KTRibbon extends CustomRelic implements OnAwakenRelic {
 
     //White Ribbon
-
-    //ummmm, what is this, some kind of a "daemon doll"????? a "constant companion"?
 
     private static final int AMOUNT = 4;
 
@@ -47,7 +49,6 @@ public class KTRibbon extends CustomRelic implements OnAwakenRelic {
 
     public void onTrigger() {
         flash();
-        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         addToBot(new GainBlockAction(AbstractDungeon.player, AMOUNT));
     }
 
@@ -56,6 +57,13 @@ public class KTRibbon extends CustomRelic implements OnAwakenRelic {
     public void onAwaken(int amount) {
         if (this.counter == -1) {
             if (amount == 1) {
+                this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                //this should provide a little more visual feedback
+                if (Settings.FAST_MODE) {
+                    this.addToTop(new VFXAction(new MiracleEffect(Color.CYAN, Color.PURPLE, "ATTACK_MAGIC_SLOW_1"), 0.0F));
+                } else {
+                    this.addToTop(new VFXAction(new MiracleEffect(Color.CYAN, Color.PURPLE, "ATTACK_MAGIC_SLOW_1"), 0.3F));
+                }
                 stopPulse();
                 this.counter = 1;
             }

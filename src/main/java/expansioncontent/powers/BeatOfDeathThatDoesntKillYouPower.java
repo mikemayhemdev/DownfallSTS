@@ -32,7 +32,7 @@ public class BeatOfDeathThatDoesntKillYouPower extends AbstractPower {
         this.type = PowerType.BUFF;
     }
 
-    public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+    public void onAfterCardPlayed(AbstractCard card) {
         this.flash();
         this.addToBot(new DamageAllEnemiesAction(this.owner, DamageInfo.createDamageMatrix(this.amount, true), DamageType.THORNS, AttackEffect.BLUNT_LIGHT, true));
     }
