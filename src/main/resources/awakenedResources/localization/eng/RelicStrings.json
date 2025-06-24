@@ -93,7 +93,7 @@
     "NAME": "Alethea",
     "FLAVOR": "From the Abyss.",
     "DESCRIPTIONS": [
-      "If you do not play any #yPowers during your turn, draw an additional card next turn."
+      "If you do not play any #yPower cards during your turn, draw an additional card next turn."
     ]
   },
   "awakened:StrengthBooster": {

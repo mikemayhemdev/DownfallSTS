@@ -205,8 +205,8 @@
   },
   "awakened:ExNihilo": {
     "NAME": "Nihil",
-    "DESCRIPTION": "Ethereal. NL awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns."
+    "DESCRIPTION": "Apply !M! awakened:Manaburn. NL awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! awakened:Manaburn. NL awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns."
   },
   "awakened:TheEmpress": {
     "NAME": "The Empress",

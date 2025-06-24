@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.NihilAction;
+import awakenedOne.powers.ManaburnPower;
 import awakenedOne.powers.NihilRetriggerPower;
 import awakenedOne.relics.KTRibbon;
 import awakenedOne.util.Wiz;
@@ -35,14 +36,15 @@ public class ExNihilo extends AbstractAwakenedCard {
     public ExNihilo() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         //baseDamage = 3;
-        this.isEthereal = true;
+        //this.isEthereal = true;
+        baseMagicNumber = magicNumber = 13;
         this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(ExNihilo.class.getSimpleName() + ".png"));
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        this.addToBot(new ApplyPowerAction(m, p, new ManaburnPower(m, this.magicNumber), this.magicNumber));
         if (Wiz.isChantActive()) {
             if (Settings.FAST_MODE) {
                 this.addToBot(new VFXAction(m, new OfferingEnemyEffect(m), 0.2F));
