@@ -1,6 +1,8 @@
 package awakenedOne.patches;
 
+import awakenedOne.cardmods.ConjureMod;
 import awakenedOne.util.Wiz;
+import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.modthespire.lib.LineFinder;
 import com.evacipated.cardcrawl.modthespire.lib.Matcher;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
@@ -26,10 +28,10 @@ public class MoonTalismanPatch {
             }
 
             if (!Wiz.isInCombat()) {
-                //todo: decide if this is needed
-//                if ((CardModifierManager.hasModifier(__result, ConjureMod.ID))) {
-//                    CardModifierManager.removeModifiersById(__result, ConjureMod.ID, true);
-//                }
+                //this is consistent with how the vanilla bottles work
+                if ((CardModifierManager.hasModifier(__result, ConjureMod.ID))) {
+                    CardModifierManager.removeModifiersById(__result, ConjureMod.ID, true);
+                }
                 MoonTalismanPatch.inBottleTalisman.set(__result, Boolean.FALSE);
             }
 
