@@ -131,65 +131,68 @@ public class AwakenedOneChar extends CustomPlayer {
         super.update();
 
         animateParticles = false;
-
-        int buf = 0;
-        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            buf = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-        }
-
-        if (!this.isDying && buf > 9 && Wiz.isInCombat()) {
-        animateParticles = true;
-        }
-
-        if (this.isDying || !Wiz.isInCombat()) {
-            animateParticles = false;
-        }
-
-        if (this.animateParticles) {
-                    this.fireTimer -= Gdx.graphics.getDeltaTime();
-                    if (this.fireTimer < 0.0F) {
-                        this.fireTimer = 0.1F;
-                        //todo: replace with non-leaky animation
-                        AbstractDungeon.effectList.add(new AwakenedEyeParticle(this.skeleton.getX() + this.eye.getWorldX(), this.skeleton.getY() + this.eye.getWorldY()));
-                        this.wParticles.add(new ReverseAwakenedWingParticle());
+        if (!this.isDying) {
+            int buf = 0;
+            if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
+                buf = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
             }
-        }
 
-        Iterator<ReverseAwakenedWingParticle> p = this.wParticles.iterator();
-
-        while(p.hasNext()) {
-            ReverseAwakenedWingParticle e = (ReverseAwakenedWingParticle)p.next();
-            e.update();
-            if (e.isDone) {
-                p.remove();
+            if (!this.isDying && buf > 9 && Wiz.isInCombat()) {
+                animateParticles = true;
             }
-        }
 
+            if (this.isDying || !Wiz.isInCombat()) {
+                animateParticles = false;
+            }
+
+            if (this.animateParticles) {
+                this.fireTimer -= Gdx.graphics.getDeltaTime();
+                if (this.fireTimer < 0.0F) {
+                    this.fireTimer = 0.1F;
+                    //todo: replace with non-leaky animation
+                    AbstractDungeon.effectList.add(new AwakenedEyeParticle(this.skeleton.getX() + this.eye.getWorldX(), this.skeleton.getY() + this.eye.getWorldY()));
+                    this.wParticles.add(new ReverseAwakenedWingParticle());
+                }
+            }
+
+            Iterator<ReverseAwakenedWingParticle> p = this.wParticles.iterator();
+
+            while (p.hasNext()) {
+                ReverseAwakenedWingParticle e = (ReverseAwakenedWingParticle) p.next();
+                e.update();
+                if (e.isDone) {
+                    p.remove();
+                }
+            }
+
+        }
     }
+
 
     public void render(SpriteBatch sb) {
-        Iterator var2 = this.wParticles.iterator();
+        if (!this.isDying) {
+            Iterator var2 = this.wParticles.iterator();
 
-        ReverseAwakenedWingParticle p;
-        while(var2.hasNext()) {
-            p = (ReverseAwakenedWingParticle)var2.next();
-            if (p.renderBehind) {
-                p.render(sb, (this.skeleton.getX() - this.back.getWorldX()), this.skeleton.getY() + this.back.getWorldY());
+            ReverseAwakenedWingParticle p;
+            while (var2.hasNext()) {
+                p = (ReverseAwakenedWingParticle) var2.next();
+                if (p.renderBehind) {
+                    p.render(sb, (this.skeleton.getX() - this.back.getWorldX()), this.skeleton.getY() + this.back.getWorldY());
+                }
             }
-        }
 
-        super.render(sb);
-        var2 = this.wParticles.iterator();
+            super.render(sb);
+            var2 = this.wParticles.iterator();
 
-        while(var2.hasNext()) {
-            p = (ReverseAwakenedWingParticle)var2.next();
-            if (!p.renderBehind) {
-                p.render(sb, this.skeleton.getX() - this.back.getWorldX(), this.skeleton.getY() + this.back.getWorldY());
+            while (var2.hasNext()) {
+                p = (ReverseAwakenedWingParticle) var2.next();
+                if (!p.renderBehind) {
+                    p.render(sb, this.skeleton.getX() - this.back.getWorldX(), this.skeleton.getY() + this.back.getWorldY());
+                }
             }
-        }
 
+        }
     }
-
 
     public void damage(DamageInfo info) {
         if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0 && skeleton.getData().findAnimation("Hit") != null) {

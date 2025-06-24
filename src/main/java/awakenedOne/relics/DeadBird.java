@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -37,15 +38,15 @@ public class DeadBird extends CustomRelic {
 
     public void update() {
         super.update();
+        if (CardCrawlGame.isInARun()) {
+            if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
+                this.counter = AMOUNT + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+            }
 
-        if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-            this.counter = AMOUNT + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+            if (this.counter < AMOUNT) {
+                this.counter = AMOUNT;
+            }
         }
-
-        if (this.counter < AMOUNT) {
-            this.counter = AMOUNT;
-        }
-
     }
 
 
