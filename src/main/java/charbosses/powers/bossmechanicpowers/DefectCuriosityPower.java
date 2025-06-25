@@ -51,16 +51,29 @@ public class DefectCuriosityPower extends AbstractBossMechanicPower implements O
     }
 
     @Override
-    public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-            if (power.ID == FocusPower.POWER_ID && power.amount < 0 && !owner.hasPower("Artifact") && target == this.owner) {
-                addToTop(new AbstractGameAction() {
-                    @Override
-                    public void update() {
-                        ArchetypeAct3OrbsNewAge.resetPretendFocus();
-                        isDone = true;
-                    }
-                });
+    public void atStartOfTurn() {
+        addToTop(new AbstractGameAction() {
+            @Override
+            public void update() {
+                ArchetypeAct3OrbsNewAge.resetPretendFocus();
+                isDone = true;
             }
+        });
+    }
+
+    @Override
+    public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        if (power.ID == FocusPower.POWER_ID && power.amount < 0 && !owner.hasPower("Artifact") && target == this.owner) {
+            addToTop(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    ArchetypeAct3OrbsNewAge.resetPretendFocus();
+                    isDone = true;
+                }
+            });
+        }
         return true;
     }
+
 }
+
