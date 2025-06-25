@@ -1,5 +1,6 @@
 package hermit.cards;
 
+import champ.relics.DuelingGlove;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -7,12 +8,15 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import gremlin.relics.TagTeamwork;
 import hermit.HermitMod;
 import hermit.actions.HandSelectAction;
 import hermit.characters.hermit;
+import hermit.relics.Spyglass;
 import hermit.util.Wiz;
 
 import static hermit.HermitMod.loadJokeCardImage;
@@ -50,6 +54,7 @@ public class Malice extends AbstractHermitCard {
         baseDamage = DAMAGE;
         loadJokeCardImage(this, "malice.png");
     }
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {}, list -> {
@@ -62,10 +67,14 @@ public class Malice extends AbstractHermitCard {
                     isCurse = true;
             }
 
-            if (isCurse)
+            if (isCurse) {
                 Wiz.att(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(this.baseDamage), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
-            else
+            } else {
                 Wiz.att(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+                if (AbstractDungeon.player.hasRelic(DuelingGlove.ID)) {
+                    AbstractDungeon.player.getRelic(DuelingGlove.ID).onTrigger(m);
+                }
+            }
 
         }, uiStrings.TEXT[0],false,false,false));
     }

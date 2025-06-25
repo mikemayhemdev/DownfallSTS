@@ -19,7 +19,7 @@ public class ProtectiveGoggles extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("ProtectiveGoggles.png"));
 
     public ProtectiveGoggles() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.CLINK);
     }
 
     //How much Block does this Relic give?
@@ -30,7 +30,7 @@ public class ProtectiveGoggles extends CustomRelic {
         if (FunctionHelper.doStuff) {
             if (FunctionHelper.isSequenceEmpty()) {
                 flash();
-                addToTop(new GainBlockAction(AbstractDungeon.player, 4));
+                addToTop(new GainBlockAction(AbstractDungeon.player, BLOCK));
                 addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             }
         }
@@ -38,7 +38,7 @@ public class ProtectiveGoggles extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + BLOCK + DESCRIPTIONS[1];
     }
 
 }

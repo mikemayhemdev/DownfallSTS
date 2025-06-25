@@ -18,7 +18,7 @@ public class PickAxe extends CustomRelic {
 
     public PickAxe() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.COMMON, LandingSound.FLAT);
+                RelicTier.COMMON, LandingSound.CLINK);
 //        this.counter = 3;
     }
 

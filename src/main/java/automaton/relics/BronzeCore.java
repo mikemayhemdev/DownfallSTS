@@ -17,7 +17,7 @@ public class BronzeCore extends CustomRelic implements OnCompileRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BronzeCore.png"));
 
     public BronzeCore() {
-        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.CLINK);
     }
 
     boolean activated = false;

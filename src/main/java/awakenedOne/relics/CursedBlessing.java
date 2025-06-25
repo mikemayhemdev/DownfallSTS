@@ -24,7 +24,7 @@ public class CursedBlessing extends CustomRelic {
     private static final int AMOUNT2 = 1;
 
     public CursedBlessing() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.CLINK);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
      //   DuvuStrings = CardCrawlGame.languagePack.getRelicStrings(DuVuDoll.ID);
         this.counter = -1;
     }

@@ -19,7 +19,7 @@ public class DefensiveTrainingManual extends CustomRelic {
 
     //DefensiveStance.java line 85
     public DefensiveTrainingManual() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.FLAT);
     }
 
     @Override

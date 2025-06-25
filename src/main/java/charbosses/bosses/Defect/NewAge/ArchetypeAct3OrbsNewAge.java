@@ -37,7 +37,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
         maxHPModifier += 350;
         actNum = 3;
         bossMechanicName = DefectCuriosityPower.NAME;
-        bossMechanicDesc = DefectBiasCuriosityPower.DESCRIPTIONS[0];
+        bossMechanicDesc = DefectCuriosityPower.DESCRIPTIONS[0] + 1 + DefectCuriosityPower.DESCRIPTIONS[1];
     }
 
     @Override

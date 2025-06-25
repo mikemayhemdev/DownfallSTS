@@ -27,7 +27,7 @@ public class GladiatorsBookOfMartialProwess extends CustomRelic {
     private boolean hasPlayedFinisher;
 
     public GladiatorsBookOfMartialProwess() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
     }
 
     @Override

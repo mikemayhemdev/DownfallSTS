@@ -42,7 +42,7 @@ public class ChampionCrownUpgraded extends CustomRelic implements OnAfterUseCard
 
 
     public ChampionCrownUpgraded() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.CLINK);
     }
 
     //# of cards drawn

@@ -32,7 +32,7 @@ public class PowerArmor extends CustomRelic implements OnReceivePowerRelic {
     public static int REMOVED = 0;
 
     public PowerArmor() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.CLINK);
     }
 
     @Override

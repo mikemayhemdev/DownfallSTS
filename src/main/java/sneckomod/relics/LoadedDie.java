@@ -17,7 +17,7 @@ public class LoadedDie extends CustomRelic {
     private static final int BLOCK = 1;
 
     public LoadedDie() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.SOLID);
     }
 
     public void onTrigger() {

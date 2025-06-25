@@ -22,7 +22,7 @@ public class PlatinumCore extends CustomRelic implements OnCompileRelic {
     private static final int FUNCTIONS = 3;
 
     public PlatinumCore() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.CLINK);
         counter = 0;
     }
 

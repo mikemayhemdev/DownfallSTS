@@ -22,7 +22,7 @@ public class ZenerDeck extends CustomRelic {
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("ZenerDeck.png"));
 
     public ZenerDeck() {
-        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.FLAT);
         this.tips.add(new CardPowerTip(new ESPSpell()));
     }
 

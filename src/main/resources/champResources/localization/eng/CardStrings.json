@@ -126,9 +126,9 @@
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
-    "DESCRIPTION": "Deal damage equal to your Block, twice. NL If you aren't in champ:Defensive, don't gain Block from cards next turn.",
+    "DESCRIPTION": "Deal damage equal to your Block, twice. NL If not in champ:Defensive, don't gain Block from cards next turn.",
     "EXTENDED_DESCRIPTION": [
-      "Deal damage equal to your Block ( !D! ) twice. NL If you aren't in champ:Defensive, don't gain Block from cards next turn."
+      "Deal damage equal to your Block ( !D! ) twice. NL If not in champ:Defensive, don't gain Block from cards next turn."
     ]
   },
   "champ:FalseCounter": {
@@ -189,7 +189,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL If you aren't in champ:Berserker, you can't play *Attacks next turn."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL If not in champ:Berserker, you can't play *Attacks next turn."
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",

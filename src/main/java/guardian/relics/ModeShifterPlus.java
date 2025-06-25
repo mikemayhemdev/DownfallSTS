@@ -22,7 +22,7 @@ public class ModeShifterPlus extends CustomRelic {
     public ModeShifterPlus() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)),
                 new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.BOSS, LandingSound.FLAT);
+                RelicTier.BOSS, LandingSound.CLINK);
     }
 
     @Override

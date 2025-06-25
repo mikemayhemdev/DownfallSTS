@@ -20,7 +20,7 @@ public class MakeshiftBattery extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("MakeshiftBattery.png"));
 
     public MakeshiftBattery() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.HEAVY);
     }
 
     @Override
