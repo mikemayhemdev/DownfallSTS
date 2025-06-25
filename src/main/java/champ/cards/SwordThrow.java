@@ -26,7 +26,7 @@ public class SwordThrow extends AbstractChampCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) dmg(m, AbstractGameAction.AttackEffect.SMASH);
-        if (dcombo()) applyToSelf(new EntangleNextTurnPower(1));
+        if (!bcombo()) applyToSelf(new EntangleNextTurnPower(1));
     }
 
     @Override
