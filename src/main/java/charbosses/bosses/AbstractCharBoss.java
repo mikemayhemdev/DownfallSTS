@@ -424,7 +424,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                             cB.refreshIntentHbLocation();
                         }
 
-                        //TODO Add a way for create a hidden attack intent for the Boss if it intends to play an Attack.
                     }
                 });
             }
