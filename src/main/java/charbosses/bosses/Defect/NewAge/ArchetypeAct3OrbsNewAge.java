@@ -95,14 +95,12 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
             switch (turn) {
                 case 0:
                     // No Orbs 4e
-                    AbstractBossCard c = new EnMachineLearning();
+                    AbstractBossCard c = new EnBiasedCognition();
                     c.freeToPlayOnce = true;
                     c.costForTurn = 0;
-//                        c.energyGeneratedIfPlayed = 1;
                     addToList(cardsList, c, false);
-
-                    addToList(cardsList, new EnBiasedCognition(),false);
                     increasePretendFocus(4);
+                    addToList(cardsList, new EnMachineLearning(),true);
                     addToList(cardsList, new EnChargeBattery());
                     addToList(cardsList, new EnRainbow());
                     // Lightning Frost Dark 0e
