@@ -34,12 +34,15 @@ public class Endure extends AbstractChampCard {
         if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
             baseBlock += AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
         }
+        if (!upgraded && AbstractDungeon.player.hasPower(DexterityPower.POWER_ID)) {
+            baseBlock -= AbstractDungeon.player.getPower(DexterityPower.POWER_ID).amount;
+        }
         super.applyPowersToBlock();
         baseBlock = realBaseBlock;
         isBlockModified = block != baseBlock;
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
     }
 }

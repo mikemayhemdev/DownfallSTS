@@ -337,8 +337,8 @@
   },
   "champ:Endure": {
     "NAME": "Endure",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block, increased by *Strength.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block, increased by *Strength."
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block, increased by Strength instead of Dexterity.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block, increased by Strength."
   },
   "champ:PreemptiveStrike": {
     "NAME": "Preemptive Strike",
