@@ -126,9 +126,9 @@
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
-    "DESCRIPTION": "Deal damage equal to your Block, twice. NL *If you aren't in champ:Defensive, you can't gain Block from cards next turn.",
+    "DESCRIPTION": "Deal damage equal to your Block, twice. NL If you aren't in champ:Defensive, don't gain Block from cards next turn.",
     "EXTENDED_DESCRIPTION": [
-      "Deal damage equal to your Block ( !D! ) twice. NL *If you aren't in champ:Defensive, you can't gain Block from cards next turn."
+      "Deal damage equal to your Block ( !D! ) twice. NL If you aren't in champ:Defensive, don't gain Block from cards next turn."
     ]
   },
   "champ:FalseCounter": {

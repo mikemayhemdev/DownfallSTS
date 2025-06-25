@@ -44,5 +44,7 @@ public class Endure extends AbstractChampCard {
 
     public void upp() {
         upgradeBlock(2);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

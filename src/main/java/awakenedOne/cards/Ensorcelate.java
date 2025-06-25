@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.ui.OrbitingSpells;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -23,7 +24,11 @@ public class Ensorcelate extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         for (int i = 0; i < magicNumber; i++) {
-            atb(new ConjureAction(true));
+            if (magicNumber-i > OrbitingSpells.spellCards.size()) {
+                atb(new ConjureAction(false));
+            } else {
+                atb(new ConjureAction(true));
+            }
         }
     }
 

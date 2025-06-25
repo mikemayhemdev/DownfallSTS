@@ -230,7 +230,12 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                 case 3:
                     increasePretendFocus(-1);
                     //Plasma Lightning Frost
-                    addToList(cardsList, new EnCapacitor(), false);//AI
+                    if (cB.maxOrbs == 4) {
+                        addToList(cardsList, new EnCapacitor(), false);//AI
+                    } else {
+                        addToList(cardsList, new EnBuffer(), false);
+                    }
+
                     //Plasma Lightning Frost Lightning
                     addToList(cardsList, new EnMulticastPlasma(cB.energyPanel.getCurrentEnergy()-1),false);
                     //Evokes Plasma
