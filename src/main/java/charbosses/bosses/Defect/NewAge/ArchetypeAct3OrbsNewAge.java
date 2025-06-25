@@ -243,7 +243,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     //Lightning Frost Lightning Plasma
 
                     addToList(cardsList, new EnHologram(), true);
-                    addToList(cardsList, new EnBarrage(4));
+                    addToList(cardsList, new EnForceField());
                     //increasePretendFocus(2);
                     //Lightning Frost Lightning Plasma. Perfect loop! :D
                     turn = 0;
