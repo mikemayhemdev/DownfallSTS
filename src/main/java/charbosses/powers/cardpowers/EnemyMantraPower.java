@@ -44,15 +44,15 @@ public class EnemyMantraPower extends AbstractPower {
 
         System.out.println("Initial amount of Mantra: " + initialAmount);
 
-        addToBot(new ReducePowerAction(this.owner, this.owner, EnemyMantraPower.POWER_ID, 4));
-        System.out.println("DEBUG: Reducing by 4...");
+        addToBot(new ReducePowerAction(this.owner, this.owner, EnemyMantraPower.POWER_ID, 5));
+        System.out.println("DEBUG: Reducing by 5...");
 
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
                 System.out.println("Following up.");
 
-                int reducedAmount = Math.min(4, initialAmount);
+                int reducedAmount = Math.min(5, initialAmount);
                 System.out.println("Predicted amount removed: " + reducedAmount);
 
                 int previousMantraGained = AbstractCharBoss.boss.mantraGained;

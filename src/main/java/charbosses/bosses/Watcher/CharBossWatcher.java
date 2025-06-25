@@ -107,7 +107,7 @@ public class CharBossWatcher extends AbstractCharBoss {
                     archetype = new ArchetypeAct2CalmNewAge();
                     break;
                 case 3:
-                    archetype = new ArchetypeAct3DualityNewAge();
+                    archetype = new ArchetypeAct3DivinityNewAge();
                     break;
                 case 4: {
                     switch (NeowBoss.Rezzes) {

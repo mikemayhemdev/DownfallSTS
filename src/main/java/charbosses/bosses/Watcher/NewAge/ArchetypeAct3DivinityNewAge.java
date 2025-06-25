@@ -45,7 +45,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_ThreadAndNeedle());
-        addRelic(new CBR_DuvuDoll(2));
+        addRelic(new CBR_Vajra());
         addRelic(new CBR_Torii());
         addRelic(new CBR_VelvetChoker());
     }
@@ -141,6 +141,6 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_Damaru());
+        addRelic(new CBR_DuvuDoll(2));
     }
 }
