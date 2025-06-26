@@ -25,8 +25,8 @@ public class MagicStrike extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1
 
     public MagicStrike() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 7;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 12;
         tags.add(CardTags.STRIKE);
         this.tags.add(AwakenedOneMod.DELVE);
        // baseSecondMagic = secondMagic = 1;
@@ -62,6 +62,6 @@ public class MagicStrike extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(5);
     }
 }
