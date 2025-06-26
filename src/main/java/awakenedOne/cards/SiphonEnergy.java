@@ -21,7 +21,7 @@ public class SiphonEnergy extends AbstractAwakenedCard {
 
     public SiphonEnergy() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 9;
         magicNumber = baseMagicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(SiphonEnergy.class.getSimpleName() + ".png"));
     }
@@ -50,7 +50,7 @@ public class SiphonEnergy extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(2);
         upgradeMagicNumber(1);
     }
 }
