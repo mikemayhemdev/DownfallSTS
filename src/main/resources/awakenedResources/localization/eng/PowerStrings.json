@@ -198,5 +198,13 @@
         "#yHex cannot be removed from this enemy for the next #b",
         " turns."
       ]
+  },
+  "awakened:ConjureNextTurnPower": {
+    "NAME": "Ensorcelate",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, #yConjure [REMOVE_SPACE].",
+      "At the start of your next turn, #yConjure #b",
+      " times."
+    ]
   }
 }

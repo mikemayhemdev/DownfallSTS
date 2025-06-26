@@ -16,7 +16,7 @@ public class Pluck extends AbstractAwakenedCard {
 
     public Pluck() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 9;
+        baseDamage = 8;
         this.baseMagicNumber = this.magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Pluck.class.getSimpleName() + ".png"));
     }
@@ -28,7 +28,7 @@ public class Pluck extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
         upgradeMagicNumber(1);
     }
 }

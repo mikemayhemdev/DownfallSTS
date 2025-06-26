@@ -2,12 +2,22 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.powers.ConjureNextTurnPower;
+import awakenedOne.powers.NextPowerBlockPower;
 import awakenedOne.ui.OrbitingSpells;
 import basemod.BaseMod;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.WeakPower;
+import sneckomod.powers.CheapStockPower;
+
+import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.util.Wiz.applyToSelf;
 import static awakenedOne.util.Wiz.atb;
 
 public class Ensorcelate extends AbstractAwakenedCard {
@@ -16,7 +26,7 @@ public class Ensorcelate extends AbstractAwakenedCard {
 
     public Ensorcelate() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 3;
+        baseBlock = 5;
         baseMagicNumber = magicNumber = 2;
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(Ensorcelate.class.getSimpleName() + ".png"));
@@ -24,9 +34,7 @@ public class Ensorcelate extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        for (int i = 0; i < magicNumber; i++) {
-            atb(new ConjureAction(true));
-        }
+        applyToSelf(new ConjureNextTurnPower(magicNumber));
     }
 
     public void upp() {

@@ -25,7 +25,7 @@ public class Slaughter extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         AbstractCard c = new Ceremony();
         Wiz.atb(new MakeTempCardInHandAction(c, 1));
     }

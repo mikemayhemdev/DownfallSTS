@@ -16,7 +16,7 @@ public class Hatchery extends AbstractAwakenedCard {
 
     public Hatchery() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 4;
         loadJokeCardImage(this, makeBetaCardPath(Hatchery.class.getSimpleName() + ".png"));
     }
 

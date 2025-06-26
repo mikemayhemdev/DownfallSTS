@@ -19,7 +19,7 @@ public class CursedBlessing extends CustomRelic {
 
 
     //required triggers
-    private static final int AMOUNT1 = 3;
+    private static final int AMOUNT1 = 4;
     //strength gain
     private static final int AMOUNT2 = 1;
 
@@ -59,7 +59,7 @@ public class CursedBlessing extends CustomRelic {
     public void onTrigger() {
         if (this.counter != -1) {
         this.counter++;
-        if (this.counter == AMOUNT2) {
+        if (this.counter == AMOUNT1) {
             this.counter = -1;
             flash();
             this.flash();

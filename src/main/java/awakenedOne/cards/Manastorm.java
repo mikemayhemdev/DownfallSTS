@@ -20,8 +20,8 @@ public class Manastorm extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public Manastorm() {
-        super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 11;
+        super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        baseDamage = 16;
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(Manastorm.class.getSimpleName() + ".png"));
     }

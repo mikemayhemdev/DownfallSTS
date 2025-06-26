@@ -14,7 +14,7 @@ public class Rebirth extends AbstractAwakenedCard {
 
     public Rebirth() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 8;
+        baseMagicNumber = magicNumber = 7;
         tags.add(CardTags.HEALING);
         loadJokeCardImage(this, makeBetaCardPath(Rebirth.class.getSimpleName() + ".png"));
     }

@@ -23,12 +23,13 @@ public class Intensify extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
+        if (upgraded) {
+            blck();
+        }
         atb(new ConjureAction(false));
         applyToSelf(new IntensifyPower(1));
     }
 
     public void upp() {
-        upgradeBlock(3);
     }
 }

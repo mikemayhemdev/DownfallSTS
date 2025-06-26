@@ -39,11 +39,12 @@
   },
   "awakened:MagicStrike": {
     "NAME": "Magic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy doesn't intend to attack, awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure. Shuffle a *Void on into your draw pile."
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL This turn, your next Spell is played twice."
+    "DESCRIPTION": "awakened:Conjure. NL This turn, your next Spell is played twice.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL This turn, your next Spell is played twice."
   },
   "awakened:QuickMove": {
     "NAME": "Peck",
@@ -101,7 +102,7 @@
   },
   "awakened:Extension": {
     "NAME": "Extension",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a Power card from your draw pile. NL It costs 1 less this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Put a random Power card from your draw pile into your hand. NL It costs 1 less this combat."
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
@@ -139,7 +140,7 @@
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
-    "DESCRIPTION": "Whenever you gain Strength, gain !M! Block."
+    "DESCRIPTION": "Whenever you gain Strength, gain !awakened:m2! Block. NL Gain !M! Strength."
   },
   "awakened:ShroudOfMiasma": {
     "NAME": "Shroud of Miasma",
@@ -160,8 +161,8 @@
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Playing this card counts as losing [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Playing this card counts as losing [E]."
+    "DESCRIPTION": "Deal !D! damage. NL [E] spent on this card is counted as having been awakened:Drained. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage.  NL [E] spent on this card is counted as having been awakened:Drained."
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
@@ -183,7 +184,7 @@
   },
   "awakened:Ensorcelate": {
     "NAME": "Ensorcelate",
-    "DESCRIPTION": "Gain !B! Block. NL Choose !M! cards to awakened:Conjure."
+    "DESCRIPTION": "Gain !B! Block. NL At the start of your next turn, awakened:Conjure !awakened:m2! times."
   },
   "awakened:Primacy": {
     "NAME": "Primacy",
@@ -200,8 +201,8 @@
   },
   "awakened:Murder": {
     "NAME": "Murder",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy !M! times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy !M! times."
   },
   "awakened:ExNihilo": {
     "NAME": "Nihil",

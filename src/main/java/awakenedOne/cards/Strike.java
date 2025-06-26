@@ -19,7 +19,7 @@ public class Strike extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_VERTICAL);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
     }
 
     public void upp() {
