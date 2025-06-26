@@ -49,6 +49,7 @@ public class ExtraCursedBell extends CustomRelic {
             AbstractDungeon.combatRewardScreen.rewards.clear();
             for (int i = 0; i < 3; i++) {
                 AbstractRelic coolcommon = AbstractDungeon.returnRandomScreenlessRelic(RelicTier.COMMON);
+                //sandtag wanted these relics removed from this things pool
                 if ((coolcommon.relicId == ArtOfWar.ID) ||
                         (coolcommon.relicId == AncientTeaSet.ID) ||
                         (coolcommon.relicId == DreamCatcher.ID) ||
