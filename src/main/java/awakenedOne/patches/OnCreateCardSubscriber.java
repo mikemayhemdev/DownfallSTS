@@ -11,9 +11,6 @@ public class OnCreateCardSubscriber {
     public static int CardsCreatedThisCombat = 0;
     @SpirePostfixPatch
     public static void onCreateCard(AbstractCard c) {
-        //yeah if a card is created outside of player turn it's probably a status card or something from the enemy
-        if (!AbstractDungeon.actionManager.turnHasEnded) {
-            CardsCreatedThisCombat++;
-        }
+        CardsCreatedThisCombat++;
     }
 }

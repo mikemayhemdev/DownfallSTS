@@ -13,6 +13,7 @@ public class EntanglePowersPower extends AbstractAwakenedPower {
 
     public EntanglePowersPower(int amount) {
         super(NAME, PowerType.DEBUFF, true, AbstractDungeon.player, null, amount);
+        updateDescription();
     }
 
     public void updateDescription() {

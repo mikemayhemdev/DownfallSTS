@@ -51,7 +51,7 @@ public class ExNihilo extends AbstractAwakenedCard {
             } else {
                 this.addToBot(new VFXAction(m, new OfferingEnemyEffect(m), 0.5F));
             }
-            atb(new ApplyPowerAction(m, AbstractDungeon.player, new NihilRetriggerPower(m, 1), 1, true, AbstractGameAction.AttackEffect.FIRE));
+            atb(new ApplyPowerAction(m, AbstractDungeon.player, new NihilRetriggerPower(m, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
             //AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new NihilAction((AbstractCreature)m, (AbstractCreature)p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
             checkOnChant();
         }
@@ -63,7 +63,7 @@ public class ExNihilo extends AbstractAwakenedCard {
                 } else {
                     this.addToBot(new VFXAction(m, new OfferingEnemyEffect(m), 0.5F));
                 }
-                atb(new ApplyPowerAction(m, AbstractDungeon.player, new NihilRetriggerPower(m, 1), 1, true, AbstractGameAction.AttackEffect.FIRE));
+                atb(new ApplyPowerAction(m, AbstractDungeon.player, new NihilRetriggerPower(m, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
                 //AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new NihilAction((AbstractCreature)m, (AbstractCreature)p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
                 checkOnChant();
                 awaken(1);
@@ -102,6 +102,10 @@ public class ExNihilo extends AbstractAwakenedCard {
                 this.timer += 0.3F;
                 switch (this.count) {
                     case 0:
+                        CardCrawlGame.sound.playA("ATTACK_FIRE", -0.5F);
+                        CardCrawlGame.sound.playA("BLOOD_SPLAT", -0.75F);
+                        CardCrawlGame.sound.playA("ATTACK_FIRE", -0.5F);
+                        CardCrawlGame.sound.playA("BLOOD_SPLAT", -0.75F);
                         CardCrawlGame.sound.playA("ATTACK_FIRE", -0.5F);
                         CardCrawlGame.sound.playA("BLOOD_SPLAT", -0.75F);
                         AbstractDungeon.effectsQueue.add(new BorderLongFlashEffect(new Color(1.0F, 0.1F, 0.1F, 1.0F)));
