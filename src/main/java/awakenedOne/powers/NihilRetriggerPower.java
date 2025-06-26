@@ -34,7 +34,7 @@ public class NihilRetriggerPower extends AbstractAwakenedPower {
         if (this.amount == 1) {
             this.description = DESCRIPTIONS[0] + LocalizedStrings.PERIOD;
         } else {
-            this.description = (DESCRIPTIONS[1] + "#b" + this.amount + DESCRIPTIONS[2]);
+            this.description = (DESCRIPTIONS[0] + "#b" + this.amount + DESCRIPTIONS[1]);
         }
     }
 
