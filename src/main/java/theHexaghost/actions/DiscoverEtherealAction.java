@@ -62,7 +62,7 @@ public class DiscoverEtherealAction extends AbstractGameAction {
 
         while (derp.size() != 3) {
             boolean dupe = false;
-            int roll = AbstractDungeon.cardRandomRng.random(99);
+            int roll = AbstractDungeon.potionRng.random(99);
             AbstractCard.CardRarity cardRarity;
             if (roll < 60) {
                 cardRarity = AbstractCard.CardRarity.COMMON;

@@ -36,7 +36,7 @@ public class BlankCard extends CustomRelic {
     public void atBattleStart() {
         ArrayList<AbstractCard> possCardsList = new ArrayList<>(AbstractDungeon.player.drawPile.group);
         possCardsList.removeIf(c -> (c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.type == STATUS));
-        AbstractCard card2 = possCardsList.get(AbstractDungeon.cardRandomRng.random(possCardsList.size() - 1)).makeStatEquivalentCopy();
+        AbstractCard card2 = possCardsList.get(AbstractDungeon.relicRng.random(possCardsList.size() - 1)).makeStatEquivalentCopy();
         if (card2 instanceof AbstractUnknownCard) {
             card2 = ((AbstractUnknownCard) card2).generateFromPoolButNotIntoHand();
         } // Get one of the cards in the unknown pool instead of the Unknown card which is already free to play.

@@ -43,7 +43,7 @@ public class Barbells extends CustomRelic {
             }
 
             if (possibleCards.size() >= AMOUNT) {// 45
-                AbstractCard card = possibleCards.get(AbstractDungeon.miscRng.random(0, possibleCards.size() - 1));// 46
+                AbstractCard card = possibleCards.get(AbstractDungeon.relicRng.random(0, possibleCards.size() - 1));// 46
                 card.upgrade();// 47
                 AbstractDungeon.player.bottledCardUpgradeCheck(card);// 48
                 float x = MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH;

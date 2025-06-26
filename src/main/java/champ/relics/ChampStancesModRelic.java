@@ -28,7 +28,7 @@ public class ChampStancesModRelic extends CustomRelic {
     public void atBattleStart() {
         super.atBattleStart();
         if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
-            int x = AbstractDungeon.cardRandomRng.random(1);
+            int x = AbstractDungeon.relicRng.random(1);
             switch (x) {
                 case 0:
                     //SlimeboundMod.logger.info("Switching to Berserker (Mod Relic)");

@@ -55,7 +55,7 @@ public class SerpentIdolPowerAction extends AbstractGameAction {
 
         while (derp.size() != 3) {// 60
             boolean dupe = false;// 61
-            int roll = AbstractDungeon.cardRandomRng.random(99);// 64
+            int roll = AbstractDungeon.potionRng.random(99);// 64
             CardRarity cardRarity;
             if (roll < 55) {// 65
                 cardRarity = CardRarity.COMMON;// 66
