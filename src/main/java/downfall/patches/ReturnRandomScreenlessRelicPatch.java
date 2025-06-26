@@ -20,7 +20,7 @@ import java.util.Objects;
 
 @SpirePatch(
         clz = AbstractDungeon.class,
-        method = "ReturnRandomScreenlessRelic"
+        method = "returnRandomScreenlessRelic"
 )
 public class ReturnRandomScreenlessRelicPatch {
     @SpirePostfixPatch
