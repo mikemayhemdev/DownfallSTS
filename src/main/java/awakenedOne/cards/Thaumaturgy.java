@@ -16,19 +16,16 @@ public class Thaumaturgy extends AbstractAwakenedCard {
 
     public Thaumaturgy() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        this.baseSecondMagic = 2;
-        this.secondMagic = this.baseSecondMagic;
         loadJokeCardImage(this, makeBetaCardPath(Thaumaturgy.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelfTop(new ThaumaturgyPower(magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
     }
 
     public void upp() {
-        upgradeSecondMagic(1);
+        upgradeMagicNumber(1);
     }
 }
