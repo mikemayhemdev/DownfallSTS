@@ -67,10 +67,9 @@ public class ExtraCursedBell extends CustomRelic {
                         coolcommon = AbstractDungeon.returnRandomScreenlessRelic(RelicTier.COMMON);
                     }
                 }
-                AbstractDungeon.getCurrRoom().addRelicToRewards(coolcommon);
+                AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(coolcommon));
+                System.out.println(coolcommon.relicId);
             }
-
-
             AbstractDungeon.combatRewardScreen.positionRewards();
             AbstractDungeon.overlayMenu.proceedButton.setLabel(this.DESCRIPTIONS[2]);
             this.cardsReceived = true;
