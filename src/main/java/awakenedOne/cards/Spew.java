@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
@@ -21,7 +22,6 @@ public class Spew extends AbstractAwakenedCard {
     public Spew() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 12;
-        this.cardsToPreview = new VoidCard();
         loadJokeCardImage(this, makeBetaCardPath(Spew.class.getSimpleName() + ".png"));
     }
     @Override
@@ -60,6 +60,12 @@ public class Spew extends AbstractAwakenedCard {
         } else {
             this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
+    }
+
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        this.keywords.add(GameDictionary.VOID.NAMES[0].toLowerCase());
     }
 
     @Override

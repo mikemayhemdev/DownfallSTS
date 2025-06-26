@@ -31,7 +31,6 @@ public class PickAxe extends CustomRelic {
     public void onEquip() {
         if ((AbstractDungeon.getCurrRoom()).eliteTrigger) {
             AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
-            AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
         }
     }
 
@@ -52,7 +51,6 @@ public class PickAxe extends CustomRelic {
         if ((AbstractDungeon.getCurrRoom()).eliteTrigger) {
             if (this.counter != -2) {
                 this.flash();
-                AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
                 AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
             }
         }

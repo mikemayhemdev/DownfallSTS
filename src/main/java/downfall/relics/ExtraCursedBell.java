@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.curses.CurseOfTheBell;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
+import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.downfallMod;
@@ -46,11 +47,29 @@ public class ExtraCursedBell extends CustomRelic {
         if (!this.cardsReceived && !AbstractDungeon.isScreenUp) {
             AbstractDungeon.combatRewardScreen.open();
             AbstractDungeon.combatRewardScreen.rewards.clear();
-            AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(AbstractDungeon.returnRandomScreenlessRelic(RelicTier.COMMON)));
-            AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(AbstractDungeon.returnRandomScreenlessRelic(RelicTier.COMMON)));
-            AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(AbstractDungeon.returnRandomScreenlessRelic(RelicTier.COMMON)));
-           // AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(AbstractDungeon.returnRandomScreenlessRelic(RelicTier.UNCOMMON)));
-           // AbstractDungeon.combatRewardScreen.rewards.add(new RewardItem(AbstractDungeon.returnRandomScreenlessRelic(RelicTier.RARE)));
+            for (int i = 0; i < 3; i++) {
+                AbstractRelic coolcommon = AbstractDungeon.returnRandomScreenlessRelic(RelicTier.COMMON);
+                if ((coolcommon.relicId == ArtOfWar.ID) ||
+                        (coolcommon.relicId == AncientTeaSet.ID) ||
+                        (coolcommon.relicId == DreamCatcher.ID) ||
+                        (coolcommon.relicId == PotionBelt.ID) ||
+                        (coolcommon.relicId == RegalPillow.ID) ||
+                        (coolcommon.relicId == Boot.ID) ||
+                        (coolcommon.relicId == TinyChest.ID)) {
+                    while ((coolcommon.relicId == ArtOfWar.ID) ||
+                            (coolcommon.relicId == AncientTeaSet.ID) ||
+                            (coolcommon.relicId == DreamCatcher.ID) ||
+                            (coolcommon.relicId == PotionBelt.ID) ||
+                            (coolcommon.relicId == RegalPillow.ID) ||
+                            (coolcommon.relicId == Boot.ID) ||
+                            (coolcommon.relicId == TinyChest.ID)) {
+                        coolcommon = AbstractDungeon.returnRandomScreenlessRelic(RelicTier.COMMON);
+                    }
+                }
+                AbstractDungeon.getCurrRoom().addRelicToRewards(coolcommon);
+            }
+
+
             AbstractDungeon.combatRewardScreen.positionRewards();
             AbstractDungeon.overlayMenu.proceedButton.setLabel(this.DESCRIPTIONS[2]);
             this.cardsReceived = true;
@@ -62,6 +81,8 @@ public class ExtraCursedBell extends CustomRelic {
             CardCrawlGame.sound.playA("souls1", -0.1F);
             this.flash();
         }
-
     }
+
+
+
 }

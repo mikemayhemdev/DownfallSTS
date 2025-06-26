@@ -71,6 +71,7 @@ public class Malice extends AbstractHermitCard {
                 Wiz.att(new DamageAllEnemiesAction(p, DamageInfo.createDamageMatrix(this.baseDamage), DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
             } else {
                 Wiz.att(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
+                //schrodinger's card target
                 if (AbstractDungeon.player.hasRelic(DuelingGlove.ID)) {
                     AbstractDungeon.player.getRelic(DuelingGlove.ID).onTrigger(m);
                 }

@@ -5,6 +5,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
+import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
+import downfall.downfallMod;
 import downfall.util.TextureLoader;
 import expansioncontent.actions.EchoACardAction;
 import sneckomod.SneckoMod;
@@ -24,8 +28,9 @@ public class BlankCard extends CustomRelic {
 
     public BlankCard() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
+        this.tips.add(new PowerTip(TipHelper.capitalize(GameDictionary.STATUS.NAMES[0]), GameDictionary.keywords.get(GameDictionary.STATUS.NAMES[0])));
+        this.tips.add(new PowerTip(TipHelper.capitalize(GameDictionary.CURSE.NAMES[0]), GameDictionary.keywords.get(GameDictionary.CURSE.NAMES[0])));
     }
-
 
     @Override
     public void atBattleStart() {

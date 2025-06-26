@@ -24,7 +24,7 @@ public class Nihilism extends AbstractAwakenedCard {
 
     public Nihilism() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 8;
         this.baseMagicNumber = this.magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Nihilism.class.getSimpleName() + ".png"));
     }
@@ -47,7 +47,7 @@ public class Nihilism extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(1);
         upgradeMagicNumber(1);
     }
 }

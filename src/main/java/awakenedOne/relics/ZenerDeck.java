@@ -29,7 +29,8 @@ public class ZenerDeck extends CustomRelic {
     @Override
     public void atBattleStart() {
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        att(new ConjureAction(false, false, true, new ESPSpell()));
+        //actually conjuring it at the start of combat might be OP
+       // att(new ConjureAction(false, false, true, new ESPSpell()));
     }
 
     @Override

@@ -1,11 +1,13 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.powers.EnemyHexedPower;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
@@ -17,6 +19,7 @@ import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.util.Wiz.atb;
 
 public class TomeOfPortalmancy extends CustomRelic {
 
@@ -40,7 +43,10 @@ public class TomeOfPortalmancy extends CustomRelic {
             while (var2.hasNext()) {
                 AbstractMonster mo = (AbstractMonster) var2.next();
                 if (!mo.isDead && !mo.isDying) {
-                        HexCurse(AMOUNT, mo, AbstractDungeon.player);
+                        // I don't need to use HexCurse here because we're not using Ultimate Hex anymore, and it's not being applied at the exact
+                        // same moment a card is played, so I don't have to worry about it
+                        // being removed while it's being applied
+                        atb(new ApplyPowerAction(mo, AbstractDungeon.player, new EnemyHexedPower(mo, AMOUNT), AMOUNT));
                         this.addToBot(new VFXAction(new GiantEyeEffect(mo.hb.cX, mo.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
                         this.addToTop(new RelicAboveCreatureAction(mo, this));
                 }

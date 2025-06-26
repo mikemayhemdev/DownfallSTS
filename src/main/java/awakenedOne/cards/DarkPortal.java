@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
 
@@ -21,7 +22,6 @@ public class DarkPortal extends AbstractAwakenedCard {
     public DarkPortal() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
-        cardsToPreview = new VoidCard();
         loadJokeCardImage(this, makeBetaCardPath(DarkPortal.class.getSimpleName() + ".png"));
     }
 
@@ -54,6 +54,12 @@ public class DarkPortal extends AbstractAwakenedCard {
     @Override
     public void upp() {
         upgradeBaseCost(0);
+    }
+
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        this.keywords.add(GameDictionary.VOID.NAMES[0].toLowerCase());
     }
 
     static {

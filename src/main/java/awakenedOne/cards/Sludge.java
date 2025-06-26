@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
@@ -20,7 +21,6 @@ public class Sludge extends AbstractAwakenedCard {
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;
-        cardsToPreview = new VoidCard();
         loadJokeCardImage(this, makeBetaCardPath(Sludge.class.getSimpleName() + ".png"));
     }
 
@@ -32,6 +32,12 @@ public class Sludge extends AbstractAwakenedCard {
                     new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         }
         addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
+    }
+
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        this.keywords.add(GameDictionary.VOID.NAMES[0].toLowerCase());
     }
 
     public void upp() {

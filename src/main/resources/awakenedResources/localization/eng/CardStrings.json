@@ -351,7 +351,8 @@
   },
   "awakened:Procession": {
     "NAME": "Procession",
-    "DESCRIPTION":  "Draw cards until your hand is full. NL Add !M! *Voids into your discard pile. NL Exhaust."
+    "DESCRIPTION":  "Draw cards until your hand is full. NL Shuffle !M! *Voids into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw cards until your hand is full. NL Add !M! *Voids into your discard pile. NL Exhaust."
   },
   "awakened:SplitWide": {
     "NAME": "Split Wide",

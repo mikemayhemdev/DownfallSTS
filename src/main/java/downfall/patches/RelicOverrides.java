@@ -130,7 +130,6 @@ public class RelicOverrides {
     //        return retVal;
     //    }
 
-
     //todo: make not a war crime
     @SpirePatch(
             clz = CardGroup.class,
