@@ -18,7 +18,7 @@ public class MagicStrike extends AbstractAwakenedCard {
 
     public MagicStrike() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 3;
+        baseDamage = 4;
         tags.add(CardTags.STRIKE);
         this.tags.add(AwakenedOneMod.DELVE);
        // baseSecondMagic = secondMagic = 1;
@@ -37,7 +37,7 @@ public class MagicStrike extends AbstractAwakenedCard {
 
         while(var1.hasNext()) {
             AbstractMonster m = (AbstractMonster)var1.next();
-            if (!m.isDeadOrEscaped() && m.getIntentBaseDmg() >= 0) {
+            if (!m.isDeadOrEscaped() && m.getIntentBaseDmg() == 0) {
                 this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                 break;
             }

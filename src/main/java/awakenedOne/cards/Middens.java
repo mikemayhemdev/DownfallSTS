@@ -21,7 +21,7 @@ public class Middens extends AbstractAwakenedCard {
 
     public Middens() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 4;
+        baseBlock = 3;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath(Middens.class.getSimpleName() + ".png"));

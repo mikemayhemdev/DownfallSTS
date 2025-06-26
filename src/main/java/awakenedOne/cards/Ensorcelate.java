@@ -16,7 +16,7 @@ public class Ensorcelate extends AbstractAwakenedCard {
 
     public Ensorcelate() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 4;
+        baseBlock = 3;
         baseMagicNumber = magicNumber = 2;
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(Ensorcelate.class.getSimpleName() + ".png"));
@@ -25,15 +25,11 @@ public class Ensorcelate extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         for (int i = 0; i < magicNumber; i++) {
-            if ((magicNumber-i > OrbitingSpells.spellCards.size()) && (p.hand.size()+1 <= BaseMod.MAX_HAND_SIZE)) {
-                atb(new ConjureAction(false));
-            } else {
-                atb(new ConjureAction(true));
-            }
+            atb(new ConjureAction(true));
         }
     }
 
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(3);
     }
 }

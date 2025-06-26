@@ -15,7 +15,7 @@ public class Reviscerate extends AbstractAwakenedCard {
 
     public Reviscerate() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 6;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath(Reviscerate.class.getSimpleName() + ".png"));
@@ -23,7 +23,7 @@ public class Reviscerate extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < this.magicNumber; i++) {
-            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+            dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         }
     }
 

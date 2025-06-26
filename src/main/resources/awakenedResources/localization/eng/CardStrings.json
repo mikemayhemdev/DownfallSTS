@@ -39,7 +39,7 @@
   },
   "awakened:MagicStrike": {
     "NAME": "Magic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage. NL If the enemy doesn't intend to attack, awakened:Conjure."
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
