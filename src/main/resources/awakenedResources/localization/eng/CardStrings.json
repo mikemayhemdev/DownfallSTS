@@ -39,7 +39,7 @@
   },
   "awakened:MagicStrike": {
     "NAME": "Magic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure. Shuffle a *Void on into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure. Shuffle a *Void into your draw pile."
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
