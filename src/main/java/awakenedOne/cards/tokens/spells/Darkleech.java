@@ -3,11 +3,13 @@ package awakenedOne.cards.tokens.spells;
 import awakenedOne.relics.EyeOfTheOccult;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 
 import static awakenedOne.AwakenedOneMod.*;
@@ -43,8 +45,8 @@ public class Darkleech extends AbstractSpellCard {
                 HexCurse(magicNumber, m2, p);
             });
         }
-        atb(new GainEnergyAction(1));
-        //this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 1), 1));
+        //atb(new GainEnergyAction(1));
+        this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 1), 1));
     }
 
     public void upp() {
