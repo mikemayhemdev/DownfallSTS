@@ -15,6 +15,7 @@ public class TheEmpress extends AbstractAwakenedCard {
     public TheEmpress() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.tags.add(AwakenedOneMod.DELVE);
+        this.isEthereal = true;
         loadJokeCardImage(this, makeBetaCardPath(TheEmpress.class.getSimpleName() + ".png"));
     }
 
@@ -24,6 +25,7 @@ public class TheEmpress extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(1);
+        this.isEthereal = false;
+        //upgradeBaseCost(1);
     }
 }

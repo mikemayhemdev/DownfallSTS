@@ -120,7 +120,7 @@
 
   "expansioncontent:TakeFlight": {
     "NAME": "Revitalize",
-    "DESCRIPTION": "Gain !M! expansioncontent:Regen. NL awakened:Chant: Gain !DM! *Regen instead."
+    "DESCRIPTION": "Heal !M! HP. NL awakened:Chant: Heal !DM! HP."
   },
   "expansioncontent:BeatOfDeath": {
     "NAME": "Beat Of Death",

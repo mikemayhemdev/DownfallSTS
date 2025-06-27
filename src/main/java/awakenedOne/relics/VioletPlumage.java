@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static awakenedOne.AwakenedOneMod.*;
 
@@ -19,8 +20,10 @@ public class VioletPlumage extends CustomRelic {
 
     //Hey, you! Go to VioletPlumagePatch! This relic also uses code from Aspiration, the GitHub and relevant patch is linked there!
 
+    //the relic was reworked because mini black hole had to go to shop because its weird rip old effect
+
     public VioletPlumage() {
-        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
 
     //violet plumage
@@ -29,7 +32,9 @@ public class VioletPlumage extends CustomRelic {
     public void onUseCard(AbstractCard c, UseCardAction action) {
         if ((c.type == AbstractCard.CardType.POWER) && !this.grayscale){
             flash();
-            addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
+            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            this.addToBot(new GainEnergyAction(1));
+            //addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
             this.grayscale = true;
         }
     }

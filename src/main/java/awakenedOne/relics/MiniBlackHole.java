@@ -20,7 +20,7 @@ public class MiniBlackHole extends CustomRelic {
     public boolean firstTurn = false;
 
     public MiniBlackHole() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
     //Alethea
@@ -30,9 +30,11 @@ public class MiniBlackHole extends CustomRelic {
         firstTurn = true;
     }
 
-    public void atTurnStart() {
+    @Override
+    public void atTurnStartPostDraw() {
         if (firstTurn == false) {
             if (this.grayscale == false) {
+                this.flash();
                 this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 addToBot(new DrawCardAction(AbstractDungeon.player, 1));
             }
@@ -43,7 +45,10 @@ public class MiniBlackHole extends CustomRelic {
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.POWER) {
-            this.grayscale = true;
+            if (!this.grayscale) {
+                this.flash();
+                this.grayscale = true;
+            }
         }
     }
 

@@ -45,8 +45,6 @@ public class ExtraCursedBell extends CustomRelic {
     public void update() {
         super.update();
         if (!this.cardsReceived && !AbstractDungeon.isScreenUp) {
-            AbstractDungeon.combatRewardScreen.open();
-            AbstractDungeon.combatRewardScreen.rewards.clear();
             for (int i = 0; i < 3; i++) {
                 AbstractRelic coolcommon = AbstractDungeon.returnRandomScreenlessRelic(RelicTier.COMMON);
                 //sandtag wanted these relics removed from this things pool
@@ -70,7 +68,9 @@ public class ExtraCursedBell extends CustomRelic {
                 AbstractDungeon.getCurrRoom().rewards.add(new RewardItem(coolcommon));
                 System.out.println(coolcommon.relicId);
             }
-            AbstractDungeon.combatRewardScreen.positionRewards();
+            AbstractDungeon.combatRewardScreen.open();
+            //AbstractDungeon.combatRewardScreen.rewards.clear();
+            //AbstractDungeon.combatRewardScreen.positionRewards();
             AbstractDungeon.overlayMenu.proceedButton.setLabel(this.DESCRIPTIONS[2]);
             this.cardsReceived = true;
             AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;

@@ -14,15 +14,13 @@ public class InResponse extends AbstractAwakenedCard {
     // intellij stuff power, self, uncommon, , , , , 3, 1
 
     public InResponse() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         //baseSecondMagic = secondMagic = 2;
         baseMagicNumber = magicNumber = 2;
-        this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(InResponse.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ConjureAction(false));
         applyToSelf(new InResponsePower(magicNumber));
     }
 

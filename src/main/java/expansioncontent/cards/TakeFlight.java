@@ -5,6 +5,7 @@ import awakenedOne.relics.KTRibbon;
 import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -17,6 +18,7 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import expansioncontent.expansionContentMod;
 
 import static awakenedOne.ui.AwakenButton.awaken;
+import static awakenedOne.util.Wiz.atb;
 
 public class TakeFlight extends AbstractExpansionCard {
     public static final String ID = makeID("TakeFlight");
@@ -32,11 +34,10 @@ public class TakeFlight extends AbstractExpansionCard {
         this.tags.add(expansionContentMod.STUDY);
         this.tags.add(expansionContentMod.STUDY_AWAKENEDONE);
         setBackgroundTexture("expansioncontentResources/images/512/bg_boss_awakenedone.png", "expansioncontentResources/images/1024/bg_boss_awakenedone.png");
-        this.baseMagicNumber = this.magicNumber = 3;
-        this.baseDownfallMagic = this.downfallMagic = 4;
+        this.baseMagicNumber = this.magicNumber = 6;
+        this.baseDownfallMagic = this.downfallMagic = 8;
         tags.add(CardTags.HEALING);
         expansionContentMod.loadJokeCardImage((AbstractCard)this, "TakeFlight.png");
-        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -51,7 +52,7 @@ public class TakeFlight extends AbstractExpansionCard {
                     chant();
                     awaken(1);
                 } else {
-                    addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new RegenPower((AbstractCreature)AbstractDungeon.player, this.magicNumber), this.magicNumber));
+                    atb(new HealAction(p, p, magicNumber));
                 }
             }
         }
@@ -61,13 +62,13 @@ public class TakeFlight extends AbstractExpansionCard {
                 chant();
             }
             if (!Wiz.isChantActive()) {
-                addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new RegenPower((AbstractCreature)AbstractDungeon.player, this.magicNumber), this.magicNumber));
+                atb(new HealAction(p, p, magicNumber));
             }
         }
     }
 
     public void chant() {
-        addToBot((AbstractGameAction) new ApplyPowerAction((AbstractCreature) AbstractDungeon.player, (AbstractCreature) AbstractDungeon.player, (AbstractPower) new RegenPower((AbstractCreature) AbstractDungeon.player, this.downfallMagic), this.downfallMagic));
+        atb(new HealAction(AbstractDungeon.player, AbstractDungeon.player, downfallMagic));
         AbstractAwakenedCard.checkOnChant();
     }
 
@@ -83,8 +84,8 @@ public class TakeFlight extends AbstractExpansionCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-            upgradeDownfall(1);
+            upgradeMagicNumber(2);
+            upgradeDownfall(4);
         }
     }
 }

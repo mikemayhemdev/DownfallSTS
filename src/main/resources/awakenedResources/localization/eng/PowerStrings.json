@@ -96,7 +96,7 @@
   "awakened:EmpressPower": {
     "NAME": "The Empress",
     "DESCRIPTIONS": [
-      "Whenever you play a non-Spell #yPower card, #yConjure.",
+      "Whenever you play a non-Spell #yPower card, #yConjure [REMOVE_SPACE].",
       "Whenever you play a non-Spell #yPower card, #yConjure #b",
       " times."
     ]

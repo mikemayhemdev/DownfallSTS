@@ -93,7 +93,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
                     //big attack
                     addToList(cardsList, new EnExpunger());     //Big Attack // I mean, not really that big compared to what time eater hits for.
                     addToList(cardsList, new EnBlind()); // blind moved here to replace the strike
-                    addToList(cardsList, new EnDevotion());
+                    addToList(cardsList, new EnDevotion(), true);
                     turn = 0;
                     looped = true;
                     break;

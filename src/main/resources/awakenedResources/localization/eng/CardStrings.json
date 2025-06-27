@@ -52,7 +52,7 @@
   },
   "awakened:InResponse": {
     "NAME": "Spellshield",
-    "DESCRIPTION": "awakened:Conjure. NL Whenever you play a Spell, gain !M! Block."
+    "DESCRIPTION": "Whenever you play a Spell, gain !M! Block."
   },
   "awakened:DarkEcho": {
     "NAME": "Dark Echo",
@@ -211,7 +211,8 @@
   },
   "awakened:TheEmpress": {
     "NAME": "The Empress",
-    "DESCRIPTION": "Whenever you play a non-Spell Power card, awakened:Conjure."
+    "DESCRIPTION": "Ethereal. NL Whenever you play a non-Spell Power card, awakened:Conjure.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a non-Spell Power card, awakened:Conjure."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",

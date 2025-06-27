@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.patches.EnumPatch;
 
 import java.util.Iterator;
 
@@ -27,7 +28,7 @@ public class Manastorm extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
+        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, EnumPatch.HERMIT_GHOSTFIRE));
 
         Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
