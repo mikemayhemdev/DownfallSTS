@@ -1,7 +1,10 @@
 package awakenedOne.powers;
 
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static awakenedOne.util.Wiz.atb;
@@ -15,13 +18,16 @@ public class ConjureNextTurnPower extends AbstractAwakenedPower {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
     }
 
-    @Override
-    public void atStartOfTurn() {
-        flash();
-        for (int i = 0; i < amount; i++) {
-            atb(new ConjureAction(false));
+
+    public void onUseCard(AbstractCard card, UseCardAction action) {
+        if (card instanceof AbstractSpellCard && !card.purgeOnUse && this.amount > 0) {
+            this.flash();
+            --this.amount;
+            if (this.amount == 0) {
+                this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            }
         }
-        addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+
     }
 
     public void updateDescription() {

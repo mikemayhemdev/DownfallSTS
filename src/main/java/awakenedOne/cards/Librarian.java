@@ -13,7 +13,7 @@ public class Librarian extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , , 
 
     public Librarian() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(Librarian.class.getSimpleName() + ".png"));
     }

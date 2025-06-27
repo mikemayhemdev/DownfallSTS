@@ -26,15 +26,15 @@ public class Ensorcelate extends AbstractAwakenedCard {
 
     public Ensorcelate() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 5;
-        baseMagicNumber = magicNumber = 2;
-        this.tags.add(AwakenedOneMod.DELVE);
+        baseBlock = 8;
+        //baseMagicNumber = magicNumber = 2;
+        //this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(Ensorcelate.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        applyToSelf(new ConjureNextTurnPower(magicNumber));
+        applyToSelf(new ConjureNextTurnPower(1));
     }
 
     public void upp() {

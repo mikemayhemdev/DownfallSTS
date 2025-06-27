@@ -13,7 +13,7 @@
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
-    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Nex turn, gain [E]. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Enemy loses !awakened:m2! HP. NL Exhaust."
   },
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
@@ -131,7 +131,7 @@
     "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less [E] for each Power card played this turn."
   },
   "awakened:DrawingDead": {
-    "NAME": "Purify",
+    "NAME": "Altar",
     "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust a card. NL If it was a Status or Curse card, awakened:Conjure."
   },
   "awakened:Envision": {
@@ -184,7 +184,7 @@
   },
   "awakened:Ensorcelate": {
     "NAME": "Ensorcelate",
-    "DESCRIPTION": "Gain !B! Block. NL At the start of your next turn, awakened:Conjure !M! times."
+    "DESCRIPTION": "Gain !B! Block. NL The next Spell you play costs 0."
   },
   "awakened:Primacy": {
     "NAME": "Primacy",
