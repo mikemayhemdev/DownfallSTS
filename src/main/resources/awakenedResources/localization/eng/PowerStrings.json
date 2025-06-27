@@ -202,9 +202,9 @@
   "awakened:ConjureNextTurnPower": {
     "NAME": "Ensorcelate",
     "DESCRIPTIONS": [
-      "The next Spell you play costs #b0 [REMOVE_SPACE].",
+      "The next #yPower card you play costs #b0 [REMOVE_SPACE].",
       "The #b",
-      " Spells you play cost #b0 [REMOVE_SPACE]."
+      " #yPower cards you play cost #b0 [REMOVE_SPACE]."
     ]
   }
 }

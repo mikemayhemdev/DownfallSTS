@@ -20,7 +20,7 @@ public class ConjureNextTurnPower extends AbstractAwakenedPower {
 
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card instanceof AbstractSpellCard && !card.purgeOnUse && this.amount > 0) {
+        if (card.type == AbstractCard.CardType.POWER && !card.purgeOnUse && this.amount > 0) {
             this.flash();
             --this.amount;
             if (this.amount == 0) {
