@@ -19,6 +19,7 @@ public class CurvedSword extends CustomRelic {
 
     //backflip scimmy
     //ninja relic but spells. tried to add a funky sounding name
+    //the joke is that this is literally a "conjure blade"
 
     public static final String ID = AwakenedOneMod.makeID("CurvedSword");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("CurvedSword.png")); //TODO: Images
