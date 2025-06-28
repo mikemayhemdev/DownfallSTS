@@ -35,7 +35,7 @@ public class Zetsumei extends CustomRelic {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card instanceof AbstractSpellCard) {
             ++this.counter;
-            if (this.counter % 5 == 0) {
+            if (this.counter % 4 == 0) {
                 this.flash();
                 this.counter = 0;
                 this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
