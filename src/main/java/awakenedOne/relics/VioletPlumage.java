@@ -31,7 +31,8 @@ public class VioletPlumage extends CustomRelic {
     }
 
     //violet plumage
-
+    public boolean firstTurn = false;
+    public boolean activated = false;
 //    @Override
 //    public void onUseCard(AbstractCard c, UseCardAction action) {
 //        if ((c.type == AbstractCard.CardType.POWER) && !this.grayscale){
@@ -43,13 +44,30 @@ public class VioletPlumage extends CustomRelic {
 //        }
 //    }
 
+
+    @Override
+    public void atPreBattle() {
+        firstTurn = true;
+        activated = false;
+    }
+    
+    @Override
+    public void atTurnStartPostDraw() {
+        if (firstTurn == false) {
+            if (activated) {
+                this.flash();
+                this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                addToBot(new DrawCardAction(AbstractDungeon.player, 3));
+            }
+        }
+        this.firstTurn = false;
+        activated = false;
+    }
+
     public void atEndOfTurn(boolean isPlayer) {
         if (this.grayscale = false) {
             if (EnergyPanel.totalCount > 0) {
-                this.flash();
-                this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, 3), 3));
-                this.grayscale = true;
+                activated = true;
             }
         }
     }
