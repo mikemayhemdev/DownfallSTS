@@ -112,7 +112,7 @@
       " #yRitual [REMOVE_SPACE]."
     ]
   },
-  "awakened:CurvedSword": {
+  "awakened:CurvedSwordMeme": {
     "NAME": "Conjure Blade",
     "FLAVOR": "Go on, do it. Conjure a blade, right now. I'm watching. :^)",
     "DESCRIPTIONS": [
@@ -120,7 +120,7 @@
       "NOTE: THE PLAYER CANNOT OBTAIN THIS RELIC OUTSIDE OF CONSOLE, IT'S A JOKE RELIC!"
     ]
   },
-  "awakened:Zetsumei": {
+  "awakened:CurvedSword": {
     "NAME": "Zetsumei",
     "FLAVOR": "A blade favored by mages due to its ability to channel casted magic back into itself. You can't hold it like you used to, but still...",
     "DESCRIPTIONS": [
