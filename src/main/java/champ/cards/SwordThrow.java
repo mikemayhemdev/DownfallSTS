@@ -16,7 +16,7 @@ public class SwordThrow extends AbstractChampCard {
 
     public SwordThrow() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 9;
         baseMagicNumber = magicNumber = 2;
         tags.add(ChampMod.COMBOBERSERKER);
         tags.add(ChampMod.COMBO);

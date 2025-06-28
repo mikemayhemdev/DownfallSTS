@@ -43,8 +43,8 @@
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
-    "DESCRIPTION": "awakened:Conjure. NL This turn, your next Spell is played twice.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL This turn, your next Spell is played twice."
+    "DESCRIPTION": "This turn, your next Spell is played twice. NL awakened:Conjure.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL This turn, your next Spell is played twice. NL awakened:Conjure."
   },
   "awakened:QuickMove": {
     "NAME": "Peck",

@@ -105,11 +105,19 @@
   },
   "awakened:CursedBlessing": {
     "NAME": "Final Rites",
-    "FLAVOR": "Die on this hill.",
+    "FLAVOR": "“I leave everything I own to my cat.”",
     "DESCRIPTIONS": [
       "The first time you activate #b",
       " #yawakened:Chant effects in a combat, gain #b",
       " #yRitual [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:CurvedSword": {
+    "NAME": "Conjure Blade",
+    "FLAVOR": "Go on, do it. Conjure a blade, right now. I'm watching. :^)",
+    "DESCRIPTIONS": [
+      "At the start of combat, add #yConjure #yBlade into your hand?",
+      "NOTE: THE PLAYER CANNOT OBTAIN THIS RELIC OUTSIDE OF CONSOLE, IT'S A JOKE RELIC!"
     ]
   },
   "awakened:MoonTalisman": {

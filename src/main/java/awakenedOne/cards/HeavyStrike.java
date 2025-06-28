@@ -19,7 +19,7 @@ public class HeavyStrike extends AbstractAwakenedCard {
     //carrionmaker
     public HeavyStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 9;
+        baseDamage = 10;
         loadJokeCardImage(this, makeBetaCardPath(HeavyStrike.class.getSimpleName() + ".png"));
     }
 
