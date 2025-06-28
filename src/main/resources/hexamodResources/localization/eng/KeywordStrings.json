@@ -62,7 +62,7 @@
     "NAMES": [
       "seal"
     ],
-    "DESCRIPTION": "The more you play a Seal card, the more likely you are to find others. If all #b6 Seals have been played during a combat, obtain #pThe #pBroken #pSeal and remove the #b6 Seals from your deck."
+    "DESCRIPTION": "Seal cards drop from Elite and Boss combats. The more you play a Seal card, the more likely you are to find different kinds. If all #b6 Seals have been played during a combat, obtain #pThe #pBroken #pSeal and remove the #b6 Seals from your deck."
   },
   {
     "ID": "afterlife",
