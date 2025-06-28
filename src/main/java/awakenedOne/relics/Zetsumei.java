@@ -17,7 +17,8 @@ import static awakenedOne.AwakenedOneMod.*;
 
 public class Zetsumei extends CustomRelic {
 
-    //the scimmy
+    //backflip scimmy
+    //ninja relic but spells. tried to add a funky sounding name
 
     public static final String ID = AwakenedOneMod.makeID("Zetsumei");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("CurvedSword.png")); //TODO: Images
