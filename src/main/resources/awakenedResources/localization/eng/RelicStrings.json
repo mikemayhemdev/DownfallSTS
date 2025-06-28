@@ -122,7 +122,7 @@
   },
   "awakened:CurvedSword": {
     "NAME": "Zetsumei",
-    "FLAVOR": "A blade favored by Conjurers due to its ability to channel casted magic back into itself. You can't hold it like you used to, but still...",
+    "FLAVOR": "A blade favored by mages due to its ability to channel casted magic back into itself. You can't hold it like you used to, but still...",
     "DESCRIPTIONS": [
       "Every time you play #b",
       " Spells in a single turn, gain a #yCeremony [REMOVE_SPACE]."
