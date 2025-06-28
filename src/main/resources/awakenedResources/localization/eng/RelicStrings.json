@@ -71,7 +71,8 @@
     "NAME": "Violet Plumage",
     "FLAVOR": "Tinged by the unending darkness of oblivion.",
     "DESCRIPTIONS": [
-      "The first time you play a #yPower card each combat, gain [E] ."
+      "The first time you end your turn with excess [E] each combat, draw #b",
+      " cards."
     ]
   },
   "awakened:ZenerDeck": {
@@ -105,7 +106,7 @@
   },
   "awakened:CursedBlessing": {
     "NAME": "Final Rites",
-    "FLAVOR": "“I leave everything I own to my cat, Noodles. Goodbye, cruel world. XOXO Jouster”",
+    "FLAVOR": "I leave everything I own to my cat, Noodles. Goodbye, cruel world. XOXO Jouster",
     "DESCRIPTIONS": [
       "The first time you activate #b",
       " #yawakened:Chant effects in a combat, gain #b",
