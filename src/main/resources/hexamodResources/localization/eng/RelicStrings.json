@@ -12,10 +12,8 @@
     "FLAVOR": "Unlimited, unrestrained, unquenchable power.",
     "DESCRIPTIONS": [
       "Upon pickup, raise your Max HP by #b",
-      " [REMOVE_SPACE], then heal all of your HP. Start each combat with #b",
-      " #yStrength [REMOVE_SPACE], #b",
-      " #yDexterity [REMOVE_SPACE], and #b",
-      " #yhexamod:Intensity [REMOVE_SPACE]. You can not receive #pThe #pBroken #pSeal and other seals again."
+      "[REMOVE_SPACE], then heal all of your HP. Start each combat with #b",
+      " #yStrength [REMOVE_SPACE], #yDexterity [REMOVE_SPACE], and #yhexamod:Intensity [REMOVE_SPACE]. You can not receive #pThe #pBroken #pSeal and other seals again."
     ]
   },
   "hexamod:UnbrokenSoul": {
