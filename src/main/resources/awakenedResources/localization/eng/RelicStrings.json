@@ -120,6 +120,14 @@
       "NOTE: THE PLAYER CANNOT OBTAIN THIS RELIC OUTSIDE OF CONSOLE, IT'S A JOKE RELIC!"
     ]
   },
+  "awakened:Zetsumei": {
+    "NAME": "Zetsumei",
+    "FLAVOR": "A blade favored by mages due to its ability to channel casted magic back into itself. You can't hold it like you used to, but still...",
+    "DESCRIPTIONS": [
+      "Every time you play #b",
+      " Spells in a single turn, gain a #yCeremony [REMOVE_SPACE]."
+    ]
+  },
   "awakened:MoonTalisman": {
     "NAME": "Crescent Talisman",
     "FLAVOR": "“Please, just... don't forget me. Even after I die.”",

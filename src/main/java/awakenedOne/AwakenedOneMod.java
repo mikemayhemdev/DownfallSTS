@@ -267,6 +267,8 @@ public class AwakenedOneMod implements
 
         BaseMod.addRelicToCustomPool(new CursedBlessing(), AwakenedOneChar.Enums.AWAKENED_BLUE); //new rare relic to fill Eye of the Occult's spot
 
+        BaseMod.addRelicToCustomPool(new Zetsumei(), AwakenedOneChar.Enums.AWAKENED_BLUE);
+
         //only obtainable through console (the "conjure blade" relic)
         BaseMod.addRelicToCustomPool(new CurvedSword(), AwakenedOneChar.Enums.AWAKENED_BLUE);
 
