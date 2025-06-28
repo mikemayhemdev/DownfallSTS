@@ -50,14 +50,17 @@ public class VioletPlumage extends CustomRelic {
         firstTurn = true;
         activated = false;
     }
-    
+
     @Override
     public void atTurnStartPostDraw() {
-        if (firstTurn == false) {
-            if (activated) {
-                this.flash();
-                this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                addToBot(new DrawCardAction(AbstractDungeon.player, 3));
+        if (this.grayscale = false) {
+            if (firstTurn == false) {
+                if (activated) {
+                    this.flash();
+                    this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                    addToBot(new DrawCardAction(AbstractDungeon.player, 3));
+                    this.grayscale = true;
+                }
             }
         }
         this.firstTurn = false;
