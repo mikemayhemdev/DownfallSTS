@@ -5,6 +5,8 @@ import champ.ChampMod;
 import champ.actions.OpenerReduceCostAction;
 import champ.util.OnOpenerSubscriber;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
@@ -24,14 +26,34 @@ public class FightingForDummies extends CustomRelic {
     public FightingForDummies() {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
-
+    public boolean firstTurn = false;
+    public boolean activated = false;
     //Dolphin's Style Guide
+
+    @Override
+    public void atPreBattle() {
+        firstTurn = true;
+        activated = false;
+    }
+
+    @Override
+    public void atTurnStartPostDraw() {
+        if (firstTurn == false) {
+            if (activated) {
+                this.flash();
+                this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+            }
+        }
+        this.firstTurn = false;
+        activated = false;
+    }
+
 
     @Override
     public void onPlayerEndTurn() {
         if (AbstractDungeon.player.stance instanceof NeutralStance) {
-            this.flash();
-            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, 1), 1));
+            activated = true;
         }
     }
 

@@ -15,7 +15,7 @@ import static awakenedOne.AwakenedOneMod.*;
 
 public class CurvedSwordMeme extends CustomRelic {
 
-    public static final String ID = AwakenedOneMod.makeID("CurvedSword");
+    public static final String ID = AwakenedOneMod.makeID("CurvedSwordMeme");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("CurvedSword.png")); //TODO: Images
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("CurvedSword.png"));
 

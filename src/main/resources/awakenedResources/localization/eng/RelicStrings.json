@@ -63,7 +63,7 @@
     "NAME": "Gilded Bone Shard",
     "FLAVOR": "...No, not that kind of focus.",
     "DESCRIPTIONS": [
-      "At the start of combat, gain #b",
+      "Start each combat with #b",
       " #yStrength [REMOVE_SPACE]. After losing any type of HP, lose that #yStrength for the rest of combat."
     ]
   },
@@ -105,7 +105,7 @@
   },
   "awakened:CursedBlessing": {
     "NAME": "Final Rites",
-    "FLAVOR": "“I leave everything I own to my cat.”",
+    "FLAVOR": "“I leave everything I own to my cat, Noodles. Goodbye, cruel world. XOXO Jouster”",
     "DESCRIPTIONS": [
       "The first time you activate #b",
       " #yawakened:Chant effects in a combat, gain #b",

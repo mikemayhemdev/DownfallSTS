@@ -43,15 +43,16 @@ public class Darkleech extends AbstractSpellCard {
         if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)){
             this.addToBot(new VFXAction(new GiantEyeEffect(m.hb.cX, m.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
             HexCurse(magicNumber, m, p);
-            addToBot(new DamageAction(m, new DamageInfo(p, secondMagic, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.POISON));
+            addToBot(new DamageAction(m, new DamageInfo(p, secondMagic, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.POISON));
         }
         else {
             //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
             AbstractDungeon.getMonsters().monsters.stream().filter(m2 -> !m2.isDead && !m2.isDying).forEach(m2 -> {
                 this.addToBot(new VFXAction(new GiantEyeEffect(m2.hb.cX, m2.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
                 HexCurse(magicNumber, m2, p);
+                addToBot(new DamageAction(m2, new DamageInfo(p, secondMagic, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.POISON));
+
             });
-            new AllEnemyLoseHPAction(secondMagic, AbstractGameAction.AttackEffect.POISON);
         }
         //atb(new GainEnergyAction(1));
         //this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 1), 1));
