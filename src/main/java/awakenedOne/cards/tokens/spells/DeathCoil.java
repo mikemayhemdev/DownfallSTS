@@ -58,6 +58,6 @@ public class DeathCoil extends AbstractSpellCard {
 
     public void upp() {
         upgradeMagicNumber(2);
-        upgradeDamage(3);
+        upgradeDamage(2);
     }
 }
