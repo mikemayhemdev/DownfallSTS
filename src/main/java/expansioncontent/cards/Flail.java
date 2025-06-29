@@ -23,6 +23,8 @@ public class Flail extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY_AUTOMATON);
         tags.add(expansionContentMod.STUDY);
 
+        tags.add(CardTags.STRIKE);
+
         baseDamage = DAMAGE;
         this.isMultiDamage = true;
         this.exhaust = true;

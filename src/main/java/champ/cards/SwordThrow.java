@@ -31,7 +31,7 @@ public class SwordThrow extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = dcombo() ? Color.RED.cpy() : BLUE_BORDER_GLOW_COLOR;
+        glowColor = !bcombo() ? GOLD_BORDER_GLOW_COLOR : Color.RED.cpy();
     }
 
     public void upp() {

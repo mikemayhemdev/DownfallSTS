@@ -1,6 +1,6 @@
 {
   "expansioncontent:GuardianWhirl": {
-    "NAME": "Guardian Whirl",
+    "NAME": "GUARDIAN WHIRL",
     "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL If you have at least !DM! Block, hits !M! more times.",
     "EXTENDED_DESCRIPTION": [
       "More Block required."
@@ -20,11 +20,11 @@
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Place a *Void on top of your draw pile. NL Exhaust."
   },
   "expansioncontent:LastStand": {
-    "NAME": "Last Stand",
+    "NAME": "Final Stand",
     "DESCRIPTION": "Remove all Debuffs. NL Gain !M! Strength."
   },
   "expansioncontent:YouAreMine": {
-    "NAME": "YOU ARE MINE!",
+    "NAME": "YOU ARE MINE!!!",
     "DESCRIPTION": "Apply !M! Weak, !M! Vulnerable, and !DM! expansioncontent:Doom to ALL enemies. NL Exhaust."
   },
   "expansioncontent:AwakenDeath": {
@@ -62,7 +62,7 @@
     ]
   },
   "expansioncontent:SuperLivingWall": {
-    "NAME": "Living Wall",
+    "NAME": "Gelatinous Wall",
     "DESCRIPTION": "Gain !B! Block. NL Apply !M! expansioncontent:Goop to attackers this turn."
   },
 
@@ -92,19 +92,19 @@
     "DESCRIPTION": "Retain. NL Lose !M! Poison."
   },
   "expansioncontent:SuperGhostShield": {
-    "NAME": "Ghost Shield",
+    "NAME": "Specter Shield",
     "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Gain[] [#e087a4]!B![] [#e087a4]Block.[] NL [#e087a4]Gain[] [#e087a4]!M![] [#e087a4]Blur.[]",
     "EXTENDED_DESCRIPTION": [
       "Gain !B! Block."
     ]
   },
   "expansioncontent:SuperGoopSpray": {
-    "NAME": "Goop Spray",
+    "NAME": "Goop Launch",
     "DESCRIPTION": "Apply !M! expansioncontent:Goop and !DM! Weak.",
     "UPGRADE_DESCRIPTION": "Apply !M! expansioncontent:Goop and !DM! Weak to ALL enemies."
   },
   "expansioncontent:ChargeUp": {
-    "NAME": "Resilient Plate",
+    "NAME": "Cleansing Plate",
     "DESCRIPTION": "Reduce each of your debuffs by !M!. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Reduce each of your debuffs by !M!."
   },
@@ -127,25 +127,25 @@
     "DESCRIPTION": "Whenever you play a card, deal !M! damage to ALL enemies."
   },
   "expansioncontent:SuperViciousMockery": {
-    "NAME": "Vicious Mockery",
+    "NAME": "Mockery",
     "DESCRIPTION": "Gain !M! Vigor. NL Apply !DM! Weak."
   },
   "expansioncontent:SuperClobber": {
-    "NAME": "Clobbering Strike",
+    "NAME": "Walloping Strike",
     "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to unblocked damage dealt."
   },
 
   "expansioncontent:SuperSomberShield": {
-    "NAME": "Somber Shield",
+    "NAME": "Greenpyre Shield",
     "DESCRIPTION": "expansioncontent:Pyre. NL Gain !B! Block. NL Next turn, gain a copy of the *Exhausted card."
   },
 
   "expansioncontent:SuperWhirlingFlame": {
-    "NAME": "Whirling Flame",
+    "NAME": "Whirling Inferno",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put a card from your discard pile on top of your draw pile."
   },
   "expansioncontent:Flail": {
-    "NAME": "Flail",
+    "NAME": "Flailing Strikes",
     "DESCRIPTION": "Deal !D! damage to ALL enemies !DM! times. NL Gain !M! Artifact. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "flailing",
@@ -153,22 +153,22 @@
     ]
   },
   "expansioncontent:SuperBloodthirst": {
-    "NAME": "Bloodthirst",
+    "NAME": "Bloodlust",
     "DESCRIPTION": "Deal !D! damage. NL If Fatal, obtain a random potion and Exhaust this card."
   },
   "expansioncontent:SuperBodyCrash": {
-    "NAME": "Body Crash",
+    "NAME": "Body Smash",
     "DESCRIPTION": "Gain !B! Block. NL Deal damage equal to your Block.",
     "UPGRADE_DESCRIPTION": " NL (Deals !D! damage.)"
   },
   "expansioncontent:SuperEtherStep": {
-    "NAME": "Ether Step",
+    "NAME": "Specter Step",
     "DESCRIPTION": "Exhaust 1 card. NL Draw !M! card. NL Deal !D! damage.",
     "UPGRADE_DESCRIPTION": "Exhaust 1 card. NL Draw !M! cards. NL Deal !D! damage."
   },
 
   "expansioncontent:Virus": {
-    "NAME": "Virus",
+    "NAME": "404 Virus",
     "DESCRIPTION": "Exhaust up to !M! cards, shuffle a *Major *Beam into the draw pile for each card exhausted. NL Exhaust."
   },
 

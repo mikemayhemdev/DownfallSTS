@@ -27,7 +27,7 @@ public class TalonRake extends AbstractAwakenedCard {
         if (m != null) {
             this.addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Color.CYAN, Color.WHITE), 0.1F));
         }
-        dmg(m, AbstractGameAction.AttackEffect.NONE);
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         atb(new ConjureAction(false));
 
     }
