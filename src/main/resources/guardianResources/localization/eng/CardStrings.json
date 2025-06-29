@@ -139,8 +139,8 @@
   },
   "Guardian:CompilePackage": {
     "NAME": "Compile Package",
-    "DESCRIPTION": "Choose a guardianmod:Package to place into guardianmod:Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose an Upgraded guardianmod:Package to place into guardianmod:Stasis. NL Exhaust.",
+    "DESCRIPTION": "Choose a *Package to place into guardianmod:Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose an Upgraded *Package to place into guardianmod:Stasis. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Package."
     ]
