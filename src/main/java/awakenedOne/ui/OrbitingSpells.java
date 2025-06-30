@@ -1,6 +1,7 @@
 package awakenedOne.ui;
 
 import awakenedOne.cards.AphoticFount;
+import awakenedOne.cards.Caw;
 import awakenedOne.cards.Deathwish;
 import awakenedOne.cards.tokens.spells.*;
 import awakenedOne.relics.ZenerDeck;
@@ -57,6 +58,18 @@ public class OrbitingSpells {
         }
 
     }
+
+    public static void upgradeCaws(int amount) {
+        for (OrbitingSpells.CardRenderInfo c : OrbitingSpells.spellCards) {
+            c.card.upgrade();
+            if (c.card instanceof Caw) {
+                c.card.baseDamage += amount;
+                c.card.applyPowers();
+            }
+        }
+    }
+
+
 
     public static void upgradeall() {
         for (CardRenderInfo c : spellCards) {

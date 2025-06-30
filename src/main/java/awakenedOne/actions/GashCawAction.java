@@ -2,6 +2,7 @@ package awakenedOne.actions;
 
 import automaton.FunctionHelper;
 import awakenedOne.cards.Caw;
+import awakenedOne.ui.OrbitingSpells;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -54,6 +55,9 @@ public class GashCawAction extends AbstractGameAction {
         }
 
         //Claw doesn't even hit Claws in the exhaust pile? Caw >>>> Claw, clearly.
+
+        OrbitingSpells.upgradeCaws(this.amount);
+
         var1 = AbstractDungeon.player.exhaustPile.group.iterator();
 
         while(var1.hasNext()) {
