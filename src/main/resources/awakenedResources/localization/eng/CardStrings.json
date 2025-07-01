@@ -279,7 +279,8 @@
   },
   "awakened:Slaughter": {
     "NAME": "To the Slaughter",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony."
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
