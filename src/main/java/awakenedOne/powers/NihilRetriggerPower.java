@@ -1,10 +1,8 @@
 package awakenedOne.powers;
 
-import champ.powers.ParryPower;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.LocalizedStrings;
 import hermit.patches.EnumPatch;
 

@@ -4,14 +4,11 @@ import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.tokens.Ceremony;
 import awakenedOne.relics.KTRibbon;
 import awakenedOne.util.Wiz;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
@@ -25,17 +22,18 @@ public class DarkPower extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 6;
         this.cardsToPreview = new Ceremony();
+        this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(DarkPower.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
 
-        if (Wiz.isChantActive()) {
+        if (isTrig_chant()) {
         chant();
     }
 
-        if ((!Wiz.isChantActive()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);

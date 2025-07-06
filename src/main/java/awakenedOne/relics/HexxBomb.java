@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 public class HexxBomb extends CustomRelic{
 
@@ -48,18 +49,16 @@ public class HexxBomb extends CustomRelic{
             if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                 this.flash();
                 this.addToTop(new RelicAboveCreatureAction(m, this));
-                AbstractMonster mo = AbstractDungeon.getRandomMonster();
+                AbstractMonster mo = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.relicRng);
                 this.addToBot(new RelicAboveCreatureAction(mo, this));
                 this.addToBot(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, amount), amount, true));
-                //HexCurse(AMOUNT, mo, AbstractDungeon.player);
             }
         }
-
     }
 
     @Override
     public boolean canSpawn() {
-        return Settings.isEndless || (AbstractDungeon.floorNum <= 53);
+        return Settings.isEndless || ((AbstractDungeon.floorNum <= 53 && AbstractDungeon.ascensionLevel >= 20) && !evilMode) || ((AbstractDungeon.floorNum <= 52 && AbstractDungeon.ascensionLevel < 20 && !evilMode)) || ((AbstractDungeon.floorNum <= 48));
     }
 
 

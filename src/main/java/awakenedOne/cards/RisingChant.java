@@ -23,6 +23,7 @@ public class RisingChant extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        this.isInnate = true;
+        //upgradeMagicNumber(1);
     }
 }

@@ -1,4 +1,3 @@
-
 package awakenedOne.actions;
 
 import com.badlogic.gdx.graphics.Color;

@@ -100,12 +100,31 @@ public class GhostflameHelper {
 
     public static void end_on_random_flame(){
 
-        int new_flame_num = AbstractDungeon.miscRng.random(hexaGhostFlames.size()-1);
+        int new_flame_num = AbstractDungeon.cardRng.random(hexaGhostFlames.size()-1);
 
 
         if (new_flame_num == hexaGhostFlames.indexOf(activeGhostFlame)) {
             while (new_flame_num == hexaGhostFlames.indexOf(activeGhostFlame)) {
-                new_flame_num = AbstractDungeon.miscRng.random(hexaGhostFlames.size() - 1);
+                new_flame_num = AbstractDungeon.cardRng.random(hexaGhostFlames.size() - 1);
+            }
+        }
+
+        AbstractGhostflame x = hexaGhostFlames.get(new_flame_num);
+        if (x.charged) {
+            x.extinguish();
+        }
+        x.activate();
+
+    }
+
+    public static void end_on_random_flame_relic_rng(){
+
+        int new_flame_num = AbstractDungeon.relicRng.random(hexaGhostFlames.size()-1);
+
+
+        if (new_flame_num == hexaGhostFlames.indexOf(activeGhostFlame)) {
+            while (new_flame_num == hexaGhostFlames.indexOf(activeGhostFlame)) {
+                new_flame_num = AbstractDungeon.relicRng.random(hexaGhostFlames.size() - 1);
             }
         }
 

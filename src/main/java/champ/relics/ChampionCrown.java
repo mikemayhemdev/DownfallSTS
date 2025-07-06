@@ -2,25 +2,11 @@ package champ.relics;
 
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
-import champ.actions.OpenerReduceCostAction;
-import champ.cards.StanceDance;
 import champ.cards.StanceDanceCrown;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
-import champ.stances.UltimateStance;
-import champ.util.OnOpenerSubscriber;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.stances.AbstractStance;
-import com.megacrit.cardcrawl.stances.NeutralStance;
-import downfall.actions.OctoChoiceAction;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
-import sneckomod.cards.SoulRoll;
-import theHexaghost.cards.MatchstickFloat;
 
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;

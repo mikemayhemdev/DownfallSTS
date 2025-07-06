@@ -3,7 +3,6 @@ package champ.cards;
 import champ.powers.ImprovisingPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 
 import static champ.ChampMod.loadJokeCardImage;
 

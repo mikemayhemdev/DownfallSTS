@@ -41,7 +41,7 @@ public class ManipulateTimeAction extends AbstractGameAction {
         AbstractPlayer p = AbstractDungeon.player;
 
         if (!p.discardPile.isEmpty()) {
-            this.addToBot(new SelectCardsCenteredAction(
+            this.addToTop(new SelectCardsCenteredAction(
                     p.discardPile.group,
                     1,
                     "Choose.",

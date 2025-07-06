@@ -33,6 +33,6 @@ public class BurningStudy extends AbstractSpellCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }

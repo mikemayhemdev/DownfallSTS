@@ -1,7 +1,7 @@
 package awakenedOne.cards;
 
+import awakenedOne.AwakenedOneMod;
 import awakenedOne.relics.KTRibbon;
-import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,15 +19,16 @@ public class ToTheLimit extends AbstractAwakenedCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         this.exhaust = true;
+        this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(ToTheLimit.class.getSimpleName() + "ToTheLimit.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (Wiz.isChantActive()) {
+        if (isTrig_chant()) {
             chant();
         }
 
-        if ((!Wiz.isChantActive()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);

@@ -1,7 +1,8 @@
 {
   "awakened:Thunderbolt": {
     "NAME": "Thunderbolt",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage twice. NL Exhaust."
   },
   "awakened:BurningStudy": {
     "NAME": "Burning Study",
@@ -13,22 +14,24 @@
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
-    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Enemy loses !awakened:m2! HP. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Enemy loses !awakened:m2! HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Enemy loses !awakened:m2! HP. NL Exhaust."
   },
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Apply !M! awakened:Manaburn. NL Next turn, lose [E]. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Apply !M! awakened:Manaburn. NL Next turn, lose [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage twice. NL Apply !M! awakened:Manaburn. NL Next turn, lose [E]. NL Exhaust."
   },
   "awakened:AphoticShield": {
     "NAME": "Aphotic Shield",
-    "DESCRIPTION": "Retain. NL Gain !M! expansioncontent:Plated *Armor. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !M! expansioncontent:Plated *Armor. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL At the end of your turn, gain !M! Block. NL Exhaust."
   },
   "awakened:ESPSpell": {
     "NAME": "ESP",
     "DESCRIPTION": "Retain. NL Draw !M! card. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust."
   },
-
   "awakened:Strike": {
     "NAME": "Strike",
     "DESCRIPTION": "Deal !D! damage."
@@ -45,10 +48,6 @@
     "NAME": "Intensify",
     "DESCRIPTION": "This turn, your next Spell is played twice. NL awakened:Conjure.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL This turn, your next Spell is played twice. NL awakened:Conjure."
-  },
-  "awakened:QuickMove": {
-    "NAME": "Peck",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
   },
   "awakened:InResponse": {
     "NAME": "Spellshield",
@@ -77,20 +76,19 @@
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain !B! Block next turn."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain !B! Block again."
   },
-
   "awakened:Psalm": {
     "NAME": "Psalm",
-    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies."
+    "DESCRIPTION": "Gain !B! Block. NL The next time you play a Power card, deal !M! damage to ALL enemies."
   },
   "awakened:FadeOut": {
     "NAME": "Demon Glyph",
-    "DESCRIPTION": "Ethereal. NL Gain !awakened:m2! Strength and Dexterity. NL At the start of your turn, gain !M! awakened:Manaburn."
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, lose [E] and draw !M! cards."
   },
   "awakened:TakeFlight": {
     "NAME": "Take Flight",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain !M! bronze:Blur."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Block is not removed at the start of your next turn."
   },
   "awakened:FeatherVeil": {
     "NAME": "Feather Veil",
@@ -161,12 +159,13 @@
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Playing this card counts as losing [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Playing this card counts as losing [E]."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Put a card from your discard pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Put a card from your discard pile into your hand."
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
-    "DESCRIPTION": "Retain. NL Double your Strength for the turn. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !M! temporary Strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! temporary Strength."
   },
   "awakened:DesperatePrayer": {
   "NAME": "Desperate Prayer",
@@ -192,7 +191,8 @@
   },
   "awakened:RisingChant": {
     "NAME": "Rising Chant",
-    "DESCRIPTION": "Whenever you activate a awakened:Chant effect, gain !M! Strength."
+    "DESCRIPTION": "Whenever you activate a awakened:Chant effect for the first time, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you activate a awakened:Chant effect for the first time, gain !M! Strength."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
@@ -216,12 +216,12 @@
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
-    "DESCRIPTION": "When you would die or at the end of combat, remove all debuffs and heal !M! HP instead."
+    "DESCRIPTION": "When you would die or at the end of combat, remove all debuffs, awakened:Awaken, and heal !M! HP instead."
   },
   "awakened:MazalethForm": {
     "NAME": "Awakened Form",
-    "DESCRIPTION": "Ethereal. NL Now and the first time you refresh your Spells each turn, gain !M! Ritual.",
-    "UPGRADE_DESCRIPTION": "Now and the first time you refresh your Spells each turn, gain !M! Ritual."
+    "DESCRIPTION": "The first time you refresh your Spells each turn, gain !M! Ritual.",
+    "UPGRADE_DESCRIPTION": "awakened:Awaken immediately. NL The first time you refresh your Spells each turn, gain !M! Ritual."
   },
   "awakened:Planeswalk": {
     "NAME": "Planeswalk",
@@ -284,7 +284,7 @@
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
-    "DESCRIPTION": "Whenever you are awakened:Drained, apply !M! awakened:Manaburn to ALL enemies."
+    "DESCRIPTION": "Whenever you Exhaust a Status or Curse card, ALL enemies lose !M! HP."
   },
   "awakened:MysticOrder": {
     "NAME": "Mystic Order",
@@ -292,7 +292,7 @@
   },
   "awakened:SacrilegiousStrike": {
     "NAME": "Sacrilegious Strike",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL You can't play any Power cards next turn."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL The next time you play a Power card, lose [E] ."
   },
   "awakened:ToTheLimit": {
     "NAME": "To the Limit",
@@ -333,7 +333,7 @@
   },
   "awakened:Hatchery": {
     "NAME": "Hatchery",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you awakened:Chant, return this from the discard pile to your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you awakened:Conjure, return this from the discard pile to your hand."
   },
   "awakened:Manastorm": {
     "NAME": "Manastorm",

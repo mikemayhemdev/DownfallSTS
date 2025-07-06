@@ -65,7 +65,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
-import static hermit.util.Wiz.pwrAmt;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer

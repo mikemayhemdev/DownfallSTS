@@ -2,6 +2,7 @@ package awakenedOne.actions;
 
 import awakenedOne.powers.DarkIncantationRitualPower;
 import awakenedOne.ui.OrbitingSpells;
+import awakenedOne.util.OnConjureSubscriber;
 import awakenedOne.util.Wiz;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -15,6 +16,7 @@ import java.util.ArrayList;
 
 import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.applyToSelf;
+import static awakenedOne.util.Wiz.isAwakened;
 
 public class ConjureAction extends AbstractGameAction {
 
@@ -52,62 +54,72 @@ public class ConjureAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        if (AbstractDungeon.player.hasPower("No Draw")) {
+            AbstractDungeon.player.getPower("No Draw").flash();
+            this.isDone = true;
+            return;
+        }
         conjuresThisCombat += 1;
         isDone = true;
         conjuredCards.clear();
-            addToTop(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    if ((OrbitingSpells.spellCards.isEmpty())) {
-                        awaken(5);
-                        OrbitingSpells.refreshSpells();
+        addToTop(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if ((OrbitingSpells.spellCards.isEmpty())) {
+                    awaken(5);
+                    OrbitingSpells.refreshSpells();
 
-                        for (OrbitingSpells.CardRenderInfo c : OrbitingSpells.spellCards) {
-                            c.card.upgrade();
-                        }
+                    if (AbstractDungeon.player.hasPower(DarkIncantationRitualPower.POWER_ID) && refreshedthisturn == false) {
+                        applyToSelf(new RitualPower(AbstractDungeon.player, AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount, true));
+                        AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).onSpecificTrigger();
+                    }
 
-                        if (AbstractDungeon.player.hasPower(DarkIncantationRitualPower.POWER_ID) && refreshedthisturn == false) {
-                            applyToSelf(new RitualPower(AbstractDungeon.player, AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount, true));
-                            AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).onSpecificTrigger();
-                        }
-
-                        //On Refresh...
+                    //On Refresh...
 //                        if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID)) {
 //                            for (int i = 0; i < AbstractDungeon.player.getPower(FeathersinksPower.POWER_ID).amount; i++) {
 //                                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
 //                            }
 //                        }
-                        refreshedthisturn = true;
-                    }
+                    refreshedthisturn = true;
                 }
-            });
-            if (!choose) {
-                AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
-                if (bstudy) {
-                    tar = pick;
-                }
-                if (ontop == false) {
-                    addToTop(new MakeTempCardInHandAction(tar));
-                }
-                if (ontop == true) {
-                    addToBot(new MakeTempCardInDrawPileAction(tar, 1, false, true));
-                }
-                addToTop(new RemoveSpellCardAction(tar));
-            } else {
-                ArrayList<OrbitingSpells.CardRenderInfo> possCards = new ArrayList<>();
-                possCards.addAll(OrbitingSpells.spellCards);
-                ArrayList<OrbitingSpells.CardRenderInfo> availableCards = new ArrayList<>();
-                while (!possCards.isEmpty()) {
-                    availableCards.add(possCards.remove(AbstractDungeon.cardRandomRng.random(possCards.size() - 1)));
-                }
-                ArrayList<AbstractCard> actualChoices = new ArrayList<>();
-                availableCards.forEach(q -> actualChoices.add(q.card.makeStatEquivalentCopy()));
-                addToTop(new SelectCardsCenteredAction(actualChoices, "", (cards) -> {
-                    AbstractCard q = cards.get(0);
-                    addToTop(new MakeTempCardInHandAction(q));
-                    addToTop(new RemoveSpellCardAction(q));
-                }));
             }
+        });
+        if (!choose) {
+            AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
+            if (bstudy) {
+                tar = pick;
+            }
+            if (isAwakened()) {
+                tar.upgrade();
+            }
+            if (ontop == false) {
+                addToTop(new MakeTempCardInHandAction(tar));
+            }
+            if (ontop == true) {
+                addToBot(new MakeTempCardInDrawPileAction(tar, 1, false, true));
+            }
+            addToTop(new RemoveSpellCardAction(tar));
+        } else {
+            ArrayList<OrbitingSpells.CardRenderInfo> possCards = new ArrayList<>();
+            possCards.addAll(OrbitingSpells.spellCards);
+            ArrayList<OrbitingSpells.CardRenderInfo> availableCards = new ArrayList<>();
+            while (!possCards.isEmpty()) {
+                availableCards.add(possCards.remove(AbstractDungeon.cardRandomRng.random(possCards.size() - 1)));
+            }
+            ArrayList<AbstractCard> actualChoices = new ArrayList<>();
+            availableCards.forEach(q -> actualChoices.add(q.card.makeStatEquivalentCopy()));
+            addToTop(new SelectCardsCenteredAction(actualChoices, "", (cards) -> {
+                AbstractCard q = cards.get(0);
+                if (isAwakened()) {
+                    q.upgrade();
+                }
+                addToTop(new MakeTempCardInHandAction(q));
+                addToTop(new RemoveSpellCardAction(q));
+            }));
+        }
+        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+            if (c instanceof OnConjureSubscriber) ((OnConjureSubscriber) c).OnConjure();
+        }
     }
 }

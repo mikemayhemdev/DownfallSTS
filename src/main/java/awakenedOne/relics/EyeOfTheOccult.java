@@ -27,6 +27,7 @@ public class EyeOfTheOccult extends CustomRelic {
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         if ((card instanceof AbstractSpellCard) && (card.target == AbstractCard.CardTarget.ALL_ENEMY)) {
+            //only flash if relevant
             if (getEnemies().size() > 1) {
                 flash();
             }

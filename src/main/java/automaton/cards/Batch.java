@@ -1,10 +1,10 @@
 package automaton.cards;
 
-import automaton.AutomatonMod;
 import automaton.FunctionHelper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import automaton.AutomatonMod;
 
 import static automaton.AutomatonMod.makeBetaCardPath;
 

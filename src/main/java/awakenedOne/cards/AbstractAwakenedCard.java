@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.AwakenedTextHelper;
 import awakenedOne.powers.RisingChantPower;
 import awakenedOne.relics.CursedBlessing;
 import awakenedOne.relics.KTRibbon;
@@ -25,6 +26,8 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import java.util.ArrayList;
 
+import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
+import static awakenedOne.AwakenedOneMod.CHANT;
 import static awakenedOne.util.Wiz.*;
 
 public abstract class AbstractAwakenedCard extends CustomCard {
@@ -47,6 +50,8 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     public int baseSecondDamage = -1;
     public boolean upgradedSecondDamage;
     public boolean isSecondDamageModified;
+
+    public boolean trig_chant = false;
 
     public AbstractAwakenedCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target) {
         this(cardID, cost, type, rarity, target, AwakenedOneChar.Enums.AWAKENED_BLUE);
@@ -109,8 +114,13 @@ public abstract class AbstractAwakenedCard extends CustomCard {
 
             super.applyPowers();
 
+            AwakenedTextHelper.colorCombos(this, false);
+
             isSecondDamageModified = (secondDamage != baseSecondDamage);
-        } else super.applyPowers();
+        } else {
+            super.applyPowers();
+            AwakenedTextHelper.colorCombos(this, false);
+        }
     }
 
     @Override
@@ -187,6 +197,14 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         }
     }
 
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        if (this.hasTag(ACTIVECHANT)) {
+            this.keywords.add("awakened:chant");
+        }
+    }
+
     public abstract void upp();
 
     // These shortcuts are specifically for cards. All other shortcuts that aren't specifically for cards can go in Wiz.
@@ -218,42 +236,60 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     public void chant() {
     }
 
-//    public void triggerWhenDrawn() {
-//        this.chant = false;
-//    }
-
+    public void onVictory() {
+        if (this.hasTag(ACTIVECHANT)) this.tags.remove(ACTIVECHANT);
+        this.initializeDescription();
+    }
 
     public boolean isChantActiveGlow(AbstractCard source) {
-        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1)).type == CardType.POWER) {
+        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1)).type == CardType.POWER || this.hasTag(ACTIVECHANT)) {
             return true;
         } else {
             return false;
         }
     }
 
-//    public void onMoveToDiscard() {
-//        this.chant = false;
-//    }
-
-    //
-
     public ArrayList<AbstractMonster> monsterList() {
         return AbstractDungeon.getMonsters().monsters;
     }
 
-    //Whenever a Chant effect activates, do this!!!
-    public static void checkOnChant() {
-        if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
-            applyToSelf(new StrengthPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
-            AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
+    @Override
+    public AbstractCard makeStatEquivalentCopy() {
+        AbstractCard original = super.makeStatEquivalentCopy();
+
+        ((AbstractAwakenedCard)original).trig_chant = this.trig_chant;
+
+        return original;
+    }
+
+    public boolean isTrig_chant() {
+        if (isChantActive() || this.hasTag(ACTIVECHANT)) {
+            this.trig_chant = true;
         }
 
+        return (trig_chant);
+    }
+
+
+    //Whenever a Chant effect activates, do this!!!
+    public void checkOnChant() {
+        if (!this.hasTag(ACTIVECHANT) && this.hasTag(CHANT)) {
+            this.tags.add(ACTIVECHANT);
+            if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
+                applyToSelf(new StrengthPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
+                AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
+            }
+
+            if (AbstractDungeon.player.hasRelic(CursedBlessing.ID)) {
+                AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
+            }
+
+            AwakenedTextHelper.colorCombos(this, false);
+            this.initializeDescription();
+
+        }
         if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
            AbstractDungeon.player.getRelic(KTRibbon.ID).onTrigger();
-        }
-
-        if (AbstractDungeon.player.hasRelic(CursedBlessing.ID)) {
-            AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
         }
 
 //        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
@@ -280,11 +316,11 @@ public abstract class AbstractAwakenedCard extends CustomCard {
 //            }
 //        }
 
-        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if (c instanceof AbstractAwakenedCard) {
-                ((AbstractAwakenedCard) c).onChant();
-            }
-        }
+//        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+//            if (c instanceof AbstractAwakenedCard) {
+//                ((AbstractAwakenedCard) c).onChant();
+//            }
+//        }
 
     }
 
@@ -292,7 +328,6 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     //Hatchery
     public void onChant() {
     }
-
 
     protected AbstractCard cardForGen(String ID) {
         AbstractCard q = CardLibrary.getCard(ID).makeCopy();

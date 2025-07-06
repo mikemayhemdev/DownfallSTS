@@ -2,16 +2,13 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.relics.KTRibbon;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
 import static awakenedOne.ui.AwakenButton.awaken;
-import static awakenedOne.util.Wiz.isChantActive;
 
 
 public class Hymn extends AbstractAwakenedCard {
@@ -19,18 +16,19 @@ public class Hymn extends AbstractAwakenedCard {
 
     public Hymn() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
-        baseBlock = 4;
+        baseBlock = 3;
+        this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(Hymn.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
 
-        if (isChantActive()) {
+        if (isTrig_chant()) {
             chant();
         }
 
-        if ((!isChantActive()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);
@@ -40,8 +38,8 @@ public class Hymn extends AbstractAwakenedCard {
 
     @Override
     public void chant() {
-       // blck();
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new NextTurnBlockPower(AbstractDungeon.player, this.block), this.block));
+        blck();
+        //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new NextTurnBlockPower(AbstractDungeon.player, this.block), this.block));
         checkOnChant();
     }
 
@@ -51,6 +49,6 @@ public class Hymn extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(1);
     }
 }

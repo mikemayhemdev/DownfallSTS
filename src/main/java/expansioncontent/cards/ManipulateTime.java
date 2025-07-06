@@ -22,7 +22,7 @@ public class ManipulateTime extends AbstractExpansionCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ManipulateTimeAction(this.upgraded));
+        this.addToTop(new ManipulateTimeAction(this.upgraded));
     }
 
     public void upgrade() {

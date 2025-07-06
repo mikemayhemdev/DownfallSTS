@@ -17,7 +17,7 @@
   "awakened:RisingChantPower": {
     "NAME": "Rising Chant",
     "DESCRIPTIONS": [
-      "Whenever you activate a #yChant effect, gain #b",
+      "Whenever you activate a #yChant effect for the first time, gain #b",
       " #yStrength [REMOVE_SPACE]."
     ]
   },
@@ -41,6 +41,13 @@
       "The next time you play a #yPower card, draw #b",
       " card.",
       " cards."
+    ]
+  },
+  "awakened:NextPowerAOEPower": {
+    "NAME": "Psalm",
+    "DESCRIPTIONS": [
+      "The next time you play a #yPower card, deal #b",
+      " damage to ALL enemies."
     ]
   },
   "awakened:SacramentPower": {
@@ -113,8 +120,8 @@
   "awakened:SongOfSorrowPower": {
     "NAME": "Song of Sorrow",
     "DESCRIPTIONS": [
-      "Whenever you are #yDrained [REMOVE_SPACE], apply #b",
-      " #yManaburn to ALL enemies."
+      "Whenever you #yExhaust a #yStatus or #rCurse [REMOVE_SPACE], ALL enemies lose #b",
+      " HP."
     ]
   },
   "awakened:FeathersinksPower": {
@@ -165,9 +172,9 @@
   "awakened:EntanglePowersPower": {
     "NAME": "Sacrilege",
     "DESCRIPTIONS": [
-      "You cannot play #yPower cards this turn.",
-      "You cannot play #yPower cards for the next #b",
-      " turns."
+      "The next time you play a #yPower card, lose [E] .",
+      "The next #b",
+      " times you play a #yPower card, lose [E] ."
     ]
   },
   "awakened:NihilPower": {

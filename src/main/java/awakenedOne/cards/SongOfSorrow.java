@@ -13,7 +13,7 @@ public class SongOfSorrow extends AbstractAwakenedCard {
 
     public SongOfSorrow() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 6;
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath(SongOfSorrow.class.getSimpleName() + ".png"));
     }
@@ -24,6 +24,6 @@ public class SongOfSorrow extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(3);
     }
 }

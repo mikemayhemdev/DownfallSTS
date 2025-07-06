@@ -90,7 +90,15 @@ public class AwakenedOneMod implements
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags DELVE;
 
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags CHANT;
+
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags ACTIVECHANT;
+
     private static String modID = "awakened";
+
+    public static boolean awakenedthiscombat = false;
 
     public AwakenedOneMod() {
         BaseMod.subscribe(this);
@@ -239,7 +247,6 @@ public class AwakenedOneMod implements
             System.out.println(classInfo.getClassName());
             AbstractCard card = (AbstractCard) Loader.getClassPool().getClassLoader().loadClass(cls.getName()).newInstance();
             BaseMod.addCard(card);
-
         }
     }
 
@@ -325,6 +332,7 @@ public class AwakenedOneMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        awakenedthiscombat = false;
         OrbitingSpells.atBattleStart();
         ConjureAction.conjuresThisCombat = 0;
         OnLoseEnergyPowerPatch.EnergyLostThisCombat = 0;
@@ -333,6 +341,7 @@ public class AwakenedOneMod implements
     }
 
     public void onVictory() {
+        awakenedthiscombat = false;
         OrbitingSpells.empty();
     }
 

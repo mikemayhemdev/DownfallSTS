@@ -1,19 +1,13 @@
 package champ.potions;
 
-
-import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import champ.ChampMod;
-import champ.actions.DiscoverOpenerAction;
 import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-
 
 public class TechPotion extends CustomPotion {
     public static final String POTION_ID = "champ:TechniquePotion";

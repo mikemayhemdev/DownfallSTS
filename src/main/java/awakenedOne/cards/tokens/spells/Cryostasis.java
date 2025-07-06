@@ -55,7 +55,7 @@ public class Cryostasis extends AbstractSpellCard {
 
 
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(3);
         upgradeMagicNumber(1);
     }
 }

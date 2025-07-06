@@ -36,7 +36,6 @@ import java.util.List;
 
 import static champ.ChampMod.*;
 
-
 public abstract class AbstractChampCard extends AbstractDownfallCard {
     protected final CardStrings cardStrings;
     public String betaArtPath;

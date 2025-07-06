@@ -24,13 +24,6 @@ public abstract class AbstractSpellCard extends AbstractAwakenedCard {
         exhaust = true;
     }
 
-//    public void applyPowers() {
-//        super.applyPowers();
-//        if (AbstractDungeon.player.hasPower(ConjureNextTurnPower.POWER_ID)) {
-//            this.costForTurn = 0;
-//        }
-//    }
-
     @Override
     public List<String> getCardDescriptors() {
         return Collections.singletonList(uiStrings.TEXT[0]);

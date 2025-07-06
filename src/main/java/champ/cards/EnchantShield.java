@@ -1,6 +1,5 @@
 package champ.cards;
 
-import champ.powers.ResolvePower;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,8 +7,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.loadJokeCardImage;
-
-import static champ.ChampMod.fatigue;
 
 public class EnchantShield extends AbstractChampCard {
 

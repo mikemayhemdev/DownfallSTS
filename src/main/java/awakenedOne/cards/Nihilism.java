@@ -3,7 +3,6 @@ package awakenedOne.cards;
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -14,7 +13,6 @@ import hermit.util.Wiz;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
-import static awakenedOne.util.Wiz.att;
 
 public class Nihilism extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Nihilism.class.getSimpleName());

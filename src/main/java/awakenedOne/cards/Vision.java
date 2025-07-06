@@ -1,6 +1,5 @@
 package awakenedOne.cards;
 
-import awakenedOne.AwakenedOneMod;
 import awakenedOne.ui.OrbitingSpells;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

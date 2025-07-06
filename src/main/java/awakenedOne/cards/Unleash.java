@@ -2,7 +2,6 @@ package awakenedOne.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -14,21 +13,25 @@ public class Unleash extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public Unleash() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.selfRetain = true;
         this.exhaust = true;
+        baseMagicNumber = magicNumber = 4;
         loadJokeCardImage(this, makeBetaCardPath( "Unleash.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (p.hasPower("Strength")) {
-            int strAmt =p.getPower("Strength").amount;
-            this.addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, strAmt), strAmt));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseStrengthPower(p, strAmt), strAmt));
-        }
+ //       if (p.hasPower("Strength")) {
+        //            int strAmt =p.getPower("Strength").amount;
+        //            this.addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, strAmt), strAmt));
+        //            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new LoseStrengthPower(p, strAmt), strAmt));
+        //        }
+        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        //upgradeBaseCost(1);
+        this.exhaust = false;
     }
 }

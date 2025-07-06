@@ -1,7 +1,6 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.spells.ESPSpell;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
@@ -11,7 +10,6 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.att;
 
 public class ZenerDeck extends CustomRelic {
 

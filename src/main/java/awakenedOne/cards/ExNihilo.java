@@ -39,13 +39,14 @@ public class ExNihilo extends AbstractAwakenedCard {
         //this.isEthereal = true;
         baseMagicNumber = magicNumber = 13;
         this.exhaust = true;
+        this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(ExNihilo.class.getSimpleName() + ".png"));
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(m, p, new ManaburnPower(m, this.magicNumber), this.magicNumber));
-        if (Wiz.isChantActive()) {
+        if (isTrig_chant()) {
             if (Settings.FAST_MODE) {
                 this.addToBot(new VFXAction(m, new OfferingEnemyEffect(m), 0.2F));
             } else {
@@ -56,7 +57,7 @@ public class ExNihilo extends AbstractAwakenedCard {
             checkOnChant();
         }
 
-        if ((!Wiz.isChantActive()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 if (Settings.FAST_MODE) {
                     this.addToBot(new VFXAction(m, new OfferingEnemyEffect(m), 0.2F));

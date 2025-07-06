@@ -5,7 +5,6 @@ import awakenedOne.actions.ConjureAction;
 import awakenedOne.powers.IntensifyPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import expansioncontent.expansionContentMod;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.applyToSelf;

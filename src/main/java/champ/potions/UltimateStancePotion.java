@@ -1,12 +1,10 @@
 package champ.potions;
 
-
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
 import champ.ChampMod;
 import champ.powers.UltimateFormPower;
 import champ.stances.UltimateStance;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;

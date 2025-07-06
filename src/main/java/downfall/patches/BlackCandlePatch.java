@@ -14,12 +14,6 @@ public class BlackCandlePatch {
     public static class MakeActuallyUsable {
         public static boolean Postfix(boolean __result, AbstractCard __instance) {
 
-            if ((__instance.type == AbstractCard.CardType.POWER)) {
-                if (AbstractDungeon.player.hasPower(EntanglePowersPower.POWER_ID)) {
-                    return false;
-                }
-            }
-
             if ((__instance.type == AbstractCard.CardType.CURSE) && (__instance.cost == -2)) {
                 if (AbstractDungeon.player.hasRelic(BlackCandle.ID)) {
                     return true;

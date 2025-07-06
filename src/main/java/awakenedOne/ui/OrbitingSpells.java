@@ -5,6 +5,7 @@ import awakenedOne.cards.Caw;
 import awakenedOne.cards.Deathwish;
 import awakenedOne.cards.tokens.spells.*;
 import awakenedOne.relics.ZenerDeck;
+import awakenedOne.util.Wiz;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
@@ -61,7 +62,6 @@ public class OrbitingSpells {
 
     public static void upgradeCaws(int amount) {
         for (OrbitingSpells.CardRenderInfo c : OrbitingSpells.spellCards) {
-            c.card.upgrade();
             if (c.card instanceof Caw) {
                 c.card.baseDamage += amount;
                 c.card.applyPowers();
@@ -85,6 +85,9 @@ public class OrbitingSpells {
 
     public static void addSpellCard(AbstractCard card) {
         if (AbstractDungeon.player.hasPower(MasterRealityPower.POWER_ID)) {
+            card.upgrade();
+        }
+        if (Wiz.isAwakened()) {
             card.upgrade();
         }
         spellCards.add(new CardRenderInfo(card));

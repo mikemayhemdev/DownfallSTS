@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
-import slimebound.SlimeboundMod;
 
 public class Colosseum_Evil_Champ extends AbstractImageEvent {
     public static final String ID = "champ:Colosseum";

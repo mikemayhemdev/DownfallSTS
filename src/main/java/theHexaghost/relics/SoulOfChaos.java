@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.RandomFlameAction;
+import theHexaghost.actions.RandomFlameActionRelicRng;
 import theHexaghost.actions.RandomizeFlameAction;
 
 import theHexaghost.ghostflames.*;
@@ -35,7 +36,7 @@ public class SoulOfChaos extends CustomRelic {
         super.atTurnStart();
         flash();
 
-        att(new RandomFlameAction());
+        att(new RandomFlameActionRelicRng());
 
         atb(new RandomizeFlameAction());
 
@@ -47,7 +48,7 @@ public class SoulOfChaos extends CustomRelic {
     @Override
     public void onPlayerEndTurn() {
         flash();
-        this.addToTop(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng), false));
+        this.addToTop(new PlayTopCardAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster) null, true, AbstractDungeon.relicRng), false));
     }
 
     public String getUpdatedDescription() {

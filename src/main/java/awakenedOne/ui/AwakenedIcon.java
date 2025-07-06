@@ -4,11 +4,6 @@ import awakenedOne.util.TexLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.icons.AbstractCustomIcon;
 
-import java.util.Collections;
-import java.util.List;
-
-import static awakenedOne.AwakenedOneMod.makeID;
-
 public class AwakenedIcon extends AbstractCustomIcon {
     public static final String ID = "awakened";
     private static AwakenedIcon singleton;
@@ -25,8 +20,4 @@ public class AwakenedIcon extends AbstractCustomIcon {
         return singleton;
     }
 
-    @Override
-    public List<String> keywordLinks() {
-        return Collections.singletonList(makeID("awakened"));
-    }
 }

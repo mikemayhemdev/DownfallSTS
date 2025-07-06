@@ -2,21 +2,32 @@ package automaton.cards;
 
 import automaton.AutomatonMod;
 import automaton.actions.AddToFuncAction;
+import awakenedOne.relics.EyeOfTheOccult;
+import awakenedOne.relics.OnAwakenRelic;
+import champ.powers.GladiatorFormPower;
+import champ.powers.ParryPower;
+import champ.relics.RageAmulet;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.actions.OctoChoiceAction;
 import downfall.cards.OctoChoiceCard;
 import downfall.util.OctopusCard;
+import guardian.powers.RevengePower;
 
 import java.util.ArrayList;
+
+import static hermit.util.Wiz.removePower;
 
 public class Branch extends AbstractBronzeCard implements OctopusCard {
 
@@ -57,6 +68,23 @@ public class Branch extends AbstractBronzeCard implements OctopusCard {
                 if (upgraded) q.upgrade();
                 att(new AddToFuncAction(q, null));
                 att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, card.baseDamage, card.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
+
+                if (AbstractDungeon.player.hasPower(GladiatorFormPower.POWER_ID)) {
+                    GladiatorFormPower revengePower = (GladiatorFormPower) AbstractDungeon.player.getPower(GladiatorFormPower.POWER_ID);
+
+                    if (revengePower != null) {
+                        revengePower.onSpecificTriggerBranch();
+                    }
+                }
+
+                for (AbstractRelic r : AbstractDungeon.player.relics) {
+                    if (r instanceof RageAmulet) {
+                        ((RageAmulet) r).onSpecificTrigger();
+                    }
+                }
+
+                atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VigorPower.POWER_ID));
+
                 break;
             }
             case "bronze:BranchBlock": {

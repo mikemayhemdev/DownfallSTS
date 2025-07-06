@@ -10,18 +10,18 @@
     "PROPER_NAME": "Conjure",
     "NAMES": [
       "conjure",
-      "conjured"
+      "conjured",
+      "awaken"
     ],
-    "DESCRIPTION": "Draw a card from your Spell Pile. If the Spell Pile is empty, refresh it and #yUpgrade all Spells."
+    "DESCRIPTION": "Draw a card from your Spell Pile. If you are #yAwakened (Played at least #b7 #yPower cards this combat), drawn Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy."
   },
   {
     "PROPER_NAME": "Chant",
     "NAMES": [
       "chant"
     ],
-    "DESCRIPTION": "Chant effects activate if the last card you played in combat was a Power card."
+    "DESCRIPTION": "Cards with #yChant effects become more powerful for the rest of combat if the last played card in combat was a #yPower card."
   },
-
   {
     "PROPER_NAME": "Hex",
     "NAMES": [

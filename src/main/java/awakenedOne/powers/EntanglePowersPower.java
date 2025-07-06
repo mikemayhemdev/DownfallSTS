@@ -1,10 +1,8 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by FernFlower decompiler)
-//
 package awakenedOne.powers;
 
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class EntanglePowersPower extends AbstractAwakenedPower {
@@ -12,7 +10,7 @@ public class EntanglePowersPower extends AbstractAwakenedPower {
     public static final String POWER_ID = makeID(NAME);
 
     public EntanglePowersPower(int amount) {
-        super(NAME, PowerType.DEBUFF, true, AbstractDungeon.player, null, amount);
+        super(NAME, PowerType.DEBUFF, false, AbstractDungeon.player, null, amount);
         updateDescription();
     }
 
@@ -25,11 +23,17 @@ public class EntanglePowersPower extends AbstractAwakenedPower {
 
     }
 
-    public void atEndOfTurn(boolean isPlayer) {
-        --this.amount;
-        updateDescription();
-        if (this.amount == 0) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, ID));
+    @Override
+    public void onAfterCardPlayed(AbstractCard card) {
+        if (card.type == AbstractCard.CardType.POWER) {
+            this.flash();
+            this.addToBot(new LoseEnergyAction(1));
+            //this.addToBot(new ApplyPowerAction(this.owner, this.owner, new Drained(this.owner,this.owner, 1), 1));
+            this.amount--;
+            updateDescription();
+            if (this.amount == 0) {
+                this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, ID));
+            }
         }
     }
 }

@@ -54,8 +54,10 @@ public class Darkleech extends AbstractSpellCard {
 
             });
         }
-        //atb(new GainEnergyAction(1));
-        //this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 1), 1));
+//        if (upgraded) {
+//            atb(new GainEnergyAction(1));
+//            this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 1), 1));
+//        }
     }
 
     public void upp() {

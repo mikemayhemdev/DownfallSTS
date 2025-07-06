@@ -1,10 +1,8 @@
 package champ.cards;
 
-import champ.ChampMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.downfallMod;
 
 import static champ.ChampMod.loadJokeCardImage;
 

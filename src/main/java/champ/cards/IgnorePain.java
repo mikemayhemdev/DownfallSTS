@@ -2,12 +2,8 @@ package champ.cards;
 
 import champ.ChampMod;
 import champ.powers.PushThroughPower;
-import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
-
-import static champ.ChampMod.fatigue;
 
 import static champ.ChampMod.loadJokeCardImage;
 

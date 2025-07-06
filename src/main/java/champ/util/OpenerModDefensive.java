@@ -2,7 +2,6 @@ package champ.util;
 
 import basemod.abstracts.AbstractCardModifier;
 import champ.ChampMod;
-import champ.stances.BerserkerStance;
 import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
@@ -13,7 +12,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import slimebound.SlimeboundMod;
 
 public class OpenerModDefensive extends AbstractCardModifier {
 

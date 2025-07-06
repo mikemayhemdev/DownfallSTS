@@ -1,8 +1,8 @@
 package awakenedOne.cards;
 
+import awakenedOne.AwakenedOneMod;
 import awakenedOne.powers.SheerTerrorPower;
 import awakenedOne.relics.KTRibbon;
-import awakenedOne.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -21,10 +21,11 @@ public class SheerTerror extends AbstractAwakenedCard {
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
     public SheerTerror() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         //this.exhaust = true;
+        this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(SheerTerror.class.getSimpleName() + ".png"));
     }
 
@@ -34,15 +35,15 @@ public class SheerTerror extends AbstractAwakenedCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(0.1F, 0.0F, 0.2F, 1.0F), ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F));
         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(0.3F, 0.2F, 0.4F, 1.0F), ShockWaveEffect.ShockWaveType.CHAOTIC), 1.0F));
 
-            HexCurse(magicNumber, m, p);
+        HexCurse(magicNumber, m, p);
 
 
-        if (Wiz.isChantActive()) {
+        if (isTrig_chant()) {
             this.addToBot(new ApplyPowerAction(m, p, new SheerTerrorPower(m, 1), 1, true, AbstractGameAction.AttackEffect.POISON));
             chant();
         }
 
-        if ((!Wiz.isChantActive()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 this.addToBot(new ApplyPowerAction(m, p, new SheerTerrorPower(m, 1), 1, true, AbstractGameAction.AttackEffect.POISON));
                 chant();
@@ -62,7 +63,7 @@ public class SheerTerror extends AbstractAwakenedCard {
 
 
     public void upp() {
-        //upgradeMagicNumber(1);
-        upgradeBaseCost(0);
+        upgradeMagicNumber(2);
+        //upgradeBaseCost(0);
     }
 }

@@ -1,11 +1,9 @@
 package champ.powers;
 
-import basemod.helpers.CardModifierManager;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,7 +12,6 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import expansioncontent.actions.EchoACardAction;
-import expansioncontent.cardmods.PropertiesMod;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 import downfall.util.TextureLoader;
 

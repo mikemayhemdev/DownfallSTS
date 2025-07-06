@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.RelicStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import gremlin.actions.DamageRandomEnemyActionButItsRelicRng;
 
 public class PricklyShields extends AbstractGremlinRelic {
     public static final String ID = getID("PricklyShields");
@@ -35,7 +36,7 @@ public class PricklyShields extends AbstractGremlinRelic {
 
             this.flash();
             AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            AbstractDungeon.actionManager.addToBottom(new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, DMG_AMT, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+            AbstractDungeon.actionManager.addToBottom(new DamageRandomEnemyActionButItsRelicRng(new DamageInfo(AbstractDungeon.player, DMG_AMT, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }
         return MathUtils.floor(blockAmount);
     }

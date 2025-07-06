@@ -1,7 +1,7 @@
 package awakenedOne.cards;
 
+import awakenedOne.AwakenedOneMod;
 import awakenedOne.relics.KTRibbon;
-import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -17,19 +17,20 @@ public class Victuals extends AbstractAwakenedCard {
 
     public Victuals() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 7;
+        baseBlock = 6;
         magicNumber = baseMagicNumber = 2;
+        this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath("Victuals.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
 
-        if (Wiz.isChantActive()) {
+        if (isTrig_chant()) {
             chant();
         }
 
-        if ((!Wiz.isChantActive()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);

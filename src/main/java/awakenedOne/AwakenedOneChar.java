@@ -30,7 +30,6 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.monsters.beyond.AwakenedOne;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.AwakenedEyeParticle;
 import org.apache.logging.log4j.LogManager;
@@ -131,13 +130,8 @@ public class AwakenedOneChar extends CustomPlayer {
         super.update();
 
         animateParticles = false;
-        if (!this.isDying) {
-            int buf = 0;
-            if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-                buf = AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-            }
 
-            if (!this.isDying && buf > 9 && Wiz.isInCombat()) {
+            if (!this.isDying && Wiz.isAwakened() && Wiz.isInCombat()) {
                 animateParticles = true;
             }
 
@@ -164,8 +158,6 @@ public class AwakenedOneChar extends CustomPlayer {
                     p.remove();
                 }
             }
-
-        }
     }
 
 

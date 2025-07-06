@@ -65,7 +65,7 @@ public class SerpentIdolPowerAction extends AbstractGameAction {
                 cardRarity = CardRarity.RARE;// 70
             }
 
-            AbstractCard tmp = SneckoMod.getOffClassCardMatchingPredicate(c -> c.type == AbstractCard.CardType.POWER && !c.hasTag(SneckoMod.BANNEDFORSNECKO) && c.color != AbstractCard.CardColor.COLORLESS && c.color != CardColorEnumPatch.CardColorPatch.BOSS);
+            AbstractCard tmp = SneckoMod.getOffClassCardMatchingPredicatePotionRng(c -> c.type == AbstractCard.CardType.POWER && !c.hasTag(SneckoMod.BANNEDFORSNECKO) && c.color != AbstractCard.CardColor.COLORLESS && c.color != CardColorEnumPatch.CardColorPatch.BOSS);
 
             for (AbstractCard c : derp) {
                 if (c.cardID.equals(tmp.cardID)) {// 76

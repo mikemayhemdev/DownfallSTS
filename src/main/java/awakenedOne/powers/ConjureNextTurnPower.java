@@ -1,13 +1,9 @@
 package awakenedOne.powers;
 
-import awakenedOne.actions.ConjureAction;
-import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
-import static awakenedOne.util.Wiz.atb;
 
 public class ConjureNextTurnPower extends AbstractAwakenedPower {
     // intellij stuff buff

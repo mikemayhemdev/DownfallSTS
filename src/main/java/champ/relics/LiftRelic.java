@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package champ.relics;
 
 import basemod.abstracts.CustomRelic;
@@ -12,9 +7,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.relics.AbstractRelic.LandingSound;
-import com.megacrit.cardcrawl.relics.AbstractRelic.RelicTier;
 import downfall.util.TextureLoader;
 
 import static champ.ChampMod.makeRelicOutlinePath;

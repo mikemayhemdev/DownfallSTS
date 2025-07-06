@@ -2,7 +2,6 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.relics.KTRibbon;
-import awakenedOne.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -26,6 +25,7 @@ public class Recitation extends AbstractAwakenedCard {
     public Recitation() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
+        this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(Recitation.class.getSimpleName() + ".png"));
     }
 
@@ -33,11 +33,11 @@ public class Recitation extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
 
-        if (Wiz.isChantActive()) {
+        if (isTrig_chant()) {
             chant();
         }
 
-        if ((!Wiz.isChantActive()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);
@@ -64,6 +64,6 @@ public class Recitation extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(3);
     }
 }

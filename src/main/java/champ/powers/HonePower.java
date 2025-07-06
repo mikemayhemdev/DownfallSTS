@@ -12,10 +12,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.util.TextureLoader;
-import hermit.HermitMod;
-import hermit.powers.MaintenanceStrikePower;
-
-import static hermit.HermitMod.makePowerPath;
 
 public class HonePower extends AbstractPower implements CloneablePowerInterface {
     public AbstractCreature source;

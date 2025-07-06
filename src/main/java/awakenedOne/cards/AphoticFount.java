@@ -4,6 +4,7 @@ import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.spells.AphoticShield;
 import awakenedOne.ui.OrbitingSpells;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,7 +23,9 @@ public class AphoticFount extends AbstractAwakenedCard {
     public AphoticFount() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
-        cardsToPreview = new AphoticShield();
+        AbstractCard c = new AphoticShield();
+        c.upgrade();
+        MultiCardPreview.add(this, new AphoticShield(), c);
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(ArcaneNesting.class.getSimpleName() + ".png"));
     }

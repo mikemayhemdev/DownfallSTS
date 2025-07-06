@@ -2,17 +2,10 @@ package guardian.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.GuardianMod;
-import guardian.rewards.GemReward;
-import guardian.rewards.GemRewardAllRarities;
-import sneckomod.util.ColorfulRareReward;
-
-import java.util.ArrayList;
+import guardian.rewards.GemRewardButRelicRng;
 
 public class SackOfGems extends CustomRelic {
     public static final String ID = "Guardian:SackOfGems";
@@ -32,7 +25,7 @@ public class SackOfGems extends CustomRelic {
 
     public void onEquip() {
         for (int i = 0; i < 5; i++) {
-            AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
+            AbstractDungeon.getCurrRoom().rewards.add(new GemRewardButRelicRng());
         }
         AbstractDungeon.combatRewardScreen.open();
         AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;

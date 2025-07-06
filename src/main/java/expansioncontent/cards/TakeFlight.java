@@ -1,6 +1,9 @@
 package expansioncontent.cards;
 
+import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.AbstractAwakenedCard;
+import awakenedOne.powers.RisingChantPower;
+import awakenedOne.relics.CursedBlessing;
 import awakenedOne.relics.KTRibbon;
 import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -14,10 +17,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import com.megacrit.cardcrawl.powers.RegenPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import expansioncontent.expansionContentMod;
 
+import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
+import static awakenedOne.AwakenedOneMod.CHANT;
 import static awakenedOne.ui.AwakenButton.awaken;
+import static awakenedOne.util.Wiz.applyToSelf;
 import static awakenedOne.util.Wiz.atb;
 
 public class TakeFlight extends AbstractExpansionCard {
@@ -37,6 +44,7 @@ public class TakeFlight extends AbstractExpansionCard {
         this.baseMagicNumber = this.magicNumber = 6;
         this.baseDownfallMagic = this.downfallMagic = 8;
         tags.add(CardTags.HEALING);
+        this.tags.add(AwakenedOneMod.CHANT);
         expansionContentMod.loadJokeCardImage((AbstractCard)this, "TakeFlight.png");
     }
 
@@ -69,7 +77,22 @@ public class TakeFlight extends AbstractExpansionCard {
 
     public void chant() {
         atb(new HealAction(AbstractDungeon.player, AbstractDungeon.player, downfallMagic));
-        AbstractAwakenedCard.checkOnChant();
+
+        if (!this.hasTag(ACTIVECHANT) && this.hasTag(CHANT)) {
+            this.tags.add(ACTIVECHANT);
+            if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
+                applyToSelf(new StrengthPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
+                AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
+            }
+
+            if (AbstractDungeon.player.hasRelic(CursedBlessing.ID)) {
+                AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
+            }
+        }
+        if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+            AbstractDungeon.player.getRelic(KTRibbon.ID).onTrigger();
+        }
+
     }
 
     public void triggerOnGlowCheck() {

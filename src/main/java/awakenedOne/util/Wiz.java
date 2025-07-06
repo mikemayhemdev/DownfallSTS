@@ -1,6 +1,9 @@
 package awakenedOne.util;
 
-import automaton.cards.FunctionCard;
+import awakenedOne.AwakenedOneMod;
+import awakenedOne.powers.RisingChantPower;
+import awakenedOne.relics.CursedBlessing;
+import awakenedOne.ui.OrbitingSpells;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -15,6 +18,7 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
@@ -23,6 +27,7 @@ import java.util.ArrayList;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
 import static awakenedOne.AwakenedOneMod.DELVE;
 
 public class Wiz {
@@ -67,14 +72,12 @@ public class Wiz {
     }
 
     public static ArrayList<AbstractCard> getCardsMatchingPredicate(Predicate<AbstractCard> pred, boolean allcards) {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
         if (allcards) {
-            ArrayList<AbstractCard> cardsList = new ArrayList<>();
             for (AbstractCard c : CardLibrary.getAllCards()) {
                 if (pred.test(c)) cardsList.add(c.makeStatEquivalentCopy());
             }
-            return cardsList;
         } else {
-            ArrayList<AbstractCard> cardsList = new ArrayList<>();
             for (AbstractCard c : AbstractDungeon.srcCommonCardPool.group) {
                 if (pred.test(c)) cardsList.add(c.makeStatEquivalentCopy());
             }
@@ -84,8 +87,8 @@ public class Wiz {
             for (AbstractCard c : AbstractDungeon.srcRareCardPool.group) {
                 if (pred.test(c)) cardsList.add(c.makeStatEquivalentCopy());
             }
-            return cardsList;
         }
+        return cardsList;
     }
 
     public static AbstractCard returnTrulyRandomPrediCardInCombat(Predicate<AbstractCard> pred, boolean allCards) {
@@ -123,10 +126,34 @@ public class Wiz {
         return hasbasics;
     }
 
+    public static boolean isAwakened() {
+        int cool;
+
+        cool = 0;
+
+        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
+            if (c.type == AbstractCard.CardType.POWER) {
+                cool++;
+            }
+        }
+
+        if (AwakenedOneMod.awakenedthiscombat) {
+            OrbitingSpells.upgradeall();
+            return true;
+        }
+
+        if (cool>6) {
+            OrbitingSpells.upgradeall();
+            return true;
+        }
+
+        return false;
+    }
+
 
     public static boolean isChantActive() {
         if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() > 1) {
-            if (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).type == AbstractCard.CardType.POWER) {
+            if ((AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).type == AbstractCard.CardType.POWER) || (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1).hasTag(ACTIVECHANT))) {
                 return true;
             }
         }

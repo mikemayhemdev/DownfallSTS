@@ -1,15 +1,10 @@
 package champ.patches;
 
-
 import champ.relics.PowerArmor;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
-
-import static hermit.util.Wiz.att;
-
 
 public class NukeVigorPatch {
     @SpirePatch(

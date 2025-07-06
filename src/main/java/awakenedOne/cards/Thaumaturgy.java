@@ -1,13 +1,10 @@
 package awakenedOne.cards;
 
 import awakenedOne.powers.ThaumaturgyPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.applyToSelf;
 import static awakenedOne.util.Wiz.applyToSelfTop;
 
 public class Thaumaturgy extends AbstractAwakenedCard {

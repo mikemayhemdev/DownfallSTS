@@ -1,6 +1,8 @@
 package expansioncontent.powers;
 
 
+import awakenedOne.AwakenedOneMod;
+import awakenedOne.ui.OrbitingSpells;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.powers.PushThroughPower;
 import com.badlogic.gdx.graphics.Texture;
@@ -72,6 +74,8 @@ public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPowe
         AbstractDungeon.actionManager.addToTop(new HealAction(abstractPlayer, abstractPlayer, this.amount));
         AbstractDungeon.actionManager.addToTop(new VFXAction(this.owner, new IntenseZoomEffect(this.owner.hb.cX, this.owner.hb.cY, true), 0.05F, true));
         AbstractDungeon.actionManager.addToTop(new SFXAction("VO_AWAKENEDONE_1"));
+        AwakenedOneMod.awakenedthiscombat = true;
+        OrbitingSpells.upgradeall();
     }
 
     @Override

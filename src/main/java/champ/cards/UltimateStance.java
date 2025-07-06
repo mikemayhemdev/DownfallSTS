@@ -1,16 +1,8 @@
 package champ.cards;
 
-import basemod.helpers.CardModifierManager;
-import champ.ChampMod;
 import champ.powers.UltimateFormNextTurnPower;
-import champ.powers.UltimateFormPower;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
-import champ.util.TechniqueMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.stances.NeutralStance;
 
 import static champ.ChampMod.loadJokeCardImage;
 

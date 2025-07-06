@@ -1,21 +1,14 @@
 package champ.events;
 
-
-import champ.relics.BlackKnightsHelmet;
-import champ.relics.ChampionCrown;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.helpers.MonsterHelper;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.ChampionsBelt;
 import com.megacrit.cardcrawl.relics.CloakClasp;
-import com.megacrit.cardcrawl.relics.WristBlade;
 import downfall.downfallMod;
 import hermit.relics.Horseshoe;
-import hermit.relics.StraightRazor;
-import slimebound.SlimeboundMod;
 
 public class MinorLeagueArena extends AbstractImageEvent {
     public static final String ID = "champ:MinorLeagueArena";

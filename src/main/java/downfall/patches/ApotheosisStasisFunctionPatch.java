@@ -26,6 +26,7 @@ public class ApotheosisStasisFunctionPatch {
         public static void Prefix(ApotheosisAction instance) {
             float duration = (float) ReflectionHacks.getPrivate(instance, AbstractGameAction.class, "duration");
             if (duration == Settings.ACTION_DUR_MED) {
+                OrbitingSpells.upgradeall();
                 for (AbstractOrb o : AbstractDungeon.player.orbs) {
                     if (o instanceof StasisOrb) {
                         ((StasisOrb) o).stasisCard.upgrade();
@@ -37,7 +38,6 @@ public class ApotheosisStasisFunctionPatch {
                     }
                     FunctionHelper.genPreview();
                 }
-                OrbitingSpells.upgradeall();
             }
         }
     }

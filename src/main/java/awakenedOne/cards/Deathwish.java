@@ -4,6 +4,7 @@ import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.spells.DeathCoil;
 import awakenedOne.ui.OrbitingSpells;
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,7 +20,9 @@ public class Deathwish extends AbstractAwakenedCard {
 
     public Deathwish() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        cardsToPreview = new DeathCoil();
+        AbstractCard c = new DeathCoil();
+        c.upgrade();
+        MultiCardPreview.add(this, new DeathCoil(), c);
         this.exhaust = true;
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(Deathwish.class.getSimpleName() + ".png"));

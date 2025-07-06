@@ -1,8 +1,8 @@
 package awakenedOne.cards;
 
+import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.GashCawAction;
 import awakenedOne.relics.KTRibbon;
-import awakenedOne.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -21,8 +21,9 @@ public class Caw extends AbstractAwakenedCard {
 
     public Caw() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 3;
+        baseDamage = 4;
         this.baseMagicNumber = 3;
+        this.tags.add(AwakenedOneMod.CHANT);
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath(Caw.class.getSimpleName() + ".png"));
     }
@@ -34,11 +35,11 @@ public class Caw extends AbstractAwakenedCard {
         }
         dmg(m, AbstractGameAction.AttackEffect.NONE);
 
-        if (Wiz.isChantActive()) {
+        if (isTrig_chant()) {
            chant();
         }
 
-        if ((!Wiz.isChantActive()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);
@@ -60,6 +61,6 @@ public class Caw extends AbstractAwakenedCard {
     @Override
     public void upp() {
         upgradeDamage(2);
-        upgradeMagicNumber(1);
+        //upgradeMagicNumber(1);
     }
 }

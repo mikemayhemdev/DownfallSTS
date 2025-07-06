@@ -5,7 +5,6 @@ import champ.relics.BerserkersGuideToSlaughter;
 import champ.relics.DefensiveTrainingManual;
 import champ.relics.FightingForDummies;
 import champ.relics.GladiatorsBookOfMartialProwess;
-import champ.stances.DefensiveStance;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -20,7 +19,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
-import downfall.events.FaceTrader_Evil;
 
 import java.util.ArrayList;
 import java.util.Collections;

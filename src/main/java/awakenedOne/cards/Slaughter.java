@@ -19,7 +19,7 @@ public class Slaughter extends AbstractAwakenedCard {
 
     public Slaughter() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 4;
+        baseDamage = 3;
         this.exhaust = true;
         this.cardsToPreview = new Ceremony();
         loadJokeCardImage(this, makeBetaCardPath(Slaughter.class.getSimpleName() + ".png"));

@@ -2,7 +2,6 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.relics.KTRibbon;
-import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -20,19 +19,18 @@ public class TakeFlight extends AbstractAwakenedCard {
 
     public TakeFlight() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 13;
-        this.baseMagicNumber = 1;
-        this.magicNumber = this.baseMagicNumber;
+        baseBlock = 12;
+        this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(TakeFlight.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        if (Wiz.isChantActive()) {
+        if (isTrig_chant()) {
             chant();
         }
 
-        if ((!Wiz.isChantActive()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
+        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
                 chant();
                 awaken(1);
@@ -42,7 +40,7 @@ public class TakeFlight extends AbstractAwakenedCard {
 
     @Override
     public void chant() {
-        applyToSelf((new BlurPower(AbstractDungeon.player, magicNumber)));
+        applyToSelf((new BlurPower(AbstractDungeon.player, 1)));
         checkOnChant();
     }
 
@@ -52,6 +50,6 @@ public class TakeFlight extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(3);
     }
 }

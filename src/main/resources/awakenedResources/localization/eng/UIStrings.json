@@ -13,5 +13,11 @@
     "TEXT": [
       " NL Next turn, lose [E]."
     ]
+  },
+  "awakened:highlightChant": {
+    "TEXT": [
+      "awakened:Chant: ",
+      "[awakenedIcon] [#12FAF0]Chant: "
+    ]
   }
 }

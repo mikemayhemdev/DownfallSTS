@@ -3,6 +3,7 @@ package sneckomod.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,10 +14,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import downfall.util.TextureLoader;
 import sneckomod.SneckoMod;
+import sneckomod.actions.PlayTyphoonAction;
 import sneckomod.cards.PoisonParadise;
 import sneckomod.cards.TyphoonFang;
 import com.megacrit.cardcrawl.core.Settings;
 import sneckomod.relics.D8;
+
+import static sneckomod.SneckoMod.NO_TYPHOON;
 
 public class TyphoonPlusPower extends AbstractPower implements CloneablePowerInterface {
     public static final String POWER_ID = SneckoMod.makeID("TyphoonPlusPower");
@@ -43,91 +47,42 @@ public class TyphoonPlusPower extends AbstractPower implements CloneablePowerInt
         this.updateDescription();
     }
 
-    public boolean isOverflowActive(AbstractCard source) { // Adjusted to take a card parameter
-        boolean OVERFLOW = false; // Reset overflow state
-
-        // Only check for overflow if the card has the OVERFLOW tag
+    public boolean isOverflowActive(AbstractCard source) {
+        boolean OVERFLOW = false;
         if (source.hasTag(SneckoMod.OVERFLOW)) {
-            // Check if there are more than 5 cards in hand
             if (AbstractDungeon.player.hand.size() > 5 || (AbstractDungeon.player.hasPower(CheatPower.POWER_ID))) {
                 OVERFLOW = true;
             }
 
-            // If the card purges on use, immediately return false
-            if ((source instanceof TyphoonFang && source.purgeOnUse)) {
-                return false; // If the card purges on use, it cannot cause overflow
+            if (source.hasTag(NO_TYPHOON)) {
+                return false;
             }
 
-            // Check for the D8 relic
             if (AbstractDungeon.player.hasRelic(D8.ID)) {
                 D8 d8Relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
                 if (d8Relic != null && d8Relic.card != null) {
                     if (d8Relic.card.uuid.equals(source.uuid)) {
-                        OVERFLOW = true; // Set overflow if the D8 card is the same as the source card
+                        OVERFLOW = true;
                     }
                 }
             }
         }
 
-        return OVERFLOW; // Return true or false
+        return OVERFLOW;
     }
-
 
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        // Check if the played card has OVERFLOW active and is not purged
-        if (!isOverflowActive(card) || card.purgeOnUse) {
-            return; // Exit if OVERFLOW is not active or the card is purged
+        if (!isOverflowActive(card) || card.hasTag(NO_TYPHOON)) {
+            return;
         }
 
-        // Loop through and play as many upgraded TyphoonFang cards as the power's amount (stacks)
         for (int i = 0; i < this.amount; i++) {
-            // Create a new upgraded instance of TyphoonFang
-            AbstractCard tmp = new TyphoonFang();
-            tmp.upgrade(); // Upgrade the card
-            tmp.purgeOnUse = true; // Set purge on use
-            tmp.freeToPlayOnce = true;
-
-            AbstractMonster randomTarget = getRandomAliveMonster();
-
-            // Continuously attempt to find a valid target if the current one is null or dead
-            while (randomTarget == null) {
-                randomTarget = getRandomAliveMonster();
-                // If all monsters are dead, exit the loop
-                if (AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-                    break;
-                }
-            }
-
-            // If no valid target is available (all monsters are dead), break out of the loop entirely
-            if (randomTarget == null) {
-                break;
-            }
-
-            // Add the card to the player's limbo (temporary play area)
-            AbstractDungeon.player.limbo.addToBottom(tmp);
-            tmp.current_x = card.current_x;
-            tmp.current_y = card.current_y;
-            tmp.target_x = (Settings.WIDTH / 2.0F - 300.0F * Settings.scale);
-            tmp.target_y = (Settings.HEIGHT / 2.0F);
-
-            // Calculate the damage for the target
-            tmp.calculateCardDamage(randomTarget);
-
-            // Add the card to the action manager's card queue, targeting the selected monster
-            AbstractDungeon.actionManager.cardQueue.add(new com.megacrit.cardcrawl.cards.CardQueueItem(tmp, randomTarget, card.energyOnUse));
+            this.addToBot(new PlayTyphoonAction(AbstractDungeon.getCurrRoom().monsters.getRandomMonster((AbstractMonster)null, true, AbstractDungeon.cardRandomRng), true, true));
         }
     }
 
-    // Helper function to get a random alive monster
-    private AbstractMonster getRandomAliveMonster() {
-        AbstractMonster randomTarget = AbstractDungeon.getMonsters().getRandomMonster(true);
-        if (randomTarget != null && randomTarget.isDeadOrEscaped()) {
-            randomTarget = null; // Ensure that the selected monster is alive
-        }
-        return randomTarget;
-    }
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {

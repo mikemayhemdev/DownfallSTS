@@ -1,35 +1,16 @@
 package champ.relics;
 
-import automaton.AutomatonMod;
-import automaton.relics.BronzeCore;
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
-import champ.actions.OpenerReduceCostAction;
-import champ.cards.Defend;
-import champ.cards.Strike;
-import champ.powers.UltimateFormPower;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
-import champ.stances.UltimateStance;
-import champ.util.OnOpenerSubscriber;
 import com.evacipated.cardcrawl.mod.stslib.relics.OnAfterUseCardRelic;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.stances.AbstractStance;
-import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import expansioncontent.actions.EchoACardAction;
-import slimebound.relics.AbsorbEndCombat;
 
 import static champ.ChampMod.*;
 import static collector.util.Wiz.atb;

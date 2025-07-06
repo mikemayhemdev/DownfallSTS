@@ -32,8 +32,8 @@ public class ColorfulPowersReward extends CustomReward {
         while (selectedCards.size() < 5) {
             AbstractCard card = SneckoMod.getOffClassCardMatchingPredicate(c ->
                     c.type == AbstractCard.CardType.POWER && c.rarity == AbstractCard.CardRarity.UNCOMMON);
-                    card.upgrade();
             if (!isDuplicate(selectedCards, card)) {
+                card.upgrade();
                 selectedCards.add(card);
             }
         }

@@ -1,6 +1,7 @@
 package awakenedOne.actions;
 
 import basemod.BaseMod;
+import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -8,7 +9,9 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.ConfusionPower;
 import hermit.actions.ReduceCostActionFixed;
+import sneckomod.actions.MuddleAction;
 
 import java.util.Iterator;
 
@@ -31,6 +34,14 @@ public class DrawPowerAction extends AbstractGameAction{
                 this.isDone = true;
                 return;
             }
+
+            if (AbstractDungeon.player.hasPower("No Draw"))
+            {
+                AbstractDungeon.player.getPower("No Draw").flash();
+                this.isDone = true;
+                return;
+            }
+
             int counter = 0;
             CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             Iterator<AbstractCard> var2 = this.p.drawPile.group.iterator();
@@ -58,8 +69,8 @@ public class DrawPowerAction extends AbstractGameAction{
                     if (this.p.hand.size() == BaseMod.MAX_HAND_SIZE) {
                         this.p.createHandIsFullDialog();
                     } else {
-                        p.drawPile.group.remove(card);
-                        p.hand.addToTop(card);
+                        this.p.drawPile.moveToDeck(card, false);
+                        this.addToTop(new DrawCardAction(1));
                         this.addToBot(new ReduceCostActionFixed(card.uuid, -1));
                     }
                 }

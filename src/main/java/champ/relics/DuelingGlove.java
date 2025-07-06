@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import downfall.util.TextureLoader;
-import gremlin.powers.WizPower;
 import hermit.cards.Malice;
 
 import static champ.ChampMod.makeRelicOutlinePath;

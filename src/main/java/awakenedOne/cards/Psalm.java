@@ -1,17 +1,13 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.utility.SFXAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import awakenedOne.powers.NextPowerAOEPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
+import static awakenedOne.util.Wiz.applyToSelf;
 
 public class Psalm extends AbstractAwakenedCard {
 
@@ -19,20 +15,20 @@ public class Psalm extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public Psalm() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 4;
-        selfRetain = true;
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 5;
+        magicNumber = baseMagicNumber = 5;
         loadJokeCardImage(this, makeBetaCardPath(Psalm.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new SFXAction("ATTACK_HEAVY"));
-        this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
-        this.addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.NONE));
+        blck();
+        applyToSelf(new NextPowerAOEPower(this.magicNumber));
     }
 
     @Override
     public void upp() {
-        upgradeDamage(3);
+        upgradeBlock(3);
+        upgradeMagicNumber(3);
     }
 }

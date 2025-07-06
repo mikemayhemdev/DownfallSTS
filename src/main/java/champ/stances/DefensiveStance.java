@@ -14,7 +14,6 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.stance.StanceAuraEffect;
-import gremlin.relics.WizardStaff;
 import guardian.vfx.DefensiveModeStanceParticleEffect;
 
 public class DefensiveStance extends AbstractChampStance {

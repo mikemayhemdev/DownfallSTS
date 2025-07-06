@@ -18,7 +18,7 @@
     "NAME": "White Ribbon",
     "FLAVOR": "Gives power to spoken words even without proper ritual.",
     "DESCRIPTIONS": [
-      "Whenever you activate a #yawakened:Chant effect, gain #b",
+      "Whenever you play a card with an active #yawakened:Chant effect, gain #b",
       " #yBlock [REMOVE_SPACE]. Activates one #yawakened:Chant effect for free each turn."
     ]
   },
@@ -109,7 +109,7 @@
     "FLAVOR": "I leave everything I own to my cat, Noodles. Goodbye, cruel world. XOXO Jouster",
     "DESCRIPTIONS": [
       "The first time you activate #b",
-      " #yawakened:Chant effects in a combat, gain #b",
+      " #yawakened:Chant effects for the first time in a combat, gain #b",
       " #yRitual [REMOVE_SPACE]."
     ]
   },

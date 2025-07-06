@@ -20,7 +20,7 @@ public class DeathCoil extends AbstractSpellCard {
 
     public DeathCoil() {
         super(ID, 0, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 10;
         baseMagicNumber = magicNumber = 4;
         loadJokeCardImage(this, makeBetaCardPath(DeathCoil.class.getSimpleName() + ".png"));
     }
@@ -40,10 +40,16 @@ public class DeathCoil extends AbstractSpellCard {
                 this.addToTop(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
             }
             dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+            if (upgraded) {
+                dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+            }
             this.addToBot(new ApplyPowerAction(m, p, new ManaburnPower(m, this.magicNumber), this.magicNumber));
         } else {
             //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
             this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+            if (upgraded) {
+                this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
+            }
             for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
                 if (!monster.isDead && !monster.isDying) {
                     if (monster != null) {
@@ -58,6 +64,6 @@ public class DeathCoil extends AbstractSpellCard {
 
     public void upp() {
         upgradeMagicNumber(2);
-        upgradeDamage(2);
+        upgradeDamage(-5);
     }
 }
