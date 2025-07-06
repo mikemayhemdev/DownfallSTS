@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.monsters.NeowBoss;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
@@ -49,9 +50,14 @@ public class HexxBomb extends CustomRelic{
             if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
                 this.flash();
                 this.addToTop(new RelicAboveCreatureAction(m, this));
-                AbstractMonster mo = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster)null, true, AbstractDungeon.relicRng);
-                this.addToBot(new RelicAboveCreatureAction(mo, this));
-                this.addToBot(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, amount), amount, true));
+                AbstractMonster mo = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.relicRng);
+                //I don't know WHY this crashes against the act 4 elite.
+                if (!(mo instanceof NeowBoss)) {
+                    if (!(mo == null)) {
+                        this.addToBot(new RelicAboveCreatureAction(mo, this));
+                        this.addToBot(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, amount), amount, true));
+                    }
+                }
             }
         }
     }
