@@ -32,7 +32,7 @@ public class BabySneckoMuddleAction extends AbstractGameAction {
                 ArrayList<AbstractCard> chosenCards = new ArrayList<>();
 
                 for (int i = 0; i < cardsToPick; i++) {
-                    AbstractCard randomCard = validCards.get(AbstractDungeon.cardRandomRng.random(validCards.size() - 1));
+                    AbstractCard randomCard = validCards.get(AbstractDungeon.relicRng.random(validCards.size() - 1));
                     System.out.println("DEBUG: Decided to Muddle: " + randomCard + " which costs: " + randomCard.costForTurn);
                     AbstractDungeon.actionManager.addToBottom(new MuddleAction(randomCard));
                     validCards.remove(randomCard); // Avoid selecting the same card again

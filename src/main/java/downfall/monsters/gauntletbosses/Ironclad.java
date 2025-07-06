@@ -112,8 +112,8 @@ public class Ironclad extends GauntletBoss {
     private void bossMove() {
         int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
         if (this.hasPower(EnemyDemonFormPower.POWER_ID)) {
-            if (rnd == 2 || rnd == 1) {
-                while (rnd == 2 || rnd == 1) {
+            if (rnd == 2) {
+                while (rnd == 2) {
                     rnd = AbstractDungeon.cardRandomRng.random(0, 3);
                 }
             }
