@@ -36,7 +36,7 @@ public class BlackCandle extends CustomRelic {
                 card.exhaust = true;
                 action.exhaustCard = true;
             } else {
-                if (card.exhaust && card.cost !=0 && card.freeToPlay()) {
+                if (card.exhaust && card.cost !=0 && card.freeToPlay() && card.cost !=-2) {
                     this.flash();
                     this.addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, EnumPatch.HERMIT_GHOSTFIRE));
                     card.exhaust = true;
