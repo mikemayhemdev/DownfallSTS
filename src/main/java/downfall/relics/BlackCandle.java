@@ -35,17 +35,16 @@ public class BlackCandle extends CustomRelic {
                 this.addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, EnumPatch.HERMIT_GHOSTFIRE));
                 card.exhaust = true;
                 action.exhaustCard = true;
+            } else {
+                if (card.exhaust && card.cost !=0 && card.freeToPlay()) {
+                    this.flash();
+                    this.addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, EnumPatch.HERMIT_GHOSTFIRE));
+                    card.exhaust = true;
+                    action.exhaustCard = true;
+                }
             }
         }
     }
-
-//    public boolean canPlay(AbstractCard card) {
-//        if (card.type == AbstractCard.CardType.CURSE) {
-//            return true;
-//        } else {
-//            return card.canPlay(card);
-//        }
-//    }
 
     public boolean canSpawn() {
        // return false;
