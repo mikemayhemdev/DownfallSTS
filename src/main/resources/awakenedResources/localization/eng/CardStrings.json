@@ -76,7 +76,8 @@
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
-    "DESCRIPTION": "Add a *Ceremony to your hand."
+    "DESCRIPTION": "Next turn, add a *Ceremony to your hand.",
+    "UPGRADE_DESCRIPTION": "Add a *Ceremony to your hand."
   },
   "awakened:Psalm": {
     "NAME": "Psalm",

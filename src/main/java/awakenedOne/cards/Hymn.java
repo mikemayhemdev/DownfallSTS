@@ -3,6 +3,7 @@ package awakenedOne.cards;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.tokens.Ceremony;
 import awakenedOne.util.Wiz;
+import collector.powers.AddCopyNextTurnPower;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,12 +24,16 @@ public class Hymn extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard c = new Ceremony();
-        Wiz.atb(new MakeTempCardInHandAction(c, 1));
+        if (!upgraded) {
+            new AddCopyNextTurnPower(c);
+        }
+        if (upgraded) {
+            Wiz.atb(new MakeTempCardInHandAction(c, 1));
+        }
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(0);
     }
 
 }
