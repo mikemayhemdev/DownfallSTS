@@ -15,8 +15,8 @@ public class FeatherVeil extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public FeatherVeil() {
-        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 10;
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseBlock = 12;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath( FeatherVeil.class.getSimpleName() + ".png"));
@@ -30,6 +30,6 @@ public class FeatherVeil extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(4);
     }
 }

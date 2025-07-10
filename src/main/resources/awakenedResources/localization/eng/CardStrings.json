@@ -76,8 +76,7 @@
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
-    "DESCRIPTION": "Add a *Ceremony to your hand.",
-    "UPGRADE_DESCRIPTION": "Add a *Ceremony+ to your hand."
+    "DESCRIPTION": "Add a *Ceremony to your hand."
   },
   "awakened:Psalm": {
     "NAME": "Psalm",
@@ -122,8 +121,7 @@
   },
   "awakened:LastDitchEffort": {
     "NAME": "Swoop",
-    "DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile."
+    "DESCRIPTION": "Gain !B! Block. NL Put the next card you play this turn on top of your draw pile."
   },
   "awakened:Reviscerate": {
     "NAME": "Reviscerate",
@@ -230,7 +228,7 @@
   },
   "awakened:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL Deals double damage if a *Void is in hand."
+    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if a *Void is in hand."
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
@@ -342,7 +340,7 @@
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each time you awakened:Conjured this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Add a copy of this card with !M! more damage to the Spell Pile. NL Exhaust."
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",

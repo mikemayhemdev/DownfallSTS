@@ -21,7 +21,7 @@ public class Spew extends AbstractAwakenedCard {
 
     public Spew() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 12;
+        baseDamage = 13;
         loadJokeCardImage(this, makeBetaCardPath(Spew.class.getSimpleName() + ".png"));
     }
     @Override
@@ -30,18 +30,18 @@ public class Spew extends AbstractAwakenedCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, dam, damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
     }
 
-    @Override
-    public void calculateCardDamage(AbstractMonster mo)
-    {
-        super.calculateCardDamage(mo);
 
+
+    public void applyPowers() {
+        super.applyPowers();
         if (checkVoid()) {
-            int base_dam = this.damage;
-            this.damage += base_dam;
+            this.freeToPlayOnce = true;
         }
-
-        isDamageModified = damage != baseDamage;
+        else {
+            this.freeToPlayOnce = false;
+        }
     }
+
 
     public static boolean checkVoid() {
         boolean hasVoid = false;

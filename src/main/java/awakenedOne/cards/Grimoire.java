@@ -1,11 +1,17 @@
 package awakenedOne.cards;
 
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.cards.tokens.spells.AphoticShield;
+import awakenedOne.ui.OrbitingSpells;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.ui.OrbitingSpells.spellCards;
+import static awakenedOne.ui.OrbitingSpells.updateTimeOffsets;
 
 public class Grimoire extends AbstractAwakenedCard {
     public final static String ID = makeID(Grimoire.class.getSimpleName());
@@ -13,34 +19,22 @@ public class Grimoire extends AbstractAwakenedCard {
 
     public Grimoire() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 9;
-        baseMagicNumber = magicNumber = 1;
+        baseDamage = 7;
+        baseMagicNumber = magicNumber = 7;
+        this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(Grimoire.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-    }
-
-    public void calculateCardDamage(AbstractMonster mo) {
-        int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * ConjureAction.conjuresThisCombat;
-        super.calculateCardDamage(mo);
-        this.baseDamage = realBaseDamage;
-        this.isDamageModified = this.damage != this.baseDamage;
-    }
-
-    public void applyPowers() {
-        int count = ConjureAction.conjuresThisCombat;
-        int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * count;
-        super.applyPowers();
-        this.baseDamage = realBaseDamage;
-        this.isDamageModified = this.damage != this.baseDamage;
+        AbstractCard card = this.makeStatEquivalentCopy();
+        this.addToBot(new ModifyDamageAction(card.uuid, this.magicNumber));
+        spellCards.add(new OrbitingSpells.CardRenderInfo(card));
+        updateTimeOffsets();
     }
 
     public void upp() {
-        upgradeDamage(1);
-        upgradeMagicNumber(1);
+        upgradeDamage(2);
+        upgradeMagicNumber(2);
     }
 }
