@@ -1,31 +1,20 @@
 package expansioncontent.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.powers.RisingChantPower;
 import awakenedOne.relics.CursedBlessing;
 import awakenedOne.relics.KTRibbon;
 import awakenedOne.util.Wiz;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import com.megacrit.cardcrawl.powers.RegenPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import expansioncontent.expansionContentMod;
 
 import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
 import static awakenedOne.AwakenedOneMod.CHANT;
-import static awakenedOne.ui.AwakenButton.awaken;
-import static awakenedOne.util.Wiz.applyToSelf;
-import static awakenedOne.util.Wiz.atb;
 
 public class TakeFlight extends AbstractExpansionCard {
     public static final String ID = makeID("TakeFlight");
@@ -49,30 +38,12 @@ public class TakeFlight extends AbstractExpansionCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if (Wiz.isChantActive()) {
-                chant();
-            }
-
-            if (!Wiz.isChantActive()) {
-                if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                    chant();
-                    awaken(1);
-                } else {
-                    atb(new HealAction(p, p, magicNumber));
-                }
-            }
-        }
-
-        if (!AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
             if (Wiz.isChantActive()) {
                 chant();
             }
             if (!Wiz.isChantActive()) {
                 atb(new HealAction(p, p, magicNumber));
             }
-        }
     }
 
     public void chant() {

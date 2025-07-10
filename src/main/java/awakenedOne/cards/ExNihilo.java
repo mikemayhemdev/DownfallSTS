@@ -1,11 +1,8 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.actions.NihilAction;
 import awakenedOne.powers.ManaburnPower;
 import awakenedOne.powers.NihilRetriggerPower;
-import awakenedOne.relics.KTRibbon;
-import awakenedOne.util.Wiz;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -18,14 +15,12 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.BorderLongFlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.WaterDropEffect;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
-import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.atb;
 
 
@@ -55,20 +50,6 @@ public class ExNihilo extends AbstractAwakenedCard {
             atb(new ApplyPowerAction(m, AbstractDungeon.player, new NihilRetriggerPower(m, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
             //AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new NihilAction((AbstractCreature)m, (AbstractCreature)p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
             checkOnChant();
-        }
-
-        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                if (Settings.FAST_MODE) {
-                    this.addToBot(new VFXAction(m, new OfferingEnemyEffect(m), 0.2F));
-                } else {
-                    this.addToBot(new VFXAction(m, new OfferingEnemyEffect(m), 0.5F));
-                }
-                atb(new ApplyPowerAction(m, AbstractDungeon.player, new NihilRetriggerPower(m, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
-                //AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new NihilAction((AbstractCreature)m, (AbstractCreature)p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
-                checkOnChant();
-                awaken(1);
-            }
         }
 
     }

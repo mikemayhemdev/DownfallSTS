@@ -1,7 +1,6 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.relics.KTRibbon;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -26,13 +25,6 @@ public class ToTheLimit extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (isTrig_chant()) {
             chant();
-        }
-
-        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                chant();
-                awaken(1);
-            }
         }
     }
 

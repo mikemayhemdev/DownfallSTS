@@ -2,7 +2,6 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.powers.SheerTerrorPower;
-import awakenedOne.relics.KTRibbon;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -41,14 +40,6 @@ public class SheerTerror extends AbstractAwakenedCard {
         if (isTrig_chant()) {
             this.addToBot(new ApplyPowerAction(m, p, new SheerTerrorPower(m, 1), 1, true, AbstractGameAction.AttackEffect.POISON));
             chant();
-        }
-
-        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                this.addToBot(new ApplyPowerAction(m, p, new SheerTerrorPower(m, 1), 1, true, AbstractGameAction.AttackEffect.POISON));
-                chant();
-                awaken(1);
-            }
         }
     }
 

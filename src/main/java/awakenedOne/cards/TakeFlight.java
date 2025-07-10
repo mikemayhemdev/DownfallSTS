@@ -1,7 +1,6 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.relics.KTRibbon;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -9,7 +8,6 @@ import com.megacrit.cardcrawl.powers.BlurPower;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
-import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.applyToSelf;
 
 public class TakeFlight extends AbstractAwakenedCard {
@@ -28,13 +26,6 @@ public class TakeFlight extends AbstractAwakenedCard {
         blck();
         if (isTrig_chant()) {
             chant();
-        }
-
-        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                chant();
-                awaken(1);
-            }
         }
     }
 

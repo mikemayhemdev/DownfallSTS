@@ -76,7 +76,8 @@
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Gain !B! Block again."
+    "DESCRIPTION": "Add a *Ceremony to your hand.",
+    "UPGRADE_DESCRIPTION": "Add a *Ceremony+ to your hand."
   },
   "awakened:Psalm": {
     "NAME": "Psalm",

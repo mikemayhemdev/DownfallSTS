@@ -15,7 +15,7 @@ import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
 
-public class KTRibbon extends CustomRelic implements OnAwakenRelic {
+public class KTRibbon extends CustomRelic {
 
     //White Ribbon
 
@@ -30,45 +30,45 @@ public class KTRibbon extends CustomRelic implements OnAwakenRelic {
     }
 
 
-    @Override
-    public void atBattleStart() {
-        this.counter = -1;
-    }
-
-    @Override
-    public void atTurnStart() {
-        this.counter = -1;
-        beginLongPulse();
-    }
-
-    @Override
-    public void onVictory(){
-        this.counter = -1;
-        stopPulse();
-    }
+//    @Override
+//    public void atBattleStart() {
+//        this.counter = -1;
+//    }
+//
+//    @Override
+//    public void atTurnStart() {
+//        this.counter = -1;
+//        beginLongPulse();
+//    }
+//
+//    @Override
+//    public void onVictory(){
+//        this.counter = -1;
+//        stopPulse();
+//    }
 
     public void onTrigger() {
         flash();
         addToBot(new GainBlockAction(AbstractDungeon.player, AMOUNT));
     }
 
-    //Check AwakenButton.java. I'm just using this override for convenience.
-    @Override
-    public void onAwaken(int amount) {
-        if (this.counter == -1) {
-            if (amount == 1) {
-                this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                //this should provide a little more visual feedback
-                if (Settings.FAST_MODE) {
-                    this.addToTop(new VFXAction(new MiracleEffect(Color.CYAN, Color.PURPLE, "ATTACK_MAGIC_SLOW_1"), 0.0F));
-                } else {
-                    this.addToTop(new VFXAction(new MiracleEffect(Color.CYAN, Color.PURPLE, "ATTACK_MAGIC_SLOW_1"), 0.3F));
-                }
-                stopPulse();
-                this.counter = 1;
-            }
-        }
-    }
+//    //Check AwakenButton.java. I'm just using this override for convenience.
+//    @Override
+//    public void onAwaken(int amount) {
+//        if (this.counter == -1) {
+//            if (amount == 1) {
+//                this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+//                //this should provide a little more visual feedback
+//                if (Settings.FAST_MODE) {
+//                    this.addToTop(new VFXAction(new MiracleEffect(Color.CYAN, Color.PURPLE, "ATTACK_MAGIC_SLOW_1"), 0.0F));
+//                } else {
+//                    this.addToTop(new VFXAction(new MiracleEffect(Color.CYAN, Color.PURPLE, "ATTACK_MAGIC_SLOW_1"), 0.3F));
+//                }
+//                stopPulse();
+//                this.counter = 1;
+//            }
+//        }
+//    }
 
     @Override
     public String getUpdatedDescription() {

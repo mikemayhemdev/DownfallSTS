@@ -2,17 +2,14 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.tokens.Ceremony;
-import awakenedOne.relics.KTRibbon;
 import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
-import static awakenedOne.ui.AwakenButton.awaken;
 
 public class DarkPower extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(DarkPower.class.getSimpleName());
@@ -31,14 +28,8 @@ public class DarkPower extends AbstractAwakenedCard {
 
         if (isTrig_chant()) {
         chant();
-    }
-
-        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                chant();
-                awaken(1);
-            }
         }
+
     }
 
     @Override

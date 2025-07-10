@@ -1,14 +1,12 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.relics.KTRibbon;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.atb;
 
 public class Victuals extends AbstractAwakenedCard {
@@ -30,12 +28,6 @@ public class Victuals extends AbstractAwakenedCard {
             chant();
         }
 
-        if ((!isTrig_chant()) && AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            if ((AbstractDungeon.player.getRelic(KTRibbon.ID).counter == -1)) {
-                chant();
-                awaken(1);
-            }
-        }
     }
 
     @Override
