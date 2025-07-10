@@ -17,7 +17,7 @@ public class Hymn extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Hymn.class.getSimpleName());
 
     public Hymn() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(Hymn.class.getSimpleName() + ".png"));
         this.cardsToPreview = new Ceremony();
     }
