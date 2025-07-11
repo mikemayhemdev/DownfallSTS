@@ -29,7 +29,7 @@ public class EmpressPower extends AbstractAwakenedPower {
         if (this.amount == 1) {
             description = DESCRIPTIONS[0];
         } else {
-            description = DESCRIPTIONS[0] + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+            description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         }
     }
 

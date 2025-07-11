@@ -76,8 +76,7 @@
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
-    "DESCRIPTION": "Next turn, add a *Ceremony to your hand.",
-    "UPGRADE_DESCRIPTION": "Add a *Ceremony to your hand."
+    "DESCRIPTION": "Gain !B! Block. awakened:Chant: Gain !M! temporary Strength."
   },
   "awakened:Psalm": {
     "NAME": "Psalm",
