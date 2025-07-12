@@ -18,15 +18,16 @@ import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
+import static champ.ChampMod.vigor;
 
 public class Darkleech extends AbstractSpellCard {
     public final static String ID = makeID(Darkleech.class.getSimpleName());
     // intellij stuff skill, all_enemy, , , , , 7, 2
 
     public Darkleech() {
-        super(ID, 0, CardType.SKILL, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
-        this.baseSecondMagic = 3;
+        this.baseSecondMagic = 4;
         this.secondMagic = this.baseSecondMagic;
         loadJokeCardImage(this, makeBetaCardPath(Darkleech.class.getSimpleName() + ".png"));
     }
@@ -43,17 +44,17 @@ public class Darkleech extends AbstractSpellCard {
         if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)){
             this.addToBot(new VFXAction(new GiantEyeEffect(m.hb.cX, m.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
             HexCurse(magicNumber, m, p);
-            addToBot(new DamageAction(m, new DamageInfo(p, secondMagic, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.POISON));
+            //addToBot(new DamageAction(m, new DamageInfo(p, secondMagic, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.POISON));
         }
         else {
             //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
             AbstractDungeon.getMonsters().monsters.stream().filter(m2 -> !m2.isDead && !m2.isDying).forEach(m2 -> {
                 this.addToBot(new VFXAction(new GiantEyeEffect(m2.hb.cX, m2.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
                 HexCurse(magicNumber, m2, p);
-                addToBot(new DamageAction(m2, new DamageInfo(p, secondMagic, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.POISON));
-
+                //addToBot(new DamageAction(m2, new DamageInfo(p, secondMagic, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.POISON));
             });
         }
+        vigor(secondMagic);
 //        if (upgraded) {
 //            atb(new GainEnergyAction(1));
 //            this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 1), 1));

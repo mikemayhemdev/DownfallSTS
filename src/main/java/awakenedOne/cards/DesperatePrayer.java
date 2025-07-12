@@ -13,8 +13,9 @@ public class DesperatePrayer extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public DesperatePrayer() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(DesperatePrayer.class.getSimpleName() + ".png"));
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

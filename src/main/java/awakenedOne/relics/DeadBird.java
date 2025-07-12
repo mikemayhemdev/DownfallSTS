@@ -11,9 +11,11 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
+import static awakenedOne.util.Wiz.isInCombat;
 import static hermit.util.Wiz.getLowestHealthEnemy;
 
 public class DeadBird extends CustomRelic {
@@ -35,34 +37,39 @@ public class DeadBird extends CustomRelic {
 
     public void update() {
         super.update();
-        if (CardCrawlGame.isInARun()) {
-            if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-                this.counter = AMOUNT + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-            }
+            if (isInCombat()) {
+                if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
+                    this.counter = AMOUNT + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+                }
 
-            if (this.counter < AMOUNT) {
-                this.counter = AMOUNT;
+                if (this.counter < AMOUNT) {
+                    this.counter = AMOUNT;
+                }
             }
-        }
+            else {
+                    this.counter = 4;
+            }
     }
-
 
     @Override
     public void onEquip() {
-        this.counter = AMOUNT;
+        this.counter = 4;
     }
 
     @Override
     public void atBattleStart() {
-        this.counter = AMOUNT;
+        this.counter = 4;
     }
 
     @Override
     public void onVictory(){
-        this.counter = AMOUNT;
+        this.counter = 4;
     }
 
-
+    @Override
+    public void onEnterRoom(AbstractRoom room) {
+        this.counter = 4;
+    }
 
     //Can't believe this was already pre-coded in Hermit's Wiz. Very helpful.
     @Override

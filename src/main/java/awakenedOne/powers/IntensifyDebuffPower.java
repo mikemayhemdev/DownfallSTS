@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-public class IntensifyPower extends AbstractAwakenedPower {
+public class IntensifyDebuffPower extends AbstractAwakenedPower {
     // intellij stuff buff
-    public static final String NAME = IntensifyPower.class.getSimpleName();
+    public static final String NAME = IntensifyDebuffPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
 
-    public IntensifyPower(int amount) {
-        super(NAME, PowerType.BUFF, true, AbstractDungeon.player, null, amount);
+    public IntensifyDebuffPower(int amount) {
+        super(NAME, PowerType.DEBUFF, true, AbstractDungeon.player, null, amount);
     }
 
     //public void onUseCard(AbstractCard card, UseCardAction action) {

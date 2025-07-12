@@ -15,8 +15,7 @@ public class ForTheHexAction extends AbstractGameAction {
     }
 
     public void update() {
-        if (this.m != null && this.m.getIntentBaseDmg() == 0) {
-            //HexCurse(amount, m, AbstractDungeon.player);
+        if (this.m != null && this.m.getIntentBaseDmg() >= 0) {
             atb(new ConjureAction(false));
         }
         this.isDone = true;

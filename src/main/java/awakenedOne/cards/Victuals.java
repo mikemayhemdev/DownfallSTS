@@ -14,7 +14,7 @@ public class Victuals extends AbstractAwakenedCard {
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
     public Victuals() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 6;
         magicNumber = baseMagicNumber = 2;
         this.tags.add(AwakenedOneMod.CHANT);

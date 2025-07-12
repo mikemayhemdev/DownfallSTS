@@ -13,10 +13,9 @@ public class SacrilegiousStrike extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public SacrilegiousStrike() {
-        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 5;
         baseBlock = 5;
-        this.exhaust = false;
         tags.add(CardTags.STRIKE);
         loadJokeCardImage(this, makeBetaCardPath(SacrilegiousStrike.class.getSimpleName() + ".png"));
     }

@@ -1,6 +1,7 @@
 package awakenedOne.actions;
 
 import awakenedOne.powers.DarkIncantationRitualPower;
+import awakenedOne.powers.IntensifyDebuffPower;
 import awakenedOne.ui.OrbitingSpells;
 import awakenedOne.util.OnConjureSubscriber;
 import awakenedOne.util.Wiz;
@@ -54,6 +55,11 @@ public class ConjureAction extends AbstractGameAction {
 
     @Override
     public void update() {
+        if (AbstractDungeon.player.hasPower(IntensifyDebuffPower.POWER_ID)) {
+            AbstractDungeon.player.getPower(IntensifyDebuffPower.POWER_ID).flash();
+            this.isDone = true;
+            return;
+        }
         if (AbstractDungeon.player.hasPower("No Draw")) {
             AbstractDungeon.player.getPower("No Draw").flash();
             this.isDone = true;

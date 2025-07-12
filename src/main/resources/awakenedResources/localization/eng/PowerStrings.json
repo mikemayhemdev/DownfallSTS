@@ -2,9 +2,17 @@
   "awakened:IntensifyPower": {
     "NAME": "Intensify",
     "DESCRIPTIONS": [
-      "The next Spell card you play this turn is played twice.",
-      "The next #b",
-      " Spell cards you play this turn are played twice."
+      "This turn, all Spell cards cost #b0 [REMOVE_SPACE].",
+      "For the next #b",
+      " turns, all Spell cards cards cost #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:IntensifyDebuffPower": {
+    "NAME": "Burnout",
+    "DESCRIPTIONS": [
+      "You cannot #yConjure for the rest of the turn.",
+      "You cannot #yConjure for the next #b",
+      " turns."
     ]
   },
   "awakened:InResponsePower": {
@@ -84,7 +92,7 @@
     ]
   },
   "awakened:LibrarianPower": {
-    "NAME": "The Magician",
+    "NAME": "Grand Magus",
     "DESCRIPTIONS": [
       "At the start of your turn, #yConjure [REMOVE_SPACE].",
       "At the start of your turn, #yConjure at random #b",
@@ -101,7 +109,7 @@
     ]
   },
   "awakened:EmpressPower": {
-    "NAME": "The Empress",
+    "NAME": "Midnight",
     "DESCRIPTIONS": [
       "Whenever you play a non-Spell #yPower card, #yConjure [REMOVE_SPACE].",
       "Whenever you play a non-Spell #yPower card, #yConjure #b",

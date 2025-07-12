@@ -1,10 +1,13 @@
 [
   {
-    "PROPER_NAME": "Flying",
+    "PROPER_NAME": "Power Potion",
     "NAMES": [
-      "flying"
+      "Power_Potion",
+      "Power Potion",
+      "power_potion",
+      "power potion"
     ],
-    "DESCRIPTION": "At the end of your turn, if this is in your hand, it flies back into your draw pile and leaves a #yFeather in your hand."
+    "DESCRIPTION": "#yPotion [REMOVE_SPACE]: Choose #b1 of #b3 random Power cards to add to your hand, it costs #b0 this turn."
   },
   {
     "PROPER_NAME": "Conjure",

@@ -16,40 +16,24 @@ public class DarkPower extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public DarkPower() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 6;
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 5;
         this.cardsToPreview = new Ceremony();
         this.tags.add(AwakenedOneMod.CHANT);
+        this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(DarkPower.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-
-        if (isTrig_chant()) {
-        chant();
-        }
-
-    }
-
-    @Override
-    public void chant() {
         AbstractCard c = new Ceremony();
-        if (upgraded) {
-            c.upgrade();
-        }
         Wiz.atb(new MakeTempCardInHandAction(c, 1));
-        checkOnChant();
     }
 
-
-    public void triggerOnGlowCheck() {
-        this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
 
     @Override
     public void upp() {
-        upgradeBlock(2);
-        this.cardsToPreview.upgrade();
+        //upgradeBlock(3);
+        this.exhaust = false;
     }
 }

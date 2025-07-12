@@ -2,7 +2,6 @@ package collector.cards;
 
 import automaton.AutomatonChar;
 import awakenedOne.AwakenedOneChar;
-import basemod.cardmods.RetainMod;
 import basemod.helpers.CardModifierManager;
 import champ.ChampChar;
 import collector.CollectorChar;

@@ -2,6 +2,8 @@ package awakenedOne.cards.tokens.spells;
 
 import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.powers.ConjureNextTurnPower;
+import awakenedOne.powers.IntensifyPower;
+import awakenedOne.relics.EyeOfTheOccult;
 import champ.powers.DefensiveStylePower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -23,6 +25,20 @@ public abstract class AbstractSpellCard extends AbstractAwakenedCard {
         this.selfRetain = true;
         exhaust = true;
     }
+
+    @Override
+    public void applyPowers() {
+        super.applyPowers();
+        if (AbstractDungeon.player.hasPower(IntensifyPower.POWER_ID)) {
+            this.costForTurn = 0;
+        }
+        if (AbstractDungeon.actionManager.turnHasEnded) {
+            if (!AbstractDungeon.player.hasPower(IntensifyPower.POWER_ID)) {
+                this.costForTurn = this.cost;
+            }
+        }
+    }
+
 
     @Override
     public List<String> getCardDescriptors() {

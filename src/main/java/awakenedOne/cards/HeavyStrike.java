@@ -19,13 +19,13 @@ public class HeavyStrike extends AbstractAwakenedCard {
     //carrionmaker
     public HeavyStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 10;
+        baseDamage = 8;
         loadJokeCardImage(this, makeBetaCardPath(HeavyStrike.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int count = (int) AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
-                .filter(card -> card instanceof AbstractSpellCard)
+                .filter(card -> card instanceof AbstractSpellCard || card.hasTag(SPELLCARD))
                 .count();
 
         for (int i = 0; i < count+1; i++) {
@@ -38,7 +38,7 @@ public class HeavyStrike extends AbstractAwakenedCard {
     public void applyPowers() {
         super.applyPowers();
         int count = (int) AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
-                .filter(card -> card instanceof AbstractSpellCard)
+                .filter(card -> card instanceof AbstractSpellCard || card.hasTag(SPELLCARD))
                 .count();
         this.rawDescription = strings.DESCRIPTION;
         this.rawDescription = this.rawDescription + strings.EXTENDED_DESCRIPTION[0] + count;

@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+import static awakenedOne.AwakenedOneMod.SPELLCARD;
 import static awakenedOne.util.Wiz.atb;
 
 public class EmpressPower extends AbstractAwakenedPower {
@@ -19,7 +20,7 @@ public class EmpressPower extends AbstractAwakenedPower {
 
     @Override
     public void onAfterCardPlayed(AbstractCard card) {
-        if (card.type == AbstractCard.CardType.POWER && !(card instanceof AbstractSpellCard)) {
+        if (card.type == AbstractCard.CardType.POWER && !(card instanceof AbstractSpellCard || card.hasTag(SPELLCARD))) {
             flash();
             atb(new ConjureAction(false));
         }

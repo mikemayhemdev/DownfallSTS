@@ -96,6 +96,12 @@ public class AwakenedOneMod implements
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags ACTIVECHANT;
 
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags SPELLCARD;
+
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags NO_DUPLICATION;
+
     private static String modID = "awakened";
 
     public static boolean awakenedthiscombat = false;

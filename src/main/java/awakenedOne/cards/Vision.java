@@ -17,7 +17,7 @@ public class Vision extends AbstractAwakenedCard {
 
     public Vision() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        //this.exhaust = true;
+        this.exhaust = true;
         baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath("Vision.png"));
     }

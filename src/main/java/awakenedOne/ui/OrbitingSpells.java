@@ -1,20 +1,27 @@
 package awakenedOne.ui;
 
+import awakenedOne.cardmods.ConjureMod;
+import awakenedOne.cardmods.SpellMod;
 import awakenedOne.cards.AphoticFount;
 import awakenedOne.cards.Caw;
 import awakenedOne.cards.Deathwish;
 import awakenedOne.cards.tokens.spells.*;
 import awakenedOne.relics.ZenerDeck;
 import awakenedOne.util.Wiz;
+import basemod.helpers.CardModifierManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
+import expansioncontent.cardmods.PropertiesMod;
 
 import java.util.ArrayList;
+
+import static awakenedOne.AwakenedOneMod.SPELLCARD;
 
 public class OrbitingSpells {
 
@@ -84,6 +91,12 @@ public class OrbitingSpells {
 
 
     public static void addSpellCard(AbstractCard card) {
+        if (!(card instanceof AbstractSpellCard) && !(card.hasTag(SPELLCARD))) {
+            CardModifierManager.addModifier(card, new SpellMod());
+        }
+        if (!card.selfRetain) {
+            CardModifierManager.addModifier(card, new PropertiesMod(PropertiesMod.supportedProperties.RETAIN, false));
+        }
         if (AbstractDungeon.player.hasPower(MasterRealityPower.POWER_ID)) {
             card.upgrade();
         }

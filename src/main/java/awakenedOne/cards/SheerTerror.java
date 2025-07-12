@@ -21,7 +21,7 @@ public class SheerTerror extends AbstractAwakenedCard {
 
     public SheerTerror() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        this.baseMagicNumber = 3;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         //this.exhaust = true;
         this.tags.add(AwakenedOneMod.CHANT);
@@ -54,7 +54,7 @@ public class SheerTerror extends AbstractAwakenedCard {
 
 
     public void upp() {
-        upgradeMagicNumber(2);
-        //upgradeBaseCost(0);
+        //upgradeMagicNumber(2);
+        upgradeBaseCost(1);
     }
 }

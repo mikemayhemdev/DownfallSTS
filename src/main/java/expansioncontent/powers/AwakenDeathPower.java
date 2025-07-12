@@ -24,8 +24,7 @@ import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import expansioncontent.expansionContentMod;
 import downfall.util.TextureLoader;
 
-import static awakenedOne.util.Wiz.applyToSelf;
-import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.*;
 
 
 public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPower, CloneablePowerInterface {
@@ -69,7 +68,7 @@ public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPowe
         AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, AwakenDeathPower.POWER_ID));
         atb(new RemoveDebuffsAction(this.owner));
         if (AbstractDungeon.actionManager.turnHasEnded) {
-            applyToSelf(new PushThroughPower(1));
+            applyToSelfTop(new PushThroughPower(1));
         }
         AbstractDungeon.actionManager.addToTop(new HealAction(abstractPlayer, abstractPlayer, this.amount));
         AbstractDungeon.actionManager.addToTop(new VFXAction(this.owner, new IntenseZoomEffect(this.owner.hb.cX, this.owner.hb.cY, true), 0.05F, true));

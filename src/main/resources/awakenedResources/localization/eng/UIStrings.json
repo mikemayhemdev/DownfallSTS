@@ -9,6 +9,11 @@
       " NL awakened:Conjure."
     ]
   },
+  "awakened:SpellMod": {
+    "TEXT": [
+      "[#12FAF0]Spell. NL"
+    ]
+  },
   "awakened:DrainingMod": {
     "TEXT": [
       " NL Next turn, lose [E]."

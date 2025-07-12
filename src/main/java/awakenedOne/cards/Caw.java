@@ -17,8 +17,8 @@ public class Caw extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public Caw() {
-        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 4;
+        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 3;
         this.baseMagicNumber = 3;
         this.tags.add(AwakenedOneMod.CHANT);
         this.magicNumber = this.baseMagicNumber;
@@ -49,7 +49,7 @@ public class Caw extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeDamage(2);
-        //upgradeMagicNumber(1);
+        upgradeDamage(1);
+        upgradeMagicNumber(1);
     }
 }

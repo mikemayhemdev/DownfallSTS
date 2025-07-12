@@ -15,6 +15,7 @@ public class Invasion extends AbstractAwakenedCard {
     public Invasion() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(Invasion.class.getSimpleName() + ".png"));
+        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -28,6 +29,7 @@ public class Invasion extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBaseCost(2);
+        isEthereal = false;
+        //upgradeBaseCost(2);
     }
 }

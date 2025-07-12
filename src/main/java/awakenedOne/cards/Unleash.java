@@ -13,7 +13,7 @@ public class Unleash extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public Unleash() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         this.selfRetain = true;
         this.exhaust = true;
         baseMagicNumber = magicNumber = 4;

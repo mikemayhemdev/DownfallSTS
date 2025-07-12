@@ -5,6 +5,7 @@ import awakenedOne.AwakenedOneMod;
 import awakenedOne.AwakenedTextHelper;
 import awakenedOne.powers.RisingChantPower;
 import awakenedOne.relics.CursedBlessing;
+import awakenedOne.relics.EyeOfTheOccult;
 import awakenedOne.relics.KTRibbon;
 import awakenedOne.util.CardArtRoller;
 import basemod.abstracts.CustomCard;
@@ -26,8 +27,7 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import java.util.ArrayList;
 
-import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
-import static awakenedOne.AwakenedOneMod.CHANT;
+import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.*;
 
 public abstract class AbstractAwakenedCard extends CustomCard {

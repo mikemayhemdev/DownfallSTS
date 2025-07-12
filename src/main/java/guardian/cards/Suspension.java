@@ -23,7 +23,7 @@ public class Suspension extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
+    private static final int COST = 1;
 
     private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
@@ -39,7 +39,7 @@ public class Suspension extends AbstractGuardianCard {
     public Suspension() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
         this.socketCount = SOCKETS;
-        baseBlock = 2;
+        baseBlock = 6;
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Suspension.png"));

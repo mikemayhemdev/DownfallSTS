@@ -503,7 +503,7 @@
     "NAME": "Black Candle",
     "FLAVOR": "The flame shines even brighter from within the darkness.",
     "DESCRIPTIONS": [
-      "#yUnplayable #rCurse cards can now be played and playable #rCurses cost #b0 [REMOVE_SPACE]. Whenever you play an #yUnplayable or discounted #rCurse, #yExhaust it and lose #b1 HP.",
+      "#yUnplayable #rCurse cards can now be played and playable #rCurses cost #b0 [REMOVE_SPACE]. Whenever you play an #yUnplayable or discounted #rCurse [REMOVE_SPACE], #yExhaust it and lose #b1 HP.",
       "Black Candle"
     ]
   },

@@ -10,9 +10,15 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.potions.AbstractPotion;
+import com.megacrit.cardcrawl.potions.PowerPotion;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.Sozu;
 import guardian.GuardianMod;
+import guardian.potions.DefensiveModePotion;
 import guardian.powers.*;
 import guardian.relics.ModeShifterPlus;
 import guardian.stances.DefensiveMode;
@@ -30,7 +36,7 @@ public class SphericShield extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 3;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -41,10 +47,10 @@ public class SphericShield extends AbstractGuardianCard {
     }
 
     public SphericShield() {
+
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-        this.baseBlock = 10;
-        this.socketCount = 0;
         exhaust = true;
+        this.isEthereal = true;
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("SphericShield.png"));
@@ -52,46 +58,13 @@ public class SphericShield extends AbstractGuardianCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         super.use(p, m);
-        AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.BorderFlashEffect(com.badlogic.gdx.graphics.Color.GOLD, true));
-        addToBot(new GainBlockAction(p, p, this.block));
-        addToBot(new ChangeStanceAction(new DefensiveMode()));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DontLeaveDefensiveModePower(AbstractDungeon.player, 1), 1));
-
-        ModeShifterPlus modeShifterPlusInstance = new ModeShifterPlus();
-        if (AbstractDungeon.player.hasRelic(ModeShifterPlus.ID)) {
-        modeShifterPlusInstance.onTrigger();
-        }
-
-        if (AbstractDungeon.player.hasPower(RevengePower.POWER_ID)) {
-            RevengePower revengePower =
-                    (RevengePower) AbstractDungeon.player.getPower(RevengePower.POWER_ID);
-
-            if (revengePower != null) {
-                revengePower.onActivateCallR(p);
+        AbstractRelic sozu = AbstractDungeon.player.getRelic(Sozu.ID);
+        if (sozu != null) {
+            sozu.flash();
+        } else {
+                AbstractPotion potion = new DefensiveModePotion();
+                AbstractDungeon.player.obtainPotion(potion.makeCopy());
             }
-        }
-
-        if (AbstractDungeon.player.hasPower(SpikerProtocolPower.POWER_ID)) {
-            SpikerProtocolPower spikerProtocolPower =
-                    (SpikerProtocolPower) AbstractDungeon.player.getPower(SpikerProtocolPower.POWER_ID);
-
-            if (spikerProtocolPower != null) {
-                spikerProtocolPower.onActivateCallS(p);
-            }
-        }
-
-
-        if (AbstractDungeon.player.hasPower(EvasiveProtocolPower.POWER_ID)) {
-            EvasiveProtocolPower evasiveProtocolPower =
-                    (EvasiveProtocolPower) AbstractDungeon.player.getPower(EvasiveProtocolPower.POWER_ID);
-
-            if (evasiveProtocolPower != null) {
-                evasiveProtocolPower.onActivateCallE(p);
-            }
-
-
-        }
-
     }
 
     public AbstractCard makeCopy() {
@@ -101,7 +74,9 @@ public class SphericShield extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(4);
+            this.isEthereal = false;
+            rawDescription = UPGRADED_DESCRIPTION;
+            initializeDescription();
         }
     }
 

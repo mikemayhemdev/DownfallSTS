@@ -15,7 +15,7 @@ public class LastDitchEffort extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public LastDitchEffort() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 5;
         loadJokeCardImage(this, makeBetaCardPath(LastDitchEffort.class.getSimpleName() + ".png"));
     }

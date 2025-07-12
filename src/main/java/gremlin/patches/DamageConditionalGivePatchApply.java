@@ -1,6 +1,8 @@
 package gremlin.patches;
 
+import awakenedOne.powers.IntensifyPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import gremlin.powers.DamageConditionalGivePower;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
@@ -9,6 +11,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import static awakenedOne.AwakenedOneMod.SPELLCARD;
+
 @SpirePatch(clz = AbstractCard.class, method = "applyPowers")
 public class DamageConditionalGivePatchApply {
     @SpireInsertPatch(
@@ -16,6 +20,16 @@ public class DamageConditionalGivePatchApply {
             localvars={"player", "tmp"}
     )
     public static SpireReturn Insert(AbstractCard abstractCard, AbstractPlayer player, @ByRef float[] tmp) {
+
+        if (abstractCard.hasTag(SPELLCARD) && AbstractDungeon.player.hasPower(IntensifyPower.POWER_ID)) {
+            abstractCard.costForTurn = 0;
+            if (AbstractDungeon.actionManager.turnHasEnded) {
+                if (!AbstractDungeon.player.hasPower(IntensifyPower.POWER_ID)) {
+                    abstractCard.costForTurn = abstractCard.cost;
+                }
+            }
+        }
+
         for(AbstractPower p : player.powers) {
             if (p instanceof DamageConditionalGivePower) {
                 float tmpcpy = tmp[0];

@@ -15,9 +15,9 @@ public class Planeswalk extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public Planeswalk() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 3;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Planeswalk.class.getSimpleName() + ".png"));
     }
 

@@ -2,12 +2,17 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.actions.ForTheHexAction;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
+
+import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
@@ -28,11 +33,34 @@ public class TalonRake extends AbstractAwakenedCard {
             this.addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Color.CYAN, Color.WHITE), 0.1F));
         }
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        atb(new ConjureAction(false));
+
+        if (!(upgraded)) {
+            this.addToBot(new ForTheHexAction(1, m));
+        }
+
+        if (upgraded) {
+            atb(new ConjureAction(false));
+        }
 
     }
 
+    public void triggerOnGlowCheck() {
+        if (!upgraded) {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+            Iterator var1 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+
+            while (var1.hasNext()) {
+                AbstractMonster m = (AbstractMonster) var1.next();
+                if (!m.isDeadOrEscaped() && m.getIntentBaseDmg() >= 0) {
+                    this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+                    break;
+                }
+            }
+        }
+    }
+
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(1);
+        //upgradeBaseCost(0);
     }
 }
