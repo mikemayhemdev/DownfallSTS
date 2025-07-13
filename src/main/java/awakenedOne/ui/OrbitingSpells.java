@@ -91,19 +91,20 @@ public class OrbitingSpells {
 
 
     public static void addSpellCard(AbstractCard card) {
+        AbstractCard newcard = card.makeSameInstanceOf();
         if (!(card instanceof AbstractSpellCard) && !(card.hasTag(SPELLCARD))) {
-            CardModifierManager.addModifier(card, new SpellMod());
-        }
-        if (!card.selfRetain) {
-            CardModifierManager.addModifier(card, new PropertiesMod(PropertiesMod.supportedProperties.RETAIN, false));
+            CardModifierManager.addModifier(newcard, new SpellMod());
+            if (!newcard.selfRetain) {
+                CardModifierManager.addModifier(newcard, new PropertiesMod(PropertiesMod.supportedProperties.RETAIN, false));
+            }
         }
         if (AbstractDungeon.player.hasPower(MasterRealityPower.POWER_ID)) {
-            card.upgrade();
+            newcard.upgrade();
         }
         if (Wiz.isAwakened()) {
-            card.upgrade();
+            newcard.upgrade();
         }
-        spellCards.add(new CardRenderInfo(card));
+        spellCards.add(new CardRenderInfo(newcard));
         updateTimeOffsets();
     }
 

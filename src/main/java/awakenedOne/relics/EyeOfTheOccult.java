@@ -1,6 +1,7 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.cards.Grimoire;
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
@@ -30,12 +31,12 @@ public class EyeOfTheOccult extends CustomRelic {
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if ((card instanceof AbstractSpellCard && card.target == AbstractCard.CardTarget.ALL_ENEMY)) {
+        if (((card instanceof AbstractSpellCard || card instanceof Grimoire) && card.target == AbstractCard.CardTarget.ALL_ENEMY)) {
             //only flash if relevant
             if (getEnemies().size() > 1) {
                 flash();
             }
-            if ((card.hasTag(SPELLCARD) && card.target != AbstractCard.CardTarget.SELF)) {
+            if ((card.hasTag(SPELLCARD) && card.target != AbstractCard.CardTarget.SELF) && !(card instanceof Grimoire)) {
                 //only flash if relevant
                 if (getEnemies().size() > 1) {
                     flash();
