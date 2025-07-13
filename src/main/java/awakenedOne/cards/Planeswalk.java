@@ -34,6 +34,6 @@ public class Planeswalk extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
     }
 }

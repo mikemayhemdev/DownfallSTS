@@ -27,7 +27,7 @@ public class Darkleech extends AbstractSpellCard {
     public Darkleech() {
         super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
-        this.baseSecondMagic = 3;
+        this.baseSecondMagic = 4;
         this.secondMagic = this.baseSecondMagic;
         loadJokeCardImage(this, makeBetaCardPath(Darkleech.class.getSimpleName() + ".png"));
     }
@@ -63,6 +63,6 @@ public class Darkleech extends AbstractSpellCard {
 
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeSecondMagic(1);
+        //upgradeSecondMagic(1);
     }
 }
