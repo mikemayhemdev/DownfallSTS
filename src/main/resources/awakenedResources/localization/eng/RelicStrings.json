@@ -18,7 +18,7 @@
     "NAME": "White Ribbon",
     "FLAVOR": "Gives power to spoken words even without proper ritual.",
     "DESCRIPTIONS": [
-      "Whenever you play a card with an active #yawakened:Chant effect, gain #b",
+      "Whenever you play a #yPower card or a card with an active #yawakened:Chant effect, gain #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },

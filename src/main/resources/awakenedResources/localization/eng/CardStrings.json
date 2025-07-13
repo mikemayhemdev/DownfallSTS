@@ -117,7 +117,7 @@
   },
   "awakened:Recitation": {
     "NAME": "Recitation",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Deal !D! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Deal !awakened:sd! damage again."
   },
   "awakened:LastDitchEffort": {
     "NAME": "Swoop",
@@ -141,7 +141,7 @@
   },
   "awakened:ShroudOfMiasma": {
     "NAME": "Shroud of Miasma",
-    "DESCRIPTION": "Whenever you apply awakened:Manaburn or awakened:Hex to an enemy, gain !M! Block."
+    "DESCRIPTION": "Whenever you attack an enemy with awakened:Hex, gain !M! Block."
   },
   "awakened:Sludge": {
     "NAME": "Sludge",
@@ -158,8 +158,8 @@
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure any Spell. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL awakened:Conjure any Spell."
+    "DESCRIPTION": "Deal !D! damage. NL Choose a card to awakened:Conjure. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Choose a card to awakened:Conjure."
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
@@ -168,7 +168,7 @@
   },
   "awakened:DesperatePrayer": {
   "NAME": "Desperate Prayer",
-  "DESCRIPTION": "Shuffle a random Power card into your draw pile, it costs 0. NL Exhaust."
+  "DESCRIPTION": "Put a random Power card on top your draw pile, it costs 0. NL Exhaust."
 },
   "awakened:BirdsEye": {
     "NAME": "Byrd's Eye",
@@ -341,7 +341,7 @@
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
-    "DESCRIPTION": "Deal !D! damage. NL Add a copy of this card with !M! more damage to the Spell Pile. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Increases damage by !M!, then shuffles into the Spell Pile."
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",

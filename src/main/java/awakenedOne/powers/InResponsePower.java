@@ -5,8 +5,6 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import static awakenedOne.AwakenedOneMod.SPELLCARD;
-
 public class InResponsePower extends AbstractAwakenedPower {
     // intellij stuff buff
     public static final String NAME = InResponsePower.class.getSimpleName();
@@ -18,7 +16,7 @@ public class InResponsePower extends AbstractAwakenedPower {
 
     @Override
     public void onAfterCardPlayed(AbstractCard card) {
-        if (card instanceof AbstractSpellCard || card.hasTag(SPELLCARD)) {
+        if (card instanceof AbstractSpellCard) {
             flash();
             addToBot(new GainBlockAction(owner, amount));
         }

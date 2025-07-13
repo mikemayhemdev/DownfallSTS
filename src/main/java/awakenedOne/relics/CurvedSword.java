@@ -35,7 +35,7 @@ public class CurvedSword extends CustomRelic {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card instanceof AbstractSpellCard || card.hasTag(SPELLCARD)) {
+        if (card instanceof AbstractSpellCard) {
             ++this.counter;
             if (this.counter % 3 == 0) {
                 this.flash();

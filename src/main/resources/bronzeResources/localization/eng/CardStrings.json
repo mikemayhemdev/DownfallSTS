@@ -584,7 +584,7 @@
   },
   "bronze:DecaBeam": {
     "NAME": "Proto-Shield",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! expansioncontent:Plated *Armor and bronze:Insert !bauto! *Dazed.",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! *Plated *Armor and bronze:Insert !bauto! *Dazed.",
     "EXTENDED_DESCRIPTION": [
       "jagged",
       "Barrier"

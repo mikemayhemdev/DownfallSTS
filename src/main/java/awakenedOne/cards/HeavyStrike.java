@@ -25,7 +25,7 @@ public class HeavyStrike extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         int count = (int) AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
-                .filter(card -> card instanceof AbstractSpellCard || card.hasTag(SPELLCARD))
+                .filter(card -> card instanceof AbstractSpellCard)
                 .count();
 
         for (int i = 0; i < count+1; i++) {
@@ -38,7 +38,7 @@ public class HeavyStrike extends AbstractAwakenedCard {
     public void applyPowers() {
         super.applyPowers();
         int count = (int) AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
-                .filter(card -> card instanceof AbstractSpellCard || card.hasTag(SPELLCARD))
+                .filter(card -> card instanceof AbstractSpellCard)
                 .count();
         this.rawDescription = strings.DESCRIPTION;
         this.rawDescription = this.rawDescription + strings.EXTENDED_DESCRIPTION[0] + count;

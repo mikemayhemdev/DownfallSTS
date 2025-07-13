@@ -27,38 +27,20 @@ public class Grimoire extends AbstractAwakenedCard {
 
     public Grimoire() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 7;
-        baseMagicNumber = magicNumber = 7;
-        this.exhaust = true;
+        this.selfRetain = true;
+        baseDamage = 6;
+        baseMagicNumber = magicNumber = 6;
         loadJokeCardImage(this, makeBetaCardPath(Grimoire.class.getSimpleName() + ".png"));
     }
 
-
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        if (this.hasTag(SPELLCARD)) {
-            if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
-                target = CardTarget.ALL_ENEMY;
-            }
-        }
-    }
-
-
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!this.hasTag(SPELLCARD)) {
-            dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        } else {
-            if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
-                dmg(m, AbstractGameAction.AttackEffect.FIRE);
-            } else {
-                //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
-                this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
-            }
-        }
-        AbstractCard newcard = this.makeStatEquivalentCopy();
-        this.addToTop(new ModifyDamageAction(newcard.uuid, this.magicNumber));
-        spellCards.add(new OrbitingSpells.CardRenderInfo(newcard));
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        this.addToTop(new ModifyDamageAction(this.uuid, this.magicNumber));
+        spellCards.add(new OrbitingSpells.CardRenderInfo(this));
+        p.hand.removeCard(this);
+        p.drawPile.removeCard(this);
+        p.discardPile.removeCard(this);
+        p.limbo.removeCard(this);
         updateTimeOffsets();
     }
 

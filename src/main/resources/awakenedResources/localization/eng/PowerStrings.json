@@ -135,7 +135,7 @@
   "awakened:FeathersinksPower": {
     "NAME": "Shroud of Miasma",
     "DESCRIPTIONS": [
-      "Whenever you apply #yManaburn or #yHex to an enemy, gain #b",
+      "Whenever you attack an enemy with #yHex [REMOVE_SPACE], gain #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },

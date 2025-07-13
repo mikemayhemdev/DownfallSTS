@@ -16,11 +16,17 @@ public class FeathersinksPower extends AbstractAwakenedPower {
     }
 
 
-    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
-        if ((power instanceof EnemyHexedPower || power instanceof ManaburnPower) && target != this.owner && !target.hasPower("Artifact")) {
-            this.flash();
-            this.addToBot(new GainBlockAction(this.owner, this.amount, Settings.FAST_MODE));
-        }
+//    public void onApplyPower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+//        if ((power instanceof EnemyHexedPower || power instanceof ManaburnPower) && target != this.owner && !target.hasPower("Artifact")) {
+//            this.flash();
+//            this.addToBot(new GainBlockAction(this.owner, this.amount, Settings.FAST_MODE));
+//        }
+//    }
+
+    @Override
+    public void onSpecificTrigger() {
+        flash();
+        addToTop(new GainBlockAction(owner, amount, true));
     }
 
 

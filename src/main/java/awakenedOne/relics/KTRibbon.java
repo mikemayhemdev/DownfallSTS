@@ -1,6 +1,7 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.patches.MoonTalismanPatch;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Color;
@@ -8,8 +9,10 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
@@ -46,6 +49,16 @@ public class KTRibbon extends CustomRelic {
 //        this.counter = -1;
 //        stopPulse();
 //    }
+
+
+    @Override
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        if (card.type == AbstractCard.CardType.POWER) {
+            this.flash();
+            addToBot(new GainBlockAction(AbstractDungeon.player, AMOUNT));
+        }
+    }
+
 
     public void onTrigger() {
         flash();

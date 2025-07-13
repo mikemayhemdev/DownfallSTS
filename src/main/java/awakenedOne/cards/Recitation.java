@@ -21,8 +21,9 @@ public class Recitation extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public Recitation() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 6;
+        baseSecondDamage = 5;
         this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(Recitation.class.getSimpleName() + ".png"));
     }
@@ -32,7 +33,7 @@ public class Recitation extends AbstractAwakenedCard {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
 
         if (isTrig_chant()) {
-            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+            altDmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
             chant();
         }
 
@@ -51,5 +52,6 @@ public class Recitation extends AbstractAwakenedCard {
     @Override
     public void upp() {
         upgradeDamage(2);
+        upgradeSecondDamage(2);
     }
 }

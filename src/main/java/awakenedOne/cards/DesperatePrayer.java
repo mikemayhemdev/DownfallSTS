@@ -1,12 +1,12 @@
 package awakenedOne.cards;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.shuffleIn;
 
 public class DesperatePrayer extends AbstractAwakenedCard {
     public final static String ID = makeID(DesperatePrayer.class.getSimpleName());
@@ -21,10 +21,7 @@ public class DesperatePrayer extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
         c.modifyCostForCombat(-999);
-//        if (upgraded) {
-//            c.upgrade();
-//        }
-        shuffleIn(c);
+        addToBot(new MakeTempCardInDrawPileAction(c, 1, false, true));
     }
 
     public void upp() {
