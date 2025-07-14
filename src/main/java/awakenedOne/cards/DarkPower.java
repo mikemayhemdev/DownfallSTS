@@ -16,8 +16,8 @@ public class DarkPower extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public DarkPower() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 5;
+        super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
+        baseBlock = 10;
         this.cardsToPreview = new Ceremony();
         this.tags.add(AwakenedOneMod.CHANT);
         this.exhaust = true;
@@ -27,6 +27,7 @@ public class DarkPower extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         AbstractCard c = new Ceremony();
+        c.upgrade();
         Wiz.atb(new MakeTempCardInHandAction(c, 1));
     }
 

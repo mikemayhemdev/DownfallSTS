@@ -258,7 +258,9 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         AbstractCard original = super.makeStatEquivalentCopy();
 
         ((AbstractAwakenedCard)original).trig_chant = this.trig_chant;
-
+        if (this.trig_chant) {
+            original.tags.add(ACTIVECHANT);
+        }
         return original;
     }
 
@@ -276,7 +278,6 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         if (!this.hasTag(ACTIVECHANT) && this.hasTag(CHANT)) {
             this.tags.add(ACTIVECHANT);
             if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
-                applyToSelf(new StrengthPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
                 AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
             }
 

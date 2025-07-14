@@ -19,9 +19,12 @@ public class DesperatePrayer extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
-        c.modifyCostForCombat(-999);
-        addToBot(new MakeTempCardInDrawPileAction(c, 1, false, true));
+        AbstractCard q = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
+        while (q.rarity != CardRarity.RARE) {
+            q = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
+        }
+        q.modifyCostForCombat(-999);
+        addToBot(new MakeTempCardInDrawPileAction(q, 1, false, true));
     }
 
     public void upp() {

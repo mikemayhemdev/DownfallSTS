@@ -1,9 +1,12 @@
 package awakenedOne.powers;
 
+import awakenedOne.actions.ConjureAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+
+import static awakenedOne.util.Wiz.atb;
 
 public class NextPowerBlockPower extends AbstractAwakenedPower {
     // intellij stuff buff
@@ -18,7 +21,10 @@ public class NextPowerBlockPower extends AbstractAwakenedPower {
     public void onAfterCardPlayed(AbstractCard card) {
         if (card.type == AbstractCard.CardType.POWER) {
             this.flash();
-            this.addToBot(new DrawCardAction(amount));
+            for (int i = 0; i < this.amount; ++i) {
+                atb(new ConjureAction(false));
+            }
+            //this.addToBot(new DrawCardAction(amount));
             addToTop(new RemoveSpecificPowerAction(owner, owner, this));
         }
     }

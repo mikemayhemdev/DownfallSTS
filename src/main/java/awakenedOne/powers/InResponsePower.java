@@ -15,11 +15,9 @@ public class InResponsePower extends AbstractAwakenedPower {
     }
 
     @Override
-    public void onAfterCardPlayed(AbstractCard card) {
-        if (card instanceof AbstractSpellCard) {
+    public void onSpecificTrigger() {
             flash();
             addToBot(new GainBlockAction(owner, amount));
-        }
     }
 
     public void updateDescription() {

@@ -18,15 +18,15 @@
   "awakened:InResponsePower": {
     "NAME": "Spellshield",
     "DESCRIPTIONS": [
-      "Whenever you play a Spell, gain #b",
+      "Whenever you create a card, gain #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
   "awakened:RisingChantPower": {
     "NAME": "Rising Chant",
     "DESCRIPTIONS": [
-      "Whenever you activate a #yChant effect for the first time, gain #b",
-      " #yStrength [REMOVE_SPACE]."
+      "Whenever you play an activated #yChant card, gain #b",
+      " temporary #yStrength [REMOVE_SPACE]."
     ]
   },
   "awakened:ThaumaturgyPower": {
@@ -46,9 +46,9 @@
   "awakened:NextPowerBlockPower": {
     "NAME": "Divination",
     "DESCRIPTIONS": [
-      "The next time you play a #yPower card, draw #b",
-      " card.",
-      " cards."
+      "The next time you play a #yPower card, Conjure #b",
+      " time.",
+      " times."
     ]
   },
   "awakened:NextPowerAOEPower": {

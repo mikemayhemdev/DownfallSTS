@@ -3,19 +3,26 @@ package awakenedOne.cards;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.actions.ForTheHexAction;
+import collector.powers.AddCopyNextTurnPower;
 import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.MultiGroupSelectAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
 
+import java.util.Collections;
 import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.att;
+import static collector.util.Wiz.applyToSelfTop;
 
 public class TalonRake extends AbstractAwakenedCard {
     public final static String ID = makeID(TalonRake.class.getSimpleName());
@@ -24,6 +31,7 @@ public class TalonRake extends AbstractAwakenedCard {
     public TalonRake() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = 6;
+        this.tags.add(AwakenedOneMod.CHANT);
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(TalonRake.class.getSimpleName() + ".png"));
     }
@@ -34,33 +42,18 @@ public class TalonRake extends AbstractAwakenedCard {
         }
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
 
-        if (!(upgraded)) {
-            this.addToBot(new ForTheHexAction(1, m));
+        if (isTrig_chant()) {
+            chant();
         }
-
-        if (upgraded) {
-            atb(new ConjureAction(false));
-        }
-
     }
 
-    public void triggerOnGlowCheck() {
-        if (!upgraded) {
-            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
-            Iterator var1 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
-            while (var1.hasNext()) {
-                AbstractMonster m = (AbstractMonster) var1.next();
-                if (!m.isDeadOrEscaped() && m.getIntentBaseDmg() >= 0) {
-                    this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
-                    break;
-                }
-            }
-        }
+    @Override
+    public void chant() {
+        atb(new ConjureAction(false));
     }
 
     public void upp() {
-        upgradeDamage(1);
+        upgradeDamage(3);
         //upgradeBaseCost(0);
     }
 }

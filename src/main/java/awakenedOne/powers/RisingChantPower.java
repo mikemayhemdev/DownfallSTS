@@ -1,6 +1,8 @@
 package awakenedOne.powers;
 
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class RisingChantPower extends AbstractAwakenedPower {
     // intellij stuff buff
@@ -17,6 +19,8 @@ public class RisingChantPower extends AbstractAwakenedPower {
 
     @Override
     public void onSpecificTrigger() {
+        applyToSelf(new StrengthPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
+        applyToSelf(new LoseStrengthPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
         flash();
     }
 

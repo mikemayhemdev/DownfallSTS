@@ -14,6 +14,7 @@ public class InResponse extends AbstractAwakenedCard {
     public InResponse() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         //baseSecondMagic = secondMagic = 2;
+        this.isEthereal = true;
         baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(InResponse.class.getSimpleName() + ".png"));
     }

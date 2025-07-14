@@ -1,6 +1,8 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.cards.tokens.Ceremony;
+import awakenedOne.util.Wiz;
 import collector.powers.AddCopyNextTurnPower;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.MultiGroupSelectAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -10,6 +12,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.powers.Drained;
 
 import java.util.Collections;
 
@@ -24,44 +27,20 @@ public class Hymn extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Hymn.class.getSimpleName());
 
     public Hymn() {
-        super(ID, 1, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(Hymn.class.getSimpleName() + ".png"));
-        baseBlock = 6;
-        this.tags.add(AwakenedOneMod.CHANT);
+        baseBlock = 3;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        if (isTrig_chant()) {
-            atb(new MultiGroupSelectAction(
-                    "",
-                    (cards, groups) -> {
-                        Collections.reverse(cards);
-                        cards.forEach(c -> att(new AbstractGameAction() {
-                            public void update() {
-                                isDone = true;
-                                addToBot(new ExhaustSpecificCardAction(c, p.discardPile));
-                                applyToSelfTop(new AddCopyNextTurnPower(c));
-                            }
-                        }));
-                    },
-                    1, false, c -> c instanceof AbstractCard, CardGroup.CardGroupType.DISCARD_PILE));
-            chant();
-        }
-    }
-
-    @Override
-    public void chant() {
-        checkOnChant();
-    }
-
-
-    public void triggerOnGlowCheck() {
-        this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        AbstractCard c = new Ceremony();
+        if (upgraded) c.upgrade();
+        Wiz.atb(new MakeTempCardInHandAction(c, 1));
+        this.addToBot(new ApplyPowerAction(p, p, new Drained(p,p, 1), 1));
     }
 
     @Override
     public void upp() {
-        upgradeBlock(3);
     }
 }

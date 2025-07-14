@@ -50,7 +50,7 @@
   },
   "awakened:InResponse": {
     "NAME": "Spellshield",
-    "DESCRIPTION": "Whenever you play a Spell, gain !M! Block."
+    "DESCRIPTION": "Ethereal. NL Whenever you create a card, gain !M! Block."
   },
   "awakened:DarkEcho": {
     "NAME": "Dark Echo",
@@ -67,16 +67,16 @@
   },
   "awakened:Ceremony": {
     "NAME": "Ceremony",
-    "DESCRIPTION": "Retain. NL Gain !M! Strength."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Strength."
   },
   "awakened:TalonRake": {
     "NAME": "Talon Rake",
-    "DESCRIPTION": "Deal !D! damage. NL If the enemy intends to attack, awakened:Conjure.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: awakened:Conjure."
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Exhaust a card in your discard pile. NL Next turn, gain a copy."
+    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony. NL Next turn, lose [E].",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+. NL Next turn, lose [E]."
   },
   "awakened:Psalm": {
     "NAME": "Psalm",
@@ -104,8 +104,7 @@
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage. NL The next time you play a Power card, draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you play a Power card, draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL The next time you play a Power card, awakened:Conjure."
   },
   "awakened:FlareShot": {
     "NAME": "Flare Shot",
@@ -177,8 +176,8 @@
   },
   "awakened:DarkPower": {
     "NAME": "Initiation",
-    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony."
+    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+."
   },
   "awakened:Ensorcelate": {
     "NAME": "Ensorcelate",
@@ -190,8 +189,7 @@
   },
   "awakened:RisingChant": {
     "NAME": "Rising Chant",
-    "DESCRIPTION": "Whenever you activate a awakened:Chant effect for the first time, gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you activate a awakened:Chant effect for the first time, gain !M! Strength."
+    "DESCRIPTION": "Whenever you play an activated awakened:Chant card, gain !M! temporary Strength."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
@@ -363,7 +361,7 @@
   },
   "awakened:SheerTerror": {
     "NAME": "Sheer Terror",
-    "DESCRIPTION": "Apply !M! awakened:Hex. NL awakened:Chant: awakened:Hex cannot be removed from this enemy for the rest of the turn."
+    "DESCRIPTION": "Apply !M! awakened:Hex. NL awakened:Hex cannot be removed from this enemy for the rest of the turn."
   },
   "awakened:Deathwish": {
     "NAME": "Deathwish",

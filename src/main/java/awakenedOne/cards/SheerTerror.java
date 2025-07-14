@@ -23,8 +23,6 @@ public class SheerTerror extends AbstractAwakenedCard {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        //this.exhaust = true;
-        this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(SheerTerror.class.getSimpleName() + ".png"));
     }
 
@@ -35,23 +33,8 @@ public class SheerTerror extends AbstractAwakenedCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(0.3F, 0.2F, 0.4F, 1.0F), ShockWaveEffect.ShockWaveType.CHAOTIC), 1.0F));
 
         HexCurse(magicNumber, m, p);
-
-
-        if (isTrig_chant()) {
-            this.addToBot(new ApplyPowerAction(m, p, new SheerTerrorPower(m, 1), 1, true, AbstractGameAction.AttackEffect.POISON));
-            chant();
-        }
+        this.addToBot(new ApplyPowerAction(m, p, new SheerTerrorPower(m, 1), 1, true, AbstractGameAction.AttackEffect.POISON));
     }
-
-    public void triggerOnGlowCheck() {
-        this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
-
-    @Override
-    public void chant() {
-        checkOnChant();
-    }
-
 
     public void upp() {
         //upgradeMagicNumber(2);

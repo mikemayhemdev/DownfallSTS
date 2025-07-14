@@ -18,7 +18,8 @@ public class Ceremony extends AbstractAwakenedCard {
         super(ID, 0, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
-        selfRetain = true;
+        //selfRetain = true;
+        this.isEthereal = true;
         this.baseSecondMagic = 2;
         this.secondMagic = this.baseSecondMagic;
         loadJokeCardImage(this, makeBetaCardPath(Ceremony.class.getSimpleName() + ".png"));
@@ -32,6 +33,8 @@ public class Ceremony extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        //upgradeMagicNumber(1);
+        selfRetain = true;
+        this.isEthereal = false;
     }
 }
