@@ -43,14 +43,12 @@ public class VioletPlumage extends CustomRelic {
 
     @Override
     public void atPreBattle() {
-        firstTurn = true;
         activated = false;
     }
 
     @Override
     public void atTurnStartPostDraw() {
         if (this.grayscale = false) {
-            if (firstTurn == false) {
                 if (activated) {
                     this.flash();
                     this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
@@ -58,16 +56,12 @@ public class VioletPlumage extends CustomRelic {
                     this.grayscale = true;
                 }
             }
-        }
-        this.firstTurn = false;
         activated = false;
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        if (this.grayscale = false) {
             if (EnergyPanel.totalCount > 0) {
                 activated = true;
-            }
         }
     }
 
