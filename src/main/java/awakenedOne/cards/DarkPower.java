@@ -19,6 +19,7 @@ public class DarkPower extends AbstractAwakenedCard {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 9;
         this.cardsToPreview = new Ceremony();
+        cardsToPreview.upgrade();
         this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(DarkPower.class.getSimpleName() + ".png"));
     }

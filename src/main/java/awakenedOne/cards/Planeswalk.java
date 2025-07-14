@@ -16,7 +16,7 @@ public class Planeswalk extends AbstractAwakenedCard {
 
     public Planeswalk() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 3;
+        baseBlock = 2;
         baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Planeswalk.class.getSimpleName() + ".png"));
     }
@@ -34,6 +34,6 @@ public class Planeswalk extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(3);
     }
 }
