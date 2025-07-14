@@ -176,8 +176,7 @@
   },
   "awakened:DarkPower": {
     "NAME": "Initiation",
-    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+."
+    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+."
   },
   "awakened:Ensorcelate": {
     "NAME": "Ensorcelate",

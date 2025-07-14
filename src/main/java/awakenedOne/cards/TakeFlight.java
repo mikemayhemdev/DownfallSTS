@@ -17,7 +17,7 @@ public class TakeFlight extends AbstractAwakenedCard {
 
     public TakeFlight() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 11;
+        baseBlock = 10;
         this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(TakeFlight.class.getSimpleName() + ".png"));
     }
@@ -41,6 +41,6 @@ public class TakeFlight extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(4);
     }
 }
