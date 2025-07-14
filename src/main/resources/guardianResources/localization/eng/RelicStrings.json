@@ -41,7 +41,7 @@
     "NAME": "Arumba's Pocket Sentry",
     "FLAVOR": "Sentry Mode active. Target acquired. No hard feelings.",
     "DESCRIPTIONS": [
-      "Every 3 turns, apply #b1 #yWeak to ALL enemies."
+      "Every #b3 turns, apply #b1 #yWeak to ALL enemies."
     ]
   },
   "Guardian:SackOfGems": {

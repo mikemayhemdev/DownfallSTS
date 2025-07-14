@@ -111,7 +111,7 @@ public class GemMine extends AbstractImageEvent {
 
                             AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
 
-                            AbstractDungeon.combatRewardScreen.open();
+                            AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
 
                             AbstractDungeon.player.getRelic(PickAxe.ID).onTrigger();
                             if (AbstractDungeon.player.getRelic(PickAxe.ID).counter == -2) {
@@ -147,8 +147,7 @@ public class GemMine extends AbstractImageEvent {
 
                         AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
 
-                        AbstractDungeon.combatRewardScreen.open();
-
+                        AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
 
                         this.damageTaken += damage;
                         this.tookGems = true;

@@ -11,11 +11,11 @@ public class AwakenedTextHelper {
     public static void colorCombos(AbstractAwakenedCard card, boolean resetColors) {
         if (AbstractDungeon.player != null) {
             if (card.rawDescription.contains(ifStr[0])) {
-                if ((card.hasTag(ACTIVECHANT)) && !resetColors) {
+                if ((card.trig_chant) && !resetColors) {
                     card.rawDescription = card.rawDescription.replace(ifStr[0], ifStr[1]);
                 }
             } else if (card.rawDescription.contains(ifStr[1])) {
-                if ((!card.hasTag(ACTIVECHANT)) || resetColors) {
+                if ((!card.trig_chant) || resetColors) {
                     card.rawDescription = card.rawDescription.replace(ifStr[1], ifStr[0]);
                 }
             }

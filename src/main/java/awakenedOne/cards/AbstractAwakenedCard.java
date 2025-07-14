@@ -267,6 +267,7 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     public boolean isTrig_chant() {
         if (isChantActive() || this.hasTag(ACTIVECHANT)) {
             this.trig_chant = true;
+            AwakenedTextHelper.colorCombos(this, false);
         }
 
         return (trig_chant);
@@ -277,9 +278,6 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     public void checkOnChant() {
         if (!this.hasTag(ACTIVECHANT) && this.hasTag(CHANT)) {
             this.tags.add(ACTIVECHANT);
-            if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
-                AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
-            }
 
             if (AbstractDungeon.player.hasRelic(CursedBlessing.ID)) {
                 AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
@@ -289,10 +287,13 @@ public abstract class AbstractAwakenedCard extends CustomCard {
             this.initializeDescription();
 
         }
+
         if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
            AbstractDungeon.player.getRelic(KTRibbon.ID).onTrigger();
         }
-
+        if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
+            AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
+        }
 //        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
 //            if (c instanceof AbstractAwakenedCard) {
 //                ((AbstractAwakenedCard) c).onChant();
@@ -322,7 +323,7 @@ public abstract class AbstractAwakenedCard extends CustomCard {
 //                ((AbstractAwakenedCard) c).onChant();
 //            }
 //        }
-
+        AwakenedTextHelper.colorCombos(this, false);
     }
 
 
