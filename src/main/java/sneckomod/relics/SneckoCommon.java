@@ -38,7 +38,7 @@ public class SneckoCommon extends CustomRelic {
         AbstractDungeon.combatRewardScreen.open(this.DESCRIPTIONS[1]);
         AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
         AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
-        }
+    }
 
 
     public String getUpdatedDescription() {
