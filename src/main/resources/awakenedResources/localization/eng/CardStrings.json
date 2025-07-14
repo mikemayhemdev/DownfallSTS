@@ -67,7 +67,8 @@
   },
   "awakened:Ceremony": {
     "NAME": "Ceremony",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Strength."
   },
   "awakened:TalonRake": {
     "NAME": "Talon Rake",
