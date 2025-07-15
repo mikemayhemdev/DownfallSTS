@@ -50,7 +50,7 @@
   "sneckomod:SerpentsNestPower": {
     "NAME": "Serpent's Nest",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, deal 1 damage to ALL enemies.",
+      "Whenever you play a #yPower card, deal #b1 damage to ALL enemies.",
       "Whenever you play a #yPower card, deal #b",
       " damage to ALL enemies."
     ]

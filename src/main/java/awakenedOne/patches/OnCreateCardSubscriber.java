@@ -18,8 +18,10 @@ public class OnCreateCardSubscriber {
     public static int CardsCreatedThisCombat = 0;
     @SpirePostfixPatch
     public static void onCreateCard(AbstractCard c) {
-        if (AbstractDungeon.player.hasPower(InResponsePower.POWER_ID)) {
-            AbstractDungeon.player.getPower(InResponsePower.POWER_ID).onSpecificTrigger();
+        if (!AbstractDungeon.actionManager.turnHasEnded) {
+            if (AbstractDungeon.player.hasPower(InResponsePower.POWER_ID)) {
+                AbstractDungeon.player.getPower(InResponsePower.POWER_ID).onSpecificTrigger();
+            }
         }
         if (c.hasTag(ACTIVECHANT)) {
             AwakenedTextHelper.colorCombos((AbstractAwakenedCard)c, false);

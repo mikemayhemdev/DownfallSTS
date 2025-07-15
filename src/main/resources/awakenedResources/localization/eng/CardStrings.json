@@ -313,7 +313,7 @@
     ]
   },
   "awakened:Middens": {
-    "NAME": "Middens",
+    "NAME": "Midden Heap",
     "DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse card from your draw or discard pile into your hand.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse cards from your draw or discard pile into your hand.",
     "EXTENDED_DESCRIPTION": [
