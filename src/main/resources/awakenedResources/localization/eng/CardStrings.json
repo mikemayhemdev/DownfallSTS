@@ -129,7 +129,7 @@
   },
   "awakened:DrawingDead": {
     "NAME": "Altar",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust a card. NL If it was a Status or Curse card, awakened:Conjure."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust a card. NL If it was a Status or Curse, awakened:Conjure."
   },
   "awakened:Envision": {
     "NAME": "Envision",
@@ -282,7 +282,7 @@
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
-    "DESCRIPTION": "Whenever you Exhaust a Status or Curse card, ALL enemies lose !M! HP."
+    "DESCRIPTION": "Whenever you Exhaust a Status or Curse, ALL enemies lose !M! HP."
   },
   "awakened:MysticOrder": {
     "NAME": "Mystic Order",
@@ -314,8 +314,8 @@
   },
   "awakened:Middens": {
     "NAME": "Midden Heap",
-    "DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse card from your draw or discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse cards from your draw or discard pile into your hand.",
+    "DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse from your draw or discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put !M! Status or *Curses from your draw or discard pile into your hand.",
     "EXTENDED_DESCRIPTION": [
       "Select a card to move to your hand.",
       "Select cards to move to your hand."

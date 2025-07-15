@@ -242,7 +242,7 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     }
 
     public boolean isChantActiveGlow(AbstractCard source) {
-        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1)).type == CardType.POWER || this.hasTag(ACTIVECHANT)) {
+        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1)).type == CardType.POWER || this.hasTag(ACTIVECHANT) || this.trig_chant) {
             return true;
         } else {
             return false;
@@ -276,16 +276,14 @@ public abstract class AbstractAwakenedCard extends CustomCard {
 
     //Whenever a Chant effect activates, do this!!!
     public void checkOnChant() {
-        if (!this.hasTag(ACTIVECHANT) && this.hasTag(CHANT)) {
+        if (!this.hasTag(ACTIVECHANT)) {
             this.tags.add(ACTIVECHANT);
-
             if (AbstractDungeon.player.hasRelic(CursedBlessing.ID)) {
                 AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
             }
 
             AwakenedTextHelper.colorCombos(this, false);
             this.initializeDescription();
-
         }
 
         if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {

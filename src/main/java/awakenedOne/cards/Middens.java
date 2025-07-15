@@ -6,6 +6,7 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.MultiGroupSelectAction
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.util.Collections;
@@ -49,6 +50,13 @@ public class Middens extends AbstractAwakenedCard {
             ));
 
         }
+
+    //add curse keyword
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        this.keywords.add(GameDictionary.CURSE.NAMES[0].toLowerCase());
+    }
 
     @Override
     public void upp() {

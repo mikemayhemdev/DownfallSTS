@@ -43,6 +43,7 @@ public class TalonRake extends AbstractAwakenedCard {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
 
         if (isTrig_chant()) {
+            this.tags.add(ACTIVECHANT);
             chant();
         }
     }
