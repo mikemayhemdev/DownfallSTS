@@ -416,7 +416,7 @@
     "NAME": "Sharpened Fragment",
     "FLAVOR": "Once a broken statue - now a makeshift weapon.",
     "DESCRIPTIONS": [
-      "During Elite and Boss combats, whenever you play a #yPower card, gain #b",
+      "During Elite and Boss combats, whenever you play a #yPower [REMOVE_SPACE], gain #b",
       " #yStrength [REMOVE_SPACE]."
     ]
   },

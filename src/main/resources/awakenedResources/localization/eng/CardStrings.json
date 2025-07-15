@@ -58,7 +58,7 @@
   },
   "awakened:CawCaw": {
     "NAME": "Fleeting Curiosity",
-    "DESCRIPTION": "Whenever you play a Power card, gain !awakened:m2! Strength. NL At the end of your turn, lose !M! Strength."
+    "DESCRIPTION": "Whenever you play a Power, gain !awakened:m2! Strength. NL At the end of your turn, lose !M! Strength."
   },
   "awakened:Librarian": {
     "NAME": "Grand Magus",
@@ -81,7 +81,7 @@
   },
   "awakened:Psalm": {
     "NAME": "Psalm",
-    "DESCRIPTION": "Gain !B! Block. NL The next time you play a Power card, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Gain !B! Block. NL The next time you play a Power, deal !M! damage to ALL enemies."
   },
   "awakened:FadeOut": {
     "NAME": "Demon Glyph",
@@ -101,11 +101,11 @@
   },
   "awakened:Extension": {
     "NAME": "Extension",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a Power card from your draw pile. NL It costs 1 less this combat."
+    "DESCRIPTION": "Deal !D! damage. NL Draw a Power from your draw pile. NL It costs 1 less this combat."
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage. NL The next time you play a Power card, awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage. NL The next time you play a Power, awakened:Conjure."
   },
   "awakened:FlareShot": {
     "NAME": "Flare Shot",
@@ -125,7 +125,7 @@
   },
   "awakened:Reviscerate": {
     "NAME": "Reviscerate",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less [E] for each Power card played this combat."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less [E] for each Power played this combat."
   },
   "awakened:DrawingDead": {
     "NAME": "Altar",
@@ -168,12 +168,12 @@
   },
   "awakened:DesperatePrayer": {
   "NAME": "Desperate Prayer",
-  "DESCRIPTION": "Put a random Power card on top your draw pile, it costs 0. NL Exhaust."
+  "DESCRIPTION": "Put a random Power on top your draw pile, it costs 0. NL Exhaust."
 },
   "awakened:BirdsEye": {
     "NAME": "Byrd's Eye",
-    "DESCRIPTION": "Put a Power card from your draw pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Put a Power card from your draw pile into your hand."
+    "DESCRIPTION": "Put a Power from your draw pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Put a Power from your draw pile into your hand."
   },
   "awakened:DarkPower": {
     "NAME": "Initiation",
@@ -181,7 +181,7 @@
   },
   "awakened:Ensorcelate": {
     "NAME": "Ensorcelate",
-    "DESCRIPTION": "Gain !B! Block. NL The next Power card you play costs 0."
+    "DESCRIPTION": "Gain !B! Block. NL The next Power you play costs 0."
   },
   "awakened:Primacy": {
     "NAME": "Primacy",
@@ -208,8 +208,8 @@
   },
   "awakened:TheEmpress": {
     "NAME": "Midnight",
-    "DESCRIPTION": "Ethereal. NL Whenever you play a non-Spell Power card, awakened:Conjure.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a non-Spell Power card, awakened:Conjure."
+    "DESCRIPTION": "Ethereal. NL Whenever you play a non-Spell Power, awakened:Conjure.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a non-Spell Power, awakened:Conjure."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
@@ -273,7 +273,7 @@
   },
   "awakened:Nihilism": {
     "NAME": "Nihilism",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. NL If it was a Power card, draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. NL If it was a Power, draw !M! cards."
   },
   "awakened:Slaughter": {
     "NAME": "To the Slaughter",
@@ -290,7 +290,7 @@
   },
   "awakened:SacrilegiousStrike": {
     "NAME": "Sacrilegious Strike",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL The next time you play a Power card, lose [E] ."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL The next time you play a Power, lose [E] ."
   },
   "awakened:ToTheLimit": {
     "NAME": "To the Limit",
@@ -307,9 +307,9 @@
   },
   "awakened:ArcaneNesting": {
     "NAME": "Arcane Nesting",
-    "DESCRIPTION": "Unplayable. NL Whenever you play a Power card while this is in hand, gain !B! Block.",
+    "DESCRIPTION": "Unplayable. NL Whenever you play a Power while this is in hand, gain !B! Block.",
     "EXTENDED_DESCRIPTION": [
-      "I must play Power cards to gain Block from this."
+      "I must play Powers to gain Block from this."
     ]
   },
   "awakened:Middens": {

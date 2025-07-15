@@ -18,7 +18,7 @@
     "NAME": "White Ribbon",
     "FLAVOR": "Gives power to spoken words even without proper ritual.",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card or a card with an active #yawakened:Chant effect, gain #b",
+      "Whenever you play a #yPower or a card with an active #yawakened:Chant effect, gain #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -94,7 +94,7 @@
     "NAME": "Alethea",
     "FLAVOR": "From the Abyss.",
     "DESCRIPTIONS": [
-      "If you do not play any #yPower cards during your turn, draw an additional card next turn."
+      "If you do not play any #yPowers during your turn, draw an additional card next turn."
     ]
   },
   "awakened:StrengthBooster": {

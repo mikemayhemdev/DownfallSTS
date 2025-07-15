@@ -29,7 +29,7 @@ public class Hymn extends AbstractAwakenedCard {
     public Hymn() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(Hymn.class.getSimpleName() + ".png"));
-        baseBlock = 3;
+        baseBlock = 4;
         this.cardsToPreview = new Ceremony();
     }
 
@@ -43,7 +43,6 @@ public class Hymn extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(1);
         cardsToPreview.upgrade();
     }
 }

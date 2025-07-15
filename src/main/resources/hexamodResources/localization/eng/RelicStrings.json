@@ -74,14 +74,14 @@
     "NAME": "Olexa's Shield",
     "FLAVOR": "Protection on-demand.",
     "DESCRIPTIONS": [
-      "#yPower cards are counted towards the progression of #ySearing and #yCrushing #yGhostflames [REMOVE_SPACE]."
+      "#yPowers are counted towards the progression of #ySearing and #yCrushing #yGhostflames [REMOVE_SPACE]."
     ]
   },
   "hexamod:BolsterEngine": {
     "NAME": "Tricky's Bolster-Rod",
     "FLAVOR": "Backed by the study of a thousand books. Knowledge is power!",
     "DESCRIPTIONS": [
-      "The first time you play a #yPower card each combat, gain #b",
+      "The first time you play a #yPower each combat, gain #b",
       " #yBlock and #b",
       " #yStrength [REMOVE_SPACE]."
     ]

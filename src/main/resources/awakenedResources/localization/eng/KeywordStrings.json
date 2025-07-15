@@ -16,7 +16,7 @@
       "conjured",
       "awaken"
     ],
-    "DESCRIPTION": "Draw a card from your Spell Pile. If you are #yAwakened (Played at least #b7 #yPower cards this combat), drawn Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy."
+    "DESCRIPTION": "Draw a card from your Spell Pile. If you are #yAwakened (Played at least #b7 #yPowers this combat), drawn Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy."
   },
   {
     "PROPER_NAME": "Chant",

@@ -50,8 +50,8 @@
   "sneckomod:SerpentsNestPower": {
     "NAME": "Serpent's Nest",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, deal #b1 damage to ALL enemies.",
-      "Whenever you play a #yPower card, deal #b",
+      "Whenever you play a #yPower, deal #b1 damage to ALL enemies.",
+      "Whenever you play a #yPower, deal #b",
       " damage to ALL enemies."
     ]
   },
@@ -130,7 +130,7 @@
   "sneckomod:SerpentineSleuthPower": {
     "NAME": "Serpentine Sleuth",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, gain #b",
+      "Whenever you play a #yPower [REMOVE_SPACE], gain #b",
       " [E] .",
       " [E] ."
     ]

@@ -46,7 +46,7 @@
   "awakened:NextPowerBlockPower": {
     "NAME": "Divination",
     "DESCRIPTIONS": [
-      "The next time you play a #yPower card, Conjure #b",
+      "The next time you play a #yPower [REMOVE_SPACE], #yConjure #b",
       " time.",
       " times."
     ]
@@ -54,14 +54,14 @@
   "awakened:NextPowerAOEPower": {
     "NAME": "Psalm",
     "DESCRIPTIONS": [
-      "The next time you play a #yPower card, deal #b",
+      "The next time you play a #yPower [REMOVE_SPACE], deal #b",
       " damage to ALL enemies."
     ]
   },
   "awakened:SacramentPower": {
     "NAME": "Sacraments",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, gain #b",
+      "Whenever you play a #yPower [REMOVE_SPACE], gain #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -111,8 +111,8 @@
   "awakened:EmpressPower": {
     "NAME": "Midnight",
     "DESCRIPTIONS": [
-      "Whenever you play a non-Spell #yPower card, #yConjure [REMOVE_SPACE].",
-      "Whenever you play a non-Spell #yPower card, #yConjure #b",
+      "Whenever you play a non-Spell #yPower [REMOVE_SPACE], #yConjure [REMOVE_SPACE].",
+      "Whenever you play a non-Spell #yPower [REMOVE_SPACE], #yConjure #b",
       " times."
     ]
   },
@@ -180,9 +180,9 @@
   "awakened:EntanglePowersPower": {
     "NAME": "Sacrilege",
     "DESCRIPTIONS": [
-      "The next time you play a #yPower card, lose [E] .",
+      "The next time you play a #yPower [REMOVE_SPACE], lose [E] .",
       "The next #b",
-      " times you play a #yPower card, lose [E] ."
+      " times you play a #yPower [REMOVE_SPACE], lose [E] ."
     ]
   },
   "awakened:NihilPower": {
@@ -217,9 +217,9 @@
   "awakened:ConjureNextTurnPower": {
     "NAME": "Ensorcelate",
     "DESCRIPTIONS": [
-      "The next #yPower card you play costs #b0 [REMOVE_SPACE].",
+      "The next #yPower you play costs #b0 [REMOVE_SPACE].",
       "The #b",
-      " #yPower cards you play cost #b0 [REMOVE_SPACE]."
+      " #yPowers you play cost #b0 [REMOVE_SPACE]."
     ]
   }
 }
