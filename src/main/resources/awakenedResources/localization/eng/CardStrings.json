@@ -222,7 +222,7 @@
   },
   "awakened:Planeswalk": {
     "NAME": "Planeswalk",
-    "DESCRIPTION": "Gain !B! Block. NL Gain [E]. NL Add a *Void into your discard pile."
+    "DESCRIPTION": "Gain !B! Block. Gain [E]. NL Add a *Void into your discard pile."
   },
   "awakened:Spew": {
     "NAME": "Spew",
@@ -314,8 +314,8 @@
   },
   "awakened:Middens": {
     "NAME": "Midden Heap",
-    "DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse from your draw or discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put !M! Status or *Curses from your draw or discard pile into your hand.",
+    "DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse card from your draw or discard pile into your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse cards from your draw or discard pile into your hand.",
     "EXTENDED_DESCRIPTION": [
       "Select a card to move to your hand.",
       "Select cards to move to your hand."

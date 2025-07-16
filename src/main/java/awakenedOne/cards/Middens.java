@@ -48,15 +48,7 @@ public class Middens extends AbstractAwakenedCard {
                     },
                     magicNumber, false, c -> c.type == CardType.STATUS || c.type == CardType.CURSE, CardGroup.CardGroupType.DRAW_PILE, CardGroup.CardGroupType.DISCARD_PILE
             ));
-
         }
-
-    //add curse keyword
-    @Override
-    public void initializeDescription() {
-        super.initializeDescription();
-        this.keywords.add(GameDictionary.CURSE.NAMES[0].toLowerCase());
-    }
 
     @Override
     public void upp() {
