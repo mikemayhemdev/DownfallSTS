@@ -34,7 +34,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("MoonTalisman.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("MoonTalisman.png"));
     public AbstractCard card = null;
-    public boolean cardSelected = false;
+    public boolean cardSelected = true;
     private boolean cardRemoved = false;
 
     //Don't forget me.
@@ -142,7 +142,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
     @Override
     public void update() {
         super.update();
-        if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && card.uuid == null) {
+        if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             cardSelected = true;
             card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
 
