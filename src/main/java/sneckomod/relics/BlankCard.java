@@ -37,9 +37,10 @@ public class BlankCard extends CustomRelic {
         ArrayList<AbstractCard> possCardsList = new ArrayList<>(AbstractDungeon.player.drawPile.group);
         possCardsList.removeIf(c -> (c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.type == STATUS));
         AbstractCard card2 = possCardsList.get(AbstractDungeon.relicRng.random(possCardsList.size() - 1)).makeStatEquivalentCopy();
+        // cool code that does nothing because unid cards don't exist anymore
         if (card2 instanceof AbstractUnknownCard) {
             card2 = ((AbstractUnknownCard) card2).generateFromPoolButNotIntoHand();
-        } // Get one of the cards in the unknown pool instead of the Unknown card which is already free to play.
+        }
         flash();
         addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         card2.freeToPlayOnce = true;

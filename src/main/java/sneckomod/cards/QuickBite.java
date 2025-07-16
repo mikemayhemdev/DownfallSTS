@@ -32,26 +32,18 @@ public class QuickBite extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));// 117
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
-        //atb(new MuddleRandomCardAction(1, true));
-        // Create a list to track the cards that are drawn
-        ArrayList<AbstractCard> preHand = new ArrayList<>(p.hand.group); // Store current cards in hand before drawing
-
-        // Draw cards based on magicNumber
+        ArrayList<AbstractCard> preHand = new ArrayList<>(p.hand.group);
         addToBot(new DrawCardAction(magicNumber, new AbstractGameAction() {
             @Override
             public void update() {
                 ArrayList<AbstractCard> drawnCards = new ArrayList<>();
-
-                // Identify which cards were added to the hand
                 for (AbstractCard card : p.hand.group) {
                     if (!preHand.contains(card)) {
-                        drawnCards.add(card); // These are the newly drawn cards
+                        drawnCards.add(card);
                     }
                 }
-
-                // Muddle the newly drawn cards
                 for (AbstractCard card : drawnCards) {
-                    addToBot(new MuddleAction(card)); // Automatically Muddle the drawn card
+                    addToBot(new MuddleAction(card));
                 }
                 isDone = true;
             }

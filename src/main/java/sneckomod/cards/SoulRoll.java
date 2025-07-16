@@ -40,10 +40,6 @@ public class SoulRoll extends AbstractSneckoCard {
         ));
     }
 
-    //   public void upgradeAction(AbstractPlayer p, AbstractMonster m){
-    //       AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-    //   }
-
     public void upgrade() {
         if (!upgraded) {
             upgradeName();

@@ -36,7 +36,7 @@ public class TyphoonPower extends AbstractPower implements CloneablePowerInterfa
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
-        this.amount = amount;  // Store the number of stacks
+        this.amount = amount;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
 

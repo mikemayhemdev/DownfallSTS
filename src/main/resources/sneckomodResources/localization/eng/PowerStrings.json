@@ -177,8 +177,8 @@
   },
   "sneckomod:TrashCanPower": {
     "NAME": "Trash Can",
-    "DESCRIPTIONS": ["At the start of your turn, you may #yExhaust a card.",
-      "At the start of your turn, you may #yExhaust up to #b",
+    "DESCRIPTIONS": ["At the end of your turn, you may #yExhaust a card.",
+      "At the end of your turn, you may #yExhaust up to #b",
       " cards."
   ]
       },

@@ -36,15 +36,10 @@ public class MarkedCard extends AbstractSneckoCard {
         ));
     }
 
-    //   public void upgradeAction(AbstractPlayer p, AbstractMonster m){
-    //       AbstractDungeon.actionManager.addToBottom(new DrawCardAction(p, 1));
-    //   }
-
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-           // upgradeMagicNumber(1);
-                        rawDescription = UPGRADE_DESCRIPTION;
+            rawDescription = UPGRADE_DESCRIPTION;
             this.exhaust = false;
             initializeDescription();
         }

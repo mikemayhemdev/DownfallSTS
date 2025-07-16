@@ -18,7 +18,6 @@ public class LuckyBreak extends AbstractSneckoCard {
     private static final int UPG_BLOCK = 3;
 
     private static final int MAGIC = 1;
-    //  private static final int UPG_MAGIC = 1;
     private static final int BASE_DRAW = 0;
 
     public LuckyBreak() {
@@ -49,7 +48,6 @@ public class LuckyBreak extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(UPG_BLOCK);
-            //  upgradeMagicNumber(UPG_MAGIC);
         }
     }
 }

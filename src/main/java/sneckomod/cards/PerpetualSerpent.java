@@ -23,9 +23,7 @@ public class PerpetualSerpent extends AbstractSneckoCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
-
         if (isOverflowActive(this)) {
             addToBot(new GainEnergyAction(MAGIC));
         }

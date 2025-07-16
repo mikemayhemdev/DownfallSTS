@@ -32,17 +32,14 @@ public class Amass extends AbstractSneckoCard {
     public void applyPowers() {
         int realBaseBlock = this.baseBlock;
 
-        // Calculate total energy cost of cards in hand
         int totalEnergyCost = 0;
         for (AbstractCard card : AbstractDungeon.player.hand.group) {
             totalEnergyCost += card.costForTurn;
         }
 
-        // Increase baseBlock by (total energy cost * magicNumber)
         this.baseBlock += totalEnergyCost * this.magicNumber;
         super.applyPowers();
 
-        // Reset baseBlock to avoid permanent modification
         this.baseBlock = realBaseBlock;
         this.isBlockModified = this.block != this.baseBlock;
     }
@@ -51,17 +48,14 @@ public class Amass extends AbstractSneckoCard {
     public void calculateCardDamage(AbstractMonster mo) {
         int realBaseBlock = this.baseBlock;
 
-        // Calculate total energy cost of cards in hand
         int totalEnergyCost = 0;
         for (AbstractCard card : AbstractDungeon.player.hand.group) {
             totalEnergyCost += card.costForTurn;
         }
 
-        // Increase baseBlock by (total energy cost * magicNumber)
         this.baseBlock += totalEnergyCost * this.magicNumber;
         super.calculateCardDamage(mo);
 
-        // Reset baseBlock to avoid permanent modification
         this.baseBlock = realBaseBlock;
         this.isBlockModified = this.block != this.baseBlock;
     }
@@ -71,9 +65,6 @@ public class Amass extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             upgradeBlock(4);
-         //   upgradeMagicNumber(UPGRADE_MAGIC);
-         //   rawDescription = UPGRADE_DESCRIPTION;
-          //  initializeDescription();
         }
     }
 }

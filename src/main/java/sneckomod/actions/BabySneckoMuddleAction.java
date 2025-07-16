@@ -14,20 +14,17 @@ public class BabySneckoMuddleAction extends AbstractGameAction {
         public void update () {
             ArrayList<AbstractCard> validCards = new ArrayList<>();
 
-            // filter valid cards based on cost and tags
             for (AbstractCard card : AbstractDungeon.player.hand.group) {
                 System.out.println("DEBUG: Baby Snecko checking card: " + card);
                 if ((card.costForTurn <= 0 || card.hasTag(SneckoMod.SNEKPROOF) || card.cost != card.costForTurn) || card.freeToPlay() || card.freeToPlayOnce) {
                     System.out.println("DEBUG: Card found invalid, costs: " + card.costForTurn);
-                    continue; // Skip invalid cards
+                    continue;
                 }
                 System.out.println("DEBUG: Card found valid, costs: " + card.costForTurn);
                 validCards.add(card);
             }
 
-            // if there are valid cards, muddle two at random
             if (!validCards.isEmpty()) {
-                // if there's only one valid card, still muddle it
                 int cardsToPick = Math.min(2, validCards.size());
                 ArrayList<AbstractCard> chosenCards = new ArrayList<>();
 
@@ -35,7 +32,7 @@ public class BabySneckoMuddleAction extends AbstractGameAction {
                     AbstractCard randomCard = validCards.get(AbstractDungeon.relicRng.random(validCards.size() - 1));
                     System.out.println("DEBUG: Decided to Muddle: " + randomCard + " which costs: " + randomCard.costForTurn);
                     AbstractDungeon.actionManager.addToBottom(new MuddleAction(randomCard));
-                    validCards.remove(randomCard); // Avoid selecting the same card again
+                    validCards.remove(randomCard);
                     chosenCards.add(randomCard);
                 }
             }

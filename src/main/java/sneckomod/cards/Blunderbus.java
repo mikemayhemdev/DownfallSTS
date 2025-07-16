@@ -41,8 +41,6 @@ public class Blunderbus extends AbstractSneckoCard {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
         SneckoMod.loadJokeCardImage(this, "Blunderbus.png");
-
-        // Initialize multiDamage for all enemies
         isMultiDamage = true;
     }
 

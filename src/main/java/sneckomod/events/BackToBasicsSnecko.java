@@ -125,7 +125,7 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                     for (AbstractCard c : strikesToRemove) {
                         cardsRemoved.add(c.cardID);
                         int choice;
-                            choice = cardRandomRng.random(0,11);
+                            choice = cardRandomRng.random(0,12);
                             AbstractCard newCard = new Strike_Red();
                             switch (choice) {
                                 case 0: newCard = new Strike_Red(); break;
@@ -143,6 +143,8 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                                 case 10: newCard = new collector.cards.Strike(); break;
 
                                 case 11: newCard = new gremlin.cards.Strike(); break;
+
+                                case 12: newCard = new awakenedOne.cards.Strike(); break;
                             }
 
                         if (c.upgraded) {
@@ -157,7 +159,7 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                         cardsRemoved.add(c.cardID);
 
                         int choice;
-                        choice = cardRandomRng.random(0,11);
+                        choice = cardRandomRng.random(0,12);
                         AbstractCard newCard = new Strike_Red();
                         switch (choice) {
                             case 0: newCard = new Defend_Red(); break;
@@ -175,6 +177,8 @@ public class BackToBasicsSnecko extends AbstractImageEvent {
                             case 10: newCard = new collector.cards.Defend(); break;
 
                             case 11: newCard = new gremlin.cards.Defend(); break;
+
+                            case 12: newCard = new awakenedOne.cards.Defend(); break;
                         }
 
                         if (c.upgraded) {

@@ -54,16 +54,13 @@ public class LastStrike extends AbstractSneckoCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Calculate multiplier for this use
         int uniqueStrikesCount = calculateDamageMultiplier(!hasPlayedOnce);
 
-        // Apply damage based on multiplier
         for (int i = 0; i < uniqueStrikesCount + 1; ++i) {
             this.addToBot(new ExpungeVFXAction(m));
             this.addToBot(new DamageAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
         }
 
-        // Track LastStrike after first play to exclude itself in future calculations
         if (!hasPlayedOnce) {
             uniqueStrikeIDs.add(this.cardID);
             hasPlayedOnce = true;
@@ -75,18 +72,12 @@ public class LastStrike extends AbstractSneckoCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-
-        // Calculate the multiplier without including this card if not yet played
         int uniqueStrikesCount = calculateDamageMultiplier(!hasPlayedOnce);
-
-        // Update the description to show the multiplier dynamically
         updateDescription(uniqueStrikesCount);
     }
 
     private int calculateDamageMultiplier(boolean excludeThisCard) {
         uniqueStrikeIDs.clear();
-
-        // Track unique Strike cards played this combat
         for (AbstractCard card : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
             if (card.hasTag(CardTags.STRIKE)
                     && (!excludeThisCard || card != this)) {
@@ -103,7 +94,7 @@ public class LastStrike extends AbstractSneckoCard {
 
     @Override
     public void onMoveToDiscard() {
-        if(upgraded){
+        if (upgraded) {
             this.rawDescription = cardStrings.UPGRADE_DESCRIPTION;
         }
         else {

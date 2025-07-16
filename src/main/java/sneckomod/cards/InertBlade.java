@@ -38,7 +38,6 @@ public class InertBlade extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
 
-        // Check the card's costForTurn and apply conditional effects
         if (this.costForTurn >= 1) {
             addToBot(new DrawCardAction(p, magicNumber));
         }

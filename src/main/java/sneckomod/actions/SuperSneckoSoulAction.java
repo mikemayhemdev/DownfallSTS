@@ -14,21 +14,18 @@ public class SuperSneckoSoulAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        // Check if the player's hand size is below the maximum hand size
         if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
             addToBot(new DrawCardAction(1, new AbstractGameAction() {
                 @Override
                 public void update() {
-                    // Ensure there is a card in hand to muddle
                     if (AbstractDungeon.player.hand.size() > 0) {
                         AbstractCard drawnCard = AbstractDungeon.player.hand.getTopCard();
-                        addToTop(new MuddleAction(drawnCard)); // Muddle the drawn card
+                        addToTop(new MuddleAction(drawnCard));
                     }
                     isDone = true;
                 }
             }));
         }
-
         isDone = true;
     }
 }

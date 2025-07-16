@@ -50,29 +50,6 @@ public class FountainPower extends AbstractPower implements CloneablePowerInterf
             AbstractMonster randomTarget = getRandomAliveMonster();
             if (randomTarget != null) {
                 this.addToBot(new ApplyPowerAction(randomTarget, this.owner, new VenomDebuff(randomTarget, this.amount), this.amount));
-
-                if (randomTarget.hasPower(LacerateDebuff.POWER_ID) && !randomTarget.hasPower("Artifact")) {
-                    AbstractPower lacerate = randomTarget.getPower(LacerateDebuff.POWER_ID);
-                    if (lacerate != null) {
-                        int additionalVenomAmount = lacerate.amount;
-                        this.addToBot(new ApplyPowerAction(randomTarget, this.owner, new VenomDebuff(randomTarget, additionalVenomAmount), additionalVenomAmount));
-                    }
-                }
-
-                if (AbstractDungeon.player.hasPower(ToxicPersonalityPower.POWER_ID) && !randomTarget.hasPower("Artifact")) {
-                    ToxicPersonalityPower toxicPersonalityPower =
-                            (ToxicPersonalityPower) AbstractDungeon.player.getPower(ToxicPersonalityPower.POWER_ID);
-
-                    if (toxicPersonalityPower != null) {
-                        toxicPersonalityPower.onActivateCall(randomTarget);
-
-                        if (randomTarget.hasPower(LacerateDebuff.POWER_ID) && !randomTarget.hasPower("Artifact")) {
-                            AbstractPower lacerate = randomTarget.getPower(LacerateDebuff.POWER_ID);
-                            int additionalVenomAmount = lacerate.amount;
-                            this.addToBot(new ApplyPowerAction(randomTarget, this.owner, new VenomDebuff(randomTarget, additionalVenomAmount), additionalVenomAmount));
-                        }
-                    }
-                }
             }
         }
     }

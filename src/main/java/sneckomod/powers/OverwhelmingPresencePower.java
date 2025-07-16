@@ -58,29 +58,6 @@ public class OverwhelmingPresencePower extends AbstractPower implements Cloneabl
         }
     }
 
-
-    //
-    //    @Override
-    //    public void onCardDraw(AbstractCard card) {
-    //
-    //        // Detect shuffle by checking if the draw pile size has increased (refilled from discard)
-    //        int currentDrawPileSize = AbstractDungeon.player.drawPile.size();
-    //        int discardPileSize = AbstractDungeon.player.discardPile.size();
-    //
-    //        if (!hasTriggeredThisTurn && currentDrawPileSize > previousDrawPileSize && discardPileSize == 0) {
-    //            // Shuffle detected and effect not yet triggered this turn
-    //            flash();
-    //            addToBot(new GainEnergyAction(amount));
-    //            addToBot(new DrawCardAction(AbstractDungeon.player, amount));
-    //
-    //            // Prevent re-triggering this turn
-    //            hasTriggeredThisTurn = true;
-    //        }
-    //
-    //        // Update the previousDrawPileSize for the next check
-    //        previousDrawPileSize = currentDrawPileSize;
-    //    }
-
     @Override
     public void updateDescription() {
         this.description = (amount == 1)

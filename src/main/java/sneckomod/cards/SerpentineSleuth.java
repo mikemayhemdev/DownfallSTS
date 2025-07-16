@@ -24,7 +24,6 @@ public class SerpentineSleuth extends AbstractSneckoCard implements OnObtainCard
 
     public SerpentineSleuth() {
         super(ID, 4, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        //baseMagicNumber = magicNumber = 1;
         isEthereal = true;
         SneckoMod.loadJokeCardImage(this, "SerpentineSleuth.png");
     }

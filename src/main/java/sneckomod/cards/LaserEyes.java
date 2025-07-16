@@ -39,7 +39,7 @@ public class LaserEyes extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(UPGRADE_DAMAGE); // Increase base damage by 5 (to 20)
+            upgradeDamage(UPGRADE_DAMAGE);
         }
     }
 }

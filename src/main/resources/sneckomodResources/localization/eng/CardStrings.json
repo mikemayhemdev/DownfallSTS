@@ -526,7 +526,7 @@
   },
   "sneckomod:CobraCoil": {
     "NAME": "Cobra Coil",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! expansioncontent:Constricted. NL sneckomod:Gift: Rare Attack."
+    "DESCRIPTION": "Deal !D! damage. NL Enemy takes !M! damage at the end of each of its turns. NL sneckomod:Gift: Rare Attack."
   },
   "sneckomod:Belittle": {
     "NAME": "Belittle",
@@ -601,8 +601,7 @@
   },
   "sneckomod:TrashCan": {
     "NAME": "Trash Can",
-    "DESCRIPTION": "At the start of your turn, you may Exhaust a card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, you may Exhaust a card."
+    "DESCRIPTION": "At the end of your turn, you may Exhaust a card."
   },
   "sneckomod:Lacerate": {
     "NAME": "Lacerate",

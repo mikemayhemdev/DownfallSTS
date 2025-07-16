@@ -26,7 +26,6 @@ public class BlunderGuard extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new BigGunsBlockPower(this.silly));
         applyToSelf(new BigGunsStrengthPower(this.magicNumber));
-       // atb(new GainEnergyAction(1));
     }
 
     public void upgrade() {

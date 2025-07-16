@@ -32,12 +32,13 @@ public class TyphoonPlusPower extends AbstractPower implements CloneablePowerInt
     private static final Texture tex32 = TextureLoader.getTexture(SneckoMod.getModID() + "Resources/images/powers/DemisePlus32.png");
 
     //this is a near identical copy of TyphoonPower, so held together with the same amount of duct tape and prayers
+    //Both of these are less terrible now.
 
     public TyphoonPlusPower(int amount) {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = AbstractDungeon.player;
-        this.amount = amount;  // Store the number of stacks
+        this.amount = amount;
         this.type = PowerType.BUFF;
         this.isTurnBased = true;
 

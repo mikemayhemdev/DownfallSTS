@@ -56,21 +56,6 @@ public class BeyondArmor extends AbstractSneckoCard {
 
         addToBot(new GainBlockAction(p, p, this.block));
         this.addToBot(new DrawOffclassAction(magicNumber));
-//        int count = 0;
-//
-//        // fully loaded code
-//        CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-//        tmp.group.addAll(AbstractDungeon.player.drawPile.group.stream()
-//                .filter(c -> c.color != this.color)
-//                .limit(magicNumber)
-//                .collect(Collectors.toList()));
-//
-//        for (AbstractCard c : tmp.group) {
-//            if (Wiz.hand().size() < BaseMod.MAX_HAND_SIZE+1) {
-//                addToBot(new FetchAction(Wiz.p().drawPile, card -> card == c));
-//                count++;
-//                if (count >= magicNumber) break;
-//            }
     }
 
     @Override
@@ -85,7 +70,7 @@ public class BeyondArmor extends AbstractSneckoCard {
 
             if (!cardListDuplicate(cardsToReward, newCard)) {
                 SOFTLOCK = 0;
-                cardsToReward.add(newCard.makeCopy()); // Use makeCopy() to ensure a new instance
+                cardsToReward.add(newCard.makeCopy());
             }
         }
         SneckoMod.addGift(cardsToReward);

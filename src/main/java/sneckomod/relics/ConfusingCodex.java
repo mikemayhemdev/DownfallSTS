@@ -27,7 +27,6 @@ public class ConfusingCodex extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
-
     //Variables
     public static final int AMOUNT = 3;
 

@@ -45,7 +45,6 @@ public class OtherworldlySlash extends AbstractSneckoCard implements OnObtainCar
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Deal initial damage
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.SLASH_HEAVY);
         boolean playedOffClassCard = AbstractDungeon.actionManager.cardsPlayedThisTurn.stream()
                 .anyMatch(card -> card.color != this.color);
