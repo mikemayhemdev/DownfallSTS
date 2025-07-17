@@ -37,15 +37,16 @@ public class InertBlade extends AbstractSneckoCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_HEAVY));
-
-        if (this.costForTurn >= 1) {
-            addToBot(new DrawCardAction(p, magicNumber));
-        }
-        if (this.costForTurn >= 2) {
-            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
-        }
-        if (this.costForTurn >= 3) {
-            addToBot(new GainEnergyAction(energypayout));
+        if (!this.freeToPlay() && !this.freeToPlayOnce) {
+            if (this.costForTurn >= 1) {
+                addToBot(new DrawCardAction(p, magicNumber));
+            }
+            if (this.costForTurn >= 2) {
+                addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber), magicNumber));
+            }
+            if (this.costForTurn >= 3) {
+                addToBot(new GainEnergyAction(energypayout));
+            }
         }
     }
 
