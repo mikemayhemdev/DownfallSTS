@@ -19,11 +19,14 @@ import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import hermit.util.TextureLoader;
 
 import java.util.ArrayList;
 
@@ -75,12 +78,28 @@ public abstract class AbstractAwakenedCard extends CustomCard {
 
     @Override
     protected Texture getPortraitImage() {
-        if (textureImg.contains("ui/missing.png")) {
-            return CardArtRoller.getPortraitTexture(this);
-        } else {
-            return super.getPortraitImage();
+        if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {
+            if (this.textureImg == null) {
+                return null;
+            } else {
+                if (betaArtPath != null) {
+                    int endingIndex = betaArtPath.lastIndexOf(".");
+                    String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
+                    newPath = "awakenedResources/images/betacards/" + newPath;
+                    FileHandle h = Gdx.files.internal(newPath);
+                    if (!h.exists()) {
+                        newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
+                        newPath = "awakenedResources/images/programmerart/" + newPath;
+                    }
+                    Texture portraitTexture;
+                    portraitTexture = TextureLoader.getTexture(newPath);
+                    return portraitTexture;
+                }
+            }
         }
+        return super.getPortraitImage();
     }
+
 
     public static String getCardTextureString(final String cardName, final CardType cardType) {
         String textureString = "awakenedResources/images/cards/" + cardName + ".png";
