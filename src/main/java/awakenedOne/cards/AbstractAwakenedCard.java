@@ -84,6 +84,18 @@ public abstract class AbstractAwakenedCard extends CustomCard {
 
     public static String getCardTextureString(final String cardName, final CardType cardType) {
         String textureString = "awakenedResources/images/cards/" + cardName + ".png";
+        FileHandle h = Gdx.files.internal(textureString);
+        if (!h.exists()) {
+            textureString = "awakenedResources/images/cards/joke/" + cardName + ".png";
+            h = Gdx.files.internal(textureString);
+        }
+        if (!h.exists()) {
+            textureString = "awakenedResources/images/cards/programmerart/" + cardName + ".png";
+            h = Gdx.files.internal(textureString);
+        }
+        if (!h.exists()) {
+            textureString = "awakenedResources/images/ui/missing.png";
+        }
         return textureString;
     }
 
