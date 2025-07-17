@@ -19,13 +19,10 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hermit.util.TextureLoader;
-
-import java.util.ArrayList;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.*;
@@ -75,8 +72,9 @@ public abstract class AbstractAwakenedCard extends CustomCard {
                 if (betaArtPath != null) {
                     int endingIndex = betaArtPath.lastIndexOf(".");
                     String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
-                    newPath = "awakenedResources/images/betacards/" + newPath;
+                    newPath = "awakenedResources/images/joke/" + newPath;
                     System.out.println("Finding texture: " + newPath);
+                    FileHandle h = Gdx.files.internal(newPath);
                     Texture portraitTexture;
                     portraitTexture = TextureLoader.getTexture(newPath);
                     return portraitTexture;

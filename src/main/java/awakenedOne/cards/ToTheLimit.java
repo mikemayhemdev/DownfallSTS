@@ -19,7 +19,7 @@ public class ToTheLimit extends AbstractAwakenedCard {
         baseMagicNumber = magicNumber = 2;
         this.exhaust = true;
         this.tags.add(AwakenedOneMod.CHANT);
-        loadJokeCardImage(this, makeBetaCardPath(ToTheLimit.class.getSimpleName() + "ToTheLimit.png"));
+        loadJokeCardImage(this, makeBetaCardPath(ToTheLimit.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
