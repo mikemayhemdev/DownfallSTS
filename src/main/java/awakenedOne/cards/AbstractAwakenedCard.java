@@ -22,7 +22,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hermit.util.TextureLoader;
 
@@ -77,11 +76,14 @@ public abstract class AbstractAwakenedCard extends CustomCard {
                     int endingIndex = betaArtPath.lastIndexOf(".");
                     String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
                     newPath = "awakenedResources/images/betacards/" + newPath;
-                    FileHandle h = Gdx.files.internal(newPath);
-                    if (!h.exists()) {
+                    System.out.println("Finding texture: " + newPath);
+
+                    if ((!Gdx.files.internal(newPath).exists())) {
                         newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
                         newPath = "awakenedResources/images/programmerart/" + newPath;
+                        System.out.println("Finding texture: " + newPath);
                     }
+
                     Texture portraitTexture;
                     portraitTexture = TextureLoader.getTexture(newPath);
                     return portraitTexture;
@@ -90,7 +92,6 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         }
         return super.getPortraitImage();
     }
-
 
     public static String getCardTextureString(final String cardName, final CardType cardType) {
         String textureString = "awakenedResources/images/cards/" + cardName + ".png";
@@ -222,16 +223,8 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         atb(new DamageAction(m, new DamageInfo(AbstractDungeon.player, damage, damageTypeForTurn), fx));
     }
 
-    protected void dmgTop(AbstractMonster m, AbstractGameAction.AttackEffect fx) {
-        att(new DamageAction(m, new DamageInfo(AbstractDungeon.player, damage, damageTypeForTurn), fx));
-    }
-
     protected void allDmg(AbstractGameAction.AttackEffect fx) {
         atb(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
-    }
-
-    protected void allDmgTop(AbstractGameAction.AttackEffect fx) {
-        att(new DamageAllEnemiesAction(AbstractDungeon.player, multiDamage, damageTypeForTurn, fx));
     }
 
     protected void altDmg(AbstractMonster m, AbstractGameAction.AttackEffect fx) {
@@ -259,14 +252,9 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         }
     }
 
-    public ArrayList<AbstractMonster> monsterList() {
-        return AbstractDungeon.getMonsters().monsters;
-    }
-
     @Override
     public AbstractCard makeStatEquivalentCopy() {
         AbstractCard original = super.makeStatEquivalentCopy();
-
         ((AbstractAwakenedCard)original).trig_chant = this.trig_chant;
         if (this.trig_chant) {
             original.tags.add(ACTIVECHANT);
@@ -279,10 +267,8 @@ public abstract class AbstractAwakenedCard extends CustomCard {
             this.trig_chant = true;
             AwakenedTextHelper.colorCombos(this, false);
         }
-
         return (trig_chant);
     }
-
 
     //Whenever a Chant effect activates, do this!!!
     public void checkOnChant() {
@@ -302,47 +288,7 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
             AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
         }
-//        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
-//            if (c instanceof AbstractAwakenedCard) {
-//                ((AbstractAwakenedCard) c).onChant();
-//            }
-//        }
-//
-//        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-//            if (c instanceof AbstractAwakenedCard) {
-//                ((AbstractAwakenedCard) c).onChant();
-//            }
-//        }
-//
-//        for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
-//            if (c instanceof AbstractAwakenedCard) {
-//                ((AbstractAwakenedCard) c).onChant();
-//            }
-//        }
-//
-//        for (AbstractCard c : AbstractDungeon.player.limbo.group) {
-//            if (c instanceof AbstractAwakenedCard) {
-//                ((AbstractAwakenedCard) c).onChant();
-//            }
-//        }
-
-//        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-//            if (c instanceof AbstractAwakenedCard) {
-//                ((AbstractAwakenedCard) c).onChant();
-//            }
-//        }
         AwakenedTextHelper.colorCombos(this, false);
-    }
-
-
-    //Hatchery
-    public void onChant() {
-    }
-
-    protected AbstractCard cardForGen(String ID) {
-        AbstractCard q = CardLibrary.getCard(ID).makeCopy();
-        if (upgraded) q.upgrade();
-        return q;
     }
 
     public void update() {

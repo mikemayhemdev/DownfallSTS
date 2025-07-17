@@ -150,14 +150,6 @@ public class AwakenedOneMod implements
         FileHandle h = Gdx.files.internal(textureString);
         if (!h.exists()) {
             textureString = "awakenedResources/images/cards/programmerart/" + resourcePath;
-            h = Gdx.files.internal(textureString);
-        }
-        if (!h.exists()) {
-            textureString = "awakenedResources/images/cards/" + resourcePath;
-            h = Gdx.files.internal(textureString);
-        }
-        if (!h.exists()) {
-            textureString = "awakenedResources/images/ui/missing.png";
         }
         return textureString;
     }
@@ -321,14 +313,9 @@ public class AwakenedOneMod implements
     // CONTENT STUFF
 
     //Hex Stuff
-    //the int begone is the amount of Hex being applied, m is the creature being Hexxed, and source is the
-    //source of the Hex or if it's the player directly applying Hex. This is helpful for mostly Snecko relevant things.
     public static void HexCurse(int begone, AbstractCreature m, AbstractCreature source) {
-        //if (!(m.hasPower(UltimateHexDebuff.POWER_ID))) {
         atb(new ApplyPowerAction(m, AbstractDungeon.player, new EnemyHexedPower(m, begone), begone));
-        // }
     }
-
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
@@ -354,26 +341,4 @@ public class AwakenedOneMod implements
     public void receivePostPlayerUpdate() {
         OrbitingSpells.update();
     }
-
-    // What button? Button? There is no button, I've never heard of a button in my entire life.
-    //private static AwakenButton becomeAwesomeButton;
-
-//    @Override
-//    public void receiveStartGame() {
-//      //  becomeAwesomeButton = new AwakenButton();
-//    }
-//
-//    public static void renderCombatUiElements(SpriteBatch sb) {
-//        if (Wiz.isInCombat() && AbstractDungeon.player.chosenClass.equals(AwakenedOneChar.Enums.AWAKENED_ONE)) {
-//           // becomeAwesomeButton.render(sb);
-//        }
-//    }
-//
-//    @Override
-//    public void receivePostDungeonUpdate() {
-//        if (Wiz.isInCombat() && AbstractDungeon.player.chosenClass.equals(AwakenedOneChar.Enums.AWAKENED_ONE)) {
-//           // becomeAwesomeButton.update();
-//        }
-//    }
-
 }
