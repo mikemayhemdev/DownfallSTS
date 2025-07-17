@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
-import static awakenedOne.ui.OrbitingSpells.updateTimeOffsets;
 import static awakenedOne.util.Wiz.atb;
 
 public class Deathwish extends AbstractAwakenedCard {
@@ -30,12 +29,11 @@ public class Deathwish extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard card = new DeathCoil();
-        spellCards.add(new OrbitingSpells.CardRenderInfo(card));
-        updateTimeOffsets();
+        spellCards.add(card);
         atb(new ConjureAction(false, false, true, new DeathCoil()));
     }
 
     public void upp() {
-       isInnate = true;
+        isInnate = true;
     }
 }

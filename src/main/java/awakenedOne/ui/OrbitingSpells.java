@@ -3,33 +3,62 @@ package awakenedOne.ui;
 import awakenedOne.cards.AphoticFount;
 import awakenedOne.cards.Caw;
 import awakenedOne.cards.Deathwish;
+import awakenedOne.cards.Grimoire;
 import awakenedOne.cards.tokens.spells.*;
 import awakenedOne.relics.ZenerDeck;
+import awakenedOne.util.TexLoader;
 import awakenedOne.util.Wiz;
-import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.Color;
+import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
+import com.megacrit.cardcrawl.helpers.FontHelper;
+import com.megacrit.cardcrawl.helpers.Hitbox;
+import com.megacrit.cardcrawl.helpers.TipHelper;
+import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+
+import static awakenedOne.AwakenedOneMod.makeID;
 
 public class OrbitingSpells {
 
-    private static final float X_DIST = 300F;
-    private static final float Y_DIST = 80F;
-    private static final float DIST_BETWEEN_CARDS = MathUtils.PI2;
-    private static final float TIME_MULT = MathUtils.PI2 * 0.075F;
-    private static final float SPELL_SIZE = 0.5F;
-    private static final float SPELL_SIZE_MOD = 0.166F;
-    private static final float SPELL_TRANSPARENCY = 0.5F;
+    public static final float POSITION_X = 20F * Settings.scale;
+    public static final float POSITION_Y = 300F * Settings.scale;
+
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Spellbook"));
 
     private static final ArrayList<String> spells = new ArrayList<>();
 
-    public static ArrayList<CardRenderInfo> spellCards = new ArrayList<>();
-    public static float time;
+    public static ArrayList<AbstractCard> spellCards = new ArrayList<>();
+    public static ArrayList<Hitbox> boxes = new ArrayList<>();
+    private static HashMap<String, Texture> cardIcons = new HashMap<>();
+    private static int hoveredCard = -1;
+
+    static {
+        for (int i = 0; i < 10; i++) {
+            boxes.add(new Hitbox(POSITION_X, Settings.HEIGHT - (POSITION_Y + (i * (70F * Settings.scale))) - 35, 200F * Settings.scale, 45F * Settings.scale));
+        }
+
+        cardIcons.put(BurningStudy.ID, TexLoader.getTexture("awakenedResources/images/ui/BurningStudy.png"));
+        cardIcons.put(Cryostasis.ID, TexLoader.getTexture("awakenedResources/images/ui/Cryostasis.png"));
+        cardIcons.put(Darkleech.ID, TexLoader.getTexture("awakenedResources/images/ui/Darkleech.png"));
+        cardIcons.put(Thunderbolt.ID, TexLoader.getTexture("awakenedResources/images/ui/Thunderbolt.png"));
+        cardIcons.put(DeathCoil.ID, TexLoader.getTexture("awakenedResources/images/ui/Deathcoil.png"));
+        cardIcons.put(AphoticShield.ID, TexLoader.getTexture("awakenedResources/images/ui/AphoticShield.png"));
+        cardIcons.put(ESPSpell.ID, TexLoader.getTexture("awakenedResources/images/ui/ESPSpell.png"));
+        cardIcons.put(Grimoire.ID, TexLoader.getTexture("awakenedResources/images/ui/Grimoire.png"));
+    }
+
+    private static Texture getIconForCard(AbstractCard tar) {
+        return cardIcons.getOrDefault(tar.cardID, TexLoader.getTexture("awakenedResources/images/ui/defaultSpell.png"));
+    }
 
     static {
         spells.add(BurningStudy.ID);
@@ -45,12 +74,12 @@ public class OrbitingSpells {
         }
 
         int count = (int) AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(q -> q instanceof Deathwish).count();
-        for(int i=0; i<count; i++) {
+        for (int i = 0; i < count; i++) {
             addSpellCard(CardLibrary.getCard(DeathCoil.ID).makeCopy());
         }
 
         int count2 = (int) AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(q -> q instanceof AphoticFount).count();
-        for(int i=0; i<count2; i++) {
+        for (int i = 0; i < count2; i++) {
             addSpellCard(CardLibrary.getCard(AphoticShield.ID).makeCopy());
         }
 
@@ -61,25 +90,22 @@ public class OrbitingSpells {
     }
 
     public static void upgradeCaws(int amount) {
-        for (OrbitingSpells.CardRenderInfo c : OrbitingSpells.spellCards) {
-            if (c.card instanceof Caw) {
-                c.card.baseDamage += amount;
-                c.card.applyPowers();
+        for (AbstractCard c : OrbitingSpells.spellCards) {
+            if (c instanceof Caw) {
+                c.baseDamage += amount;
+                c.applyPowers();
             }
         }
     }
 
-
-
     public static void upgradeall() {
-        for (CardRenderInfo c : spellCards) {
-            c.card.upgrade();
+        for (AbstractCard c : spellCards) {
+            c.upgrade();
         }
     }
 
     public static void empty() {
         spellCards.clear();
-        update();
     }
 
     public static void addSpellCard(AbstractCard card) {
@@ -89,24 +115,16 @@ public class OrbitingSpells {
         if (Wiz.isAwakened()) {
             card.upgrade();
         }
-        spellCards.add(new CardRenderInfo(card));
-        updateTimeOffsets();
+        spellCards.add(card);
     }
 
     public static boolean removeSpellCard(AbstractCard card) {
         int idx = getIndexOfCard(card);
         if (idx != -1) {
             spellCards.remove(getIndexOfCard(card));
-            updateTimeOffsets();
             return true;
         }
         return false;
-    }
-
-    public static void updateTimeOffsets() {
-        for (int i = 0; i < spellCards.size(); i++) {
-            spellCards.get(i).timeOffset = ((float) i / (float) spellCards.size()) * DIST_BETWEEN_CARDS;
-        }
     }
 
     public static void atBattleStart() {
@@ -114,60 +132,49 @@ public class OrbitingSpells {
     }
 
     public static void update() {
-        time += Gdx.graphics.getDeltaTime() * TIME_MULT;
-        for (CardRenderInfo c : spellCards) {
-            c.updatePositions();
-            c.card.update();
-        }
-    }
-
-    public static void prePlayerRender(SpriteBatch sb) {
-        for (CardRenderInfo c : spellCards) {
-            if (c.renderBehind) {
-                c.card.render(sb);
+        hoveredCard = -1;
+        for (int i = 0; i < boxes.size(); i++) {
+            boxes.get(i).update();
+            if (boxes.get(i).hovered) {
+                if (i < spellCards.size()) {
+                    hoveredCard = i;
+                }
             }
         }
     }
 
     public static void postPlayerRender(SpriteBatch sb) {
-        for (CardRenderInfo c : spellCards) {
-            if (!c.renderBehind) {
-                c.card.render(sb);
-            }
+        sb.setColor(Color.WHITE.cpy());
+        FontHelper.renderFontLeftTopAligned(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], POSITION_X, Settings.HEIGHT - POSITION_Y + (50 * Settings.scale), Settings.GOLD_COLOR);
+        int xr = 0;
+
+        for (AbstractCard s : spellCards) {
+            sb.draw(getIconForCard(s), boxes.get(xr).x, boxes.get(xr).y);
+            float dist = FontHelper.getWidth(FontHelper.tipHeaderFont, s.name, 1.0F);
+            FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, s.name, boxes.get(xr).x + 15F, boxes.get(xr).y + 10F, Color.WHITE.cpy());
+            TipHelper.renderTipEnergy(sb, AbstractCard.orb_red, boxes.get(xr).x + dist + 25.5F, boxes.get(xr).y);
+            FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, String.valueOf(s.cost), boxes.get(xr).x + dist + 35F, boxes.get(xr).y + 10F, Color.WHITE.cpy());
+            xr++;
+        }
+
+        for (Hitbox h : boxes) {
+            h.render(sb);
+        }
+
+        if (hoveredCard != -1) {
+            AbstractCard tar = spellCards.get(hoveredCard);
+            tar.target_x = tar.current_x = POSITION_X + 300;
+            tar.target_y = tar.current_y = Settings.HEIGHT - (POSITION_Y + 100);
+            spellCards.get(hoveredCard).render(sb);
         }
     }
 
     public static int getIndexOfCard(AbstractCard card) {
         for (int i = 0; i < spellCards.size(); i++) {
-            if (spellCards.get(i).card.cardID.equals(card.cardID)) {
+            if (spellCards.get(i).cardID.equals(card.cardID)) {
                 return i;
             }
         }
         return -1;
-    }
-
-    public static class CardRenderInfo {
-        public boolean renderBehind;
-        private float timeOffset;
-        public AbstractCard card;
-
-        public CardRenderInfo(AbstractCard card) {
-            card.targetTransparency = card.transparency = SPELL_TRANSPARENCY;
-            this.card = card;
-        }
-
-        public void updatePositions() {
-            card.target_x = (float) (X_DIST * Math.cos(time + timeOffset)) + (AbstractDungeon.player.drawX + (AbstractDungeon.player.hb.width / 5));
-            card.target_y = (float) (Y_DIST * Math.sin(time + timeOffset)) + (AbstractDungeon.player.drawY + (AbstractDungeon.player.hb.height / 2));
-            boolean isBehind = ((time + timeOffset) / MathUtils.PI) % 2 < 1;
-            renderBehind = isBehind;
-            float adjustedTime1 = (time + timeOffset) % MathUtils.PI;
-            float adjustedTime2 = ((time + timeOffset) % (MathUtils.PI / 2));
-            if (adjustedTime1 / (MathUtils.PI / 2) >= 1) {
-                adjustedTime2 = (MathUtils.PI / 2) - adjustedTime2;
-            }
-            float sizeMod = ((adjustedTime2 / (MathUtils.PI / 2)) * SPELL_SIZE_MOD);
-            card.targetDrawScale = SPELL_SIZE + (sizeMod * (isBehind ? -1 : 1));
-        }
     }
 }
