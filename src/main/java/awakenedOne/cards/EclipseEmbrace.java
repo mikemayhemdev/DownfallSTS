@@ -8,13 +8,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.applyToSelf;
 
-public class Invasion extends AbstractAwakenedCard {
-    public final static String ID = makeID(Invasion.class.getSimpleName());
+public class EclipseEmbrace extends AbstractAwakenedCard {
+    public final static String ID = makeID(EclipseEmbrace.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
-    public Invasion() {
+    public EclipseEmbrace() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        loadJokeCardImage(this, makeBetaCardPath(Invasion.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(EclipseEmbrace.class.getSimpleName() + ".png"));
         isEthereal = true;
     }
 

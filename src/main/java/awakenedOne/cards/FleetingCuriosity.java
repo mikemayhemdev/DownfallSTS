@@ -9,15 +9,15 @@ import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.applyToSelf;
 import static awakenedOne.util.Wiz.applyToSelfTop;
 
-public class CawCaw extends AbstractAwakenedCard {
-    public final static String ID = makeID(CawCaw.class.getSimpleName());
+public class FleetingCuriosity extends AbstractAwakenedCard {
+    public final static String ID = makeID(FleetingCuriosity.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , 2, 1
 
-    public CawCaw() {
+    public FleetingCuriosity() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         baseSecondMagic = secondMagic = 2;
-        loadJokeCardImage(this, makeBetaCardPath(CawCaw.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(FleetingCuriosity.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

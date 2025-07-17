@@ -149,11 +149,11 @@ public class AwakenedOneMod implements
         String textureString = "awakenedResources/images/joke/" + resourcePath;
         FileHandle h = Gdx.files.internal(textureString);
         if (!h.exists()) {
-            textureString = "awakenedResources/images/cards/" + resourcePath;
+            textureString = "awakenedResources/images/cards/programmerart/" + resourcePath;
             h = Gdx.files.internal(textureString);
         }
         if (!h.exists()) {
-            textureString = "awakenedResources/images/cards/programmerart/" + resourcePath;
+            textureString = "awakenedResources/images/cards/" + resourcePath;
             h = Gdx.files.internal(textureString);
         }
         if (!h.exists()) {
@@ -261,7 +261,7 @@ public class AwakenedOneMod implements
         //add awakened one relics here
         BaseMod.addRelicToCustomPool(new RippedDoll(), AwakenedOneChar.Enums.AWAKENED_BLUE); //starter
         BaseMod.addRelicToCustomPool(new ShreddedDoll(), AwakenedOneChar.Enums.AWAKENED_BLUE); //starter+
-        BaseMod.addRelicToCustomPool(new KTRibbon(), AwakenedOneChar.Enums.AWAKENED_BLUE); //boss misc
+        BaseMod.addRelicToCustomPool(new WhiteRibbon(), AwakenedOneChar.Enums.AWAKENED_BLUE); //boss misc
         BaseMod.addRelicToCustomPool(new TomeOfPortalmancy(), AwakenedOneChar.Enums.AWAKENED_BLUE); //common
         BaseMod.addRelicToCustomPool(new ZenerDeck(), AwakenedOneChar.Enums.AWAKENED_BLUE); //uncommon
         BaseMod.addRelicToCustomPool(new AbyssBlade(), AwakenedOneChar.Enums.AWAKENED_BLUE); //boss energy lose [e] refund

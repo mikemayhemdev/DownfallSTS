@@ -13,17 +13,17 @@ import hermit.util.Wiz;
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
 
-public class DrawingDead extends AbstractAwakenedCard {
-    public final static String ID = makeID(DrawingDead.class.getSimpleName());
+public class Altar extends AbstractAwakenedCard {
+    public final static String ID = makeID(Altar.class.getSimpleName());
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
     public static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
 
-    public DrawingDead() {
+    public Altar() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 6;
         this.tags.add(AwakenedOneMod.DELVE);
         selfRetain = true;
-        loadJokeCardImage(this, makeBetaCardPath(DrawingDead.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Altar.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

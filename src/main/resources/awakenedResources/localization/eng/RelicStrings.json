@@ -14,7 +14,7 @@
       " [REMOVE_SPACE].[] NL At the start of your turn, #yawakened:Conjure [REMOVE_SPACE]. NL The first time you refresh your Spells each combat, gain #b1 #yRitual [REMOVE_SPACE]."
     ]
   },
-  "awakened:KTRibbon": {
+  "awakened:WhiteRibbon": {
     "NAME": "White Ribbon",
     "FLAVOR": "Gives power to spoken words even without proper ritual.",
     "DESCRIPTIONS": [

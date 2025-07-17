@@ -11,15 +11,15 @@ import static awakenedOne.ui.OrbitingSpells.spellCards;
 import static awakenedOne.ui.OrbitingSpells.updateTimeOffsets;
 import static awakenedOne.util.Wiz.atb;
 
-public class Vision extends AbstractAwakenedCard {
-    public final static String ID = makeID(Vision.class.getSimpleName());
+public class DoubleVision extends AbstractAwakenedCard {
+    public final static String ID = makeID(DoubleVision.class.getSimpleName());
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
-    public Vision() {
+    public DoubleVision() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
         baseMagicNumber = magicNumber = 1;
-        loadJokeCardImage(this, makeBetaCardPath("Vision.png"));
+        loadJokeCardImage(this, makeBetaCardPath(DoubleVision.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

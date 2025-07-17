@@ -8,14 +8,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.applyToSelf;
 
-public class Librarian extends AbstractAwakenedCard {
-    public final static String ID = makeID(Librarian.class.getSimpleName());
+public class GrandMagus extends AbstractAwakenedCard {
+    public final static String ID = makeID(GrandMagus.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , , 
 
-    public Librarian() {
+    public GrandMagus() {
         super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.tags.add(AwakenedOneMod.DELVE);
-        loadJokeCardImage(this, makeBetaCardPath(Librarian.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(GrandMagus.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -11,16 +11,16 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
 
-public class HeavyStrike extends AbstractAwakenedCard {
-    public final static String ID = makeID(HeavyStrike.class.getSimpleName());
+public class Carrionmaker extends AbstractAwakenedCard {
+    public final static String ID = makeID(Carrionmaker.class.getSimpleName());
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1
 
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
     //carrionmaker
-    public HeavyStrike() {
+    public Carrionmaker() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseDamage = 8;
-        loadJokeCardImage(this, makeBetaCardPath(HeavyStrike.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Carrionmaker.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

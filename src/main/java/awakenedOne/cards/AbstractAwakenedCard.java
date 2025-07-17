@@ -6,7 +6,7 @@ import awakenedOne.AwakenedTextHelper;
 import awakenedOne.powers.RisingChantPower;
 import awakenedOne.relics.CursedBlessing;
 import awakenedOne.relics.EyeOfTheOccult;
-import awakenedOne.relics.KTRibbon;
+import awakenedOne.relics.WhiteRibbon;
 import awakenedOne.util.CardArtRoller;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
@@ -286,8 +286,8 @@ public abstract class AbstractAwakenedCard extends CustomCard {
             this.initializeDescription();
         }
 
-        if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-           AbstractDungeon.player.getRelic(KTRibbon.ID).onTrigger();
+        if (AbstractDungeon.player.hasRelic(WhiteRibbon.ID)) {
+           AbstractDungeon.player.getRelic(WhiteRibbon.ID).onTrigger();
         }
         if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
             AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();

@@ -1,34 +1,26 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.patches.MoonTalismanPatch;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
-import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
 
-public class KTRibbon extends CustomRelic {
-
-    //White Ribbon
+public class WhiteRibbon extends CustomRelic {
 
     private static final int AMOUNT = 4;
 
-    public static final String ID = AwakenedOneMod.makeID("KTRibbon");
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("KTRibbon.png"));
-    private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("KTRibbon.png"));
+    public static final String ID = AwakenedOneMod.makeID("WhiteRibbon");
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("WhiteRibbon.png"));
+    private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("WhiteRibbon.png"));
 
-    public KTRibbon() {
+    public WhiteRibbon() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
     }
 

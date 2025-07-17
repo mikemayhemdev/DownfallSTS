@@ -10,18 +10,18 @@ import com.megacrit.cardcrawl.vfx.combat.PressurePointEffect;
 
 import static awakenedOne.AwakenedOneMod.*;
 
-public class Retaliation extends AbstractAwakenedCard {
-    public final static String ID = makeID(Retaliation.class.getSimpleName());
+public class ManaburnCard extends AbstractAwakenedCard {
+    public final static String ID = makeID(ManaburnCard.class.getSimpleName());
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
     //Manaburn
 
     //rework to pressure points
 
-    public Retaliation() {
+    public ManaburnCard() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 6;
-        loadJokeCardImage(this, makeBetaCardPath(Retaliation.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(ManaburnCard.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

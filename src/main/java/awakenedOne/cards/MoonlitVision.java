@@ -8,15 +8,15 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.applyToSelfTop;
 
-public class TheEmpress extends AbstractAwakenedCard {
-    public final static String ID = makeID(TheEmpress.class.getSimpleName());
+public class MoonlitVision extends AbstractAwakenedCard {
+    public final static String ID = makeID(MoonlitVision.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
-    public TheEmpress() {
+    public MoonlitVision() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.tags.add(AwakenedOneMod.DELVE);
         this.isEthereal = true;
-        loadJokeCardImage(this, makeBetaCardPath(TheEmpress.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(MoonlitVision.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

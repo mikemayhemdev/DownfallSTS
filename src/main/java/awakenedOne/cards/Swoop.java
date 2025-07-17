@@ -10,14 +10,14 @@ import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
 
 
-public class LastDitchEffort extends AbstractAwakenedCard {
-    public final static String ID = AwakenedOneMod.makeID(LastDitchEffort.class.getSimpleName());
+public class Swoop extends AbstractAwakenedCard {
+    public final static String ID = AwakenedOneMod.makeID(Swoop.class.getSimpleName());
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
-    public LastDitchEffort() {
+    public Swoop() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 5;
-        loadJokeCardImage(this, makeBetaCardPath(LastDitchEffort.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Swoop.class.getSimpleName() + ".png"));
     }
 
 

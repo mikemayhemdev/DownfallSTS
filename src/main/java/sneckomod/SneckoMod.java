@@ -7,7 +7,6 @@ import automaton.cards.Invalidate;
 import automaton.cards.Undervolt;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.cards.*;
-import awakenedOne.powers.FeathersinksPower;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
@@ -528,11 +527,10 @@ public class SneckoMod implements
                 c.cardID.equals(AceOfWands.ID) ||
 
                 //Awakened One Cards
-                c.cardID.equals(Retaliation.ID) ||
+                c.cardID.equals(ManaburnCard.ID) ||
                 c.cardID.equals(SingularityShield.ID) ||
                 c.cardID.equals(Deathwish.ID) ||
-                c.cardID.equals(IntoNothing.ID) ||
-                c.cardID.equals(FadeOut.ID) ||
+                c.cardID.equals(FromTheAbyss.ID) ||
                 c.cardID.equals(MirePit.ID) ||
                 c.cardID.equals(Sludge.ID) ||
                 c.cardID.equals(SongOfSorrow.ID) ||
@@ -568,8 +566,8 @@ public class SneckoMod implements
                         c.cardID.equals(GremlinMeal.ID) ||
                         c.cardID.equals(FollowThrough.ID) ||
                         c.cardID.equals(FeatherVeil.ID) ||
-                        c.cardID.equals(CawCaw.ID) ||
-                        c.cardID.equals(FadeOut.ID) ||
+                        c.cardID.equals(FleetingCuriosity.ID) ||
+                        c.cardID.equals(DemonGlyph.ID) ||
                         c.cardID.equals(SacrilegiousStrike.ID) ||
                         c.cardID.equals(Unleash.ID) ||
 

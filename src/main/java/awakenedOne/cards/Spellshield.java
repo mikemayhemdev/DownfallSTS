@@ -7,16 +7,16 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.applyToSelf;
 
-public class InResponse extends AbstractAwakenedCard {
-    public final static String ID = makeID(InResponse.class.getSimpleName());
+public class Spellshield extends AbstractAwakenedCard {
+    public final static String ID = makeID(Spellshield.class.getSimpleName());
     // intellij stuff power, self, uncommon, , , , , 3, 1
 
-    public InResponse() {
+    public Spellshield() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         //baseSecondMagic = secondMagic = 2;
         this.isEthereal = true;
         baseMagicNumber = magicNumber = 2;
-        loadJokeCardImage(this, makeBetaCardPath(InResponse.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Spellshield.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

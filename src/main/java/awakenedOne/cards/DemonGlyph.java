@@ -11,16 +11,16 @@ import com.megacrit.cardcrawl.vfx.combat.FastingEffect;
 
 import static awakenedOne.AwakenedOneMod.*;
 
-public class FadeOut extends AbstractAwakenedCard {
-    public final static String ID = makeID(FadeOut.class.getSimpleName());
+public class DemonGlyph extends AbstractAwakenedCard {
+    public final static String ID = makeID(DemonGlyph.class.getSimpleName());
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
-    public FadeOut() {
+    public DemonGlyph() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         //baseSecondMagic = secondMagic = 3;
         this.isEthereal = true;
-        loadJokeCardImage(this, makeBetaCardPath(FadeOut.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(DemonGlyph.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

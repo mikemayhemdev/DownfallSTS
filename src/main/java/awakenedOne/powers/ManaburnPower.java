@@ -1,6 +1,6 @@
 package awakenedOne.powers;
 
-import awakenedOne.cards.Retaliation;
+import awakenedOne.cards.ManaburnCard;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -28,7 +28,7 @@ public class ManaburnPower extends AbstractAwakenedPower implements OnLoseEnergy
 
     @Override
     public void triggerMarks(AbstractCard card) {
-        if (card.cardID.equals(Retaliation.ID)) {
+        if (card.cardID.equals(ManaburnCard.ID)) {
             this.addToBot(new LoseHPAction(this.owner, (AbstractCreature)null, this.amount, EnumPatch.HERMIT_GHOSTFIRE));
         }
     }

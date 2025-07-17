@@ -3,7 +3,7 @@ package expansioncontent.cards;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.powers.RisingChantPower;
 import awakenedOne.relics.CursedBlessing;
-import awakenedOne.relics.KTRibbon;
+import awakenedOne.relics.WhiteRibbon;
 import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -60,8 +60,8 @@ public class TakeFlight extends AbstractExpansionCard {
                 AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
             }
         }
-        if (AbstractDungeon.player.hasRelic(KTRibbon.ID)) {
-            AbstractDungeon.player.getRelic(KTRibbon.ID).onTrigger();
+        if (AbstractDungeon.player.hasRelic(WhiteRibbon.ID)) {
+            AbstractDungeon.player.getRelic(WhiteRibbon.ID).onTrigger();
         }
 
     }
