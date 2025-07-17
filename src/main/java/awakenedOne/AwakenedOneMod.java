@@ -141,7 +141,6 @@ public class AwakenedOneMod implements
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
-
     }
 
 

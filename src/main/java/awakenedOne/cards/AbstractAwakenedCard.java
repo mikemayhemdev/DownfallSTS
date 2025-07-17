@@ -77,13 +77,6 @@ public abstract class AbstractAwakenedCard extends CustomCard {
                     String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
                     newPath = "awakenedResources/images/betacards/" + newPath;
                     System.out.println("Finding texture: " + newPath);
-
-                    if ((!Gdx.files.internal(newPath).exists())) {
-                        newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
-                        newPath = "awakenedResources/images/programmerart/" + newPath;
-                        System.out.println("Finding texture: " + newPath);
-                    }
-
                     Texture portraitTexture;
                     portraitTexture = TextureLoader.getTexture(newPath);
                     return portraitTexture;
