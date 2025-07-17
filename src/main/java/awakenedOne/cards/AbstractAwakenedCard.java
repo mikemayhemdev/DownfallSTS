@@ -72,9 +72,7 @@ public abstract class AbstractAwakenedCard extends CustomCard {
                 if (betaArtPath != null) {
                     int endingIndex = betaArtPath.lastIndexOf(".");
                     String newPath = betaArtPath.substring(0, endingIndex) + "_p" + betaArtPath.substring(endingIndex);
-                    newPath = "awakenedResources/images/joke/" + newPath;
                     System.out.println("Finding texture: " + newPath);
-                    FileHandle h = Gdx.files.internal(newPath);
                     Texture portraitTexture;
                     portraitTexture = TextureLoader.getTexture(newPath);
                     return portraitTexture;
@@ -86,18 +84,6 @@ public abstract class AbstractAwakenedCard extends CustomCard {
 
     public static String getCardTextureString(final String cardName, final CardType cardType) {
         String textureString = "awakenedResources/images/cards/" + cardName + ".png";
-        FileHandle h = Gdx.files.internal(textureString);
-        if (!h.exists()) {
-            textureString = "awakenedResources/images/cards/joke/" + cardName + ".png";
-            h = Gdx.files.internal(textureString);
-        }
-        if (!h.exists()) {
-            textureString = "awakenedResources/images/cards/programmerart/" + cardName + ".png";
-            h = Gdx.files.internal(textureString);
-        }
-        if (!h.exists()) {
-            textureString = "awakenedResources/images/ui/missing.png";
-        }
         return textureString;
     }
 
