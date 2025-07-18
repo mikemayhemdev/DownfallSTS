@@ -20,8 +20,6 @@ public class VioletPlumage extends CustomRelic {
 
     //the relic was reworked because mini black hole had to go to shop because its weird rip old effect
 
-    //the relic was reworked again
-
     public VioletPlumage() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
@@ -29,27 +27,18 @@ public class VioletPlumage extends CustomRelic {
     //violet plumage
     public boolean firstTurn = false;
     public boolean activated = false;
-//    @Override
-//    public void onUseCard(AbstractCard c, UseCardAction action) {
-//        if ((c.type == AbstractCard.CardType.POWER) && !this.grayscale){
-//            flash();
-//            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-//            this.addToBot(new GainEnergyAction(1));
-//            //addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
-//            this.grayscale = true;
-//        }
-//    }
-
 
     @Override
     public void atPreBattle() {
+        this.beginLongPulse();
         activated = false;
     }
 
     @Override
     public void atTurnStartPostDraw() {
-        if (this.grayscale = false) {
+        if (!(this.grayscale)) {
                 if (activated) {
+                    this.stopPulse();
                     this.flash();
                     this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                     addToBot(new DrawCardAction(AbstractDungeon.player, 3));
@@ -59,9 +48,11 @@ public class VioletPlumage extends CustomRelic {
         activated = false;
     }
 
-    public void atEndOfTurn(boolean isPlayer) {
+    public void onPlayerEndTurn() {
+        if (!(this.grayscale)) {
             if (EnergyPanel.totalCount > 0) {
                 activated = true;
+            }
         }
     }
 
