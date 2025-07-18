@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
-import static awakenedOne.ui.OrbitingSpells.updateTimeOffsets;
 import static awakenedOne.util.Wiz.atb;
 
 public class AphoticFount extends AbstractAwakenedCard {
@@ -32,8 +31,7 @@ public class AphoticFount extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard card = new AphoticShield();
-        spellCards.add(new OrbitingSpells.CardRenderInfo(card));
-        updateTimeOffsets();
+        spellCards.add(card);
 
         atb(new ConjureAction(false, false, true, new AphoticShield()));
     }

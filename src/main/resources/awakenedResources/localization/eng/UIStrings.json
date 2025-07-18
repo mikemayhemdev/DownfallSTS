@@ -24,5 +24,10 @@
       "awakened:Chant: ",
       "[awakenedIcon] [#12FAF0]Chant: "
     ]
+  },
+  "awakened:Spellbook": {
+    "TEXT": [
+      "Spellbook"
+    ]
   }
 }

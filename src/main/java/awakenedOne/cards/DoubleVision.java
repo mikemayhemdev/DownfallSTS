@@ -1,6 +1,5 @@
 package awakenedOne.cards;
 
-import awakenedOne.ui.OrbitingSpells;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,7 +7,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
-import static awakenedOne.ui.OrbitingSpells.updateTimeOffsets;
 import static awakenedOne.util.Wiz.atb;
 
 public class DoubleVision extends AbstractAwakenedCard {
@@ -29,8 +27,7 @@ public class DoubleVision extends AbstractAwakenedCard {
                 //q2.updateCost(-99);
                 for (int i = 0; i < magicNumber; i++) {
                     AbstractCard card = q2.makeStatEquivalentCopy();
-                    spellCards.add(new OrbitingSpells.CardRenderInfo(card));
-                    updateTimeOffsets();
+                    spellCards.add(card);
                 }
             }
         }));

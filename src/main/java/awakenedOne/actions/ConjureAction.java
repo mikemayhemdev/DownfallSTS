@@ -92,7 +92,7 @@ public class ConjureAction extends AbstractGameAction {
             }
         });
         if (!choose) {
-            AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).card.makeStatEquivalentCopy();
+            AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
             if (bstudy) {
                 tar = pick;
             }
@@ -107,14 +107,14 @@ public class ConjureAction extends AbstractGameAction {
             }
             addToTop(new RemoveSpellCardAction(tar));
         } else {
-            ArrayList<OrbitingSpells.CardRenderInfo> possCards = new ArrayList<>();
+            ArrayList<AbstractCard> possCards = new ArrayList<>();
             possCards.addAll(OrbitingSpells.spellCards);
-            ArrayList<OrbitingSpells.CardRenderInfo> availableCards = new ArrayList<>();
+            ArrayList<AbstractCard> availableCards = new ArrayList<>();
             while (!possCards.isEmpty()) {
                 availableCards.add(possCards.remove(AbstractDungeon.cardRandomRng.random(possCards.size() - 1)));
             }
             ArrayList<AbstractCard> actualChoices = new ArrayList<>();
-            availableCards.forEach(q -> actualChoices.add(q.card.makeStatEquivalentCopy()));
+            availableCards.forEach(q -> actualChoices.add(q.makeStatEquivalentCopy()));
             addToTop(new SelectCardsCenteredAction(actualChoices, "", (cards) -> {
                 AbstractCard q = cards.get(0);
                 if (isAwakened()) {

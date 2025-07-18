@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import static awakenedOne.ui.OrbitingSpells.spellCards;
-import static awakenedOne.ui.OrbitingSpells.updateTimeOffsets;
 
 public class ConjureBladeSpellPileAction extends AbstractGameAction {
     public int[] multiDamage;
@@ -37,8 +36,7 @@ public class ConjureBladeSpellPileAction extends AbstractGameAction {
 
         Expunger c = new Expunger();
         c.setX(effect);
-        spellCards.add(new OrbitingSpells.CardRenderInfo(c));
-        updateTimeOffsets();
+        spellCards.add(c);
         if (!this.freeToPlayOnce) {
             this.p.energy.use(EnergyPanel.totalCount);
         }
