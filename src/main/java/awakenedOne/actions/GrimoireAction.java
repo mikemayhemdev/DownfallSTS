@@ -40,6 +40,7 @@ public class GrimoireAction extends AbstractGameAction {
             Iterator<AbstractCard> var1;
             for (var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext();) {
                 AbstractCard c = var1.next();
+                addToBot((AbstractGameAction)new GrimoireSpecificCardAction(c, AbstractDungeon.player.limbo, true));
                 addToBot((AbstractGameAction)new GrimoireSpecificCardAction(c, AbstractDungeon.player.drawPile, true));
                 addToBot((AbstractGameAction)new GrimoireSpecificCardAction(c, AbstractDungeon.player.hand, true));
                 addToBot((AbstractGameAction)new GrimoireSpecificCardAction(c, AbstractDungeon.player.discardPile, true));

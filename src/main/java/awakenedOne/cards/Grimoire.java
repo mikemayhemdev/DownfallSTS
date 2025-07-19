@@ -1,6 +1,7 @@
 package awakenedOne.cards;
 
 import awakenedOne.actions.GrimoireAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -19,11 +20,13 @@ public class Grimoire extends AbstractAwakenedCard {
         this.selfRetain = true;
         baseDamage = 6;
         baseMagicNumber = magicNumber = 6;
+        this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(Grimoire.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToTop(new GrimoireAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this.uuid));
+        //this.addToTop(new GrimoireAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this.uuid));
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         AbstractCard q = this.makeStatEquivalentCopy();
         this.addToBot(new ModifyDamageAction(q.uuid, this.magicNumber));
         spellCards.add(q);
