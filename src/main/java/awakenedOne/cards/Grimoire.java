@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.actions.GrimoireAction;
 import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -22,9 +23,10 @@ public class Grimoire extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new GrimoireAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this.uuid));
-        this.addToTop(new ModifyDamageAction(this.uuid, this.magicNumber));
-        spellCards.add(this);
+        this.addToTop(new GrimoireAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this.uuid));
+        AbstractCard q = this.makeStatEquivalentCopy();
+        this.addToBot(new ModifyDamageAction(q.uuid, this.magicNumber));
+        spellCards.add(q);
     }
 
     public void upp() {
