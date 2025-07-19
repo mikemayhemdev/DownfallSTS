@@ -28,7 +28,7 @@ public class Grimoire extends AbstractAwakenedCard {
         //this.addToTop(new GrimoireAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this.uuid));
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         AbstractCard q = this.makeStatEquivalentCopy();
-        this.addToBot(new ModifyDamageAction(q.uuid, this.magicNumber));
+        this.addToTop(new ModifyDamageAction(q.uuid, this.magicNumber));
         spellCards.add(q);
     }
 
