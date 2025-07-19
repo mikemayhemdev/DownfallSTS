@@ -32,24 +32,17 @@ public class GrimoireAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (this.duration == DURATION && this.target != null) {
-            AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.FIRE));
-            this.target.damage(this.info);
-
-            Iterator<AbstractCard> var1 = AbstractDungeon.player.masterDeck.group.iterator();
-            while (var1.hasNext()) {
-                AbstractCard c = var1.next();
-                if (c.uuid.equals(this.uuid)) {
-                    addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
-                    addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile, false));
-                    addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.limbo, true));
-                }
+        if (this.duration == DURATION) {
+            if (this.target != null) {
+                AbstractDungeon.effectList.add(new FlashAtkImgEffect(this.target.hb.cX, this.target.hb.cY, AttackEffect.FIRE));
+                this.target.damage(this.info);
             }
+            Iterator<AbstractCard> var1;
             for (var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext();) {
                 AbstractCard c = var1.next();
-                addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
-                addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile, false));
-                addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.limbo, true));
+                addToBot((AbstractGameAction)new GrimoireSpecificCardAction(c, AbstractDungeon.player.drawPile, true));
+                addToBot((AbstractGameAction)new GrimoireSpecificCardAction(c, AbstractDungeon.player.hand, true));
+                addToBot((AbstractGameAction)new GrimoireSpecificCardAction(c, AbstractDungeon.player.discardPile, true));
             }
 
                 for (AbstractOrb o : this.p.orbs) {
