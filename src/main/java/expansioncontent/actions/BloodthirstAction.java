@@ -9,10 +9,12 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.potions.PowerPotion;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.Sozu;
+import guardian.orbs.StasisOrb;
 
 import java.util.Iterator;
 import java.util.UUID;
@@ -45,15 +47,26 @@ public class BloodthirstAction extends AbstractGameAction {
                 while (var1.hasNext()) {
                     AbstractCard c = var1.next();
                     if (c.uuid.equals(this.uuid)) {
-                        // c.applyPowers();
+                        addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
                         addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile, false));
+                        addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.limbo, true));
                     }
                 }
                 for (var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext();) {
                     AbstractCard c = var1.next();
-                    //c.applyPowers();
+                    addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
                     addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile, false));
+                    addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.limbo, true));
                 }
+
+                for (AbstractOrb o : AbstractDungeon.player.orbs) {
+                    if (o instanceof StasisOrb) {
+                        if (((StasisOrb) o).stasisCard.uuid == this.uuid) {
+                            AbstractDungeon.player.orbs.remove(o);
+                        }
+                    }
+                }
+
             AbstractRelic sozu = AbstractDungeon.player.getRelic(Sozu.ID);
                 if (sozu != null) {
                     sozu.flash();

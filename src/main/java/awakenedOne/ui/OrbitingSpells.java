@@ -151,7 +151,12 @@ public class OrbitingSpells {
         for (AbstractCard s : spellCards) {
             sb.draw(getIconForCard(s), boxes.get(xr).x, boxes.get(xr).y);
             float dist = FontHelper.getWidth(FontHelper.tipHeaderFont, s.name, 1.0F);
-            FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, s.name, boxes.get(xr).x + 15F, boxes.get(xr).y + 10F, Color.WHITE.cpy());
+
+            Color textColor = Color.WHITE.cpy();
+            if (s.upgraded) {
+                textColor = Color.GREEN.cpy();
+            }
+            FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, s.name, boxes.get(xr).x + 15F, boxes.get(xr).y + 10F, textColor);
             TipHelper.renderTipEnergy(sb, AbstractCard.orb_red, boxes.get(xr).x + dist + 25.5F, boxes.get(xr).y);
             FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, String.valueOf(s.cost), boxes.get(xr).x + dist + 35F, boxes.get(xr).y + 10F, Color.WHITE.cpy());
             xr++;

@@ -17,7 +17,7 @@ import com.megacrit.cardcrawl.ui.FtueTip;
 
 public class AwakenedOneTutorials extends FtueTip {
 
-    private static final TutorialStrings tutorialStrings = CardCrawlGame.languagePack.getTutorialString("HermitMod:AwakenedTutorials");
+    private static final TutorialStrings tutorialStrings = CardCrawlGame.languagePack.getTutorialString("HermitMod:AwakenedOneTutorials");
     public static final String[] txt = tutorialStrings.TEXT;
     public static final String[] LABEL = tutorialStrings.LABEL;
     private Texture img1;

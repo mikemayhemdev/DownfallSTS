@@ -153,8 +153,8 @@
   },
   "awakened:DoubleVision": {
     "NAME": "Double Vision",
-    "DESCRIPTION": "Choose a card in hand. Add !M! copy of that card to the Spell Pile until it is refreshed. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in hand. Add !M! copies of that card to the Spell Pile until it is refreshed. NL Exhaust."
+    "DESCRIPTION": "Choose a card in hand. Add !M! copy of that card to your Spellbook until it is refreshed. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in hand. Add !M! copies of that card to your Spellbook until it is refreshed. NL Exhaust."
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
@@ -335,12 +335,12 @@
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Increases damage by !M!, then shuffles into the Spell Pile."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Increases damage by !M!, then shuffles into your Spellbook."
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",
-    "DESCRIPTION": "Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure it. NL Exhaust."
+    "DESCRIPTION": "Add *Aphotic *Shield to your Spellbook. NL awakened:Conjure it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to your Spellbook. NL awakened:Conjure it. NL Exhaust."
   },
   "awakened:Bloodthirst": {
     "NAME": "Bloodthirst",
@@ -361,8 +361,8 @@
   },
   "awakened:Deathwish": {
     "NAME": "Deathwish",
-    "DESCRIPTION": "Add *Deathcoil to the Spell Pile. NL awakened:Conjure it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add *Deathcoil to the Spell Pile. NL awakened:Conjure it. NL Exhaust."
+    "DESCRIPTION": "Add *Deathcoil to your Spellbook. NL awakened:Conjure it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add *Deathcoil to your Spellbook. NL awakened:Conjure it. NL Exhaust."
   },
   "awakened:SiphonEnergy": {
     "NAME": "Siphon",

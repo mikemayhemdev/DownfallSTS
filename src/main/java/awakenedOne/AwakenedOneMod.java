@@ -1,7 +1,7 @@
 package awakenedOne;
 
 import awakenedOne.actions.ConjureAction;
-import awakenedOne.cards.AbstractAwakenedCard;
+import awakenedOne.cards.*;
 import awakenedOne.cards.cardvars.SecondDamage;
 import awakenedOne.cards.cardvars.SecondMagicNumber;
 import awakenedOne.cards.cardvars.ThirdMagicNumber;
@@ -43,7 +43,11 @@ import com.megacrit.cardcrawl.events.city.Nest;
 import com.megacrit.cardcrawl.events.exordium.GoldenWing;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import downfall.downfallMod;
 import downfall.util.CardIgnore;
+import hermit.cards.*;
+import hermit.characters.hermit;
+import hermit.relics.*;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
@@ -66,7 +70,8 @@ public class AwakenedOneMod implements
         PostInitializeSubscriber,
         OnStartBattleSubscriber,
         OnPlayerTurnStartSubscriber,
-        PostPlayerUpdateSubscriber {
+        PostPlayerUpdateSubscriber,
+        SetUnlocksSubscriber {
 
 
     public static final String SHOULDER1 = "awakenedResources/images/char/mainChar/shoulder.png";
@@ -340,4 +345,32 @@ public class AwakenedOneMod implements
     public void receivePostPlayerUpdate() {
         OrbitingSpells.update();
     }
+
+    @Override
+    public void receiveSetUnlocks() {
+        downfallMod.registerUnlockSuiteAlternating(
+                BirdsEye.ID,
+                MoonlitVision.ID,
+                Slaughter.ID,
+
+                TomeOfPortalmancy.ID,
+                AbyssBlade.ID,
+                HexxBomb.ID,
+
+                Deathwish.ID,
+                AphoticFount.ID,
+                DoubleVision.ID,
+
+                VioletPlumage.ID,
+                DeadBird.ID,
+                ShardOfNowak.ID,
+
+                SplitWide.ID,
+                Thaumaturgy.ID,
+                RisingChant.ID,
+
+                AwakenedOneChar.Enums.AWAKENED_ONE
+        );
+    }
+
 }

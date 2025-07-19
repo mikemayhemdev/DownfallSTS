@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
+import static awakenedOne.util.Wiz.atb;
 import static awakenedOne.util.Wiz.att;
 
 public class RippedDoll extends CustomRelic {
@@ -32,9 +33,10 @@ public class RippedDoll extends CustomRelic {
 
     @Override
     public void atBattleStart() {
-        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        super.atBattleStart();
+        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         //this.addToTop(new MakeTempCardInHandAction(new Ceremony(), 1, false));
-        att(new ConjureAction(false, false, true, new BurningStudy()));
+        atb(new ConjureAction(false, false, true, new BurningStudy()));
     }
 
     @Override

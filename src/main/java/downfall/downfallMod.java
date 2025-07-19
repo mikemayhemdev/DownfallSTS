@@ -216,8 +216,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static String Act2BossFaced = "";
     public static String Act3BossFaced = "";
 
-    public static boolean[] unseenTutorials = new boolean[]{true, // Hermit
-
+    public static boolean[] unseenTutorials = new boolean[]{
+            true, // Hermit
             true, // Guardian 1
             true, // Hexa 2
             true, // Charboss Info 3
@@ -228,9 +228,9 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             true, // Auto 8
             true, // Gremlins 9
             true, // Snecko 10
-            true  // Awakened 11
-         // true, //act3 boss 12
-         // true //act3 boss 13
+            true, // Awakened 11
+            true, // act 3 boss 2 12
+            true  // act 3 boss 3 13
     };
 
     public static Properties tutorialSaves = new Properties();
@@ -1753,11 +1753,11 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         }
 
         //awakened tutorial 11
-//        if (AbstractDungeon.player instanceof AwakenedOneChar) {
-//            if (downfallMod.unseenTutorials[11]) {
-//                AbstractDungeon.actionManager.addToBottom(new MessageCaller(11));
-//            }
-//        }
+        if (AbstractDungeon.player instanceof AwakenedOneChar) {
+            if (downfallMod.unseenTutorials[11]) {
+                AbstractDungeon.actionManager.addToTop(new MessageCaller(11));
+            }
+        }
     }
 
 

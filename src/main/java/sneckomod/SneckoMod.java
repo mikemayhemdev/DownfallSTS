@@ -725,12 +725,12 @@ public class SneckoMod implements
                 OverwhelmingPresence.ID,
 
                 SneckoBoss.ID,
-                CheapStock.ID,
+                SleevedAce.ID,
                 CleanMud.ID,
 
-                GlitteringGambit.ID,
+                BlankCard.ID,
                 SneckoTalon.ID,
-                Jackpot.ID,
+                SleevedAce.ID,
 
                 TheSnecko.Enums.THE_SNECKO
         );
