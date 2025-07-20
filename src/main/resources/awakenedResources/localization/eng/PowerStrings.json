@@ -111,7 +111,7 @@
   "awakened:EmpressPower": {
     "NAME": "Midnight",
     "DESCRIPTIONS": [
-      "Whenever you play a non-Spell #yPower [REMOVE_SPACE], #yConjure [REMOVE_SPACE].",
+      "Whenever you play a non-Spell #yPower [REMOVE_SPACE], #yConjure #b1 time.",
       "Whenever you play a non-Spell #yPower [REMOVE_SPACE], #yConjure #b",
       " times."
     ]
