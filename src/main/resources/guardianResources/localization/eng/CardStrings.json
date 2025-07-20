@@ -119,7 +119,7 @@
   "Guardian:SphericShield": {
     "NAME": "Spheric Shield",
     "DESCRIPTION": "Ethereal. NL Gain a guardianmod:Polishing_Oil. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain a guardianmod:Polishing_Oil. NL Exhaust"
+    "UPGRADE_DESCRIPTION": "Gain a guardianmod:Polishing_Oil. NL Exhaust."
   },
   "Guardian:Harden": {
     "NAME": "Harden",

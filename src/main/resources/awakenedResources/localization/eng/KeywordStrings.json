@@ -3,9 +3,11 @@
     "PROPER_NAME": "Power Potion",
     "NAMES": [
       "Power Potion",
-      "Power_Potion"
+      "Power_Potion",
+      "power_potion",
+      "powerpotion"
     ],
-    "DESCRIPTION": "#yPotion [REMOVE_SPACE]: Choose #b1 of #b3 random Power cards to add to your hand, it costs #b0 this turn."
+    "DESCRIPTION": "#yPotion [REMOVE_SPACE]: Choose #b1 of #b3 random #yPower cards to add to your hand, it costs #b0 this turn."
   },
   {
     "PROPER_NAME": "Conjure",

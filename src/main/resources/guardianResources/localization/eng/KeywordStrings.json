@@ -57,7 +57,9 @@
   {
     "NAMES": [
       "Polishing Oil",
-      "Polishing_Oil"
+      "Polishing_Oil",
+      "polishing_oil",
+      "polishingoil"
     ],
     "PROPER_NAME": "Polishing Oil",
     "DESCRIPTION": "#yPotion [REMOVE_SPACE]: Gain #b16 #yBlock [REMOVE_SPACE]. Enter #yDefensive #yMode [REMOVE_SPACE]."
