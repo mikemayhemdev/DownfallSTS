@@ -15,7 +15,7 @@ public class Brainshock extends AbstractAwakenedCard {
 
     public Brainshock() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 11;
+        baseDamage = 9;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath(Brainshock.class.getSimpleName() + ".png"));

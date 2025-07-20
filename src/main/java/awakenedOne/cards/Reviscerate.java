@@ -18,7 +18,7 @@ public class Reviscerate extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public Reviscerate() {
-        super(ID, 6, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 6;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
@@ -37,7 +37,7 @@ public class Reviscerate extends AbstractAwakenedCard {
     }
 
     public void configureCostsOnNewCard() {
-        Iterator var1 = AbstractDungeon.actionManager.cardsPlayedThisCombat.iterator();
+        Iterator var1 = AbstractDungeon.actionManager.cardsPlayedThisTurn.iterator();
 
         while(var1.hasNext()) {
             AbstractCard c = (AbstractCard)var1.next();
