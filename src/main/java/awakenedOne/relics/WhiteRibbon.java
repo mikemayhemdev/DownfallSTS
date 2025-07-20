@@ -51,7 +51,6 @@ public class WhiteRibbon extends CustomRelic {
         }
     }
 
-
     public void onTrigger() {
         flash();
         addToBot(new GainBlockAction(AbstractDungeon.player, AMOUNT));

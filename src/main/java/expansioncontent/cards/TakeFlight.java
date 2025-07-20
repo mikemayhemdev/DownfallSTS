@@ -51,14 +51,15 @@ public class TakeFlight extends AbstractExpansionCard {
 
         if (!this.hasTag(ACTIVECHANT) && this.hasTag(CHANT)) {
             this.tags.add(ACTIVECHANT);
-            if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
-                applyToSelf(new StrengthPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
-                AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
-            }
+        }
 
-            if (AbstractDungeon.player.hasRelic(CursedBlessing.ID)) {
-                AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
-            }
+        if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
+            applyToSelf(new StrengthPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
+            AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
+        }
+
+        if (AbstractDungeon.player.hasRelic(CursedBlessing.ID)) {
+            AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
         }
         if (AbstractDungeon.player.hasRelic(WhiteRibbon.ID)) {
             AbstractDungeon.player.getRelic(WhiteRibbon.ID).onTrigger();
