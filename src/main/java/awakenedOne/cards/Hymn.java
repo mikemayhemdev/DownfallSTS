@@ -43,6 +43,7 @@ public class Hymn extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
+        upgradeBlock(1);
         cardsToPreview.upgrade();
     }
 }
