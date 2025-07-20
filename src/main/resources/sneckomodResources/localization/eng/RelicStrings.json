@@ -75,7 +75,7 @@
     "NAME": "Idol of Retromation",
     "FLAVOR": "Often called the Idol of Reto for short.",
     "DESCRIPTIONS": [
-      "At the start of your turn, reduce the cost of a random card by #b1 until played."
+      "At the start of your turn, reduce the cost of a random card in your hand by #b1 until played."
     ]
   },
   "sneckomod:BlankCard": {

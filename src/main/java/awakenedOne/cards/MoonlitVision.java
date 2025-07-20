@@ -25,7 +25,7 @@ public class MoonlitVision extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        this.isEthereal = false;
-        //upgradeBaseCost(1);
+        //this.isEthereal = false;
+        upgradeBaseCost(1);
     }
 }

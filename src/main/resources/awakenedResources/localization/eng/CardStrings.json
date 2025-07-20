@@ -206,9 +206,8 @@
     "UPGRADE_DESCRIPTION": "Apply !M! awakened:Manaburn. NL awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns."
   },
   "awakened:MoonlitVision": {
-    "NAME": "Eclipse Vision",
-    "DESCRIPTION": "Ethereal. NL Whenever you play a non-Spell Power, awakened:Conjure.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a non-Spell Power, awakened:Conjure."
+    "NAME": "Moonlit Vision",
+    "DESCRIPTION": "Whenever you play a non-Spell Power, awakened:Conjure."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
