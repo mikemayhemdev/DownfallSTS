@@ -18,7 +18,7 @@ public class Reviscerate extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public Reviscerate() {
-        super(ID, 5, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 6, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 6;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
@@ -57,6 +57,7 @@ public class Reviscerate extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBaseCost(4);
+        //upgradeBaseCost(4);
+        upgradeDamage(2);
     }
 }

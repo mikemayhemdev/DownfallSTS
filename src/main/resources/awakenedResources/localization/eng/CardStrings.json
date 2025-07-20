@@ -163,8 +163,7 @@
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
-    "DESCRIPTION": "Retain. NL Gain !M! temporary Strength. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! temporary Strength."
+    "DESCRIPTION": "Retain. NL Gain !M! temporary Strength. NL Gain [E]. NL Exhaust."
   },
   "awakened:DesperatePrayer": {
   "NAME": "Desperate Prayer",
@@ -198,8 +197,8 @@
   },
   "awakened:Murder": {
     "NAME": "Murder",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy !M! times."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
   },
   "awakened:ExNihilo": {
     "NAME": "Nihil",
@@ -207,7 +206,7 @@
     "UPGRADE_DESCRIPTION": "Apply !M! awakened:Manaburn. NL awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns."
   },
   "awakened:MoonlitVision": {
-    "NAME": "Midnight",
+    "NAME": "Eclipse Vision",
     "DESCRIPTION": "Ethereal. NL Whenever you play a non-Spell Power, awakened:Conjure.",
     "UPGRADE_DESCRIPTION": "Whenever you play a non-Spell Power, awakened:Conjure."
   },

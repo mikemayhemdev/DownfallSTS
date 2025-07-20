@@ -47,6 +47,6 @@
     "NAMES": [
       "manaburn"
     ],
-    "DESCRIPTION": "Whenever you lose [E] , even if you had none to lose, loses HP equal to it's #yManaburn [REMOVE_SPACE]."
+    "DESCRIPTION": "Whenever you lose [E] , even if you had none to lose, loses HP equal to its #yManaburn [REMOVE_SPACE]."
   }
 ]

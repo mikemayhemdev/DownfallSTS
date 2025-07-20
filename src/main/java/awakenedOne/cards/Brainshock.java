@@ -36,6 +36,15 @@ public class Brainshock extends AbstractAwakenedCard {
         this.isDamageModified = this.damage != this.baseDamage;
     }
 
+
+    public void applyPowers() {
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += this.magicNumber * OnLoseEnergyPowerPatch.EnergyLostThisCombat;
+        super.applyPowers();
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+    }
+
     public void upp() {
         upgradeMagicNumber(1);
     }

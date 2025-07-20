@@ -55,6 +55,7 @@ public class TalonRake extends AbstractAwakenedCard {
     @Override
     public void chant() {
         atb(new ConjureAction(false));
+        checkOnChant();
     }
 
     public void upp() {

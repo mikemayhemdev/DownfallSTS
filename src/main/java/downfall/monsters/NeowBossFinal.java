@@ -100,10 +100,10 @@ public class NeowBossFinal extends AbstractMonster {
 
 
         if (AbstractDungeon.ascensionLevel >= 4) {
-            this.damage.add(new DamageInfo(this, 12)); //Eye Beam Damage - 54 damage first cycle
+            this.damage.add(new DamageInfo(this, 10)); //Eye Beam Damage - 45 damage first cycle
             this.damage.add(new DamageInfo(this, 44));  //Scream Damage - 66 damage first cycle
         } else {
-            this.damage.add(new DamageInfo(this, 9)); //Eye Beam Damage - 42 damage first cycle
+            this.damage.add(new DamageInfo(this, 8)); //Eye Beam Damage - 32 damage first cycle
             this.damage.add(new DamageInfo(this, 33));  //Scream Damage - 50 damage first cycle
         }
 
