@@ -60,6 +60,6 @@ public class Thunderbolt extends AbstractSpellCard {
     }
 
     public void upp() {
-        upgradeDamage(-5);
+        upgradeDamage(-6);
     }
 }
