@@ -215,8 +215,8 @@
   },
   "awakened:MazalethForm": {
     "NAME": "Awakened Form",
-    "DESCRIPTION": "The first Spell you place each turn is played twice.",
-    "UPGRADE_DESCRIPTION": "awakened:Awaken immediately. NL The first Spell you place each turn is played twice."
+    "DESCRIPTION": "The first Spell you play each turn is played twice.",
+    "UPGRADE_DESCRIPTION": "awakened:Awaken immediately. NL The first Spell you play each turn is played twice."
   },
   "awakened:Planeswalk": {
     "NAME": "Planeswalk",
