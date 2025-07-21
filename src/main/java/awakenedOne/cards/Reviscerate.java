@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -37,21 +38,35 @@ public class Reviscerate extends AbstractAwakenedCard {
         }
     }
 
-    public void configureCostsOnNewCard() {
+    public void triggerWhenDrawn() {
+        super.triggerWhenDrawn();
         Iterator var1 = AbstractDungeon.actionManager.cardsPlayedThisTurn.iterator();
-
+        int powers = 0;
         while(var1.hasNext()) {
             AbstractCard c = (AbstractCard)var1.next();
             if (c.type == CardType.POWER) {
-                this.addToTop( new ReduceCostForTurnAction(this,1));
+                powers++;
             }
         }
+        this.setCostForTurn(this.cost - powers);
+    }
 
+
+    public void configureCostsOnNewCard() {
+        Iterator var1 = AbstractDungeon.actionManager.cardsPlayedThisTurn.iterator();
+        int powers = 0;
+        while(var1.hasNext()) {
+            AbstractCard c = (AbstractCard)var1.next();
+            if (c.type == CardType.POWER) {
+                powers++;
+            }
+        }
+        this.setCostForTurn(this.cost - powers);
     }
 
     public void triggerOnCardPlayed(AbstractCard c) {
         if (c.type == CardType.POWER) {
-            this.addToTop( new ReduceCostForTurnAction(this,1));
+            this.setCostForTurn(this.costForTurn - 1);
         }
     }
 
