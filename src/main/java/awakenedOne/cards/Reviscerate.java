@@ -53,7 +53,6 @@ public class Reviscerate extends AbstractAwakenedCard {
         if (c.type == CardType.POWER) {
             this.addToTop( new ReduceCostForTurnAction(this,1));
         }
-
     }
 
     @Override
