@@ -71,6 +71,10 @@ public class OrbitingSpells {
 
     public static void refreshSpells() {
         spellCards.clear();
+        if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
+            addSpellCard(CardLibrary.getCard(ESPSpell.ID).makeCopy());
+        }
+
         for (int i = 0; i < spells.size(); i++) {
             addSpellCard(CardLibrary.getCard(spells.get(i)).makeCopy());
         }
@@ -84,11 +88,6 @@ public class OrbitingSpells {
         for (int i = 0; i < count2; i++) {
             addSpellCard(CardLibrary.getCard(AphoticShield.ID).makeCopy());
         }
-
-        if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
-            addSpellCard(CardLibrary.getCard(ESPSpell.ID).makeCopy());
-        }
-
     }
 
     public static void upgradeCaws(int amount) {

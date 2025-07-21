@@ -78,12 +78,6 @@ public class ConjureAction extends AbstractGameAction {
                 if ((spellCards.isEmpty())) {
                     awaken(5);
                     OrbitingSpells.refreshSpells();
-
-                    if (AbstractDungeon.player.hasPower(DarkIncantationRitualPower.POWER_ID) && refreshedthisturn == false) {
-                        applyToSelf(new RitualPower(AbstractDungeon.player, AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount, true));
-                        AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).onSpecificTrigger();
-                    }
-
                     //On Refresh...
 //                        if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID)) {
 //                            for (int i = 0; i < AbstractDungeon.player.getPower(FeathersinksPower.POWER_ID).amount; i++) {

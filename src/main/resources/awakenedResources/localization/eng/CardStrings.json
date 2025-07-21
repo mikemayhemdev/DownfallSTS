@@ -215,8 +215,8 @@
   },
   "awakened:MazalethForm": {
     "NAME": "Awakened Form",
-    "DESCRIPTION": "The first time you refresh your Spells each turn, gain !M! Ritual.",
-    "UPGRADE_DESCRIPTION": "awakened:Awaken immediately. NL The first time you refresh your Spells each turn, gain !M! Ritual."
+    "DESCRIPTION": "The first Spell you place each turn is played twice.",
+    "UPGRADE_DESCRIPTION": "awakened:Awaken immediately. NL The first Spell you place each turn is played twice."
   },
   "awakened:Planeswalk": {
     "NAME": "Planeswalk",

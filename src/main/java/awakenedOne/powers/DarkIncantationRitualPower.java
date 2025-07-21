@@ -1,6 +1,11 @@
 package awakenedOne.powers;
 
+import awakenedOne.actions.ConjureAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.StrengthPower;
+
+import static awakenedOne.util.Wiz.atb;
 
 public class DarkIncantationRitualPower extends AbstractAwakenedPower {
     // intellij stuff buff
@@ -12,12 +17,16 @@ public class DarkIncantationRitualPower extends AbstractAwakenedPower {
     }
 
     @Override
-    public void onSpecificTrigger() {
+    public void atStartOfTurn() {
         flash();
+        this.addToBot(new ApplyPowerAction(this.owner, this.owner, new DoubleSpellPower(this.amount), this.amount));
     }
 
-    @Override
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (amount == 1) {
+            description = DESCRIPTIONS[0];
+        } else {
+            description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+        }
     }
 }
