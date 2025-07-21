@@ -32,6 +32,7 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.monsters.beyond.AwakenedOne;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.AwakenedEyeParticle;
+import com.megacrit.cardcrawl.vfx.AwakenedWingParticle;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import reskinContent.patches.CharacterSelectScreenPatches;
@@ -80,6 +81,7 @@ public class AwakenedOneChar extends CustomPlayer {
     private Bone back;
     public boolean animateParticles = false;
     private ArrayList<ReverseAwakenedWingParticle> wParticles = new ArrayList();
+    private ArrayList<AwakenedWingParticle> wParticles2 = new ArrayList();
 
 
     public AwakenedOneChar(String name, PlayerClass setClass) {
@@ -145,7 +147,13 @@ public class AwakenedOneChar extends CustomPlayer {
                     this.fireTimer = 0.1F;
                     //todo: replace with non-leaky animation
                     AbstractDungeon.effectList.add(new AwakenedEyeParticle(this.skeleton.getX() + this.eye.getWorldX(), this.skeleton.getY() + this.eye.getWorldY()));
-                    this.wParticles.add(new ReverseAwakenedWingParticle());
+                    if (!this.flipHorizontal) {
+                        this.wParticles.add(new ReverseAwakenedWingParticle());
+                    }
+                    if (this.flipHorizontal) {
+                        this.wParticles2.add(new AwakenedWingParticle());
+                    }
+
                 }
             }
 
@@ -158,6 +166,19 @@ public class AwakenedOneChar extends CustomPlayer {
                     p.remove();
                 }
             }
+
+        if (this.flipHorizontal) {
+            Iterator<AwakenedWingParticle> p2 = this.wParticles2.iterator();
+
+            while (p2.hasNext()) {
+                AwakenedWingParticle e2 = (AwakenedWingParticle) p2.next();
+                e2.update();
+                if (e2.isDone) {
+                    p2.remove();
+                }
+            }
+        }
+
     }
 
 
