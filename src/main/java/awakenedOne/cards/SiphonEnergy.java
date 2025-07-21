@@ -2,11 +2,14 @@ package awakenedOne.cards;
 
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.GainStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
@@ -18,7 +21,7 @@ public class SiphonEnergy extends AbstractAwakenedCard {
     public SiphonEnergy() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
-        magicNumber = baseMagicNumber = 2;
+        magicNumber = baseMagicNumber = 5;
         loadJokeCardImage(this, makeBetaCardPath(SiphonEnergy.class.getSimpleName() + ".png"));
     }
 
@@ -29,7 +32,11 @@ public class SiphonEnergy extends AbstractAwakenedCard {
             public void update() {
                 isDone = true;
                 if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2) instanceof AbstractSpellCard) {
-                    atb(new DrawCardAction(AbstractDungeon.player, magicNumber));
+                    this.addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, magicNumber), -magicNumber));
+                    if (m != null && !m.hasPower("Artifact")) {
+                        this.addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, magicNumber), magicNumber));
+                    }
+                    //atb(new DrawCardAction(AbstractDungeon.player, magicNumber));
                 }
             }
         });
@@ -47,6 +54,6 @@ public class SiphonEnergy extends AbstractAwakenedCard {
     @Override
     public void upp() {
         upgradeDamage(3);
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }

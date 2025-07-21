@@ -85,7 +85,7 @@
   },
   "awakened:DemonGlyph": {
     "NAME": "Demon Glyph",
-    "DESCRIPTION": "Ethereal. NL At the start of your turn, lose [E] and draw !M! cards."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Strength and Dexterity. NL At the start of your turn, lose [E]."
   },
   "awakened:TakeFlight": {
     "NAME": "Take Flight",
@@ -141,7 +141,7 @@
   },
   "awakened:ShroudOfMiasma": {
     "NAME": "Shroud of Miasma",
-    "DESCRIPTION": "Whenever you attack an enemy with awakened:Hex, gain !M! Block."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak and awakened:Hex to ALL enemies. NL Exhaust."
   },
   "awakened:Sludge": {
     "NAME": "Sludge",
@@ -364,6 +364,6 @@
   },
   "awakened:SiphonEnergy": {
     "NAME": "Siphon",
-    "DESCRIPTION": "Deal !D! damage. NL If the last card played this combat was a Spell, draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL If the last card played this combat was a Spell, enemy loses !M! Strength this turn."
   }
 }
