@@ -24,11 +24,12 @@ public class DarknessFalls extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DarknessFallsPower(secondMagic)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DarknessFallsPower(p, magicNumber, secondMagic)));
     }
 
     @Override
     public void upp() {
-        this.isInnate = true;
+        //this.isInnate = true;
+        upgradeMagicNumber(2);
     }
 }

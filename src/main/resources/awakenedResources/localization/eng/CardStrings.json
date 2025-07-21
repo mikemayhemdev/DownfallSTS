@@ -228,8 +228,7 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
-    "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength."
+    "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength."
   },
   "awakened:Brainshock": {
     "NAME": "Brainshock",
