@@ -85,7 +85,7 @@
   },
   "awakened:DemonGlyph": {
     "NAME": "Demon Glyph",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength and Dexterity. NL At the start of your turn, lose [E]."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Strength and Dexterity. NL Gain !awakened:m2! awakened:Manaburn."
   },
   "awakened:TakeFlight": {
     "NAME": "Take Flight",

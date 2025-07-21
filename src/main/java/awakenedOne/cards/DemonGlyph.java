@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import awakenedOne.powers.ManaburnPower;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -18,9 +19,9 @@ public class DemonGlyph extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public DemonGlyph() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 4;
-        //baseSecondMagic = secondMagic = 3;
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
+        baseSecondMagic = secondMagic = 3;
         this.isEthereal = true;
         loadJokeCardImage(this, makeBetaCardPath(DemonGlyph.class.getSimpleName() + ".png"));
     }
@@ -31,20 +32,20 @@ public class DemonGlyph extends AbstractAwakenedCard {
         this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, this.magicNumber), this.magicNumber));
 
-        this.addToBot(new ApplyPowerAction(p, p, new EnergyDownPower(p, 1, true), 1));
+       // this.addToBot(new ApplyPowerAction(p, p, new EnergyDownPower(p, 1, true), 1));
         if (p != null) {
             this.addToBot(new VFXAction(new FastingEffect(p.hb.cX, p.hb.cY, Color.BLUE)));
         }
 
         //this.addToBot(new ApplyPowerAction(p, p, new NihilPower(p, this.magicNumber), this.magicNumber));
-        //this.addToBot(new ApplyPowerAction(p, p, new ManaburnPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new ManaburnPower(p, this.secondMagic), this.secondMagic));
     }
 
     public void upp() {
         //this.isEthereal = false;
         //upgradeBaseCost(0);
         upgradeMagicNumber(1);
-        //upgradeSecondMagic(1);
+        upgradeSecondMagic(1);
     }
 
 }
