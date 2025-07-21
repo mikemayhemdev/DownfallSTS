@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -42,7 +43,7 @@ public class Reviscerate extends AbstractAwakenedCard {
         while(var1.hasNext()) {
             AbstractCard c = (AbstractCard)var1.next();
             if (c.type == CardType.POWER) {
-                this.updateCost(-1);
+                this.addToTop( new ReduceCostForTurnAction(this,1));
             }
         }
 
@@ -50,7 +51,7 @@ public class Reviscerate extends AbstractAwakenedCard {
 
     public void triggerOnCardPlayed(AbstractCard c) {
         if (c.type == CardType.POWER) {
-            this.updateCost(-1);
+            this.addToTop( new ReduceCostForTurnAction(this,1));
         }
 
     }
