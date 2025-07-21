@@ -71,22 +71,25 @@ public class OrbitingSpells {
 
     public static void refreshSpells() {
         spellCards.clear();
-        if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
-            addSpellCard(CardLibrary.getCard(ESPSpell.ID).makeCopy());
+
+        for (AbstractCard card : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
+            if (card instanceof Deathwish || card instanceof AphoticFount) {
+                if (card instanceof Deathwish) {
+                    addSpellCard(CardLibrary.getCard(DeathCoil.ID).makeCopy());
+                }
+                if (card instanceof AphoticFount) {
+                    addSpellCard(CardLibrary.getCard(AphoticShield.ID).makeCopy());
+                }
+            }
         }
 
         for (int i = 0; i < spells.size(); i++) {
             addSpellCard(CardLibrary.getCard(spells.get(i)).makeCopy());
         }
 
-        int count = (int) AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(q -> q instanceof Deathwish).count();
-        for (int i = 0; i < count; i++) {
-            addSpellCard(CardLibrary.getCard(DeathCoil.ID).makeCopy());
-        }
 
-        int count2 = (int) AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(q -> q instanceof AphoticFount).count();
-        for (int i = 0; i < count2; i++) {
-            addSpellCard(CardLibrary.getCard(AphoticShield.ID).makeCopy());
+        if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
+            addSpellCard(CardLibrary.getCard(ESPSpell.ID).makeCopy());
         }
     }
 
