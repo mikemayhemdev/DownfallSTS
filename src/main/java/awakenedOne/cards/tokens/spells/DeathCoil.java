@@ -54,7 +54,7 @@ public class DeathCoil extends AbstractSpellCard {
                 if (!monster.isDead && !monster.isDying) {
                     if (monster != null) {
                         this.addToTop(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, monster.hb.cX, monster.hb.cY), 0.5F));
-                        this.addToBot(new ApplyPowerAction(monster, p, new ManaburnPower(m, this.magicNumber), this.magicNumber));
+                        this.addToBot(new ApplyPowerAction(monster, p, new ManaburnPower(monster, this.magicNumber), this.magicNumber));
                     }
                 }
               }
