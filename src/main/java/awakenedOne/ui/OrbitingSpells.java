@@ -26,6 +26,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.placeholderColor;
+import static downfall.downfallMod.DeterministicConjure;
 
 public class OrbitingSpells {
 
@@ -63,8 +65,8 @@ public class OrbitingSpells {
     static {
         spells.add(BurningStudy.ID);
         spells.add(Thunderbolt.ID);
-        spells.add(Darkleech.ID);
         spells.add(Cryostasis.ID);
+        spells.add(Darkleech.ID);
     }
 
     public static void refreshSpells() {
@@ -155,6 +157,9 @@ public class OrbitingSpells {
             Color textColor = Color.WHITE.cpy();
             if (s.upgraded) {
                 textColor = Color.GREEN.cpy();
+            }
+            if (s == spellCards.get(0) && DeterministicConjure) {
+                textColor = placeholderColor;
             }
             FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, s.name, boxes.get(xr).x + 15F, boxes.get(xr).y + 10F, textColor);
             TipHelper.renderTipEnergy(sb, AbstractCard.orb_red, boxes.get(xr).x + dist + 25.5F, boxes.get(xr).y);

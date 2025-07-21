@@ -18,7 +18,7 @@ public class DemonGlyph extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public DemonGlyph() {
-        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 4;
         //baseSecondMagic = secondMagic = 3;
         this.isEthereal = true;

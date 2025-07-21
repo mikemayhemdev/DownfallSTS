@@ -32,7 +32,7 @@ public class SiphonEnergy extends AbstractAwakenedCard {
             public void update() {
                 isDone = true;
                 if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2) instanceof AbstractSpellCard) {
-                    this.addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, magicNumber), -magicNumber));
+                    this.addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -magicNumber), -magicNumber));
                     if (m != null && !m.hasPower("Artifact")) {
                         this.addToBot(new ApplyPowerAction(m, p, new GainStrengthPower(m, magicNumber), magicNumber));
                     }

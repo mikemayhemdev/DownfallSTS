@@ -1,5 +1,6 @@
 package awakenedOne.actions;
 
+import awakenedOne.cards.Strike;
 import awakenedOne.powers.DarkIncantationRitualPower;
 import awakenedOne.powers.IntensifyDebuffPower;
 import awakenedOne.ui.OrbitingSpells;
@@ -16,8 +17,10 @@ import com.megacrit.cardcrawl.powers.RitualPower;
 import java.util.ArrayList;
 
 import static awakenedOne.ui.AwakenButton.awaken;
+import static awakenedOne.ui.OrbitingSpells.spellCards;
 import static awakenedOne.util.Wiz.applyToSelf;
 import static awakenedOne.util.Wiz.isAwakened;
+import static downfall.downfallMod.DeterministicConjure;
 
 public class ConjureAction extends AbstractGameAction {
 
@@ -72,7 +75,7 @@ public class ConjureAction extends AbstractGameAction {
             @Override
             public void update() {
                 isDone = true;
-                if ((OrbitingSpells.spellCards.isEmpty())) {
+                if ((spellCards.isEmpty())) {
                     awaken(5);
                     OrbitingSpells.refreshSpells();
 
@@ -92,7 +95,13 @@ public class ConjureAction extends AbstractGameAction {
             }
         });
         if (!choose) {
-            AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
+            AbstractCard tar = new Strike();
+            if (!DeterministicConjure) {
+                tar = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
+            }
+            if (DeterministicConjure) {
+                tar = spellCards.get(0);
+            }
             if (bstudy) {
                 tar = pick;
             }
@@ -108,7 +117,7 @@ public class ConjureAction extends AbstractGameAction {
             addToTop(new RemoveSpellCardAction(tar));
         } else {
             ArrayList<AbstractCard> possCards = new ArrayList<>();
-            possCards.addAll(OrbitingSpells.spellCards);
+            possCards.addAll(spellCards);
             ArrayList<AbstractCard> availableCards = new ArrayList<>();
             while (!possCards.isEmpty()) {
                 availableCards.add(possCards.remove(AbstractDungeon.cardRandomRng.random(possCards.size() - 1)));

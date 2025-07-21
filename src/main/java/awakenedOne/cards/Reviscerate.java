@@ -2,8 +2,6 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.GameActionManager;
-import com.megacrit.cardcrawl.actions.common.ReduceCostForTurnAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -31,6 +29,10 @@ public class Reviscerate extends AbstractAwakenedCard {
         }
     }
 
+    public void atTurnStart() {
+        this.resetAttributes();
+        this.applyPowers();
+    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < this.magicNumber; i++) {
