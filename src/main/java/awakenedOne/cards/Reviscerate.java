@@ -72,7 +72,6 @@ public class Reviscerate extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        //upgradeBaseCost(4);
         upgradeDamage(2);
     }
 }

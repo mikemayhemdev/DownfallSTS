@@ -31,6 +31,7 @@ public abstract class AbstractSpellCard extends AbstractAwakenedCard {
         super.applyPowers();
         if (AbstractDungeon.player.hasPower(IntensifyPower.POWER_ID)) {
             this.costForTurn = 0;
+            this.isCostModifiedForTurn = true;
         }
         if (AbstractDungeon.actionManager.turnHasEnded) {
             if (!AbstractDungeon.player.hasPower(IntensifyPower.POWER_ID)) {

@@ -32,6 +32,7 @@ public class EnMulticastPlasma extends AbstractBossCard {
         super(ID, cardStrings.NAME, "blue/skill/multicast", inCost, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.BLUE, CardRarity.RARE, CardTarget.NONE, AbstractMonster.Intent.BUFF);
         cost = inCost;
         this.showEvokeValue = true;
+        this.energyGeneratedIfPlayed = inCost*2;
     }
 
 
