@@ -39,8 +39,8 @@ public class TalonRake extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m != null) {
-            this.addToBot(new VFXAction(new RipAndTearEffect(p.hb.cX, p.hb.cY, Color.CYAN.cpy(), Color.WHITE)));
-            this.addToBot(new VFXAction(new RipAndTearEffect(p.hb.cX, p.hb.cY, Color.CYAN.cpy(), Color.WHITE)));
+            this.addToBot(new VFXAction(new RipAndTearEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), Color.WHITE)));
+            this.addToBot(new VFXAction(new RipAndTearEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), Color.WHITE)));
         }
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
