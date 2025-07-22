@@ -127,14 +127,16 @@ public class OrbitingSpells {
         int idx = getIndexOfCard(card);
         if (idx != -1) {
             spellCards.remove(getIndexOfCard(card));
-            if (!spellCards.isEmpty()) {
-                int rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
-                spellCards.get(rnd).tags.add(UP_NEXT);
+            if (card.hasTag(UP_NEXT)) {
+                if (!spellCards.isEmpty()) {
+                    int rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
+                    spellCards.get(rnd).tags.add(UP_NEXT);
+                }
             }
-            return true;
+                return true;
+            }
+            return false;
         }
-        return false;
-    }
 
     public static void atBattleStart() {
         refreshSpells();
