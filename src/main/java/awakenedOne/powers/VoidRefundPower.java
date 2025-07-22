@@ -43,7 +43,7 @@ public class VoidRefundPower extends AbstractAwakenedPower implements OnLoseEner
         }
 
         if (this.amount != 1) {
-            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3];
+            this.description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
         }
     }
 }

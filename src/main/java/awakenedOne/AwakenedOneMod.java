@@ -343,6 +343,7 @@ public class AwakenedOneMod implements
         OnCreateCardSubscriber.CardsCreatedThisCombat = 0;
         OnCreateCardSubscriber.CardsCreatedThisTurn = 0;
         awakenedthiscombat = false;
+        spellCards.clear();
         OrbitingSpells.empty();
     }
 
