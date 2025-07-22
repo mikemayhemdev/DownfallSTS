@@ -134,7 +134,6 @@ public class OrbitingSpells {
         int idx = getIndexOfCard(card);
         if (idx != -1) {
             spellCards.remove(getIndexOfCard(card));
-            if (card.hasTag(UP_NEXT)) {
                 if (!spellCards.isEmpty()) {
                     for (int i = 0; i < spellCards.size(); i++) {
                         if (spellCards.get(i).hasTag(UP_NEXT)) {
@@ -143,7 +142,6 @@ public class OrbitingSpells {
                     }
                     int rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
                     spellCards.get(rnd).tags.add(UP_NEXT);
-                }
             }
             return true;
         }
