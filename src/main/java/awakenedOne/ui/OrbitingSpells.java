@@ -133,20 +133,36 @@ public class OrbitingSpells {
     public static boolean removeSpellCard(AbstractCard card) {
         int idx = getIndexOfCard(card);
         if (idx != -1) {
-            spellCards.remove(getIndexOfCard(card));
-                if (!spellCards.isEmpty()) {
-                    for (int i = 0; i < spellCards.size()-1; i++) {
-                        if (spellCards.get(i).hasTag(UP_NEXT)) {
-                            spellCards.get(i).tags.remove(UP_NEXT);
-                        }
+            if (!spellCards.isEmpty()) {
+                for (int i = 0; i < spellCards.size() - 1; i++) {
+                    if (spellCards.get(i).hasTag(UP_NEXT)) {
+                        spellCards.get(i).tags.remove(UP_NEXT);
                     }
-                    int rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
-                    spellCards.get(rnd).tags.add(UP_NEXT);
+                }
             }
+            spellCards.remove(getIndexOfCard(card));
+            setupnext();
             return true;
         }
         return false;
     }
+
+    public static void setupnext() {
+        if (!spellCards.isEmpty()) {
+            for (int i = 0; i < spellCards.size() - 1; i++) {
+                if (spellCards.get(i).hasTag(UP_NEXT)) {
+                    spellCards.get(i).tags.remove(UP_NEXT);
+                }
+            }
+            AbstractCard card = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng);
+            int idx = getIndexOfCard(card);
+            if (idx != -1) {
+                spellCards.get(getIndexOfCard(card)).tags.add(UP_NEXT);
+            }
+        }
+    }
+
+
 
     public static void atBattleStart() {
         refreshSpells();

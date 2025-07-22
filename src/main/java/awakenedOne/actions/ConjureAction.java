@@ -6,6 +6,7 @@ import awakenedOne.powers.IntensifyDebuffPower;
 import awakenedOne.ui.OrbitingSpells;
 import awakenedOne.util.OnConjureSubscriber;
 import awakenedOne.util.Wiz;
+import charbosses.cards.colorless.EnApotheosis;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
@@ -90,19 +91,24 @@ public class ConjureAction extends AbstractGameAction {
             }
         });
         if (!choose) {
-            AbstractCard tar = new Strike();
+            AbstractCard tar = new EnApotheosis(); //dummy card
             if (!bstudy) {
             if (!DeterministicConjure) {
                 tar = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
             }
                 if (DeterministicConjure) {
-                    for (int i = 0; i < spellCards.size(); i++) {
+                    for (int i = 0; i < spellCards.size()-1; i++) {
                         if (spellCards.get(i).hasTag(UP_NEXT)) {
                             tar = spellCards.get(i);
                         }
                     }
                 }
             }
+
+            if (tar instanceof EnApotheosis) {
+                tar = spellCards.get(0);
+            }
+
             if (bstudy) {
                 tar = pick;
             }
