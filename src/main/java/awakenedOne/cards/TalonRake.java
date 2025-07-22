@@ -30,8 +30,8 @@ public class TalonRake extends AbstractAwakenedCard {
 
     public TalonRake() {
         super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = 6;
-        this.tags.add(AwakenedOneMod.CHANT);
+        baseDamage = 5;
+        //this.tags.add(AwakenedOneMod.CHANT);
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(TalonRake.class.getSimpleName() + ".png"));
     }
@@ -41,22 +41,22 @@ public class TalonRake extends AbstractAwakenedCard {
             this.addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Color.CYAN, Color.WHITE), 0.1F));
         }
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-
-        if (isTrig_chant()) {
-            this.tags.add(ACTIVECHANT);
-            chant();
-        }
-    }
-
-    public void triggerOnGlowCheck() {
-        this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
-
-    @Override
-    public void chant() {
         atb(new ConjureAction(false));
-        checkOnChant();
+//        if (isTrig_chant()) {
+//            this.tags.add(ACTIVECHANT);
+//            chant();
+//        }
     }
+
+//    public void triggerOnGlowCheck() {
+//        this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+//    }
+
+    //    @Override
+    //    public void chant() {
+    //        atb(new ConjureAction(false));
+    //        checkOnChant();
+    //    }
 
     public void upp() {
         upgradeDamage(3);

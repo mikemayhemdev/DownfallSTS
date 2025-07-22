@@ -123,6 +123,9 @@ public class ConjureAction extends AbstractGameAction {
                 addToTop(new MakeTempCardInDrawPileAction(tar, 1, false, true));
             }
             addToTop(new RemoveSpellCardAction(tar));
+            if (!bstudy) {
+                addToBot(new SetUpNextSpellAction());
+            }
         } else {
             ArrayList<AbstractCard> possCards = new ArrayList<>();
             possCards.addAll(spellCards);

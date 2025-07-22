@@ -2,6 +2,7 @@ package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.actions.SetUpNextSpellAction;
 import awakenedOne.cards.tokens.spells.BurningStudy;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
@@ -37,6 +38,7 @@ public class RippedDoll extends CustomRelic {
         this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         //this.addToTop(new MakeTempCardInHandAction(new Ceremony(), 1, false));
         atb(new ConjureAction(false, false, true, new BurningStudy()));
+        addToBot(new SetUpNextSpellAction());
     }
 
     @Override

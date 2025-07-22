@@ -150,7 +150,7 @@ public class OrbitingSpells {
                 card = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng);
                 idx = getIndexOfCard(card);
             }
-            spellCards.get(getIndexOfCard(card)).tags.add(UP_NEXT);
+            spellCards.get(idx).tags.add(UP_NEXT);
         }
     }
 
