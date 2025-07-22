@@ -35,8 +35,7 @@ public class RippedDoll extends CustomRelic {
     public void atBattleStart() {
         super.atBattleStart();
         this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        att(new ConjureAction(false, false, true, new BurningStudy()));
-        atb(new SetUpNextSpellAction());
+        att(new ConjureAction(false, false));
     }
 
     @Override
