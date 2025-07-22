@@ -97,8 +97,11 @@ public class OrbitingSpells {
         if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
             addSpellCard(CardLibrary.getCard(ESPSpell.ID).makeCopy());
         }
-
-        setupnext();
+        if ((conjuresThisCombat == 0) && (AbstractDungeon.player.hasRelic(RippedDoll.ID))) {
+            spellCards.get(0).tags.add(UP_NEXT);
+        } else {
+            setupnext();
+        }
     }
 
 
@@ -178,14 +181,10 @@ public class OrbitingSpells {
         for (AbstractCard c : spellCards) {
             c.tags.remove(UP_NEXT);
         }
-        if ((conjuresThisCombat == 0) && (AbstractDungeon.player.hasRelic(RippedDoll.ID))) {
-            spellCards.get(0).tags.add(UP_NEXT);
-        } else {
             AbstractCard card = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng);
             int idx = getIndexOfCard(card);
             if (idx != -1) {
                 spellCards.get(getIndexOfCard(card)).tags.add(UP_NEXT);
-            }
         }
     }
 

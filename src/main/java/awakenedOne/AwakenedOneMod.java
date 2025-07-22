@@ -336,6 +336,10 @@ public class AwakenedOneMod implements
     }
 
     public void onVictory() {
+        ConjureAction.conjuresThisCombat = 0;
+        OnLoseEnergyPowerPatch.EnergyLostThisCombat = 0;
+        OnCreateCardSubscriber.CardsCreatedThisCombat = 0;
+        OnCreateCardSubscriber.CardsCreatedThisTurn = 0;
         awakenedthiscombat = false;
         OrbitingSpells.empty();
     }
