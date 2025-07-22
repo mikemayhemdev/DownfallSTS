@@ -128,8 +128,10 @@
   "awakened:SongOfSorrowPower": {
     "NAME": "Song of Sorrow",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust a #yStatus or #rCurse [REMOVE_SPACE], ALL enemies lose #b",
-      " HP."
+      "The first time you create a #yVoid each turn, #yExhaust it and deal #b",
+      " damage to ALL enemies. ",
+      "You have not created a #yVoid yet this turn.",
+      "You have already created a #yVoid this turn."
     ]
   },
   "awakened:FeathersinksPower": {

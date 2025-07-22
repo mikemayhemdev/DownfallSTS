@@ -349,6 +349,7 @@ public class AwakenedOneMod implements
 
     @Override
     public void receiveOnPlayerTurnStart() {
+        OnCreateCardSubscriber.VoidCreatedThisTurn = false;
         OnCreateCardSubscriber.CardsCreatedThisTurn = 0;
         ConjureAction.refreshedthisturn = false;
     }

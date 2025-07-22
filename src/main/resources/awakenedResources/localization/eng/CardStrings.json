@@ -280,7 +280,7 @@
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
-    "DESCRIPTION": "Whenever you Exhaust a Status or Curse, ALL enemies lose !M! HP."
+    "DESCRIPTION": "The first time you create a #yVoid each turn, #yExhaust it and deal !M! damage to ALL enemies."
   },
   "awakened:MysticOrder": {
     "NAME": "Mystic Order",
