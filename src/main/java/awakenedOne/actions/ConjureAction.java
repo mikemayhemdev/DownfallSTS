@@ -21,8 +21,7 @@ import java.util.ArrayList;
 import static awakenedOne.AwakenedOneMod.UP_NEXT;
 import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
-import static awakenedOne.util.Wiz.applyToSelf;
-import static awakenedOne.util.Wiz.isAwakened;
+import static awakenedOne.util.Wiz.*;
 import static downfall.downfallMod.DeterministicConjure;
 
 public class ConjureAction extends AbstractGameAction {
@@ -124,6 +123,9 @@ public class ConjureAction extends AbstractGameAction {
             }
             if (!bstudy) {
                 addToTop(new RemoveSpellCardAction(tar));
+                if (spellCards.size() > 1) {
+                    atb(new SetUpNextSpellAction());
+                }
             } else {
                 addToTop(new RemoveSpellCardActionSpecial(tar));
             }

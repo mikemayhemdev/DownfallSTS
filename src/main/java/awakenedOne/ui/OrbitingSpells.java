@@ -150,32 +150,6 @@ public class OrbitingSpells {
                         awaken(5);
                         OrbitingSpells.refreshSpells();
                         ConjureAction.refreshedthisturn = true;
-                        setupnext();
-                    }
-                }
-            });
-            if (!(spellCards.isEmpty())) {
-                setupnext();
-            }
-            return true;
-        }
-        return false;
-    }
-
-
-    public static boolean removeSpellCardSpecial(AbstractCard card) {
-        int idx = getIndexOfCard(card);
-        if (idx != -1) {
-            spellCards.remove(getIndexOfCard(card));
-            att(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    if ((spellCards.isEmpty())) {
-                        awaken(5);
-                        OrbitingSpells.refreshSpells();
-                        ConjureAction.refreshedthisturn = true;
-                        setupnext();
                     }
                 }
             });
@@ -183,14 +157,13 @@ public class OrbitingSpells {
         }
         return false;
     }
+
 
 
     public static void setupnext() {
-        if (!spellCards.isEmpty()) {
-            AbstractCard card = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng);
-            int idx = getIndexOfCard(card);
-            spellCards.get(idx).tags.add(UP_NEXT);
-        }
+        int rnd;
+        rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
+        spellCards.get(rnd).tags.add(UP_NEXT);
     }
 
 

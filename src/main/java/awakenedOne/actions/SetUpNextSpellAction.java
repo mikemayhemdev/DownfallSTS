@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
 public class SetUpNextSpellAction extends AbstractGameAction {
-
     public SetUpNextSpellAction() {
     }
 
