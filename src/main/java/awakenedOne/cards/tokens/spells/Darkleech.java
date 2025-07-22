@@ -62,7 +62,7 @@ public class Darkleech extends AbstractSpellCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
         //upgradeSecondMagic(1);
     }
 }
