@@ -25,8 +25,7 @@ import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static awakenedOne.AwakenedOneMod.makeID;
-import static awakenedOne.AwakenedOneMod.placeholderColor;
+import static awakenedOne.AwakenedOneMod.*;
 import static downfall.downfallMod.DeterministicConjure;
 
 public class OrbitingSpells {
@@ -91,6 +90,7 @@ public class OrbitingSpells {
         if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
             addSpellCard(CardLibrary.getCard(ESPSpell.ID).makeCopy());
         }
+        setupnext();
     }
 
     public static void upgradeCaws(int amount) {
@@ -126,11 +126,21 @@ public class OrbitingSpells {
         int idx = getIndexOfCard(card);
         if (idx != -1) {
             spellCards.remove(getIndexOfCard(card));
+            if (card.hasTag(UP_NEXT)) {
+                setupnext();
+            }
             return true;
         }
         return false;
     }
 
+
+    public static void setupnext() {
+        int rnd = AbstractDungeon.cardRandomRng.random(0, spells.size()-1);
+        spellCards.get(rnd).tags.add(UP_NEXT);
+    }
+
+    //Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng)
     public static void atBattleStart() {
         refreshSpells();
     }
@@ -160,7 +170,7 @@ public class OrbitingSpells {
             if (s.upgraded) {
                 textColor = Color.GREEN.cpy();
             }
-            if (s == spellCards.get(0) && DeterministicConjure) {
+            if (s.hasTag(UP_NEXT) && DeterministicConjure) {
                 textColor = placeholderColor;
             }
             FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, s.name, boxes.get(xr).x + 15F, boxes.get(xr).y + 10F, textColor);

@@ -16,6 +16,7 @@ import com.megacrit.cardcrawl.powers.RitualPower;
 
 import java.util.ArrayList;
 
+import static awakenedOne.AwakenedOneMod.UP_NEXT;
 import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
 import static awakenedOne.util.Wiz.applyToSelf;
@@ -94,7 +95,9 @@ public class ConjureAction extends AbstractGameAction {
                 tar = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
             }
             if (DeterministicConjure) {
-                tar = spellCards.get(0);
+                while (!tar.hasTag(UP_NEXT)) {
+                    tar = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
+                }
             }
             if (bstudy) {
                 tar = pick;
