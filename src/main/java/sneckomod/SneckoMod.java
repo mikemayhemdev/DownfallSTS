@@ -536,7 +536,6 @@ public class SneckoMod implements
                 c.cardID.equals(SplitWide.ID) ||
                 c.cardID.equals(SheerTerror.ID) ||
                 c.cardID.equals(ShroudOfMiasma.ID) ||
-                c.cardID.equals(Psalm.ID) ||
                 c.cardID.equals(SiphonEnergy.ID) ||
                 c.cardID.equals(ExNihilo.ID)
                 )

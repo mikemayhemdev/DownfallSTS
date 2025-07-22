@@ -1,6 +1,5 @@
 package awakenedOne.cards;
 
-import awakenedOne.powers.FeathersinksPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -9,7 +8,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.applyToSelf;
 
 public class ShroudOfMiasma extends AbstractAwakenedCard {
     public final static String ID = makeID(ShroudOfMiasma.class.getSimpleName());

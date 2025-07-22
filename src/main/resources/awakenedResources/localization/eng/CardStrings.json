@@ -81,7 +81,7 @@
   },
   "awakened:Psalm": {
     "NAME": "Psalm",
-    "DESCRIPTION": "Apply !M! awakened:Hex to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Does not remove awakened:Hex."
   },
   "awakened:DemonGlyph": {
     "NAME": "Demon Glyph",
