@@ -21,9 +21,6 @@ public class DamageConditionalGivePatchApply {
             localvars={"player", "tmp"}
     )
     public static SpireReturn Insert(AbstractCard abstractCard, AbstractPlayer player, @ByRef float[] tmp) {
-        if (abstractCard.hasTag(UP_NEXT)) {
-            abstractCard.tags.remove(UP_NEXT);
-        }
         for(AbstractPower p : player.powers) {
             if (p instanceof DamageConditionalGivePower) {
                 float tmpcpy = tmp[0];

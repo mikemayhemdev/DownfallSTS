@@ -28,14 +28,6 @@ public class Grimoire extends AbstractAwakenedCard {
         loadJokeCardImage(this, makeBetaCardPath(Grimoire.class.getSimpleName() + ".png"));
     }
 
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        if (AbstractDungeon.player.hand.contains(this)) {
-            this.tags.remove(UP_NEXT);
-        }
-    }
-
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         att(new ModifyDamageAction(this.uuid, magicNumber));

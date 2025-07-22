@@ -123,9 +123,6 @@ public class ConjureAction extends AbstractGameAction {
                 addToTop(new MakeTempCardInDrawPileAction(tar, 1, false, true));
             }
             addToTop(new RemoveSpellCardAction(tar));
-            if ((!bstudy) || ((conjuresThisCombat != 1) && !AbstractDungeon.player.hasRelic(RippedDoll.ID))) {
-                addToBot(new SetUpNextSpellAction());
-            }
         } else {
             ArrayList<AbstractCard> possCards = new ArrayList<>();
             possCards.addAll(spellCards);
@@ -142,9 +139,6 @@ public class ConjureAction extends AbstractGameAction {
                 }
                 addToTop(new MakeTempCardInHandAction(q));
                 addToTop(new RemoveSpellCardAction(q));
-                if (q.hasTag(UP_NEXT)) {
-                    addToBot(new SetUpNextSpellAction());
-                }
             }));
         }
         for (AbstractCard c : AbstractDungeon.player.discardPile.group) {

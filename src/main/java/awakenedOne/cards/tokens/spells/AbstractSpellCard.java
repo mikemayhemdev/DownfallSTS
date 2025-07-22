@@ -30,9 +30,6 @@ public abstract class AbstractSpellCard extends AbstractAwakenedCard {
     @Override
     public void applyPowers() {
         super.applyPowers();
-        if (AbstractDungeon.player.hand.contains(this)) {
-            this.tags.remove(UP_NEXT);
-        }
         if (AbstractDungeon.player.hasPower(IntensifyPower.POWER_ID)) {
             this.costForTurn = 0;
             this.isCostModifiedForTurn = true;
