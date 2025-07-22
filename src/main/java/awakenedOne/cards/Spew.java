@@ -58,12 +58,6 @@ public class Spew extends AbstractAwakenedCard {
     }
 
     @Override
-    public void initializeDescription() {
-        super.initializeDescription();
-        this.keywords.add(GameDictionary.VOID.NAMES[0].toLowerCase());
-    }
-
-    @Override
     public void upp() {
         upgradeDamage(4);
     }

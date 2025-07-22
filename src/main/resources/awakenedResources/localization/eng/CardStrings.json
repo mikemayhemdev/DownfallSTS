@@ -280,7 +280,7 @@
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
-    "DESCRIPTION": "The first time you create a #yVoid each turn, #yExhaust it and deal !M! damage to ALL enemies."
+    "DESCRIPTION": "The first time you create a *Void each turn, Exhaust it and deal !M! damage to ALL enemies."
   },
   "awakened:MysticOrder": {
     "NAME": "Mystic Order",

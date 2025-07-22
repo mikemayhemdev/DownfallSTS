@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.powers.SongOfSorrowPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
@@ -20,6 +21,12 @@ public class SongOfSorrow extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new SongOfSorrowPower(magicNumber));
+    }
+
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        this.keywords.add(GameDictionary.VOID.NAMES[0].toLowerCase());
     }
 
     @Override
