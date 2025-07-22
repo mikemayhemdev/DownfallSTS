@@ -11,6 +11,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import static awakenedOne.AwakenedOneMod.UP_NEXT;
+
 
 @SpirePatch(clz = AbstractCard.class, method = "applyPowers")
 public class DamageConditionalGivePatchApply {
@@ -19,6 +21,9 @@ public class DamageConditionalGivePatchApply {
             localvars={"player", "tmp"}
     )
     public static SpireReturn Insert(AbstractCard abstractCard, AbstractPlayer player, @ByRef float[] tmp) {
+        if (abstractCard.hasTag(UP_NEXT)) {
+            abstractCard.tags.remove(UP_NEXT);
+        }
         for(AbstractPower p : player.powers) {
             if (p instanceof DamageConditionalGivePower) {
                 float tmpcpy = tmp[0];

@@ -119,11 +119,10 @@ public class ConjureAction extends AbstractGameAction {
                 addToTop(new MakeTempCardInHandAction(tar));
             }
             if (ontop == true) {
-                addToBot(new MakeTempCardInDrawPileAction(tar, 1, false, true));
+                addToTop(new MakeTempCardInDrawPileAction(tar, 1, false, true));
             }
             addToTop(new RemoveSpellCardAction(tar));
-            if (tar.hasTag(UP_NEXT)){
-                tar.tags.remove(UP_NEXT);
+            if (tar.hasTag(UP_NEXT)) {
                 addToBot(new SetUpNextSpellAction());
             }
         } else {
