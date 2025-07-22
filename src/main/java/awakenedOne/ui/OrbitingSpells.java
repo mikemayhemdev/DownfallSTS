@@ -127,7 +127,6 @@ public class OrbitingSpells {
         if (Wiz.isAwakened()) {
             card.upgrade();
         }
-        card.tags.remove(UP_NEXT);
         spellCards.add(card);
     }
 
