@@ -1,6 +1,7 @@
 package awakenedOne.ui;
 
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.actions.SetUpNextSpellAction;
 import awakenedOne.cards.AphoticFount;
 import awakenedOne.cards.Caw;
 import awakenedOne.cards.Deathwish;
@@ -97,15 +98,7 @@ public class OrbitingSpells {
             addSpellCard(CardLibrary.getCard(ESPSpell.ID).makeCopy());
         }
 
-        if (conjuresThisCombat == 0) {
-            int rnd;
-            if (AbstractDungeon.player.hasRelic(RippedDoll.ID)) {
-                rnd = 0;
-            } else {
-                rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
-        }
-        spellCards.get(rnd).tags.add(UP_NEXT);
-        }
+        setupnext();
     }
 
 
@@ -142,6 +135,28 @@ public class OrbitingSpells {
         int idx = getIndexOfCard(card);
         if (idx != -1) {
             spellCards.remove(getIndexOfCard(card));
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    if ((spellCards.isEmpty())) {
+                        awaken(5);
+                        OrbitingSpells.refreshSpells();
+                        ConjureAction.refreshedthisturn = true;
+                    } else {
+                        atb(new SetUpNextSpellAction());
+                    }
+                }
+            });
+            return true;
+        }
+        return false;
+    }
+
+    public static boolean removeSpellCardSpecial(AbstractCard card) {
+        int idx = getIndexOfCard(card);
+        if (idx != -1) {
+            spellCards.remove(getIndexOfCard(card));
             att(new AbstractGameAction() {
                 @Override
                 public void update() {
@@ -159,10 +174,13 @@ public class OrbitingSpells {
     }
 
 
-
     public static void setupnext() {
         int rnd;
-        rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
+        if ((conjuresThisCombat == 0) && (AbstractDungeon.player.hasRelic(RippedDoll.ID))) {
+            rnd = 0;
+            } else {
+            rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
+        }
         spellCards.get(rnd).tags.add(UP_NEXT);
     }
 

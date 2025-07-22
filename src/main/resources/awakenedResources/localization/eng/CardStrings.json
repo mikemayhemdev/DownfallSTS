@@ -225,7 +225,7 @@
   },
   "awakened:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if a *Void is in hand."
+    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if a card was created this turn."
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",

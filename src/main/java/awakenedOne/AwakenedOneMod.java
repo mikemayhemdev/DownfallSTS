@@ -331,6 +331,7 @@ public class AwakenedOneMod implements
         ConjureAction.conjuresThisCombat = 0;
         OnLoseEnergyPowerPatch.EnergyLostThisCombat = 0;
         OnCreateCardSubscriber.CardsCreatedThisCombat = 0;
+        OnCreateCardSubscriber.CardsCreatedThisTurn = 0;
         ConjureAction.refreshedthisturn = false;
     }
 
@@ -341,6 +342,7 @@ public class AwakenedOneMod implements
 
     @Override
     public void receiveOnPlayerTurnStart() {
+        OnCreateCardSubscriber.CardsCreatedThisTurn = 0;
         ConjureAction.refreshedthisturn = false;
     }
 

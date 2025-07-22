@@ -2,7 +2,6 @@ package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
-import awakenedOne.actions.SetUpNextSpellAction;
 import awakenedOne.cards.tokens.spells.BurningStudy;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;

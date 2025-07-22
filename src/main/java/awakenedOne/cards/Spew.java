@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import automaton.cards.goodstatus.IntoTheVoid;
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.patches.OnCreateCardSubscriber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -21,7 +22,7 @@ public class Spew extends AbstractAwakenedCard {
 
     public Spew() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 14;
+        baseDamage = 12;
         loadJokeCardImage(this, makeBetaCardPath(Spew.class.getSimpleName() + ".png"));
     }
     @Override
@@ -44,13 +45,7 @@ public class Spew extends AbstractAwakenedCard {
 
 
     public static boolean checkVoid() {
-        boolean hasVoid = false;
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c instanceof VoidCard || c instanceof IntoTheVoid) {
-                hasVoid = true;
-            }
-        }
-        return hasVoid;
+        return OnCreateCardSubscriber.CardsCreatedThisTurn > 0;
     }
 
     @Override
