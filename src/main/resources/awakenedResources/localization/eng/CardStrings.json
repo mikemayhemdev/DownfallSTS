@@ -97,7 +97,7 @@
   },
   "awakened:Peck": {
     "NAME": "Peck",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. Draw !M! card."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! card."
   },
   "awakened:Extension": {
     "NAME": "Extension",

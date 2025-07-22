@@ -23,7 +23,7 @@ public class Psalm extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public Psalm() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         loadJokeCardImage(this, makeBetaCardPath(Psalm.class.getSimpleName() + ".png"));
         baseDamage = 14;
     }
