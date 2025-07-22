@@ -28,7 +28,6 @@ public class RippedDoll extends CustomRelic {
     public RippedDoll() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
         AbstractCard q = new BurningStudy();
-        //q.upgrade();
         tips.add(new CardPowerTip(q));
     }
 

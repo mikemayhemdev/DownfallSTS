@@ -21,7 +21,7 @@ public class Spew extends AbstractAwakenedCard {
 
     public Spew() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 13;
+        baseDamage = 14;
         loadJokeCardImage(this, makeBetaCardPath(Spew.class.getSimpleName() + ".png"));
     }
     @Override

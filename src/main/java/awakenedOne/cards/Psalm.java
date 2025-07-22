@@ -25,7 +25,7 @@ public class Psalm extends AbstractAwakenedCard {
     public Psalm() {
         super(ID, 2, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         loadJokeCardImage(this, makeBetaCardPath(Psalm.class.getSimpleName() + ".png"));
-        baseDamage = 14;
+        baseDamage = 12;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
