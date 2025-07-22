@@ -90,7 +90,8 @@ public class OrbitingSpells {
             addSpellCard(CardLibrary.getCard(ESPSpell.ID).makeCopy());
         }
 
-        setupnext();
+        int rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
+        spellCards.get(rnd).tags.add(UP_NEXT);
     }
 
     public static void upgradeCaws(int amount) {
@@ -126,20 +127,13 @@ public class OrbitingSpells {
         int idx = getIndexOfCard(card);
         if (idx != -1) {
             spellCards.remove(getIndexOfCard(card));
-            if (card.hasTag(UP_NEXT)) {
-                setupnext();
+            if (!spellCards.isEmpty()) {
+                int rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
+                spellCards.get(rnd).tags.add(UP_NEXT);
             }
             return true;
         }
         return false;
-    }
-
-
-    public static void setupnext() {
-        if (!spellCards.isEmpty()) {
-            int rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
-            spellCards.get(rnd).tags.add(UP_NEXT);
-        }
     }
 
     public static void atBattleStart() {

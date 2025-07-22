@@ -91,12 +91,14 @@ public class ConjureAction extends AbstractGameAction {
         });
         if (!choose) {
             AbstractCard tar = new Strike();
+            if (!bstudy) {
             if (!DeterministicConjure) {
                 tar = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
             }
-            if (DeterministicConjure) {
-                while (!tar.hasTag(UP_NEXT)) {
-                    tar = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
+                if (DeterministicConjure) {
+                    while (!tar.hasTag(UP_NEXT)) {
+                        tar = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
+                    }
                 }
             }
             if (bstudy) {
@@ -105,6 +107,7 @@ public class ConjureAction extends AbstractGameAction {
             if (isAwakened()) {
                 tar.upgrade();
             }
+            tar.tags.remove(UP_NEXT);
             if (ontop == false) {
                 addToTop(new MakeTempCardInHandAction(tar));
             }
