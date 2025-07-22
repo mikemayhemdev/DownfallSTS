@@ -81,7 +81,7 @@
   },
   "awakened:Psalm": {
     "NAME": "Psalm",
-    "DESCRIPTION": "Gain !B! Block. NL The next time you play a Power, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Apply !M! awakened:Hex to ALL enemies."
   },
   "awakened:DemonGlyph": {
     "NAME": "Demon Glyph",
