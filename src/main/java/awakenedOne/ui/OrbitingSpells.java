@@ -92,12 +92,15 @@ public class OrbitingSpells {
             addSpellCard(CardLibrary.getCard(ESPSpell.ID).makeCopy());
         }
 
-        int rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
-
-        if (conjuresThisCombat == 0 && AbstractDungeon.player.hasRelic(RippedDoll.ID)) {
-            rnd = 0;
+        if (conjuresThisCombat == 0) {
+            int rnd;
+            if (AbstractDungeon.player.hasRelic(RippedDoll.ID)) {
+                rnd = 0;
+            } else {
+                rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
         }
         spellCards.get(rnd).tags.add(UP_NEXT);
+        }
     }
 
 
