@@ -175,18 +175,17 @@ public class OrbitingSpells {
 
 
     public static void setupnext() {
-        int rnd;
-        if ((conjuresThisCombat == 0) && (AbstractDungeon.player.hasRelic(RippedDoll.ID))) {
-            rnd = 0;
-        } else {
-            if (spellCards.size() > 1) {
-                rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
-            } else {
-                rnd = 0;
-            }
+        for (AbstractCard c : spellCards) {
+            c.tags.remove(UP_NEXT);
         }
-        if (!spellCards.isEmpty()) {
-            spellCards.get(rnd).tags.add(UP_NEXT);
+        if ((conjuresThisCombat == 0) && (AbstractDungeon.player.hasRelic(RippedDoll.ID))) {
+            spellCards.get(0).tags.add(UP_NEXT);
+        } else {
+            AbstractCard card = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng);
+            int idx = getIndexOfCard(card);
+            if (idx != -1) {
+                spellCards.get(getIndexOfCard(card)).tags.add(UP_NEXT);
+            }
         }
     }
 

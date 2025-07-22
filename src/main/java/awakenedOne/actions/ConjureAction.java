@@ -97,14 +97,16 @@ public class ConjureAction extends AbstractGameAction {
                 tar = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
             }
                 if (DeterministicConjure) {
-                    for (int i = 0; i < spellCards.size()-1; i++) {
-                        if (spellCards.get(i).hasTag(UP_NEXT)) {
-                            tar = spellCards.get(i);
+                    for (AbstractCard c : spellCards) {
+                        System.out.println("DEBUG: CHECKING: " + c.name);
+                        if (c.hasTag(UP_NEXT)) {
+                            System.out.println("DEBUG: YES! UP NEXT: " + c.name);
+                            tar = c.makeStatEquivalentCopy();
                         }
                     }
                 }
             }
-
+            System.out.println("DEBUG: TARGET CARD: " + tar.name);
             if (tar instanceof EnApotheosis) {
                 tar = spellCards.get(0);
             }
