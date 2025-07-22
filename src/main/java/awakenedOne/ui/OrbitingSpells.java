@@ -141,7 +141,9 @@ public class OrbitingSpells {
                 }
             }
             spellCards.remove(getIndexOfCard(card));
-            setupnext();
+            if (card.hasTag(UP_NEXT)) {
+                setupnext();
+            }
             return true;
         }
         return false;
