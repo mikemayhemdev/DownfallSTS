@@ -1,5 +1,6 @@
 package charbosses.powers.bossmechanicpowers;
 
+import awakenedOne.powers.DoubleSpellPower;
 import basemod.interfaces.CloneablePowerInterface;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
@@ -63,6 +64,9 @@ public class DefectCuriosityPower extends AbstractBossMechanicPower implements O
 
     @Override
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
+        if (power.ID == StrengthPower.POWER_ID) {
+            this.addToBot(new ApplyPowerAction(this.owner, this.owner, new FocusPower(this.owner, this.amount*power.amount), this.amount*power.amount));
+        }
         if (power.ID == FocusPower.POWER_ID && power.amount < 0 && !owner.hasPower("Artifact") && target == this.owner) {
             addToTop(new AbstractGameAction() {
                 @Override
