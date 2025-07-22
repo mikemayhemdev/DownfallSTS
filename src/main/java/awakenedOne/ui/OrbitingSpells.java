@@ -134,9 +134,6 @@ public class OrbitingSpells {
         int idx = getIndexOfCard(card);
         if (idx != -1) {
             spellCards.remove(getIndexOfCard(card));
-            if (card.hasTag(UP_NEXT)) {
-                setupnext();
-            }
             return true;
         }
         return false;
