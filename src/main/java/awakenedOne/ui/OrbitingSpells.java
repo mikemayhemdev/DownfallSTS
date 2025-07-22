@@ -142,16 +142,13 @@ public class OrbitingSpells {
 
     public static void setupnext() {
         if (!spellCards.isEmpty()) {
-            for (int i = 0; i < spellCards.size() - 1; i++) {
-                if (spellCards.get(i).hasTag(UP_NEXT)) {
-                    spellCards.get(i).tags.remove(UP_NEXT);
-                }
-            }
             AbstractCard card = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng);
             int idx = getIndexOfCard(card);
-            if (idx != -1) {
-                spellCards.get(getIndexOfCard(card)).tags.add(UP_NEXT);
+            while (idx != -1) {
+                card = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng);
+                idx = getIndexOfCard(card);
             }
+            spellCards.get(getIndexOfCard(card)).tags.add(UP_NEXT);
         }
     }
 

@@ -3,6 +3,7 @@ package awakenedOne.actions;
 import awakenedOne.cards.Strike;
 import awakenedOne.powers.DarkIncantationRitualPower;
 import awakenedOne.powers.IntensifyDebuffPower;
+import awakenedOne.relics.RippedDoll;
 import awakenedOne.ui.OrbitingSpells;
 import awakenedOne.util.OnConjureSubscriber;
 import awakenedOne.util.Wiz;
@@ -122,7 +123,7 @@ public class ConjureAction extends AbstractGameAction {
                 addToTop(new MakeTempCardInDrawPileAction(tar, 1, false, true));
             }
             addToTop(new RemoveSpellCardAction(tar));
-            if (tar.hasTag(UP_NEXT)) {
+            if ((!bstudy) || ((conjuresThisCombat != 1) && !AbstractDungeon.player.hasRelic(RippedDoll.ID))) {
                 addToBot(new SetUpNextSpellAction());
             }
         } else {
