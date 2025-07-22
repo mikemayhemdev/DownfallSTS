@@ -133,13 +133,6 @@ public class OrbitingSpells {
     public static boolean removeSpellCard(AbstractCard card) {
         int idx = getIndexOfCard(card);
         if (idx != -1) {
-            if (!spellCards.isEmpty()) {
-                for (int i = 0; i < spellCards.size() - 1; i++) {
-                    if (spellCards.get(i).hasTag(UP_NEXT)) {
-                        spellCards.get(i).tags.remove(UP_NEXT);
-                    }
-                }
-            }
             spellCards.remove(getIndexOfCard(card));
             if (card.hasTag(UP_NEXT)) {
                 setupnext();
