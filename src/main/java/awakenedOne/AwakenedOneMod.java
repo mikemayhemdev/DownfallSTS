@@ -59,6 +59,7 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import static awakenedOne.ui.OrbitingSpells.spellCards;
 import static awakenedOne.util.Wiz.atb;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
@@ -327,12 +328,13 @@ public class AwakenedOneMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         awakenedthiscombat = false;
-        OrbitingSpells.atBattleStart();
         ConjureAction.conjuresThisCombat = 0;
         OnLoseEnergyPowerPatch.EnergyLostThisCombat = 0;
         OnCreateCardSubscriber.CardsCreatedThisCombat = 0;
         OnCreateCardSubscriber.CardsCreatedThisTurn = 0;
         ConjureAction.refreshedthisturn = false;
+        spellCards.clear();
+        OrbitingSpells.atBattleStart();
     }
 
     public void onVictory() {
