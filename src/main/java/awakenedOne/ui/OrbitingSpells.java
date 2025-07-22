@@ -121,6 +121,7 @@ public class OrbitingSpells {
     }
 
     public static void addSpellCard(AbstractCard card) {
+        card.tags.remove(UP_NEXT);
         if (AbstractDungeon.player.hasPower(MasterRealityPower.POWER_ID)) {
             card.upgrade();
         }
