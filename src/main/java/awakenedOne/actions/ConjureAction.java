@@ -109,7 +109,6 @@ public class ConjureAction extends AbstractGameAction {
             if (isAwakened()) {
                 tar.upgrade();
             }
-            tar.tags.remove(UP_NEXT);
             if (ontop == false) {
                 addToTop(new MakeTempCardInHandAction(tar));
             }

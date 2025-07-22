@@ -100,6 +100,7 @@ public class OrbitingSpells {
         spellCards.get(rnd).tags.add(UP_NEXT);
     }
 
+
     public static void upgradeCaws(int amount) {
         for (AbstractCard c : OrbitingSpells.spellCards) {
             if (c instanceof Caw) {
@@ -126,6 +127,7 @@ public class OrbitingSpells {
         if (Wiz.isAwakened()) {
             card.upgrade();
         }
+        card.tags.remove(UP_NEXT);
         spellCards.add(card);
     }
 
@@ -135,14 +137,19 @@ public class OrbitingSpells {
             spellCards.remove(getIndexOfCard(card));
             if (card.hasTag(UP_NEXT)) {
                 if (!spellCards.isEmpty()) {
+                    for (int i = 0; i < spellCards.size(); i++) {
+                        if (spellCards.get(i).hasTag(UP_NEXT)) {
+                            spellCards.get(i).tags.remove(UP_NEXT);
+                        }
+                    }
                     int rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
                     spellCards.get(rnd).tags.add(UP_NEXT);
                 }
             }
-                return true;
-            }
-            return false;
+            return true;
         }
+        return false;
+    }
 
     public static void atBattleStart() {
         refreshSpells();
