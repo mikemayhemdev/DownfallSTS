@@ -135,7 +135,7 @@ public class OrbitingSpells {
         if (idx != -1) {
             spellCards.remove(getIndexOfCard(card));
                 if (!spellCards.isEmpty()) {
-                    for (int i = 0; i < spellCards.size(); i++) {
+                    for (int i = 0; i < spellCards.size()-1; i++) {
                         if (spellCards.get(i).hasTag(UP_NEXT)) {
                             spellCards.get(i).tags.remove(UP_NEXT);
                         }
