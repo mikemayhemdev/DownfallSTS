@@ -5,6 +5,7 @@ import awakenedOne.cards.Caw;
 import awakenedOne.cards.Deathwish;
 import awakenedOne.cards.Grimoire;
 import awakenedOne.cards.tokens.spells.*;
+import awakenedOne.relics.RippedDoll;
 import awakenedOne.relics.ZenerDeck;
 import awakenedOne.util.TexLoader;
 import awakenedOne.util.Wiz;
@@ -26,6 +27,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.actions.ConjureAction.conjuresThisCombat;
 import static downfall.downfallMod.DeterministicConjure;
 
 public class OrbitingSpells {
@@ -91,6 +93,10 @@ public class OrbitingSpells {
         }
 
         int rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
+
+        if (conjuresThisCombat == 0 && AbstractDungeon.player.hasRelic(RippedDoll.ID)) {
+            rnd = 0;
+        }
         spellCards.get(rnd).tags.add(UP_NEXT);
     }
 
