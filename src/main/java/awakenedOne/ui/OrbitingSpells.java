@@ -1,5 +1,6 @@
 package awakenedOne.ui;
 
+import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.AphoticFount;
 import awakenedOne.cards.Caw;
 import awakenedOne.cards.Deathwish;
@@ -12,6 +13,7 @@ import awakenedOne.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -28,6 +30,9 @@ import java.util.HashMap;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.actions.ConjureAction.conjuresThisCombat;
+import static awakenedOne.ui.AwakenButton.awaken;
+import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.att;
 import static downfall.downfallMod.DeterministicConjure;
 
 public class OrbitingSpells {
@@ -137,6 +142,17 @@ public class OrbitingSpells {
         int idx = getIndexOfCard(card);
         if (idx != -1) {
             spellCards.remove(getIndexOfCard(card));
+            att(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    if ((spellCards.isEmpty())) {
+                        awaken(5);
+                        OrbitingSpells.refreshSpells();
+                        ConjureAction.refreshedthisturn = true;
+                    }
+                }
+            });
             return true;
         }
         return false;
