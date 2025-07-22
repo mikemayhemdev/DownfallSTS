@@ -146,11 +146,7 @@ public class OrbitingSpells {
         if (!spellCards.isEmpty()) {
             AbstractCard card = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng);
             int idx = getIndexOfCard(card);
-            while (idx != -1) {
-                card = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng);
-                idx = getIndexOfCard(card);
-            }
-            spellCards.get(idx).tags.add(UP_NEXT);
+            spellCards.get(idx-1).tags.add(UP_NEXT);
         }
     }
 
