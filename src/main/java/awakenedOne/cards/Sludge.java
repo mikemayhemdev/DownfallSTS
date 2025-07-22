@@ -17,7 +17,7 @@ public class Sludge extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public Sludge() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         this.exhaust = true;

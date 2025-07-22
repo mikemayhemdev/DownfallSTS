@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
+import com.megacrit.cardcrawl.vfx.combat.RipAndTearEffect;
 
 import java.util.Collections;
 import java.util.Iterator;
@@ -29,8 +30,8 @@ public class TalonRake extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public TalonRake() {
-        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = 5;
+        super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
+        baseDamage = 4;
         //this.tags.add(AwakenedOneMod.CHANT);
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(TalonRake.class.getSimpleName() + ".png"));
@@ -38,8 +39,10 @@ public class TalonRake extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m != null) {
-            this.addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Color.CYAN, Color.WHITE), 0.1F));
+            this.addToBot(new VFXAction(new RipAndTearEffect(p.hb.cX, p.hb.cY, Color.CYAN.cpy(), Color.WHITE)));
+            this.addToBot(new VFXAction(new RipAndTearEffect(p.hb.cX, p.hb.cY, Color.CYAN.cpy(), Color.WHITE)));
         }
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         atb(new ConjureAction(false));
 //        if (isTrig_chant()) {
@@ -59,7 +62,7 @@ public class TalonRake extends AbstractAwakenedCard {
     //    }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
         //upgradeBaseCost(0);
     }
 }

@@ -72,7 +72,7 @@
   },
   "awakened:TalonRake": {
     "NAME": "Talon Rake",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage twice. NL awakened:Conjure."
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
@@ -97,7 +97,7 @@
   },
   "awakened:Peck": {
     "NAME": "Peck",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. Draw !M! card."
   },
   "awakened:Extension": {
     "NAME": "Extension",
@@ -113,11 +113,11 @@
   },
   "awakened:ClarionCall": {
     "NAME": "Clarion Call",
-    "DESCRIPTION": "Deal !D! damage. NL The next time you are awakened:Drained, gain [E] and draw a card."
+    "DESCRIPTION": "Deal !D! damage. NL The next time you are awakened:Drained, gain [E]."
   },
   "awakened:Recitation": {
     "NAME": "Recitation",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Deal !awakened:sd! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Then, deal !awakened:sd! damage."
   },
   "awakened:Swoop": {
     "NAME": "Swoop",
@@ -129,7 +129,7 @@
   },
   "awakened:Altar": {
     "NAME": "Altar",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust a card. NL If it was a Status or Curse, awakened:Conjure."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. NL If it was a Status or Curse, awakened:Conjure."
   },
   "awakened:Envision": {
     "NAME": "Envision",
@@ -163,7 +163,7 @@
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
-    "DESCRIPTION": "Retain. NL Gain !M! temporary Strength. Gain [E]. NL Exhaust."
+    "DESCRIPTION": "Gain !M! temporary Strength. NL Gain [E]. NL Exhaust."
   },
   "awakened:DesperatePrayer": {
   "NAME": "Desperate Prayer",
@@ -220,7 +220,7 @@
   },
   "awakened:Planeswalk": {
     "NAME": "Planeswalk",
-    "DESCRIPTION": "Gain !B! Block. Gain [E]. NL Add a *Void into your discard pile."
+    "DESCRIPTION": "Gain !B! Block. NL Gain [E]. NL Add a *Void into your discard pile."
   },
   "awakened:Spew": {
     "NAME": "Spew",
@@ -228,7 +228,7 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
-    "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength."
+    "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block."
   },
   "awakened:Brainshock": {
     "NAME": "Brainshock",
@@ -283,7 +283,7 @@
   },
   "awakened:MysticOrder": {
     "NAME": "Mystic Order",
-    "DESCRIPTION": "Whenever you Exhaust a card this turn, gain !M! Block."
+    "DESCRIPTION": "Draw !M! cards. NL awakened:Conjure."
   },
   "awakened:SacrilegiousStrike": {
     "NAME": "Sacrilegious Strike",
@@ -363,6 +363,6 @@
   },
   "awakened:SiphonEnergy": {
     "NAME": "Siphon",
-    "DESCRIPTION": "Deal !D! damage. NL If the last card played this combat was a Spell, enemy loses !M! Strength this turn."
+    "DESCRIPTION": "Deal !D! damage. NL If the last card played this combat was a Spell, gremlin:Steal !M! Strength this turn."
   }
 }

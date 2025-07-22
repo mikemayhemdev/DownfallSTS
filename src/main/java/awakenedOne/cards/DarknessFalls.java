@@ -17,19 +17,15 @@ public class DarknessFalls extends AbstractAwakenedCard {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
-        this.baseSecondMagic = 2;
-        this.secondMagic = this.baseSecondMagic;
-        this.isInnate = false;
         loadJokeCardImage(this, makeBetaCardPath(DarknessFalls.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DarknessFallsPower(p, magicNumber, secondMagic)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DarknessFallsPower(p, magicNumber)));
     }
 
     @Override
     public void upp() {
-        //this.isInnate = true;
         upgradeMagicNumber(2);
     }
 }

@@ -33,7 +33,7 @@ public class VoidRefundPower extends AbstractAwakenedPower implements OnLoseEner
             att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnergizedBluePower(AbstractDungeon.player, this.amount), this.amount));
         }
 
-        atb(new DrawCardAction(AbstractDungeon.player, this.amount));
+       // atb(new DrawCardAction(AbstractDungeon.player, this.amount));
         addToTop(new RemoveSpecificPowerAction(owner, owner, this));
     }
 

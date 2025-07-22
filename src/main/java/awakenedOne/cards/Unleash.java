@@ -16,7 +16,7 @@ public class Unleash extends AbstractAwakenedCard {
 
     public Unleash() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        this.selfRetain = true;
+        //this.selfRetain = true;
         this.exhaust = true;
         baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath( "Unleash.png"));

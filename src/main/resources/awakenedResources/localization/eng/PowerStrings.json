@@ -173,17 +173,15 @@
     "NAME": "Darkness Falls",
     "DESCRIPTIONS": [
       "Whenever you are #yDrained [REMOVE_SPACE], gain #b",
-      " #yBlock and #b",
-      " #yStrength [REMOVE_SPACE]."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "awakened:VoidRefundPower": {
     "NAME": "Clarion Call",
     "DESCRIPTIONS": [
-      "The next time you are #yDrained [REMOVE_SPACE], gain [E] and draw a card.",
+      "The next time you are #yDrained [REMOVE_SPACE], gain [E] .",
       "The next time you are #yDrained [REMOVE_SPACE], gain #b",
-      " [E] and draw #b",
-      " cards."
+      " [E] ."
     ]
   },
   "awakened:EntanglePowersPower": {
