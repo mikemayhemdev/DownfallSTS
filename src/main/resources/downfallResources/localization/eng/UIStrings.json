@@ -65,7 +65,7 @@
       "Disable music overrides (requires game restart)",
       "Unlock all locked alternative skin for Downfall characters",
       "Use icons instead of adding to text to cards for applied properties.",
-      "Conjure pulls non-random cards from the Spellbook."
+      "The Spellbook highlights the next card Conjure will draw."
     ]
   },
   "downfall:EnergyPanelTip": {
