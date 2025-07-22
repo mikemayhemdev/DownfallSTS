@@ -23,7 +23,6 @@ public class OnCreateCardSubscriber {
     public static void onCreateCard(AbstractCard c) {
         if (c.hasTag(UP_NEXT)) {
             c.tags.remove(UP_NEXT);
-            atb(new SetUpNextSpellAction());
         }
         if (!AbstractDungeon.actionManager.turnHasEnded) {
             if (AbstractDungeon.player.hasPower(InResponsePower.POWER_ID)) {

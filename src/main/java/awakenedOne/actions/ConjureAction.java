@@ -74,6 +74,23 @@ public class ConjureAction extends AbstractGameAction {
         conjuresThisCombat += 1;
         isDone = true;
         conjuredCards.clear();
+        addToTop(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                if ((spellCards.isEmpty())) {
+                    awaken(5);
+                    OrbitingSpells.refreshSpells();
+                    //On Refresh...
+//                        if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID)) {
+//                            for (int i = 0; i < AbstractDungeon.player.getPower(FeathersinksPower.POWER_ID).amount; i++) {
+//                                AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
+//                            }
+//                        }
+                    refreshedthisturn = true;
+                }
+            }
+        });
         if (!choose) {
             AbstractCard tar = new EnApotheosis(); //dummy card
             if (!bstudy) {
@@ -105,9 +122,10 @@ public class ConjureAction extends AbstractGameAction {
             if (ontop == true) {
                 addToTop(new MakeTempCardInDrawPileAction(tar, 1, false, true));
             }
-            addToBot(new RemoveSpellCardAction(tar));
             if (!bstudy) {
-                addToBot(new SetUpNextSpellAction());
+                addToTop(new RemoveSpellCardAction(tar));
+            } else {
+                addToTop(new RemoveSpellCardSpecialAction(tar));
             }
         } else {
             ArrayList<AbstractCard> possCards = new ArrayList<>();

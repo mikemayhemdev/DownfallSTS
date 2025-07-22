@@ -150,6 +150,32 @@ public class OrbitingSpells {
                         awaken(5);
                         OrbitingSpells.refreshSpells();
                         ConjureAction.refreshedthisturn = true;
+                        setupnext();
+                    }
+                }
+            });
+            if (!(spellCards.isEmpty())) {
+                setupnext();
+            }
+            return true;
+        }
+        return false;
+    }
+
+
+    public static boolean removeSpellCardSpecial(AbstractCard card) {
+        int idx = getIndexOfCard(card);
+        if (idx != -1) {
+            spellCards.remove(getIndexOfCard(card));
+            att(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    if ((spellCards.isEmpty())) {
+                        awaken(5);
+                        OrbitingSpells.refreshSpells();
+                        ConjureAction.refreshedthisturn = true;
+                        setupnext();
                     }
                 }
             });
@@ -157,6 +183,7 @@ public class OrbitingSpells {
         }
         return false;
     }
+
 
     public static void setupnext() {
         if (!spellCards.isEmpty()) {
