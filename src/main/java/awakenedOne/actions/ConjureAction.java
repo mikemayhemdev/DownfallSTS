@@ -125,7 +125,7 @@ public class ConjureAction extends AbstractGameAction {
             if (!bstudy) {
                 addToTop(new RemoveSpellCardAction(tar));
             } else {
-                addToTop(new RemoveSpellCardSpecialAction(tar));
+                addToTop(new RemoveSpellCardActionSpecial(tar));
             }
         } else {
             ArrayList<AbstractCard> possCards = new ArrayList<>();
