@@ -40,7 +40,7 @@ public class EnemyHexedPower extends AbstractAwakenedPower {
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (info.type == DamageInfo.DamageType.NORMAL) {
             this.flashWithoutSound();
-            if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1) instanceof Psalm) {
+            if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && !(AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1) instanceof Psalm)) {
             if (!owner.hasPower(SheerTerrorPower.POWER_ID)) {
                 addToBot(new ReducePowerAction(this.owner, this.owner, this, this.amount));
             }
