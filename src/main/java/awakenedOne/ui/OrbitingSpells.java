@@ -135,7 +135,7 @@ public class OrbitingSpells {
         int idx = getIndexOfCard(card);
         if (idx != -1) {
             spellCards.remove(getIndexOfCard(card));
-            atb(new AbstractGameAction() {
+            att(new AbstractGameAction() {
                 @Override
                 public void update() {
                     isDone = true;
@@ -178,10 +178,16 @@ public class OrbitingSpells {
         int rnd;
         if ((conjuresThisCombat == 0) && (AbstractDungeon.player.hasRelic(RippedDoll.ID))) {
             rnd = 0;
+        } else {
+            if (spellCards.size() > 1) {
+                rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
             } else {
-            rnd = AbstractDungeon.cardRandomRng.random(0, spells.size() - 1);
+                rnd = 0;
+            }
         }
-        spellCards.get(rnd).tags.add(UP_NEXT);
+        if (!spellCards.isEmpty()) {
+            spellCards.get(rnd).tags.add(UP_NEXT);
+        }
     }
 
 
