@@ -13,7 +13,7 @@ import static awakenedOne.util.Wiz.applyToSelf;
 public class CursedStrength extends AbstractAwakenedPower implements OnLoseEnergyPower {
     // intellij stuff buff
 
-    public static final String NAME = DarknessFallsPower.class.getSimpleName();
+    public static final String NAME = CursedStrength.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
 
     // intellij stuff buff

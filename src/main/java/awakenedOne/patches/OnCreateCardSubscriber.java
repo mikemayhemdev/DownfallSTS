@@ -70,7 +70,9 @@ public class OnCreateCardSubscriber {
                     //                                atb(new ExhaustSpecificCardAction(q, AbstractDungeon.player.limbo));
                     //                                atb(new WaitAction(0.1F));
                     //                            }
-                            AbstractDungeon.player.getPower(SongOfSorrowPower.POWER_ID).onSpecificTrigger();
+                    if (AbstractDungeon.player.hasPower(SongOfSorrowPower.POWER_ID)) {
+                        AbstractDungeon.player.getPower(SongOfSorrowPower.POWER_ID).onSpecificTrigger();
+                    }
                     }
                 }
             }
