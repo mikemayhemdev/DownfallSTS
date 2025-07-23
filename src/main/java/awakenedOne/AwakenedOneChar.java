@@ -4,6 +4,7 @@ import awakenedOne.cards.Defend;
 import awakenedOne.cards.Hymn;
 import awakenedOne.cards.Strike;
 import awakenedOne.cards.TalonRake;
+import awakenedOne.effects.IroncladVictoryFlameEffectBlue;
 import awakenedOne.effects.ReverseAwakenedWingParticle;
 import awakenedOne.relics.RippedDoll;
 import awakenedOne.util.Wiz;
@@ -31,8 +32,12 @@ import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.monsters.beyond.AwakenedOne;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.AwakenedEyeParticle;
 import com.megacrit.cardcrawl.vfx.AwakenedWingParticle;
+import com.megacrit.cardcrawl.vfx.combat.GiantFireEffect;
+import com.megacrit.cardcrawl.vfx.scene.IroncladVictoryFlameEffect;
+import hermit.vfx.GreenFireEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import reskinContent.patches.CharacterSelectScreenPatches;
@@ -42,6 +47,7 @@ import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.AwakenedOneMod.placeholderColor;
+import static hermit.characters.hermit.update_timer;
 
 public class AwakenedOneChar extends CustomPlayer {
     public static final String ID = makeID("awakenedOne");
@@ -251,6 +257,23 @@ public class AwakenedOneChar extends CustomPlayer {
         ArrayList<String> retVal = new ArrayList<>();
         retVal.add(RippedDoll.ID);
         return retVal;
+    }
+
+
+    @Override
+    public void updateVictoryVfx(ArrayList<AbstractGameEffect> effects) {
+
+        update_timer += Gdx.graphics.getDeltaTime();
+
+        update_timer += Gdx.graphics.getDeltaTime();
+
+        for (float i = 0; i + (1.0 / 120.0) <= update_timer; update_timer -= (1.0 / 120.0)) {
+            float spawn = (float) MathUtils.random(0, 10);
+            if (spawn == 1) {
+                effects.add(new IroncladVictoryFlameEffectBlue());
+                AbstractDungeon.effectsQueue.add(new IroncladVictoryFlameEffectBlue());
+            }
+        }
     }
 
     @Override
