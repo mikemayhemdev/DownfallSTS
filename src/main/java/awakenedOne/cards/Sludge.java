@@ -34,11 +34,11 @@ public class Sludge extends AbstractAwakenedCard {
                     new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         }
 
-        if (upgraded) {
-            atb(new MakeTempCardInDiscardAction(new VoidCard(), 1));
-        } else {
+//        if (upgraded) {
+//            atb(new MakeTempCardInDiscardAction(new VoidCard(), 1));
+//        } else {
             addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
-        }
+        //}
     }
 
     @Override
@@ -48,6 +48,6 @@ public class Sludge extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        //upgradeMagicNumber(1);
+        upgradeMagicNumber(1);
     }
 }

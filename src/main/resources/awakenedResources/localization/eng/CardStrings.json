@@ -145,8 +145,7 @@
   },
   "awakened:Sludge": {
     "NAME": "Sludge",
-    "DESCRIPTION": "gremlin:Steal !M! Strength. NL Place a *Void on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "gremlin:Steal !M! Strength. NL Add a *Void into your discard pile. NL Exhaust."
+    "DESCRIPTION": "gremlin:Steal !M! Strength. NL Place a *Void on top of your draw pile. NL Exhaust."
   },
   "awakened:KnifesEdge": {
     "NAME": "Knife's Edge",
