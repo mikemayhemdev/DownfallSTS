@@ -26,7 +26,14 @@
     "NAME": "Rising Chant",
     "DESCRIPTIONS": [
       "Whenever you play an activated #yChant card, gain #b",
-      " temporary #yStrength [REMOVE_SPACE]."
+      " #yStrength [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:CursedStrength": {
+    "NAME": "Darkblessed",
+    "DESCRIPTIONS": [
+      "Whenever you are #yDrained [REMOVE_SPACE], gain #b",
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "awakened:ThaumaturgyPower": {
@@ -111,8 +118,8 @@
   "awakened:EmpressPower": {
     "NAME": "Midnight",
     "DESCRIPTIONS": [
-      "Whenever you play a non-Spell #yPower [REMOVE_SPACE], #yConjure #b1 time.",
-      "Whenever you play a non-Spell #yPower [REMOVE_SPACE], #yConjure #b",
+      "Whenever you play a #yPower [REMOVE_SPACE], #yConjure #b1 time.",
+      "Whenever you play a #yPower [REMOVE_SPACE], #yConjure #b",
       " times."
     ]
   },

@@ -36,42 +36,41 @@ public class OnCreateCardSubscriber {
             }
             if (c instanceof VoidCard || c instanceof IntoTheVoid) {
                 if (!VoidCreatedThisTurn) {
-                    VoidCreatedThisTurn = true;
-                    if (AbstractDungeon.player.hasPower(SongOfSorrowPower.POWER_ID)) {
-                        for (int i = 0; i < AbstractDungeon.player.drawPile.size(); ) {
-                            AbstractCard q = AbstractDungeon.player.drawPile.group.get(i);
-                            if (c.uuid == q.uuid) {
-                                AbstractDungeon.player.drawPile.removeCard(c);
-                                AbstractDungeon.player.limbo.addToTop(c);
-                                atb(new ExhaustSpecificCardAction(c, AbstractDungeon.player.limbo));
-                                atb(new WaitAction(0.1F));
-                            } else {
-                                i++;
-                            }
-                        }
-
-                        for (int i = 0; i < AbstractDungeon.player.discardPile.size(); ) {
-                            AbstractCard q = AbstractDungeon.player.discardPile.group.get(i);
-                            if (c.uuid == q.uuid) {
-                                AbstractDungeon.player.discardPile.removeCard(c);
-                                AbstractDungeon.player.limbo.addToTop(c);
-                                atb(new ExhaustSpecificCardAction(c, AbstractDungeon.player.limbo));
-                                atb(new WaitAction(0.1F));
-                            } else {
-                                i++;
-                            }
-                        }
-
-                        for (int i = 0; i < AbstractDungeon.player.hand.size(); ) {
-                            AbstractCard q = AbstractDungeon.player.hand.group.get(i);
-                            if (c.uuid == q.uuid) {
-                                AbstractDungeon.player.hand.removeCard(c);
-                                AbstractDungeon.player.limbo.addToTop(c);
-                                atb(new ExhaustSpecificCardAction(q, AbstractDungeon.player.limbo));
-                                atb(new WaitAction(0.1F));
-                            }
+       //             VoidCreatedThisTurn = true;
+                    //                    if (AbstractDungeon.player.hasPower(SongOfSorrowPower.POWER_ID)) {
+                    //                        for (int i = 0; i < AbstractDungeon.player.drawPile.size(); ) {
+                    //                            AbstractCard q = AbstractDungeon.player.drawPile.group.get(i);
+                    //                            if (c.uuid == q.uuid) {
+                    //                                AbstractDungeon.player.drawPile.removeCard(c);
+                    //                                AbstractDungeon.player.limbo.addToTop(c);
+                    //                                atb(new ExhaustSpecificCardAction(c, AbstractDungeon.player.limbo));
+                    //                                atb(new WaitAction(0.1F));
+                    //                            } else {
+                    //                                i++;
+                    //                            }
+                    //                        }
+                    //
+                    //                        for (int i = 0; i < AbstractDungeon.player.discardPile.size(); ) {
+                    //                            AbstractCard q = AbstractDungeon.player.discardPile.group.get(i);
+                    //                            if (c.uuid == q.uuid) {
+                    //                                AbstractDungeon.player.discardPile.removeCard(c);
+                    //                                AbstractDungeon.player.limbo.addToTop(c);
+                    //                                atb(new ExhaustSpecificCardAction(c, AbstractDungeon.player.limbo));
+                    //                                atb(new WaitAction(0.1F));
+                    //                            } else {
+                    //                                i++;
+                    //                            }
+                    //                        }
+                    //
+                    //                        for (int i = 0; i < AbstractDungeon.player.hand.size(); ) {
+                    //                            AbstractCard q = AbstractDungeon.player.hand.group.get(i);
+                    //                            if (c.uuid == q.uuid) {
+                    //                                AbstractDungeon.player.hand.removeCard(c);
+                    //                                AbstractDungeon.player.limbo.addToTop(c);
+                    //                                atb(new ExhaustSpecificCardAction(q, AbstractDungeon.player.limbo));
+                    //                                atb(new WaitAction(0.1F));
+                    //                            }
                             AbstractDungeon.player.getPower(SongOfSorrowPower.POWER_ID).onSpecificTrigger();
-                        }
                     }
                 }
             }
@@ -83,4 +82,3 @@ public class OnCreateCardSubscriber {
             CardsCreatedThisTurn++;
         }
     }
-}

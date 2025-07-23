@@ -18,7 +18,7 @@ public class Bloodthirst extends AbstractAwakenedCard {
 
     public Bloodthirst() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 16;
+        baseDamage = 20;
         tags.add(CardTags.HEALING);
         loadJokeCardImage(this, makeBetaCardPath(Bloodthirst.class.getSimpleName() + ".png"));
     }
@@ -42,6 +42,6 @@ public class Bloodthirst extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(6);
+        upgradeDamage(5);
     }
 }

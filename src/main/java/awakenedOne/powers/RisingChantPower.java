@@ -19,8 +19,7 @@ public class RisingChantPower extends AbstractAwakenedPower {
 
     @Override
     public void onSpecificTrigger() {
-        applyToSelf(new StrengthPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
-        applyToSelf(new LoseStrengthPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
+        applyToSelf(new StrengthPower(AbstractDungeon.player, amount));
         flash();
     }
 

@@ -189,7 +189,7 @@
   },
   "awakened:RisingChant": {
     "NAME": "Rising Chant",
-    "DESCRIPTION": "Whenever you play an activated awakened:Chant card, gain !M! temporary Strength."
+    "DESCRIPTION": "Whenever you play an activated awakened:Chant card, gain !M! Strength."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
@@ -208,7 +208,7 @@
   },
   "awakened:MoonlitVision": {
     "NAME": "Moonlit Vision",
-    "DESCRIPTION": "Whenever you play a non-Spell Power, awakened:Conjure."
+    "DESCRIPTION": "Whenever you play a Power, awakened:Conjure."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
@@ -229,7 +229,7 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
-    "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block."
+    "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength."
   },
   "awakened:Brainshock": {
     "NAME": "Brainshock",

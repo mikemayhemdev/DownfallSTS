@@ -28,7 +28,7 @@ public class ThaumaturgyPower extends AbstractAwakenedPower implements OnReceive
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source) {
             if ((power instanceof StrengthPower) && (power.amount > 0)) {
                 flash();
-                addToBot(new GainBlockAction(owner, this.amount*power.amount));
+                addToBot(new GainBlockAction(owner, this.amount));
 //                addToBot(new GainBlockAction(owner, this.amount * power.amount));
                 updateDescription();
             }

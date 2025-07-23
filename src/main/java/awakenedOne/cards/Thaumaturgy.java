@@ -12,7 +12,7 @@ public class Thaumaturgy extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public Thaumaturgy() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath(Thaumaturgy.class.getSimpleName() + ".png"));
