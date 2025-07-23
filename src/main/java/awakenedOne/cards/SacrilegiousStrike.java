@@ -14,8 +14,8 @@ public class SacrilegiousStrike extends AbstractAwakenedCard {
 
     public SacrilegiousStrike() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 5;
-        baseBlock = 5;
+        baseDamage = 4;
+        baseBlock = 4;
         tags.add(CardTags.STRIKE);
         loadJokeCardImage(this, makeBetaCardPath(SacrilegiousStrike.class.getSimpleName() + ".png"));
     }

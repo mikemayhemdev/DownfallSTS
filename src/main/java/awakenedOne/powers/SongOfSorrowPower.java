@@ -21,18 +21,12 @@ public class SongOfSorrowPower extends AbstractAwakenedPower {
 
     @Override
     public void onSpecificTrigger() {
-        active = false;
         flash();
         this.addToBot(new DamageAllEnemiesAction((AbstractCreature) null, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
     }
 
     public void updateDescription() {
-        if (active) {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[2];
-        } else {
-            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[3]);
-        }
-
     }
 
 }
