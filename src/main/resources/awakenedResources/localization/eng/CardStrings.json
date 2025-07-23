@@ -164,7 +164,7 @@
   },
   "awakened:Unleash": {
     "NAME": "Unleash",
-    "DESCRIPTION": "Gain !M! temporary Strength. NL Gain [E]. NL Exhaust."
+    "DESCRIPTION": "Gain !M! temporary Strength. NL Next turn, gain a *Miracle. NL Exhaust."
   },
   "awakened:DesperatePrayer": {
   "NAME": "Desperate Prayer",
