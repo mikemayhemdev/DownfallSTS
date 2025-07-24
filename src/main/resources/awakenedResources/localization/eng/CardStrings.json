@@ -161,7 +161,7 @@
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Choose a card to awakened:Conjure."
   },
   "awakened:Unleash": {
-    "NAME": "Unleash",
+    "NAME": "Zealotry",
     "DESCRIPTION": "Gain !M! temporary Strength. NL Next turn, gain a *Miracle."
   },
   "awakened:DesperatePrayer": {
