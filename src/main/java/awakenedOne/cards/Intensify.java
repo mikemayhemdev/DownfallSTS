@@ -15,7 +15,7 @@ public class Intensify extends AbstractAwakenedCard {
     // intellij stuff skill, self, common, , , 10, 4, , 
 
     public Intensify() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath("Intensify.png"));
     }
