@@ -211,7 +211,8 @@
   "awakened:NihilRetriggerPower": {
     "NAME": "Nihil",
     "DESCRIPTIONS": [
-      "Loses HP equal to its #yManaburn at the start of its turn",
+      "Loses HP equal to its #yManaburn at the start of its turn.",
+      "Loses HP equal to its #yManaburn at the start of its turn ",
       " times."
     ]
   },

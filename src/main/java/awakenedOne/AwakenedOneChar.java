@@ -268,7 +268,7 @@ public class AwakenedOneChar extends CustomPlayer {
         update_timer += Gdx.graphics.getDeltaTime();
 
         for (float i = 0; i + (1.0 / 120.0) <= update_timer; update_timer -= (1.0 / 120.0)) {
-            float spawn = (float) MathUtils.random(0, 15);
+            float spawn = (float) MathUtils.random(0, 20);
             if (spawn == 1) {
                 effects.add(new IroncladVictoryFlameEffectBlue());
                 AbstractDungeon.effectsQueue.add(new IroncladVictoryFlameEffectBlue());

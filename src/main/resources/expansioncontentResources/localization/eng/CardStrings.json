@@ -1,6 +1,6 @@
 {
   "expansioncontent:GuardianWhirl": {
-    "NAME": "GUARDIAN WHIRL",
+    "NAME": "Guardian Whirl",
     "DESCRIPTION": "Deal !D! damage to ALL enemies !M! times. NL If you have at least !DM! Block, hits !M! more times.",
     "EXTENDED_DESCRIPTION": [
       "More Block required."
