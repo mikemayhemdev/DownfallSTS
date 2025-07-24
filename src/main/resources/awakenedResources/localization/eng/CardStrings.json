@@ -56,7 +56,7 @@
     "DESCRIPTION": "At the end of your turn, deal !D! damage to ALL enemies, increased by Strength."
   },
   "awakened:FleetingCuriosity": {
-    "NAME": "Fleeting Curiosity",
+    "NAME": "Fading Curiosity",
     "DESCRIPTION": "Whenever you play a Power, gain !awakened:m2! Strength. NL At the end of your turn, lose !M! Strength."
   },
   "awakened:GrandMagus": {
@@ -107,7 +107,7 @@
     "DESCRIPTION": "Deal !D! damage. NL The next time you play a Power, awakened:Conjure."
   },
   "awakened:FlareShot": {
-    "NAME": "Flare Shot",
+    "NAME": "Feather Flare",
     "DESCRIPTION": "Deal !D! damage. NL This turn, whenever you play a non-Attack card, deal !M! damage to ALL enemies."
   },
   "awakened:ClarionCall": {
@@ -139,7 +139,7 @@
     "DESCRIPTION": "Whenever you gain Strength, gain !M! Block."
   },
   "awakened:ShroudOfMiasma": {
-    "NAME": "Shroud of Miasma",
+    "NAME": "Wave of Miasma",
     "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak and awakened:Hex to ALL enemies. NL Exhaust."
   },
   "awakened:Sludge": {
@@ -186,7 +186,7 @@
     "DESCRIPTION": "The first !M! times you gain Strength each turn, draw a card."
   },
   "awakened:RisingChant": {
-    "NAME": "Rising Chant",
+    "NAME": "Rising Chorus",
     "DESCRIPTION": "Whenever you play an activated awakened:Chant card, gain !M! Strength."
   },
   "awakened:FeatherWhirl": {
@@ -285,7 +285,7 @@
     "DESCRIPTION": "Draw !M! cards. NL awakened:Conjure."
   },
   "awakened:SacrilegiousStrike": {
-    "NAME": "Sacrilegious Strike",
+    "NAME": "Profane Strike",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL The next time you play a Power, lose [E] ."
   },
   "awakened:ToTheLimit": {

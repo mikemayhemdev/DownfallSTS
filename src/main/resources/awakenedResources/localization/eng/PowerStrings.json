@@ -23,7 +23,7 @@
     ]
   },
   "awakened:RisingChantPower": {
-    "NAME": "Rising Chant",
+    "NAME": "Rising Chorus",
     "DESCRIPTIONS": [
       "Whenever you play an activated #yChant card, gain #b",
       " #yStrength [REMOVE_SPACE]."
