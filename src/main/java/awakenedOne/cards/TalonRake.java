@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
+import com.megacrit.cardcrawl.vfx.combat.RipAndTearEffect;
 
 import java.util.Collections;
 import java.util.Iterator;
@@ -29,36 +30,39 @@ public class TalonRake extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public TalonRake() {
-        super(ID, 1, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = 6;
-        this.tags.add(AwakenedOneMod.CHANT);
+        super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
+        baseDamage = 5;
+        //this.tags.add(AwakenedOneMod.CHANT);
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(TalonRake.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m != null) {
-            this.addToBot(new VFXAction(new ClawEffect(m.hb.cX, m.hb.cY, Color.CYAN, Color.WHITE), 0.1F));
+            this.addToBot(new VFXAction(new RipAndTearEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), Color.WHITE)));
+            this.addToBot(new VFXAction(new RipAndTearEffect(m.hb.cX, m.hb.cY, Color.CYAN.cpy(), Color.WHITE)));
         }
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-
-        if (isTrig_chant()) {
-            this.tags.add(ACTIVECHANT);
-            chant();
-        }
-    }
-
-    public void triggerOnGlowCheck() {
-        this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
-
-    @Override
-    public void chant() {
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         atb(new ConjureAction(false));
+//        if (isTrig_chant()) {
+//            this.tags.add(ACTIVECHANT);
+//            chant();
+//        }
     }
+
+//    public void triggerOnGlowCheck() {
+//        this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+//    }
+
+    //    @Override
+    //    public void chant() {
+    //        atb(new ConjureAction(false));
+    //        checkOnChant();
+    //    }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
         //upgradeBaseCost(0);
     }
 }

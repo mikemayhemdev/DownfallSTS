@@ -1,8 +1,10 @@
 package awakenedOne.cards;
 
 import awakenedOne.powers.DarkIncantationRitualPower;
+import awakenedOne.powers.DoubleSpellPower;
 import awakenedOne.ui.OrbitingSpells;
 import basemod.helpers.BaseModCardTags;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -26,6 +28,7 @@ public class MazalethForm extends AbstractAwakenedCard {
             OrbitingSpells.upgradeall();
         }
         applyToSelf(new DarkIncantationRitualPower(magicNumber));
+        applyToSelf(new DoubleSpellPower(magicNumber));
     }
 
     public void upp() {

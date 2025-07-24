@@ -1,6 +1,7 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.spells.ESPSpell;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.util.Wiz.att;
 
 public class ZenerDeck extends CustomRelic {
 
@@ -28,7 +30,7 @@ public class ZenerDeck extends CustomRelic {
     public void atBattleStart() {
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         //actually conjuring it at the start of combat might be OP
-       // att(new ConjureAction(false, false, true, new ESPSpell()));
+       att(new ConjureAction(false, false, true, new ESPSpell()));
     }
 
     @Override

@@ -40,7 +40,7 @@ public class BurdenOfKnowledge extends CustomRelic {
     int effectCount = 0;
 
     public BurdenOfKnowledge() {
-        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.DEPRECATED, LandingSound.MAGICAL);
     }
 
     public String getUpdatedDescription() {

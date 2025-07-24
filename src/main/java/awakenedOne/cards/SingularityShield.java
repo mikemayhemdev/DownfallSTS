@@ -12,7 +12,7 @@ public class SingularityShield extends AbstractAwakenedCard {
 
     public SingularityShield() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
-        baseBlock = 6;
+        baseBlock = 8;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath(SingularityShield.class.getSimpleName() + ".png"));
@@ -25,7 +25,7 @@ public class SingularityShield extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(1);
         upgradeMagicNumber(1);
     }
 }

@@ -525,7 +525,6 @@ public class SneckoMod implements
                 c.cardID.equals(Belittle.ID) ||
                 c.cardID.equals(PoisonParadise.ID) ||
                 c.cardID.equals(AceOfWands.ID) ||
-
                 //Awakened One Cards
                 c.cardID.equals(ManaburnCard.ID) ||
                 c.cardID.equals(SingularityShield.ID) ||
@@ -537,6 +536,7 @@ public class SneckoMod implements
                 c.cardID.equals(SplitWide.ID) ||
                 c.cardID.equals(SheerTerror.ID) ||
                 c.cardID.equals(ShroudOfMiasma.ID) ||
+                c.cardID.equals(SiphonEnergy.ID) ||
                 c.cardID.equals(ExNihilo.ID)
                 )
 
@@ -725,12 +725,12 @@ public class SneckoMod implements
                 OverwhelmingPresence.ID,
 
                 SneckoBoss.ID,
-                CheapStock.ID,
+                SleevedAce.ID,
                 CleanMud.ID,
 
-                GlitteringGambit.ID,
+                BlankCard.ID,
                 SneckoTalon.ID,
-                Jackpot.ID,
+                SleevedAce.ID,
 
                 TheSnecko.Enums.THE_SNECKO
         );

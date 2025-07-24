@@ -1,10 +1,13 @@
 package awakenedOne.actions;
 
+import awakenedOne.cards.Strike;
 import awakenedOne.powers.DarkIncantationRitualPower;
 import awakenedOne.powers.IntensifyDebuffPower;
+import awakenedOne.relics.RippedDoll;
 import awakenedOne.ui.OrbitingSpells;
 import awakenedOne.util.OnConjureSubscriber;
 import awakenedOne.util.Wiz;
+import charbosses.cards.colorless.EnApotheosis;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
@@ -15,9 +18,11 @@ import com.megacrit.cardcrawl.powers.RitualPower;
 
 import java.util.ArrayList;
 
+import static awakenedOne.AwakenedOneMod.UP_NEXT;
 import static awakenedOne.ui.AwakenButton.awaken;
-import static awakenedOne.util.Wiz.applyToSelf;
-import static awakenedOne.util.Wiz.isAwakened;
+import static awakenedOne.ui.OrbitingSpells.spellCards;
+import static awakenedOne.util.Wiz.*;
+import static downfall.downfallMod.DeterministicConjure;
 
 public class ConjureAction extends AbstractGameAction {
 
@@ -72,15 +77,9 @@ public class ConjureAction extends AbstractGameAction {
             @Override
             public void update() {
                 isDone = true;
-                if ((OrbitingSpells.spellCards.isEmpty())) {
+                if ((spellCards.isEmpty())) {
                     awaken(5);
                     OrbitingSpells.refreshSpells();
-
-                    if (AbstractDungeon.player.hasPower(DarkIncantationRitualPower.POWER_ID) && refreshedthisturn == false) {
-                        applyToSelf(new RitualPower(AbstractDungeon.player, AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).amount, true));
-                        AbstractDungeon.player.getPower(DarkIncantationRitualPower.POWER_ID).onSpecificTrigger();
-                    }
-
                     //On Refresh...
 //                        if (AbstractDungeon.player.hasPower(FeathersinksPower.POWER_ID)) {
 //                            for (int i = 0; i < AbstractDungeon.player.getPower(FeathersinksPower.POWER_ID).amount; i++) {
@@ -92,7 +91,26 @@ public class ConjureAction extends AbstractGameAction {
             }
         });
         if (!choose) {
-            AbstractCard tar = Wiz.getRandomItem(OrbitingSpells.spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
+            AbstractCard tar = new EnApotheosis(); //dummy card
+            if (!bstudy) {
+            if (!DeterministicConjure) {
+                tar = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
+            }
+                if (DeterministicConjure) {
+                    for (AbstractCard c : spellCards) {
+                        System.out.println("DEBUG: CHECKING: " + c.name);
+                        if (c.hasTag(UP_NEXT)) {
+                            System.out.println("DEBUG: YES! UP NEXT: " + c.name);
+                            tar = c.makeStatEquivalentCopy();
+                        }
+                    }
+                }
+            }
+            System.out.println("DEBUG: TARGET CARD: " + tar.name);
+            if (tar instanceof EnApotheosis) {
+                tar = spellCards.get(0);
+            }
+
             if (bstudy) {
                 tar = pick;
             }
@@ -103,12 +121,19 @@ public class ConjureAction extends AbstractGameAction {
                 addToTop(new MakeTempCardInHandAction(tar));
             }
             if (ontop == true) {
-                addToBot(new MakeTempCardInDrawPileAction(tar, 1, false, true));
+                addToTop(new MakeTempCardInDrawPileAction(tar, 1, false, true));
             }
-            addToTop(new RemoveSpellCardAction(tar));
+            if (!bstudy) {
+                addToTop(new RemoveSpellCardAction(tar));
+//                if (!spellCards.isEmpty()) {
+//                    atb(new SetUpNextSpellAction());
+//                }
+            } else {
+                addToTop(new RemoveSpellCardActionSpecial(tar));
+            }
         } else {
             ArrayList<AbstractCard> possCards = new ArrayList<>();
-            possCards.addAll(OrbitingSpells.spellCards);
+            possCards.addAll(spellCards);
             ArrayList<AbstractCard> availableCards = new ArrayList<>();
             while (!possCards.isEmpty()) {
                 availableCards.add(possCards.remove(AbstractDungeon.cardRandomRng.random(possCards.size() - 1)));

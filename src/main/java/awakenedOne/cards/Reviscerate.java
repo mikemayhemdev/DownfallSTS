@@ -18,7 +18,7 @@ public class Reviscerate extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public Reviscerate() {
-        super(ID, 5, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 6;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
@@ -29,6 +29,10 @@ public class Reviscerate extends AbstractAwakenedCard {
         }
     }
 
+    public void atTurnStart() {
+        this.resetAttributes();
+        this.applyPowers();
+    }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < this.magicNumber; i++) {
@@ -36,27 +40,40 @@ public class Reviscerate extends AbstractAwakenedCard {
         }
     }
 
-    public void configureCostsOnNewCard() {
-        Iterator var1 = AbstractDungeon.actionManager.cardsPlayedThisCombat.iterator();
-
+    public void triggerWhenDrawn() {
+        super.triggerWhenDrawn();
+        Iterator var1 = AbstractDungeon.actionManager.cardsPlayedThisTurn.iterator();
+        int powers = 0;
         while(var1.hasNext()) {
             AbstractCard c = (AbstractCard)var1.next();
             if (c.type == CardType.POWER) {
-                this.updateCost(-1);
+                powers++;
             }
         }
+        this.setCostForTurn(this.cost - powers);
+    }
 
+
+    public void configureCostsOnNewCard() {
+        Iterator var1 = AbstractDungeon.actionManager.cardsPlayedThisTurn.iterator();
+        int powers = 0;
+        while(var1.hasNext()) {
+            AbstractCard c = (AbstractCard)var1.next();
+            if (c.type == CardType.POWER) {
+                powers++;
+            }
+        }
+        this.setCostForTurn(this.cost - powers);
     }
 
     public void triggerOnCardPlayed(AbstractCard c) {
         if (c.type == CardType.POWER) {
-            this.updateCost(-1);
+            this.setCostForTurn(this.costForTurn - 1);
         }
-
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(4);
+        upgradeDamage(2);
     }
 }

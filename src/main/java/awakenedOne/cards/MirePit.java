@@ -23,7 +23,7 @@ public class MirePit extends AbstractAwakenedCard {
 
     public MirePit() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 7;
+        baseMagicNumber = magicNumber = 6;
         this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(MirePit.class.getSimpleName() + ".png"));
     }
@@ -57,6 +57,6 @@ public class MirePit extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(2);
     }
 }

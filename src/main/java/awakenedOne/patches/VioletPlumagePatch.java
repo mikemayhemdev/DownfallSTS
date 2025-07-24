@@ -1,6 +1,8 @@
 package awakenedOne.patches;
 //
+import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import awakenedOne.powers.ConjureNextTurnPower;
+import awakenedOne.powers.IntensifyPower;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -19,10 +21,14 @@ public class VioletPlumagePatch {
             if(__result)
                 return true;
 
-            if(isIndeedWithoutADoubtInCombat() && __instance.type == AbstractCard.CardType.CURSE) {
+            if (isIndeedWithoutADoubtInCombat() && __instance.type == AbstractCard.CardType.CURSE) {
                 if (__instance.cost != 0) {
                     return (AbstractDungeon.player.hasRelic(BlackCandle.ID));
                 }
+            }
+
+            if (isIndeedWithoutADoubtInCombat() && __instance instanceof AbstractSpellCard && (AbstractDungeon.player.hasPower(IntensifyPower.POWER_ID))) {
+                return (AbstractDungeon.player.hasPower(IntensifyPower.POWER_ID));
             }
 
             if(isIndeedWithoutADoubtInCombat() && __instance.type == AbstractCard.CardType.POWER && (AbstractDungeon.player.hasPower(ConjureNextTurnPower.POWER_ID))) {

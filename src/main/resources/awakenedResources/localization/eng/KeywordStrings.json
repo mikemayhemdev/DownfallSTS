@@ -2,12 +2,12 @@
   {
     "PROPER_NAME": "Power Potion",
     "NAMES": [
-      "Power_Potion",
       "Power Potion",
+      "Power_Potion",
       "power_potion",
-      "power potion"
+      "powerpotion"
     ],
-    "DESCRIPTION": "#yPotion [REMOVE_SPACE]: Choose #b1 of #b3 random Power cards to add to your hand, it costs #b0 this turn."
+    "DESCRIPTION": "#yPotion [REMOVE_SPACE]: Choose #b1 of #b3 random #yPower cards to add to your hand, it costs #b0 this turn."
   },
   {
     "PROPER_NAME": "Conjure",
@@ -16,7 +16,7 @@
       "conjured",
       "awaken"
     ],
-    "DESCRIPTION": "Draw a card from your Spell Pile. If you are #yAwakened (Played at least #b7 #yPowers this combat), drawn Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy."
+    "DESCRIPTION": "Draw a card from your Spellbook. If you are #yAwakened (Played at least #b7 #yPowers this combat), drawn Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy."
   },
   {
     "PROPER_NAME": "Chant",
@@ -47,6 +47,6 @@
     "NAMES": [
       "manaburn"
     ],
-    "DESCRIPTION": "Whenever you lose [E] , even if you had none to lose, loses HP equal to it's #yManaburn [REMOVE_SPACE]."
+    "DESCRIPTION": "Whenever you lose [E] , even if you had none to lose, loses HP equal to its #yManaburn [REMOVE_SPACE]."
   }
 ]

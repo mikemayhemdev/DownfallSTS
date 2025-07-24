@@ -13,7 +13,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
-import static awakenedOne.util.Wiz.att;
+import static awakenedOne.util.Wiz.atb;
+import static downfall.downfallMod.DeterministicConjure;
 
 public class RippedDoll extends CustomRelic {
 
@@ -26,15 +27,18 @@ public class RippedDoll extends CustomRelic {
     public RippedDoll() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
         AbstractCard q = new BurningStudy();
-        //q.upgrade();
         tips.add(new CardPowerTip(q));
     }
 
     @Override
     public void atBattleStart() {
-        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        //this.addToTop(new MakeTempCardInHandAction(new Ceremony(), 1, false));
-        att(new ConjureAction(false, false, true, new BurningStudy()));
+        super.atBattleStart();
+        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        if (DeterministicConjure) {
+            atb(new ConjureAction(false, false));
+        } else {
+            atb(new ConjureAction(false, false, true, new BurningStudy()));
+        }
     }
 
     @Override

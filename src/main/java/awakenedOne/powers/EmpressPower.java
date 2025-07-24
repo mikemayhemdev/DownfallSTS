@@ -19,7 +19,7 @@ public class EmpressPower extends AbstractAwakenedPower {
 
     @Override
     public void onAfterCardPlayed(AbstractCard card) {
-        if (card.type == AbstractCard.CardType.POWER && !(card instanceof AbstractSpellCard)) {
+        if (card.type == AbstractCard.CardType.POWER) {
             flash();
             atb(new ConjureAction(false));
         }

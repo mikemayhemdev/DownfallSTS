@@ -131,8 +131,8 @@
   },
   "HermitMod:AwakenedOneTutorials": {
     "TEXT": [
-      "The Awakened One has a powerful selection of Spell cards found inside of their Spell Pile.",
-      "Whenever you play a card with Conjure, you draw one card from it. Emptying the Spell Pile refreshes all Spells and Upgrades them."
+      "The Awakened One has a powerful selection of Spell cards found inside of their Spellbook.",
+      "Whenever you play a card with Conjure, you draw one card from it. Emptying the Spellbook refreshes all Spells."
     ],
     "LABEL": [
       "Next",

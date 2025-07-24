@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import awakenedOne.powers.CursedStrength;
 import awakenedOne.powers.DarknessFallsPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,20 +16,19 @@ public class DarknessFalls extends AbstractAwakenedCard {
 
     public DarknessFalls() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 4;
+        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
-        this.baseSecondMagic = 2;
-        this.secondMagic = this.baseSecondMagic;
-        this.isInnate = false;
+        baseSecondMagic = secondMagic = 1;
         loadJokeCardImage(this, makeBetaCardPath(DarknessFalls.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DarknessFallsPower(secondMagic)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DarknessFallsPower(p, magicNumber)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CursedStrength(p, secondMagic)));
     }
 
     @Override
     public void upp() {
-        this.isInnate = true;
+        upgradeMagicNumber(1);
     }
 }

@@ -12,8 +12,8 @@ public class RisingChant extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public RisingChant() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 2;
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath(RisingChant.class.getSimpleName() + ".png"));
     }
@@ -23,6 +23,7 @@ public class RisingChant extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        //upgradeMagicNumber(1);
+        upgradeBaseCost(1);
     }
 }

@@ -18,7 +18,7 @@ public class MagicStrike extends AbstractAwakenedCard {
 
     public MagicStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 12;
+        baseDamage = 11;
         tags.add(CardTags.STRIKE);
         this.tags.add(AwakenedOneMod.DELVE);
        // baseSecondMagic = secondMagic = 1;

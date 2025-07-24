@@ -79,7 +79,7 @@
     "NAME": "Zener Deck",
     "FLAVOR": "“One, two, three, all eyes should be on me.”",
     "DESCRIPTIONS": [
-      "At the start of combat, add #yESP to the Spell Pile."
+      "At the start of combat, add #yESP to your Spellbook and #yawakened:Conjure it."
     ]
   },
   "awakened:CawingCask": {
@@ -109,7 +109,7 @@
     "FLAVOR": "I leave everything I own to my cat, Noodles. Goodbye, cruel world. XOXO Jouster",
     "DESCRIPTIONS": [
       "The first time you activate #b",
-      " #yawakened:Chant effects for the first time in a combat, gain #b",
+      " #yawakened:Chant effects in a combat, gain #b",
       " #yRitual [REMOVE_SPACE]."
     ]
   },

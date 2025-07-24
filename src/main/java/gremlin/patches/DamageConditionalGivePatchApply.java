@@ -11,6 +11,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import static awakenedOne.AwakenedOneMod.UP_NEXT;
+
 
 @SpirePatch(clz = AbstractCard.class, method = "applyPowers")
 public class DamageConditionalGivePatchApply {

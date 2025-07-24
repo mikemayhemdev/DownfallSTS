@@ -35,8 +35,7 @@ public class DrawPowerAction extends AbstractGameAction{
                 return;
             }
 
-            if (AbstractDungeon.player.hasPower("No Draw"))
-            {
+            if (AbstractDungeon.player.hasPower("No Draw")) {
                 AbstractDungeon.player.getPower("No Draw").flash();
                 this.isDone = true;
                 return;

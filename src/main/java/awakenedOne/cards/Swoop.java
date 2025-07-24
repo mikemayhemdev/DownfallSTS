@@ -16,7 +16,7 @@ public class Swoop extends AbstractAwakenedCard {
 
     public Swoop() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 5;
+        baseBlock = 7;
         loadJokeCardImage(this, makeBetaCardPath(Swoop.class.getSimpleName() + ".png"));
     }
 

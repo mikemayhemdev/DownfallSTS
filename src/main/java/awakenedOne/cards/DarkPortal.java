@@ -42,7 +42,8 @@ public class DarkPortal extends AbstractAwakenedCard {
                         selecteda.unhover();
                         selecteda.applyPowers();
 
-                        selecteda.setCostForTurn(0);
+                        selecteda.costForTurn = 0;
+                        selecteda.isCostModifiedForTurn = true;
                     }
             ));
         }

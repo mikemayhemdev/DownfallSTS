@@ -28,8 +28,7 @@
   },
   "awakened:ESPSpell": {
     "NAME": "ESP",
-    "DESCRIPTION": "Retain. NL Draw !M! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust."
   },
   "awakened:Strike": {
     "NAME": "Strike",
@@ -57,7 +56,7 @@
     "DESCRIPTION": "At the end of your turn, deal !D! damage to ALL enemies, increased by Strength."
   },
   "awakened:FleetingCuriosity": {
-    "NAME": "Fleeting Curiosity",
+    "NAME": "Fading Curiosity",
     "DESCRIPTION": "Whenever you play a Power, gain !awakened:m2! Strength. NL At the end of your turn, lose !M! Strength."
   },
   "awakened:GrandMagus": {
@@ -72,7 +71,7 @@
   },
   "awakened:TalonRake": {
     "NAME": "Talon Rake",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage twice. NL awakened:Conjure."
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
@@ -81,11 +80,11 @@
   },
   "awakened:Psalm": {
     "NAME": "Psalm",
-    "DESCRIPTION": "Gain !B! Block. NL The next time you play a Power, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Does not remove awakened:Hex."
   },
   "awakened:DemonGlyph": {
     "NAME": "Demon Glyph",
-    "DESCRIPTION": "Ethereal. NL At the start of your turn, lose [E] and draw !M! cards."
+    "DESCRIPTION": "Ethereal. NL Gain !M! Strength and Dexterity. NL Gain !awakened:m2! awakened:Manaburn."
   },
   "awakened:TakeFlight": {
     "NAME": "Take Flight",
@@ -97,7 +96,7 @@
   },
   "awakened:Peck": {
     "NAME": "Peck",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! card."
   },
   "awakened:Extension": {
     "NAME": "Extension",
@@ -108,16 +107,16 @@
     "DESCRIPTION": "Deal !D! damage. NL The next time you play a Power, awakened:Conjure."
   },
   "awakened:FlareShot": {
-    "NAME": "Flare Shot",
+    "NAME": "Feather Flare",
     "DESCRIPTION": "Deal !D! damage. NL This turn, whenever you play a non-Attack card, deal !M! damage to ALL enemies."
   },
   "awakened:ClarionCall": {
     "NAME": "Clarion Call",
-    "DESCRIPTION": "Deal !D! damage. NL The next time you are awakened:Drained, gain [E] and draw a card."
+    "DESCRIPTION": "Deal !D! damage. NL The next time you are awakened:Drained, gain [E]."
   },
   "awakened:Recitation": {
     "NAME": "Recitation",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Deal !awakened:sd! damage again."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Then, deal !awakened:sd! damage."
   },
   "awakened:Swoop": {
     "NAME": "Swoop",
@@ -125,11 +124,11 @@
   },
   "awakened:Reviscerate": {
     "NAME": "Reviscerate",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less [E] for each Power played this combat."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less [E] for each Power played this turn."
   },
   "awakened:Altar": {
     "NAME": "Altar",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust a card. NL If it was a Status or Curse, awakened:Conjure."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. NL If it was a Status or Curse, awakened:Conjure."
   },
   "awakened:Envision": {
     "NAME": "Envision",
@@ -140,8 +139,8 @@
     "DESCRIPTION": "Whenever you gain Strength, gain !M! Block."
   },
   "awakened:ShroudOfMiasma": {
-    "NAME": "Shroud of Miasma",
-    "DESCRIPTION": "Whenever you attack an enemy with awakened:Hex, gain !M! Block."
+    "NAME": "Wave of Miasma",
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak and awakened:Hex to ALL enemies. NL Exhaust."
   },
   "awakened:Sludge": {
     "NAME": "Sludge",
@@ -153,18 +152,17 @@
   },
   "awakened:DoubleVision": {
     "NAME": "Double Vision",
-    "DESCRIPTION": "Choose a card in hand. Add !M! copy of that card to the Spell Pile until it is refreshed. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in hand. Add !M! copies of that card to the Spell Pile until it is refreshed. NL Exhaust."
+    "DESCRIPTION": "Choose a card in hand. Add !M! copy of that card to your Spellbook until it is refreshed. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose a card in hand. Add !M! copies of that card to your Spellbook until it is refreshed. NL Exhaust."
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Choose a card to awakened:Conjure. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Choose a card to awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage. NL The next time you play a Power, deal !M! damage to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you play a Power, deal !M! damage to ALL enemies."
   },
   "awakened:Unleash": {
-    "NAME": "Unleash",
-    "DESCRIPTION": "Retain. NL Gain !M! temporary Strength. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! temporary Strength."
+    "NAME": "Zealotry",
+    "DESCRIPTION": "Gain !M! temporary Strength. NL Next turn, gain a *Miracle."
   },
   "awakened:DesperatePrayer": {
   "NAME": "Desperate Prayer",
@@ -188,8 +186,8 @@
     "DESCRIPTION": "The first !M! times you gain Strength each turn, draw a card."
   },
   "awakened:RisingChant": {
-    "NAME": "Rising Chant",
-    "DESCRIPTION": "Whenever you play an activated awakened:Chant card, gain !M! temporary Strength."
+    "NAME": "Rising Chorus",
+    "DESCRIPTION": "Whenever you play an activated awakened:Chant card, gain !M! Strength."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
@@ -198,8 +196,8 @@
   },
   "awakened:Murder": {
     "NAME": "Murder",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy !M! times."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
   },
   "awakened:ExNihilo": {
     "NAME": "Nihil",
@@ -207,9 +205,8 @@
     "UPGRADE_DESCRIPTION": "Apply !M! awakened:Manaburn. NL awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns."
   },
   "awakened:MoonlitVision": {
-    "NAME": "Midnight",
-    "DESCRIPTION": "Ethereal. NL Whenever you play a non-Spell Power, awakened:Conjure.",
-    "UPGRADE_DESCRIPTION": "Whenever you play a non-Spell Power, awakened:Conjure."
+    "NAME": "Moonlit Vision",
+    "DESCRIPTION": "Whenever you play a Power, awakened:Conjure."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
@@ -217,8 +214,8 @@
   },
   "awakened:MazalethForm": {
     "NAME": "Awakened Form",
-    "DESCRIPTION": "The first time you refresh your Spells each turn, gain !M! Ritual.",
-    "UPGRADE_DESCRIPTION": "awakened:Awaken immediately. NL The first time you refresh your Spells each turn, gain !M! Ritual."
+    "DESCRIPTION": "The first Spell you play each turn is played twice.",
+    "UPGRADE_DESCRIPTION": "awakened:Awaken immediately. NL The first Spell you play each turn is played twice."
   },
   "awakened:Planeswalk": {
     "NAME": "Planeswalk",
@@ -226,12 +223,11 @@
   },
   "awakened:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if a *Void is in hand."
+    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if a card was created this turn."
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
-    "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength."
+    "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength."
   },
   "awakened:Brainshock": {
     "NAME": "Brainshock",
@@ -282,14 +278,14 @@
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
-    "DESCRIPTION": "Whenever you Exhaust a Status or Curse, ALL enemies lose !M! HP."
+    "DESCRIPTION": "Whenever you create a *Void, deal !M! damage to ALL enemies."
   },
   "awakened:MysticOrder": {
     "NAME": "Mystic Order",
-    "DESCRIPTION": "Whenever you Exhaust a card this turn, gain !M! Block."
+    "DESCRIPTION": "Draw !M! cards. NL awakened:Conjure."
   },
   "awakened:SacrilegiousStrike": {
-    "NAME": "Sacrilegious Strike",
+    "NAME": "Profane Strike",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL The next time you play a Power, lose [E] ."
   },
   "awakened:ToTheLimit": {
@@ -335,12 +331,12 @@
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Increases damage by !M!, then shuffles into the Spell Pile."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Increases damage by !M!, then shuffles into your Spellbook."
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",
-    "DESCRIPTION": "Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to the Spell Pile. NL awakened:Conjure it. NL Exhaust."
+    "DESCRIPTION": "Add *Aphotic *Shield to your Spellbook. NL awakened:Conjure it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add *Aphotic *Shield to your Spellbook. NL awakened:Conjure it. NL Exhaust."
   },
   "awakened:Bloodthirst": {
     "NAME": "Bloodthirst",
@@ -361,11 +357,11 @@
   },
   "awakened:Deathwish": {
     "NAME": "Deathwish",
-    "DESCRIPTION": "Add *Deathcoil to the Spell Pile. NL awakened:Conjure it. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Add *Deathcoil to the Spell Pile. NL awakened:Conjure it. NL Exhaust."
+    "DESCRIPTION": "Add *Deathcoil to your Spellbook. NL awakened:Conjure it. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Add *Deathcoil to your Spellbook. NL awakened:Conjure it. NL Exhaust."
   },
   "awakened:SiphonEnergy": {
     "NAME": "Siphon",
-    "DESCRIPTION": "Deal !D! damage. NL If the last card played this combat was a Spell, draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL If the last card played this combat was a Spell, gremlin:Steal !M! Strength this turn."
   }
 }

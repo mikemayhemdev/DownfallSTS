@@ -188,7 +188,8 @@
     "NAME": "Unbiased Cognition",
     "DESCRIPTIONS": [
       "Whenever you play a #yPower [REMOVE_SPACE], Defect gains #b",
-      " #yFocus."
+      " #yFocus.",
+      " Changes to Defect's #yStrength also affect their #yFocus [REMOVE_SPACE]."
     ]
   },
   "downfall:DefectBiasCuriosity": {

@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import java.util.Collections;
 import java.util.List;
 
+import static awakenedOne.AwakenedOneMod.UP_NEXT;
 import static awakenedOne.AwakenedOneMod.makeID;
 
 public abstract class AbstractSpellCard extends AbstractAwakenedCard {
@@ -25,20 +26,6 @@ public abstract class AbstractSpellCard extends AbstractAwakenedCard {
         this.selfRetain = true;
         exhaust = true;
     }
-
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        if (AbstractDungeon.player.hasPower(IntensifyPower.POWER_ID)) {
-            this.costForTurn = 0;
-        }
-        if (AbstractDungeon.actionManager.turnHasEnded) {
-            if (!AbstractDungeon.player.hasPower(IntensifyPower.POWER_ID)) {
-                this.costForTurn = this.cost;
-            }
-        }
-    }
-
 
     @Override
     public List<String> getCardDescriptors() {

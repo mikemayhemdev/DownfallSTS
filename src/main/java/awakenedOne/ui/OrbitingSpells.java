@@ -1,16 +1,20 @@
 package awakenedOne.ui;
 
+import awakenedOne.actions.ConjureAction;
+import awakenedOne.actions.SetUpNextSpellAction;
 import awakenedOne.cards.AphoticFount;
 import awakenedOne.cards.Caw;
 import awakenedOne.cards.Deathwish;
 import awakenedOne.cards.Grimoire;
 import awakenedOne.cards.tokens.spells.*;
+import awakenedOne.relics.RippedDoll;
 import awakenedOne.relics.ZenerDeck;
 import awakenedOne.util.TexLoader;
 import awakenedOne.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -25,7 +29,12 @@ import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import static awakenedOne.AwakenedOneMod.makeID;
+import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.actions.ConjureAction.conjuresThisCombat;
+import static awakenedOne.ui.AwakenButton.awaken;
+import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.att;
+import static downfall.downfallMod.DeterministicConjure;
 
 public class OrbitingSpells {
 
@@ -64,9 +73,11 @@ public class OrbitingSpells {
     static {
         spells.add(BurningStudy.ID);
         spells.add(Thunderbolt.ID);
-        spells.add(Darkleech.ID);
         spells.add(Cryostasis.ID);
+        spells.add(Darkleech.ID);
     }
+
+
 
     public static void refreshSpells() {
         spellCards.clear();
@@ -87,8 +98,13 @@ public class OrbitingSpells {
         if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
             addSpellCard(CardLibrary.getCard(ESPSpell.ID).makeCopy());
         }
-
+        if ((conjuresThisCombat == 0) && (AbstractDungeon.player.hasRelic(RippedDoll.ID))) {
+            spellCards.get(0).tags.add(UP_NEXT);
+        } else {
+            setupnext();
+        }
     }
+
 
     public static void upgradeCaws(int amount) {
         for (AbstractCard c : OrbitingSpells.spellCards) {
@@ -123,10 +139,57 @@ public class OrbitingSpells {
         int idx = getIndexOfCard(card);
         if (idx != -1) {
             spellCards.remove(getIndexOfCard(card));
+            att(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    if ((spellCards.isEmpty())) {
+                        awaken(5);
+                        OrbitingSpells.refreshSpells();
+                        ConjureAction.refreshedthisturn = true;
+                    } else {
+                        atb(new SetUpNextSpellAction());
+                    }
+                }
+            });
             return true;
         }
         return false;
     }
+
+    public static boolean removeSpellCardSpecial(AbstractCard card) {
+        int idx = getIndexOfCard(card);
+        if (idx != -1) {
+            spellCards.remove(getIndexOfCard(card));
+            att(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    if ((spellCards.isEmpty())) {
+                        awaken(5);
+                        OrbitingSpells.refreshSpells();
+                        ConjureAction.refreshedthisturn = true;
+                    }
+                }
+            });
+            return true;
+        }
+        return false;
+    }
+
+
+    public static void setupnext() {
+        for (AbstractCard c : spellCards) {
+            c.tags.remove(UP_NEXT);
+        }
+            AbstractCard card = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng);
+            int idx = getIndexOfCard(card);
+            if (idx != -1) {
+                spellCards.get(getIndexOfCard(card)).tags.add(UP_NEXT);
+        }
+    }
+
+
 
     public static void atBattleStart() {
         refreshSpells();
@@ -152,7 +215,15 @@ public class OrbitingSpells {
         for (AbstractCard s : spellCards) {
             sb.draw(getIconForCard(s), boxes.get(xr).x, boxes.get(xr).y);
             float dist = FontHelper.getWidth(FontHelper.tipHeaderFont, s.name, 1.0F);
-            FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, s.name, boxes.get(xr).x + 15F, boxes.get(xr).y + 10F, Color.WHITE.cpy());
+
+            Color textColor = Color.WHITE.cpy();
+            if (s.upgraded) {
+                textColor = Color.GREEN.cpy();
+            }
+            if (s.hasTag(UP_NEXT) && DeterministicConjure) {
+                textColor = placeholderColor;
+            }
+            FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, s.name, boxes.get(xr).x + 15F, boxes.get(xr).y + 10F, textColor);
             TipHelper.renderTipEnergy(sb, AbstractCard.orb_red, boxes.get(xr).x + dist + 25.5F, boxes.get(xr).y);
             FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, String.valueOf(s.cost), boxes.get(xr).x + dist + 35F, boxes.get(xr).y + 10F, Color.WHITE.cpy());
             xr++;

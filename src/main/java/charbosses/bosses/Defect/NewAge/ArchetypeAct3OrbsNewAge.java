@@ -8,6 +8,8 @@ import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.cards.colorless.EnGoodInstincts;
 import charbosses.cards.curses.EnInjury;
+import charbosses.cards.curses.EnNormality;
+import charbosses.cards.curses.EnPain;
 import charbosses.cards.curses.EnShame;
 import charbosses.cards.purple.EnLikeWater;
 import charbosses.orbs.AbstractEnemyOrb;
@@ -34,10 +36,10 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
     public ArchetypeAct3OrbsNewAge() {
         super("DF_ARCHETYPE_ORBS", "Orbs");
 
-        maxHPModifier += 350;
+        maxHPModifier += 300;
         actNum = 3;
         bossMechanicName = DefectCuriosityPower.NAME;
-        bossMechanicDesc = DefectCuriosityPower.DESCRIPTIONS[0] + 1 + DefectCuriosityPower.DESCRIPTIONS[1];
+        bossMechanicDesc = DefectCuriosityPower.DESCRIPTIONS[0] + 1 + DefectCuriosityPower.DESCRIPTIONS[1] + DefectCuriosityPower.DESCRIPTIONS[2];
     }
 
     @Override
@@ -141,7 +143,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnColdSnap(),extraUpgrades);
                     //Lightning Frost 0e
 
-                    addToList(cardsList, new EnInjury());
+                    addToList(cardsList, new EnPain());
                     turn++;
                     break;
                 case 3:
@@ -171,7 +173,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     // Evokes Lightning
                     //Frost Lightning Plasma Lightning 3e
                     addToList(cardsList, new EnGoodInstincts());
-                    addToList(cardsList, new EnBarrage(4));
+                    addToList(cardsList, new EnStrikeBlue());
                     addToList(cardsList, new EnColdSnap(),extraUpgrades);
                     cB.orbsAsEn().get(1).evokeOverride = true;
                     cB.orbsAsEn().get(1).evokeMult = 1;
@@ -192,13 +194,13 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     cB.orbsAsEn().get(2).evokeOverride = true;
                     cB.orbsAsEn().get(2).evokeMult = 1;
                     //Frost Lightning Lightning Lightning 5e
-                    addToList(cardsList, new EnInjury());
                     addToList(cardsList, new EnDualcast());
                     //Evokes Frost 4e
                     cB.orbsAsEn().get(3).evokeOverride = true;
                     cB.orbsAsEn().get(3).evokeMult = 2;
                     //Lightning Lightning Lightning 4e
                     addToList(cardsList, new EnFusion(true,false),true);
+                    addToList(cardsList, new EnNormality());
                     addToList(cardsList, new EnForceField());
                     //Lightning Lightning Lightning Plasma 3e
                     turn++;
@@ -235,7 +237,6 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     } else {
                         addToList(cardsList, new EnBuffer(), false);
                     }
-
                     //Plasma Lightning Frost Lightning
                     addToList(cardsList, new EnMulticastPlasma(cB.energyPanel.getCurrentEnergy()-1),false);
                     //Evokes Plasma

@@ -263,14 +263,12 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     public void checkOnChant() {
         if (!this.hasTag(ACTIVECHANT)) {
             this.tags.add(ACTIVECHANT);
-            if (AbstractDungeon.player.hasRelic(CursedBlessing.ID)) {
-                AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
-            }
-
             AwakenedTextHelper.colorCombos(this, false);
             this.initializeDescription();
         }
-
+        if (AbstractDungeon.player.hasRelic(CursedBlessing.ID)) {
+            AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
+        }
         if (AbstractDungeon.player.hasRelic(WhiteRibbon.ID)) {
            AbstractDungeon.player.getRelic(WhiteRibbon.ID).onTrigger();
         }

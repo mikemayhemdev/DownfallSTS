@@ -22,7 +22,7 @@ public class Altar extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 6;
         this.tags.add(AwakenedOneMod.DELVE);
-        selfRetain = true;
+        //selfRetain = true;
         loadJokeCardImage(this, makeBetaCardPath(Altar.class.getSimpleName() + ".png"));
     }
 

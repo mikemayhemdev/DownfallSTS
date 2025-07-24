@@ -198,13 +198,13 @@ public class CollectorMod implements
                 Omen.ID,
                 DoubleTrouble.ID,
 
-                Suffering.ID,
+                BottledCollectible.ID,
                 JadeRing.ID,
-                MiniCurse.ID,
+                SoullitLamp.ID,
 
-                StashAway.ID,
+                Incense.ID,
                 ForbiddenFruit.ID,
-                FingerOfDeath.ID,
+                FuelCanister.ID,
 
                 CollectorChar.Enums.THE_COLLECTOR
         );
