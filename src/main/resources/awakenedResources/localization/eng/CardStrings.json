@@ -157,8 +157,8 @@
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Choose a card to awakened:Conjure. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Choose a card to awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage. NL The next time you play a Power, deal !M! damage to ALL enemies. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you play a Power, deal !M! damage to ALL enemies."
   },
   "awakened:Unleash": {
     "NAME": "Zealotry",

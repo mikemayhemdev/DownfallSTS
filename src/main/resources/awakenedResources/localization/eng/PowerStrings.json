@@ -59,7 +59,7 @@
     ]
   },
   "awakened:NextPowerAOEPower": {
-    "NAME": "Psalm",
+    "NAME": "Raven Strike",
     "DESCRIPTIONS": [
       "The next time you play a #yPower [REMOVE_SPACE], deal #b",
       " damage to ALL enemies."
