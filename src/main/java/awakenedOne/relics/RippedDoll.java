@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
 import static awakenedOne.util.Wiz.atb;
+import static downfall.downfallMod.DeterministicConjure;
 
 public class RippedDoll extends CustomRelic {
 
@@ -33,7 +34,11 @@ public class RippedDoll extends CustomRelic {
     public void atBattleStart() {
         super.atBattleStart();
         this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        atb(new ConjureAction(false, false));
+        if (DeterministicConjure) {
+            atb(new ConjureAction(false, false));
+        } else {
+            atb(new ConjureAction(false, false, true, new BurningStudy()));
+        }
     }
 
     @Override
