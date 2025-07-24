@@ -279,9 +279,9 @@ public class AwakenedOneChar extends CustomPlayer {
     @Override
     public void doCharSelectScreenSelectEffect() {
         if (MathUtils.randomBoolean()) {
-            CardCrawlGame.sound.play("VO_AWAKENEDONE_2", 0.1F);// 72
+            CardCrawlGame.sound.play("VO_AWAKENEDONE_2", 0.3F);
         } else {
-            CardCrawlGame.sound.play("VO_AWAKENEDONE_1", 0.1F);// 72
+            CardCrawlGame.sound.play("VO_AWAKENEDONE_1", 0.3F);
         }
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT, false);
     }
