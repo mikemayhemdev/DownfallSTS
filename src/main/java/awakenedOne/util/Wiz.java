@@ -142,7 +142,7 @@ public class Wiz {
             return true;
         }
 
-        if (cool>6) {
+        if (cool>9) {
             OrbitingSpells.upgradeall();
             return true;
         }

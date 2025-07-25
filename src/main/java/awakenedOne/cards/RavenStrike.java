@@ -22,19 +22,20 @@ public class RavenStrike extends AbstractAwakenedCard {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 7;
         tags.add(CardTags.STRIKE);
-        this.baseMagicNumber = 7;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(RavenStrike.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-        applyToSelf(new NextPowerAOEPower(magicNumber));
+        HexCurse(magicNumber, m, p);
+        //applyToSelf(new NextPowerAOEPower(magicNumber));
     }
 
     @Override
     public void upp() {
-        this.exhaust = false;
+        upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 }

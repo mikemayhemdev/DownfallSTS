@@ -104,7 +104,7 @@
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage. NL The next time you play a Power, awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL The next time you play a Power, awakened:Conjure."
   },
   "awakened:FlareShot": {
     "NAME": "Feather Flare",
@@ -140,7 +140,7 @@
   },
   "awakened:ShroudOfMiasma": {
     "NAME": "Wave of Miasma",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak and awakened:Hex to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !M! Weak and awakened:Hex to ALL enemies."
   },
   "awakened:Sludge": {
     "NAME": "Sludge",
@@ -157,8 +157,7 @@
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL The next time you play a Power, deal !M! damage to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL The next time you play a Power, deal !M! damage to ALL enemies."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Hex."
   },
   "awakened:Unleash": {
     "NAME": "Zealotry",
@@ -273,8 +272,7 @@
   },
   "awakened:Slaughter": {
     "NAME": "To the Slaughter",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony."
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
@@ -362,6 +360,6 @@
   },
   "awakened:SiphonEnergy": {
     "NAME": "Siphon",
-    "DESCRIPTION": "Deal !D! damage. NL If the last card played this combat was a Spell, gremlin:Steal !M! Strength this turn."
+    "DESCRIPTION": "Deal !D! damage. NL gremlin:Steal !M! Strength this turn."
   }
 }

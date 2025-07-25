@@ -3,6 +3,8 @@ package awakenedOne.cards;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.powers.NextPowerBlockPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -15,14 +17,14 @@ public class Pluck extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public Pluck() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
-        this.baseMagicNumber = this.magicNumber = 1;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
+        baseDamage = 5;
+        //this.baseMagicNumber = this.magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Pluck.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        this.addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         applyToSelf(new NextPowerBlockPower(this.magicNumber));
     }
 

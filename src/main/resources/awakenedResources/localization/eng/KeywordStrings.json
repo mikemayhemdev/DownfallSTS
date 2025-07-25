@@ -16,7 +16,7 @@
       "conjured",
       "awaken"
     ],
-    "DESCRIPTION": "Draw a card from your Spellbook. If you are #yAwakened (Played at least #b7 #yPowers this combat), drawn Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy."
+    "DESCRIPTION": "Draw a card from your Spellbook. If you are #yAwakened (Played at least #b10 #yPowers this combat), drawn Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy."
   },
   {
     "PROPER_NAME": "Chant",
@@ -40,7 +40,7 @@
       "drain",
       "drained"
     ],
-    "DESCRIPTION": "Any effect that causes you to lose [E] , even if you had none to lose."
+    "DESCRIPTION": "Any effect that causes you to lose [E] , even if you had none to lose. (Does not include [E] spent playing cards.)"
   },
   {
     "PROPER_NAME": "Manaburn",
