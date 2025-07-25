@@ -49,6 +49,7 @@ public class OrbitingSpells {
     public static ArrayList<Hitbox> boxes = new ArrayList<>();
     private static HashMap<String, Texture> cardIcons = new HashMap<>();
     private static int hoveredCard = -1;
+    private static Hitbox barBox = new Hitbox(POSITION_X + 300F * Settings.scale, Settings.HEIGHT - POSITION_Y, 40 * Settings.scale, 350 * Settings.scale);
 
     static {
         for (int i = 0; i < 10; i++) {
