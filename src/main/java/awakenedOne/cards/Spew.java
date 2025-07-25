@@ -36,10 +36,7 @@ public class Spew extends AbstractAwakenedCard {
     public void applyPowers() {
         super.applyPowers();
         if (checkVoid()) {
-            this.freeToPlayOnce = true;
-        }
-        else {
-            this.freeToPlayOnce = false;
+            this.costForTurn = 0;
         }
     }
 

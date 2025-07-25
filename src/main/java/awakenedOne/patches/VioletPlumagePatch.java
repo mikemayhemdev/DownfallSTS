@@ -1,5 +1,6 @@
 package awakenedOne.patches;
 //
+import awakenedOne.cards.Spew;
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import awakenedOne.powers.ConjureNextTurnPower;
 import awakenedOne.powers.IntensifyPower;
@@ -20,6 +21,10 @@ public class VioletPlumagePatch {
         public static boolean patch(boolean __result, AbstractCard __instance) {
             if(__result)
                 return true;
+
+            if (isIndeedWithoutADoubtInCombat() && __instance instanceof Spew) {
+                return OnCreateCardSubscriber.CardsCreatedThisTurn > 0;
+            }
 
             if (isIndeedWithoutADoubtInCombat() && __instance.type == AbstractCard.CardType.CURSE) {
                 if (__instance.cost != 0) {
