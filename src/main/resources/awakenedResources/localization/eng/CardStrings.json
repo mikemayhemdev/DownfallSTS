@@ -165,7 +165,7 @@
   },
   "awakened:DesperatePrayer": {
   "NAME": "Desperate Prayer",
-  "DESCRIPTION": "Put a random Power on top your draw pile, it costs 0. NL Exhaust."
+  "DESCRIPTION": "Put a random Power on top of your draw pile, it costs 0. NL Exhaust."
 },
   "awakened:BirdsEye": {
     "NAME": "Byrd's Eye",
@@ -190,8 +190,8 @@
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
-    "DESCRIPTION": "Deal !D! damage to a random enemy 2X times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy 2X+2 times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to a random enemy X times twice. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy X+1 times twice. NL Exhaust."
   },
   "awakened:Murder": {
     "NAME": "Murder",
