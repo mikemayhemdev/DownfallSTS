@@ -22,6 +22,7 @@ public class Reviscerate extends AbstractAwakenedCard {
         baseDamage = 6;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
+        tags.add(CardTags.STRIKE);
         loadJokeCardImage(this, makeBetaCardPath(Reviscerate.class.getSimpleName() + ".png"));
 
         if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode != null) {
