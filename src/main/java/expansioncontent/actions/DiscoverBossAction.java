@@ -90,8 +90,7 @@ public class DiscoverBossAction extends AbstractGameAction {
                         continue;
 
                     }
-                }
-                    else if (AbstractDungeon.player instanceof AwakenedOneChar) {
+                } else if (AbstractDungeon.player instanceof AwakenedOneChar) {
                         if (q.hasTag(expansionContentMod.STUDY_AWAKENEDONE)) {
                             continue;
                         }
