@@ -219,7 +219,7 @@
     ]
   },
   "champ:VampiricStrike": {
-    "NAME": "Clobbering Strike",
+    "NAME": "Clobber Strike",
     "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to unblocked damage dealt."
   },
   "champ:AdrenalArmor": {

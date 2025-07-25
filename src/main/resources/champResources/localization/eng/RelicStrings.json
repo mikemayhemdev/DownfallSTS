@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "Once per combat, you may enter a #yStance you are not in, either #bchamp:Defensive or #rchamp:Berserker #yStance [REMOVE_SPACE]."
+      "Once per combat, you may enter a #yStance you are not in."
     ]
   },
   "champ:BlackKnightHelmet": {

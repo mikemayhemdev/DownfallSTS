@@ -34,7 +34,6 @@ public class ChampionCrown extends CustomRelic  {
 
     @Override
     public void atBattleStart() {
-        this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         this.addToTop(new MakeTempCardInHandAction(new StanceDanceCrown(), 1, false));
     }
 
