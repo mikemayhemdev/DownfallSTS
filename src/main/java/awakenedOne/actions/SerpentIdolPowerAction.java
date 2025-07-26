@@ -30,39 +30,41 @@ public class SerpentIdolPowerAction extends AbstractGameAction {
     }// 22
 
     public void update() {
-        if (this.duration == Settings.ACTION_DUR_FAST) {// 26
-            AbstractDungeon.cardRewardScreen.customCombatOpen(generateCardChoices(), CardRewardScreen.TEXT[1], true);// 27
-            this.tickDuration();// 28
+        if (this.duration == Settings.ACTION_DUR_FAST) {
+            AbstractDungeon.cardRewardScreen.customCombatOpen(this.generateCardChoices(), CardRewardScreen.TEXT[1], true);
+            this.tickDuration();
         } else {
-            if (!this.retrieveCard) {// 32
-                if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {// 33
-                        AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeStatEquivalentCopy();// 34
-                        disCard.setCostForTurn(0);// 36
-                        disCard.current_x = -1000.0F * Settings.scale;// 38
-                        atb(new MakeTempCardInHandAction(disCard, this.amount));
-                        AbstractDungeon.cardRewardScreen.discoveryCard = null;// 48
-                    }
-                this.retrieveCard = true;// 50
-            }
+            if (!this.retrieveCard) {
+                if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {
+                    for (int i = 0; i < this.count; i++) {
 
-            this.tickDuration();// 53
+
+                        AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeStatEquivalentCopy();
+                        disCard.setCostForTurn(0);
+
+                        disCard.current_x = -1000.0F * Settings.scale;
+                        if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
+                            AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                        } else {
+                            AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                        }
+
+                    }
+                }
+
+                AbstractDungeon.cardRewardScreen.discoveryCard = null;
+
+                this.retrieveCard = true;
+            }
+            this.tickDuration();
         }
-    }// 29 54
+    }
 
     private ArrayList<AbstractCard> generateCardChoices() {
         ArrayList<AbstractCard> derp = new ArrayList<>();// 57
 
         while (derp.size() != 3) {// 60
             boolean dupe = false;// 61
-            int roll = AbstractDungeon.potionRng.random(99);// 64
-            CardRarity cardRarity;
-            if (roll < 55) {// 65
-                cardRarity = CardRarity.COMMON;// 66
-            } else if (roll < 85) {// 67
-                cardRarity = CardRarity.UNCOMMON;// 68
-            } else {
-                cardRarity = CardRarity.RARE;// 70
-            }
 
             AbstractCard tmp = SneckoMod.getOffClassCardMatchingPredicatePotionRng(c -> c.type == AbstractCard.CardType.POWER && !c.hasTag(SneckoMod.BANNEDFORSNECKO) && c.color != AbstractCard.CardColor.COLORLESS && c.color != CardColorEnumPatch.CardColorPatch.BOSS);
 
