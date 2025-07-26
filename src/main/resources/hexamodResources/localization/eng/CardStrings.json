@@ -279,7 +279,7 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
-    "DESCRIPTION": "Deal !D! damage X times. NL Apply !M! Weak X times.",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Weak X times.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Weak X+1 times."
   },
   "hexamod:NightmareVision": {

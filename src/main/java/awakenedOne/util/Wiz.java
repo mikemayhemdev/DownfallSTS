@@ -36,7 +36,7 @@ public class Wiz {
         return AbstractDungeon.player;
     }
 
-    public static int POWERS_TO_AWAKEN = 7;
+    public static int POWERS_TO_AWAKEN = 8;
 
     public static void forAllCardsInList(Consumer<AbstractCard> consumer, ArrayList<AbstractCard> cardsList) {
         for (AbstractCard c : cardsList) {

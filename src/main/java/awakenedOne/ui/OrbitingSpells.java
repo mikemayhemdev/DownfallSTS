@@ -1,5 +1,6 @@
 package awakenedOne.ui;
 
+import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.actions.SetUpNextSpellAction;
 import awakenedOne.cards.AphoticFount;
@@ -243,7 +244,7 @@ public class OrbitingSpells {
         }
 
         for (int i = 0; i < Wiz.POWERS_TO_AWAKEN; i++) {
-            sb.draw(AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= i ? filledPip : unfilledPip,
+            sb.draw((AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= i  || AwakenedOneMod.awakenedthiscombat) ? filledPip : unfilledPip,
                     barBox.x,
                     barBox.y + (40 * Settings.scale) * i);
         }
