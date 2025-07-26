@@ -17,7 +17,7 @@ public class Endure extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
 
         this.tags.add(ChampMod.OPENERDEFENSIVE);
-        baseBlock = block = 7;
+        baseBlock = block = 6;
         postInit();
 
         loadJokeCardImage(this, "Endure.png");

@@ -268,7 +268,7 @@ public class AwakenedOneChar extends CustomPlayer {
         update_timer += Gdx.graphics.getDeltaTime();
 
         for (float i = 0; i + (1.0 / 120.0) <= update_timer; update_timer -= (1.0 / 120.0)) {
-            float spawn = (float) MathUtils.random(0, 15);
+            float spawn = (float) MathUtils.random(0, 20);
             if (spawn == 1) {
                 effects.add(new IroncladVictoryFlameEffectBlue());
                 AbstractDungeon.effectsQueue.add(new IroncladVictoryFlameEffectBlue());
@@ -279,9 +279,9 @@ public class AwakenedOneChar extends CustomPlayer {
     @Override
     public void doCharSelectScreenSelectEffect() {
         if (MathUtils.randomBoolean()) {
-            CardCrawlGame.sound.play("VO_AWAKENEDONE_2", 0.1F);// 72
+            CardCrawlGame.sound.play("VO_AWAKENEDONE_2", 0.3F);
         } else {
-            CardCrawlGame.sound.play("VO_AWAKENEDONE_1", 0.1F);// 72
+            CardCrawlGame.sound.play("VO_AWAKENEDONE_1", 0.3F);
         }
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT, false);
     }

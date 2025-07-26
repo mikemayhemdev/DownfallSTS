@@ -80,7 +80,7 @@
     ]
   },
   "awakened:FlarePower": {
-    "NAME": "Flare Shot",
+    "NAME": "Feather Flare",
     "DESCRIPTIONS": [
       "Whenever you play a #ynon-Attack card this turn, deal #b",
       " damage to ALL enemies."
@@ -211,7 +211,8 @@
   "awakened:NihilRetriggerPower": {
     "NAME": "Nihil",
     "DESCRIPTIONS": [
-      "Loses HP equal to its #yManaburn at the start of its turn",
+      "Loses HP equal to its #yManaburn at the start of its turn.",
+      "Loses HP equal to its #yManaburn at the start of its turn ",
       " times."
     ]
   },

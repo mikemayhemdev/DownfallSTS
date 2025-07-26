@@ -30,9 +30,9 @@ public class NihilRetriggerPower extends AbstractAwakenedPower {
     @Override
     public void updateDescription() {
         if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + LocalizedStrings.PERIOD;
+            this.description = DESCRIPTIONS[0];
         } else {
-            this.description = (DESCRIPTIONS[0] + "#b" + this.amount + DESCRIPTIONS[1]);
+            this.description = (DESCRIPTIONS[1] + "#b" + this.amount + DESCRIPTIONS[2]);
         }
     }
 

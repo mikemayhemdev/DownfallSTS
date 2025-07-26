@@ -30,6 +30,8 @@ public class OnCreateCardSubscriber {
 
     @SpirePostfixPatch
     public static void onCreateCard(AbstractCard c) {
+        CardsCreatedThisCombat++;
+        CardsCreatedThisTurn++;
         if (!AbstractDungeon.actionManager.turnHasEnded) {
             if (AbstractDungeon.player.hasPower(InResponsePower.POWER_ID)) {
                 AbstractDungeon.player.getPower(InResponsePower.POWER_ID).onSpecificTrigger();
@@ -80,7 +82,5 @@ public class OnCreateCardSubscriber {
                 AwakenedTextHelper.colorCombos((AbstractAwakenedCard) c, false);
                 c.initializeDescription();
             }
-            CardsCreatedThisCombat++;
-            CardsCreatedThisTurn++;
         }
     }

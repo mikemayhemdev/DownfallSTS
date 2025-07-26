@@ -89,13 +89,12 @@ public class DiscoverBossAction extends AbstractGameAction {
                     if (q.hasTag(expansionContentMod.STUDY_COLLECTOR)) {
                         continue;
 
+                    }
                 } else if (AbstractDungeon.player instanceof AwakenedOneChar) {
-                    if (q.hasTag(expansionContentMod.STUDY_AWAKENEDONE)) {
-                        continue;
+                        if (q.hasTag(expansionContentMod.STUDY_AWAKENEDONE)) {
+                            continue;
                         }
                     }
-
-                }
                 AbstractCard r = q.makeCopy();
                 cardsList.add(r);
             }

@@ -16,6 +16,7 @@ public class DoubleSpellPower extends AbstractAwakenedPower {
 
     public DoubleSpellPower(int amount) {
         super(NAME, PowerType.BUFF, true, AbstractDungeon.player, null, amount);
+        this.updateDescription();
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
@@ -46,6 +47,7 @@ public class DoubleSpellPower extends AbstractAwakenedPower {
             if (this.amount == 0) {
                 this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, ID));
             }
+            updateDescription();
         }
 
     }

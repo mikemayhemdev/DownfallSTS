@@ -20,7 +20,6 @@ public class Slaughter extends AbstractAwakenedCard {
     public Slaughter() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 3;
-        this.exhaust = true;
         this.cardsToPreview = new Ceremony();
         loadJokeCardImage(this, makeBetaCardPath(Slaughter.class.getSimpleName() + ".png"));
     }
@@ -33,7 +32,6 @@ public class Slaughter extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        this.exhaust = false;
-        //upgradeDamage(3);
+        upgradeDamage(3);
     }
 }

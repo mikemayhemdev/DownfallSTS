@@ -13,8 +13,6 @@ import expansioncontent.expansionContentMod;
 public class AwakenDeath extends AbstractExpansionCard {
     public static final String ID = makeID("AwakenDeath");
 
-    private static final int MAGIC = 1;
-
     public AwakenDeath() {
         super(ID, 2, AbstractCard.CardType.POWER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
         this.tags.add(expansionContentMod.STUDY);
