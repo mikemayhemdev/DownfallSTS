@@ -2,17 +2,22 @@ package awakenedOne.actions;
 
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
+import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.CardRewardScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 import expansioncontent.patches.CardColorEnumPatch;
+import slimebound.actions.MakeTempCardInHandActionReduceCost;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
+
+import static awakenedOne.util.Wiz.atb;
 
 public class SerpentIdolPowerAction extends AbstractGameAction {
     private boolean retrieveCard = false;
@@ -31,18 +36,12 @@ public class SerpentIdolPowerAction extends AbstractGameAction {
         } else {
             if (!this.retrieveCard) {// 32
                 if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {// 33
-                    for (int i = 0; i < this.count; i++) {
                         AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeStatEquivalentCopy();// 34
                         disCard.setCostForTurn(0);// 36
                         disCard.current_x = -1000.0F * Settings.scale;// 38
-                        if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {// 39
-                            AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 40
-                        } else {
-                            AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 44
-                        }
+                        atb(new MakeTempCardInHandAction(disCard, this.amount));
                         AbstractDungeon.cardRewardScreen.discoveryCard = null;// 48
                     }
-                }
                 this.retrieveCard = true;// 50
             }
 

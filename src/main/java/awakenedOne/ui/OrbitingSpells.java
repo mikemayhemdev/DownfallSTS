@@ -236,19 +236,20 @@ public class OrbitingSpells {
             h.render(sb);
         }
 
-        if (hoveredCard != -1) {
-            AbstractCard tar = spellCards.get(hoveredCard);
-            tar.target_x = tar.current_x = POSITION_X + 300;
-            tar.target_y = tar.current_y = Settings.HEIGHT - (POSITION_Y + 100);
-            spellCards.get(hoveredCard).render(sb);
-        }
-
         for (int i = 0; i < Wiz.POWERS_TO_AWAKEN; i++) {
             sb.draw((AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= i  || AwakenedOneMod.awakenedthiscombat) ? filledPip : unfilledPip,
                     barBox.x,
                     barBox.y + (40 * Settings.scale) * i);
         }
         barBox.render(sb);
+
+
+        if (hoveredCard != -1) {
+            AbstractCard tar = spellCards.get(hoveredCard);
+            tar.target_x = tar.current_x = barBox.x + 200;
+            tar.target_y = tar.current_y = Settings.HEIGHT - (POSITION_Y + 100);
+            spellCards.get(hoveredCard).render(sb);
+        }
     }
 
     public static int getIndexOfCard(AbstractCard card) {
