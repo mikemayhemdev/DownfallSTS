@@ -49,7 +49,9 @@ public class OrbitingSpells {
     public static ArrayList<Hitbox> boxes = new ArrayList<>();
     private static HashMap<String, Texture> cardIcons = new HashMap<>();
     private static int hoveredCard = -1;
-    private static Hitbox barBox = new Hitbox(POSITION_X + 300F * Settings.scale, Settings.HEIGHT - POSITION_Y, 40 * Settings.scale, 350 * Settings.scale);
+    private static Hitbox barBox = new Hitbox(POSITION_X + 250F * Settings.scale, Settings.HEIGHT - POSITION_Y - 300, 40 * Settings.scale, 350 * Settings.scale);
+    private static Texture unfilledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled.png");
+    private static Texture filledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_filled.png");
 
     static {
         for (int i = 0; i < 10; i++) {
@@ -239,6 +241,13 @@ public class OrbitingSpells {
             tar.target_y = tar.current_y = Settings.HEIGHT - (POSITION_Y + 100);
             spellCards.get(hoveredCard).render(sb);
         }
+
+        for (int i = 0; i < Wiz.POWERS_TO_AWAKEN; i++) {
+            sb.draw(AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= i ? filledPip : unfilledPip,
+                    barBox.x,
+                    barBox.y + (40 * Settings.scale) * i);
+        }
+        barBox.render(sb);
     }
 
     public static int getIndexOfCard(AbstractCard card) {
