@@ -36,6 +36,8 @@ public class Wiz {
         return AbstractDungeon.player;
     }
 
+    public static int POWERS_TO_AWAKEN = 7;
+
     public static void forAllCardsInList(Consumer<AbstractCard> consumer, ArrayList<AbstractCard> cardsList) {
         for (AbstractCard c : cardsList) {
             consumer.accept(c);
@@ -142,7 +144,7 @@ public class Wiz {
             return true;
         }
 
-        if (cool>6) {
+        if (cool >= POWERS_TO_AWAKEN) {
             OrbitingSpells.upgradeall();
             return true;
         }
