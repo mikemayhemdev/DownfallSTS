@@ -74,7 +74,6 @@ public class AwakenedOneMod implements
         PostPlayerUpdateSubscriber,
         SetUnlocksSubscriber {
 
-
     public static final String SHOULDER1 = "awakenedResources/images/char/mainChar/shoulder.png";
     public static final String SHOULDER2 = "awakenedResources/images/char/mainChar/shoulderR.png";
     public static final String CORPSE = "awakenedResources/images/char/mainChar/corpse.png";

@@ -39,15 +39,15 @@ public class PickAxe extends CustomRelic {
 
     @Override
     public void onTrigger() {
-        super.onTrigger();
-        this.counter = -2;
-        setCounter(this.counter);
+        //super.onTrigger();
+      //  this.counter = -2;
+      //  setCounter(this.counter);
     }
 
     public void setCounter(int counter) {
-        this.counter = -2;
-        this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("relics/pickUsed.png"));
-        this.usedUp();
+      //  this.counter = -2;
+    //    this.img = TextureLoader.getTexture(GuardianMod.getResourcePath("relics/pickUsed.png"));
+        //this.usedUp();
     }
 
     public void onVictory(){
