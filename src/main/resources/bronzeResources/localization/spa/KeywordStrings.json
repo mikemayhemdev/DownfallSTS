@@ -1,0 +1,52 @@
+[
+  {
+    "PROPER_NAME": "Codifica",
+    "NAMES": [
+	  "encode",
+      "encoded",
+      "codifica",
+      "codificada",
+      "codifiques",
+      "codifican",
+      "codificar",
+	  "codificado",
+	  "codificados",
+	  "codificable"
+    ],
+    "DESCRIPTION": "Codifica una carta. NL Cuando se hayan Codificado 3 cartas, sus efectos (excepto Codificar) se fusionan en una Función que cuesta #b1 [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Compilar",
+    "NAMES": [
+	  "compile",
+      "compiled",
+      "compilar",
+      "compilada"
+    ],
+    "DESCRIPTION": "Un efecto que se activa cuando esta carta se fusiona en una Función. NL Puede ser un efecto negativo, al cual se le llama un 'Error'."
+  },
+  {
+    "PROPER_NAME": "Desenfoque",
+    "NAMES": [
+	  "blur",
+      "desenfoque" 
+    ],
+    "DESCRIPTION": "No pierdes Bloqueo al final del turno."
+  },
+  {
+    "PROPER_NAME": "Inserta",
+    "NAMES": [
+      "insert",
+	  "inserta"
+    ],
+    "DESCRIPTION": "Baraja una carta en tu pila de robo."
+  },
+  {
+    "PROPER_NAME": "Cicla",
+    "NAMES": [
+	  "cycle",
+      "cicla" 
+    ],
+    "DESCRIPTION": "Descarta una carta y roba una nueva carta en su lugar."
+  }
+]

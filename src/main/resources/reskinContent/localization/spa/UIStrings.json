@@ -1,0 +1,104 @@
+{
+  "reskinContent:ReSkin": {
+    "TEXT": [
+      "Aspecto",
+      "Original"
+    ]
+  },
+  "reskinContent:PortraitAnimation": {
+    "TEXT": [
+      "Tipo de retrato"
+    ]
+  },
+  "reskinContent:PortraitAnimationType": {
+    "TEXT": [
+      "Estático",
+      "Animado",
+      "Efecto completo"
+    ]
+  },
+  "reskinContent:BetaArtUnlockEffect": {
+    "TEXT": [
+      "¡Arte alternativo de El Guardian desbloqueado!",
+      "¡Arte alternativo de El Rey Babosa desbloqueado!",
+      "¡Arte alternativo de El Hexafantasma desbloqueado!",
+      "¡Arte alternativo de Serpentija desbloqueado!",
+      "¡Arte alternativo de El Campeón desbloqueado!",
+      "¡Arte alternativo de El Autómata desbloqueado!",
+      "¡Arte alternativo de Los Gremlins desbloqueado!",
+      "¡Arte alternativo de El Coleccionista desbloqueado!"
+    ]
+  },
+  "reskinContent:ReSkinGuardian": {
+    "TEXT": [
+      "Guardian Chan",
+      "Boceto inicial"
+    ],
+    "EXTRA_TEXT": [
+      "Un constructo de la Aguja, programado para defenderla. NL Capaz de protegerse del daño al recibir una orden.",
+      "Uno de los primeros bocetos del Guardian. NL Funcionaba mejor sobre el papel."
+    ]
+  },
+  "reskinContent:ReSkinSlime": {
+    "TEXT": [
+      "Baifu",
+      "¿Rey babosa?"
+    ],
+    "EXTRA_TEXT": [
+      "Esta curiosa babosa tiene un gusto especial por las reliquias sabrosas.. NL Aunque no lo parezca, ¡sirve al Corazón por pura coincidencia!.",
+      "¿Este es... el Rey Babosa? Parece sospechosamente amigable. NL Bueno, su sombrero es el más grande de toda la Aguja, así que debe estar al mando..."
+    ]
+  },
+  "reskinContent:ReSkinHexaghost": {
+    "TEXT": [
+      "Hexafan",
+      "Fantasmágono",
+      "Fantámpara"
+    ],
+    "EXTRA_TEXT": [
+      "Un espíritu maldito de la Aguja. NL Condenado a un destino eterno como protector.",
+      "En su tiempo libre persigue círculos amarillos. NL Tiene un terror paralizante a las píldoras de poder.",
+      "Antiguo compañero del Hexafantasma. NL Decidió dejar de aniquilar aventureros por un empleo estable vendiendo deseos."
+    ]
+  },
+  "reskinContent:ReSkinSnecko": {
+    "TEXT": [
+      "SSSSerpentija",
+      "Serpentor"
+    ],
+    "EXTRA_TEXT": [
+      "Usa sus ojos para inducir desorientación cognitiva, ocultando su verdadera forma. NL Estudios revelan que las criaturas confundidas ven un mundo completamente distinto.",
+      "Buscando una fuerza superior, esta ambiciosa Serpentija siguió los pasos de su héroe. NL Adoptando múltiples V perfectas y un brazo musculoso, se hace llamar \"Sneckdor\"."
+    ]
+  },
+  "reskinContent:ReSkinChamp": {
+    "TEXT": [
+      "Cam-p-on",
+      "Campeón del Lavado"
+    ],
+    "EXTRA_TEXT": [
+      "Su espada parece imposible de blandir, NL pero en realidad es la única lo bastante fuerte como para levantarla.",
+      "Es día de lavandería."
+    ]
+  },
+  "reskinContent:ReSkinGremlin": {
+    "TEXT": [
+      "Gatos"
+    ],
+    "EXTRA_TEXT": [
+      "Ehm... Meow?"
+    ]
+  },
+  "reskinContent:ReSkinBronze": {
+    "TEXT": [
+      "Autómata",
+      "\"Autómata\"",
+      "Perfecto"
+    ],
+    "EXTRA_TEXT": [
+      "",
+      "¡Sí! De pies a cabeza, eso es un Autómata. NL ¡Nunca he visto algo que se parezca más a un Autómata!",
+      "[ARRANQUE] Inicializando... Sistemas centrales en línea - Sin fallos detectados NL [OBJETIVO] El EQUILIBRIO será IMPUESTO"
+    ]
+  }
+}

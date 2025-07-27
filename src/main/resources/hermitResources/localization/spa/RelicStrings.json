@@ -1,0 +1,103 @@
+{
+  "hermit:Momento": {
+    "NAME": "Medallón Viejo",
+    "FLAVOR": "Tiene una fotografía descolorida dentro.",
+    "DESCRIPTIONS": [
+      "Al comienzo de cada combate, añade un #yRecuerdo a tu mano."
+    ]
+  },
+  "hermit:RyeStalk": {
+    "NAME": "Tallo de Centeno",
+    "FLAVOR": "Sigue en perfecto estado, a pesar de haber sido masticado por tanto tiempo.",
+    "DESCRIPTIONS": [
+      "Cada vez que pierdas vida durante el turno del enemigo, roba #b1 carta."
+    ]
+  },
+  "hermit:BartenderGlass": {
+    "NAME": "Vaso de Chupito",
+    "FLAVOR": "Cualquier líquido dentro se transforma en otra cosa.",
+    "DESCRIPTIONS": [
+      "Las primeras #b2 veces que uses una poción en cada combate, obtén una poción aleatoria. Solo puedes usar #b2 pociones por combate.",
+      "No puedes usar más pociones en este combate."
+    ]
+  },
+  "hermit:Horseshoe": {
+    "NAME": "Herradura",
+    "FLAVOR": "Amuleto de la suerte. Alguien va a echarla de menos.",
+    "DESCRIPTIONS": [
+      "Cada vez que ganes #yDébil, #yFrágil o #yVulnerable, recibes #b1 menos de ese efecto."
+    ]
+  },
+  "hermit:Spyglass": {
+    "NAME": "Catalejo",
+    "FLAVOR": "Propiedad de Kestin Highfin.",
+    "DESCRIPTIONS": [
+      "Si terminas tu turno #yhermit:Concentrado, gana [E] adicional el próximo turno."
+    ]
+  },
+  "hermit:RedScarf": {
+    "NAME": "Bufanda Roja",
+    "FLAVOR": "Es cálida y suave.",
+    "DESCRIPTIONS": [
+      "Cada vez que apliques una nueva Desventaja a un enemigo, gana #b3 #yBloqueo."
+    ]
+  },
+  "hermit:DentedPlate": {
+    "NAME": "Placa Abollada",
+    "FLAVOR": "Todavía hay varias balas incrustadas en ella.",
+    "DESCRIPTIONS": [
+      "Mientras tengas #b50% o menos de vida, gana [E] y roba #b1 carta al inicio de tu turno."
+    ]
+  },
+  "hermit:PetGhost": {
+    "NAME": "Fantasma Compañero",
+    "FLAVOR": "Pobrecillo.",
+    "DESCRIPTIONS": [
+      "Evita tu primera muerte por pérdida de PV en cada combate."
+    ]
+  },
+  "hermit:CharredGlove": {
+    "NAME": "Guante Chamuscado",
+    "FLAVOR": "Algunas partes aún brillan con cenizas sobrenaturales.",
+    "DESCRIPTIONS": [
+      "Cada vez que robes una carta #rMaldición, tu siguiente ataque inflige #b3 de daño adicional."
+    ]
+  },
+  "hermit:ClaspedLocket": {
+    "NAME": "Medallón Cerrado",
+    "FLAVOR": "Ya no se puede abrir.",
+    "DESCRIPTIONS": [
+      "Reemplaza el #yMedallón #yViejo. La primera vez que robes una carta #rMaldición cada turno, #yAgótala y roba #b2 cartas. Al obtener esta reliquia, consigue #b2 #rInjurias.",
+      "Nunca más..."
+    ]
+  },
+  "hermit:StraightRazor": {
+    "NAME": "Navaja Recta",
+    "FLAVOR": "Para un afeitado más apurado...",
+    "DESCRIPTIONS": [
+      "Cada vez que elimines o #yTransformes una carta de tu mazo, cura #b15 de vida."
+    ]
+  },
+  "hermit:BrassTacks": {
+    "NAME": "Clavos de Latón",
+    "FLAVOR": "El brillo de estos clavos nunca parece desvanecerse.",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, gana #b2 #yBloqueo."
+    ]
+  },
+  "hermit:BlackPowder": {
+    "NAME": "Pólvora Negra",
+    "FLAVOR": "Manéjala con cuidado.",
+    "DESCRIPTIONS": [
+      "Cada vez que actives un efecto de #yhermit:Preciso, inflige #b2 de daño a TODOS los enemigos."
+    ]
+  },
+  "hermit:BloodyTooth": {
+    "NAME": "Diente Roto",
+    "FLAVOR": "Parece demasiado grande para ser de una mandíbula humana...",
+    "DESCRIPTIONS": [
+      "Cada vez que derrotes a un enemigo de Élite, cura #b7 de vida y gana #b35 de oro."
+    ]
+  }
+}
+

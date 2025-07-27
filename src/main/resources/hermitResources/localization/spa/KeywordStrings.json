@@ -1,0 +1,65 @@
+[
+  {
+    "PROPER_NAME": "Preciso",
+    "NAMES": [
+      "Dead On",
+      "Dead_On",
+      "dead_on",
+      "deadon",
+      "preciso",
+      "Precisa"
+    ],
+    "DESCRIPTION": "Las cartas con Preciso tienen un efecto adicional si están en el centro de tu mano."
+  },
+  {
+    "PROPER_NAME": "Concentración",
+    "NAMES": [
+      "Concentrate",
+      "concentrate",
+      "concentrated",
+      "Concentrated",
+      "concentración",
+      "concentrado"
+    ],
+    "DESCRIPTION": "La siguiente carta con #yPreciso que juegues mientras estés en #yConcentración activará su efecto sin importar la posición. Se pierde al final del turno."
+  },
+  {
+    "PROPER_NAME": "Contusión",
+    "NAMES": [
+      "bruise",
+      "bruised",
+      "contusión",
+    ],
+    "DESCRIPTION": "Los objetivos con Contusión reciben más daño de ataques. Se pierde al final del turno."
+  },
+  {
+    "PROPER_NAME": "Resistente",
+    "NAMES": [
+      "rugged",
+      "resistente",
+    ],
+    "DESCRIPTION": "Reduce la siguiente instancia de daño de ataque recibido a #b2 [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Recompensa",
+    "NAMES": [
+      "bounty",
+      "recompensa",
+    ],
+    "DESCRIPTION": "Enemigo normal: #b15 de oro. Elite: #b40 de oro. Jefe: #b100 de oro."
+  },
+  {
+    "PROPER_NAME": "Aturdir",
+    "NAMES": [
+      "stun",
+      "Stun",
+      "stunned",
+      "Stunned",
+      "aturdir",
+      "aturdido",
+	  "aturde",
+	  "atúrdelo"
+    ],
+    "DESCRIPTION": "Los enemigos aturdidos pierden su turno."
+  }
+]

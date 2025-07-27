@@ -1,0 +1,31 @@
+{
+  "Guardian:AcceleratePotion": {
+    "NAME": "Poción de Emergencia",
+    "DESCRIPTIONS": [
+      "#yAcelera todas las cartas en #yEstasis #b",
+      " veces."
+    ]
+  },
+  "Guardian:DefensiveModePotion": {
+    "NAME": "Aceite Abrillantador",
+    "DESCRIPTIONS": [
+      "Gana #b",
+      " de #yBloqueo. Entra en #yModo #yDefensivo [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:BlockOnCardUsePotion": {
+    "NAME": "Tintura del Blindador",
+    "DESCRIPTIONS": [
+      "Gana #b",
+      " de #yBloqueo cada vez que juegues una carta este turno."
+    ]
+  },
+  "Guardian:StasisDiscoveryPotion": {
+    "NAME": "Elixir Cuántico",
+    "DESCRIPTIONS": [
+      "Obtén espacios de Estasis hasta tener #b",
+      ". NL Repite #b",
+      " veces: elige #b1 de #b3 cartas para colocar en #yEstasis [REMOVE_SPACE]."
+    ]
+  }
+}

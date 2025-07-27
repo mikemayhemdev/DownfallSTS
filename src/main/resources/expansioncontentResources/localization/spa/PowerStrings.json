@@ -1,0 +1,140 @@
+{
+  "expansioncontent:StudyTheSpirePower": {
+    "NAME": "Estudiar la Aguja",
+    "DESCRIPTIONS": [
+      "Obtén una carta de #yJefe aleatoria al inicio del siguiente turno. NL Cuesta #b0 hasta que se juegue.",
+      "Obtén una carta de #yJefe aleatoria al inicio de los próximos #b",
+      " turnos. NL Cuestan #b0 hasta que se jueguen.",
+      "Obtén una carta de #yJefe #yMejorada aleatoria al inicio del siguiente turno. NL Cuesta #b0 hasta que se juegue.",
+      "Obtén una carta de #yJefe #yMejorada aleatoria al inicio de los próximos #b",
+      " turnos. NL Cuestan #b0 hasta que se jueguen."
+    ]
+  },
+  "expansioncontent:AwakenedOnePower": {
+    "NAME": "Ritual Oscuro",
+    "DESCRIPTIONS": [
+      "Obtiene #b",
+      " de #yFuerza si este enemigo no ataca en su turno."
+    ]
+  },
+  "expansioncontent:AwakenDeathPower": {
+    "NAME": "Despertar",
+    "DESCRIPTIONS": [
+      "Cuando fueras a morir, cura #b",
+      " PV y elimina este efecto."
+    ]
+  },
+  "expansioncontent:ChronoBoostPower": {
+    "NAME": "Impulso Crono",
+    "DESCRIPTIONS": [
+      "Después de jugar #b",
+      " cartas más, obtén #b",
+      " de #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "expansioncontent:ChronoBoostPlusPower": {
+    "NAME": "Impulso Crono+",
+    "DESCRIPTIONS": [
+      "Después de jugar #b",
+      " cartas más, obtén #b",
+      " de #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "expansioncontent:DeEnergizedPower": {
+    "NAME": "Desenergizado",
+    "DESCRIPTIONS": [
+      "Al inicio de tu próximo turno, pierde #b",
+      " [E] ."
+    ]
+  },
+  "expansioncontent:PolyBeamAgainPower": {
+    "NAME": "Potencia",
+    "DESCRIPTIONS": [
+      "#yRáfaga #yDonu se jugará al inicio de tu próximo turno.",
+      "#yRáfaga #yDonu se jugará al inicio de los próximos #b",
+      " turnos."
+    ]
+  },
+  "expansioncontent:PolyBeamAgainPowerUpgraded": {
+    "NAME": "Potencia",
+    "DESCRIPTIONS": [
+      "#yRáfaga #yDonu+ se jugará al inicio de tu próximo turno.",
+      "#yRáfaga #yDonu+ se jugará al inicio de los próximos #b",
+      " turnos."
+    ]
+  },
+  "expansioncontent:AddCopyPower": {
+    "NAME": "Carta Retrasada",
+    "DESCRIPTIONS": [
+      "Agrega ",
+      " a tu mano al inicio del próximo turno."
+    ]
+  },
+  "expansioncontent:AddSameInstancePower": {
+    "NAME": "Carta Retrasada",
+    "DESCRIPTIONS": [
+      "Agrega ",
+      " a tu mano al inicio del próximo turno."
+    ]
+  },
+  "expansioncontent:NextTurnExhumePower": {
+    "NAME": "Exhumar Retrasado",
+    "DESCRIPTIONS": [
+      "Exhuma ",
+      " al inicio del próximo turno."
+    ]
+  },
+  "expansioncontent:PretendHexWheelPower": {
+    "NAME": "Hexaquemadura",
+    "DESCRIPTIONS": [
+      "En #b",
+      " turnos, inflige #b",
+      "Al final de tu turno, inflige #b",
+      " de daño a un enemigo aleatorio #b6 veces."
+    ]
+  },
+  "expansioncontent:BeatOfDeathP": {
+    "NAME": "Latido de la Muerte",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta, inflige #b",
+      " de daño a TODOS los enemigos."
+    ]
+  },
+  "expansioncontent:PandemoniumPower": {
+    "NAME": "Pandemonio",
+    "DESCRIPTIONS": [
+      "Al inicio de tu turno, juega una carta aleatoria de tu pila de descarte.",
+      "Al inicio de tu turno, juega #b",
+      " cartas aleatorias de tu pila de descarte."
+    ]
+  },
+  "expansioncontent:EvilWithinPower": {
+    "NAME": "El Mal Interior",
+    "DESCRIPTIONS": [
+      "Inflige #b",
+      " de daño a TODOS los enemigos tras aplicar #b",
+      " desventajas más.",
+      " desventaja más."
+    ]
+  },
+  "expansioncontent:ReveriePower": {
+    "NAME": "Ensueño",
+    "DESCRIPTIONS": [
+      "Al inicio de tu turno, mira la carta superior de tu pila de descarte y agrégala a tu mano.",
+      "Al inicio de tu turno, mira las primeras #b",
+      " cartas de tu pila de descarte y elige una para agregar a tu mano.",
+      "Elige una carta para agregar a tu mano."
+    ]
+  },
+  "expansioncontent:VexVinciblePower": {
+    "NAME": "Invencible",
+    "DESCRIPTIONS": [
+      "Limita todo el daño y pérdida de PV a #b",
+      " por turno. Se elimina tras activarse.",
+      "Limita todo el daño y pérdida de PV a #b",
+      " por turno. Se elimina tras #b",
+      " activaciones."
+    ]
+  }
+}
+

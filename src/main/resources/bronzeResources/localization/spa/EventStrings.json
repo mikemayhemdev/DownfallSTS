@@ -1,0 +1,73 @@
+{
+  "bronze:ShapeFactory": {
+    "NAME": "Fábrica de Drones",
+    "DESCRIPTIONS": [
+      "Te topas con una de las fábricas de drones deterioradas del Exordio. Sorprendentemente, los controles aún funcionan. Si activas y desmantelas algunas de estas máquinas con forma geométrica, podrías heredar parte de su armamento.",
+      "Ninguno de estos drones tiene lo que necesitas."
+    ],
+    "OPTIONS": [
+      "[Luchar contra Pinchador] Obtén #gEspina como recompensa de combate.",
+      "[Luchar contra Repulsor] Obtén #gPulso #gAturdidor como recompensa de combate.",
+      "[Luchar contra Explosor] Obtén #gExplosión como recompensa de combate.",
+      "[Marcharse]",
+      "[Iniciar Combate]",
+      "[También luchar contra Pinchador] Obtén #gEspina como recompensa de combate.",
+      "[También luchar contra Repulsor] Obtén #gPulso #gAturdidor como recompensa de combate.",
+      "[También luchar contra Explosor] Obtén #gExplosión como recompensa de combate."
+    ]
+  },
+  "bronze:AncientFactory": {
+    "NAME": "Fábrica Ancestral",
+    "DESCRIPTIONS": [
+      "Mientras continúas tu incansable descenso, llegas a la ~fábrica original~. Recuerdas haber estado aquí durante tu propio ensamblaje, cuando conociste al ~Autor~ por primera vez. NL Cada uno de los antiguos constructos que crearon son tan #yperfectos como tú. Hay piezas de viejos prototipos que podrían servirte, pero será necesario activarlos.",
+      "Incluso sin estar terminados, estos prototipos siguen siendo formidables; no vale la pena correr riesgos innecesarios."
+    ],
+    "OPTIONS": [
+      "[Luchar contra Prototipo Donu] Obtén #gProtorayo.",
+      "[Luchar contra Prototipo Deca] Obtén #gProtoescudo.",
+      "[Luchar contra Ambos] Obtén #gAmbas #gCartas.",
+      "[Marcharse]"
+    ]
+  },
+  "bronze:BackToBasics": {
+    "NAME": "Unificación",
+    "DESCRIPTIONS": [
+      "No hay fuerza sin unidad."
+    ],
+    "OPTIONS": [
+      "[Unificar] Todos los #gGolpes y #gDefensas obtienen #gCodificar [REMOVE_SPACE].",
+      "[Bloqueado] Requiere una carta Golpe o Defensa."
+    ]
+  },
+  "bronze:AccursedBlacksmith": {
+    "NAME": "Herrero Maldito",
+    "DESCRIPTIONS": [
+      "Decides usar la forja y... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...mejoras tu arsenal con nuevas actualizaciones y servomecanismos."
+    ],
+    "OPTIONS": [
+      "[Modificar] #gMejora #g3 #gCartas #gAleatorias #gcon #gCodificar.",
+      "[Bloqueado] Requiere una carta sin mejorar con Codificar."
+    ]
+  },
+  "bronze:CrystalForge": {
+    "NAME": "Forja Tenebrosa",
+    "DESCRIPTIONS": [
+      "A través de pasajes secretos conocidos solo por los Constructos de la Aguja, accedes a una cámara diseñada para el mantenimiento y reparación de modelos Autómata. Las herramientas aquí disponibles sin duda te serán útiles.",
+      "Con las tenazas mágicas, incrustas cuidadosamente un arma directamente en tu núcleo. #y@Bzzzt!@ Codificarte a ti mismo no es tan fácil como pensabas.",
+      "Usando el yunque encantado, destrozas una valiosa pieza de equipo solo para forjarla en una explosión de energía pura. Esta ~se~ ~fusiona~ ~con~ ~tu~ ~forma,~ llenándote de calor y fuerza.",
+      "El poder de la Forja para transmutar materia se pone en marcha al arrojar una pieza de equipo no deseada. Momentos después, el material se disuelve y se comprime en una nueva mejora para tu armadura.",
+      "Escapas por el mismo pasaje secreto por el que entraste, dejando atrás la Forja Tenebrosa. Tu viaje continúa hacia el Amanecer que aguarda en la cima de la Aguja.",
+      "Elige una carta para eliminar."
+    ],
+    "OPTIONS": [
+      "[Forjar] Obtén #gCódigo #gEmbotellado. #rPierde #r10 #rPuntos #rMáximos #rde #rVida.",
+      "[Transmutar] #gElimina #guna #gCarta. #gObtén #guna #gCarta #gAleatoria #gcon #gCodificar.",
+      "[Reforjar] #rElimina una #yCarta Rara. #gObtén #g10 #gPuntos #gMáximos #gde #gVida #gy #gCura #gcompleta.",
+      "[Bloqueado] Ya ha sido utilizada.",
+      "[Marcharse]",
+      "[Bloqueado] Requiere una carta con Codificar.",
+      "[Bloqueado] Requiere una Carta Rara.",
+      "Elige una carta para eliminar."
+    ]
+  }
+}

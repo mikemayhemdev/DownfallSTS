@@ -1,0 +1,94 @@
+{
+  "hexamod:WanderingSpecter": {
+    "NAME": "Espectro Errante",
+    "DESCRIPTIONS": [
+      "Esta zona de la Aguja parece un #pcementerio. Caminas con cuidado hasta que una extraña y tenue ~aparición~ se interpone. Extiende ambas manos, aparentemente ofreciendo algún tipo de #rtrato. NL NL Puedes notar que sostiene una preciosa #bReliquia en cada palma, pero no logras distinguir cuál es cuál... sin embargo, está claro que el #rprecio será alto.",
+      "Agradeces al espectro por el trato. El #bfantasma te lanza una última mirada fatigada antes de continuar su ~interminable~ ~travesía.~ Tú también sigues adelante.",
+      "Tomas la caja blanca iridiscente, ¡y se @rompe@ en tus manos! Mientras recoges las almas en las que se fragmenta, una #pfragmento #pnegro emerge y se ~incrusta~ en tu cuerpo.",
+      "Tomas la extraña caja #ydorada y sientes una #poscuridad fluir dentro de ti al abrirla. ¡Dentro encuentras un arma útil!",
+      "Tomas la caja palpitante y constante que @LATe@ con fuerza, y sientes cómo se @FUNDE@ con tu brazo. Una nauseabunda #psensación te invade, pero también te sientes más fuerte...",
+      "Tan pronto como tomas el artefacto de la figura, la #poscuridad envuelve la sala. El espectro te habla una vez más, sus palabras resuenan en tu mente sin haber sido pronunciadas. NL NL #p'Una #pdecisión #psabia. #p¿Qué #pme #pdices #psi #pte #poffrezco #potro #ptrato, #pamigo? #pToma #ptodos #plos #pque #pquieras...'",
+      "Sabes que los tratos de esta #paparición tienen un precio demasiado alto. Debes hacer algo, y ¡qué suerte! ¡Junto a la pared hay una #bVela #bAntimaldiciones! NL NL La tomas rápidamente, te #rquemas #rligeramente, y la arrojas al espectro, que se disipa en un #bresplandor #bspectral. NL NL Ya no ofrecerá más tratos.",
+      "Sabes que los tratos de esta #paparición tienen un precio demasiado alto. Por suerte, llevas contigo una #bVela #bAntimaldiciones. NL NL La arrojas al espectro, que se desvanece en un #bresplandor #bespectral. NL NL Ya no ofrecerá más tratos."
+    ],
+    "OPTIONS": [
+      "[Caja Izquierda] #gObtén #gMuñeco #gde #gDu-Vu o #gAmuleto #gPiedraoscura. #rDos #rMaldición - #rEmbrujado.",
+      "[Buscar Más]",
+      "[Caja Derecha] #gObtén #gLlave #gMaldita o #gCampana #gde #gInvocación. #rMaldición #rExtra.",
+      "[Ahuyentar] #gObtén una #bVela #bNegra. #rPierde #r5 #rPV.",
+      "[Ahuyentar] Marcharte.",
+      "[Intercambiar por Poder] #gObtén una carta #yRara #galeatoria. #rTe vuelves #rMaldito - #rAleatorio.",
+      "[Intercambiar por Vida] #gObtén #g5 #gPV #gMáximos. #rTe vuelves #rMaldito - #rAleatorio.",
+      "[Intercambiar por Almas] #gObtén #g100 #gAlmas. #rTe vuelves #rMaldito - #rAleatorio.",
+      "[Bloqueado] Intercambio Completado.",
+      "[Marcharte]"
+    ]
+  },
+  "hexamod:SealChamber": {
+    "NAME": "Cámara de Sellos",
+    "DESCRIPTIONS": [
+      "Una estructura imponente se alza frente a ti. La mayoría evitaría acercarse, pero tú conoces su propósito... y sabes que puede ser de gran utilidad. NL Entras en la cámara y te preparas para hacer un #rsacrificio...",
+      "Entregando un fragmento de tu propia alma, obtienes el sello: un paso más hacia tu poder definitivo.",
+      "Tras reflexionar, decides no realizar el sacrificio. Necesitarás todas tus fuerzas para completar tu travesía.",
+      "Este Sello será de gran utilidad en las batallas venideras."
+    ],
+    "OPTIONS": [
+      "[Ofrecer] #rPierde ",
+      " PV. #gObtén el #gPrimer #gSello.",
+      " #yAlmas. #gObtén el #gSegundo #gSello.",
+      ". #gObtén el #gTercer #gSello.",
+      ". #gObtén el #gCuarto #gSello.",
+      "[Bloqueado] Requiere más Oro.",
+      "[Bloqueado] Requiere una Carta Común.",
+      "[Bloqueado] Requiere una Poción.",
+      "[Marcharte]",
+      "[Bloqueado] Ya ofreciste algo.",
+      ". #gObtén el #gQuinto #gSello.",
+      "[Bloqueado] Requiere una Carta Mejorada.",
+      " PV Máx. #gObtén el #gSexto #gSello.",
+      "[Bloqueado] Requiere 2 PV Máx."
+    ]
+  },
+  "hexamod:HexaFalling": {
+    "NAME": "Caída Fantasmal",
+    "DESCRIPTIONS": [
+      "Tú, libre de las débiles leyes de la gravedad, ~flotas~ sobre el abismo sin sufrir daño.",
+      " NL O simplemente flotas a voluntad."
+    ],
+    "OPTIONS": [
+      "[Flotar] #gNo pierdes #gnada...",
+      "[Marcharte]"
+    ]
+  },
+  "hexamod:CouncilOfGhosts": {
+    "NAME": "Consejo de Fantasmas",
+    "DESCRIPTIONS": [
+      "Mientras continúas tu descenso, #phumo #pnegro #pdenso comienza a brotar del suelo y las paredes a tu alrededor, tomando forma en tres figuras enmascaradas que comienzan a hablar. NL NL ~\"Este~ ~está~ ~#rcondenado...\"~ NL \"Entendemos tu carga, #pcondenado... ¿Te gustaría conocer nuestros #y~secretos~?\"",
+      "#y\"¡Excelente!\" NL Mientras la figura fantasmal habla, notas cómo su enorme boca se abre más y más. #p~Denso~ #p~humo~ #p~negro~ se vierte y envuelve la sala. No puedes ver ni respirar...",
+      "Aún envuelto en #phumo #pnegro, tu cuerpo se debilita, pero tu espíritu #parde con más fuerza. NL Comprendes cómo lo corpóreo y lo incorpóreo están conectados de formas que nunca habrías imaginado.",
+      "Dentro de la oscuridad, ves con ojos desprovistos de duda. Los espíritus te han mostrado cómo dominar tu forma y cruzar entre este mundo y el otro con facilidad.",
+      "\"Buena suerte, #pcondenado...\" NL ~\"Nos~ ~quedaremos~ ~a~ ~ayudar~ ~a~ ~otros...\"~ NL #r@\"¡JA@ #r¡JA@ #r¡JA@ #r¡JAJAJA!\"@ NL NL No estás del todo seguro de por qué el último se rió mientras el Consejo se desvanecía, pero estás agradecido de haber obtenido su conocimiento.",
+      "\"Qué decepción...\" NL ~\"Nunca~ ~escaparás~ ~de~ ~este~ ~lugar...\"~ NL #r@\"¡JA@ #r¡JA@ #r¡JA@ #r¡JAJAJA!\"@ NL NL Las figuras desaparecen, dejando solo la risa inquietante resonando en tus oídos."
+    ],
+    "OPTIONS": [
+      "[Aceptar] #rPierde #r",
+      " #rPV #rMáx. Desbloquea opciones de Estudio y Aprendizaje.",
+      "[Estudiar] #rPierde #rtodos #rtus #rGolpes. #gObtén #g3 #gJusticias del #gConsejo.",
+      "[Aprender] #rPierde #rtodas #rtus #rDefensas. #gObtén ",
+      "[Completado]",
+      "[Marcharte]",
+      "[Bloqueado] Aún no puedes marcharte.",
+      " #gAparición."
+    ]
+  },
+  "hexamod:BackToBasics": {
+    "NAME": "Volver a lo Básico",
+    "DESCRIPTIONS": [
+      "El espíritu es la espada... y la experiencia, la piedra de afilar."
+    ],
+    "OPTIONS": [
+      "[Nostalgia] #gAgrega #gEtérea a todos tus #gGolpes y #gDefensas.",
+      "[Bloqueado] Requiere un Golpe o Defensa."
+    ]
+  }
+}

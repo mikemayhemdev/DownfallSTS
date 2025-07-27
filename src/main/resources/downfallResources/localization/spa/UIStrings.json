@@ -1,0 +1,210 @@
+{
+  "downfall:EvilMenuPanel": {
+    "TEXT": [
+      "Downfall",
+      "Defiende el Corazón de los intrusos aventureros que intentan Asesinar la Aguja.",
+      "Elige a tu Villano",
+      "Campaña"
+    ]
+  },
+  "downfall:SoulToGoldChanges": {
+    "TEXT": [
+      "Almas",
+      "Muestra cuántas Almas llevas contigo. Las Almas pueden ser ofrecidas al Corazón a cambio de recompensas.",
+      "Estado del Comerciante",
+      "HP",
+      "¡Muerto!",
+      "Fuerza",
+      "Almas robadas",
+      "Perdición"
+    ]
+  },
+  "downfall:BustKeyButton": {
+    "TEXT": [
+      "Romper Rubí",
+      "Romper Zafiro",
+      "Romper Esmeralda",
+      "(Acción gratuita) Gasta 50 Almas: Destruye la llave para ",
+      "iniciar combates contra Jefes con 1 de Fuerza.",
+      "iniciar combates contra Jefes con 10 de HP Temporal.",
+      "iniciar combates contra Jefes con 1 de Destreza.",
+      "¡Llave destruida!",
+      "Se requieren ",
+      " Almas.",
+      "(Acción gratuita) Destruye la llave para "
+    ]
+  },
+  "downfall:WheelSpinButton": {
+    "TEXT": [
+      "Girar Rueda",
+      "(Acción gratuita) Gira la Rueda.",
+      "No puedes girar de nuevo."
+    ]
+  },
+  "downfall:AscensionText": {
+    "TEXT": [
+      "19. Los jefes tienen una reliquia adicional.",
+      "20. El jefe del Acto 3 tiene Cola de Lagarto que cura todo el HP.",
+      "Obtén la Llave Rubí. Rómpela después.",
+      "4. Los jefes tienen una carta extra mejorada."
+    ]
+  },
+  "downfall:ConfigMenuText": {
+    "TEXT": [
+      "Permitir que las partidas estándar encuentren reliquias globales de los personajes de Downfall.",
+      "Permitir que las partidas estándar encuentren pociones globales de Downfall.",
+      "Permitir que las partidas estándar encuentren eventos globales de Downfall.",
+      "Permitir que las partidas estándar encuentren Cartas de Jefe de Downfall.",
+      "Permitir que personajes estándar jueguen en Downfall, y que los Villanos participen en partidas estándar.",
+      "Permitir que personajes modificados jueguen en partidas de Downfall.",
+      "Permitir que las partidas estándar encuentren cartas de Maldición de Downfall.",
+      "Las partidas de Downfall usan el diseño tradicional del Mapa: hoguera antes del jefe, no al inicio.",
+      "Desbloquear todas las cartas y reliquias bloqueadas para los personajes de Downfall (requiere reiniciar el juego)",
+      "Desactivar Asistente de Posturas del Campeón - para jugadores expertos.",
+      "Evitar que Snecko use barajas de otros mods.",
+      "Desactivar música personalizada (requiere reiniciar el juego)",
+      "Desbloquear todas las apariencias alternativas bloqueadas para personajes de Downfall",
+      "Usar íconos en lugar de texto adicional en las cartas para indicar propiedades aplicadas."
+    ]
+  },
+  "downfall:EnergyPanelTip": {
+    "TEXT": [
+      "Energía actual del enemigo. Las cartas requieren energía para jugarse."
+    ],
+    "EXTRA_TEXT": [
+      "Energía"
+    ]
+  },
+  "downfall:RemoveCardReward": {
+    "TEXT": [
+      "Eliminar una carta de tu mazo",
+      "Elige una carta para eliminar"
+    ]
+  },
+  "downfall:TransformCardReward": {
+    "TEXT": [
+      "Transformar una carta de tu mazo",
+      "Elige una carta para transformar"
+    ]
+  },
+  "downfall:UpgradeCardReward": {
+    "TEXT": [
+      "Mejorar una carta de tu mazo",
+      "Elige una carta para mejorar"
+    ]
+  },
+  "downfall:BossRelicReward": {
+    "TEXT": [
+      "Elige 1 de 3 Reliquias de Jefe.",
+      "Obtén una ",
+      ".",
+      "Elige una reliquia... más o menos"
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "Etéreo. NL "
+    ]
+  },
+  "downfall:JaxReward": {
+    "TEXT": [
+      "¡Encontraste algo de JAX!"
+    ]
+  },
+  "downfall:RareCardReward": {
+    "TEXT": [
+      "Agrega una carta Rara a tu mazo."
+    ]
+  },
+  "downfall:OctoChoiceAction": {
+    "TEXT": [
+      "Elige una opción.",
+      "No deberías ver esto. Ups."
+    ]
+  },
+  "downfall:BossCardReward": {
+    "TEXT": [
+      "Agrega una carta de Jefe a tu mazo",
+      "Elige una carta."
+    ]
+  },
+  "downfall:ColorfulCardReward": {
+    "TEXT": [
+      "Agrega una carta ",
+      " a tu mazo",
+      "Elige una carta."
+    ]
+  },
+  "downfall:ColorfulUncommonCardReward": {
+    "TEXT": [
+      "Agrega una carta ",
+      " a tu mazo",
+      "Elige una carta."
+    ]
+  },
+  "downfall:ColorfulRareCardReward": {
+    "TEXT": [
+      "Agrega una carta ",
+      " a tu mazo",
+      "Elige una carta."
+    ]
+  },
+  "downfall:DiceRollPotionReward": {
+    "TEXT": [
+      "Agrega una carta mejorada ",
+      " a tu mazo.",
+      "Elige una carta."
+    ]
+  },
+  "downfall:ColorfulPowersCardReward": {
+    "TEXT": [
+      "Agrega un Poder mejorado ",
+      " a tu mazo.",
+      "Elige una carta."
+    ]
+  },
+  "downfall:RunHistoryMonsterNames": {
+    "TEXT": [
+      "Cabezas del Muro Viviente",
+      "El Acorazado",
+      "La Silenciosa",
+      "El Defecto",
+      "La Vigilante",
+      "Comerciante",
+      "El Ermitaño"
+    ]
+  },
+  "downfall:WhaleHunter": {
+    "TEXT": [
+      "Cazador de Ballenas",
+      "Terminó el ciclo."
+    ]
+  },
+  "downfall:Unfettered": {
+    "TEXT": [
+      "Libre de ataduras",
+      "Obtuvo el Sello Roto."
+    ]
+  },
+  "downfall:SingleCardViewPopup": {
+    "TEXT": [
+      "Munición"
+    ]
+  },
+  "downfall:MainMenuAd": {
+    "TEXT": [
+      "¿Quieres más?",
+      "Muchos más mods, incluido",
+      "Downfall, están disponibles para",
+      "la versión base de Slay the Spire en",
+      "Steam Workshop.",
+      "¡Haz clic aquí para aprender cómo!"
+    ]
+  },
+  "downfall:CantEscapeGauntlet": {
+    "TEXT": [
+      "Estoy abrumado."
+    ],
+    "Translator note": "Este texto aparece cuando intentas escapar del combate tipo gauntlet, donde hay más de un héroe vivo, así que estás abrumado por el número y no puedes escapar."
+  }
+}

@@ -1,0 +1,201 @@
+{
+  "Gremlin:Agony": {
+    "NAME": "Dolor Agonizante",
+    "DESCRIPTIONS": [
+      "Los #yAtaques infligen un #b",
+      "% menos de daño por #b",
+      " turno.",
+      " turnos."
+    ]
+  },
+  "Gremlin:Bang": {
+    "NAME": "Bang",
+    "DESCRIPTIONS": [
+      "El siguiente Ataque que juegues consume todas las acumulaciones de #yMagia y causa #b", " de daño adicional."
+    ]
+  },
+  "Gremlin:Bashed": {
+    "NAME": "Apaleado",
+    "DESCRIPTIONS": [
+      "Cada vez que ganes #yBloqueo este turno, pierde #b", " PV."
+    ]
+  },
+  "Gremlin:BubbleBarrier": {
+    "NAME": "Barrera Burbuja",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta este turno, gana #b", " de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:CongaLine": {
+    "NAME": "Línea Conga",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, gana ",
+      " y haz un #yCambio al siguiente Gremlin."
+    ]
+  },
+  "Gremlin:Crippled": {
+    "NAME": "Lisiado",
+    "DESCRIPTIONS": [
+      "Cada vez que este enemigo gane #yDébil [REMOVE_SPACE], pierde #b",
+      " PV."
+    ]
+  },
+  "Gremlin:Encore": {
+    "NAME": "Repetición",
+    "DESCRIPTIONS": [
+      "#yMagia inflige #b", " de daño adicional."
+    ]
+  },
+  "Gremlin:Enthusiasm": {
+    "NAME": "Entusiasmo",
+    "DESCRIPTIONS": [
+      "Cada vez que hagas un #yCambio, roba #b",
+      " carta.",
+      " cartas."
+    ]
+  },
+  "Gremlin:FatGremlin": {
+    "NAME": "Gremlin Obeso",
+    "DESCRIPTIONS": [
+      "Cada vez que juegas un Ataque, aplica #b",
+      " de #yDébil a todos los objetivos."
+    ]
+  },
+  "Gremlin:Flex": {
+    "NAME": "Fuerza Disipada",
+    "DESCRIPTIONS": [
+      "Al final de este turno, pierde #b",
+      " de #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:Furious": {
+    "NAME": "Furioso",
+    "DESCRIPTIONS": [
+      "Cada vez que fueras a ganar #yBloqueo este turno, en su lugar inflige ese daño a TODOS los enemigos."
+    ]
+  },
+  "Gremlin:GremlinNob": {
+    "NAME": "Gremlin Nob",
+    "DESCRIPTIONS": [
+      "Al inicio de cada turno, gana #b3 cartas de Gremlin Nob. Ya no puedes hacer #yCambio [REMOVE_SPACE]. Cuando pierdas todos tus #yPV temporales [REMOVE_SPACE], prevén el daño restante y vuelve atrás."
+    ]
+  },
+  "Gremlin:GremlinWizard": {
+    "NAME": "Gremlin Mago",
+    "DESCRIPTIONS": [
+      "Cada vez que juegas una Habilidad, gana #b",
+      " de #yMagia [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:Heckle": {
+    "NAME": "Burlón",
+    "DESCRIPTIONS": [
+      "Cada vez que apliques una desventaja a un enemigo, gana #b",
+      " de #yPV temporales [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:InfiniteBlocks": {
+    "NAME": "Bloqueo Infinito",
+    "DESCRIPTIONS": [
+      "Al inicio de tu turno, gana #b",
+      " de #yProtección [REMOVE_SPACE].",
+      " de #yProtección [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:MadGremlin": {
+    "NAME": "Gremlin Guerrero",
+    "DESCRIPTIONS": [
+      "Gana #b",
+      " de #yFuerza temporal al ser atacado."
+    ]
+  },
+  "Gremlin:MakeshiftArmor": {
+    "NAME": "Armadura Improvisada",
+    "DESCRIPTIONS": [
+      "Juega #b",
+      " Ataques más para ganar #b",
+      " Ataques más para ganar #b",
+      " de #yArtefacto [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:MakingMagic": {
+    "NAME": "Crear Magia",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu siguiente turno, gana #b",
+      " copia de #yBang [REMOVE_SPACE].",
+      " copias de #yBang [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:MakingMoreMagic": {
+    "NAME": "Crear Magia+",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu siguiente turno, gana #b",
+      " copia #yMejorada de #yBang [REMOVE_SPACE].",
+      " copias #yMejoradas de #yBang [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:Polish": {
+    "NAME": "Pulido",
+    "DESCRIPTIONS": [
+      "#yGuardias otorgan #b",
+      " de #yBloqueo adicional [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:Scatter": {
+    "NAME": "Dispersión",
+    "DESCRIPTIONS": [
+      "La próxima vez que fueras a perder PV, en su lugar haz un #yCambio a un Gremlin aleatorio.",
+      " veces que fueras a perder PV, en su lugar haz un #yCambio a un Gremlin aleatorio."
+    ]
+  },
+  "Gremlin:ShadowShiv": {
+    "NAME": "Daga Sombría",
+    "DESCRIPTIONS": [
+      "Cada vez que juegas un Ataque que no se #yAgota, gana #b",
+      " #yShiv [REMOVE_SPACE].",
+      " #yShivs [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:ShieldGremlin": {
+    "NAME": "Gremlin Reservado",
+    "DESCRIPTIONS": [
+      "Cada vez que juegas una Habilidad, gana #b",
+      " de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:SneakyGremlin": {
+    "NAME": "Gremlin Ladrón",
+    "DESCRIPTIONS": [
+      "Los Ataques que cuestan 0 infligen #b",
+      " más de daño. Cada vez que juegas un Ataque, inflige #b",
+      " de daño a un enemigo aleatorio."
+    ]
+  },
+  "Gremlin:TargetWeakness": {
+    "NAME": "Atacar las Heridas",
+    "DESCRIPTIONS": [
+      "Inflige #b",
+      " de daño adicional a enemigos #yDébiles."
+    ]
+  },
+  "Gremlin:Unforgiving": {
+    "NAME": "Implacable",
+    "DESCRIPTIONS": [
+      "No puedes perder #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:Wiz": {
+    "NAME": "Magia",
+    "DESCRIPTIONS": [
+      "Cargando. NL Faltan #b", " acumulación.", " acumulaciones.",
+      "Listo para disparar."
+    ]
+  },
+  "Gremlin:Wizardry": {
+    "NAME": "Magia Interior",
+    "DESCRIPTIONS": [
+      "Al inicio de tu turno, gana #b",
+      " de #yMagia [REMOVE_SPACE]."
+    ]
+  }
+}
