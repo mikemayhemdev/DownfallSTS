@@ -13,8 +13,9 @@ public class MoonlitVision extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public MoonlitVision() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.tags.add(AwakenedOneMod.DELVE);
+        this.isEthereal = true;
         loadJokeCardImage(this, makeBetaCardPath(MoonlitVision.class.getSimpleName() + ".png"));
     }
 

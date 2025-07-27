@@ -161,7 +161,7 @@
   },
   "awakened:Unleash": {
     "NAME": "Zealotry",
-    "DESCRIPTION": "Gain !M! temporary Strength. NL Next turn, gain a *Miracle."
+    "DESCRIPTION": "Next turn, gain !M! temporary Strength and [E]."
   },
   "awakened:DesperatePrayer": {
   "NAME": "Desperate Prayer",
@@ -205,7 +205,7 @@
   },
   "awakened:MoonlitVision": {
     "NAME": "Moonlit Vision",
-    "DESCRIPTION": "Whenever you play a Power, awakened:Conjure."
+    "DESCRIPTION": "Ethereal. NL Whenever you play a Power, awakened:Conjure."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
