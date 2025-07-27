@@ -15,13 +15,16 @@ public class EmpressPower extends AbstractAwakenedPower {
 
     public EmpressPower(AbstractCreature owner, int amount) {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
+        updateDescription();
     }
 
     @Override
     public void onAfterCardPlayed(AbstractCard card) {
         if (card.type == AbstractCard.CardType.POWER) {
-            flash();
-            atb(new ConjureAction(false));
+            for (int i = 0; i < this.amount; i++) {
+                flash();
+                atb(new ConjureAction(false));
+            }
         }
     }
 
