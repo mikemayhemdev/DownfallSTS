@@ -20,7 +20,7 @@ public class Altar extends AbstractAwakenedCard {
 
     public Altar() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 6;
+        baseBlock = 5;
         this.tags.add(AwakenedOneMod.DELVE);
         //selfRetain = true;
         loadJokeCardImage(this, makeBetaCardPath(Altar.class.getSimpleName() + ".png"));
@@ -29,13 +29,9 @@ public class Altar extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {
-            for (AbstractCard c : list)
-            {
+            for (AbstractCard c : list) {
                 Wiz.p().hand.moveToExhaustPile(c);
-                if (c.type == CardType.STATUS || c.type == CardType.CURSE) {
-                    atb(new ConjureAction(false));
-                }
-
+                atb(new ConjureAction(false));
             }
             list.clear();
         }, null, uiStrings.TEXT[0],false,false,false));

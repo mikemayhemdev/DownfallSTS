@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.shuffleIn;
 
 public class Planeswalk extends AbstractAwakenedCard {
     public final static String ID = makeID(Planeswalk.class.getSimpleName());
@@ -16,15 +17,13 @@ public class Planeswalk extends AbstractAwakenedCard {
 
     public Planeswalk() {
         super(ID, 0, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 2;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Planeswalk.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
         atb(new GainEnergyAction(magicNumber));
-        atb(new MakeTempCardInDiscardAction(new VoidCard(), 1));
+        shuffleIn(new VoidCard());
     }
 
     @Override
@@ -34,6 +33,6 @@ public class Planeswalk extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeMagicNumber(1);
     }
 }

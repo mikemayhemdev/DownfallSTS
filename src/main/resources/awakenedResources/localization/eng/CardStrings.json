@@ -14,7 +14,7 @@
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
-    "DESCRIPTION": "Retain. NL Apply !M! awakened:Hex. NL Your next Attack deals !awakened:m2! additional damage. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Apply !M! Vulnerable. NL Exhaust."
   },
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
@@ -40,7 +40,7 @@
   },
   "awakened:MagicStrike": {
     "NAME": "Magic Strike",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Conjure. NL Shuffle a *Void into your draw pile."
+    "DESCRIPTION": "Deal !D! damage. NL Add a *Void into your discard pile."
   },
   "awakened:Intensify": {
     "NAME": "Intensify",
@@ -49,14 +49,14 @@
   },
   "awakened:Spellshield": {
     "NAME": "Spellshield",
-    "DESCRIPTION": "Ethereal. NL Whenever you create a card, gain !M! Block."
+    "DESCRIPTION": "Whenever you create a card, gain !M! Block."
   },
   "awakened:DarkEcho": {
     "NAME": "Dark Echo",
     "DESCRIPTION": "At the end of your turn, deal !D! damage to ALL enemies, increased by Strength."
   },
-  "awakened:FleetingCuriosity": {
-    "NAME": "Fading Curiosity",
+  "awakened:AwakenedForm": {
+    "NAME": "Awakened Form",
     "DESCRIPTION": "Whenever you play a Power, gain !awakened:m2! Strength. NL At the end of your turn, lose !M! Strength."
   },
   "awakened:GrandMagus": {
@@ -84,7 +84,7 @@
   },
   "awakened:DemonGlyph": {
     "NAME": "Demon Glyph",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength and Dexterity. NL Gain !awakened:m2! awakened:Manaburn."
+    "DESCRIPTION": "Gain !M! Strength and Dexterity. NL When you awakened:Awaken, gain !awakened:m2! more."
   },
   "awakened:TakeFlight": {
     "NAME": "Take Flight",
@@ -96,7 +96,8 @@
   },
   "awakened:Peck": {
     "NAME": "Peck",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! card."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! cards."
   },
   "awakened:Extension": {
     "NAME": "Extension",
@@ -104,7 +105,7 @@
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL The next time you play a Power, awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure."
   },
   "awakened:FlareShot": {
     "NAME": "Feather Flare",
@@ -116,7 +117,7 @@
   },
   "awakened:Recitation": {
     "NAME": "Recitation",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Then, deal !awakened:sd! damage."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Deal damage again."
   },
   "awakened:Swoop": {
     "NAME": "Swoop",
@@ -128,7 +129,7 @@
   },
   "awakened:Altar": {
     "NAME": "Altar",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. NL If it was a Status or Curse, awakened:Conjure."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. NL awakened:Conjure."
   },
   "awakened:Envision": {
     "NAME": "Envision",
@@ -174,7 +175,8 @@
   },
   "awakened:DarkPower": {
     "NAME": "Initiation",
-    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+."
+    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+."
   },
   "awakened:Ensorcelate": {
     "NAME": "Ensorcelate",
@@ -195,30 +197,30 @@
   },
   "awakened:Murder": {
     "NAME": "Murder",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+    "DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy !M! times.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage to a random enemy !M! times."
   },
   "awakened:ExNihilo": {
     "NAME": "Nihil",
-    "DESCRIPTION": "Apply !M! awakened:Manaburn. NL awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! awakened:Manaburn. NL awakened:Chant: Enemy loses HP equal to its awakened:Manaburn at the start of its turns."
+    "DESCRIPTION": "Apply !M! awakened:Manaburn. NL awakened:Chant: ALL enemies lose HP equal to their awakened:Manaburn."
   },
   "awakened:MoonlitVision": {
     "NAME": "Moonlit Vision",
-    "DESCRIPTION": "Ethereal. NL Whenever you play a Power, awakened:Conjure."
+    "DESCRIPTION": "Ethereal. NL Whenever you play a Power, awakened:Conjure.",
+    "UPGRADE_DESCRIPTION": "Whenever you play a Power, awakened:Conjure."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
     "DESCRIPTION": "When you would die or at the end of combat, remove all debuffs, awakened:Awaken, and heal !M! HP instead."
   },
-  "awakened:MazalethForm": {
-    "NAME": "Awakened Form",
-    "DESCRIPTION": "The first Spell you play each turn is played twice.",
-    "UPGRADE_DESCRIPTION": "awakened:Awaken immediately. NL The first Spell you play each turn is played twice."
+  "awakened:Archmage": {
+    "NAME": "Archmage",
+    "DESCRIPTION": "The first Spell you play each turn is played twice."
   },
   "awakened:Planeswalk": {
     "NAME": "Planeswalk",
-    "DESCRIPTION": "Gain !B! Block. NL Gain [E]. NL Add a *Void into your discard pile."
+    "DESCRIPTION": "Gain [E] [E] . NL Shuffle a *Void into your draw pile.",
+    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E] . NL Shuffle a *Void into your draw pile."
   },
   "awakened:Spew": {
     "NAME": "Spew",
@@ -272,7 +274,8 @@
   },
   "awakened:Slaughter": {
     "NAME": "To the Slaughter",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony+."
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
@@ -320,12 +323,12 @@
     "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Increase the damage of all *Caw cards by !M! this combat."
   },
   "awakened:ManaburnCard": {
-    "NAME": "Manaburn",
-    "DESCRIPTION": "Apply !M! awakened:Manaburn. NL ALL enemies lose HP equal to their awakened:Manaburn."
+    "NAME": "Scour",
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Manaburn."
   },
   "awakened:Manastorm": {
     "NAME": "Manastorm",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure for each enemy hit."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure twice."
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
@@ -342,8 +345,7 @@
   },
   "awakened:Procession": {
     "NAME": "Procession",
-    "DESCRIPTION":  "Draw cards until your hand is full. NL Shuffle !M! *Voids into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw cards until your hand is full. NL Add !M! *Voids into your discard pile. NL Exhaust."
+    "DESCRIPTION": "Draw !awakened:m2! cards. NL Shuffle !M! *Voids into your draw pile."
   },
   "awakened:SplitWide": {
     "NAME": "Split Wide",
@@ -360,6 +362,6 @@
   },
   "awakened:SiphonEnergy": {
     "NAME": "Siphon",
-    "DESCRIPTION": "Deal !D! damage. NL gremlin:Steal !M! Strength this turn."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: gremlin:Steal !M! Strength this turn."
   }
 }

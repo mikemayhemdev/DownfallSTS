@@ -52,7 +52,7 @@ public class Middens extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(2);
+        upgradeBlock(1);
         upgradeMagicNumber(1);
     }
 }

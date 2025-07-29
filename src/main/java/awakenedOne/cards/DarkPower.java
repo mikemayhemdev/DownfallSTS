@@ -19,7 +19,6 @@ public class DarkPower extends AbstractAwakenedCard {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 11;
         this.cardsToPreview = new Ceremony();
-        cardsToPreview.upgrade();
         this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(DarkPower.class.getSimpleName() + ".png"));
     }
@@ -27,13 +26,16 @@ public class DarkPower extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         AbstractCard c = new Ceremony();
-        c.upgrade();
+        if (upgraded) {
+            c.upgrade();
+        }
         Wiz.atb(new MakeTempCardInHandAction(c, 1));
     }
 
 
     @Override
     public void upp() {
+        cardsToPreview.upgrade();
         upgradeBlock(3);
     }
 }

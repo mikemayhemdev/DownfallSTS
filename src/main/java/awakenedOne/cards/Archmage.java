@@ -2,36 +2,29 @@ package awakenedOne.cards;
 
 import awakenedOne.powers.DarkIncantationRitualPower;
 import awakenedOne.powers.DoubleSpellPower;
-import awakenedOne.ui.OrbitingSpells;
-import basemod.helpers.BaseModCardTags;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.applyToSelf;
 
-public class MazalethForm extends AbstractAwakenedCard {
-    public final static String ID = makeID(MazalethForm.class.getSimpleName());
+public class Archmage extends AbstractAwakenedCard {
+    public final static String ID = makeID(Archmage.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
-    public MazalethForm() {
+    public Archmage() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        tags.add(BaseModCardTags.FORM);
         baseMagicNumber = magicNumber = 1;
-        loadJokeCardImage(this, makeBetaCardPath(MazalethForm.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Archmage.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) {
-            awakenedthiscombat = true;
-            OrbitingSpells.upgradeall();
-        }
         applyToSelf(new DarkIncantationRitualPower(magicNumber));
         applyToSelf(new DoubleSpellPower(magicNumber));
     }
 
     public void upp() {
+        upgradeBaseCost(2);
     }
 
 }

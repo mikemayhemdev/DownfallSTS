@@ -43,7 +43,7 @@ public class Grimoire extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
-        upgradeMagicNumber(2);
+        upgradeDamage(3);
+        upgradeMagicNumber(3);
     }
 }

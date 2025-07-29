@@ -28,16 +28,8 @@ public class Manastorm extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, EnumPatch.HERMIT_GHOSTFIRE));
-
-        Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
-        while (var2.hasNext()) {
-            AbstractMonster mo = (AbstractMonster) var2.next();
-            if (!mo.isDeadOrEscaped()) {
-                atb(new ConjureAction(false));
-            }
-        }
-
+        atb(new ConjureAction(false));
+        atb(new ConjureAction(false));
     }
 
     @Override

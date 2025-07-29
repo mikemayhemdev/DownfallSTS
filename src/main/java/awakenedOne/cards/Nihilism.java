@@ -22,7 +22,7 @@ public class Nihilism extends AbstractAwakenedCard {
 
     public Nihilism() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 7;
         this.baseMagicNumber = this.magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Nihilism.class.getSimpleName() + ".png"));
     }

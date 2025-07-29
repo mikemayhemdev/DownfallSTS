@@ -3,7 +3,7 @@
     "NAME": "Ripped Doll",
     "FLAVOR": "The last reminder of your prior self. It still holds latent magicks.",
     "DESCRIPTIONS": [
-      "At the start of combat, #yawakened:Conjure a #yBurning #yStudy [REMOVE_SPACE]."
+      "At the start of combat, #yawakened:Conjure [REMOVE_SPACE]."
     ]
   },
   "awakened:ShreddedDoll": {

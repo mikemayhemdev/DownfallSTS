@@ -26,19 +26,13 @@ public class RippedDoll extends CustomRelic {
 
     public RippedDoll() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
-        AbstractCard q = new BurningStudy();
-        tips.add(new CardPowerTip(q));
     }
 
     @Override
     public void atBattleStart() {
         super.atBattleStart();
         this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        if (DeterministicConjure) {
-            atb(new ConjureAction(false, false));
-        } else {
-            atb(new ConjureAction(false, false, true, new BurningStudy()));
-        }
+        atb(new ConjureAction(false, false));
     }
 
     @Override

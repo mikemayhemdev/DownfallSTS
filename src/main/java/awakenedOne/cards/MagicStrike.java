@@ -3,6 +3,7 @@ package awakenedOne.cards;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
@@ -18,17 +19,15 @@ public class MagicStrike extends AbstractAwakenedCard {
 
     public MagicStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 11;
+        baseDamage = 12;
         tags.add(CardTags.STRIKE);
-        this.tags.add(AwakenedOneMod.DELVE);
        // baseSecondMagic = secondMagic = 1;
         loadJokeCardImage(this, makeBetaCardPath(MagicStrike.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        atb(new ConjureAction(false));
-        shuffleIn(new VoidCard());
+        atb(new MakeTempCardInDiscardAction(new VoidCard(), 1));
         //HexCurse(magicNumber, m, p);
         //this.addToBot(new ForTheHexAction(this.magicNumber, m));
     }

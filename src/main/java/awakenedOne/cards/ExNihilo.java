@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.watcher.TriggerMarksAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -30,10 +31,7 @@ public class ExNihilo extends AbstractAwakenedCard {
 
     public ExNihilo() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        //baseDamage = 3;
-        //this.isEthereal = true;
         baseMagicNumber = magicNumber = 13;
-        this.exhaust = true;
         this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(ExNihilo.class.getSimpleName() + ".png"));
     }
@@ -47,11 +45,9 @@ public class ExNihilo extends AbstractAwakenedCard {
             } else {
                 this.addToBot(new VFXAction(m, new OfferingEnemyEffect(m), 0.5F));
             }
-            atb(new ApplyPowerAction(m, AbstractDungeon.player, new NihilRetriggerPower(m, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
-            //AbstractDungeon.actionManager.addToBottom((AbstractGameAction)new NihilAction((AbstractCreature)m, (AbstractCreature)p, this.damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HEAVY));
-            checkOnChant();
+            this.addToBot(new TriggerMarksAction(this));
+            chant();
         }
-
     }
 
     @Override
@@ -65,8 +61,7 @@ public class ExNihilo extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        //this.isEthereal = false;
-        this.exhaust = false;
+        upgradeMagicNumber(4);
     }
 
     private static class OfferingEnemyEffect extends AbstractGameEffect {

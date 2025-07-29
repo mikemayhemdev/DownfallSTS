@@ -12,9 +12,7 @@ public class Spellshield extends AbstractAwakenedCard {
     // intellij stuff power, self, uncommon, , , , , 3, 1
 
     public Spellshield() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        //baseSecondMagic = secondMagic = 2;
-        this.isEthereal = true;
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Spellshield.class.getSimpleName() + ".png"));
     }
@@ -24,6 +22,7 @@ public class Spellshield extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(1);
+        //upgradeMagicNumber(1);
     }
 }

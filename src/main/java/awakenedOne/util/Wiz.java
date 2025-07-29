@@ -1,8 +1,7 @@
 package awakenedOne.util;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.powers.RisingChantPower;
-import awakenedOne.relics.CursedBlessing;
+import awakenedOne.powers.DominusPower;
 import awakenedOne.ui.OrbitingSpells;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -18,7 +17,6 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
@@ -140,11 +138,17 @@ public class Wiz {
         }
 
         if (AwakenedOneMod.awakenedthiscombat) {
+            if (AbstractDungeon.player.hasPower(DominusPower.POWER_ID)) {
+                AbstractDungeon.player.getPower(DominusPower.POWER_ID).onSpecificTrigger();
+            }
             OrbitingSpells.upgradeall();
             return true;
         }
 
         if (cool >= POWERS_TO_AWAKEN) {
+            if (AbstractDungeon.player.hasPower(DominusPower.POWER_ID)) {
+                AbstractDungeon.player.getPower(DominusPower.POWER_ID).onSpecificTrigger();
+            }
             OrbitingSpells.upgradeall();
             return true;
         }

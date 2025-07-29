@@ -356,6 +356,7 @@ public class HexaMod implements
 //        ExhaustCardTickPatch.exhaustedThisTurn = false;
         for (int i = 1; i <= 6; i++) {
             seal_weight[i] = seal_weight[i] + new_seal_weight[i];
+            seal_weight[i] = seal_weight[i] + new_seal_weight[i];
         }
         bonus_seal_drop_chance = bonus_seal_drop_chance + new_bonus_seal_drop_chance;
     }

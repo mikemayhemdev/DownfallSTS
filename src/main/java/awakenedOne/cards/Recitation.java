@@ -23,7 +23,6 @@ public class Recitation extends AbstractAwakenedCard {
     public Recitation() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 6;
-        baseSecondDamage = 4;
         this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(Recitation.class.getSimpleName() + ".png"));
     }
@@ -31,9 +30,8 @@ public class Recitation extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
-
         if (isTrig_chant()) {
-            altDmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
             chant();
         }
 
@@ -52,6 +50,5 @@ public class Recitation extends AbstractAwakenedCard {
     @Override
     public void upp() {
         upgradeDamage(2);
-        upgradeSecondDamage(2);
     }
 }

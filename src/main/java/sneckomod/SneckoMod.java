@@ -566,7 +566,7 @@ public class SneckoMod implements
                         c.cardID.equals(GremlinMeal.ID) ||
                         c.cardID.equals(FollowThrough.ID) ||
                         c.cardID.equals(FeatherVeil.ID) ||
-                        c.cardID.equals(FleetingCuriosity.ID) ||
+                        c.cardID.equals(AwakenedForm.ID) ||
                         c.cardID.equals(DemonGlyph.ID) ||
                         c.cardID.equals(SacrilegiousStrike.ID) ||
                         c.cardID.equals(Unleash.ID) ||

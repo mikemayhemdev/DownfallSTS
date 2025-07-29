@@ -101,11 +101,7 @@ public class OrbitingSpells {
         if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
             addSpellCard(CardLibrary.getCard(ESPSpell.ID).makeCopy());
         }
-        if ((conjuresThisCombat == 0) && (AbstractDungeon.player.hasRelic(RippedDoll.ID))) {
-            spellCards.get(0).tags.add(UP_NEXT);
-        } else {
-            setupnext();
-        }
+        setupnext();
     }
 
 

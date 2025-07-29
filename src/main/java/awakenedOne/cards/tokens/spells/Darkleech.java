@@ -14,7 +14,11 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedBluePower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
+
+import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
@@ -25,10 +29,8 @@ public class Darkleech extends AbstractSpellCard {
     // intellij stuff skill, all_enemy, , , , , 7, 2
 
     public Darkleech() {
-        super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
+        super(ID, 0, CardType.SKILL, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 1;
-        this.baseSecondMagic = 5;
-        this.secondMagic = this.baseSecondMagic;
         loadJokeCardImage(this, makeBetaCardPath(Darkleech.class.getSimpleName() + ".png"));
     }
 
@@ -43,26 +45,20 @@ public class Darkleech extends AbstractSpellCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)){
             this.addToBot(new VFXAction(new GiantEyeEffect(m.hb.cX, m.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
-            HexCurse(magicNumber, m, p);
-            //addToBot(new DamageAction(m, new DamageInfo(p, secondMagic, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.POISON));
-        }
+            this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));
+            }
         else {
-            //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
-            AbstractDungeon.getMonsters().monsters.stream().filter(m2 -> !m2.isDead && !m2.isDying).forEach(m2 -> {
-                this.addToBot(new VFXAction(new GiantEyeEffect(m2.hb.cX, m2.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
-                HexCurse(magicNumber, m2, p);
-                //addToBot(new DamageAction(m2, new DamageInfo(p, secondMagic, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.POISON));
-            });
+            Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+            while (var3.hasNext()) {
+                AbstractMonster mo = (AbstractMonster)var3.next();
+                this.addToBot(new VFXAction(new GiantEyeEffect(mo.hb.cX, mo.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
+                this.addToBot(new ApplyPowerAction(mo, p, new VulnerablePower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+            }
         }
-        vigor(secondMagic);
-//        if (upgraded) {
-//            atb(new GainEnergyAction(1));
-//            this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 1), 1));
-//        }
+
     }
 
     public void upp() {
         upgradeMagicNumber(1);
-        upgradeSecondMagic(1);
     }
 }
