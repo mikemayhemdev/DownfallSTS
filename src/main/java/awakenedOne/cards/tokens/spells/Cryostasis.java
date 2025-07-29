@@ -19,7 +19,7 @@ public class Cryostasis extends AbstractSpellCard {
 
     public Cryostasis() {
         super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
-        baseBlock = 8;
+        baseBlock = 9;
         baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Cryostasis.class.getSimpleName() + ".png"));
     }
@@ -55,7 +55,7 @@ public class Cryostasis extends AbstractSpellCard {
 
 
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(3);
         upgradeMagicNumber(1);
     }
 }
