@@ -33,11 +33,11 @@ public class RavenStrike extends AbstractAwakenedCard {
     }
 
     @Override
-    public void chant() {
-        if(upgraded){applyToSelf(new EnergizedBluePower(AbstractDungeon.player, 1));}
+    public void chant() {applyToSelf(new EnergizedBluePower(AbstractDungeon.player, 1));
         applyToSelf(new DrawCardNextTurnPower(AbstractDungeon.player, magicNumber));
         checkOnChant();
     }
+
 
     public void triggerOnGlowCheck() {
         this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;

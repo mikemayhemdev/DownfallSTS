@@ -43,6 +43,7 @@ public class RippedDoll extends CustomRelic {
 
     @Override
     public void atTurnStartPostDraw() {
+        super.atTurnStart();
         if (this.counter < 2) {
             this.counter++;
             flash();
