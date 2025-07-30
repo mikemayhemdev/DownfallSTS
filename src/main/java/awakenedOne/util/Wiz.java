@@ -142,6 +142,7 @@ public class Wiz {
         }
 
         if (cool >= POWERS_TO_AWAKEN) {
+            att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DominusPower.POWER_ID));
             awakenedthiscombat = true;
             awaken(10);
             OrbitingSpells.upgradeall();
