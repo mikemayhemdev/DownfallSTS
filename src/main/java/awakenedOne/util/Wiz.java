@@ -140,6 +140,7 @@ public class Wiz {
         if (AwakenedOneMod.awakenedthiscombat) {
             if (AbstractDungeon.player.hasPower(DominusPower.POWER_ID)) {
                 AbstractDungeon.player.getPower(DominusPower.POWER_ID).onSpecificTrigger();
+                att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DominusPower.POWER_ID));
             }
             OrbitingSpells.upgradeall();
             return true;
