@@ -1,8 +1,14 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
+import basemod.BaseMod;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.MultiGroupSelectAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,8 +16,12 @@ import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
 
+import java.util.Collections;
+
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
+import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.att;
 
 public class DarkPortal extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(DarkPortal.class.getSimpleName());
@@ -26,30 +36,30 @@ public class DarkPortal extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!p.discardPile.isEmpty()) {
-            this.addToBot(new SelectCardsCenteredAction(
-
-                    p.discardPile.group,
-                    1,
-                    TEXT[0],
-
-                    (selectedCards) -> {
-
-                        AbstractCard selecteda = selectedCards.get(0);
-                        p.discardPile.removeCard(selecteda);
-                        p.hand.addToHand(selecteda);
-                        selecteda.lighten(false);
-                        selecteda.unhover();
-                        selecteda.applyPowers();
-
-                        selecteda.costForTurn = 0;
-                        selecteda.isCostModifiedForTurn = true;
-                    }
-            ));
-        }
-
-        addToBot(new MakeTempCardInDiscardAction(new VoidCard(), 1));
-
+        atb(new MultiGroupSelectAction(
+                cardStrings.EXTENDED_DESCRIPTION[magicNumber == 1 ? 0 : 1],
+                (cards, groups) -> {
+                    Collections.reverse(cards);
+                    cards.forEach(c -> att(new AbstractGameAction() {
+                        public void update() {
+                            isDone = true;
+                            if (p.hand.size() >= BaseMod.MAX_HAND_SIZE) {
+                                if (groups.get(c) == p.drawPile)
+                                    p.drawPile.moveToDiscardPile(c);
+                                p.createHandIsFullDialog();
+                            } else {
+                                p.hand.moveToHand(c, groups.get(c));
+                            }
+                            if (p.drawPile.contains(cards.get(0))) {
+                                addToTop(new MakeTempCardInDrawPileAction(new VoidCard(), 1, true, true));
+                            } else if (p.discardPile.contains(cards.get(0))) {
+                                addToTop(new MakeTempCardInDiscardAction(new VoidCard(), 1));
+                            }
+                        }
+                    }));
+                },
+                magicNumber, false, c -> c instanceof AbstractCard, CardGroup.CardGroupType.DRAW_PILE, CardGroup.CardGroupType.DISCARD_PILE
+        ));
     }
 
     @Override

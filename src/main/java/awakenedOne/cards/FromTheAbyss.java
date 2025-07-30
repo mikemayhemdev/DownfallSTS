@@ -2,8 +2,10 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.*;
@@ -16,25 +18,12 @@ public class FromTheAbyss extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
         this.tags.add(AwakenedOneMod.DELVE);
-        this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(FromTheAbyss.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        HexCurse(magicNumber, m, p);
-        if (isTrig_chant()) {
-            chant();
-        }
-    }
-
-    public void triggerOnGlowCheck() {
-        this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-    }
-
-    @Override
-    public void chant() {
-        atb(new ConjureAction(false));
-        checkOnChant();
+        this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, magicNumber), magicNumber));
+        chant();
     }
 
     public void upp() {

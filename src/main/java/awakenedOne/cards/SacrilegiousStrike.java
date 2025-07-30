@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.powers.EntanglePowersPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.PutOnDeckAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -14,21 +15,18 @@ public class SacrilegiousStrike extends AbstractAwakenedCard {
 
     public SacrilegiousStrike() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 5;
-        baseBlock = 5;
+        baseDamage = 7;
         tags.add(CardTags.STRIKE);
         loadJokeCardImage(this, makeBetaCardPath(SacrilegiousStrike.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        applyToSelf(new EntanglePowersPower(1));
+        this.addToBot(new PutOnDeckAction(p, p, 1, false));
     }
 
     @Override
     public void upp() {
-        upgradeDamage(2);
-        upgradeBlock(2);
+        upgradeDamage(3);
     }
 }

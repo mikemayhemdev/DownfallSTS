@@ -14,9 +14,9 @@ public class DoubleVision extends AbstractAwakenedCard {
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
     public DoubleVision() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
-        baseMagicNumber = magicNumber = 1;
+        baseMagicNumber = magicNumber = 3;
         loadJokeCardImage(this, makeBetaCardPath(DoubleVision.class.getSimpleName() + ".png"));
     }
 
@@ -34,7 +34,6 @@ public class DoubleVision extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        //upgradeBaseCost(0);
-        upgradeMagicNumber(1);
+        upgradeBaseCost(0);
     }
 }

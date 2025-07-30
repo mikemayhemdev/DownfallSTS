@@ -28,16 +28,32 @@ public class RippedDoll extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
+    public void onEquip() {
+        this.counter = -1;
+    }
+
+    public void onVictory() {
+        this.counter = -1;
+    }
+
     @Override
     public void atBattleStart() {
-        super.atBattleStart();
-        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        atb(new ConjureAction(false, false));
+        this.counter = 0;
+    }
+
+    @Override
+    public void atTurnStart() {
+        if (this.counter > 2) {
+            this.counter++;
+            flash();
+            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            atb(new ConjureAction(false, false));
+        }
     }
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + 2 + DESCRIPTIONS[1];
     }
 
 }

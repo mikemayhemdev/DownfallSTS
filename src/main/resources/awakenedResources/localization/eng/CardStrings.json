@@ -80,7 +80,7 @@
   },
   "awakened:Psalm": {
     "NAME": "Psalm",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Does not remove awakened:Hex."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Apply !M! Weak to ALL enemies."
   },
   "awakened:DemonGlyph": {
     "NAME": "Demon Glyph",
@@ -129,7 +129,7 @@
   },
   "awakened:Altar": {
     "NAME": "Altar",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. NL awakened:Conjure."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL awakened:Conjure."
   },
   "awakened:Envision": {
     "NAME": "Envision",
@@ -153,12 +153,11 @@
   },
   "awakened:DoubleVision": {
     "NAME": "Double Vision",
-    "DESCRIPTION": "Choose a card in hand. Add !M! copy of that card to your Spellbook until it is refreshed. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in hand. Add !M! copies of that card to your Spellbook until it is refreshed. NL Exhaust."
+    "DESCRIPTION": "Choose a card in hand. NL Add !M! copies of that card to your Spellbook. NL Exhaust."
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Hex."
+    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Next turn, gain [E] and draw !M! card."
   },
   "awakened:Unleash": {
     "NAME": "Zealotry",
@@ -224,7 +223,7 @@
   },
   "awakened:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL Costs 0 if a card was created this turn."
+    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] [E] ."
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
@@ -245,7 +244,8 @@
   },
   "awakened:FromTheAbyss": {
     "NAME": "From the Abyss",
-    "DESCRIPTION": "Apply !M! awakened:Hex. NL awakened:Chant: awakened:Conjure."
+    "DESCRIPTION": "Next turn, gain [E] [E] . NL awakened:Conjure.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] . NL awakened:Conjure."
   },
   "awakened:Carrionmaker": {
     "NAME": "Carrionmaker",
@@ -266,11 +266,11 @@
   },
   "awakened:DarkPortal": {
     "NAME": "Reality Rift",
-    "DESCRIPTION": "Swap a card in your discard pile with a *Void. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Swap a card in your draw or discard pile with a *Void. NL Exhaust."
   },
   "awakened:Nihilism": {
     "NAME": "Nihilism",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. NL If it was a Power, draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. NL If it was a Power, draw !M! cards."
   },
   "awakened:Slaughter": {
     "NAME": "To the Slaughter",
@@ -287,7 +287,7 @@
   },
   "awakened:SacrilegiousStrike": {
     "NAME": "Profane Strike",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL The next time you play a Power, lose [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL Put a card in your hand on top of your draw pile."
   },
   "awakened:ToTheLimit": {
     "NAME": "To the Limit",
