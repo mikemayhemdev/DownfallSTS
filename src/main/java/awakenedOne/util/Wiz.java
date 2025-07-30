@@ -1,6 +1,7 @@
 package awakenedOne.util;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.cards.DemonGlyph;
 import awakenedOne.powers.DominusPower;
 import awakenedOne.ui.OrbitingSpells;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -119,7 +120,7 @@ public class Wiz {
     public static boolean hasConjure() {
         boolean hasbasics = false;
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.hasTag(DELVE)) {
+            if (c.hasTag(DELVE) || c instanceof DemonGlyph) {
                 hasbasics = true;
             }
         }
@@ -142,7 +143,9 @@ public class Wiz {
         }
 
         if (cool >= POWERS_TO_AWAKEN) {
-            att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DominusPower.POWER_ID));
+            if (AbstractDungeon.player.hasPower(DominusPower.POWER_ID)) {
+                att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DominusPower.POWER_ID));
+            }
             awakenedthiscombat = true;
             awaken(10);
             OrbitingSpells.upgradeall();

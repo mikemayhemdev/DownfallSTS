@@ -16,15 +16,18 @@ public class DominusPower extends AbstractAwakenedPower implements OnAwakenPower
     // intellij stuff buff
     public static final String NAME = DominusPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
+    public boolean activated = false;
 
     public DominusPower(int amount) {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
         updateDescription();
+        activated = false;
     }
 
     @Override
     public void onAwaken(int vibe) {
-        if (vibe == 10) {
+        if (vibe == 10 && activated == false) {
+            activated = true;
             flash();
             this.addToBot(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 1.0F));
             applyToSelf(new StrengthPower(AbstractDungeon.player, amount));

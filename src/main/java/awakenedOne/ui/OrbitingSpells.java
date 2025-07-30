@@ -211,7 +211,7 @@ public class OrbitingSpells {
             float dist = FontHelper.getWidth(FontHelper.tipHeaderFont, s.name, 1.0F);
 
             Color textColor = Color.WHITE.cpy();
-            if (s.upgraded) {
+            if (s.upgraded || Wiz.isAwakened()) {
                 textColor = Color.GREEN.cpy();
             }
             if (s.hasTag(UP_NEXT) && DeterministicConjure) {
