@@ -42,12 +42,10 @@ public class RippedDoll extends CustomRelic {
     }
 
     @Override
-    public void atTurnStartPostDraw() {
-        super.atTurnStart();
+    public void atTurnStart() {
         if (this.counter < 2) {
             this.counter++;
             flash();
-            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             atb(new ConjureAction(false, false));
         }
     }

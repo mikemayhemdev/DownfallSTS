@@ -33,7 +33,8 @@ public class RavenStrike extends AbstractAwakenedCard {
     }
 
     @Override
-    public void chant() {applyToSelf(new EnergizedBluePower(AbstractDungeon.player, 1));
+    public void chant() {
+        applyToSelf(new EnergizedBluePower(AbstractDungeon.player, 1));
         applyToSelf(new DrawCardNextTurnPower(AbstractDungeon.player, magicNumber));
         checkOnChant();
     }
