@@ -27,6 +27,7 @@ import java.util.function.Predicate;
 
 import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
 import static awakenedOne.AwakenedOneMod.DELVE;
+import static awakenedOne.ui.AwakenButton.awaken;
 
 public class Wiz {
     //The wonderful Wizard of Oz allows access to most easy compilations of data, or functions.
@@ -138,16 +139,13 @@ public class Wiz {
         }
 
         if (AwakenedOneMod.awakenedthiscombat) {
-            if (AbstractDungeon.player.hasPower(DominusPower.POWER_ID)) {
-                AbstractDungeon.player.getPower(DominusPower.POWER_ID).onSpecificTrigger();
-                att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DominusPower.POWER_ID));
-            }
+            awaken(10);
             OrbitingSpells.upgradeall();
             return true;
         }
 
         if (cool >= POWERS_TO_AWAKEN) {
-            AwakenedOneMod.awakenedthiscombat = true;
+            awaken(10);
             OrbitingSpells.upgradeall();
             return true;
         }

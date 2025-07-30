@@ -1,5 +1,6 @@
 package awakenedOne.powers;
 
+import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -11,7 +12,7 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 
-public class DominusPower extends AbstractAwakenedPower {
+public class DominusPower extends AbstractAwakenedPower implements OnAwakenPower {
     // intellij stuff buff
     public static final String NAME = DominusPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
@@ -22,12 +23,14 @@ public class DominusPower extends AbstractAwakenedPower {
     }
 
     @Override
-    public void onSpecificTrigger() {
-        flash();
-        this.addToBot(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 1.0F));
-        applyToSelf(new StrengthPower(AbstractDungeon.player, amount));
-        applyToSelf(new DexterityPower(AbstractDungeon.player, amount));
-        addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+    public void onAwaken(int vibe) {
+        if (vibe == 10) {
+            flash();
+            this.addToBot(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 1.0F));
+            applyToSelf(new StrengthPower(AbstractDungeon.player, amount));
+            applyToSelf(new DexterityPower(AbstractDungeon.player, amount));
+            addToTop(new RemoveSpecificPowerAction(owner, owner, this));
+        }
     }
 
 
