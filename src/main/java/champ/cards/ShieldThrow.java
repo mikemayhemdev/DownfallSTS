@@ -42,7 +42,7 @@ public class ShieldThrow extends AbstractChampCard {
 
     @Override
     public void triggerOnGlowCheck() {
-        glowColor = !dcombo() ? GOLD_BORDER_GLOW_COLOR : Color.RED.cpy();
+        glowColor = dcombo() ? GOLD_BORDER_GLOW_COLOR : Color.RED.cpy();
     }
 
     public void applyPowers() {
