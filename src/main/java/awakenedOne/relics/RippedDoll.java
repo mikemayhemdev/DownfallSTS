@@ -43,7 +43,7 @@ public class RippedDoll extends CustomRelic {
 
     @Override
     public void atTurnStart() {
-        if (this.counter > 2) {
+        if (this.counter < 2) {
             this.counter++;
             flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
