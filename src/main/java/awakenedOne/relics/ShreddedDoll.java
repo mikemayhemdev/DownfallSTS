@@ -55,7 +55,7 @@ public class ShreddedDoll extends CustomRelic implements OnAwakenRelic {
     }
 
     @Override
-    public void atTurnStart() {
+    public void atTurnStartPostDraw() {
         flash();
         atb(new ConjureAction(false));
     }
