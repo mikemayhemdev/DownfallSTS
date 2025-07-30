@@ -29,7 +29,6 @@ public class DominusPower extends AbstractAwakenedPower implements OnAwakenPower
             this.addToBot(new VFXAction(AbstractDungeon.player, new InflameEffect(AbstractDungeon.player), 1.0F));
             applyToSelf(new StrengthPower(AbstractDungeon.player, amount));
             applyToSelf(new DexterityPower(AbstractDungeon.player, amount));
-            addToTop(new RemoveSpecificPowerAction(owner, owner, this));
         }
     }
 
