@@ -146,9 +146,7 @@ public class Wiz {
         }
 
         if (cool >= POWERS_TO_AWAKEN) {
-            if (AbstractDungeon.player.hasPower(DominusPower.POWER_ID)) {
-                AbstractDungeon.player.getPower(DominusPower.POWER_ID).onSpecificTrigger();
-            }
+            AwakenedOneMod.awakenedthiscombat = true;
             OrbitingSpells.upgradeall();
             return true;
         }
