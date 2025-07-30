@@ -25,8 +25,7 @@ import java.util.ArrayList;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
-import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
-import static awakenedOne.AwakenedOneMod.DELVE;
+import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.ui.AwakenButton.awaken;
 
 public class Wiz {
@@ -139,12 +138,11 @@ public class Wiz {
         }
 
         if (AwakenedOneMod.awakenedthiscombat) {
-            awaken(10);
-            OrbitingSpells.upgradeall();
-            return true;
+            cool = 100;
         }
 
         if (cool >= POWERS_TO_AWAKEN) {
+            awakenedthiscombat = true;
             awaken(10);
             OrbitingSpells.upgradeall();
             return true;
