@@ -28,6 +28,10 @@ public class FeatherWhirl extends AbstractAwakenedCard {
             }
             return true;
         }, magicNumber));
+        if (upgraded){
+            this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
+            this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
+        }
     }
 
 
