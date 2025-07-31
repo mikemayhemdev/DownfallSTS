@@ -15,7 +15,7 @@ public class FromTheAbyss extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public FromTheAbyss() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(FromTheAbyss.class.getSimpleName() + ".png"));
@@ -23,7 +23,7 @@ public class FromTheAbyss extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, magicNumber), magicNumber));
-        chant();
+        atb(new ConjureAction(false));
     }
 
     public void upp() {
