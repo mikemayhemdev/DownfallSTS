@@ -266,7 +266,10 @@
   },
   "awakened:DarkPortal": {
     "NAME": "Reality Rift",
-    "DESCRIPTION": "Swap a card in your draw or discard pile with a *Void. NL Exhaust."
+    "DESCRIPTION": "Swap a card in your draw or discard pile with a *Void. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose a card to put into your hand."
+    ]
   },
   "awakened:Nihilism": {
     "NAME": "Nihilism",
