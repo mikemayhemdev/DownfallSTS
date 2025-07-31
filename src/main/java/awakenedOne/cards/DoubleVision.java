@@ -17,6 +17,7 @@ public class DoubleVision extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
         baseMagicNumber = magicNumber = 3;
+        this.tags.add(CardTags.HEALING);
         loadJokeCardImage(this, makeBetaCardPath(DoubleVision.class.getSimpleName() + ".png"));
     }
 

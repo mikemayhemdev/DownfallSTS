@@ -243,8 +243,8 @@
   },
   "awakened:FromTheAbyss": {
     "NAME": "From the Abyss",
-    "DESCRIPTION": "Next turn, gain [E] [E] . NL awakened:Conjure.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E] . NL awakened:Conjure."
+    "DESCRIPTION": "Next turn, gain [E] [E]. NL awakened:Conjure.",
+    "UPGRADE_DESCRIPTION": "Next turn, gain [E] [E] [E]. NL awakened:Conjure."
   },
   "awakened:Carrionmaker": {
     "NAME": "Carrionmaker",
