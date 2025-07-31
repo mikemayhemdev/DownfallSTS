@@ -18,8 +18,7 @@
   },
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Apply !M! awakened:Manaburn. NL Next turn, lose [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage twice. NL Apply !M! awakened:Manaburn. NL Next turn, lose [E]. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Manaburn. NL Next turn, lose [E]."
   },
   "awakened:AphoticShield": {
     "NAME": "Aphotic Shield",
