@@ -27,7 +27,8 @@
   },
   "awakened:ESPSpell": {
     "NAME": "ESP",
-    "DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Draw !M! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust."
   },
   "awakened:Strike": {
     "NAME": "Strike",
