@@ -153,7 +153,7 @@ public class NeowBossFinal extends AbstractMonster {
         // halfDead = true;
         AbstractDungeon.getCurrRoom().playBgmInstantly("BOSS_ENDING");
 
-        int beatAmount = 2; //a19 healing, a18 healing is this -1
+        int beatAmount = 3; //a19 healing, a18 healing is this -1
 //        if (AbstractDungeon.ascensionLevel >= 19) {
 //            beatAmount += 1;
 //        }
