@@ -37,7 +37,7 @@ public class DarkPortal extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new MultiGroupSelectAction(
-                cardStrings.EXTENDED_DESCRIPTION[magicNumber == 1 ? 0 : 1],
+                cardStrings.EXTENDED_DESCRIPTION[0],
                 (cards, groups) -> {
                     Collections.reverse(cards);
                     cards.forEach(c -> att(new AbstractGameAction() {
@@ -58,7 +58,7 @@ public class DarkPortal extends AbstractAwakenedCard {
                         }
                     }));
                 },
-                magicNumber, false, c -> c instanceof AbstractCard, CardGroup.CardGroupType.DRAW_PILE, CardGroup.CardGroupType.DISCARD_PILE
+                1, false, c -> c instanceof AbstractCard, CardGroup.CardGroupType.DRAW_PILE, CardGroup.CardGroupType.DISCARD_PILE
         ));
     }
 
