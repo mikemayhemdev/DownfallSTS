@@ -43,17 +43,18 @@ public class DarkPortal extends AbstractAwakenedCard {
                     cards.forEach(c -> att(new AbstractGameAction() {
                         public void update() {
                             isDone = true;
-                            if (p.drawPile.contains(cards.get(0))) {
+                            if (p.drawPile.contains(c)) {
                                 addToTop(new MakeTempCardInDrawPileAction(new VoidCard(), 1, true, true));
-                            } else if (p.discardPile.contains(cards.get(0))) {
+                            } else if (p.discardPile.contains(c)) {
                                 addToTop(new MakeTempCardInDiscardAction(new VoidCard(), 1));
                             }
                             if (p.hand.size() >= BaseMod.MAX_HAND_SIZE) {
                                 if (groups.get(c) == p.drawPile)
                                     p.drawPile.moveToDiscardPile(c);
                                     p.createHandIsFullDialog();
-                            } else
+                            } else {
                                 p.hand.moveToHand(c, groups.get(c));
+                            }
                         }
                     }));
                 },
