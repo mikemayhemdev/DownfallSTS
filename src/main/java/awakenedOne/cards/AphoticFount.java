@@ -20,7 +20,7 @@ public class AphoticFount extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public AphoticFount() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
         AbstractCard c = new AphoticShield();
         c.upgrade();
