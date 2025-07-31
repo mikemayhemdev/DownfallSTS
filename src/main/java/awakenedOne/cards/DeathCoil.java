@@ -19,7 +19,7 @@ public class DeathCoil extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, 13, 6, , , ,
 
     public DeathCoil() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 10;
         baseMagicNumber = magicNumber = 4;
         loadJokeCardImage(this, makeBetaCardPath(DeathCoil.class.getSimpleName() + ".png"));
