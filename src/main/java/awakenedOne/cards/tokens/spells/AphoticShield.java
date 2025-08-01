@@ -15,7 +15,7 @@ public class AphoticShield extends AbstractSpellCard {
 
     public AphoticShield() {
         super(ID, 1, CardType.SKILL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 4;
         loadJokeCardImage(this, makeBetaCardPath(AphoticShield.class.getSimpleName() + ".png"));
     }
 

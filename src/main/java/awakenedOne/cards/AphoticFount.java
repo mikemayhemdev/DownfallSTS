@@ -20,8 +20,7 @@ public class AphoticFount extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public AphoticFount() {
-        super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        this.exhaust = true;
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         AbstractCard c = new AphoticShield();
         c.upgrade();
         MultiCardPreview.add(this, new AphoticShield(), c);
@@ -38,6 +37,6 @@ public class AphoticFount extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        this.isInnate = true;
+        upgradeBaseCost(0);
     }
 }
