@@ -16,7 +16,7 @@ public class FromTheAbyss extends AbstractAwakenedCard {
 
     public FromTheAbyss() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(FromTheAbyss.class.getSimpleName() + ".png"));
     }

@@ -20,7 +20,6 @@ public class Archmage extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new DarkIncantationRitualPower(magicNumber));
-        applyToSelf(new DoubleSpellPower(magicNumber));
     }
 
     public void upp() {
