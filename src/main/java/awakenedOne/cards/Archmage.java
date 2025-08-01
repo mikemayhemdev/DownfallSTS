@@ -14,13 +14,12 @@ public class Archmage extends AbstractAwakenedCard {
 
     public Archmage() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
         this.isEthereal = true;
         loadJokeCardImage(this, makeBetaCardPath(Archmage.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new DarkIncantationRitualPower(magicNumber));
+        applyToSelf(new DarkIncantationRitualPower(1));
     }
 
     public void upp() {
