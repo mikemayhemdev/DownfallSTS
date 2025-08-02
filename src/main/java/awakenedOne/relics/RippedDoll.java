@@ -43,10 +43,13 @@ public class RippedDoll extends CustomRelic {
 
     @Override
     public void atTurnStart() {
-        if (this.counter < 2) {
+        if (this.counter < 2 && this.counter != -1) {
             this.counter++;
             flash();
             atb(new ConjureAction(false, false));
+            if (this.counter == 2){
+                this.counter = -1;
+            }
         }
     }
 
