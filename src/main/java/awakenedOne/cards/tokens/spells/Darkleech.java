@@ -29,8 +29,8 @@ public class Darkleech extends AbstractSpellCard {
     // intellij stuff skill, all_enemy, , , , , 7, 2
 
     public Darkleech() {
-        super(ID, 0, CardType.SKILL, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 1;
+        super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Darkleech.class.getSimpleName() + ".png"));
     }
 
@@ -59,6 +59,6 @@ public class Darkleech extends AbstractSpellCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeMagicNumber(2);
     }
 }
