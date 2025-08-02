@@ -58,7 +58,7 @@ public class OrbitingSpells {
         cardIcons.put(Cryostasis.ID, TexLoader.getTexture("awakenedResources/images/ui/Cryostasis.png"));
         cardIcons.put(Darkleech.ID, TexLoader.getTexture("awakenedResources/images/ui/Darkleech.png"));
         cardIcons.put(Thunderbolt.ID, TexLoader.getTexture("awakenedResources/images/ui/Thunderbolt.png"));
-        cardIcons.put(DeathCoil.ID, TexLoader.getTexture("awakenedResources/images/ui/Deathcoil.png"));
+        //cardIcons.put(DeathCoil.ID, TexLoader.getTexture("awakenedResources/images/ui/Deathcoil.png"));
         cardIcons.put(AphoticShield.ID, TexLoader.getTexture("awakenedResources/images/ui/AphoticShield.png"));
         cardIcons.put(ESPSpell.ID, TexLoader.getTexture("awakenedResources/images/ui/ESPSpell.png"));
         cardIcons.put(Grimoire.ID, TexLoader.getTexture("awakenedResources/images/ui/Grimoire.png"));
