@@ -19,13 +19,13 @@ import slimebound.slimes.SlimeHelper;
 
 public class Split extends AbstractSlimeboundCard {
     public static final String ID = "Slimebound:Split";
-    public static final String IMG_PATH = SlimeboundMod.getResourcePath("cards/split.png");
+    public static final String IMG_PATH = SlimeboundMod.getResourcePath("cards/Inspiration.png");
     private static final CardStrings cardStrings;
     public static final String[] EXTENDED_DESCRIPTION;
 
     public Split() {
         super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.SLIMEBOUND, CardRarity.BASIC, CardTarget.NONE);
-        SlimeboundMod.loadJokeCardImage(this, "Split.png");
+        SlimeboundMod.loadJokeCardImage(this, "Inspiration.png");
         baseMagicNumber = magicNumber = 2;
     }
 

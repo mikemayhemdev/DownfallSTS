@@ -37,8 +37,6 @@ public class Gluttony extends AbstractSlimeboundCard {
     public Gluttony() {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
-        this.cardsToPreview = new Lick();
-
         //this.tags.add(SneckoMod.BANNEDFORSNECKO);
         SlimeboundMod.loadJokeCardImage(this, "Gluttony.png");
     }

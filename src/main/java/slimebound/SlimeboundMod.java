@@ -8,6 +8,7 @@ import basemod.eventUtil.AddEventParams;
 import basemod.eventUtil.EventUtils;
 import basemod.helpers.RelicType;
 import basemod.interfaces.*;
+import champ.ChampMod;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -37,6 +38,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import slimebound.cards.*;
+import slimebound.cards.licktokens.*;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.events.*;
 import slimebound.helpers.SelfDamageVariable;
@@ -367,17 +369,17 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addCard(new slimebound.cards.Dissolve());
         BaseMod.addCard(new slimebound.cards.DuplicatedForm());
         BaseMod.addCard(new slimebound.cards.LeechingTouch());
-        BaseMod.addCard(new SamplingLick());
+        //BaseMod.addCard(new SamplingLick());
         BaseMod.addCard(new FormOfPuddle());
-        BaseMod.addCard(new slimebound.cards.Lick());
-        BaseMod.addCard(new slimebound.cards.MegaLick());
+       // BaseMod.addCard(new slimebound.cards.Lick());
+       // BaseMod.addCard(new slimebound.cards.MegaLick());
 
         BaseMod.addCard(new PressTheAttack());
         //BaseMod.addCard(new SoulSicken());
         // BaseMod.addCard(new slimebound.cards.zzzFocusedLick());
-        BaseMod.addCard(new HauntingLick());
+        //BaseMod.addCard(new HauntingLick());
         //BaseMod.addCard(new AcidGelatin());
-        BaseMod.addCard(new RejuvenatingLick());
+       // BaseMod.addCard(new RejuvenatingLick());
         BaseMod.addCard(new slimebound.cards.TongueLash());
         BaseMod.addCard(new ItLooksTasty());
         BaseMod.addCard(new slimebound.cards.AcidTongue());
@@ -427,6 +429,10 @@ public class SlimeboundMod implements OnCardUseSubscriber,
         BaseMod.addCard(new TagTeam());
         BaseMod.addCard(new RallyTheTroops());
 
+        BaseMod.addCard(new Conspire());
+        BaseMod.addCard(new SplitAnAttack());
+        BaseMod.addCard(new NewPlan());
+        BaseMod.addCard(new Windup());
 
     }
 
@@ -580,14 +586,34 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     public void receiveOnBattleStart(AbstractRoom room) {
         attacksPlayedThisTurn = 0;
-        SlimeHelper.AtBattleStart();
+        //SlimeHelper.AtBattleStart();
+    }
+
+    public static AbstractCard getRandomLick(){
+        int choice = AbstractDungeon.cardRng.random(0, 4);
+        switch (choice) {
+            case 0:
+                return new LickTokenBlock();
+            case 1:
+                return new LickTokenDouble();
+            case 2:
+                return new LickTokenVuln();
+            case 3:
+                return new LickTokenDraw();
+            case 4:
+                return new LickTokenWeak();
+        }
+        return new LickTokenWeak(); //default never should be hit
     }
 
 
     @Override
     public void receivePostPlayerUpdate() {
+        /*
         if (CardCrawlGame.chosenCharacter == SlimeboundEnum.SLIMEBOUND && SlimeHelper.InCombat()) {
             SlimeHelper.Update();
         }
+
+         */
     }
 }

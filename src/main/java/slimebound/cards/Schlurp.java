@@ -22,7 +22,6 @@ public class Schlurp extends AbstractSlimeboundCard {
         super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.SKILL, AbstractCardEnum.SLIMEBOUND, CardRarity.COMMON, CardTarget.ENEMY);
         this.baseSlimed = this.slimed = 7;
         this.magicNumber = this.baseMagicNumber = 1;
-        this.cardsToPreview = new Lick();
         SlimeboundMod.loadJokeCardImage(this, "Schlurp.png");
 
     }
@@ -30,7 +29,7 @@ public class Schlurp extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(m, p, new SlimedPower(m, p, slimed)));
         for (int i = 0; i < this.magicNumber; i++) {
-            addToBot(new MakeTempCardInHandAction(new Lick()));
+            addToBot(new MakeTempCardInHandAction(SlimeboundMod.getRandomLick()));
         }
     }
 

@@ -35,7 +35,7 @@
   },
   "Slimebound:DisruptingSlam": {
     "NAME": "Just Desserts",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL expansioncontent:Exhume !M! random \"Lick\" cards."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Trigger your slimeboundMod:Prepare effects immediately."
   },
   "Slimebound:Dissolve": {
     "NAME": "Quick Snack",
@@ -60,7 +60,7 @@
   },
   "Slimebound:Equalize": {
     "NAME": "Equalize",
-    "DESCRIPTION": "Deal !D! damage. NL Grant 2 energy to both slimeboundmod:Pike and slimeboundmod:Cid. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Grant 2 energy to both slimeboundmod:Pike and slimeboundmod:Cid."
   },
   "Slimebound:FinishingTackle": {
     "NAME": "Opening Tackle",
@@ -106,20 +106,13 @@
     "NAME": "Growth Punch",
     "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL slimeboundmod:Consume - Increase this card's effects by !M! this combat."
   },
-  "Slimebound:HauntingLick": {
-    "NAME": "Haunting Lick",
-    "DESCRIPTION": "Apply !M! Vulnerable and !slime! slimeboundmod:Goop. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Vulnerable and !slime! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
-  },
   "Slimebound:HungryTackle": {
     "NAME": "Hungry Tackle",
-    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL expansioncontent:Exhume a random \"Lick\" card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL expansioncontent:Exhume 2 random \"Lick\" cards."
+    "DESCRIPTION": "Deal !D! damage. NL Take !SlimeboundSelfharm! damage. NL Gain 2 *Licks."
   },
   "Slimebound:ItLooksTasty": {
     "NAME": "It Looks Tasty",
-    "DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Gain a *Lick.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. slimeboundmod:Consume - Gain a *Lick+."
+    "DESCRIPTION": "Deal !D! damage. Gain a *Lick."
   },
   "Slimebound:LeadByExample": {
     "NAME": "Lead By Example",
@@ -143,11 +136,6 @@
     "NAME": "Level Up",
     "DESCRIPTION": "Gain 1 Strength. NL Increase slimeboundmod:Cid and slimeboundmod:Pike's damage by !M! this combat."
   },
-  "Slimebound:Lick": {
-    "NAME": "Lick",
-    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Exhaust - slimeboundmod:Buried.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !slime! slimeboundmod:Goop. NL Draw a card. NL Exhaust - slimeboundmod:Buried."
-  },
   "Slimebound:LivingWall": {
     "NAME": "Living Wall",
     "DESCRIPTION": "Gain !B! Block. NL Apply !slime! slimeboundmod:Goop to attackers this turn."
@@ -166,11 +154,6 @@
       "Choose Pike."
     ]
   },
-  "Slimebound:MegaLick": {
-    "NAME": "Mega-Lick",
-    "DESCRIPTION": "Apply !M! Weak and !slime! slimeboundmod:Goop to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !M! Weak and !slime! slimeboundmod:Goop to ALL enemies. NL Draw a card. NL Exhaust."
-  },
   "Slimebound:MinionMaster": {
     "NAME": "Minion Master",
     "DESCRIPTION": "Choose slimeboundmod:Pike or slimeboundmod:Cid. slimeboundmod:Enchant them with 'When slimeboundmod:Commanded, performs an additional turn'.",
@@ -183,9 +166,8 @@
     ]
   },
   "Slimebound:Nibble": {
-    "NAME": "Nibble and Lick",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a *Lick. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a *Lick. NL Draw a card. NL Exhaust."
+    "NAME": "Nibble",
+    "DESCRIPTION": "Deal !D! damage. NL Gain a *Lick."
   },
   "Slimebound:OneTwoCombo": {
     "NAME": "One-Two Combo",
@@ -208,14 +190,13 @@
       ]
   },
   "Slimebound:Prepare": {
-    "NAME": "Prepare",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E] and draw !M! cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain [E] and draw !M! cards. NL Retain up to !M! cards this turn. Exhaust."
+    "NAME": "Hold Fast",
+    "DESCRIPTION": "Gain !B! Block. NL slimeboundmod:Prepare: Gain [E]."
   },
   "Slimebound:PrepareCrush": {
-    "NAME": "Prepare: Crush",
-    "DESCRIPTION": "Next turn, gain *SLIME *CRUSH, [E] [E] [E] and !M! Strength. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Next turn, gain *SLIME *CRUSH+, [E] [E] [E] [E] and !M! Strength. NL Exhaust.",
+    "NAME": "Prepare Crush",
+    "DESCRIPTION": "slimeboundMod:Prepare: Gain *SLIME *CRUSH, [E] [E] [E] and !M! Strength. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "slimeboundMod:Prepare: gain *SLIME *CRUSH+, [E] [E] [E] [E] and !M! Strength. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "~Slime...~ NL #r~CRUSH!!!~"
     ]
@@ -241,21 +222,12 @@
   },
   "Slimebound:Recollect": {
     "NAME": "Recollect",
-    "DESCRIPTION": "Gain !B! Block. NL expansioncontent:Exhume a random \"Lick\" card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL expansioncontent:Exhume 2 random \"Lick\" cards.",
-    "EXTENDED_DESCRIPTION": [
-      "Not... Exhausted..."
-    ]
+    "DESCRIPTION": "Gain !B! Block. NL slimeboundMod:Prepare: Gain !B! Block."
   },
   "Slimebound:Recycling": {
     "NAME": "Recycling",
     "DESCRIPTION": "At the start of your turn, expansioncontent:Exhume a random \"Lick\" card.",
     "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, expansioncontent:Exhume a random \"Lick\" card."
-  },
-  "Slimebound:RejuvenatingLick": {
-    "NAME": "Double Lick",
-    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop 2 times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !slime! slimeboundmod:Goop 2 times. NL Draw a card. NL Exhaust."
   },
   "Slimebound:Replication": {
     "NAME": "Replication",
@@ -273,11 +245,6 @@
   "Slimebound:RollThrough": {
     "NAME": "Roll Through",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL You do not take damage from the next !M! \"Tackle\" cards."
-  },
-  "Slimebound:SamplingLick": {
-    "NAME": "Sampling Lick",
-    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Gain !B! Block. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Gain !B! Block. NL Draw a card. NL Exhaust."
   },
   "Slimebound:Schlurp": {
     "NAME": "Schlurp",
@@ -335,7 +302,7 @@
     "DESCRIPTION": "Gain !M! Block whenever you slimeboundmod:Consume."
   },
   "Slimebound:Split": {
-    "NAME": "Split",
+    "NAME": "Inspiration",
     "DESCRIPTION": "Grant the lowest energy slimeboundmod:Slime !M! energy, then slimeboundmod:Command them. (Cid wins ties)"
   },
   "Slimebound:SplitAcid": {
@@ -400,5 +367,45 @@
     "EXTENDED_DESCRIPTION": [
       "Not... Exhausted..."
     ]
+  },
+  "Slimebound:Conspire": {
+    "NAME": "Conspire",
+    "DESCRIPTION": "Draw a card. NL slimeboundMod:Prepare: Draw !M! cards."
+    },
+  "Slimebound:Windup": {
+    "NAME": "Windup",
+    "DESCRIPTION": "slimeboundMod:Prepare: Gain !M! Temporary Strength and draw an Attack."
+   },
+  "Slimebound:NewPlan": {
+    "NAME": "New Plan",
+    "DESCRIPTION": "slimeboundMod:Prepare: Add a random 2+ cost card to your hand. It costs 0 until played. NL Exhaust."
+  },
+  "Slimebound:SplitAnAttack": {
+    "NAME": "Split",
+    "DESCRIPTION": "Choose an Attack card in hand. Gain an Upgraded Ethereal copy of it.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Choose an Attack card in hand. Gain an Upgraded Ethereal copy of it.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose an Attack to gain an Upgraded Ethereal copy of."
+    ]
+  },
+  "Slimebound:LickTokenBlock": {
+    "NAME": "Sampling Lick",
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Gain !B! Block. NL Exhaust."
+  },
+  "Slimebound:LickTokenVuln": {
+    "NAME": "Haunting Lick",
+    "DESCRIPTION": "Apply !M! Vulnerable and !slime! slimeboundmod:Goop. NL Exhaust."
+  },
+  "Slimebound:LickTokenWeak": {
+    "NAME": "Impairing Lick",
+    "DESCRIPTION": "Apply !M! Weak and !slime! slimeboundmod:Goop. NL Exhaust."
+  },
+  "Slimebound:LickTokenDraw": {
+    "NAME": "Thrilling Lick",
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop. NL Draw a card. NL Exhaust."
+  },
+  "Slimebound:LickTokenDouble": {
+    "NAME": "Double Lick",
+    "DESCRIPTION": "Apply !slime! slimeboundmod:Goop 2 times. NL Exhaust."
   }
 }

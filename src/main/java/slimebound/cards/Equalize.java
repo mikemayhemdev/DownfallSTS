@@ -31,7 +31,7 @@ public class Equalize extends AbstractSlimeboundCard {
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 3;
     private static final int POWER = 6;
     private static final int UPGRADE_BONUS = 3;
 
@@ -52,9 +52,9 @@ public class Equalize extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseDamage = 14;
-        this.magicNumber = this.baseMagicNumber = 2;
-        this.exhaust = true;
+        this.baseDamage = 18;
+        this.magicNumber = this.baseMagicNumber = 3;
+        //this.exhaust = true;
         //tags.add(CardTags.HEALING);
         SlimeboundMod.loadJokeCardImage(this, "Equalize.png");
 
@@ -80,8 +80,8 @@ public class Equalize extends AbstractSlimeboundCard {
         if (!this.upgraded) {
 
             upgradeName();
-            upgradeDamage(4);
-            upgradeMagicNumber(1);
+            upgradeDamage(6);
+            //upgradeMagicNumber(1);
 
 
         }

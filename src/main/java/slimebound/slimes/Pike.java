@@ -17,11 +17,9 @@ import slimebound.vfx.SlimeFlareEffect;
 
 public class Pike extends AbstractSlime {
     public static final String ID = "Slimebound:Pike";
-//    public static final String atlasString = SlimeboundMod.getResourcePath("orbs/attack.atlas");
-//    public static final String skeletonString = "images/monsters/theBottom/slimeAltS/skeleton.json";
 
     public Pike() {
-        super();
+        super(SlimeboundMod.getResourcePath("orbs/attack.atlas"), "images/monsters/theBottom/slimeAltS/skeleton.json");
     }
 
     public void updateDescription() {

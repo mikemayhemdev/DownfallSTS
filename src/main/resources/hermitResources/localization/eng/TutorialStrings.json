@@ -106,7 +106,7 @@
   "HermitMod:SlimeBossTutorials": {
     "TEXT": [
       "The Slime Boss can apply Goop to enemies to increase the damage they take the next time they are attacked, removing all Goop and triggering any Consume effects.",
-      "He can also Split into Slime minions that attack at the start of his turn and whenever he Commands."
+      "He also has split into two Slime minions, Cid and Pike, that act at the start of his turn and whenever he Commands."
     ],
     "LABEL": [
       "Next",

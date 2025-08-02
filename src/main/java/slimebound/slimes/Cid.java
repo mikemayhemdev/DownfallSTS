@@ -17,11 +17,9 @@ import slimebound.vfx.SlimeFlareEffect;
 
 public class Cid extends AbstractSlime {
     public static final String ID = "Slimebound:Cid";
-//    public static final String atlasString = SlimeboundMod.getResourcePath("orbs/shield.atlas");
-//    public static final String skeletonString = "images/monsters/theBottom/slimeS/skeleton.json";
 
     public Cid() {
-        super();
+        super(SlimeboundMod.getResourcePath("orbs/shield.atlas"), "images/monsters/theBottom/slimeS/skeleton.json");
     }
 
     public void updateDescription() {

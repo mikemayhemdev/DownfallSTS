@@ -49,10 +49,10 @@
   },
   {
     "NAMES": [
-      "buried"
+      "prepare"
     ],
-    "PROPER_NAME": "Buried",
-    "DESCRIPTION": "Buried cards will always be chosen last for random #yExhume effects."
+    "PROPER_NAME": "Prepare",
+    "DESCRIPTION": "Prepare effects trigger at the start of your next turn."
   },
   {
     "NAMES": [

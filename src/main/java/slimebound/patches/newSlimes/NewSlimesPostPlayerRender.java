@@ -13,10 +13,13 @@ import slimebound.slimes.SlimeHelper;
 public class NewSlimesPostPlayerRender {
     public static void Postfix(AbstractPlayer obj, SpriteBatch sb) {
         if (CardCrawlGame.chosenCharacter == SlimeboundEnum.SLIMEBOUND) {
+            /*
             if (SlimeHelper.InCombat()) {
                 SlimeHelper.Render(sb);
                 // TODO: Modified version of render may want to be called outside of combat to see ally slimes
             }
+
+             */
         }
     }
 }

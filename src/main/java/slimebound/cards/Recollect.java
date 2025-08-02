@@ -1,6 +1,7 @@
 package slimebound.cards;
 
 
+import collector.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import slimebound.SlimeboundMod;
 import slimebound.actions.ExhumeLickAction;
 import slimebound.actions.ReturnRandom0Cost;
@@ -45,8 +47,7 @@ public class Recollect extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
 
-        this.baseBlock = 8;
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.baseBlock = 6;
         SlimeboundMod.loadJokeCardImage(this, "Recollect.png");
         //this.exhaust = true;
 
@@ -56,7 +57,7 @@ public class Recollect extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
-        AbstractDungeon.actionManager.addToBottom(new ExhumeLickAction(this.magicNumber, false));
+        Wiz.applyToSelf(new NextTurnBlockPower(p, block));
 
 
     }
@@ -68,7 +69,7 @@ public class Recollect extends AbstractSlimeboundCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            upgradeBlock(2);
             //upgradeMagicNumber(1);
             // this.rawDescription = UPGRADED_DESCRIPTION;
             //this.initializeDescription();

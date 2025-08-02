@@ -43,7 +43,6 @@ public class ItLooksTasty extends AbstractSlimeboundCard {
         super(ID, NAME, SlimeboundMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.SLIMEBOUND, RARITY, TARGET);
 
         this.baseDamage = 8;
-        this.cardsToPreview = new Lick();
         SlimeboundMod.loadJokeCardImage(this, "ItLooksTasty.png");
 
     }
@@ -51,16 +50,8 @@ public class ItLooksTasty extends AbstractSlimeboundCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        if (m.hasPower(SlimedPower.POWER_ID)) {
-            AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(this.upgraded));
-            /*
-            if (upgraded) {
-                AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));
-            }
-            */
-        }
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new com.megacrit.cardcrawl.cards.DamageInfo(p, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-
+        AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction());
 
     }
 
@@ -82,10 +73,7 @@ public class ItLooksTasty extends AbstractSlimeboundCard {
 
             upgradeName();
 
-            upgradeDamage(2);
-            cardsToPreview.upgrade();
-            this.rawDescription = UPGRADED_DESCRIPTION;
-            this.initializeDescription();
+            upgradeDamage(3);
 
         }
 

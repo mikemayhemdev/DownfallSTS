@@ -517,5 +517,26 @@
       "Adds ",
       " #yGoop at the start of this enemy's turn."
     ]
+  },
+  "Slimebound:WindupPower": {
+    "NAME": "Winding Up: Strength",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yTemporary #yStrength at the start of your next turn."
+    ]
+  },
+  "Slimebound:WindupDrawPower": {
+    "NAME": "Winding Up: Attacks",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " Attack cards at the start of your next turn."
+    ]
+  },
+  "Slimebound:NewPlanPower": {
+    "NAME": "Plotting New Plan",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " random 2+ cost cards at the start your next turn. They cost 0 until played."
+    ]
   }
 }

@@ -13,7 +13,7 @@ import slimebound.slimes.SlimeHelper;
 public class NewSlimesEndTurn {
     public static void Postfix(GameActionManager __instance) {
         if (CardCrawlGame.chosenCharacter == SlimeboundEnum.SLIMEBOUND) {
-            SlimeHelper.AtEndOfTurn();
+            //SlimeHelper.AtEndOfTurn();
         }
     }
 }

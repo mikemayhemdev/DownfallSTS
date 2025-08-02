@@ -1,27 +1,31 @@
 package slimebound.powers;
 
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.DrawPileToHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import slimebound.SlimeboundMod;
-import slimebound.actions.RandomLickCardAction;
 
 
-public class GluttonyPowerUpgraded extends AbstractPower {
-    public static final String POWER_ID = "Slimebound:GluttonyPowerUpgraded";
+public class WindupPower extends AbstractPower {
+    public static final String POWER_ID = "Slimebound:WindupPower";
     public static final String NAME = "Potency";
-    public static final String IMG = "powers/GluttonyS.png";
+    public static final String IMG = "powers/DelayedAttackSmall.png";
     public static final Logger logger = LogManager.getLogger(SlimeboundMod.class.getName());
     public static PowerType POWER_TYPE = PowerType.BUFF;
     public static String[] DESCRIPTIONS;
     private AbstractCreature source;
 
 
-    public GluttonyPowerUpgraded(AbstractCreature owner, AbstractCreature source, int amount) {
+    public WindupPower(AbstractCreature owner, AbstractCreature source, int amount) {
 
         this.name = NAME;
 
@@ -49,11 +53,8 @@ public class GluttonyPowerUpgraded extends AbstractPower {
 
     public void updateDescription() {
 
-        if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-        } else {
-            this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[2]);
-        }
+
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
 
 
     }
@@ -63,7 +64,12 @@ public class GluttonyPowerUpgraded extends AbstractPower {
 
         flash();
 
-        AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(true));
+        this.addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, this.amount), this.amount));
+        this.addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, this.amount), this.amount));
+
+        this.addToBot(new DrawPileToHandAction(this.amount, AbstractCard.CardType.ATTACK));
+
+        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction(this.owner, this.owner, WindupPower.POWER_ID));
 
 
     }

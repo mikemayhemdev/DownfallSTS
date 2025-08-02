@@ -10,7 +10,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import slimebound.cards.Lick;
+import slimebound.SlimeboundMod;
 
 public class DissolveAction extends AbstractGameAction {
     public static final String[] TEXT;
@@ -105,7 +105,7 @@ public class DissolveAction extends AbstractGameAction {
         cards += this.extraCards;
 
         for (int i = 0; i < cards; i++) {
-            AbstractCard c = new Lick();
+            AbstractCard c = SlimeboundMod.getRandomLick();
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
         }
 

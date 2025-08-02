@@ -136,7 +136,7 @@ public class GluttonyPower extends TwoAmountPower {
             this.flash();
             amount2--;
             updateDescription();
-            AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction(false));
+            AbstractDungeon.actionManager.addToBottom(new RandomLickCardAction());
         }
     }
 
