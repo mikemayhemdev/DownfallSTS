@@ -22,7 +22,7 @@ public class DoubleVision extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SelectCardsInHandAction(1, "", (cards) -> {
+        atb(new SelectCardsInHandAction(1, DoubleVision.class.getSimpleName(), (cards) -> {
             for (AbstractCard q : cards) {
                 AbstractCard q2 = q.makeStatEquivalentCopy();
                 //q2.updateCost(-99);

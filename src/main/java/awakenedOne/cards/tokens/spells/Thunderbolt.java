@@ -21,6 +21,7 @@ public class Thunderbolt extends AbstractSpellCard {
     public Thunderbolt() {
         super(ID, 1, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 12;
+        this.setBackgroundTexture("awakenedResources/images/512/bg_attack_awakened.png", "awakenedResources/images/1024/bg_attack_awakened.png");
         loadJokeCardImage(this, makeBetaCardPath(Thunderbolt.class.getSimpleName() + ".png"));
     }
 

@@ -21,6 +21,7 @@ public class Cryostasis extends AbstractSpellCard {
         super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
         baseBlock = 8;
         baseMagicNumber = magicNumber = 1;
+        this.setBackgroundTexture("awakenedResources/images/512/bg_skill_awakened.png", "awakenedResources/images/1024/bg_skill_awakened.png");
         loadJokeCardImage(this, makeBetaCardPath(Cryostasis.class.getSimpleName() + ".png"));
     }
 

@@ -14,6 +14,7 @@ public class ESPSpell extends AbstractSpellCard {
     public ESPSpell() {
         super(ID, 0, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
+        this.setBackgroundTexture("awakenedResources/images/512/bg_skill_awakened.png", "awakenedResources/images/1024/bg_skill_awakened.png");
         loadJokeCardImage(this, makeBetaCardPath(ESPSpell.class.getSimpleName() + ".png"));
     }
 

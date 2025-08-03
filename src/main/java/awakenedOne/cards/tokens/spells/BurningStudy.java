@@ -16,6 +16,7 @@ public class BurningStudy extends AbstractSpellCard {
     public BurningStudy() {
         super(ID, 1, CardType.POWER, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        this.setBackgroundTexture("awakenedResources/images/512/bg_power_awakened.png", "awakenedResources/images/1024/bg_power_awakened.png");
         loadJokeCardImage(this, makeBetaCardPath(BurningStudy.class.getSimpleName() + ".png"));
     }
 

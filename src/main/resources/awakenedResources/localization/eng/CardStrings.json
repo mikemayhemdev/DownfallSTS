@@ -23,7 +23,7 @@
   "awakened:AphoticShield": {
     "NAME": "Aphotic Shield",
     "DESCRIPTION": "Retain. NL Gain !M! expansioncontent:Plated *Armor. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL At the end of your turn, gain !M! Block. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Retain. NL At the end of each of your turns, gain !M! Block. NL Exhaust."
   },
   "awakened:ESPSpell": {
     "NAME": "ESP",
@@ -187,7 +187,8 @@
   },
   "awakened:RisingChant": {
     "NAME": "Rising Chorus",
-    "DESCRIPTION": "Whenever you play an activated awakened:Chant card, gain !M! Strength."
+    "DESCRIPTION": "Whenever you play an activated awakened:Chant card, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Whenever you play an activated awakened:Chant card, gain !M! Strength."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
