@@ -163,8 +163,8 @@
   },
   "expansioncontent:SuperEtherStep": {
     "NAME": "Specter Step",
-    "DESCRIPTION": "Exhaust 1 card. NL Draw !M! card. NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "Exhaust 1 card. NL Draw !M! cards. NL Deal !D! damage."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. NL Draw !M! cards."
   },
 
   "expansioncontent:Virus": {
