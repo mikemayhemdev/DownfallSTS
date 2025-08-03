@@ -20,7 +20,7 @@ public class Procession extends AbstractAwakenedCard {
 
     public Procession() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseSecondMagic = secondMagic = 2;
+        baseSecondMagic = secondMagic = 3;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath(Procession.class.getSimpleName() + ".png"));

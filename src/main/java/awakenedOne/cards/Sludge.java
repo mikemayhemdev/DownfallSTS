@@ -2,10 +2,12 @@ package awakenedOne.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -19,35 +21,26 @@ public class Sludge extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public Sludge() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        this.baseMagicNumber = 1;
-        this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        baseBlock = 20;
+        baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Sludge.class.getSimpleName() + ".png"));
+        if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode != null) {
+            this.configureCostsOnNewCard();
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(
-                new ApplyPowerAction(m, p, new StrengthPower(m, -this.magicNumber), -this.magicNumber, AbstractGameAction.AttackEffect.POISON));
-        if(!m.hasPower("Artifact")){
-            AbstractDungeon.actionManager.addToBottom(
-                    new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        }
-
-//        if (upgraded) {
-//            atb(new MakeTempCardInDiscardAction(new VoidCard(), 1));
-//        } else {
-            addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
-        //}
+        blck();
+        atb(new DrawCardAction(magicNumber));
     }
 
-    @Override
-    public void initializeDescription() {
-        super.initializeDescription();
-        this.keywords.add(GameDictionary.VOID.NAMES[0].toLowerCase());
+    public void configureCostsOnNewCard() {
+
     }
 
     public void upp() {
+        upgradeBlock(4);
         upgradeMagicNumber(1);
     }
 }

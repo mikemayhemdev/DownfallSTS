@@ -22,8 +22,8 @@ public class Grimoire extends AbstractAwakenedCard {
     public Grimoire() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         this.selfRetain = true;
-        baseDamage = 6;
-        baseMagicNumber = magicNumber = 6;
+        baseDamage = 7;
+        baseMagicNumber = magicNumber = 7;
         this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(Grimoire.class.getSimpleName() + ".png"));
     }

@@ -82,8 +82,8 @@
   "awakened:FlarePower": {
     "NAME": "Feather Flare",
     "DESCRIPTIONS": [
-      "Whenever you play a #ynon-Attack card this turn, deal #b",
-      " damage to ALL enemies."
+      "Whenever you play a #ynon-Attack card this turn, ALL enemies lose #b",
+      " HP."
     ]
   },
   "awakened:PrimacyPower": {
@@ -235,6 +235,14 @@
       "The next #yPower you play costs #b0 [REMOVE_SPACE].",
       "The next #b",
       " #yPowers you play cost #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:DoubleDamageNextAttackPower": {
+    "NAME": "Double Damage",
+    "DESCRIPTIONS": [
+      "The next #yAttack you play deals double damage.",
+      "The next #b",
+      " #yAttacks you play deal double damage."
     ]
   }
 }

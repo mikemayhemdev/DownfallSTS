@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.util.Wiz.applyToSelf;
 import static awakenedOne.util.Wiz.applyToSelfTop;
 
 public class MoonlitVision extends AbstractAwakenedCard {
@@ -13,19 +14,17 @@ public class MoonlitVision extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public MoonlitVision() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.tags.add(AwakenedOneMod.DELVE);
-        this.isEthereal = true;
         loadJokeCardImage(this, makeBetaCardPath(MoonlitVision.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-            applyToSelfTop(new EmpressPower(p, 1));
+        applyToSelf(new EmpressPower());
     }
 
     @Override
     public void upp() {
-        this.isEthereal = false;
-        //upgradeBaseCost(1);
+        isInnate = true;
     }
 }
