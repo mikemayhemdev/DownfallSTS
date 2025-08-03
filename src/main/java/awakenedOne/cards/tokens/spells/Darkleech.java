@@ -31,6 +31,7 @@ public class Darkleech extends AbstractSpellCard {
     public Darkleech() {
         super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 2;
+        this.setBackgroundTexture("awakenedResources/images/512/bg_skill_awakened.png", "awakenedResources/images/1024/bg_skill_awakened.png");
         loadJokeCardImage(this, makeBetaCardPath(Darkleech.class.getSimpleName() + ".png"));
     }
 

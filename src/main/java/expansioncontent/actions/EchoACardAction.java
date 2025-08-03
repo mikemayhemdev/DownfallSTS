@@ -38,7 +38,7 @@ public class EchoACardAction extends AbstractGameAction {
             mod.addProperty(PropertiesMod.supportedProperties.ETHEREAL, false);
         if (!card.exhaust)
             mod.addProperty(PropertiesMod.supportedProperties.EXHAUST, false);
-        if(this.free){
+        if (this.free) {
             card.freeToPlayOnce = true;
         }
 

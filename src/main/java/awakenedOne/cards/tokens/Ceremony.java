@@ -19,6 +19,7 @@ public class Ceremony extends AbstractAwakenedCard {
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         //selfRetain = true;
+        this.setBackgroundTexture("awakenedResources/images/512/bg_power_awakened.png", "awakenedResources/images/1024/bg_power_awakened.png");
         this.isEthereal = true;
         this.baseSecondMagic = 2;
         this.secondMagic = this.baseSecondMagic;

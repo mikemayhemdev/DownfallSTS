@@ -33,9 +33,9 @@ public class EtherStep extends AbstractHexaCard implements HexaPurpleTextInterfa
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
         this.addToBot(new ExhaustAction(1, false));
         this.addToBot(new DrawCardAction(p, this.magicNumber));
-        dmg(m, makeInfo(), AbstractGameAction.AttackEffect.FIRE);
     }
 
     public void afterlife() {

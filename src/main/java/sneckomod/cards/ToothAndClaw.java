@@ -27,7 +27,7 @@ public class ToothAndClaw extends AbstractSneckoCard {
 
     public ToothAndClaw() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 4;
         SneckoMod.loadJokeCardImage(this, "ToothAndClaw.png");
         this.cardsToPreview = new Shiv();
     }
@@ -80,7 +80,7 @@ public class ToothAndClaw extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            //upgradeDamage(2);
+            upgradeDamage(2);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
             this.cardsToPreview.upgrade();
