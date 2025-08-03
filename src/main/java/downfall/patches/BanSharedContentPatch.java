@@ -1,12 +1,14 @@
 package downfall.patches;
 
 import automaton.AutomatonChar;
+import automaton.potions.BurnAndBuffPotion;
 import automaton.relics.BronzeIdol;
 import automaton.relics.DecasWashers;
 import automaton.relics.DonusWashers;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.relics.*;
 import champ.ChampChar;
+import champ.potions.CounterstrikePotion;
 import champ.relics.Barbells;
 import champ.relics.DeflectingBracers;
 import champ.relics.DuelingGlove;
@@ -21,11 +23,14 @@ import downfall.cards.curses.*;
 import downfall.downfallMod;
 import expansioncontent.actions.RandomCardWithTagAction;
 import expansioncontent.cards.*;
+import expansioncontent.potions.BossPotion;
 import expansioncontent.relics.StudyCardRelic;
 import gremlin.characters.GremlinCharacter;
+import gremlin.potions.WizPotion;
 import gremlin.relics.PricklyShields;
 import gremlin.relics.SupplyScroll;
 import guardian.characters.GuardianCharacter;
+import guardian.potions.BlockOnCardUsePotion;
 import guardian.relics.BottledAnomaly;
 import guardian.relics.GemstoneGun;
 import guardian.relics.PocketSentry;
@@ -34,9 +39,11 @@ import hermit.relics.BloodyTooth;
 import hermit.relics.BrassTacks;
 import hermit.relics.RyeStalk;
 import slimebound.characters.SlimeboundCharacter;
+import slimebound.potions.ThreeZeroPotion;
 import slimebound.relics.PreparedRelic;
 import slimebound.relics.StickyStick;
 import sneckomod.TheSnecko;
+import sneckomod.potions.MuddlingPotion;
 import sneckomod.relics.BlankCard;
 import sneckomod.relics.SneckoTalon;
 import sneckomod.relics.SuperSneckoEye;
@@ -212,7 +219,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.colorlessCardPool.removeCard(SuperWhirlingFlame.ID);
                 AbstractDungeon.srcColorlessCardPool.removeCard(WhirlingFlame.ID);
             }
-            }
+        }
     }
 
 
@@ -227,8 +234,8 @@ public class BanSharedContentPatch {
                 //last checked during awakened one dev, 5/14/25
 
                 if (!(AbstractDungeon.player instanceof CollectorChar)) {
-                AbstractDungeon.relicsToRemoveOnStart.add(AutoCurser.ID);
-                AbstractDungeon.relicsToRemoveOnStart.add(Bagpipes.ID);
+                    AbstractDungeon.relicsToRemoveOnStart.add(AutoCurser.ID);
+                    AbstractDungeon.relicsToRemoveOnStart.add(Bagpipes.ID);
                 }
 
                 if (!(AbstractDungeon.player instanceof ChampChar)) {
@@ -344,26 +351,26 @@ public class BanSharedContentPatch {
             //todo: I'm thinking of just making all these potions character exclusive which fixes the compendium problem
             // and people don't like these potions anyways
             if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_potions) {
-              //  PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
-             //  PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
-             //   PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
-              // PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
-             //   PotionHelper.potions.remove(CounterstrikePotion.POTION_ID);
-             //   PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
-             //   PotionHelper.potions.remove(WizPotion.POTION_ID);
-            //   PotionHelper.potions.remove(BossPotion.POTION_ID);
-            //   PotionHelper.potions.remove(TempHPPotion.POTION_ID);
-           }
+                //  PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
+                PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
+                PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
+                PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
+                PotionHelper.potions.remove(CounterstrikePotion.POTION_ID);
+                PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
+                PotionHelper.potions.remove(WizPotion.POTION_ID);
+                PotionHelper.potions.remove(BossPotion.POTION_ID);
+                //   PotionHelper.potions.remove(TempHPPotion.POTION_ID);
+            }
             // edit: below probably not functioning too but lazy to implement
             // Ban shared potions from other classes if you haven't played as that class before
-          //  runLockedPotions.forEach((playerClass, potionIds) -> {
-                // Shared potions will never be banned from their base class
-             //   if (chosenClass != playerClass) {
-                 //   if (!HeartEvent.hasPlayedRun(playerClass)) {
-                 //       PotionHelper.potions.removeAll(potionIds);
-                //    }
-                }
-          //  });
-   //     }
+            //  runLockedPotions.forEach((playerClass, potionIds) -> {
+            // Shared potions will never be banned from their base class
+            //   if (chosenClass != playerClass) {
+            //   if (!HeartEvent.hasPlayedRun(playerClass)) {
+            //       PotionHelper.potions.removeAll(potionIds);
+            //    }
+            //  });
+            //     }
+        }
     }
 }
