@@ -246,7 +246,7 @@
     ]
   },
   "awakened:ChosensVersePower": {
-    "NAME": "Chosen's Verse",
+    "NAME": "Chosen Verse",
     "DESCRIPTIONS": [
       "The next time you play a non-Attack card this turn, draw a card and gain #b",
       " #yBlock.",
