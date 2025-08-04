@@ -52,6 +52,6 @@ public class Sludge extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(3);
     }
 }
