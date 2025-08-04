@@ -12,7 +12,7 @@ public class SheerTerror extends AbstractAwakenedCard {
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
     public SheerTerror() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(SheerTerror.class.getSimpleName() + ".png"));
     }

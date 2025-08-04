@@ -201,7 +201,8 @@
   },
   "awakened:Murder": {
     "NAME": "Murder",
-    "DESCRIPTION": "Ethereal. NL Deal !D! damage to a random enemy !M! times."
+    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
   },
   "awakened:ExNihilo": {
     "NAME": "Nihil",

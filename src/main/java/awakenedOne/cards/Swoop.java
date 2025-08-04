@@ -18,7 +18,7 @@ public class Swoop extends AbstractAwakenedCard {
 
     public Swoop() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 5;
+        baseBlock = 4;
         baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Swoop.class.getSimpleName() + ".png"));
     }
@@ -30,6 +30,7 @@ public class Swoop extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        //upgradeMagicNumber(1);
+        upgradeBlock(1);
     }
 }

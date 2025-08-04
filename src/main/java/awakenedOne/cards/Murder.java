@@ -18,7 +18,7 @@ public class Murder extends AbstractAwakenedCard {
         baseDamage = 4;
         this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
-        this.isEthereal = true;
+        this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(Murder.class.getSimpleName() + ".png"));
     }
 
@@ -75,6 +75,7 @@ public class Murder extends AbstractAwakenedCard {
 //    }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        this.exhaust = false;
+        //upgradeMagicNumber(1);
     }
 }
