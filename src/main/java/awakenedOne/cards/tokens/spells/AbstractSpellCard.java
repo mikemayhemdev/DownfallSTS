@@ -35,15 +35,17 @@ public abstract class AbstractSpellCard extends AbstractAwakenedCard {
     @Override
     public void applyPowers() {
         if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasRelic(StrengthBooster.ID))) {
+
             int realBaseDamage = this.baseDamage;
             this.baseDamage += StrengthBooster.AMOUNT;
-            super.applyPowers();
-            this.baseDamage = realBaseDamage;
-            this.isDamageModified = this.damage != this.baseDamage;
 
             int realBaseBlock = this.baseBlock;
             this.baseBlock += StrengthBooster.AMOUNT;
+
             super.applyPowers();
+
+            this.baseDamage = realBaseDamage;
+            this.isDamageModified = this.damage != this.baseDamage;
             this.baseBlock = realBaseBlock;
             this.isBlockModified = this.block != this.baseBlock;
 
@@ -52,24 +54,27 @@ public abstract class AbstractSpellCard extends AbstractAwakenedCard {
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
-        int realBaseDamage = this.baseDamage;
-        if (AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
-            this.baseDamage += StrengthBooster.AMOUNT;
+        if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasRelic(StrengthBooster.ID))) {
+
+            int realBaseDamage = this.baseDamage;
+
+            if (AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
+                this.baseDamage += StrengthBooster.AMOUNT;
+            }
+
+            int realBaseBlock = this.baseBlock;
+            if (AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
+                this.baseBlock += StrengthBooster.AMOUNT;
+            }
+
+            super.calculateCardDamage(mo);
+
+            this.baseDamage = realBaseDamage;
+            this.isDamageModified = this.damage != this.baseDamage;
+
+            this.baseBlock = realBaseBlock;
+            this.isBlockModified = this.block != this.baseBlock;
         }
-
-        int realBaseBlock = this.baseBlock;
-        if (AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
-            this.baseBlock += StrengthBooster.AMOUNT;
-        }
-
-        super.calculateCardDamage(mo);
-
-        this.baseDamage = realBaseDamage;
-        this.isDamageModified = this.damage != this.baseDamage;
-
-        this.baseBlock = realBaseBlock;
-        this.isBlockModified = this.block != this.baseBlock;
-
     }
 
     @Override
