@@ -343,7 +343,7 @@
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",
-    "DESCRIPTION": "Now and when you refresh your Spells, add *Aphotic *Shield to your Spellbook."
+    "DESCRIPTION": "Now and whenever you refresh your Spells, add *Aphotic *Shield to your Spellbook."
   },
   "awakened:Bloodthirst": {
     "NAME": "Bloodthirst",
