@@ -28,7 +28,7 @@ public class Primacy extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new DrawCardAction(1));
+        atb(new DrawCardAction(magicNumber));
     }
 
     public void configureCostsOnNewCard() {
