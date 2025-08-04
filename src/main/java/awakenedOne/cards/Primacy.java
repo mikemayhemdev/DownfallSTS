@@ -17,7 +17,7 @@ public class Primacy extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public Primacy() {
-        super(ID, 7, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 8, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = 20;
         this.magicNumber = this.baseMagicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Primacy.class.getSimpleName() + ".png"));

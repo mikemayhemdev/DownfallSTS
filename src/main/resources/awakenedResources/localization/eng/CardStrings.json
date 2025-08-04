@@ -120,7 +120,7 @@
     "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Deal !D! damage again."
   },
   "awakened:Swoop": {
-    "NAME": "Chosen's Verse",
+    "NAME": "Chosen Verse",
     "DESCRIPTION": "The next !M! times you play a non-Attack card this turn, draw a card and gain !B! Block."
   },
   "awakened:Reviscerate": {
@@ -343,7 +343,7 @@
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",
-    "DESCRIPTION": "Gain !M! Plated Armor. NL Now and when you refresh your Spells, add *Aphotic *Shield to your Spellbook."
+    "DESCRIPTION": "Now and when you refresh your Spells, add *Aphotic *Shield to your Spellbook."
   },
   "awakened:Bloodthirst": {
     "NAME": "Bloodthirst",
@@ -358,7 +358,7 @@
     "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy, gain !M! temporary Strength. NL Exhaust."
   },
   "awakened:SheerTerror": {
-    "NAME": "Sheer Terror",
+    "NAME": "Cruelty",
     "DESCRIPTION": "Whenever you Retain a card, gain !M! Block."
   },
   "awakened:Deathwish": {

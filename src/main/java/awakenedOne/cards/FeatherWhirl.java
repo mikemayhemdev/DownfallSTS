@@ -16,7 +16,7 @@ public class FeatherWhirl extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1
 
     public FeatherWhirl() {
-        super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
         baseMagicNumber = magicNumber = 0;
         cardsToPreview = new PlumeJab();

@@ -1,6 +1,7 @@
 package awakenedOne.cards.tokens;
 
 import awakenedOne.cards.AbstractAwakenedCard;
+import awakenedOne.cards.FeatherWhirl;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -19,6 +20,7 @@ public class PlumeJab extends AbstractAwakenedCard {
     public PlumeJab() {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
         baseDamage = 2;
+        loadJokeCardImage(this, makeBetaCardPath(PlumeJab.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
