@@ -31,10 +31,10 @@ public class Altar extends AbstractAwakenedCard {
         Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {
             for (AbstractCard c : list) {
                 Wiz.p().hand.moveToExhaustPile(c);
-                atb(new ConjureAction(false));
             }
             list.clear();
         }, null, uiStrings.TEXT[0],false,false,false));
+        atb(new ConjureAction(false));
     }
 
     public void upp() {
