@@ -207,7 +207,7 @@ public class OrbitingSpells {
         int xr = 0;
 
         for (AbstractCard s : spellCards) {
-            sb.draw(getIconForCard(s), boxes.get(xr).x, boxes.get(xr).y);
+            drawTextureScaled(sb, getIconForCard(s), boxes.get(xr).x, boxes.get(xr).y);
             float dist = FontHelper.getWidth(FontHelper.tipHeaderFont, s.name, 1.0F);
 
             Color textColor = Color.WHITE.cpy();
@@ -228,9 +228,9 @@ public class OrbitingSpells {
         }
 
         for (int i = 0; i < Wiz.POWERS_TO_AWAKEN; i++) {
-            sb.draw((AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= i  || AwakenedOneMod.awakenedthiscombat) ? filledPip : unfilledPip,
+            drawTextureScaled(sb, (AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= i  || AwakenedOneMod.awakenedthiscombat) ? filledPip : unfilledPip,
                     barBox.x,
-                    barBox.y + (40 * Settings.scale) * i);
+                    barBox.y + (40 * Settings.yScale) * i);
         }
         barBox.render(sb);
 
@@ -241,6 +241,10 @@ public class OrbitingSpells {
             tar.target_y = tar.current_y = Settings.HEIGHT - (POSITION_Y + 100 * Settings.scale);
             spellCards.get(hoveredCard).render(sb);
         }
+    }
+
+    public static void drawTextureScaled(SpriteBatch sb, Texture tex, float x, float y) {
+        sb.draw(tex, x, y, 0, 0, tex.getWidth() * Settings.scale, tex.getHeight() * Settings.scale, 1, 1, 0, 0, 0, tex.getWidth(), tex.getHeight(), false, false);
     }
 
     public static int getIndexOfCard(AbstractCard card) {

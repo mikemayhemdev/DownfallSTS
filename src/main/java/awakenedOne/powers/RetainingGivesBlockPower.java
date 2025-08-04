@@ -1,5 +1,7 @@
 package awakenedOne.powers;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -15,18 +17,21 @@ public class RetainingGivesBlockPower extends AbstractAwakenedPower {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
     }
 
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK) {
-            this.addToBot(new ReducePowerAction(owner, owner, this, 1));
-        }
-    }
-
-    public float atDamageGive(float damage, DamageInfo.DamageType type) {
-        return type == DamageInfo.DamageType.NORMAL ? damage * 2.0F : damage;
+    public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
+        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
+            public void update() {
+                isDone = true;
+                if (AbstractDungeon.player.hand.group.stream().anyMatch(c -> c.selfRetain || c.retain))
+                    flash();
+                AbstractDungeon.player.hand.group.stream()
+                        .filter(c -> c.selfRetain || c.retain)
+                        .forEach(c -> AbstractDungeon.actionManager.addToBottom(new GainBlockAction(owner, owner, RetainingGivesBlockPower.this.amount, true)));
+            }
+        });
     }
 
     @Override
     public void updateDescription() {
-        description = amount == 1 ? DESCRIPTIONS[0] : DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 }

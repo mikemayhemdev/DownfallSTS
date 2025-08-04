@@ -263,5 +263,12 @@
       "+",
       " to your Spellbook."
     ]
+  },
+  "awakened:RetainingGivesBlockPower": {
+    "NAME": "Retain Block",
+    "DESCRIPTIONS": [
+      "Whenever you #yRetain a card, gain #b",
+      " #yBlock."
+    ]
   }
 }

@@ -243,8 +243,8 @@
   },
   "awakened:Baptism": {
     "NAME": "Baptism",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! 0 cost card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! 0 cost cards."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! 0-cost card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! 0-cost cards."
   },
   "awakened:FromTheAbyss": {
     "NAME": "From the Abyss",
