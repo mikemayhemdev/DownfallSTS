@@ -16,7 +16,7 @@ public class EmpressPower extends AbstractAwakenedPower implements NonStackableP
     public static final String POWER_ID = makeID(NAME);
 
     public EmpressPower() {
-        super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, 4);
+        super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, 3);
         updateDescription();
     }
 
@@ -26,7 +26,7 @@ public class EmpressPower extends AbstractAwakenedPower implements NonStackableP
         if (amount == 0) {
             flash();
             AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-            amount = 4;
+            amount = 3;
         }
     }
 

@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -9,7 +10,7 @@ import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.applyToSelf;
+import static awakenedOne.util.Wiz.*;
 
 public class RavenStrike extends AbstractAwakenedCard {
     public final static String ID = makeID(RavenStrike.class.getSimpleName());
@@ -34,8 +35,13 @@ public class RavenStrike extends AbstractAwakenedCard {
 
     @Override
     public void chant() {
-        applyToSelf(new EnergizedBluePower(AbstractDungeon.player, 1));
-        applyToSelf(new DrawCardNextTurnPower(AbstractDungeon.player, magicNumber));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                att(new PlayTopCardAction(AbstractDungeon.getRandomMonster(), false));
+            }
+        });
         checkOnChant();
     }
 

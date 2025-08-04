@@ -1,6 +1,8 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.powers.ChosensVersePower;
+import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,18 +18,18 @@ public class Swoop extends AbstractAwakenedCard {
 
     public Swoop() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 7;
+        baseBlock = 5;
+        baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Swoop.class.getSimpleName() + ".png"));
     }
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        blck();
-        this.addToBot(new ApplyPowerAction(p, p, new ReboundPower(p), 1));
+        Wiz.applyToSelf(new ChosensVersePower(magicNumber, block));
     }
 
     @Override
     public void upp() {
-        upgradeBlock(3);
+        upgradeMagicNumber(1);
     }
 }

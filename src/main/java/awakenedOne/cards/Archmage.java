@@ -14,7 +14,6 @@ public class Archmage extends AbstractAwakenedCard {
 
     public Archmage() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        this.isEthereal = true;
         loadJokeCardImage(this, makeBetaCardPath(Archmage.class.getSimpleName() + ".png"));
     }
 

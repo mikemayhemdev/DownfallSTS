@@ -29,7 +29,6 @@ public class EclipseEmbrace extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        isEthereal = false;
-        //upgradeBaseCost(2);
+        upgradeBaseCost(2);
     }
 }

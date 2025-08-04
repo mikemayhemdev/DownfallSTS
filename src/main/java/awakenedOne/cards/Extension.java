@@ -38,6 +38,6 @@ public class Extension extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(2);
     }
 }

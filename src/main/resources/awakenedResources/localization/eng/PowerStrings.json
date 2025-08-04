@@ -244,5 +244,24 @@
       "The next #b",
       " #yAttacks you play deal double damage."
     ]
+  },
+  "awakened:ChosensVersePower": {
+    "NAME": "Chosen's Verse",
+    "DESCRIPTIONS": [
+      "The next time you play a non-Attack card this turn, draw a card and gain #b",
+      " #yBlock.",
+      "The next #b",
+      " times you play a non-Attack card this turn, draw a card and gain #b",
+      " #yBlock."
+    ]
+  },
+  "awakened:AphoticFountPower": {
+    "NAME": "Aphotic Fount",
+    "DESCRIPTIONS": [
+      "Whenever you refresh your Spells, add #b",
+      " #yAphotic #yShield",
+      "+",
+      " to your Spellbook."
+    ]
   }
 }

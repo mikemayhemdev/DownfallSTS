@@ -15,7 +15,6 @@ public class MoonlitVision extends AbstractAwakenedCard {
 
     public MoonlitVision() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(MoonlitVision.class.getSimpleName() + ".png"));
     }
 

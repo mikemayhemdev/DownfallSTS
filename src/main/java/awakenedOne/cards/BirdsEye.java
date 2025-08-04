@@ -18,8 +18,9 @@ public class BirdsEye extends AbstractAwakenedCard {
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
     public BirdsEye() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(BirdsEye.class.getSimpleName() + ".png"));
+        exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -34,6 +35,6 @@ public class BirdsEye extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBaseCost(0);
+        exhaust = false;
     }
 }

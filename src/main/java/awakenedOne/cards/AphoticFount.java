@@ -3,6 +3,7 @@ package awakenedOne.cards;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.spells.AphoticShield;
+import awakenedOne.powers.AphoticFountPower;
 import awakenedOne.ui.OrbitingSpells;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
+import static awakenedOne.util.Wiz.applyToSelf;
 import static awakenedOne.util.Wiz.atb;
 
 public class AphoticFount extends AbstractAwakenedCard {
@@ -24,19 +26,18 @@ public class AphoticFount extends AbstractAwakenedCard {
         AbstractCard c = new AphoticShield();
         c.upgrade();
         MultiCardPreview.add(this, new AphoticShield(), c);
-        this.tags.add(AwakenedOneMod.DELVE);
+        baseMagicNumber = magicNumber = 4;
         loadJokeCardImage(this, makeBetaCardPath(AphoticFount.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard card = new AphoticShield();
         spellCards.add(card);
-
-        atb(new ConjureAction(false, false, true, new AphoticShield()));
+        applyToSelf(new AphoticFountPower());
     }
 
     @Override
     public void upp() {
-        upgradeBaseCost(0);
+        upgradeMagicNumber(2);
     }
 }

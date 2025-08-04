@@ -16,7 +16,7 @@ public class Victuals extends AbstractAwakenedCard {
 
     public Victuals() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 8;
+        baseBlock = 7;
         magicNumber = baseMagicNumber = 2;
         this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath("Victuals.png"));
