@@ -19,7 +19,7 @@ public class Carrionmaker extends AbstractAwakenedCard {
     //carrionmaker
     public Carrionmaker() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 10;
+        baseDamage = 9;
         loadJokeCardImage(this, makeBetaCardPath(Carrionmaker.class.getSimpleName() + ".png"));
     }
 
@@ -60,6 +60,6 @@ public class Carrionmaker extends AbstractAwakenedCard {
 
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
     }
 }
