@@ -35,7 +35,7 @@
     "FLAVOR": "A grimoire detailing the construction and maintenance of interplanar gates.",
     "DESCRIPTIONS": [
       "Whenever a #yVoid is #yExhausted [REMOVE_SPACE], apply #b",
-      " #yawakened:Hex to ALL enemies."
+      " #yawakened:Manaburn to ALL enemies."
     ]
   },
   "awakened:EyeOfTheOccult": {
@@ -102,7 +102,9 @@
     "NAME": "Paper Crow",
     "FLAVOR": "Arbiter of doubt and curses folded one thousand times...",
     "DESCRIPTIONS": [
-      "Enemies with #yawakened:Hex take #b30% more damage per stack rather than #b20% [REMOVE_SPACE]."
+      "Spells deal #b",
+      " more damage and grant #b",
+      " more #yBlock [REMOVE_SPACE]."
     ]
   },
   "awakened:CursedBlessing": {

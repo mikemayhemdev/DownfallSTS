@@ -4,13 +4,17 @@ import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.powers.ConjureNextTurnPower;
 import awakenedOne.powers.IntensifyPower;
 import awakenedOne.relics.EyeOfTheOccult;
+import awakenedOne.relics.StrengthBooster;
+import champ.powers.CounterPower;
 import champ.powers.DefensiveStylePower;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import gremlin.powers.PolishPower;
 
 import java.util.Collections;
 import java.util.List;
@@ -25,6 +29,47 @@ public abstract class AbstractSpellCard extends AbstractAwakenedCard {
         super(cardID, cost, type, CardRarity.SPECIAL, target, CardColor.COLORLESS);
         this.selfRetain = true;
         exhaust = true;
+    }
+
+
+    @Override
+    public void applyPowers() {
+        if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasRelic(StrengthBooster.ID))) {
+            int realBaseDamage = this.baseDamage;
+            this.baseDamage += 2;
+            super.applyPowers();
+            this.baseDamage = realBaseDamage;
+            this.isDamageModified = this.damage != this.baseDamage;
+
+            int realBaseBlock = this.baseBlock;
+            this.baseBlock += 2;
+            super.applyPowers();
+            this.baseBlock = realBaseBlock;
+            this.isBlockModified = this.block != this.baseBlock;
+
+            }
+        super.applyPowers();
+    }
+
+    public void calculateCardDamage(AbstractMonster mo) {
+        int realBaseDamage = this.baseDamage;
+        if (AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
+            this.baseDamage += 2;
+        }
+
+        int realBaseBlock = this.baseBlock;
+        if (AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
+            this.baseBlock += 2;
+        }
+
+        super.calculateCardDamage(mo);
+
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+
+        this.baseBlock = realBaseBlock;
+        this.isBlockModified = this.block != this.baseBlock;
+
     }
 
     @Override
