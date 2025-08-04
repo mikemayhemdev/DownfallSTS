@@ -1,6 +1,8 @@
 package awakenedOne.cards;
 
 import awakenedOne.actions.EasyXCostAction;
+import awakenedOne.cards.tokens.PlumeJab;
+import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,28 +17,21 @@ public class FeatherWhirl extends AbstractAwakenedCard {
 
     public FeatherWhirl() {
         super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 2;
         this.exhaust = true;
         baseMagicNumber = magicNumber = 0;
+        cardsToPreview = new PlumeJab();
         loadJokeCardImage(this, makeBetaCardPath(FeatherWhirl.class.getSimpleName() + ".png"));
     }
 
  public void use(AbstractPlayer p, AbstractMonster m) {
         att(new EasyXCostAction(this, (effect, params) -> {
-            for (int i = 0; i < effect*2; i++) {
-               this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
-            }
+            Wiz.makeInHand(new PlumeJab(), effect + params[0]);
             return true;
         }, magicNumber));
-        if (upgraded){
-            this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
-            this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
-        }
     }
 
 
     public void upp() {
-        //upgradeDamage(2);
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

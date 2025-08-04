@@ -1,11 +1,16 @@
 package awakenedOne.cards;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import expansioncontent.actions.DrawSpecificAction;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.*;
@@ -15,25 +20,24 @@ public class Baptism extends AbstractAwakenedCard {
     // intellij stuff skill, self, rare, , , , , 4, 2
 
     public Baptism() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 7;
-        exhaust = true;
-        this.tags.add(CardTags.HEALING);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 9;
+        baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Baptism.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new HealAction(p, p, magicNumber));
-        addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true));
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        atb(new DrawSpecificAction(magicNumber, card -> card.cost == 0));
     }
 
     @Override
-    public void initializeDescription() {
-        super.initializeDescription();
-        this.keywords.add(GameDictionary.VOID.NAMES[0].toLowerCase());
+    public void triggerOnGlowCheck() {
+        glowColor = AbstractDungeon.player.drawPile.group.stream().noneMatch(q -> q.cost == 0) ? Color.RED : AbstractCard.BLUE_BORDER_GLOW_COLOR;
     }
 
     public void upp() {
-        upgradeMagicNumber(3);
+        upgradeDamage(1);
+        upgradeMagicNumber(1);
     }
 }

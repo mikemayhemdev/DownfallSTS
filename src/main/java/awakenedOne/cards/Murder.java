@@ -75,7 +75,6 @@ public class Murder extends AbstractAwakenedCard {
 //    }
 
     public void upp() {
-        this.isEthereal = false;
-        this.selfRetain = true;
+        upgradeMagicNumber(1);
     }
 }

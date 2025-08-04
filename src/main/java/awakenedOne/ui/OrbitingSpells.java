@@ -45,13 +45,13 @@ public class OrbitingSpells {
     public static ArrayList<Hitbox> boxes = new ArrayList<>();
     private static HashMap<String, Texture> cardIcons = new HashMap<>();
     private static int hoveredCard = -1;
-    private static Hitbox barBox = new Hitbox(POSITION_X + 250F * Settings.scale, Settings.HEIGHT - POSITION_Y - 300, 40 * Settings.scale, 350 * Settings.scale);
+    private static Hitbox barBox = new Hitbox(POSITION_X + 250F * Settings.scale, Settings.HEIGHT - POSITION_Y - 300 * Settings.scale, 40 * Settings.scale, 350 * Settings.scale);
     private static Texture unfilledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled.png");
     private static Texture filledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_filled.png");
 
     static {
         for (int i = 0; i < 10; i++) {
-            boxes.add(new Hitbox(POSITION_X, Settings.HEIGHT - (POSITION_Y + (i * (70F * Settings.scale))) - 35, 200F * Settings.scale, 45F * Settings.scale));
+            boxes.add(new Hitbox(POSITION_X, Settings.HEIGHT - (POSITION_Y + (i * (70F * Settings.scale))) - 35 * Settings.scale, 200F * Settings.scale, 45F * Settings.scale));
         }
 
         cardIcons.put(BurningStudy.ID, TexLoader.getTexture("awakenedResources/images/ui/BurningStudy.png"));
@@ -207,7 +207,7 @@ public class OrbitingSpells {
         int xr = 0;
 
         for (AbstractCard s : spellCards) {
-            sb.draw(getIconForCard(s), boxes.get(xr).x, boxes.get(xr).y);
+            drawTextureScaled(sb, getIconForCard(s), boxes.get(xr).x, boxes.get(xr).y);
             float dist = FontHelper.getWidth(FontHelper.tipHeaderFont, s.name, 1.0F);
 
             Color textColor = Color.WHITE.cpy();
@@ -228,19 +228,23 @@ public class OrbitingSpells {
         }
 
         for (int i = 0; i < Wiz.POWERS_TO_AWAKEN; i++) {
-            sb.draw((AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= i  || AwakenedOneMod.awakenedthiscombat) ? filledPip : unfilledPip,
+            drawTextureScaled(sb, (AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= i  || AwakenedOneMod.awakenedthiscombat) ? filledPip : unfilledPip,
                     barBox.x,
-                    barBox.y + (40 * Settings.scale) * i);
+                    barBox.y + (40 * Settings.yScale) * i);
         }
         barBox.render(sb);
 
 
         if (hoveredCard != -1) {
             AbstractCard tar = spellCards.get(hoveredCard);
-            tar.target_x = tar.current_x = barBox.x + 200;
-            tar.target_y = tar.current_y = Settings.HEIGHT - (POSITION_Y + 100);
+            tar.target_x = tar.current_x = barBox.x + 200 * Settings.scale;
+            tar.target_y = tar.current_y = Settings.HEIGHT - (POSITION_Y + 100 * Settings.scale);
             spellCards.get(hoveredCard).render(sb);
         }
+    }
+
+    public static void drawTextureScaled(SpriteBatch sb, Texture tex, float x, float y) {
+        sb.draw(tex, x, y, 0, 0, tex.getWidth() * Settings.scale, tex.getHeight() * Settings.scale, 1, 1, 0, 0, 0, tex.getWidth(), tex.getHeight(), false, false);
     }
 
     public static int getIndexOfCard(AbstractCard card) {

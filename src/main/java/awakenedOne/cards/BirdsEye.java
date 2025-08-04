@@ -1,12 +1,17 @@
 package awakenedOne.cards;
 
+import awakenedOne.actions.ConjureAction;
+import awakenedOne.ui.OrbitingSpells;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsCenteredAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.att;
 
 public class BirdsEye extends AbstractAwakenedCard {
     public final static String ID = makeID(BirdsEye.class.getSimpleName());
@@ -14,16 +19,22 @@ public class BirdsEye extends AbstractAwakenedCard {
 
     public BirdsEye() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(BirdsEye.class.getSimpleName() + ".png"));
+        exhaust = true;
     }
 
-    public void use(AbstractPlayer p, AbstractMonster m)
-    {
-        atb(new FetchAction(AbstractDungeon.player.drawPile, c -> (c.type == CardType.POWER)));
+    public void use(AbstractPlayer p, AbstractMonster m) {
+        atb(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
+                OrbitingSpells.refreshSpells();
+            }
+        });
+        atb(new ConjureAction(true));
     }
 
     public void upp() {
-        this.exhaust = false;
+        exhaust = false;
     }
 }

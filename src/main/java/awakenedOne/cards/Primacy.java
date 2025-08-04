@@ -1,29 +1,52 @@
 package awakenedOne.cards;
 
 import awakenedOne.powers.PrimacyPower;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.applyToSelf;
+import static awakenedOne.util.Wiz.atb;
 
 public class Primacy extends AbstractAwakenedCard {
     public final static String ID = makeID(Primacy.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
     public Primacy() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        //this.isEthereal = true;
-        this.baseMagicNumber = 3;
-        this.magicNumber = this.baseMagicNumber;
+        super(ID, 7, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        baseBlock = 20;
+        this.magicNumber = this.baseMagicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Primacy.class.getSimpleName() + ".png"));
+        if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode != null) {
+            this.configureCostsOnNewCard();
+        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new PrimacyPower(magicNumber));
+        blck();
+        atb(new DrawCardAction(1));
+    }
+
+    public void configureCostsOnNewCard() {
+        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
+            if (c.type == CardType.POWER) {
+                updateCost(-1);
+            }
+        }
+    }
+
+    public void triggerOnCardPlayed(AbstractCard c) {
+        if (c.type == CardType.POWER) {
+            this.updateCost(-1);
+        }
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBlock(4);
+        upgradeMagicNumber(1);
     }
 }

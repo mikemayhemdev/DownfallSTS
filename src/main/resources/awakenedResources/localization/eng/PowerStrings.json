@@ -82,8 +82,8 @@
   "awakened:FlarePower": {
     "NAME": "Feather Flare",
     "DESCRIPTIONS": [
-      "Whenever you play a #ynon-Attack card this turn, deal #b",
-      " damage to ALL enemies."
+      "Whenever you play a #ynon-Attack card this turn, ALL enemies lose #b",
+      " HP."
     ]
   },
   "awakened:PrimacyPower": {
@@ -235,6 +235,40 @@
       "The next #yPower you play costs #b0 [REMOVE_SPACE].",
       "The next #b",
       " #yPowers you play cost #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:DoubleDamageNextAttackPower": {
+    "NAME": "Double Damage",
+    "DESCRIPTIONS": [
+      "The next #yAttack you play deals double damage.",
+      "The next #b",
+      " #yAttacks you play deal double damage."
+    ]
+  },
+  "awakened:ChosensVersePower": {
+    "NAME": "Chosen's Verse",
+    "DESCRIPTIONS": [
+      "The next time you play a non-Attack card this turn, draw a card and gain #b",
+      " #yBlock.",
+      "The next #b",
+      " times you play a non-Attack card this turn, draw a card and gain #b",
+      " #yBlock."
+    ]
+  },
+  "awakened:AphoticFountPower": {
+    "NAME": "Aphotic Fount",
+    "DESCRIPTIONS": [
+      "Whenever you refresh your Spells, add #b",
+      " #yAphotic #yShield",
+      "+",
+      " to your Spellbook."
+    ]
+  },
+  "awakened:RetainingGivesBlockPower": {
+    "NAME": "Retain Block",
+    "DESCRIPTIONS": [
+      "Whenever you #yRetain a card, gain #b",
+      " #yBlock."
     ]
   }
 }

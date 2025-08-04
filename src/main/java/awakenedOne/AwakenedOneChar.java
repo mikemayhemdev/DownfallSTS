@@ -235,7 +235,7 @@ public class AwakenedOneChar extends CustomPlayer {
     @Override
     public CharSelectInfo getLoadout() {
         return new CharSelectInfo(NAMES[0], TEXT[0],
-                80, 80, 0, 99, 5, this, getStartingRelics(),
+                75, 75, 0, 99, 5, this, getStartingRelics(),
                 getStartingDeck(), false);
     }
 

@@ -1,6 +1,7 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
+import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,7 +16,7 @@ public class Victuals extends AbstractAwakenedCard {
 
     public Victuals() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 6;
+        baseBlock = 5;
         magicNumber = baseMagicNumber = 2;
         this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath("Victuals.png"));
@@ -23,17 +24,15 @@ public class Victuals extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-
         if (isTrig_chant()) {
             chant();
         }
-
     }
 
     @Override
     public void chant() {
         //addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, magicNumber), magicNumber));
-        atb(new DrawCardAction(AbstractDungeon.player, this.magicNumber));
+        atb(new BetterDiscardPileToHandAction(1));
         checkOnChant();
     }
 
