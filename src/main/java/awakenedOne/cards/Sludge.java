@@ -25,11 +25,12 @@ public class Sludge extends AbstractAwakenedCard {
 
     public Sludge() {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 18;
+        baseDamage = 8;
         loadJokeCardImage(this, makeBetaCardPath(Sludge.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         AbstractCard toRemove = null;
         for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
@@ -51,6 +52,6 @@ public class Sludge extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(6);
+        upgradeDamage(4);
     }
 }
