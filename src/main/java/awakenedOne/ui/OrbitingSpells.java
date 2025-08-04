@@ -45,13 +45,13 @@ public class OrbitingSpells {
     public static ArrayList<Hitbox> boxes = new ArrayList<>();
     private static HashMap<String, Texture> cardIcons = new HashMap<>();
     private static int hoveredCard = -1;
-    private static Hitbox barBox = new Hitbox(POSITION_X + 250F * Settings.scale, Settings.HEIGHT - POSITION_Y - 300, 40 * Settings.scale, 350 * Settings.scale);
+    private static Hitbox barBox = new Hitbox(POSITION_X + 250F * Settings.scale, Settings.HEIGHT - POSITION_Y - 300 * Settings.scale, 40 * Settings.scale, 350 * Settings.scale);
     private static Texture unfilledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled.png");
     private static Texture filledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_filled.png");
 
     static {
         for (int i = 0; i < 10; i++) {
-            boxes.add(new Hitbox(POSITION_X, Settings.HEIGHT - (POSITION_Y + (i * (70F * Settings.scale))) - 35, 200F * Settings.scale, 45F * Settings.scale));
+            boxes.add(new Hitbox(POSITION_X, Settings.HEIGHT - (POSITION_Y + (i * (70F * Settings.scale))) - 35 * Settings.scale, 200F * Settings.scale, 45F * Settings.scale));
         }
 
         cardIcons.put(BurningStudy.ID, TexLoader.getTexture("awakenedResources/images/ui/BurningStudy.png"));
@@ -237,8 +237,8 @@ public class OrbitingSpells {
 
         if (hoveredCard != -1) {
             AbstractCard tar = spellCards.get(hoveredCard);
-            tar.target_x = tar.current_x = barBox.x + 200;
-            tar.target_y = tar.current_y = Settings.HEIGHT - (POSITION_Y + 100);
+            tar.target_x = tar.current_x = barBox.x + 200 * Settings.scale;
+            tar.target_y = tar.current_y = Settings.HEIGHT - (POSITION_Y + 100 * Settings.scale);
             spellCards.get(hoveredCard).render(sb);
         }
     }

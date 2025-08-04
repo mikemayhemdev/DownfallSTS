@@ -145,7 +145,10 @@
   },
   "awakened:Sludge": {
     "NAME": "Sludge",
-    "DESCRIPTION": "Can only be played if a *Void is Exhausted. NL Deal !D! damage. NL Erase a *Void from your Exhaust Pile."
+    "DESCRIPTION": "Can only be played if a *Void is Exhausted. NL Deal !D! damage. NL Erase a *Void from your Exhaust Pile.",
+    "EXTENDED_DESCRIPTION": [
+      "I do not have an Exhausted Void."
+    ]
   },
   "awakened:KnifesEdge": {
     "NAME": "Knife's Edge",
