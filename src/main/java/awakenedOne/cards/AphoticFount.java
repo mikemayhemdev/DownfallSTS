@@ -38,6 +38,7 @@ public class AphoticFount extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
+        //upgradeMagicNumber(2);
+        upgradeBaseCost(0);
     }
 }
