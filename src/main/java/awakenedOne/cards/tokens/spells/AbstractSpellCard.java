@@ -36,13 +36,13 @@ public abstract class AbstractSpellCard extends AbstractAwakenedCard {
     public void applyPowers() {
         if ((AbstractDungeon.player != null) && (AbstractDungeon.player.hasRelic(StrengthBooster.ID))) {
             int realBaseDamage = this.baseDamage;
-            this.baseDamage += 2;
+            this.baseDamage += StrengthBooster.AMOUNT;
             super.applyPowers();
             this.baseDamage = realBaseDamage;
             this.isDamageModified = this.damage != this.baseDamage;
 
             int realBaseBlock = this.baseBlock;
-            this.baseBlock += 2;
+            this.baseBlock += StrengthBooster.AMOUNT;
             super.applyPowers();
             this.baseBlock = realBaseBlock;
             this.isBlockModified = this.block != this.baseBlock;
@@ -54,12 +54,12 @@ public abstract class AbstractSpellCard extends AbstractAwakenedCard {
     public void calculateCardDamage(AbstractMonster mo) {
         int realBaseDamage = this.baseDamage;
         if (AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
-            this.baseDamage += 2;
+            this.baseDamage += StrengthBooster.AMOUNT;
         }
 
         int realBaseBlock = this.baseBlock;
         if (AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
-            this.baseBlock += 2;
+            this.baseBlock += StrengthBooster.AMOUNT;
         }
 
         super.calculateCardDamage(mo);

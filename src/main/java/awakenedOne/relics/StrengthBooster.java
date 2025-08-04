@@ -20,7 +20,7 @@ public class StrengthBooster extends CustomRelic {
 
     //Paper Crow / Paper Krow
 
-//    private static final int AMOUNT = 4;
+    public static final int AMOUNT = 2;
 //
 //    //Look at ApplyPowerPatch
 //    public void onTrigger(int amount) {
@@ -33,7 +33,7 @@ public class StrengthBooster extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + 2 + DESCRIPTIONS[1] + 2 + DESCRIPTIONS[2];
+        return DESCRIPTIONS[0] + AMOUNT + DESCRIPTIONS[1] + AMOUNT + DESCRIPTIONS[2];
     }
 
 }
