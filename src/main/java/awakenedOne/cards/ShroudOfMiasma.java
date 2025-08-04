@@ -21,7 +21,7 @@ public class ShroudOfMiasma extends AbstractAwakenedCard {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = 3;
         baseSecondMagic = secondMagic = 9;
-        //this.exhaust = true;
+        this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(ShroudOfMiasma.class.getSimpleName() + ".png"));
     }
 

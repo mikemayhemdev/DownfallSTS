@@ -1,5 +1,6 @@
 package awakenedOne.ui;
 
+import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.actions.SetUpNextSpellAction;
@@ -22,6 +23,7 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
+import guardian.characters.GuardianCharacter;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -44,10 +46,12 @@ public class OrbitingSpells {
     public static ArrayList<AbstractCard> spellCards = new ArrayList<>();
     public static ArrayList<Hitbox> boxes = new ArrayList<>();
     private static HashMap<String, Texture> cardIcons = new HashMap<>();
+    private static HashMap<String, Color> cardColors = new HashMap<>();
     private static int hoveredCard = -1;
     private static Hitbox barBox = new Hitbox(POSITION_X + 250F * Settings.scale, Settings.HEIGHT - POSITION_Y - 300 * Settings.scale, 40 * Settings.scale, 350 * Settings.scale);
     private static Texture unfilledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled.png");
     private static Texture filledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_filled.png");
+    private static Color defaultNextColor = Color.GREEN.cpy();
 
     static {
         for (int i = 0; i < 10; i++) {
@@ -62,10 +66,22 @@ public class OrbitingSpells {
         cardIcons.put(AphoticShield.ID, TexLoader.getTexture("awakenedResources/images/ui/AphoticShield.png"));
         cardIcons.put(ESPSpell.ID, TexLoader.getTexture("awakenedResources/images/ui/ESPSpell.png"));
         cardIcons.put(Grimoire.ID, TexLoader.getTexture("awakenedResources/images/ui/Grimoire.png"));
+
+        cardColors.put(BurningStudy.ID, Color.RED.cpy());
+        cardColors.put(Cryostasis.ID, placeholderColor.cpy());
+        cardColors.put(Darkleech.ID, Color.PURPLE.cpy());
+        cardColors.put(Thunderbolt.ID, Color.YELLOW.cpy());
+        cardColors.put(AphoticShield.ID, GuardianCharacter.cardRenderColor.cpy());
+        cardColors.put(ESPSpell.ID, Color.PINK.cpy());
+        cardColors.put(Grimoire.ID, Color.FIREBRICK.cpy());
     }
 
     private static Texture getIconForCard(AbstractCard tar) {
         return cardIcons.getOrDefault(tar.cardID, TexLoader.getTexture("awakenedResources/images/ui/defaultSpell.png"));
+    }
+
+    private static Color getColorForCard(AbstractCard tar) {
+        return cardColors.getOrDefault(tar.cardID, defaultNextColor);
     }
 
     static {
@@ -215,7 +231,7 @@ public class OrbitingSpells {
                 textColor = Color.GREEN.cpy();
             }
             if (s.hasTag(UP_NEXT) && DeterministicConjure) {
-                textColor = placeholderColor;
+                textColor = getColorForCard(s);
             }
             FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, s.name, boxes.get(xr).x + 15F, boxes.get(xr).y + 10F, textColor);
             TipHelper.renderTipEnergy(sb, AbstractCard.orb_red, boxes.get(xr).x + dist + 25.5F, boxes.get(xr).y);

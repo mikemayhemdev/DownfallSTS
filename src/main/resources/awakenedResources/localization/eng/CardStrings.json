@@ -141,7 +141,7 @@
   },
   "awakened:ShroudOfMiasma": {
     "NAME": "Wave of Miasma",
-    "DESCRIPTION": "Apply !M! Weak and !awakened:m2! awakened:Manaburn to ALL enemies."
+    "DESCRIPTION": "Apply !M! Weak and !awakened:m2! awakened:Manaburn to ALL enemies. NL Exhaust."
   },
   "awakened:Sludge": {
     "NAME": "Sludge",

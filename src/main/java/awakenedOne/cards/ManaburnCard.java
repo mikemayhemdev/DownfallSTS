@@ -22,7 +22,7 @@ public class ManaburnCard extends AbstractAwakenedCard {
     public ManaburnCard() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 4;
         loadJokeCardImage(this, makeBetaCardPath(ManaburnCard.class.getSimpleName() + ".png"));
     }
 

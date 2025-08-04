@@ -23,6 +23,6 @@ public class GrandMagus extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        isInnate = true;
+        upgradeBaseCost(0);
     }
 }
