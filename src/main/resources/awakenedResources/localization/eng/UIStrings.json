@@ -29,5 +29,10 @@
     "TEXT": [
       "Spellbook"
     ]
+  },
+  "awakened:FullSpellbook": {
+    "TEXT": [
+      "My Spellbook is full!"
+    ]
   }
 }

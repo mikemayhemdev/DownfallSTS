@@ -23,6 +23,7 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
+import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import guardian.characters.GuardianCharacter;
 
 import java.util.ArrayList;
@@ -143,7 +144,11 @@ public class OrbitingSpells {
         if (Wiz.isAwakened()) {
             card.upgrade();
         }
-        spellCards.add(card);
+        if (spellCards.size() < 10) {
+            spellCards.add(card);
+        } else {
+            AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, CardCrawlGame.languagePack.getUIString("awakened:FullSpellbook").TEXT[0], true));
+        }
     }
 
     public static boolean removeSpellCard(AbstractCard card) {
