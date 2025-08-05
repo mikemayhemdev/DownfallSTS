@@ -11,7 +11,9 @@ import static awakenedOne.AwakenedOneMod.makeRelicPath;
 public class StrengthBooster extends CustomRelic {
 
     public static final String ID = AwakenedOneMod.makeID("StrengthBooster");
+
     public static final int AMOUNT = 25;
+
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("StrengthBooster.png")); //TODO: Images
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("StrengthBooster.png"));
 
