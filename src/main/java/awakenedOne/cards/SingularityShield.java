@@ -5,10 +5,10 @@ import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
-import expansioncontent.powers.DeEnergizedPower;
 import hermit.powers.Drained;
 
-import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
 
 public class SingularityShield extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(SingularityShield.class.getSimpleName());

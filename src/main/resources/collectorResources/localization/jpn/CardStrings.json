@@ -190,7 +190,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "緑炎の軌跡",
-    "DESCRIPTION": "3 枚の コレクトカード から 1 枚を選び手札に加え、収集札にそのコピーを !M! 枚加える。 NL 廃棄。",
+    "DESCRIPTION": "3 枚の コレクトカード から 1 枚を選び手札に加え、収集札にそのコピーを !M! 枚加える。",
     "EXTENDED_DESCRIPTION": [
       "選択したカードを手札と収集札に加える"
     ]

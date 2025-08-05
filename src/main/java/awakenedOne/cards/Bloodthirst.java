@@ -28,13 +28,13 @@ public class Bloodthirst extends AbstractAwakenedCard {
         if (Settings.FAST_MODE) {
             this.addToTop(new VFXAction(new ViolentAttackEffect(m.hb.cX, m.hb.cY, Color.RED)));
 
-            for(i = 0; i < 5; ++i) {
+            for (i = 0; i < 5; ++i) {
                 this.addToTop(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY)));
             }
         } else {
             this.addToTop(new VFXAction(new ViolentAttackEffect(m.hb.cX, m.hb.cY, Color.RED), 0.4F));
 
-            for(i = 0; i < 5; ++i) {
+            for (i = 0; i < 5; ++i) {
                 this.addToTop(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY)));
             }
         }

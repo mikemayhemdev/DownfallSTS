@@ -1,19 +1,15 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.cards.Grimoire;
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
+import static awakenedOne.AwakenedOneMod.makeRelicPath;
 import static awakenedOne.util.Wiz.getEnemies;
 
 public class EyeOfTheOccult extends CustomRelic {

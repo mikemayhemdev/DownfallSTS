@@ -1,6 +1,6 @@
 package awakenedOne.cards;
 
-import awakenedOne.powers.DominusPower;
+import awakenedOne.powers.DemonGlyphPower;
 import awakenedOne.util.Wiz;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -39,7 +39,7 @@ public class DemonGlyph extends AbstractAwakenedCard {
             this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, secondMagic), secondMagic));
             this.addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, secondMagic), secondMagic));
         } else {
-            applyToSelf(new DominusPower(secondMagic));
+            applyToSelf(new DemonGlyphPower(secondMagic));
         }
     }
 

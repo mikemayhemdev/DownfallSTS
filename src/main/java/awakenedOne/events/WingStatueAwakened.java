@@ -18,7 +18,6 @@ public class WingStatueAwakened extends AbstractImageEvent {
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
     private static final EventStrings eventStrings;
-    private int damage;
 
     static {
         eventStrings = CardCrawlGame.languagePack.getEventString(ID);
@@ -27,6 +26,7 @@ public class WingStatueAwakened extends AbstractImageEvent {
         OPTIONS = eventStrings.OPTIONS;
     }
 
+    private final int damage;
     private CurScreen screen;
 
     public WingStatueAwakened() {
@@ -34,12 +34,12 @@ public class WingStatueAwakened extends AbstractImageEvent {
         this.screen = CurScreen.INTRO;
 
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.damage = (int)((float)AbstractDungeon.player.maxHealth * 0.35F);
+            this.damage = (int) ((float) AbstractDungeon.player.maxHealth * 0.35F);
         } else {
-            this.damage = (int)((float)AbstractDungeon.player.maxHealth * 0.25F);
+            this.damage = (int) ((float) AbstractDungeon.player.maxHealth * 0.25F);
         }
 
-        this.imageEventText.setDialogOption(OPTIONS [0], new ShatteredFragment());
+        this.imageEventText.setDialogOption(OPTIONS[0], new ShatteredFragment());
         this.imageEventText.setDialogOption(OPTIONS[2] + this.damage + OPTIONS[4], new BrokenWingStatue());
         this.imageEventText.setDialogOption(OPTIONS[3]);
     }
@@ -50,8 +50,8 @@ public class WingStatueAwakened extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         AbstractCard curse = new CurseOfBlood();
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .35F), (float) (Settings.HEIGHT / 2)));
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .65F), (float) (Settings.HEIGHT / 2)));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, Settings.WIDTH * .35F, (float) (Settings.HEIGHT / 2)));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, Settings.WIDTH * .65F, (float) (Settings.HEIGHT / 2)));
 
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.imageEventText.clearAllDialogs();
@@ -67,7 +67,7 @@ public class WingStatueAwakened extends AbstractImageEvent {
                         AbstractDungeon.player.damage(new DamageInfo(null, (this.damage)));
                         this.screen = CurScreen.RESULT;
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new BrokenWingStatue());
-                        logMetricObtainRelicAndDamage(ID, "Collected Statue", new BrokenWingStatue(), ((AbstractDungeon.ascensionLevel >= 15)?7:5));
+                        logMetricObtainRelicAndDamage(ID, "Collected Statue", new BrokenWingStatue(), ((AbstractDungeon.ascensionLevel >= 15) ? 7 : 5));
                         return;
                     case 2:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);

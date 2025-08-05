@@ -1,11 +1,12 @@
 package awakenedOne.powers;
 
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 
-import static awakenedOne.util.Wiz.atb;
 import static awakenedOne.util.Wiz.att;
 
 public class VoidRefundPower extends AbstractAwakenedPower implements OnLoseEnergyPower {
@@ -33,7 +34,7 @@ public class VoidRefundPower extends AbstractAwakenedPower implements OnLoseEner
             att(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnergizedBluePower(AbstractDungeon.player, this.amount), this.amount));
         }
 
-       // atb(new DrawCardAction(AbstractDungeon.player, this.amount));
+        // atb(new DrawCardAction(AbstractDungeon.player, this.amount));
         addToTop(new RemoveSpecificPowerAction(owner, owner, this));
     }
 

@@ -14,7 +14,8 @@ import com.megacrit.cardcrawl.monsters.city.Byrd;
 import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 
-import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
+import static awakenedOne.AwakenedOneMod.makeRelicPath;
 
 public class CawingCask extends CustomRelic {
 

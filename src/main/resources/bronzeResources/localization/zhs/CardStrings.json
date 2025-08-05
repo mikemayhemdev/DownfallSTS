@@ -469,7 +469,7 @@
   },
   "bronze:Break": {
     "NAME": "打断",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 ： bronze:插入 *灼伤 、 *伤口 、 *黏液 、 *晕眩 与 *虚空 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 ： 获得 *灼伤 、 *伤口 、 *黏液 、 *晕眩 与 *虚空 。",
     "EXTENDED_DESCRIPTION": [
       "打断",
       "粉碎"

@@ -30,7 +30,6 @@ public class ShreddedDoll extends CustomRelic implements OnAwakenRelic {
     }
 
 
-
     @Override
     public void atBattleStart() {
         this.beginLongPulse();
@@ -45,7 +44,7 @@ public class ShreddedDoll extends CustomRelic implements OnAwakenRelic {
     //Check AwakenButton.java. I'm just using this override for convenience.
     @Override
     public void onAwaken(int amount) {
-        if (amount == 5 && activatedthiscombat == false) {
+        if (amount == 5 && !activatedthiscombat) {
             stopPulse();
             activatedthiscombat = true;
             flash();
@@ -83,10 +82,10 @@ public class ShreddedDoll extends CustomRelic implements OnAwakenRelic {
         // Colorize the starter relic's name
         String name = new RippedDoll().name;
         StringBuilder sb = new StringBuilder();
-        if(Settings.language== Settings.GameLanguage.ZHS|| Settings.language== Settings.GameLanguage.ZHT){
+        if (Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT) {
             sb.append("[#").append(AwakenedOneMod.placeholderColor.toString()).append("]").append(name).append("[]");
 
-        }else {
+        } else {
             for (String word : name.split(" ")) {
                 sb.append("[#").append(AwakenedOneMod.placeholderColor.toString()).append("]").append(word).append("[] ");
             }

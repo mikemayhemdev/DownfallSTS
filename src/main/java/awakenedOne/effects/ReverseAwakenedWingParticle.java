@@ -14,7 +14,7 @@ public class ReverseAwakenedWingParticle extends AbstractGameEffect {
     private float x;
     private float y;
     private float tScale;
-    private TextureAtlas.AtlasRegion img;
+    private final TextureAtlas.AtlasRegion img;
 
     public ReverseAwakenedWingParticle() {
         this.duration = 2.0F;
@@ -45,8 +45,8 @@ public class ReverseAwakenedWingParticle extends AbstractGameEffect {
 
         this.x += 155.0F * Settings.scale;
         this.y += 30.0F * Settings.scale;
-        this.x -= (float)(this.img.packedWidth / 2);
-        this.y -= (float)(this.img.packedHeight / 2);
+        this.x -= (float) (this.img.packedWidth / 2);
+        this.y -= (float) (this.img.packedHeight / 2);
     }
 
     public void update() {
@@ -72,7 +72,7 @@ public class ReverseAwakenedWingParticle extends AbstractGameEffect {
 
     public void render(SpriteBatch sb, float x, float y) {
 
-  //      if (!this.img.isFlipX()) {
+        //      if (!this.img.isFlipX()) {
         //            this.img.flip(true, false);
         //        }
 
@@ -80,12 +80,12 @@ public class ReverseAwakenedWingParticle extends AbstractGameEffect {
 
         sb.setColor(new Color(0.4F, 1.0F, 1.0F, this.color.a / 2.0F));
         sb.setBlendFunction(770, 1);
-        sb.draw(this.img, this.x + x, this.y + y, (float)this.img.packedWidth * 0.08F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, (this.scale * MathUtils.random(1.1F, 1.25F)), this.scale, this.rotation + derp + 180.0F);
+        sb.draw(this.img, this.x + x, this.y + y, (float) this.img.packedWidth * 0.08F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, (this.scale * MathUtils.random(1.1F, 1.25F)), this.scale, this.rotation + derp + 180.0F);
         sb.setBlendFunction(770, 771);
         sb.setColor(this.color);
-        sb.draw(this.img, this.x + x, this.y + y, (float)this.img.packedWidth * 0.08F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, this.scale, this.scale, this.rotation + derp+ 180.0F);
+        sb.draw(this.img, this.x + x, this.y + y, (float) this.img.packedWidth * 0.08F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, this.scale, this.scale, this.rotation + derp + 180.0F);
         sb.setColor(new Color(0.0F, 0.0F, 0.0F, this.color.a / 5.0F));
-        sb.draw(this.img, this.x + x, this.y + y, (float)this.img.packedWidth * 0.08F, (float)this.img.packedHeight / 2.0F, (float)this.img.packedWidth, (float)this.img.packedHeight, (this.scale * 0.7F), this.scale * 0.7F, this.rotation + derp - 40.0F+ 180.0F);
+        sb.draw(this.img, this.x + x, this.y + y, (float) this.img.packedWidth * 0.08F, (float) this.img.packedHeight / 2.0F, (float) this.img.packedWidth, (float) this.img.packedHeight, (this.scale * 0.7F), this.scale * 0.7F, this.rotation + derp - 40.0F + 180.0F);
     }
 
     public void dispose() {

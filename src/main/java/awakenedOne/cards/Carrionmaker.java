@@ -16,6 +16,7 @@ public class Carrionmaker extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1
 
     private static final CardStrings strings = CardCrawlGame.languagePack.getCardStrings(ID);
+
     //carrionmaker
     public Carrionmaker() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
@@ -28,7 +29,7 @@ public class Carrionmaker extends AbstractAwakenedCard {
                 .filter(card -> card instanceof AbstractSpellCard)
                 .count();
 
-        for (int i = 0; i < count+1; i++) {
+        for (int i = 0; i < count + 1; i++) {
             this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
         this.initializeDescription();
@@ -44,8 +45,7 @@ public class Carrionmaker extends AbstractAwakenedCard {
         this.rawDescription = this.rawDescription + strings.EXTENDED_DESCRIPTION[0] + count;
         if (count == 1) {
             this.rawDescription += strings.EXTENDED_DESCRIPTION[1];
-        }
-        else {
+        } else {
             this.rawDescription += strings.EXTENDED_DESCRIPTION[2];
         }
         this.initializeDescription();
@@ -56,7 +56,6 @@ public class Carrionmaker extends AbstractAwakenedCard {
         this.rawDescription = strings.DESCRIPTION;
         this.initializeDescription();
     }
-
 
 
     public void upp() {

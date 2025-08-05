@@ -1,23 +1,21 @@
 package awakenedOne.cards;
 
-import awakenedOne.powers.EntanglePowersPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.PutOnDeckAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.applyToSelf;
 
-public class SacrilegiousStrike extends AbstractAwakenedCard {
-    public final static String ID = makeID(SacrilegiousStrike.class.getSimpleName());
+public class ProfaneStrike extends AbstractAwakenedCard {
+    public final static String ID = makeID(ProfaneStrike.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
-    public SacrilegiousStrike() {
+    public ProfaneStrike() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
         tags.add(CardTags.STRIKE);
-        loadJokeCardImage(this, makeBetaCardPath(SacrilegiousStrike.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(ProfaneStrike.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

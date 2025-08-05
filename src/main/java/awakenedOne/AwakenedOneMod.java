@@ -13,7 +13,6 @@ import awakenedOne.patches.OnLoseEnergyPowerPatch;
 import awakenedOne.potions.CultistsDelight;
 import awakenedOne.potions.SacramentalWine;
 import awakenedOne.potions.SneckoPowersPotion;
-import awakenedOne.powers.EnemyHexedPower;
 import awakenedOne.relics.*;
 import awakenedOne.ui.AwakenedIcon;
 import awakenedOne.ui.OrbitingSpells;
@@ -34,9 +33,7 @@ import com.evacipated.cardcrawl.mod.widepotions.WidePotionsMod;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Nest;
@@ -45,14 +42,12 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
-import hermit.cards.*;
-import hermit.characters.hermit;
-import hermit.relics.*;
 import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 
+import javax.crypto.SecretKeyFactory;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -60,7 +55,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static awakenedOne.ui.OrbitingSpells.spellCards;
-import static awakenedOne.util.Wiz.atb;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -103,10 +97,8 @@ public class AwakenedOneMod implements
 
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags UP_NEXT;
-
-    private static String modID = "awakened";
-
     public static boolean awakenedthiscombat = false;
+    private static String modID = "awakened";
 
     public AwakenedOneMod() {
         BaseMod.subscribe(this);
@@ -119,38 +111,6 @@ public class AwakenedOneMod implements
                 ATTACK_L_ART, SKILL_L_ART, POWER_L_ART,
                 CARD_ENERGY_L, TEXT_ENERGY);
     }
-
-
-    public void receivePostInitialize() {
-
-        BaseMod.addEvent(new AddEventParams.Builder(TheNestAwakened.ID, TheNestAwakened.class) //Event ID//
-                //Event Spawn Condition//
-                .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
-                //Event ID to Override//
-                .overrideEvent(Nest.ID)
-                //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
-
-        BaseMod.addEvent(new AddEventParams.Builder(WingStatueAwakened.ID, WingStatueAwakened.class) //Event ID//
-                //Event Spawn Condition//
-                .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
-                //Event ID to Override//
-                .overrideEvent(GoldenWing.ID)
-                //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
-
-        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsAwakened.ID, BackToBasicsAwakened.class) //Event ID//
-                //Event Character//
-                .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
-                //Existing Event to Override//
-                .overrideEvent(BackToBasics.ID)
-                //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
-    }
-
 
     public static String makeBetaCardPath(String resourcePath) {
         String textureString = "awakenedResources/images/cards/joke/" + resourcePath;
@@ -173,7 +133,6 @@ public class AwakenedOneMod implements
         TextureAtlas.AtlasRegion cardImg = new TextureAtlas.AtlasRegion(cardTexture, 0, 0, tw, th);
         ReflectionHacks.setPrivate(card, AbstractCard.class, "jokePortrait", cardImg);
     }
-
 
     public static String makeCardPath(String resourcePath) {
         return getModID() + "Resources/images/cards/" + resourcePath;
@@ -249,6 +208,44 @@ public class AwakenedOneMod implements
         }
     }
 
+    /*
+    //Hex Stuff
+    public static void HexCurse(int begone, AbstractCreature m, AbstractCreature source) {
+        atb(new ApplyPowerAction(m, AbstractDungeon.player, new EnemyHexedPower(m, begone), begone));
+    }
+
+     */
+
+    public void receivePostInitialize() {
+
+        BaseMod.addEvent(new AddEventParams.Builder(TheNestAwakened.ID, TheNestAwakened.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
+                //Event ID to Override//
+                .overrideEvent(Nest.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(WingStatueAwakened.ID, WingStatueAwakened.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
+                //Event ID to Override//
+                .overrideEvent(GoldenWing.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsAwakened.ID, BackToBasicsAwakened.class) //Event ID//
+                //Event Character//
+                .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
+                //Existing Event to Override//
+                .overrideEvent(BackToBasics.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+    }
+
     @Override
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new AwakenedOneChar("The Awakened One", AwakenedOneChar.Enums.AWAKENED_ONE), CHARSELECT_BUTTON, CHARSELECT_PORTRAIT, AwakenedOneChar.Enums.AWAKENED_ONE);
@@ -300,6 +297,8 @@ public class AwakenedOneMod implements
     }
 
 
+    // CONTENT STUFF
+
     @Override
     public void receiveEditCards() {
         CustomIconHelper.addCustomIcon(AwakenedIcon.get());
@@ -314,14 +313,6 @@ public class AwakenedOneMod implements
                  ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
-    }
-
-
-    // CONTENT STUFF
-
-    //Hex Stuff
-    public static void HexCurse(int begone, AbstractCreature m, AbstractCreature source) {
-        atb(new ApplyPowerAction(m, AbstractDungeon.player, new EnemyHexedPower(m, begone), begone));
     }
 
     @Override
@@ -361,9 +352,10 @@ public class AwakenedOneMod implements
     @Override
     public void receiveSetUnlocks() {
         downfallMod.registerUnlockSuiteAlternating(
-                RisingChant.ID,
-                Primacy.ID,
+
                 SplitWide.ID,
+                Primacy.ID,
+                RisingChant.ID,
 
                 TomeOfPortalmancy.ID,
                 AbyssBlade.ID,
@@ -371,14 +363,14 @@ public class AwakenedOneMod implements
 
                 Ensorcelate.ID,
                 Skyward.ID,
-                Slaughter.ID,
+                BloodRite.ID,
 
                 VioletPlumage.ID,
                 DeadBird.ID,
                 ShardOfNowak.ID,
 
+                FourthDimension.ID,
                 Grimoire.ID,
-                DoubleVision.ID,
                 AphoticFount.ID,
 
                 AwakenedOneChar.Enums.AWAKENED_ONE

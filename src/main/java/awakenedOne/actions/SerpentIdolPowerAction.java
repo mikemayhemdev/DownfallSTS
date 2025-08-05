@@ -2,26 +2,20 @@ package awakenedOne.actions;
 
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.AbstractCard.CardRarity;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.screens.CardRewardScreen;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToHandEffect;
 import expansioncontent.patches.CardColorEnumPatch;
-import slimebound.actions.MakeTempCardInHandActionReduceCost;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 
-import static awakenedOne.util.Wiz.atb;
-
 public class SerpentIdolPowerAction extends AbstractGameAction {
     private boolean retrieveCard = false;
-    private int count;
+    private final int count;
 
     public SerpentIdolPowerAction(int count) {
         this.actionType = ActionType.CARD_MANIPULATION;// 19

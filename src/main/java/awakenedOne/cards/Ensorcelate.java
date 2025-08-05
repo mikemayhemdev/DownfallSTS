@@ -1,6 +1,6 @@
 package awakenedOne.cards;
 
-import awakenedOne.powers.ConjureNextTurnPower;
+import awakenedOne.powers.EnsorcelatePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -21,7 +21,7 @@ public class Ensorcelate extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        applyToSelf(new ConjureNextTurnPower(1));
+        applyToSelf(new EnsorcelatePower(1));
     }
 
     public void upp() {

@@ -1,9 +1,6 @@
 package awakenedOne.actions;
 
-import awakenedOne.cards.Strike;
-import awakenedOne.powers.DarkIncantationRitualPower;
 import awakenedOne.powers.IntensifyDebuffPower;
-import awakenedOne.relics.RippedDoll;
 import awakenedOne.ui.OrbitingSpells;
 import awakenedOne.util.OnConjureSubscriber;
 import awakenedOne.util.Wiz;
@@ -14,27 +11,24 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.RitualPower;
 
 import java.util.ArrayList;
 
 import static awakenedOne.AwakenedOneMod.UP_NEXT;
 import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.isAwakened;
 import static downfall.downfallMod.DeterministicConjure;
 
 public class ConjureAction extends AbstractGameAction {
 
-    private boolean choose;
-    private boolean ontop;
-    private boolean bstudy;
-    AbstractCard pick;
-
     public static boolean refreshedthisturn = false;
     public static ArrayList<AbstractCard> conjuredCards = new ArrayList();
-
     public static int conjuresThisCombat = 0;
+    AbstractCard pick;
+    private final boolean choose;
+    private final boolean ontop;
+    private final boolean bstudy;
 
 
     public ConjureAction(boolean choose) {
@@ -93,9 +87,9 @@ public class ConjureAction extends AbstractGameAction {
         if (!choose) {
             AbstractCard tar = new EnApotheosis(); //dummy card
             if (!bstudy) {
-            if (!DeterministicConjure) {
-                tar = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
-            }
+                if (!DeterministicConjure) {
+                    tar = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng).makeStatEquivalentCopy();
+                }
                 if (DeterministicConjure) {
                     for (AbstractCard c : spellCards) {
                         System.out.println("DEBUG: CHECKING: " + c.name);
@@ -117,10 +111,10 @@ public class ConjureAction extends AbstractGameAction {
             if (isAwakened()) {
                 tar.upgrade();
             }
-            if (ontop == false) {
+            if (!ontop) {
                 addToTop(new MakeTempCardInHandAction(tar));
             }
-            if (ontop == true) {
+            if (ontop) {
                 addToTop(new MakeTempCardInDrawPileAction(tar, 1, false, true));
             }
             if (!bstudy) {

@@ -1,9 +1,8 @@
 package awakenedOne;
+
 import awakenedOne.cards.AbstractAwakenedCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
-import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
 
 public class AwakenedTextHelper {
     protected static String[] ifStr = CardCrawlGame.languagePack.getUIString("awakened:highlightChant").TEXT;

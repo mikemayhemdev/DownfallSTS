@@ -11,7 +11,8 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.purple.ConjureBlade;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
+import static awakenedOne.AwakenedOneMod.makeRelicPath;
 
 public class CurvedSwordMeme extends CustomRelic {
 

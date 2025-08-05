@@ -2,19 +2,13 @@ package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
-import awakenedOne.cards.tokens.spells.BurningStudy;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
-import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
 import static awakenedOne.util.Wiz.atb;
-import static downfall.downfallMod.DeterministicConjure;
 
 public class RippedDoll extends CustomRelic {
 
@@ -47,7 +41,7 @@ public class RippedDoll extends CustomRelic {
             this.counter++;
             flash();
             atb(new ConjureAction(false, false));
-            if (this.counter == 2){
+            if (this.counter == 2) {
                 this.counter = -1;
             }
         }

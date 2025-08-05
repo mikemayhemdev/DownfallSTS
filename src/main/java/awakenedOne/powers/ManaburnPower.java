@@ -1,10 +1,8 @@
 package awakenedOne.powers;
 
-import awakenedOne.cards.ExNihilo;
-import awakenedOne.cards.ManaburnCard;
+import awakenedOne.cards.Nihil;
 import awakenedOne.relics.StrengthBooster;
-import champ.relics.RageAmulet;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -29,22 +27,18 @@ public class ManaburnPower extends AbstractAwakenedPower implements OnLoseEnergy
     public void LoseEnergyAction(int gained) {
         this.flash();
 
-        boolean hascrow = false;
-
-        if (AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
-            hascrow = true;
-        }
+        boolean hascrow = AbstractDungeon.player.hasRelic(StrengthBooster.ID);
 
         if (!hascrow) {
             this.addToBot(new DamageAction(owner, new DamageInfo(owner, amount * gained, DamageInfo.DamageType.HP_LOSS), EnumPatch.HERMIT_GHOSTFIRE));
         }
 
         if (hascrow) {
-            this.addToBot(new DamageAction(owner, new DamageInfo(owner, (amount * gained)+((amount * gained)/2), DamageInfo.DamageType.HP_LOSS), EnumPatch.HERMIT_GHOSTFIRE));
+            this.addToBot(new DamageAction(owner, new DamageInfo(owner, (amount * gained) + ((amount * gained) / 4), DamageInfo.DamageType.HP_LOSS), EnumPatch.HERMIT_GHOSTFIRE));
 
             for (AbstractRelic r : AbstractDungeon.player.relics) {
                 if (r instanceof StrengthBooster) {
-                    ((StrengthBooster) r).onSpecificTrigger((amount * gained)/2);
+                    ((StrengthBooster) r).onSpecificTrigger((amount * gained) / 4);
                 }
             }
         }
@@ -52,25 +46,21 @@ public class ManaburnPower extends AbstractAwakenedPower implements OnLoseEnergy
 
     @Override
     public void triggerMarks(AbstractCard card) {
-        if (card.cardID.equals(ExNihilo.ID)) {
+        if (card.cardID.equals(Nihil.ID)) {
 
 
-            boolean hascrow = false;
-
-            if (AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
-                hascrow = true;
-            }
+            boolean hascrow = AbstractDungeon.player.hasRelic(StrengthBooster.ID);
 
             if (!hascrow) {
                 this.addToBot(new DamageAction(owner, new DamageInfo(owner, amount, DamageInfo.DamageType.HP_LOSS), EnumPatch.HERMIT_GHOSTFIRE));
             }
 
             if (hascrow) {
-                this.addToBot(new DamageAction(owner, new DamageInfo(owner, (amount)+((amount)/2), DamageInfo.DamageType.HP_LOSS), EnumPatch.HERMIT_GHOSTFIRE));
+                this.addToBot(new DamageAction(owner, new DamageInfo(owner, (amount) + ((amount) / 4), DamageInfo.DamageType.HP_LOSS), EnumPatch.HERMIT_GHOSTFIRE));
 
                 for (AbstractRelic r : AbstractDungeon.player.relics) {
                     if (r instanceof StrengthBooster) {
-                        ((StrengthBooster) r).onSpecificTrigger((amount)/2);
+                        ((StrengthBooster) r).onSpecificTrigger((amount) / 4);
                     }
                 }
             }
@@ -80,18 +70,15 @@ public class ManaburnPower extends AbstractAwakenedPower implements OnLoseEnergy
 
     @Override
     public void updateDescription() {
-        boolean hascrow = false;
-
-        if (AbstractDungeon.player.hasRelic(StrengthBooster.ID)) {
-            hascrow = true;
-        }
+        boolean hascrow = AbstractDungeon.player.hasRelic(StrengthBooster.ID);
 
         if (!hascrow) {
             description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         }
 
         if (hascrow) {
-            description = DESCRIPTIONS[0] + (amount)+(amount/2) + DESCRIPTIONS[1];
+            int newamount = ((amount)+(amount / 4));
+            description = DESCRIPTIONS[0] + (newamount) + DESCRIPTIONS[1];
         }
 
     }

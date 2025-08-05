@@ -38,17 +38,17 @@ public class Cryostasis extends AbstractSpellCard {
         AbstractDungeon.effectsQueue.add(new FrostOrbActivateEffect(p.hb.cX, p.hb.cY));
         blck();
 
-       // if (upgraded) {
-            if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
-                atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
-            }
+        // if (upgraded) {
+        if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+            atb(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+        }
 
-            if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
-                //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
-                for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
-                    if (!monster.isDead && !monster.isDying) {
-                        addToBot(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
-                //    }
+        if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+            //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
+            for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+                if (!monster.isDead && !monster.isDying) {
+                    addToBot(new ApplyPowerAction(monster, p, new WeakPower(monster, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.LIGHTNING));
+                    //    }
                 }
             }
         }

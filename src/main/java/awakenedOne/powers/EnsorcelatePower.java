@@ -5,12 +5,12 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-public class ConjureNextTurnPower extends AbstractAwakenedPower {
+public class EnsorcelatePower extends AbstractAwakenedPower {
     // intellij stuff buff
-    public static final String NAME = ConjureNextTurnPower.class.getSimpleName();
+    public static final String NAME = EnsorcelatePower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
 
-    public ConjureNextTurnPower(int amount) {
+    public EnsorcelatePower(int amount) {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
     }
 

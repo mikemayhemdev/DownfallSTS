@@ -4,7 +4,8 @@ import automaton.relics.BottledCode;
 import awakenedOne.relics.MoonTalisman;
 import champ.relics.SignatureFinisher;
 import collector.relics.BottledCollectible;
-import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import guardian.relics.BottledAnomaly;
@@ -18,7 +19,7 @@ public class MoreBottleUpgrades {
     @SpirePatch(clz = AbstractPlayer.class, method = "bottledCardUpgradeCheck")
     public static class BottledCardUpgradeCheckPatch {
         @SpirePostfixPatch
-            public static void Postfix(AbstractPlayer __instance, AbstractCard c) {
+        public static void Postfix(AbstractPlayer __instance, AbstractCard c) {
 
             if (__instance.hasRelic(SignatureFinisher.ID)) {
                 SignatureFinisher a = (SignatureFinisher) __instance.getRelic(SignatureFinisher.ID);

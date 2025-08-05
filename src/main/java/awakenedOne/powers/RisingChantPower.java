@@ -1,7 +1,6 @@
 package awakenedOne.powers;
 
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class RisingChantPower extends AbstractAwakenedPower {
@@ -14,7 +13,7 @@ public class RisingChantPower extends AbstractAwakenedPower {
     }
 
     public void updateDescription() {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
     @Override

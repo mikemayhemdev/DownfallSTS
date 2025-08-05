@@ -1,6 +1,6 @@
 package awakenedOne.cards;
 
-import awakenedOne.powers.RetainingGivesBlockPower;
+import awakenedOne.powers.SpellshieldPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.util.Wiz;
@@ -18,7 +18,7 @@ public class Spellshield extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.applyToSelf(new RetainingGivesBlockPower(magicNumber));
+        Wiz.applyToSelf(new SpellshieldPower(magicNumber));
     }
 
     public void upp() {

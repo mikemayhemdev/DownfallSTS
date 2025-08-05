@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static awakenedOne.util.Wiz.atb;
 
 public class ForTheHexAction extends AbstractGameAction {
-    private AbstractMonster m;
+    private final AbstractMonster m;
 
     public ForTheHexAction(int weakAmt, AbstractMonster m) {
         this.actionType = ActionType.WAIT;

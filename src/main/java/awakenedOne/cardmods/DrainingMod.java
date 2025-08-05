@@ -22,7 +22,7 @@ public class DrainingMod extends AbstractCardModifier {
     @Override
     public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
         super.onUse(card, target, action);
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Drained(AbstractDungeon.player,AbstractDungeon.player, 1), 1));
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Drained(AbstractDungeon.player, AbstractDungeon.player, 1), 1));
     }
 
     @Override

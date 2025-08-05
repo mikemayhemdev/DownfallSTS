@@ -526,14 +526,15 @@ public class SneckoMod implements
                 c.cardID.equals(PoisonParadise.ID) ||
                 c.cardID.equals(AceOfWands.ID) ||
                 //Awakened One Cards
-                c.cardID.equals(ManaburnCard.ID) ||
-                c.cardID.equals(Psalm.ID) ||
+                c.cardID.equals(Scour.ID) ||
+                c.cardID.equals(SingularityShield.ID) ||
                 c.cardID.equals(DeathCoil.ID) ||
+                c.cardID.equals(Gloomguard.ID) ||
                 c.cardID.equals(MirePit.ID) ||
                 c.cardID.equals(SplitWide.ID) ||
-                c.cardID.equals(ShroudOfMiasma.ID) ||
-                c.cardID.equals(SiphonEnergy.ID) ||
-                c.cardID.equals(ExNihilo.ID)
+                c.cardID.equals(WaveOfMiasma.ID) ||
+                c.cardID.equals(Siphon.ID) ||
+                c.cardID.equals(Nihil.ID)
                 )
 
         ) || (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == AbstractDungeon.player.getCardColor() || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.rarity == AbstractCard.CardRarity.BASIC || c.type == STATUS || !q.test(c)  || c.hasTag(BANNEDFORSNECKO) || c.hasTag(GHOSTWHEELCARD))

@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.applyToSelf;
 
 public class SongOfSorrow extends AbstractAwakenedCard {
     public final static String ID = makeID(SongOfSorrow.class.getSimpleName());
@@ -14,7 +14,7 @@ public class SongOfSorrow extends AbstractAwakenedCard {
 
     public SongOfSorrow() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 7;
+        this.baseMagicNumber = 6;
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath(SongOfSorrow.class.getSimpleName() + ".png"));
     }

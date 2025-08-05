@@ -4,11 +4,13 @@ import awakenedOne.AwakenedOneMod;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
-import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
+import static awakenedOne.AwakenedOneMod.makeRelicPath;
 
 public class VioletPlumage extends CustomRelic {
 
@@ -19,14 +21,12 @@ public class VioletPlumage extends CustomRelic {
     //Hey, you! Go to VioletPlumagePatch! This relic also uses code from Aspiration, the GitHub and relevant patch is linked there!
 
     //the relic was reworked because mini black hole had to go to shop because its weird rip old effect
-
-    public VioletPlumage() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
-    }
-
     //violet plumage
     public boolean firstTurn = false;
     public boolean activated = false;
+    public VioletPlumage() {
+        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
+    }
 
     @Override
     public void atPreBattle() {
@@ -37,14 +37,14 @@ public class VioletPlumage extends CustomRelic {
     @Override
     public void atTurnStartPostDraw() {
         if (!(this.grayscale)) {
-                if (activated) {
-                    this.stopPulse();
-                    this.flash();
-                    this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                    addToBot(new DrawCardAction(AbstractDungeon.player, 3));
-                    this.grayscale = true;
-                }
+            if (activated) {
+                this.stopPulse();
+                this.flash();
+                this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                addToBot(new DrawCardAction(AbstractDungeon.player, 3));
+                this.grayscale = true;
             }
+        }
         activated = false;
     }
 

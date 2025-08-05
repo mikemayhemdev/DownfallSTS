@@ -15,13 +15,6 @@
       " turns."
     ]
   },
-  "awakened:InResponsePower": {
-    "NAME": "Spellshield",
-    "DESCRIPTIONS": [
-      "Whenever you create a card, gain #b",
-      " #yBlock [REMOVE_SPACE]."
-    ]
-  },
   "awakened:RisingChantPower": {
     "NAME": "Rising Chorus",
     "DESCRIPTIONS": [
@@ -43,40 +36,11 @@
       " turns, gain a #yCeremony [REMOVE_SPACE]."
     ]
   },
-  "awakened:RageExhaustPower": {
-    "NAME": "Mystic Order",
-    "DESCRIPTIONS": [
-      "Whenever you #yExhaust a card this turn, gain #b",
-      " #yBlock [REMOVE_SPACE]."
-    ]
-  },
-  "awakened:NextPowerBlockPower": {
-    "NAME": "Divination",
-    "DESCRIPTIONS": [
-      "The next time you play a #yPower [REMOVE_SPACE], #yConjure #b",
-      " time.",
-      " times."
-    ]
-  },
-  "awakened:NextPowerAOEPower": {
-    "NAME": "Raven Strike",
-    "DESCRIPTIONS": [
-      "The next time you play a #yPower [REMOVE_SPACE], deal #b",
-      " damage to ALL enemies."
-    ]
-  },
   "awakened:SacramentPower": {
     "NAME": "Sacraments",
     "DESCRIPTIONS": [
       "Whenever you play a #yPower [REMOVE_SPACE], gain #b",
       " #yBlock [REMOVE_SPACE]."
-    ]
-  },
-  "awakened:EnemyHexedPower": {
-    "NAME": "Hexed",
-    "DESCRIPTIONS": [
-      "This creature takes #b",
-      "% more damage from the next #yAttack [REMOVE_SPACE]."
     ]
   },
   "awakened:FlarePower": {
@@ -98,8 +62,8 @@
       " NL This effect cannot be triggered again this turn."
     ]
   },
-  "awakened:LibrarianPower": {
-    "NAME": "Grand Magus",
+  "awakened:SpellbinderPower": {
+    "NAME": "Spellbinder",
     "DESCRIPTIONS": [
       "At the start of your turn, #yConjure [REMOVE_SPACE].",
       "At the start of your turn, #yConjure at random #b",
@@ -115,7 +79,7 @@
       " damage to ALL enemies."
     ]
   },
-  "awakened:EmpressPower": {
+  "awakened:MoonlitVisionPower": {
     "NAME": "Moonlit Vision",
     "DESCRIPTIONS": [
       "At the start of your turn, if your hand contains #b8 or more cards, gain [E].",
@@ -123,7 +87,7 @@
       " [E]."
     ]
   },
-  "awakened:InvasionPower": {
+  "awakened:EclipseEmbracePower": {
     "NAME": "Eclipse Embrace",
     "DESCRIPTIONS": [
       "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain [E] and draw a card next turn.",
@@ -135,11 +99,11 @@
   "awakened:SongOfSorrowPower": {
     "NAME": "Song of Sorrow",
     "DESCRIPTIONS": [
-      "Whenever you create a #yVoid [REMOVE_SPACE], deal #b",
-      " damage to ALL enemies. "
+      "Whenever you create a #yVoid [REMOVE_SPACE], ALL enemies lose #b",
+      " HP."
     ]
   },
-  "awakened:FeathersinksPower": {
+  "awakened:ShroudOfMiasmaPower": {
     "NAME": "Shroud of Miasma",
     "DESCRIPTIONS": [
       "Whenever you attack an enemy with #yHex [REMOVE_SPACE], gain #b",
@@ -160,8 +124,8 @@
       " HP."
     ]
   },
-  "awakened:DarkIncantationRitualPower": {
-    "NAME": "Archmage",
+  "awakened:ArchmagusPower": {
+    "NAME": "Archmagus",
     "DESCRIPTIONS": [
       "The first Spell you play each turn is played twice.",
       "The first #b",
@@ -191,27 +155,11 @@
       " [E] ."
     ]
   },
-  "awakened:EntanglePowersPower": {
-    "NAME": "Sacrilege",
-    "DESCRIPTIONS": [
-      "The next time you play a #yPower [REMOVE_SPACE], lose [E] .",
-      "The next #b",
-      " times you play a #yPower [REMOVE_SPACE], lose [E] ."
-    ]
-  },
-  "awakened:DominusPower": {
-    "NAME": "Dominus",
+  "awakened:DemonGlyphPower": {
+    "NAME": "Demon Glyph",
     "DESCRIPTIONS": [
       "Gain #b",
       " #yStrength and #yDexterity when you #yAwaken [REMOVE_SPACE]."
-    ]
-  },
-  "awakened:NihilRetriggerPower": {
-    "NAME": "Nihil",
-    "DESCRIPTIONS": [
-      "Loses HP equal to its #yManaburn at the start of its turn.",
-      "Loses HP equal to its #yManaburn at the start of its turn ",
-      " times."
     ]
   },
     "awakened:ReverseRitualPower": {
@@ -221,28 +169,12 @@
         " #yStrength [REMOVE_SPACE]."
       ]
     },
-    "awakened:SheerTerrorPower": {
-      "NAME": "Sheer Terror",
-      "DESCRIPTIONS": [
-        "#yHex cannot be removed from this enemy for the rest of this turn.",
-        "#yHex cannot be removed from this enemy for the next #b",
-        " turns."
-      ]
-  },
-  "awakened:ConjureNextTurnPower": {
+  "awakened:EnsorcelatePower": {
     "NAME": "Ensorcelate",
     "DESCRIPTIONS": [
       "The next #yPower you play costs #b0 [REMOVE_SPACE].",
       "The next #b",
       " #yPowers you play cost #b0 [REMOVE_SPACE]."
-    ]
-  },
-  "awakened:DoubleDamageNextAttackPower": {
-    "NAME": "Double Damage",
-    "DESCRIPTIONS": [
-      "The next #yAttack you play deals double damage.",
-      "The next #b",
-      " #yAttacks you play deal double damage."
     ]
   },
   "awakened:ChosensVersePower": {
@@ -264,8 +196,8 @@
       " to your Spellbook."
     ]
   },
-  "awakened:RetainingGivesBlockPower": {
-    "NAME": "Retain Block",
+  "awakened:SpellshieldPower": {
+    "NAME": "Spellshield",
     "DESCRIPTIONS": [
       "Whenever you #yRetain a card, gain #b",
       " #yBlock."

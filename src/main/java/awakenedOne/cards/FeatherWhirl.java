@@ -3,8 +3,6 @@ package awakenedOne.cards;
 import awakenedOne.actions.EasyXCostAction;
 import awakenedOne.cards.tokens.PlumeJab;
 import awakenedOne.util.Wiz;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -23,7 +21,7 @@ public class FeatherWhirl extends AbstractAwakenedCard {
         loadJokeCardImage(this, makeBetaCardPath(FeatherWhirl.class.getSimpleName() + ".png"));
     }
 
- public void use(AbstractPlayer p, AbstractMonster m) {
+    public void use(AbstractPlayer p, AbstractMonster m) {
         att(new EasyXCostAction(this, (effect, params) -> {
             Wiz.makeInHand(new PlumeJab(), effect + params[0]);
             return true;

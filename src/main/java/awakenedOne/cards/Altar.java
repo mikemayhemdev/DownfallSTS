@@ -33,7 +33,7 @@ public class Altar extends AbstractAwakenedCard {
                 Wiz.p().hand.moveToExhaustPile(c);
             }
             list.clear();
-        }, null, uiStrings.TEXT[0],false,false,false));
+        }, null, uiStrings.TEXT[0], false, false, false));
         atb(new ConjureAction(false));
     }
 

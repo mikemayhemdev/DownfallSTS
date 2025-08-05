@@ -1,7 +1,6 @@
 package awakenedOne.actions;
 
 import basemod.BaseMod;
-import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -9,13 +8,11 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.ConfusionPower;
 import hermit.actions.ReduceCostActionFixed;
-import sneckomod.actions.MuddleAction;
 
 import java.util.Iterator;
 
-public class DrawPowerAction extends AbstractGameAction{
+public class DrawPowerAction extends AbstractGameAction {
 
     public AbstractPlayer p;
     public int cards_to_draw;
@@ -46,7 +43,7 @@ public class DrawPowerAction extends AbstractGameAction{
             Iterator<AbstractCard> var2 = this.p.drawPile.group.iterator();
 
             AbstractCard card;
-            while ( var2.hasNext() && (counter < this.cards_to_draw) ){
+            while (var2.hasNext() && (counter < this.cards_to_draw)) {
                 card = var2.next();
                 if (card.type == AbstractCard.CardType.POWER) {
                     tmp.addToRandomSpot(card);

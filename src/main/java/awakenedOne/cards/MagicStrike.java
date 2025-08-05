@@ -1,7 +1,5 @@
 package awakenedOne.cards;
 
-import awakenedOne.AwakenedOneMod;
-import awakenedOne.actions.ConjureAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
@@ -11,7 +9,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
-import static awakenedOne.util.Wiz.shuffleIn;
 
 public class MagicStrike extends AbstractAwakenedCard {
     public final static String ID = makeID(MagicStrike.class.getSimpleName());
@@ -21,7 +18,7 @@ public class MagicStrike extends AbstractAwakenedCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 12;
         tags.add(CardTags.STRIKE);
-       // baseSecondMagic = secondMagic = 1;
+        // baseSecondMagic = secondMagic = 1;
         loadJokeCardImage(this, makeBetaCardPath(MagicStrike.class.getSimpleName() + ".png"));
     }
 

@@ -11,6 +11,7 @@ import downfall.util.CardIgnore;
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
 import static awakenedOne.util.Wiz.atb;
+
 @Deprecated
 @CardIgnore
 public class Deathwish extends AbstractAwakenedCard {

@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.vfx.combat.WaterDropEffect;
 import static awakenedOne.util.Wiz.atb;
 
 public class NihilAction extends AbstractGameAction {
-    private int damage;
+    private final int damage;
 
     public NihilAction(AbstractCreature target, AbstractCreature source, int amount, DamageInfo.DamageType type, AbstractGameAction.AttackEffect effect) {
         setValues(target, source, amount);
@@ -40,7 +40,7 @@ public class NihilAction extends AbstractGameAction {
             this.target.damage(new DamageInfo(this.source, this.damage, this.damageType));
             if (AbstractDungeon.getMonsters().areMonstersBasicallyDead())
                 AbstractDungeon.actionManager.clearPostCombatActions();
-            AbstractDungeon.actionManager.addToTop((AbstractGameAction) new WaitAction(0.1F));
+            AbstractDungeon.actionManager.addToTop(new WaitAction(0.1F));
         }
     }
 
@@ -63,7 +63,7 @@ public class NihilAction extends AbstractGameAction {
     private static class OfferingEnemyEffect extends AbstractGameEffect {
         private int count = 0;
         private float timer = 0.0F;
-        private AbstractCreature target;
+        private final AbstractCreature target;
 
         public OfferingEnemyEffect(AbstractCreature target) {
             this.target = target;

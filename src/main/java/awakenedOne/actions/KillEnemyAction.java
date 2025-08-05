@@ -11,7 +11,10 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.*;
 
 public class KillEnemyAction extends AbstractGameAction {
+    private static final float BLOCK_ICON_X = -14.0F * Settings.scale;
+    private static final float BLOCK_ICON_Y = -14.0F * Settings.scale;
     private final AbstractMonster m;
+
 
     public KillEnemyAction(AbstractMonster m) {
         this.m = m;
@@ -41,7 +44,6 @@ public class KillEnemyAction extends AbstractGameAction {
         }
         this.isDone = true;
     }
-
 
     private void loseHP(int damageAmount) {
         boolean hadBlock = m.currentBlock != 0;
@@ -73,7 +75,6 @@ public class KillEnemyAction extends AbstractGameAction {
             AbstractDungeon.effectList.add(new BlockedWordEffect(m, m.hb.cX, m.hb.cY, AbstractMonster.TEXT[30]));
         }
     }
-
 
     private int decrementBlock(int damageAmount) {
         if (m.currentBlock > 0) {
@@ -110,8 +111,4 @@ public class KillEnemyAction extends AbstractGameAction {
 
         return damageAmount;
     }
-
-
-    private static final float BLOCK_ICON_X = -14.0F * Settings.scale;
-    private static final float BLOCK_ICON_Y = -14.0F * Settings.scale;
 }

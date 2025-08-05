@@ -80,7 +80,7 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "悪意の中で",
-    "DESCRIPTION": "敵に !DM! のデバフを適用する度に、すべての敵に !M! ダメージを与える。"
+    "DESCRIPTION": "敵にデバフを !DM! 回適用する度に、すべての敵に !M! ダメージを与える。"
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "しゃれこうべ",

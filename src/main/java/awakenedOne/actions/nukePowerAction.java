@@ -58,7 +58,7 @@ public class nukePowerAction extends AbstractGameAction {
     }
 
     private void mopUpSelectedCard(List<AbstractCard> cards) {
-    //    if (cards.get(0) instanceof VoidCard || cards.get(0) instanceof IntoTheVoid || (cards.get(0).type == AbstractCard.CardType.POWER))
+        //    if (cards.get(0) instanceof VoidCard || cards.get(0) instanceof IntoTheVoid || (cards.get(0).type == AbstractCard.CardType.POWER))
         if ((cards.get(0).type == AbstractCard.CardType.POWER)) {
             atb(new DrawCardAction(draw));
         }

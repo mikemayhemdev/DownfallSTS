@@ -1,7 +1,6 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.powers.EnemyHexedPower;
 import awakenedOne.powers.ManaburnPower;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
@@ -19,7 +18,8 @@ import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 
 import java.util.Iterator;
 
-import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
+import static awakenedOne.AwakenedOneMod.makeRelicPath;
 import static awakenedOne.util.Wiz.atb;
 
 public class TomeOfPortalmancy extends CustomRelic {
@@ -44,9 +44,9 @@ public class TomeOfPortalmancy extends CustomRelic {
             while (var2.hasNext()) {
                 AbstractMonster mo = (AbstractMonster) var2.next();
                 if (!mo.isDead && !mo.isDying) {
-                        atb(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, AMOUNT), AMOUNT));
-                        this.addToBot(new VFXAction(new GiantEyeEffect(mo.hb.cX, mo.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
-                        this.addToTop(new RelicAboveCreatureAction(mo, this));
+                    atb(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, AMOUNT), AMOUNT));
+                    this.addToBot(new VFXAction(new GiantEyeEffect(mo.hb.cX, mo.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
+                    this.addToTop(new RelicAboveCreatureAction(mo, this));
                 }
             }
 

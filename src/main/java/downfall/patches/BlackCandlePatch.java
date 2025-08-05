@@ -1,12 +1,9 @@
 package downfall.patches;
 
-import awakenedOne.powers.EntanglePowersPower;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.potions.AbstractPotion;
 import downfall.relics.BlackCandle;
-import hermit.relics.BartenderGlass;
 
 
 public class BlackCandlePatch {

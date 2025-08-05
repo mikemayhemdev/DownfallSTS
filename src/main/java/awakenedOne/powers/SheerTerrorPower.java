@@ -14,7 +14,7 @@ public class SheerTerrorPower extends AbstractAwakenedPower {
         super(NAME, PowerType.DEBUFF, true, owner, null, amount);
 
         if (this.amount <= 0) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }
         updateDescription();
     }

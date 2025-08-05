@@ -29,7 +29,7 @@ public class Ceremony extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new VFXAction(p, new InflameEffect(p), .1F));
         this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-       // applyToSelf(new StrengthOverTurnsPower(1, this.magicNumber));
+        // applyToSelf(new StrengthOverTurnsPower(1, this.magicNumber));
     }
 
     @Override

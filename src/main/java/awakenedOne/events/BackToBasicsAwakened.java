@@ -44,8 +44,8 @@ public class BackToBasicsAwakened extends AbstractImageEvent {
     }
 
     private BackToBasicsAwakened.CUR_SCREEN screen;
-    private List<String> cardsUpgraded;
-    private ArrayList<AbstractCard> cardsToRemove;
+    private final List<String> cardsUpgraded;
+    private final ArrayList<AbstractCard> cardsToRemove;
 
     public BackToBasicsAwakened() {
         super(NAME, DIALOG_1, "images/events/backToBasics.jpg");
@@ -113,7 +113,7 @@ public class BackToBasicsAwakened extends AbstractImageEvent {
                     this.imageEventText.updateBodyText(DESCRIPTIONSGUARDIAN[0]);
 
                     ArrayList<String> cardsDrained = new ArrayList<>();
-                    for (AbstractCard c : cardsToRemove){
+                    for (AbstractCard c : cardsToRemove) {
                         CardModifierManager.addModifier(c, new DrainingMod());
                         cardsDrained.add(c.cardID);
                     }
@@ -147,8 +147,8 @@ public class BackToBasicsAwakened extends AbstractImageEvent {
 
 
     private void upgradeStrikeAndDefends() {
-        for (AbstractCard c: AbstractDungeon.player.masterDeck.group){
-            if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) ) {
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.canUpgrade() && (c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.hasTag(AbstractCard.CardTags.STARTER_STRIKE))) {
                 c.upgrade();
                 this.cardsUpgraded.add(c.cardID);
                 AbstractDungeon.player.bottledCardUpgradeCheck(c);

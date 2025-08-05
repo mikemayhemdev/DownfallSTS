@@ -14,9 +14,8 @@ import static awakenedOne.AwakenedOneMod.makeRelicPath;
 
 public class WhiteRibbon extends CustomRelic {
 
-    private static final int AMOUNT = 3;
-
     public static final String ID = AwakenedOneMod.makeID("WhiteRibbon");
+    private static final int AMOUNT = 3;
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("WhiteRibbon.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("WhiteRibbon.png"));
 

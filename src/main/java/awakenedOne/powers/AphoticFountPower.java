@@ -3,7 +3,6 @@ package awakenedOne.powers;
 import awakenedOne.cards.tokens.spells.AphoticShield;
 import awakenedOne.ui.OrbitingSpells;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -12,7 +11,8 @@ public class AphoticFountPower extends AbstractAwakenedPower implements NonStack
     // intellij stuff buff
     public static final String NAME = AphoticFountPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
-    private boolean upgraded;
+    private final boolean upgraded;
+
     public AphoticFountPower(boolean upgraded) {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, 1);
         updateDescription();

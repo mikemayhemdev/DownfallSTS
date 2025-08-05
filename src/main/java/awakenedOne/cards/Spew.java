@@ -1,6 +1,5 @@
 package awakenedOne.cards;
 
-import automaton.cards.goodstatus.IntoTheVoid;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.patches.OnCreateCardSubscriber;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -8,10 +7,8 @@ import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
@@ -27,19 +24,18 @@ public class Spew extends AbstractAwakenedCard {
         baseDamage = 12;
         loadJokeCardImage(this, makeBetaCardPath(Spew.class.getSimpleName() + ".png"));
     }
+
+    public static boolean checkVoid() {
+        return OnCreateCardSubscriber.CardsCreatedThisTurn > 0;
+    }
+
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         int dam = this.damage;
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, dam, damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
-        if (checkVoid()){
+        if (checkVoid()) {
             atb(new GainEnergyAction(2));
         }
-    }
-
-
-
-    public static boolean checkVoid() {
-        return OnCreateCardSubscriber.CardsCreatedThisTurn > 0;
     }
 
     @Override
