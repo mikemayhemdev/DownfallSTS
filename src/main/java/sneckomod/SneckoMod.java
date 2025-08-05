@@ -527,7 +527,7 @@ public class SneckoMod implements
                 c.cardID.equals(AceOfWands.ID) ||
                 //Awakened One Cards
                 c.cardID.equals(ManaburnCard.ID) ||
-                c.cardID.equals(SingularityShield.ID) ||
+                c.cardID.equals(Psalm.ID) ||
                 c.cardID.equals(DeathCoil.ID) ||
                 c.cardID.equals(MirePit.ID) ||
                 c.cardID.equals(SplitWide.ID) ||
@@ -564,8 +564,6 @@ public class SneckoMod implements
                         c.cardID.equals(FeatherVeil.ID) ||
                         c.cardID.equals(AwakenedForm.ID) ||
                         c.cardID.equals(DemonGlyph.ID) ||
-                        c.cardID.equals(SacrilegiousStrike.ID) ||
-                        c.cardID.equals(Unleash.ID) ||
 
                         //Really Bad Offclass cards
                         c.cardID.equals(ChargedBarrage.ID)
