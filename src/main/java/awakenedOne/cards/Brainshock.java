@@ -1,11 +1,13 @@
 package awakenedOne.cards;
 
 import awakenedOne.patches.OnLoseEnergyPowerPatch;
+import awakenedOne.powers.BrainshockPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
+import hermit.util.Wiz;
 
 import static awakenedOne.AwakenedOneMod.*;
 
@@ -16,7 +18,6 @@ public class Brainshock extends AbstractAwakenedCard {
     public Brainshock() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 9;
-        this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath(Brainshock.class.getSimpleName() + ".png"));
     }
@@ -26,26 +27,11 @@ public class Brainshock extends AbstractAwakenedCard {
             this.addToBot(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
         }
         dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+        Wiz.applyToSelf(new BrainshockPower(1));
     }
 
-    public void calculateCardDamage(AbstractMonster mo) {
-        int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * OnLoseEnergyPowerPatch.EnergyLostThisCombat;
-        super.calculateCardDamage(mo);
-        this.baseDamage = realBaseDamage;
-        this.isDamageModified = this.damage != this.baseDamage;
-    }
-
-
-    public void applyPowers() {
-        int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * OnLoseEnergyPowerPatch.EnergyLostThisCombat;
-        super.applyPowers();
-        this.baseDamage = realBaseDamage;
-        this.isDamageModified = this.damage != this.baseDamage;
-    }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeDamage(4);
     }
 }

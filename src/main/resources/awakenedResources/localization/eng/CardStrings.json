@@ -230,7 +230,7 @@
   },
   "awakened:Brainshock": {
     "NAME": "Brainshock",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each [E] awakened:Drained this combat."
+    "DESCRIPTION": "Deal !D! damage. NL The next time you play a *Spell this turn, gain [E] and draw 1 card ."
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Eclipse Embrace",

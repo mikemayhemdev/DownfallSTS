@@ -202,5 +202,13 @@
       "Whenever you #yRetain a card, gain #b",
       " #yBlock."
     ]
+  },
+  "awakened:BrainshockPower": {
+    "NAME": "Brainshock",
+    "DESCRIPTIONS": [
+      "The next time you play a #ySpell this turn, gain #b",
+      " Energy and draw #b",
+      " card(s)."
+    ]
   }
 }
