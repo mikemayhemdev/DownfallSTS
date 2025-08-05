@@ -15,7 +15,6 @@ public class EclipseEmbrace extends AbstractAwakenedCard {
     public EclipseEmbrace() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(EclipseEmbrace.class.getSimpleName() + ".png"));
-        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
