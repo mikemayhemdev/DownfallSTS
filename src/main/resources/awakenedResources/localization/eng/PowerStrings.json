@@ -39,8 +39,8 @@
   "awakened:ThaumaturgyPower": {
     "NAME": "Thaumaturgy",
     "DESCRIPTIONS": [
-      "Whenever you gain #yStrength [REMOVE_SPACE], gain #b",
-      " #yBlock [REMOVE_SPACE]."
+      "At the start of your next #b",
+      " turns, gain a #yCeremony [REMOVE_SPACE]."
     ]
   },
   "awakened:RageExhaustPower": {
@@ -116,11 +116,11 @@
     ]
   },
   "awakened:EmpressPower": {
-    "NAME": "Midnight",
+    "NAME": "Moonlit Vision",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower [REMOVE_SPACE], #yConjure #b1 time.",
-      "Whenever you play a #yPower [REMOVE_SPACE], #yConjure #b",
-      " times."
+      "At the start of your turn, if your hand contains #b8 or more cards, gain [E].",
+      "At the start of your turn, if your hand contains #b8 or more cards, gain #b",
+      " [E]."
     ]
   },
   "awakened:InvasionPower": {

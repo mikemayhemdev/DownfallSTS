@@ -206,8 +206,8 @@
   },
   "awakened:MoonlitVision": {
     "NAME": "Moonlit Vision",
-    "DESCRIPTION": "At the start of your turn, if your hand contains 7 or more cards, gain [E].",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, if your hand contains 7 or more cards, gain [E]."
+    "DESCRIPTION": "At the start of your turn, if your hand contains 8 or more cards, gain [E].",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, if your hand contains 8 or more cards, gain [E]."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",

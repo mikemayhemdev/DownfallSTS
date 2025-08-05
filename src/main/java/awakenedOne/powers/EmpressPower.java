@@ -22,7 +22,7 @@ public class EmpressPower extends AbstractAwakenedPower implements NonStackableP
 
     @Override
     public void atStartOfTurnPostDraw() {
-        if (AbstractDungeon.player.hand.size() >= 7) {
+        if (AbstractDungeon.player.hand.size() >= 8) {
             flash();
             atb(new GainEnergyAction(amount));
         }
