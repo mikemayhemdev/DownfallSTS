@@ -2,28 +2,24 @@ package awakenedOne.cards;
 
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.HealAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.actions.DrawSpecificAction;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.*;
 
-public class Baptism extends AbstractAwakenedCard {
-    public final static String ID = makeID(Baptism.class.getSimpleName());
+public class Clutch extends AbstractAwakenedCard {
+    public final static String ID = makeID(Clutch.class.getSimpleName());
     // intellij stuff skill, self, rare, , , , , 4, 2
 
-    public Baptism() {
+    public Clutch() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 9;
         baseMagicNumber = magicNumber = 1;
-        loadJokeCardImage(this, makeBetaCardPath(Baptism.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Clutch.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -1,6 +1,8 @@
 package awakenedOne.cards;
 
+import awakenedOne.patches.OnLoseEnergyPowerPatch;
 import collector.powers.AddCopyNextTurnPower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.tempCards.Miracle;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,17 +20,34 @@ public class Unleash extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public Unleash() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 5;
+        baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath( "Unleash.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new NextTurnGainTemporaryStrengthPower(p, magicNumber)));
-        this.addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, 1), 1));
+        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
+    }
+
+    public void calculateCardDamage(AbstractMonster mo) {
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += this.magicNumber * OnLoseEnergyPowerPatch.EnergyLostThisCombat;
+        super.calculateCardDamage(mo);
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
+    }
+
+    public void applyPowers() {
+        int realBaseDamage = this.baseDamage;
+        this.baseDamage += this.magicNumber * OnLoseEnergyPowerPatch.EnergyLostThisCombat;
+        super.applyPowers();
+        this.baseDamage = realBaseDamage;
+        this.isDamageModified = this.damage != this.baseDamage;
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeDamage(1);
+        upgradeMagicNumber(1);
     }
 }

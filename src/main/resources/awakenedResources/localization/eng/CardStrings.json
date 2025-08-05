@@ -47,10 +47,6 @@
     "DESCRIPTION": "awakened:Conjure. NL This turn, Spells cost 0 and you cannot awakened:Conjure again.",
     "UPGRADE_DESCRIPTION": "Retain. awakened:Conjure. NL This turn, Spells cost 0 and you cannot awakened:Conjure again."
   },
-  "awakened:Spellshield": {
-    "NAME": "Spellshield",
-    "DESCRIPTION": "Whenever you create a card, gain !M! Block."
-  },
   "awakened:DarkEcho": {
     "NAME": "Dark Echo",
     "DESCRIPTION": "At the end of your turn, deal !D! damage to ALL enemies, increased by Strength."
@@ -119,7 +115,7 @@
     "NAME": "Recitation",
     "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Deal !D! damage again."
   },
-  "awakened:Swoop": {
+  "awakened:ChosenVerse": {
     "NAME": "Chosen Verse",
     "DESCRIPTION": "The next !M! times you play a non-Attack card this turn, draw a card and gain !B! Block."
   },
@@ -141,7 +137,7 @@
   },
   "awakened:ShroudOfMiasma": {
     "NAME": "Wave of Miasma",
-    "DESCRIPTION": "Apply !M! Weak and !awakened:m2! awakened:Manaburn to ALL enemies."
+    "DESCRIPTION": "Apply !M! Weak and !awakened:m2! awakened:Manaburn to ALL enemies. NL Exhaust."
   },
   "awakened:Sludge": {
     "NAME": "Sludge",
@@ -163,8 +159,8 @@
     "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Play the top card of your draw pile."
   },
   "awakened:Unleash": {
-    "NAME": "Zealotry",
-    "DESCRIPTION": "Next turn, gain !M! temporary Strength and [E]."
+    "NAME": "Unleash",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each other card in your hand."
   },
   "awakened:DesperatePrayer": {
     "NAME": "Desperate Prayer",
@@ -185,8 +181,8 @@
     "NAME": "Ensorcelate",
     "DESCRIPTION": "Gain !B! Block. NL The next Power you play costs 0."
   },
-  "awakened:Primacy": {
-    "NAME": "Primacy",
+  "awakened:Skyward": {
+    "NAME": "Skyward",
     "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Costs 1 less [E] for each Power played this combat.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards. NL Costs 1 less [E] for each Power played this combat."
   },
@@ -210,8 +206,8 @@
   },
   "awakened:MoonlitVision": {
     "NAME": "Moonlit Vision",
-    "DESCRIPTION": "Every 3 times you awakened:Conjure, gain [E].",
-    "UPGRADE_DESCRIPTION": "Innate. NL Every 3 times you awakened:Conjure, gain [E]."
+    "DESCRIPTION": "At the start of your turn, if your hand contains 7 or more cards, gain [E].",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, if your hand contains 7 or more cards, gain [E]."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
@@ -242,8 +238,8 @@
     "NAME": "Eclipse Embrace",
     "DESCRIPTION": "Whenever you Exhaust a *Void, gain [E] and draw a card next turn."
   },
-  "awakened:Baptism": {
-    "NAME": "Baptism",
+  "awakened:Clutch": {
+    "NAME": "Clutch",
     "DESCRIPTION": "Deal !D! damage. NL Draw !M! 0-cost card.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! 0-cost cards."
   },
@@ -302,8 +298,8 @@
     "DESCRIPTION": "awakened:Chant: Gain [E] [E] . NL Exhaust.",
     "UPGRADE_DESCRIPTION": "awakened:Chant: Gain [E] [E] [E] . NL Exhaust."
   },
-  "awakened:Victuals": {
-    "NAME": "Victuals",
+  "awakened:Gather": {
+    "NAME": "Gather",
     "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Put a card from your discard pile into your hand."
   },
   "awakened:TheTower": {
@@ -358,8 +354,8 @@
     "NAME": "Split Wide",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy, gain !M! temporary Strength. NL Exhaust."
   },
-  "awakened:SheerTerror": {
-    "NAME": "Cruelty",
+  "awakened:Spellshield": {
+    "NAME": "Spellshield",
     "DESCRIPTION": "Whenever you Retain a card, gain !M! Block."
   },
   "awakened:Deathwish": {
@@ -374,5 +370,10 @@
   "awakened:PlumeJab": {
     "NAME": "Plume Jab",
     "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Exhaust."
+  },
+  "awakened:Primacy": {
+    "NAME": "Primacy",
+    "DESCRIPTION": "The first !M! time you gain Strength each turn, draw a card.",
+    "UPGRADE_DESCRIPTION": "The first !M! times you gain Strength each turn, draw a card."
   }
 }
