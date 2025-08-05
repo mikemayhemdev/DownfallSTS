@@ -119,7 +119,7 @@
     "NAME": "Recitation",
     "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Deal !D! damage again."
   },
-  "awakened:Swoop": {
+  "awakened:ChosenVerse": {
     "NAME": "Chosen Verse",
     "DESCRIPTION": "The next !M! times you play a non-Attack card this turn, draw a card and gain !B! Block."
   },
@@ -185,8 +185,8 @@
     "NAME": "Ensorcelate",
     "DESCRIPTION": "Gain !B! Block. NL The next Power you play costs 0."
   },
-  "awakened:Primacy": {
-    "NAME": "Primacy",
+  "awakened:Skyward": {
+    "NAME": "Skyward",
     "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Costs 1 less [E] for each Power played this combat.",
     "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards. NL Costs 1 less [E] for each Power played this combat."
   },
@@ -242,8 +242,8 @@
     "NAME": "Eclipse Embrace",
     "DESCRIPTION": "Whenever you Exhaust a *Void, gain [E] and draw a card next turn."
   },
-  "awakened:Baptism": {
-    "NAME": "Baptism",
+  "awakened:Clutch": {
+    "NAME": "Clutch",
     "DESCRIPTION": "Deal !D! damage. NL Draw !M! 0-cost card.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! 0-cost cards."
   },
@@ -302,8 +302,8 @@
     "DESCRIPTION": "awakened:Chant: Gain [E] [E] . NL Exhaust.",
     "UPGRADE_DESCRIPTION": "awakened:Chant: Gain [E] [E] [E] . NL Exhaust."
   },
-  "awakened:Victuals": {
-    "NAME": "Victuals",
+  "awakened:Gather": {
+    "NAME": "Gather",
     "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Put a card from your discard pile into your hand."
   },
   "awakened:TheTower": {
@@ -358,8 +358,8 @@
     "NAME": "Split Wide",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy, gain !M! temporary Strength. NL Exhaust."
   },
-  "awakened:SheerTerror": {
-    "NAME": "Cruelty",
+  "awakened:Spellshield": {
+    "NAME": "Spellshield",
     "DESCRIPTION": "Whenever you Retain a card, gain !M! Block."
   },
   "awakened:Deathwish": {
@@ -374,5 +374,10 @@
   "awakened:PlumeJab": {
     "NAME": "Plume Jab",
     "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Exhaust."
+  },
+  "awakened:Primacy": {
+    "NAME": "Primacy",
+    "DESCRIPTION": "The first !M! time you gain Strength each turn, draw a card.",
+    "UPGRADE_DESCRIPTION": "The first !M! times you gain Strength each turn, draw a card."
   }
 }

@@ -2,19 +2,17 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.common.BetterDiscardPileToHandAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
 
-public class Victuals extends AbstractAwakenedCard {
-    public final static String ID = makeID(Victuals.class.getSimpleName());
+public class Gather extends AbstractAwakenedCard {
+    public final static String ID = makeID(Gather.class.getSimpleName());
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
-    public Victuals() {
+    public Gather() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 4;
         magicNumber = baseMagicNumber = 2;

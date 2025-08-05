@@ -1,24 +1,24 @@
 package awakenedOne.cards;
 
-import awakenedOne.powers.InResponsePower;
+import awakenedOne.powers.RetainingGivesBlockPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.util.Wiz;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.applyToSelf;
 
 public class Spellshield extends AbstractAwakenedCard {
     public final static String ID = makeID(Spellshield.class.getSimpleName());
-    // intellij stuff power, self, uncommon, , , , , 3, 1
+    // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
     public Spellshield() {
-        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Spellshield.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new InResponsePower(magicNumber));
+        Wiz.applyToSelf(new RetainingGivesBlockPower(magicNumber));
     }
 
     public void upp() {
