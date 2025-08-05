@@ -2,6 +2,8 @@ package automaton.patches;
 
 import automaton.FunctionHelper;
 import automaton.cardmods.EncodeMod;
+import awakenedOne.cards.Grimoire;
+import awakenedOne.ui.OrbitingSpells;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -49,6 +51,18 @@ public class GoSomewhereElsePatch {
                     isDone = true;
                     AbstractDungeon.player.limbo.removeCard(card);
                     FunctionHelper.addToSequence(card);
+                }
+            });
+            return false;
+        }
+        else if (card.cardID.equals(Grimoire.ID)) {
+            AbstractDungeon.player.limbo.addToTop(card);
+            AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    AbstractDungeon.player.limbo.removeCard(card);
+                    OrbitingSpells.addSpellCard(card);
                 }
             });
             return false;

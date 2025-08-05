@@ -128,7 +128,7 @@
     "FLAVOR": "A blade favored by mages due to its ability to channel casted magic back into itself.",
     "DESCRIPTIONS": [
       "Every time you play #b",
-      " Spells in a single turn, gain a #yCeremony [REMOVE_SPACE]."
+      " Spells in a combat, gain a #yCeremony [REMOVE_SPACE]."
     ]
   },
   "awakened:MoonTalisman": {

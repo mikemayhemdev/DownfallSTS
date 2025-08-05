@@ -5,6 +5,7 @@ import awakenedOne.actions.ConjureAction;
 import awakenedOne.actions.SetUpNextSpellAction;
 import awakenedOne.cards.*;
 import awakenedOne.cards.tokens.spells.*;
+import awakenedOne.powers.AphoticFountPower;
 import awakenedOne.relics.ZenerDeck;
 import awakenedOne.util.TexLoader;
 import awakenedOne.util.Wiz;
@@ -20,6 +21,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.localization.UIStrings;
+import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 import guardian.characters.GuardianCharacter;
@@ -92,19 +94,27 @@ public class OrbitingSpells {
     }
 
     public static void refreshSpells() {
-        spellCards.clear();
+        for (int i = 0; i < spells.size(); i++) {
+            String curID = spells.get(i);
+            spellCards.removeIf(card -> card.cardID.equals(curID));
+        }
+        if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
+            spellCards.removeIf(card -> card.cardID.equals(ESPSpell.ID));
+        }
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof AphoticFountPower) {
+                spellCards.removeIf(card -> card.cardID.equals(AphoticShield.ID));
+            }
+        }
+
         for (int i = 0; i < spells.size(); i++) {
             addSpellCard(CardLibrary.getCard(spells.get(i)).makeCopy());
         }
 
-        int count = (int) AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(q -> q instanceof Deathwish).count();
-        for (int i = 0; i < count; i++) {
-            addSpellCard(CardLibrary.getCard(DeathCoil.ID).makeCopy());
-        }
-
-        int count2 = (int) AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(q -> q instanceof AphoticFount).count();
-        for (int i = 0; i < count2; i++) {
-            addSpellCard(CardLibrary.getCard(AphoticShield.ID).makeCopy());
+        for (AbstractPower p : AbstractDungeon.player.powers) {
+            if (p instanceof AphoticFountPower) {
+                p.onSpecificTrigger();
+            }
         }
 
         if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
@@ -250,7 +260,7 @@ public class OrbitingSpells {
 
         if (hoveredCard != -1) {
             AbstractCard tar = spellCards.get(hoveredCard);
-            tar.target_x = tar.current_x = barBox.x + 200 * Settings.scale;
+            tar.target_x = tar.current_x = barBox.x + 350 * Settings.scale;
             tar.target_y = tar.current_y = Settings.HEIGHT - (POSITION_Y + 100 * Settings.scale);
             spellCards.get(hoveredCard).render(sb);
         }
