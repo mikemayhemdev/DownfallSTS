@@ -361,25 +361,25 @@ public class AwakenedOneMod implements
     @Override
     public void receiveSetUnlocks() {
         downfallMod.registerUnlockSuiteAlternating(
-                BirdsEye.ID,
-                MoonlitVision.ID,
-                Slaughter.ID,
+                RisingChant.ID,
+                Primacy.ID,
+                SplitWide.ID,
 
                 TomeOfPortalmancy.ID,
                 AbyssBlade.ID,
                 HexxBomb.ID,
 
-                Deathwish.ID,
-                AphoticFount.ID,
-                DoubleVision.ID,
+                Ensorcelate.ID,
+                Skyward.ID,
+                Slaughter.ID,
 
                 VioletPlumage.ID,
                 DeadBird.ID,
                 ShardOfNowak.ID,
 
-                SplitWide.ID,
-                Thaumaturgy.ID,
-                RisingChant.ID,
+                Grimoire.ID,
+                DoubleVision.ID,
+                AphoticFount.ID,
 
                 AwakenedOneChar.Enums.AWAKENED_ONE
         );
