@@ -3,6 +3,7 @@ package awakenedOne.cards;
 import awakenedOne.patches.OnLoseEnergyPowerPatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
@@ -13,7 +14,7 @@ public class Unleash extends AbstractAwakenedCard {
 
     public Unleash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 6;
         baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath("Unleash.png"));
     }
@@ -24,7 +25,7 @@ public class Unleash extends AbstractAwakenedCard {
 
     public void calculateCardDamage(AbstractMonster mo) {
         int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * OnLoseEnergyPowerPatch.EnergyLostThisCombat;
+        this.baseDamage += AbstractDungeon.player.hand.size() - 1;
         super.calculateCardDamage(mo);
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
@@ -32,7 +33,7 @@ public class Unleash extends AbstractAwakenedCard {
 
     public void applyPowers() {
         int realBaseDamage = this.baseDamage;
-        this.baseDamage += this.magicNumber * OnLoseEnergyPowerPatch.EnergyLostThisCombat;
+        this.baseDamage += AbstractDungeon.player.hand.size() - 1;
         super.applyPowers();
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;

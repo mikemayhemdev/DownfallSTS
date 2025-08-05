@@ -1,7 +1,9 @@
 package awakenedOne.cards.tokens.spells;
 
 import awakenedOne.cards.AbstractAwakenedCard;
+import awakenedOne.powers.BrainshockPower;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 
 import java.util.Collections;
@@ -64,6 +66,10 @@ public abstract class AbstractSpellCard extends AbstractAwakenedCard {
 //        }
 //    }
 
+    public void triggerOnGlowCheck() {
+
+        this.glowColor = AbstractDungeon.player.hasPower(BrainshockPower.POWER_ID) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
     @Override
     public List<String> getCardDescriptors() {
         return Collections.singletonList(uiStrings.TEXT[0]);
