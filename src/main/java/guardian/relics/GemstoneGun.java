@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import expansioncontent.patches.CenterGridCardSelectScreen;
 import guardian.GuardianMod;
 import guardian.cards.*;
+import guardian.characters.GuardianCharacter;
 
 import java.util.ArrayList;
 
@@ -89,6 +90,9 @@ public class GemstoneGun extends CustomRelic implements CustomSavable<ArrayList<
         allGemCards.add("PURPLE");
         allGemCards.add("SYNTHETIC");
         allGemCards.add("LIGHTBLUE");
+        if (AbstractDungeon.player instanceof GuardianCharacter) {
+            allGemCards.add("BLUE");
+        }
 
         int rando;
         String ID;

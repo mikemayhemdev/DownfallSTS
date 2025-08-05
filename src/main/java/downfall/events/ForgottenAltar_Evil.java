@@ -4,10 +4,14 @@ package downfall.events;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.colorless.Apparition;
+import com.megacrit.cardcrawl.cards.curses.Pain;
+import com.megacrit.cardcrawl.cards.curses.Shame;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 
 public class ForgottenAltar_Evil extends AbstractImageEvent {
     public static final String ID = "downfall:ForgottenAltar";
@@ -41,15 +45,30 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
             this.hpLoss = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.2F);
         }
 
+
+        if (AbstractDungeon.ascensionLevel >= 15) {
+            this.goldCost = 100;
+        } else {
+            this.goldCost = 50;
+        }
+
+        if (this.goldCost > AbstractDungeon.player.gold) {
+            this.goldCost = AbstractDungeon.player.gold;
+        }
+
         if (AbstractDungeon.player.gold >= goldCost) {
             this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldCost + OPTIONSALT[1] + (this.hpLoss + 10) + OPTIONSALT[2]);
         } else {
             this.imageEventText.setDialogOption(OPTIONSALT[3] + this.goldCost + OPTIONSALT[4], true);
-
         }
 
         this.imageEventText.setDialogOption(OPTIONS[2] + 5 + OPTIONS[3] + this.hpLoss + OPTIONS[4]);
-        this.imageEventText.setDialogOption(OPTIONSALT[5]);
+
+        if (15 > AbstractDungeon.ascensionLevel) {
+            this.imageEventText.setDialogOption(OPTIONSALT[5]);
+        } else {
+            this.imageEventText.setDialogOption(OPTIONSALT[6]);
+        }
     }
 
     protected void buttonEffect(int buttonPressed) {
@@ -79,8 +98,15 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
                         return;
                     case 2:
                         this.imageEventText.clearAllDialogs();
-                        this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
-                        this.imageEventText.setDialogOption(OPTIONSALT[5]);
+                        if (15 > AbstractDungeon.ascensionLevel) {
+                            this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
+                            this.imageEventText.setDialogOption(OPTIONSALT[5]);
+                        } else {
+                            Shame curse = new Shame();
+                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                            this.imageEventText.updateBodyText(DESCRIPTIONSALT[2]);
+                            this.imageEventText.setDialogOption(OPTIONSALT[5]);
+                        }
                         this.screenNum = 1;
                         logMetricIgnored(ID);
                         return;

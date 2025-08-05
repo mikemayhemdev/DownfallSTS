@@ -38,7 +38,7 @@ public class UnknownEgg extends CustomRelic {
             }
         }
 
-        Collections.shuffle(upgradableCards, new Random(AbstractDungeon.miscRng.randomLong()));
+        Collections.shuffle(upgradableCards, new Random(AbstractDungeon.relicRng.randomLong()));
         if (!upgradableCards.isEmpty()) {
             if (upgradableCards.size() == 1) {
                 ((AbstractCard) upgradableCards.get(0)).upgrade();

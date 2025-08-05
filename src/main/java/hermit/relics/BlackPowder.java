@@ -14,12 +14,15 @@ public class BlackPowder extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("black_powder.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("black_powder_outline.png"));
 
+    //aoe damage dealt
+    public static final int OOMPH = 2;
+
     public BlackPowder() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
     }
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + OOMPH + DESCRIPTIONS[1];
     }
 }

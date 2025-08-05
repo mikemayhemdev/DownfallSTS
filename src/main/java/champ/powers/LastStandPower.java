@@ -2,7 +2,6 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
-import champ.cards.LastStand;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.animations.ShoutAction;
@@ -19,7 +18,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import downfall.util.TextureLoader;
-import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Arrays;

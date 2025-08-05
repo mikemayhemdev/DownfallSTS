@@ -50,7 +50,7 @@ public class PandemoniumPower extends AbstractPower {
                     @Override
                     public void update() {
                         AbstractMonster randomMonster = AbstractDungeon.getCurrRoom().monsters.getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-                        cardToPlay.freeToPlayOnce = true;
+                        //cardToPlay.freeToPlayOnce = true;
                         cardToPlay.applyPowers();
                         cardToPlay.calculateCardDamage(randomMonster);
 

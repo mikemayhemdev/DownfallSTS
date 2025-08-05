@@ -147,7 +147,8 @@
   },
   "sneckomod:OverwhelmingPresence": {
     "NAME": "Overwhelming",
-    "DESCRIPTION": "The first time you shuffle your deck each turn, gain [E] and draw !M! card."
+    "DESCRIPTION": "Ethereal. NL The first time you play an sneckomod:Offclass card each turn, draw a card.",
+    "UPGRADE_DESCRIPTION": "The first time you play an sneckomod:Offclass card each turn, draw a card."
   },
   "sneckomod:RiskySword": {
     "NAME": "Risky Sword",
@@ -163,7 +164,8 @@
   },
   "sneckomod:QuickBite": {
     "NAME": "Snake Rake",
-    "DESCRIPTION": "Deal !D! damage. NL sneckomod:Muddle the highest-cost card in your hand."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card and sneckomod:Muddle it.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards and sneckomod:Muddle them."
   },
   "sneckomod:QuickMove": {
     "NAME": "Quick Move",
@@ -524,7 +526,7 @@
   },
   "sneckomod:CobraCoil": {
     "NAME": "Cobra Coil",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! expansioncontent:Constricted. NL sneckomod:Gift: Rare Attack."
+    "DESCRIPTION": "Deal !D! damage. NL Enemy takes !M! damage at the end of each of its turns. NL sneckomod:Gift: Rare Attack."
   },
   "sneckomod:Belittle": {
     "NAME": "Belittle",
@@ -566,7 +568,7 @@
   "sneckomod:MarkedCard": {
     "NAME": "Marked Card",
     "DESCRIPTION": "Retain. NL sneckomod:Muddle a card. NL It will always be cheaper. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL sneckomod:Muddle !M! cards. NL They will always be cheaper. NL Exhaust."
+    "UPGRADE_DESCRIPTION": "Retain. NL sneckomod:Muddle a card. NL It will always be cheaper. NL Exhaust."
   },
   "sneckomod:InertBlade": {
     "NAME": "Inert Blade",
@@ -599,19 +601,16 @@
   },
   "sneckomod:TrashCan": {
     "NAME": "Trash Can",
-    "DESCRIPTION": "At the start of your turn, you may Exhaust a card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, you may Exhaust a card."
+    "DESCRIPTION": "At the end of your turn, you may Exhaust a card."
   },
   "sneckomod:Lacerate": {
     "NAME": "Lacerate",
-    "DESCRIPTION": "Deal !D! damage. Whenever this enemy is debuffed this turn they gain !M! sneckomod:Venom. sneckomod:Gift: *Crippling *Cloud.",
-    "DESCRIPTION_BATTLE": "Deal !D! damage. Whenever this enemy is debuffed this turn they gain !M! sneckomod:Venom."
+    "DESCRIPTION": "Apply !M! sneckomod:Venom to ALL enemies. NL Gain a *Crippling *Cloud. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Apply !M! sneckomod:Venom to ALL enemies. NL Gain a *Crippling *Cloud+. NL Exhaust."
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Serpentine Sleuth",
     "DESCRIPTION": "Ethereal. NL Whenever you play a Power, gain [E]. NL sneckomod:Gift: Rare Power.",
-    "UPGRADE_DESCRIPTION": "Ethereal. NL Whenever you play a Power, gain [E] [E]. NL sneckomod:Gift: Rare Power.",
-    "DESCRIPTION_BATTLE": "Ethereal. NL Whenever you play a Power, gain [E].",
-    "UPGRADE_DESCRIPTION_BATTLE": "Ethereal. NL Whenever you play a Power, gain [E] [E]."
+    "DESCRIPTION_BATTLE": "Ethereal. NL Whenever you play a Power, gain [E]."
   }
 }

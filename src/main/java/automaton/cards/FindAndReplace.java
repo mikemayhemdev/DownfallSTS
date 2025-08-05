@@ -9,10 +9,10 @@ import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import static automaton.AutomatonMod.makeBetaCardPath;
-
 import java.util.ArrayList;
 import java.util.Comparator;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class FindAndReplace extends AbstractBronzeCard {
 

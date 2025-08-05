@@ -1,9 +1,8 @@
 package champ.cards;
 
-import champ.ChampMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.downfallMod;
 
 import static champ.ChampMod.loadJokeCardImage;
 
@@ -22,6 +21,12 @@ public class SwordSigil extends AbstractChampCard {
         for (int i = 0; i < magicNumber; i++) {
             techique();
         }
+    }
+
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        this.keywords.add(GameDictionary.STANCE.NAMES[0].toLowerCase());
     }
 
     public void upp() {

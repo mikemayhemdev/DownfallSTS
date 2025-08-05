@@ -46,8 +46,7 @@ public class UnendingSupplyPower extends AbstractPower implements CloneablePower
 
     public void atStartOfTurn() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            this.flash();//
-
+            this.flash();
             ArrayList<AbstractCard> cards = OffclassHelper.getXRandomOffclassCards(this.amount);
             for (AbstractCard card : cards) {
                 addToBot(new EchoACardAction(card, false));

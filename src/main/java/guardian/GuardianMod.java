@@ -390,6 +390,72 @@ public class GuardianMod implements PostDrawSubscriber,
         return rewardGemCards;
     }
 
+    public static ArrayList<AbstractCard> getRewardGemCardsButRelicRng(boolean onlyCommon, int count) {
+        ArrayList<String> allGemCards = new ArrayList<>();
+        ArrayList<AbstractCard> rewardGemCards = new ArrayList<>();
+
+        allGemCards.add("RED");
+        allGemCards.add("LIGHTBLUE");
+        allGemCards.add("FRAGMENTED");
+        if (!onlyCommon) allGemCards.add("ORANGE");
+        if (!onlyCommon) allGemCards.add("CYAN");
+        if (!onlyCommon) allGemCards.add("WHITE");
+        allGemCards.add("BLUE");
+        if (!onlyCommon) allGemCards.add("CRIMSON");
+        if (!onlyCommon) allGemCards.add("GREEN");
+        if (!onlyCommon) allGemCards.add("PURPLE");
+        if (!onlyCommon) allGemCards.add("SYNTHETIC");
+        if (!onlyCommon) allGemCards.add("YELLOW");
+
+        int rando;
+        String ID;
+        for (int i = 0; i < count; i++) {
+            rando = AbstractDungeon.relicRng.random(0, allGemCards.size() - 1);
+            ID = allGemCards.get(rando);
+            switch (ID) {
+                case "RED":
+                    rewardGemCards.add(new Gem_Red());
+                    break;
+                case "GREEN":
+                    rewardGemCards.add(new Gem_Green());
+                    break;
+                case "LIGHTBLUE":
+                    rewardGemCards.add(new Gem_Lightblue());
+                    break;
+                case "ORANGE":
+                    rewardGemCards.add(new Gem_Orange());
+                    break;
+                case "CYAN":
+                    rewardGemCards.add(new Gem_Cyan());
+                    break;
+                case "WHITE":
+                    rewardGemCards.add(new Gem_White());
+                    break;
+                case "BLUE":
+                    rewardGemCards.add(new Gem_Blue());
+                    break;
+                case "CRIMSON":
+                    rewardGemCards.add(new Gem_Crimson());
+                    break;
+                case "FRAGMENTED":
+                    rewardGemCards.add(new Gem_Fragmented());
+                    break;
+                case "PURPLE":
+                    rewardGemCards.add(new Gem_Purple());
+                    break;
+                case "SYNTHETIC":
+                    rewardGemCards.add(new Gem_Synthetic());
+                    break;
+                case "YELLOW":
+                    rewardGemCards.add(new Gem_Yellow());
+                    break;
+            }
+            allGemCards.remove(rando);
+        }
+
+        return rewardGemCards;
+    }
+
     public static void updateStasisCount() {
 
     }
@@ -876,7 +942,6 @@ public static void saveData() {
                 .dungeonID(TheBeyond.ID)
                 //Only in Evil if content sharing is disabled
                 //This is a guardian exclusive event that doesn't overwrite anything, it should appear in standard even without content sharing
-                .spawnCondition(() -> (1==1))
            //     .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
         BaseMod.addEvent(new AddEventParams.Builder(CrystalForge.ID, CrystalForge.class) //Event ID//

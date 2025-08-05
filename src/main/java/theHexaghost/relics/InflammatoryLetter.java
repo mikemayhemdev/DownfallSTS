@@ -21,15 +21,19 @@ public class InflammatoryLetter extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.FLAT);
     }
     //Jar of TOBSCo
+
+    //variables
+    public static final int INTENSITY = 1;
+
     @Override
     public void atBattleStart() {
         flash();
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(1), 1));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(INTENSITY), INTENSITY));
         //grayscale = true;
     }
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + INTENSITY + DESCRIPTIONS[1];
     }
 }

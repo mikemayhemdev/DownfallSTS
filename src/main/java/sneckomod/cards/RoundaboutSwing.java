@@ -11,7 +11,7 @@ public class RoundaboutSwing extends AbstractSneckoCard {
 
     public static final String ID = SneckoMod.makeID("RoundaboutSwing");
 
-    private static final int DAMAGE = 10;
+    private static final int DAMAGE = 8;
     private static final int UPGRADE_DAMAGE = 3;
     private static final int MAGIC = 2;
 

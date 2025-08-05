@@ -1,0 +1,125 @@
+{
+  "collector:EmeraldTorch": {
+    "NAME": "Antorcha Esmeralda",
+    "FLAVOR": "Los fuegos de la avaricia nunca se apagan.",
+    "DESCRIPTIONS": [
+      "Comienza cada combate con #b1 de #ycollector:Reserva."
+    ]
+  },
+  "collector:PrismaticTorch": {
+    "NAME": "Antorcha Prismática",
+    "FLAVOR": "Las llamas cambiantes reflejan el favor de la fortuna.",
+    "DESCRIPTIONS": [
+      "Reemplaza ",
+      "[] [REMOVE_SPACE]. Al comienzo de cada combate, añade una #yBrasa a tu mano y gana #b1 de #ycollector:Reserva. La primera vez que #yAgotes una #yBrasa cada turno, gana #b1 de #ycollector:Reserva [REMOVE_SPACE]."
+    ]
+  },
+  "collector:HolidayCoal": {
+    "NAME": "Carbón de Krampus",
+    "FLAVOR": "\"¡Intrigante! ¿Pero por qué solo ciertas chimeneas?\" - Ranwid",
+    "DESCRIPTIONS": [
+      "Cuando vayas a robar de una pila Coleccionada vacía, añade una #yMecha #yAfortunada a tu mano."
+    ]
+  },
+  "collector:BagOfTricks": {
+    "NAME": "Bolsa de Trucos",
+    "FLAVOR": "Tramposa.",
+    "DESCRIPTIONS": [
+      "Al comienzo de cada combate, roba #b",
+      " cartas Coleccionadas."
+    ]
+  },
+  "collector:JadeRing": {
+    "NAME": "Anillo de Jade",
+    "FLAVOR": "El jade es símbolo de honestidad.",
+    "DESCRIPTIONS": [
+      "Los enemigos reciben #b",
+      " de daño adicional de #ycollector:Condena [REMOVE_SPACE]."
+    ]
+  },
+  "collector:SoullitLamp": {
+    "NAME": "Lámpara Encendida por Almas",
+    "FLAVOR": "Una decoración fantasmal. El crepitar del fuego ha sido reemplazado por lamentos zumbantes.",
+    "DESCRIPTIONS": [
+      "Al obtenerla, gana #b3 de #yEsencia [REMOVE_SPACE]. Al comienzo del combate, añade una #yBrasa a tu mano."
+    ]
+  },
+  "collector:ThimbleHelm": {
+    "NAME": "Casco Dedal",
+    "FLAVOR": "Llevado por los héroes más diminutos de la Aguja.",
+    "DESCRIPTIONS": [
+      "Comienza cada combate con #b",
+      " de #yPV_Temporales [REMOVE_SPACE]. Mientras tengas #yPV_Temporales [REMOVE_SPACE], las cartas otorgan #b1 de #yBloqueo adicional [REMOVE_SPACE]."
+    ]
+  },
+  "collector:Incense": {
+    "NAME": "Incienso",
+    "FLAVOR": "Una forma antigua de claridad mental.",
+    "DESCRIPTIONS": [
+      "No puedes ganar #yDébil [REMOVE_SPACE], #yVulnerable ni #yFrágil mientras ya tengas alguno de esos efectos [REMOVE_SPACE]."
+    ]
+  },
+  "collector:FuelCanister": {
+    "NAME": "Lata de Combustible",
+    "FLAVOR": "Asquerosa.",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, #yRetén la carta de menor coste en tu mano."
+    ]
+  },
+  "collector:AutoCurser": {
+    "NAME": "Talismán Hexx",
+    "FLAVOR": "\"Desde que lo uso, me pego en el pie dos veces más. ¡Creo que funciona!\" - Ranwid",
+    "DESCRIPTIONS": [
+      "Al comienzo del combate, aplica #b1 de #yDébil y #yVulnerable a un enemigo aleatorio."
+    ]
+  },
+  "collector:Bagpipes": {
+    "NAME": "La Gaita",
+    "FLAVOR": "Este temido instrumento volvió loco al gran Kublai.",
+    "DESCRIPTIONS": [
+      "Siempre que apliques #yDébil o #yVulnerable nuevos a un enemigo, aumenta la cantidad aplicada en #b1 [REMOVE_SPACE]."
+    ]
+  },
+  "collector:BottledCollectible": {
+    "NAME": "Cerebro Embotellado",
+    "FLAVOR": "Recolectado en el laboratorio de un hechicero.",
+    "DESCRIPTIONS": [
+      "Al obtenerla, #yMejora una carta en tu Colección. Comienza los combates con ella en la parte superior de tu pila Coleccionada.",
+      "Comienza el combate con ",
+      " en la parte superior de tu pila Coleccionada.",
+      "Selecciona una carta para embotellar para "
+    ]
+  },
+  "collector:TheContract": {
+    "NAME": "El Contrato",
+    "FLAVOR": "Firma con sangre.",
+    "DESCRIPTIONS": [
+      "Al obtenerla, gana #b10 de #yEsencia [REMOVE_SPACE]."
+    ]
+  },
+  "collector:ForbiddenFruit": {
+    "NAME": "Fruta Prohibida",
+    "FLAVOR": "Esta especie de fruta no se parece a nada conocido.",
+    "DESCRIPTIONS": [
+      "Al obtenerla, elige y obtén una carta Común, Poco común y Rara de todas las disponibles. Luego, obtén una #yMaldita [REMOVE_SPACE].",
+      "Elige una carta Rara para añadir a tu mazo.",
+      "Elige una carta Poco común para añadir a tu mazo.",
+      "Elige una carta Común para añadir a tu mazo."
+    ]
+  },
+  "collector:RoughDiamond": {
+    "NAME": "Diamante en Bruto",
+    "FLAVOR": "Con las minas demolidas, incluso esta piedra empañada vale algo.",
+    "DESCRIPTIONS": [
+      "La primera vez que juegues una carta #yRara cada turno, gana [E] . Al obtenerla, obtén una recompensa de carta #yRara.",
+      "¡Conocimiento!"
+    ]
+  },
+  "collector:BlockedChakra": {
+    "NAME": "Chakra Bloqueado",
+    "FLAVOR": "Un solo tirón muscular es suficiente.",
+    "DESCRIPTIONS": [
+      "Gana [E] al comienzo de tu turno. No puedes robar de tu pila Coleccionada hasta el 4.º turno."
+    ]
+  }
+}

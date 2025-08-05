@@ -106,7 +106,7 @@ public class FleeingMerchant extends AbstractMonster {
      //   }
 
   //      if (!(AbstractDungeon.floorNum < 50)) {
-                    type = EnemyType.ELITE;
+                    type = EnemyType.NORMAL;
         //        }
 
 

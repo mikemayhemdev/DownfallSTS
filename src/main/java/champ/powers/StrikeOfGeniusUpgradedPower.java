@@ -1,11 +1,9 @@
 package champ.powers;
 
-import basemod.helpers.CardModifierManager;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -15,7 +13,6 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.util.TextureLoader;
 import expansioncontent.actions.EchoACardAction;
-import expansioncontent.cardmods.PropertiesMod;
 
 import java.util.ArrayList;
 
@@ -35,7 +32,7 @@ public class StrikeOfGeniusUpgradedPower extends AbstractPower implements Clonea
         this.owner = AbstractDungeon.player;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        this.isTurnBased = true;
+        this.isTurnBased = false;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);

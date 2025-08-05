@@ -1,0 +1,111 @@
+[
+  {
+    "PROPER_NAME": "Desenfoque",
+    "ID": "blur",
+    "NAMES": ["blur","desenfoque"],
+    "DESCRIPTION": "#yBloqueo no se elimina al inicio de tu turno."
+  },
+  {
+    "PROPER_NAME": "Vibrancy",
+    "NAMES": ["vibrancy"],
+    "DESCRIPTION": "NOT USED DO NOT TL"
+  },
+  {
+    "PROPER_NAME": "Opulence",
+    "NAMES": ["opulence"],
+    "DESCRIPTION": "NOT USED DO NOT TL"
+  },
+  {
+    "PROPER_NAME": "Regeneración",
+    "NAMES": ["regen", "regeneración"],
+    "DESCRIPTION": "Al final de tu turno, recupera PV igual a tu #yRegeneración y reduce #yRegeneración en #b1 [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Armadura de placas",
+    "NAMES": ["plated","placas"],
+    "DESCRIPTION": "Al final de tu turno, gana Bloqueo igual a tu #yArmadura #yde #yplacas [REMOVE_SPACE]. Recibir daño sin bloqueo reduce la #yArmadura #yde #yplacas en #b1 [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Jefe",
+    "NAMES": ["boss", "jefe"],
+    "DESCRIPTION": "Solo puedes jugar #b1 carta de #yJefe por turno."
+  },
+  {
+    "PROPER_NAME": "Eco",
+    "ID": "eco",
+    "NAMES": ["echo","eco"],
+    "DESCRIPTION": "Agrega una copia de una carta a tu mano; es #yEtérea y se #yExilia [REMOVE_SPACE]. NL Los ecos no pueden ser copiados por otros ecos."
+  },
+  {
+    "PROPER_NAME": "Exhuma",
+    "ID": "exhume",
+    "NAMES": ["exhume","exhuma"],
+    "DESCRIPTION": "Coloca una carta de tu pila de exilio en tu mano."
+  },
+  {
+    "PROPER_NAME": "Invencible",
+    "NAMES": ["invincible","invencible"],
+    "DESCRIPTION": "No puedes perder más de una cantidad específica de PV en un solo turno. NL Al final de cualquier ronda en la que Invencible haya evitado pérdida de PV, se elimina."
+  },
+  {
+    "PROPER_NAME": "Reclama",
+    "NAMES": ["reclaim","reclama"],
+    "DESCRIPTION": "Coloca una carta de tu pila de exilio en tu pila de descarte."
+  },
+  {
+    "NAMES": ["goop", "gooped", "baba", "babado","babeado"],
+    "PROPER_NAME": "Baba",
+    "DESCRIPTION": "El próximo ataque inflige #b1 de daño adicional por cada acumulación de #yBaba [REMOVE_SPACE], eliminando todas las acumulaciones y activando cualquier efecto de #yConsumir."
+  },
+  {
+    "PROPER_NAME": "Encadenado",
+    "NAMES": ["shackled","encadenado"],
+    "DESCRIPTION": "Las criaturas Encadenadas pierden #yFuerza durante un turno."
+  },
+  {
+    "PROPER_NAME": "PV temporales",
+    "ID": "pv_temp",
+    "NAMES": ["temp hp",
+      "temp_hp","pv temp","pv_temp"],
+    "DESCRIPTION": "Hasta el final del combate, previene el daño a tus PV."
+  },
+  {
+    "PROPER_NAME": "Pira",
+    "NAMES": ["pyre","pira"],
+    "DESCRIPTION": "Requiere exiliar una carta en tu mano además de pagar su coste de energía."
+  },
+  {
+    "PROPER_NAME": "Condena",
+   "NAMES": [
+	  "doom",
+      "doomed",
+      "condena",
+      "condenado"
+    ],
+    "DESCRIPTION": "Las criaturas Condenadas pierden PV al inicio de su turno; luego, Condena se elimina #bsalvo que la criatura esté #yAfligida (tenga tanto #yDébil como #yVulnerable [REMOVE_SPACE])."
+  },
+ {
+    "NAMES": ["goop", "gooped", "baba", "babado"],
+    "PROPER_NAME": "Baba",
+    "DESCRIPTION": "El próximo ataque inflige #b1 de daño adicional por cada acumulación de #yBaba [REMOVE_SPACE], eliminando todas las acumulaciones y activando cualquier efecto de #yConsumir."
+  },
+  {
+    "PROPER_NAME": "Restringido",
+    "NAMES": ["constricted","restringido"],
+    "DESCRIPTION": "Las criaturas con Restringido reciben daño al final de su turno."
+  },
+  {
+    "PROPER_NAME": "Cántico",
+    "NAMES": ["chant",
+      "Chant",
+      "Chants","cantar","cantico","cantar","canticos"],
+    "DESCRIPTION": "Los efectos de Cántico en una carta se activan durante el juego si jugaste un Poder mientras estaba en tu mano."
+  },
+  {
+    "PROPER_NAME": "Transformar",
+    "ID": "transform",
+    "NAMES": ["transform","transformar"],
+    "DESCRIPTION": "#yAgota una carta y reemplázala con otra diferente."
+  }
+]
+

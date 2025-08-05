@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import theHexaghost.HexaMod;
 import theHexaghost.cards.seals.*;
+import theHexaghost.relics.TheBrokenSeal;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -272,45 +273,6 @@ public class SealChamber extends AbstractImageEvent {
                 this.openMap();
         }
 
-    }
-
-
-
-    public boolean canSpawn() {
-        int variable = 0;
-        int hasone = 0;
-        int hastwo = 0;
-        int hasthree = 0;
-        int hasfour = 0;
-        int hasfive = 0;
-        int hassix = 0;
-
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c instanceof FirstSeal && hasone == 0) {
-                variable++;
-                hasone++;
-            } else if (c instanceof SecondSeal && hastwo == 0) {
-                variable++;
-                hastwo++;
-            } else if (c instanceof ThirdSeal && hasthree == 0) {
-                variable++;
-                hasthree++;
-            } else if (c instanceof FourthSeal && hasfour == 0) {
-                variable++;
-                hasfour++;
-            } else if (c instanceof SixthSeal && hasfive == 0) {
-                variable++;
-                hasfive++;
-            } else if (c instanceof FifthSeal && hassix == 0) {
-                variable++;
-                hassix++;
-            }
-        }
-
-        if (variable == 6) {
-            return false;
-        }
-        return true;
     }
 
     private enum CurScreen {

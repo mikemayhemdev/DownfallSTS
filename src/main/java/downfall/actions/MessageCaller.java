@@ -59,6 +59,9 @@ public class MessageCaller extends AbstractGameAction {
                 case 10:
                     AbstractDungeon.ftue = new SneckoTutorials();
                     break;
+                case 11:
+                    AbstractDungeon.ftue = new AwakenedOneTutorials();
+                    break;
             }
             downfallMod.unseenTutorials[code] = false;
 

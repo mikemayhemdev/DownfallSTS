@@ -29,7 +29,7 @@ public class FuelCanister extends CustomRelic {
         ArrayList<AbstractCard> toRetain = new ArrayList<>();
         for (AbstractCard q : AbstractDungeon.player.hand.group) {
             //can retain unplayable cards but not x cost cards, cannot retain ethereal cards or cards that already retain themselves
-            if ((q.costForTurn < max) && !(q.costForTurn < -1) && !(q.isEthereal) && !(q.selfRetain)) {
+            if ((q.costForTurn < max) && !(q.costForTurn <= -1) && !(q.isEthereal) && !(q.selfRetain)) {
             //if ((q.costForTurn < max) && !(q.costForTurn < -1) && !(q.selfRetain)) {
                 toRetain.clear();
                 toRetain.add(q);

@@ -1,0 +1,74 @@
+{
+  "Gremlin:NobFight": {
+    "TEXT": [
+      "¡GREMS DÉBILES DAN ALMAS!",
+      "Tú, Enfadado. Ahora eres mío.",
+      "Tú, Gordo. Ahora eres mío.",
+      "Tú, Femenino. Ahora eres mía.",
+      "Tú, Nervioso. Ahora eres mío.",
+      "Tú. Tonto. Ahora eres mío.",
+      "Tú. Ahora eres mío.",
+      "Necesito elegir."
+    ]
+  },
+  "Gremlin:GremFight": {
+    "TEXT": [
+      "¡Aplástenles la cabeza!",
+      "¡Mátenlos bien muertos!",
+      "¡Tómenles sus cosas!"
+    ]
+  },
+  "Gremlin:ResurrectOption": {
+    "TEXT": [
+      "Resucitar",
+      "(Acción gratuita) Invoca a un Gremlin aleatorio desde la tumba.",
+      "Se requiere un Gremlin muerto.",
+      "El sitio de descanso ya fue profanado.",
+      "¡ME LEVANTO!",
+      "¡ME LEVANTO, DE NUEVO!",
+      "¡VOLVÍ POR MÁS SAQUEO!"
+    ]
+  },
+  "Gremlin:RestOption": {
+    "TEXT": [
+      "Descansar",
+      "Cura a todos los Gremlins un 100% de tus PV máximos (",
+      " PV de ",
+      "Cura a todos los Gremlins un 30% de tus PV máximos (",
+      "Si hay algún Gremlin muerto, uno será resucitado al azar."
+    ]
+  },
+  "Gremlin:Swap": {
+    "TEXT": [
+      "¡SIN CAMBIO!",
+      "¡NOB ES EL JEFE AHORA!",
+      "¡NOB MANDA PARA SIEMPRE!"
+    ]
+  },
+  "Gremlin:ArtMode": {
+    "TEXT": [
+      "Modo Artístico Gremlin",
+      "Los Gremlins invaden los marcos de las cartas. Solo afecta lo visual. Podría facilitar encontrar sinergias."
+    ]
+  },
+  "Gremlin:BonusGold": {
+    "TEXT": [
+      " Oro (Bonus)"
+    ]
+  },
+  "Gremlin:MakeEchoAction": {
+    "TEXT": [
+      "Eco: "
+    ]
+  },
+  "Gremlin:EventReplacementStrings": {
+    "TEXT": [
+      "#rPierde #r",
+      " #rPV",
+      "#rTodos #rlos #rGremlins #rpierden #r",
+      "#gGana #g",
+      " #gPV",
+      "#gTodos #glos #gGremlins #gganan #g"
+    ]
+  }
+}

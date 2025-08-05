@@ -1,13 +1,17 @@
 package expansioncontent.powers;
 
 
+import awakenedOne.AwakenedOneMod;
+import awakenedOne.ui.OrbitingSpells;
 import basemod.interfaces.CloneablePowerInterface;
+import champ.powers.PushThroughPower;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.OnPlayerDeathPower;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.unique.RemoveDebuffsAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -15,9 +19,12 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import expansioncontent.expansionContentMod;
 import downfall.util.TextureLoader;
+
+import static awakenedOne.util.Wiz.*;
 
 
 public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPower, CloneablePowerInterface {
@@ -50,19 +57,24 @@ public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPowe
         return false;
     }
 
-    public void onVictory()
-         {
-          AbstractPlayer p = AbstractDungeon.player;
+    public void onVictory() {
+        AbstractPlayer p = AbstractDungeon.player;
            if (p.currentHealth > 0) {
                  p.heal(this.amount);
           }
-          }
+    }
 
     public void trigger(AbstractPlayer abstractPlayer) {
         AbstractDungeon.actionManager.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, AwakenDeathPower.POWER_ID));
+        atb(new RemoveDebuffsAction(this.owner));
+        if (AbstractDungeon.actionManager.turnHasEnded) {
+            applyToSelfTop(new PushThroughPower(1));
+        }
         AbstractDungeon.actionManager.addToTop(new HealAction(abstractPlayer, abstractPlayer, this.amount));
         AbstractDungeon.actionManager.addToTop(new VFXAction(this.owner, new IntenseZoomEffect(this.owner.hb.cX, this.owner.hb.cY, true), 0.05F, true));
         AbstractDungeon.actionManager.addToTop(new SFXAction("VO_AWAKENEDONE_1"));
+        AwakenedOneMod.awakenedthiscombat = true;
+        OrbitingSpells.upgradeall();
     }
 
     @Override

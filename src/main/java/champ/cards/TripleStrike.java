@@ -10,7 +10,6 @@ import expansioncontent.actions.EchoACardAction;
 import expansioncontent.cardmods.EtherealMod;
 import expansioncontent.cardmods.ExhaustMod;
 import expansioncontent.cardmods.PropertiesMod;
-import expansioncontent.expansionContentMod;
 
 import static champ.ChampMod.loadJokeCardImage;
 

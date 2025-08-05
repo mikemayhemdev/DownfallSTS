@@ -1,6 +1,5 @@
 package champ.cards;
 
-import champ.ChampMod;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -16,7 +15,7 @@ public class Backstep extends AbstractChampCard {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
        // tags.add(ChampMod.OPENER);
 
-        baseBlock = 7;
+        baseBlock = 6;
         //this.tags.add(ChampMod.OPENERDEFENSIVE);
         //tags.add(ChampMod.COMBO);
         //tags.add(ChampMod.COMBOBERSERKER);

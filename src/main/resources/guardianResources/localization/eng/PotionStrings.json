@@ -10,7 +10,7 @@
     "NAME": "Polishing Oil",
     "DESCRIPTIONS": [
       "Gain #b",
-      " #yBlock. Enter #yDefensive #yMode [REMOVE_SPACE]."
+      " #yBlock [REMOVE_SPACE]. Enter #yDefensive #yMode [REMOVE_SPACE]."
     ]
   },
   "Guardian:BlockOnCardUsePotion": {

@@ -1,0 +1,59 @@
+{
+  "awakened:Nest": {
+    "NAME": "The Nest",
+    "DESCRIPTIONS": [
+      "You have found and returned to it. NL #pThe #pNest, the site of your ascension into the #b~living~ #b~avatar~ #b~of~ #b~a~ #b~god.~ The instant you enter, you are surrounded by Cultists, @cawing@ and @cheering@ for you! NL They know well that your arrivals often come with the requirements of a #r@tithe....@",
+      "The fights ahead will be difficult, and this is the perfect time to find a unique piece of weaponry to add to your arsenal. NL NL #r@...No@ #r@daggers@ #r@though.@ NL NL You perform a potent ritual to summon an extremely powerful #yrelic, but performing this ritual has taken a heavy toll on you. NL NL Drained, you leave the Nest, hopeful that your new weapon will create havoc in its wake.",
+      "More and more of the flock line up, bringing you offerings. NL NL Most are @worthless@ @trash,@ but one brings a particularly interesting offering: a #bpowerful #belixir that could greatly benefit you in battle. NL NL Soon after, you leave the Nest and continue your journey downwards the Spire.",
+      "The cultists surround you even more than they normally would upon seeing their prized statue return to them as well. NL As this is cause for celebration, you are showered in gifts and Souls! NL By the time the celebrations are over and you've left the Nest, you realize that you could have used this time to instead look for a valuable weapon... NL NL It's too late now, but you move forward anyways.",
+      "#r@\"BIRDGOD!!@ #r@RETURNED!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL The statue that you decided to not destroy has come in handy today for sure.",
+      "",
+      "",
+      "The Cultists surround you even more than they normally would upon seeing their prized statue return to them. NL As this is cause for celebration, you are showered in gifts and Souls! NL By the time the celebrations are over and you've left the Nest, you realize that you could have used this time to instead look for a valuable weapon... NL NL It's too late now, but you move forward anyways.",
+      "You quickly move to the Donation Box and treasury, intending to make full use of the coin and to find a #yRelic as well. NL NL The coins, paid for in blood itself, can act as a viable substitute for #bSouls. NL NL The #yRelic, of course, will also prove helpful in the trials ahead. NL NL You clutch the #rblood-soaked coins from the Donation Box, intending to make full use of them, but then you notice that the coffers are running quite low... NL NL NL ~...~",
+      "Were you... #r@robbed?@ The Nest, #pstolen from? NL NL Of course not, there's ~no~ ~way~ that would happen. NL NL NL That would be foolish, to even think of such a thing. NL NL NL ~...right?~ NL NL NL You push your #y~lingering~ #y~doubts~ aside and move on and away from the Nest."
+    ],
+    "OPTIONS": [
+      "[Return Statue] #rLose #rBroken #rWing #rStatue. #gGain #gmany #grewards.",
+      "[Locked] Requires Broken Wing Statue.",
+      "[Collect Offerings] #gGain #ga #gCuriosity #gPotion.",
+      "[Summon Weaponry] #gObtain #ga #gspecial #gRelic. #rLose #r",
+      " #rMax #rHP.",
+      "[Donation Box] #gGain #g",
+      " #gGold #gand #ga #gCommon #gRelic. #rBecome #rCursed #r- #rDoubt.",
+      "[Leave]",
+      "[Continue]",
+      "[Be Praised!] #gGain #grewards for returning the #gBroken #gWing #gStatue.",
+      "[Continue] - #rBecome #rCursed #r- #rDoubt."
+    ]
+  },
+  "awakened:WingStatue": {
+    "NAME": "Wing Statue",
+    "DESCRIPTIONS": [
+      "Among the stone and boulders, you notice an intricate large blue statue depicting Mazaleth, God of Crows. NL NL You feel a sudden, intense anger and desire to destroy it. NL NL However, you know doing so will draw the ire of your benefactor.",
+      "You decide that it isn't worth the danger of destroying the statue, and instead decide to take the statue with you. NL You temporarily strain under its weight, but quickly get a handle of it and move on.",
+      "You lash out at the statue, shattering it into pieces! NL From the rubble, you find a sharp fragment of the statue which still possesses lingering magic. NL You leave, feeling a #pdark #penergy seep into your blood.",
+      "You walk past and continue onward.",
+      "CA...Caw?! Gift for BIRD GOD?",
+      "CA-CAAAW!!",
+      "An exchange? A fair offer...",
+      "The cult will be pleased."
+    ],
+    "OPTIONS": [
+      "[Destroy] #gGain #gSharpened #gFragment. #rBecome #rCursed #rTwice #r- #rHaemophilia.",
+      "[Collect] #rLose #r",
+      "[Leave]",
+      " #rHP. #gGain #gBroken #gWing #gStatue."
+    ]
+  },
+  "awakened:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Nothing matters except the struggle for life. The here and now."
+    ],
+    "OPTIONS": [
+      "[Desperation] #gYour #gStrikes #gand #gDefends #gbecome #gDraining.",
+      "[Locked] Requires a Strike or Defend."
+    ]
+  }
+}

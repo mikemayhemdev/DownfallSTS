@@ -2,6 +2,7 @@ package champ.relics;
 
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.MathUtils;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
 
-public class Barbells extends CustomRelic {
+public class Barbells extends CustomRelic implements OnRemoveCardFromMasterDeckRelic {
     public static final String ID = ChampMod.makeID("Barbells");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Barbell.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Barbell.png"));
@@ -26,6 +27,44 @@ public class Barbells extends CustomRelic {
     public Barbells() {
         super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.MAGICAL);
     }
+
+    //# of required cards to perform an upgrade
+    private static final int AMOUNT = 10;
+
+
+    @Override
+    public void onEquip() {
+        ArrayList<AbstractCard> possibleCards = new ArrayList<>();// 38
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.canUpgrade()) {// 40
+                possibleCards.add(c);// 41
+            }
+        }
+        this.counter = possibleCards.size();
+    }
+
+
+    @Override
+    public void onRemoveCardFromMasterDeck(AbstractCard var1) {
+        ArrayList<AbstractCard> possibleCards = new ArrayList<>();// 38
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+            if (c.canUpgrade()) {// 40
+                possibleCards.add(c);// 41
+            }
+        }
+        this.counter = possibleCards.size();
+    }
+
+    public void onObtainCard(AbstractCard c) {
+        ArrayList<AbstractCard> possibleCards = new ArrayList<>();// 38
+        for (AbstractCard card : AbstractDungeon.player.masterDeck.group) {
+            if (card.canUpgrade()) {// 40
+                possibleCards.add(card);// 41
+            }
+        }
+        this.counter = possibleCards.size();
+    }
+
 
     @Override
     public void onEnterRoom(AbstractRoom room) {
@@ -38,9 +77,11 @@ public class Barbells extends CustomRelic {
                     possibleCards.add(c);// 41
                 }
             }
+            this.counter = possibleCards.size();
 
-            if (possibleCards.size() >= 10) {// 45
-                AbstractCard card = possibleCards.get(AbstractDungeon.miscRng.random(0, possibleCards.size() - 1));// 46
+            if (possibleCards.size() >= AMOUNT) {// 45
+                this.counter = possibleCards.size() - 1;
+                AbstractCard card = possibleCards.get(AbstractDungeon.relicRng.random(0, possibleCards.size() - 1));// 46
                 card.upgrade();// 47
                 AbstractDungeon.player.bottledCardUpgradeCheck(card);// 48
                 float x = MathUtils.random(0.1F, 0.9F) * (float) Settings.WIDTH;
@@ -58,6 +99,6 @@ public class Barbells extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + AMOUNT + DESCRIPTIONS[1];
     }
 }

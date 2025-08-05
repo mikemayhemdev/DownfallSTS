@@ -70,7 +70,6 @@ public class SnakeEyesPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        // Remove the power at the end of the turn
         if (isPlayer) {
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
@@ -78,7 +77,6 @@ public class SnakeEyesPower extends AbstractPower implements CloneablePowerInter
 
     @Override
     public void updateDescription() {
-        // Update the power description based on the amount
         if (this.amount == 1) {
             this.description = DESCRIPTIONS[0];
         } else {

@@ -14,6 +14,11 @@ public class ObsidianScales extends CustomRelic implements OnReceivePowerRelic{
     public static final String IMG_PATH = "relics/obsidianscales.png";
     public static final String OUTLINE_IMG_PATH = "relics/obsidianscalesOutline.png";
 
+    //Thorns at start of battle
+    private static final int INITIALTHORNS = 3;
+
+    //Thorns upon being debuffed
+    private static final int THORNS = 1;
 
     public ObsidianScales() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)),
@@ -23,7 +28,7 @@ public class ObsidianScales extends CustomRelic implements OnReceivePowerRelic{
 
     public void atBattleStart() {
         this.flash();
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, 3), 3));
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, INITIALTHORNS), INITIALTHORNS));
     }
 
 
@@ -32,7 +37,7 @@ public class ObsidianScales extends CustomRelic implements OnReceivePowerRelic{
         // was told that checking for flex / speed / thorns down was "not fun" so it uses determination rules
        if (var1.type == AbstractPower.PowerType.DEBUFF){
            this.flash();
-            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, 1), 1));
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, THORNS), THORNS));
         }
         return true;
     }
@@ -40,7 +45,7 @@ public class ObsidianScales extends CustomRelic implements OnReceivePowerRelic{
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + INITIALTHORNS + DESCRIPTIONS[1] + THORNS + DESCRIPTIONS[2];
     }
 
 }

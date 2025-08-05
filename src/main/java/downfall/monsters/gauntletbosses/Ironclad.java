@@ -1,11 +1,13 @@
 package downfall.monsters.gauntletbosses;
 
 import charbosses.core.EnemyEnergyManager;
+import charbosses.powers.cardpowers.EnemyWraithFormPower;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.blue.Buffer;
 import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
 import com.megacrit.cardcrawl.cards.red.Bash;
@@ -94,7 +96,12 @@ public class Ironclad extends GauntletBoss {
                 }
                 break;
             case 5:
-                addToBot(new ApplyPowerAction(this, this, new EnemyDemonFormPower(this, 2), 2));
+                if (AbstractDungeon.ascensionLevel >= 18) {
+                    addToBot(new ApplyPowerAction(this, this, new EnemyDemonFormPower(this, 3), 3));
+                }
+                if (AbstractDungeon.ascensionLevel < 18) {
+                    addToBot(new ApplyPowerAction(this, this, new EnemyDemonFormPower(this, 2), 2));
+                }
                 break;
         }
 
@@ -104,8 +111,12 @@ public class Ironclad extends GauntletBoss {
 
     private void bossMove() {
         int rnd = AbstractDungeon.cardRandomRng.random(0, 3);
-        if (turnNum > 5) {
-            rnd = AbstractDungeon.cardRandomRng.random(0, 4);
+        if (this.hasPower(EnemyDemonFormPower.POWER_ID)) {
+            if (rnd == 2) {
+                while (rnd == 2) {
+                    rnd = AbstractDungeon.cardRandomRng.random(0, 3);
+                }
+            }
         }
         switch (rnd) {
             case 0:
@@ -124,10 +135,6 @@ public class Ironclad extends GauntletBoss {
                 isAttacking = true;
                 setMove(moveName(Bash.ID), (byte) 4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
                 break;
-            case 4:
-                isAttacking = true;
-                setMove(moveName(Bash.ID), (byte) 4, Intent.ATTACK_DEBUFF, this.damage.get(2).base);
-                break;
     }
     }
 
@@ -135,7 +142,15 @@ public class Ironclad extends GauntletBoss {
         turnNum++;
         if (turnNum == 5) {
             isAttacking = false;
-            setMove(moveName(DemonForm.ID), (byte) 5, Intent.BUFF);
+
+            if (AbstractDungeon.ascensionLevel < 18) {
+                setMove(moveName(DemonForm.ID), (byte) 5, Intent.BUFF);
+            }
+
+            if (AbstractDungeon.ascensionLevel >= 18) {
+                setMove(moveName(DemonForm.ID) + "+", (byte) 5, Intent.BUFF);
+            }
+
         } else {
             if (isThird && turnNum > 1 && ally1 != null && ally2 != null) {
 

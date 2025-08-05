@@ -1,11 +1,11 @@
 package champ.cards;
 
-import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WhirlwindEffect;
 
@@ -37,10 +37,11 @@ public class Encircle extends AbstractChampCard {
         atb(new VFXAction(new WhirlwindEffect(), 0.0F));
         allDmg(AbstractGameAction.AttackEffect.NONE);
 
-        for (AbstractMonster q : monsterList()) {
-            atb(new DrawCardAction(magicNumber));
+        for (AbstractMonster monster : AbstractDungeon.getMonsters().monsters) {
+            if ((!monster.isDeadOrEscaped())) {
+                atb(new DrawCardAction(magicNumber));
+            }
         }
-
     }
 
     public void upp() {

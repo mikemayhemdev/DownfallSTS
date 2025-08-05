@@ -17,8 +17,10 @@
     "NAME": "Shotglass",
     "FLAVOR": "Any liquid placed inside changes into something else.",
     "DESCRIPTIONS": [
-      "First #b2 times you use a potion each combat, gain a random potion. You can only use #b2 potions each combat.",
-      "You cannot use any more potions this combat."
+      "First #b",
+      "You cannot use any more potions this combat.",
+      " times you use a potion each combat, gain a random potion. You can only use #b",
+      " potions each combat."
     ]
   },
   "hermit:Horseshoe": {
@@ -39,7 +41,8 @@
     "NAME": "Red Scarf",
     "FLAVOR": "It's warm and fuzzy.",
     "DESCRIPTIONS": [
-      "Whenever you apply a new debuff to an enemy, gain #b3 #yBlock [REMOVE_SPACE]."
+      "Whenever you apply a new debuff to an enemy, gain #b",
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "hermit:DentedPlate": {
@@ -60,43 +63,51 @@
     "NAME": "Charred Glove",
     "FLAVOR": "Parts of the glove still glow with otherworldly cinders.",
     "DESCRIPTIONS": [
-      "Whenever you draw a #rCurse [REMOVE_SPACE], your next attack deals #b3 more damage."
+      "Whenever you draw a #rCurse [REMOVE_SPACE], your next attack deals #b",
+      " more damage."
     ]
   },
   "hermit:ClaspedLocket": {
     "NAME": "Clasped Locket",
     "FLAVOR": "It won't open anymore.",
     "DESCRIPTIONS": [
-      "Replaces #yOld #yLocket [REMOVE_SPACE]. First time you draw a #rCurse each turn, #yExhaust it and draw #b2 cards. Upon pickup, obtain #b2 #rInjuries [REMOVE_SPACE].",
-      "Never again..."
+      "Replaces #yOld #yLocket [REMOVE_SPACE]. First time you draw a #rCurse each turn, #yExhaust it and draw #b",
+      "Never again...",
+      " cards. Upon pickup, obtain #b",
+      " #rInjuries [REMOVE_SPACE]."
     ]
   },
   "hermit:StraightRazor": {
     "NAME": "Straight Razor",
     "FLAVOR": "For a cleaner shave...",
     "DESCRIPTIONS": [
-      "Whenever you remove or #yTransform a card from your deck, heal #b15 HP."
+      "Whenever you remove or #yTransform a card from your deck, heal #b",
+      " HP."
     ]
   },
   "hermit:BrassTacks": {
     "NAME": "Brass Tacks",
     "FLAVOR": "The luster on these tacks never seems to fade.",
     "DESCRIPTIONS": [
-      "At the end of your turn, gain #b2 #yBlock [REMOVE_SPACE]."
+      "At the end of your turn, gain #b",
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "hermit:BlackPowder": {
     "NAME": "Black Powder",
     "FLAVOR": "Handle with care.",
     "DESCRIPTIONS": [
-      "Whenever you trigger a #yhermit:Dead_On effect, deal #b2 damage to ALL enemies."
+      "Whenever you trigger a #yhermit:Dead_On effect, deal #b",
+      " damage to ALL enemies."
     ]
   },
   "hermit:BloodyTooth": {
     "NAME": "Broken Tooth",
     "FLAVOR": "Appears too large to have come from a human jaw...",
     "DESCRIPTIONS": [
-      "Whenever you defeat an Elite encounter, heal #b7 HP and gain #b35 Gold."
+      "Whenever you defeat an Elite encounter, heal #b",
+      " HP and gain #b",
+      " Gold."
     ]
   }
 }

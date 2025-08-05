@@ -1,0 +1,38 @@
+{
+  "awakened:SpellDescriptor": {
+    "TEXT": [
+      "Spell"
+    ]
+  },
+  "awakened:ConjureMod": {
+    "TEXT": [
+      " NL awakened:Conjure."
+    ]
+  },
+  "awakened:SpellMod": {
+    "TEXT": [
+      "[#12FAF0]Spell. NL"
+    ]
+  },
+  "awakened:DrainingMod": {
+    "TEXT": [
+      " NL Next turn, lose [E]."
+    ]
+  },
+  "awakened:highlightChant": {
+    "TEXT": [
+      "awakened:Chant: ",
+      "[awakenedIcon] [#12FAF0]Chant: "
+    ]
+  },
+  "awakened:Spellbook": {
+    "TEXT": [
+      "Spellbook"
+    ]
+  },
+  "awakened:FullSpellbook": {
+    "TEXT": [
+      "My Spellbook is full!"
+    ]
+  }
+}

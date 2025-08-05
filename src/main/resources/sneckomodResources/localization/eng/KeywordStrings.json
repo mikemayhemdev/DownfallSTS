@@ -56,7 +56,7 @@
     "NAMES": [
       "venom"
     ],
-    "DESCRIPTION": "Creatures with #yVenom lose HP whenever they gain a debuff that isn't #yVenom."
+    "DESCRIPTION": "Creatures with #yVenom lose HP you apply a debuff that isn't #yVenom to them."
   },
   {
     "PROPER_NAME": "Lucky",

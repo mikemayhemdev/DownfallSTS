@@ -16,8 +16,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.util.CardIgnore;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.util.CardIgnore;
 import sneckomod.SneckoMod;
 
 import java.util.ArrayList;

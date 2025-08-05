@@ -38,9 +38,12 @@ public class ShatteredFragment extends CustomRelic {
         //tips.add(new CardPowerTip( new AwakenDeath() ) );
     }
 
+    //Variables
+    public static final int AMOUNT = 1;
+
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + AMOUNT + DESCRIPTIONS[1];
     }
 
 //    @Override
@@ -68,7 +71,7 @@ public class ShatteredFragment extends CustomRelic {
 
                if (isEliteOrBoss) {
                     this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                    atb((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new StrengthPower((AbstractCreature)AbstractDungeon.player, 1), 1));
+                    atb((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new StrengthPower((AbstractCreature)AbstractDungeon.player, AMOUNT), AMOUNT));
                 }
             }
         }

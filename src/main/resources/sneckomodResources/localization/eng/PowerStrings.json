@@ -42,17 +42,16 @@
   "sneckomod:OverwhelmingPresencePower": {
     "NAME": "Overwhelming Presence",
     "DESCRIPTIONS": [
-      "The first time you shuffle your deck each turn, gain [E] and draw #b1 card.",
-      "The first time you shuffle your deck each turn, gain ",
-      " [E] and draw #b",
+      "The first time you play an #yOffclass card each turn, draw #b1 card.",
+      "The first time you play an #yOffclass card each turn, draw #b ",
       " cards."
     ]
   },
   "sneckomod:SerpentsNestPower": {
     "NAME": "Serpent's Nest",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, deal 1 damage to ALL enemies.",
-      "Whenever you play a #yPower card, deal #b",
+      "Whenever you play a #yPower, deal #b1 damage to ALL enemies.",
+      "Whenever you play a #yPower, deal #b",
       " damage to ALL enemies."
     ]
   },
@@ -77,7 +76,7 @@
     "DESCRIPTIONS": [
       "At the start of your turn, add #b",
       "At the start of your turn, add an #yEcho of a random #yOffclass card into your hand.",
-      " #yEchoes of a random #yOffclass cards into your hand."
+      " #yEchoes of random #yOffclass cards into your hand."
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {
@@ -131,7 +130,7 @@
   "sneckomod:SerpentineSleuthPower": {
     "NAME": "Serpentine Sleuth",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, gain #b",
+      "Whenever you play a #yPower [REMOVE_SPACE], gain #b",
       " [E] .",
       " [E] ."
     ]
@@ -178,8 +177,8 @@
   },
   "sneckomod:TrashCanPower": {
     "NAME": "Trash Can",
-    "DESCRIPTIONS": ["At the start of your turn, you may #yExhaust a card.",
-      "At the start of your turn, you may #yExhaust up to #b",
+    "DESCRIPTIONS": ["At the end of your turn, you may #yExhaust a card.",
+      "At the end of your turn, you may #yExhaust up to #b",
       " cards."
   ]
       },

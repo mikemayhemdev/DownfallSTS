@@ -1,18 +1,12 @@
 package champ.cards;
 
-import automaton.actions.AddToFuncAction;
 import automaton.actions.EasyXCostAction;
-import automaton.cards.FormatEncoded;
-import collector.powers.NextTurnReservePower;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import downfall.downfallMod;
 
 import static champ.ChampMod.loadJokeCardImage;
-import static collector.util.Wiz.applyToSelf;
-import static collector.util.Wiz.atb;
 
 public class Lariat extends AbstractChampCard {
     public final static String ID = makeID("Lariat");
@@ -37,6 +31,12 @@ public class Lariat extends AbstractChampCard {
             return true;
         }, 0));
 
+    }
+
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        this.keywords.add(GameDictionary.STANCE.NAMES[0].toLowerCase());
     }
 
     public void upp() {

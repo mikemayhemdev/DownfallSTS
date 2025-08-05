@@ -10,12 +10,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import guardian.GuardianMod;
-import guardian.cards.*;
 
 import java.util.ArrayList;
 
@@ -56,10 +53,14 @@ public class CrystalForgeAutomaton extends AbstractImageEvent {
         validCards = new ArrayList<>();
         rareCards = new ArrayList<>();
 
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+
+        for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
             if (c.hasTag(AutomatonMod.ENCODES)) {
                 validCards.add(c);
             }
+        }
+
+        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c.rarity == AbstractCard.CardRarity.RARE) rareCards.add(c);
         }
         if (validCards.size() == 0) {

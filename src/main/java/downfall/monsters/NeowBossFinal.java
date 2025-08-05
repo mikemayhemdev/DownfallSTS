@@ -81,9 +81,9 @@ public class NeowBossFinal extends AbstractMonster {
         this.baseDrawX = drawX;
 
         if (AbstractDungeon.ascensionLevel >= 9) {
-            setHp(650);
+            setHp(800);
         } else {
-            setHp(600);
+            setHp(750);
         }
 
         AnimationState.TrackEntry e = this.state.setAnimation(0, "idle", true);
@@ -100,10 +100,10 @@ public class NeowBossFinal extends AbstractMonster {
 
 
         if (AbstractDungeon.ascensionLevel >= 4) {
-            this.damage.add(new DamageInfo(this, 12)); //Eye Beam Damage - 54 damage first cycle
+            this.damage.add(new DamageInfo(this, 10)); //Eye Beam Damage - 45 damage first cycle
             this.damage.add(new DamageInfo(this, 44));  //Scream Damage - 66 damage first cycle
         } else {
-            this.damage.add(new DamageInfo(this, 9)); //Eye Beam Damage - 42 damage first cycle
+            this.damage.add(new DamageInfo(this, 8)); //Eye Beam Damage - 32 damage first cycle
             this.damage.add(new DamageInfo(this, 33));  //Scream Damage - 50 damage first cycle
         }
 
@@ -160,7 +160,7 @@ public class NeowBossFinal extends AbstractMonster {
 
         int invincibleAmt = 250;
         if (AbstractDungeon.ascensionLevel >= 19) {
-           // invincibleAmt -= 50;
+            invincibleAmt -= 50;
         }// a19 difficulty setting is changed from god of life 2(3), invincible 300(250) , to,  you (dont) get heart's favor
 
         if (AbstractDungeon.ascensionLevel >= 19) {
@@ -176,13 +176,13 @@ public class NeowBossFinal extends AbstractMonster {
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvinciblePower(this, invincibleAmt), invincibleAmt));
 
-        if (AbstractDungeon.ascensionLevel < 19) {
-            for (int i = 0; i < 3; i++) {
-                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
-            }
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, null, new HeartsFavorPower(this, 2), 2));
-
-        }
+//        if (AbstractDungeon.ascensionLevel < 19) {
+//            for (int i = 0; i < 3; i++) {
+//                AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));
+//            }
+//            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, null, new HeartsFavorPower(this, 2), 2));
+//
+//        }
 
         /*
         for (int i = 0; i < 3; i++) {
@@ -243,19 +243,16 @@ public class NeowBossFinal extends AbstractMonster {
                 //AbstractDungeon.actionManager.addToBottom(new RemoveSpecificPowerAction(this, this, "Shackled"));
 
 
-                // god of life maxes out at 6 (7 on a19 because of the higher starting healing) now
-                int buf = 0;
-                    if (this.hasPower(NeowInvulnerablePower.POWER_ID)) {
-                        buf = this.getPower(NeowInvulnerablePower.POWER_ID).amount;
-                    }
-                        if (buf < 6) {
-                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
-                        }
+                // nerfed healing again
+                //Neow will only gain extra God of Life ONCE similar to the corrupt heart
 
-
-                if (!this.hasPower(NeowInvulnerablePower.POWER_ID)) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 2)));
-                }
+//                int buf = 0;
+//                    if (this.hasPower(NeowInvulnerablePower.POWER_ID)) {
+//                        buf = this.getPower(NeowInvulnerablePower.POWER_ID).amount;
+//                    }
+//                        if (buf < 5) {
+//                            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 1)));
+//                        }
 
                 if (AbstractDungeon.ascensionLevel >= 19) {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 9), 9));
@@ -279,12 +276,13 @@ public class NeowBossFinal extends AbstractMonster {
                         }
                         break;
                     case 1:
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new NeowInvulnerablePower(this, 1)));
                         if (AbstractDungeon.ascensionLevel >= 19) {
-                            AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 100));
+                            AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 50));
                             //this effectively makes her HP 700 - Not factoring in God of Life.
                         }
                         if (AbstractDungeon.ascensionLevel < 19) {
-                            AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 75));
+                            AbstractDungeon.actionManager.addToBottom(new HealAction(this, this, 30));
                             //this pre a19 version effectively makes her hp 675, and 625 pre a4 - Not factoring in God of Life.
                         }
 

@@ -40,11 +40,9 @@ public class GhostflameHelper {
 
         if (!(AbstractDungeon.player instanceof TheHexaghost)) {
             hexaGhostFlames.add(new SearingGhostflame(globalX + AbstractDungeon.player.drawX - (120.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (370.0F * Settings.scale)));
+            hexaGhostFlames.add(new CrushingGhostflame(globalX + AbstractDungeon.player.drawX + (60.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (370.0F * Settings.scale)));
+            hexaGhostFlames.add(new BolsteringGhostflame(globalX + AbstractDungeon.player.drawX + (90.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (90.0F * Settings.scale)));
             hexaGhostFlames.get(0).activate();
-//            hexaGhostFlames.add(new CrushingGhostflame(globalX + AbstractDungeon.player.drawX + (60.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (370.0F * Settings.scale)));
-//            hexaGhostFlames.add(new BolsteringGhostflame(globalX + AbstractDungeon.player.drawX + (90.0F * Settings.scale), globalY + AbstractDungeon.player.drawY + (90.0F * Settings.scale)));
-//            hexaGhostFlames.get(0).activate();
-//        }
         }
     }
 
@@ -102,7 +100,34 @@ public class GhostflameHelper {
 
     public static void end_on_random_flame(){
 
-        int new_flame_num = AbstractDungeon.miscRng.random(hexaGhostFlames.size()-1);
+        int new_flame_num = AbstractDungeon.cardRng.random(hexaGhostFlames.size()-1);
+
+
+        if (new_flame_num == hexaGhostFlames.indexOf(activeGhostFlame)) {
+            while (new_flame_num == hexaGhostFlames.indexOf(activeGhostFlame)) {
+                new_flame_num = AbstractDungeon.cardRng.random(hexaGhostFlames.size() - 1);
+            }
+        }
+
+        AbstractGhostflame x = hexaGhostFlames.get(new_flame_num);
+        if (x.charged) {
+            x.extinguish();
+        }
+        x.activate();
+
+    }
+
+    public static void end_on_random_flame_relic_rng(){
+
+        int new_flame_num = AbstractDungeon.relicRng.random(hexaGhostFlames.size()-1);
+
+
+        if (new_flame_num == hexaGhostFlames.indexOf(activeGhostFlame)) {
+            while (new_flame_num == hexaGhostFlames.indexOf(activeGhostFlame)) {
+                new_flame_num = AbstractDungeon.relicRng.random(hexaGhostFlames.size() - 1);
+            }
+        }
+
         AbstractGhostflame x = hexaGhostFlames.get(new_flame_num);
         if (x.charged) {
             x.extinguish();

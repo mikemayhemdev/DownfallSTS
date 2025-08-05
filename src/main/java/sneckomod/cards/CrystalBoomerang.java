@@ -42,7 +42,7 @@ public class CrystalBoomerang extends AbstractSneckoCard {
                         selecteda.applyPowers();
 
                         if (selecteda.color != p.getCardColor()) {
-                            this.addToTop(new GainBlockAction(p, p, this.block));
+                            blck();
                         }
                     }
             ));

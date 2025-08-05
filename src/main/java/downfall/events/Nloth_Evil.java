@@ -2,6 +2,7 @@ package downfall.events;
 
 
 import automaton.relics.BottledCode;
+import awakenedOne.relics.MoonTalisman;
 import champ.relics.SignatureFinisher;
 import collector.relics.BottledCollectible;
 import collector.relics.ForbiddenFruit;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.relics.*;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import guardian.relics.BottledStasis;
 import guardian.relics.PickAxe;
+import guardian.relics.StasisEgg;
 import sneckomod.relics.D8;
 import sneckomod.relics.SneckoBoss;
 import sneckomod.relics.SneckoCommon;
@@ -80,10 +82,11 @@ public class Nloth_Evil extends AbstractImageEvent {
                     r.relicId.equals(LizardTail.ID) ||
                     r.relicId.equals(Mango.ID) ||
                     r.relicId.equals(SignatureFinisher.ID) ||
-                            r.relicId.equals(BottledCode.ID) ||
                     r.relicId.equals(WingBoots.ID)) ||
+                    r.relicId.equals(MoonTalisman.ID) ||
                     //event
-
+                    r.relicId.equals(StasisEgg.ID) ||
+                    r.relicId.equals(BottledCode.ID) ||
                     r.relicId.equals(D8.ID))
             {
                 relicIterator.remove(); // Remove the blacklisted relic

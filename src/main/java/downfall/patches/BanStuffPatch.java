@@ -1,9 +1,14 @@
 package downfall.patches;
 
+import awakenedOne.AwakenedOneChar;
 import basemod.devcommands.relic.RelicRemove;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
+import com.megacrit.cardcrawl.relics.BirdFacedUrn;
+import com.megacrit.cardcrawl.relics.MummifiedHand;
+import com.megacrit.cardcrawl.relics.OrangePellets;
 import com.megacrit.cardcrawl.relics.PrismaticShard;
 import downfall.potions.CursedFountainPotion;
 import gremlin.patches.GremlinEnum;
@@ -30,6 +35,22 @@ public class BanStuffPatch {
 
             if (EvilModeCharacterSelect.evilMode) {
                 relicsToRemoveOnStart.add("Ectoplasm");
+            }
+
+            boolean nukemummyhand = (AbstractDungeon.miscRng.randomBoolean());
+            boolean nukepellets = (AbstractDungeon.miscRng.randomBoolean());
+            boolean nukeurn = (AbstractDungeon.miscRng.randomBoolean());
+
+            if (nukemummyhand && (chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE)) {
+                relicsToRemoveOnStart.add(MummifiedHand.ID);
+            }
+
+            if (nukepellets && (chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE)) {
+                relicsToRemoveOnStart.add(OrangePellets.ID);
+            }
+
+            if (nukeurn && (chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE)) {
+                relicsToRemoveOnStart.add(BirdFacedUrn.ID);
             }
 
         }

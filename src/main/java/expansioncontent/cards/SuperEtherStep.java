@@ -42,9 +42,9 @@ public class SuperEtherStep extends AbstractExpansionCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
         this.addToBot(new ExhaustAction(1, false));
         this.addToBot(new DrawCardAction(p, this.magicNumber));
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 
     public void upgrade() {

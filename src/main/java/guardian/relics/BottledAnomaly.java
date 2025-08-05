@@ -4,22 +4,26 @@ import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.cardManip.PurgeCardEffect;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import guardian.GuardianMod;
 import guardian.patches.BottledStasisPatch;
 import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.function.Predicate;
 
-public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
+public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer>, OnRemoveCardFromMasterDeckRelic {
     public static final String ID = "Guardian:BottledAnomaly";
     public static final String IMG_PATH = "relics/bottledAnomaly.png";
     public static final String OUTLINE_IMG_PATH = "relics/bottledAnomalyOutline.png";
@@ -30,6 +34,17 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
     public BottledAnomaly() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.SHOP, LandingSound.CLINK);
+    }
+
+    @Override
+    public void onRemoveCardFromMasterDeck(AbstractCard var1) {
+        if (this.card != null) {
+            if (var1.uuid == card.uuid) {
+                this.flash();
+                this.grayscale = true;
+                setDescriptionAfterLoading();
+            }
+        }
     }
 
     @Override
@@ -102,23 +117,52 @@ public class BottledAnomaly extends CustomRelic implements CustomBottleRelic, Cu
             BottledStasisPatch.inBottledAnomaly.set(card, true);
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
+
             setDescriptionAfterLoading();
         }
 
     }
 
-    private void setDescriptionAfterLoading() {
-        if(cardRemoved){
+//    @Override
+//    public void onRemoveCardFromMasterDeck(AbstractCard var1){
+//        if (var1.uuid == card.uuid) {
+//            setDescriptionAfterLoading();
+//        }
+//    }
+
+
+    public void setDescriptionAfterLoading() {
+        boolean cardExists = false;
+
+        if (cardSelected) {
+            if (card != null) {
+                for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                    if (c.uuid == card.uuid) {
+                        cardExists = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (!cardExists) {
+            cardRemoved = true;
             tips.clear();
+            this.grayscale = true;
             this.description = this.DESCRIPTIONS[4];
             tips.add(new PowerTip(name, description));
             initializeTips();
-            return ;
         }
-        this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
-        tips.clear();
-        tips.add(new PowerTip(name, description));
-        initializeTips();
+
+        if (cardExists) {
+            this.grayscale = false;
+            this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
+            tips.clear();
+            tips.add(new PowerTip(name, description));
+            initializeTips();
+        }
     }
 
     @Override

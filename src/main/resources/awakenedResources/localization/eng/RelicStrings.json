@@ -1,0 +1,145 @@
+{
+  "awakened:RippedDoll": {
+    "NAME": "Ripped Doll",
+    "FLAVOR": "The last reminder of your prior self. It still holds latent magicks.",
+    "DESCRIPTIONS": [
+      "At the start of the first #b",
+      " turns of combat, #yawakened:Conjure [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:ShreddedDoll": {
+    "NAME": "Shredded Doll",
+    "FLAVOR": "A reminder of your weakness, and yet you still can't let go.",
+    "DESCRIPTIONS": [
+      "Replaces ",
+      " [REMOVE_SPACE].[] NL At the start of your turn, #yawakened:Conjure [REMOVE_SPACE]. NL The first time you refresh your Spells each combat, gain #b1 #yRitual [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:WhiteRibbon": {
+    "NAME": "White Ribbon",
+    "FLAVOR": "Gives power to spoken words even without proper ritual.",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower or a card with an active #yawakened:Chant effect, gain #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:HexxBomb": {
+    "NAME": "Manabomb",
+    "FLAVOR": "3... 2...",
+    "DESCRIPTIONS": [
+     "Whenever an enemy dies, transfer any #yawakened:Manaburn it has to a random enemy."
+    ]
+  },
+  "awakened:TomeOfPortalmancy": {
+    "NAME": "Tome of Portalmancy",
+    "FLAVOR": "A grimoire detailing the construction and maintenance of interplanar gates.",
+    "DESCRIPTIONS": [
+      "Whenever a #yVoid is #yExhausted [REMOVE_SPACE], apply #b",
+      " #yawakened:Manaburn to ALL enemies."
+    ]
+  },
+  "awakened:EyeOfTheOccult": {
+    "NAME": "Eye of the Occult",
+    "FLAVOR": "This gruesome carving imparts magical knowledge to its owner.",
+    "DESCRIPTIONS": [
+      "Spells hit ALL enemies."
+    ]
+  },
+  "awakened:DeadBird": {
+    "NAME": "Corvid Spirit",
+    "FLAVOR": "This spectre closely follows behind the damned and cursed.",
+    "DESCRIPTIONS": [
+      "At the end of your turn, deal #b",
+      " damage to the lowest HP enemy, increased by #yStrength [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:AbyssBlade": {
+    "NAME": "Abyss Blade",
+    "FLAVOR": "Void Refund.",
+    "DESCRIPTIONS": [
+      "The first time you are #yawakened:Drained each turn, gain [E] and draw a card."
+    ]
+  },
+  "awakened:ShardOfNowak": {
+    "NAME": "Gilded Bone Shard",
+    "FLAVOR": "...No, not that kind of focus.",
+    "DESCRIPTIONS": [
+      "Start each combat with #b",
+      " #yStrength [REMOVE_SPACE]. After losing any type of HP, lose that #yStrength for the rest of combat."
+    ]
+  },
+  "awakened:VioletPlumage": {
+    "NAME": "Violet Plumage",
+    "FLAVOR": "Tinged by the unending darkness of oblivion.",
+    "DESCRIPTIONS": [
+      "The first time you end your turn with excess [E] each combat, draw #b",
+      " additional cards at the start of your next turn."
+    ]
+  },
+  "awakened:ZenerDeck": {
+    "NAME": "Zener Deck",
+    "FLAVOR": "“One, two, three, all eyes should be on me.”",
+    "DESCRIPTIONS": [
+      "At the start of combat, add #yESP to your Spellbook and #yawakened:Conjure it."
+    ]
+  },
+  "awakened:CawingCask": {
+    "NAME": "Cawing Cask",
+    "FLAVOR": "A ceremonially carved barrel depicting the crow god Mazaleth, its contents smell questionable...",
+    "DESCRIPTIONS": [
+      "Whenever you use a potion, gain #b",
+      " #yRitual [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:MiniBlackHole": {
+    "NAME": "Alethea",
+    "FLAVOR": "From the Abyss.",
+    "DESCRIPTIONS": [
+      "If you do not play any #yPowers during your turn, draw an additional card next turn."
+    ]
+  },
+  "awakened:StrengthBooster": {
+    "NAME": "Paper Crow",
+    "FLAVOR": "Arbiter of doubt and curses folded one thousand times...",
+    "DESCRIPTIONS": [
+      "Enemies take #b",
+      "% additional damage from #yawakened:Manaburn [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:CursedBlessing": {
+    "NAME": "Final Rites",
+    "FLAVOR": "I leave everything I own to my cat, Noodles. Goodbye, cruel world. XOXO Jouster",
+    "DESCRIPTIONS": [
+      "The first time you activate #b",
+      " #yawakened:Chant effects in a combat, gain #b",
+      " #yRitual [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:CurvedSwordMeme": {
+    "NAME": "Conjure Blade",
+    "FLAVOR": "Go on, do it. Conjure a blade, right now. I'm watching. :^)",
+    "DESCRIPTIONS": [
+      "At the start of combat, add #yConjure #yBlade into your hand?",
+      "NOTE: THE PLAYER CANNOT OBTAIN THIS RELIC OUTSIDE OF CONSOLE, IT'S A JOKE RELIC!"
+    ]
+  },
+  "awakened:CurvedSword": {
+    "NAME": "Zetsumei",
+    "FLAVOR": "A blade favored by mages due to its ability to channel casted magic back into itself.",
+    "DESCRIPTIONS": [
+      "Every time you play #b",
+      " Spells in a single turn, gain a #yCeremony [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:MoonTalisman": {
+    "NAME": "Crescent Talisman",
+    "FLAVOR": "“Please, just... don't forget me. Even after I die.”",
+    "DESCRIPTIONS": [
+      "Upon pickup, choose a card that does #rNOT have #yawakened:Conjure [REMOVE_SPACE]. Add #yawakened:Conjure to it.",
+      "Choose a card for ",
+      "The Talisman has blessed ",
+      " and added #yawakened:Conjure to it.",
+      "The card attached to this relic has been #rremoved from your deck, the relic no longer functions."
+    ]
+  }
+}

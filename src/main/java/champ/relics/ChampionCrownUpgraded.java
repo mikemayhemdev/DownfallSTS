@@ -1,26 +1,21 @@
 package champ.relics;
 
-import automaton.AutomatonMod;
-import automaton.relics.BronzeCore;
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
-import champ.actions.OpenerReduceCostAction;
-import champ.powers.UltimateFormPower;
-import champ.stances.UltimateStance;
-import champ.util.OnOpenerSubscriber;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnAfterUseCardRelic;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import slimebound.relics.AbsorbEndCombat;
 
-import static champ.ChampMod.makeRelicOutlinePath;
-import static champ.ChampMod.makeRelicPath;
+import static champ.ChampMod.*;
+import static collector.util.Wiz.atb;
 
-public class ChampionCrownUpgraded extends CustomRelic {
+public class ChampionCrownUpgraded extends CustomRelic implements OnAfterUseCardRelic {
 
     public static final String ID = ChampMod.makeID("ChampionCrownUpgraded");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("UltimateChampionCrown.png"));
@@ -28,14 +23,57 @@ public class ChampionCrownUpgraded extends CustomRelic {
 
 
     public ChampionCrownUpgraded() {
-        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.CLINK);
+    }
+
+    //# of cards drawn
+    private static final int AMOUNT = 2;
+
+//    @Override
+//    public void atBattleStart() {
+//        addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));
+//        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(AMOUNT), AMOUNT));
+//    }
+//
+//
+//    @Override
+//    public void onChangeStance(AbstractStance oldStance, AbstractStance newStance) {
+//        if (!newStance.ID.equals(NeutralStance.STANCE_ID) && !(oldStance.ID.equals(newStance.ID))) {
+//            flash();
+//            atb(new DrawCardAction(AMOUNT));
+//        }
+//    }
+
+
+    public void atTurnStart() {
+        this.counter = 0;
     }
 
     @Override
-    public void atBattleStart() {
-        addToBot(new ChangeStanceAction(UltimateStance.STANCE_ID));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new UltimateFormPower(3), 3));
+    public void onVictory() {
+        this.counter = 0;
     }
+
+    @Override
+    public void onAfterUseCard(AbstractCard c, UseCardAction var2) {
+        if (c.hasTag(ChampMod.FINISHER) && this.counter == 0) {
+            flash();
+            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            atb(new DrawCardAction(AMOUNT));
+            int x = AbstractDungeon.relicRng.random(1);
+            switch (x) {
+                case 0:
+                    berserkOpen();
+                    break;
+                case 1:
+                    defenseOpen();
+                    break;
+            }
+            this.counter = 1;
+        }
+    }
+
+
 
     @Override
     public void obtain() {
@@ -71,7 +109,7 @@ public class ChampionCrownUpgraded extends CustomRelic {
             sb.append("[#").append(ChampMod.placeholderColor.toString()).append("]");
         }
 
-        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + sb + DESCRIPTIONS[1] + AMOUNT + DESCRIPTIONS[2];
     }
 
 }

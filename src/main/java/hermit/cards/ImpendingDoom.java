@@ -28,7 +28,7 @@ public class ImpendingDoom extends AbstractDynamicCard {
 
     // STAT DECLARATION
 
-    private static final CardRarity RARITY = CardRarity.CURSE; //Change from Special Rarity: Impending Doom can now show up as a Curse during Downfall Mode runs.
+    private static final CardRarity RARITY = CardRarity.CURSE; // remove special rarity to become downfall curse
     private static final CardTarget TARGET = CardTarget.ALL;
     private static final CardType TYPE = CardType.CURSE;
     public static final CardColor COLOR = CardColor.CURSE;

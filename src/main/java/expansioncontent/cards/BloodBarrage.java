@@ -18,8 +18,7 @@ public class BloodBarrage extends AbstractExpansionCard {
     public BloodBarrage() {
         super(ID, 1, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ENEMY);
         setBackgroundTexture("expansioncontentResources/images/512/bg_boss_heart.png", "expansioncontentResources/images/1024/bg_boss_heart.png");
-        this.tags.add(expansionContentMod.STUDY);
-        this.baseDamage = 2;
+        this.baseDamage = 3;
         this.exhaust = true;
         this.baseMagicNumber = 5;
         this.magicNumber = this.baseMagicNumber;

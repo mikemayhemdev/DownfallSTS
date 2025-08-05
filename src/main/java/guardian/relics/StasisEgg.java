@@ -4,6 +4,7 @@ import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,23 +12,36 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import guardian.GuardianMod;
 import guardian.patches.BottledStasisPatch;
 
 import java.util.function.Predicate;
 
-public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
+import static awakenedOne.AwakenedOneMod.DELVE;
+
+public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer>, OnRemoveCardFromMasterDeckRelic {
     public static final String ID = "Guardian:StasisEgg";
     public static final String IMG_PATH = "relics/stasisEgg.png";
     public static final String OUTLINE_IMG_PATH = "relics/stasisEggOutline.png";
     private boolean cardSelected = true;
-    private AbstractCard card = null;
+    public AbstractCard card = null;
 
     public StasisEgg() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.SPECIAL, LandingSound.FLAT);
     }
 
+    @Override
+    public void onRemoveCardFromMasterDeck(AbstractCard var1) {
+        if (this.card != null) {
+            if (var1.uuid == card.uuid) {
+                this.flash();
+                this.grayscale = true;
+                setDescriptionAfterLoading();
+            }
+        }
+    }
 
     @Override
     public Predicate<AbstractCard> isOnCard() {
@@ -102,15 +116,39 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
+
             setDescriptionAfterLoading();
         }
     }
 
     private void setDescriptionAfterLoading() {
-        this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
-        tips.clear();
-        tips.add(new PowerTip(name, description));
-        initializeTips();
+        boolean cardExists = false;
+
+            if (card != null) {
+                for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                    if (c.uuid == card.uuid) {
+                        cardExists = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!cardExists) {
+                tips.clear();
+                this.description = this.DESCRIPTIONS[4];
+                this.grayscale = true;
+                initializeTips();
+            }
+
+            if (cardExists) {
+                this.description = FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[2];
+                tips.clear();
+                tips.add(new PowerTip(name, description));
+                initializeTips();
+                this.grayscale = false;
+            }
     }
 
     @Override
@@ -158,4 +196,20 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
         }
 
     }
+
+    public boolean canSpawn() {
+
+        CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
+                tmp.addToTop(c);
+        }
+
+        if (tmp.size() > 0) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
 }

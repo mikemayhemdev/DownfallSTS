@@ -31,27 +31,33 @@ public class TheBrokenSeal extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
     }
 
+    //variables
+    public static final int MAX_HP = 10;
+    public static final int STR = 2;
+    public static final int DEX = 2;
+    public static final int INTENSITY = 2;
+
     @Override
     public void onEquip() {
-        AbstractDungeon.player.increaseMaxHp(10, true);
+        AbstractDungeon.player.increaseMaxHp(MAX_HP, true);
         AbstractDungeon.player.heal(AbstractDungeon.player.maxHealth);
         if( AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT){
-            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 2), 2));
-            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, 2), 2));
-            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(2), 2));
+            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, STR), STR));
+            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, DEX), DEX));
+            this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(INTENSITY), INTENSITY));
         }
     }
 
     @Override
     public void atBattleStart() {
-        this.flash();// 24
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 2), 2));
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, 2), 2));
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(2), 2));
+        this.flash();
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, STR), STR));
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, DEX), DEX));
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(INTENSITY), INTENSITY));
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
 
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + MAX_HP + DESCRIPTIONS[1] + STR + DESCRIPTIONS[2];
     }
 }

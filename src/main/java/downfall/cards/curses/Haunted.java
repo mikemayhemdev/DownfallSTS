@@ -43,7 +43,7 @@ public class Haunted extends CustomCard implements OnOtherCardExhaustInHand {
     public Haunted() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
 
-        this.magicNumber = this.baseMagicNumber = 1;
+        this.magicNumber = this.baseMagicNumber = 2;
 
         this.isEthereal = true;
         tags.add(downfallMod.DOWNFALL_CURSE);
@@ -79,7 +79,7 @@ public class Haunted extends CustomCard implements OnOtherCardExhaustInHand {
     public void onOtherCardExhaustWhileInHand(AbstractCard card) {
         if (card != this) {
             flash(Color.PURPLE.cpy());
-            this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 2, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+            this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         }
     }
 

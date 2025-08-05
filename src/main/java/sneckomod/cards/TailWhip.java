@@ -39,7 +39,6 @@ public class TailWhip extends AbstractSneckoCard {
         }
         if (y > 0)
             applyToEnemy(m, autoVuln(m, y));
-        // atb(new MuddleHandAction());
     }
 
 

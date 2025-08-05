@@ -1,5 +1,7 @@
 package sneckomod.patches;
 
+import awakenedOne.patches.MoonTalismanPatch;
+import awakenedOne.util.Wiz;
 import com.evacipated.cardcrawl.modthespire.lib.SpireField;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -17,7 +19,14 @@ public class BottledD8Patch {
     )
     public static class MakeStatEquivalentCopy {
         public static AbstractCard Postfix(AbstractCard __result, AbstractCard __instance) {
-            inD8.set(__result, inD8.get(__instance));
+
+            if (Wiz.isInCombat()) {
+                inD8.set(__result, inD8.get(__instance));
+            }
+
+            if (!Wiz.isInCombat()) {
+                inD8.set(__result, Boolean.FALSE);
+            }
 
             return __result;
         }

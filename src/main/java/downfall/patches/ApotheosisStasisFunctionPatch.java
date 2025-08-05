@@ -1,6 +1,7 @@
 package downfall.patches;
 
 import automaton.FunctionHelper;
+import awakenedOne.ui.OrbitingSpells;
 import basemod.ReflectionHacks;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePrefixPatch;
@@ -25,6 +26,7 @@ public class ApotheosisStasisFunctionPatch {
         public static void Prefix(ApotheosisAction instance) {
             float duration = (float) ReflectionHacks.getPrivate(instance, AbstractGameAction.class, "duration");
             if (duration == Settings.ACTION_DUR_MED) {
+                OrbitingSpells.upgradeall();
                 for (AbstractOrb o : AbstractDungeon.player.orbs) {
                     if (o instanceof StasisOrb) {
                         ((StasisOrb) o).stasisCard.upgrade();

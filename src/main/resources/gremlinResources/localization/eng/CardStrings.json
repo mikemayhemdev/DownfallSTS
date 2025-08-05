@@ -308,7 +308,7 @@
 
   "Gremlin:Pickpocket": {
     "NAME": "Pickpocket",
-    "DESCRIPTION": "Deal !D! damage. NL Target loses !M! Strength this turn, twice. NL Gain !blamage! Gold. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! Gold. NL Exhaust."
   },
 
   "Gremlin:PinNeedle": {

@@ -454,7 +454,7 @@
   },
   "hexamod:FlameDevourer": {
     "NAME": "噬火",
-    "DESCRIPTION": "若当前鬼火已 *点燃 ， hexamod:回退 ， NL 并获得 !B! 点 格挡 。"
+    "DESCRIPTION": "若上枚鬼火已 *点燃 ， hexamod:回退 ， NL 并获得 !B! 点 格挡 。"
   },
   "hexamod:SpectralGrace": {
     "NAME": "幽雅",

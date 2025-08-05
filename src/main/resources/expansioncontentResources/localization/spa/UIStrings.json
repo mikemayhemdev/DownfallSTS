@@ -1,0 +1,58 @@
+{
+  "downfall:PropertiesMod": {
+    "TEXT": [
+      "Propiedades aplicadas.",
+      "Propiedades adicionales: ",
+      "Propiedades adicionales para este turno: ",
+      " NL También para este turno: ",
+      ", ",
+      ".",
+      "#y",
+      "Eco",
+      "Injugable",
+      "Etérea",
+      "Retiene",
+      "Agota",
+      " ",
+      "NL ",
+      "Eco: "
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "Etérea. NL "
+    ]
+  },
+  "downfall:ExhaustMod": {
+    "TEXT": [
+      " NL Agota."
+    ]
+  },
+  "downfall:InnateMod": {
+    "TEXT": [
+      "Innata. NL "
+    ]
+  },
+  "downfall:RetainCardMod": {
+    "TEXT": [
+      "Retiene. NL "
+    ]
+  },
+  "downfall:UnplayableMod": {
+    "TEXT": [
+      "Injugable. NL ",
+      "Esta carta no puede jugarse.",
+      "Esta carta no puede jugarse este turno."
+    ]
+  },
+  "expansioncontent:CannotUseBossCardMessage": {
+    "TEXT": [
+      "¡Ya jugué una carta de Jefe este turno!"
+    ]
+  },
+  "expansioncontent:BossCardTagName": {
+    "TEXT": [
+      "Jefe"
+    ]
+  }
+}

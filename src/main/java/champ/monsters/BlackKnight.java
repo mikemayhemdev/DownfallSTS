@@ -3,12 +3,8 @@
  import champ.events.Colosseum_Evil_Champ;
  import com.badlogic.gdx.math.MathUtils;
  import com.esotericsoftware.spine.AnimationState;
- import com.esotericsoftware.spine.AnimationState.TrackEntry;
  import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
- import com.megacrit.cardcrawl.actions.GameActionManager;
  import com.megacrit.cardcrawl.actions.animations.AnimateFastAttackAction;
- import com.megacrit.cardcrawl.actions.animations.ShoutAction;
  import com.megacrit.cardcrawl.actions.animations.TalkAction;
  import com.megacrit.cardcrawl.actions.animations.VFXAction;
  import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -16,27 +12,18 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
  import com.megacrit.cardcrawl.actions.common.DamageAction;
  import com.megacrit.cardcrawl.actions.utility.SFXAction;
  import com.megacrit.cardcrawl.actions.utility.WaitAction;
- import com.megacrit.cardcrawl.audio.SoundMaster;
  import com.megacrit.cardcrawl.cards.DamageInfo;
- import com.megacrit.cardcrawl.characters.AbstractPlayer;
  import com.megacrit.cardcrawl.core.CardCrawlGame;
  import com.megacrit.cardcrawl.core.Settings;
  import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
- import com.megacrit.cardcrawl.helpers.Hitbox;
- import com.megacrit.cardcrawl.helpers.ScreenShake;
  import com.megacrit.cardcrawl.localization.MonsterStrings;
  import com.megacrit.cardcrawl.monsters.AbstractMonster;
- import com.megacrit.cardcrawl.monsters.AbstractMonster.Intent;
  import com.megacrit.cardcrawl.powers.MetallicizePower;
  import com.megacrit.cardcrawl.powers.StrengthPower;
  import com.megacrit.cardcrawl.powers.VulnerablePower;
  import com.megacrit.cardcrawl.powers.WeakPower;
- import com.megacrit.cardcrawl.rooms.AbstractRoom;
- import com.megacrit.cardcrawl.scenes.AbstractScene;
- import com.megacrit.cardcrawl.unlock.UnlockTracker;
  import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
  import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
- import java.util.ArrayList;
 
  public class BlackKnight extends AbstractMonster
          {

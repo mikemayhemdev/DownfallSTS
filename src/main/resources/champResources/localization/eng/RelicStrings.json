@@ -3,7 +3,7 @@
     "NAME": "Champion's Crown",
     "FLAVOR": "A WINNER IS YOU!",
     "DESCRIPTIONS": [
-      "At the start of combat, choose to enter #bchamp:Defensive or #rchamp:Berserker #yStance [REMOVE_SPACE]."
+      "Once per combat, you may enter a #yStance you are not in."
     ]
   },
   "champ:BlackKnightHelmet": {
@@ -17,14 +17,16 @@
     "NAME": "Barbell",
     "FLAVOR": "1000 reps? Psh. I can do 1001.",
     "DESCRIPTIONS": [
-      "Whenever you enter a Rest Site, if you have at least #b10 Upgradable cards in your deck, #yUpgrade one at random."
+      "Whenever you enter a Rest Site, if you have at least #b",
+      " #yUpgradable cards in your deck, #yUpgrade one at random."
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
     "NAME": "Berserker's Guide",
     "FLAVOR": "The text is illegible.",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b3 #yVigor [REMOVE_SPACE]."
+      "At the start of your turn, gain #b",
+      " #yVigor [REMOVE_SPACE]."
     ]
   },
   "champ:ChampionCrownUpgraded": {
@@ -32,14 +34,16 @@
     "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL Start each combat in #ychamp:Ultimate #yStance [REMOVE_SPACE], which lasts for #b3 turns."
+      " [REMOVE_SPACE].[] NL The first time you play a #ychamp:Finisher each turn, draw #b",
+      " cards and enter a random #yStance [REMOVE_SPACE]."
     ]
   },
   "champ:DefensiveTrainingManual": {
     "NAME": "Defensive Thesis",
     "FLAVOR": "Pro tip: Don't get hit.",
     "DESCRIPTIONS": [
-      "#bchamp:Defensive #bStance's #ychamp:Finisher #yBonus grants #b3 more #yBlock [REMOVE_SPACE]."
+      "#bchamp:Defensive #bStance's #ychamp:Finisher #yBonus grants #b",
+      " more #yBlock [REMOVE_SPACE]."
     ]
   },
   "champ:DeflectingBracers": {
@@ -74,7 +78,8 @@
     "NAME": "Power Armor",
     "FLAVOR": "Bought used.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL Your maximum #yVigor and #ychamp:Counter is #b10 [REMOVE_SPACE]."
+      "Gain [E] at the start of your turn. NL Your maximum #yVigor and #ychamp:Counter is #b",
+      " [REMOVE_SPACE]."
     ]
   },
   "champ:RageAmulet": {
@@ -91,7 +96,8 @@
     "DESCRIPTIONS": [
       "Upon pickup, choose a #ychamp:Finisher [REMOVE_SPACE]. This #yFinisher costs #b0 [REMOVE_SPACE], can be used without a #yStance [REMOVE_SPACE], and never causes your #yStance to be exited.",
       "Choose a card for ",
-      " costs #b0 [REMOVE_SPACE], can be used without a #yStance [REMOVE_SPACE], and never causes your #yStance to be exited."
+      " costs #b0 [REMOVE_SPACE], can be used without a #yStance [REMOVE_SPACE], and never causes your #yStance to be exited.",
+      "The card attached to this relic has been #rremoved from your deck, the relic no longer functions."
     ]
   },
   "champ:SpectersHand": {

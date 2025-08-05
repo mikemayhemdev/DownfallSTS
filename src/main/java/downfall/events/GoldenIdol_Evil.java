@@ -37,7 +37,7 @@ public class GoldenIdol_Evil extends AbstractImageEvent {
         this.screen = CurScreen.INTRO;
 
         if (AbstractDungeon.ascensionLevel >= 15){
-            gold = 75;
+            gold = 50;
         }
 
         if (!trapAlreadySet) {

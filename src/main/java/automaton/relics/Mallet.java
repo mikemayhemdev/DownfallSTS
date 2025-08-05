@@ -26,7 +26,7 @@ public class Mallet extends CustomRelic {
     public boolean firstTurn = false;
 
     public Mallet() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.HEAVY);
         AbstractCard q = new FineTuning();
         q.upgrade();
         tips.add(new CardPowerTip(q));

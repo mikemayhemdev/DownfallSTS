@@ -103,17 +103,8 @@ public class MuddleAction extends AbstractGameAction {
                 card.setCostForTurn(truecost);
             }
 
-            if (AbstractDungeon.player.hasPower(BlunderGuardPower.POWER_ID)){
-                if ((card.costForTurn == 3)) {
-                    AbstractDungeon.player.getPower(BlunderGuardPower.POWER_ID).onSpecificTrigger();
-                }
-            }
-
             LoadedDie loadedDieInstance = new LoadedDie();
             if (AbstractDungeon.player.hasRelic(LoadedDie.ID)) {
-                addToBot(new GainBlockAction(AbstractDungeon.player, 1));
-                loadedDieInstance.flash();
-                this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, loadedDieInstance));
                 AbstractDungeon.player.getRelic(LoadedDie.ID).onTrigger();
             }
 

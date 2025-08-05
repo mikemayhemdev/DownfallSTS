@@ -1,6 +1,5 @@
 package champ;
 
-import automaton.vfx.CompileVictoryEffect;
 import basemod.abstracts.CustomPlayer;
 import champ.cards.*;
 import champ.relics.ChampionCrown;
@@ -23,13 +22,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.*;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
-import com.megacrit.cardcrawl.stances.NeutralStance;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.PetalEffect;
-import com.megacrit.cardcrawl.vfx.combat.GiantFireEffect;
-import com.megacrit.cardcrawl.vfx.scene.DefectVictoryNumberEffect;
 import downfall.util.TextureLoader;
-import hermit.vfx.GreenFireEffect;
 import reskinContent.patches.CharacterSelectScreenPatches;
 
 import java.util.ArrayList;
@@ -187,13 +182,13 @@ public class ChampChar extends CustomPlayer {
                 currentIdle = "IdleBerserker";
                 break;
             }
-            case NeutralStance
-                    .STANCE_ID: {
-                this.stateData.setMix(currentIdle, "Idle", 0.5F);
-                this.state.setAnimation(0, "Idle", true);
-                currentIdle = "Idle";
-                break;
-            }
+//            case NeutralStance
+//                    .STANCE_ID: {
+//                this.stateData.setMix(currentIdle, "Idle", 0.5F);
+//                this.state.setAnimation(0, "Idle", true);
+//                currentIdle = "Idle";
+//                break;
+//            }
             case UltimateStance
                     .STANCE_ID: {
                 this.stateData.setMix(currentIdle, "IdleUltimate", 0.5F);
@@ -201,9 +196,13 @@ public class ChampChar extends CustomPlayer {
                 currentIdle = "IdleUltimate";
                 break;
             }
+            default: {
+                this.stateData.setMix(currentIdle, "Idle", 0.5F);
+                this.state.setAnimation(0, "Idle", true);
+                currentIdle = "Idle";
+                break;
+            }
         }
-
-
     }
 
     @Override

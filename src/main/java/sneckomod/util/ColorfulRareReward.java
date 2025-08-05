@@ -42,7 +42,7 @@ public class ColorfulRareReward extends CustomReward {
 
         // If we have enough cards, add three unique upgraded ones to the list
         while (selectedCards.size() < 3 && !availableCards.isEmpty()) {
-            AbstractCard card = availableCards.get(AbstractDungeon.cardRandomRng.random(0, availableCards.size() - 1)).makeCopy();
+            AbstractCard card = availableCards.get(AbstractDungeon.relicRng.random(0, availableCards.size() - 1)).makeCopy();
             if (!isDuplicate(selectedCards, card)) {
                 selectedCards.add(card);
             }

@@ -26,6 +26,9 @@ public class Sixitude extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("Sixitude.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("Sixitude.png"));
 
+    //variables
+    public static final int SIX_SHOOTER = 6;
+
     public Sixitude() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
         this.counter = 0;
@@ -33,9 +36,9 @@ public class Sixitude extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
-        if (!targetCard.hasTag(expansionContentMod.ECHO)) {
+        if ((targetCard.costForTurn != 0) && !(targetCard.freeToPlay())) {
             ++this.counter;
-            if (this.counter % 6 == 0) {
+            if (this.counter % SIX_SHOOTER == 0) {
                 this.flash();
                 this.counter = 0;
                 this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
@@ -47,6 +50,6 @@ public class Sixitude extends CustomRelic {
     }
 
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + SIX_SHOOTER + DESCRIPTIONS[1];
     }
 }

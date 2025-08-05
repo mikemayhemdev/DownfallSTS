@@ -1,11 +1,9 @@
 package automaton.cards;
 
 import automaton.AutomatonMod;
-import automaton.powers.CleanCodePower;
 import automaton.powers.RemoveNextErrorPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 
 public class CleanCode extends AbstractBronzeCard {
 

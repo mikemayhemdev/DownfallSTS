@@ -47,7 +47,7 @@ public class ThreeZeroPotion extends CustomPotion {
         for (int i = 0; i < this.potency; i++) {
             while (var1.hasNext()) {
                 c3 = (AbstractCard) var1.next();
-                if (c3.cost == 0) {
+                if (c3.cost == 0 && !c3.hasTag(AbstractCard.CardTags.HEALING)) {
                     list.add(c3);
                 }
             }
@@ -56,7 +56,7 @@ public class ThreeZeroPotion extends CustomPotion {
 
             while (var1.hasNext()) {
                 c3 = (AbstractCard) var1.next();
-                if (c3.cost == 0) {
+                if (c3.cost == 0 && !c3.hasTag(AbstractCard.CardTags.HEALING)) {
                     list.add(c3);
                 }
             }
@@ -65,12 +65,12 @@ public class ThreeZeroPotion extends CustomPotion {
 
             while (var1.hasNext()) {
                 c3 = (AbstractCard) var1.next();
-                if (c3.cost == 0) {
+                if (c3.cost == 0 && !c3.hasTag(AbstractCard.CardTags.HEALING)) {
                     list.add(c3);
                 }
             }
 
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(list.get(cardRandomRng.random(list.size() - 1))));
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(list.get(potionRng.random(list.size() - 1))));
 
         }
     }

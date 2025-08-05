@@ -279,7 +279,7 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
-    "DESCRIPTION": "Deal !D! damage X times. NL Apply !M! Weak X times.",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Weak X times.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Weak X+1 times."
   },
   "hexamod:NightmareVision": {
@@ -447,11 +447,8 @@
   },
   "hexamod:EtherStep": {
     "NAME": "Ether Step",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Exhaust 1 card. NL Draw !M! card. NL ",
-    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Exhaust 1 card. NL Draw !M! cards. NL ",
-    "EXTENDED_DESCRIPTION": [
-      "Deal !D! damage."
-    ]
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage.[] NL Exhaust 1 card. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage.[] NL Exhaust 1 card. NL Draw !M! cards."
   },
   "hexamod:OpposingAction": {
     "NAME": "Opposing Action",

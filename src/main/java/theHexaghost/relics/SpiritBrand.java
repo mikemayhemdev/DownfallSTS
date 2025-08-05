@@ -3,7 +3,6 @@ package theHexaghost.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import theHexaghost.HexaMod;
 import theHexaghost.ghostflames.AbstractGhostflame;
@@ -25,9 +24,12 @@ public class SpiritBrand extends CustomRelic implements OnChargeSubscriber {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
     }
 
+    //variables
+    private static final int BLOCK = 4;
+
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + BLOCK + DESCRIPTIONS[1];
     }
 
     @Override
@@ -40,7 +42,7 @@ public class SpiritBrand extends CustomRelic implements OnChargeSubscriber {
     public void onCharge(AbstractGhostflame g) {
         if (!activated) {
             flash();
-            addToBot(new GainBlockAction(AbstractDungeon.player, 4));
+            addToBot(new GainBlockAction(AbstractDungeon.player, BLOCK));
             activated = true;
             stopPulse();
         }

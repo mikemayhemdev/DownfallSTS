@@ -145,7 +145,7 @@
   "Guardian:RevengePower": {
     "NAME": "Revenge",
     "DESCRIPTIONS": [
-      "Whenever you enter #yDefensive #yMode gain #b",
+      "Whenever you enter #yDefensive #yMode [REMOVE_SPACE], gain #b",
       " #yStrength [REMOVE_SPACE]."
     ]
   },

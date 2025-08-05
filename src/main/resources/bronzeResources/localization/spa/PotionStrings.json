@@ -1,0 +1,35 @@
+{
+  "bronze:FreeFunctionsPotion": {
+    "NAME": "Aceite de Máquina",
+    "DESCRIPTIONS": [
+      "Aumenta todos los valores numéricos en las cartas #yCodificadas en #b",
+      " excepto el costo."
+    ]
+  },
+  "bronze:CleanCodePotion": {
+    "NAME": "Elixir Alquírico",
+    "DESCRIPTIONS": [
+      "Elimina todos los efectos de #yError de #yCompilación de la próxima #yFunción que crees; cuesta #b0 hasta que se juegue.",
+      "Elimina todos los efectos de #yError de #yCompilación de las próximas #b",
+      " #yFunciones que crees; cuestan #b0 hasta que se jueguen."
+    ]
+  },
+  "bronze:BurnAndBuffPotion": {
+    "NAME": "Brebaje Irritante",
+    "DESCRIPTIONS": [
+      "Gana #b",
+      " de #yFuerza y #b",
+      " de #yDestreza [REMOVE_SPACE]. NL Añade dos cartas #yQuemadura+ a tu pila de descarte."
+    ]
+  },
+  "bronze:BuildAFunctionPotion": {
+    "NAME": "Mezcla Ingeniosa de Kio",
+    "DESCRIPTIONS": [
+      "Elige #b1 de #b3 cartas aleatorias para #yCodificar [REMOVE_SPACE]; repite hasta crear una #yFunción [REMOVE_SPACE].",
+      "Elige #b1 de #b3 cartas aleatorias para #yCodificar [REMOVE_SPACE]; repite hasta crear una #yFunción y gana #b",
+      " copia de ella.",
+      " copias de ella."
+    ]
+  }
+}
+

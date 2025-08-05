@@ -18,66 +18,66 @@ public class SerpentIdolAction extends AbstractGameAction {
     private boolean retrieveCard = false;
 
     public SerpentIdolAction() {
-        this.actionType = ActionType.CARD_MANIPULATION;// 19
-        this.duration = Settings.ACTION_DUR_FAST;// 20
-    }// 22
+        this.actionType = ActionType.CARD_MANIPULATION;
+        this.duration = Settings.ACTION_DUR_FAST;
+    }
 
     public void update() {
-        if (this.duration == Settings.ACTION_DUR_FAST) {// 26
-            AbstractDungeon.cardRewardScreen.customCombatOpen(OffclassHelper.getXRandomOffclassCards(3), CardRewardScreen.TEXT[1], true);// 27
-            this.tickDuration();// 28
+        if (this.duration == Settings.ACTION_DUR_FAST) {
+            AbstractDungeon.cardRewardScreen.customCombatOpen(OffclassHelper.getXRandomOffclassCards(3), CardRewardScreen.TEXT[1], true);
+            this.tickDuration();
         } else {
-            if (!this.retrieveCard) {// 32
-                if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {// 33
-                    AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeStatEquivalentCopy();// 34
-                    disCard.setCostForTurn(0);// 36
+            if (!this.retrieveCard) {
+                if (AbstractDungeon.cardRewardScreen.discoveryCard != null) {
+                    AbstractCard disCard = AbstractDungeon.cardRewardScreen.discoveryCard.makeStatEquivalentCopy();
+                    disCard.setCostForTurn(0);
 
-                    disCard.current_x = -1000.0F * Settings.scale;// 38
-                    if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {// 39
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 40
+                    disCard.current_x = -1000.0F * Settings.scale;
+                    if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToHandEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     } else {
-                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));// 44
+                        AbstractDungeon.effectList.add(new ShowCardAndAddToDiscardEffect(disCard, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                     }
 
-                    AbstractDungeon.cardRewardScreen.discoveryCard = null;// 48
+                    AbstractDungeon.cardRewardScreen.discoveryCard = null;
                 }
 
-                this.retrieveCard = true;// 50
+                this.retrieveCard = true;
             }
 
-            this.tickDuration();// 53
+            this.tickDuration();
         }
-    }// 29 54
+    }
 
     private ArrayList<AbstractCard> generateCardChoices() {
-        ArrayList<AbstractCard> derp = new ArrayList<>();// 57
+        ArrayList<AbstractCard> derp = new ArrayList<>();
 
-        while (derp.size() != 3) {// 60
-            boolean dupe = false;// 61
-            int roll = AbstractDungeon.cardRandomRng.random(99);// 64
+        while (derp.size() != 3) {
+            boolean dupe = false;
+            int roll = AbstractDungeon.cardRandomRng.random(99);
             CardRarity cardRarity;
-            if (roll < 55) {// 65
-                cardRarity = CardRarity.COMMON;// 66
-            } else if (roll < 85) {// 67
-                cardRarity = CardRarity.UNCOMMON;// 68
+            if (roll < 55) {
+                cardRarity = CardRarity.COMMON;
+            } else if (roll < 85) {
+                cardRarity = CardRarity.UNCOMMON;
             } else {
-                cardRarity = CardRarity.RARE;// 70
+                cardRarity = CardRarity.RARE;
             }
 
             AbstractCard tmp = SneckoMod.getOffClassCardMatchingPredicate(c -> c.rarity == cardRarity);
 
             for (AbstractCard c : derp) {
-                if (c.cardID.equals(tmp.cardID)) {// 76
-                    dupe = true;// 77
-                    break;// 78
+                if (c.cardID.equals(tmp.cardID)) {
+                    dupe = true;
+                    break;
                 }
             }
 
-            if (!dupe) {// 82
-                derp.add(tmp.makeCopy());// 83
+            if (!dupe) {
+                derp.add(tmp.makeCopy());
             }
         }
 
-        return derp;// 87
+        return derp;
     }
 }

@@ -15,18 +15,18 @@ import expansioncontent.expansionContentMod;
 public class GuardianWhirl extends AbstractExpansionCard {
     public static final String ID = makeID("GuardianWhirl");
 
-    private static final int DAMAGE = 5;
+    private static final int DAMAGE = 4;
 
     private static final int MAGIC = 2;
 
     private static final int downfallMagic = 10;
 
     public GuardianWhirl() {
-        super(ID, 1, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
+        super(ID, 2, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.ALL_ENEMY);
         setBackgroundTexture("expansioncontentResources/images/512/bg_boss_guardian.png", "expansioncontentResources/images/1024/bg_boss_guardian.png");
         this.tags.add(expansionContentMod.STUDY_GUARDIAN);
         this.tags.add(expansionContentMod.STUDY);
-        this.baseDamage = 5;
+        this.baseDamage =   4;
         this.isMultiDamage = true;
         this.baseDownfallMagic = 10;
         this.magicNumber = this.baseMagicNumber = 2;
@@ -52,7 +52,7 @@ public class GuardianWhirl extends AbstractExpansionCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeDamage(1);
+            upgradeDamage(2);
         }
     }
 }

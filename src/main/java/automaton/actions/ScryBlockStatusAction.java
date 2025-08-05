@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import theHexaghost.HexaMod;
 
 public class ScryBlockStatusAction extends AbstractGameAction {
     private static final UIStrings uiStrings;

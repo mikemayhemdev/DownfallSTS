@@ -8,7 +8,10 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import downfall.downfallMod;
+
+import static champ.ChampMod.vigor;
 
 public class NextTurnPowerPower extends AbstractPower {
     private AbstractPower powerToGain;
@@ -43,7 +46,12 @@ public class NextTurnPowerPower extends AbstractPower {
     @Override
     public void atStartOfTurn() {
         flash();
-        addToBot(new ApplyPowerAction(owner, owner, powerToGain, powerToGain.amount));
+        if (powerToGain.ID != VigorPower.POWER_ID) {
+            addToBot(new ApplyPowerAction(owner, owner, powerToGain, powerToGain.amount));
+        }
+        if (powerToGain.ID == VigorPower.POWER_ID) {
+            vigor(amount);
+        }
         addToBot(new RemoveSpecificPowerAction(owner, owner, this.ID));
     }
 

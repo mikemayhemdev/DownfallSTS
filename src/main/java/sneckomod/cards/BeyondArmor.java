@@ -2,6 +2,7 @@ package sneckomod.cards;
 
 import basemod.BaseMod;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.relics.ToxicEgg2;
 import hermit.relics.Spyglass;
 import hermit.util.Wiz;
 import sneckomod.SneckoMod;
+import sneckomod.actions.DrawOffclassAction;
 import sneckomod.relics.UnknownEgg;
 
 import java.util.ArrayList;
@@ -53,23 +55,7 @@ public class BeyondArmor extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new GainBlockAction(p, p, this.block));
-
-        int count = 0;
-
-        // fully loaded code
-        CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        tmp.group.addAll(AbstractDungeon.player.drawPile.group.stream()
-                .filter(c -> c.color != this.color)
-                .limit(magicNumber)
-                .collect(Collectors.toList()));
-
-        for (AbstractCard c : tmp.group) {
-            if (Wiz.hand().size() < BaseMod.MAX_HAND_SIZE) {
-                addToBot(new FetchAction(Wiz.p().drawPile, card -> card == c));
-                count++;
-                if (count >= magicNumber) break;
-            }
-        }
+        this.addToBot(new DrawOffclassAction(magicNumber));
     }
 
     @Override
@@ -84,7 +70,7 @@ public class BeyondArmor extends AbstractSneckoCard {
 
             if (!cardListDuplicate(cardsToReward, newCard)) {
                 SOFTLOCK = 0;
-                cardsToReward.add(newCard.makeCopy()); // Use makeCopy() to ensure a new instance
+                cardsToReward.add(newCard.makeCopy());
             }
         }
         SneckoMod.addGift(cardsToReward);

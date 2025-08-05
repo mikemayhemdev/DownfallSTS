@@ -17,7 +17,7 @@ public class Endure extends AbstractChampCard {
         tags.add(ChampMod.OPENER);
 
         this.tags.add(ChampMod.OPENERDEFENSIVE);
-        baseBlock = block = 7;
+        baseBlock = block = 6;
         postInit();
 
         loadJokeCardImage(this, "Endure.png");
@@ -34,12 +34,17 @@ public class Endure extends AbstractChampCard {
         if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
             baseBlock += AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
         }
+        if (!upgraded && AbstractDungeon.player.hasPower(DexterityPower.POWER_ID)) {
+            baseBlock -= AbstractDungeon.player.getPower(DexterityPower.POWER_ID).amount;
+        }
         super.applyPowersToBlock();
         baseBlock = realBaseBlock;
         isBlockModified = block != baseBlock;
     }
 
     public void upp() {
-        upgradeBlock(3);
+        upgradeBlock(2);
+        rawDescription = UPGRADE_DESCRIPTION;
+        initializeDescription();
     }
 }

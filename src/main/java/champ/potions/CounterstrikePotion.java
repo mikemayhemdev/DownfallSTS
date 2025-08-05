@@ -1,9 +1,7 @@
 package champ.potions;
 
-
 import basemod.BaseMod;
 import basemod.abstracts.CustomPotion;
-import champ.ChampMod;
 import champ.powers.CounterPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;

@@ -18,10 +18,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
-import com.megacrit.cardcrawl.powers.ArtifactPower;
-import com.megacrit.cardcrawl.powers.GainStrengthPower;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.*;
 
 public class WatcherSkillPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:WatcherSkillPower";
@@ -41,7 +38,7 @@ public class WatcherSkillPower extends AbstractBossMechanicPower {
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[3];
     }
     @Override
     public void onUseCard(final AbstractCard card, final UseCardAction action) {
@@ -53,6 +50,21 @@ public class WatcherSkillPower extends AbstractBossMechanicPower {
             this.addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount, true, AbstractGameAction.AttackEffect.NONE));
             this.addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, this.amount), this.amount));
         }
+
+        if (card.type.equals(AbstractCard.CardType.ATTACK)) {
+            this.flash();
+            this.addToBot(new ApplyPowerAction(owner, owner, new DexterityPower(owner, amount), amount, true, AbstractGameAction.AttackEffect.NONE));
+            this.addToBot(new ApplyPowerAction(owner, owner, new LoseDexterityPower(owner, this.amount), this.amount));
+        }
+
+        if (card.type.equals(AbstractCard.CardType.POWER)) {
+            this.flash();
+            this.addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount, true, AbstractGameAction.AttackEffect.NONE));
+            this.addToBot(new ApplyPowerAction(owner, owner, new LoseStrengthPower(owner, this.amount), this.amount));
+            this.addToBot(new ApplyPowerAction(owner, owner, new DexterityPower(owner, amount), amount, true, AbstractGameAction.AttackEffect.NONE));
+            this.addToBot(new ApplyPowerAction(owner, owner, new LoseDexterityPower(owner, this.amount), this.amount));
+        }
+
     }
 
     @Override

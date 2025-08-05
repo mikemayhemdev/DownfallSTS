@@ -22,15 +22,18 @@ public class BrassTacks extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.CLINK);
     }
 
+    //variables
+    private static final int BLOCK = 2;
+
     public void atBattleStart() {
         this.flash();
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new MetallicizePower(AbstractDungeon.player, 2), 2));
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new MetallicizePower(AbstractDungeon.player, BLOCK), BLOCK));
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + BLOCK + DESCRIPTIONS[1];
     }
 
 }

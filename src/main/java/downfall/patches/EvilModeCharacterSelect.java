@@ -1,6 +1,7 @@
 package downfall.patches;
 
 import automaton.AutomatonChar;
+import awakenedOne.AwakenedOneChar;
 import basemod.CustomCharacterSelectScreen;
 import basemod.ReflectionHacks;
 import champ.ChampChar;
@@ -55,7 +56,7 @@ public class EvilModeCharacterSelect {
             Iterator<CharacterOption> options = __instance.options.iterator();
 
             ArrayList<CharacterOption> basegameOptions = new ArrayList<>(), moddedOptions = new ArrayList<>();
-            CharacterOption[] villainOptions = new CharacterOption[8];
+            CharacterOption[] villainOptions = new CharacterOption[9];
 
             while (options.hasNext()) {
                 CharacterOption o = options.next();
@@ -107,18 +108,26 @@ public class EvilModeCharacterSelect {
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
                                 villainOptions[5] = o;
+
+                            } else if (o.c.chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE) {
+                                if (UnlockTracker.isCharacterLocked("Awakened")) {
+                                    o.locked = true;
+                                    ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
+                                }
+                                villainOptions[6] = o;
+
                             } else if (o.c.chosenClass == GremlinEnum.GREMLIN) {
                                 if (UnlockTracker.isCharacterLocked("Gremlin")) {
                                     o.locked = true;
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
-                                villainOptions[6] = o;
+                                villainOptions[7] = o;
                             } else if (o.c.chosenClass == TheSnecko.Enums.THE_SNECKO) {
                                 if (UnlockTracker.isCharacterLocked("Snecko")) {
                                     o.locked = true;
                                     ReflectionHacks.setPrivate(o, CharacterOption.class, "buttonImg", ImageMaster.CHAR_SELECT_LOCKED);
                                 }
-                                villainOptions[7] = o;
+                                villainOptions[8] = o;
                             }  else {
                                 isVillain = false;
                                 moddedOptions.add(o);

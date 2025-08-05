@@ -4,16 +4,14 @@ import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
 import champ.relics.ChampionCrown;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.AbstractStance;
 import guardian.GuardianMod;
 import guardian.cards.GearUp;
+import guardian.powers.EnergizedGuardianPower;
 import guardian.stances.DefensiveMode;
 
 public class ModeShifterPlus extends CustomRelic {
@@ -24,7 +22,7 @@ public class ModeShifterPlus extends CustomRelic {
     public ModeShifterPlus() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)),
                 new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.BOSS, LandingSound.FLAT);
+                RelicTier.BOSS, LandingSound.CLINK);
     }
 
     @Override
@@ -34,12 +32,22 @@ public class ModeShifterPlus extends CustomRelic {
         addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
 
+    //finally got around to doing this
     @Override
-    public void onChangeStance(AbstractStance prevStance, AbstractStance newStance) {
-        if (newStance instanceof DefensiveMode) {
-           // flash();
-            addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+    public void onTrigger() {
+        super.onTrigger();
+
+        addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+
+        if (!AbstractDungeon.actionManager.turnHasEnded) {
+            addToTop(new GainEnergyAction(1));
         }
+
+        if (AbstractDungeon.actionManager.turnHasEnded) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnergizedGuardianPower(AbstractDungeon.player, 1)));
+        }
+
+        addToTop(new DrawCardAction(AbstractDungeon.player, 2));
     }
 
     @Override

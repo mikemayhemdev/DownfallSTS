@@ -59,7 +59,7 @@ public class TrashCanPower extends AbstractPower implements CloneablePowerInterf
     }
 
     @Override
-    public void atStartOfTurnPostDraw() {
+    public void atEndOfRound() {
         this.flash();
         Wiz.atb(new HandSelectAction(this.amount, (c) -> true, list -> {
             for (AbstractCard c : list)

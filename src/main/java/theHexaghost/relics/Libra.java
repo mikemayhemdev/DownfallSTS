@@ -73,9 +73,9 @@ public class Libra extends CustomRelic {
     }
 
     public void update() {
+        //it wasn't
         super.update(); // Todo, verify the trigger condition is fine for controller input too
-        if (!this.calledTransform && (no_cards_to_select || (AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered && InputHelper.justClickedLeft) ) ) {
-            AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered = false;
+        if (!this.calledTransform && (no_cards_to_select)) {
             this.calledTransform = true;
             AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
             this.giveCards(AbstractDungeon.gridSelectScreen.selectedCards);
@@ -117,10 +117,7 @@ public class Libra extends CustomRelic {
             new_cards.addToBottom(c);
             AbstractDungeon.player.masterDeck.removeCard(card);
         }
-
         AbstractDungeon.gridSelectScreen.openConfirmationGrid(new_cards, this.DESCRIPTIONS[1]);
-        AbstractDungeon.gridSelectScreen.selectedCards.clear();
-
     }
 
 

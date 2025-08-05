@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import gremlin.powers.WizPower;
 
+import static champ.ChampMod.vigor;
+
 public class WizPotion extends CustomPotion {
     public static final String POTION_ID = "gremlin:WizPotion";
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
@@ -39,8 +41,9 @@ public class WizPotion extends CustomPotion {
 
 
     public void use(AbstractCreature target) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                new VigorPower(AbstractDungeon.player, this.potency), this.potency));
+      //  AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
+                //new VigorPower(AbstractDungeon.player, this.potency), this.potency));
+        vigor(this.potency);
     }
 
     public CustomPotion makeCopy() {

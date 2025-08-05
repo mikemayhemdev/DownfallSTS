@@ -2,6 +2,7 @@ package charbosses.bosses.Watcher.NewAge;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
+import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.cards.colorless.EnGoodInstincts;
@@ -18,7 +19,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
-public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
+public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
 
     private AbstractBossCard theVeryImportantSandsOfTime = null;
     private AbstractBossCard theVeryImportantPerseverence = null;
@@ -44,7 +45,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
 
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_ThreadAndNeedle());
-        addRelic(new CBR_DuvuDoll(2));
+        addRelic(new CBR_Vajra());
         addRelic(new CBR_Torii());
         addRelic(new CBR_VelvetChoker());
     }
@@ -92,7 +93,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
                     //big attack
                     addToList(cardsList, new EnExpunger());     //Big Attack // I mean, not really that big compared to what time eater hits for.
                     addToList(cardsList, new EnBlind()); // blind moved here to replace the strike
-                    addToList(cardsList, new EnDevotion());
+                    addToList(cardsList, new EnDevotion(), true);
                     turn = 0;
                     looped = true;
                     break;
@@ -140,6 +141,6 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseDefect {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_Damaru());
+        addRelic(new CBR_DuvuDoll(2));
     }
 }

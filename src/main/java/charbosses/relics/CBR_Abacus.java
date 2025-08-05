@@ -19,7 +19,7 @@ public class CBR_Abacus extends AbstractCharbossRelic {
     }
 
 
-    public void onShuffle() {
+    public void onTrigger() {
         this.flash();
         this.addToBot(new RelicAboveCreatureAction(this.owner, this));
         this.addToBot(new GainBlockAction(this.owner, this.owner, 6));

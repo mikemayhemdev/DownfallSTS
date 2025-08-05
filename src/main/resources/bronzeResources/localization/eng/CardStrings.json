@@ -300,7 +300,7 @@
   },
   "bronze:HyperBeam": {
     "NAME": "HYPER BEAM",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Put 5 *Void on top of your draw pile."
+    "DESCRIPTION": "Retain. NL Deal !D! damage to ALL enemies. NL Put !M! *Voids on top of your draw pile."
   },
   "bronze:InfiniteBeams": {
     "NAME": "Infinite Beams",
@@ -584,7 +584,7 @@
   },
   "bronze:DecaBeam": {
     "NAME": "Proto-Shield",
-    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! expansioncontent:Plated *Armor and bronze:Insert !bauto! *Dazed.",
+    "DESCRIPTION": "Gain !B! Block. NL bronze:Compile - Gain !M! *Plated *Armor and bronze:Insert !bauto! *Dazed.",
     "EXTENDED_DESCRIPTION": [
       "jagged",
       "Barrier"

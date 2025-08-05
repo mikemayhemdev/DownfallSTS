@@ -1,0 +1,140 @@
+[
+  {
+    "PROPER_NAME": "Activo",
+    "NAMES": [
+      "active",
+      "activo"
+    ],
+    "DESCRIPTION": "La llama fantasmal #yActiva puede ser #yIncendiada si se cumplen sus requisitos de Incendio."
+  },
+  {
+    "PROPER_NAME": "Avanzar",
+    "NAMES": [
+      "advance",
+      "advanced",
+      "advancing",
+      "avanzar",
+      "avanzado",
+      "avanzando",
+	  "avanza",
+	  "avanzarás",
+	  "avanzas"
+    ],
+    "DESCRIPTION": "Avanza hacia la siguiente llama fantasmal. Al hacerlo, esta se #yApaga."
+  },
+  {
+    "PROPER_NAME": "Retroceder",
+    "NAMES": [
+      "retract",
+      "retracted",
+      "retracting",
+      "retroceder",
+      "retrocedido",
+      "retrocediendo",
+	  "retrocede",
+	  "retrocedas"
+    ],
+    "DESCRIPTION": "Retrocede a la llama fantasmal anterior. Al hacerlo, esta se #yApaga."
+  },
+  {
+    "PROPER_NAME": "Intensidad",
+    "NAMES": [
+      "intensity",
+      "intensidad"
+    ],
+    "DESCRIPTION": "La Intensidad incrementa el daño, el #yQuemarAlma y el #yBloqueo aplicados por las llamas fantasmales al ser #yIncendiada."
+  },
+  {
+    "ID": "soulburn",
+    "PROPER_NAME": "QuemarAlma",
+    "NAMES": [
+      "soulburn",
+      "soulburned",
+      "quemaralma",
+      "quemadoalma"
+    ],
+    "DESCRIPTION": "Después de #b3 turnos, un enemigo con QuemarAlma pierde PV y se elimina el efecto."
+  },
+  {
+    "PROPER_NAME": "Extinguir",
+    "NAMES": [
+      "extinguish",
+      "extinguished",
+      "extinguir",
+      "extinguido",
+	  "extingue",
+	  "extinguida"
+    ],
+    "DESCRIPTION": "Permite que una llama fantasmal pueda ser #yIncendiada nuevamente, reiniciando sus requisitos de ignición."
+  },
+  {
+    "PROPER_NAME": "Incendiar",
+    "NAMES": [
+      "ignite",
+      "ignited",
+      "force-ignite",
+      "incendiar",
+	  "incendia",
+      "incendiada",
+	  "incendiadas",
+	  "incendiarse",
+      "forzar-incendio",
+      "incendio",
+	  "incendiala",
+	  "incendies",
+    ],
+    "DESCRIPTION": "Activa el efecto de ignición descrito en una llama fantasmal."
+  },
+  {
+    "PROPER_NAME": "Sellar",
+    "NAMES": [
+      "seal",
+      "sellar",
+	  "sello"
+    ],
+    "DESCRIPTION": "Cuanto más juegas cartas de Sello, más probable es encontrar otras. Si se han jugado los #b6 Sellos durante un combate, obtén el #pSello #pRoto y elimina los #b6 Sellos del mazo."
+  },
+  {
+    "ID": "afterlife",
+    "PROPER_NAME": "Ultratumba",
+    "NAMES": [
+      "afterlife",
+      "ultratumba"
+    ],
+    "DESCRIPTION": "Este efecto púrpura también se activa cuando esta carta se #yAgota."
+  },
+  {
+    "PROPER_NAME": "Aplastante",
+    "NAMES": [
+      "crushing",
+      "aplastante"
+    ],
+    "DESCRIPTION": "#yLlama #yFantasmal. Se #yincendia al jugar #b2 #yHabilidades mientras estás sobre ella. #yIncendiar: Al #yIncendiarse, inflige #b6 de daño a un enemigo aleatorio."
+  },
+  {
+    "PROPER_NAME": "Fortalecedora",
+    "NAMES": [
+      "bolstering",
+      "fortalecedora"
+    ],
+    "DESCRIPTION": "#yLlama #yFantasmal. Se #yIncendia al jugar un #yPoder mientras estás sobre ella. #yIncendio: Al #yIncendiarse, obtén #b4 de #yBloqueo y #b1 de #yFuerza."
+  },
+  {
+    "ID": "plated",
+    "PROPER_NAME": "Armadura de Placas",
+    "NAMES": [
+      "plated",
+      "placada",
+	   "placas"
+    ],
+    "DESCRIPTION": "Al final de tu turno, obtén Bloqueo igual a tu cantidad de #yArmadura de #yPlacas. Recibir daño de un ataque sin bloquear reduce tu Armadura en #b1."
+  },
+  {
+    "PROPER_NAME": "Abrasadora",
+    "NAMES": [
+      "searing",
+      "abrasadora"
+    ],
+    "DESCRIPTION": "#yLlama #yFantasmal. #ySe enciende al jugar #b2 #yAtaques mientras estás sobre ella. #yIncendio: Al #yIncendiarse, aplica #b6 de #yQuemarAlma a un enemigo aleatorio, modificado dos veces por la #yIntensidad."
+  }
+]

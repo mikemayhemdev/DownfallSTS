@@ -23,6 +23,9 @@ public class RedScarf extends CustomRelic implements OnApplyPowerRelic {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
     }
 
+    //variables
+    private static final int BLOCK = 3;
+
     @Override
     public boolean onApplyPower(AbstractPower var1, AbstractCreature var2, AbstractCreature var3)
     {
@@ -31,7 +34,7 @@ public class RedScarf extends CustomRelic implements OnApplyPowerRelic {
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             flash();
 
-            this.addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, 3));
+            this.addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, BLOCK));
         }
 
         return true;
@@ -39,7 +42,7 @@ public class RedScarf extends CustomRelic implements OnApplyPowerRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + BLOCK + DESCRIPTIONS[1];
     }
 
 }

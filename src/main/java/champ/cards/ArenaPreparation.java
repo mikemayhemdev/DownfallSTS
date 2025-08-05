@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import expansioncontent.cardmods.PropertiesMod;
-import expansioncontent.cardmods.RetainCardMod;
 
 import static champ.ChampMod.loadJokeCardImage;
 

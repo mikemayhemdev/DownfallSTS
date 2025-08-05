@@ -1,0 +1,324 @@
+{
+  "collector:AddCopyNextTurn": {
+    "NAME": "Carta Entrante",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu próximo turno, añade ",
+      " a tu mano."
+    ]
+  },
+  "collector:BindingCall": {
+    "NAME": "Llamado de Atadura",
+    "DESCRIPTIONS": [
+      "Cada vez que pierdas todos tus #yPV #yTemporales, aplica #b",
+      " de #yCondena a TODOS los enemigos."
+    ]
+  },
+  "collector:CantTouchThis": {
+    "NAME": "Intocable",
+    "DESCRIPTIONS": [
+      "Cada vez que bloquees completamente un ataque, aplica #b",
+      " de #yCondena al atacante."
+    ]
+  },
+  "collector:Crackle": {
+    "NAME": "Crepitar",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, gana #b1 de #yReserva.",
+      "Al comienzo de tu turno, gana #b",
+      " de #yReservas."
+    ]
+  },
+  "collector:DarkLordForm": {
+    "NAME": "Forma del Señor Oscuro",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, juega #y¡Eres #yMío! a un enemigo aleatorio.",
+      "Al comienzo de tu turno, juega #b",
+      " copias de #y¡Eres #yMío! a enemigos aleatorios."
+    ]
+  },
+  "collector:DarkLordFormPlus": {
+    "NAME": "Forma del Señor Oscuro+",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, juega #y¡Eres #yMío!+ a un enemigo aleatorio.",
+      "Al comienzo de tu turno, juega #b",
+      " copias de #y¡Eres #yMío!+ a enemigos aleatorios."
+    ]
+  },
+  "collector:DoMayhem": {
+    "NAME": "Causar Caos",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, si algún enemigo tiene #b",
+      " o más de #yCondena, juega la carta superior de tu pila de robo.",
+      " o más de #yCondena, juega las #b",
+      " primeras cartas de tu pila de robo."
+    ]
+  },
+  "collector:Doom": {
+    "NAME": "Condena",
+    "DESCRIPTIONS": [
+      "Pierde #b",
+      " PV al comienzo de su turno, elimina toda la #yCondena si no esta #yAfligido."
+    ]
+  },
+  "collector:DoublePlayCollectibles": {
+    "NAME": "Coleccionables Dobles",
+    "DESCRIPTIONS": [
+      "Las cartas Coleccionadas se juegan dos veces.",
+      "Las cartas Coleccionadas se juegan #b",
+      " veces adicionales."
+    ]
+  },
+  "collector:DemisePower": {
+    "NAME": "Destino Inevitable",
+    "DESCRIPTIONS": [
+      "Evita la próxima vez que se elimine #yCondena de este enemigo.",
+      "Evita las próximas #b",
+      " veces que se elimine #yCondena de este enemigo."
+    ]
+  },
+  "collector:FeelMyPain": {
+    "NAME": "Siente Mi Dolor",
+    "DESCRIPTIONS": [
+      "Cada vez que #yAgotes una carta, un enemigo aleatorio pierde #b",
+      " PV."
+    ]
+  },
+  "collector:HealIfDieThisTurn": {
+    "NAME": "Finalizado",
+    "DESCRIPTIONS": [
+      "Cuando ",
+      " muera, cura #b",
+      " PV."
+    ]
+  },
+  "collector:Karma": {
+    "NAME": "Karma",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, si un enemigo está #yAfligido [REMOVE_SPACE], gana #b",
+      " de #yBloqueo."
+    ]
+  },
+  "collector:NextAttackAppliesDoom": {
+    "NAME": "Ataque Condenado",
+    "DESCRIPTIONS": [
+      "Tu próximo Ataque este turno aplica #b",
+      " de #yCondena."
+    ]
+  },
+  "collector:AttacksApplyDoomPower": {
+    "NAME": "Ataques Condenados",
+    "DESCRIPTIONS": [
+      "Los Ataques este turno aplican #b",
+      " de #yCondena."
+    ]
+  },
+  "collector:NextCollectedTwice": {
+    "NAME": "Doble Colección",
+    "DESCRIPTIONS": [
+      "Tu próxima carta Coleccionada este turno se juega dos veces.",
+      "Tus próximas #b",
+      " cartas Coleccionadas este turno se juegan dos veces."
+    ]
+  },
+  "collector:NextTurnReserve": {
+    "NAME": "Reserva del Próximo Turno",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu próximo turno, gana #b1 de #yReserva.",
+      "Al comienzo de tu próximo turno, gana #b",
+      " de #yReservas."
+    ]
+  },
+  "collector:Omen": {
+    "NAME": "Augurio",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta #yColeccionada, gana #b",
+      " de #yFuerza."
+    ]
+  },
+  "collector:ProtectingCall": {
+    "NAME": "Llamado Protector",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, si tienes #yPV #yTemporales, gana #b",
+      " de #yBloqueo."
+    ]
+  },
+  "collector:RagingCall": {
+    "NAME": "Llamado Furioso",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, si tienes #yPV #yTemporales, inflige #b",
+      " de daño a TODOS los enemigos."
+    ]
+  },
+  "collector:Reserve": {
+    "NAME": "Reservas",
+    "DESCRIPTIONS": [
+      "Tienes #b1 de #yReserva.",
+      "Tienes #b",
+      " de #yReservas."
+    ]
+  },
+  "collector:Soulforge": {
+    "NAME": "Forja de Almas",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, añade #b1 *Brasa a tu mano.",
+      "Al comienzo de tu turno, añade #b",
+      " *Brasas a tu mano."
+    ]
+  },
+  "collector:StrengthOverTurns": {
+    "NAME": "Potenciar",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu próximo turno, gana #b",
+      " de #yFuerza.",
+      "Al comienzo de tus próximos #b",
+      " turnos, gana #b"
+    ]
+  },
+  "collector:Suffering": {
+    "NAME": "Sufrimiento",
+    "DESCRIPTIONS": [
+      "Cada vez que apliques #yDébil o #yVulnerable, también aplica #b",
+      " de #yCondena."
+    ]
+  },
+  "collector:TorchHead": {
+    "NAME": "CabezaDeAntorcha",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues un #yAtaque, si tienes #yPV #yTemporales, CabezaDeAntorcha: NL ",
+      "Aplica #b",
+      " de #yCondena a un enemigo aleatorio.",
+      "Inflige #b",
+      " de daño a TODOS los enemigos.",
+      "Gana #b",
+      " de #yBloqueo.",
+      " #yVeneno a un enemigo aleatorio.",
+      "Roba #b",
+      " carta.",
+      " cartas."
+    ]
+  },
+  "collector:IncreasedCollectionDraw": {
+    "NAME": "Colección Expandida",
+    "DESCRIPTIONS": [
+      "Roba #b1 carta Coleccionada adicional cada turno.",
+      "Roba #b",
+      " cartas Coleccionadas adicionales cada turno."
+    ]
+  },
+  "collector:MastersCall": {
+    "NAME": "Llamado del Amo",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues un Ataque, si tienes #yPV #yTemporales, inflige #b",
+      " de daño a un enemigo aleatorio."
+    ]
+  },
+   "collector:LouseCard": {
+    "NAME": "Encogerse",
+    "DESCRIPTIONS": [
+      "La próxima vez que recibas daño de ataque sin bloquear, gana #b",
+      " de #yBloqueo."
+    ]
+  },
+  "collector:MadGremlinCard": {
+    "NAME": "Furioso",
+    "DESCRIPTIONS": [
+      "Si recibes daño de ataque sin bloquear este turno, añade un #yGremlin #yGuerrero a tu mano.",
+      "Si recibes daño de ataque sin bloquear este turno, añade #b",
+      " #yGremlins #yGuerreros a tu mano."
+    ]
+  },
+  "collector:GremlinWizardCard": {
+    "NAME": "Cargando Poder",
+    "DESCRIPTIONS": [
+      "En el próximo turno, gana #b",
+      " de #yVigor."
+    ]
+  },
+  "collector:ThievesCard": {
+    "NAME": "Escurridizo",
+    "DESCRIPTIONS": [
+      "Recibe #b",
+      " menos daño de ataques este turno."
+    ]
+  },
+  "collector:BookOfStabbingCard": {
+    "NAME": "Apuñalador",
+    "DESCRIPTIONS": [
+      "Cada vez que inflijas daño de ataque sin bloquear, aplica #b",
+      " de #yCondena."
+    ]
+  },
+  "collector:TransientCard": {
+    "NAME": "Desvaneciente",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, #rmueres.",
+      "En #b",
+      " turnos, #rmueres."
+    ]
+  },
+  "collector:ReptomancerCard": {
+    "NAME": "Llamado Tóxico",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, si tienes #yPV #yTemporales, aplica #b",
+      " de #yVeneno a un enemigo aleatorio."
+    ]
+  },
+  "collector:MoreBlockWithTempHP": {
+    "NAME": "Casco Dedal",
+    "DESCRIPTIONS": [
+      "Mientras tengas #yPV #yTemporales, gana #b",
+      " más de #yBloqueo con las cartas."
+    ]
+  },
+  "collector:NextTurnVigor": {
+    "NAME": "Vigor del Próximo Turno",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu próximo turno, gana #b",
+      " de #yVigor."
+    ]
+  },
+  "collector:AcidSlimeCard": {
+    "NAME": "Duplicación Babosa",
+    "DESCRIPTIONS": [
+      "Tu próximo #yAtaque o #yHabilidad este turno se juega dos veces.",
+      "Tus próximos #b",
+      " #yAtaques o #yHabilidades este turno se juegan dos veces."
+    ]
+  },
+  "collector:GremlinNobCard": {
+    "NAME": "Irritado",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una #yHabilidad, gana #b",
+      " de #yVigor."
+    ]
+  },
+  "collector:LanternFlare": {
+    "NAME": "Marcado por la Llama",
+    "DESCRIPTIONS": [
+      "Al final de su turno, gana #b",
+      " de #yCondena."
+    ]
+  },
+  "collector:WomanInBlueCard": {
+    "NAME": "Mujer de Azul",
+    "DESCRIPTIONS": [
+      "Al final del combate, pierdes todas tus pociones."
+    ]
+  },
+  "collector:ShootingStar": {
+    "NAME": "Estrella Fugaz",
+    "DESCRIPTIONS": [
+      "La primera vez que un #yAtaque arda en la #yPira cada turno, regresa a tu mano. Cuesta #b0 hasta jugarse.",
+      "Las primeras #b",
+      " veces que un #yAtaque arda en la #yPira cada turno, regresa a tu mano. Cuesta #b0 hasta jugarse."
+    ]
+  },
+  "collector:LoseHpNextTurn": {
+    "NAME": "Marcado para Morir",
+    "DESCRIPTIONS": [
+      "Al final de su turno, pierde #b",
+      " PV."
+    ]
+  }
+}
+

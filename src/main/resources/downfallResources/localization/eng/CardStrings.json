@@ -13,7 +13,7 @@
   },
   "downfall:Haunted": {
     "NAME": "Haunted",
-    "DESCRIPTION": "Ethereal. Unplayable. NL Whenever another card is *Exhausted when this is in hand, take 2 damage."
+    "DESCRIPTION": "Unplayable. Ethereal. NL Whenever another card is *Exhausted when this is in hand, take !M! damage."
   },
   "downfall:Malfunctioning": {
     "NAME": "Flawed",
@@ -22,6 +22,11 @@
   "downfall:Scatterbrained": {
     "NAME": "Scatterbrained",
     "DESCRIPTION": "At the end of your turn, if this is in your hand, add a copy of it to your discard pile. NL Exhaust."
+  },
+  "downfall:CurseOfBlood": {
+    "NAME": "Haemophilia",
+    "DESCRIPTION": "Lose [E] at the start of your next turn. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": ["Note for LOC: Hemophilia is a name for a disorder for when your blood doesn’t clot properly. I added the a in the middle for coolness factor."]
   },
   "downfall:SummonMushrooms": {
     "NAME": "Fungus Among Us",

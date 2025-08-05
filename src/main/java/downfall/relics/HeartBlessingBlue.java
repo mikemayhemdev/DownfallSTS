@@ -3,9 +3,12 @@ package downfall.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.actions.tempHp.AddTemporaryHPAction;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
+import gremlin.characters.GremlinCharacter;
+import gremlin.patches.GremlinEnum;
 
 public class HeartBlessingBlue extends CustomRelic {
 
@@ -26,7 +29,13 @@ public class HeartBlessingBlue extends CustomRelic {
     public void atBattleStart() {
         if (AbstractDungeon.getCurrRoom().monsters.monsters.stream().anyMatch(q -> q.type == AbstractMonster.EnemyType.BOSS)) {
             flash();
-            addToBot(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, 10));
+            //addToBot(new AddTemporaryHPAction(AbstractDungeon.player, AbstractDungeon.player, 10));
+            if (AbstractDungeon.player.chosenClass != GremlinEnum.GREMLIN) {
+                this.addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 10, 0.0F));
+            }
+            else {
+                ((GremlinCharacter)AbstractDungeon.player).healGremlins(2);
+            }
         }
     }
 }

@@ -61,7 +61,7 @@
   "champ:ImprovisingPower": {
     "NAME": "Improvising",
     "DESCRIPTIONS": [
-      "At the start of your turn, if you are not in a #yStance [REMOVE_SPACE], enter a random #yStance [REMOVE_SPACE]. Whenever you enter a #yStance [REMOVE_SPACE], trigger its #ySkill #yBonus #b",
+      "Whenever you enter a #yStance [REMOVE_SPACE], trigger its #ySkill #yBonus #b",
       " times."
     ]
   },
@@ -170,8 +170,8 @@
   "champ:NoBlockNextTurnPower": {
     "NAME": "Shield Thrown",
     "DESCRIPTIONS": [
-      "You can't gain Block next turn.",
-      "You can't gain Block for the next #b",
+      "You can't gain #yBlock next turn.",
+      "You can't gain #yBlock for the next #b",
       " turns."
     ]
   },

@@ -1,10 +1,16 @@
 package theHexaghost.cards;
 
+import champ.powers.GladiatorFormPower;
+import champ.relics.RageAmulet;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
 import gremlin.relics.FragmentationGrenade;
 import theHexaghost.HexaMod;
@@ -94,6 +100,23 @@ public class GhostLash extends AbstractHexaCard implements HexaPurpleTextInterfa
             AbstractDungeon.player.getRelic(FragmentationGrenade.ID).flash();
             this.damage = this.damage - FragmentationGrenade.OOMPH;
         }
+
+
+        if (AbstractDungeon.player.hasPower(GladiatorFormPower.POWER_ID)) {
+            GladiatorFormPower revengePower = (GladiatorFormPower) AbstractDungeon.player.getPower(GladiatorFormPower.POWER_ID);
+
+            if (revengePower != null) {
+                revengePower.onSpecificTriggerBranch();
+            }
+        }
+
+        for (AbstractRelic r : AbstractDungeon.player.relics) {
+            if (r instanceof RageAmulet) {
+                ((RageAmulet) r).onSpecificTrigger();
+            }
+        }
+
+        atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VigorPower.POWER_ID));
     }
 
     public void upgrade() {
