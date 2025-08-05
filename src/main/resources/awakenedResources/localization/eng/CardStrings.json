@@ -57,8 +57,7 @@
   },
   "awakened:Spellbinder": {
     "NAME": "Spellbinder",
-    "DESCRIPTION": "At the start of your turn, awakened:Conjure.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, awakened:Conjure."
+    "DESCRIPTION": "At the start of your turn, awakened:Conjure."
   },
   "awakened:Ceremony": {
     "NAME": "Ceremony",
