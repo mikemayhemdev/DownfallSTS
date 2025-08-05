@@ -19,12 +19,13 @@ public class Pluck extends AbstractAwakenedCard {
     public Pluck() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = 5;
+        this.isMultiDamage = true;
         this.baseMagicNumber = this.magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Pluck.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
+        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
         atb(new ConjureAction(false));
     }
 

@@ -15,7 +15,7 @@ public class SingularityShield extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public SingularityShield() {
-        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
         loadJokeCardImage(this, makeBetaCardPath(SingularityShield.class.getSimpleName() + ".png"));
     }
