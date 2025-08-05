@@ -47,10 +47,6 @@
     "DESCRIPTION": "awakened:Conjure. NL This turn, Spells cost 0 and you cannot awakened:Conjure again.",
     "UPGRADE_DESCRIPTION": "Retain. awakened:Conjure. NL This turn, Spells cost 0 and you cannot awakened:Conjure again."
   },
-  "awakened:Spellshield": {
-    "NAME": "Spellshield",
-    "DESCRIPTION": "Whenever you create a card, gain !M! Block."
-  },
   "awakened:DarkEcho": {
     "NAME": "Dark Echo",
     "DESCRIPTION": "At the end of your turn, deal !D! damage to ALL enemies, increased by Strength."
