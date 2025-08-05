@@ -51,6 +51,6 @@ public class RavenStrike extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeDamage(4);
+        upgradeDamage(5);
     }
 }

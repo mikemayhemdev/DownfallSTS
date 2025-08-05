@@ -132,7 +132,7 @@
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
-    "DESCRIPTION": "Gain 1 Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand."
+    "DESCRIPTION": "Gain !M! Dexterity. NL At the start of your next 2 turns, add a *Ceremony into your hand."
   },
   "awakened:WaveOfMiasma": {
     "NAME": "Wave of Miasma",
