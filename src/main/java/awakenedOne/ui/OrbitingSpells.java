@@ -36,7 +36,7 @@ import static downfall.downfallMod.DeterministicConjure;
 
 public class OrbitingSpells {
 
-    public static final float POSITION_X = 20F * Settings.scale;
+    public static final float POSITION_X = 95F * Settings.scale;
     public static final float POSITION_Y = 300F * Settings.scale;
 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Spellbook"));
@@ -48,9 +48,10 @@ public class OrbitingSpells {
     private static HashMap<String, Texture> cardIcons = new HashMap<>();
     private static HashMap<String, Color> cardColors = new HashMap<>();
     private static int hoveredCard = -1;
-    private static Hitbox barBox = new Hitbox(POSITION_X + 250F * Settings.scale, Settings.HEIGHT - POSITION_Y - 300 * Settings.scale, 40 * Settings.scale, 350 * Settings.scale);
+    private static Hitbox barBox = new Hitbox(POSITION_X - 75F * Settings.scale, Settings.HEIGHT - POSITION_Y - 350 * Settings.scale, 40 * Settings.scale, 350 * Settings.scale);
     private static Texture unfilledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled.png");
     private static Texture filledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_filled.png");
+    private static Texture pipComplete = TexLoader.getTexture("awakenedResources/images/ui/pip_complete.png");
     private static Color defaultNextColor = Color.GREEN.cpy();
 
     static {
@@ -227,15 +228,10 @@ public class OrbitingSpells {
             float dist = FontHelper.getWidth(FontHelper.tipHeaderFont, s.name, 1.0F);
 
             Color textColor = Color.WHITE.cpy();
-            if (s.upgraded) {
-                textColor = Color.GREEN.cpy();
-            }
             if (s.hasTag(UP_NEXT) && DeterministicConjure) {
                 textColor = getColorForCard(s);
             }
-            FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, s.name, boxes.get(xr).x + 15F, boxes.get(xr).y + 10F, textColor);
-            TipHelper.renderTipEnergy(sb, AbstractCard.orb_red, boxes.get(xr).x + dist + 25.5F, boxes.get(xr).y);
-            FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, String.valueOf(s.cost), boxes.get(xr).x + dist + 35F, boxes.get(xr).y + 10F, Color.WHITE.cpy());
+            FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, s.name, boxes.get(xr).x + 40F, boxes.get(xr).y + 25F, textColor);
             xr++;
         }
 
@@ -243,10 +239,11 @@ public class OrbitingSpells {
             h.render(sb);
         }
 
+        boolean woke = Wiz.isAwakened();
         for (int i = 0; i < Wiz.POWERS_TO_AWAKEN; i++) {
-            drawTextureScaled(sb, (AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= i  || AwakenedOneMod.awakenedthiscombat) ? filledPip : unfilledPip,
+            drawTextureScaled(sb, (woke ? pipComplete : (AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= i  || AwakenedOneMod.awakenedthiscombat) ? filledPip : unfilledPip),
                     barBox.x,
-                    barBox.y + (40 * Settings.yScale) * i);
+                    barBox.y + (55 * Settings.yScale) * i);
         }
         barBox.render(sb);
 

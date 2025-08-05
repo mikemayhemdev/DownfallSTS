@@ -16,22 +16,20 @@ public class EmpressPower extends AbstractAwakenedPower implements NonStackableP
     public static final String POWER_ID = makeID(NAME);
 
     public EmpressPower() {
-        super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, 3);
+        super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, 1);
         updateDescription();
     }
 
     @Override
-    public void onSpecificTrigger() {
-        amount -= 1;
-        if (amount == 0) {
+    public void atStartOfTurnPostDraw() {
+        if (AbstractDungeon.player.hand.size() >= 7) {
             flash();
-            AbstractDungeon.actionManager.addToBottom(new GainEnergyAction(1));
-            amount = 3;
+            atb(new GainEnergyAction(amount));
         }
     }
 
     public void updateDescription() {
-        description = DESCRIPTIONS[0];
+        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
 }

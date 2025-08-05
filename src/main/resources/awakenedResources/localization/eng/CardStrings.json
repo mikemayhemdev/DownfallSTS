@@ -163,8 +163,8 @@
     "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Play the top card of your draw pile."
   },
   "awakened:Unleash": {
-    "NAME": "Zealotry",
-    "DESCRIPTION": "Next turn, gain !M! temporary Strength and [E]."
+    "NAME": "Unleash",
+    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each other card in your hand."
   },
   "awakened:DesperatePrayer": {
     "NAME": "Desperate Prayer",
@@ -210,8 +210,8 @@
   },
   "awakened:MoonlitVision": {
     "NAME": "Moonlit Vision",
-    "DESCRIPTION": "Every 3 times you awakened:Conjure, gain [E].",
-    "UPGRADE_DESCRIPTION": "Innate. NL Every 3 times you awakened:Conjure, gain [E]."
+    "DESCRIPTION": "At the start of your turn, if your hand contains 7 or more cards, gain [E].",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, if your hand contains 7 or more cards, gain [E]."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
