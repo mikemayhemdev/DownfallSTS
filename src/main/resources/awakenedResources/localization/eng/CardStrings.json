@@ -140,7 +140,7 @@
     "DESCRIPTION": "Apply !M! Weak and !awakened:m2! awakened:Manaburn to ALL enemies. NL Exhaust."
   },
   "awakened:Sludge": {
-    "NAME": "Sludge",
+    "NAME": "Sludge Bomb",
     "DESCRIPTION": "Can only be played if a *Void is Exhausted. NL Deal !D! damage twice. NL Erase a *Void from your Exhaust Pile.",
     "EXTENDED_DESCRIPTION": [
       "I do not have an Exhausted Void."
