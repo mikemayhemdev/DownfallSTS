@@ -28,6 +28,7 @@ public class Psalm extends AbstractAwakenedCard {
         loadJokeCardImage(this, makeBetaCardPath(Psalm.class.getSimpleName() + ".png"));
         baseDamage = 10;
 
+        isMultiDamage = true;
         this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
 

@@ -25,6 +25,7 @@ public class TheTower extends AbstractAwakenedCard {
         baseDamage = 4;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
+        isMultiDamage = true;
         loadJokeCardImage(this, makeBetaCardPath(TheTower.class.getSimpleName() + ".png"));
     }
 
