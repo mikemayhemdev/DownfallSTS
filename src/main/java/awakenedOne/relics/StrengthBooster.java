@@ -4,6 +4,8 @@ import awakenedOne.AwakenedOneMod;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
@@ -20,7 +22,7 @@ public class StrengthBooster extends CustomRelic {
 
     //Paper Crow / Paper Krow
 
-    public static final int AMOUNT = 2;
+    public static final int AMOUNT = 50;
 //
 //    //Look at ApplyPowerPatch
 //    public void onTrigger(int amount) {
@@ -31,9 +33,15 @@ public class StrengthBooster extends CustomRelic {
 //        }
 //    }
 
+    //debug
+    public void onSpecificTrigger(int debug) {
+        this.flash();
+        System.out.println(debug);
+    }
+
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + AMOUNT + DESCRIPTIONS[1] + AMOUNT + DESCRIPTIONS[2];
+        return DESCRIPTIONS[0] + AMOUNT + DESCRIPTIONS[1];
     }
 
 }

@@ -102,9 +102,8 @@
     "NAME": "Paper Crow",
     "FLAVOR": "Arbiter of doubt and curses folded one thousand times...",
     "DESCRIPTIONS": [
-      "Spells deal #b",
-      " more damage and grant #b",
-      " more #yBlock [REMOVE_SPACE]."
+      "Enemies take #b",
+      "% additional damage from #yawakened:Manaburn [REMOVE_SPACE]."
     ]
   },
   "awakened:CursedBlessing": {
