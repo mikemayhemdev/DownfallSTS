@@ -1,6 +1,6 @@
 package awakenedOne.powers;
 
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
@@ -17,8 +17,8 @@ public class NihilPower extends AbstractAwakenedPower {
 
     @Override
     public void atStartOfTurn() {
-            flash();
-            addToBot(new ApplyPowerAction(owner, AbstractDungeon.player, new ManaburnPower(owner, amount), amount));
+        flash();
+        addToBot(new ApplyPowerAction(owner, AbstractDungeon.player, new ManaburnPower(owner, amount), amount));
     }
 
     @Override

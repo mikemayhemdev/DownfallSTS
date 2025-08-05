@@ -1,13 +1,7 @@
 package awakenedOne.powers;
 
-import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardQueueItem;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class IntensifyPower extends AbstractAwakenedPower {
     // intellij stuff buff

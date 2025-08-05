@@ -8,13 +8,11 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import downfall.util.SelectCardsCenteredAction;
 
 import java.util.Collections;
 
@@ -23,16 +21,20 @@ import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
 import static awakenedOne.util.Wiz.atb;
 import static awakenedOne.util.Wiz.att;
 
-public class DarkPortal extends AbstractAwakenedCard {
-    public final static String ID = AwakenedOneMod.makeID(DarkPortal.class.getSimpleName());
+public class RealityRift extends AbstractAwakenedCard {
+    public final static String ID = AwakenedOneMod.makeID(RealityRift.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
     public static final String[] TEXT;
 
-    public DarkPortal() {
+    static {
+        TEXT = CardCrawlGame.languagePack.getUIString("BetterToHandAction").TEXT;
+    }
+
+    public RealityRift() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.exhaust = true;
-        loadJokeCardImage(this, makeBetaCardPath(DarkPortal.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(RealityRift.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -51,7 +53,7 @@ public class DarkPortal extends AbstractAwakenedCard {
                             if (p.hand.size() >= BaseMod.MAX_HAND_SIZE) {
                                 if (groups.get(c) == p.drawPile)
                                     p.drawPile.moveToDiscardPile(c);
-                                    p.createHandIsFullDialog();
+                                p.createHandIsFullDialog();
                             } else {
                                 p.hand.moveToHand(c, groups.get(c));
                             }
@@ -71,9 +73,5 @@ public class DarkPortal extends AbstractAwakenedCard {
     public void initializeDescription() {
         super.initializeDescription();
         this.keywords.add(GameDictionary.VOID.NAMES[0].toLowerCase());
-    }
-
-    static {
-        TEXT = CardCrawlGame.languagePack.getUIString("BetterToHandAction").TEXT;
     }
 }

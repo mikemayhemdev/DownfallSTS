@@ -5,9 +5,9 @@ import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -23,32 +23,30 @@ public class DeadBird extends CustomRelic {
     public static final String ID = AwakenedOneMod.makeID("DeadBird");
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("DeadBird.png")); //TODO: Images
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("DeadBird.png"));
-
-    public DeadBird() {
-        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
-    }
+    //damage
+    private static final int AMOUNT = 4;
 
     //Corvid Spirit
 
     //or, Eve's Dead Bird
 
-    //damage
-    private static final int AMOUNT = 4;
+    public DeadBird() {
+        super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+    }
 
     public void update() {
         super.update();
-            if (isInCombat()) {
-                if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
-                    this.counter = AMOUNT + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
-                }
+        if (isInCombat()) {
+            if (AbstractDungeon.player.hasPower(StrengthPower.POWER_ID)) {
+                this.counter = AMOUNT + AbstractDungeon.player.getPower(StrengthPower.POWER_ID).amount;
+            }
 
-                if (this.counter < AMOUNT) {
-                    this.counter = AMOUNT;
-                }
+            if (this.counter < AMOUNT) {
+                this.counter = AMOUNT;
             }
-            else {
-                    this.counter = 4;
-            }
+        } else {
+            this.counter = 4;
+        }
     }
 
     @Override
@@ -62,7 +60,7 @@ public class DeadBird extends CustomRelic {
     }
 
     @Override
-    public void onVictory(){
+    public void onVictory() {
         this.counter = 4;
     }
 

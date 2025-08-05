@@ -2,7 +2,7 @@ package awakenedOne.patches;
 
 import awakenedOne.powers.OnLoseEnergyPower;
 import awakenedOne.relics.OnLoseEnergyRelic;
-import com.evacipated.cardcrawl.modthespire.lib.*;
+import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;

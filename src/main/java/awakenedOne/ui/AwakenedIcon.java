@@ -6,8 +6,8 @@ import com.evacipated.cardcrawl.mod.stslib.icons.AbstractCustomIcon;
 
 public class AwakenedIcon extends AbstractCustomIcon {
     public static final String ID = "awakened";
-    private static AwakenedIcon singleton;
     private static final Texture iconTex = TexLoader.getTexture("awakenedResources/images/ui/AwesomeIcon.png");
+    private static AwakenedIcon singleton;
 
     public AwakenedIcon() {
         super(ID, iconTex);

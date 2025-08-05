@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.actions.DrawSpecificAction;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.atb;
 
 public class Clutch extends AbstractAwakenedCard {
     public final static String ID = makeID(Clutch.class.getSimpleName());

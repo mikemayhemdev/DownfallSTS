@@ -40,20 +40,20 @@ public class MirePit extends AbstractAwakenedCard {
         Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
         AbstractMonster mo;
-        while(var3.hasNext()) {
-            mo = (AbstractMonster)var3.next();
+        while (var3.hasNext()) {
+            mo = (AbstractMonster) var3.next();
             this.addToBot(new ApplyPowerAction(mo, p, new StrengthPower(mo, -this.magicNumber), -this.magicNumber, true, AbstractGameAction.AttackEffect.POISON));
         }
 
         var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
-        while(var3.hasNext()) {
-            mo = (AbstractMonster)var3.next();
+        while (var3.hasNext()) {
+            mo = (AbstractMonster) var3.next();
             if (!mo.hasPower("Artifact")) {
                 this.addToBot(new ApplyPowerAction(mo, p, new GainStrengthPower(mo, this.magicNumber), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
             }
         }
-        this.addToBot(new ApplyPowerAction(p, p, new Drained(p,p, 1), 1));
+        this.addToBot(new ApplyPowerAction(p, p, new Drained(p, p, 1), 1));
     }
 
     public void upp() {

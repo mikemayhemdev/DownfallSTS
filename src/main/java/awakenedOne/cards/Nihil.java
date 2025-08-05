@@ -2,11 +2,9 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.powers.ManaburnPower;
-import awakenedOne.powers.NihilRetriggerPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.TriggerMarksAction;
@@ -22,18 +20,17 @@ import com.megacrit.cardcrawl.vfx.combat.WaterDropEffect;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
-import static awakenedOne.util.Wiz.atb;
 
 
-public class ExNihilo extends AbstractAwakenedCard {
-    public final static String ID = AwakenedOneMod.makeID(ExNihilo.class.getSimpleName());
+public class Nihil extends AbstractAwakenedCard {
+    public final static String ID = AwakenedOneMod.makeID(Nihil.class.getSimpleName());
     // intellij stuff skill, self, basic, , ,  5, 3, ,
 
-    public ExNihilo() {
+    public Nihil() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = 13;
         this.tags.add(AwakenedOneMod.CHANT);
-        loadJokeCardImage(this, makeBetaCardPath(ExNihilo.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Nihil.class.getSimpleName() + ".png"));
     }
 
 
@@ -67,7 +64,7 @@ public class ExNihilo extends AbstractAwakenedCard {
     private static class OfferingEnemyEffect extends AbstractGameEffect {
         private int count = 0;
         private float timer = 0.0F;
-        private AbstractCreature target;
+        private final AbstractCreature target;
 
         public OfferingEnemyEffect(AbstractCreature target) {
             this.target = target;

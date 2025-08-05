@@ -5,7 +5,8 @@ import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.mod.stslib.relics.OnLoseTempHpRelic;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -45,18 +46,18 @@ public class ShardOfNowak extends CustomRelic implements OnLoseTempHpRelic {
 
     @Override
     public void onLoseHp(int damageAmount) {
-            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-                if (!this.grayscale) {
-                    this.grayscale = true;
-                    AbstractPlayer p = AbstractDungeon.player;
-                    this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                    this.addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, -FOCUS), -FOCUS));
-                }
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            if (!this.grayscale) {
+                this.grayscale = true;
+                AbstractPlayer p = AbstractDungeon.player;
+                this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                this.addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, -FOCUS), -FOCUS));
             }
-            this.stopPulse();
-            isActive = false;
-            AbstractDungeon.player.hand.applyPowers();
-     }
+        }
+        this.stopPulse();
+        isActive = false;
+        AbstractDungeon.player.hand.applyPowers();
+    }
 
 
 //    public void onMonsterDeath(AbstractMonster m) {

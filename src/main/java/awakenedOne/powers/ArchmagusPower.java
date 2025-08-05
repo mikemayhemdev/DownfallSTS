@@ -1,18 +1,14 @@
 package awakenedOne.powers;
 
-import awakenedOne.actions.ConjureAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
-import static awakenedOne.util.Wiz.atb;
-
-public class DarkIncantationRitualPower extends AbstractAwakenedPower {
+public class ArchmagusPower extends AbstractAwakenedPower {
     // intellij stuff buff
-    public static final String NAME = DarkIncantationRitualPower.class.getSimpleName();
+    public static final String NAME = ArchmagusPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
 
-    public DarkIncantationRitualPower(int amount) {
+    public ArchmagusPower(int amount) {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
     }
 

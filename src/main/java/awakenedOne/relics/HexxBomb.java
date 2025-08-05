@@ -5,16 +5,18 @@ import awakenedOne.powers.ManaburnPower;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.monsters.NeowBoss;
 
-import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
+import static awakenedOne.AwakenedOneMod.makeRelicPath;
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
-public class HexxBomb extends CustomRelic{
+public class HexxBomb extends CustomRelic {
 
     //Manabomb
 

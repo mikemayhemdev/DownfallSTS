@@ -2,28 +2,15 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
-import awakenedOne.actions.ForTheHexAction;
-import collector.powers.AddCopyNextTurnPower;
 import com.badlogic.gdx.graphics.Color;
-import com.evacipated.cardcrawl.mod.stslib.actions.common.MultiGroupSelectAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.combat.ClawEffect;
 import com.megacrit.cardcrawl.vfx.combat.RipAndTearEffect;
-
-import java.util.Collections;
-import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
-import static awakenedOne.util.Wiz.att;
-import static collector.util.Wiz.applyToSelfTop;
 
 public class TalonRake extends AbstractAwakenedCard {
     public final static String ID = makeID(TalonRake.class.getSimpleName());

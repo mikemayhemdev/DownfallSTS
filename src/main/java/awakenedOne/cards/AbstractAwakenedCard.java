@@ -24,8 +24,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hermit.util.TextureLoader;
 
-import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
+import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.isChantActive;
 
 public abstract class AbstractAwakenedCard extends CustomCard {
 
@@ -63,6 +64,23 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         initializeDescription();
     }
 
+    public static String getCardTextureString(final String cardName, final CardType cardType) {
+        String textureString = "awakenedResources/images/cards/" + cardName + ".png";
+        FileHandle h = Gdx.files.internal(textureString);
+        if (!h.exists()) {
+            textureString = "awakenedResources/images/cards/joke/" + cardName + ".png";
+            h = Gdx.files.internal(textureString);
+        }
+        if (!h.exists()) {
+            textureString = "awakenedResources/images/cards/programmerart/" + cardName + ".png";
+            h = Gdx.files.internal(textureString);
+        }
+        if (!h.exists()) {
+            textureString = "awakenedResources/images/ui/missing.png";
+        }
+        return textureString;
+    }
+
     @Override
     protected Texture getPortraitImage() {
         if (Settings.PLAYTESTER_ART_MODE || UnlockTracker.betaCardPref.getBoolean(this.cardID, false)) {
@@ -80,23 +98,6 @@ public abstract class AbstractAwakenedCard extends CustomCard {
             }
         }
         return super.getPortraitImage();
-    }
-
-    public static String getCardTextureString(final String cardName, final CardType cardType) {
-        String textureString = "awakenedResources/images/cards/" + cardName + ".png";
-        FileHandle h = Gdx.files.internal(textureString);
-        if (!h.exists()) {
-            textureString = "awakenedResources/images/cards/joke/" + cardName + ".png";
-            h = Gdx.files.internal(textureString);
-        }
-        if (!h.exists()) {
-            textureString = "awakenedResources/images/cards/programmerart/" + cardName + ".png";
-            h = Gdx.files.internal(textureString);
-        }
-        if (!h.exists()) {
-            textureString = "awakenedResources/images/ui/missing.png";
-        }
-        return textureString;
     }
 
     @Override
@@ -234,17 +235,13 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     }
 
     public boolean isChantActiveGlow(AbstractCard source) {
-        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && ((AbstractCard) AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1)).type == CardType.POWER || this.hasTag(ACTIVECHANT) || this.trig_chant) {
-            return true;
-        } else {
-            return false;
-        }
+        return !AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1).type == CardType.POWER || this.hasTag(ACTIVECHANT) || this.trig_chant;
     }
 
     @Override
     public AbstractCard makeStatEquivalentCopy() {
         AbstractCard original = super.makeStatEquivalentCopy();
-        ((AbstractAwakenedCard)original).trig_chant = this.trig_chant;
+        ((AbstractAwakenedCard) original).trig_chant = this.trig_chant;
         if (this.trig_chant) {
             original.tags.add(ACTIVECHANT);
         }
@@ -270,7 +267,7 @@ public abstract class AbstractAwakenedCard extends CustomCard {
             AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
         }
         if (AbstractDungeon.player.hasRelic(WhiteRibbon.ID)) {
-           AbstractDungeon.player.getRelic(WhiteRibbon.ID).onTrigger();
+            AbstractDungeon.player.getRelic(WhiteRibbon.ID).onTrigger();
         }
         if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
             AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();

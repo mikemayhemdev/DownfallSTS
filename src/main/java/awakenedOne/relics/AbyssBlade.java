@@ -4,7 +4,10 @@ import awakenedOne.AwakenedOneMod;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 
@@ -36,7 +39,7 @@ public class AbyssBlade extends CustomRelic implements OnLoseEnergyRelic {
     }
 
     @Override
-    public void onVictory(){
+    public void onVictory() {
         this.counter = -1;
         stopPulse();
     }
@@ -60,7 +63,6 @@ public class AbyssBlade extends CustomRelic implements OnLoseEnergyRelic {
             this.counter = 1;
         }
     }
-
 
 
     @Override

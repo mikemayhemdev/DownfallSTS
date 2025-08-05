@@ -1,6 +1,6 @@
 package awakenedOne.cards;
 
-import awakenedOne.powers.InvasionPower;
+import awakenedOne.powers.EclipseEmbracePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -18,7 +18,7 @@ public class EclipseEmbrace extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new InvasionPower(1));
+        applyToSelf(new EclipseEmbracePower(1));
     }
 
     @Override

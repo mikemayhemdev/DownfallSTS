@@ -17,14 +17,8 @@ import java.util.Map;
 import static awakenedOne.AwakenedOneMod.getModID;
 
 public abstract class AbstractTwoAmountAwakenedPower extends TwoAmountPower {
-    private static PowerStrings getPowerStrings(String ID) {
-        return CardCrawlGame.languagePack.getPowerStrings(ID);
-    }
-
-    protected AbstractCreature source;
-
     protected static Map<String, PowerStrings> powerStrings = new HashMap<>();
-
+    protected AbstractCreature source;
     protected String[] DESCRIPTIONS;
 
     public AbstractTwoAmountAwakenedPower(String NAME, PowerType powerType, boolean isTurnBased, AbstractCreature owner, AbstractCreature source, int amount) {
@@ -90,6 +84,14 @@ public abstract class AbstractTwoAmountAwakenedPower extends TwoAmountPower {
         this.updateDescription();
     }
 
+    private static PowerStrings getPowerStrings(String ID) {
+        return CardCrawlGame.languagePack.getPowerStrings(ID);
+    }
+
+    public static String makeID(String idText) {
+        return getModID() + ":" + idText;
+    }
+
     public void updateDescription() {
         if (this.amount == 1) {
             this.description = DESCRIPTIONS[0];
@@ -100,9 +102,5 @@ public abstract class AbstractTwoAmountAwakenedPower extends TwoAmountPower {
 
     public void applyToSelf(AbstractPower po) {
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, po, po.amount));
-    }
-
-    public static String makeID(String idText) {
-        return getModID() + ":" + idText;
     }
 }

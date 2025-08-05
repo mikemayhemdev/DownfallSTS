@@ -13,7 +13,8 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
-import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
+import static awakenedOne.AwakenedOneMod.makeRelicPath;
 
 public class CurvedSword extends CustomRelic {
 

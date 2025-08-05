@@ -1,13 +1,10 @@
 package awakenedOne.cards;
 
 import awakenedOne.powers.ManaburnPower;
-import awakenedOne.relics.EyeOfTheOccult;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
 import hermit.powers.Drained;
@@ -27,12 +24,12 @@ public class DeathCoil extends AbstractAwakenedCard {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-            if (m != null) {
-                this.addToTop(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
-            }
-            dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
-            this.addToBot(new ApplyPowerAction(m, p, new ManaburnPower(m, this.magicNumber), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new Drained(p,p, 1), 1));
+        if (m != null) {
+            this.addToTop(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
+        }
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+        this.addToBot(new ApplyPowerAction(m, p, new ManaburnPower(m, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new Drained(p, p, 1), 1));
     }
 
     public void upp() {

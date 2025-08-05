@@ -1,25 +1,12 @@
 package awakenedOne.cards.tokens.spells;
 
 import awakenedOne.cards.AbstractAwakenedCard;
-import awakenedOne.powers.ConjureNextTurnPower;
-import awakenedOne.powers.IntensifyPower;
-import awakenedOne.relics.EyeOfTheOccult;
-import awakenedOne.relics.StrengthBooster;
-import champ.powers.CounterPower;
-import champ.powers.DefensiveStylePower;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import gremlin.powers.PolishPower;
 
 import java.util.Collections;
 import java.util.List;
 
-import static awakenedOne.AwakenedOneMod.UP_NEXT;
 import static awakenedOne.AwakenedOneMod.makeID;
 
 public abstract class AbstractSpellCard extends AbstractAwakenedCard {

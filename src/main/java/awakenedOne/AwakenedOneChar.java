@@ -35,9 +35,6 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.AwakenedEyeParticle;
 import com.megacrit.cardcrawl.vfx.AwakenedWingParticle;
-import com.megacrit.cardcrawl.vfx.combat.GiantFireEffect;
-import com.megacrit.cardcrawl.vfx.scene.IroncladVictoryFlameEffect;
-import hermit.vfx.GreenFireEffect;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import reskinContent.patches.CharacterSelectScreenPatches;
@@ -52,6 +49,8 @@ import static hermit.characters.hermit.update_timer;
 public class AwakenedOneChar extends CustomPlayer {
     public static final String ID = makeID("awakenedOne");
     public static final CharacterStrings characterStrings = CardCrawlGame.languagePack.getCharacterString(ID);
+    private static final String[] NAMES = characterStrings.NAMES;
+    private static final String[] TEXT = characterStrings.TEXT;
     private static final String[] orbTextures = {
             "awakenedResources/images/mainChar/orb/layer1.png",
             "awakenedResources/images/mainChar/orb/layer2.png",
@@ -64,30 +63,18 @@ public class AwakenedOneChar extends CustomPlayer {
             "awakenedResources/images/mainChar/orb/layer3d.png",
             "awakenedResources/images/mainChar/orb/layer4d.png",
             "awakenedResources/images/mainChar/orb/layer5d.png",};
-    private static final String[] NAMES = characterStrings.NAMES;
-    private static final String[] TEXT = characterStrings.TEXT;
-
-    public float renderscale = 1.2F;
-
-    private float fireTimer = 0.0F;
-
+    private static final Logger logger = LogManager.getLogger(AwakenedOne.class.getName());
     private final String atlasURL = "awakenedResources/images/mainChar/awakened.atlas";
     private final String jsonURL = "awakenedResources/images/mainChar/awakened.json";
-
-
-
-    private static final Logger logger = LogManager.getLogger(AwakenedOne.class.getName());
-
-    private boolean form1 = true;
-
-
+    public float renderscale = 1.2F;
+    public boolean animateParticles = false;
+    private float fireTimer = 0.0F;
+    private final boolean form1 = true;
     private boolean revived = false;
-
     private Bone eye;
     private Bone back;
-    public boolean animateParticles = false;
-    private ArrayList<ReverseAwakenedWingParticle> wParticles = new ArrayList();
-    private ArrayList<AwakenedWingParticle> wParticles2 = new ArrayList();
+    private final ArrayList<ReverseAwakenedWingParticle> wParticles = new ArrayList();
+    private final ArrayList<AwakenedWingParticle> wParticles2 = new ArrayList();
 
 
     public AwakenedOneChar(String name, PlayerClass setClass) {
@@ -115,8 +102,8 @@ public class AwakenedOneChar extends CustomPlayer {
         this.eye = this.skeleton.findBone("Eye");
         Iterator var4 = this.skeleton.getBones().iterator();
 
-        while(var4.hasNext()) {
-            Bone b = (Bone)var4.next();
+        while (var4.hasNext()) {
+            Bone b = (Bone) var4.next();
             logger.info(b.getData().getName());
         }
 
@@ -137,47 +124,43 @@ public class AwakenedOneChar extends CustomPlayer {
 
         super.update();
 
-        animateParticles = false;
+        animateParticles = !this.isDying && Wiz.isAwakened() && Wiz.isInCombat();
 
-            if (!this.isDying && Wiz.isAwakened() && Wiz.isInCombat()) {
-                animateParticles = true;
-            }
+        if (this.isDying || !Wiz.isInCombat()) {
+            animateParticles = false;
+        }
 
-            if (this.isDying || !Wiz.isInCombat()) {
-                animateParticles = false;
-            }
-
-            if (this.animateParticles) {
-                this.fireTimer -= Gdx.graphics.getDeltaTime();
-                if (this.fireTimer < 0.0F) {
-                    this.fireTimer = 0.1F;
-                    //todo: replace with non-leaky animation
-                    AbstractDungeon.effectList.add(new AwakenedEyeParticle(this.skeleton.getX() + this.eye.getWorldX(), this.skeleton.getY() + this.eye.getWorldY()));
-                    if (!this.flipHorizontal) {
-                        this.wParticles.add(new ReverseAwakenedWingParticle());
-                    }
-                    if (this.flipHorizontal) {
-                        this.wParticles2.add(new AwakenedWingParticle());
-                    }
-
+        if (this.animateParticles) {
+            this.fireTimer -= Gdx.graphics.getDeltaTime();
+            if (this.fireTimer < 0.0F) {
+                this.fireTimer = 0.1F;
+                //todo: replace with non-leaky animation
+                AbstractDungeon.effectList.add(new AwakenedEyeParticle(this.skeleton.getX() + this.eye.getWorldX(), this.skeleton.getY() + this.eye.getWorldY()));
+                if (!this.flipHorizontal) {
+                    this.wParticles.add(new ReverseAwakenedWingParticle());
                 }
-            }
-
-            Iterator<ReverseAwakenedWingParticle> p = this.wParticles.iterator();
-
-            while (p.hasNext()) {
-                ReverseAwakenedWingParticle e = (ReverseAwakenedWingParticle) p.next();
-                e.update();
-                if (e.isDone) {
-                    p.remove();
+                if (this.flipHorizontal) {
+                    this.wParticles2.add(new AwakenedWingParticle());
                 }
+
             }
+        }
+
+        Iterator<ReverseAwakenedWingParticle> p = this.wParticles.iterator();
+
+        while (p.hasNext()) {
+            ReverseAwakenedWingParticle e = p.next();
+            e.update();
+            if (e.isDone) {
+                p.remove();
+            }
+        }
 
         if (this.flipHorizontal) {
             Iterator<AwakenedWingParticle> p2 = this.wParticles2.iterator();
 
             while (p2.hasNext()) {
-                AwakenedWingParticle e2 = (AwakenedWingParticle) p2.next();
+                AwakenedWingParticle e2 = p2.next();
                 e2.update();
                 if (e2.isDone) {
                     p2.remove();

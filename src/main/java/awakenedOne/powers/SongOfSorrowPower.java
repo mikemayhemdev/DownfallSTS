@@ -1,9 +1,9 @@
 package awakenedOne.powers;
 
+import awakenedOne.actions.AllEnemyLoseHPAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,7 +13,7 @@ public class SongOfSorrowPower extends AbstractAwakenedPower {
     public static final String NAME = SongOfSorrowPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
 
-    private boolean active = true;
+    private final boolean active = true;
 
     public SongOfSorrowPower(int amount) {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
@@ -22,11 +22,11 @@ public class SongOfSorrowPower extends AbstractAwakenedPower {
     @Override
     public void onSpecificTrigger() {
         flash();
-        this.addToBot(new DamageAllEnemiesAction((AbstractCreature) null, DamageInfo.createDamageMatrix(this.amount, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
+        this.addToBot(new AllEnemyLoseHPAction(amount, AbstractGameAction.AttackEffect.FIRE));
     }
 
     public void updateDescription() {
-            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
 
 }

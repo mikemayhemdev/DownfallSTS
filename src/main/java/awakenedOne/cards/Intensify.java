@@ -8,7 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.applyToSelf;
+import static awakenedOne.util.Wiz.att;
 
 public class Intensify extends AbstractAwakenedCard {
     public final static String ID = makeID(Intensify.class.getSimpleName());

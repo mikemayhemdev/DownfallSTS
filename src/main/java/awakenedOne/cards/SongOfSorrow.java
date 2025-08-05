@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.applyToSelf;
 
 public class SongOfSorrow extends AbstractAwakenedCard {
     public final static String ID = makeID(SongOfSorrow.class.getSimpleName());

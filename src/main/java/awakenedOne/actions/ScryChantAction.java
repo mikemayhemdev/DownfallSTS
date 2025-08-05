@@ -11,9 +11,15 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 public class ScryChantAction extends AbstractGameAction {
-    private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private float startingDuration;
+    private static final UIStrings uiStrings;
+
+    static {
+        uiStrings = CardCrawlGame.languagePack.getUIString("ReprogramAction");
+        TEXT = uiStrings.TEXT;
+    }
+
+    private final float startingDuration;
 
     public ScryChantAction(int numCards) {
         this.amount = numCards;
@@ -44,7 +50,7 @@ public class ScryChantAction extends AbstractGameAction {
                 CardGroup tmpGroup = new CardGroup(CardGroupType.UNSPECIFIED);
                 if (this.amount != -1) {
                     for (int i = 0; i < Math.min(this.amount, AbstractDungeon.player.drawPile.size()); ++i) {
-                        tmpGroup.addToTop((AbstractCard) AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
+                        tmpGroup.addToTop(AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
                     }
                 } else {
                     for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
@@ -56,11 +62,11 @@ public class ScryChantAction extends AbstractGameAction {
             } else if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 for (int i = AbstractDungeon.gridSelectScreen.selectedCards.size() - 1; i >= 0; i--) {
                     AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(i);
-                        if (c.type == AbstractCard.CardType.POWER) {
-                            AbstractDungeon.player.drawPile.moveToHand(c);
-                        } else {
-                            AbstractDungeon.player.drawPile.moveToDiscardPile(c);
-                        }
+                    if (c.type == AbstractCard.CardType.POWER) {
+                        AbstractDungeon.player.drawPile.moveToHand(c);
+                    } else {
+                        AbstractDungeon.player.drawPile.moveToDiscardPile(c);
+                    }
                     AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 }
 
@@ -71,10 +77,5 @@ public class ScryChantAction extends AbstractGameAction {
                 this.tickDuration();
             }
         }
-    }
-
-    static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("ReprogramAction");
-        TEXT = uiStrings.TEXT;
     }
 }

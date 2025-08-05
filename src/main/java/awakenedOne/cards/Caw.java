@@ -33,7 +33,7 @@ public class Caw extends AbstractAwakenedCard {
         dmg(m, AbstractGameAction.AttackEffect.NONE);
 
         if (isTrig_chant()) {
-           chant();
+            chant();
         }
     }
 

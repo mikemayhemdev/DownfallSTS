@@ -12,7 +12,7 @@ import guardian.orbs.StasisOrb;
 import java.util.Iterator;
 
 public class GashCawAction extends AbstractGameAction {
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public GashCawAction(AbstractCard card, int amount) {
         this.card = card;
@@ -26,8 +26,8 @@ public class GashCawAction extends AbstractGameAction {
         Iterator var1 = AbstractDungeon.player.discardPile.group.iterator();
 
         AbstractCard c;
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
             if (c instanceof Caw) {
                 c.baseDamage += this.amount;
                 c.applyPowers();
@@ -36,8 +36,8 @@ public class GashCawAction extends AbstractGameAction {
 
         var1 = AbstractDungeon.player.drawPile.group.iterator();
 
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
             if (c instanceof Caw) {
                 c.baseDamage += this.amount;
                 c.applyPowers();
@@ -46,8 +46,8 @@ public class GashCawAction extends AbstractGameAction {
 
         var1 = AbstractDungeon.player.hand.group.iterator();
 
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
             if (c instanceof Caw) {
                 c.baseDamage += this.amount;
                 c.applyPowers();
@@ -60,8 +60,8 @@ public class GashCawAction extends AbstractGameAction {
 
         var1 = AbstractDungeon.player.exhaustPile.group.iterator();
 
-        while(var1.hasNext()) {
-            c = (AbstractCard)var1.next();
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
             if (c instanceof Caw) {
                 c.baseDamage += this.amount;
                 c.applyPowers();

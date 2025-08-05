@@ -28,20 +28,23 @@ public class TheTower extends AbstractAwakenedCard {
         loadJokeCardImage(this, makeBetaCardPath(TheTower.class.getSimpleName() + ".png"));
     }
 
+    public static int countCards() {
+        return OnCreateCardSubscriber.CardsCreatedThisCombat;
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         Iterator var2 = AbstractDungeon.getMonsters().monsters.iterator();
 
-        while(var2.hasNext()) {
-            AbstractMonster mo = (AbstractMonster)var2.next();
+        while (var2.hasNext()) {
+            AbstractMonster mo = (AbstractMonster) var2.next();
             if (!mo.isDeadOrEscaped()) {
                 this.addToBot(new VFXAction(new ExplosionSmallEffect(mo.hb.cX, mo.hb.cY), 0.1F));
             }
         }
 
-       this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
 
     }
-
 
     public void calculateCardDamage(AbstractMonster mo) {
         int realBaseDamage = this.baseDamage;
@@ -51,10 +54,6 @@ public class TheTower extends AbstractAwakenedCard {
         this.isDamageModified = this.damage != this.baseDamage;
     }
 
-    public static int countCards() {
-        return OnCreateCardSubscriber.CardsCreatedThisCombat;
-    }
-
     public void applyPowers() {
         int realBaseDamage = this.baseDamage;
         this.baseDamage += this.magicNumber * countCards();
@@ -62,7 +61,6 @@ public class TheTower extends AbstractAwakenedCard {
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
     }
-
 
 
     @Override

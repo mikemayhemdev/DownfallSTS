@@ -4,7 +4,8 @@ import awakenedOne.AwakenedOneMod;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -32,8 +33,8 @@ public class MiniBlackHole extends CustomRelic {
 
     @Override
     public void atTurnStartPostDraw() {
-        if (firstTurn == false) {
-            if (this.grayscale == false) {
+        if (!firstTurn) {
+            if (!this.grayscale) {
                 this.flash();
                 this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 addToBot(new DrawCardAction(AbstractDungeon.player, 1));

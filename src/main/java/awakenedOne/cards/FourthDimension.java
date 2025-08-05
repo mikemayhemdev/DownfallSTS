@@ -9,20 +9,20 @@ import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
 import static awakenedOne.util.Wiz.atb;
 
-public class DoubleVision extends AbstractAwakenedCard {
-    public final static String ID = makeID(DoubleVision.class.getSimpleName());
+public class FourthDimension extends AbstractAwakenedCard {
+    public final static String ID = makeID(FourthDimension.class.getSimpleName());
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
-    public DoubleVision() {
+    public FourthDimension() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
         baseMagicNumber = magicNumber = 3;
         this.tags.add(CardTags.HEALING);
-        loadJokeCardImage(this, makeBetaCardPath(DoubleVision.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(FourthDimension.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new SelectCardsInHandAction(1, DoubleVision.class.getSimpleName(), (cards) -> {
+        atb(new SelectCardsInHandAction(1, FourthDimension.class.getSimpleName(), (cards) -> {
             for (AbstractCard q : cards) {
                 AbstractCard q2 = q.makeStatEquivalentCopy();
                 //q2.updateCost(-99);

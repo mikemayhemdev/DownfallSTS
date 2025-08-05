@@ -169,35 +169,35 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
 
         boolean cardExists = false;
 
-            if (card != null) {
-                for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-                    if (c.uuid == card.uuid) {
-                        cardSelected = true;
-                        cardExists = true;
-                        break;
-                    }
+        if (card != null) {
+            for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                if (c.uuid == card.uuid) {
+                    cardSelected = true;
+                    cardExists = true;
+                    break;
                 }
             }
-
-            if (!cardExists) {
-                cardRemoved = true;
-                tips.clear();
-                this.description = this.DESCRIPTIONS[4];
-                this.grayscale = true;
-                tips.add(new PowerTip(name, description));
-                initializeTips();
-                return;
-            }
-
-            if (cardExists) {
-                cardRemoved = false;
-                this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
-                this.grayscale = false;
-                tips.clear();
-                tips.add(new PowerTip(name, description));
-                initializeTips();
-            }
         }
+
+        if (!cardExists) {
+            cardRemoved = true;
+            tips.clear();
+            this.description = this.DESCRIPTIONS[4];
+            this.grayscale = true;
+            tips.add(new PowerTip(name, description));
+            initializeTips();
+            return;
+        }
+
+        if (cardExists) {
+            cardRemoved = false;
+            this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
+            this.grayscale = false;
+            tips.clear();
+            tips.add(new PowerTip(name, description));
+            initializeTips();
+        }
+    }
 
 
     @Override
@@ -215,11 +215,7 @@ public class MoonTalisman extends CustomRelic implements CustomBottleRelic, Cust
             }
         }
 
-        if (tmp.size() > 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return tmp.size() > 0;
 
     }
 

@@ -3,23 +3,21 @@ package awakenedOne.cards;
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.util.Wiz.atb;
 
-public class ToTheLimit extends AbstractAwakenedCard {
-    public final static String ID = makeID(ToTheLimit.class.getSimpleName());
+public class Victuals extends AbstractAwakenedCard {
+    public final static String ID = makeID(Victuals.class.getSimpleName());
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
-    public ToTheLimit() {
+    public Victuals() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         this.exhaust = true;
         this.tags.add(AwakenedOneMod.CHANT);
-        loadJokeCardImage(this, makeBetaCardPath(ToTheLimit.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(Victuals.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

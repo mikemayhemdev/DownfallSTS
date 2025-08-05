@@ -1,6 +1,5 @@
 package awakenedOne.cards;
 
-import awakenedOne.actions.DrawPowerAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -8,7 +7,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.att;
 
 public class Extension extends AbstractAwakenedCard {
     public final static String ID = makeID(Extension.class.getSimpleName());

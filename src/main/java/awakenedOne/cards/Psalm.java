@@ -1,7 +1,6 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.powers.NextPowerAOEPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -16,8 +15,8 @@ import com.megacrit.cardcrawl.vfx.combat.CleaveEffect;
 
 import java.util.Iterator;
 
-import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.applyToSelf;
+import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
+import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
 
 public class Psalm extends AbstractAwakenedCard {
 
@@ -41,8 +40,8 @@ public class Psalm extends AbstractAwakenedCard {
 
         Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
-        while(var3.hasNext()) {
-            AbstractMonster mo = (AbstractMonster)var3.next();
+        while (var3.hasNext()) {
+            AbstractMonster mo = (AbstractMonster) var3.next();
             this.addToBot(new ApplyPowerAction(mo, p, new WeakPower(mo, this.magicNumber, false), this.magicNumber, true, AbstractGameAction.AttackEffect.NONE));
         }
 

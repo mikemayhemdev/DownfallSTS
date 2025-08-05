@@ -19,20 +19,27 @@ import downfall.relics.BrokenWingStatue;
 
 public class TheNestAwakened extends AbstractImageEvent {
     public static final String ID = "awakened:Nest";
-    private static final EventStrings eventStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;
+    private static final EventStrings eventStrings;
+
+    static {
+        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
+        NAME = eventStrings.NAME;
+        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
+        OPTIONS = eventStrings.OPTIONS;
+    }
+
     private int hpAmt = 0;
     private int goldAmt = 0;
-
     private CUR_SCREEN screen;
 
-    public TheNestAwakened () {
+    public TheNestAwakened() {
         super(NAME, DESCRIPTIONS[0], "images/events/theNest.jpg");
         this.noCardsInRewards = true;
         AbstractDungeon.getCurrRoom().rewards.clear();
-        if (AbstractDungeon.player.hasRelic(BrokenWingStatue.ID) || BrokenWingStatue.GIVEN){
+        if (AbstractDungeon.player.hasRelic(BrokenWingStatue.ID) || BrokenWingStatue.GIVEN) {
             if ((AbstractDungeon.player.hasRelic(BrokenWingStatue.ID))) {
                 this.imageEventText.setDialogOption(OPTIONS[0]);
             } else {
@@ -43,9 +50,9 @@ public class TheNestAwakened extends AbstractImageEvent {
         }
 
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.25F);
+            this.hpAmt = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.25F);
         } else {
-            this.hpAmt = MathUtils.round((float)AbstractDungeon.player.maxHealth * 0.20F);
+            this.hpAmt = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.20F);
         }
 
         this.imageEventText.setDialogOption(OPTIONS[3] + hpAmt + OPTIONS[4], new EyeOfTheOccult());
@@ -65,7 +72,7 @@ public class TheNestAwakened extends AbstractImageEvent {
     }
 
     protected void buttonEffect(int buttonPressed) {
-        switch(this.screen) {
+        switch (this.screen) {
             case INTRO:
                 switch (buttonPressed) {
                     case 0:
@@ -88,7 +95,7 @@ public class TheNestAwakened extends AbstractImageEvent {
                         }
 
                         AbstractRelic eye = new EyeOfTheOccult();
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), eye);
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), eye);
 
                         this.imageEventText.updateDialogOption(0, OPTIONS[7]);
                         this.imageEventText.clearRemainingOptions();
@@ -113,7 +120,7 @@ public class TheNestAwakened extends AbstractImageEvent {
                         AbstractDungeon.player.gainGold(this.goldAmt);
 
                         AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractRelic.RelicTier.COMMON);
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), r);
+                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), r);
                         logMetricObtainRelic(ID, "Donation Box", r);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[10]);
@@ -138,11 +145,11 @@ public class TheNestAwakened extends AbstractImageEvent {
                 AbstractDungeon.effectList.add(new RainingGoldEffect(this.goldAmt));
                 AbstractDungeon.player.gainGold(this.goldAmt);
                 AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractRelic.RelicTier.COMMON);
-                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float)(Settings.WIDTH / 2), (float)(Settings.HEIGHT / 2), r);
+                AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), r);
 
                 logMetricGainGold(ID, "Returned Statue", this.goldAmt);
                 logMetricObtainRelic(ID, "Returned Statue", r);
-               this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
+                this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                 this.imageEventText.clearAllDialogs();
                 this.imageEventText.setDialogOption(OPTIONS[2]);
                 this.screen = CUR_SCREEN.GIFTSTAGE4;
@@ -172,12 +179,5 @@ public class TheNestAwakened extends AbstractImageEvent {
 
         CUR_SCREEN() {
         }
-    }
-
-    static {
-        eventStrings = CardCrawlGame.languagePack.getEventString(ID);
-        NAME = eventStrings.NAME;
-        DESCRIPTIONS = eventStrings.DESCRIPTIONS;
-        OPTIONS = eventStrings.OPTIONS;
     }
 }

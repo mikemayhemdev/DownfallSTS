@@ -2,7 +2,7 @@ package awakenedOne.util;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.DemonGlyph;
-import awakenedOne.powers.DominusPower;
+import awakenedOne.powers.DemonGlyphPower;
 import awakenedOne.ui.OrbitingSpells;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -30,12 +30,12 @@ import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.ui.AwakenButton.awaken;
 
 public class Wiz {
+    public static int POWERS_TO_AWAKEN = 8;
+
     //The wonderful Wizard of Oz allows access to most easy compilations of data, or functions.
     public static AbstractPlayer adp() {
         return AbstractDungeon.player;
     }
-
-    public static int POWERS_TO_AWAKEN = 8;
 
     public static void forAllCardsInList(Consumer<AbstractCard> consumer, ArrayList<AbstractCard> cardsList) {
         for (AbstractCard c : cardsList) {
@@ -143,8 +143,8 @@ public class Wiz {
         }
 
         if (cool >= POWERS_TO_AWAKEN) {
-            if (AbstractDungeon.player.hasPower(DominusPower.POWER_ID)) {
-                att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DominusPower.POWER_ID));
+            if (AbstractDungeon.player.hasPower(DemonGlyphPower.POWER_ID)) {
+                att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DemonGlyphPower.POWER_ID));
             }
             awakenedthiscombat = true;
             awaken(10);
@@ -158,9 +158,7 @@ public class Wiz {
 
     public static boolean isChantActive() {
         if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() > 1) {
-            if ((AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).type == AbstractCard.CardType.POWER) || (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1).hasTag(ACTIVECHANT))) {
-                return true;
-            }
+            return (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).type == AbstractCard.CardType.POWER) || (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1).hasTag(ACTIVECHANT));
         }
         return false;
     }

@@ -23,28 +23,28 @@ public class NukeCardAction extends AbstractGameAction {
         for (int i = 0; i < AbstractDungeon.player.drawPile.size(); ) {
             AbstractCard c = AbstractDungeon.player.drawPile.group.get(i);
             if (c.uuid == card.uuid) {
-                addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.drawPile, true));
+                addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.drawPile, true));
             }
         }
 
         for (int i = 0; i < AbstractDungeon.player.hand.size(); ) {
             AbstractCard c = AbstractDungeon.player.hand.group.get(i);
             if (c.uuid == card.uuid) {
-                addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
+                addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
             }
         }
 
         for (int i = 0; i < AbstractDungeon.player.discardPile.size(); ) {
             AbstractCard c = AbstractDungeon.player.discardPile.group.get(i);
             if (c.uuid == card.uuid) {
-                addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile, true));
+                addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.discardPile, true));
             }
         }
 
         for (int i = 0; i < AbstractDungeon.player.limbo.size(); ) {
             AbstractCard c = AbstractDungeon.player.limbo.group.get(i);
             if (c.uuid == card.uuid) {
-                addToBot((AbstractGameAction)new ExhaustSpecificCardAction(c, AbstractDungeon.player.limbo, true));
+                addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.limbo, true));
             }
         }
 
@@ -56,5 +56,5 @@ public class NukeCardAction extends AbstractGameAction {
                 }
             }
         }
-        }
     }
+}

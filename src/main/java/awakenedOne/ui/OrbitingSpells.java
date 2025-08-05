@@ -1,6 +1,5 @@
 package awakenedOne.ui;
 
-import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.actions.SetUpNextSpellAction;
@@ -20,7 +19,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.Hitbox;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.powers.watcher.MasterRealityPower;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
@@ -46,14 +44,14 @@ public class OrbitingSpells {
 
     public static ArrayList<AbstractCard> spellCards = new ArrayList<>();
     public static ArrayList<Hitbox> boxes = new ArrayList<>();
-    private static HashMap<String, Texture> cardIcons = new HashMap<>();
-    private static HashMap<String, Color> cardColors = new HashMap<>();
+    private static final HashMap<String, Texture> cardIcons = new HashMap<>();
+    private static final HashMap<String, Color> cardColors = new HashMap<>();
     private static int hoveredCard = -1;
-    private static Hitbox barBox = new Hitbox(POSITION_X - 75F * Settings.scale, Settings.HEIGHT - POSITION_Y - 350 * Settings.scale, 40 * Settings.scale, 350 * Settings.scale);
-    private static Texture unfilledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled.png");
-    private static Texture filledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_filled.png");
-    private static Texture pipComplete = TexLoader.getTexture("awakenedResources/images/ui/pip_complete.png");
-    private static Color defaultNextColor = Color.GREEN.cpy();
+    private static final Hitbox barBox = new Hitbox(POSITION_X - 75F * Settings.scale, Settings.HEIGHT - POSITION_Y - 350 * Settings.scale, 40 * Settings.scale, 350 * Settings.scale);
+    private static final Texture unfilledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled.png");
+    private static final Texture filledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_filled.png");
+    private static final Texture pipComplete = TexLoader.getTexture("awakenedResources/images/ui/pip_complete.png");
+    private static final Color defaultNextColor = Color.GREEN.cpy();
 
     static {
         for (int i = 0; i < 10; i++) {
@@ -78,14 +76,6 @@ public class OrbitingSpells {
         cardColors.put(Grimoire.ID, Color.FIREBRICK.cpy());
     }
 
-    private static Texture getIconForCard(AbstractCard tar) {
-        return cardIcons.getOrDefault(tar.cardID, TexLoader.getTexture("awakenedResources/images/ui/defaultSpell.png"));
-    }
-
-    private static Color getColorForCard(AbstractCard tar) {
-        return cardColors.getOrDefault(tar.cardID, defaultNextColor);
-    }
-
     static {
         spells.add(BurningStudy.ID);
         spells.add(Thunderbolt.ID);
@@ -93,7 +83,13 @@ public class OrbitingSpells {
         spells.add(Darkleech.ID);
     }
 
+    private static Texture getIconForCard(AbstractCard tar) {
+        return cardIcons.getOrDefault(tar.cardID, TexLoader.getTexture("awakenedResources/images/ui/defaultSpell.png"));
+    }
 
+    private static Color getColorForCard(AbstractCard tar) {
+        return cardColors.getOrDefault(tar.cardID, defaultNextColor);
+    }
 
     public static void refreshSpells() {
         spellCards.clear();
@@ -198,13 +194,12 @@ public class OrbitingSpells {
         for (AbstractCard c : spellCards) {
             c.tags.remove(UP_NEXT);
         }
-            AbstractCard card = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng);
-            int idx = getIndexOfCard(card);
-            if (idx != -1) {
-                spellCards.get(getIndexOfCard(card)).tags.add(UP_NEXT);
+        AbstractCard card = Wiz.getRandomItem(spellCards, AbstractDungeon.cardRandomRng);
+        int idx = getIndexOfCard(card);
+        if (idx != -1) {
+            spellCards.get(getIndexOfCard(card)).tags.add(UP_NEXT);
         }
     }
-
 
 
     public static void atBattleStart() {
@@ -246,7 +241,7 @@ public class OrbitingSpells {
 
         boolean woke = Wiz.isAwakened();
         for (int i = 0; i < Wiz.POWERS_TO_AWAKEN; i++) {
-            drawTextureScaled(sb, (woke ? pipComplete : (AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= i  || AwakenedOneMod.awakenedthiscombat) ? filledPip : unfilledPip),
+            drawTextureScaled(sb, (woke ? pipComplete : (AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= i || AwakenedOneMod.awakenedthiscombat) ? filledPip : unfilledPip),
                     barBox.x,
                     barBox.y + (55 * Settings.yScale) * i);
         }

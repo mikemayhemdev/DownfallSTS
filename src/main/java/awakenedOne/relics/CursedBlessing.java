@@ -25,7 +25,7 @@ public class CursedBlessing extends CustomRelic {
 
     public CursedBlessing() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.FLAT);
-     //   DuvuStrings = CardCrawlGame.languagePack.getRelicStrings(DuVuDoll.ID);
+        //   DuvuStrings = CardCrawlGame.languagePack.getRelicStrings(DuVuDoll.ID);
         this.counter = -1;
     }
 
@@ -42,9 +42,9 @@ public class CursedBlessing extends CustomRelic {
         this.counter = -1;
     }
 
-     public void onVictory() {
-         this.counter = -1;
-     }
+    public void onVictory() {
+        this.counter = -1;
+    }
 
     @Override
     public void atBattleStart() {
@@ -58,20 +58,20 @@ public class CursedBlessing extends CustomRelic {
 
     public void onTrigger() {
         if (this.counter != -1) {
-        this.counter++;
-        if (this.counter == AMOUNT1) {
-            this.counter = -1;
-            flash();
-            this.flash();
-            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, AMOUNT2), AMOUNT2));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RitualPower(AbstractDungeon.player, AMOUNT2, true), AMOUNT2));
+            this.counter++;
+            if (this.counter == AMOUNT1) {
+                this.counter = -1;
+                flash();
+                this.flash();
+                this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, AMOUNT2), AMOUNT2));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RitualPower(AbstractDungeon.player, AMOUNT2, true), AMOUNT2));
             }
         }
     }
 
 
-   // public boolean canSpawn() {
+    // public boolean canSpawn() {
     //        Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
     //
     //        AbstractCard c;

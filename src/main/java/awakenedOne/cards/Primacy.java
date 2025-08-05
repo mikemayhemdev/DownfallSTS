@@ -1,6 +1,5 @@
 package awakenedOne.cards;
 
-import awakenedOne.powers.InResponsePower;
 import awakenedOne.powers.PrimacyPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;

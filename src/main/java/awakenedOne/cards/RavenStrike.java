@@ -6,11 +6,9 @@ import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
-import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.att;
 
 public class RavenStrike extends AbstractAwakenedCard {
     public final static String ID = makeID(RavenStrike.class.getSimpleName());
@@ -49,7 +47,6 @@ public class RavenStrike extends AbstractAwakenedCard {
     public void triggerOnGlowCheck() {
         this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
     }
-
 
 
     @Override

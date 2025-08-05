@@ -16,9 +16,9 @@ import java.util.UUID;
 //turn out that a ritual dagger that hits three times is stupid and even if it wasn't the code is annoying
 
 public class RitualDaggerThreeAction extends AbstractGameAction {
-    private int increaseAmount;
-    private DamageInfo info;
-    private UUID uuid;
+    private final int increaseAmount;
+    private final DamageInfo info;
+    private final UUID uuid;
 
     public RitualDaggerThreeAction(AbstractCreature target, DamageInfo info, int incAmount, UUID targetUUID) {
         this.info = info;
@@ -39,8 +39,8 @@ public class RitualDaggerThreeAction extends AbstractGameAction {
                 Iterator var1 = AbstractDungeon.player.masterDeck.group.iterator();
 
                 AbstractCard c;
-                while(var1.hasNext()) {
-                    c = (AbstractCard)var1.next();
+                while (var1.hasNext()) {
+                    c = (AbstractCard) var1.next();
                     if (c.uuid.equals(this.uuid)) {
                         c.misc += this.increaseAmount;
                         c.applyPowers();
@@ -49,8 +49,8 @@ public class RitualDaggerThreeAction extends AbstractGameAction {
                     }
                 }
 
-                for(var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext(); c.baseDamage = c.misc) {
-                    c = (AbstractCard)var1.next();
+                for (var1 = GetAllInBattleInstances.get(this.uuid).iterator(); var1.hasNext(); c.baseDamage = c.misc) {
+                    c = (AbstractCard) var1.next();
                     c.misc += this.increaseAmount;
                     c.applyPowers();
                 }
