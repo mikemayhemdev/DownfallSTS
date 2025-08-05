@@ -34,11 +34,13 @@ public class ManaburnPower extends AbstractAwakenedPower implements OnLoseEnergy
         }
 
         if (hascrow) {
-            this.addToBot(new DamageAction(owner, new DamageInfo(owner, (amount * gained) + ((amount * gained) / 2), DamageInfo.DamageType.HP_LOSS), EnumPatch.HERMIT_GHOSTFIRE));
+
+            this.addToBot(new DamageAction(owner, new DamageInfo(owner, (amount * gained) + ((amount * gained) / 4), DamageInfo.DamageType.HP_LOSS), EnumPatch.HERMIT_GHOSTFIRE));
 
             for (AbstractRelic r : AbstractDungeon.player.relics) {
                 if (r instanceof StrengthBooster) {
-                    ((StrengthBooster) r).onSpecificTrigger((amount * gained) / 2);
+                    ((StrengthBooster) r).onSpecificTrigger((amount * gained) / 4);
+
                 }
             }
         }
@@ -56,11 +58,12 @@ public class ManaburnPower extends AbstractAwakenedPower implements OnLoseEnergy
             }
 
             if (hascrow) {
-                this.addToBot(new DamageAction(owner, new DamageInfo(owner, (amount) + ((amount) / 2), DamageInfo.DamageType.HP_LOSS), EnumPatch.HERMIT_GHOSTFIRE));
+                this.addToBot(new DamageAction(owner, new DamageInfo(owner, (amount) + ((amount) / 4), DamageInfo.DamageType.HP_LOSS), EnumPatch.HERMIT_GHOSTFIRE));
 
                 for (AbstractRelic r : AbstractDungeon.player.relics) {
                     if (r instanceof StrengthBooster) {
-                        ((StrengthBooster) r).onSpecificTrigger((amount) / 2);
+                        ((StrengthBooster) r).onSpecificTrigger((amount) / 4);
+
                     }
                 }
             }
@@ -77,7 +80,9 @@ public class ManaburnPower extends AbstractAwakenedPower implements OnLoseEnergy
         }
 
         if (hascrow) {
-            description = DESCRIPTIONS[0] + (amount) + (amount / 2) + DESCRIPTIONS[1];
+            int newamount = ((amount)+(amount / 4));
+            description = DESCRIPTIONS[0] + (newamount) + DESCRIPTIONS[1];
+
         }
 
     }

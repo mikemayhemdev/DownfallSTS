@@ -528,14 +528,13 @@ public class SneckoMod implements
                 //Awakened One Cards
                 c.cardID.equals(Scour.ID) ||
                 c.cardID.equals(SingularityShield.ID) ||
-                c.cardID.equals(Deathwish.ID) ||
+
+                c.cardID.equals(DeathCoil.ID) ||
                 c.cardID.equals(Gloomguard.ID) ||
                 c.cardID.equals(MirePit.ID) ||
-                c.cardID.equals(SludgeBomb.ID) ||
                 c.cardID.equals(SplitWide.ID) ||
-                c.cardID.equals(Spellshield.ID) ||
                 c.cardID.equals(WaveOfMiasma.ID) ||
-                c.cardID.equals(RavenStrike.ID) ||
+
                 c.cardID.equals(Siphon.ID) ||
                 c.cardID.equals(Nihil.ID)
                 )
@@ -568,8 +567,10 @@ public class SneckoMod implements
                         c.cardID.equals(FeatherVeil.ID) ||
                         c.cardID.equals(AwakenedForm.ID) ||
                         c.cardID.equals(DemonGlyph.ID) ||
+
                         c.cardID.equals(ProfaneStrike.ID) ||
                         c.cardID.equals(Unleash.ID) ||
+
 
                         //Really Bad Offclass cards
                         c.cardID.equals(ChargedBarrage.ID)
