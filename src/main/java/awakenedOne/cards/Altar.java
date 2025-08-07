@@ -33,9 +33,12 @@ public class Altar extends AbstractAwakenedCard {
         Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {
             for (AbstractCard c : list) {
                 Wiz.p().hand.moveToExhaustPile(c);
+                /*
                 if (c instanceof AbstractSpellCard) {
                     atb(new GainEnergyAction(1));
                 }
+
+                 */
             }
             list.clear();
         }, null, uiStrings.TEXT[0], false, false, false));

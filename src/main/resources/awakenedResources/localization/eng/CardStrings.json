@@ -124,7 +124,7 @@
   },
   "awakened:Altar": {
     "NAME": "Altar",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Exhaust 1 card. If it was a Spell, gain [E]."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Exhaust 1 card."
   },
   "awakened:Envision": {
     "NAME": "Envision",
@@ -229,7 +229,7 @@
   },
   "awakened:Brainshock": {
     "NAME": "Eventide",
-    "DESCRIPTION": "Gain !M! Temp Strength and a *Plume *Jab. NL Add a *Void to the top of your draw pile."
+    "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Add a *Void to the top of your draw pile."
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Eclipse Embrace",
@@ -270,7 +270,7 @@
   },
   "awakened:Dejection": {
     "NAME": "Dejection",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. If it was a *Spell, awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. If it was a Spell, gain [E] ."
   },
   "awakened:BloodRite": {
     "NAME": "Blood Rite",

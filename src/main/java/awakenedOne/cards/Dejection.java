@@ -37,7 +37,7 @@ public class Dejection extends AbstractAwakenedCard {
             for (AbstractCard c : list) {
                 Wiz.p().hand.moveToExhaustPile(c);
                 if (c instanceof AbstractSpellCard) {
-                    atb(new ConjureAction(false));
+                    atb(new GainEnergyAction(1));
                 }
 
             }
