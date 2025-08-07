@@ -16,7 +16,7 @@ public class RavenStrike extends AbstractAwakenedCard {
 
     public RavenStrike() {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 15;
+        baseDamage = 16;
         tags.add(CardTags.STRIKE);
         this.tags.add(AwakenedOneMod.CHANT);
         this.baseMagicNumber = 1;

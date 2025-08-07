@@ -34,6 +34,6 @@ public class DeathCoil extends AbstractAwakenedCard {
 
     public void upp() {
         upgradeMagicNumber(2);
-        upgradeDamage(3);
+        upgradeDamage(2);
     }
 }

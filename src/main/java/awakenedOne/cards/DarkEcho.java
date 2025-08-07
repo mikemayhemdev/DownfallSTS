@@ -13,7 +13,7 @@ public class DarkEcho extends AbstractAwakenedCard {
 
     public DarkEcho() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseDamage = 4;
+        baseMagicNumber = magicNumber = 4;
         loadJokeCardImage(this, makeBetaCardPath(DarkEcho.class.getSimpleName() + ".png"));
     }
 

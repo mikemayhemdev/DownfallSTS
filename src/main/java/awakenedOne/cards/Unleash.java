@@ -40,7 +40,6 @@ public class Unleash extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
         upgradeMagicNumber(1);
     }
 }

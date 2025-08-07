@@ -49,7 +49,7 @@
   },
   "awakened:DarkEcho": {
     "NAME": "Dark Echo",
-    "DESCRIPTION": "At the end of your turn, deal !D! damage to ALL enemies, increased by Strength."
+    "DESCRIPTION": "At the end of your turn, deal !M! damage to ALL enemies, increased by Strength."
   },
   "awakened:AwakenedForm": {
     "NAME": "Awakened Form",
@@ -163,7 +163,7 @@
   },
   "awakened:DesperatePrayer": {
     "NAME": "Desperate Prayer",
-    "DESCRIPTION": "Add a random Attack, Skill, and Power into your hand. They cost 0. NL Exhaust."
+    "DESCRIPTION": "Add a random Attack, Skill, and Power into your hand. NL awakened:Chant: They cost 0. NL Exhaust."
   },
   "awakened:BirdsEye": {
     "NAME": "Byrd's Eye",
@@ -242,7 +242,7 @@
   },
   "awakened:Gloomguard": {
     "NAME": "Gloomguard",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! awakened:Manaburn."
+    "DESCRIPTION": "Gain !B! Block. NL Decrease this card's Block by !M! for the rest of combat."
   },
   "awakened:Carrionmaker": {
     "NAME": "Carrionmaker",
@@ -270,7 +270,7 @@
   },
   "awakened:Dejection": {
     "NAME": "Dejection",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. If it was NL a Spell, gain [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. If it was a Spell, gain [E] ."
   },
   "awakened:BloodRite": {
     "NAME": "Blood Rite",

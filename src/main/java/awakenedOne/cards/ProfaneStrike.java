@@ -13,7 +13,7 @@ public class ProfaneStrike extends AbstractAwakenedCard {
 
     public ProfaneStrike() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 6;
         tags.add(CardTags.STRIKE);
         loadJokeCardImage(this, makeBetaCardPath(ProfaneStrike.class.getSimpleName() + ".png"));
     }

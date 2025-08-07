@@ -13,7 +13,7 @@ public class Ensorcelate extends AbstractAwakenedCard {
 
     public Ensorcelate() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 8;
+        baseBlock = 9;
         //baseMagicNumber = magicNumber = 2;
         //this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(Ensorcelate.class.getSimpleName() + ".png"));
