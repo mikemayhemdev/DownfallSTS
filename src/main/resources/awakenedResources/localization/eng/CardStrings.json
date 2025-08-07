@@ -124,7 +124,7 @@
   },
   "awakened:Altar": {
     "NAME": "Altar",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Exhaust 1 card."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL awakened:Conjure."
   },
   "awakened:Envision": {
     "NAME": "Envision",
