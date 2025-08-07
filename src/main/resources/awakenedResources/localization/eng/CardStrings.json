@@ -204,7 +204,7 @@
   },
   "awakened:MoonlitVision": {
     "NAME": "Moonlit Vision",
-    "DESCRIPTION": "The first time you play a *Spell each turn, NL gain [E]."
+    "DESCRIPTION": "The first time you play a Spell each turn, NL gain [E]."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
@@ -270,7 +270,7 @@
   },
   "awakened:Dejection": {
     "NAME": "Dejection",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. If it was a Spell, gain [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. If it was NL a Spell, gain [E] ."
   },
   "awakened:BloodRite": {
     "NAME": "Blood Rite",
