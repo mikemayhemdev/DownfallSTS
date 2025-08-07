@@ -17,6 +17,7 @@ import awakenedOne.relics.*;
 import awakenedOne.ui.AwakenedIcon;
 import awakenedOne.ui.OrbitingSpells;
 import awakenedOne.util.CardFilter;
+import awakenedOne.util.TexLoader;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.eventUtil.AddEventParams;
@@ -126,7 +127,7 @@ public class AwakenedOneMod implements
             ((AbstractAwakenedCard) card).betaArtPath = img;
         }
         Texture cardTexture;
-        cardTexture = ImageMaster.loadImage(img);
+        cardTexture = TexLoader.getTexture(img);
         cardTexture.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
         int tw = cardTexture.getWidth();
         int th = cardTexture.getHeight();
