@@ -1,37 +1,42 @@
 package awakenedOne.cards;
 
-import awakenedOne.patches.OnLoseEnergyPowerPatch;
-import awakenedOne.powers.BrainshockPower;
+import awakenedOne.cards.tokens.PlumeJab;
+import awakenedOne.cards.tokens.spells.AbstractSpellCard;
+import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.LoseStrengthPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
-import hermit.util.Wiz;
 
 import static awakenedOne.AwakenedOneMod.*;
 
 public class Brainshock extends AbstractAwakenedCard {
     public final static String ID = makeID(Brainshock.class.getSimpleName());
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1
-
     public Brainshock() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 9;
-        this.magicNumber = this.baseMagicNumber;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 4;
+        cardsToPreview = new PlumeJab();
         loadJokeCardImage(this, makeBetaCardPath(Brainshock.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (m != null) {
-            this.addToBot(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
-        }
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_HEAVY);
-        Wiz.applyToSelf(new BrainshockPower(1));
+        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));
+
+        Wiz.makeInHand(new PlumeJab(), 1);
+
+        Wiz.atb(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true, false));
+
     }
 
-
     public void upp() {
-        upgradeDamage(4);
+        upgradeMagicNumber(2);
     }
 }

@@ -272,6 +272,7 @@ public class AwakenedOneMod implements
 
         BaseMod.addRelicToCustomPool(new CurvedSword(), AwakenedOneChar.Enums.AWAKENED_BLUE);
 
+        BaseMod.addRelicToCustomPool(new AwakenedUrn(), AwakenedOneChar.Enums.AWAKENED_BLUE); //Urn replacement
         //only obtainable through console (the "conjure blade" relic)
         BaseMod.addRelicToCustomPool(new CurvedSwordMeme(), AwakenedOneChar.Enums.AWAKENED_BLUE);
 

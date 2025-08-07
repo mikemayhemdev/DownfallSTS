@@ -1,8 +1,11 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.actions.ConjureAction;
+import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -13,6 +16,7 @@ import hermit.util.Wiz;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
+import static awakenedOne.util.Wiz.atb;
 
 public class Dejection extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Dejection.class.getSimpleName());
@@ -32,8 +36,8 @@ public class Dejection extends AbstractAwakenedCard {
         Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {
             for (AbstractCard c : list) {
                 Wiz.p().hand.moveToExhaustPile(c);
-                if (c.type == CardType.POWER) {
-                    Wiz.atb(new DrawCardAction(magicNumber));
+                if (c instanceof AbstractSpellCard) {
+                    atb(new ConjureAction(false));
                 }
 
             }

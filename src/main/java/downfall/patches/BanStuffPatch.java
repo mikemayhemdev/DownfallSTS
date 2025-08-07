@@ -37,19 +37,9 @@ public class BanStuffPatch {
                 relicsToRemoveOnStart.add("Ectoplasm");
             }
 
-            boolean nukemummyhand = (AbstractDungeon.miscRng.randomBoolean());
-            boolean nukepellets = (AbstractDungeon.miscRng.randomBoolean());
-            boolean nukeurn = (AbstractDungeon.miscRng.randomBoolean());
 
-            if (nukemummyhand && (chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE)) {
-                relicsToRemoveOnStart.add(MummifiedHand.ID);
-            }
 
-            if (nukepellets && (chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE)) {
-                relicsToRemoveOnStart.add(OrangePellets.ID);
-            }
-
-            if (nukeurn && (chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE)) {
+            if (chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE) {
                 relicsToRemoveOnStart.add(BirdFacedUrn.ID);
             }
 

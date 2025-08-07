@@ -141,5 +141,13 @@
       " and added #yawakened:Conjure to it.",
       "The card attached to this relic has been #rremoved from your deck, the relic no longer functions."
     ]
+  },
+  "awakened:AwakenedUrn": {
+    "NAME": "Bird-Faced Vase",
+    "FLAVOR":  "This urn shows the crow god Mazaleth looking mischievous.",
+    "DESCRIPTIONS": [
+      "The first 4 times you play a #yPower card, heal #b",
+      " HP."
+      ]
   }
 }

@@ -12,7 +12,7 @@ public class MoonlitVision extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public MoonlitVision() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(MoonlitVision.class.getSimpleName() + ".png"));
     }
 
@@ -20,8 +20,9 @@ public class MoonlitVision extends AbstractAwakenedCard {
         applyToSelf(new MoonlitVisionPower());
     }
 
+
     @Override
     public void upp() {
-        isInnate = true;
+        upgradeBaseCost(1);
     }
 }

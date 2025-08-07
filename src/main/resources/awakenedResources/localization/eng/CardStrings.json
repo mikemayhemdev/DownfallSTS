@@ -124,7 +124,7 @@
   },
   "awakened:Altar": {
     "NAME": "Altar",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL awakened:Conjure."
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Exhaust 1 card. If it was a Spell, gain [E]."
   },
   "awakened:Envision": {
     "NAME": "Envision",
@@ -147,7 +147,7 @@
   },
   "awakened:KnifesEdge": {
     "NAME": "Knife's Edge",
-    "DESCRIPTION": "Gain !awakened:m2! Strength. NL Add !M! *Voids into your discard pile."
+    "DESCRIPTION": "Gain !awakened:m2! Strength. NL Shuffle !M! *Voids into your draw pile."
   },
   "awakened:FourthDimension": {
     "NAME": "Fourth Dimension",
@@ -204,8 +204,7 @@
   },
   "awakened:MoonlitVision": {
     "NAME": "Moonlit Vision",
-    "DESCRIPTION": "At the start of your turn, if your hand contains 8 or more cards, gain [E].",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, if your hand contains 8 or more cards, gain [E]."
+    "DESCRIPTION": "The first time you play a *Spell each turn, NL gain [E]."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
@@ -229,8 +228,8 @@
     "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength."
   },
   "awakened:Brainshock": {
-    "NAME": "Brainshock",
-    "DESCRIPTION": "Deal !D! damage. NL The next time you play a *Spell this turn, gain [E] and draw 1 card ."
+    "NAME": "Eventide",
+    "DESCRIPTION": "Gain !M! Temp Strength and a *Plume *Jab. NL Add a *Void to the top of your draw pile."
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Eclipse Embrace",
@@ -271,7 +270,7 @@
   },
   "awakened:Dejection": {
     "NAME": "Dejection",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. NL If it was a Power, draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. If it was a *Spell, awakened:Conjure."
   },
   "awakened:BloodRite": {
     "NAME": "Blood Rite",

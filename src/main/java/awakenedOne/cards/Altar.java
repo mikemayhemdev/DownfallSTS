@@ -2,6 +2,8 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.cards.tokens.spells.AbstractSpellCard;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -31,9 +33,13 @@ public class Altar extends AbstractAwakenedCard {
         Wiz.atb(new HandSelectAction(1, (c) -> true, list -> {
             for (AbstractCard c : list) {
                 Wiz.p().hand.moveToExhaustPile(c);
+                if (c instanceof AbstractSpellCard) {
+                    atb(new GainEnergyAction(1));
+                }
             }
             list.clear();
         }, null, uiStrings.TEXT[0], false, false, false));
+
         atb(new ConjureAction(false));
     }
 
