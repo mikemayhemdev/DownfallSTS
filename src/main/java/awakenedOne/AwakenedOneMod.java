@@ -39,7 +39,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Nest;
 import com.megacrit.cardcrawl.events.exordium.GoldenWing;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
@@ -48,7 +47,6 @@ import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
 
-import javax.crypto.SecretKeyFactory;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;

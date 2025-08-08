@@ -66,15 +66,15 @@ public class AwakenedOneChar extends CustomPlayer {
     private static final Logger logger = LogManager.getLogger(AwakenedOne.class.getName());
     private final String atlasURL = "awakenedResources/images/mainChar/awakened.atlas";
     private final String jsonURL = "awakenedResources/images/mainChar/awakened.json";
+    private final boolean form1 = true;
+    private final ArrayList<ReverseAwakenedWingParticle> wParticles = new ArrayList();
+    private final ArrayList<AwakenedWingParticle> wParticles2 = new ArrayList();
     public float renderscale = 1.2F;
     public boolean animateParticles = false;
     private float fireTimer = 0.0F;
-    private final boolean form1 = true;
     private boolean revived = false;
     private Bone eye;
     private Bone back;
-    private final ArrayList<ReverseAwakenedWingParticle> wParticles = new ArrayList();
-    private final ArrayList<AwakenedWingParticle> wParticles2 = new ArrayList();
 
 
     public AwakenedOneChar(String name, PlayerClass setClass) {

@@ -1,14 +1,9 @@
 package awakenedOne.powers;
 
-import awakenedOne.actions.MoonlitVisionAction;
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
-import com.evacipated.cardcrawl.mod.stslib.powers.abstracts.TwoAmountPower;
-import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import slimebound.SlimeboundMod;
 
 import static awakenedOne.util.Wiz.atb;
 
@@ -25,8 +20,8 @@ public class MoonlitVisionPower extends AbstractTwoAmountAwakenedPower {
 
     @Override
     public void onAfterCardPlayed(AbstractCard usedCard) {
-        if (usedCard instanceof AbstractSpellCard){
-            if (amount2 > 0){
+        if (usedCard instanceof AbstractSpellCard) {
+            if (amount2 > 0) {
                 atb(new GainEnergyAction(1));
                 amount2--;
                 flash();
@@ -37,6 +32,7 @@ public class MoonlitVisionPower extends AbstractTwoAmountAwakenedPower {
 
     @Override
     public void stackPower(int stackAmount) {
+        super.stackPower(stackAmount);
         amount2 += stackAmount;
         updateDescription();
     }

@@ -14,8 +14,8 @@ import sneckomod.SneckoMod;
 import java.util.ArrayList;
 
 public class SerpentIdolPowerAction extends AbstractGameAction {
-    private boolean retrieveCard = false;
     private final int count;
+    private boolean retrieveCard = false;
 
     public SerpentIdolPowerAction(int count) {
         this.actionType = ActionType.CARD_MANIPULATION;// 19

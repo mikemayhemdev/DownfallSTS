@@ -1,18 +1,14 @@
 package awakenedOne.cards;
 
-import awakenedOne.powers.ManaburnPower;
 import awakenedOne.util.Wiz;
-import basemod.BaseMod;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.atb;
-import static awakenedOne.util.Wiz.att;
 
 public class Gloomguard extends AbstractAwakenedCard {
     public final static String ID = makeID(Gloomguard.class.getSimpleName());
@@ -27,8 +23,8 @@ public class Gloomguard extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        for (AbstractCard c: p.hand.group){
-            if (c instanceof VoidCard){
+        for (AbstractCard c : p.hand.group) {
+            if (c instanceof VoidCard) {
                 Wiz.atb(new ExhaustSpecificCardAction(c, p.hand));
                 Wiz.atb(new GainEnergyAction(1));
             }

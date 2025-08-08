@@ -43,9 +43,9 @@ public class BackToBasicsAwakened extends AbstractImageEvent {
         OPTIONSGUARDIAN = eventStringsGuardian.OPTIONS;
     }
 
-    private BackToBasicsAwakened.CUR_SCREEN screen;
     private final List<String> cardsUpgraded;
     private final ArrayList<AbstractCard> cardsToRemove;
+    private BackToBasicsAwakened.CUR_SCREEN screen;
 
     public BackToBasicsAwakened() {
         super(NAME, DIALOG_1, "images/events/backToBasics.jpg");

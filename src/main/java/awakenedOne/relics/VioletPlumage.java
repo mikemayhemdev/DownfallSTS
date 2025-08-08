@@ -24,6 +24,7 @@ public class VioletPlumage extends CustomRelic {
     //violet plumage
     public boolean firstTurn = false;
     public boolean activated = false;
+
     public VioletPlumage() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
