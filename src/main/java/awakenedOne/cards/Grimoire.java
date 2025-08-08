@@ -6,9 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.ui.OrbitingSpells.spellCards;
 import static awakenedOne.util.Wiz.atb;
-import static awakenedOne.util.Wiz.att;
 
 public class Grimoire extends AbstractAwakenedCard {
     public final static String ID = makeID(Grimoire.class.getSimpleName());

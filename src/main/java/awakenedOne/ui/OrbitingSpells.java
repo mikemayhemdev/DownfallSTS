@@ -3,7 +3,8 @@ package awakenedOne.ui;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.actions.SetUpNextSpellAction;
-import awakenedOne.cards.*;
+import awakenedOne.cards.Caw;
+import awakenedOne.cards.Grimoire;
 import awakenedOne.cards.tokens.spells.*;
 import awakenedOne.powers.AphoticFountPower;
 import awakenedOne.relics.ZenerDeck;
@@ -43,17 +44,16 @@ public class OrbitingSpells {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Spellbook"));
 
     private static final ArrayList<String> spells = new ArrayList<>();
-
-    public static ArrayList<AbstractCard> spellCards = new ArrayList<>();
-    public static ArrayList<Hitbox> boxes = new ArrayList<>();
     private static final HashMap<String, Texture> cardIcons = new HashMap<>();
     private static final HashMap<String, Color> cardColors = new HashMap<>();
-    private static int hoveredCard = -1;
     private static final Hitbox barBox = new Hitbox(POSITION_X - 75F * Settings.scale, Settings.HEIGHT - POSITION_Y - 350 * Settings.scale, 40 * Settings.scale, 350 * Settings.scale);
     private static final Texture unfilledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled.png");
     private static final Texture filledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_filled.png");
     private static final Texture pipComplete = TexLoader.getTexture("awakenedResources/images/ui/pip_complete.png");
     private static final Color defaultNextColor = Color.GREEN.cpy();
+    public static ArrayList<AbstractCard> spellCards = new ArrayList<>();
+    public static ArrayList<Hitbox> boxes = new ArrayList<>();
+    private static int hoveredCard = -1;
 
     static {
         for (int i = 0; i < 10; i++) {
