@@ -37,11 +37,8 @@ public class BanStuffPatch {
                 relicsToRemoveOnStart.add("Ectoplasm");
             }
 
+            relicsToRemoveOnStart.add(BirdFacedUrn.ID);
 
-
-            if (chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE) {
-                relicsToRemoveOnStart.add(BirdFacedUrn.ID);
-            }
 
         }
     }

@@ -273,7 +273,6 @@ public class AwakenedOneMod implements
 
         BaseMod.addRelicToCustomPool(new CurvedSword(), AwakenedOneChar.Enums.AWAKENED_BLUE);
 
-        BaseMod.addRelicToCustomPool(new AwakenedUrn(), AwakenedOneChar.Enums.AWAKENED_BLUE); //Urn replacement
         //only obtainable through console (the "conjure blade" relic)
         BaseMod.addRelicToCustomPool(new CurvedSwordMeme(), AwakenedOneChar.Enums.AWAKENED_BLUE);
 
@@ -283,7 +282,7 @@ public class AwakenedOneMod implements
         BaseMod.addRelic(new ShardOfNowak(), RelicType.SHARED); //uncommon shared
         BaseMod.addRelic(new MiniBlackHole(), RelicType.SHARED);//common shared
 
-        BaseMod.addRelic(new DeadBird(), RelicType.SHARED); //decided this was useful enough to be shared
+        BaseMod.addRelic(new DeadBird(), RelicType.SHARED);//common shared
     }
 
     public void addPotions() {

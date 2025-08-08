@@ -190,8 +190,8 @@
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
-    "DESCRIPTION": "Gain X copies of *Plume *Jab. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 copies of *Plume *Jab. NL Exhaust."
+    "DESCRIPTION": "Gain X copies of *Plume *Jab.",
+    "UPGRADE_DESCRIPTION": "Gain X+1 copies of *Plume *Jab."
   },
   "awakened:Murder": {
     "NAME": "Murder",
@@ -360,7 +360,7 @@
   },
   "awakened:PlumeJab": {
     "NAME": "Plume Jab",
-    "DESCRIPTION": "Deal !D! damage to a random enemy twice."
+    "DESCRIPTION": "Retain. NL Deal !D! damage to a random enemy twice. NL Exhaust."
   },
   "awakened:Primacy": {
     "NAME": "Primacy",
