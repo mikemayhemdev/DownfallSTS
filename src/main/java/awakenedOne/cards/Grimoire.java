@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
+import static awakenedOne.util.Wiz.atb;
 import static awakenedOne.util.Wiz.att;
 
 public class Grimoire extends AbstractAwakenedCard {
@@ -18,22 +19,12 @@ public class Grimoire extends AbstractAwakenedCard {
         this.selfRetain = true;
         baseDamage = 7;
         baseMagicNumber = magicNumber = 7;
-        this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(Grimoire.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        att(new ModifyDamageAction(this.uuid, magicNumber));
-        spellCards.add(this);
-        // atb(new AddSpellCardAction(this));
-//        atb(new AbstractGameAction() {
-//            @Override
-//            public void update() {
-//                isDone = true;
-//                spellCards.add(q);
-//            }
-//        });
+        atb(new ModifyDamageAction(this.uuid, magicNumber));
     }
 
     public void upp() {

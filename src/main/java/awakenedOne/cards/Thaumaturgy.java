@@ -16,15 +16,15 @@ public class Thaumaturgy extends AbstractAwakenedCard {
 
     public Thaumaturgy() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 2;
+        this.baseMagicNumber = 1;
         this.magicNumber = this.baseMagicNumber;
         cardsToPreview = new Ceremony();
         loadJokeCardImage(this, makeBetaCardPath(Thaumaturgy.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new DexterityPower(p, 1));
-        applyToSelfTop(new ThaumaturgyPower(magicNumber));
+        applyToSelf(new DexterityPower(p, magicNumber));
+        applyToSelf(new ThaumaturgyPower(2));
     }
 
     public void upp() {

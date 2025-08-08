@@ -31,14 +31,14 @@ public class CurvedSword extends CustomRelic {
         tips.add(new CardPowerTip(new Ceremony()));
     }
 
-    public void atTurnStart() {
+    public void atBattleStart() {
         this.counter = 0;
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card instanceof AbstractSpellCard) {
             ++this.counter;
-            if (this.counter % 3 == 0) {
+            if (this.counter % 4 == 0) {
                 this.flash();
                 this.counter = 0;
                 this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
@@ -54,7 +54,7 @@ public class CurvedSword extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + 3 + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + 4 + DESCRIPTIONS[1];
     }
 
 }

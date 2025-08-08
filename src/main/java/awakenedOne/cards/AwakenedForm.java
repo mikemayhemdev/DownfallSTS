@@ -17,7 +17,7 @@ public class AwakenedForm extends AbstractAwakenedCard {
     public AwakenedForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 2;
+        baseSecondMagic = secondMagic = 3;
         tags.add(BaseModCardTags.FORM);
         loadJokeCardImage(this, makeBetaCardPath(AwakenedForm.class.getSimpleName() + ".png"));
     }
@@ -29,7 +29,6 @@ public class AwakenedForm extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeSecondMagic(1);
-        //upgradeMagicNumber(-1);
+       upgradeMagicNumber(-1);
     }
 }

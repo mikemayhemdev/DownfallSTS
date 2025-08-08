@@ -50,6 +50,6 @@ public class MagicStrike extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(4);
     }
 }

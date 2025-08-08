@@ -38,10 +38,14 @@ public class Thunderbolt extends AbstractSpellCard {
             CardCrawlGame.sound.playA("ORB_LIGHTNING_EVOKE", 0.9F);
             CardCrawlGame.sound.playA("ORB_LIGHTNING_PASSIVE", -0.3F);
             vfx(new LightningEffect(m.hb.cX, m.hb.cY));
+
+            isMultiDamage = false;
             dmg(m, AbstractGameAction.AttackEffect.NONE);
         } else {
             //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
             this.addToBot(new VFXAction(new ReaperEffect()));
+
+            isMultiDamage = true;
             this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         }
 
@@ -50,10 +54,12 @@ public class Thunderbolt extends AbstractSpellCard {
                 CardCrawlGame.sound.playA("ORB_LIGHTNING_EVOKE", 0.9F);
                 CardCrawlGame.sound.playA("ORB_LIGHTNING_PASSIVE", -0.3F);
                 vfx(new LightningEffect(m.hb.cX, m.hb.cY));
+                isMultiDamage = false;
                 dmg(m, AbstractGameAction.AttackEffect.NONE);
             } else {
                 //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
                 this.addToBot(new VFXAction(new ReaperEffect()));
+                isMultiDamage = true;
                 this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
             }
         }

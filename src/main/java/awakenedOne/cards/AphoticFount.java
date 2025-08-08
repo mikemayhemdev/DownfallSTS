@@ -30,7 +30,7 @@ public class AphoticFount extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard card = new AphoticShield();
         spellCards.add(card);
-        applyToSelf(new AphoticFountPower(false));
+        applyToSelf(new AphoticFountPower());
     }
 
     @Override

@@ -28,7 +28,7 @@ public class TomeOfPortalmancy extends CustomRelic {
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("TomeOfPortalmancy.png")); //TODO: Images
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("TomeOfPortalmancy.png"));
 
-    private static final int AMOUNT = 1;
+    private static final int AMOUNT = 3;
 
     public TomeOfPortalmancy() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);

@@ -29,7 +29,7 @@ public class Scour extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
-        upgradeMagicNumber(2);
+        upgradeDamage(2);
+        upgradeMagicNumber(1);
     }
 }

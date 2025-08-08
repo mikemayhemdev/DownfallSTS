@@ -49,7 +49,7 @@
   },
   "awakened:DarkEcho": {
     "NAME": "Dark Echo",
-    "DESCRIPTION": "At the end of your turn, deal !D! damage to ALL enemies, increased by Strength."
+    "DESCRIPTION": "At the end of your turn, deal !M! damage to ALL enemies, increased by Strength."
   },
   "awakened:AwakenedForm": {
     "NAME": "Awakened Form",
@@ -132,7 +132,7 @@
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
-    "DESCRIPTION": "Gain 1 Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand."
+    "DESCRIPTION": "Gain !M! Dexterity. NL At the start of your next 2 turns, add a *Ceremony into your hand."
   },
   "awakened:WaveOfMiasma": {
     "NAME": "Wave of Miasma",
@@ -147,7 +147,7 @@
   },
   "awakened:KnifesEdge": {
     "NAME": "Knife's Edge",
-    "DESCRIPTION": "Gain !awakened:m2! Strength. NL Add !M! *Voids into your discard pile."
+    "DESCRIPTION": "Gain !awakened:m2! Strength. NL Shuffle !M! *Voids into your draw pile."
   },
   "awakened:FourthDimension": {
     "NAME": "Fourth Dimension",
@@ -163,7 +163,7 @@
   },
   "awakened:DesperatePrayer": {
     "NAME": "Desperate Prayer",
-    "DESCRIPTION": "Add a random Attack, Skill, and Power into your hand. They cost 0. NL Exhaust."
+    "DESCRIPTION": "Add a random Attack, Skill, and Power into your hand. NL awakened:Chant: They cost 0. NL Exhaust."
   },
   "awakened:BirdsEye": {
     "NAME": "Byrd's Eye",
@@ -204,8 +204,7 @@
   },
   "awakened:MoonlitVision": {
     "NAME": "Moonlit Vision",
-    "DESCRIPTION": "At the start of your turn, if your hand contains 8 or more cards, gain [E].",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, if your hand contains 8 or more cards, gain [E]."
+    "DESCRIPTION": "The first time you play a Spell each turn, NL gain [E]."
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
@@ -229,8 +228,8 @@
     "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength."
   },
   "awakened:Brainshock": {
-    "NAME": "Brainshock",
-    "DESCRIPTION": "Deal !D! damage. NL The next time you play a *Spell this turn, gain [E] and draw 1 card ."
+    "NAME": "Eventide",
+    "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Add a *Void to the top of your draw pile."
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Eclipse Embrace",
@@ -243,7 +242,7 @@
   },
   "awakened:Gloomguard": {
     "NAME": "Gloomguard",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !M! awakened:Manaburn."
+    "DESCRIPTION": "Gain !B! Block. NL Decrease this card's Block by !M! for the rest of combat."
   },
   "awakened:Carrionmaker": {
     "NAME": "Carrionmaker",
@@ -271,7 +270,7 @@
   },
   "awakened:Dejection": {
     "NAME": "Dejection",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. NL If it was a Power, draw !M! cards."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. If it was a Spell, gain [E] ."
   },
   "awakened:BloodRite": {
     "NAME": "Blood Rite",

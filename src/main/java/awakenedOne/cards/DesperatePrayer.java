@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -13,28 +14,38 @@ public class DesperatePrayer extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public DesperatePrayer() {
-        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(DesperatePrayer.class.getSimpleName() + ".png"));
+        this.tags.add(AwakenedOneMod.CHANT);
         exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.ATTACK).makeCopy();
-        c.setCostForTurn(0);
-        //if (upgraded) c.upgrade();
-        this.addToBot(new MakeTempCardInHandAction(c, true));
         AbstractCard d = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.SKILL).makeCopy();
-        d.setCostForTurn(0);
-        //if (upgraded) d.upgrade();
-        this.addToBot(new MakeTempCardInHandAction(d, true));
         AbstractCard e = AbstractDungeon.returnTrulyRandomCardInCombat(CardType.POWER).makeCopy();
-        e.setCostForTurn(0);
-        //if (upgraded) e.upgrade();
+        if (isTrig_chant()) {
+            c.setCostForTurn(0);
+            d.setCostForTurn(0);
+            e.setCostForTurn(0);
+            chant();
+        }
+        this.addToBot(new MakeTempCardInHandAction(c, true));
+        this.addToBot(new MakeTempCardInHandAction(d, true));
         this.addToBot(new MakeTempCardInHandAction(e, true));
     }
 
+    public void triggerOnGlowCheck() {
+        this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+    }
+
+    @Override
+    public void chant() {
+        checkOnChant();
+    }
+
     public void upp() {
-        upgradeBaseCost(2);
+        upgradeBaseCost(1);
 
     }
 }

@@ -18,7 +18,7 @@ public class Peck extends AbstractAwakenedCard {
     public Peck() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 1;
-        baseBlock = 6;
+        baseBlock = 5;
         magicNumber = baseMagicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Peck.class.getSimpleName() + ".png"));
     }
@@ -31,7 +31,7 @@ public class Peck extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeDamage(1);
+        upgradeBlock(1);
         upgradeMagicNumber(1);
     }
 }

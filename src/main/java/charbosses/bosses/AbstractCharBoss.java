@@ -366,7 +366,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
 
     public void endTurnStartTurn() {
-        if (!AbstractDungeon.getCurrRoom().isBattleOver) {
+        if (!AbstractDungeon.getCurrRoom().isBattleOver && currentHealth > 0) {
             //addToBot(new EnemyDrawCardAction(this, this.gameHandSize, true));
             addToBot(new AbstractGameAction() {
                 @Override

@@ -1,6 +1,7 @@
 package awakenedOne.cards;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
@@ -22,7 +23,7 @@ public class KnifesEdge extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new MakeTempCardInDiscardAction(new VoidCard(), magicNumber));
+        addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), magicNumber, true, true));
         applyToSelf(new StrengthPower(p, secondMagic));
     }
 

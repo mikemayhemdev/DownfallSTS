@@ -82,9 +82,9 @@
   "awakened:MoonlitVisionPower": {
     "NAME": "Moonlit Vision",
     "DESCRIPTIONS": [
-      "At the start of your turn, if your hand contains #b8 or more cards, gain [E].",
-      "At the start of your turn, if your hand contains #b8 or more cards, gain #b",
-      " [E]."
+      "The first #b",
+      " times you play a Spell each turn, gain [E] . #b",
+      " remaining this turn."
     ]
   },
   "awakened:EclipseEmbracePower": {
@@ -201,14 +201,6 @@
     "DESCRIPTIONS": [
       "Whenever you #yRetain a card, gain #b",
       " #yBlock."
-    ]
-  },
-  "awakened:BrainshockPower": {
-    "NAME": "Brainshock",
-    "DESCRIPTIONS": [
-      "The next time you play a #ySpell this turn, gain #b",
-      " Energy and draw #b",
-      " card(s)."
     ]
   }
 }

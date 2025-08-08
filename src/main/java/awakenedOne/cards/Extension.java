@@ -1,5 +1,7 @@
 package awakenedOne.cards;
 
+import basemod.BaseMod;
+import basemod.patches.com.megacrit.cardcrawl.characters.AbstractPlayer.MaxHandSizePatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -29,7 +31,9 @@ public class Extension extends AbstractAwakenedCard {
                 @Override
                 public void update() {
                     isDone = true;
-                    AbstractDungeon.player.discardPile.moveToHand(Extension.this);
+                    if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
+                        AbstractDungeon.player.discardPile.moveToHand(Extension.this);
+                    }
                 }
             });
         }

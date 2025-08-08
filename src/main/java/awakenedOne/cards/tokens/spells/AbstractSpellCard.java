@@ -2,6 +2,7 @@ package awakenedOne.cards.tokens.spells;
 
 import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.powers.BrainshockPower;
+import awakenedOne.powers.MoonlitVisionPower;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.UIStrings;
@@ -67,8 +68,14 @@ public abstract class AbstractSpellCard extends AbstractAwakenedCard {
 //    }
 
     public void triggerOnGlowCheck() {
+        if (AbstractDungeon.player.hasPower(MoonlitVisionPower.POWER_ID)){
 
-        this.glowColor = AbstractDungeon.player.hasPower(BrainshockPower.POWER_ID) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+            if (((MoonlitVisionPower)AbstractDungeon.player.getPower(MoonlitVisionPower.POWER_ID)).amount2 > 0){
+                this.glowColor =  GOLD_BORDER_GLOW_COLOR;
+                return;
+            }
+        }
+        this.glowColor = BLUE_BORDER_GLOW_COLOR;
     }
     @Override
     public List<String> getCardDescriptors() {

@@ -13,7 +13,7 @@ public class EclipseEmbrace extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public EclipseEmbrace() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(EclipseEmbrace.class.getSimpleName() + ".png"));
     }
 
@@ -28,6 +28,12 @@ public class EclipseEmbrace extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBaseCost(2);
+        upgradeBaseCost(1);
+    }
+
+
+    @Override
+    public float getTitleFontSize() {
+        return 19F;
     }
 }
