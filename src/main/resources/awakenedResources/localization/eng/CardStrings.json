@@ -38,8 +38,8 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "awakened:MagicStrike": {
-    "NAME": "Magic Strike",
+  "awakened:Brainshock": {
+    "NAME": "Brainshock",
     "DESCRIPTION": "Deal !D! damage. NL Add a *Void into your discard pile."
   },
   "awakened:Intensify": {
@@ -227,7 +227,7 @@
     "NAME": "Darkness Falls",
     "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength."
   },
-  "awakened:Brainshock": {
+  "awakened:Eventide": {
     "NAME": "Eventide",
     "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Add a *Void to the top of your draw pile."
   },
@@ -242,7 +242,7 @@
   },
   "awakened:Gloomguard": {
     "NAME": "Gloomguard",
-    "DESCRIPTION": "Gain !B! Block. NL Decrease this card's Block by !M! for the rest of combat."
+    "DESCRIPTION": "Gain !B! Block. NL For each Void in hand, Exhaust it and gain [E] ."
   },
   "awakened:Carrionmaker": {
     "NAME": "Carrionmaker",

@@ -1,28 +1,38 @@
 package awakenedOne.cards;
 
 import awakenedOne.powers.ManaburnPower;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.ModifyBlockAction;
+import awakenedOne.util.Wiz;
+import basemod.BaseMod;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.att;
 
 public class Gloomguard extends AbstractAwakenedCard {
     public final static String ID = makeID(Gloomguard.class.getSimpleName());
     // intellij stuff power, self, rare, , , , , ,
 
     public Gloomguard() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseBlock = 12;
-        baseMagicNumber = magicNumber = 3;
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseBlock = 9;
+        //  baseMagicNumber = magicNumber = 3;
         loadJokeCardImage(this, makeBetaCardPath(Gloomguard.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        atb(new ModifyBlockAction(this.uuid, -magicNumber));
+        for (AbstractCard c: p.hand.group){
+            if (c instanceof VoidCard){
+                Wiz.atb(new ExhaustSpecificCardAction(c, p.hand));
+                Wiz.atb(new GainEnergyAction(1));
+            }
+        }
     }
 
     public void upp() {
