@@ -202,5 +202,20 @@
       "Whenever you #yRetain a card, gain #b",
       " #yBlock."
     ]
+  },
+  "awakened:DaggerstormPower": {
+    "NAME": "Daggerstorm",
+    "DESCRIPTIONS": [
+      "Whenever you create a card, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "awakened:SchemePower": {
+    "NAME": "Scheme",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " cards played this turn that cost #b1 or less will be played twice.",
+      "The next card played this turn that costs #b1 or less will be played twice."
+    ]
   }
 }

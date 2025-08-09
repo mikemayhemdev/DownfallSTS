@@ -10,6 +10,7 @@ import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -23,6 +24,9 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import hermit.util.TextureLoader;
+import slimebound.SlimeboundMod;
+
+import java.util.Objects;
 
 import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
 import static awakenedOne.util.Wiz.atb;
@@ -32,6 +36,8 @@ public abstract class AbstractAwakenedCard extends CustomCard {
 
     protected final CardStrings cardStrings;
     public String betaArtPath;
+
+    public String frameString;
 
     public int secondMagic;
     public int baseSecondMagic = -1;
@@ -54,9 +60,14 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         this(cardID, cost, type, rarity, target, AwakenedOneChar.Enums.AWAKENED_BLUE);
     }
 
+    public AbstractAwakenedCard(final String cardID, final int cost, final CardRarity rarity, final CardType type,  final CardTarget target) {
+        this(cardID, cost, type, rarity, target, AwakenedOneChar.Enums.AWAKENED_BLUE);
+    }
+
     public AbstractAwakenedCard(final String cardID, final int cost, final CardType type, final CardRarity rarity, final CardTarget target, final CardColor color) {
         super(cardID, "", getCardTextureString(cardID.replace(AwakenedOneMod.getModID() + ":", ""), type),
                 cost, "", type, color, rarity, target);
+
         cardStrings = CardCrawlGame.languagePack.getCardStrings(this.cardID);
         rawDescription = cardStrings.DESCRIPTION;
         name = originalName = cardStrings.NAME;
@@ -275,7 +286,15 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         AwakenedTextHelper.colorCombos(this, false);
     }
 
-    public void update() {
-        super.update();
+
+    protected String getTypeName() {
+        switch (type) {
+            case ATTACK:
+                return "attack";
+            case POWER:
+                return "power";
+            default:
+                return "skill";
+        }
     }
 }

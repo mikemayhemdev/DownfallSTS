@@ -366,5 +366,48 @@
     "NAME": "Primacy",
     "DESCRIPTION": "The first time you gain Strength each turn, draw a card.",
     "UPGRADE_DESCRIPTION": "The first !M! times you gain Strength each turn, draw a card."
+  },
+  "awakened:Daggerstorm": {
+    "NAME": "Daggerstorm",
+    "DESCRIPTION": "Whenever you create a card, deal !M! damage to a random enemy."
+  },
+  "awakened:PackRat": {
+    "NAME": "Pack Rat",
+    "DESCRIPTION": "Deal !D! damage and gain !B! Block twice. NL Obtain a random potion. NL Exhaust."
+  },
+  "awakened:ManaShield": {
+    "NAME": "Mana Shield",
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Reduce the cost of a random Spell in hand by 1."
+  },
+  "awakened:Crusher": {
+    "NAME": "Crusher",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When a card is created, reduce this card's cost by 1 until played."
+  },
+  "awakened:Minniegun": {
+    "NAME": "Minniegun",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Shuffle a *Void into your draw pile."
+  },
+  "awakened:SignInBlood": {
+    "NAME": "Sign in Blood",
+    "DESCRIPTION": "Take 3 damage. NL Draw !M! cards. NL Gain !M! temporary Strength."
+  },
+  "awakened:SpreadingSpores": {
+    "NAME": "Spreading Spores",
+    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns.  NL Shuffle a copy of this into your draw pile."
+  },
+  "awakened:Scheme": {
+    "NAME": "Scheme",
+    "DESCRIPTION": "The next !M! cards you play that cost 1 or less are played twice."
+  },
+  "awakened:TheEncyclopedia": {
+    "NAME": "The Encyclopedia",
+    "DESCRIPTION": "Choose 2 of !M! random cards to add into your hand. They cost 2 less. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose 2 cards to add to your draw pile."
+    ]
+  },
+  "awakened:DesperatePrayerAlt": {
+    "NAME": "Reality Rift",
+    "DESCRIPTION": "Add !M! powerful cards from *ANOTHER *DIMENSION and 2 *Voids to your draw pile. Exhaust."
   }
 }
