@@ -18,6 +18,7 @@ import automaton.relics.*;
 import automaton.util.*;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.relics.AwakenedUrn;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -185,6 +186,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     //Config Menu Stuff
     private ModPanel settingsPanel;
     public static Properties configDefault = new Properties();
+    public static boolean disableBaseGameAdjustments = false;
     public static boolean contentSharing_relics = true;
     public static boolean contentSharing_potions = true;
     public static boolean contentSharing_events = false;
@@ -194,7 +196,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static boolean crossoverModCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
-    public static boolean normalMapLayout = false;
+    public static boolean normalMapLayout = true;
     public static boolean sneckoNoModCharacters = false;
     public static boolean useIconsForAppliedProperties = false;
     public static boolean DeterministicConjure = true;
@@ -213,6 +215,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static final String PROP_NO_MUSIC = "disableMusicOverride";
     public static final String PROP_ICONS_FOR_APPLIED_PROPERTIES = "useIconsForAppliedProperties";
     public static final String NO_RNG_CONJURE = "RNGlessConjure";
+    public static final String NO_BASE_ADJUSTMENTS = "disableBaseGameAdjustments";
 
     public static String Act1BossFaced = "";
     public static String Act2BossFaced = "";
@@ -373,6 +376,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             config.setBool(PROP_NO_MUSIC, noMusic);
             config.setBool(PROP_ICONS_FOR_APPLIED_PROPERTIES, useIconsForAppliedProperties);
             config.setBool(NO_RNG_CONJURE, DeterministicConjure);
+            config.setBool(NO_BASE_ADJUSTMENTS, disableBaseGameAdjustments);
             config.save();
             GoldenIdol_Evil.save();
         } catch (IOException e) {
@@ -774,6 +778,13 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 unlockAllReskin();
             });
 
+            configPos -= configStep;
+            ModLabeledToggleButton noBaseAdjustmentsBtn = new ModLabeledToggleButton(configStrings.TEXT[15], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, disableBaseGameAdjustments, settingsPanel, (label) -> {
+            }, (button) -> {
+                disableBaseGameAdjustments = button.enabled;
+                saveData();
+            });
+
             settingsPanel.addUIElement(contentSharingBtnCurses);
             settingsPanel.addUIElement(contentSharingBtnEvents);
             settingsPanel.addUIElement(contentSharingBtnPotions);
@@ -785,6 +796,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             settingsPanel.addUIElement(noMusicBtn);
             settingsPanel.addUIElement(unlockAllSkinBtn);
             settingsPanel.addUIElement(characterModCrossoverBtn);
+            settingsPanel.addUIElement(noBaseAdjustmentsBtn);
         }
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
@@ -1338,6 +1350,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addRelic(new NeowBlessing(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedBell(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedKey(), RelicType.SHARED);
+
+        if (downfallMod.disableBaseGameAdjustments = false) BaseMod.addRelic(new AwakenedUrn(), RelicType.SHARED);
         addPotions();
     }
 
