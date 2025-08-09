@@ -21,8 +21,8 @@ public class PackRat extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(PackRat.class.getSimpleName());
     public PackRat() {
         super(ID, 1, CardRarity.RARE, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 5;
-        baseBlock = 5;
+        baseDamage = 2;
+        baseBlock = 2;
         exhaust = true;
 
         frameString = "inscryp";

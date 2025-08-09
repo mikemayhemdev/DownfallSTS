@@ -1,11 +1,18 @@
 package awakenedOne.cards;
 
+import awakenedOne.actions.GetDimensionCardsAction;
 import awakenedOne.cards.altDimension.*;
+import awakenedOne.cards.tokens.spells.AbstractSpellCard;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.util.Wiz;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -17,72 +24,35 @@ public class DesperatePrayerAlt extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public DesperatePrayerAlt() {
-        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(DesperatePrayerAlt.class.getSimpleName() + ".png"));
         exhaust = true;
         baseMagicNumber = magicNumber = 3;
+        baseSecondMagic = secondMagic = 1;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
+        Wiz.atb(new GetDimensionCardsAction(magicNumber, secondMagic));
+        addToBot(new MakeTempCardInDiscardAction(new VoidCard(), 2));
+        addToBot(new AbstractGameAction() {
+            @Override
+            public void update() {
+                isDone = true;
 
-        ArrayList<Integer> numbers = new ArrayList<>();
-        for (int i = 0; i <= 8; i++) {
-            numbers.add(i);
-        }
-        Collections.shuffle(numbers);
-
-        for(int i = 0; i < this.magicNumber; ++i) {
-            AbstractCard card = null;
-            switch(numbers.get(0)) {
-                case 0: {
-                    card = new Crusher();
-                    break;
-                }
-                case 1: {
-                    card = new Daggerstorm();
-                    break;
-                }
-                case 2: {
-                    card = new ManaShield();
-                    break;
-                }
-                case 3: {
-                    card = new Minniegun();
-                    break;
-                }
-                case 4: {
-                    card = new PackRat();
-                    break;
-                }
-                case 5: {
-                    card = new Scheme();
-                    break;
-                }
-                case 6: {
-                    card = new SignInBlood();
-                    break;
-                }
-                case 7: {
-                    card = new SpreadingSpores();
-                    break;
-                }
-                case 8: {
-                    card = new TheEncyclopedia();
-                    break;
+                for (AbstractCard c:AbstractDungeon.player.hand.group){
+                    if (c instanceof Crusher){
+                        ((Crusher) c).enabled = true;
+                        return;
+                    }
                 }
             }
-
-            this.addToBot(new MakeTempCardInDrawPileAction(card, 1, true, true));
-            numbers.remove(0);
-        }
-
-        addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), 2, true, true));
+        });
     }
 
 
     public void upp() {
-        upgradeMagicNumber(2);
-
+        upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
     }
 }

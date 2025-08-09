@@ -22,9 +22,10 @@ public class SignInBlood extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(SignInBlood.class.getSimpleName());
 
     public SignInBlood() {
-        super(ID, 1, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
+        super(ID, 0, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
 
+        exhaust = true;
         frameString = "towertactics";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
 
@@ -32,7 +33,7 @@ public class SignInBlood extends AbstractAwakenedCard {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 3, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, 2, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         Wiz.atb(new DrawCardAction(this.magicNumber));
         this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));

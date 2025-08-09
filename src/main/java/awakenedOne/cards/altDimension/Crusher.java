@@ -21,9 +21,10 @@ public class Crusher extends AbstractAwakenedCard implements onGenerateCardMidco
     public final static String ID = AwakenedOneMod.makeID(Crusher.class.getSimpleName());
 
     private static final int COST = 5;
+    public boolean enabled = false;
     public Crusher() {
         super(ID, COST, CardRarity.RARE, CardType.ATTACK, CardTarget.ENEMY);
-        baseDamage = 32;
+        baseDamage = 25;
         selfRetain = true;
         frameString = "grift";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
@@ -32,10 +33,12 @@ public class Crusher extends AbstractAwakenedCard implements onGenerateCardMidco
 
     @Override
     public void onCreateCard(AbstractCard card) {
-        if (card != this && Wiz.p().hand.group.contains(this)) {
-            if (Wiz.getLogicalCardCost(this) > 0) {
-                modifyCostForCombat(-1);
-                this.flash(Color.GREEN.cpy());
+        if (enabled) {
+            if (card != this && Wiz.p().hand.group.contains(this)) {
+                if (Wiz.getLogicalCardCost(this) > 0) {
+                    modifyCostForCombat(-1);
+                    this.flash(Color.GREEN.cpy());
+                }
             }
         }
     }
@@ -55,6 +58,6 @@ public class Crusher extends AbstractAwakenedCard implements onGenerateCardMidco
     }
 
     public void upp() {
-        upgradeDamage(8);
+        upgradeDamage(5);
     }
 }

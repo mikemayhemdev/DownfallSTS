@@ -389,7 +389,7 @@
   },
   "awakened:SignInBlood": {
     "NAME": "Sign in Blood",
-    "DESCRIPTION": "Take 3 damage. NL Draw !M! cards. NL Gain !M! temporary Strength."
+    "DESCRIPTION": "Take 3 damage. NL Draw !M! cards. NL Gain !M! temporary Strength. NL Exhaust."
   },
   "awakened:SpreadingSpores": {
     "NAME": "Spreading Spores",
@@ -397,7 +397,7 @@
   },
   "awakened:Scheme": {
     "NAME": "Scheme",
-    "DESCRIPTION": "The next !M! cards you play that cost 1 or less are played twice."
+    "DESCRIPTION": "The next !M! cards you play this turn that cost 1 or less are played twice."
   },
   "awakened:TheEncyclopedia": {
     "NAME": "The Encyclopedia",
@@ -408,6 +408,6 @@
   },
   "awakened:DesperatePrayerAlt": {
     "NAME": "Reality Rift",
-    "DESCRIPTION": "Add !M! powerful cards from *ANOTHER *DIMENSION and 2 *Voids to your draw pile. Exhaust."
+    "DESCRIPTION": "Choose !awakened:m2! of !M! powerful cards from *ANOTHER *DIMENSION to gain. NL Add 2 Voids to your discard pile. Exhaust."
   }
 }

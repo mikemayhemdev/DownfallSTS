@@ -18,7 +18,7 @@ public class SpreadingSpores extends AbstractAwakenedCard {
 
     public SpreadingSpores() {
         super(ID, 0, CardRarity.RARE, CardType.POWER, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 1;
         isEthereal = true;
 
         frameString = "train";

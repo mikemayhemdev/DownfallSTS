@@ -17,7 +17,7 @@ public class TheEncyclopedia extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(TheEncyclopedia.class.getSimpleName());
 
     public TheEncyclopedia() {
-        super(ID, 1, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
+        super(ID, 2, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = 6;
 

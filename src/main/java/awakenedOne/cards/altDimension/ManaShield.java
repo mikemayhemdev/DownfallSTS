@@ -28,7 +28,7 @@ public class ManaShield extends AbstractAwakenedCard {
 
     public ManaShield() {
         super(ID, 2, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
-        baseBlock = 15;
+        baseBlock = 12;
 
         frameString = "gordian";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
@@ -56,6 +56,6 @@ public class ManaShield extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBlock(5);
+        upgradeBlock(4);
     }
 }
