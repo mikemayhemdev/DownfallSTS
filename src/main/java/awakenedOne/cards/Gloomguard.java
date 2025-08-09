@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import automaton.cards.goodstatus.IntoTheVoid;
 import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
@@ -24,7 +25,7 @@ public class Gloomguard extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         for (AbstractCard c : p.hand.group) {
-            if (c instanceof VoidCard) {
+            if (c instanceof VoidCard || c instanceof IntoTheVoid) {
                 Wiz.atb(new ExhaustSpecificCardAction(c, p.hand));
                 Wiz.atb(new GainEnergyAction(1));
             }

@@ -13,7 +13,7 @@ public class Unleash extends AbstractAwakenedCard {
 
     public Unleash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 5;
         baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath("Unleash.png"));
     }
