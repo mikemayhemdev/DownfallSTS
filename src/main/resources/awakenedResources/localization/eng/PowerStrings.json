@@ -190,10 +190,15 @@
   "awakened:AphoticFountPower": {
     "NAME": "Aphotic Fount",
     "DESCRIPTIONS": [
-      "Whenever you refresh your Spells, add #b",
-      " #yAphotic #yShield",
-      "+",
-      " to your Spellbook."
+      "Whenever you play #yCryostasis, gain #b",
+      " #yPlated #yArmor."
+    ]
+  },
+  "awakened:GrimoirePower": {
+    "NAME": "Grimoire",
+    "DESCRIPTIONS": [
+      "Your #yThunderbolts deal #b",
+      " more damage."
     ]
   },
   "awakened:SpellshieldPower": {
@@ -216,6 +221,16 @@
       "The next #b",
       " cards played this turn that cost #b1 or less will be played twice.",
       "The next card played this turn that costs #b1 or less will be played twice."
+    ]
+  },
+  "awakened:FourthDimensionPower": {
+    "NAME": "FourthDimension",
+    "DESCRIPTIONS": [
+      "At the start of your next #b",
+      " turn, ",
+      " turns, ",
+      "play and #yExhaust a copy of ",
+      "."
     ]
   }
 }

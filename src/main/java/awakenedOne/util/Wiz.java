@@ -30,7 +30,7 @@ import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.ui.AwakenButton.awaken;
 
 public class Wiz {
-    public static int POWERS_TO_AWAKEN = 8;
+    public static int POWERS_TO_AWAKEN = 7;
 
     //The wonderful Wizard of Oz allows access to most easy compilations of data, or functions.
     public static AbstractPlayer adp() {

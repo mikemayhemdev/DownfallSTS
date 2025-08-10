@@ -3,6 +3,7 @@ package awakenedOne.cards;
 import awakenedOne.actions.GetDimensionCardsAction;
 import awakenedOne.cards.altDimension.*;
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
+import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
@@ -19,12 +20,13 @@ import java.util.Collections;
 
 import static awakenedOne.AwakenedOneMod.*;
 
+@NoPools
 public class DesperatePrayerAlt extends AbstractAwakenedCard {
     public final static String ID = makeID(DesperatePrayerAlt.class.getSimpleName());
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public DesperatePrayerAlt() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF, CardColor.COLORLESS);
         loadJokeCardImage(this, makeBetaCardPath(DesperatePrayerAlt.class.getSimpleName() + ".png"));
         exhaust = true;
         baseMagicNumber = magicNumber = 3;
@@ -52,7 +54,7 @@ public class DesperatePrayerAlt extends AbstractAwakenedCard {
 
 
     public void upp() {
-        upgradeMagicNumber(1);
-        upgradeSecondMagic(1);
+        upgradeMagicNumber(2);
+       // upgradeSecondMagic(1);
     }
 }

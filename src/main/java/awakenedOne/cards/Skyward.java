@@ -15,7 +15,7 @@ public class Skyward extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public Skyward() {
-        super(ID, 8, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 7, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         baseBlock = 20;
         this.magicNumber = this.baseMagicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Skyward.class.getSimpleName() + ".png"));
@@ -44,7 +44,7 @@ public class Skyward extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeBlock(4);
-        upgradeMagicNumber(1);
+        upgradeBlock(6);
+      //  upgradeMagicNumber(1);
     }
 }

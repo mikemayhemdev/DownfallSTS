@@ -1,5 +1,6 @@
 package awakenedOne.cards.tokens.spells;
 
+import awakenedOne.powers.AphoticFountPower;
 import awakenedOne.relics.EyeOfTheOccult;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -15,7 +16,6 @@ import static awakenedOne.util.Wiz.atb;
 
 public class Cryostasis extends AbstractSpellCard {
     public final static String ID = makeID(Cryostasis.class.getSimpleName());
-    // intellij stuff skill, self, , , 7, 1, 1, 1
 
     public Cryostasis() {
         super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
@@ -52,7 +52,13 @@ public class Cryostasis extends AbstractSpellCard {
                 }
             }
         }
-    }
+
+        if (AbstractDungeon.player.hasPower(AphoticFountPower.POWER_ID)){
+            AbstractDungeon.player.getPower(AphoticFountPower.POWER_ID).onSpecificTrigger();
+            }
+        }
+
+
 
 
     public void upp() {

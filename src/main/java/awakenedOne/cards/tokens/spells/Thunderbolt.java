@@ -1,5 +1,6 @@
 package awakenedOne.cards.tokens.spells;
 
+import awakenedOne.powers.GrimoirePower;
 import awakenedOne.relics.EyeOfTheOccult;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -10,6 +11,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import com.megacrit.cardcrawl.vfx.combat.ReaperEffect;
+import slimebound.powers.TackleBuffPower;
+import slimebound.powers.TackleDebuffPower;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.vfx;
@@ -44,11 +47,11 @@ public class Thunderbolt extends AbstractSpellCard {
         } else {
             //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
             this.addToBot(new VFXAction(new ReaperEffect()));
-
             isMultiDamage = true;
             this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         }
 
+        /*
         if (upgraded) {
             if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
                 CardCrawlGame.sound.playA("ORB_LIGHTNING_EVOKE", 0.9F);
@@ -64,9 +67,20 @@ public class Thunderbolt extends AbstractSpellCard {
             }
         }
 
+         */
+
     }
 
+    public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
+        int bonus = 0;
+        if (player.hasPower(GrimoirePower.POWER_ID)) {
+            bonus = player.getPower(GrimoirePower.POWER_ID).amount;
+        }
+        return tmp + bonus;
+    }
+
+
     public void upp() {
-        upgradeDamage(-6);
+        upgradeDamage(6);
     }
 }

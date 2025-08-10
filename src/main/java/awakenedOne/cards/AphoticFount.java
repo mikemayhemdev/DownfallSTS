@@ -2,7 +2,9 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.tokens.spells.AphoticShield;
+import awakenedOne.cards.tokens.spells.Cryostasis;
 import awakenedOne.powers.AphoticFountPower;
+import awakenedOne.util.Wiz;
 import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -20,22 +22,18 @@ public class AphoticFount extends AbstractAwakenedCard {
 
     public AphoticFount() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        AbstractCard c = new AphoticShield();
-        c.upgrade();
-        MultiCardPreview.add(this, new AphoticShield(), c);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(AphoticFount.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard card = new AphoticShield();
-        spellCards.add(card);
-        applyToSelf(new AphoticFountPower());
+        Wiz.makeInHand(new Cryostasis());
+        applyToSelf(new AphoticFountPower(magicNumber));
     }
 
     @Override
     public void upp() {
-        //upgradeMagicNumber(2);
-        upgradeBaseCost(0);
+        upgradeMagicNumber(1);
+       // upgradeBaseCost(0);
     }
 }

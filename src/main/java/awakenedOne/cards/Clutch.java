@@ -17,8 +17,8 @@ public class Clutch extends AbstractAwakenedCard {
 
     public Clutch() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 9;
-        baseMagicNumber = magicNumber = 1;
+        baseDamage = 3;
+        //baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Clutch.class.getSimpleName() + ".png"));
     }
 
@@ -33,7 +33,6 @@ public class Clutch extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(1);
-        upgradeMagicNumber(1);
+        upgradeDamage(3);
     }
 }
