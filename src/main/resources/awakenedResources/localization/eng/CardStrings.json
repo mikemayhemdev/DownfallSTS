@@ -1,8 +1,7 @@
 {
   "awakened:Thunderbolt": {
     "NAME": "Thunderbolt",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage twice. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
   },
   "awakened:BurningStudy": {
     "NAME": "Burning Study",
