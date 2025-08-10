@@ -82,7 +82,7 @@ public class OrbitingSpells {
         spells.add(BurningStudy.ID);
         spells.add(Thunderbolt.ID);
         spells.add(Cryostasis.ID);
-        spells.add(Darkleech.ID);
+        //spells.add(Darkleech.ID);
     }
 
     private static Texture getIconForCard(AbstractCard tar) {
