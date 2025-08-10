@@ -375,6 +375,10 @@
     "NAME": "Pack Rat",
     "DESCRIPTION": "Deal !D! damage and gain !B! Block twice. NL Obtain a random potion. NL Exhaust."
   },
+  "awakened:Mantis": {
+    "NAME": "Mantis",
+    "DESCRIPTION": "Gain !M! Strength. NL Add a *Plume *Jab into your hand."
+  },
   "awakened:ManaShield": {
     "NAME": "Mana Shield",
     "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Reduce the cost of a random Spell in hand by 1."

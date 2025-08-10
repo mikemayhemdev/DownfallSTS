@@ -55,5 +55,18 @@
       "[Desperation] #gYour #gStrikes #gand #gDefends #gbecome #gDraining.",
       "[Locked] Requires a Strike or Defend."
     ]
+  },
+  "awakened:AbyssEvent": {
+    "NAME": "From the Abyss",
+    "DESCRIPTIONS": [
+      "This is some intro text.",
+      "This is some outro text - you took the thing!",
+      "This is some outro text - you didn't take the thing."
+    ],
+    "OPTIONS": [
+      "[Reach] Gain #gReality #gRift. #rBecome #rCursed - #rAged.",
+      "[Leave] Second option which is currently just leaving.",
+      "[Leave]"
+    ]
   }
 }

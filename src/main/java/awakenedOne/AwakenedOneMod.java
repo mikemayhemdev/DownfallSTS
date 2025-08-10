@@ -5,6 +5,7 @@ import awakenedOne.cards.*;
 import awakenedOne.cards.cardvars.SecondDamage;
 import awakenedOne.cards.cardvars.SecondMagicNumber;
 import awakenedOne.cards.cardvars.ThirdMagicNumber;
+import awakenedOne.events.AbyssEvent;
 import awakenedOne.events.BackToBasicsAwakened;
 import awakenedOne.events.TheNestAwakened;
 import awakenedOne.events.WingStatueAwakened;
@@ -36,6 +37,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Nest;
 import com.megacrit.cardcrawl.events.exordium.GoldenWing;
@@ -46,6 +48,7 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.events.ArtOfSlimeWar;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -54,6 +57,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static awakenedOne.ui.OrbitingSpells.spellCards;
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -242,6 +246,15 @@ public class AwakenedOneMod implements
                 .overrideEvent(BackToBasics.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+
+        BaseMod.addEvent(new AddEventParams.Builder(AbyssEvent.ID, AbyssEvent.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
+
+                //Event Type//
+                .eventType(EventUtils.EventType.SHRINE)
                 .create());
     }
 

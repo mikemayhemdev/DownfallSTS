@@ -57,7 +57,7 @@ public class GetDimensionCardsAction extends AbstractGameAction {
                             break;
                         }
                         case 4: {
-                            card = new PackRat();
+                            card = new Mantis();
                             break;
                         }
                         case 5: {
