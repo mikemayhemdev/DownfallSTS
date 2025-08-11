@@ -17,7 +17,7 @@ public class ClarionCall extends AbstractAwakenedCard {
 
     public ClarionCall() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 9;
         loadJokeCardImage(this, makeBetaCardPath(ClarionCall.class.getSimpleName() + ".png"));
     }
 
