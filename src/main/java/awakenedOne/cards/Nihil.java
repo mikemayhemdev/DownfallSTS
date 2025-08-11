@@ -28,7 +28,7 @@ public class Nihil extends AbstractAwakenedCard {
 
     public Nihil() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 13;
+        baseMagicNumber = magicNumber = 12;
         this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(Nihil.class.getSimpleName() + ".png"));
     }
