@@ -4,12 +4,11 @@ import awakenedOne.AwakenedOneMod;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
-import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
 import static awakenedOne.AwakenedOneMod.makeRelicPath;
@@ -46,7 +45,7 @@ public class AwakenedUrn extends CustomRelic {
             this.flash();
             this.addToTop(new HealAction(AbstractDungeon.player, AbstractDungeon.player, 3));
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            this.counter --;
+            this.counter--;
         }
 
     }

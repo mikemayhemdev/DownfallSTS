@@ -9,10 +9,10 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
 
 public class ConjureBladeSpellPileAction extends AbstractGameAction {
-    public int[] multiDamage;
     private final boolean freeToPlayOnce;
     private final AbstractPlayer p;
     private final int energyOnUse;
+    public int[] multiDamage;
 
     public ConjureBladeSpellPileAction(AbstractPlayer p, boolean freeToPlayOnce, int energyOnUse) {
         this.p = p;

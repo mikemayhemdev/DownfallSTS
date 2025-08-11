@@ -29,6 +29,6 @@ public class AwakenedForm extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-       upgradeMagicNumber(-1);
+        upgradeMagicNumber(-1);
     }
 }

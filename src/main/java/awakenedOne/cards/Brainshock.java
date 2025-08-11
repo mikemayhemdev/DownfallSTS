@@ -1,39 +1,47 @@
 package awakenedOne.cards;
 
-import awakenedOne.cards.tokens.PlumeJab;
-import awakenedOne.cards.tokens.spells.AbstractSpellCard;
-import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
-import com.megacrit.cardcrawl.actions.defect.NewRipAndTearAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
-import com.megacrit.cardcrawl.vfx.combat.HemokinesisEffect;
 
 import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.util.Wiz.atb;
 
 public class Brainshock extends AbstractAwakenedCard {
     public final static String ID = makeID(Brainshock.class.getSimpleName());
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1
+
     public Brainshock() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 8;
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 12;
+        tags.add(CardTags.STRIKE);
+        // baseSecondMagic = secondMagic = 1;
         loadJokeCardImage(this, makeBetaCardPath(Brainshock.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for(int i = 0; i < 2; ++i) {
-            this.addToBot(new NewRipAndTearAction(this));
-        }
-        Wiz.atb(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true, false));
-
+        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        atb(new MakeTempCardInDiscardAction(new VoidCard(), 1));
+        //HexCurse(magicNumber, m, p);
+        //this.addToBot(new ForTheHexAction(this.magicNumber, m));
     }
+
+//    public void triggerOnGlowCheck() {
+//        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+//        Iterator var1 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+//
+//        while(var1.hasNext()) {
+//            AbstractMonster m = (AbstractMonster)var1.next();
+//            if (!m.isDeadOrEscaped() && m.getIntentBaseDmg() == 0) {
+//                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+//                break;
+//            }
+//        }
+//
+//    }
 
     @Override
     public void initializeDescription() {
@@ -42,6 +50,6 @@ public class Brainshock extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(4);
     }
 }

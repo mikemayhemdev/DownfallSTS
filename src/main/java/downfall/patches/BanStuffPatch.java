@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.relics.BirdFacedUrn;
 import com.megacrit.cardcrawl.relics.MummifiedHand;
 import com.megacrit.cardcrawl.relics.OrangePellets;
 import com.megacrit.cardcrawl.relics.PrismaticShard;
+import downfall.downfallMod;
 import downfall.potions.CursedFountainPotion;
 import gremlin.patches.GremlinEnum;
 
@@ -37,11 +38,8 @@ public class BanStuffPatch {
                 relicsToRemoveOnStart.add("Ectoplasm");
             }
 
+            if (!downfallMod.disableBaseGameAdjustments) relicsToRemoveOnStart.add(BirdFacedUrn.ID);
 
-
-            if (chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE) {
-                relicsToRemoveOnStart.add(BirdFacedUrn.ID);
-            }
 
         }
     }

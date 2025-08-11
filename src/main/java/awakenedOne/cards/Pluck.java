@@ -21,6 +21,7 @@ public class Pluck extends AbstractAwakenedCard {
         baseDamage = 5;
         isMultiDamage = true;
         this.baseMagicNumber = this.magicNumber = 1;
+        this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(Pluck.class.getSimpleName() + ".png"));
     }
 

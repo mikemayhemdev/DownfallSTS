@@ -23,7 +23,7 @@ public class KnifesEdge extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new MakeTempCardInDrawPileAction(new VoidCard(), magicNumber, true, true));
+        addToBot(new MakeTempCardInDiscardAction(new VoidCard(), magicNumber));
         applyToSelf(new StrengthPower(p, secondMagic));
     }
 

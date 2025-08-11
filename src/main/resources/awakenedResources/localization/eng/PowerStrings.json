@@ -66,7 +66,7 @@
     "NAME": "Spellbinder",
     "DESCRIPTIONS": [
       "At the start of your turn, #yConjure [REMOVE_SPACE].",
-      "At the start of your turn, #yConjure at random #b",
+      "At the start of your turn, #yConjure #b",
       " times."
     ]
   },
@@ -190,10 +190,15 @@
   "awakened:AphoticFountPower": {
     "NAME": "Aphotic Fount",
     "DESCRIPTIONS": [
-      "Whenever you refresh your Spells, add #b",
-      " #yAphotic #yShield",
-      "+",
-      " to your Spellbook."
+      "Whenever you play #yCryostasis, gain #b",
+      " #yPlated #yArmor."
+    ]
+  },
+  "awakened:GrimoirePower": {
+    "NAME": "Grimoire",
+    "DESCRIPTIONS": [
+      "Your #yThunderbolts deal #b",
+      " more damage."
     ]
   },
   "awakened:SpellshieldPower": {
@@ -201,6 +206,31 @@
     "DESCRIPTIONS": [
       "Whenever you #yRetain a card, gain #b",
       " #yBlock."
+    ]
+  },
+  "awakened:DaggerstormPower": {
+    "NAME": "Daggerstorm",
+    "DESCRIPTIONS": [
+      "Whenever you create a card, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "awakened:SchemePower": {
+    "NAME": "Scheme",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " cards played this turn that cost #b1 or less will be played twice.",
+      "The next card played this turn that costs #b1 or less will be played twice."
+    ]
+  },
+  "awakened:FourthDimensionPower": {
+    "NAME": "FourthDimension",
+    "DESCRIPTIONS": [
+      "At the start of your next #b",
+      " turn, ",
+      " turns, ",
+      "play and #yExhaust a copy of ",
+      "."
     ]
   }
 }

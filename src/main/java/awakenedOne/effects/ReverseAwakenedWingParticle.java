@@ -11,10 +11,10 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class ReverseAwakenedWingParticle extends AbstractGameEffect {
+    private final TextureAtlas.AtlasRegion img;
     private float x;
     private float y;
     private float tScale;
-    private final TextureAtlas.AtlasRegion img;
 
     public ReverseAwakenedWingParticle() {
         this.duration = 2.0F;

@@ -5,6 +5,7 @@ import awakenedOne.cards.*;
 import awakenedOne.cards.cardvars.SecondDamage;
 import awakenedOne.cards.cardvars.SecondMagicNumber;
 import awakenedOne.cards.cardvars.ThirdMagicNumber;
+import awakenedOne.events.AbyssEvent;
 import awakenedOne.events.BackToBasicsAwakened;
 import awakenedOne.events.TheNestAwakened;
 import awakenedOne.events.WingStatueAwakened;
@@ -36,10 +37,10 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Nest;
 import com.megacrit.cardcrawl.events.exordium.GoldenWing;
-import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
 import downfall.util.CardIgnore;
@@ -47,8 +48,8 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.events.ArtOfSlimeWar;
 
-import javax.crypto.SecretKeyFactory;
 import java.io.File;
 import java.net.URISyntaxException;
 import java.net.URL;
@@ -56,6 +57,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static awakenedOne.ui.OrbitingSpells.spellCards;
+import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -245,6 +247,15 @@ public class AwakenedOneMod implements
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
+
+
+        BaseMod.addEvent(new AddEventParams.Builder(AbyssEvent.ID, AbyssEvent.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
+
+                //Event Type//
+                .eventType(EventUtils.EventType.SHRINE)
+                .create());
     }
 
     @Override
@@ -273,7 +284,6 @@ public class AwakenedOneMod implements
 
         BaseMod.addRelicToCustomPool(new CurvedSword(), AwakenedOneChar.Enums.AWAKENED_BLUE);
 
-        BaseMod.addRelicToCustomPool(new AwakenedUrn(), AwakenedOneChar.Enums.AWAKENED_BLUE); //Urn replacement
         //only obtainable through console (the "conjure blade" relic)
         BaseMod.addRelicToCustomPool(new CurvedSwordMeme(), AwakenedOneChar.Enums.AWAKENED_BLUE);
 
@@ -283,7 +293,7 @@ public class AwakenedOneMod implements
         BaseMod.addRelic(new ShardOfNowak(), RelicType.SHARED); //uncommon shared
         BaseMod.addRelic(new MiniBlackHole(), RelicType.SHARED);//common shared
 
-        BaseMod.addRelic(new DeadBird(), RelicType.SHARED); //decided this was useful enough to be shared
+        BaseMod.addRelic(new DeadBird(), RelicType.SHARED);//common shared
     }
 
     public void addPotions() {

@@ -61,9 +61,9 @@ public class NihilAction extends AbstractGameAction {
 
 
     private static class OfferingEnemyEffect extends AbstractGameEffect {
+        private final AbstractCreature target;
         private int count = 0;
         private float timer = 0.0F;
-        private final AbstractCreature target;
 
         public OfferingEnemyEffect(AbstractCreature target) {
             this.target = target;

@@ -1,10 +1,8 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -27,7 +25,7 @@ public class Dejection extends AbstractAwakenedCard {
     public Dejection() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 7;
-        this.baseMagicNumber = this.magicNumber = 2;
+        //this.baseMagicNumber = this.magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Dejection.class.getSimpleName() + ".png"));
     }
 

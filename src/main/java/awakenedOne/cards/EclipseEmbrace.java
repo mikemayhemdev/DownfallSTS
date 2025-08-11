@@ -30,10 +30,4 @@ public class EclipseEmbrace extends AbstractAwakenedCard {
     public void upp() {
         upgradeBaseCost(1);
     }
-
-
-    @Override
-    public float getTitleFontSize() {
-        return 19F;
-    }
 }

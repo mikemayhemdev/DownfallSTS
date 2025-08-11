@@ -9,7 +9,8 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.RitualPower;
 
-import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
+import static awakenedOne.AwakenedOneMod.makeRelicPath;
 
 public class CursedBlessing extends CustomRelic {
 

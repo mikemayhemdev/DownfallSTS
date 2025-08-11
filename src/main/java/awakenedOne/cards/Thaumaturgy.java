@@ -8,7 +8,6 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.applyToSelf;
-import static awakenedOne.util.Wiz.applyToSelfTop;
 
 public class Thaumaturgy extends AbstractAwakenedCard {
     public final static String ID = makeID(Thaumaturgy.class.getSimpleName());

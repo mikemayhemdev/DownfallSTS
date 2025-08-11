@@ -15,6 +15,8 @@ public class PlumeJab extends AbstractAwakenedCard {
     public PlumeJab() {
         super(ID, 0, CardType.ATTACK, CardRarity.SPECIAL, CardTarget.ALL_ENEMY, CardColor.COLORLESS);
         baseDamage = 2;
+        exhaust = true;
+        selfRetain = true;
         loadJokeCardImage(this, makeBetaCardPath(PlumeJab.class.getSimpleName() + ".png"));
     }
 

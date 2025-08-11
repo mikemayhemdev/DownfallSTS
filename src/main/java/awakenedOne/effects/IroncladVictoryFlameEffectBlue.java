@@ -16,12 +16,12 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class IroncladVictoryFlameEffectBlue extends AbstractGameEffect {
-    private float x;
-    private float y;
     private final float vX;
     private final float vY;
     private final boolean flipX = MathUtils.randomBoolean();
     private final TextureAtlas.AtlasRegion img;
+    private float x;
+    private float y;
 
     public IroncladVictoryFlameEffectBlue() {
         this.duration = 1.0F;

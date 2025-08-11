@@ -1,8 +1,7 @@
 {
   "awakened:Thunderbolt": {
     "NAME": "Thunderbolt",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage twice. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
   },
   "awakened:BurningStudy": {
     "NAME": "Burning Study",
@@ -14,16 +13,11 @@
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
-    "DESCRIPTION": "Retain. NL Apply !M! Vulnerable. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Apply !M! Vulnerable. NL Apply !awakened:m2! awakened:Manaburn. NL Exhaust."
   },
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Manaburn. NL Next turn, lose [E]."
-  },
-  "awakened:AphoticShield": {
-    "NAME": "Aphotic Shield",
-    "DESCRIPTION": "Retain. NL Gain !M! expansioncontent:Plated *Armor. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL At the end of each of your turns, gain !M! Block. NL Exhaust."
   },
   "awakened:ESPSpell": {
     "NAME": "ESP",
@@ -38,8 +32,8 @@
     "NAME": "Defend",
     "DESCRIPTION": "Gain !B! Block."
   },
-  "awakened:MagicStrike": {
-    "NAME": "Magic Strike",
+  "awakened:Brainshock": {
+    "NAME": "Brainshock",
     "DESCRIPTION": "Deal !D! damage. NL Add a *Void into your discard pile."
   },
   "awakened:Intensify": {
@@ -124,7 +118,7 @@
   },
   "awakened:Altar": {
     "NAME": "Altar",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust 1 card. NL awakened:Conjure."
+    "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. NL awakened:Conjure."
   },
   "awakened:Envision": {
     "NAME": "Envision",
@@ -147,11 +141,14 @@
   },
   "awakened:KnifesEdge": {
     "NAME": "Knife's Edge",
-    "DESCRIPTION": "Gain !awakened:m2! Strength. NL Shuffle !M! *Voids into your draw pile."
+    "DESCRIPTION": "Gain !awakened:m2! Strength. NL Add !M! *Voids into your discard pile."
   },
   "awakened:FourthDimension": {
-    "NAME": "Fourth Dimension",
-    "DESCRIPTION": "Choose a card in hand. NL Add !M! copies of that card to your Spellbook. NL Exhaust."
+    "NAME": "4th Dimension",
+    "DESCRIPTION": "Exhaust a card. At the start of your next !M! turns, play and Exhaust a copy of it. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Exhaust for 4th Dimension."
+      ]
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
@@ -181,8 +178,7 @@
   },
   "awakened:Skyward": {
     "NAME": "Skyward",
-    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Costs 1 less [E] for each Power played this combat.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Draw !M! cards. NL Costs 1 less [E] for each Power played this combat."
+    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Costs 1 less [E] for each Power played this combat."
   },
   "awakened:RisingChant": {
     "NAME": "Rising Chorus",
@@ -190,8 +186,8 @@
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
-    "DESCRIPTION": "Gain X copies of *Plume *Jab. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 copies of *Plume *Jab. NL Exhaust."
+    "DESCRIPTION": "Gain X copies of *Plume *Jab.",
+    "UPGRADE_DESCRIPTION": "Gain X+1 copies of *Plume *Jab."
   },
   "awakened:Murder": {
     "NAME": "Murder",
@@ -227,7 +223,7 @@
     "NAME": "Darkness Falls",
     "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength."
   },
-  "awakened:Brainshock": {
+  "awakened:Eventide": {
     "NAME": "Eventide",
     "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Add a *Void to the top of your draw pile."
   },
@@ -237,12 +233,11 @@
   },
   "awakened:Clutch": {
     "NAME": "Clutch",
-    "DESCRIPTION": "Deal !D! damage. NL Draw !M! 0-cost card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! 0-cost cards."
+    "DESCRIPTION": "Deal !D! damage. NL Draw a 0-cost card."
   },
   "awakened:Gloomguard": {
     "NAME": "Gloomguard",
-    "DESCRIPTION": "Gain !B! Block. NL Decrease this card's Block by !M! for the rest of combat."
+    "DESCRIPTION": "Gain !B! Block. NL For each Void in hand, Exhaust it and gain [E] ."
   },
   "awakened:Carrionmaker": {
     "NAME": "Carrionmaker",
@@ -270,7 +265,7 @@
   },
   "awakened:Dejection": {
     "NAME": "Dejection",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust 1 card. If it was a Spell, gain [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain [E] ."
   },
   "awakened:BloodRite": {
     "NAME": "Blood Rite",
@@ -332,11 +327,11 @@
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Increases damage by !M!, then shuffles into your Spellbook."
+    "DESCRIPTION": "awakened:Conjure. NL *Thunderbolts deal !M! additional damage."
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",
-    "DESCRIPTION": "Now and whenever you refresh your Spells, add *Aphotic *Shield to your Spellbook."
+    "DESCRIPTION": "awakened:Conjure. NL Whenever you play *Cryostasis, gain !M! expansioncontent:Plated *Armor."
   },
   "awakened:Bloodthirst": {
     "NAME": "Bloodthirst",
@@ -344,7 +339,7 @@
   },
   "awakened:Procession": {
     "NAME": "Procession",
-    "DESCRIPTION": "Draw !awakened:m2! cards. NL Shuffle !M! *Voids into your draw pile."
+    "DESCRIPTION": "Draw !awakened:m2! cards. NL Add 2 *Voids into your discard pile."
   },
   "awakened:SplitWide": {
     "NAME": "Split Wide",
@@ -360,11 +355,58 @@
   },
   "awakened:PlumeJab": {
     "NAME": "Plume Jab",
-    "DESCRIPTION": "Deal !D! damage to a random enemy twice."
+    "DESCRIPTION": "Retain. NL Deal !D! damage to a random enemy twice. NL Exhaust."
   },
   "awakened:Primacy": {
     "NAME": "Primacy",
     "DESCRIPTION": "The first time you gain Strength each turn, draw a card.",
     "UPGRADE_DESCRIPTION": "The first !M! times you gain Strength each turn, draw a card."
+  },
+  "awakened:Daggerstorm": {
+    "NAME": "Daggerstorm",
+    "DESCRIPTION": "Whenever you create a card, deal !M! damage to a random enemy."
+  },
+  "awakened:PackRat": {
+    "NAME": "Pack Rat",
+    "DESCRIPTION": "Deal !D! damage and gain !B! Block twice. NL Obtain a random potion. NL Exhaust."
+  },
+  "awakened:Mantis": {
+    "NAME": "Mantis",
+    "DESCRIPTION": "Gain !M! Strength. NL Add a *Plume *Jab into your hand."
+  },
+  "awakened:ManaShield": {
+    "NAME": "Mana Shield",
+    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Reduce the cost of a random Spell in hand by 1."
+  },
+  "awakened:Crusher": {
+    "NAME": "Crusher",
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When a card is created, reduce this card's cost by 1 until played."
+  },
+  "awakened:Minniegun": {
+    "NAME": "Minniegun",
+    "DESCRIPTION": "Deal !D! damage !M! times. NL Shuffle a *Void into your draw pile."
+  },
+  "awakened:SignInBlood": {
+    "NAME": "Sign in Blood",
+    "DESCRIPTION": "Take 3 damage. NL Draw !M! cards. NL Gain !M! temporary Strength. NL Exhaust."
+  },
+  "awakened:SpreadingSpores": {
+    "NAME": "Spreading Spores",
+    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns.  NL Shuffle a copy of this into your draw pile."
+  },
+  "awakened:Scheme": {
+    "NAME": "Scheme",
+    "DESCRIPTION": "The next !M! cards you play this turn that cost 1 or less are played twice."
+  },
+  "awakened:TheEncyclopedia": {
+    "NAME": "The Encyclopedia",
+    "DESCRIPTION": "Choose 2 of !M! random cards to add into your hand. They cost 2 less. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose 2 cards to add to your draw pile."
+    ]
+  },
+  "awakened:DesperatePrayerAlt": {
+    "NAME": "Reality Rift",
+    "DESCRIPTION": "Choose !awakened:m2! of !M! powerful cards from *ANOTHER *DIMENSION to gain. NL Add 2 Voids to your discard pile. Exhaust."
   }
 }

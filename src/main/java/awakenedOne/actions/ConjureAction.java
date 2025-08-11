@@ -25,10 +25,10 @@ public class ConjureAction extends AbstractGameAction {
     public static boolean refreshedthisturn = false;
     public static ArrayList<AbstractCard> conjuredCards = new ArrayList();
     public static int conjuresThisCombat = 0;
-    AbstractCard pick;
     private final boolean choose;
     private final boolean ontop;
     private final boolean bstudy;
+    AbstractCard pick;
 
 
     public ConjureAction(boolean choose) {

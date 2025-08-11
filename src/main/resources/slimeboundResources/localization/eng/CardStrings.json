@@ -149,7 +149,7 @@
     "UPGRADE_DESCRIPTION": "Apply !M! Weak and !slime! slimeboundmod:Goop. NL Draw a card. NL Exhaust - slimeboundmod:Buried."
   },
   "Slimebound:LivingWall": {
-    "NAME": "Living Wall",
+    "NAME": "Form of Wall",
     "DESCRIPTION": "Gain !B! Block. NL Apply !slime! slimeboundmod:Goop to attackers this turn."
   },
   "Slimebound:MassFeed": {

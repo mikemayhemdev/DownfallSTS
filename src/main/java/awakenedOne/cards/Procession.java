@@ -1,6 +1,7 @@
 package awakenedOne.cards;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -25,7 +26,7 @@ public class Procession extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new DrawCardAction(AbstractDungeon.player, secondMagic));
-        atb(new MakeTempCardInDrawPileAction(new VoidCard(), this.magicNumber, true, true));
+        addToBot(new MakeTempCardInDiscardAction(new VoidCard(), magicNumber));
     }
 
     @Override

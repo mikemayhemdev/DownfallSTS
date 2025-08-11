@@ -65,7 +65,8 @@
       "Disable music overrides (requires game restart)",
       "Unlock all locked alternative skin for Downfall characters",
       "Use icons instead of adding to text to cards for applied properties.",
-      "The Spellbook highlights the next card Conjure will draw."
+      "The Spellbook highlights the next card Conjure will draw.",
+      "No Downfall adjustments to original cards & relics (Bird-Faced Urn)"
     ]
   },
   "downfall:EnergyPanelTip": {

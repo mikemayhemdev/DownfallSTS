@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import automaton.cards.goodstatus.IntoTheVoid;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
@@ -26,7 +27,7 @@ public class SludgeBomb extends AbstractAwakenedCard {
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
         AbstractCard toRemove = null;
         for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
-            if (c instanceof VoidCard) {
+            if (c instanceof VoidCard || c instanceof IntoTheVoid) {
                 toRemove = c;
                 break;
             }

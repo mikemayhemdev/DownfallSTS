@@ -17,7 +17,7 @@ public class WaveOfMiasma extends AbstractAwakenedCard {
     public WaveOfMiasma() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = 3;
-        baseSecondMagic = secondMagic = 8;
+        baseSecondMagic = secondMagic = 5;
         this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(WaveOfMiasma.class.getSimpleName() + ".png"));
     }

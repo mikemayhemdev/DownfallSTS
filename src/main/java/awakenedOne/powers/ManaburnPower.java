@@ -80,7 +80,7 @@ public class ManaburnPower extends AbstractAwakenedPower implements OnLoseEnergy
         }
 
         if (hascrow) {
-            int newamount = ((amount)+(amount / 4));
+            int newamount = ((amount) + (amount / 4));
             description = DESCRIPTIONS[0] + (newamount) + DESCRIPTIONS[1];
 
         }

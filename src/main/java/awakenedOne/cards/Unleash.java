@@ -1,6 +1,5 @@
 package awakenedOne.cards;
 
-import awakenedOne.patches.OnLoseEnergyPowerPatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,7 +13,7 @@ public class Unleash extends AbstractAwakenedCard {
 
     public Unleash() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 5;
         baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath("Unleash.png"));
     }

@@ -18,8 +18,8 @@ public class BloodRite extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3,  , , ,
 
     public BloodRite() {
-        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 3;
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 9;
         this.cardsToPreview = new Ceremony();
         loadJokeCardImage(this, makeBetaCardPath(BloodRite.class.getSimpleName() + ".png"));
     }
@@ -36,6 +36,6 @@ public class BloodRite extends AbstractAwakenedCard {
     @Override
     public void upp() {
         cardsToPreview.upgrade();
-        upgradeDamage(1);
+        upgradeDamage(2);
     }
 }
