@@ -67,7 +67,7 @@ public class OrbitingSpells {
         //cardIcons.put(DeathCoil.ID, TexLoader.getTexture("awakenedResources/images/ui/Deathcoil.png"));
         //cardIcons.put(AphoticShield.ID, TexLoader.getTexture("awakenedResources/images/ui/AphoticShield.png"));
         cardIcons.put(ESPSpell.ID, TexLoader.getTexture("awakenedResources/images/ui/ESPSpell.png"));
-        cardIcons.put(Grimoire.ID, TexLoader.getTexture("awakenedResources/images/ui/Grimoire.png"));
+        //cardIcons.put(Grimoire.ID, TexLoader.getTexture("awakenedResources/images/ui/Grimoire.png"));
 
         cardColors.put(BurningStudy.ID, Color.RED.cpy());
         cardColors.put(Cryostasis.ID, placeholderColor.cpy());
@@ -75,7 +75,7 @@ public class OrbitingSpells {
         cardColors.put(Thunderbolt.ID, Color.YELLOW.cpy());
         //cardColors.put(AphoticShield.ID, GuardianCharacter.cardRenderColor.cpy());
         cardColors.put(ESPSpell.ID, Color.PINK.cpy());
-        cardColors.put(Grimoire.ID, Color.FIREBRICK.cpy());
+        //cardColors.put(Grimoire.ID, Color.FIREBRICK.cpy());
     }
 
     static {
