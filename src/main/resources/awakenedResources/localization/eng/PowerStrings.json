@@ -66,7 +66,7 @@
     "NAME": "Spellbinder",
     "DESCRIPTIONS": [
       "At the start of your turn, #yConjure [REMOVE_SPACE].",
-      "At the start of your turn, #yConjure at random #b",
+      "At the start of your turn, #yConjure #b",
       " times."
     ]
   },

@@ -1,5 +1,6 @@
 package awakenedOne.cards.tokens.spells;
 
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -8,6 +9,8 @@ import com.megacrit.cardcrawl.powers.MetallicizePower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 
 import static awakenedOne.AwakenedOneMod.*;
+
+@NoCompendium
 
 public class AphoticShield extends AbstractSpellCard {
     public final static String ID = makeID(AphoticShield.class.getSimpleName());

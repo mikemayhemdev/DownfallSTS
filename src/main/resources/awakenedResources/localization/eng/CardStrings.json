@@ -13,7 +13,7 @@
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
-    "DESCRIPTION": "Retain. NL Apply !M! Vulnerable. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Apply !M! Vulnerable. NL Apply !awakened:m2! awakened:Manaburn. NL Exhaust."
   },
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
@@ -144,10 +144,10 @@
     "DESCRIPTION": "Gain !awakened:m2! Strength. NL Add !M! *Voids into your discard pile."
   },
   "awakened:FourthDimension": {
-    "NAME": "Fourth Dimension",
-    "DESCRIPTION": "Exhaust 1 card. At the start of your next !M! turns, play and Exhaust a copy of it. NL Exhaust.",
+    "NAME": "4th Dimension",
+    "DESCRIPTION": "Exhaust a card. At the start of your next !M! turns, play and Exhaust a copy of it. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "Exhaust for Fourth Dimension."
+      "Exhaust for 4th Dimension."
       ]
   },
   "awakened:RavenStrike": {
