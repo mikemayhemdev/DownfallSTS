@@ -126,6 +126,16 @@ public class ConjureAction extends AbstractGameAction {
                 addToTop(new RemoveSpellCardActionSpecial(tar));
             }
         } else {
+            if (AbstractDungeon.player.hasPower(IntensifyDebuffPower.POWER_ID)) {
+                AbstractDungeon.player.getPower(IntensifyDebuffPower.POWER_ID).flash();
+                this.isDone = true;
+                return;
+            }
+            if (AbstractDungeon.player.hasPower("No Draw")) {
+                AbstractDungeon.player.getPower("No Draw").flash();
+                this.isDone = true;
+                return;
+            }
             ArrayList<AbstractCard> possCards = new ArrayList<>();
             possCards.addAll(spellCards);
             ArrayList<AbstractCard> availableCards = new ArrayList<>();

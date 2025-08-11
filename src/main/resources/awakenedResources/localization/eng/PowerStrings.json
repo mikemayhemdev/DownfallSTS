@@ -181,17 +181,17 @@
     "NAME": "Chosen Verse",
     "DESCRIPTIONS": [
       "The next time you play a non-Attack card this turn, draw a card and gain #b",
-      " #yBlock.",
+      " #yBlock [REMOVE_SPACE].",
       "The next #b",
       " times you play a non-Attack card this turn, draw a card and gain #b",
-      " #yBlock."
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "awakened:AphoticFountPower": {
     "NAME": "Aphotic Fount",
     "DESCRIPTIONS": [
-      "Whenever you play #yCryostasis, gain #b",
-      " #yPlated #yArmor."
+      "Whenever you play #yCryostasis [REMOVE_SPACE], gain #b",
+      " #yPlated #yArmor [REMOVE_SPACE]."
     ]
   },
   "awakened:GrimoirePower": {
@@ -224,13 +224,13 @@
     ]
   },
   "awakened:FourthDimensionPower": {
-    "NAME": "FourthDimension",
+    "NAME": "4th Dimension",
     "DESCRIPTIONS": [
       "At the start of your next #b",
       " turn, ",
       " turns, ",
       "play and #yExhaust a copy of ",
-      "."
+      " [REMOVE_SPACE]."
     ]
   }
 }
