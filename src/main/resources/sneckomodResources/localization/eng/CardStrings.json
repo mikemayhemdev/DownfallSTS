@@ -567,8 +567,8 @@
   },
   "sneckomod:MarkedCard": {
     "NAME": "Marked Card",
-    "DESCRIPTION": "Retain. NL sneckomod:Muddle a card. NL It will always be cheaper. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL sneckomod:Muddle a card. NL It will always be cheaper."
+    "DESCRIPTION": "sneckomod:Muddle a card. NL It will always be cheaper. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL sneckomod:Muddle a card. NL It will always be cheaper. NL Exhaust."
   },
   "sneckomod:InertBlade": {
     "NAME": "Inert Blade",
