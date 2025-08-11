@@ -190,7 +190,7 @@
   "awakened:AphoticFountPower": {
     "NAME": "Aphotic Fount",
     "DESCRIPTIONS": [
-      "Whenever you play #yCryostasis, gain #b",
+      "Whenever you play #yCryostasis [REMOVE_SPACE], gain #b",
       " #yPlated #yArmor [REMOVE_SPACE]."
     ]
   },
