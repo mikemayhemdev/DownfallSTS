@@ -22,7 +22,7 @@ public class FourthDimension extends AbstractAwakenedCard {
     public FourthDimension() {
         super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
         //this is going to need healing tag
         this.tags.add(CardTags.HEALING);
         loadJokeCardImage(this, makeBetaCardPath(FourthDimension.class.getSimpleName() + ".png"));
