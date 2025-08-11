@@ -25,6 +25,7 @@ public class AphoticFount extends AbstractAwakenedCard {
     public AphoticFount() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
+        this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(AphoticFount.class.getSimpleName() + ".png"));
     }
 
