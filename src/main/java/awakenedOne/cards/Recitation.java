@@ -22,9 +22,9 @@ public class Recitation extends AbstractAwakenedCard {
 
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+        dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
         if (isTrig_chant()) {
-            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+            dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
             chant();
         }
 
