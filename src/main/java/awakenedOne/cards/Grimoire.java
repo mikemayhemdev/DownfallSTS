@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.spells.Thunderbolt;
 import awakenedOne.powers.AphoticFountPower;
@@ -20,7 +21,7 @@ public class Grimoire extends AbstractAwakenedCard {
 
     public Grimoire() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-
+        this.tags.add(AwakenedOneMod.DELVE);
         baseMagicNumber = magicNumber = 4;
         loadJokeCardImage(this, makeBetaCardPath(Grimoire.class.getSimpleName() + ".png"));
     }

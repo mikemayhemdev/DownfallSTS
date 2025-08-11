@@ -15,7 +15,7 @@ import static awakenedOne.AwakenedOneMod.makeRelicPath;
 public class WhiteRibbon extends CustomRelic {
 
     public static final String ID = AwakenedOneMod.makeID("WhiteRibbon");
-    private static final int AMOUNT = 3;
+    private static final int AMOUNT = 4;
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("WhiteRibbon.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("WhiteRibbon.png"));
 
@@ -42,13 +42,13 @@ public class WhiteRibbon extends CustomRelic {
 //    }
 
 
-    @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (card.type == AbstractCard.CardType.POWER) {
-            this.flash();
-            addToBot(new GainBlockAction(AbstractDungeon.player, AMOUNT));
-        }
-    }
+//    @Override
+//    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+//        if (card.type == AbstractCard.CardType.POWER) {
+//            this.flash();
+//            addToBot(new GainBlockAction(AbstractDungeon.player, AMOUNT));
+//        }
+//    }
 
     public void onTrigger() {
         flash();

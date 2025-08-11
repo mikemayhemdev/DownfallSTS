@@ -21,7 +21,6 @@ public class MarkedCard extends AbstractSneckoCard {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         SneckoMod.loadJokeCardImage(this, "MarkedCard.png");
         baseMagicNumber = magicNumber = MAGIC;
-        this.selfRetain = true;
         exhaust = true;
     }
 
@@ -40,7 +39,7 @@ public class MarkedCard extends AbstractSneckoCard {
         if (!upgraded) {
             upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
-            this.exhaust = false;
+            this.selfRetain = true;
             initializeDescription();
         }
     }
