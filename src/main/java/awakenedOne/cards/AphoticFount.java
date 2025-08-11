@@ -1,6 +1,7 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.spells.AphoticShield;
 import awakenedOne.cards.tokens.spells.Cryostasis;
 import awakenedOne.powers.AphoticFountPower;
@@ -14,6 +15,7 @@ import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
 import static awakenedOne.util.Wiz.applyToSelf;
+import static awakenedOne.util.Wiz.atb;
 
 public class AphoticFount extends AbstractAwakenedCard {
 
@@ -27,7 +29,8 @@ public class AphoticFount extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.makeInHand(new Cryostasis());
+       // Wiz.makeInHand(new Cryostasis());
+        atb(new ConjureAction(false));
         applyToSelf(new AphoticFountPower(magicNumber));
     }
 

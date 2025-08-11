@@ -327,11 +327,11 @@
   },
   "awakened:Grimoire": {
     "NAME": "Grimoire",
-    "DESCRIPTION": "Add a *Thunderbolt into your hand. NL Increase damage dealt by Thunderbolt cards by !M!."
+    "DESCRIPTION": "awakened:Conjure. NL *Thunderbolts deal !M! additional damage."
   },
   "awakened:AphoticFount": {
     "NAME": "Aphotic Fount",
-    "DESCRIPTION": "Add a *Cryostasis into your hand. NL Whenever you play *Cryostasis, gain !M! expansioncontent:Plated *Armor."
+    "DESCRIPTION": "awakened:Conjure. NL Whenever you play *Cryostasis, gain !M! expansioncontent:Plated *Armor."
   },
   "awakened:Bloodthirst": {
     "NAME": "Bloodthirst",

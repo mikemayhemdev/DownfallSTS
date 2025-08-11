@@ -1,5 +1,6 @@
 package awakenedOne.cards;
 
+import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.spells.Thunderbolt;
 import awakenedOne.powers.AphoticFountPower;
 import awakenedOne.powers.GrimoirePower;
@@ -25,7 +26,8 @@ public class Grimoire extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        Wiz.makeInHand(new Thunderbolt());
+       // Wiz.makeInHand(new Thunderbolt());
+        atb(new ConjureAction(false));
         applyToSelf(new GrimoirePower(magicNumber));
 
     }
