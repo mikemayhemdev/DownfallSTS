@@ -16,7 +16,7 @@ public class FlareShot extends AbstractAwakenedCard {
 
     public FlareShot() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 4;
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath(FlareShot.class.getSimpleName() + ".png"));

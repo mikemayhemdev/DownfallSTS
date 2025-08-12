@@ -15,7 +15,7 @@ public class Recitation extends AbstractAwakenedCard {
 
     public Recitation() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 5;
         this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(Recitation.class.getSimpleName() + ".png"));
     }

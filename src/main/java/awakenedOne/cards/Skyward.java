@@ -16,7 +16,7 @@ public class Skyward extends AbstractAwakenedCard {
 
     public Skyward() {
         super(ID, 7, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseBlock = 20;
+        baseBlock = 18;
         this.magicNumber = this.baseMagicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Skyward.class.getSimpleName() + ".png"));
         if (CardCrawlGame.dungeon != null && AbstractDungeon.currMapNode != null) {

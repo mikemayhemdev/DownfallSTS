@@ -85,8 +85,7 @@
   },
   "awakened:Peck": {
     "NAME": "Peck",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! cards."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! card."
   },
   "awakened:Extension": {
     "NAME": "Extension",
@@ -94,7 +93,7 @@
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, awakened:Conjure."
   },
   "awakened:FlareShot": {
     "NAME": "Feather Flare",
@@ -126,7 +125,8 @@
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
-    "DESCRIPTION": "Gain !M! Dexterity. NL At the start of your next 2 turns, add a *Ceremony into your hand."
+    "DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next turn, add a *Ceremony into your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand."
   },
   "awakened:WaveOfMiasma": {
     "NAME": "Wave of Miasma",
@@ -164,7 +164,7 @@
   },
   "awakened:BirdsEye": {
     "NAME": "Byrd's Eye",
-    "DESCRIPTION": "Refresh your Spells. Choose a Spell to awakened:Conjure. NL Exhaust.",
+    "DESCRIPTION": "Choose a Spell to awakened:Conjure. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Refresh your Spells. Choose a Spell to awakened:Conjure."
   },
   "awakened:Initiation": {
@@ -186,8 +186,8 @@
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
-    "DESCRIPTION": "Gain X copies of *Plume *Jab.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 copies of *Plume *Jab."
+    "DESCRIPTION": "Gain X copies of *Plume *Jab. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain X+1 copies of *Plume *Jab. NL Exhaust."
   },
   "awakened:Murder": {
     "NAME": "Murder",
@@ -278,7 +278,8 @@
   },
   "awakened:MysticOrder": {
     "NAME": "Mystic Order",
-    "DESCRIPTION": "Draw !M! cards. NL awakened:Conjure."
+    "DESCRIPTION": "Draw !M! cards. NL awakened:Conjure. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL awakened:Conjure."
   },
   "awakened:ProfaneStrike": {
     "NAME": "Profane Strike",
