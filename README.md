@@ -6,8 +6,8 @@ When designing the Bosses turns, historically we've put ourselves in too small o
 
 With those comments in mind, bosses have been redesigned all with the following changes:
 
-
-
+ 
+ 
 -Bosses no longer have an energy limit. They play every card shown in intents.
 
 -Bosses no longer have consistent number of cards per turn. They may play 1, 2, or 3 cards, whatever the design and balance calls for.
@@ -16,8 +16,8 @@ With those comments in mind, bosses have been redesigned all with the following 
 
 -Bosses no longer have a forced special character mechanic. Instead, most bosses that utilize special mechanics will follow in Mushroom Ironclad's footsteps and have a new unique Power card that explains the effect, and they play that card on turn 1.
 
-
-
+ 
+ 
 
 Most character bosses have retained their general theme and mechanics, with a few changes:
 
