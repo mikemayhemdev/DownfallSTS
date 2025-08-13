@@ -66,37 +66,18 @@ public class Headshot extends AbstractDynamicCard {
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
+        super.calculateCardDamage(mo);
+        //if this triggers dead on 3 times it deals 400% damage by adding 100% 3 times, not 800% damage, this is intentional.
+        if (!mo.hasPower("Intangible")) {
             if (isDeadOnPos() || trig_deadon) {
                 int DeadOnTimes = DeadOnAmount();
-
-                //The dead on effect is +100% damage, not *2 damage!!!
-
-                //So the code here is so that it won't repeat for each dead on time * 2 since it's not doubling-doubling, it's increasing by 100% for each trigger
-                //This means each trigger is an additional stack of the original damage, and not an additional stack of the new damage!
-
-                //tldr; If this triggers dead on 3 times it deals 400% damage by adding 100% 3 times, not 800% damage.
-
+                //idk why it was doing a loop instead of just doing this
                 this.damage *= DeadOnTimes;
             }
-            super.calculateCardDamage(mo);
+        }
             //don't uncomment this, bad idea
             //this.baseDamage = base_dam;
             isDamageModified = damage != baseDamage;
-    }
-
-    public void applyPowers() {
-        //just read the calculate card damage one this is identical but has no comments
-        int base_dam = this.damage;
-        if (isDeadOnPos() || trig_deadon) {
-            int DeadOnTimes = DeadOnAmount();
-
-            for (int a = 0; a < DeadOnTimes; a++) {
-                this.damage += base_dam;
-            }
-        }
-        super.applyPowers();
-        //this.baseDamage = base_dam;
-        isDamageModified = damage != baseDamage;
     }
 
     //Upgraded stats.
