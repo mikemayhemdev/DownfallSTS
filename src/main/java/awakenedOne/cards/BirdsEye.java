@@ -20,7 +20,6 @@ public class BirdsEye extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) {
             atb(new AbstractGameAction() {
                 @Override
                 public void update() {
@@ -28,12 +27,10 @@ public class BirdsEye extends AbstractAwakenedCard {
                     OrbitingSpells.refreshSpells();
                 }
             });
-        }
         atb(new ConjureAction(true));
     }
 
     public void upp() {
-        //
-        //exhaust = false;
+        exhaust = false;
     }
 }
