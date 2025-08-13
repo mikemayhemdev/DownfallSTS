@@ -1,13 +1,11 @@
 package hermit.cards;
 
-import charbosses.powers.BossIntangiblePower;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.IntangiblePower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
@@ -48,9 +46,11 @@ public class Headshot extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //damage calculation happens here for dead on stuff
         int dam = this.damage;
-        AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, dam, damageTypeForTurn), EnumPatch.HERMIT_GUN2));
+
+        AbstractDungeon.actionManager.addToBottom(
+                new DamageAction(m, new DamageInfo(p, dam, damageTypeForTurn),
+                        EnumPatch.HERMIT_GUN2));
         if (isDeadOn()) {
             TriggerDeadOnEffect(p,m);
         }
@@ -69,13 +69,15 @@ public class Headshot extends AbstractDynamicCard {
         super.calculateCardDamage(mo);
         //if this triggers dead on 3 times it deals 400% damage by adding 100% 3 times, not 800% damage, this is intentional.
         if (!mo.hasPower("Intangible")) {
-            if (isDeadOnPos() || trig_deadon) {
-                int DeadOnTimes = DeadOnAmount();
-                //idk why it was doing a loop instead of just doing this
-                this.damage *= DeadOnTimes;
+           if (isDeadOnPos() || trig_deadon) {
+               int DeadOnTimes = DeadOnAmount();
+               int base_dam = this.damage;
+               for (int a = 0; a < DeadOnTimes; a++) {
+                   this.damage += base_dam;
+               }
             }
         }
-            //don't uncomment this, bad idea
+            //don't uncomment this, bad idea!!!
             //this.baseDamage = base_dam;
             isDamageModified = damage != baseDamage;
     }
