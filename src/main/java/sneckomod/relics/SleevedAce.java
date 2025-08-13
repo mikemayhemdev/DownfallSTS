@@ -6,6 +6,8 @@ import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import expansioncontent.actions.EchoACardAction;
 import expansioncontent.cardmods.RetainCardMod;
 import guardian.cards.GearUp;
 import sneckomod.SneckoMod;
@@ -27,7 +29,7 @@ public class SleevedAce extends CustomRelic {
     @Override
     public void atBattleStart() {
         AbstractCard q = new MarkedCard();
-        addToBot(new MakeTempCardInHandAction(q));
+        AbstractDungeon.actionManager.addToBottom(new EchoACardAction(q, 1));
     }
 
     public String getUpdatedDescription() {

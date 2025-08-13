@@ -54,7 +54,7 @@
     "NAME": "Sleeved Ace",
     "FLAVOR": "We're all aces.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain a #yMarked #yCard [REMOVE_SPACE]."
+      "At the start of each combat, gain an #ygremlin:Echo of a #yMarked #yCard [REMOVE_SPACE]."
     ]
   },
   "sneckomod:UnknownEgg": {
