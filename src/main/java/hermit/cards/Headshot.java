@@ -1,11 +1,13 @@
 package hermit.cards;
 
+import charbosses.powers.BossIntangiblePower;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.IntangiblePower;
 import hermit.HermitMod;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
@@ -64,21 +66,22 @@ public class Headshot extends AbstractDynamicCard {
     }
 
     @Override
-    public void calculateCardDamage(AbstractMonster mo)
-    {
-        super.calculateCardDamage(mo);
+    public void calculateCardDamage(AbstractMonster mo) {
+        if (!mo.hasPower("Intangible")) {
+            super.calculateCardDamage(mo);
 
-        if (isDeadOnPos() || trig_deadon) {
+            if (isDeadOnPos() || trig_deadon) {
 
-            int DeadOnTimes = DeadOnAmount();
-            int base_dam = this.damage;
+                int DeadOnTimes = DeadOnAmount();
+                int base_dam = this.damage;
 
-            for (int a = 0; a < DeadOnTimes; a++) {
-                this.damage += base_dam;
+                for (int a = 0; a < DeadOnTimes; a++) {
+                    this.damage += base_dam;
+                }
             }
-        }
 
-        isDamageModified = damage != baseDamage;
+            isDamageModified = damage != baseDamage;
+        }
     }
 
     //Upgraded stats.
