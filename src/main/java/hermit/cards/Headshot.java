@@ -48,10 +48,10 @@ public class Headshot extends AbstractDynamicCard {
     // Actions the card should do.
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        int dam = this.damage;
+        //int dam = this.damage;
 
         AbstractDungeon.actionManager.addToBottom(
-                new DamageAction(m, new DamageInfo(p, dam, damageTypeForTurn),
+                new DamageAction(m, new DamageInfo(p, this.damage, damageTypeForTurn),
                         EnumPatch.HERMIT_GUN2));
         if (isDeadOn()) {
             TriggerDeadOnEffect(p,m);
@@ -67,21 +67,20 @@ public class Headshot extends AbstractDynamicCard {
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
-        super.calculateCardDamage(mo);
-        if (!mo.hasPower("Intangible")) {
+
+            int realBaseDamage = this.baseDamage;
+
             if (isDeadOnPos() || trig_deadon) {
-
                 int DeadOnTimes = DeadOnAmount();
-                int base_dam = this.damage;
-
-                for (int a = 0; a < DeadOnTimes; a++) {
-                    this.damage += base_dam;
-                }
+                this.baseDamage = this.baseDamage*DeadOnTimes;
             }
 
+            super.calculateCardDamage(mo);
+
+            this.baseDamage = realBaseDamage;
             isDamageModified = damage != baseDamage;
-        }
     }
+
 
     //Upgraded stats.
     @Override
