@@ -65,19 +65,19 @@ public class Headshot extends AbstractDynamicCard {
         }
     }
 
-    @Override
     public void calculateCardDamage(AbstractMonster mo) {
             int realBaseDamage = this.baseDamage;
 
             if (isDeadOnPos() || trig_deadon) {
                 int DeadOnTimes = DeadOnAmount();
-                this.baseDamage = this.baseDamage*DeadOnTimes;
+                this.baseDamage *= DeadOnTimes;
             }
 
             super.calculateCardDamage(mo);
 
             this.baseDamage = realBaseDamage;
-            isDamageModified = damage != baseDamage;
+
+            this.isDamageModified = this.damage != this.baseDamage;
     }
 
 
