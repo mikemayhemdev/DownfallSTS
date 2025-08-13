@@ -27,7 +27,7 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
     public static final String IMG_PATH = "relics/bottledStasis.png";
     public static final String OUTLINE_IMG_PATH = "relics/bottledStasisOutline.png";
     public AbstractCard card = null;
-    public boolean cardSelected = false;
+    public boolean cardSelected = true;
     private boolean cardRemoved = false;
 
     public BottledStasis() {
