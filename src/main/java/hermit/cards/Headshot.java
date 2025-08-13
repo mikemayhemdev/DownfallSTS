@@ -77,7 +77,7 @@ public class Headshot extends AbstractDynamicCard {
             this.isDamageModified = this.damage != this.baseDamage;
     }
 
-
+    @Override
     public void applyPowers() {
         int realBaseDamage = this.baseDamage;
         if (isDeadOnPos() || trig_deadon) {
