@@ -25,6 +25,7 @@ public class EnWideOpen extends AbstractHermitBossCard {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/wide_open.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
         this.baseDamage = 6;
         baseMagicNumber = magicNumber = 1;
+        vulnGeneratedIfPlayed = magicNumber;
     }
 
     @Override
@@ -39,6 +40,7 @@ public class EnWideOpen extends AbstractHermitBossCard {
             this.upgradeName();
             this.upgradeDamage(2);
             upgradeMagicNumber(1);
+            vulnGeneratedIfPlayed = magicNumber;
         }
     }
 

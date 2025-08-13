@@ -5,8 +5,12 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct1SharpshooterNewAge;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct3DoomsdayNewAge;
+import charbosses.bosses.Hermit.Simpler.ArchetypeAct1SharpshooterSimple;
+import charbosses.bosses.Hermit.Simpler.ArchetypeAct2WheelOfFateSimple;
+import charbosses.bosses.Hermit.Simpler.ArchetypeAct3BasicsSimple;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
+import charbosses.powers.bossmechanicpowers.HermitWheelOfFortune;
 import charbosses.ui.EnergyOrbHermit;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -21,6 +25,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import downfall.downfallMod;
 import downfall.util.LocalizeHelper;
+import expansioncontent.expansionContentMod;
 import hermit.characters.hermit;
 import hermit.effects.HermitEyeParticle;
 
@@ -38,8 +43,9 @@ public class CharBossHermit extends AbstractCharBoss {
     public Slot eye;
     private float fireTimer = 0.0F;
 
+    private boolean noRender = false;
     public CharBossHermit() {
-        super(NAME, ID, 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, -20.0f, hermit.Enums.HERMIT);
+        super(NAME, ID, 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, 20.0f, hermit.Enums.HERMIT);
         this.energyOrb = new EnergyOrbHermit();
         this.energy = new EnemyEnergyManager(3);
         loadAnimation(
@@ -66,19 +72,36 @@ public class CharBossHermit extends AbstractCharBoss {
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else
-            switch (AbstractDungeon.actNum) {
-                case 1:
-                    archetype = new ArchetypeAct1SharpshooterNewAge();
-                    break;
-                case 2:
-                    archetype = new ArchetypeAct2WheelOfFateNewAge();
-                    break;
-                case 3:
-                    archetype = new ArchetypeAct3DoomsdayNewAge();
-                    break;
-                default:
-                    archetype = new ArchetypeAct1SharpshooterNewAge();
-                    break;
+            if (expansionContentMod.useSimplerBosses){
+                switch (AbstractDungeon.actNum) {
+                    case 1:
+                        archetype = new ArchetypeAct1SharpshooterSimple();
+                        break;
+                    case 2:
+                        archetype = new ArchetypeAct2WheelOfFateSimple();
+                        break;
+                    case 3:
+                        archetype = new ArchetypeAct3BasicsSimple();
+                        break;
+                    default:
+                        archetype = new ArchetypeAct1SharpshooterSimple();
+                        break;
+                }
+            } else {
+                switch (AbstractDungeon.actNum) {
+                    case 1:
+                        archetype = new ArchetypeAct1SharpshooterNewAge();
+                        break;
+                    case 2:
+                        archetype = new ArchetypeAct2WheelOfFateNewAge();
+                        break;
+                    case 3:
+                        archetype = new ArchetypeAct3DoomsdayNewAge();
+                        break;
+                    default:
+                        archetype = new ArchetypeAct1SharpshooterNewAge();
+                        break;
+                }
             }
 
         archetype.initialize();
@@ -141,12 +164,27 @@ public class CharBossHermit extends AbstractCharBoss {
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
-        if (chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
-            if (previewCard == null && !((ArchetypeAct2WheelOfFateNewAge) chosenArchetype).mockDeck.isEmpty()) {
-                AbstractCard q = ((ArchetypeAct2WheelOfFateNewAge) chosenArchetype).mockDeck.get(0);
-                previewCard = q.makeStatEquivalentCopy();
+        if (chosenArchetype.turn < 1 && chosenArchetype instanceof ArchetypeAct2WheelOfFateSimple) {
+            noRender = true;
+        } else {
+            noRender = false;
+        }
+        if (hasPower(HermitWheelOfFortune.POWER_ID)) {
+            if (chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
+                if (previewCard == null && !((ArchetypeAct2WheelOfFateNewAge) chosenArchetype).mockDeck.isEmpty()) {
+                    AbstractCard q = ((ArchetypeAct2WheelOfFateNewAge) chosenArchetype).mockDeck.get(0);
+                    previewCard = q.makeStatEquivalentCopy();
+                }
             }
-            if (previewCard != null && !isDead && !isDying) {
+
+            if (chosenArchetype instanceof ArchetypeAct2WheelOfFateSimple) {
+                if (previewCard == null && !((ArchetypeAct2WheelOfFateSimple) chosenArchetype).mockDeck.isEmpty()) {
+                    AbstractCard q = ((ArchetypeAct2WheelOfFateSimple) chosenArchetype).mockDeck.get(0);
+                    previewCard = q.makeStatEquivalentCopy();
+                }
+            }
+
+            if (previewCard != null && !isDead && !isDying && !noRender) {
                 int cardsinrow = Math.min(3 - HAND_ROW_LENGTH * (int) Math.floor((float) 3 / (float) HAND_ROW_LENGTH), HAND_ROW_LENGTH);
                 float widthspacing = AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
                 int tar = 4;
@@ -159,6 +197,8 @@ public class CharBossHermit extends AbstractCharBoss {
             }
         }
     }
+
+
 
     @Override
     public void update() {

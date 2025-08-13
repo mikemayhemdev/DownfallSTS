@@ -21,6 +21,7 @@ public class EnHoleUp extends AbstractHermitBossCard {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/hole_up.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND);
         this.baseBlock = 12;
         baseMagicNumber = magicNumber = 2;
+
     }
 
     @Override

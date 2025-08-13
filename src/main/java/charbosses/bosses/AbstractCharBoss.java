@@ -65,6 +65,7 @@ import com.megacrit.cardcrawl.vfx.combat.DeckPoofEffect;
 import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import downfall.downfallMod;
+import expansioncontent.expansionContentMod;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -146,7 +147,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void init() {
         AbstractCharBoss.boss = this;
         this.setHp(this.maxHealth);
-        this.energy.energyMaster = 2;
+        if (expansionContentMod.useSimplerBosses){
+            this.energy.energyMaster = 99;
+        } else {
+            this.energy.energyMaster = 2;
+        }
         this.generateAll();
         super.init();
         this.preBattlePrep();
@@ -290,8 +295,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     @Override
     public void update() {
         super.update();
-        for (AbstractRelic r : this.relics) {
-            r.update();
+        if (!expansionContentMod.useSimplerBosses) {
+            for (AbstractRelic r : this.relics) {
+                r.update();
+            }
         }
 
         for (AbstractOrb o : this.orbs) {
@@ -306,10 +313,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void applyEndOfTurnTriggers() {
         if (hasPower(StunMonsterPower.POWER_ID)) chosenArchetype.turn--;
 
-        this.energy.recharge();
+        if (!expansionContentMod.useSimplerBosses) this.energy.recharge();
 
-        for (final AbstractPower p : AbstractCharBoss.boss.powers) {
-            p.onEnergyRecharge();
+        if (!expansionContentMod.useSimplerBosses) {
+            for (final AbstractPower p : AbstractCharBoss.boss.powers) {
+                p.onEnergyRecharge();
+            }
         }
 
         for (final AbstractCard c : this.hand.group) {
@@ -317,7 +326,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         this.stance.onEndOfTurn();
 
-        addToBot(new EnemyDiscardAtEndOfTurnAction());
+        if (!expansionContentMod.useSimplerBosses) {
+            addToBot(new EnemyDiscardAtEndOfTurnAction());
         /*
         for (final AbstractCard c : this.drawPile.group) {
             c.resetAttributes();
@@ -326,8 +336,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             c.resetAttributes();
         }
         */
-        for (final AbstractCard c : this.hand.group) {
-            c.resetAttributes();
+            for (final AbstractCard c : this.hand.group) {
+                c.resetAttributes();
+            }
         }
         addToBot(new DelayedActionAction(new CharbossTurnstartDrawAction()));
     }
@@ -340,7 +351,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCard c : hand.group) {
             ((AbstractBossCard) c).lockIntentValues = true;
         }
-        this.applyStartOfTurnRelics();
+        if (!expansionContentMod.useSimplerBosses) this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
         this.applyStartOfTurnCards();
         //this.applyStartOfTurnPowers();
@@ -470,6 +481,15 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                             c2.manualCustomVulnModifier = true;
                         }
                     }
+                }
+
+                //Self Weak Check - knows to check if any Artifact will be left
+                if (c.selfWeakIfPlayed > 0) {
+                        for (int j = i + 1; j < hand.size(); j++) {
+                            AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                            c2.manualCustomSelfWeakModifier = true;
+                        }
+
                 }
 
                 //Shuriken Checks for Act 1 Silent
@@ -1201,7 +1221,7 @@ public void damage(final DamageInfo info) {
     @Override
     public void die() {
         if (this.currentHealth <= 0) {
-            BossMechanicDisplayPanel.resetBossPanel();
+            if (!expansionContentMod.useSimplerBosses) BossMechanicDisplayPanel.resetBossPanel();
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
             onBossVictoryLogic();
@@ -1211,7 +1231,7 @@ public void damage(final DamageInfo info) {
 
         AbstractCharBoss.boss = null;
         AbstractCharBoss.finishedSetup = false;
-        relics.clear();
+        if (!expansionContentMod.useSimplerBosses) relics.clear();
         hand.clear();
         /*
         drawPile.clear();
@@ -1620,8 +1640,10 @@ public void damage(final DamageInfo info) {
         if (!this.isDead) {
             this.renderHand(sb);
             this.stance.render(sb);
-            for (AbstractRelic r : this.relics) {
-                r.render(sb);
+            if (!expansionContentMod.useSimplerBosses) {
+                for (AbstractRelic r : this.relics) {
+                    r.render(sb);
+                }
             }
             if (!this.orbs.isEmpty()) {
 
@@ -1629,7 +1651,7 @@ public void damage(final DamageInfo info) {
                     o.render(sb);
                 }
             }
-            this.energyPanel.render(sb);
+            if (!expansionContentMod.useSimplerBosses)  this.energyPanel.render(sb);
         }
     }
 

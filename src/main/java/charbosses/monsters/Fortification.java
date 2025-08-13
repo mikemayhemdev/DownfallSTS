@@ -2,6 +2,7 @@ package charbosses.monsters;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.bossmechanicpowers.IroncladFortificationPower;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.MathUtils;
 import com.esotericsoftware.spine.AnimationState;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 import com.megacrit.cardcrawl.powers.DemonFormPower;
 import downfall.downfallMod;
+import expansioncontent.expansionContentMod;
 
 import static charbosses.bosses.Ironclad.NewAge.ArchetypeAct3BlockNewAge.FORTIFICATION_AMOUNT;
 
@@ -31,6 +33,8 @@ public class Fortification extends AbstractMonster {
         e.setTime(e.getEndTime() * MathUtils.random());
         this.stateData.setMix("Hit", "Idle", 0.1F);
         flipHorizontal= true;
+
+        if (expansionContentMod.useSimplerBosses) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new IroncladFortificationPower(this)));
     }
 
     @Override

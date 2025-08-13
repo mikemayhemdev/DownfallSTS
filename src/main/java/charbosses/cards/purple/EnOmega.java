@@ -1,6 +1,7 @@
 package charbosses.cards.purple;
 
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.cardpowers.EnemyOmegaPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -22,6 +23,7 @@ public class EnOmega extends AbstractBossCard {
     public EnOmega() {
         super("Omega", cardStrings.NAME, "colorless/power/omega", 3, cardStrings.DESCRIPTION, CardType.POWER, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF, AbstractMonster.Intent.ATTACK);
         this.exhaust = true;
+        baseMagicNumber = magicNumber = 50;
     }
 
     public AbstractCard makeCopy() {
@@ -37,7 +39,7 @@ public class EnOmega extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(m, m, new OmegaPower(m, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(m, m, new EnemyOmegaPower(m, this.magicNumber), this.magicNumber));
     }
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings("Omega");

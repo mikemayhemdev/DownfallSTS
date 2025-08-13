@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import downfall.downfallMod;
 import hermit.cards.GhostlyPresence;
 import hermit.cards.ItchyTrigger;
 import hermit.characters.hermit;
@@ -26,6 +27,7 @@ public class EnGhostlyPresence extends AbstractHermitBossCard {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/ghostly_presence.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_DEBUFF);
         this.baseBlock = 8;
         baseMagicNumber = magicNumber = 1;
+        tags.add(downfallMod.CHARBOSS_DEADON);
     }
 
     @Override

@@ -21,6 +21,7 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.watcher.EnergyDownPower;
 import com.megacrit.cardcrawl.vfx.combat.FastingEffect;
+import expansioncontent.expansionContentMod;
 
 import java.util.ArrayList;
 
@@ -41,7 +42,7 @@ public class EnFasting extends AbstractBossCard {
 
         this.addToBot(new ApplyPowerAction(m, m, new StrengthPower(m, this.magicNumber), this.magicNumber));
         this.addToBot(new ApplyPowerAction(m, m, new DexterityPower(m, this.magicNumber), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(m, m, new EnemyEnergyDownPower(m, 1,true), 1));
+        if (!expansionContentMod.useSimplerBosses) this.addToBot(new ApplyPowerAction(m, m, new EnemyEnergyDownPower(m, 1,true), 1));
 
 //        final EnergyManager energy = AbstractCharBoss.boss.energy;
 //        --energy.energyMaster;

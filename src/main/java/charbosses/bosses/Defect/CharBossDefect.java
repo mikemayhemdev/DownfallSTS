@@ -6,6 +6,9 @@ import charbosses.bosses.Defect.NewAge.ArchetypeAct1TurboNewAge;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct3InserterNewAge;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
+import charbosses.bosses.Defect.Simpler.ArchetypeAct1VoidsSimple;
+import charbosses.bosses.Defect.Simpler.ArchetypeAct2ClawSimple;
+import charbosses.bosses.Defect.Simpler.ArchetypeAct3OrbsSimple;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import com.esotericsoftware.spine.AnimationState;
@@ -21,6 +24,7 @@ import com.megacrit.cardcrawl.core.Settings;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import downfall.util.LocalizeHelper;
+import expansioncontent.expansionContentMod;
 
 public class CharBossDefect extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Defect");
@@ -29,7 +33,7 @@ public class CharBossDefect extends AbstractCharBoss {
     public int clawsPlayed = 0;
 
     public CharBossDefect() {
-        super(NAME, ID, 75, 0.0F, -5.0F, 240.0F, 244.0F, null, 0.0f, -20.0f, AbstractPlayer.PlayerClass.DEFECT);
+        super(NAME, ID, 75, 0.0F, -5.0F, 240.0F, 244.0F, null, 0.0f, 20.0f, AbstractPlayer.PlayerClass.DEFECT);
         this.energyOrb = new EnergyOrbBlue();
         this.energy = new EnemyEnergyManager(3);
         this.loadAnimation("images/characters/defect/idle/skeleton.atlas", "images/characters/defect/idle/skeleton.json", 1.0F);
@@ -57,6 +61,22 @@ public class CharBossDefect extends AbstractCharBoss {
             this.currentHealth -= 100;
             downfallMod.overrideBossDifficulty = false;
         } else
+            if (expansionContentMod.useSimplerBosses){
+                switch (AbstractDungeon.actNum) {
+                    case 1:
+                        archetype = new ArchetypeAct1VoidsSimple();
+                        break;
+                    case 2:
+                        archetype = new ArchetypeAct2ClawSimple();
+                        break;
+                    case 3:
+                        archetype = new ArchetypeAct3OrbsSimple();
+                        break;
+                    default:
+                        archetype = new ArchetypeAct1VoidsSimple();
+                        break;
+                }
+            } else {
             switch (AbstractDungeon.actNum) {
                 case 1:
                     archetype = new ArchetypeAct1TurboNewAge();
@@ -67,28 +87,10 @@ public class CharBossDefect extends AbstractCharBoss {
                 case 3:
                     archetype = new ArchetypeAct3OrbsNewAge();
                     break;
-                case 4: {
-                    //SlimeboundMod.logger.info("Defect spawned at Archetype " + NeowBoss.Rezzes);
-                    switch (NeowBoss.Rezzes) {
-
-                        case 0:
-                            archetype = new ArchetypeAct1TurboNewAge();
-                            break;
-                        case 1:
-                            archetype = new ArchetypeAct2ClawNewAge();
-                            break;
-                        case 2:
-                            archetype = new ArchetypeAct3OrbsNewAge();
-                            break;
-                        default:
-                            archetype = new ArchetypeAct3OrbsNewAge();
-                            break;
-                    }
-                    break;
-                }
                 default:
                     archetype = new ArchetypeAct1TurboNewAge();
                     break;
+            }
             }
 
         archetype.initialize();

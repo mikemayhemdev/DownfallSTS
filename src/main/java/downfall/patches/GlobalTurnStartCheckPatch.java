@@ -5,6 +5,7 @@ import automaton.cards.RecursiveStrike;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Silent.NewAge.ArchetypeAct2MirrorImageNewAge;
+import charbosses.bosses.Silent.Simpler.ArchetypeAct2MirrorImageSimple;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.actions.GameActionManager;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -31,7 +32,7 @@ public class GlobalTurnStartCheckPatch {
             }
         }
         if (AbstractCharBoss.boss != null) {
-            if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge && (AbstractDungeon.lastCombatMetricKey.equals("SI_MIRROR_ARCHETYPE") || AbstractDungeon.actNum == 4)) {
+            if ((AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2MirrorImageNewAge || AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2MirrorImageSimple) && (AbstractDungeon.lastCombatMetricKey.equals("SI_MIRROR_ARCHETYPE") || AbstractDungeon.actNum == 4)) {
                 ((CharBossSilent) AbstractCharBoss.boss).spawnImage(false);
             }
         }

@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
+import expansioncontent.expansionContentMod;
 
 public class WatcherAngryPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:WatcherAngryPower";
@@ -26,20 +27,31 @@ public class WatcherAngryPower extends AbstractBossMechanicPower {
         this.ID = POWER_ID;
         this.owner = owner;
         this.updateDescription();
-        loadRegion("curiosity");
+        if (!expansionContentMod.useSimplerBosses) {
+            loadRegion("curiosity");
+        } else {
+            loadRegion("anger");
+        }
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
+
+        if (!expansionContentMod.useSimplerBosses) {
+            this.description = DESCRIPTIONS[0];
+        } else {
+            this.description = DESCRIPTIONS[1];
+        }
     }
 
     @Override
     public void atEndOfRound() {
         super.atEndOfRound();
-        if (!active && owner.currentHealth <= owner.maxHealth / 2) {
+        if (!expansionContentMod.useSimplerBosses) {
+            if (!active && owner.currentHealth <= owner.maxHealth / 2) {
 
-            this.addToBot(new EnemyChangeStanceAction(EnWrathStance.STANCE_ID));
-            active = true;
+                this.addToBot(new EnemyChangeStanceAction(EnWrathStance.STANCE_ID));
+                active = true;
+            }
         }
     }
 

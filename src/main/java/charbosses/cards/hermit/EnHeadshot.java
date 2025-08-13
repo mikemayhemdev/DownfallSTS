@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.downfallMod;
 import hermit.cards.Headshot;
 import hermit.characters.hermit;
 import hermit.patches.EnumPatch;
@@ -24,6 +25,7 @@ public class EnHeadshot extends AbstractHermitBossCard {
     public EnHeadshot() {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/headshot.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
         this.baseDamage = 7;
+        tags.add(downfallMod.CHARBOSS_DEADON);
     }
 
     @Override

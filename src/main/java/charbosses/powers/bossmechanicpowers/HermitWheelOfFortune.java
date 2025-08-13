@@ -1,7 +1,9 @@
 package charbosses.powers.bossmechanicpowers;
 
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
+import charbosses.bosses.Hermit.Simpler.ArchetypeAct2WheelOfFateSimple;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -12,6 +14,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import expansioncontent.expansionContentMod;
 
 public class HermitWheelOfFortune extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:HermitWheelOfFortune";
@@ -23,20 +26,28 @@ public class HermitWheelOfFortune extends AbstractBossMechanicPower {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = 2;
+        if (expansionContentMod.useSimplerBosses){
+            this.amount = 2;
+        } else {
+            this.amount = 0;
+        }
         this.updateDescription();
         loadRegion("curiosity");
         this.type = PowerType.BUFF;
     }
 
     public void updateDescription() {
-        this.description = DESC[0];
+        if (expansionContentMod.useSimplerBosses){
+            this.description = DESC[1];
+        } else {
+            this.description = DESC[0];
+        }
     }
 
     @Override
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
         if (this.owner instanceof CharBossHermit && !(card instanceof AbstractBossCard) && card.type == AbstractCard.CardType.ATTACK) {
-            if (((CharBossHermit) this.owner).chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
+            if (((CharBossHermit) this.owner).chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge || (((CharBossHermit) this.owner).chosenArchetype instanceof ArchetypeAct2WheelOfFateSimple && ((CharBossHermit) this.owner).chosenArchetype.turn >= 1)) {
                 addToBot(new ReInitializeHandAction(this.owner, this));
             }
         }
@@ -44,8 +55,8 @@ public class HermitWheelOfFortune extends AbstractBossMechanicPower {
 
     @Override
     public void onSpecificTrigger() {
-        flash();
-        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
+     //   flash();
+       // addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
     }
 
     static {
@@ -70,7 +81,9 @@ class ReInitializeHandAction extends AbstractGameAction {
     public void update() {
         if (!this.shouldCancelAction()) {
             power.flash();
-            ((ArchetypeAct2WheelOfFateNewAge) ((CharBossHermit) source).chosenArchetype).reInitializeHand();
+            if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) ((ArchetypeAct2WheelOfFateNewAge) ((CharBossHermit) source).chosenArchetype).reInitializeHand();
+            if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateSimple) ((ArchetypeAct2WheelOfFateSimple) ((CharBossHermit) source).chosenArchetype).reInitializeHand();
+
         }
         isDone = true;
     }

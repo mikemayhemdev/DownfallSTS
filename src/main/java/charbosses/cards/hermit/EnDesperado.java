@@ -2,6 +2,7 @@ package charbosses.cards.hermit;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
+import charbosses.bosses.Hermit.Simpler.ArchetypeAct2WheelOfFateSimple;
 import charbosses.cards.AbstractBossCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -33,6 +34,9 @@ public class EnDesperado extends AbstractHermitBossCard {
             public void update() {
                 if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
                     AbstractBossCard c = ((ArchetypeAct2WheelOfFateNewAge) AbstractCharBoss.boss.chosenArchetype).getCardFromDeck(uuid);
+                    if (c != null) c.baseDamage *= 2;
+                } else if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateSimple) {
+                    AbstractBossCard c = ((ArchetypeAct2WheelOfFateSimple) AbstractCharBoss.boss.chosenArchetype).getCardFromDeck(uuid);
                     if (c != null) c.baseDamage *= 2;
                 }
                 isDone = true;
