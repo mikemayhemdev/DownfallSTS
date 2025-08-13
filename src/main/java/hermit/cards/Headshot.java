@@ -67,9 +67,8 @@ public class Headshot extends AbstractDynamicCard {
 
     @Override
     public void calculateCardDamage(AbstractMonster mo) {
+        super.calculateCardDamage(mo);
         if (!mo.hasPower("Intangible")) {
-            super.calculateCardDamage(mo);
-
             if (isDeadOnPos() || trig_deadon) {
 
                 int DeadOnTimes = DeadOnAmount();
