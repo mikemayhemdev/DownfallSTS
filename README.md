@@ -50,22 +50,31 @@ Hermit 3 - Partially reworked, now is a Strike/Defend Maintenance deck that stil
 Regular Character Bosses pass - Still uses cards as intents, but no more energy render, energy/cards per turn requirement, and more focus on custom cards and effects. No more relics either and no 'helper UI' for explaining custom powers.
 
 Ironclad 1 - Statuses
-Power: 
 
 Disarm(+), Mirror Mirror custom Power: "Status cards this character generates are added to you instead."
+
 Reckless Charge x2
+
 Power Through
+
 Bash(+)
+
 Immolate
+
 Metallicize(+)
+
 (loop back to Reckless Charge)
 
 Ironclad 2 - Mushrooms
 
 1: Summon Mushrooms, Feeding Frenzy (Power: Reaper also targets ALL Mushrooms. Gain 1 Strength when you kill your own Mushroom.)
+
 2: Rupture, Hemokinesis(+)
+
 3: Reaper
+
 4: Flame Barrier, JAX
+
 5: Shockwave
 
 
@@ -74,22 +83,35 @@ Ironclad 3 - Block
 Already has Fortification in play
 
 1: Barricade
+
 2: Impervious, Intimidate
+
 3: Iron Wave, Body Slam
+
 4: Metallicize x2 (+)
+
 5: Ghostly Armor, Disarm
+
 6: Iron Wave, Body Slam
+
 (cycle to 1, but Barricade is replaced with Entrench)
 
 Silent 1 - Poison
 
 1: New Toxins (Power: Poison no longer decays, but is blockable and deals damage at the end of turn instead of the start.), Bouncing Flask, Mad Scientist ("Give your opponent an Antidote)
+
 2: Poisoned Stab x2
+
 3: Footwork / Dodge and Roll
+
 4: Noxious Fumes
+
 5: Bane x2
+
 6: Terror (replaced with Leg Sweep in future turns)
+
 (cycle back to turn 1 with just a bouncing flask)
+
 
 
 Silent 2 - Mirror Image
@@ -97,53 +119,89 @@ Silent 2 - Mirror Image
 Turn 1: Hallucination (Power: Hide your real location each turn. When you or the illusion are Attacked, the illusion fades), Backstab
 
 Turn 2: JAX, Dagger Spray
+
 Turn 3: Blur x2
+
 Turn 4: Dash
+
 Turn 5: Riddle With Holes
+
 Turn 6: After Image x3
+
 (cycle to turn 2)
+
 
 Silent 3 - Shivs
 
 1: Bag of Knives (Power: The first time your opponent plays a 2+ cost card each turn, gain 2 Shivs), Accuracy(+)
+
 2: Cloak and Dagger+
+
 3: Piercing Wail x2(+)
+
 4: Blade Dance+
+
 5: Neutralize+, Finisher
+
 6: Wraith Form (replaced with Phantasmal Killer in future turns)
+
 7: Blade Dance+
+
 (cycle to turn 1, but Infinite Blades is added on top of the Accuracy)
 
 
 Defect 1 - Voids
-1: Boot Sequence, Murderbot custom Power: "Whenever you deal unblocked attack damage, add a Void to your opponent's discard pile."
+
+1: Boot Sequence, Energy Thief custom Power: "Whenever you deal unblocked attack damage, add a Void to your opponent's discard pile."
+
 2: Doom and Gloom
+
 3: Leap x2
+
 4: Rip and Tear
+
 5: Buffer, Loop
+
 6: Sunder
+
 (return to loop 2)
 
 
+
 Defect 2 - Claw
+
 1: Claw, Chill, Chill
+
 2: Defragment+
+
 3: Core Surge, Reprogram
+
 4: Claw, Claw
+
 5: Genetic Algorithm
+
 6: Core Surge, Hyper Beam
+
 (return to turn 1)
+
 
 
 Defect 3 - Orbs
 
 1: Curious Robot (Power: When your opponent plays a Power, gain 1 Focus. Your Strength affects your Focus.), Temptation (Insert 5 random Powers into your opponent's draw pile), Zap  (L)
+
 2: Cold Snap, Barrage     (L-F)
+
 3: Defragment, Dualcast lightning    (F)
+
 4: Glacier    (FFF)
+
 5: Ball Lightning x2 (FLL)
+
 6: Biased Cognition, Dualcast frost  (LL)
+
 7: Thunder Strike
+
 (return to 2)
 
 
@@ -152,27 +210,44 @@ Watcher 1 - Stances
 1: Bottled Rage (Power: If your opponent has played more Attacks than Skills, you are in Wrath. Otherwise, you are Calm.). Steady (Power: Wrath increases damage dealt and received by 50% instead of 100%) Like Water x2.
 
 2: Mental Fortress, Halt, Halt
+
 3: Panacea, Fasting
+
 4: Wallop
+
 5: Sash Whip, Crush Joints
+
 6: Conjure Blade (hand-created at 3 hits)
+
 (cycle to turn 2, Conjure Blade replaced with expunger)
+
 
 
 Watcher 2 - Omega
 Starts with a Cultist in combat
 
 1: Alpha, "End is Nigh" - "Gain 200 Max HP. EVERYONE gains 1 Ritual"
+
 2: Wish for Plated Armor
+
 3: Wave of the Hand, Protect, Empty Body
+
 4: True Peace ("Do nothing. Wait for the inevitable end of all things.")
+
 5: Beta
+
 6: Wish for Plated Armor
+
 7: Wave of the Hand, Protect, Empty Body
+
 8: True Peace ("Do nothing. Wait for the inevitable end of all things.")
+
 9: Omega
-10: Judgment, Blasphemy
-11: Judgment, True Peace
+
+10: Blasphemy
+
+11: True Peace x3
+
 
 
 Watcher 3 - Mantra
@@ -180,12 +255,19 @@ Watcher 3 - Mantra
 1: Fleeting Faith (Power: Gain 1 Mantra when your opponent plays a card. Lose 5 at the start of your turn. You can never leave Divinity.). Wish for Strength
 
 2: Flying Sleeves, Prostrate
+
 3: Wave of the Hand, Wallop
+
 4: Worship
+
 5: Ragnarök
+
 6: Devotion
+
 7: Brilliance
+
 cycle to turn 2
+
 
 
 
@@ -195,32 +277,55 @@ Starts with Louse buddy
 1: Hyperfocused (Always gain Dead On effects. After receiving 10 damage each turn, remove Dead On effects for that turn.)
 
 2: Deadeye, Wide Open
+
 3: Headshot
+
 4: Ghostly Presence, Snapshot
+
 5: Dive, Ricochet
+
 6: Roughhouse
+
 7: Smoking Barrel
+
 (cycle to turn 2)
 
 
+
 Hermit 2 - The Wheel, Determination
+
 1: Wheel of Fate (Power: Future turns are dictated by the Wheel of Fate. When attacked, the Wheel advances one step)
 
 Wheel Order:
+
 Defend
+
 Strike
+
 Doubt
+
 Glare
+
 Desperado
+
 Purgatory
+
 Wide Open
+
 Hole Up
+
 Swift Strike
+
 Low Profile
+
 Reprieve
+
 Dissolve
+
 Memento
+
 Golden Bullet
+
 
 
 Hermit 3 - Strike/Defend
