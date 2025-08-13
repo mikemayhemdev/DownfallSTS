@@ -17,21 +17,33 @@ With those comments in mind, bosses have been redesigned all with the following 
 Most character bosses have retained their general theme and mechanics, with a few changes:
 
 Ironclad 1 - Still places its generated Status cards in your piles.
+
 Silent 1 - Still is themed around Poison, Poison mechanics unchanged.
+
 Defect 1 - Now places Voids when dealing unblocked attack damage. Infrequently attacks, but attacks hard, and still has a countdown clock from Darkness orbs.
+
 Watcher 1 - Fully reworked. Now tracks your Attacks and Skills, and switches stances based on which one is used more.
+
 Hermit 1 - Still is based on Dead On and breaking concentration, mechanics unchanged.
 
 Ironclad 2 - Mechanics unchanged, still is Mushroom / Healing themed.
+
 Silent 2 - Mechanics unchanged, still has the Illusory Silent.
+
 Defect 2 - Mechanics unchanged, still has Bronze Orb and Artifact abuse.
+
 Watcher 2 - Fully reworked, now is a purely Defensive setup that opens with Alpha, and has a Cultist buddy.
+
 Hermit 2 - Mechanics unchanged, still uses the Wheel of cards, but many new cards have been added and Hermit will open the fight with Determination as his method of scaling.
 
 Ironclad 3 - Mechanics unchanged, still is Block themed with the Fortification.
+
 Silent 3 - Mechanics unchanged, still uses Shivs and hinders 2+ cost cards.
+
 Defect 3 - Mechanics unchanged, still uses Orbs and hinders Powers.
+
 Watcher 3 - Returned to being Mantra-themed and hinders mass-play combo decks.
+
 Hermit 3 - Partially reworked, now is a Strike/Defend Maintenance deck that still summons Daggers.
 
 
