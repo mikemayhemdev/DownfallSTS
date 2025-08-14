@@ -63,22 +63,23 @@ public class Headshot extends AbstractDynamicCard {
         }
     }
 
+
     @Override
-    public void calculateCardDamage(AbstractMonster mo)
-    {
+    public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
-
-        if (isDeadOnPos() || trig_deadon) {
-
-            int DeadOnTimes = DeadOnAmount();
-            int base_dam = this.damage;
-
-            for (int a = 0; a < DeadOnTimes; a++) {
-                this.damage += base_dam;
+        //if this triggers dead on 3 times it deals 400% damage by adding 100% 3 times, not 800% damage, this is intentional.
+        if (!mo.hasPower("Intangible")) {
+           if (isDeadOnPos() || trig_deadon) {
+               int DeadOnTimes = DeadOnAmount();
+               int base_dam = this.damage;
+               for (int a = 0; a < DeadOnTimes; a++) {
+                   this.damage += base_dam;
+               }
             }
         }
-
-        isDamageModified = damage != baseDamage;
+            //don't uncomment this, bad idea!!!
+            //this.baseDamage = base_dam;
+            isDamageModified = damage != baseDamage;
     }
 
     //Upgraded stats.

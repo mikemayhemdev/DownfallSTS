@@ -18,8 +18,8 @@ public class Caw extends AbstractAwakenedCard {
 
     public Caw() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 4;
-        this.baseMagicNumber = 4;
+        baseDamage = 3;
+        this.baseMagicNumber = 3;
         this.tags.add(AwakenedOneMod.CHANT);
         this.magicNumber = this.baseMagicNumber;
         loadJokeCardImage(this, makeBetaCardPath(Caw.class.getSimpleName() + ".png"));

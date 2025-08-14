@@ -21,12 +21,15 @@ public class SleevedAce extends CustomRelic {
 
     public SleevedAce() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.MAGICAL);
-        this.tips.add(new CardPowerTip(new MarkedCard()));
+        AbstractCard q = new MarkedCard();
+        q.upgrade();
+        this.tips.add(new CardPowerTip(q));
     }
 
     @Override
     public void atBattleStart() {
         AbstractCard q = new MarkedCard();
+        q.upgrade();
         addToBot(new MakeTempCardInHandAction(q));
     }
 

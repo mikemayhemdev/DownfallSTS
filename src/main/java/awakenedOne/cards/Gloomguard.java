@@ -17,7 +17,7 @@ public class Gloomguard extends AbstractAwakenedCard {
 
     public Gloomguard() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 9;
+        baseBlock = 8;
         //  baseMagicNumber = magicNumber = 3;
         loadJokeCardImage(this, makeBetaCardPath(Gloomguard.class.getSimpleName() + ".png"));
     }

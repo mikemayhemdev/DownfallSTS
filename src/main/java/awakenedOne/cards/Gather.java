@@ -14,7 +14,7 @@ public class Gather extends AbstractAwakenedCard {
 
     public Gather() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 4;
+        baseBlock = 3;
         magicNumber = baseMagicNumber = 2;
         this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath("Victuals.png"));

@@ -17,8 +17,8 @@ public class DeathCoil extends AbstractAwakenedCard {
 
     public DeathCoil() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 8;
-        baseMagicNumber = magicNumber = 4;
+        baseDamage = 6;
+        baseMagicNumber = magicNumber = 3;
         loadJokeCardImage(this, makeBetaCardPath(DeathCoil.class.getSimpleName() + ".png"));
     }
 
@@ -33,7 +33,7 @@ public class DeathCoil extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
         upgradeDamage(2);
     }
 }

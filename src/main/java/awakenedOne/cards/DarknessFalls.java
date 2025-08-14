@@ -29,6 +29,6 @@ public class DarknessFalls extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

@@ -41,6 +41,6 @@ public class TakeFlight extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeBlock(4);
+        upgradeBlock(3);
     }
 }

@@ -19,7 +19,7 @@ public class SoulStrike extends AbstractAwakenedCard {
 
     public SoulStrike() {
         super(ID, 3, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 5;
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
         tags.add(CardTags.STRIKE);

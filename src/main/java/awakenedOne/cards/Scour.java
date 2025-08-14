@@ -12,14 +12,10 @@ public class Scour extends AbstractAwakenedCard {
     public final static String ID = makeID(Scour.class.getSimpleName());
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
-    //Manaburn
-
-    //rework to pressure points
-
     public Scour() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
-        baseMagicNumber = magicNumber = 4;
+        baseDamage = 7;
+        baseMagicNumber = magicNumber = 3;
         loadJokeCardImage(this, makeBetaCardPath(Scour.class.getSimpleName() + ".png"));
     }
 

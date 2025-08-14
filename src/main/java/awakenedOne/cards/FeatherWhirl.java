@@ -15,7 +15,7 @@ public class FeatherWhirl extends AbstractAwakenedCard {
 
     public FeatherWhirl() {
         super(ID, -1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        // this.exhaust = true;
+        this.exhaust = true;
         baseMagicNumber = magicNumber = 0;
         cardsToPreview = new PlumeJab();
         loadJokeCardImage(this, makeBetaCardPath(FeatherWhirl.class.getSimpleName() + ".png"));

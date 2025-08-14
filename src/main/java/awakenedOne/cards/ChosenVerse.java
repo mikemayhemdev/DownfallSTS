@@ -16,7 +16,7 @@ public class ChosenVerse extends AbstractAwakenedCard {
 
     public ChosenVerse() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseBlock = 4;
+        baseBlock = 3;
         baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(ChosenVerse.class.getSimpleName() + ".png"));
     }

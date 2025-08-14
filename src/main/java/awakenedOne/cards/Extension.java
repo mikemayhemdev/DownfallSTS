@@ -15,7 +15,7 @@ public class Extension extends AbstractAwakenedCard {
 
     public Extension() {
         super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 3;
+        baseDamage = 2;
         loadJokeCardImage(this, makeBetaCardPath(Extension.class.getSimpleName() + ".png"));
     }
 

@@ -30,7 +30,7 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SignatureMove.png"));
 
     public AbstractCard card = null;
-    public boolean cardSelected = false;
+    public boolean cardSelected = true;
     private boolean hasfinisher = false;
 
     private boolean cardRemoved = false;

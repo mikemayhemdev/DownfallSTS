@@ -20,13 +20,13 @@ public class BirdsEye extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                OrbitingSpells.refreshSpells();
-            }
-        });
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    OrbitingSpells.refreshSpells();
+                }
+            });
         atb(new ConjureAction(true));
     }
 

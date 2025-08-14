@@ -65,17 +65,17 @@ public class OrbitingSpells {
         cardIcons.put(Darkleech.ID, TexLoader.getTexture("awakenedResources/images/ui/Darkleech.png"));
         cardIcons.put(Thunderbolt.ID, TexLoader.getTexture("awakenedResources/images/ui/Thunderbolt.png"));
         //cardIcons.put(DeathCoil.ID, TexLoader.getTexture("awakenedResources/images/ui/Deathcoil.png"));
-        cardIcons.put(AphoticShield.ID, TexLoader.getTexture("awakenedResources/images/ui/AphoticShield.png"));
+        //cardIcons.put(AphoticShield.ID, TexLoader.getTexture("awakenedResources/images/ui/AphoticShield.png"));
         cardIcons.put(ESPSpell.ID, TexLoader.getTexture("awakenedResources/images/ui/ESPSpell.png"));
-        cardIcons.put(Grimoire.ID, TexLoader.getTexture("awakenedResources/images/ui/Grimoire.png"));
+        //cardIcons.put(Grimoire.ID, TexLoader.getTexture("awakenedResources/images/ui/Grimoire.png"));
 
         cardColors.put(BurningStudy.ID, Color.RED.cpy());
         cardColors.put(Cryostasis.ID, placeholderColor.cpy());
         cardColors.put(Darkleech.ID, Color.PURPLE.cpy());
         cardColors.put(Thunderbolt.ID, Color.YELLOW.cpy());
-        cardColors.put(AphoticShield.ID, GuardianCharacter.cardRenderColor.cpy());
+        //cardColors.put(AphoticShield.ID, GuardianCharacter.cardRenderColor.cpy());
         cardColors.put(ESPSpell.ID, Color.PINK.cpy());
-        cardColors.put(Grimoire.ID, Color.FIREBRICK.cpy());
+        //cardColors.put(Grimoire.ID, Color.FIREBRICK.cpy());
     }
 
     static {
@@ -101,20 +101,9 @@ public class OrbitingSpells {
         if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
             spellCards.removeIf(card -> card.cardID.equals(ESPSpell.ID));
         }
-        for (AbstractPower p : AbstractDungeon.player.powers) {
-            if (p instanceof AphoticFountPower) {
-                spellCards.removeIf(card -> card.cardID.equals(AphoticShield.ID));
-            }
-        }
 
         for (int i = 0; i < spells.size(); i++) {
             addSpellCard(CardLibrary.getCard(spells.get(i)).makeCopy());
-        }
-
-        for (AbstractPower p : AbstractDungeon.player.powers) {
-            if (p instanceof AphoticFountPower) {
-                p.onSpecificTrigger();
-            }
         }
 
         if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
