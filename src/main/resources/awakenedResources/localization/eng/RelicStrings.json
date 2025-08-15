@@ -42,7 +42,7 @@
     "NAME": "Eye of the Occult",
     "FLAVOR": "This gruesome carving imparts magical knowledge to its owner.",
     "DESCRIPTIONS": [
-      "Spells hit ALL enemies."
+      "#yThunderbolt and #yDarkleech target ALL enemies."
     ]
   },
   "awakened:DeadBird": {
@@ -146,7 +146,7 @@
     "NAME": "Bird-Faced Vase",
     "FLAVOR":  "This urn shows the crow god Mazaleth looking mischievous.",
     "DESCRIPTIONS": [
-      "The first 4 times you play a #yPower card each combat, heal #b",
+      "The first #b4 times you play a #yPower card each combat, heal #b",
       " HP."
       ]
   }

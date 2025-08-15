@@ -2,6 +2,8 @@ package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
+import awakenedOne.cards.tokens.spells.Darkleech;
+import awakenedOne.cards.tokens.spells.Thunderbolt;
 import awakenedOne.util.TexLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
@@ -27,7 +29,7 @@ public class EyeOfTheOccult extends CustomRelic {
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (((card instanceof AbstractSpellCard) && card.target == AbstractCard.CardTarget.ALL_ENEMY)) {
+        if (((card instanceof Thunderbolt || card instanceof Darkleech))) {
             //only flash if relevant
             if (getEnemies().size() > 1) {
                 flash();

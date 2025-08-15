@@ -1,5 +1,7 @@
 package downfall.cards;
 
+import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
@@ -15,6 +17,10 @@ import expansioncontent.expansionContentMod;
 import java.util.Arrays;
 
 import static expansioncontent.cards.AbstractExpansionCard.makeID;
+
+@Deprecated
+@NoCompendium
+@NoPools
 
 public class BloodySacrifice extends AbstractDownfallCard {
 

@@ -1,23 +1,29 @@
 {
+  "awakened:PhaseSkip": {
+    "NAME": "Ascendant's Drink",
+    "DESCRIPTIONS": [
+      "#yAwaken immediately."
+    ]
+  },
   "awakened:CultistsDelight": {
     "NAME": "Cultist's Delight",
     "DESCRIPTIONS": [
       "Whenever you play a #yPower card this combat, gain #b",
-      " #yStrength [REMOVE_SPACE]."
+      " #yStrength [REMOVE_SPACE]. Add a random #yPower to your hand that costs #b0 for the turn."
     ]
   },
   "awakened:SacramentalWine": {
     "NAME": "Sacramental Wine",
     "DESCRIPTIONS": [
       "Whenever you play a #yPower card this combat, gain #b",
-      " #yBlock [REMOVE_SPACE]. Add a random #yPower card to your hand."
+      " #yBlock [REMOVE_SPACE]. Add a random #yPower to your hand that costs #b0 for the turn."
     ]
   },
   "awakened:SneckoPowersPotion": {
     "NAME": "Snecko Essence",
     "DESCRIPTIONS": [
-      "Choose #b1 of #b3 random #yOffclass #yPower cards to add to your hand, it costs #b0 this turn.",
-      "Choose #b1 of #b3 random #yOffclass #yPower cards and add #b",
+      "Choose #b1 of #b3 random #yOffclass #yPowers to add to your hand, it costs #b0 this turn.",
+      "Choose #b1 of #b3 random #yOffclass #yPowers and add #b",
       " copies to your hand, they cost #b0 this turn."
     ]
   }

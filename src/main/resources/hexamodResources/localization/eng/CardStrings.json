@@ -216,7 +216,7 @@
   "hexamod:InfernalForm": {
     "NAME": "Infernal Form",
     "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! hexamod:Intensity. NL At the start of your turn, gain !M! hexamod:Intensity."
+    "UPGRADE_DESCRIPTION": "Now and at the start of your turn, gain !M! hexamod:Intensity."
   },
   "hexamod:Incineration": {
     "NAME": "Incineration",
@@ -447,8 +447,8 @@
   },
   "hexamod:EtherStep": {
     "NAME": "Ether Step",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage.[] NL Exhaust 1 card. NL Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage.[] NL Exhaust 1 card. NL Draw !M! cards."
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage.[] NL Exhaust a card. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage.[] NL Exhaust a card. NL Draw !M! cards."
   },
   "hexamod:OpposingAction": {
     "NAME": "Opposing Action",

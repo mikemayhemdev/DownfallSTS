@@ -5,6 +5,8 @@ import basemod.ReflectionHacks;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -33,7 +35,6 @@ public class CultistsDelight extends CustomPotion {
 
         this.isThrown = false;
         this.targetRequired = false;
-        this.labOutlineColor = AwakenedOneMod.potionLabColor;
     }
 
     public void initializeData() {
@@ -50,6 +51,9 @@ public class CultistsDelight extends CustomPotion {
             this.addToBot(new VFXAction(new LightBulbEffect(AbstractDungeon.player.hb), 0.2F));
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new CuriosityPower(AbstractDungeon.player, potency)));
+        AbstractCard c = AbstractDungeon.returnTrulyRandomCardInCombat(AbstractCard.CardType.POWER).makeCopy();
+        c.setCostForTurn(0);
+        this.addToBot(new MakeTempCardInHandAction(c, true));
     }
 
     public CustomPotion makeCopy() {

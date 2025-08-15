@@ -19,6 +19,7 @@ public class BurningStudy extends AbstractSpellCard {
     public BurningStudy() {
         super(ID, 1, CardType.POWER, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
+        baseSecondMagic = secondMagic = 1;
         this.setBackgroundTexture("awakenedResources/images/512/bg_power_awakened.png", "awakenedResources/images/1024/bg_power_awakened.png");
         loadJokeCardImage(this, makeBetaCardPath(BurningStudy.class.getSimpleName() + ".png"));
     }
@@ -34,7 +35,7 @@ public class BurningStudy extends AbstractSpellCard {
 //        }
         this.addToBot(new VFXAction(p, new InflameEffect(p), 1.0F));
         applyToSelf(new StrengthPower(p, magicNumber));
-        Wiz.forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, 1, false)));
+        Wiz.forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, secondMagic, false)));
     }
 
     public void upp() {
