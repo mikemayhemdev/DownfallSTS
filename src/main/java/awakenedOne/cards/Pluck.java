@@ -18,7 +18,7 @@ public class Pluck extends AbstractAwakenedCard {
 
     public Pluck() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 5;
+        baseDamage = 6;
         isMultiDamage = true;
         this.baseMagicNumber = this.magicNumber = 1;
         this.tags.add(AwakenedOneMod.DELVE);

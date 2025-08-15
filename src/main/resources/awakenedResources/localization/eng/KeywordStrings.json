@@ -16,7 +16,7 @@
       "conjured",
       "awaken"
     ],
-    "DESCRIPTION": "Create the next card from your Spellbook in your hand. If you are #yAwakened (Played at least #b7 #yPowers this combat), conjured Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy."
+    "DESCRIPTION": "Create the next card from your Spellbook in your hand."
   },
   {
     "PROPER_NAME": "Chant",

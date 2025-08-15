@@ -1,25 +1,14 @@
 package awakenedOne.events;
 
-import awakenedOne.cards.DesperatePrayerAlt;
-import basemod.helpers.CardModifierManager;
-import champ.util.TechniqueMod;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import awakenedOne.cards.RealityRift;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.curses.Pride;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
-import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
-import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
-import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 import downfall.cards.curses.Aged;
-import downfall.cards.curses.PrideStandard;
-import slimebound.cards.CheckThePlaybook;
 
 import java.util.ArrayList;
 
@@ -48,7 +37,7 @@ public class AbyssEvent extends AbstractImageEvent {
         super(NAME, DESCRIPTIONS[0], "champResources/images/events/book.png");
 
 
-        this.imageEventText.setDialogOption(OPTIONS[0], new DesperatePrayerAlt());
+        this.imageEventText.setDialogOption(OPTIONS[0], new RealityRift());
         this.imageEventText.setDialogOption(OPTIONS[1]);
 
     }
@@ -61,7 +50,7 @@ public class AbyssEvent extends AbstractImageEvent {
                     case 0:
                         this.screenNum = 1;
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
-                        AbstractCard card = new DesperatePrayerAlt();
+                        AbstractCard card = new RealityRift();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH * .33), (float) (Settings.HEIGHT / 2)));
                         card = new Aged();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH * .66), (float) (Settings.HEIGHT / 2)));

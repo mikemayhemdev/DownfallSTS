@@ -258,13 +258,6 @@
     "NAME": "Singularity Shield",
     "DESCRIPTION": "Gain !B! Block. NL Next turn, gain !B! Block and lose [E]."
   },
-  "awakened:RealityRift": {
-    "NAME": "Reality Rift",
-    "DESCRIPTION": "Swap a card in your draw or discard pile with a *Void. NL Exhaust.",
-    "EXTENDED_DESCRIPTION": [
-      "Choose a card to put into your hand."
-    ]
-  },
   "awakened:Dejection": {
     "NAME": "Dejection",
     "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain [E] ."
@@ -328,8 +321,8 @@
     "NAME": "Manastorm",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure twice."
   },
-  "awakened:Grimoire": {
-    "NAME": "Grimoire",
+  "awakened:BringTheStorm": {
+    "NAME": "Bring the Storm",
     "DESCRIPTION": "awakened:Conjure. NL *Thunderbolts deal !M! additional damage."
   },
   "awakened:AphoticFount": {
@@ -408,8 +401,12 @@
       "Choose 2 cards to add to your draw pile."
     ]
   },
-  "awakened:DesperatePrayerAlt": {
+  "awakened:RealityRift": {
     "NAME": "Reality Rift",
     "DESCRIPTION": "Choose !awakened:m2! of !M! powerful cards from *ANOTHER *DIMENSION to gain. NL Add 2 Voids to your discard pile. Exhaust."
+  },
+  "awakened:Inscribe": {
+    "NAME": "Inscribe",
+    "DESCRIPTION": "Choose a Spell. Add a copy to the Spellbook for the rest of combat, and 2 copies into your hand."
   }
 }

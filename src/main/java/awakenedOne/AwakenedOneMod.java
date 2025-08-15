@@ -38,7 +38,6 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.city.Nest;
 import com.megacrit.cardcrawl.events.exordium.GoldenWing;
@@ -49,7 +48,6 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
-import slimebound.events.ArtOfSlimeWar;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -58,7 +56,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static awakenedOne.ui.OrbitingSpells.spellCards;
-import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -384,7 +381,7 @@ public class AwakenedOneMod implements
                 ShardOfNowak.ID,
 
                 FourthDimension.ID,
-                Grimoire.ID,
+                BringTheStorm.ID,
                 AphoticFount.ID,
 
                 AwakenedOneChar.Enums.AWAKENED_ONE
