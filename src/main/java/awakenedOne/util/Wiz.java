@@ -4,6 +4,7 @@ import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.DemonGlyph;
 import awakenedOne.powers.DemonGlyphPower;
+import awakenedOne.ui.AwakenButton;
 import awakenedOne.ui.OrbitingSpells;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
@@ -138,6 +139,7 @@ public class Wiz {
         if (!awakenedthiscombat){
             if (powersThisCombat >= POWERS_TO_AWAKEN){
                 if (AbstractDungeon.player.hasPower(DemonGlyphPower.POWER_ID)) {
+                    AwakenButton.awaken(10);
                     att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DemonGlyphPower.POWER_ID));
                 }
                 awakenedthiscombat = true;
