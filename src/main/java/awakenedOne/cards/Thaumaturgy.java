@@ -15,7 +15,7 @@ public class Thaumaturgy extends AbstractAwakenedCard {
 
     public Thaumaturgy() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 1;
+        this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         baseSecondMagic = secondMagic = 1;
         cardsToPreview = new Ceremony();

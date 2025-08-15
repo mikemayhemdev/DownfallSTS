@@ -18,7 +18,7 @@ public class TalonRake extends AbstractAwakenedCard {
 
     public TalonRake() {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
-        baseDamage = 4;
+        baseDamage = 5;
         //this.tags.add(AwakenedOneMod.CHANT);
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(TalonRake.class.getSimpleName() + ".png"));

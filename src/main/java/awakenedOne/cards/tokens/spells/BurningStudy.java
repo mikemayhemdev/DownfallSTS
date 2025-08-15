@@ -4,9 +4,12 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
+import hermit.util.Wiz;
 
 import static awakenedOne.AwakenedOneMod.*;
+import static awakenedOne.util.Wiz.applyToEnemy;
 import static awakenedOne.util.Wiz.applyToSelf;
 
 public class BurningStudy extends AbstractSpellCard {
@@ -15,7 +18,7 @@ public class BurningStudy extends AbstractSpellCard {
 
     public BurningStudy() {
         super(ID, 1, CardType.POWER, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
         this.setBackgroundTexture("awakenedResources/images/512/bg_power_awakened.png", "awakenedResources/images/1024/bg_power_awakened.png");
         loadJokeCardImage(this, makeBetaCardPath(BurningStudy.class.getSimpleName() + ".png"));
     }
@@ -31,9 +34,10 @@ public class BurningStudy extends AbstractSpellCard {
 //        }
         this.addToBot(new VFXAction(p, new InflameEffect(p), 1.0F));
         applyToSelf(new StrengthPower(p, magicNumber));
+        Wiz.forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, 1, false)));
     }
 
     public void upp() {
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(1);
     }
 }

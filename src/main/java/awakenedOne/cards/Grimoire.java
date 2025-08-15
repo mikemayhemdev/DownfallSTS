@@ -22,7 +22,7 @@ public class Grimoire extends AbstractAwakenedCard {
     public Grimoire() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.tags.add(AwakenedOneMod.DELVE);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 5;
         loadJokeCardImage(this, makeBetaCardPath(Grimoire.class.getSimpleName() + ".png"));
     }
 

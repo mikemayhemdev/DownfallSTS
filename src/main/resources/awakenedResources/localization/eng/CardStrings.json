@@ -5,11 +5,11 @@
   },
   "awakened:BurningStudy": {
     "NAME": "Burning Study",
-    "DESCRIPTION": "Retain. NL Gain !M! Strength."
+    "DESCRIPTION": "Retain. NL Gain !M! Strength. NL Apply 1 Weak to ALL enemies."
   },
   "awakened:Cryostasis": {
     "NAME": "Cryostasis",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Apply !M! Weak. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust."
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
@@ -125,7 +125,7 @@
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
-    "DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next turn, add a *Ceremony into your hand.",
+    "DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand.",
     "UPGRADE_DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand."
   },
   "awakened:WaveOfMiasma": {
@@ -217,7 +217,8 @@
   },
   "awakened:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] [E] ."
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
