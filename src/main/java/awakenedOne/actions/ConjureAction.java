@@ -31,6 +31,7 @@ public class ConjureAction extends AbstractGameAction {
     private final boolean ontop;
     private final boolean bstudy;
     private int permaAdd;
+    private int extraCreate;
     AbstractCard pick;
 
     public ConjureAction(boolean choose) {
@@ -39,14 +40,16 @@ public class ConjureAction extends AbstractGameAction {
         bstudy = false;
         pick = null;
         permaAdd = 0;
+        extraCreate = 0;
     }
 
-    public ConjureAction(boolean choose, int permaAddCount) {
+    public ConjureAction(boolean choose, int permaAddCount, int creationCount) {
         this.choose = choose;
         ontop = false;
         bstudy = false;
         pick = null;
         permaAdd = permaAddCount;
+        extraCreate = creationCount;
     }
 
     public ConjureAction(boolean choose, boolean drawpile) {
@@ -172,7 +175,9 @@ public class ConjureAction extends AbstractGameAction {
                 if (permaAdd == 0){
                     addToTop(new RemoveSpellCardAction(q));
                 } else {
-                    addToTop(new MakeTempCardInHandAction(q));
+                    for (int i = 0; i < extraCreate-1; i++) {
+                        addToTop(new MakeTempCardInHandAction(q));
+                    }
                     for (int i = 0; i < permaAdd; i++) {
                         spellCards.add(q.makeStatEquivalentCopy());
                     }

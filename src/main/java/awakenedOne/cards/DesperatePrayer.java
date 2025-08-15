@@ -21,9 +21,7 @@ public class DesperatePrayer extends AbstractAwakenedCard {
         exhaust = true;
         baseMagicNumber = magicNumber = 3;
         AbstractCard c = new Ceremony();
-        if (upgraded) {
-            c.upgrade();
-        }
+        c.upgrade();
         this.cardsToPreview = c;
     }
 

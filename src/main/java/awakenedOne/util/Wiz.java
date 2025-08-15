@@ -129,32 +129,21 @@ public class Wiz {
     }
 
     public static boolean isAwakened() {
-        int cool;
+        return  awakenedthiscombat;
 
-        cool = 0;
+    }
 
-        for (AbstractCard c : AbstractDungeon.actionManager.cardsPlayedThisCombat) {
-            if (c.type == AbstractCard.CardType.POWER) {
-                cool++;
+    public static void awaken(){
+        if (!awakenedthiscombat){
+            if (powersThisCombat >= POWERS_TO_AWAKEN){
+                if (AbstractDungeon.player.hasPower(DemonGlyphPower.POWER_ID)) {
+                    att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DemonGlyphPower.POWER_ID));
+                }
+                awakenedthiscombat = true;
+                Wiz.applyToSelf(new CuriosityPower(AbstractDungeon.player, 1));
+                OrbitingSpells.upgradeall();
             }
         }
-
-        if (AwakenedOneMod.awakenedthiscombat) {
-            cool = 100;
-        }
-
-        if (cool >= POWERS_TO_AWAKEN) {
-            if (AbstractDungeon.player.hasPower(DemonGlyphPower.POWER_ID)) {
-                att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DemonGlyphPower.POWER_ID));
-            }
-            awakenedthiscombat = true;
-            Wiz.applyToSelf(new CuriosityPower(AbstractDungeon.player, 1));
-            awaken(10);
-            OrbitingSpells.upgradeall();
-            return true;
-        }
-
-        return false;
     }
 
 
