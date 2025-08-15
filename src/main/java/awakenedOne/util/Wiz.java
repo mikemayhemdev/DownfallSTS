@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.CuriosityPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
@@ -147,6 +148,7 @@ public class Wiz {
                 att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DemonGlyphPower.POWER_ID));
             }
             awakenedthiscombat = true;
+            Wiz.applyToSelf(new CuriosityPower(AbstractDungeon.player, 1));
             awaken(10);
             OrbitingSpells.upgradeall();
             return true;

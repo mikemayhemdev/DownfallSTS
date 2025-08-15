@@ -11,12 +11,14 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 
 import java.util.ArrayList;
 
 import static awakenedOne.AwakenedOneMod.UP_NEXT;
 import static awakenedOne.ui.AwakenButton.awaken;
 import static awakenedOne.ui.OrbitingSpells.spellCards;
+import static awakenedOne.ui.OrbitingSpells.spells;
 import static awakenedOne.util.Wiz.isAwakened;
 import static downfall.downfallMod.DeterministicConjure;
 
@@ -28,14 +30,23 @@ public class ConjureAction extends AbstractGameAction {
     private final boolean choose;
     private final boolean ontop;
     private final boolean bstudy;
+    private int permaAdd;
     AbstractCard pick;
-
 
     public ConjureAction(boolean choose) {
         this.choose = choose;
         ontop = false;
         bstudy = false;
         pick = null;
+        permaAdd = 0;
+    }
+
+    public ConjureAction(boolean choose, int permaAddCount) {
+        this.choose = choose;
+        ontop = false;
+        bstudy = false;
+        pick = null;
+        permaAdd = permaAddCount;
     }
 
     public ConjureAction(boolean choose, boolean drawpile) {
@@ -126,23 +137,31 @@ public class ConjureAction extends AbstractGameAction {
                 addToTop(new RemoveSpellCardActionSpecial(tar));
             }
         } else {
-            if (AbstractDungeon.player.hasPower(IntensifyDebuffPower.POWER_ID)) {
-                AbstractDungeon.player.getPower(IntensifyDebuffPower.POWER_ID).flash();
-                this.isDone = true;
-                return;
-            }
-            if (AbstractDungeon.player.hasPower("No Draw")) {
-                AbstractDungeon.player.getPower("No Draw").flash();
-                this.isDone = true;
-                return;
+            if (permaAdd == 0) {
+                if (AbstractDungeon.player.hasPower(IntensifyDebuffPower.POWER_ID)) {
+                    AbstractDungeon.player.getPower(IntensifyDebuffPower.POWER_ID).flash();
+                    this.isDone = true;
+                    return;
+                }
+                if (AbstractDungeon.player.hasPower("No Draw")) {
+                    AbstractDungeon.player.getPower("No Draw").flash();
+                    this.isDone = true;
+                    return;
+                }
             }
             ArrayList<AbstractCard> possCards = new ArrayList<>();
-            possCards.addAll(spellCards);
             ArrayList<AbstractCard> availableCards = new ArrayList<>();
-            while (!possCards.isEmpty()) {
-                availableCards.add(possCards.remove(AbstractDungeon.cardRandomRng.random(possCards.size() - 1)));
-            }
             ArrayList<AbstractCard> actualChoices = new ArrayList<>();
+            if (permaAdd == 0){
+                possCards.addAll(spellCards);
+                while (!possCards.isEmpty()) {
+                    availableCards.add(possCards.remove(AbstractDungeon.cardRandomRng.random(possCards.size() - 1)));
+                }
+            } else {
+                for (int i = 0; i < 4; i++) {
+                    actualChoices.add(CardLibrary.getCard(spells.get(i)));
+                }
+            }
             availableCards.forEach(q -> actualChoices.add(q.makeStatEquivalentCopy()));
             addToTop(new SelectCardsCenteredAction(actualChoices, "", (cards) -> {
                 AbstractCard q = cards.get(0);
@@ -150,11 +169,20 @@ public class ConjureAction extends AbstractGameAction {
                     q.upgrade();
                 }
                 addToTop(new MakeTempCardInHandAction(q));
-                addToTop(new RemoveSpellCardAction(q));
+                if (permaAdd == 0){
+                    addToTop(new RemoveSpellCardAction(q));
+                } else {
+                    addToTop(new MakeTempCardInHandAction(q));
+                    for (int i = 0; i < permaAdd; i++) {
+                        spellCards.add(q.makeStatEquivalentCopy());
+                    }
+                }
             }));
         }
-        for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
-            if (c instanceof OnConjureSubscriber) ((OnConjureSubscriber) c).OnConjure();
+        if (permaAdd == 0) {
+            for (AbstractCard c : AbstractDungeon.player.discardPile.group) {
+                if (c instanceof OnConjureSubscriber) ((OnConjureSubscriber) c).OnConjure();
+            }
         }
     }
 }

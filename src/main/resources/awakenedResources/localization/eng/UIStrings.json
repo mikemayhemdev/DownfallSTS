@@ -27,7 +27,10 @@
   },
   "awakened:Spellbook": {
     "TEXT": [
-      "Spellbook"
+      "Spellbook",
+      "The Awakening",
+      "After playing 7 Powers, become #yAwakened! While #yAwakened, conjured Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy, and every Power played grants 1 #yStrength."
+
     ]
   },
   "awakened:FullSpellbook": {

@@ -2,7 +2,7 @@ package automaton.patches;
 
 import automaton.FunctionHelper;
 import automaton.cardmods.EncodeMod;
-import awakenedOne.cards.Grimoire;
+import awakenedOne.cards.BringTheStorm;
 import awakenedOne.ui.OrbitingSpells;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -16,7 +16,6 @@ import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 
 import static automaton.FunctionHelper.cardPositions;
-import static automaton.FunctionHelper.doStuff;
 
 @SpirePatch(
         clz = UseCardAction.class,
@@ -55,7 +54,7 @@ public class GoSomewhereElsePatch {
             });
             return false;
         }
-        else if (card.cardID.equals(Grimoire.ID)) {
+        else if (card.cardID.equals(BringTheStorm.ID)) {
             AbstractDungeon.player.limbo.addToTop(card);
             AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
                 @Override
