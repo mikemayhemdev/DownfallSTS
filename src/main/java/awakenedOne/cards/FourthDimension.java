@@ -20,9 +20,9 @@ public class FourthDimension extends AbstractAwakenedCard {
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
     public FourthDimension() {
-        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         //this is going to need healing tag
         this.tags.add(CardTags.HEALING);
         loadJokeCardImage(this, makeBetaCardPath(FourthDimension.class.getSimpleName() + ".png"));
@@ -32,7 +32,8 @@ public class FourthDimension extends AbstractAwakenedCard {
         atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
             for (AbstractCard c : cards) {
                 if (!(c instanceof FourthDimension) && !(c instanceof Nightmare)) {
-                    applyToSelfTop(new FourthDimensionPower(magicNumber, c.makeStatEquivalentCopy()));
+                    shuffleIn(c.makeStatEquivalentCopy(), magicNumber);
+                    //applyToSelfTop(new FourthDimensionPower(magicNumber, c.makeStatEquivalentCopy()));
                     att(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
                 } else {
                     AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, CardCrawlGame.languagePack.getUIString("awakened:FourthDimensionDupeAttempt").TEXT[0], true));
@@ -43,6 +44,7 @@ public class FourthDimension extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeBaseCost(0);
+        //upgradeMagicNumber(1);
     }
 }

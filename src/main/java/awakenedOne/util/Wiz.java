@@ -1,5 +1,6 @@
 package awakenedOne.util;
 
+import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.DemonGlyph;
 import awakenedOne.powers.DemonGlyphPower;
@@ -140,7 +141,9 @@ public class Wiz {
                     att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DemonGlyphPower.POWER_ID));
                 }
                 awakenedthiscombat = true;
-                Wiz.applyToSelf(new CuriosityPower(AbstractDungeon.player, 1));
+                if ((AbstractDungeon.player.chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE)) {
+                    Wiz.applyToSelf(new CuriosityPower(AbstractDungeon.player, 1));
+                }
                 OrbitingSpells.upgradeall();
             }
         }

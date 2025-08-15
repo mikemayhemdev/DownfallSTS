@@ -48,7 +48,7 @@
   "awakened:AwakenedForm": {
     "NAME": "Awakened Form",
     "DESCRIPTION": "At the start of your turn, gain !M! Ritual.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Ritual. NL At the start of your turn, gain !M! Ritual."
+    "UPGRADE_DESCRIPTION": "Now and at the start of your turn, gain !M! Ritual."
   },
   "awakened:Spellbinder": {
     "NAME": "Spellbinder",
@@ -146,7 +146,7 @@
   },
   "awakened:FourthDimension": {
     "NAME": "4th Dimension",
-    "DESCRIPTION": "Exhaust a card. At the start of your next !M! turns, play and Exhaust a copy of it. NL Exhaust.",
+    "DESCRIPTION": "Exhaust a card. NL fShuffle !M! copies of it into your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for 4th Dimension."
       ]

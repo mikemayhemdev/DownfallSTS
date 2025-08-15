@@ -12,6 +12,8 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 
+import static awakenedOne.util.Wiz.awaken;
+
 public class PhaseSkip extends CustomPotion {
     public static final String POTION_ID = "awakened:PhaseSkip";
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
@@ -19,7 +21,7 @@ public class PhaseSkip extends CustomPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public PhaseSkip() {
-        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.MOON, PotionColor.ANCIENT);
+        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.EYE, PotionColor.ANCIENT);
         this.isThrown = false;
         this.targetRequired = false;
         this.labOutlineColor = AwakenedOneMod.potionLabColor;
@@ -36,7 +38,7 @@ public class PhaseSkip extends CustomPotion {
         if (AwakenedOneMod.awakenedthiscombat == false) {
             AbstractDungeon.actionManager.addToTop(new VFXAction(target, new IntenseZoomEffect(target.hb.cX, target.hb.cY, true), 0.05F, true));
             AbstractDungeon.actionManager.addToTop(new SFXAction("VO_AWAKENEDONE_1"));
-            AwakenedOneMod.awakenedthiscombat = true;
+            awaken();
             OrbitingSpells.upgradeall();
         }
     }
