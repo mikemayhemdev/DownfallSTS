@@ -20,7 +20,7 @@ public class MysticOrder extends AbstractAwakenedCard {
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(AwakenedOneMod.DELVE);
-        this.exhaust = true;
+      //  this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(MysticOrder.class.getSimpleName() + ".png"));
     }
 

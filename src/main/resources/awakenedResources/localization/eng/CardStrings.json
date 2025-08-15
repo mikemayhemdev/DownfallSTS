@@ -273,8 +273,7 @@
   },
   "awakened:MysticOrder": {
     "NAME": "Mystic Order",
-    "DESCRIPTION": "Draw !M! cards. NL awakened:Conjure. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Draw !M! cards. NL awakened:Conjure."
+    "DESCRIPTION": "Draw !M! cards. NL awakened:Conjure."
   },
   "awakened:ProfaneStrike": {
     "NAME": "Profane Strike",
