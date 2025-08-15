@@ -21,10 +21,9 @@ public class PhaseSkip extends CustomPotion {
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
     public PhaseSkip() {
-        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.EYE, PotionColor.ANCIENT);
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.H, PotionColor.ELIXIR);
         this.isThrown = false;
         this.targetRequired = false;
-        this.labOutlineColor = AwakenedOneMod.potionLabColor;
     }
 
     public void initializeData() {
