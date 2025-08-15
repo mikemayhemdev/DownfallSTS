@@ -1,5 +1,6 @@
 package awakenedOne.ui;
 
+import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.actions.SetUpNextSpellAction;
@@ -257,14 +258,35 @@ public class OrbitingSpells {
             if (barBox.hovered) {
                 // showAll = true;
                 if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
-                    TipHelper.renderGenericTip(
-                            (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
-                            uiStrings.TEXT[1],
-                            uiStrings.TEXT[2]);
+                    if ((AbstractDungeon.player.chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE)) {
+                        TipHelper.renderGenericTip(
+                                (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                uiStrings.TEXT[1],
+                                uiStrings.TEXT[2]);
+                    }
+
+                    if ((AbstractDungeon.player.chosenClass != AwakenedOneChar.Enums.AWAKENED_ONE)) {
+                        TipHelper.renderGenericTip(
+                                (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                uiStrings.TEXT[1],
+                                uiStrings.TEXT[3]);
+                    }
+
+
                 } else {
-                    TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
-                            uiStrings.TEXT[1],
-                            uiStrings.TEXT[2]);
+                    if ((AbstractDungeon.player.chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE)) {
+                        TipHelper.renderGenericTip(
+                                (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                uiStrings.TEXT[1],
+                                uiStrings.TEXT[2]);
+                    }
+
+                    if ((AbstractDungeon.player.chosenClass != AwakenedOneChar.Enums.AWAKENED_ONE)) {
+                        TipHelper.renderGenericTip(
+                                (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                                uiStrings.TEXT[1],
+                                uiStrings.TEXT[3]);
+                    }
                 }
             }
         }

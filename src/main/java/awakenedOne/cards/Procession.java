@@ -1,8 +1,10 @@
 package awakenedOne.cards;
 
+import awakenedOne.actions.ProcessionAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
+import com.megacrit.cardcrawl.actions.watcher.OmniscienceAction;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -18,15 +20,12 @@ public class Procession extends AbstractAwakenedCard {
 
     public Procession() {
         super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
-        baseSecondMagic = secondMagic = 3;
-        this.baseMagicNumber = 2;
-        this.magicNumber = this.baseMagicNumber;
+        this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(Procession.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DrawCardAction(AbstractDungeon.player, secondMagic));
-        addToBot(new MakeTempCardInDiscardAction(new VoidCard(), magicNumber));
+        this.addToBot(new ProcessionAction());
     }
 
     @Override
@@ -36,6 +35,7 @@ public class Procession extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeSecondMagic(1);
+        this.exhaust = false;;
+        //upgradeSecondMagic(1);
     }
 }

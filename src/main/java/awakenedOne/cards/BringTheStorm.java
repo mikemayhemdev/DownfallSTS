@@ -16,7 +16,7 @@ public class BringTheStorm extends AbstractAwakenedCard {
     public BringTheStorm() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.tags.add(AwakenedOneMod.DELVE);
-        baseMagicNumber = magicNumber = 5;
+        baseMagicNumber = magicNumber = 6;
         loadJokeCardImage(this, makeBetaCardPath(BringTheStorm.class.getSimpleName() + ".png"));
     }
 

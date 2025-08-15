@@ -48,7 +48,7 @@
   "awakened:AwakenedForm": {
     "NAME": "Awakened Form",
     "DESCRIPTION": "At the start of your turn, gain !M! Ritual.",
-    "UPGRADE_DESCRIPTION": "Gain 1 Ritual. NL At the start of your turn, gain !M! Ritual."
+    "UPGRADE_DESCRIPTION": "Now and at the start of your turn, gain !M! Ritual."
   },
   "awakened:Spellbinder": {
     "NAME": "Spellbinder",
@@ -146,7 +146,7 @@
   },
   "awakened:FourthDimension": {
     "NAME": "4th Dimension",
-    "DESCRIPTION": "Exhaust a card. At the start of your next !M! turns, play and Exhaust a copy of it. NL Exhaust.",
+    "DESCRIPTION": "Exhaust a card. NL Shuffle !M! copies of it into your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for 4th Dimension."
       ]
@@ -322,7 +322,7 @@
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure twice."
   },
   "awakened:BringTheStorm": {
-    "NAME": "Bring the Storm",
+    "NAME": "Storm Ruler",
     "DESCRIPTION": "awakened:Conjure. NL *Thunderbolts deal !M! additional damage."
   },
   "awakened:AphoticFount": {
@@ -335,7 +335,8 @@
   },
   "awakened:Procession": {
     "NAME": "Procession",
-    "DESCRIPTION": "Draw !awakened:m2! cards. NL Add 2 *Voids into your discard pile."
+    "DESCRIPTION": "Play a card in your draw pile and shuffle in *Voids equal to its cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Play a card in your draw pile and shuffle in *Voids equal to its cost."
   },
   "awakened:SplitWide": {
     "NAME": "Split Wide",

@@ -94,7 +94,7 @@
     "NAMES": [
       "plated"
     ],
-    "DESCRIPTION": "At the end of your turn, gain Block equal to your #yPlated #yArmor. Taking unblocked attack damage reduces #yPlated #yArmor by #b1."
+    "DESCRIPTION": "At the end of your turn, gain #yBlock equal to your #yPlated #yArmor [REMOVE_SPACE]. Taking unblocked attack damage reduces #yPlated #yArmor by #b1 [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Searing",
