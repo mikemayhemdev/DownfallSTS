@@ -322,7 +322,7 @@
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure twice."
   },
   "awakened:BringTheStorm": {
-    "NAME": "Bring the Storm",
+    "NAME": "Storm Ruler",
     "DESCRIPTION": "awakened:Conjure. NL *Thunderbolts deal !M! additional damage."
   },
   "awakened:AphoticFount": {
