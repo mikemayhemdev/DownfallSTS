@@ -17,7 +17,7 @@ public class Clutch extends AbstractAwakenedCard {
 
     public Clutch() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 8;
+        baseDamage = 9;
         //baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Clutch.class.getSimpleName() + ".png"));
     }

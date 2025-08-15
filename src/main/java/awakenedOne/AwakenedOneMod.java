@@ -12,6 +12,7 @@ import awakenedOne.events.WingStatueAwakened;
 import awakenedOne.patches.OnCreateCardSubscriber;
 import awakenedOne.patches.OnLoseEnergyPowerPatch;
 import awakenedOne.potions.CultistsDelight;
+import awakenedOne.potions.PhaseSkip;
 import awakenedOne.potions.SacramentalWine;
 import awakenedOne.potions.SneckoPowersPotion;
 import awakenedOne.relics.*;
@@ -289,17 +290,18 @@ public class AwakenedOneMod implements
 
         //shared relics
         BaseMod.addRelic(new CawingCask(), RelicType.SHARED); //rare shared
-        BaseMod.addRelic(new VioletPlumage(), RelicType.SHARED); //shop shared
+        BaseMod.addRelic(new VioletPlumage(), RelicType.SHARED); //common shared
         BaseMod.addRelic(new ShardOfNowak(), RelicType.SHARED); //uncommon shared
-        BaseMod.addRelic(new MiniBlackHole(), RelicType.SHARED);//common shared
-
-        BaseMod.addRelic(new DeadBird(), RelicType.SHARED);//common shared
+        BaseMod.addRelic(new MiniBlackHole(), RelicType.SHARED);//shop shared
+        BaseMod.addRelic(new DeadBird(), RelicType.SHARED);//rare shared
     }
 
     public void addPotions() {
-        BaseMod.addPotion(CultistsDelight.class, Color.BLUE, Color.NAVY, Color.YELLOW, CultistsDelight.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
         BaseMod.addPotion(SacramentalWine.class, Color.NAVY, Color.VIOLET, Color.MAROON, SacramentalWine.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
         BaseMod.addPotion(SneckoPowersPotion.class, Color.CYAN, Color.TAN, Color.BLUE, SneckoPowersPotion.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
+        BaseMod.addPotion(PhaseSkip.class, Color.CYAN, Color.PURPLE, Color.BLUE, PhaseSkip.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
+
+        BaseMod.addPotion(CultistsDelight.class, Color.BLUE, Color.NAVY, Color.YELLOW, CultistsDelight.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(CultistsDelight.POTION_ID);

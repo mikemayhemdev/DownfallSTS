@@ -165,8 +165,8 @@
     "awakened:ReverseRitualPower": {
       "NAME": "Awakened Form",
       "DESCRIPTIONS": [
-        "At the end of your turn, lose #b",
-        " #yStrength [REMOVE_SPACE]."
+        "At the start of your turn, gain #b",
+        " #yRitual [REMOVE_SPACE]."
       ]
     },
   "awakened:EnsorcelatePower": {

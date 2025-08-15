@@ -16,9 +16,8 @@ public class DeathCoil extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, 13, 6, , , ,
 
     public DeathCoil() {
-        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 6;
-        baseMagicNumber = magicNumber = 3;
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseMagicNumber = magicNumber = 7;
         loadJokeCardImage(this, makeBetaCardPath(DeathCoil.class.getSimpleName() + ".png"));
     }
 
@@ -27,13 +26,11 @@ public class DeathCoil extends AbstractAwakenedCard {
         if (m != null) {
             this.addToTop(new VFXAction(new HemokinesisEffect(p.hb.cX, p.hb.cY, m.hb.cX, m.hb.cY), 0.5F));
         }
-        dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         this.addToBot(new ApplyPowerAction(m, p, new ManaburnPower(m, this.magicNumber), this.magicNumber));
         this.addToBot(new ApplyPowerAction(p, p, new Drained(p, p, 1), 1));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
-        upgradeDamage(2);
+        upgradeMagicNumber(3);
     }
 }

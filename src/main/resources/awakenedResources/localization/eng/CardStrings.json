@@ -5,11 +5,11 @@
   },
   "awakened:BurningStudy": {
     "NAME": "Burning Study",
-    "DESCRIPTION": "Retain. NL Gain !M! Strength."
+    "DESCRIPTION": "Retain. NL Gain !M! Strength. NL Apply !awakened:m2! Weak to ALL enemies."
   },
   "awakened:Cryostasis": {
     "NAME": "Cryostasis",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Apply !M! Weak. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust."
   },
   "awakened:Darkleech": {
     "NAME": "Darkleech",
@@ -47,7 +47,8 @@
   },
   "awakened:AwakenedForm": {
     "NAME": "Awakened Form",
-    "DESCRIPTION": "Whenever you play a Power, gain !awakened:m2! Strength. NL At the end of your turn, lose !M! Strength."
+    "DESCRIPTION": "At the start of your turn, gain !M! Ritual.",
+    "UPGRADE_DESCRIPTION": "Now and at the start of your turn, gain !M! Ritual."
   },
   "awakened:Spellbinder": {
     "NAME": "Spellbinder",
@@ -125,7 +126,7 @@
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
-    "DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next turn, add a *Ceremony into your hand.",
+    "DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand.",
     "UPGRADE_DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand."
   },
   "awakened:WaveOfMiasma": {
@@ -160,7 +161,7 @@
   },
   "awakened:DesperatePrayer": {
     "NAME": "Desperate Prayer",
-    "DESCRIPTION": "Add a random Attack, Skill, and Power into your hand. NL awakened:Chant: They cost 0. NL Exhaust."
+    "DESCRIPTION": "Gain !M! *Ceremony+ cards. NL Exhaust."
   },
   "awakened:BirdsEye": {
     "NAME": "Byrd's Eye",
@@ -217,7 +218,8 @@
   },
   "awakened:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] .",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] [E] ."
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",

@@ -41,7 +41,7 @@ public class Virus extends AbstractExpansionCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ExhaustVirusAction(5, false, true, true));
+        this.addToBot(new ExhaustVirusAction(magicNumber, false, true, true));
 
     }
 

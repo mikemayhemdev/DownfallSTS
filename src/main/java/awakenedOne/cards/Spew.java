@@ -21,7 +21,8 @@ public class Spew extends AbstractAwakenedCard {
 
     public Spew() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 9;
+        baseDamage = 13;
+        baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Spew.class.getSimpleName() + ".png"));
     }
 
@@ -34,7 +35,7 @@ public class Spew extends AbstractAwakenedCard {
         int dam = this.damage;
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, dam, damageTypeForTurn), AbstractGameAction.AttackEffect.POISON));
         if (checkVoid()) {
-            atb(new GainEnergyAction(2));
+            atb(new GainEnergyAction(magicNumber));
         }
     }
 
@@ -49,6 +50,6 @@ public class Spew extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeDamage(4);
+        upgradeMagicNumber(1);
     }
 }
