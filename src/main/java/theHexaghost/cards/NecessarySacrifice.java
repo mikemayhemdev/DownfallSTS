@@ -14,6 +14,7 @@ public class NecessarySacrifice extends AbstractHexaCard {
 
     public NecessarySacrifice() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+
         HexaMod.loadJokeCardImage(this, "NecessarySacrifice.png");
     }
 
