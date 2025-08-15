@@ -19,7 +19,7 @@ public class DesperatePrayer extends AbstractAwakenedCard {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(DesperatePrayer.class.getSimpleName() + ".png"));
         exhaust = true;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
         AbstractCard c = new Ceremony();
         c.upgrade();
         this.cardsToPreview = c;
