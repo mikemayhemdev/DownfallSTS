@@ -18,19 +18,10 @@ public class Cryostasis extends AbstractSpellCard {
     public final static String ID = makeID(Cryostasis.class.getSimpleName());
 
     public Cryostasis() {
-        super(ID, 1, CardType.SKILL, CardTarget.ENEMY);
+        super(ID, 1, CardType.SKILL, CardTarget.SELF);
         baseBlock = 9;
-        baseMagicNumber = magicNumber = 1;
         this.setBackgroundTexture("awakenedResources/images/512/bg_skill_awakened.png", "awakenedResources/images/1024/bg_skill_awakened.png");
         loadJokeCardImage(this, makeBetaCardPath(Cryostasis.class.getSimpleName() + ".png"));
-    }
-
-    @Override
-    public void applyPowers() {
-        super.applyPowers();
-        if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
-            target = CardTarget.ALL_ENEMY;
-        }
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
