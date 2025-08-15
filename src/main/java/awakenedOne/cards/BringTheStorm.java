@@ -29,6 +29,6 @@ public class BringTheStorm extends AbstractAwakenedCard {
 
     public void upp() {
         //upgradeDamage(2);
-        upgradeMagicNumber(2);
+        upgradeMagicNumber(3);
     }
 }

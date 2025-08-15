@@ -44,14 +44,13 @@ public class OrbitingSpells {
     public static final ArrayList<String> spells = new ArrayList<>();
     private static final HashMap<String, Texture> cardIcons = new HashMap<>();
     private static final HashMap<String, Color> cardColors = new HashMap<>();
-    private static final Hitbox barBox = new Hitbox(POSITION_X - 75F * Settings.scale, Settings.HEIGHT - POSITION_Y - 350 * Settings.scale, 40 * Settings.scale, 350 * Settings.scale);
+    private static final Hitbox barBox = new Hitbox(POSITION_X - 75F * Settings.scale, Settings.HEIGHT - POSITION_Y - 350 * Settings.scale, 55 * Settings.scale, 55 * Settings.scale * 7);
     private static final Texture unfilledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled.png");
     private static final Texture filledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_filled.png");
     private static final Texture pipComplete = TexLoader.getTexture("awakenedResources/images/ui/pip_complete.png");
     private static final Color defaultNextColor = Color.GREEN.cpy();
     public static ArrayList<AbstractCard> spellCards = new ArrayList<>();
     public static ArrayList<Hitbox> boxes = new ArrayList<>();
-    public static Hitbox barHitbox;
     private static int hoveredCard = -1;
 
     static {
@@ -75,7 +74,6 @@ public class OrbitingSpells {
         //cardColors.put(AphoticShield.ID, GuardianCharacter.cardRenderColor.cpy());
         cardColors.put(ESPSpell.ID, Color.PINK.cpy());
         //cardColors.put(Grimoire.ID, Color.FIREBRICK.cpy());
-        barHitbox = new Hitbox( barBox.x, barBox.y, 55F * Settings.scale, (55 * Settings.yScale) * 6);
 
     }
 
@@ -216,6 +214,7 @@ public class OrbitingSpells {
                 }
             }
         }
+        barBox.update();
     }
 
     public static void postPlayerRender(SpriteBatch sb) {
@@ -254,17 +253,19 @@ public class OrbitingSpells {
             tar.target_y = tar.current_y = Settings.HEIGHT - (POSITION_Y + 100 * Settings.scale);
             spellCards.get(hoveredCard).render(sb);
         }
-        if (barBox.hovered) {
-            // showAll = true;
-            if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
-                TipHelper.renderGenericTip(
-                        (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
-                        uiStrings.TEXT[1],
-                        uiStrings.TEXT[2]);
-            } else {
-                TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
-                        uiStrings.TEXT[1],
-                        uiStrings.TEXT[2]);
+        if (barBox != null) {
+            if (barBox.hovered) {
+                // showAll = true;
+                if ((float) InputHelper.mX < 1400.0F * Settings.scale) {
+                    TipHelper.renderGenericTip(
+                            (float) InputHelper.mX + 60.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                            uiStrings.TEXT[1],
+                            uiStrings.TEXT[2]);
+                } else {
+                    TipHelper.renderGenericTip((float) InputHelper.mX - 350.0F * Settings.scale, (float) InputHelper.mY - 50.0F * Settings.scale,
+                            uiStrings.TEXT[1],
+                            uiStrings.TEXT[2]);
+                }
             }
         }
     }

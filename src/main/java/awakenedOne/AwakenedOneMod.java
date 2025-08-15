@@ -56,6 +56,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static awakenedOne.ui.OrbitingSpells.spellCards;
+import static awakenedOne.util.Wiz.awaken;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
 @SpireInitializer
@@ -66,6 +67,7 @@ public class AwakenedOneMod implements
         PostInitializeSubscriber,
         OnStartBattleSubscriber,
         OnPlayerTurnStartSubscriber,
+        OnCardUseSubscriber,
         PostPlayerUpdateSubscriber,
         SetUnlocksSubscriber {
 
@@ -99,6 +101,7 @@ public class AwakenedOneMod implements
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags UP_NEXT;
     public static boolean awakenedthiscombat = false;
+    public static int powersThisCombat = 0;
     private static String modID = "awakened";
 
     public AwakenedOneMod() {
@@ -329,6 +332,7 @@ public class AwakenedOneMod implements
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         awakenedthiscombat = false;
+        powersThisCombat = 0;
         ConjureAction.conjuresThisCombat = 0;
         OnLoseEnergyPowerPatch.EnergyLostThisCombat = 0;
         OnCreateCardSubscriber.CardsCreatedThisCombat = 0;
@@ -388,4 +392,11 @@ public class AwakenedOneMod implements
         );
     }
 
+    @Override
+    public void receiveCardUsed(AbstractCard abstractCard) {
+        if (abstractCard.type == AbstractCard.CardType.POWER){
+            powersThisCombat++;
+            awaken();
+        }
+    }
 }

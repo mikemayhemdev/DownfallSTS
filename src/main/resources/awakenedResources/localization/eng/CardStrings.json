@@ -17,7 +17,7 @@
   },
   "awakened:DeathCoil": {
     "NAME": "Deathcoil",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Manaburn. NL Next turn, lose [E]."
+    "DESCRIPTION": "Apply !M! awakened:Manaburn. NL Next turn, lose [E]."
   },
   "awakened:ESPSpell": {
     "NAME": "ESP",
@@ -48,7 +48,7 @@
   "awakened:AwakenedForm": {
     "NAME": "Awakened Form",
     "DESCRIPTION": "At the start of your turn, gain !M! Ritual.",
-    "UPGRADE_DESCRIPTION": "Now and at the start of your turn, gain !M! Ritual."
+    "UPGRADE_DESCRIPTION": "Gain 1 Ritual. NL At the start of your turn, gain !M! Ritual."
   },
   "awakened:Spellbinder": {
     "NAME": "Spellbinder",
@@ -187,8 +187,8 @@
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
-    "DESCRIPTION": "Gain X copies of *Plume *Jab. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 copies of *Plume *Jab. NL Exhaust."
+    "DESCRIPTION": "Gain X copies of *Plume *Jab.",
+    "UPGRADE_DESCRIPTION": "Gain X+1 copies of *Plume *Jab."
   },
   "awakened:Murder": {
     "NAME": "Murder",
@@ -407,6 +407,6 @@
   },
   "awakened:Inscribe": {
     "NAME": "Inscribe",
-    "DESCRIPTION": "Choose a Spell. Add a copy to the Spellbook for the rest of combat, and 2 copies into your hand."
+    "DESCRIPTION": "Choose a Spell. Add a copy to the Spellbook for the rest of combat, and a copy into your hand."
   }
 }

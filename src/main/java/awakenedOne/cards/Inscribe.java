@@ -17,11 +17,12 @@ public class Inscribe extends AbstractAwakenedCard {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Inscribe.class.getSimpleName() + ".png"));
+        tags.add(DELVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        atb(new ConjureAction(true, 1));
+        atb(new ConjureAction(true, 1, magicNumber));
     }
 
     public void upp() {
