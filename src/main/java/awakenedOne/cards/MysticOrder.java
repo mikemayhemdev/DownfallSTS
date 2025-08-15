@@ -33,7 +33,7 @@ public class MysticOrder extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        this.exhaust = false;
-        //upgradeMagicNumber(1);
+        //this.exhaust = false;
+        upgradeMagicNumber(1);
     }
 }
