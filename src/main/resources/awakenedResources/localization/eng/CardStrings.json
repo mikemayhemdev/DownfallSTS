@@ -146,7 +146,7 @@
   },
   "awakened:FourthDimension": {
     "NAME": "4th Dimension",
-    "DESCRIPTION": "Exhaust a card. NL fShuffle !M! copies of it into your draw pile. NL Exhaust.",
+    "DESCRIPTION": "Exhaust a card. NL Shuffle !M! copies of it into your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for 4th Dimension."
       ]
