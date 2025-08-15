@@ -335,8 +335,8 @@
   },
   "awakened:Procession": {
     "NAME": "Procession",
-    "DESCRIPTION": "Choose a card in your draw pile. NL Play the chosen card and shuffle in *Voids equal to its cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose a card in your draw pile. NL Play the chosen card and shuffle in *Voids equal to its cost."
+    "DESCRIPTION": "Play a card in your draw pile and shuffle in *Voids equal to its cost. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Play a card in your draw pile and shuffle in *Voids equal to its cost."
   },
   "awakened:SplitWide": {
     "NAME": "Split Wide",
