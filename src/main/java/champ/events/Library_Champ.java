@@ -40,7 +40,7 @@ public class Library_Champ extends AbstractImageEvent {
     private boolean pickCard = false;
     private static final float HP_HEAL_PERCENT = 0.33F;
     private static final float A_2_HP_HEAL_PERCENT = 0.2F;
-    private int healAmt;
+    private final int healAmt;
 
     public Library_Champ() {
         super(NAME, DIALOG_1, "images/events/library.jpg");
@@ -68,7 +68,7 @@ public class Library_Champ extends AbstractImageEvent {
     public void update() {
         super.update();
         if (this.pickCard && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = ((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0)).makeCopy();
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0).makeCopy();
             logMetricObtainCard(ID, "Read", c);
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
@@ -163,7 +163,7 @@ public class Library_Champ extends AbstractImageEvent {
         list.add(DESCRIPTIONS[2]);
         list.add(DESCRIPTIONS[3]);
         list.add(DESCRIPTIONS[4]);
-        return (String)list.get(MathUtils.random(2));
+        return list.get(MathUtils.random(2));
     }
 
     private AbstractRelic getRandomFace() {

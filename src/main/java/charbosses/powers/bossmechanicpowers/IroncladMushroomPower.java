@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
 
 public class IroncladMushroomPower extends AbstractBossMechanicPower {
@@ -28,7 +29,7 @@ public class IroncladMushroomPower extends AbstractBossMechanicPower {
     }
 
     public void updateDescription() {
-        if (expansionContentMod.useSimplerBosses){
+        if (!downfallMod.useLegacyBosses){
             this.description = DESC[1] + amount + DESC[2];
         } else {
             this.description = DESC[0];

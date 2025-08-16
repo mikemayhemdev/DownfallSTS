@@ -80,18 +80,15 @@ public class ArchetypeAct2OmegaSimple extends ArchetypeBaseWatcher {
 //                    AbstractCharBoss.boss.powerhouseTurn = true;
                 break;
             case 9:
-               // addToList(cardsList, new EnJudgment());
-                addToList(cardsList, new EnBlasphemy());
+                addToList(cardsList, new EnTruePeace());
+                addToList(cardsList, new EnTruePeace());
+                addToList(cardsList, new EnTruePeace());
+                //addToList(cardsList, new EnBlasphemy());
                 turn++;
 //                    AbstractCharBoss.boss.powerhouseTurn = true;
                 break;
             case 10:
-                addToList(cardsList, new EnTruePeace());
-                addToList(cardsList, new EnTruePeace());
-                addToList(cardsList, new EnTruePeace());
-                turn = 0;
-                looped = true;
-//                    AbstractCharBoss.boss.powerhouseTurn = true;
+                addToList(cardsList, new EnJudgment());
                 break;
         }
 

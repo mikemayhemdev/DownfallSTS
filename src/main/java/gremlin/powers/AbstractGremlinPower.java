@@ -11,7 +11,7 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import basemod.ReflectionHacks;
 
 public abstract class AbstractGremlinPower extends AbstractPower {
-    private Color renderColor = null;
+    private final Color renderColor = null;
 
     static String getID(String ID){
         return "Gremlin:"+ID;
@@ -31,7 +31,7 @@ public abstract class AbstractGremlinPower extends AbstractPower {
             sb.draw(region48, x - (float)region48.packedWidth / 2.0f, y - (float)region48.packedHeight / 2.0f, (float)region48.packedWidth / 2.0f, (float)region48.packedHeight / 2.0f, region48.packedWidth, region48.packedHeight, Settings.scale, Settings.scale, 0.0f);
         }
         @SuppressWarnings("unchecked")
-        ArrayList<AbstractGameEffect> effectList = (ArrayList<AbstractGameEffect>)ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
+        ArrayList<AbstractGameEffect> effectList = ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
         for (AbstractGameEffect e : effectList) {
             e.render(sb, x, y);
         }

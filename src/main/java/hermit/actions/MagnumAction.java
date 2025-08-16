@@ -36,13 +36,13 @@ import java.util.Iterator;
 public class MagnumAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
-    private AbstractCard magnumcard;
-    private boolean isRandom;
-    private boolean endTurn;
+    private final AbstractPlayer p;
+    private final AbstractCard magnumcard;
+    private final boolean isRandom;
+    private final boolean endTurn;
     public static int numDiscarded;
     private static final float DURATION;
-    private DamageInfo info;
+    private final DamageInfo info;
 
 
     public MagnumAction(AbstractCreature target, DamageInfo info, AbstractCard magnumcard) {

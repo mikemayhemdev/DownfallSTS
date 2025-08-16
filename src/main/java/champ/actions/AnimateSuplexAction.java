@@ -11,7 +11,7 @@ public class AnimateSuplexAction extends AbstractGameAction
 {
     private boolean called = false;
     private boolean flipped = false;
-    private AbstractMonster mo;
+    private final AbstractMonster mo;
 
     public AnimateSuplexAction(AbstractMonster m)
     {

@@ -61,7 +61,7 @@ public class CharBossDefect extends AbstractCharBoss {
             this.currentHealth -= 100;
             downfallMod.overrideBossDifficulty = false;
         } else
-            if (expansionContentMod.useSimplerBosses){
+            if (!downfallMod.useLegacyBosses){
                 switch (AbstractDungeon.actNum) {
                     case 1:
                         archetype = new ArchetypeAct1VoidsSimple();

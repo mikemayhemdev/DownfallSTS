@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
 
 public class EnPowerThrough extends AbstractBossCard {
@@ -32,7 +33,7 @@ public class EnPowerThrough extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!expansionContentMod.useSimplerBosses) this.addToBot(new EnemyMakeTempCardInHandAction(new EnWound(), 2));
+        if (downfallMod.useLegacyBosses) this.addToBot(new EnemyMakeTempCardInHandAction(new EnWound(), 2));
         this.addToBot(new GainBlockAction(m, m, this.block));
         if (addWoundsToPlayer) {
             this.addToBot(new MakeTempCardInDiscardAction(new Wound(), 2));

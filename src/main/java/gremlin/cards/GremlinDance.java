@@ -39,10 +39,10 @@ public class GremlinDance extends AbstractGremlinCard {
     private static final int MAGIC = 2;
     private static final int UPGRADE_BONUS = 2;
 
-    private String gremlin;
+    private final String gremlin;
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    private final ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
     public GremlinDance()
     {

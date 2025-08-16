@@ -18,8 +18,8 @@ import gremlin.powers.WizPower;
 
 public class CounterStrikeAction extends AbstractGameAction
 {
-    private AbstractMonster m;
-    private boolean isUpgraded;
+    private final AbstractMonster m;
+    private final boolean isUpgraded;
 
     public CounterStrikeAction(final AbstractMonster m, final int amount, boolean isUpgraded) {
         this.actionType = ActionType.WAIT;

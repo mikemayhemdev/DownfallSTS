@@ -11,10 +11,10 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 public class FlyingDaggerAnyColorEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private float x;
     private float y;
-    private float destY;
-    private float scaleMultiplier;
+    private final float destY;
+    private final float scaleMultiplier;
     private static final float DUR = 0.5F;
-    private TextureAtlas.AtlasRegion img;
+    private final TextureAtlas.AtlasRegion img;
     private boolean playedSound = false;
 
     public FlyingDaggerAnyColorEffect(float x, float y, float fAngle, boolean shouldFlip, Color clr) {

@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.AbstractPower.PowerType;
 
 public class ReduceDebuffsAction extends AbstractGameAction {
-    private AbstractCreature c;
+    private final AbstractCreature c;
 
     public ReduceDebuffsAction(AbstractCreature c, int amount) {
         this.c = c;

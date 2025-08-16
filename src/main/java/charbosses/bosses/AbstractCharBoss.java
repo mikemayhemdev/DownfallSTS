@@ -147,7 +147,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void init() {
         AbstractCharBoss.boss = this;
         this.setHp(this.maxHealth);
-        if (expansionContentMod.useSimplerBosses){
+        if (!downfallMod.useLegacyBosses){
             this.energy.energyMaster = 99;
         } else {
             this.energy.energyMaster = 2;
@@ -295,7 +295,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     @Override
     public void update() {
         super.update();
-        if (!expansionContentMod.useSimplerBosses) {
+        if (downfallMod.useLegacyBosses) {
             for (AbstractRelic r : this.relics) {
                 r.update();
             }
@@ -313,9 +313,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void applyEndOfTurnTriggers() {
         if (hasPower(StunMonsterPower.POWER_ID)) chosenArchetype.turn--;
 
-        if (!expansionContentMod.useSimplerBosses) this.energy.recharge();
+        if (downfallMod.useLegacyBosses) this.energy.recharge();
 
-        if (!expansionContentMod.useSimplerBosses) {
+        if (downfallMod.useLegacyBosses) {
             for (final AbstractPower p : AbstractCharBoss.boss.powers) {
                 p.onEnergyRecharge();
             }
@@ -326,7 +326,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         this.stance.onEndOfTurn();
 
-        if (!expansionContentMod.useSimplerBosses) {
+        if (downfallMod.useLegacyBosses) {
             addToBot(new EnemyDiscardAtEndOfTurnAction());
         /*
         for (final AbstractCard c : this.drawPile.group) {
@@ -351,7 +351,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCard c : hand.group) {
             ((AbstractBossCard) c).lockIntentValues = true;
         }
-        if (!expansionContentMod.useSimplerBosses) this.applyStartOfTurnRelics();
+        if (downfallMod.useLegacyBosses) this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
         this.applyStartOfTurnCards();
         //this.applyStartOfTurnPowers();
@@ -1221,7 +1221,7 @@ public void damage(final DamageInfo info) {
     @Override
     public void die() {
         if (this.currentHealth <= 0) {
-            if (!expansionContentMod.useSimplerBosses) BossMechanicDisplayPanel.resetBossPanel();
+            if (downfallMod.useLegacyBosses) BossMechanicDisplayPanel.resetBossPanel();
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
             onBossVictoryLogic();
@@ -1231,7 +1231,7 @@ public void damage(final DamageInfo info) {
 
         AbstractCharBoss.boss = null;
         AbstractCharBoss.finishedSetup = false;
-        if (!expansionContentMod.useSimplerBosses) relics.clear();
+        if (downfallMod.useLegacyBosses) relics.clear();
         hand.clear();
         /*
         drawPile.clear();
@@ -1640,7 +1640,7 @@ public void damage(final DamageInfo info) {
         if (!this.isDead) {
             this.renderHand(sb);
             this.stance.render(sb);
-            if (!expansionContentMod.useSimplerBosses) {
+            if (downfallMod.useLegacyBosses) {
                 for (AbstractRelic r : this.relics) {
                     r.render(sb);
                 }
@@ -1651,7 +1651,7 @@ public void damage(final DamageInfo info) {
                     o.render(sb);
                 }
             }
-            if (!expansionContentMod.useSimplerBosses)  this.energyPanel.render(sb);
+            if (downfallMod.useLegacyBosses)  this.energyPanel.render(sb);
         }
     }
 

@@ -8,10 +8,10 @@ import com.megacrit.cardcrawl.vfx.PetalEffect;
 public class StanceDanceEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
     private float timer = 0.1F;
     private float timerFlip = 0F;
-    private AbstractCreature owner;
-    private boolean useJump;
-    private boolean usePetals;
-    private boolean useSpotlight;
+    private final AbstractCreature owner;
+    private final boolean useJump;
+    private final boolean usePetals;
+    private final boolean useSpotlight;
     private boolean doubleSpins;
 
     public StanceDanceEffect(AbstractCreature c, boolean jump, boolean petals, boolean spotlight, boolean doubleSpins) {

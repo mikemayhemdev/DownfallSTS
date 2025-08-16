@@ -92,8 +92,6 @@ public class expansionContentMod implements
     public static Texture etherealIcon;
     public static Texture exhaustIcon;
     public static Texture retainIcon;
-
-    public static boolean useSimplerBosses = true;
     public static Texture unplayableIcon;
 
     public expansionContentMod() {

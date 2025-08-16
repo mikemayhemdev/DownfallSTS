@@ -56,14 +56,14 @@ public class ChampChar extends CustomPlayer {
     public float renderscale2 = 2.5F;
 
     public float stanceSwitchAnimTimer = 0.0F;
-    private ArrayList<String> stanceSwitchQueue = new ArrayList<>();
+    private final ArrayList<String> stanceSwitchQueue = new ArrayList<>();
 
 
-    private String atlasURL = "champResources/images/char/mainChar/champ.atlas";
-    private String jsonURL = "champResources/images/char/mainChar/champ.json";
+    private final String atlasURL = "champResources/images/char/mainChar/champ.atlas";
+    private final String jsonURL = "champResources/images/char/mainChar/champ.json";
 
-    private String atlasURL2 = "reskinContent/img/ChampMod/Chan-P/animation/TheChampPlayer.atlas";
-    private String jsonURL2 = "reskinContent/img/ChampMod/Chan-P/animation/TheChampPlayer.json";
+    private final String atlasURL2 = "reskinContent/img/ChampMod/Chan-P/animation/TheChampPlayer.atlas";
+    private final String jsonURL2 = "reskinContent/img/ChampMod/Chan-P/animation/TheChampPlayer.json";
 
     /*
     private String atlasURL2 = "reskinContent/img/HexaghostMod/animation/Hexaghost_self_downfall.atlas";
@@ -71,7 +71,7 @@ public class ChampChar extends CustomPlayer {
     */
 
     public ChampChar(String name, PlayerClass setClass) {
-        super(name, setClass, orbTextures, "champResources/images/char/mainChar/orb/vfx.png", (String) null, (String) null);
+        super(name, setClass, orbTextures, "champResources/images/char/mainChar/orb/vfx.png", null, (String) null);
 
         initializeClass(null,
                 CharacterSelectScreenPatches.characters[4].skins[CharacterSelectScreenPatches.characters[4].reskinCount].SHOULDER1,

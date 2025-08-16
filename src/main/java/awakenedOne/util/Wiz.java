@@ -135,9 +135,13 @@ public class Wiz {
 
     }
 
-    public static void awaken(){
+    public static void awaken() {
+    awaken(false);
+    }
+
+    public static void awaken(boolean instant){
         if (!awakenedthiscombat){
-            if (powersThisCombat >= POWERS_TO_AWAKEN){
+            if (powersThisCombat >= POWERS_TO_AWAKEN || instant){
                 if (AbstractDungeon.player.hasPower(DemonGlyphPower.POWER_ID)) {
                     AwakenButton.awaken(10);
                     att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DemonGlyphPower.POWER_ID));

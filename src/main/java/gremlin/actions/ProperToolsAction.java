@@ -10,7 +10,7 @@ import gremlin.cards.Ward;
 
 public class ProperToolsAction extends AbstractGameAction
 {
-    private AbstractMonster m;
+    private final AbstractMonster m;
 
     public ProperToolsAction(final AbstractMonster m, int amount) {
         this.actionType = ActionType.WAIT;

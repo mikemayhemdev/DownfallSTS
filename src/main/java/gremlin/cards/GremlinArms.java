@@ -45,7 +45,7 @@ public class GremlinArms extends AbstractGremlinCard {
     private boolean hasOptions = true;
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    private final ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
     public GremlinArms()
     {

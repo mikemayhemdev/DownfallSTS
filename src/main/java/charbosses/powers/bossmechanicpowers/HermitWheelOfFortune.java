@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
 
 public class HermitWheelOfFortune extends AbstractBossMechanicPower {
@@ -26,7 +27,7 @@ public class HermitWheelOfFortune extends AbstractBossMechanicPower {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        if (expansionContentMod.useSimplerBosses){
+        if (!downfallMod.useLegacyBosses){
             this.amount = 2;
         } else {
             this.amount = 0;
@@ -37,7 +38,7 @@ public class HermitWheelOfFortune extends AbstractBossMechanicPower {
     }
 
     public void updateDescription() {
-        if (expansionContentMod.useSimplerBosses){
+        if (!downfallMod.useLegacyBosses){
             this.description = DESC[1];
         } else {
             this.description = DESC[0];

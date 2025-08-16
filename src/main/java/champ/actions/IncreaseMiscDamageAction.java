@@ -8,8 +8,8 @@ import java.util.Iterator;
 import java.util.UUID;
 
 public class IncreaseMiscDamageAction extends AbstractGameAction {
-    private int miscIncrease;
-    private UUID uuid;
+    private final int miscIncrease;
+    private final UUID uuid;
 
     public IncreaseMiscDamageAction(UUID targetUUID, int miscValue, int miscIncrease) {
         this.miscIncrease = miscIncrease;

@@ -34,7 +34,7 @@ public class Fortification extends AbstractMonster {
         this.stateData.setMix("Hit", "Idle", 0.1F);
         flipHorizontal= true;
 
-        if (expansionContentMod.useSimplerBosses) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new IroncladFortificationPower(this)));
+        if (!downfallMod.useLegacyBosses) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new IroncladFortificationPower(this)));
     }
 
     @Override

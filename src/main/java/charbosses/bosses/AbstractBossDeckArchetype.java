@@ -87,7 +87,7 @@ public abstract class AbstractBossDeckArchetype {
     */
 
     public void addedPreBattle() {
-        if (!expansionContentMod.useSimplerBosses) initializeBossPanel();
+        if (downfallMod.useLegacyBosses) initializeBossPanel();
     }
 
     public abstract void initializeBonusRelic();

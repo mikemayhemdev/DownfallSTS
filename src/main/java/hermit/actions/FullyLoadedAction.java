@@ -14,8 +14,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.Iterator;
 
 public class FullyLoadedAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private CardType typeToCheck;
+    private final AbstractPlayer p;
+    private final CardType typeToCheck;
 
     public FullyLoadedAction() {
         this.p = AbstractDungeon.player;

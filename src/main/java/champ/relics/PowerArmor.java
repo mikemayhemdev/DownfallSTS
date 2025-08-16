@@ -45,11 +45,7 @@ public class PowerArmor extends CustomRelic implements OnReceivePowerRelic {
                 var1.amount = 0;
             }
 
-            if (var1.amount != 0) {
-                return true;
-            }
-
-            return false;
+            return var1.amount != 0;
         }
 
         return true;

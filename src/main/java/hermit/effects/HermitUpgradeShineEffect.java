@@ -13,8 +13,8 @@ import com.megacrit.cardcrawl.vfx.UpgradeHammerImprintEffect;
 import com.megacrit.cardcrawl.vfx.UpgradeShineParticleEffect;
 
 public class HermitUpgradeShineEffect extends AbstractGameEffect {
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
     private boolean clang1 = false;
     private boolean clang2 = false;
 

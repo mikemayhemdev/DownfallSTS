@@ -19,7 +19,7 @@ import java.util.Collections;
 import java.util.Random;
 
 public class GremlinSwapAction extends AbstractGameAction {
-    private static UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Gremlin:Swap");
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString("Gremlin:Swap");
 
     private GremlinStandby gremlin;
     private boolean fromRelic = false;

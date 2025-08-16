@@ -36,11 +36,7 @@ public class Horseshoe extends CustomRelic implements OnReceivePowerRelic{
             this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             flash();
 
-            if (var1.amount != 0) {
-                return true;
-            }
-
-            return false;
+            return var1.amount != 0;
         }
 
         return true;

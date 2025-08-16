@@ -28,7 +28,7 @@ public class EnRoughhouse extends AbstractHermitBossCard {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/roughhouse.png", 3, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEFEND);
         this.baseDamage = 24;
         this.baseBlock = 20;
-        if(!expansionContentMod.useSimplerBosses) modifyCostForCombat(-3);
+        if(downfallMod.useLegacyBosses) modifyCostForCombat(-3);
         tags.add(downfallMod.CHARBOSS_DEADON);
     }
 

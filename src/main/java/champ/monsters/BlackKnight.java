@@ -44,17 +44,17 @@
        public static final int SLAP_DMG = 12;
        public static final int A_2_SLASH_DMG = 18;
        public static final int A_2_SLAP_DMG = 14;
-       private int slashDmg;
-       private int executeDmg;
-       private int slapDmg;
-       private int blockAmt;
+       private final int slashDmg;
+       private final int executeDmg;
+       private final int slapDmg;
+       private final int blockAmt;
        private static final int DEBUFF_AMT = 2;
        private static final int EXEC_COUNT = 2;
        private static final int FORGE_AMT = 5;
        private static final int BLOCK_AMT = 15;
        private static final int A_9_FORGE_AMT = 6;
-       private static final int A_9_BLOCK_AMT = 18; private static final int A_19_FORGE_AMT = 7; private static final int A_19_BLOCK_AMT = 20; private static final int STR_AMT = 2; private static final int A_4_STR_AMT = 3; private static final int A_19_STR_AMT = 4; private int strAmt; private int forgeAmt; private int numTurns = 0;
-       private int forgeTimes = 0; private int forgeThreshold = 2;
+       private static final int A_9_BLOCK_AMT = 18; private static final int A_19_FORGE_AMT = 7; private static final int A_19_BLOCK_AMT = 20; private static final int STR_AMT = 2; private static final int A_4_STR_AMT = 3; private static final int A_19_STR_AMT = 4; private final int strAmt; private final int forgeAmt; private int numTurns = 0;
+       private int forgeTimes = 0; private final int forgeThreshold = 2;
        private boolean thresholdReached = false; private boolean firstTurn = true;
     
        public BlackKnight() {
@@ -151,7 +151,7 @@
                 
                 
                        AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player,
-                                 (DamageInfo)this.damage.get(0), AbstractGameAction.AttackEffect.NONE));
+                               this.damage.get(0), AbstractGameAction.AttackEffect.NONE));
                        break;
                  case 2:
                        AbstractDungeon.actionManager.addToBottom(new com.megacrit.cardcrawl.actions.common.GainBlockAction(this, this, this.blockAmt));
@@ -171,7 +171,7 @@
                 
                 
                        AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player,
-                                 (DamageInfo)this.damage.get(1), AbstractGameAction.AttackEffect.NONE));
+                               this.damage.get(1), AbstractGameAction.AttackEffect.NONE));
                 
                        AbstractDungeon.actionManager.addToBottom(new VFXAction(new GoldenSlashEffect(AbstractDungeon.player.hb.cX + 60.0F * Settings.scale, AbstractDungeon.player.hb.cY, true), vfxSpeed));
                 
@@ -181,13 +181,13 @@
                 
                 
                        AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player,
-                                 (DamageInfo)this.damage.get(1), AbstractGameAction.AttackEffect.NONE));
+                               this.damage.get(1), AbstractGameAction.AttackEffect.NONE));
                        break;
                  case 4:
                        AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_CHAMP_SLAP"));
                        AbstractDungeon.actionManager.addToBottom(new AnimateFastAttackAction(this));
                        AbstractDungeon.actionManager.addToBottom(new DamageAction(AbstractDungeon.player,
-                                 (DamageInfo)this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+                               this.damage.get(2), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new com.megacrit.cardcrawl.powers.FrailPower(AbstractDungeon.player, 2, true), 2));
                 
                 
@@ -260,7 +260,7 @@
                  }
         
              if ((!lastMove((byte)3)) && (!lastMoveBefore((byte)3)) && (this.thresholdReached)) {
-                   setMove(EXECUTE_NAME, (byte)3, AbstractMonster.Intent.ATTACK, ((DamageInfo)this.damage.get(1)).base, 2, true);
+                   setMove(EXECUTE_NAME, (byte)3, AbstractMonster.Intent.ATTACK, this.damage.get(1).base, 2, true);
                    return;
                  }
         
@@ -294,14 +294,14 @@
         
         
              if ((!lastMove((byte)4)) && (num <= 55)) {
-                   setMove(SLAP_NAME, (byte)4, AbstractMonster.Intent.ATTACK_DEBUFF, ((DamageInfo)this.damage.get(2)).base);
+                   setMove(SLAP_NAME, (byte)4, AbstractMonster.Intent.ATTACK_DEBUFF, this.damage.get(2).base);
                    return;
                  }
         
              if (!lastMove((byte)1)) {
-                   setMove((byte)1, AbstractMonster.Intent.ATTACK, ((DamageInfo)this.damage.get(0)).base);
+                   setMove((byte)1, AbstractMonster.Intent.ATTACK, this.damage.get(0).base);
                  } else {
-                   setMove(SLAP_NAME, (byte)4, AbstractMonster.Intent.ATTACK_DEBUFF, ((DamageInfo)this.damage.get(2)).base);
+                   setMove(SLAP_NAME, (byte)4, AbstractMonster.Intent.ATTACK_DEBUFF, this.damage.get(2).base);
                  }
            }
     

@@ -17,7 +17,7 @@ import hermit.characters.hermit;
 public class HermitEyeParticle extends AbstractGameEffect {
     private float x;
     private float y;
-    private AtlasRegion img;
+    private final AtlasRegion img;
     public AbstractCreature parent;
     public Skeleton skeleton;
     private hermit hermitParent;

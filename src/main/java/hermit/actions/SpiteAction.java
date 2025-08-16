@@ -14,7 +14,7 @@ import hermit.powers.Rugged;
 import java.util.Iterator;
 
 public class SpiteAction extends AbstractGameAction {
-    private float startingDuration;
+    private final float startingDuration;
 
     public SpiteAction() {
         this.actionType = ActionType.WAIT;

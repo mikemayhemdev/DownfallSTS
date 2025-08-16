@@ -11,13 +11,13 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 public class HermitVictoryMoon extends AbstractGameEffect {
 
     // Settings
-    private float duration;
+    private final float duration;
 
-    private float x;
-    private float y;
+    private final float x;
+    private final float y;
 
-    private static Texture texture = new Texture("hermitResources/images/ending/red_moon.png");
-    private static Texture texture_glow = new Texture("hermitResources/images/ending/moon_glow.png");
+    private static final Texture texture = new Texture("hermitResources/images/ending/red_moon.png");
+    private static final Texture texture_glow = new Texture("hermitResources/images/ending/moon_glow.png");
 
     public static float alpha = 0;
     private static float wiggle = 0;
@@ -38,7 +38,7 @@ public class HermitVictoryMoon extends AbstractGameEffect {
         alpha = 0;
 
         // how big
-        this.scale = 1f * Settings.scale;
+        this.scale = Settings.scale;
     }
 
     @Override

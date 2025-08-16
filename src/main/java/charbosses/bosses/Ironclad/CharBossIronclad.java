@@ -73,7 +73,7 @@ public class CharBossIronclad extends AbstractCharBoss {
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else
-            if (expansionContentMod.useSimplerBosses) {
+            if (!downfallMod.useLegacyBosses) {
             switch (AbstractDungeon.actNum) {
                 case 1:
                     archetype = new ArchetypeAct1StatusesSimple();

@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.vfx.WallopEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class PreciseThrustAction extends AbstractGameAction {
-    private DamageInfo info;
+    private final DamageInfo info;
 
     public PreciseThrustAction(AbstractCreature target, DamageInfo info) {
         this.info = info;

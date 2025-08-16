@@ -18,7 +18,7 @@ import hermit.powers.ReprievePower;
 import java.util.Iterator;
 
 public class ReprieveAction extends AbstractGameAction {
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
     private int totalcards = 0;
     int curseTreshold = 0;
 

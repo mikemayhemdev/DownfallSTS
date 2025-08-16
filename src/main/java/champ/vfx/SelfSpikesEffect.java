@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class SelfSpikesEffect extends AbstractGameEffect {
-    private boolean mute;
-    private float scale;
-    private int spikeCount;
+    private final boolean mute;
+    private final float scale;
+    private final int spikeCount;
 
     public SelfSpikesEffect(Color clr, int count, boolean noAudio, float size) {
         mute = noAudio;

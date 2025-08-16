@@ -205,10 +205,7 @@ public abstract class AbstractChampCard extends AbstractDownfallCard {
         ChampMod.finishersThisCombat++; //If there is a finishers this combat problem, maybe look here
 
         if (!AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
-            boolean leaveStance = true;
-            if (noExit || AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
-                leaveStance = false;
-            }
+            boolean leaveStance = !noExit && !AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID);
             if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
                 SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
                 if (SignatureMovePatch.inSignatureMove.get(this)) {
@@ -272,7 +269,7 @@ public abstract class AbstractChampCard extends AbstractDownfallCard {
             if (p.hasRelic(SignatureFinisher.ID)){
                 if ((((SignatureFinisher)p.getRelic(SignatureFinisher.ID)).card.uuid == this.uuid)){
                     bottled = true;
-                };
+                }
             }
             if (!bottled) {
                 if ((AbstractDungeon.player.stance instanceof NeutralStance)) {

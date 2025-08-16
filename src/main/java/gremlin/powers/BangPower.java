@@ -58,7 +58,6 @@ public class BangPower extends AbstractGremlinPower implements ConditionalModify
 
     @Override
     public void stackPower(int stackAmount) {
-        return;
     }
 
     @Override

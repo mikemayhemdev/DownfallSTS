@@ -106,7 +106,7 @@ public class ItchyTrigger extends AbstractDynamicCard {
                     AbstractCard cc = (AbstractCard)var9.next();
                 }
 
-                c = (AbstractCard)groupCopy.get(AbstractDungeon.cardRandomRng.random(0, groupCopy.size() - 1));
+                c = groupCopy.get(AbstractDungeon.cardRandomRng.random(0, groupCopy.size() - 1));
             }
 
             if (c != null) {

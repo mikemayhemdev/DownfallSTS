@@ -34,7 +34,7 @@ public class ResolvePower extends AbstractPower implements CloneablePowerInterfa
         this.updateDescription();
     }
 
-    private int strengthGrantedByResolve = 0;
+    private final int strengthGrantedByResolve = 0;
 
     /*
     @Override

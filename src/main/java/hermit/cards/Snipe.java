@@ -32,7 +32,7 @@ public class Snipe extends AbstractDynamicCard {
 
     private static final int COST = 0;
 
-    private int SnipeAmount = 1;
+    private final int SnipeAmount = 1;
 
     // /STAT DECLARATION/
 

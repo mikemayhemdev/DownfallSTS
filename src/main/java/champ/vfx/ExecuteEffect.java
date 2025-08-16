@@ -4,10 +4,10 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 
 public class ExecuteEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
-    private float timer = 0.1F;
-    private float timerFlip = 0F;
-    private AbstractCreature owner;
-    private boolean useJump;
+    private final float timer = 0.1F;
+    private final float timerFlip = 0F;
+    private final AbstractCreature owner;
+    private final boolean useJump;
 
     public ExecuteEffect(AbstractCreature c, boolean jump) {
         this.duration = .65F;

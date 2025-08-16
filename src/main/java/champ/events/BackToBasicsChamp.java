@@ -44,8 +44,8 @@ public class BackToBasicsChamp extends AbstractImageEvent {
     }
 
     private BackToBasicsChamp.CUR_SCREEN screen;
-    private List<String> cardsUpgraded;
-    private ArrayList<AbstractCard> cardsToRemove;
+    private final List<String> cardsUpgraded;
+    private final ArrayList<AbstractCard> cardsToRemove;
 
     public BackToBasicsChamp() {
         super(NAME, DIALOG_1, "images/events/backToBasics.jpg");

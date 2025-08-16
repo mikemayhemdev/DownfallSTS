@@ -105,7 +105,7 @@ public class CharBossWatcher extends AbstractCharBoss {
         } else
 
 
-        if (expansionContentMod.useSimplerBosses) {
+        if (!downfallMod.useLegacyBosses) {
             switch (AbstractDungeon.actNum) {
                 case 1:
                     archetype = new ArchetypeAct1StanceDanceSimple();

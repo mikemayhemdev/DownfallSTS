@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 
 public class EatArmorAction extends AbstractGameAction
 {
-    private AbstractCreature c;
+    private final AbstractCreature c;
 
     public EatArmorAction(AbstractCreature c) {
         this.c = c;
