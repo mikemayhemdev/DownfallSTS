@@ -47,7 +47,7 @@ public class WorldOfGoop_Evil extends AbstractImageEvent {
         }
 
         //this.imageEventText.setDialogOption(OPTIONS[0] + (this.gold+50) * 3 + OPTIONS[3], new Icky());
-        this.imageEventText.setDialogOption(OPTIONS[1] + (this.gold+25) * 2 + OPTIONS[4], new Icky());
+        this.imageEventText.setDialogOption(OPTIONS[1] + (this.gold+10) * 2 + OPTIONS[4], new Icky());
         this.imageEventText.setDialogOption(OPTIONS[2] + this.gold + OPTIONS[5], new Icky());
         this.imageEventText.setDialogOption(OPTIONS[6]);
     }

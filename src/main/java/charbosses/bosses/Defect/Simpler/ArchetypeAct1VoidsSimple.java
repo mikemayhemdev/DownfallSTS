@@ -19,7 +19,7 @@ public class ArchetypeAct1VoidsSimple extends ArchetypeBaseDefect {
 
     public ArchetypeAct1VoidsSimple() {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");
-        maxHPModifier += 102;
+        maxHPModifier += 105;
         actNum = 1;
     }
 

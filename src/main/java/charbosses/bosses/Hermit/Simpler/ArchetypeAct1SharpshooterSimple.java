@@ -28,7 +28,7 @@ public class ArchetypeAct1SharpshooterSimple extends ArchetypeBaseIronclad {
     public ArchetypeAct1SharpshooterSimple() {
         super("HERMIT_SHARPSHOOTER_ARCHETYPE", "Dead On");
 
-        maxHPModifier += 95;
+        maxHPModifier += 98;
         actNum = 1;
     }
 

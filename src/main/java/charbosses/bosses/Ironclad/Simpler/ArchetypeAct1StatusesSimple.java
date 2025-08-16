@@ -13,7 +13,7 @@ public class ArchetypeAct1StatusesSimple extends ArchetypeBaseIronclad {
     public ArchetypeAct1StatusesSimple() {
         super("IC_STATUS_ARCHETYPE", "Status");
 
-        maxHPModifier += 60;
+        maxHPModifier += 70;
         actNum = 1;
     }
 

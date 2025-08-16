@@ -28,7 +28,7 @@ public class ArchetypeAct2ClawSimple extends ArchetypeBaseDefect {
     public ArchetypeAct2ClawSimple() {
         super("DF_ARCHETYPE_CLAW", "Claw");
 
-        maxHPModifier += 192;
+        maxHPModifier += 195;
         actNum = 2;
     }
 

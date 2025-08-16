@@ -15,7 +15,7 @@ public class ArchetypeAct3BasicsSimple extends ArchetypeBaseIronclad {
     public ArchetypeAct3BasicsSimple() {
         super("HERMIT_DOOMSDAY_ARCHETYPE", "Doomsday");
 
-        maxHPModifier += 363;
+        maxHPModifier += 368;
         actNum = 3;
     }
 
