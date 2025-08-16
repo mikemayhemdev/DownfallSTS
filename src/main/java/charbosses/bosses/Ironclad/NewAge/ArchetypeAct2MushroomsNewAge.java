@@ -39,7 +39,7 @@ public class ArchetypeAct2MushroomsNewAge extends ArchetypeBaseIronclad {
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IroncladMushroomPower(p)));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new IroncladMushroomPower(p, 1)));
     }
 
 

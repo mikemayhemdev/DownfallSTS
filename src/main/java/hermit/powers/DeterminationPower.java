@@ -60,7 +60,7 @@ public class DeterminationPower extends AbstractPower implements CloneablePowerI
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source)
     {
         if (power.type==PowerType.DEBUFF)
-            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, amount), amount));
+            this.addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
 
         return true;
     }

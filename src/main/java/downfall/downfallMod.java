@@ -196,7 +196,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static boolean crossoverModCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
-    public static boolean normalMapLayout = true;
+    public static boolean normalMapLayout = false;
     public static boolean sneckoNoModCharacters = false;
     public static boolean useIconsForAppliedProperties = false;
     public static boolean DeterministicConjure = true;
@@ -248,6 +248,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static AbstractCard.CardTags CHARBOSS_SETUP;
     @SpireEnum
     public static AbstractCard.CardTags DOWNFALL_CURSE;
+    @SpireEnum
+    public static AbstractCard.CardTags CHARBOSS_DEADON;
 
     public static final boolean EXPERIMENTAL_FLIP = false;
     public static Settings.GameLanguage[] SupportedLanguages = {

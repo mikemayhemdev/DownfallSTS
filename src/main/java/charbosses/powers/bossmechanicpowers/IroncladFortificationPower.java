@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import expansioncontent.expansionContentMod;
 
 import static charbosses.bosses.Ironclad.NewAge.ArchetypeAct3BlockNewAge.FORTIFICATION_AMOUNT;
 
@@ -29,7 +30,11 @@ public class IroncladFortificationPower extends AbstractBossMechanicPower {
     }
 
     public void updateDescription() {
-        this.description = DESC[0] + FORTIFICATION_AMOUNT + DESC[1];
+        if (expansionContentMod.useSimplerBosses){
+            this.description = DESC[2];
+        } else {
+            this.description = DESC[0] + FORTIFICATION_AMOUNT + DESC[1];
+        }
     }
 
     static {

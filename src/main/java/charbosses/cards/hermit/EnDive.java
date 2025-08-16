@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
+import downfall.downfallMod;
 import hermit.cards.Dive;
 import hermit.cards.GhostlyPresence;
 import hermit.characters.hermit;
@@ -24,6 +25,7 @@ public class EnDive extends AbstractHermitBossCard {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/dive.png", 1, cardStrings.DESCRIPTION, CardType.SKILL, hermit.Enums.COLOR_YELLOW, CardRarity.COMMON, CardTarget.SELF, AbstractMonster.Intent.DEFEND_BUFF);
         this.baseBlock = 8;
         baseMagicNumber = magicNumber = 1;
+        tags.add(downfallMod.CHARBOSS_DEADON);
     }
 
     @Override
