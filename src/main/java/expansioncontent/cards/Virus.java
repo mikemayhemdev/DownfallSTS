@@ -34,7 +34,7 @@ public class Virus extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY_AUTOMATON);
         tags.add(expansionContentMod.STUDY);
         cardsToPreview = new MajorBeam();
-        baseMagicNumber = MAGIC;
+        baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;
 
         loadJokeCardImage(this, "Virus.png");
