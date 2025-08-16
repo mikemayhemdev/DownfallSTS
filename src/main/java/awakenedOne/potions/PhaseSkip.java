@@ -36,7 +36,7 @@ public class PhaseSkip extends CustomPotion {
 
     public void use(AbstractCreature target) {
         if (AwakenedOneMod.awakenedthiscombat == false) {
-            AbstractDungeon.actionManager.addToTop(new VFXAction(target, new IntenseZoomEffect(target.hb.cX, target.hb.cY, true), 0.05F, true));
+            AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new IntenseZoomEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, true), 0.05F, true));
             AbstractDungeon.actionManager.addToTop(new SFXAction("VO_AWAKENEDONE_1"));
             awaken();
             OrbitingSpells.upgradeall();
