@@ -9,7 +9,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 
 public class ShivPerCardPlayedAction extends AbstractGameAction
 {
-    private boolean upgraded;
+    private final boolean upgraded;
 
     public ShivPerCardPlayedAction(boolean upgraded) {
         this.actionType = ActionType.CARD_MANIPULATION;

@@ -20,7 +20,7 @@ public class CampfireRestPatch {
             if (ModHelper.isModEnabled(NightTerrors.ID)) {
                 gremlinMob.mobState.setToMax(gremlinMob.maxHealth);
             } else {
-                int toHeal = (Integer)ReflectionHacks.getPrivate(__instance, CampfireSleepEffect.class, "healAmount");
+                int toHeal = ReflectionHacks.getPrivate(__instance, CampfireSleepEffect.class, "healAmount");
                 gremlinMob.mobState.campfireHeal(toHeal, gremlinMob.maxHealth);
             }
             if (gremlinMob.canRez()) {

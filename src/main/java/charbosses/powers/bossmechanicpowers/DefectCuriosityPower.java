@@ -41,7 +41,7 @@ public class DefectCuriosityPower extends AbstractBossMechanicPower implements O
     }
 
     public void updateDescription() {
-        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[2]);
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {

@@ -18,9 +18,9 @@ public class ScrapOozePatch {
     {
         public static void Postfix(ScrapOoze __instance) {
             if (AbstractDungeon.player instanceof GremlinCharacter) {
-                int dmg = (int) ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "dmg");
+                int dmg = ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "dmg");
                 dmg = (dmg + 4) / 5; // Divided by 5 rounded up
-                int relicObtainChance = (int) ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "relicObtainChance");
+                int relicObtainChance = ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "relicObtainChance");
                 __instance.imageEventText.updateDialogOption(0, strings.OPTIONS[0] + dmg + ScrapOoze.OPTIONS[1] + relicObtainChance + ScrapOoze.OPTIONS[2]);
             }
         }
@@ -34,7 +34,7 @@ public class ScrapOozePatch {
         )
         public static void Insert(ScrapOoze __instance, int buttonPressed){
             if (AbstractDungeon.player instanceof GremlinCharacter) {
-                int dmg = (int) ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "dmg");
+                int dmg = ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "dmg");
                 realDmg = dmg;
                 dmg = (dmg + 4) / 5; // Divided by 5 rounded up
                 ((GremlinCharacter) AbstractDungeon.player).damageGremlins(dmg);
@@ -64,9 +64,9 @@ public class ScrapOozePatch {
         )
         public static void Insert(ScrapOoze __instance, int buttonPressed) {
             if (AbstractDungeon.player instanceof GremlinCharacter) {
-                int dmg = (int) ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "dmg");
+                int dmg = ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "dmg");
                 dmg = (dmg + 4) / 5; // Divided by 5 rounded up
-                int relicObtainChance = (int) ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "relicObtainChance");
+                int relicObtainChance = ReflectionHacks.getPrivate(__instance, ScrapOoze.class, "relicObtainChance");
                 __instance.imageEventText.updateDialogOption(0, strings.OPTIONS[1] + dmg + ScrapOoze.OPTIONS[1] + relicObtainChance + ScrapOoze.OPTIONS[2]);
             }
         }

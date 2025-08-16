@@ -17,7 +17,7 @@ public class KnowingSkullPatch {
     {
         public static void Postfix(KnowingSkull __instance) {
             if (AbstractDungeon.player instanceof GremlinCharacter) {
-                int dmg = (int) ReflectionHacks.getPrivate(__instance, KnowingSkull.class, "leaveCost");
+                int dmg = ReflectionHacks.getPrivate(__instance, KnowingSkull.class, "leaveCost");
                 dmg = (dmg + 4) / 5; // Divided by 5 rounded up
                 ReflectionHacks.setPrivate(__instance, KnowingSkull.class, "leaveCost", dmg);
             }
@@ -32,7 +32,7 @@ public class KnowingSkullPatch {
         )
         public static void Insert(KnowingSkull __instance, int buttonPressed){
             if (AbstractDungeon.player instanceof GremlinCharacter) {
-                int dmg = (int) ReflectionHacks.getPrivate(__instance, KnowingSkull.class, "leaveCost");
+                int dmg = ReflectionHacks.getPrivate(__instance, KnowingSkull.class, "leaveCost");
                 __instance.imageEventText.updateDialogOption(0, strings.OPTIONS[2] + dmg + KnowingSkull.OPTIONS[1]);
                 __instance.imageEventText.updateDialogOption(1, KnowingSkull.OPTIONS[5] + 90 + strings.OPTIONS[3] + dmg + KnowingSkull.OPTIONS[1]);
                 __instance.imageEventText.updateDialogOption(2, strings.OPTIONS[1] + dmg + KnowingSkull.OPTIONS[1]);
@@ -49,7 +49,7 @@ public class KnowingSkullPatch {
         )
         public static void Insert(KnowingSkull __instance, int buttonPressed){
             if (AbstractDungeon.player instanceof GremlinCharacter) {
-                int dmg = (int) ReflectionHacks.getPrivate(__instance, KnowingSkull.class, "leaveCost");
+                int dmg = ReflectionHacks.getPrivate(__instance, KnowingSkull.class, "leaveCost");
                 ((GremlinCharacter) AbstractDungeon.player).damageGremlins(dmg);
             }
         }

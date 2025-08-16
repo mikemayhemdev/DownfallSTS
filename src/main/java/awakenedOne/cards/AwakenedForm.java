@@ -26,11 +26,8 @@ public class AwakenedForm extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RitualPower(p, magicNumber, true), magicNumber));
-        }
-        //applyToSelfTop(new CuriosityPower(p, secondMagic));
-        applyToSelf(new ReverseRitualPower(magicNumber));
+        applyToSelfTop(new CuriosityPower(p, magicNumber));
+        applyToSelfTop(new RitualPower(p, magicNumber, true));
     }
 
     @Override

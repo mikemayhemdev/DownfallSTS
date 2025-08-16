@@ -20,7 +20,7 @@ public class MysticOrder extends AbstractAwakenedCard {
         this.baseMagicNumber = 2;
         this.magicNumber = this.baseMagicNumber;
         this.tags.add(AwakenedOneMod.DELVE);
-        this.exhaust = true;
+      //  this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(MysticOrder.class.getSimpleName() + ".png"));
     }
 
@@ -33,7 +33,7 @@ public class MysticOrder extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        this.exhaust = false;
-        //upgradeMagicNumber(1);
+        //this.exhaust = false;
+        upgradeMagicNumber(1);
     }
 }

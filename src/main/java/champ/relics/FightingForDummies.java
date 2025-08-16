@@ -33,7 +33,7 @@ public class FightingForDummies extends CustomRelic {
 
     @Override
     public void atTurnStartPostDraw() {
-        if (firstTurn == false) {
+        if (!firstTurn) {
             if (activated) {
                 this.flash();
                 this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));

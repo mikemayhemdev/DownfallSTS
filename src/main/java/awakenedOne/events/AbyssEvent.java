@@ -1,6 +1,6 @@
 package awakenedOne.events;
 
-import awakenedOne.cards.RealityRift;
+import awakenedOne.cards.altDimension.RealityRift;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;

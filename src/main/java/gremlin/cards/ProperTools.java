@@ -38,7 +38,7 @@ public class ProperTools extends AbstractGremlinCard {
 
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    private final ArrayList<AbstractCard> cardsList = new ArrayList<>();
 
     public ProperTools()
     {

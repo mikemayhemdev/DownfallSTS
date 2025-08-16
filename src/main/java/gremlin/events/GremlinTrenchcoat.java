@@ -115,7 +115,7 @@ public class GremlinTrenchcoat extends AbstractImageEvent {
         INTRO,
         COMPLETE;
 
-        private CUR_SCREEN() {
+        CUR_SCREEN() {
         }
     }
 }

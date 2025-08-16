@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import downfall.actions.AbstractXAction;
 
 public class LariatAction extends AbstractXAction {
-    private int boom;
-    private int boom2;
+    private final int boom;
+    private final int boom2;
 
     public LariatAction(int x, int y) {
         boom = x;

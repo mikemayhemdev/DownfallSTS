@@ -1,7 +1,7 @@
-package awakenedOne.cards;
+package awakenedOne.cards.altDimension;
 
 import awakenedOne.actions.GetDimensionCardsAction;
-import awakenedOne.cards.altDimension.*;
+import awakenedOne.cards.AbstractAwakenedCard;
 import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;

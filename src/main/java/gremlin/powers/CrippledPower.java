@@ -22,7 +22,7 @@ public class CrippledPower extends AbstractGremlinPower implements OnReceivePowe
     private static final PowerStrings strings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
     private static final Texture IMG = new Texture(GremlinMod.getResourcePath("powers/crippled.png"));
 
-    private AbstractCreature source;
+    private final AbstractCreature source;
 
     public CrippledPower(AbstractCreature owner, AbstractCreature source, int amount) {
         this.name = strings.NAME;

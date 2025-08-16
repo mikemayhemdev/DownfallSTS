@@ -23,7 +23,7 @@ public class UnforgivingPatch {
             rloc=35
     )
     public static SpireReturn Insert(ApplyPowerAction __instance) {
-        AbstractPower powerToApply = (AbstractPower) ReflectionHacks.getPrivate(__instance, ApplyPowerAction.class, "powerToApply");
+        AbstractPower powerToApply = ReflectionHacks.getPrivate(__instance, ApplyPowerAction.class, "powerToApply");
         if(powerToApply.ID.equals(StrengthPower.POWER_ID) &&
                 __instance.amount < 0 &&
                 __instance.target.hasPower(UnforgivingPower.POWER_ID)){

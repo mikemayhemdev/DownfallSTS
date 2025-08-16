@@ -12,9 +12,9 @@ import downfall.actions.AbstractXAction;
 
 public class SteelEdgeAction extends AbstractXAction {
 
-    private int bonusAmt;
-    private int boom;
-    private int boom2;
+    private final int bonusAmt;
+    private final int boom;
+    private final int boom2;
 
     public SteelEdgeAction(int x, int y, int bonusAmt, AbstractMonster target) {
         this.bonusAmt = bonusAmt;

@@ -18,7 +18,7 @@ import java.util.Iterator;
 public class EclipseAction extends AbstractGameAction {
     private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
     public EclipseAction(int amount) {
         this.p = AbstractDungeon.player;

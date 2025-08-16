@@ -22,13 +22,13 @@ public class HermitTutorials extends FtueTip {
     private static final TutorialStrings tutorialStrings = CardCrawlGame.languagePack.getTutorialString("HermitMod:HermitTutorials");
     public static final String[] txt = tutorialStrings.TEXT;
     public static final String[] LABEL = tutorialStrings.LABEL;
-    private Texture img1;
-    private Texture img2;
+    private final Texture img1;
+    private final Texture img2;
     private Texture img3;
-    private Color screen = Color.valueOf("1c262a00");
+    private final Color screen = Color.valueOf("1c262a00");
     private float x;
-    private float x1;
-    private float x2;
+    private final float x1;
+    private final float x2;
     private float x3;
     private float targetX;
     private float startX;
@@ -37,7 +37,7 @@ public class HermitTutorials extends FtueTip {
     private static String txt1 = txt[0];
     private static String txt2 = txt[1];
 
-    private int closeScreen;
+    private final int closeScreen;
 
 
     public HermitTutorials() {
@@ -125,7 +125,7 @@ public class HermitTutorials extends FtueTip {
 
         FontHelper.renderFontCenteredWidth(sb, FontHelper.panelNameFont, LABEL[2], Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F - 360.0F * Settings.scale, Settings.GOLD_COLOR);
 
-        FontHelper.renderFontCenteredWidth(sb, FontHelper.tipBodyFont, LABEL[3] + Integer.toString(Math.abs(this.currentSlot - 1)) + "/" +
+        FontHelper.renderFontCenteredWidth(sb, FontHelper.tipBodyFont, LABEL[3] + Math.abs(this.currentSlot - 1) + "/" +
                 Math.abs(this.closeScreen - 1) + LABEL[4], Settings.WIDTH / 2.0F, Settings.HEIGHT / 2.0F - 400.0F * Settings.scale, Settings.CREAM_COLOR);
 
         AbstractDungeon.overlayMenu.proceedButton.render(sb);

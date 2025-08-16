@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.potions.AbstractPotion;
 import hermit.patches.EnumPatch;
 
 public class MagnumActionDamage extends AbstractGameAction {
-    private AbstractCreature m;
-    private AbstractPlayer p;
-    private AbstractCard c;
+    private final AbstractCreature m;
+    private final AbstractPlayer p;
+    private final AbstractCard c;
 
     public MagnumActionDamage(AbstractCreature m, AbstractPlayer p, AbstractCard c) {
         this.m = m;

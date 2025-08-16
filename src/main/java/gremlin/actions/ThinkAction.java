@@ -8,9 +8,9 @@ import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 public class ThinkAction
         extends AbstractGameAction
 {
-    private String msg;
+    private final String msg;
     private boolean used = false;
-    private float bubbleDuration;
+    private final float bubbleDuration;
 
     public ThinkAction(String text, float duration, float bubbleDuration)
     {

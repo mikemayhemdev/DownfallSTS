@@ -14,6 +14,8 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
+import expansioncontent.expansionContentMod;
 import hermit.cards.Headshot;
 import hermit.cards.Roughhouse;
 import hermit.characters.hermit;
@@ -26,7 +28,8 @@ public class EnRoughhouse extends AbstractHermitBossCard {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/roughhouse.png", 3, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEFEND);
         this.baseDamage = 24;
         this.baseBlock = 20;
-        modifyCostForCombat(-3);
+        if(downfallMod.useLegacyBosses) modifyCostForCombat(-3);
+        tags.add(downfallMod.CHARBOSS_DEADON);
     }
 
     @Override

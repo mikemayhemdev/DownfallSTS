@@ -34,15 +34,15 @@ public abstract class AbstractChampStance extends AbstractStance {
 
     public Color textColor = new Color(1F, 1F, 1F, 1F);
 
-    public float animAlphaBySlot[] = new float[3];
-    private boolean useBrightTexture[] = new boolean[3];
+    public float[] animAlphaBySlot = new float[3];
+    private final boolean[] useBrightTexture = new boolean[3];
 
 
     public static final float whiteOverlayTimer = .4F;
 
-    private Texture whiteOverlay = TextureLoader.getTexture(HexaMod.makeUIPath("whiteOverlay.png"));
+    private final Texture whiteOverlay = TextureLoader.getTexture(HexaMod.makeUIPath("whiteOverlay.png"));
 
-    private static long sfxId = -1L;
+    private static final long sfxId = -1L;
     public String STANCE_ID = "guardianmod:AbstractMode";
 
     public static Texture bruh = TextureLoader.getTexture(ChampMod.makeUIPath("crushing.png"));
@@ -156,11 +156,12 @@ public abstract class AbstractChampStance extends AbstractStance {
     public Texture getHelperTexture() {
         return bruh;
 
-    };
+    }
+
     public Texture getHelperTextureBright() {
         return bruhB;
 
-    };
+    }
 
     public void update() {
         hitbox2.update();

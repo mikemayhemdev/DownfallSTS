@@ -8,10 +8,10 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import hermit.util.Wiz;
 
 public class DeadOrAliveAction extends AbstractGameAction {
-    private DamageInfo info;
-    private AbstractPlayer p;
-    private int energyOnUse;
-    private boolean freeToPlayOnce;
+    private final DamageInfo info;
+    private final AbstractPlayer p;
+    private final int energyOnUse;
+    private final boolean freeToPlayOnce;
 
     public DeadOrAliveAction(AbstractPlayer p, AbstractCreature target, DamageInfo info, boolean freeToPlayOnce, int energyOnUse) {
         this.info = info;

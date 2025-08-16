@@ -39,7 +39,7 @@ public class DeterminationPower extends AbstractPower implements CloneablePowerI
         type = PowerType.BUFF;
 
         if (this.amount <= 0) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
@@ -60,7 +60,7 @@ public class DeterminationPower extends AbstractPower implements CloneablePowerI
     public boolean onReceivePower(AbstractPower power, AbstractCreature target, AbstractCreature source)
     {
         if (power.type==PowerType.DEBUFF)
-            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, amount), amount));
+            this.addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
 
         return true;
     }

@@ -9,7 +9,7 @@ import gremlin.GremlinMod;
 
 public class PretaliationAction extends AbstractGameAction
 {
-    private AbstractMonster m;
+    private final AbstractMonster m;
 
     public PretaliationAction(final int dmgAmount, final AbstractMonster m) {
         this.actionType = ActionType.WAIT;

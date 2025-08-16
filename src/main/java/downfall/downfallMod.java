@@ -196,9 +196,10 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static boolean crossoverModCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
-    public static boolean normalMapLayout = true;
+    public static boolean normalMapLayout = false;
     public static boolean sneckoNoModCharacters = false;
     public static boolean useIconsForAppliedProperties = false;
+    public static boolean useLegacyBosses = false;
     public static boolean DeterministicConjure = true;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
@@ -216,6 +217,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static final String PROP_ICONS_FOR_APPLIED_PROPERTIES = "useIconsForAppliedProperties";
     public static final String NO_RNG_CONJURE = "RNGlessConjure";
     public static final String NO_BASE_ADJUSTMENTS = "disableBaseGameAdjustments";
+    public static final String LEGACY_BOSSES = "legacyBosses";
 
     public static String Act1BossFaced = "";
     public static String Act2BossFaced = "";
@@ -248,6 +250,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static AbstractCard.CardTags CHARBOSS_SETUP;
     @SpireEnum
     public static AbstractCard.CardTags DOWNFALL_CURSE;
+    @SpireEnum
+    public static AbstractCard.CardTags CHARBOSS_DEADON;
 
     public static final boolean EXPERIMENTAL_FLIP = false;
     public static Settings.GameLanguage[] SupportedLanguages = {
@@ -289,6 +293,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         configDefault.setProperty(PROP_NO_MUSIC, "FALSE");
         configDefault.setProperty(PROP_ICONS_FOR_APPLIED_PROPERTIES, "FALSE");
         configDefault.setProperty(NO_RNG_CONJURE, "TRUE");
+        configDefault.setProperty(LEGACY_BOSSES, "FALSE");
 
 
         loadConfigData();
@@ -377,6 +382,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             config.setBool(PROP_ICONS_FOR_APPLIED_PROPERTIES, useIconsForAppliedProperties);
             config.setBool(NO_RNG_CONJURE, DeterministicConjure);
             config.setBool(NO_BASE_ADJUSTMENTS, disableBaseGameAdjustments);
+            config.setBool(LEGACY_BOSSES, useLegacyBosses);
             config.save();
             GoldenIdol_Evil.save();
         } catch (IOException e) {
@@ -678,15 +684,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             saveData();
         });
 
-        configPos -= configStep;
-        ModLabeledToggleButton NoRNGConjureButton = new ModLabeledToggleButton(configStrings.TEXT[14], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, DeterministicConjure, settingsPanel, (label) -> {
-        }, (button) -> {
-            DeterministicConjure = button.enabled;
-            CardCrawlGame.mainMenuScreen.charSelectScreen.options.clear();
-            CardCrawlGame.mainMenuScreen.charSelectScreen.initialize();
-            saveData();
-        });
-
 //        configPos -= configStep;
 //        ModLabeledToggleButton useIconsForAppliedCardPropertiesBtn = new ModLabeledToggleButton(configStrings.TEXT[13], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, useIconsForAppliedProperties, settingsPanel, (label) -> {
 //        }, (button) -> {
@@ -695,7 +692,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 //        });
 
         settingsPanel.addUIElement(characterCrossoverBtn);
-        settingsPanel.addUIElement(NoRNGConjureButton);
         //settingsPanel.addUIElement(useIconsForAppliedCardPropertiesBtn);
 
         if (!STEAM_MODE) {
@@ -785,6 +781,21 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 saveData();
             });
 
+            configPos -= configStep;
+            ModLabeledToggleButton NoRNGConjureButton = new ModLabeledToggleButton(configStrings.TEXT[14], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, DeterministicConjure, settingsPanel, (label) -> {
+            }, (button) -> {
+                DeterministicConjure = button.enabled;
+                saveData();
+            });
+
+            configPos -= configStep;
+            ModLabeledToggleButton legacyBossesButton = new ModLabeledToggleButton(configStrings.TEXT[16], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, useLegacyBosses, settingsPanel, (label) -> {
+            }, (button) -> {
+                useLegacyBosses = button.enabled;
+                saveData();
+            });
+
+
             settingsPanel.addUIElement(contentSharingBtnCurses);
             settingsPanel.addUIElement(contentSharingBtnEvents);
             settingsPanel.addUIElement(contentSharingBtnPotions);
@@ -797,6 +808,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             settingsPanel.addUIElement(unlockAllSkinBtn);
             settingsPanel.addUIElement(characterModCrossoverBtn);
             settingsPanel.addUIElement(noBaseAdjustmentsBtn);
+            settingsPanel.addUIElement(NoRNGConjureButton);
+            settingsPanel.addUIElement(legacyBossesButton);
         }
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
@@ -817,11 +830,12 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 sneckoNoModCharacters = config.getBool(PROP_SNECKO_MODLESS);
                 unlockEverything = config.getBool(PROP_UNLOCK_ALL);
                 noMusic = config.getBool(PROP_NO_MUSIC);
+                useIconsForAppliedProperties = config.getBool(PROP_ICONS_FOR_APPLIED_PROPERTIES);
+                DeterministicConjure = config.getBool(NO_RNG_CONJURE);
+                useLegacyBosses = config.getBool(LEGACY_BOSSES);
             }
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
             crossoverModCharacters = config.getBool(PROP_MOD_CHAR_CROSSOVER);
-            useIconsForAppliedProperties = config.getBool(PROP_ICONS_FOR_APPLIED_PROPERTIES);
-            DeterministicConjure = config.getBool(NO_RNG_CONJURE);
         } catch (Exception e) {
             e.printStackTrace();
             clearData();

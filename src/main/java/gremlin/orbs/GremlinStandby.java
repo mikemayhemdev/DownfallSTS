@@ -24,7 +24,7 @@ public abstract class GremlinStandby extends AbstractOrb {
     public AnimationState state;
 
     public int hp;
-    private int yOffset;
+    private final int yOffset;
 
     public String assetFolder;
     public String animationName;

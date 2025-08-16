@@ -30,7 +30,7 @@ public class EternalPower extends AbstractPower implements CloneablePowerInterfa
         ID = POWER_ID;
 
         this.owner = owner;
-        this.total = amount;
+        total = amount;
         this.amount = amount;
         this.source = source;
 

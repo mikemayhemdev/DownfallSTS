@@ -15,8 +15,8 @@ import java.util.Iterator;
 import java.util.UUID;
 
 public class GoldenBulletAction extends AbstractGameAction {
-    private DamageInfo info;
-    private UUID uuid;
+    private final DamageInfo info;
+    private final UUID uuid;
     int amount;
 
     public GoldenBulletAction(AbstractCreature target, DamageInfo info, int amount, UUID targetUUID) {

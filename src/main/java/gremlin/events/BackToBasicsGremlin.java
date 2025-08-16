@@ -44,9 +44,9 @@ public class BackToBasicsGremlin extends AbstractImageEvent {
     }
 
     private BackToBasicsGremlin.CUR_SCREEN screen;
-    private List<String> cardsUpgraded;
-    private ArrayList<AbstractCard> strikesToRemove;
-    private ArrayList<AbstractCard> defendsToRemove;
+    private final List<String> cardsUpgraded;
+    private final ArrayList<AbstractCard> strikesToRemove;
+    private final ArrayList<AbstractCard> defendsToRemove;
 
     public BackToBasicsGremlin() {
         super(NAME, DIALOG_1, "images/events/backToBasics.jpg");

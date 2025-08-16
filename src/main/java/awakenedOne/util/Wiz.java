@@ -135,17 +135,25 @@ public class Wiz {
 
     }
 
-    public static void awaken(){
+    public static void awaken() {
+    awaken(false);
+    }
+
+    public static void awaken(boolean instant){
         if (!awakenedthiscombat){
-            if (powersThisCombat >= POWERS_TO_AWAKEN){
+            if (powersThisCombat >= POWERS_TO_AWAKEN || instant){
                 if (AbstractDungeon.player.hasPower(DemonGlyphPower.POWER_ID)) {
                     AwakenButton.awaken(10);
                     att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DemonGlyphPower.POWER_ID));
                 }
                 awakenedthiscombat = true;
+
                 if ((AbstractDungeon.player.chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE)) {
-                    Wiz.applyToSelf(new CuriosityPower(AbstractDungeon.player, 1));
+                    //Wiz.applyToSelf(new CuriosityPower(AbstractDungeon.player, 1));
+                    //No effect at this time, if a new one is added later, place it here
                 }
+
+
                 OrbitingSpells.upgradeall();
             }
         }

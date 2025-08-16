@@ -50,6 +50,6 @@ public class EnBeta extends AbstractBossCard {
     }
 
     static {
-        cardStrings = CardCrawlGame.languagePack.getCardStrings("Alpha");
+        cardStrings = CardCrawlGame.languagePack.getCardStrings("Beta");
     }
 }

@@ -29,6 +29,10 @@ public class EnWrathStance extends AbstractEnemyStance {
         return type == DamageType.NORMAL ? damage * 1.5F : damage;
     }
 
+    public float atDamageReceive(float damage, DamageType type) {
+        return type == DamageType.NORMAL ? damage * 1.5F : damage;
+    }
+
     public void updateAnimation() {
         if (AbstractCharBoss.boss != null) {
             if (!Settings.DISABLE_EFFECTS) {

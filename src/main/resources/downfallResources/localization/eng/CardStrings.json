@@ -34,6 +34,78 @@
   },
   "downfall:BossMaintenance": {
     "NAME": "Maintenance",
-    "DESCRIPTION": "*Strikes deal !M! more damage this combat. NL Gain !B! Dexterity. NL This costs 1 more this combat."
+    "DESCRIPTION": "*Strikes deal !M! more damage this combat. NL Gain !B! Dexterity."
+  },
+  "downfall:CuriousRobot": {
+    "NAME": "Curious Robot",
+    "DESCRIPTION": "When your opponent plays a Power, gain 1 Focus. Your Strength affects your Focus."
+  },
+  "downfall:Murderbot": {
+    "NAME": "Energy Thief",
+    "DESCRIPTION": "Whenever you deal unblocked attack damage, add a *Void to your opponent's discard pile."
+  },
+  "downfall:Temptation": {
+    "NAME": "Temptation",
+    "DESCRIPTION": "Shuffle !M! random Powers into your opponent's draw pile."
+  },
+  "downfall:BagOfKnives": {
+    "NAME": "Bag of Knives",
+    "DESCRIPTION": "The first time you play a card that costs 2 or more each turn, gain 2 *Shivs."
+  },
+  "downfall:GiveAntidote": {
+    "NAME": "Mad Scientist",
+    "DESCRIPTION": "Give your opponent an *Antidote."
+  },
+  "downfall:Hallunication": {
+    "NAME": "Hallucination",
+    "DESCRIPTION": "Hide your real location each turn. When you or the illusion are Attacked, the illusion fades."
+  },
+  "downfall:NewToxins": {
+    "NAME": "New Toxins",
+    "DESCRIPTION": "Poison no longer decays, but is blockable and deals damage at the end of turn instead of the start."
+  },
+  "downfall:FeedingFrenzy": {
+    "NAME": "Feeding Frenzy",
+    "DESCRIPTION": "*Reaper also targets ALL *Mushrooms. Gain 1 Strength when you kill your own *Mushroom."
+  },
+  "downfall:StatusMirror": {
+    "NAME": "Magic Mirror",
+    "DESCRIPTION": "Status cards this character generates are added to you instead."
+  },
+  "downfall:EyeForAnEye": {
+    "NAME": "Eye for an Eye",
+    "DESCRIPTION": "If your opponent has played more Attacks than non-Attacks, you are in Wrath. Else, you are in Calm."
+  },
+  "downfall:TruePeace": {
+    "NAME": "True Peace",
+    "DESCRIPTION": "Do nothing. Wait for the inevitable end of all things."
+  },
+  "downfall:EndIsNigh": {
+    "NAME": "End is Nigh",
+    "DESCRIPTION": "Gain !M! Max HP. NL EVERYONE gains 1 Ritual."
+  },
+  "downfall:FleetingFaith": {
+    "NAME": "Fleeting Faith",
+    "DESCRIPTION": "Gain 1 Mantra when your opponent plays a card. Lose 5 at the start of your turn."
+  },
+  "downfall:FaithRewarded": {
+    "NAME": "Faith Rewarded",
+    "DESCRIPTION": "If you enter Divinity, you can never leave it."
+  },
+  "downfall:Hyperfocused": {
+    "NAME": "Deadly Focus",
+    "DESCRIPTION": "Always gain *Dead *On effects. After receiving 10 damage, remove *Dead *On effects for that turn."
+  },
+  "downfall:Arsenal": {
+    "NAME": "Living Arsenal",
+    "DESCRIPTION": "Summon a *Doomed *Dagger."
+  },
+  "downfall:Steady": {
+    "NAME": "Steady",
+    "DESCRIPTION": "*Wrath now increases damage dealt and receive by 50% instead of 100%."
+  },
+  "downfall:Revolver": {
+    "NAME": "Revolver",
+    "DESCRIPTION": "Future turns are dictated by the *Wheel *of *Fate. When attacked, the *Wheel advances one step."
   }
 }

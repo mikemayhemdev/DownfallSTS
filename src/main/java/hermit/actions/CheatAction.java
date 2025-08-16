@@ -19,12 +19,12 @@ import java.util.Iterator;
 public class CheatAction extends AbstractGameAction {
 
     public static final String[] TEXT;
-    private float startingDuration;
-    private AbstractCard cheatcard;
+    private final float startingDuration;
+    private final AbstractCard cheatcard;
     private AbstractCard onlyChoice;
     private boolean onlyBoolean = false;
-    private boolean isdeadon;
-    private int trig_times;
+    private final boolean isdeadon;
+    private final int trig_times;
 
     public CheatAction(int numCards, AbstractHermitCard cheatcard, boolean isdeadon, int trig_times) {
         this.amount = numCards;
@@ -59,7 +59,7 @@ public class CheatAction extends AbstractGameAction {
                 CardGroup tmpGroup = new CardGroup(CardGroupType.UNSPECIFIED);
                 if (this.amount != -1) {
                     for(int i = 0; i < Math.min(this.amount, AbstractDungeon.player.drawPile.size()); ++i) {
-                        tmpGroup.addToTop((AbstractCard)AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
+                        tmpGroup.addToTop(AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - i - 1));
                     }
                 } else {
                     Iterator var5 = AbstractDungeon.player.drawPile.group.iterator();

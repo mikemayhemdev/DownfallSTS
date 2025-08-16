@@ -1,5 +1,6 @@
 package charbosses.cards.hermit;
 
+import basemod.helpers.CardTags;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
 import hermit.cards.Deadeye;
 import hermit.characters.hermit;
 
@@ -23,6 +25,7 @@ public class EnDeadeye extends AbstractHermitBossCard {
         super(ID, cardStrings.NAME, "hermitResources/images/cards/deadeye.png", 1, cardStrings.DESCRIPTION, CardType.ATTACK, hermit.Enums.COLOR_YELLOW, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_BUFF);
         baseDamage = 5;
         baseMagicNumber = magicNumber = 2;
+        tags.add(downfallMod.CHARBOSS_DEADON);
     }
 
     @Override

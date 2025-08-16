@@ -15,7 +15,7 @@ import static hermit.HermitMod.makeID;
 
 public class AttackEffectPatch {
 
-    private static Texture GhostFireTexture = TextureLoader.getTexture("hermitResources/images/vfx/HermitGhostFire.png");
+    private static final Texture GhostFireTexture = TextureLoader.getTexture("hermitResources/images/vfx/HermitGhostFire.png");
 
     @SpirePatch(clz = FlashAtkImgEffect.class, method = "loadImage")
     public static class vfx

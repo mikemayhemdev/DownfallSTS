@@ -8,9 +8,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.UUID;
 
 public class DevastateAction extends com.megacrit.cardcrawl.actions.AbstractGameAction {
-    private int increaseAmount;
-    private DamageInfo info;
-    private UUID uuid;
+    private final int increaseAmount;
+    private final DamageInfo info;
+    private final UUID uuid;
 
     public DevastateAction(AbstractCreature target, DamageInfo info, int incAmount, UUID targetUUID) {
         this.info = info;

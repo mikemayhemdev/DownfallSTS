@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.helpers.GetAllInBattleInstances;
 import java.util.UUID;
 
 public class ModifyDamageAndBlockAction extends AbstractGameAction {
-    private UUID uuid;
+    private final UUID uuid;
 
     public ModifyDamageAndBlockAction(UUID targetUUID, int amount) {
         this.setValues(this.target, this.source, amount);

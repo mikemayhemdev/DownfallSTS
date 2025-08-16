@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.MonsterStrings;
 import downfall.downfallMod;
+import expansioncontent.expansionContentMod;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -86,7 +87,7 @@ public abstract class AbstractBossDeckArchetype {
     */
 
     public void addedPreBattle() {
-        initializeBossPanel();
+        if (downfallMod.useLegacyBosses) initializeBossPanel();
     }
 
     public abstract void initializeBonusRelic();
