@@ -10,9 +10,9 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.patches.EnumPatch;
 
 public class FinalCanterAction extends AbstractGameAction {
-    private AbstractCreature m;
-    private AbstractPlayer p;
-    private AbstractCard c;
+    private final AbstractCreature m;
+    private final AbstractPlayer p;
+    private final AbstractCard c;
     private AttackEffect eff = EnumPatch.HERMIT_GHOSTFIRE;
 
     public FinalCanterAction(AbstractCreature m, AbstractPlayer p, int amount, AbstractCard c, AttackEffect eff) {

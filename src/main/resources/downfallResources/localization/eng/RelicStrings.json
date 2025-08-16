@@ -416,7 +416,8 @@
     "NAME": "Sharpened Fragment",
     "FLAVOR": "Once a broken statue - now a makeshift weapon.",
     "DESCRIPTIONS": [
-      "During Elite and Boss combats, whenever you play a #yPower card, gain #b1 #yStrength [REMOVE_SPACE]."
+      "During Elite and Boss combats, whenever you play a #yPower [REMOVE_SPACE], gain #b",
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "downfall:RedIOU": {
@@ -456,7 +457,7 @@
     "NAME": "Sapphire Heart Blessing",
     "FLAVOR": "The heart is pleased.",
     "DESCRIPTIONS": [
-      "Start Boss combats with #b10 #yTemporary #yHP [REMOVE_SPACE]."
+      "At the start of Boss combats, heal #b10 HP."
     ]
   },
   "downfall:HeartBlessingGreen": {
@@ -470,7 +471,7 @@
     "NAME": "Burden of Knowledge",
     "FLAVOR": "The truth hurts.",
     "DESCRIPTIONS": [
-      "Upon pickup, #rlose #rALL #rHeart #rBlessings and #b10 Max HP. Permanently #yUpgrade #rALL cards #rEVERYWHERE [REMOVE_SPACE]. Start combats with #b1 less #yStrength and #yDexterity [REMOVE_SPACE]."
+      "Upon pickup, #rlose #rALL #rHeart #rBlessings and #b20 Max HP. Permanently #yUpgrade #rALL cards #rEVERYWHERE [REMOVE_SPACE]. Start combats with #b2 less #yStrength and #yDexterity [REMOVE_SPACE]."
     ]
   },
   "downfall:TeleportStone": {
@@ -494,7 +495,7 @@
     "NAME": "Hecktoplasm",
     "FLAVOR": "This blob of slime seems to pulse with the energy of hundreds of souls. No wonder no one wanted it.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. You can no longer gain #ySouls. Breaking Keys costs no #ySouls.",
+      "Gain [E] at the start of your turn. You can no longer gain #ySouls [REMOVE_SPACE]. Breaking Keys costs no #ySouls [REMOVE_SPACE].",
       "Hecktoplasm"
     ]
   },
@@ -502,7 +503,7 @@
     "NAME": "Black Candle",
     "FLAVOR": "The flame shines even brighter from within the darkness.",
     "DESCRIPTIONS": [
-      "#yUnplayable #rCurse cards can now be played. Whenever you play an #yUnplayable #rCurse card, #yExhaust it and lose #b1 HP.",
+      "#yUnplayable #rCurse cards can now be played and playable #rCurses cost #b0 [REMOVE_SPACE]. Whenever you play an #yUnplayable or discounted #rCurse [REMOVE_SPACE], #yExhaust it and lose #b1 HP.",
       "Black Candle"
     ]
   },

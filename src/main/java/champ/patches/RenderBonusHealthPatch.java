@@ -1,6 +1,5 @@
 package champ.patches;
 
-
 import champ.powers.ResolvePower;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;

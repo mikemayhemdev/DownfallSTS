@@ -35,12 +35,11 @@ public class PeekPages extends AbstractExpansionCard {
         this.magicNumber = this.baseMagicNumber;
         this.cardsToPreview = new Insight();
         this.exhaust = true;
-        this.tags.add(expansionContentMod.STUDY);
         loadJokeCardImage(this, "PeekPages.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview.makeStatEquivalentCopy(), magicNumber, true, true));
+        this.addToBot(new MakeTempCardInDrawPileAction(this.cardsToPreview.makeStatEquivalentCopy(), magicNumber, false, true));
 
     }
 

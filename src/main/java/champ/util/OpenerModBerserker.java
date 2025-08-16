@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import slimebound.SlimeboundMod;
 
 public class OpenerModBerserker extends AbstractCardModifier {
 

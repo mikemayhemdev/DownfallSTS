@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package champ;
 
 import champ.powers.CalledShotPower;
@@ -38,8 +33,8 @@ public class TipHelperChamp3 {
     private static boolean isCard;
     private static float drawX;
     private static float drawY;
-    private static ArrayList<String> KEYWORDS;
-    private static ArrayList<PowerTip> POWER_TIPS;
+    private static final ArrayList<String> KEYWORDS;
+    private static final ArrayList<PowerTip> POWER_TIPS;
     private static String HEADER;
     private static String BODY;
     private static AbstractCard card;
@@ -50,7 +45,7 @@ public class TipHelperChamp3 {
     private static final float BOX_EDGE_H;
     private static final float BOX_BODY_H;
     private static final float BOX_W;
-    private static GlyphLayout gl;
+    private static final GlyphLayout gl;
     private static float textHeight;
     private static final float TEXT_OFFSET_X;
     private static final float HEADER_OFFSET_Y;
@@ -138,10 +133,7 @@ public class TipHelperChamp3 {
 
     private static void renderPowerTips(float x, float y, SpriteBatch sb, ArrayList<PowerTip> powerTips) {
         float originalY = y;
-        boolean offsetLeft = false;
-        if (x > (float) Settings.WIDTH / 2.0F) {
-            offsetLeft = true;
-        }
+        boolean offsetLeft = x > (float) Settings.WIDTH / 2.0F;
 
         float offset = 0.0F;
 
@@ -180,7 +172,7 @@ public class TipHelperChamp3 {
     }
 
     public static float calculateAdditionalOffset(ArrayList<PowerTip> powerTips, float hBcY) {
-        return powerTips.isEmpty() ? 0.0F : (1.0F - hBcY / (float) Settings.HEIGHT) * getTallestOffset(powerTips) - (getPowerTipHeight((PowerTip) powerTips.get(0)) + BOX_EDGE_H * 3.15F) / 2.0F;
+        return powerTips.isEmpty() ? 0.0F : (1.0F - hBcY / (float) Settings.HEIGHT) * getTallestOffset(powerTips) - (getPowerTipHeight(powerTips.get(0)) + BOX_EDGE_H * 3.15F) / 2.0F;
     }
 
     public static float calculateToAvoidOffscreen(ArrayList<PowerTip> powerTips, float hBcY) {
@@ -215,7 +207,7 @@ public class TipHelperChamp3 {
             if (!GameDictionary.keywords.containsKey(s)) {
                 logger.info("MISSING: " + s + " in Dictionary!");
             } else {
-                textHeight = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, (String) GameDictionary.keywords.get(s), BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - 7.0F * Settings.scale;
+                textHeight = -FontHelper.getSmartHeight(FontHelper.tipBodyFont, GameDictionary.keywords.get(s), BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING) - 7.0F * Settings.scale;
                 renderBox(sb, s, x, y);
                 y -= textHeight + BOX_EDGE_H * 3.15F;
             }
@@ -279,7 +271,7 @@ public class TipHelperChamp3 {
             FontHelper.renderFontLeftTopAligned(sb, FontHelper.tipHeaderFont, capitalize(TEXT[0]), x + TEXT_OFFSET_X * 2.5F, y + HEADER_OFFSET_Y, Settings.GOLD_COLOR);
         }
 
-        FontHelper.renderSmartText(sb, FontHelper.tipBodyFont, (String) GameDictionary.keywords.get(word), x + TEXT_OFFSET_X, y + BODY_OFFSET_Y, BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING, BASE_COLOR);
+        FontHelper.renderSmartText(sb, FontHelper.tipBodyFont, GameDictionary.keywords.get(word), x + TEXT_OFFSET_X, y + BODY_OFFSET_Y, BODY_TEXT_WIDTH, TIP_DESC_LINE_SPACING, BASE_COLOR);
     }
 
     public static String capitalize(String input) {

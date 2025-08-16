@@ -5,8 +5,6 @@ import automaton.AutomatonTextHelper;
 import basemod.abstracts.AbstractCardModifier;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 
-import static automaton.FunctionHelper.WITH_DELIMITER;
-
 public class EncodeMod extends BronzeCardMod {
 
     public static String ID = "bronze:EncodeModifier";

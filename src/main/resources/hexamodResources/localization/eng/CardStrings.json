@@ -216,7 +216,7 @@
   "hexamod:InfernalForm": {
     "NAME": "Infernal Form",
     "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! hexamod:Intensity. NL At the start of your turn, gain !M! hexamod:Intensity."
+    "UPGRADE_DESCRIPTION": "Now and at the start of your turn, gain !M! hexamod:Intensity."
   },
   "hexamod:Incineration": {
     "NAME": "Incineration",
@@ -228,8 +228,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
-    "DESCRIPTION": "Exhaust 2 cards. NL If they are Attack or Skill, transform them to the opposite type.",
-    "UPGRADE_DESCRIPTION": "Exhaust 2 cards. NL If they are Attack or Skill, transform them to the opposite type and Upgrade them.",
+    "DESCRIPTION": "Exhaust 2 cards. NL If they are Attack or Skill, transform them into the opposite type.",
+    "UPGRADE_DESCRIPTION": "Exhaust 2 cards. NL If they are Attack or Skill, transform them into the opposite type and Upgrade them.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for Worthy Sacrifice."
     ]
@@ -279,7 +279,7 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Rain of Embers",
-    "DESCRIPTION": "Deal !D! damage X times. NL Apply !M! Weak X times.",
+    "DESCRIPTION": "Deal !D! damage and apply !M! Weak X times.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage and apply !M! Weak X+1 times."
   },
   "hexamod:NightmareVision": {
@@ -447,11 +447,8 @@
   },
   "hexamod:EtherStep": {
     "NAME": "Ether Step",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Exhaust 1 card. NL Draw !M! card. NL ",
-    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Exhaust 1 card. NL Draw !M! cards. NL ",
-    "EXTENDED_DESCRIPTION": [
-      "Deal !D! damage."
-    ]
+    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage.[] NL Exhaust a card. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Deal[] !D! [#e087a4]damage.[] NL Exhaust a card. NL Draw !M! cards."
   },
   "hexamod:OpposingAction": {
     "NAME": "Opposing Action",

@@ -16,7 +16,9 @@ public class AutoCurser extends CustomRelic {
     public static final String ID = CollectorMod.makeID(AutoCurser.class.getSimpleName());
     private static final String IMG_PATH = AutoCurser.class.getSimpleName() + ".png";
     private static final String OUTLINE_IMG_PATH = AutoCurser.class.getSimpleName() + ".png";
-    //talisman
+
+    //hexx talisman
+
     public AutoCurser() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.COMMON, LandingSound.MAGICAL);
     }

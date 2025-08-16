@@ -63,6 +63,6 @@ public class Polish extends AbstractGremlinCard {
 
     private float rotationTimer;
     private int previewIndex;
-    private ArrayList<AbstractCard> cardsList = new ArrayList<>();
+    private final ArrayList<AbstractCard> cardsList = new ArrayList<>();
 }
 

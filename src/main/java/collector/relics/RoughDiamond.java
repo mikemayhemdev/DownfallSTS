@@ -24,7 +24,7 @@ public class RoughDiamond extends CustomRelic {
 
 
     public RoughDiamond() {
-        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.DEPRECATED, LandingSound.MAGICAL);
     }
 
     public void onEquip() {

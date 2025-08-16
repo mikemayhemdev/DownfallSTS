@@ -5,6 +5,8 @@ import automaton.AutomatonMod;
 import automaton.cards.Deprecate;
 import automaton.cards.Invalidate;
 import automaton.cards.Undervolt;
+import awakenedOne.AwakenedOneChar;
+import awakenedOne.cards.*;
 import basemod.BaseMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
@@ -27,10 +29,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireEnum;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.blue.BiasedCognition;
-import com.megacrit.cardcrawl.cards.blue.GoForTheEyes;
-import com.megacrit.cardcrawl.cards.blue.Hyperbeam;
-import com.megacrit.cardcrawl.cards.blue.MachineLearning;
+import com.megacrit.cardcrawl.cards.blue.*;
 import com.megacrit.cardcrawl.cards.colorless.*;
 import com.megacrit.cardcrawl.cards.green.*;
 import com.megacrit.cardcrawl.cards.purple.*;
@@ -43,18 +42,14 @@ import com.megacrit.cardcrawl.events.city.BackToBasics;
 import com.megacrit.cardcrawl.events.exordium.Sssserpent;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.random.Random;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.relics.PrismaticShard;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.cards.OctoChoiceCard;
 import downfall.downfallMod;
 import downfall.events.Serpent_Evil;
-import downfall.relics.BrokenWingStatue;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
-import expansioncontent.cards.Chronoboost;
 import expansioncontent.cards.DashGenerateEvil;
-import expansioncontent.cards.PeekPages;
 import expansioncontent.cards.SuperLivingWall;
 import expansioncontent.patches.CardColorEnumPatch;
 import expansioncontent.patches.CenterGridCardSelectScreen;
@@ -137,11 +132,13 @@ public class SneckoMod implements
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags OVERFLOW;
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags MUDDLED;
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags NO_TYPHOON;
 
     public static Random identifyRng;
 
     public static ArrayList<AbstractCard.CardColor> validColors = new ArrayList<>();
-    public static ArrayList<String> allowedColors = new ArrayList<>(Arrays.asList("RED", "BLUE", "GREEN", "PURPLE", "GUARDIAN", "SLIMEBOUND", "HEXA_GHOST_PURPLE", "THE_CHAMP_GRAY", "THE_BRONZE_AUTOMATON", "GREMLIN", "HERMIT_YELLOW", "THE_COLLECTOR"));
+    public static ArrayList<String> allowedColors = new ArrayList<>(Arrays.asList("RED", "BLUE", "GREEN", "PURPLE", "GUARDIAN", "SLIMEBOUND", "HEXA_GHOST_PURPLE", "THE_CHAMP_GRAY", "THE_BRONZE_AUTOMATON", "GREMLIN", "HERMIT_YELLOW", "THE_COLLECTOR", "AWAKENED_BLUE"));
     public static ArrayList<UnknownClass> unknownClasses = new ArrayList<>();
     public static boolean pureSneckoMode = false;
 
@@ -360,11 +357,60 @@ public class SneckoMod implements
 
         possList.removeIf(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE);
 
-        if (possList.size() == 0 && ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) || !(AbstractDungeon.player instanceof TheSnecko)))) {
-            possList.add(new Madness());
+        if (possList.isEmpty()) {
+            return new Madness();
         }
 
         return possList.get(AbstractDungeon.miscRng.random(possList.size() - 1)).makeCopy();
+    }
+
+    public static AbstractCard getOffClassCardMatchingPredicatePotionRng(Predicate<AbstractCard> q) {
+        ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
+        possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == AbstractDungeon.player.getCardColor() || c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.rarity == AbstractCard.CardRarity.BASIC || c.type == STATUS || !q.test(c)  || c.hasTag(BANNEDFORSNECKO) || c.hasTag(GHOSTWHEELCARD));
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
+        }
+        if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
+        possList.removeIf(c -> !validColors.contains(c.color));
+
+        possList.removeIf(c -> c.color == AbstractDungeon.player.getCardColor());
+
+        possList.removeIf(c -> c.color == CardColorEnumPatch.CardColorPatch.BOSS);
+
+        possList.removeIf(c -> c.color == AbstractCard.CardColor.COLORLESS);
+
+        possList.removeIf(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE);
+
+        if (possList.isEmpty()) {
+            return new Madness();
+        }
+
+        return possList.get(AbstractDungeon.potionRng.random(possList.size() - 1)).makeCopy();
+    }
+
+
+    public static AbstractCard getOffClassCardMatchingPredicateRelicRng(Predicate<AbstractCard> q) {
+        ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
+        possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == AbstractDungeon.player.getCardColor() || c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.rarity == AbstractCard.CardRarity.BASIC || c.type == STATUS || !q.test(c)  || c.hasTag(BANNEDFORSNECKO) || c.hasTag(GHOSTWHEELCARD));
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
+        }
+        if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
+        possList.removeIf(c -> !validColors.contains(c.color));
+
+        possList.removeIf(c -> c.color == AbstractDungeon.player.getCardColor());
+
+        possList.removeIf(c -> c.color == CardColorEnumPatch.CardColorPatch.BOSS);
+
+        possList.removeIf(c -> c.color == AbstractCard.CardColor.COLORLESS);
+
+        possList.removeIf(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE);
+
+        if (possList.isEmpty()) {
+            return new Madness();
+        }
+
+        return possList.get(AbstractDungeon.relicRng.random(possList.size() - 1)).makeCopy();
     }
 
 
@@ -382,6 +428,8 @@ public class SneckoMod implements
                 c.cardID.equals(Malaise.ID) ||
                 //Defect Cards
                 c.cardID.equals(GoForTheEyes.ID) ||
+                c.cardID.equals(BeamCell.ID) ||
+                c.cardID.equals(LockOn.ID) ||
                 // Watcher Cards
                 c.cardID.equals(CrushJoints.ID) ||
                 c.cardID.equals(SashWhip.ID) ||
@@ -394,13 +442,17 @@ public class SneckoMod implements
                 c.cardID.equals(SadisticNature.ID) ||
                 //Gremlins Cards
                 c.cardID.equals(Jeer.ID) ||
-                c.cardID.equals(Pickpocket.ID) ||
+                c.cardID.equals(AggressiveDefense.ID) ||
+                c.cardID.equals(Dazzle.ID) ||
+                c.cardID.equals(Exacerbate.ID) ||
+                c.cardID.equals(BrokenShin.ID) ||
                 c.cardID.equals(Heckle.ID) ||
                 c.cardID.equals(ToeStub.ID) ||
                 //Champ Cards
                 c.cardID.equals(ViciousMockery.ID) ||
                 c.cardID.equals(Taunt.ID) ||
                 c.cardID.equals(FaceSlap.ID) ||
+                c.cardID.equals(Shatter.ID) ||
                 c.cardID.equals(SetATrap.ID) ||
                 c.cardID.equals(CheapShot.ID) ||
                 //Slime Boss Cards
@@ -472,12 +524,26 @@ public class SneckoMod implements
                 c.cardID.equals(MakeshiftBlade.ID) ||
                 c.cardID.equals(Belittle.ID) ||
                 c.cardID.equals(PoisonParadise.ID) ||
-                c.cardID.equals(AceOfWands.ID))
+                c.cardID.equals(AceOfWands.ID) ||
+                //Awakened One Cards
+                c.cardID.equals(Scour.ID) ||
+                c.cardID.equals(SingularityShield.ID) ||
+
+                c.cardID.equals(DeathCoil.ID) ||
+                c.cardID.equals(Gloomguard.ID) ||
+                c.cardID.equals(MirePit.ID) ||
+                c.cardID.equals(SplitWide.ID) ||
+                c.cardID.equals(WaveOfMiasma.ID) ||
+
+                c.cardID.equals(Siphon.ID) ||
+                c.cardID.equals(Nihil.ID)
+                )
 
         ) || (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == AbstractDungeon.player.getCardColor() || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.rarity == AbstractCard.CardRarity.BASIC || c.type == STATUS || !q.test(c)  || c.hasTag(BANNEDFORSNECKO) || c.hasTag(GHOSTWHEELCARD))
         || (
                 //False Positives
-                c.cardID.equals(SwordThrow.ID) ||
+                        c.cardID.equals(SwordThrow.ID) ||
+                        c.cardID.equals(ShieldThrow.ID) ||
                         c.cardID.equals(HyperBeam_Guardian.ID) ||
                         c.cardID.equals(HoleUp.ID) ||
                         c.cardID.equals(Quickdraw.ID) ||
@@ -498,6 +564,14 @@ public class SneckoMod implements
                         c.cardID.equals(MachineLearning.ID) ||
                         c.cardID.equals(GremlinMeal.ID) ||
                         c.cardID.equals(FollowThrough.ID) ||
+                        c.cardID.equals(FeatherVeil.ID) ||
+                        c.cardID.equals(AwakenedForm.ID) ||
+                        c.cardID.equals(DemonGlyph.ID) ||
+
+                        c.cardID.equals(ProfaneStrike.ID) ||
+                        c.cardID.equals(Unleash.ID) ||
+
+
                         //Really Bad Offclass cards
                         c.cardID.equals(ChargedBarrage.ID)
         ))
@@ -526,6 +600,9 @@ public class SneckoMod implements
                 c.color != ChampChar.Enums.CHAMP_GRAY &&
                 c.color != AutomatonChar.Enums.BRONZE_AUTOMATON &&
                 c.color != CollectorChar.Enums.COLLECTOR &&
+                //Act 3 Bosses
+                c.color != AwakenedOneChar.Enums.AWAKENED_BLUE &&
+
                 //Bonus Characters
                 c.color != TheSnecko.Enums.SNECKO_CYAN &&
                 c.color != gremlin.patches.AbstractCardEnum.GREMLIN)
@@ -549,8 +626,8 @@ public class SneckoMod implements
 
         possList.removeIf(c -> c.color == AbstractCard.CardColor.COLORLESS);
 
-        if (possList.size() == 0 && ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) || !(AbstractDungeon.player instanceof TheSnecko)))) {
-            possList.add(new Madness());
+        if (possList.isEmpty()) {
+            return new Madness();
         }
 
         return possList.get(AbstractDungeon.miscRng.random(possList.size() - 1)).makeCopy();
@@ -649,12 +726,12 @@ public class SneckoMod implements
                 OverwhelmingPresence.ID,
 
                 SneckoBoss.ID,
-                CheapStock.ID,
+                SleevedAce.ID,
                 CleanMud.ID,
 
-                GlitteringGambit.ID,
+                BlankCard.ID,
                 SneckoTalon.ID,
-                Jackpot.ID,
+                SleevedAce.ID,
 
                 TheSnecko.Enums.THE_SNECKO
         );
@@ -668,7 +745,6 @@ public class SneckoMod implements
     }
 
     public void addPotions() {
-
         BaseMod.addPotion(CheatPotion.class, Color.GRAY, Color.WHITE, Color.BLACK, CheatPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
         BaseMod.addPotion(DiceRollPotion.class, Color.CYAN, Color.WHITE, Color.BLACK, DiceRollPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
         BaseMod.addPotion(OffclassReductionPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);

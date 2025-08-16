@@ -1,0 +1,37 @@
+
+{
+  "collector:MiniCursePotion": {
+    "NAME": "Extracto de Alma",
+    "DESCRIPTIONS": [
+      "Aplica #b1 de #yDébil, #b1 de #yVulnerable y #b6 de #yCondena.",
+      "Aplica #b",
+      " de #yDébil, #b",
+      " de #yVulnerable y #b",
+      " de #yCondena [REMOVE_SPACE]."
+    ]
+  },
+  "collector:ReservePotion": {
+    "NAME": "Poción de Reserva",
+    "DESCRIPTIONS": [
+      "Gana #b2 de #yReserva.",
+      "Gana #b",
+      " de #yReserva [REMOVE_SPACE]."
+    ]
+  },
+  "collector:DebuffDoublePotion": {
+    "NAME": "Aceites Embalsamadores",
+    "DESCRIPTIONS": [
+      "Duplica las desventajas del objetivo.",
+      "Multiplica las desventajas del objetivo por #b",
+      "."
+    ]
+  },
+  "collector:TempHPPotion": {
+    "NAME": "Agua Fétida",
+    "DESCRIPTIONS": [
+      "Gana #b8 de #yPV #yTemporales.",
+      "Gana #b",
+      " de #yPV #yTemporales [REMOVE_SPACE]."
+    ]
+  }
+}

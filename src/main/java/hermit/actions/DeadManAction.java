@@ -14,7 +14,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.Iterator;
 
 public class DeadManAction extends AbstractGameAction {
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
     public DeadManAction(int amount) {
         this.p = AbstractDungeon.player;

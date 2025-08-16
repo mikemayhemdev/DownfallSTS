@@ -1,11 +1,11 @@
 package automaton.relics;
 
 import automaton.AutomatonMod;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import downfall.util.TextureLoader;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import downfall.util.TextureLoader;
 
 import static automaton.AutomatonMod.makeRelicOutlinePath;
 import static automaton.AutomatonMod.makeRelicPath;
@@ -17,7 +17,7 @@ public class BronzeCore extends CustomRelic implements OnCompileRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("BronzeCore.png"));
 
     public BronzeCore() {
-        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.CLINK);
     }
 
     boolean activated = false;

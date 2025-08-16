@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -78,4 +79,12 @@ public class Covet extends AbstractDynamicCard {
             initializeDescription();
         }
     }
+
+    //add curse keyword
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        this.keywords.add(GameDictionary.CURSE.NAMES[0].toLowerCase());
+    }
+
 }

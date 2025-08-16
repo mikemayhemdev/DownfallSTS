@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.Iterator;
 
 public class EternalAction extends AbstractGameAction {
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
     public EternalAction() {
         this.actionType = ActionType.CARD_MANIPULATION;

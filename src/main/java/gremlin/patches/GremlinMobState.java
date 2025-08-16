@@ -15,7 +15,7 @@ import java.util.Random;
 public class GremlinMobState {
     public ArrayList<String> gremlins;
     public ArrayList<Integer> gremlinHP;
-    private ArrayList<String> enslaved;
+    private final ArrayList<String> enslaved;
     private String voucher;
     public boolean inCombat = false;
     // Workaround for not have ascension available at creation
@@ -243,7 +243,7 @@ public class GremlinMobState {
         for(int i=0;i<gremlins.size();i++){
             s.add(gremlins.get(i) + ": " + gremlinHP.get(i).toString());
         }
-        return s.toString() + " <" + enslaved.toString() + ">" + "[" + voucher + "]";
+        return s + " <" + enslaved.toString() + ">" + "[" + voucher + "]";
     }
 
     public String getGremlinName(int index) {

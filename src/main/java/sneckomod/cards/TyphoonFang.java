@@ -9,6 +9,8 @@ import sneckomod.SneckoMod;
 import sneckomod.powers.TyphoonPlusPower;
 import sneckomod.powers.TyphoonPower;
 
+import static sneckomod.SneckoMod.NO_TYPHOON;
+
 public class TyphoonFang extends AbstractSneckoCard {
 
     public final static String ID = makeID("TyphoonFang");
@@ -30,7 +32,7 @@ public class TyphoonFang extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));// reused snek bite animation
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
-        if (isOverflowActive(this) && !this.purgeOnUse) {
+        if (isOverflowActive(this) && !this.hasTag(NO_TYPHOON)) {
             if (!upgraded) {
                 applyToSelf(new TyphoonPower(1));
             }

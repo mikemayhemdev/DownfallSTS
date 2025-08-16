@@ -40,12 +40,14 @@ public class BurdenOfKnowledge extends CustomRelic {
     int effectCount = 0;
 
     public BurdenOfKnowledge() {
-        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.DEPRECATED, LandingSound.MAGICAL);
     }
 
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];
     }
+
+    //todo: variables
 
     public void onEquip() {
 
@@ -56,7 +58,7 @@ public class BurdenOfKnowledge extends CustomRelic {
         downfallMod.removeAnyRelicFromPools(StasisUpgradeRelic.ID);
         downfallMod.removeAnyRelicFromPools(Barbells.ID);
 
-        AbstractDungeon.player.decreaseMaxHealth(10);
+        AbstractDungeon.player.decreaseMaxHealth(20);
         List<String> upgradedCards = new ArrayList();
 
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
@@ -109,16 +111,12 @@ public class BurdenOfKnowledge extends CustomRelic {
         }
     }
 
-    public void atBattleStart() {
+    public void atPreBattle() {
         this.flash();
         this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new MasterRealityPower(AbstractDungeon.player)));
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -1), -1));
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, -1), -1));
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, -2), -2));
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DexterityPower(AbstractDungeon.player, -2), -2));
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        AbstractDungeon.player.hasRelic(Enchiridion.ID);
-        {
-            this.addToBot(new ArmamentsAction(true));
-        }
     }
 
     public AbstractRelic makeCopy() {

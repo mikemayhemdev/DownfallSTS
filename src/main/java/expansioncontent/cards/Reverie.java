@@ -18,7 +18,7 @@ public class Reverie extends AbstractExpansionCard {
     private static final int MAGIC = 3;
 
     public Reverie() {
-        super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         tags.add(expansionContentMod.STUDY_TIMEEATER);
         tags.add(expansionContentMod.STUDY);
         baseMagicNumber = magicNumber = MAGIC;
@@ -33,8 +33,7 @@ public class Reverie extends AbstractExpansionCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            //upgradeMagicNumber(2);
-            upgradeBaseCost(2);
+            upgradeMagicNumber(2);
         }
     }
 

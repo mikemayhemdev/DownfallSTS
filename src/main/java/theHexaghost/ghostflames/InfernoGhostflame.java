@@ -88,7 +88,7 @@ public class InfernoGhostflame extends AbstractGhostflame {
         }
 
         if (amountOfIgnitedGhostflames == 6) {
-            if(!AbstractDungeon.player.hasRelic(IceCube.ID)){
+            if (!AbstractDungeon.player.hasRelic(IceCube.ID)) {
                 atb(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(2), 2));
             }
         }

@@ -1,0 +1,46 @@
+{
+  "awakened:SpellDescriptor": {
+    "TEXT": [
+      "Spell"
+    ]
+  },
+  "awakened:ConjureMod": {
+    "TEXT": [
+      " NL awakened:Conjure."
+    ]
+  },
+  "awakened:SpellMod": {
+    "TEXT": [
+      "[#12FAF0]Spell. NL"
+    ]
+  },
+  "awakened:DrainingMod": {
+    "TEXT": [
+      " NL Next turn, lose [E]."
+    ]
+  },
+  "awakened:highlightChant": {
+    "TEXT": [
+      "awakened:Chant: ",
+      "[awakenedIcon] [#12FAF0]Chant: "
+    ]
+  },
+  "awakened:Spellbook": {
+    "TEXT": [
+      "Spellbook",
+      "Awakening",
+      "After playing 7 Powers, become #yAwakened [REMOVE_SPACE]! NL NL While #yAwakened [REMOVE_SPACE], #yConjured Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy.",
+      "After playing 7 Powers, become #yAwakened [REMOVE_SPACE]! NL NL While #yAwakened [REMOVE_SPACE], #yConjured Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy."
+    ]
+  },
+  "awakened:FullSpellbook": {
+    "TEXT": [
+      "My Spellbook is full!"
+    ]
+  },
+  "awakened:FourthDimensionDupeAttempt": {
+    "TEXT": [
+      "@Doing@ @that@ @would@ @break@ @the@ @space-time@ @continuum!!!@"
+    ]
+  }
+}

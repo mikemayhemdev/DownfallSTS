@@ -6,6 +6,7 @@ import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -13,11 +14,12 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import guardian.patches.BottledStasisPatch;
 
 import java.util.function.Predicate;
 
-public class BottledCode extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
+public class BottledCode extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer>, OnRemoveCardFromMasterDeckRelic {
     public static final String ID = "bronze:BottledCode";
     public static final String IMG_PATH = "bottledCode.png";
     public static final String OUTLINE_IMG_PATH = "bottledCode.png";
@@ -27,6 +29,17 @@ public class BottledCode extends CustomRelic implements CustomBottleRelic, Custo
     public BottledCode() {
         super(ID, new Texture(AutomatonMod.makeRelicPath(IMG_PATH)), new Texture(AutomatonMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)),
                 RelicTier.SPECIAL, LandingSound.CLINK);
+    }
+
+    @Override
+    public void onRemoveCardFromMasterDeck(AbstractCard var1) {
+        if (this.card != null) {
+            if (var1.uuid == card.uuid) {
+                this.flash();
+                this.grayscale = true;
+                setDescriptionAfterLoading();
+            }
+        }
     }
 
     @Override
@@ -102,16 +115,50 @@ public class BottledCode extends CustomRelic implements CustomBottleRelic, Custo
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
+
             setDescriptionAfterLoading();
         }
     }
 
-    private void setDescriptionAfterLoading() {
-        this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
-        tips.clear();
-        tips.add(new PowerTip(name, description));
-        initializeTips();
+    public void setDescriptionAfterLoading() {
+
+        boolean cardExists = false;
+
+        if (cardSelected) {
+            if (card != null) {
+                for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                    if (c.uuid == card.uuid) {
+                        cardExists = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!cardExists) {
+                tips.clear();
+                this.description = this.DESCRIPTIONS[4];
+                this.grayscale = true;
+                initializeTips();
+            }
+
+            if (cardExists) {
+                this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
+                this.grayscale = false;
+                tips.clear();
+                tips.add(new PowerTip(name, description));
+                initializeTips();
+            }
+        }
     }
+
+//    @Override
+//    public void onRemoveCardFromMasterDeck(AbstractCard var1){
+//        if (var1.uuid == card.uuid) {
+//            setDescriptionAfterLoading();
+//        }
+//    }
 
     @Override
     public AbstractRelic makeCopy() {

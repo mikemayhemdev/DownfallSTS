@@ -36,8 +36,7 @@ public class MakeshiftBlade extends AbstractSneckoCard {
     // Card constants
     private static final int DAMAGE = 9;
     private static final int COST = 1;
-    private static final int MAGIC = 3; // Initial debuff requirement
-    private static final int UPGRADE_MAGIC = -1; // Reduces debuff requirement by 1
+    private static final int MAGIC = 3;
     private static int SOFTLOCK = 0;
 
 
@@ -101,7 +100,6 @@ public class MakeshiftBlade extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPGRADE_MAGIC);
             upgradeDamage(4);
         }
     }

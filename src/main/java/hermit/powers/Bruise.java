@@ -45,7 +45,7 @@ public class Bruise extends AbstractPower implements CloneablePowerInterface {
         type = PowerType.DEBUFF;
 
         if (this.amount <= 0) {
-            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.POWER_ID));
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, POWER_ID));
         }
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);

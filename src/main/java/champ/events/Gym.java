@@ -33,7 +33,7 @@ public class Gym extends AbstractImageEvent {
     }
 
     private CurScreen screen;
-    private int maxHP = 10;
+    private final int maxHP = 10;
     private boolean pickCard = false;
     private StanceChosen stance;
 

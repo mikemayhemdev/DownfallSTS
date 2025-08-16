@@ -38,7 +38,7 @@ public class TechniqueTome extends AbstractImageEvent {
     private boolean pickCard = false;
     private int hpCost = 5;
     private int hpSpent = 0;
-    private ArrayList<String> cardsTeched = new ArrayList<>();
+    private final ArrayList<String> cardsTeched = new ArrayList<>();
     private int prideGained;
 
     public TechniqueTome() {

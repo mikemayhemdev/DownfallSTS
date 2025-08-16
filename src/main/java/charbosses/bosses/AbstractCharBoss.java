@@ -65,6 +65,7 @@ import com.megacrit.cardcrawl.vfx.combat.DeckPoofEffect;
 import com.megacrit.cardcrawl.vfx.combat.HbBlockBrokenEffect;
 import com.megacrit.cardcrawl.vfx.combat.StrikeEffect;
 import downfall.downfallMod;
+import expansioncontent.expansionContentMod;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -146,7 +147,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void init() {
         AbstractCharBoss.boss = this;
         this.setHp(this.maxHealth);
-        this.energy.energyMaster = 2;
+        if (!downfallMod.useLegacyBosses){
+            this.energy.energyMaster = 99;
+        } else {
+            this.energy.energyMaster = 2;
+        }
         this.generateAll();
         super.init();
         this.preBattlePrep();
@@ -290,8 +295,10 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     @Override
     public void update() {
         super.update();
-        for (AbstractRelic r : this.relics) {
-            r.update();
+        if (downfallMod.useLegacyBosses) {
+            for (AbstractRelic r : this.relics) {
+                r.update();
+            }
         }
 
         for (AbstractOrb o : this.orbs) {
@@ -306,10 +313,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void applyEndOfTurnTriggers() {
         if (hasPower(StunMonsterPower.POWER_ID)) chosenArchetype.turn--;
 
-        this.energy.recharge();
+        if (downfallMod.useLegacyBosses) this.energy.recharge();
 
-        for (final AbstractPower p : AbstractCharBoss.boss.powers) {
-            p.onEnergyRecharge();
+        if (downfallMod.useLegacyBosses) {
+            for (final AbstractPower p : AbstractCharBoss.boss.powers) {
+                p.onEnergyRecharge();
+            }
         }
 
         for (final AbstractCard c : this.hand.group) {
@@ -317,7 +326,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         }
         this.stance.onEndOfTurn();
 
-        addToBot(new EnemyDiscardAtEndOfTurnAction());
+        if (downfallMod.useLegacyBosses) {
+            addToBot(new EnemyDiscardAtEndOfTurnAction());
         /*
         for (final AbstractCard c : this.drawPile.group) {
             c.resetAttributes();
@@ -326,8 +336,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
             c.resetAttributes();
         }
         */
-        for (final AbstractCard c : this.hand.group) {
-            c.resetAttributes();
+            for (final AbstractCard c : this.hand.group) {
+                c.resetAttributes();
+            }
         }
         addToBot(new DelayedActionAction(new CharbossTurnstartDrawAction()));
     }
@@ -340,7 +351,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCard c : hand.group) {
             ((AbstractBossCard) c).lockIntentValues = true;
         }
-        this.applyStartOfTurnRelics();
+        if (downfallMod.useLegacyBosses) this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
         this.applyStartOfTurnCards();
         //this.applyStartOfTurnPowers();
@@ -350,6 +361,9 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     }
 
     public ArrayList<AbstractCard> getThisTurnCards() {
+        if (chosenArchetype == null) {
+            return new ArrayList<>();
+        }
         return chosenArchetype.getThisTurnCards();
     }
 
@@ -363,7 +377,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
 
 
     public void endTurnStartTurn() {
-        if (!AbstractDungeon.getCurrRoom().isBattleOver) {
+        if (!AbstractDungeon.getCurrRoom().isBattleOver && currentHealth > 0) {
             //addToBot(new EnemyDrawCardAction(this, this.gameHandSize, true));
             addToBot(new AbstractGameAction() {
                 @Override
@@ -421,7 +435,6 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                             cB.refreshIntentHbLocation();
                         }
 
-                        //TODO Add a way for create a hidden attack intent for the Boss if it intends to play an Attack.
                     }
                 });
             }
@@ -468,6 +481,15 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                             c2.manualCustomVulnModifier = true;
                         }
                     }
+                }
+
+                //Self Weak Check - knows to check if any Artifact will be left
+                if (c.selfWeakIfPlayed > 0) {
+                        for (int j = i + 1; j < hand.size(); j++) {
+                            AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
+                            c2.manualCustomSelfWeakModifier = true;
+                        }
+
                 }
 
                 //Shuriken Checks for Act 1 Silent
@@ -673,17 +695,31 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         int totalIntentDmg = -1;
         for (AbstractCard c : this.hand.group) {
             AbstractBossCard cB = (AbstractBossCard) c;
-            if (cB.intentDmg > 0 && (!cB.bossDarkened || AbstractDungeon.player.hasRelic(RunicDome.ID))) {
-                if (totalIntentDmg == -1) {
-                    totalIntentDmg = 0;
+            if (cB.type == AbstractCard.CardType.ATTACK) {
+                if (cB.intentDmg > 0 && (!cB.bossDarkened || AbstractDungeon.player.hasRelic(RunicDome.ID))) {
+                    if (totalIntentDmg == -1) {
+                        totalIntentDmg = 0;
+                    }
+                    totalIntentDmg += cB.intentDmg;
                 }
-                totalIntentDmg += cB.intentDmg;
             }
         }
         return totalIntentDmg;
     }
 
     public int getIntentBaseDmg() {
+        int totalIntentDmg = -1;
+        for (AbstractCard c : this.hand.group) {
+            AbstractBossCard cB = (AbstractBossCard) c;
+            if (cB.type == AbstractCard.CardType.ATTACK) {
+                if (cB.intentDmg > 0) {
+                    if (totalIntentDmg == -1) {
+                        totalIntentDmg = 0;
+                    }
+                    totalIntentDmg += cB.intentDmg;
+                }
+            }
+        }
         return getIntentDmg();
     }
 
@@ -1185,7 +1221,7 @@ public void damage(final DamageInfo info) {
     @Override
     public void die() {
         if (this.currentHealth <= 0) {
-            BossMechanicDisplayPanel.resetBossPanel();
+            if (downfallMod.useLegacyBosses) BossMechanicDisplayPanel.resetBossPanel();
             useFastShakeAnimation(5.0F);
             CardCrawlGame.screenShake.rumble(4.0F);
             onBossVictoryLogic();
@@ -1195,7 +1231,7 @@ public void damage(final DamageInfo info) {
 
         AbstractCharBoss.boss = null;
         AbstractCharBoss.finishedSetup = false;
-        relics.clear();
+        if (downfallMod.useLegacyBosses) relics.clear();
         hand.clear();
         /*
         drawPile.clear();
@@ -1604,8 +1640,10 @@ public void damage(final DamageInfo info) {
         if (!this.isDead) {
             this.renderHand(sb);
             this.stance.render(sb);
-            for (AbstractRelic r : this.relics) {
-                r.render(sb);
+            if (downfallMod.useLegacyBosses) {
+                for (AbstractRelic r : this.relics) {
+                    r.render(sb);
+                }
             }
             if (!this.orbs.isEmpty()) {
 
@@ -1613,7 +1651,7 @@ public void damage(final DamageInfo info) {
                     o.render(sb);
                 }
             }
-            this.energyPanel.render(sb);
+            if (downfallMod.useLegacyBosses)  this.energyPanel.render(sb);
         }
     }
 

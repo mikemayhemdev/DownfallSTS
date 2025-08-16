@@ -18,6 +18,10 @@ public class BartenderGlass extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("bartenders_glass.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("bartenders_glass.png"));
 
+
+    //variables
+    private static final int POTION_LIMIT = 2;
+
     public BartenderGlass() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.SOLID);
         counter = -1;
@@ -27,7 +31,7 @@ public class BartenderGlass extends CustomRelic {
         super.obtain();
 
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT)
-            counter = 2;
+            counter = POTION_LIMIT;
         else
             counter = -1;
     }
@@ -35,7 +39,7 @@ public class BartenderGlass extends CustomRelic {
     @Override
     public void atBattleStart() {
         flash();
-        this.counter = 2;
+        this.counter = POTION_LIMIT;
         AbstractDungeon.actionManager.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
         this.grayscale = false;
     }
@@ -59,7 +63,7 @@ public class BartenderGlass extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + POTION_LIMIT + DESCRIPTIONS[2] + POTION_LIMIT + DESCRIPTIONS[3];
     }
 
 }

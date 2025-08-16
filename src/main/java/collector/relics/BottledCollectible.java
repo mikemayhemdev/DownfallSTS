@@ -1,5 +1,6 @@
 package collector.relics;
 
+import automaton.AutomatonMod;
 import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
@@ -15,6 +16,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.util.TextureLoader;
 
 import java.util.function.Predicate;
@@ -26,8 +28,10 @@ public class BottledCollectible extends CustomRelic implements CustomBottleRelic
     private static final String IMG_PATH = BottledCollectible.class.getSimpleName() + ".png";
     private static final String OUTLINE_IMG_PATH = BottledCollectible.class.getSimpleName() + ".png";
 
-    private static AbstractCard card;
+    public AbstractCard card;
     private boolean cardSelected = true;
+
+    private boolean cardRemoved = false;
 
     private int idxToLoad = -1;
 
@@ -122,15 +126,40 @@ public class BottledCollectible extends CustomRelic implements CustomBottleRelic
             }
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
+
             setDescriptionAfterLoading();
         }
     }
 
     public void setDescriptionAfterLoading() {
-        this.description = DESCRIPTIONS[1] + FontHelper.colorString(card.name, "y") + DESCRIPTIONS[2];
-        this.tips.clear();
-        this.tips.add(new PowerTip(this.name, this.description));
-        this.initializeTips();
+        //todo: better card removal detection code!!!!
+        if (cardSelected) {
+            boolean cardExists = false;
+
+            CardGroup tmp = CollectorCollection.collection;
+            for (AbstractCard c : tmp.group) {
+                if (c.uuid == card.uuid) {
+                    cardExists = true;
+                    break;
+                }
+            }
+
+
+            if (!cardExists) {
+                tips.clear();
+                this.description = this.DESCRIPTIONS[4];
+                initializeTips();
+                this.grayscale = true;
+            } else {
+                this.description = DESCRIPTIONS[1] + FontHelper.colorString(card.name, "y") + DESCRIPTIONS[2];
+                this.tips.clear();
+                this.tips.add(new PowerTip(this.name, this.description));
+                this.initializeTips();
+            }
+
+        }
     }
 
     @Override

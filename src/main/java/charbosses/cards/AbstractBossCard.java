@@ -5,6 +5,7 @@ import basemod.abstracts.CustomCard;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import charbosses.cards.colorless.EnHandOfGreedHermitNecro;
+import charbosses.cards.hermit.EnMemento;
 import charbosses.cards.hermit.EnShortFuse;
 import charbosses.cards.hermit.EnShortFuseNecro;
 import charbosses.cards.purple.AbstractStanceChangeCard;
@@ -81,6 +82,7 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int damageMultIfPlayed = 1;
     public int focusGeneratedIfPlayed = 0;
     public int vulnGeneratedIfPlayed = 0;
+    public int selfWeakIfPlayed = 0;
     public int artifactConsumedIfPlayed = 0;
     public boolean vulnCalculated = false;
     public int blockGeneratedIfPlayed = 0;
@@ -93,9 +95,10 @@ public abstract class AbstractBossCard extends AbstractCard {
     public int manualCustomDamageModifier = 0;
     public float manualCustomDamageModifierMult = 1.0f;
     public boolean manualCustomVulnModifier = false;
+    public boolean manualCustomSelfWeakModifier = false;
     public static boolean fakeStormPower = false;
     //TODO - Does Vuln get actually calculated anywhere?  this variable does not appear to be referenced
-
+    //paper phrog?
 
     private static final float INTENT_HB_W = 64.0F * Settings.scale;
     public Hitbox intentHb = new Hitbox(INTENT_HB_W, INTENT_HB_W);
@@ -144,7 +147,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.intent = intent;
 
         if (isCustomCard) {
-            if (color == hermit.Enums.COLOR_YELLOW) {
+            if (color == hermit.Enums.COLOR_YELLOW || this instanceof EnMemento) {
                 this.portrait = new TextureAtlas.AtlasRegion(new Texture(img), 0, 0, 250, 190);
                 this.portraitImg = new Texture(img);
             } else {

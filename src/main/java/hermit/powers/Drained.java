@@ -32,7 +32,7 @@ public class Drained extends AbstractPower implements CloneablePowerInterface {
         this.source = source;
 
         type = PowerType.DEBUFF;
-        isTurnBased = false;
+        isTurnBased = true;
 
         // We load those textures here.
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);

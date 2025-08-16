@@ -1,0 +1,110 @@
+{
+  "collector:CollectionReward": {
+    "TEXT": [
+      "Elige una carta para Coleccionar."
+    ]
+  },
+  "collector:CollectibleCardTab": {
+    "TEXT": [
+      "Coleccionable"
+    ]
+  },
+  "collector:CollectionScreen": {
+    "TEXT": [
+      "Ocultar",
+      "Tu Colección comienza el combate con todas las cartas aquí."
+    ]
+  },
+  "collector:CollectionUITopPanel": {
+    "TEXT": [
+      "Colección",
+      "Ver todas las cartas en tu Colección.",
+      "Estas cartas comienzan en tu pila Coleccionada en cada combate."
+    ]
+  },
+  "collector:CombatCollectionPileButton": {
+    "TEXT": [
+      "Pila Coleccionada",
+      "Aquí se encuentran las cartas Coleccionadas que aún no has robado este combate. Robas una carta de aquí al comienzo de cada turno.",
+      "¡No tengo cartas Coleccionadas!"
+    ]
+  },
+  "collector:EssenceCount": {
+    "TEXT": [
+      "Esencias",
+      "Gasta Esencias para añadir cartas a tu Colección. Las salas de combate otorgan #b1 #yEsencia. Los Élite dan #b2 #yEsencias, y los Jefes dan #b3. NL Tienes #b",
+      " Esencias."
+    ]
+  },
+  "collector:CombatCollectionViewScreen": {
+    "TEXT": [
+      "Vista de colección en combate"
+    ]
+  },
+  "collector:PyreInfo": {
+    "TEXT": [
+      "Pira",
+      "Para jugar esta carta, paga el coste adicional de Agotar cartas de tu mano."
+    ]
+  },
+  "collector:CollectedCardMod": {
+    "TEXT": [
+      "collector:Megatereal. NL ",
+      "Coleccionada"
+    ]
+  },
+  "collector:CollectibleCardReward": {
+    "TEXT": [
+      "Coleccionada: ",
+      "Puedes obtener esta"
+    ]
+  },
+  "collector:HoardedMod": {
+    "TEXT": [
+      "No jugable. Retiene. NL ",
+      "No jugable. NL ",
+      "Retiene. NL "
+    ]
+  },
+  "collector:SecondEnergyOrb": {
+    "TEXT": [
+      "Reservas",
+      "Un tipo especial de Energía que persiste entre turnos."
+    ]
+  },
+  "collector:PyreCostSpendScreen": {
+    "TEXT": [
+      "Agotar para la Pira."
+    ]
+  },
+  "collector:PyreModText": {
+    "TEXT": [
+      "¡No tengo una carta para Agotar!"
+    ]
+  },
+  "collector:StashAwayCampfireOption": {
+    "TEXT": [
+      "Liberar",
+      "Eliminar una carta Coleccionada. Gana ",
+      " Almas.",
+      "Requiere una carta Coleccionada.",
+      "Selecciona una carta Coleccionada para eliminar."
+    ]
+  },
+  "collector:BonusEventOption": {
+    "TEXT": [
+      "[Tomar]"
+    ]
+  },
+  "collector:EssenceReward": {
+    "TEXT": [
+      "Gana ",
+      " Esencia."
+    ]
+  },
+  "collector:CharacterOption": {
+    "TEXT": [
+      "Esencias: "
+    ]
+  }
+}

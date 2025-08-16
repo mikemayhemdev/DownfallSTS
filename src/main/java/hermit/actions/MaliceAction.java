@@ -25,7 +25,7 @@ public class MaliceAction extends AbstractGameAction {
     public static final String[] TEXT;
     private final float startingDuration;
     private final DamageInfo info;
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
     int[] base;
     boolean extra_draw;
 

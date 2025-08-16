@@ -24,7 +24,8 @@
     "NAME": "Ring of the Snek",
     "FLAVOR": "Illegible, unreadable, due by Thursday.",
     "DESCRIPTIONS": [
-      "Whenever you activate #b3 #ysneckomod:Overflow effects, apply #b1 #yWeak and #yVulnerable to a random enemy."
+      "Whenever you activate #b",
+      " #ysneckomod:Overflow effects, apply #b1 #yWeak and #yVulnerable to a random enemy."
     ]
   },
   "sneckomod:CrystallizedMud": {
@@ -38,7 +39,8 @@
     "NAME": "Loaded Die",
     "FLAVOR": "Cheese-stuffed.",
     "DESCRIPTIONS": [
-      "Whenever a card is #ysneckomod:Muddled, gain #b1 #yBlock [REMOVE_SPACE]."
+      "Whenever a card is #ysneckomod:Muddled [REMOVE_SPACE], gain #b",
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "sneckomod:RareBoosterPack": {
@@ -52,7 +54,7 @@
     "NAME": "Sleeved Ace",
     "FLAVOR": "We're all aces.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain a #yMarked #yCard [REMOVE_SPACE]."
+      "At the start of each combat, gain a #yMarked #yCard+ [REMOVE_SPACE]."
     ]
   },
   "sneckomod:UnknownEgg": {
@@ -73,7 +75,7 @@
     "NAME": "Idol of Retromation",
     "FLAVOR": "Often called the Idol of Reto for short.",
     "DESCRIPTIONS": [
-      "At the start of your turn, reduce the cost of a random card that costs at least #b1 in your hand by #b1 for this turn."
+      "At the start of your turn, reduce the cost of a random card in your hand by #b1 until played."
     ]
   },
   "sneckomod:BlankCard": {
@@ -90,14 +92,15 @@
       "Upon pickup, choose a card that has an #ysneckomod:Overflow effect. Whenever you play it, gain #b4 #yBlock and activate its #yOverflow effect, even if you don't have more than #b5 cards in hand.",
       "Choose a card for ",
       "Whenever ",
-      " is played, gain #b4 #yBlock and activate its #ysneckomod:Overflow effect, even if you don't have more than #b5 cards in hand."
+      " is played, gain #b4 #yBlock and activate its #ysneckomod:Overflow effect, even if you don't have more than #b5 cards in hand.",
+      "The card attached to this relic has been #rremoved from your deck, the relic no longer functions."
     ]
   },
   "sneckomod:BabySnecko": {
     "NAME": "Young Snecko",
     "FLAVOR": "Bewilderingly adorable.",
     "DESCRIPTIONS": [
-      "Deals #b9 damage to a random enemy and #ysneckomod:Muddles #b2 random (not #b0 cost, #bX [REMOVE_SPACE], or #yUnplayable [REMOVE_SPACE]) cards in your hand at the start of your turn."
+      "Deals #b9 damage to a random enemy and #ysneckomod:Muddles #b2 random (at least #b1 cost) cards in your hand at the start of your turn."
     ]
   },
   "sneckomod:SneckoCommon": {

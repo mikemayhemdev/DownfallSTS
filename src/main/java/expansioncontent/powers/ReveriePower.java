@@ -1,10 +1,12 @@
 package expansioncontent.powers;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
+import hermit.util.Wiz;
 import sneckomod.SneckoMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -44,30 +46,31 @@ public class ReveriePower extends AbstractPower {
 
     @Override
     public void atStartOfTurn() {
-        this.flash();
+        if (Wiz.hand().size() < BaseMod.MAX_HAND_SIZE) {
+            this.flash();
+            if (!AbstractDungeon.player.discardPile.isEmpty()) {
+                ArrayList<AbstractCard> cardsToChooseFrom = new ArrayList<>();
 
-        if (!AbstractDungeon.player.discardPile.isEmpty()) {
-            ArrayList<AbstractCard> cardsToChooseFrom = new ArrayList<>();
+                for (int i = 0; i < this.amount && i < AbstractDungeon.player.discardPile.size(); ++i) {
+                    cardsToChooseFrom.add(AbstractDungeon.player.discardPile.group.get(i));
+                }
 
-            for (int i = 0; i < this.amount && i < AbstractDungeon.player.discardPile.size(); ++i) {
-                cardsToChooseFrom.add(AbstractDungeon.player.discardPile.group.get(i));
-            }
+                if (!cardsToChooseFrom.isEmpty()) {
+                    this.addToBot(new SelectCardsCenteredAction(
+                            cardsToChooseFrom,
+                            1,
+                            DESCRIPTIONS[3],
+                            (selectedCards) -> {
+                                AbstractCard chosenCard = selectedCards.get(0);
+                                AbstractDungeon.player.discardPile.removeCard(chosenCard);
+                                AbstractDungeon.player.hand.addToHand(chosenCard);
 
-            if (!cardsToChooseFrom.isEmpty()) {
-                this.addToBot(new SelectCardsCenteredAction(
-                        cardsToChooseFrom,
-                        1,
-                        DESCRIPTIONS[3],
-                        (selectedCards) -> {
-                            AbstractCard chosenCard = selectedCards.get(0);
-                            AbstractDungeon.player.discardPile.removeCard(chosenCard);
-                            AbstractDungeon.player.hand.addToHand(chosenCard);
-
-                            chosenCard.lighten(false);
-                            chosenCard.unhover();
-                            chosenCard.applyPowers();
-                        }
-                ));
+                                chosenCard.lighten(false);
+                                chosenCard.unhover();
+                                chosenCard.applyPowers();
+                            }
+                    ));
+                }
             }
         }
     }

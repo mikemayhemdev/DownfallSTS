@@ -2,13 +2,10 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
 import champ.stances.UltimateStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -55,13 +52,6 @@ public class UltimateFormPower extends AbstractPower implements CloneablePowerIn
         if (amount == 1) {
             flash();
             AbstractDungeon.actionManager.addToBottom(new ChangeStanceAction(NeutralStance.STANCE_ID));
-            if (AbstractDungeon.player.hasPower(ImprovisingPower.POWER_ID)) {
-                if (AbstractDungeon.cardRandomRng.randomBoolean()) {
-                    addToBot(new ChangeStanceAction(new BerserkerStance()));
-                } else {
-                    addToBot(new ChangeStanceAction(new DefensiveStance()));
-                }
-            }
         }
     }
 

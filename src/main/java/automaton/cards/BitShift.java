@@ -10,12 +10,11 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import expansioncontent.cardmods.PropertiesMod;
-import expansioncontent.cardmods.RetainCardMod;
 import sneckomod.SneckoMod;
 
-import static automaton.AutomatonMod.makeBetaCardPath;
-
 import java.util.ArrayList;
+
+import static automaton.AutomatonMod.makeBetaCardPath;
 
 public class BitShift extends AbstractBronzeCard {
     public final static String ID = makeID("BitShift");

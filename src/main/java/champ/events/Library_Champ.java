@@ -5,7 +5,6 @@ import champ.relics.BerserkersGuideToSlaughter;
 import champ.relics.DefensiveTrainingManual;
 import champ.relics.FightingForDummies;
 import champ.relics.GladiatorsBookOfMartialProwess;
-import champ.stances.DefensiveStance;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -20,7 +19,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
-import downfall.events.FaceTrader_Evil;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -42,7 +40,7 @@ public class Library_Champ extends AbstractImageEvent {
     private boolean pickCard = false;
     private static final float HP_HEAL_PERCENT = 0.33F;
     private static final float A_2_HP_HEAL_PERCENT = 0.2F;
-    private int healAmt;
+    private final int healAmt;
 
     public Library_Champ() {
         super(NAME, DIALOG_1, "images/events/library.jpg");
@@ -70,7 +68,7 @@ public class Library_Champ extends AbstractImageEvent {
     public void update() {
         super.update();
         if (this.pickCard && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
-            AbstractCard c = ((AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0)).makeCopy();
+            AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0).makeCopy();
             logMetricObtainCard(ID, "Read", c);
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
@@ -165,7 +163,7 @@ public class Library_Champ extends AbstractImageEvent {
         list.add(DESCRIPTIONS[2]);
         list.add(DESCRIPTIONS[3]);
         list.add(DESCRIPTIONS[4]);
-        return (String)list.get(MathUtils.random(2));
+        return list.get(MathUtils.random(2));
     }
 
     private AbstractRelic getRandomFace() {

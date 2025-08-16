@@ -44,7 +44,7 @@ public class StolenMerchandise extends AbstractGremlinRelic {
         this.flash();
         AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
 
-        AbstractCard colorless = AbstractDungeon.returnTrulyRandomColorlessCardInCombat().makeCopy();
+        AbstractCard colorless = AbstractDungeon.returnTrulyRandomColorlessCardInCombat(AbstractDungeon.relicRng).makeCopy();
         addToBot(new EchoACardAction(colorless));
     }
 

@@ -14,8 +14,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.Iterator;
 
 public class GambitAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private CardType typeToCheck;
+    private final AbstractPlayer p;
+    private final CardType typeToCheck;
 
     public GambitAction(int amount, CardType type) {
         this.p = AbstractDungeon.player;

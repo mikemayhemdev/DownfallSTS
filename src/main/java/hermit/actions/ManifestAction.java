@@ -16,8 +16,8 @@ import java.util.Iterator;
 // DEPRECATED
 
 public class ManifestAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private CardType typeToCheck;
+    private final AbstractPlayer p;
+    private final CardType typeToCheck;
 
     public ManifestAction(int amount) {
         this.p = AbstractDungeon.player;

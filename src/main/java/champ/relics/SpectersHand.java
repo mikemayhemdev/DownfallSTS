@@ -1,13 +1,10 @@
 package champ.relics;
 
 import basemod.abstracts.CustomRelic;
-import basemod.cardmods.ExhaustMod;
-import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
 import champ.cards.Defend;
 import champ.cards.Strike;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.stances.AbstractStance;

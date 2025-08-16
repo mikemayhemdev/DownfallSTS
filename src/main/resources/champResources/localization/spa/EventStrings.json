@@ -1,0 +1,101 @@
+{
+  "champ:ChampTalk": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "¿QUIERES RECUPERAR ESTE CINTURÓN?",
+      "¡VEN Y QUÍTAMELO!"
+    ],
+    "OPTIONS": [""]
+  },
+  "champ:Colosseum": {
+    "NAME": "El Coliseo",
+    "DESCRIPTIONS": [
+      "Mientras avanzas por la Aguja, notas un grupo de humanoides apostados cerca de un gran auditorio. Al acercarte, los Esclavistas se sorprenden, pero rápidamente explican. NL NL \"¡CAMPEÓN! ¡Nos honras con tu presencia! ¿Has venido a enfrentar al nuevo retador?\"",
+      "¿Un nuevo retador? ¡Qué deleite! NL NL Sin embargo, el duelo tendrá que esperar. Al público siempre le gusta ver al Campeón destrozar al último capturado...",
+      "Entras al enorme estadio y te encuentras con una audiencia desbordante de #bEsclavistas, #pCultistas y otros habitantes de la Ciudad. NL NL ",
+      "@\"¿QUIÉN@ @SE@ @ATREVE@ @A@ @RETARME?!\"@ gritas con fuerza al público, llamando al supuesto retador. NL Un caballero se acerca, con una armadura sospechosamente parecida a la tuya, pero cubierta de tinta negra. La multitud lo aclama más de lo que merece. NL NL ¡Solo puede haber un Campeón!",
+      "@\"¡EL@ @SIGUIENTE@ @ES@ @MÍO!\"@ ruge tu voz entre vítores atronadores. NL NL No pasa mucho tiempo antes de que los esclavistas arrastren a su más reciente presa. El retador, aún aturdido por la emboscada, se incorpora y se prepara. NL NL Esto será divertido.",
+      "Decides que, aunque tentador, pelear aquí sería una distracción innecesaria. Tu viaje continúa mientras dejas a los esclavistas con su emboscada.",
+      "Caballero Negro"
+    ],
+    "OPTIONS": [
+      "[Defender el título] #rLuchar contra el #rCaballero #rNegro. #gObtén #gmuchas #grecompensas.",
+      "[Participar] #rLuchar contra el #rHéroe #rCautivo. #gObtén #gmuchas #grecompensas.",
+      "[Salir]",
+      "[¡LUCHAR!]",
+      "[Continuar]"
+    ]
+  },
+  "champ:Library": {
+    "NAME": "La Biblioteca",
+    "DESCRIPTIONS": [
+      "Te encuentras con el corazón del conocimiento de la Ciudad: la antigua Biblioteca. NL En su interior hay incontables rollos, manuscritos y libros. NL Puedes tomar uno para descansar un poco, o buscar algo más específico sobre técnicas de combate.",
+      "Pasas mucho tiempo recorriendo los pasillos repletos de tomos y guías, hasta encontrar el libro ideal. NL NL Te acomodas en una silla cómoda y repasas posturas y estilos olvidados. Incluso un espécimen de combate perfecto como tú sabe que la mente también debe entrenarse."
+    ],
+    "OPTIONS": [
+      "[Investigar] #gEncuentra #gun #gLibro #gsobre #gCombate.",
+      "[Bloqueado] Ya tienes todos los tomos de combate."
+    ]
+  },
+  "champ:TechniqueTome": {
+    "NAME": "Tomo de Técnica",
+    "DESCRIPTIONS": [
+      "Al tomar un camino lateral, una fuerza invisible guía tus pasos hacia un nuevo destino. No pasa mucho antes de encontrar un pedestal con un tomo enorme, envuelto en una energía luminosa inquietante. NL NL Al acercarte, las páginas, antes en blanco, cobran vida con grabados de combinaciones de ataque, posturas marciales y puntos débiles enemigos. NL NL Parece demasiado bueno para ser verdad, pero este regalo, esta oportunidad, este conocimiento no deben desperdiciarse.",
+      "¡Increíble! Las enseñanzas de este tomo son asombrosas. Cada palabra y diagrama salta de la página a tu mente, dándote nuevos métodos para aniquilar a tus oponentes. NL NL Lamentablemente, tal conocimiento nunca es gratis y desgasta tu psique. Pero queda tanto por aprender...",
+      "Sí. Tanto más. No puedes detenerte ahora. Con apenas una vacilación, te dejas consumir por la avalancha de información, encontrando aún más ventajas de combate. NL NL Comprendiendo ya el costo, ofreces voluntariamente más de tu energía vital a cambio de sabiduría. Pero aún queda mucho por aprender...",
+      "Reuniendo toda tu fuerza de voluntad, resistes el deseo de leer el tomo maldito. Tal vez regreses otro día, pero por ahora, tienes trabajo que hacer.",
+      "Cualquiera que haya sido el precio, valió la pena por obtener este conocimiento. Requiere esfuerzo despegarte del libro, pero lo logras. NL NL Con sus enseñanzas frescas en tu mente, sales en busca de una nueva víctima para probarlas."
+    ],
+    "OPTIONS": [
+      "[Leer] Elige un Ataque para ganar #y'activación del #yBono de #yHabilidad'. #rPierdes #r",
+      " #rPV.",
+      "[Salir]",
+      "[Bloqueado] Requiere una carta de Ataque.",
+      "Elige una carta para ganar #y'activación del #yBono de #yHabilidad'.",
+      "[Leer] Elige un Ataque para ganar #y'activación del #yBono de #yHabilidad'. #rMaldición #r- #rOrgullo."
+    ]
+  },
+  "champ:Gym": {
+    "NAME": "Gimnasio",
+    "DESCRIPTIONS": [
+      "Siguiendo tu camino por la Aguja, llegas al Gimnasio del Exordio: un lugar que visitas con frecuencia para mantenerte en forma. NL NL Sería una oportunidad desperdiciada no tomar un breve descanso aquí. Para mantenerte en la cima, cada ventaja cuenta.",
+      "Hoy te enfocas en la resistencia. Con la armadura puesta, te lanzas a correr varias vueltas por la pista central del gimnasio. NL NL Con una oleada de energía y adrenalina, abandonas el gimnasio listo para lo que venga.",
+      "Hoy te enfocas en el combate. Encuentras rápidamente a alguien que parezca aguantar un golpe y sin darle opción, lo arrastras al área de combate. No dura mucho antes de rendirse. NL NL Aunque el combate fue trivial, descubriste una nueva forma de iniciar la pelea. Útil para lo que se avecina.",
+      "Hoy te enfocas en fuerza y tono muscular. Levantas las pesas más pesadas y trabajas en ciclos intensos. Al terminar, ya puedes sentirte más fuerte que antes. NL NL Te marchas pensando que la próxima vez deberías enfocarte en piernas. No puede omitirse."
+    ],
+    "OPTIONS": [
+      "[Cardio] #gGana #g",
+      " #gPV #gMáximos.",
+      "[Sparring] Elige una carta que no sea Final para ganar 'Entrar en Postura (elegida)'.",
+      "[Levantamiento] #gGana #g1 #gde #gFuerza #gpermanente.",
+      "[Salir]",
+      "Elige una carta que no sea Final para ganar 'Entrar en Defensivo'.",
+      "Elige una carta que no sea Final para ganar 'Entrar en Gladiador'.",
+      "Elige una carta que no sea Final para ganar 'Entrar en Berserker'.",
+      "[Bloqueado] Requiere una carta que no entre en una Postura."
+    ]
+  },
+  "champ:MinorLeagueArena": {
+    "NAME": "Arena Menor",
+    "DESCRIPTIONS": [
+      "Siguiendo por el Exordio, te topas con una atracción conocida: el antiguo sitio de los juegos brutales que ahora se celebran en el Coliseo de la Ciudad. Esta arena más pequeña y modesta ahora es campo de entrenamiento para retadores menores. NL NL Este tipo de competencia está claramente debajo de ti, pero podría ser un entretenimiento aceptable.",
+      "Decides que tu tiempo es mejor empleado en otro lado. Al alejarte, escuchas un suspiro de alivio de los combatientes: claramente, nadie esperaba morir a tus manos hoy."
+    ],
+    "OPTIONS": [
+      "[Luchar contra Centurión y Místico] #gObtén #gBroche #gde #gCapa.",
+      "[Luchar contra Noble Gremlin] #gObtén #gCinturón #gdel #gCampeón.",
+      "[Luchar contra Dúo de Esclavistas] #gObtén #gHerradura.",
+      "[Salir]"
+    ]
+  },
+  "champ:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "La habilidad y la confianza forman una combinación invencible."
+    ],
+    "OPTIONS": [
+      "[Intuición] #gAñade #y'activación del #yBono de #yHabilidad.' a todos los #gGolpes y #gDefender.",
+      "[Bloqueado] Requiere una carta Golpe o Defensa."
+    ]
+  }
+}

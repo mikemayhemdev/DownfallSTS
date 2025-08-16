@@ -60,7 +60,7 @@ public class FromBeyond extends AbstractDynamicCard {
             Wiz.atb(new AbstractGameAction() {
                 @Override
                 public void update() {
-                    target = AbstractDungeon.getMonsters().getRandomMonster((AbstractMonster) null, true, AbstractDungeon.cardRandomRng);
+                    target = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
                     if (this.target != null && !isDeadOrEscaped(this.target)) {
                         this.addToTop(new FastLoseHPAction(this.target, AbstractDungeon.player, dameg, EnumPatch.HERMIT_GHOSTFIRE));
                     }

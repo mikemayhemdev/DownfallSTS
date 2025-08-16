@@ -1,0 +1,30 @@
+{
+  "Slimebound:SlimedPotion": {
+    "NAME": "Frasco de Baba",
+    "DESCRIPTIONS": [
+      "Aplica #b",
+      " de #yBaba [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:SlimyTonguePotion": {
+    "NAME": "Elixir Baboso",
+    "DESCRIPTIONS": [
+      "Cada vez que un efecto aplique #yBaba en este combate, aplica #b",
+      " adicional."
+    ]
+  },
+  "Slimebound:SpawnSlimePotion": {
+    "NAME": "Ejército Embotellado",
+    "DESCRIPTIONS": [
+      "#yDivídete en #b",
+      " Babas aleatorias (Normales o #yEspecialistas [REMOVE_SPACE])."
+    ]
+  },
+  "Slimebound:ThreeZeroPotion": {
+    "NAME": "Brebaje con Ooze",
+    "DESCRIPTIONS": [
+      "Agrega #b",
+      " cartas aleatorias de coste 0 a tu mano."
+    ]
+  }
+}

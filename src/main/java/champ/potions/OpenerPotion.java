@@ -1,6 +1,5 @@
 package champ.potions;
 
-
 import basemod.abstracts.CustomPotion;
 import champ.ChampMod;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -71,8 +70,8 @@ public class OpenerPotion extends CustomPotion {
             if (q.hasTag(ChampMod.OPENERBERSERKER)) bersOpenersList.add(q.makeCopy());
             if (q.hasTag(ChampMod.OPENERDEFENSIVE)) defOpenersList.add(q.makeCopy());
         }
-        choiceList.add(bersOpenersList.get(AbstractDungeon.cardRandomRng.random(bersOpenersList.size() - 1)));
-        choiceList.add(defOpenersList.get(AbstractDungeon.cardRandomRng.random(defOpenersList.size() - 1)));
+        choiceList.add(bersOpenersList.get(AbstractDungeon.potionRng.random(bersOpenersList.size() - 1)));
+        choiceList.add(defOpenersList.get(AbstractDungeon.potionRng.random(defOpenersList.size() - 1)));
         return choiceList;
     }
 

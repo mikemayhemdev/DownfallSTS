@@ -14,7 +14,7 @@ public class HecktoplasmPatch {
         if (AbstractDungeon.player.hasRelic(Hecktoplasm.ID)) {
             AbstractDungeon.player.getRelic(Hecktoplasm.ID).flash();
             System.out.println("Removing " + amount[0] + " Souls.");
-            amount[0] = (int)(amount[0] * 0);
+            amount[0] = 0;
         }
     }
 }

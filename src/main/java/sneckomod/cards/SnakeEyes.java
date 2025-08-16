@@ -18,7 +18,7 @@ import java.util.ArrayList;
 public class SnakeEyes extends AbstractSneckoCard implements OnObtainCard {
 
 
-    ///Snake Eyes
+    //Snake Eyes
     public final static String ID = makeID("SnakeEyes");
 
     private static final int MAGIC = 1;

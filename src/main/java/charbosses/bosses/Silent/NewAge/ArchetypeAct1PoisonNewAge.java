@@ -140,6 +140,6 @@ public class ArchetypeAct1PoisonNewAge extends ArchetypeBaseSilent {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_SneckoSkull());
+        addRelic(new CBR_Vajra());
     }
 }

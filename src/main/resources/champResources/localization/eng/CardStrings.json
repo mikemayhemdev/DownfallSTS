@@ -27,17 +27,13 @@
     ]
   },
   "champ:StanceDanceCrown": {
-    "NAME": "Champion's Crown",
-    "DESCRIPTION": "Choose a Stance to Enter. NL Trigger its *Skill champ:Bonus.",
-    "UPGRADE_DESCRIPTION": "Choose a Stance to Enter. NL Trigger its *Skill champ:Bonus twice.",
-    "EXTENDED_DESCRIPTION": [
-      "Enter champ:Berserker.",
-      "Enter champ:Defensive."
-    ]
+    "NAME": "Inspiration",
+    "DESCRIPTION": "Retain. NL Enter a Stance you aren't in. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Enter a Stance you aren't in."
   },
   "champ:SwordSigil": {
     "NAME": "Sigil of Victory",
-    "DESCRIPTION": "Trigger your current Stance's *Skill champ:Bonus !M! times."
+    "DESCRIPTION": "Trigger your current *Stance's *Skill champ:Bonus !M! times."
   },
   "champ:FaceSlap": {
     "NAME": "Face Slap",
@@ -130,9 +126,9 @@
   },
   "champ:ShieldThrow": {
     "NAME": "Shield Throw",
-    "DESCRIPTION": "Deal damage equal to your Block, twice.",
+    "DESCRIPTION": "Deal damage equal to your Block, twice. NL If not in champ:Defensive, don't gain Block from cards next turn.",
     "EXTENDED_DESCRIPTION": [
-      "Deal damage equal to your Block ( !D! ) twice."
+      "Deal damage equal to your Block ( !D! ) twice. NL If not in champ:Defensive, don't gain Block from cards next turn."
     ]
   },
   "champ:FalseCounter": {
@@ -146,7 +142,7 @@
   },
   "champ:Lariat": {
     "NAME": "Lariat",
-    "DESCRIPTION": "Gain !B! Block X times. NL Trigger your Stance's *Skill champ:Bonus X times."
+    "DESCRIPTION": "Gain !B! Block X times. NL Trigger your *Stance's *Skill champ:Bonus X times."
   },
   "champ:HoldFirm": {
     "NAME": "Hold Firm",
@@ -162,7 +158,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "Vicious Mockery",
-    "DESCRIPTION": "Gain !M! Vigor. NL Apply !DM! Weak. NL Trigger your Stance's *Skill champ:Bonus.",
+    "DESCRIPTION": "Gain !M! Vigor. NL Apply !DM! Weak. NL Trigger your current *Stance's *Skill champ:Bonus.",
     "EXTENDED_DESCRIPTION": [
       "Berserker champ:Combo: Gain !M! temporary Strength. NL ",
       "Defensive champ:Combo: Gain !M! temporary Dexterity."
@@ -193,7 +189,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "Sword Throw",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Gain 2 Weak. NL *Berserker champ:Combo: Don't gain Weak."
+    "DESCRIPTION": "Deal !D! damage !M! times. NL If not in champ:Berserker, you can't play *Attacks next turn."
   },
   "champ:MurderStrike": {
     "NAME": "Murder Strike",
@@ -209,7 +205,7 @@
   },
   "champ:RisingSlash": {
     "NAME": "Rising Strike",
-    "DESCRIPTION": "Deal !D! damage. NL If the last played card this combat was a champ:Finisher, deal !D! damage again."
+    "DESCRIPTION": "Retain. NL Deal !D! damage. NL If the last card played was a champ:Finisher, deal !D! damage again."
   },
   "champ:Shatter": {
     "NAME": "Shatter",
@@ -223,7 +219,7 @@
     ]
   },
   "champ:VampiricStrike": {
-    "NAME": "Clobbering Strike",
+    "NAME": "Clobber Strike",
     "DESCRIPTION": "Deal !D! damage. NL Gain Block equal to unblocked damage dealt."
   },
   "champ:AdrenalArmor": {
@@ -288,7 +284,7 @@
   },
   "champ:Improvising": {
     "NAME": "Improvising",
-      "DESCRIPTION": "Enter a random Stance at the start of your turn if not in a Stance. NL Trigger *Skill champ:Bonus !M! times entering Stances."
+      "DESCRIPTION": "Whenever you enter a Stance, trigger its *Skill champ:Bonus !M! times."
   },
   "champ:CalledShot": {
     "NAME": "Refreshment",
@@ -341,8 +337,8 @@
   },
   "champ:Endure": {
     "NAME": "Endure",
-    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block, increased by *Strength.",
-    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block, increased by *Strength."
+    "DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block, increased by Strength instead of Dexterity.",
+    "UPGRADE_DESCRIPTION": "Enter champ:Defensive. NL Gain !B! Block, increased by Strength."
   },
   "champ:PreemptiveStrike": {
     "NAME": "Preemptive Strike",

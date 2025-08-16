@@ -17,7 +17,7 @@ public class Memento extends CustomRelic {
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("memento.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("memento.png"));
 
-    private int TURNS = 0;
+    private final int TURNS = 0;
 
     public Memento() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.FLAT);

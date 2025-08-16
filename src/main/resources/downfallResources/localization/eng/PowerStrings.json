@@ -66,9 +66,10 @@
     ]
   },
   "downfall:WatcherAngryPower": {
-    "NAME": "Unbridled Rage",
+    "NAME": "Steady",
     "DESCRIPTIONS": [
-      "At the end of her turn, if Watcher is at or below #b50% HP, she enters #yWrath. NL Watcher's #yWrath increases damage dealt and received by #b50% instead of #b100% [REMOVE_SPACE]."
+      "At the end of her turn, if Watcher is at or below #b50% HP, she enters #yWrath. NL Watcher's #yWrath increases damage dealt and received by #b50% instead of #b100% [REMOVE_SPACE].",
+      "Watcher's #yWrath increases damage dealt and received by #b50% instead of #b100% [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -88,9 +89,14 @@
   "downfall:WatcherSkillPower": {
     "NAME": "Prey on Disharmony",
     "DESCRIPTIONS": [
-      "Whenever you play a skill, Watcher gains #b",
-      " temporary #yStrength.",
-      "Whenever you play a skill, Watcher gains #yTemporary #yStrength [REMOVE_SPACE]."
+      "Whenever you play an #yAttack, Watcher gains #b",
+      " temp. #yDexterity, #b",
+      " temp. #yStrength when you play a #ySkill, and #b",
+      " of both when you play a #yPower.",
+      "If you play more than #b",
+      " cards in a turn, Watcher removes ALL of her debuffs.",
+      "You have played #b",
+      " cards this turn."
     ]
   },
   "downfall:WrathNextTurnPower": {
@@ -110,7 +116,13 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "Fleeting Faith",
     "DESCRIPTIONS": [
-      "Watcher gains #b1 #yMantra whenever you play a card. NL Whenever Watcher enters #yDivinity, she gains #b3 #yStrength. NL Watcher loses #b4 #yMantra at the start of her turn. NL Watcher does not exit #yDivinity at the end of her turn."
+      "Watcher gains #b1 #yMantra whenever you play a card. NL Watcher loses #b6 #yMantra at the start of her turn."
+    ]
+  },
+  "downfall:WatcherDivinityNoRemovePower": {
+    "NAME": "Faith Rewarded",
+    "DESCRIPTIONS": [
+      "Once Watcher enters #Divinity, she does not exit it at the end of her turn."
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -144,9 +156,9 @@
     ]
   },
   "downfall:SilentPoisonPower": {
-    "NAME": "Warning: Highly Toxic",
+    "NAME": "New Toxins",
     "DESCRIPTIONS": [
-      "#yPoison is blockable and deals damage at end of turn. NL Receive an #yAntidote at the start of combat."
+      "#yPoison is blockable and deals damage at end of turn."
     ]
   },
   "downfall:NeowHighlyToxic": {
@@ -182,23 +194,24 @@
   "downfall:DefectCuriosity": {
     "NAME": "Unbiased Cognition",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, Defect gains #b",
-      " #yFocus."
+      "Whenever you play a #yPower [REMOVE_SPACE], Defect gains #b",
+      " #yFocus [REMOVE_SPACE].",
+      " Changes to Defect's #yStrength also affect their #yFocus [REMOVE_SPACE]."
     ]
   },
   "downfall:DefectBiasCuriosity": {
-    "NAME": "Corrected Cognitive",
+    "NAME": "Bias",
     "DESCRIPTIONS": [
-      "Defect plays an #yUnbiased #yCognition at the start of combat. NL Whenever you play a #yPower card, Defect's #yBias loses efficacy this turn.",
-      "Whenever you play a #yPower card, Defect's #yBias loses efficacy this turn.",
-      "Defect's #yBias loses efficacy this turn.",
-      "Bias"
+      "Defect starts combat with #b4 #yFocus and gains #b1 more whenever you play a #yPower [REMOVE_SPACE], but also loses #b1 #yFocus at the start of their turn.",
+      "Defect loses #b",
+      " #yFocus",
+      " at the end of their turn."
     ]
   },
   "downfall:DefectCuriosityLighning": {
     "NAME": "Unbiased Cognition",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card, Defect channels #b",
+      "Whenever you play a #yPower [REMOVE_SPACE], Defect channels #b",
       " #yLightning #yOrb [REMOVE_SPACE]."
     ]
   },
@@ -211,7 +224,8 @@
   "downfall:IroncladStatusPower": {
     "NAME": "Synchronize",
     "DESCRIPTIONS": [
-      "Whenever Ironclad generates a #yStatus card, a duplicate is added into your discard pile."
+      "Whenever Ironclad generates a #yStatus card, a duplicate is added into your discard pile.",
+      "Whenever Ironclad generates a #yStatus card, it enters your discard pile instead."
     ]
   },
   "downfall:NeowSyncronize": {
@@ -223,7 +237,9 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "Feeding Frenzy",
     "DESCRIPTIONS": [
-      "Ironclad's #yReaper does not #yExhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 #yStrength [REMOVE_SPACE]."
+      "Ironclad's #yReaper does not #yExhaust and targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b1 #yStrength [REMOVE_SPACE].",
+      "Ironclad's #yReaper targets ALL Mushrooms. NL When Ironclad kills a Mushroom, he gains #b",
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowFeedingFrenzy": {
@@ -236,7 +252,8 @@
     "NAME": "Bastion",
     "DESCRIPTIONS": [
       "Ironclad begins the fight with a #yFortification, which will grant him #b",
-      " #yBlock each turn. NL When the #yFortification has been destroyed, Ironclad loses #yBarricade, but gains #b5 #yStrength at the start of each turn."
+      " #yBlock each turn. NL When the #yFortification has been destroyed, Ironclad loses #yBarricade, but gains #b5 #yStrength at the start of each turn.",
+      "When destroyed, Ironclad loses #yBarricade, but gains #b5 #yStrength at the start of each turn."
     ]
   },
   "downfall:NeowBastion": {
@@ -348,9 +365,10 @@
     ]
   },
   "downfall:HermitWheelOfFortune": {
-    "NAME": "Wheel of Fortune",
+    "NAME": "Wheel of Fate",
     "DESCRIPTIONS": [
-      "After you play an #yAttack, Hermit #yCycles his first card. Hermit's card cost can't change."
+      "After you play an #yAttack, Hermit #yCycles his first card. Hermit's card cost can't change. Whenever Hermit draws #rNecronomicurse, he gains #b2 Strength.",
+      "After you play an #yAttack, Hermit #yCycles his first card."
     ]
   },
   "downfall:HermitDoomsday": {
@@ -384,9 +402,10 @@
     "DESCRIPTIONS": [
       "BUG! You should not see this",
       "Next turn, gain #b",
-      " ",
-      ".",
-      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field."
+      " #y",
+      " [REMOVE_SPACE].",
+      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field.",
+      "finalized text should look like this: Next turn, gain #b7 #yVigor [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowStayAt1Hp": {
@@ -417,6 +436,26 @@
     "DESCRIPTIONS": [
       "Whenever Neow's #yInvincible reaches #b0 [REMOVE_SPACE], reduce her #yGod #yof #yLife by #b",
       " [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:DefectAttackVoidPower":{
+    "NAME": "Energy Thief",
+    "DESCRIPTIONS": [
+      "Whenever you deal unblocked attack damage, add a Void to your opponent's discard pile."
+    ]
+  },
+  "downfall:WatcherTrackerAttacksPower":{
+    "NAME": "Eye for Attacks",
+    "DESCRIPTIONS": [
+      "You have played #b",
+      " Attacks. While this number exceeds non-Attacks, Watcher is in #yWrath Stance."
+    ]
+  },
+  "downfall:WatcherTrackerSkillsPower":{
+    "NAME": "Eye for Skills",
+    "DESCRIPTIONS": [
+      "You have played #b",
+      " non-Attacks. While this number exceeds or matches Attacks, Watcher is in #yCalm Stance."
     ]
   }
 }

@@ -1,6 +1,5 @@
 package champ.cards;
 
-import champ.ChampMod;
 import charbosses.bosses.Merchant.CharBossMerchant;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;

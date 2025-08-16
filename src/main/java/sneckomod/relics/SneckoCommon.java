@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.relics.MoltenEgg2;
 import com.megacrit.cardcrawl.relics.ToxicEgg2;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.util.TextureLoader;
+import guardian.rewards.GemRewardButRelicRng;
 import sneckomod.SneckoMod;
 import sneckomod.cards.unknowns.UnknownClass;
 import sneckomod.util.ColorfulPowersReward;
@@ -33,31 +34,10 @@ public class SneckoCommon extends CustomRelic {
     }
 
     public void onEquip() {
-        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
-        while (cardsToReward.size() < 5) {
-            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicate(c ->
-                    c.type == AbstractCard.CardType.POWER && c.rarity == AbstractCard.CardRarity.UNCOMMON);
-
-            for (AbstractRelic r : AbstractDungeon.player.relics) {
-                r.onPreviewObtainCard(newCard);
-            }
-
-            //newCard.upgrade();
-            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
-            CardGroup c = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-
-                if (!isDuplicate(cardsToReward, newCard)) {
-                    cardsToReward.add(newCard.makeCopy());
-                }
-              }
-            AbstractDungeon.cardRewardScreen.open(cardsToReward, null, TEXT[2]);
-            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-        }
-
-
-
-    private boolean isDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
-        return cardsList.stream().anyMatch(c -> c.cardID.equals(card.cardID));
+        AbstractDungeon.getCurrRoom().rewards.add(new ColorfulPowersReward());
+        AbstractDungeon.combatRewardScreen.open(this.DESCRIPTIONS[1]);
+        AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
+        AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
     }
 
 

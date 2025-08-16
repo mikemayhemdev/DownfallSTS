@@ -245,14 +245,18 @@ public class CrystalForge extends AbstractImageEvent {
                         this.pickCardForSalvageGems = true;
                         this.imageEventText.updateBodyText(SALVAGE);
                         this.imageEventText.updateDialogOption(0, OPTIONS[4], true);
+                        this.imageEventText.updateDialogOption(1, OPTIONS[4], true);
+                        this.imageEventText.updateDialogOption(2, OPTIONS[4], true);
                         AbstractDungeon.gridSelectScreen.open(GuardianMod.getCardsWithFilledSockets(), 1, false, DESCRIPTIONS[5]);
-
                         break;
                     case 1:
                         this.pickCardForGemRemoval = true;
                         AbstractDungeon.gridSelectScreen.open(GuardianMod.getCardsWithFilledSockets(), 1, DESCRIPTIONS[6], false, false, false, false);
                         this.imageEventText.updateBodyText(PRY);
+
+                        this.imageEventText.updateDialogOption(0, OPTIONS[4], true);
                         this.imageEventText.updateDialogOption(1, OPTIONS[4], true);
+                        this.imageEventText.updateDialogOption(2, OPTIONS[4], true);
 
                         break;
                     case 2:
@@ -260,6 +264,8 @@ public class CrystalForge extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(TRANSMUTE);
                         AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, DESCRIPTIONS[7], false, false, false, true);
 
+                        this.imageEventText.updateDialogOption(0, OPTIONS[4], true);
+                        this.imageEventText.updateDialogOption(1, OPTIONS[4], true);
                         this.imageEventText.updateDialogOption(2, OPTIONS[4], true);
 
                         break;

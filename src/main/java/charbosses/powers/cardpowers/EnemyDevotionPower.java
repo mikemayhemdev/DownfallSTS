@@ -29,7 +29,8 @@ public class EnemyDevotionPower extends AbstractPower {
         this.description = powerStrings.DESCRIPTIONS[0] + this.amount + powerStrings.DESCRIPTIONS[1];
     }
 
-    public void atStartOfTurnPostDraw() {
+    @Override
+    public void atStartOfTurn() {
         this.flash();
         if (!AbstractCharBoss.boss.hasPower("Mantra") && this.amount >= 10) {
             this.addToBot(new EnemyChangeStanceAction("Divinity"));

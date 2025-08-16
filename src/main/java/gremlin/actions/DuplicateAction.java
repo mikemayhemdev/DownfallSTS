@@ -18,7 +18,7 @@ public class DuplicateAction extends AbstractGameAction {
     public static final String[] TEXT = uiStrings.TEXT;
     private final AbstractPlayer p;
     private final int dupeAmount;
-    private ArrayList<AbstractCard> cannotDuplicate = new ArrayList<>();
+    private final ArrayList<AbstractCard> cannotDuplicate = new ArrayList<>();
 
     public DuplicateAction(AbstractCreature source, int amount) {
         setValues(AbstractDungeon.player, source, amount);

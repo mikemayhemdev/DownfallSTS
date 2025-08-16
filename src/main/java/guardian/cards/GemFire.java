@@ -204,7 +204,8 @@ public class GemFire extends AbstractGuardianCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            //upgradeBaseCost(1);
+            upgradeDamage(4);
         }
     }
 }

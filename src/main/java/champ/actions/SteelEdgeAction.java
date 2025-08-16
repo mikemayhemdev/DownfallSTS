@@ -2,9 +2,7 @@ package champ.actions;
 
 import champ.cards.AbstractChampCard;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -14,9 +12,9 @@ import downfall.actions.AbstractXAction;
 
 public class SteelEdgeAction extends AbstractXAction {
 
-    private int bonusAmt;
-    private int boom;
-    private int boom2;
+    private final int bonusAmt;
+    private final int boom;
+    private final int boom2;
 
     public SteelEdgeAction(int x, int y, int bonusAmt, AbstractMonster target) {
         this.bonusAmt = bonusAmt;

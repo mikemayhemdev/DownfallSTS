@@ -1,0 +1,120 @@
+{
+  "sneckomod:SneckoSoul": {
+    "NAME": "Alma de Serpentija",
+    "FLAVOR": "0...3...2...2...1",
+    "DESCRIPTIONS": [
+      "Al comienzo de cada combate, añade un #yGiro #yEspiritual a tu mano."
+    ]
+  },
+  "sneckomod:SuperSneckoSoul": {
+    "NAME": "Alma de Serpentija Súper",
+    "FLAVOR": "3120231321230320",
+    "DESCRIPTIONS": [
+      "Reemplaza [#407B93]Alma [#407B93]de [#407B93]Serpentija[]. NL Al comienzo de cada combate y cada dos turnos, obtienes un #yGiro #yEspiritual [REMOVE_SPACE]. NL En los otros turnos, roba una carta adicional al comienzo de tu turno y la #ysneckomod:Confunde."
+    ]
+  },
+  "sneckomod:CleanMud": {
+    "NAME": "Flauta del Encantador",
+    "FLAVOR": "Sssssss...",
+    "DESCRIPTIONS": [
+      "Las cartas #ysneckomod:Confundidas no pueden costar #b3 [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:ConfusingCodex": {
+    "NAME": "Anillo de la Serpentija",
+    "FLAVOR": "Ilegible, inentendible, entrega el jueves.",
+    "DESCRIPTIONS": [
+      "Cada vez que actives #b3 efectos de #ysneckomod:Exceso, aplica #b1 #yDébil y #yVulnerable a un enemigo aleatorio."
+    ]
+  },
+  "sneckomod:CrystallizedMud": {
+    "NAME": "Colgante Hipnótico",
+    "FLAVOR": "Barro deslumbrante.",
+    "DESCRIPTIONS": [
+      "Obtén [E] al comienzo de tu turno. Las cartas #ysneckomod:Confundidas no pueden costar #b0."
+    ]
+  },
+  "sneckomod:LoadedDie": {
+    "NAME": "Dado Cargado",
+    "FLAVOR": "Relleno de queso.",
+    "DESCRIPTIONS": [
+      "Cada vez que una carta sea #ysneckomod:Confundida, obtén #b1 de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:RareBoosterPack": {
+    "NAME": "Caja de Refuerzo Rara",
+    "FLAVOR": "En estado impecable.",
+    "DESCRIPTIONS": [
+      "Al obtener esta reliquia, recibe una carta #ysneckomod:Ajena #yRara."
+    ]
+  },
+  "sneckomod:SleevedAce": {
+    "NAME": "As Bajo la Manga",
+    "FLAVOR": "Todos somos ases.",
+    "DESCRIPTIONS": [
+      "Al comienzo de cada combate, obtén una #yCarta #yMarcada [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:UnknownEgg": {
+    "NAME": "Huevo No Identificado",
+    "FLAVOR": "¿Qué saldrá? Paga $1000 para averiguarlo.",
+    "DESCRIPTIONS": [
+      "Cada vez que añadas una carta #ysneckomod:Ajena a tu mazo, #yMejórala. Al obtener esta reliquia, #yMejora #b2 cartas #ysneckomod:Ajenas aleatorias."
+    ]
+  },
+  "sneckomod:SuperSneckoEye": {
+    "NAME": "Ojo de Serpentija Súper",
+    "FLAVOR": "0121012",
+    "DESCRIPTIONS": [
+      "Reemplaza al #yOjo #yde #ySerpentija. Al comienzo de tu turno, roba #b4 cartas adicionales. Comienza cada combate con #yConfusión."
+    ]
+  },
+  "sneckomod:SneckoTalon": {
+    "NAME": "Ídolo de Retromation",
+    "FLAVOR": "También llamado Ídolo de Reto.",
+    "DESCRIPTIONS": [
+      "Al comienzo de tu turno, reduce en #b1 el costo de una carta aleatoria en tu mano que cueste al menos #b1 durante este turno."
+    ]
+  },
+  "sneckomod:BlankCard": {
+    "NAME": "Carta en Blanco",
+    "FLAVOR": "Mímica de cartas.",
+    "DESCRIPTIONS": [
+      "Al comienzo de cada combate, añade un #ygremlin:Eco de una carta aleatoria que #rno sea #rMaldición [REMOVE_SPACE], ni #yEstado de tu mazo a tu mano. Cuesta #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:D8": {
+    "NAME": "Octaedro Místico",
+    "FLAVOR": "Parece estar cargado hacia un lado.",
+    "DESCRIPTIONS": [
+      "Al obtener esta reliquia, elige una carta con efecto de #ysneckomod:Exceso. Cada vez que la juegues, obtén #b4 de #yBloqueo y activa su efecto de #yExceso incluso si no tienes más de #b5 cartas en la mano.",
+      "Elige una carta para ",
+      "Cada vez que se juegue ",
+      ", obtén #b4 de #yBloqueo y activa su efecto de #ysneckomod:Exceso incluso si no tienes más de #b5 cartas en la mano."
+    ]
+  },
+  "sneckomod:BabySnecko": {
+    "NAME": "Serpentija Joven",
+    "FLAVOR": "Desconcertantemente adorable.",
+    "DESCRIPTIONS": [
+      "Inflige #b9 de daño a un enemigo aleatorio y #ysneckomod:Confunde #b2 cartas aleatorias en tu mano (que no cuesten #b0, ni sean de costo #bX [REMOVE_SPACE], ni #yInjugables [REMOVE_SPACE]) al comienzo de tu turno."
+    ]
+  },
+  "sneckomod:SneckoCommon": {
+    "NAME": "Sello de Aprobación",
+    "FLAVOR": "Soy El Hierro y esta es mi reliquia favorita de la Aguja. -Folleto del Comerciante",
+    "DESCRIPTIONS": [
+      "Al obtener esta reliquia, elige #b1 de #b5 Poderes #ysneckomod:Ajenos #yPoco #ycomunes para obtenerla."
+    ]
+  },
+  "sneckomod:SneckoBoss": {
+    "NAME": "Herradura Suertuda",
+    "FLAVOR": "Crea tu propia suerte.",
+    "DESCRIPTIONS": [
+      "Al obtener esta reliquia, elige #b1 de #b3 #yPersonajes [REMOVE_SPACE]. Elige #b3 cartas Poco Comunes Mejoradas y #b2 Raras para añadir a tu mazo. Todos los combates otorgarán una recompensa adicional de cartas del personaje elegido.",
+      "Al obtenerla, obtén #b3 Poco Comunes Mejoradas y #b2 Raras de ",
+      ". Todos los combates otorgarán una recompensa adicional de cartas de ",
+      "."
+    ]
+  }
+}

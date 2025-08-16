@@ -3,6 +3,7 @@ package downfall.monsters.gauntletbosses;
 import charbosses.cards.purple.EnWish;
 import charbosses.cards.purple.EnWishPlated;
 import charbosses.core.EnemyEnergyManager;
+import charbosses.powers.cardpowers.EnemyEnergyDownPower;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
@@ -10,10 +11,7 @@ import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
-import com.megacrit.cardcrawl.cards.purple.Defend_Watcher;
-import com.megacrit.cardcrawl.cards.purple.Strike_Purple;
-import com.megacrit.cardcrawl.cards.purple.Wallop;
-import com.megacrit.cardcrawl.cards.purple.Wish;
+import com.megacrit.cardcrawl.cards.purple.*;
 import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -27,6 +25,7 @@ import downfall.powers.DrawReductionPowerPlus;
 import downfall.powers.gauntletpowers.MonsterVigor;
 import downfall.powers.gauntletpowers.OnDeathEveryoneBuffer;
 import downfall.powers.gauntletpowers.OnDeathEveryoneVigor;
+import hermit.cards.Maintenance;
 
 public class Watcher extends GauntletBoss {
 
@@ -95,7 +94,18 @@ public class Watcher extends GauntletBoss {
                 }
                 break;
             case 5:
-                addToBot(new ApplyPowerAction(this, this, new PlatedArmorPower(this, 8), 8));
+                //addToBot(new ApplyPowerAction(this, this, new PlatedArmorPower(this, 8), 8));
+                if (AbstractDungeon.ascensionLevel >= 18) {
+                    this.addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 4), 4));
+                    this.addToBot(new ApplyPowerAction(this, this, new DexterityPower(this, 4), 4));
+                }
+
+                if (AbstractDungeon.ascensionLevel < 18) {
+                    this.addToBot(new ApplyPowerAction(this, this, new StrengthPower(this, 3), 3));
+                    this.addToBot(new ApplyPowerAction(this, this, new DexterityPower(this, 3), 3));
+                }
+
+                this.addToBot(new ApplyPowerAction(this, this, new EnemyEnergyDownPower(this, 1,true), 1));
                 break;
         }
 
@@ -130,7 +140,13 @@ public class Watcher extends GauntletBoss {
         turnNum++;
         if (turnNum == 5) {
             isAttacking = false;
-            setMove(moveName(Wish.ID) + "+", (byte) 5, Intent.BUFF);
+            if (AbstractDungeon.ascensionLevel < 18) {
+                setMove(moveName(Fasting.ID), (byte) 5, Intent.BUFF);
+            }
+
+            if (AbstractDungeon.ascensionLevel >= 18) {
+                setMove(moveName(Fasting.ID) + "+", (byte) 5, Intent.BUFF);
+            }
         } else {
             if (isThird && turnNum > 1 && ally1 != null && ally2 != null) {
                 if (!ally1.isDeadOrEscaped() && !ally2.isDeadOrEscaped() && ally1.isAttacking && ally2.isAttacking) {

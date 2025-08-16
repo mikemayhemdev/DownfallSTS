@@ -1,5 +1,7 @@
 package downfall.events;
 
+import automaton.relics.BottledCode;
+import awakenedOne.relics.MoonTalisman;
 import champ.relics.SignatureFinisher;
 import collector.CollectorChar;
 import collector.relics.BottledCollectible;
@@ -16,8 +18,11 @@ import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.RainingGoldEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import guardian.events.StasisEgg;
+import guardian.relics.BottledAnomaly;
 import guardian.relics.BottledStasis;
 import guardian.relics.PickAxe;
+import sneckomod.relics.D8;
 import sneckomod.relics.SneckoBoss;
 import sneckomod.relics.SneckoCommon;
 import theHexaghost.relics.Libra;
@@ -67,7 +72,7 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
             ((r.relicId != Strawberry.ID) &&
                     (r.relicId != MawBank.ID) &&
                     (r.relicId != PickAxe.ID) &&
-                    (r.relicId != TinyChest.ID) &&
+                    (r.relicId != Matryoshka.ID) &&
                     (r.relicId != WarPaint.ID) &&
                     (r.relicId != Whetstone.ID) &&
                     (r.relicId != SneckoCommon.ID) &&
@@ -84,6 +89,14 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
                     (r.relicId != Mango.ID) &&
                     (r.relicId != SignatureFinisher.ID) &&
                     (r.relicId != WingBoots.ID) &&
+                    (r.relicId != MoonTalisman.ID) &&
+
+                    (r.relicId != BottledAnomaly.ID) &&
+                    (r.relicId != BottledCode.ID) &&
+                    (r.relicId != StasisEgg.ID) &&
+                    (r.relicId != D8.ID) &&
+
+
                     //Boss
                     (r.relicId != Astrolabe.ID) &&
                     (r.relicId != ForbiddenFruit.ID) &&

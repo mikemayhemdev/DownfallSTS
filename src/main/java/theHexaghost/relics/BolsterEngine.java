@@ -25,6 +25,12 @@ public class BolsterEngine extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
     }
     //Tricky's Bolster-Rod 高热之杖
+
+    //variables
+
+    private static final int BLOCK = 6;
+    private static final int STR = 1;
+
     @Override
     public void atBattleStart() {
         grayscale = false;
@@ -38,8 +44,8 @@ public class BolsterEngine extends CustomRelic {
             stopPulse();
             grayscale = true;
             addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-            addToBot(new GainBlockAction(AbstractDungeon.player, 6));
-            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, 1), 1));
+            addToBot(new GainBlockAction(AbstractDungeon.player, BLOCK));
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, STR), STR));
         }
     }
 
@@ -49,6 +55,6 @@ public class BolsterEngine extends CustomRelic {
     }
 
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + BLOCK + DESCRIPTIONS[1] + STR + DESCRIPTIONS[2];
     }
 }

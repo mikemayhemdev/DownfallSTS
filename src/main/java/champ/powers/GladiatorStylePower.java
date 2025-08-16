@@ -2,17 +2,14 @@ package champ.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
-import champ.cards.AbstractChampCard;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.stances.NeutralStance;
-import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
 
 public class GladiatorStylePower extends AbstractPower implements CloneablePowerInterface {

@@ -15,7 +15,7 @@ public class WideAngle extends AbstractSneckoCard {
 
     private static final int COST = 3;
     private static final int DAMAGE = 18;
-    private static final int UPGRADE_DMG = 6;
+    private static final int UPGRADE_DMG = 4;
 
     public WideAngle() {
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);

@@ -16,6 +16,9 @@ import automaton.cards.Strike;
 import automaton.potions.BurnAndBuffPotion;
 import automaton.relics.*;
 import automaton.util.*;
+import awakenedOne.AwakenedOneChar;
+import awakenedOne.AwakenedOneMod;
+import awakenedOne.relics.AwakenedUrn;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -163,7 +166,7 @@ import static sneckomod.OffclassHelper.getARandomOffclass;
 public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubscriber, PostDrawSubscriber, PostDungeonInitializeSubscriber, EditStringsSubscriber, EditKeywordsSubscriber, AddCustomModeModsSubscriber, PostInitializeSubscriber, EditRelicsSubscriber, EditCardsSubscriber, PostUpdateSubscriber, StartGameSubscriber, StartActSubscriber, AddAudioSubscriber, RenderSubscriber, PostDeathSubscriber {
     public static final String modID = "downfall";
 
-    public static final boolean STEAM_MODE = true;
+    public static final boolean STEAM_MODE = false;
 
     public static boolean neowtextoverride = false;
 
@@ -183,6 +186,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     //Config Menu Stuff
     private ModPanel settingsPanel;
     public static Properties configDefault = new Properties();
+    public static boolean disableBaseGameAdjustments = false;
     public static boolean contentSharing_relics = true;
     public static boolean contentSharing_potions = true;
     public static boolean contentSharing_events = false;
@@ -195,6 +199,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static boolean normalMapLayout = false;
     public static boolean sneckoNoModCharacters = false;
     public static boolean useIconsForAppliedProperties = false;
+    public static boolean useLegacyBosses = false;
+    public static boolean DeterministicConjure = true;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
@@ -209,13 +215,16 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static final String PROP_SNECKO_MODLESS = "sneckoNoModCharacters";
     public static final String PROP_NO_MUSIC = "disableMusicOverride";
     public static final String PROP_ICONS_FOR_APPLIED_PROPERTIES = "useIconsForAppliedProperties";
+    public static final String NO_RNG_CONJURE = "RNGlessConjure";
+    public static final String NO_BASE_ADJUSTMENTS = "disableBaseGameAdjustments";
+    public static final String LEGACY_BOSSES = "legacyBosses";
 
     public static String Act1BossFaced = "";
     public static String Act2BossFaced = "";
     public static String Act3BossFaced = "";
 
-    public static boolean[] unseenTutorials = new boolean[]{true, // Hermit
-
+    public static boolean[] unseenTutorials = new boolean[]{
+            true, // Hermit
             true, // Guardian 1
             true, // Hexa 2
             true, // Charboss Info 3
@@ -225,10 +234,10 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             true, // Champ 7
             true, // Auto 8
             true, // Gremlins 9
-            true // Snecko 10
-            // true, //act3 boss 11
-         // true, //act3 boss 12
-         // true //act3 boss 13
+            true, // Snecko 10
+            true, // Awakened 11
+            true, // act 3 boss 2 12
+            true  // act 3 boss 3 13
     };
 
     public static Properties tutorialSaves = new Properties();
@@ -241,18 +250,22 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static AbstractCard.CardTags CHARBOSS_SETUP;
     @SpireEnum
     public static AbstractCard.CardTags DOWNFALL_CURSE;
+    @SpireEnum
+    public static AbstractCard.CardTags CHARBOSS_DEADON;
 
     public static final boolean EXPERIMENTAL_FLIP = false;
     public static Settings.GameLanguage[] SupportedLanguages = {
             // Insert other languages here
             // DONT FORGET TO TOGGLE AT reskinContent.getLanguageString() TOO
-            Settings.GameLanguage.ENG, Settings.GameLanguage.ZHS,
-             Settings.GameLanguage.JPN,
+            Settings.GameLanguage.ENG,
+            Settings.GameLanguage.ZHS,
+            Settings.GameLanguage.JPN,
             Settings.GameLanguage.KOR,
-       //     Settings.GameLanguage.FRA,
-//            Settings.GameLanguage.ZHT,
-      //      Settings.GameLanguage.RUS,
-        //    Settings.GameLanguage.PTB
+            Settings.GameLanguage.SPA,
+            // Settings.GameLanguage.FRA,
+            // Settings.GameLanguage.ZHT,
+            // Settings.GameLanguage.RUS,
+            // Settings.GameLanguage.PTB
     };
 
     public static ReplaceData[] wordReplacements;
@@ -279,6 +292,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         configDefault.setProperty(PROP_UNLOCK_ALL, "FALSE");
         configDefault.setProperty(PROP_NO_MUSIC, "FALSE");
         configDefault.setProperty(PROP_ICONS_FOR_APPLIED_PROPERTIES, "FALSE");
+        configDefault.setProperty(NO_RNG_CONJURE, "TRUE");
+        configDefault.setProperty(LEGACY_BOSSES, "FALSE");
 
 
         loadConfigData();
@@ -340,6 +355,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 return "hermitResources/" + path;
             case PACKAGE_COLLECTOR:
                 return "collectorResources/" + path;
+            case PACKAGE_AWAKENED:
+                return "awakenedResources/" + path;
         }
         return "downfallResources/" + path;
     }
@@ -359,11 +376,13 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             config.setBool(PROP_CHAR_CROSSOVER, crossoverCharacters);
             config.setBool(PROP_MOD_CHAR_CROSSOVER, crossoverModCharacters);
             config.setBool(PROP_NORMAL_MAP, normalMapLayout);
-
             config.setBool(PROP_UNLOCK_ALL, unlockEverything);
             config.setBool(PROP_SNECKO_MODLESS, sneckoNoModCharacters);
             config.setBool(PROP_NO_MUSIC, noMusic);
             config.setBool(PROP_ICONS_FOR_APPLIED_PROPERTIES, useIconsForAppliedProperties);
+            config.setBool(NO_RNG_CONJURE, DeterministicConjure);
+            config.setBool(NO_BASE_ADJUSTMENTS, disableBaseGameAdjustments);
+            config.setBool(LEGACY_BOSSES, useLegacyBosses);
             config.save();
             GoldenIdol_Evil.save();
         } catch (IOException e) {
@@ -435,6 +454,9 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_HERMIT));
 
             BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_COLLECTOR));
+
+            BaseMod.loadCustomStringsFile(stringType, makeLocalizationPath(language, stringType.getSimpleName(), otherPackagePaths.PACKAGE_AWAKENED));
+
         } else {
 
             //SlimeboundMod.logger.info("loading loc:" + language + " PACKAGE_HERMIT" + stringType);
@@ -475,6 +497,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addCard(new Pride());
         BaseMod.addCard(new Scatterbrained());
         BaseMod.addCard(new Sapped());
+        BaseMod.addCard(new CurseOfBlood());
 /*
         BaseMod.addCard(new Slug());
         BaseMod.addCard(new Defend_Crowbot());
@@ -541,6 +564,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         loadModKeywords(GremlinMod.getModID(), otherPackagePaths.PACKAGE_GREMLIN);
         loadModKeywords(HermitMod.getModID(), otherPackagePaths.PACKAGE_HERMIT);
         loadModKeywords(CollectorMod.getModID(), otherPackagePaths.PACKAGE_COLLECTOR);
+        loadModKeywords(AwakenedOneMod.getModID(), otherPackagePaths.PACKAGE_AWAKENED);
         loadModKeywords(modID, otherPackagePaths.PACKAGE_DOWNFALL);
     }
 
@@ -750,6 +774,28 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 unlockAllReskin();
             });
 
+            configPos -= configStep;
+            ModLabeledToggleButton noBaseAdjustmentsBtn = new ModLabeledToggleButton(configStrings.TEXT[15], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, disableBaseGameAdjustments, settingsPanel, (label) -> {
+            }, (button) -> {
+                disableBaseGameAdjustments = button.enabled;
+                saveData();
+            });
+
+            configPos -= configStep;
+            ModLabeledToggleButton NoRNGConjureButton = new ModLabeledToggleButton(configStrings.TEXT[14], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, DeterministicConjure, settingsPanel, (label) -> {
+            }, (button) -> {
+                DeterministicConjure = button.enabled;
+                saveData();
+            });
+
+            configPos -= configStep;
+            ModLabeledToggleButton legacyBossesButton = new ModLabeledToggleButton(configStrings.TEXT[16], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, useLegacyBosses, settingsPanel, (label) -> {
+            }, (button) -> {
+                useLegacyBosses = button.enabled;
+                saveData();
+            });
+
+
             settingsPanel.addUIElement(contentSharingBtnCurses);
             settingsPanel.addUIElement(contentSharingBtnEvents);
             settingsPanel.addUIElement(contentSharingBtnPotions);
@@ -761,6 +807,9 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             settingsPanel.addUIElement(noMusicBtn);
             settingsPanel.addUIElement(unlockAllSkinBtn);
             settingsPanel.addUIElement(characterModCrossoverBtn);
+            settingsPanel.addUIElement(noBaseAdjustmentsBtn);
+            settingsPanel.addUIElement(NoRNGConjureButton);
+            settingsPanel.addUIElement(legacyBossesButton);
         }
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
@@ -781,10 +830,12 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 sneckoNoModCharacters = config.getBool(PROP_SNECKO_MODLESS);
                 unlockEverything = config.getBool(PROP_UNLOCK_ALL);
                 noMusic = config.getBool(PROP_NO_MUSIC);
+                useIconsForAppliedProperties = config.getBool(PROP_ICONS_FOR_APPLIED_PROPERTIES);
+                DeterministicConjure = config.getBool(NO_RNG_CONJURE);
+                useLegacyBosses = config.getBool(LEGACY_BOSSES);
             }
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
             crossoverModCharacters = config.getBool(PROP_MOD_CHAR_CROSSOVER);
-            useIconsForAppliedProperties = config.getBool(PROP_ICONS_FOR_APPLIED_PROPERTIES);
         } catch (Exception e) {
             e.printStackTrace();
             clearData();
@@ -947,7 +998,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         BaseMod.addEvent(new AddEventParams.Builder(WingStatue_Evil.ID, WingStatue_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && !(AbstractDungeon.player instanceof AwakenedOneChar))
                 //Event ID to Override//
                 .overrideEvent(GoldenWing.ID)
                 //Event Type//
@@ -1037,7 +1088,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         BaseMod.addEvent(new AddEventParams.Builder(TheNest_Evil.ID, TheNest_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode)
+                .spawnCondition(() -> evilMode && !(AbstractDungeon.player instanceof AwakenedOneChar))
                 //Event ID to Override//
                 .overrideEvent(Nest.ID)
                 //Event Type//
@@ -1313,6 +1364,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addRelic(new NeowBlessing(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedBell(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedKey(), RelicType.SHARED);
+
+        if (downfallMod.disableBaseGameAdjustments = false) BaseMod.addRelic(new AwakenedUrn(), RelicType.SHARED);
         addPotions();
     }
 
@@ -1428,7 +1481,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
 
     public static boolean isDownfallCharacter(AbstractPlayer p) {
-        if (p instanceof SlimeboundCharacter || p instanceof TheHexaghost || p instanceof GuardianCharacter || p instanceof TheSnecko || p instanceof ChampChar || p instanceof AutomatonChar || p instanceof GremlinCharacter || p instanceof hermit.characters.hermit || p instanceof CollectorChar) {
+        if (p instanceof SlimeboundCharacter || p instanceof TheHexaghost || p instanceof GuardianCharacter || p instanceof TheSnecko || p instanceof ChampChar || p instanceof AutomatonChar || p instanceof GremlinCharacter || p instanceof hermit.characters.hermit || p instanceof CollectorChar || p instanceof AwakenedOneChar) {
             return true;
         }
         return false;
@@ -1640,7 +1693,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
 
     public enum otherPackagePaths {
-        PACKAGE_SLIME, PACKAGE_GUARDIAN, PACKAGE_HEXAGHOST, PACKAGE_SNECKO, PACKAGE_EXPANSION, PACKAGE_CHAMP, PACKAGE_AUTOMATON, PACKAGE_GREMLIN, PACKAGE_HERMIT, PACKAGE_COLLECTOR, PACKAGE_DOWNFALL;
+        PACKAGE_SLIME, PACKAGE_GUARDIAN, PACKAGE_HEXAGHOST, PACKAGE_SNECKO, PACKAGE_EXPANSION, PACKAGE_CHAMP, PACKAGE_AUTOMATON, PACKAGE_GREMLIN, PACKAGE_HERMIT, PACKAGE_COLLECTOR, PACKAGE_DOWNFALL, PACKAGE_AWAKENED;;
 
         otherPackagePaths() {
         }
@@ -1740,6 +1793,13 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         if (AbstractDungeon.player instanceof TheSnecko) {
             if (downfallMod.unseenTutorials[10]) {
                 AbstractDungeon.actionManager.addToTop(new MessageCaller(10));
+            }
+        }
+
+        //awakened tutorial 11
+        if (AbstractDungeon.player instanceof AwakenedOneChar) {
+            if (downfallMod.unseenTutorials[11]) {
+                AbstractDungeon.actionManager.addToTop(new MessageCaller(11));
             }
         }
     }

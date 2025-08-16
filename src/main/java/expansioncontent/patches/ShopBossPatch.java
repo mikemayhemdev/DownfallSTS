@@ -1,6 +1,7 @@
 package expansioncontent.patches;
 
 import automaton.AutomatonChar;
+import awakenedOne.AwakenedOneChar;
 import basemod.ReflectionHacks;
 import champ.ChampChar;
 import collector.CollectorChar;
@@ -49,6 +50,31 @@ public class ShopBossPatch {
         }
     }
 
+    //public class ShopBossPatch {
+    //    public static void Postfix(ShopScreen __instance) {
+    //        //if (EvilModeCharacterSelect.evilMode) {
+    //            ArrayList<AbstractCard> colorlessCards = (ArrayList<AbstractCard>) ReflectionHacks.getPrivate(__instance, ShopScreen.class, "colorlessCards");
+    //            if (1 == 1) {
+    //                //  if (AbstractDungeon.merchantRng.randomBoolean()) {
+    //                int x = colorlessCards.get(0).price;
+    //                colorlessCards.set(0, getReplacement(colorlessCards.get(0).rarity));
+    //                colorlessCards.get(0).price = x;
+    //                for (final AbstractRelic r : AbstractDungeon.player.relics) {
+    //                    r.onPreviewObtainCard(colorlessCards.get(0));
+    //                }
+    //            }
+    //            if (EvilModeCharacterSelect.evilMode  || (downfallMod.contentSharing_colorlessCards && (AbstractDungeon.merchantRng.randomBoolean()))) {
+    //                //  if (AbstractDungeon.merchantRng.randomBoolean()) {
+    //                int x = colorlessCards.get(1).price;
+    //                colorlessCards.set(1, getReplacement(colorlessCards.get(1).rarity));
+    //                colorlessCards.get(1).price = x;
+    //                for (final AbstractRelic r : AbstractDungeon.player.relics) {
+    //                    r.onPreviewObtainCard(colorlessCards.get(1));
+    //                }
+    //            }
+    //        }
+    //    //}
+
     public static AbstractCard getReplacement(AbstractCard.CardRarity rarity) {
         ArrayList<AbstractCard> potentialCardsList = new ArrayList<>();
         for (AbstractCard q : CardLibrary.getAllCards()) {
@@ -88,10 +114,14 @@ public class ShopBossPatch {
             }
         }
         if (AbstractDungeon.player instanceof CollectorChar || RandomCardWithTagAction.collectorLocked()) {
-            if (q.hasTag(expansionContentMod.STUDY_COLLECTOR)){
+            if (q.hasTag(expansionContentMod.STUDY_COLLECTOR)) {
                 return false;
             }
-            }
+        }
+
+        if (AbstractDungeon.player instanceof AwakenedOneChar || RandomCardWithTagAction.awakenedLocked()) {
+            return !q.hasTag(expansionContentMod.STUDY_AWAKENEDONE);
+        }
 
         return true;
     }

@@ -4,6 +4,7 @@ import basemod.abstracts.CustomBottleRelic;
 import basemod.abstracts.CustomRelic;
 import basemod.abstracts.CustomSavable;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
 import com.megacrit.cardcrawl.actions.defect.ChannelAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -13,6 +14,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import guardian.GuardianMod;
 import guardian.orbs.StasisOrb;
 import guardian.patches.BottledStasisPatch;
@@ -20,17 +22,28 @@ import sneckomod.cards.unknowns.AbstractUnknownCard;
 
 import java.util.function.Predicate;
 
-public class BottledStasis extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
+public class BottledStasis extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer>, OnRemoveCardFromMasterDeckRelic {
     public static final String ID = "Guardian:BottledStasis";
     public static final String IMG_PATH = "relics/bottledStasis.png";
     public static final String OUTLINE_IMG_PATH = "relics/bottledStasisOutline.png";
     public AbstractCard card = null;
-    private boolean cardSelected = true;
+    public boolean cardSelected = true;
     private boolean cardRemoved = false;
 
     public BottledStasis() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
                 RelicTier.UNCOMMON, LandingSound.CLINK);
+    }
+
+    @Override
+    public void onRemoveCardFromMasterDeck(AbstractCard var1) {
+        if (this.card != null) {
+            if (var1.uuid == card.uuid) {
+                this.flash();
+                this.grayscale = true;
+                setDescriptionAfterLoading();
+            }
+        }
     }
 
     @Override
@@ -80,6 +93,8 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
         for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
             tmp.addToTop(c);
         }
+
+
         AbstractDungeon.gridSelectScreen.open(tmp,
                 1, DESCRIPTIONS[1] + name + ".",
                 false, false, false, false);
@@ -95,33 +110,58 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
         }
     }
 
+//    @Override
+//    public void onRemoveCardFromMasterDeck(AbstractCard var1){
+//        if (var1.uuid == card.uuid) {
+//            setDescriptionAfterLoading();
+//        }
+//    }
+
     @Override
     public void update() {
         super.update();
 
-        if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+        if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && card.uuid == null) {
             cardSelected = true;
             card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             BottledStasisPatch.inBottledStasis.set(card, true);
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
+
             setDescriptionAfterLoading();
         }
     }
 
-    private void setDescriptionAfterLoading() {
-        if(cardRemoved){
+    public void setDescriptionAfterLoading() {
+
+        boolean cardExists = false;
+
+        if (cardSelected) {
+            if (card != null) {
+                for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                    if (c.uuid == card.uuid) {
+                        cardExists = true;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (!cardExists) {
+            cardRemoved = true;
             tips.clear();
             this.description = this.DESCRIPTIONS[4];
-            tips.add(new PowerTip(name, description));
             initializeTips();
-            return ;
         }
+
+        if (cardExists) {
         this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[3];
         tips.clear();
         tips.add(new PowerTip(name, description));
         initializeTips();
+        }
     }
 
     @Override

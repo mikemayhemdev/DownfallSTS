@@ -28,8 +28,8 @@ public class SuperBloodthirst extends AbstractExpansionCard {
 
     public SuperBloodthirst() {
         super(ID, 2, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        tags.add(expansionContentMod.STUDY_AWAKENEDONE);
         tags.add(expansionContentMod.STUDY);
+        tags.add(expansionContentMod.STUDY_AWAKENEDONE);
         //todo attack bg instead of power bg
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_awakenedone.png", "expansioncontentResources/images/1024/bg_boss_awakenedone.png");
         this.baseDamage = DAMAGE;
@@ -52,7 +52,7 @@ public class SuperBloodthirst extends AbstractExpansionCard {
                 this.addToTop(new VFXAction(new StarBounceEffect(m.hb.cX, m.hb.cY)));
             }
         }
-        this.addToBot(new BloodthirstAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this.uuid));
+        this.addToBot(new BloodthirstAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn), this.uuid, false));
     }
 
     public void upgrade() {

@@ -30,7 +30,7 @@ public class ForbiddenFruit extends CustomRelic {
     private boolean selected = true;
 
     public ForbiddenFruit() {
-        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.BOSS, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.DEPRECATED, LandingSound.MAGICAL);
         tips.add(new CardPowerTip( new Sapped() ) );
     }
 

@@ -48,7 +48,10 @@ public class ArchetypeHelper {
         if (Arrays.stream(orbCodes).anyMatch(s -> card.rawDescription.contains(s))) {
             return true;
         }
-        //TODO should probably also check if it actually spawns the card
+
+        //TO-DO should probably also check if it actually spawns the card
+        //this isn't our code so I'm just gonna remove the to-do, also this only ever comes up in cross-mod things
+
         if (card.cardsToPreview instanceof Miracle) {
             return true;
         }

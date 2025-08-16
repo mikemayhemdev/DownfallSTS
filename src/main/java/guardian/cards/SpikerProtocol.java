@@ -86,7 +86,7 @@ public class SpikerProtocol extends AbstractGuardianCard {
             mods = secondaryM;
         }
         // }
-        if (p.stance instanceof DefensiveMode) {
+        if (p.stance instanceof DefensiveMode || mods >= moda) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new ThornsPower(p, magicNumber), magicNumber));
         }
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new SpikerProtocolPower(p, magicNumber)));

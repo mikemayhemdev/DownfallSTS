@@ -8,9 +8,13 @@ import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.cards.colorless.EnGoodInstincts;
 import charbosses.cards.curses.EnInjury;
+import charbosses.cards.curses.EnNormality;
+import charbosses.cards.curses.EnPain;
 import charbosses.cards.curses.EnShame;
+import charbosses.cards.purple.EnLikeWater;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.bossmechanicpowers.DefectBiasCuriosityPower;
+import charbosses.powers.bossmechanicpowers.DefectCuriosityPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
@@ -18,6 +22,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import com.megacrit.cardcrawl.powers.BiasPower;
 import com.megacrit.cardcrawl.powers.FocusPower;
 
 import java.util.ArrayList;
@@ -31,20 +36,17 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
     public ArchetypeAct3OrbsNewAge() {
         super("DF_ARCHETYPE_ORBS", "Orbs");
 
-        maxHPModifier += 350;
+        maxHPModifier += 300;
         actNum = 3;
-        bossMechanicName = DefectBiasCuriosityPower.NAME;
-        bossMechanicDesc = DefectBiasCuriosityPower.DESCRIPTIONS[0];
+        bossMechanicName = DefectCuriosityPower.NAME;
+        bossMechanicDesc = DefectCuriosityPower.DESCRIPTIONS[0] + 1 + DefectCuriosityPower.DESCRIPTIONS[1] + DefectCuriosityPower.DESCRIPTIONS[2];
     }
 
     @Override
     public void addedPreBattle() {
         super.addedPreBattle();
         AbstractCreature p = AbstractCharBoss.boss;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new FocusPower(p,4)));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectBiasCuriosityPower(p)));
-        if(AbstractDungeon.ascensionLevel >= 19)
-        AbstractDungeon.actionManager.addToBottom(new HealAction(p, p, 2));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DefectCuriosityPower(p)));
     }
 
     public void initialize() {
@@ -54,6 +56,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
         addRelic(new CBR_Lantern());
         addRelic(new CBR_IceCream());
         addRelic(new CBR_FusionHammer());
+        addRelic(new CBR_Enchiridon());
     }
 
 
@@ -94,7 +97,11 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
             switch (turn) {
                 case 0:
                     // No Orbs 4e
-
+                    AbstractBossCard c = new EnBiasedCognition();
+                    c.freeToPlayOnce = true;
+                    c.costForTurn = 0;
+                    addToList(cardsList, c, false);
+                    increasePretendFocus(4);
                     addToList(cardsList, new EnMachineLearning(),true);
                     addToList(cardsList, new EnChargeBattery());
                     addToList(cardsList, new EnRainbow());
@@ -102,6 +109,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     turn++;
                     break;
                 case 1:
+                    increasePretendFocus(-1);
                     //Turn 2
                     // Lightning Frost Dark 5e
                     addToList(cardsList, new EnDualcast());
@@ -125,6 +133,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     turn++;
                     break;
                 case 2:
+                    increasePretendFocus(-1);
                     //Turn 3
                     // No Orbs 4e
                     addToList(cardsList, new EnConsume());
@@ -134,10 +143,11 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnColdSnap(),extraUpgrades);
                     //Lightning Frost 0e
 
-                    addToList(cardsList, new EnInjury());
+                    addToList(cardsList, new EnPain());
                     turn++;
                     break;
                 case 3:
+                    increasePretendFocus(-1);
                     //Turn 4
                     //Lightning Frost 3e
                     addToList(cardsList, new EnDoubleEnergy(),false);
@@ -154,14 +164,16 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
         } else {
             switch (turn) {
                 case 0:
+                    increasePretendFocus(-1);
                     //Lightning Frost Lightning Plasma 5e
-                    addToList(cardsList, new EnBuffer(true), false);//AI
+                    addToList(cardsList, new EnDefragment(), false);//AI
+                    increasePretendFocus(1);
                     cB.orbsAsEn().get(0).evokeOverride = true;
                     cB.orbsAsEn().get(0).evokeMult = 1;
                     // Evokes Lightning
                     //Frost Lightning Plasma Lightning 3e
                     addToList(cardsList, new EnGoodInstincts());
-                    addToList(cardsList, new EnBarrage(4));
+                    addToList(cardsList, new EnStrikeBlue());
                     addToList(cardsList, new EnColdSnap(),extraUpgrades);
                     cB.orbsAsEn().get(1).evokeOverride = true;
                     cB.orbsAsEn().get(1).evokeMult = 1;
@@ -172,6 +184,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     turn++;
                     break;
                 case 1:
+                    increasePretendFocus(-1);
                     //Lightning Plasma Lightning Frost 5e
                     addToList(cardsList, new EnElectrodynamics(), false);//AI
                     cB.orbsAsEn().get(0).evokeOverride = true;
@@ -181,18 +194,19 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     cB.orbsAsEn().get(2).evokeOverride = true;
                     cB.orbsAsEn().get(2).evokeMult = 1;
                     //Frost Lightning Lightning Lightning 5e
-                    addToList(cardsList, new EnInjury());
                     addToList(cardsList, new EnDualcast());
                     //Evokes Frost 4e
                     cB.orbsAsEn().get(3).evokeOverride = true;
                     cB.orbsAsEn().get(3).evokeMult = 2;
                     //Lightning Lightning Lightning 4e
                     addToList(cardsList, new EnFusion(true,false),true);
+                    addToList(cardsList, new EnNormality());
                     addToList(cardsList, new EnForceField());
                     //Lightning Lightning Lightning Plasma 3e
                     turn++;
                     break;
                 case 2:
+                    increasePretendFocus(-1);
                     //Lightning Lightning Lightning Plasma
                     addToList(cardsList, new EnDefragment(), false);//AI
                     increasePretendFocus(1);
@@ -216,10 +230,15 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     turn ++;
                     break;
                 case 3:
+                    increasePretendFocus(-1);
                     //Plasma Lightning Frost
-                    addToList(cardsList, new EnCapacitor(), false);//AI
+                    if (cB.maxOrbs == 4) {
+                        addToList(cardsList, new EnCapacitor(), false);//AI
+                    } else {
+                        addToList(cardsList, new EnBuffer(), false);
+                    }
                     //Plasma Lightning Frost Lightning
-                    addToList(cardsList, new EnMulticast(cB.energyPanel.getCurrentEnergy()-1),false,2*(cB.energyPanel.getCurrentEnergy()-1));
+                    addToList(cardsList, new EnMulticastPlasma(cB.energyPanel.getCurrentEnergy()-1),false);
                     //Evokes Plasma
                     cB.orbsAsEn().get(0).evokeOverride = true;
                     cB.orbsAsEn().get(0).evokeMult = 4;
@@ -230,8 +249,8 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     //Lightning Frost Lightning Plasma
 
                     addToList(cardsList, new EnHologram(), true);
-                    addToList(cardsList, new EnConsume());
-                    increasePretendFocus(2);
+                    addToList(cardsList, new EnForceField());
+                    //increasePretendFocus(2);
                     //Lightning Frost Lightning Plasma. Perfect loop! :D
                     turn = 0;
                     looped = true;

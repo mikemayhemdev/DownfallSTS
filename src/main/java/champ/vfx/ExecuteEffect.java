@@ -1,19 +1,13 @@
 package champ.vfx;
 
-import basemod.ReflectionHacks;
-import com.badlogic.gdx.Graphics;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.vfx.PetalEffect;
-
-import java.util.ArrayList;
 
 public class ExecuteEffect extends com.megacrit.cardcrawl.vfx.AbstractGameEffect {
-    private float timer = 0.1F;
-    private float timerFlip = 0F;
-    private AbstractCreature owner;
-    private boolean useJump;
+    private final float timer = 0.1F;
+    private final float timerFlip = 0F;
+    private final AbstractCreature owner;
+    private final boolean useJump;
 
     public ExecuteEffect(AbstractCreature c, boolean jump) {
         this.duration = .65F;

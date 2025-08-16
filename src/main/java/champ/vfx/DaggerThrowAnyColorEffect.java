@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package champ.vfx;
 
 import com.badlogic.gdx.Gdx;
@@ -17,11 +12,11 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class DaggerThrowAnyColorEffect extends AbstractGameEffect {
-    private float x;
-    private float y;
-    private float destY;
+    private final float x;
+    private final float y;
+    private final float destY;
     private static final float DUR = 0.4F;
-    private AtlasRegion img;
+    private final AtlasRegion img;
     private boolean playedSound = false;
     private boolean forcedAngle = false;
 

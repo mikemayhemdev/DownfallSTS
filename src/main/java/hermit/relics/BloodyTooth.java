@@ -21,14 +21,18 @@ public class BloodyTooth extends CustomRelic {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.FLAT);
     }
 
+    //variables
+    private static final int HEALING = 7;
+    private static final int GOLD = 35;
+
     public void onVictory(){
         if ((AbstractDungeon.getCurrRoom()).eliteTrigger)
         {
             this.flash();
             if (AbstractDungeon.player.currentHealth > 0) {
-                AbstractDungeon.player.heal(7);
+                AbstractDungeon.player.heal(HEALING);
             }
-            AbstractDungeon.player.gainGold(35);
+            AbstractDungeon.player.gainGold(GOLD);
         }
     }
 
@@ -38,6 +42,6 @@ public class BloodyTooth extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + HEALING + DESCRIPTIONS[1] + GOLD + DESCRIPTIONS[2];
     }
 }

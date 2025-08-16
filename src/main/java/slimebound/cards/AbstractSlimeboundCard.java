@@ -1,6 +1,7 @@
 package slimebound.cards;
 
 import basemod.abstracts.CustomCard;
+import champ.relics.DefensiveTrainingManual;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -98,7 +99,7 @@ public abstract class AbstractSlimeboundCard extends CustomCard {
         super.applyPowers();
         int base = baseSelfDamage;
         if (AbstractDungeon.player.hasRelic(SelfDamagePreventRelic.ID)) {
-            base -= 3;
+            base -= SelfDamagePreventRelic.AMOUNT;
         }
         if (AbstractDungeon.player.hasPower(TackleModifyDamagePower.POWER_ID)) {
             base += AbstractDungeon.player.getPower(TackleModifyDamagePower.POWER_ID).amount;

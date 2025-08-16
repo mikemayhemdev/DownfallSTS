@@ -45,7 +45,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         super.addedPreBattle();
 
         AbstractCreature p = AbstractCharBoss.boss;
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitWheelOfFortune(p), 1));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitWheelOfFortune(p), 2));
     }
 
     private void reshuffle() {
@@ -115,9 +115,9 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
             AbstractCard target = getNextCard();
             cardsList.add(target);
 
-//            if (target.cardID.equals(EnNecronomicurse.ID)) {
-//                AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
-//            }
+            if (target.cardID.equals(EnNecronomicurse.ID)) {
+                AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
+            }
         }
         if (AbstractCharBoss.boss instanceof CharBossHermit) {
             CharBossHermit.previewCard = mockDeck.get(0).makeStatEquivalentCopy();
@@ -152,9 +152,9 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         AbstractCard next = getNextCard();
         AbstractCharBoss.boss.hand.addToTop(next);
 
-//        if (next.cardID.equals(EnNecronomicurse.ID)) {
-//            AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
-//        }
+        if (next.cardID.equals(EnNecronomicurse.ID)) {
+            AbstractCharBoss.boss.getPower(HermitWheelOfFortune.POWER_ID).onSpecificTrigger();
+        }
 
         AbstractCharBoss.boss.hand.refreshHandLayout();
         AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {

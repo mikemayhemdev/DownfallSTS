@@ -1,5 +1,6 @@
 package champ.patches;
 
+import automaton.cards.Branch;
 import basemod.ReflectionHacks;
 import champ.cards.CrookedStrike;
 import charbosses.bosses.AbstractCharBoss;
@@ -18,8 +19,7 @@ public class VigorPatch {
     public static class DontConsumeVigorPatch {
         @SpirePrefixPatch
         public static SpireReturn<Void> patch(VigorPower __instance, AbstractCard card, UseCardAction action) {
-            if (card instanceof CrookedStrike){
-
+            if (card instanceof CrookedStrike || card instanceof Branch) {
                 __instance.flash();
                 return SpireReturn.Return(null);
             }

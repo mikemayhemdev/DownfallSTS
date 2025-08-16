@@ -19,8 +19,10 @@ import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
+import downfall.relics.HeartBlessingRed;
 import guardian.GuardianMod;
 import guardian.relics.PickAxe;
+import guardian.rewards.GemReward;
 
 import java.util.ArrayList;
 
@@ -102,10 +104,20 @@ public class GemMine extends AbstractImageEvent {
 
                             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                             CardCrawlGame.sound.play("MONSTER_BOOK_STAB_0");
+
+                            AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
+
+                            AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
+
+                            AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
+
+                            AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
+
                             AbstractDungeon.player.getRelic(PickAxe.ID).onTrigger();
                             if (AbstractDungeon.player.getRelic(PickAxe.ID).counter == -2) {
                                 this.imageEventText.updateDialogOption(0, OPTIONS[5], true);
 
+                            AbstractDungeon.player.loseRelic(PickAxe.ID);
                             }
                             this.tookGems = true;
                         } else {
@@ -125,13 +137,18 @@ public class GemMine extends AbstractImageEvent {
                     case 1:
                         this.imageEventText.updateBodyText(DIALOG_MINE);
 
-                        ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 1);
-                        AbstractCard card = gems.get(0);
-                        cardsAdded.add(card.cardID);
+                      //  ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 1);
+                     //   AbstractCard card = gems.get(0);
+                      //  cardsAdded.add(card.cardID);
 
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                       // AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                         CardCrawlGame.sound.play("MONSTER_BOOK_STAB_0");
                         AbstractDungeon.player.damage(new DamageInfo(null, this.damage));
+
+                        AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
+
+                        AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
+
                         this.damageTaken += damage;
                         this.tookGems = true;
                         return;

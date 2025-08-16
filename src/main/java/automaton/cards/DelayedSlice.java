@@ -2,8 +2,6 @@ package automaton.cards;
 
 import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
@@ -15,6 +13,8 @@ public class DelayedSlice extends AbstractBronzeCard {
     public final static String ID = makeID("DelayedSlice");
 
     //stupid intellij stuff attack, all_enemy, common
+
+    //Robo-Chop
 
     public DelayedSlice() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);

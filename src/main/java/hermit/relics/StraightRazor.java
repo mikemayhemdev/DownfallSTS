@@ -20,6 +20,10 @@ public class StraightRazor extends CustomRelic implements OnRemoveCardFromMaster
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("straight_razor.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("straight_razor_outline.png"));
 
+
+    //variables
+    private static final int HEALING = 15;
+
     public StraightRazor() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.CLINK);
     }
@@ -28,7 +32,7 @@ public class StraightRazor extends CustomRelic implements OnRemoveCardFromMaster
     public void onRemoveCardFromMasterDeck(AbstractCard var1){
         this.flash();
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        AbstractDungeon.player.heal(15);
+        AbstractDungeon.player.heal(HEALING);
     }
 
     public boolean canSpawn() {
@@ -37,6 +41,6 @@ public class StraightRazor extends CustomRelic implements OnRemoveCardFromMaster
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + HEALING + DESCRIPTIONS[1];
     }
 }

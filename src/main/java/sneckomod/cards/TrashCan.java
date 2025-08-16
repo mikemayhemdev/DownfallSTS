@@ -14,8 +14,7 @@ public class TrashCan extends AbstractSneckoCard {
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
     public TrashCan() {
-        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        isInnate = false;
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         SneckoMod.loadJokeCardImage(this, "TrashCan.png");
     }
 
@@ -26,9 +25,7 @@ public class TrashCan extends AbstractSneckoCard {
 
     public void upgrade() {
         if (!upgraded) {
-            isInnate = true;
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(0);
             upgradeName();
         }
     }

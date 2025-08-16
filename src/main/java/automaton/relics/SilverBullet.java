@@ -20,7 +20,7 @@ public class SilverBullet extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SilverBullet.png"));
 
     public SilverBullet() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.CLINK);
         tips.add(new CardPowerTip(new WhirlingStrike()));
     }
 

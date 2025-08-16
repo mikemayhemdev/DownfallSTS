@@ -2,41 +2,22 @@ package champ.stances;
 
 import champ.ChampChar;
 import champ.ChampMod;
-import champ.actions.FatigueHpLossAction;
-import champ.cards.AbstractChampCard;
 
-import champ.util.OnOpenerSubscriber;
-import champ.util.OnTechniqueSubscriber;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Interpolation;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.stances.AbstractStance;
-import com.megacrit.cardcrawl.stances.NeutralStance;
-import com.megacrit.cardcrawl.vfx.BorderFlashEffect;
-import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 import downfall.util.TextureLoader;
-import slimebound.SlimeboundMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
-import theHexaghost.ghostflames.AbstractGhostflame;
-import theHexaghost.vfx.MyOrb;
-
-import static theHexaghost.GhostflameHelper.activeGhostFlame;
 
 public abstract class AbstractChampStance extends AbstractStance {
 
@@ -53,15 +34,15 @@ public abstract class AbstractChampStance extends AbstractStance {
 
     public Color textColor = new Color(1F, 1F, 1F, 1F);
 
-    public float animAlphaBySlot[] = new float[3];
-    private boolean useBrightTexture[] = new boolean[3];
+    public float[] animAlphaBySlot = new float[3];
+    private final boolean[] useBrightTexture = new boolean[3];
 
 
     public static final float whiteOverlayTimer = .4F;
 
-    private Texture whiteOverlay = TextureLoader.getTexture(HexaMod.makeUIPath("whiteOverlay.png"));
+    private final Texture whiteOverlay = TextureLoader.getTexture(HexaMod.makeUIPath("whiteOverlay.png"));
 
-    private static long sfxId = -1L;
+    private static final long sfxId = -1L;
     public String STANCE_ID = "guardianmod:AbstractMode";
 
     public static Texture bruh = TextureLoader.getTexture(ChampMod.makeUIPath("crushing.png"));
@@ -175,11 +156,12 @@ public abstract class AbstractChampStance extends AbstractStance {
     public Texture getHelperTexture() {
         return bruh;
 
-    };
+    }
+
     public Texture getHelperTextureBright() {
         return bruhB;
 
-    };
+    }
 
     public void update() {
         hitbox2.update();

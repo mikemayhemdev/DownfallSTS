@@ -8,6 +8,9 @@ import charbosses.bosses.Defect.NewAge.ArchetypeAct2ClawNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct1StatusesNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct2MushroomsNewAge;
 import charbosses.bosses.Ironclad.NewAge.ArchetypeAct3BlockNewAge;
+import charbosses.bosses.Ironclad.Simpler.ArchetypeAct1StatusesSimple;
+import charbosses.bosses.Ironclad.Simpler.ArchetypeAct2MushroomsSimple;
+import charbosses.bosses.Ironclad.Simpler.ArchetypeAct3BlockSimple;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.red.EnBodySlam;
 import charbosses.core.EnemyEnergyManager;
@@ -36,6 +39,7 @@ import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbRed;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import downfall.util.LocalizeHelper;
+import expansioncontent.expansionContentMod;
 import guardian.powers.ConstructPower;
 import hermit.util.TextureLoader;
 import slimebound.SlimeboundMod;
@@ -48,7 +52,7 @@ public class CharBossIronclad extends AbstractCharBoss {
     private Texture bgImg = TextureLoader.getTexture("downfallResources/images/bgShrooms.png");
 
     public CharBossIronclad() {
-        super(NAME, ID, 80, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, -20.0f, PlayerClass.IRONCLAD);
+        super(NAME, ID, 80, -4.0f, -16.0f, 220.0f, 290.0f, null, 0.0f, 20.0f, PlayerClass.IRONCLAD);
         this.energyOrb = new EnergyOrbRed();
         this.energy = new EnemyEnergyManager(3);
         this.loadAnimation("images/characters/ironclad/idle/skeleton.atlas", "images/characters/ironclad/idle/skeleton.json", 1.0f);
@@ -69,6 +73,22 @@ public class CharBossIronclad extends AbstractCharBoss {
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else
+            if (!downfallMod.useLegacyBosses) {
+            switch (AbstractDungeon.actNum) {
+                case 1:
+                    archetype = new ArchetypeAct1StatusesSimple();
+                    break;
+                case 2:
+                    archetype = new ArchetypeAct2MushroomsSimple();
+                    break;
+                case 3:
+                    archetype = new ArchetypeAct3BlockSimple();
+                    break;
+                default:
+                    archetype = new ArchetypeAct1StatusesSimple();
+                    break;
+            }
+        } else {
             switch (AbstractDungeon.actNum) {
                 case 1:
                     archetype = new ArchetypeAct1StatusesNewAge();
@@ -79,29 +99,12 @@ public class CharBossIronclad extends AbstractCharBoss {
                 case 3:
                     archetype = new ArchetypeAct3BlockNewAge();
                     break;
-                case 4: {
-
-                    //SlimeboundMod.logger.info("Ironclad spawned at Archetype " + NeowBoss.Rezzes);
-                    switch (NeowBoss.Rezzes) {
-                        case 0:
-                            archetype = new ArchetypeAct1StatusesNewAge();
-                            break;
-                        case 1:
-                            archetype = new ArchetypeAct2MushroomsNewAge();
-                            break;
-                        case 2:
-                            archetype = new ArchetypeAct3BlockNewAge();
-                            break;
-                        default:
-                            archetype = new ArchetypeAct1StatusesNewAge();
-                            break;
-                    }
-                    break;
-                }
                 default:
                     archetype = new ArchetypeAct1StatusesNewAge();
                     break;
             }
+        }
+
 
         archetype.initialize();
         chosenArchetype = archetype;

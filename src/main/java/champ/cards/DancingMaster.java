@@ -1,11 +1,8 @@
 package champ.cards;
 
-import automaton.AutomatonMod;
-import champ.ChampMod;
 import champ.powers.DancingMasterPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 
 import static champ.ChampMod.loadJokeCardImage;
 

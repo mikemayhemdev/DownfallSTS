@@ -6,30 +6,55 @@ import basemod.abstracts.CustomSavable;
 import champ.ChampMod;
 import champ.patches.SignatureMovePatch;
 import com.badlogic.gdx.graphics.Texture;
+import com.evacipated.cardcrawl.mod.stslib.relics.OnRemoveCardFromMasterDeckRelic;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.util.TextureLoader;
 
 import java.util.function.Predicate;
 
 import static champ.ChampMod.*;
 
-public class SignatureFinisher extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer> {
+public class SignatureFinisher extends CustomRelic implements CustomBottleRelic, CustomSavable<Integer>, OnRemoveCardFromMasterDeckRelic {
 
     public static final String ID = ChampMod.makeID("SignatureFinisher");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("SignatureMove.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("SignatureMove.png"));
 
     public AbstractCard card = null;
-    private boolean cardSelected = true;
+    public boolean cardSelected = true;
+    private boolean hasfinisher = false;
+
+    private boolean cardRemoved = false;
 
     public SignatureFinisher() {
         super(ID, IMG, OUTLINE, RelicTier.RARE, LandingSound.MAGICAL);
+    }
+
+    @Override
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        if (this.card != null && card.uuid.equals(this.card.uuid)) {
+            this.flash();
+        }
+    }
+
+    @Override
+    public void onRemoveCardFromMasterDeck(AbstractCard var1) {
+        if (this.card != null) {
+            if (var1.uuid == card.uuid) {
+                this.flash();
+                this.grayscale = true;
+                setDescriptionAfterLoading();
+            }
+        }
     }
 
     @Override
@@ -56,12 +81,48 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
             if (card != null) {
                 SignatureMovePatch.inSignatureMove.set(card, true);
                 setDescriptionAfterLoading();
-                card.cost = 0;
-                card.costForTurn = 0;
-                card.isCostModified = true;
+                //card.cost = 0;
+                //card.costForTurn = 0;
+                //card.isCostModified = true;
             }
         }
     }
+
+    @Override
+    public void atBattleStartPreDraw() {
+        if (!cardRemoved && cardSelected){
+            boolean cardExists = false;
+            if (card!=null) {
+                for(AbstractCard c :AbstractDungeon.player.masterDeck.group){
+                    if (c.uuid==card.uuid){
+                        cardExists = true;
+                        break;
+                    }
+                }
+            }
+            if (!cardExists) {
+                cardRemoved = true;
+                tips.clear();
+                this.description = this.DESCRIPTIONS[4];
+                initializeTips();
+            }
+        }
+        if (cardRemoved) {
+            return;
+        }
+        super.atBattleStartPreDraw();
+        counter = 0;
+        for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
+            if (SignatureMovePatch.inSignatureMove.get(card)) {
+                addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                c.cost = 0;
+                c.costForTurn = 0;
+                c.isCostModified = true;
+                break;
+            }
+        }
+    }
+
 
     @Override
     public void onEquip() {
@@ -89,9 +150,11 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
     public void onUnequip() {
         if (card != null) {
             AbstractCard cardInDeck = AbstractDungeon.player.masterDeck.getSpecificCard(card);
+
             if (cardInDeck != null) {
                 SignatureMovePatch.inSignatureMove.set(cardInDeck, false);
             }
+
         }
     }
 
@@ -102,23 +165,68 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
         if (!cardSelected && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
             cardSelected = true;
             card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            card.cost = 0;
-            card.costForTurn = 0;
-            card.isCostModified = true;
+//            card.cost = 0;
+//            card.costForTurn = 0;
+//            card.isCostModified = true;
             SignatureMovePatch.inSignatureMove.set(card, true);
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
+
+            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
+
             setDescriptionAfterLoading();
         }
     }
 
-    private void setDescriptionAfterLoading() {
-        this.description = FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[2];
-        tips.clear();
-        tips.add(new PowerTip(name, description));
-        initializeTips();
+
+//    @Override
+//    public void onRemoveCardFromMasterDeck(AbstractCard var1){
+//        if (var1.uuid == card.uuid){
+//            setDescriptionAfterLoading();
+//        }
+//    }
+
+
+    public void setDescriptionAfterLoading() {
+        boolean cardExists = false;
+
+        if (cardSelected) {
+            if (card != null) {
+                for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
+                    if (c.uuid == card.uuid) {
+                        cardExists = true;
+                        break;
+                    }
+                }
+            }
+
+            if (!cardExists) {
+                tips.clear();
+                this.description = this.DESCRIPTIONS[3];
+                this.grayscale = true;
+                initializeTips();
+            }
+
+            if (cardExists) {
+                this.description = FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[2];
+                tips.clear();
+                tips.add(new PowerTip(name, description));
+                initializeTips();
+                this.grayscale = false;
+            }
+        }
     }
+
+
+    public boolean canSpawn() {
+        for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
+            if (c.hasTag(FINISHER)) {
+                hasfinisher = true;
+            }
+        }
+        return hasfinisher;
+    }
+
 
     @Override
     public AbstractRelic makeCopy() {

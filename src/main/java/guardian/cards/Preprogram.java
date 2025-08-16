@@ -25,10 +25,10 @@ public class Preprogram extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.UNCOMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
+    private static final int COST = 1;
 
     //TUNING CONSTANTS
-    private static final int COUNT = 4;
+    private static final int COUNT = 5;
     private static final int UPGRADECOUNT = 3;
     private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;

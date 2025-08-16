@@ -29,25 +29,18 @@ public class PureSnecko extends AbstractSneckoCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        // Create a list to track the cards that are drawn
-        ArrayList<AbstractCard> preHand = new ArrayList<>(p.hand.group); // Store current cards in hand before drawing
-
-        // Draw cards based on magicNumber
+        ArrayList<AbstractCard> preHand = new ArrayList<>(p.hand.group);
         addToBot(new DrawCardAction(magicNumber, new AbstractGameAction() {
             @Override
             public void update() {
                 ArrayList<AbstractCard> drawnCards = new ArrayList<>();
-
-                // Identify which cards were added to the hand
                 for (AbstractCard card : p.hand.group) {
                     if (!preHand.contains(card)) {
-                        drawnCards.add(card); // These are the newly drawn cards
+                        drawnCards.add(card);
                     }
                 }
-
-                // Muddle the newly drawn cards
                 for (AbstractCard card : drawnCards) {
-                    addToBot(new MuddleAction(card)); // Automatically Muddle the drawn card
+                    addToBot(new MuddleAction(card));
                 }
                 isDone = true;
             }
@@ -58,7 +51,7 @@ public class PureSnecko extends AbstractSneckoCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(UPG_MAGIC); // Increase the number of cards drawn when upgraded
+            upgradeMagicNumber(UPG_MAGIC);
             initializeDescription();
         }
     }

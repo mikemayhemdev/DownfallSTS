@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package champ.vfx;
 
 import com.badlogic.gdx.graphics.Color;
@@ -13,7 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 
 public class DaggerSprayAnyColorEffect extends AbstractGameEffect {
-    private boolean flipX;
+    private final boolean flipX;
 
     public DaggerSprayAnyColorEffect(boolean shouldFlip, Color clr) {
         this.color = clr.cpy();

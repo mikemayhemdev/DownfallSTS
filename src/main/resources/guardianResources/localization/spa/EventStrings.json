@@ -1,0 +1,127 @@
+{
+  "Guardian:GemMine": {
+    "NAME": "Mina de Gemas",
+    "DESCRIPTIONS": [
+      "Te adentras en un antiguo pozo minero. En las grietas de la roca puedes ver varias gemas relucientes: #gEsmeraldas, #rrubíes, #ytopacios y otras más. Un grupo de Gremlins mineros cercanos tiene herramientas que podrían ayudarte, pero las gemas están tan cerca de la superficie que, con algo de determinación, podrías extraerlas a mano.",
+      "Cavando en la pared rocosa, logras arrancar una gema de su lugar. Duele un poco, pero vale la pena.",
+      "Aunque la idea del tesoro es tentadora, prefieres conservar tu armadura para retos más importantes.",
+      "Habiendo conquistado la vieja mina, te marchas con una sensación de logro... y algunos apéndices de bronce adoloridos.",
+      "Arrebatas el pico minero del campamento Gremlin, que parece estar en malas condiciones. Puedes usarlo aquí para obtener gemas, o guardarlo para más adelante en tu ascenso.",
+      "Usando el pico, golpeas la pared y tallas una gema. El pico se deteriora un poco en el proceso, pero es mejor eso que dañar tus garras."
+    ],
+    "OPTIONS": [
+      "[Cavar con Garras] #gObtén #guna #gGema #galeatoria. #rPierde #r",
+      " #rPV.",
+      "[Retirarse]",
+      "[Robar] #rEnfrenta #ra #rGremlins. #gObtén #gel #gPico #gde #gRapsodia.",
+      "[Minar con Pico] #gObtén #guna #gGema #galeatoria. #rPierde #runa #rcarga #rdel #rPico.",
+      "[Bloqueado] Pico #rRoto."
+    ]
+  },
+  "Guardian:StasisEgg": {
+    "NAME": "Cámara Cuántica",
+    "DESCRIPTIONS": [
+      "Tropiezas con una caja cubierta de símbolos rúnicos extraños. Dentro encuentras un dispositivo con forma de huevo que emite un zumbido suave. No sabes qué es, pero la energía que desprende indica que debe ser poderoso.",
+      "Decides que algo tan poderoso está destinado a usarse. Lo guardas, pero a medida que las runas se iluminan, sientes que el tiempo comienza a ralentizarse... cada vez más... más... más...",
+      "Decides que algo así no debe caer en manos equivocadas y decides destruirlo. NL Una luz cálida te invade antes de que el huevo #rexplote #rviolentamente, sus fragmentos #rte #rlastiman.",
+      "Decides que algo tan poderoso debe estar ahí por una razón. Aunque tu instinto te dice que deberías usarlo, decides dejarlo y seguir tu camino."
+    ],
+    "OPTIONS": [
+      "[Usar] #gObtén #gCámara #gCuántica. #rGanas #rla #rMaldición #r- #rEnvejecido.",
+      "[Romper] #gGana #g",
+      " #gde #gPV #gMáximos. #rGanas #rla #rMaldición #r- #rDolor.",
+      "[Dejarlo]"
+    ]
+  },
+  "Guardian:AccursedBlacksmith": {
+    "NAME": "Herrero Maldito",
+    "DESCRIPTIONS": [
+      "Decides usar la forja y... NL #y@¡CLANG!@ #y@¡CLAAANG!@ #y@¡CLANG!@ NL ...haces espacio en tu arsenal para nuevas gemas."
+    ],
+    "OPTIONS": [
+      "[Modificar] #gAñade #guna #granura #ga #guna #gcarta #gcon #granuras.",
+      "Añade una ranura a una carta.",
+      "[Bloqueado] Requiere una carta con ranuras."
+    ]
+  },
+  "Guardian:GuardianTalk": {
+    "NAME": "Protocolo Interrumpido",
+    "DESCRIPTIONS": [
+      "REEMPLAZAR - REGRESAR A ENSAMBLE.",
+      "ANOMALÍA DETECTADA.",
+      "MODELO GUARDIAN DEFECTUOSO.",
+      "OVERRIDE PROTOCOLO ALFA.",
+      "GUARDIAN: REGRESA A TU PUESTO.",
+      "FALLO TOTAL DE PROTOCOLO DETECTADO.",
+      "TERMINAR GUARDIAN INMEDIATAMENTE.",
+      "NUEVO PROTOCOLO: DESTRUIR.",
+      "CESE Y REGRESO A EXORDIUM."
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "Guardian:CrystalForge": {
+    "NAME": "Forja Funesta",
+    "DESCRIPTIONS": [
+      "A través de pasadizos secretos conocidos solo por los Constructos de la Aguja, entras en una cámara diseñada para dar mantenimiento a modelos Autómata. Las herramientas aquí serán útiles, incluso si no fueron diseñadas para Guardianes.",
+      "Usando el yunque encantado, destruyes una pieza innecesaria de tu equipo para recuperar las valiosas gemas que colocaste ahí anteriormente.",
+      "Con las tenazas mágicas, abres cuidadosamente una ranura y extraes las gemas, haciéndolas inservibles pero liberando espacio.",
+      "La capacidad de transmutar materia de la forja se activa al instante cuando arrojas un objeto innecesario. Un momento después, la materia se condensa en una hermosa gema.",
+      "Escapas por el mismo pasadizo por el que entraste, dejando la Forja Funesta atrás. Tu viaje continúa hacia el Amanecer en la cima de la Aguja.",
+      "Selecciona una carta para Desmantelar.",
+      "Selecciona una carta para Extraer.",
+      "Selecciona una carta para Transmutar.",
+      "Selecciona una Gema.",
+      "Selecciona una carta para recibir la Gema.",
+      "Aprovechando la pausa en tu ascenso, insertas una gema en tu equipo y sientes tu poder crecer."
+    ],
+    "OPTIONS": [
+      "[Desmantelar] #rElimina una carta con ranuras. Obtén sus #gGemas.",
+      "[Bloqueado] Requiere una carta con una gema insertada.",
+      "[Extraer] #rDestruye todas las #gGemas en una carta con ranuras.",
+      "[Transmutar] #rElimina una carta. Obtén una #gGema aleatoria.",
+      "[Bloqueado] Ya ha sido usada.",
+      "[Salir]",
+      "[Mejorar] Añade una #gGema a una #granura.",
+      "[Bloqueado] Requiere una gema y una ranura libre."
+    ]
+  },
+  "Guardian:Purifier": {
+    "NAME": "Purificador",
+    "DESCRIPTIONS": [
+      "Con un golpe certero, destruyes el Santuario para descubrir los tesoros en su interior. Entre los escombros encuentras dos gemas relucientes esperando ser colocadas en tu arsenal. NL NL Dejas atrás los restos del santuario y continúas el ascenso."
+    ],
+    "OPTIONS": [
+      "[Romper] #gObtén #g2 #gGemas #galeatorias [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:Transmorgrifier": {
+    "NAME": "Transmutador",
+    "DESCRIPTIONS": [
+      "Esta sección aún no contiene descripción."
+    ],
+    "OPTIONS": [
+      "[Pendiente]"
+    ]
+  },
+  "Guardian:UpgradeShrine": {
+    "NAME": "Santuario de Mejora",
+    "DESCRIPTIONS": [
+      "Esta sección aún no contiene descripción."
+    ],
+    "OPTIONS": [
+      "[Pendiente]"
+    ]
+  },
+  "Guardian:BackToBasics": {
+    "NAME": "Volver a lo Básico",
+    "DESCRIPTIONS": [
+      "Si eres el clavo, resiste los golpes; si eres el martillo, golpea."
+    ],
+    "OPTIONS": [
+      "[Resistir] #gAñade #gEnsamblar #g2 a todos tus #gGolpes y #gDefensas.",
+      "[Bloqueado] Requiere un Golpe o Defensa."
+    ]
+  }
+}

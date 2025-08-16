@@ -53,14 +53,7 @@ public class DefensiveModePotion extends CustomPotion {
 
         ModeShifterPlus modeShifterPlusInstance = new ModeShifterPlus();
         if (AbstractDungeon.player.hasRelic(ModeShifterPlus.ID)) {
-            if (!AbstractDungeon.actionManager.turnHasEnded) {
-                addToTop(new GainEnergyAction(1));
-            }
-            if (AbstractDungeon.actionManager.turnHasEnded) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, target, new EnergizedGuardianPower(target, 1)));
-            }
-            addToTop(new DrawCardAction(AbstractDungeon.player, 2));
-            modeShifterPlusInstance.flash();
+            modeShifterPlusInstance.onTrigger();
         }
 
         if (AbstractDungeon.player.hasPower(RevengePower.POWER_ID)) {

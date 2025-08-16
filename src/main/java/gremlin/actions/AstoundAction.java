@@ -10,7 +10,7 @@ import gremlin.powers.WizPower;
 
 public class AstoundAction extends AbstractGameAction
 {
-    private boolean upgraded;
+    private final boolean upgraded;
 
     public AstoundAction(final AbstractCreature source, int amount, boolean upgraded) {
         this.duration = Settings.ACTION_DUR_XFAST;

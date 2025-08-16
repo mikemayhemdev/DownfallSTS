@@ -13,12 +13,10 @@ import expansioncontent.expansionContentMod;
 public class AwakenDeath extends AbstractExpansionCard {
     public static final String ID = makeID("AwakenDeath");
 
-    private static final int MAGIC = 1;
-
     public AwakenDeath() {
         super(ID, 2, AbstractCard.CardType.POWER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-        this.tags.add(expansionContentMod.STUDY_AWAKENEDONE);
         this.tags.add(expansionContentMod.STUDY);
+        this.tags.add(expansionContentMod.STUDY_AWAKENEDONE);
         setBackgroundTexture("expansioncontentResources/images/512/bg_boss_awakenedone.png", "expansioncontentResources/images/1024/bg_boss_awakenedone.png");
         this.baseMagicNumber = this.magicNumber = 1;
         expansionContentMod.loadJokeCardImage((AbstractCard)this, "AwakenDeath.png");

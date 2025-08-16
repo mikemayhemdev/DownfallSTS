@@ -1,6 +1,8 @@
 package gremlin.patches;
 
+import awakenedOne.powers.IntensifyPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import gremlin.powers.DamageConditionalGivePower;
 import com.evacipated.cardcrawl.modthespire.lib.ByRef;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInsertPatch;
@@ -8,6 +10,9 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpireReturn;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+
+import static awakenedOne.AwakenedOneMod.UP_NEXT;
+
 
 @SpirePatch(clz = AbstractCard.class, method = "applyPowers")
 public class DamageConditionalGivePatchApply {

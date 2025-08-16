@@ -1,15 +1,10 @@
 package champ.cards;
 
-import champ.ChampMod;
-import champ.powers.BerserkerStylePower;
 import champ.powers.HonePower;
-import champ.powers.ResolvePower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.loadJokeCardImage;
-
-import static champ.ChampMod.fatigue;
 
 public class BerserkerStyle extends AbstractChampCard {
 

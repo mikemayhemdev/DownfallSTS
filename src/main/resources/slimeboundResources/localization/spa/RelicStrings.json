@@ -1,0 +1,106 @@
+{
+  "Slimebound:AbsorbEndCombat": {
+    "NAME": "Corazón de Baba",
+    "FLAVOR": "Me siento... viscoso.",
+    "DESCRIPTIONS": [
+      "Cada vez que #yslimeboundmod:Consume [REMOVE_SPACE], sana #b2 PV, hasta un máximo de #b8 por combate."
+    ]
+  },
+  "Slimebound:AbsorbEndCombatUpgraded": {
+    "NAME": "Corazón Negro de Baba",
+    "FLAVOR": "El secreto del moco.",
+    "DESCRIPTIONS": [
+      "Reemplaza ",
+      " [REMOVE_SPACE].[] NL Cada vez que #yslimeboundmod:Consume [REMOVE_SPACE], sana #b3 PV, hasta un máximo de #b15 por combate."
+    ]
+  },
+  "Slimebound:SlimedTailRelic": {
+    "NAME": "Cola Viscosa",
+    "FLAVOR": "Una cola falsa para engañar a los enemigos, completamente cubierta de baba.",
+    "DESCRIPTIONS": [
+      "Cada vez que #yDivide [REMOVE_SPACE], obtén #b",
+      " de #yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:PotencyRelic": {
+    "NAME": "Piedra de Nomakk",
+    "FLAVOR": "Cuando se presenta a un miembro de tu Pandilla Baba, parece que empieza a bailar.",
+    "DESCRIPTIONS": [
+      "Al inicio del combate, gana #b1 de #yslimeboundmod:Potencia [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:DailySplitRelic": {
+    "NAME": "Babear la Aguja",
+    "FLAVOR": "SIEMPRE se divide. ¿Por qué es una reliquia? ¡Porque no sé cómo añadir el mod personalizado a la lista de mods activos!",
+    "DESCRIPTIONS": [
+      "#bModificador #bPersonalizado #bde #bPartida NL Todos los enemigos se transforman en dos babas al tener #b50% de PV."
+    ]
+  },
+  "Slimebound:ScrapOozeRelic": {
+    "NAME": "Baba de Chatarra",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Al inicio del combate, invoca a #yBaba #yde #yChatarra (puede revivir si es #yAbsorbida [REMOVE_SPACE]). NL En los puntos de descanso, puedes donar una carta a la #yBaba #yde #yChatarra, modificando su daño: NL #b+1 daño por #gPoco Comunes NL #b+2 daño por #yRaras NL #b-1 daño por Comunes NL #b-2 daño por #rMaldiciones",
+      "Elimina una carta de tu mazo y modifica el daño de la Baba de Chatarra.",
+      "Nada que ofrecerle a la Baba de Chatarra.",
+      "Chatarra"
+    ]
+  },
+  "Slimebound:GreedOozeRelic": {
+    "NAME": "Baba Codiciosa",
+    "FLAVOR": "Un amigo encontrado en la Aguja que devora almas.",
+    "DESCRIPTIONS": [
+      "Al inicio del combate, invoca a #yBaba #yCodiciosa (puede revivir si es #yAbsorbida [REMOVE_SPACE]). NL En los puntos de descanso, la #yBaba #yCodiciosa tomará #b50 de tus almas y aumentará su daño en #b1."
+    ]
+  },
+  "Slimebound:PreparedRelic": {
+    "NAME": "Sopa de Baba",
+    "FLAVOR": "Sabe horrible, pero es increíblemente saludable.",
+    "DESCRIPTIONS": [
+      "Al entrar a un Punto de Descanso, comienza el siguiente combate con una carta de #yPrepararse que cuesta #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:AggressiveSlimeRelic": {
+    "NAME": "Habitante del Moco",
+    "FLAVOR": "Me siguió a casa. ¿Puedo quedármelo?",
+    "DESCRIPTIONS": [
+      "Al inicio del combate, #yslimeboundmod:Divídete en una #yslimeboundmod:Baba #yBruta [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:SlimedSkullRelic": {
+    "NAME": "Cráneo Baboso",
+    "FLAVOR": "Un cráneo Snecko en pésimas condiciones. Sucio y viscoso, la mugre se le pega como pegamento.",
+    "DESCRIPTIONS": [
+      "Cada vez que aplicas #yslimeboundmod:Baba, aplica #b",
+      " adicional de #yslimeboundmod:Baba [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:MaxSlimesRelic": {
+    "NAME": "Estandarte de Jeremías",
+    "FLAVOR": "Tú y un ejército de baba.",
+    "DESCRIPTIONS": [
+      "Al inicio del combate, gana #b1 espacio adicional de Baba y #yslimeboundmod:Divídete en una Baba aleatoria."
+    ]
+  },
+  "Slimebound:SelfDamagePreventRelic": {
+    "NAME": "Equipo Protector",
+    "FLAVOR": "La mejor defensa es una buena ofensiva.",
+    "DESCRIPTIONS": [
+      "Reduce el daño que recibes por #yslimeboundmod:Embestidas en #b3 [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:TarBlob": {
+    "NAME": "Baba de Alquitrán",
+    "FLAVOR": "El tipo de baba... no tan buena.",
+    "DESCRIPTIONS": [
+      "Obtén [E] al inicio de tu turno. Al inicio del combate, pierdes #b1 espacio de Baba."
+    ]
+  },
+  "Slimebound:StickyStick": {
+    "NAME": "Cubo Gelatinoso",
+    "FLAVOR": "Hey, se te pegó al cuerpo.",
+    "DESCRIPTIONS": [
+      "Las primeras #b2 veces que robes una carta de #yEstado o una #rMaldición cada turno, roba #b1 carta. Si era un #yVacío [REMOVE_SPACE], obtén [E] [REMOVE_SPACE]."
+    ]
+  }
+}

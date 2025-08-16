@@ -19,7 +19,7 @@ import guardian.vfx.DefensiveModeStanceParticleEffect;
 public class DefensiveStance extends AbstractChampStance {
 
     public static final String STANCE_ID = "champ:DefensiveStance";
-    private static long sfxId = -1L;
+    private static final long sfxId = -1L;
 
     public DefensiveStance() {
         this.ID = STANCE_ID;
@@ -81,7 +81,7 @@ public class DefensiveStance extends AbstractChampStance {
     public static int finisherAmount() {
         int x = 8;
         if (AbstractDungeon.player.hasRelic(DefensiveTrainingManual.ID)) {
-            x += 3;
+            x += DefensiveTrainingManual.OOMPH;
         }
         return x;
     }
@@ -114,7 +114,7 @@ public class DefensiveStance extends AbstractChampStance {
             this.particleTimer2 -= Gdx.graphics.getDeltaTime();
             if (this.particleTimer2 < 0.0F) {
                 this.particleTimer2 = MathUtils.random(0.45F, 0.55F);
-                AbstractDungeon.effectsQueue.add(new StanceAuraEffect(this.STANCE_ID));
+                AbstractDungeon.effectsQueue.add(new StanceAuraEffect(STANCE_ID));
             }
         }
     }

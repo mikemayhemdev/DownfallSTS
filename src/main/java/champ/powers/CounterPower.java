@@ -3,11 +3,9 @@ package champ.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import champ.cards.Riposte;
-import champ.cards.SetATrap;
 import champ.relics.PowerArmor;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -33,7 +31,7 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
         this.owner = AbstractDungeon.player;
         this.amount = amount;
         this.type = PowerType.BUFF;
-        this.isTurnBased = true;
+        this.isTurnBased = false;
 
         this.region128 = new TextureAtlas.AtlasRegion(tex84, 0, 0, 84, 84);
         this.region48 = new TextureAtlas.AtlasRegion(tex32, 0, 0, 32, 32);
@@ -83,9 +81,7 @@ public class CounterPower extends AbstractPower implements CloneablePowerInterfa
     public void stackPower(int stackAmount) {
         if (AbstractDungeon.player.hasRelic(PowerArmor.ID))
             if (amount + stackAmount > PowerArmor.CAP_RESOLVE_ETC) {
-                PowerArmor PowerArmorInstance = new PowerArmor();
-                PowerArmorInstance.flash();
-                addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, PowerArmorInstance));
+                ((PowerArmor)(AbstractDungeon.player.getRelic(PowerArmor.ID))).onTrigger((stackAmount - (PowerArmor.CAP_RESOLVE_ETC - amount)));
                 stackAmount = (PowerArmor.CAP_RESOLVE_ETC - amount);
             }
         super.stackPower(stackAmount);

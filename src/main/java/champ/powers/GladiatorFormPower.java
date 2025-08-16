@@ -1,5 +1,6 @@
 package champ.powers;
 
+import automaton.cards.Branch;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import champ.cards.CrookedStrike;
@@ -47,11 +48,18 @@ public class GladiatorFormPower extends AbstractPower implements CloneablePowerI
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!(card instanceof CrookedStrike)) {
+        if (!(card instanceof CrookedStrike || card instanceof Branch)) {
             if (card.type == AbstractCard.CardType.ATTACK && owner.hasPower(VigorPower.POWER_ID))
                 addNextTurnPower(AbstractDungeon.player.getPower(VigorPower.POWER_ID));
         }
     }
+
+    public void onSpecificTriggerBranch() {
+        if (owner.hasPower(CounterPower.POWER_ID))
+            addNextTurnPower(AbstractDungeon.player.getPower(CounterPower.POWER_ID));
+    }
+
+
     @Override
     public void onSpecificTrigger() {
         if (owner.hasPower(CounterPower.POWER_ID))

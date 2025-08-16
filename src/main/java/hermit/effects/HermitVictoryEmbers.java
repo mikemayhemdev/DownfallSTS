@@ -17,21 +17,21 @@ public class HermitVictoryEmbers extends AbstractGameEffect {
     private float x;
     private float y;
 
-    private static Texture texture_normal = new Texture("hermitResources/images/ending/orb_long.png");
-    private static Texture texture2_normal = new Texture("hermitResources/images/ending/orb_glow_long.png");
+    private static final Texture texture_normal = new Texture("hermitResources/images/ending/orb_long.png");
+    private static final Texture texture2_normal = new Texture("hermitResources/images/ending/orb_glow_long.png");
 
-    private static Texture texture_alt = new Texture("hermitResources/images/ending/orb.png");
-    private static Texture texture2_alt = new Texture("hermitResources/images/ending/orb_glow.png");
+    private static final Texture texture_alt = new Texture("hermitResources/images/ending/orb.png");
+    private static final Texture texture2_alt = new Texture("hermitResources/images/ending/orb_glow.png");
 
     private Texture texture = texture_normal;
     private Texture texture2 = texture2_normal;
 
     private float speed = -6400.0f;
 
-    private float direction;
+    private final float direction;
 
     private float wiggle = 0;
-    private boolean random_ember;
+    private final boolean random_ember;
     private float alpha = 1;
 
     public HermitVictoryEmbers() {
@@ -58,7 +58,7 @@ public class HermitVictoryEmbers extends AbstractGameEffect {
         float h = MathUtils.random(0.7F, 0.85F);
         float dist = h * (float)Settings.WIDTH;
         this.y = (float) (Settings.HEIGHT*0.75 + MathUtils.sinDeg(placedir) * dist);
-        this.x = (float) (Settings.WIDTH/2 + MathUtils.cosDeg(placedir) * dist);
+        this.x = Settings.WIDTH/2 + MathUtils.cosDeg(placedir) * dist;
 
 
         this.direction = placedir;

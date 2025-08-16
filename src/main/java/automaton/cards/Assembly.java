@@ -4,7 +4,6 @@ import automaton.AutomatonMod;
 import automaton.actions.ScryEncodeCardsAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 
 public class Assembly extends AbstractBronzeCard {
 

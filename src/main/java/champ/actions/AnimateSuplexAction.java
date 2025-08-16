@@ -5,14 +5,13 @@ import champ.patches.SuplexPatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 public class AnimateSuplexAction extends AbstractGameAction
 {
     private boolean called = false;
     private boolean flipped = false;
-    private AbstractMonster mo;
+    private final AbstractMonster mo;
 
     public AnimateSuplexAction(AbstractMonster m)
     {

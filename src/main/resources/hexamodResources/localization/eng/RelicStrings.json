@@ -3,14 +3,17 @@
     "NAME": "Spirit Brand",
     "FLAVOR": "A bound protector.",
     "DESCRIPTIONS": [
-      "The first time you #yIgnite a Ghostflame each turn, gain #b4 #yBlock [REMOVE_SPACE]."
+      "The first time you #yIgnite a Ghostflame each turn, gain #b",
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "hexamod:TheBrokenSeal": {
     "NAME": "The Broken Seal",
     "FLAVOR": "Unlimited, unrestrained, unquenchable power.",
     "DESCRIPTIONS": [
-      "Upon pickup, raise your Max HP by #b10 [REMOVE_SPACE], then heal all of your HP. Start each combat with #b2 #yStrength [REMOVE_SPACE], #b2 #yDexterity [REMOVE_SPACE], and #b2 #yhexamod:Intensity [REMOVE_SPACE]. You can not receive #pThe #pBroken #pSeal and other seals again."
+      "Upon pickup, raise your Max HP by #b",
+      " [REMOVE_SPACE], then heal all of your HP. Start each combat with #b",
+      " #yStrength [REMOVE_SPACE], #yDexterity [REMOVE_SPACE], and #yhexamod:Intensity [REMOVE_SPACE]. You can not receive #pThe #pBroken #pSeal and other seals again."
     ]
   },
   "hexamod:UnbrokenSoul": {
@@ -18,28 +21,31 @@
     "FLAVOR": "Let's see if we can do... better.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL Whenever you #yIgnite a Ghostflame, gain #b4 #yBlock [REMOVE_SPACE]."
+      " [REMOVE_SPACE].[] NL Whenever you #yIgnite a Ghostflame, gain #b",
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "hexamod:IceCube": {
     "NAME": "Xanatos' Icy Charm",
     "FLAVOR": "I feel... cold.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. Start each combat with #b1 less #yhexamod:Intensity [REMOVE_SPACE], and receive no #yhexamod:Intensity from the #yInferno #yGhostflame [REMOVE_SPACE]."
+      "Gain [E] at the start of your turn. Start each combat with #b",
+      " less #yhexamod:Intensity [REMOVE_SPACE], and receive no #yhexamod:Intensity from the #yInferno #yGhostflame [REMOVE_SPACE]."
     ]
   },
   "hexamod:SoulStone": {
     "NAME": "Soul Stone",
     "FLAVOR": "A soul would liven this thing up!",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust #b3 cards, #yhexamod:Ignite the current Ghostflame."
+      "Whenever you #yExhaust #b",
+      " cards, #yhexamod:Ignite the current Ghostflame."
     ]
   },
   "hexamod:RecyclingMachine": {
     "NAME": "Recycler",
     "FLAVOR": "One day, it shall be recycled too.",
     "DESCRIPTIONS": [
-      "The first time an non-Status and non-Curse #yEthereal card is #yExhausted each combat, add a copy to your hand that costs #b0 until played."
+      "The first time a #ynon-Status, #rnon-Curse #yEthereal card is #yExhausted each combat, add a copy to your hand that costs #b0 until played."
     ]
   },
   "hexamod:MatchstickCase": {
@@ -53,42 +59,47 @@
     "NAME": "Jar of TOBSCo",
     "FLAVOR": "A little extra heat makes everything better.",
     "DESCRIPTIONS": [
-      "Start each combat with #b1 #yhexamod:Intensity [REMOVE_SPACE]."
+      "Start each combat with #b",
+      " #yhexamod:Intensity [REMOVE_SPACE]."
     ]
   },
   "hexamod:SoulOfChaos": {
     "NAME": "Soul of Chaos",
     "FLAVOR": "Mayhem, made manifest.",
     "DESCRIPTIONS": [
-      "The second #ySearing #yGhostflame becomes a #yMayhem #yGhostflame [REMOVE_SPACE]. NL #yMayhem #yGhostflame activates when you end your turn on it. NL #yIgnition [REMOVE_SPACE]: #yScry #bn and then play the top card of your draw pile, #bn is modified by #yIntensity [REMOVE_SPACE]."
+      "At the start of your turn, move to a random Ghostflame and randomize it. At the end of your turn, play the top card of your draw pile."
     ]
   },
   "hexamod:JarOfFuel": {
     "NAME": "Olexa's Shield",
     "FLAVOR": "Protection on-demand.",
     "DESCRIPTIONS": [
-      "#yPower cards are counted towards the progression of #ySearing and #yCrushing #yGhostflames [REMOVE_SPACE]."
+      "#yPowers are counted towards the progression of #ySearing and #yCrushing #yGhostflames [REMOVE_SPACE]."
     ]
   },
   "hexamod:BolsterEngine": {
     "NAME": "Tricky's Bolster-Rod",
     "FLAVOR": "Backed by the study of a thousand books. Knowledge is power!",
     "DESCRIPTIONS": [
-      "The first time you play a #yPower card each combat, gain #b6 #yBlock and #b1 #yStrength [REMOVE_SPACE]."
+      "The first time you play a #yPower each combat, gain #b",
+      " #yBlock and #b",
+      " #yStrength [REMOVE_SPACE]."
     ]
   },
   "hexamod:CandleOfCauterizing": {
     "NAME": "Red Candle",
     "FLAVOR": "Fire BURNS...",
     "DESCRIPTIONS": [
-      "Whenever you apply #yhexamod:Soulburn [REMOVE_SPACE], apply #b3 additional #yhexamod:Soulburn [REMOVE_SPACE]."
+      "Whenever you apply #yhexamod:Soulburn [REMOVE_SPACE], apply #b",
+      " additional #yhexamod:Soulburn [REMOVE_SPACE]."
     ]
   },
   "hexamod:Sixitude": {
     "NAME": "Six-Point Brand",
     "FLAVOR": "Fire, fire, fire, fire, fire, FIRE!",
     "DESCRIPTIONS": [
-      "Whenever you play #b6 cards, gain an #ygremlin:Echo of a basic #yStrike [REMOVE_SPACE]. It costs #b0 [REMOVE_SPACE]."
+      "Whenever you play #b",
+      " non-0 cost cards, gain an #ygremlin:Echo of a basic #yStrike [REMOVE_SPACE]. It costs #b0 [REMOVE_SPACE]."
     ]
   },
   "hexamod:Libra": {

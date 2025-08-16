@@ -1,26 +1,17 @@
 package expansioncontent.cards;
 
 
-import champ.ChampMod;
-import champ.relics.PowerArmor;
 import com.badlogic.gdx.math.MathUtils;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.RemoveAllBlockAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.city.Champ;
-import com.megacrit.cardcrawl.powers.VulnerablePower;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
-import downfall.util.CardIgnore;
 import expansioncontent.expansionContentMod;
-import static expansioncontent.expansionContentMod.loadJokeCardImage;
+
+import static champ.ChampMod.vigor;
+
 import java.util.ArrayList;
 
 public class FaceSlap extends AbstractExpansionCard {
@@ -51,24 +42,6 @@ public class FaceSlap extends AbstractExpansionCard {
         applyToEnemy(m, autoWeak(m, downfallMagic));
         atb(new SFXAction("VO_CHAMP_2A"));
         atb(new TalkAction(true, getTaunt(), 2.0F, 2.0F));
-    }
-
-    public static void vigor(int begone) {
-
-        AbstractDungeon.actionManager.addToBottom(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = begone;
-                if (AbstractDungeon.player.hasRelic(PowerArmor.ID) && AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
-                    if (x + AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount > PowerArmor.CAP_RESOLVE_ETC) {
-                        x = PowerArmor.CAP_RESOLVE_ETC - AbstractDungeon.player.getPower(VigorPower.POWER_ID).amount;
-                    }
-                }
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new VigorPower(AbstractDungeon.player, x), x));
-            }
-        });
-
     }
 
     private String getTaunt() {

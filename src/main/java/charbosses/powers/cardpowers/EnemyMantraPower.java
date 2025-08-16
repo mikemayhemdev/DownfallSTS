@@ -19,6 +19,7 @@ public class EnemyMantraPower extends AbstractPower {
     public static final String POWER_ID = "Mantra";
     private static final PowerStrings powerStrings;
     private final int PRAYER_REQUIRED = 10;
+    private int initialAmount = 0;
 
     public EnemyMantraPower(AbstractCreature owner, int amount) {
         this.name = powerStrings.NAME;
@@ -40,19 +41,22 @@ public class EnemyMantraPower extends AbstractPower {
 
         this.flash();
 
-        int initialAmount = this.amount;
+        initialAmount = this.amount;
 
         System.out.println("Initial amount of Mantra: " + initialAmount);
 
-        addToBot(new ReducePowerAction(this.owner, this.owner, EnemyMantraPower.POWER_ID, 4));
-        System.out.println("DEBUG: Reducing by 4...");
+        addToBot(new ReducePowerAction(this.owner, this.owner, EnemyMantraPower.POWER_ID, 5));
+    }
+
+    public void atEndOfRound() {
+        System.out.println("DEBUG: Reducing by 5...");
 
         addToBot(new AbstractGameAction() {
             @Override
             public void update() {
                 System.out.println("Following up.");
 
-                int reducedAmount = Math.min(4, initialAmount);
+                int reducedAmount = Math.min(6, initialAmount);
                 System.out.println("Predicted amount removed: " + reducedAmount);
 
                 int previousMantraGained = AbstractCharBoss.boss.mantraGained;

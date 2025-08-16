@@ -26,7 +26,7 @@ public class FreePlayPatch {
     {
         if (CardCrawlGame.isInARun() && !AbstractDungeon.player.equals(null)) {
             if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-                if (AbstractDungeon.player.hasPower(PlayCardAndExhaustPower.POWER_ID) && c.cost != -1 && AbstractDungeon.player.hand.group.indexOf(c) != -1) {
+                if (AbstractDungeon.player.hasPower(PlayCardAndExhaustPower.POWER_ID) && c.cost != -1 && AbstractDungeon.player.hand.group.contains(c)) {
                     int amount = AbstractDungeon.player.getPower(PlayCardAndExhaustPower.POWER_ID).amount;
                     if (amount > 0)
                         return SpireReturn.Return(true);

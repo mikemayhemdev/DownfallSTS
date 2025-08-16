@@ -1,21 +1,16 @@
 package champ.relics;
 
+import automaton.cards.Branch;
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
 import champ.cards.CrookedStrike;
-import champ.powers.CounterPower;
-import collector.CollectorCollection;
-import collector.actions.DrawCardFromCollectionAction;
-import collector.relics.HolidayCoal;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
-import downfall.powers.NextTurnPowerPower;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -23,15 +18,12 @@ import hermit.util.Wiz;
 
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
-import static collector.util.Wiz.atb;
-import static collector.util.Wiz.att;
 
 public class RageAmulet extends CustomRelic {
 
     public static final String ID = ChampMod.makeID("RageAmulet");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("CrystallizedMud.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("CrystallizedMud.png"));
-    private boolean triggeredThisTurn = false;
     int remainingVigor = 0;
     private static final int VIGREQ = 8;
     public RageAmulet() {
@@ -51,10 +43,14 @@ public class RageAmulet extends CustomRelic {
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (!(card instanceof CrookedStrike)) {
+        if (!(card instanceof CrookedStrike || card instanceof Branch)) {
             if (card.type == AbstractCard.CardType.ATTACK && AbstractDungeon.player.hasPower(VigorPower.POWER_ID))
                 addNextTurnPower(AbstractDungeon.player.getPower(VigorPower.POWER_ID));
         }
+    }
+
+    public void onSpecificTrigger() {
+        addNextTurnPower(AbstractDungeon.player.getPower(VigorPower.POWER_ID));
     }
 
     public void addNextTurnPower(AbstractPower power) {

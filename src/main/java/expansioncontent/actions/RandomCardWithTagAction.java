@@ -2,13 +2,16 @@ package expansioncontent.actions;
 
 
 import automaton.AutomatonChar;
+import awakenedOne.AwakenedOneChar;
 import champ.ChampChar;
+import collector.CollectorChar;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import downfall.unlocks.AwakenedUnlock;
 import downfall.unlocks.CollectorUnlock;
 import expansioncontent.expansionContentMod;
 import guardian.patches.GuardianEnum;
@@ -66,6 +69,10 @@ public class RandomCardWithTagAction extends AbstractGameAction {
         return UnlockTracker.isCharacterLocked(CollectorUnlock.KEY);
     }
 
+    public static boolean awakenedLocked() {
+        return UnlockTracker.isCharacterLocked(AwakenedUnlock.KEY);
+    }
+
     public void update() {
 
         ArrayList<String> tmp = new ArrayList<>();
@@ -85,6 +92,11 @@ public class RandomCardWithTagAction extends AbstractGameAction {
                     && (AbstractDungeon.player.chosenClass == ChampChar.Enums.THE_CHAMP || champLocked())))
                     && (!(c.getValue().hasTag(expansionContentMod.STUDY_AUTOMATON)
                     && (AbstractDungeon.player.chosenClass == AutomatonChar.Enums.THE_AUTOMATON || autoLocked())))
+                    && (!(c.getValue().hasTag(expansionContentMod.STUDY_COLLECTOR)
+                    && (AbstractDungeon.player.chosenClass == CollectorChar.Enums.THE_COLLECTOR || collectorLocked())))
+                    && (!(c.getValue().hasTag(expansionContentMod.STUDY_AWAKENEDONE)
+                    && (AbstractDungeon.player.chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE || awakenedLocked())))
+
             ) {
                 tmp.add(c.getKey());
             }

@@ -1,32 +1,32 @@
 package downfall.patches;
 
-import basemod.BaseMod;
+import automaton.relics.BottledCode;
+import awakenedOne.relics.MoonTalisman;
 import basemod.ReflectionHacks;
-import basemod.abstracts.DynamicVariable;
-import basemod.helpers.dynamicvariables.BlockVariable;
-import basemod.helpers.dynamicvariables.DamageVariable;
-import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.CardModifierPatches;
-import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.RenderCustomDynamicVariableCN;
 import champ.ChampChar;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import champ.relics.SignatureFinisher;
+import collector.relics.BottledCollectible;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.evacipated.cardcrawl.modthespire.patcher.PatchingException;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.LoseHPAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.localization.RelicStrings;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.relics.*;
 import downfall.downfallMod;
+import downfall.relics.BlackCandle;
 import downfall.util.TextureLoader;
+import guardian.relics.BottledAnomaly;
+import guardian.relics.BottledStasis;
+import guardian.relics.StasisEgg;
 import javassist.*;
-import javassist.bytecode.DuplicateMemberException;
+import sneckomod.relics.D8;
 
 import java.util.Objects;
-import java.util.regex.Pattern;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
@@ -84,6 +84,180 @@ public class RelicOverrides {
 //    public static boolean addCanSpawn48PI(PreservedInsect __instance) {
 //        return (Settings.isEndless || (AbstractDungeon.floorNum <= 52 && !evilMode) || (AbstractDungeon.floorNum <= 48 && evilMode));
 //    }
+
+
+//    @SpirePatch(
+//            clz= BottledFlame.class,
+//            method="onEquip"
+//    )
+//    public static class BottledFlamePatch {
+//        @SpirePrefixPatch
+//        public static void Prefix(BottledFlame _instance) {
+//
+//            CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+//
+//            for (AbstractCard c : AbstractDungeon.player.masterDeck.getPurgeableCards().getAttacks().group) {
+//                if (!isDownfallBottle(c)) {
+//                    tmp.addToTop(c);
+//                }
+//            }
+//
+//            if (tmp.size() > 0) {
+//                //this.cardSelected = false;
+//                if (AbstractDungeon.isScreenUp) {
+//                    AbstractDungeon.dynamicBanner.hide();
+//                    AbstractDungeon.overlayMenu.cancelButton.hide();
+//                    AbstractDungeon.previousScreen = AbstractDungeon.screen;
+//                }
+//
+//                AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
+//                AbstractDungeon.gridSelectScreen.open(tmp, 1, _instance.DESCRIPTIONS[1] + _instance.name + LocalizedStrings.PERIOD, false, false, false, false);
+//            }
+//        }
+//    }
+
+    //    public CardGroup getPurgeableCards() {
+    //        CardGroup retVal = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+    //        Iterator var2 = this.group.iterator();
+    //
+    //        while(var2.hasNext()) {
+    //            AbstractCard c = (AbstractCard)var2.next();
+    //            if (!c.cardID.equals("Necronomicurse") && !c.cardID.equals("CurseOfTheBell") && !c.cardID.equals("AscendersBane")) {
+    //                retVal.group.add(c);
+    //            }
+    //        }
+    //
+    //        return retVal;
+    //    }
+
+    //todo: make not a war crime
+    @SpirePatch(
+            clz = CardGroup.class,
+            method = "getPurgeableCards"
+    )
+    public static class CardGroup_getPurgeableCards {
+        public CardGroup_getPurgeableCards() {
+        }
+        @SpirePostfixPatch
+        public static CardGroup Postfix(CardGroup __result, CardGroup __instance) {
+            if (UnbottledBottles()) {
+
+                __result.group.removeIf((c) -> {
+                    return (isDownfallBottle(c) && (__result.size() > 1));
+                });
+            }
+
+            return __result;
+        }
+    }
+
+        //todo: some of the worst code I've ever written, fix before release IMPORTANT
+        public static boolean UnbottledBottles() {
+            boolean result = false;
+            RelicStrings strings;
+
+            if (AbstractDungeon.player.hasRelic(BottledFlame.ID)) {
+                BottledFlame a = (BottledFlame) AbstractDungeon.player.getRelic(BottledFlame.ID);
+                strings = CardCrawlGame.languagePack.getRelicStrings(BottledFlame.ID);
+                if (a.description == strings.DESCRIPTIONS[0]) {
+                    result = true;
+                }
+            }
+
+            if (AbstractDungeon.player.hasRelic(BottledLightning.ID)) {
+                BottledLightning a = (BottledLightning) AbstractDungeon.player.getRelic(BottledLightning.ID);
+                strings = CardCrawlGame.languagePack.getRelicStrings(BottledLightning.ID);
+                if (a.description == strings.DESCRIPTIONS[0]) {
+                    result = true;
+                }
+            }
+
+            if (AbstractDungeon.player.hasRelic(BottledTornado.ID)) {
+                BottledTornado a = (BottledTornado) AbstractDungeon.player.getRelic(BottledTornado.ID);
+                strings = CardCrawlGame.languagePack.getRelicStrings(BottledTornado.ID);
+                if (a.description == strings.DESCRIPTIONS[0]) {
+                    result = true;
+                }
+            }
+
+            return result;
+        }
+
+    public static boolean isDownfallBottle (AbstractCard card) {
+        boolean result = false;
+        if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
+            SignatureFinisher a = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
+            if (a.card != null) {
+                    if (card.uuid == a.card.uuid) {
+                        result = true;
+                    }
+            }
+        }
+
+        if (AbstractDungeon.player.hasRelic(BottledStasis.ID)) {
+            BottledStasis b = (BottledStasis) AbstractDungeon.player.getRelic(BottledStasis.ID);
+            if (b.card != null) {
+                    if (card.uuid == b.card.uuid) {
+                        result = true;
+                }
+            }
+        }
+
+        if (AbstractDungeon.player.hasRelic(BottledAnomaly.ID)) {
+            BottledAnomaly crelic = (BottledAnomaly) AbstractDungeon.player.getRelic(BottledAnomaly.ID);
+            if (crelic.card != null) {
+                    if (card.uuid == crelic.card.uuid) {
+                        result = true;
+                    }
+            }
+        }
+
+        if (AbstractDungeon.player.hasRelic(MoonTalisman.ID)) {
+            MoonTalisman d = (MoonTalisman) AbstractDungeon.player.getRelic(MoonTalisman.ID);
+            if (d.card != null) {
+                    if (card.uuid == d.card.uuid) {
+                        result = true;
+                }
+            }
+        }
+
+        if (AbstractDungeon.player.hasRelic(BottledCollectible.ID)) {
+            BottledCollectible e = (BottledCollectible) AbstractDungeon.player.getRelic(BottledCollectible.ID);
+            if (e.card != null) {
+                    if (card.uuid == e.card.uuid) {
+                        result = true;
+                }
+            }
+        }
+
+        if (AbstractDungeon.player.hasRelic(D8.ID)) {
+            D8 f = (D8) AbstractDungeon.player.getRelic(D8.ID);
+            if (f.card != null) {
+                    if (card.uuid == f.card.uuid) {
+                        result = true;
+                    }
+                }
+        }
+
+        if (AbstractDungeon.player.hasRelic(BottledCode.ID)) {
+            BottledCode g = (BottledCode) AbstractDungeon.player.getRelic(BottledCode.ID);
+            if (g.card != null) {
+                    if (card.uuid == g.card.uuid) {
+                        result = true;
+                    }
+            }
+        }
+
+        if (AbstractDungeon.player.hasRelic(StasisEgg.ID)) {
+            StasisEgg s = (StasisEgg) AbstractDungeon.player.getRelic(StasisEgg.ID);
+            if (s.card != null) {
+                    if (card.uuid == s.card.uuid) {
+                        result = true;
+                    }
+            }
+        }
+        return result;
+    }
 
 
     @SpirePatch(clz = BustedCrown.class, method = "getUpdatedDescription")

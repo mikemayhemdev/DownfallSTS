@@ -61,14 +61,7 @@ public class ModeShiftPower extends AbstractGuardianPower {
 
             ModeShifterPlus modeShifterPlusInstance = new ModeShifterPlus();
             if (AbstractDungeon.player.hasRelic(ModeShifterPlus.ID)) {
-                if (!AbstractDungeon.actionManager.turnHasEnded) {
-                    addToTop(new GainEnergyAction(1));
-                }
-                if (AbstractDungeon.actionManager.turnHasEnded) {
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(owner, owner, new EnergizedGuardianPower(owner, 1)));
-                }
-                addToTop(new DrawCardAction(AbstractDungeon.player, 2));
-                modeShifterPlusInstance.flash();
+                modeShifterPlusInstance.onTrigger();
             }
 
 

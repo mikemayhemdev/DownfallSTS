@@ -24,7 +24,6 @@ public class DashGenerateEvil extends AbstractExpansionCard {
         this.baseDownfallMagic = 5;
         this.baseMagicNumber = this.magicNumber = 10;
         this.exhaust = true;
-        this.tags.add(expansionContentMod.STUDY);
         expansionContentMod.loadJokeCardImage((AbstractCard)this, "DashGenerateEvil.png");
     }
 

@@ -13,7 +13,7 @@
 },
 "hermit:ShadowCloakPower": {
         "NAME": "Shadow Cloak",
-        "DESCRIPTIONS": ["Whenever you draw or #yExhaust a curse, gain #b", " Block."]
+        "DESCRIPTIONS": ["Whenever you draw or #yExhaust a #rCurse, gain #b", " Block."]
 },
 "hermit:TakeAimPower": {
         "NAME": "Take Aim",
@@ -61,7 +61,7 @@
 },
 "hermit:Drained": {
         "NAME": "Drained",
-        "DESCRIPTIONS": ["Gain #b", " less energy next turn."]
+        "DESCRIPTIONS": ["Gain #b", " less [E] next turn."]
 },
 "hermit:DeterminationPower": {
         "NAME": "Determination",

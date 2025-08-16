@@ -24,7 +24,7 @@ public class GuardianWhirl extends AbstractGuardianCard {
     private static final CardTarget TARGET = CardTarget.ALL_ENEMY;
     private static final CardStrings cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
 
-    private static final int COST = 1;
+    private static final int COST = 2;
     private static final int DAMAGE = 4;
     private static final int MULTICOUNT = 2;
     private static final int SOCKETS = 0;
@@ -77,7 +77,8 @@ public class GuardianWhirl extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
+            upgradeDamage(2);
+            //upgradeMagicNumber(1);
             updateDescription();
         }
     }

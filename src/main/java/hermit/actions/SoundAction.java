@@ -5,7 +5,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 
 public class SoundAction extends AbstractGameAction {
-    private String sfx;
+    private final String sfx;
 
     public SoundAction(String sound) {
         sfx = sound;

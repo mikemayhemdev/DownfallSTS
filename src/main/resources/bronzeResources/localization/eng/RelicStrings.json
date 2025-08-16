@@ -10,14 +10,16 @@
     "NAME": "Protective Goggles",
     "FLAVOR": "Look closely.",
     "DESCRIPTIONS": [
-      "If you end your turn with no #yEncoded cards, gain #b4 #yBlock [REMOVE_SPACE]."
+      "If you end your turn with no #yEncoded cards, gain #b",
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "bronze:DecasWashers": {
     "NAME": "Deca's Washers",
     "FLAVOR": "It is unclear why Deca collects these.",
     "DESCRIPTIONS": [
-      "At the start of the first #b3 turns of each combat, draw an additional card."
+      "At the start of the first #b",
+      " turns of each combat, draw an additional card."
     ]
   },
   "bronze:Timepiece": {
@@ -67,7 +69,8 @@
     "FLAVOR": "Changelog: Improved user experience.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL The first #b3 Functions you create each combat cost #b0 until played."
+      " [REMOVE_SPACE].[] NL The first #b",
+      " Functions you create each combat cost #b0 until played."
     ]
   },
   "bronze:BottledCode": {
@@ -77,7 +80,8 @@
       "Upon pickup, choose a card with #yEncode [REMOVE_SPACE]. Start each combat with this card #yEncoded [REMOVE_SPACE].",
       "Choose a card for ",
       "Start each combat with #yEncoded ",
-      " [REMOVE_SPACE]."
+      " [REMOVE_SPACE].",
+      "The bottled card has been #rremoved from your deck, the relic no longer functions."
     ]
   },
   "bronze:DonusWashers": {

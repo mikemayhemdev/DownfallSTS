@@ -118,7 +118,8 @@
   },
   "Guardian:SphericShield": {
     "NAME": "Spheric Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Enter guardianmod:Defensive *Mode. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Gain a guardianmod:Polishing_Oil. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain a guardianmod:Polishing_Oil. NL Exhaust."
   },
   "Guardian:Harden": {
     "NAME": "Harden",
@@ -139,8 +140,8 @@
   },
   "Guardian:CompilePackage": {
     "NAME": "Compile Package",
-    "DESCRIPTION": "Choose a guardianmod:Package to place into guardianmod:Stasis. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Choose an Upgraded guardianmod:Package to place into guardianmod:Stasis. NL Exhaust.",
+    "DESCRIPTION": "Choose a *Package to place into guardianmod:Stasis. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Choose an Upgraded *Package to place into guardianmod:Stasis. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Choose a Package."
     ]
@@ -181,8 +182,8 @@
     "UPGRADE_DESCRIPTION": "Gain a *Reroute+, *Preprogram+, and *Time *Capacitor+. NL Exhaust."
   },
   "Guardian:Planning": {
-    "NAME": "Planning",
-    "DESCRIPTION": "Place the top !M! cards of your draw pile into guardianmod:Stasis."
+    "NAME": "Storage Shield",
+    "DESCRIPTION": "Gain !B! Block. NL Reduce your debuffs by !M!."
   },
   "Guardian:Recover": {
     "NAME": "Recover",

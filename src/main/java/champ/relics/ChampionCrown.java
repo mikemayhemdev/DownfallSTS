@@ -2,26 +2,11 @@ package champ.relics;
 
 import basemod.abstracts.CustomRelic;
 import champ.ChampMod;
-import champ.actions.OpenerReduceCostAction;
-import champ.cards.StanceDance;
 import champ.cards.StanceDanceCrown;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
-import champ.stances.UltimateStance;
-import champ.util.OnOpenerSubscriber;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
-import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.stances.AbstractStance;
-import com.megacrit.cardcrawl.stances.NeutralStance;
-import downfall.actions.OctoChoiceAction;
 import downfall.util.TextureLoader;
 import com.badlogic.gdx.graphics.Texture;
-import theHexaghost.cards.MatchstickFloat;
 
 import static champ.ChampMod.makeRelicOutlinePath;
 import static champ.ChampMod.makeRelicPath;
@@ -33,7 +18,7 @@ public class ChampionCrown extends CustomRelic  {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("ChampionCrown.png"));
 
     public ChampionCrown() {
-        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.CLINK);
     }
 
     /*
@@ -46,12 +31,27 @@ public class ChampionCrown extends CustomRelic  {
     }
 
      */
+
     @Override
     public void atBattleStart() {
-        super.atBattleStart();
-        StanceDanceCrown stance = new StanceDanceCrown();
-        addToBot(new OctoChoiceAction(null, stance));
+        this.addToTop(new MakeTempCardInHandAction(new StanceDanceCrown(), 1, false));
     }
+
+//    @Override
+//    public void atBattleStart() {
+//        super.atBattleStart();
+//        if (AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
+//            int x = AbstractDungeon.relicRng.random(1);
+//            switch (x) {
+//                case 0:
+//                    addToBot(new ChangeStanceAction(BerserkerStance.STANCE_ID));
+//                    break;
+//                case 1:
+//                    addToBot(new ChangeStanceAction(DefensiveStance.STANCE_ID));
+//                    break;
+//            }
+//        }
+//    }
 
     @Override
     public String getUpdatedDescription() {

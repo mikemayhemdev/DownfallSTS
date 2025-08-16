@@ -46,7 +46,7 @@ public class ImmovableObject extends AbstractSneckoCard {
                     isDone = true;
                 }
             });
-            addToBot(new ExhaustSpecificCardAction(this, p.hand));  // Exhaust this card
+            addToBot(new ExhaustSpecificCardAction(this, p.hand));
         }
     }
 

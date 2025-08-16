@@ -17,18 +17,21 @@ public class TheContract extends CustomRelic {
     private static final String IMG_PATH = TheContract.class.getSimpleName() + ".png";
     private static final String OUTLINE_IMG_PATH = TheContract.class.getSimpleName() + ".png";
 
+    //Essence granted
+    private static final int ESSENCE = 10;
+
     public TheContract() {
         super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
     @Override
     public void onEquip() {
-        EssenceSystem.changeEssence(10);
+        EssenceSystem.changeEssence(ESSENCE);
     }
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0];
+        return DESCRIPTIONS[0] + ESSENCE + DESCRIPTIONS[1];
     }
 }
 

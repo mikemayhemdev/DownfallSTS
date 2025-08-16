@@ -13,16 +13,11 @@ import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.screens.SingleCardViewPopup;
-import javassist.CannotCompileException;
 import javassist.CtBehavior;
-import javassist.expr.ExprEditor;
-import javassist.expr.MethodCall;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.util.ArrayList;
 
 public class SymbolDescriptionPatch {
     private static final String crown_icon_NAME = "crown_icon";

@@ -6,7 +6,9 @@
 package guardian.events;
 
 
+import automaton.AutomatonMod;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.curses.Pain;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -19,6 +21,7 @@ import guardian.GuardianMod;
 import downfall.cards.curses.Aged;
 import guardian.ui.RelicPreviewButton;
 
+import java.util.ArrayList;
 import java.util.Collections;
 
 public class StasisEgg extends AbstractImageEvent {
@@ -31,6 +34,7 @@ public class StasisEgg extends AbstractImageEvent {
     private static final String DIALOG_LEAVE;
     private static final String DIALOG_USE;
     private static final String DIALOG_SMASH;
+    private ArrayList<AbstractCard> validCards;
 
     static {
         eventStrings = CardCrawlGame.languagePack.getEventString(ID);
@@ -54,7 +58,21 @@ public class StasisEgg extends AbstractImageEvent {
         } else {
             this.maxHP = (int) ((float) AbstractDungeon.player.maxHealth * 0.15F);
         }
-        imageEventText.optionList.add(new RelicPreviewButton(0, OPTIONS[0], new guardian.relics.StasisEgg(), false, new Aged()));
+
+        CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        for (AbstractCard c : CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).group) {
+            validCards.add(c);
+        }
+
+
+        if (validCards.size() > 0) {
+            imageEventText.optionList.add(new RelicPreviewButton(0, OPTIONS[0], new guardian.relics.StasisEgg(), false, new Aged()));
+        } else {
+            this.imageEventText.setDialogOption(OPTIONS[4], true);
+        }
+
+
+        //imageEventText.optionList.add(new RelicPreviewButton(0, OPTIONS[0], new guardian.relics.StasisEgg(), false, new Aged()));
         this.imageEventText.setDialogOption(OPTIONS[1] + this.maxHP + OPTIONS[2], CardLibrary.getCopy(Pain.ID, 0, 0));
         this.imageEventText.setDialogOption(OPTIONS[3]);
     }

@@ -4,7 +4,6 @@ import champ.powers.StrikeOfGeniusPower;
 import champ.powers.StrikeOfGeniusUpgradedPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import sneckomod.SneckoMod;
 
 import static champ.ChampMod.loadJokeCardImage;
 

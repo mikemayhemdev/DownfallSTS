@@ -2,6 +2,8 @@ package automaton.patches;
 
 import automaton.FunctionHelper;
 import automaton.cardmods.EncodeMod;
+import awakenedOne.cards.BringTheStorm;
+import awakenedOne.ui.OrbitingSpells;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -14,7 +16,6 @@ import javassist.expr.ExprEditor;
 import javassist.expr.MethodCall;
 
 import static automaton.FunctionHelper.cardPositions;
-import static automaton.FunctionHelper.doStuff;
 
 @SpirePatch(
         clz = UseCardAction.class,
@@ -49,6 +50,18 @@ public class GoSomewhereElsePatch {
                     isDone = true;
                     AbstractDungeon.player.limbo.removeCard(card);
                     FunctionHelper.addToSequence(card);
+                }
+            });
+            return false;
+        }
+        else if (card.cardID.equals(BringTheStorm.ID)) {
+            AbstractDungeon.player.limbo.addToTop(card);
+            AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    AbstractDungeon.player.limbo.removeCard(card);
+                    OrbitingSpells.addSpellCard(card);
                 }
             });
             return false;

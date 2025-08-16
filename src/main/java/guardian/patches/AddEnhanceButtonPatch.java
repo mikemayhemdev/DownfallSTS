@@ -36,11 +36,12 @@ public class AddEnhanceButtonPatch {
                 GuardianMod.socketBonfireOption = new EnhanceBonfireOption(active);
                 ___buttons.add(GuardianMod.socketBonfireOption);
             }
-            if (AbstractDungeon.player.hasRelic(PickAxe.ID)) {
-                boolean relicActive;
-                relicActive = AbstractDungeon.player.getRelic(PickAxe.ID).counter != -2;
-                ___buttons.add(new FindGemsOption(relicActive));
-            }
+
+//            if (AbstractDungeon.player.hasRelic(PickAxe.ID)) {
+//                boolean relicActive;
+//                relicActive = AbstractDungeon.player.getRelic(PickAxe.ID).counter != -2;
+//                ___buttons.add(new FindGemsOption(relicActive));
+//            }
 
             if (AbstractDungeon.player instanceof CollectorChar || !CollectorCollection.collection.isEmpty()) {
                 ___buttons.add(new StashAwayCampfireOption());

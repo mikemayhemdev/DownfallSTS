@@ -1,6 +1,7 @@
 package guardian.cards;
 
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -10,6 +11,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import guardian.GuardianMod;
 import guardian.actions.PlaceTopCardIntoStasisAction;
 import guardian.patches.AbstractCardEnum;
+import hermit.actions.ReduceDebuffsAction;
 
 import static guardian.GuardianMod.makeBetaCardPath;
 
@@ -23,9 +25,9 @@ public class Planning extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.SKILL;
     private static final CardRarity RARITY = CardRarity.COMMON;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 0;
+    private static final int COST = 2;
 
-    private static final int CARDS = 2;
+    private static final int CARDS = 1;
     private static final int UPGRADE_CARDS = 1;
     private static final int SOCKETS = 1;
     private static final boolean SOCKETSAREAFTER = true;
@@ -41,21 +43,18 @@ public class Planning extends AbstractGuardianCard {
 
     public Planning() {
         super(ID, NAME, GuardianMod.getResourcePath(IMG_PATH), COST, DESCRIPTION, TYPE, AbstractCardEnum.GUARDIAN, RARITY, TARGET);
-
+        baseBlock = 12;
         this.baseMagicNumber = this.magicNumber = CARDS;
-        this.socketCount = SOCKETS;
+        this.socketCount = 0;
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("Planning.png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, this.block));
         super.use(p, m);
-
-        for (int i = 0; i < this.magicNumber; i++) {
-            AbstractDungeon.actionManager.addToBottom(new PlaceTopCardIntoStasisAction());
-        }
-
+        AbstractDungeon.actionManager.addToBottom(new ReduceDebuffsAction(AbstractDungeon.player, this.magicNumber));
         super.useGems(p, m);
     }
 
@@ -66,11 +65,7 @@ public class Planning extends AbstractGuardianCard {
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            if (this.socketCount < 4) {
-                this.socketCount++;
-                this.saveGemMisc();
-            }
-            this.updateDescription();
+            upgradeBlock(4);
         }
     }
 

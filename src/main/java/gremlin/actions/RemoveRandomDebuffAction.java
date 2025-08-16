@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 public class RemoveRandomDebuffAction extends AbstractGameAction {
-    private AbstractCreature c;
+    private final AbstractCreature c;
 
     public RemoveRandomDebuffAction(AbstractCreature c) {
         this.c = c;

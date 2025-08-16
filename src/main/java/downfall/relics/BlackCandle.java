@@ -9,11 +9,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import downfall.downfallMod;
 import hermit.characters.hermit;
+import hermit.patches.EnumPatch;
+
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 
-
-/// This relic exists to quickgrab its description, images, and texts to replace blue candle while playing evil mode, like hecktoplasm.
-/// Do not remove it. Also, it doesn't work, the real patch uses an override. But still, don't touch this.
 public class BlackCandle extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("BlackCandle");
@@ -33,24 +32,23 @@ public class BlackCandle extends CustomRelic {
         if (card.type == AbstractCard.CardType.CURSE) {
             if (card.cost == -2) {
                 this.flash();
-                this.addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, AbstractGameAction.AttackEffect.FIRE));
+                this.addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, EnumPatch.HERMIT_GHOSTFIRE));
                 card.exhaust = true;
                 action.exhaustCard = true;
+            } else {
+                if (card.exhaust && card.cost !=0 && card.freeToPlay() && card.cost !=-2) {
+                    this.flash();
+                    this.addToBot(new LoseHPAction(AbstractDungeon.player, AbstractDungeon.player, 1, EnumPatch.HERMIT_GHOSTFIRE));
+                    card.exhaust = true;
+                    action.exhaustCard = true;
+                }
             }
         }
     }
 
-    public boolean canPlay(AbstractCard card) {
-        if (card.type == AbstractCard.CardType.CURSE) {
-            return true;
-        }else{
-            return card.canPlay(card);
-        }
-    }
-
     public boolean canSpawn() {
-        return false;
-        //(evilMode || (AbstractDungeon.player instanceof hermit));
+       // return false;
+        return (evilMode || (AbstractDungeon.player instanceof hermit));
     }
 
     public AbstractRelic makeCopy() {

@@ -11,9 +11,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class LuckDrawAction extends AbstractGameAction {
-    private AbstractPlayer p;
-    private CardType typeToCheck;
-    private int energy;
+    private final AbstractPlayer p;
+    private final CardType typeToCheck;
+    private final int energy;
     private int tracker = 0;
 
     public LuckDrawAction(int energy) {
@@ -40,7 +40,7 @@ public class LuckDrawAction extends AbstractGameAction {
             }
 
             if (!p.drawPile.isEmpty()) {
-                AbstractCard c = (AbstractCard) AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - 1);
+                AbstractCard c = AbstractDungeon.player.drawPile.group.get(AbstractDungeon.player.drawPile.size() - 1);
                 if (c.cost > 0)
                 tracker += c.cost;
 

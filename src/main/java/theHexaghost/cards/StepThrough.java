@@ -19,7 +19,7 @@ public class StepThrough extends AbstractHexaCard {
 
     //stupid intellij stuff ATTACK, SELF_AND_ENEMY, UNCOMMON
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 7;
     private static final int UPG_DAMAGE = 3;
 
     public StepThrough() {

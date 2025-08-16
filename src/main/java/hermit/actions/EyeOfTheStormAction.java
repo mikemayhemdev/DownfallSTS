@@ -8,9 +8,9 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class EyeOfTheStormAction extends AbstractGameAction {
 
-    private AbstractCard cl;
-    private AbstractPlayer pl;
-    private int c_cost;
+    private final AbstractCard cl;
+    private final AbstractPlayer pl;
+    private final int c_cost;
 
     public EyeOfTheStormAction(AbstractPlayer p, AbstractCard c, int cost)
     {

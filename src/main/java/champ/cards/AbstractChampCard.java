@@ -4,6 +4,7 @@ import basemod.helpers.TooltipInfo;
 import champ.ChampChar;
 import champ.ChampMod;
 import champ.ChampTextHelper;
+import champ.patches.SignatureMovePatch;
 import champ.powers.CalledShotPower;
 import champ.powers.DancingMasterPower;
 import champ.relics.SignatureFinisher;
@@ -34,7 +35,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static champ.ChampMod.*;
-
 
 public abstract class AbstractChampCard extends AbstractDownfallCard {
     protected final CardStrings cardStrings;
@@ -205,13 +205,10 @@ public abstract class AbstractChampCard extends AbstractDownfallCard {
         ChampMod.finishersThisCombat++; //If there is a finishers this combat problem, maybe look here
 
         if (!AbstractDungeon.player.stance.ID.equals(NeutralStance.STANCE_ID)) {
-            boolean leaveStance = true;
-            if (noExit || AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID)) {
-                leaveStance = false;
-            }
+            boolean leaveStance = !noExit && !AbstractDungeon.player.hasPower(CalledShotPower.POWER_ID);
             if (AbstractDungeon.player.hasRelic(SignatureFinisher.ID)) {
                 SignatureFinisher s = (SignatureFinisher) AbstractDungeon.player.getRelic(SignatureFinisher.ID);
-                if (s.card.uuid == this.uuid) {
+                if (SignatureMovePatch.inSignatureMove.get(this)) {
                     leaveStance = false;
                 }
             }
@@ -272,7 +269,7 @@ public abstract class AbstractChampCard extends AbstractDownfallCard {
             if (p.hasRelic(SignatureFinisher.ID)){
                 if ((((SignatureFinisher)p.getRelic(SignatureFinisher.ID)).card.uuid == this.uuid)){
                     bottled = true;
-                };
+                }
             }
             if (!bottled) {
                 if ((AbstractDungeon.player.stance instanceof NeutralStance)) {

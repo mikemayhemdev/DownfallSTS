@@ -1,9 +1,7 @@
 package champ.cards;
 
 import champ.ChampMod;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static champ.ChampMod.loadJokeCardImage;
@@ -17,7 +15,7 @@ public class BerserkersShout extends AbstractChampCard {
     //stupid intellij stuff skill, self, uncommon
 
     private static final int MAGIC = 3;
-    private static final int UPG_MAGIC = 3;
+    private static final int UPG_MAGIC = 1;
 
     public BerserkersShout() {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
@@ -44,6 +42,6 @@ public class BerserkersShout extends AbstractChampCard {
        // tags.add(ChampMod.TECHNIQUE);
         //postInit();
       //  initializeDescription();
-        upgradeMagicNumber(3);
+        upgradeMagicNumber(UPG_MAGIC);
     }
 }

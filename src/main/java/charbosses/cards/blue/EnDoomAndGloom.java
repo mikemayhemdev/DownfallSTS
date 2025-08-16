@@ -35,8 +35,8 @@ public class EnDoomAndGloom extends AbstractBossCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new SFXAction("ATTACK_HEAVY"));
-        this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
-        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.NONE));
+        //this.addToBot(new VFXAction(p, new CleaveEffect(), 0.1F));
+        this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
         this.addToBot(new EnemyChannelAction(new EnemyDark()));
 
     }

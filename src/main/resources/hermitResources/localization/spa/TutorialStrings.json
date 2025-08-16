@@ -1,0 +1,132 @@
+{
+  "HermitMod:HermitTutorials": {
+    "TEXT": [
+      "El Ermitaño puede usar cartas con #yPreciso. NL NL Las cartas con #yPreciso activan su efecto especial cuando están posicionadas en el centro de tu mano.",
+      "Si tienes una cantidad par de cartas, #yambas cartas del centro cuentan, incluso si son las únicas en tu mano."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "Preciso",
+      "(Página: ",
+      ")"
+    ]
+  },
+  "HermitMod:GuardianTutorials": {
+    "TEXT": [
+      "El Guardián puede Reforzarse al obtener cierta cantidad de Reforzar.",
+      "También puede insertar Gemas en cartas para mejorar sus efectos."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "El Guardián",
+      "(Página: ",
+      ")"
+    ]
+  },
+  "HermitMod:HexaghostTutorials": {
+    "TEXT": [
+      "Hexafantasma canaliza poder al Cargar sus Llamas.",
+      "Realiza una acción específica mientras cada una esté Activa para Cargarla."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "El Hexafantasma",
+      "(Página: ",
+      ")"
+    ]
+  },
+  "HermitMod:CharbossTutorials": {
+    "TEXT": [
+      "Los Héroes enemigos tienen habilidades poderosas que pueden obligarte a cambiar tu estrategia.",
+      "Asegúrate de revisar los beneficios de un héroe antes de enfrentarlo."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "Asesinos del Spire",
+      "(Página: ",
+      ")"
+    ]
+  },
+  "HermitMod:ChampTutorials": {
+    "TEXT": [
+      "El Campeón puede alternar entre dos Posturas Gladiatorias: Postura de Berserker y Postura Defensivo. Al jugar Habilidades mientras estás en estas posturas, se activan sus Bonos de Habilidad, hasta tres veces.",
+      "También puede usar cartas de Remate poderosas mientras esté en estas posturas, a costa de salir de ellas."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "El Campeón",
+      "(Página: ",
+      ")"
+    ]
+  },
+  "HermitMod:AutomatonTutorials": {
+    "TEXT": [
+      "El Autómata puede usar cartas de Codificar para añadir hasta tres cartas a una Secuencia y combinarlas en una sola carta de Función.",
+      "Algunas cartas tienen Efectos de Compilar especiales que se activan al combinarse en una Función. Estos pueden ser positivos o negativos (llamados Errores de Compilación)."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "El Autómata",
+      "(Página: ",
+      ")"
+    ]
+  },
+  "HermitMod:SneckoTutorials": {
+    "TEXT": [
+      "La Serpentija puede Confundir cartas para cambiar temporalmente su coste a un número entre 0 y 3. Confusión siempre cambia el coste de la carta y nunca lo deja igual.",
+      "También puede encontrar cartas de Regalo que le otorgan cartas de otros personajes al tomarlas."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "La Serpentija",
+      "(Página: ",
+      ")"
+    ]
+  },
+  "HermitMod:GremlinsTutorials": {
+    "TEXT": [
+      "Los Gremlins son cinco personajes a la vez y cada uno tiene efectos y puntos de vida únicos.",
+      "Puedes intercambiarlos usando ciertas cartas."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "Los Gremlins",
+      "(Página: ",
+      ")"
+    ]
+  },
+  "HermitMod:SlimeBossTutorials": {
+    "TEXT": [
+      "El Rey Babosa puede aplicar Baba a los enemigos para aumentar el daño que reciben en el siguiente ataque, eliminando toda la Baba y activando cualquier efecto de Consumir.",
+      "También puede Dividirse en Babas que atacan al inicio de su turno y cuando da una Orden."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "El Rey Babosa",
+      "(Página: ",
+      ")"
+    ]
+  },
+  "HermitMod:CollectorTutorials": {
+    "TEXT": [
+      "El Coleccionista toma Esencias de los enemigos. Puedes gastar Esencias para agregar sus espíritus a tu Colección.",
+      "La Colección es un mazo separado. Robas una carta de ella cada turno."
+    ],
+    "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "El Coleccionista",
+      "(Página: ",
+      ")"
+    ]
+  }
+}

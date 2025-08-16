@@ -1,16 +1,20 @@
 package expansioncontent.cards;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import awakenedOne.AwakenedOneMod;
+import awakenedOne.powers.RisingChantPower;
+import awakenedOne.relics.CursedBlessing;
+import awakenedOne.relics.WhiteRibbon;
+import awakenedOne.util.Wiz;
+import com.megacrit.cardcrawl.actions.common.HealAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.RegenPower;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import expansioncontent.expansionContentMod;
+
+import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
+import static awakenedOne.AwakenedOneMod.CHANT;
 
 public class TakeFlight extends AbstractExpansionCard {
     public static final String ID = makeID("TakeFlight");
@@ -21,50 +25,62 @@ public class TakeFlight extends AbstractExpansionCard {
 
     private static final int MAGIC = 1;
 
-    boolean chant = false;
-
     public TakeFlight() {
         super(ID, 1, AbstractCard.CardType.POWER, AbstractCard.CardRarity.UNCOMMON, AbstractCard.CardTarget.SELF);
-        this.tags.add(expansionContentMod.STUDY_AWAKENEDONE);
         this.tags.add(expansionContentMod.STUDY);
+        this.tags.add(expansionContentMod.STUDY_AWAKENEDONE);
         setBackgroundTexture("expansioncontentResources/images/512/bg_boss_awakenedone.png", "expansioncontentResources/images/1024/bg_boss_awakenedone.png");
-        this.baseMagicNumber = this.magicNumber = 3;
-        this.baseDownfallMagic = this.downfallMagic = 4;
+        this.baseMagicNumber = this.magicNumber = 6;
+        this.baseDownfallMagic = this.downfallMagic = 8;
         tags.add(CardTags.HEALING);
+        this.tags.add(AwakenedOneMod.CHANT);
         expansionContentMod.loadJokeCardImage((AbstractCard)this, "TakeFlight.png");
-        this.exhaust = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (!this.chant)
-            addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new RegenPower((AbstractCreature)AbstractDungeon.player, this.magicNumber), this.magicNumber));
-        if (this.chant)
-            addToBot((AbstractGameAction)new ApplyPowerAction((AbstractCreature)AbstractDungeon.player, (AbstractCreature)AbstractDungeon.player, (AbstractPower)new RegenPower((AbstractCreature)AbstractDungeon.player, this.downfallMagic), this.downfallMagic));
+            if (Wiz.isChantActive()) {
+                chant();
+            }
+            if (!Wiz.isChantActive()) {
+                atb(new HealAction(p, p, magicNumber));
+            }
     }
 
-    public void triggerWhenDrawn() {
-        this.chant = false;
-    }
+    public void chant() {
+        atb(new HealAction(AbstractDungeon.player, AbstractDungeon.player, downfallMagic));
 
-    public void triggerOnCardPlayed(AbstractCard card) {
-        if (card.type == AbstractCard.CardType.POWER && AbstractDungeon.player.hand.contains((AbstractCard)this))
-            this.chant = true;
-    }
+        if (!this.hasTag(ACTIVECHANT) && this.hasTag(CHANT)) {
+            this.tags.add(ACTIVECHANT);
+        }
 
-    @Override
-    public void onMoveToDiscard() {
-        this.chant = false;
+        if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
+            applyToSelf(new StrengthPower(AbstractDungeon.player, AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).amount));
+            AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
+        }
+
+        if (AbstractDungeon.player.hasRelic(CursedBlessing.ID)) {
+            AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
+        }
+        if (AbstractDungeon.player.hasRelic(WhiteRibbon.ID)) {
+            AbstractDungeon.player.getRelic(WhiteRibbon.ID).onTrigger();
+        }
+
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = this.chant ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
+        if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && ((AbstractCard)AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1)).type == CardType.POWER) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        }
+
     }
 
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-            upgradeDownfall(1);
+            upgradeMagicNumber(2);
+            upgradeDownfall(4);
         }
     }
 }

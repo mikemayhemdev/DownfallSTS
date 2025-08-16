@@ -1,0 +1,18 @@
+{
+  "Guardian": {
+    "NAMES": [
+      "El Guardián"
+    ],
+    "TEXT": [
+      "Un constructo de la Aguja, programado para defenderla. NL Capaz de protegerse del daño a voluntad.",
+      "DIRECTIVA PRINCIPAL - #r~DESTRUIR~ #r~AL~ #r~CORAZÓN.~",
+      "[ guardianmod:Ranura ]",
+      "Al avanzar por una calle sin iluminar, te topas con varias figuras encapuchadas en medio de un ritual oscuro. Al acercarte, se giran hacia ti al unísono, de forma inquietante. La más alta muestra colmillos afilados y extiende una mano pálida y alargada. NL ~\"Únete~ ~a~ ~nosotros,~ ~antiguo~ ~protector,~ ~y~ ~siente~ ~el~ ~calor~ ~de~ ~la~ ~Aguja.\"~",
+      "Modo Defensivo",
+      "Tienes #b3 de #yEspinas y tu #yBloqueo no expira.",
+      "~ERROR:~ #rEstasis en progreso."
+    ],
+    "KEYWORDS": [
+    ]
+  }
+}

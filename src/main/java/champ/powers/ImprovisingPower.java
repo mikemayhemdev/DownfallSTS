@@ -3,11 +3,8 @@ package champ.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import champ.ChampMod;
 import champ.stances.AbstractChampStance;
-import champ.stances.BerserkerStance;
-import champ.stances.DefensiveStance;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.watcher.ChangeStanceAction;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
@@ -47,16 +44,16 @@ public class ImprovisingPower extends AbstractPower implements CloneablePowerInt
         }
     }
 
-    @Override
-    public void atStartOfTurn() {
-            if (AbstractDungeon.player.stance instanceof NeutralStance) {
-                if (AbstractDungeon.cardRandomRng.randomBoolean()) {
-                    addToBot(new ChangeStanceAction(new BerserkerStance()));
-                } else {
-                    addToBot(new ChangeStanceAction(new DefensiveStance()));
-                }
-            }
-        }
+//    @Override
+//    public void atStartOfTurn() {
+//            if (AbstractDungeon.player.stance instanceof NeutralStance) {
+//                if (AbstractDungeon.cardRandomRng.randomBoolean()) {
+//                    addToBot(new ChangeStanceAction(new BerserkerStance()));
+//                } else {
+//                    addToBot(new ChangeStanceAction(new DefensiveStance()));
+//                }
+//            }
+//        }
 
     @Override
     public void updateDescription() {

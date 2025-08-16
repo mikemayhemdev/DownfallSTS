@@ -19,7 +19,7 @@ public class ModeShifter extends CustomRelic {
 
     public ModeShifter() {
         super(ID, new Texture(GuardianMod.getResourcePath(IMG_PATH)), new Texture(GuardianMod.getResourcePath(OUTLINE_IMG_PATH)),
-                RelicTier.STARTER, LandingSound.FLAT);
+                RelicTier.STARTER, LandingSound.CLINK);
         this.tips.add(new CardPowerTip(new GearUp()));
     }
 

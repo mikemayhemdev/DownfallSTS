@@ -13,7 +13,7 @@ public class Circumvent extends AbstractChampCard {
 
     public Circumvent() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 7;
+        baseBlock = 6;
         baseMagicNumber = magicNumber = 2;
         tags.add(ChampMod.COMBODEFENSIVE);
         tags.add(ChampMod.COMBO);

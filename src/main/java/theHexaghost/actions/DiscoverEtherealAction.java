@@ -62,7 +62,7 @@ public class DiscoverEtherealAction extends AbstractGameAction {
 
         while (derp.size() != 3) {
             boolean dupe = false;
-            int roll = AbstractDungeon.cardRandomRng.random(99);
+            int roll = AbstractDungeon.potionRng.random(99);
             AbstractCard.CardRarity cardRarity;
             if (roll < 60) {
                 cardRarity = AbstractCard.CardRarity.COMMON;
@@ -74,7 +74,7 @@ public class DiscoverEtherealAction extends AbstractGameAction {
 
 
             ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
-            possList.removeIf(c -> (!c.isEthereal || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || c.hasTag(AbstractCard.CardTags.HEALING)));
+            possList.removeIf(c -> (c.color != AbstractDungeon.player.getCardColor() || !c.isEthereal || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.type == STATUS || c.hasTag(AbstractCard.CardTags.HEALING)));
 
             AbstractCard tmp = possList.get(AbstractDungeon.cardRandomRng.random(possList.size() - 1)).makeCopy();
 

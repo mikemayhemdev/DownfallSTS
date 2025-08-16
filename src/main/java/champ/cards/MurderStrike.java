@@ -1,6 +1,5 @@
 package champ.cards;
 
-import champ.ChampMod;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;

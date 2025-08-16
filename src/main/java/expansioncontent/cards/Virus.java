@@ -34,14 +34,14 @@ public class Virus extends AbstractExpansionCard {
         tags.add(expansionContentMod.STUDY_AUTOMATON);
         tags.add(expansionContentMod.STUDY);
         cardsToPreview = new MajorBeam();
-        baseMagicNumber = MAGIC;
+        baseMagicNumber = magicNumber = MAGIC;
         this.exhaust = true;
 
         loadJokeCardImage(this, "Virus.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ExhaustVirusAction(5, false, true, true));
+        this.addToBot(new ExhaustVirusAction(magicNumber, false, true, true));
 
     }
 

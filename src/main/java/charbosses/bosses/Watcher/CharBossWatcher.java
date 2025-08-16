@@ -2,10 +2,10 @@ package charbosses.bosses.Watcher;
 
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Watcher.NewAge.ArchetypeAct1RetainNewAge;
-import charbosses.bosses.Watcher.NewAge.ArchetypeAct2CalmNewAge;
-import charbosses.bosses.Watcher.NewAge.ArchetypeAct2StancesNewAge;
-import charbosses.bosses.Watcher.NewAge.ArchetypeAct3DivinityNewAge;
+import charbosses.bosses.Watcher.NewAge.*;
+import charbosses.bosses.Watcher.Simpler.ArchetypeAct1StanceDanceSimple;
+import charbosses.bosses.Watcher.Simpler.ArchetypeAct2OmegaSimple;
+import charbosses.bosses.Watcher.Simpler.ArchetypeAct3DivinitySimple;
 import charbosses.core.EnemyEnergyManager;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -22,6 +22,7 @@ import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbPurple;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import downfall.util.LocalizeHelper;
+import expansioncontent.expansionContentMod;
 
 public class CharBossWatcher extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Watcher");
@@ -35,7 +36,7 @@ public class CharBossWatcher extends AbstractCharBoss {
 
 
     public CharBossWatcher() {
-        super(NAME, ID, 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, -20.0f, PlayerClass.WATCHER);
+        super(NAME, ID, 72, 0.0F, -5.0F, 240.0F, 270.0F, null, 0.0f, 20.0f, PlayerClass.WATCHER);
         this.energyOrb = new EnergyOrbPurple();
         this.energy = new EnemyEnergyManager(3);
         this.loadAnimation("images/characters/watcher/idle/skeleton.atlas", "images/characters/watcher/idle/skeleton.json", 1.0f);
@@ -102,6 +103,24 @@ public class CharBossWatcher extends AbstractCharBoss {
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else
+
+
+        if (!downfallMod.useLegacyBosses) {
+            switch (AbstractDungeon.actNum) {
+                case 1:
+                    archetype = new ArchetypeAct1StanceDanceSimple();
+                    break;
+                case 2:
+                    archetype = new ArchetypeAct2OmegaSimple();
+                    break;
+                case 3:
+                    archetype = new ArchetypeAct3DivinitySimple();
+                    break;
+                default:
+                    archetype = new ArchetypeAct1StanceDanceSimple();
+                    break;
+            }
+        } else {
             switch (AbstractDungeon.actNum) {
                 case 1:
                     archetype = new ArchetypeAct1RetainNewAge();
@@ -110,29 +129,13 @@ public class CharBossWatcher extends AbstractCharBoss {
                     archetype = new ArchetypeAct2CalmNewAge();
                     break;
                 case 3:
-                    archetype = new ArchetypeAct3DivinityNewAge();
+                    archetype = new ArchetypeAct3DualityNewAge();
                     break;
-                case 4: {
-                    switch (NeowBoss.Rezzes) {
-                        case 0:
-                            archetype = new ArchetypeAct1RetainNewAge();
-                            break;
-                        case 1:
-                            archetype = new ArchetypeAct2CalmNewAge();
-                            break;
-                        case 2:
-                            archetype = new ArchetypeAct3DivinityNewAge();
-                            break;
-                        default:
-                            archetype = new ArchetypeAct1RetainNewAge();
-                            break;
-                    }
-                    break;
-                }
                 default:
                     archetype = new ArchetypeAct1RetainNewAge();
                     break;
             }
+        }
 
         archetype.initialize();
         chosenArchetype = archetype;

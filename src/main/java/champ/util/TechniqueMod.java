@@ -3,14 +3,12 @@ package champ.util;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import champ.ChampMod;
-import champ.cards.AbstractChampCard;
 import champ.stances.AbstractChampStance;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import sneckomod.SneckoMod;
 
 public class TechniqueMod extends AbstractCardModifier {
 

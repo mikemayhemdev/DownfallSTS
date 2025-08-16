@@ -2,8 +2,6 @@ package sneckomod.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import gremlin.actions.RemoveRandomDebuffAction;
 import sneckomod.SneckoMod;
 import downfall.util.TextureLoader;
 

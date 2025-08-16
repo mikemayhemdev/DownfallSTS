@@ -1,15 +1,20 @@
 package charbosses.cards.hermit;
 
-import charbosses.bosses.AbstractCharBoss;
-import charbosses.bosses.Hermit.NewAge.ArchetypeAct2WheelOfFateNewAge;
+import charbosses.bosses.Hermit.Simpler.ArchetypeAct3BasicsSimple;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
+import com.megacrit.cardcrawl.actions.common.SuicideAction;
+import com.megacrit.cardcrawl.actions.utility.HideHealthBarAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.monsters.beyond.SnakeDagger;
 import com.megacrit.cardcrawl.powers.DexterityPower;
-import hermit.actions.ReduceCostActionFixed;
+import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import hermit.characters.hermit;
 import hermit.powers.MaintenanceStrikePower;
 
@@ -30,8 +35,7 @@ public class EnMaintenance extends AbstractHermitBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         addToBot(new ApplyPowerAction(m, m, new MaintenanceStrikePower(m, magicNumber)));
         addToBot(new ApplyPowerAction(m, m, new DexterityPower(m, dexterity)));
-        if (!(AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge))
-            addToBot(new ReduceCostActionFixed(this.uuid, 1));
+
     }
 
     @Override

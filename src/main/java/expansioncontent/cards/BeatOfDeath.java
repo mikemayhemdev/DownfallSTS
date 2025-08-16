@@ -16,7 +16,6 @@ public class BeatOfDeath extends AbstractExpansionCard {
     public BeatOfDeath() {
         super(ID, 2, AbstractCard.CardType.POWER, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.SELF);
         setBackgroundTexture("expansioncontentResources/images/512/bg_boss_heart.png", "expansioncontentResources/images/1024/bg_boss_heart.png");
-        this.tags.add(expansionContentMod.STUDY);
         this.magicNumber = this.baseMagicNumber = 2;
         expansionContentMod.loadJokeCardImage((AbstractCard)this, "BeatOfDeath.png");
     }

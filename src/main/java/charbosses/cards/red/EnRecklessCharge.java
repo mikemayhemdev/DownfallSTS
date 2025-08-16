@@ -25,7 +25,7 @@ public class EnRecklessCharge extends AbstractBossCard {
     }
 
     public EnRecklessCharge() {
-        super(ID, cardStrings.NAME, "red/attack/reckless_charge", 0, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK);
+        super(ID, cardStrings.NAME, "red/attack/reckless_charge", 0, cardStrings.DESCRIPTION, CardType.ATTACK, CardColor.RED, CardRarity.UNCOMMON, CardTarget.ENEMY, AbstractMonster.Intent.ATTACK_DEBUFF);
         this.baseDamage = 7;
         this.cardsToPreview = new Dazed();
         this.tags.add(downfallMod.CHARBOSS_ATTACK);

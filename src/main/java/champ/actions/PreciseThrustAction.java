@@ -1,13 +1,6 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package champ.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.ActionType;
-import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
@@ -19,7 +12,7 @@ import com.megacrit.cardcrawl.vfx.WallopEffect;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
 
 public class PreciseThrustAction extends AbstractGameAction {
-    private DamageInfo info;
+    private final DamageInfo info;
 
     public PreciseThrustAction(AbstractCreature target, DamageInfo info) {
         this.info = info;

@@ -18,6 +18,8 @@ import sneckomod.SneckoMod;
 import sneckomod.cards.TyphoonFang;
 import sneckomod.relics.D8;
 
+import static sneckomod.SneckoMod.NO_TYPHOON;
+
 public class FountainPower extends AbstractPower implements CloneablePowerInterface {
     public static final String POWER_ID = SneckoMod.makeID("FountainPower");
     private static final PowerStrings powerStrings = CardCrawlGame.languagePack.getPowerStrings(POWER_ID);
@@ -48,60 +50,33 @@ public class FountainPower extends AbstractPower implements CloneablePowerInterf
             AbstractMonster randomTarget = getRandomAliveMonster();
             if (randomTarget != null) {
                 this.addToBot(new ApplyPowerAction(randomTarget, this.owner, new VenomDebuff(randomTarget, this.amount), this.amount));
-
-                // Check if the target has LacerateDebuff and apply additional Venom equal to its amount
-                if (randomTarget.hasPower(LacerateDebuff.POWER_ID) && !randomTarget.hasPower("Artifact")) {
-                    AbstractPower lacerate = randomTarget.getPower(LacerateDebuff.POWER_ID);
-                    if (lacerate != null) {
-                        int additionalVenomAmount = lacerate.amount;
-                        this.addToBot(new ApplyPowerAction(randomTarget, this.owner, new VenomDebuff(randomTarget, additionalVenomAmount), additionalVenomAmount));
-                    }
-                }
-
-                // Check if the player has Toxic Personality power and the target does not have Artifact
-                if (AbstractDungeon.player.hasPower(ToxicPersonalityPower.POWER_ID) && !randomTarget.hasPower("Artifact")) {
-                    ToxicPersonalityPower toxicPersonalityPower =
-                            (ToxicPersonalityPower) AbstractDungeon.player.getPower(ToxicPersonalityPower.POWER_ID);
-
-                    if (toxicPersonalityPower != null) {
-                        toxicPersonalityPower.onActivateCall(randomTarget);
-
-                        // Re-check LacerateDebuff after Toxic Personality activation and apply Venom if needed
-                        if (randomTarget.hasPower(LacerateDebuff.POWER_ID) && !randomTarget.hasPower("Artifact")) {
-                            AbstractPower lacerate = randomTarget.getPower(LacerateDebuff.POWER_ID);
-                            int additionalVenomAmount = lacerate.amount;
-                            this.addToBot(new ApplyPowerAction(randomTarget, this.owner, new VenomDebuff(randomTarget, additionalVenomAmount), additionalVenomAmount));
-                        }
-                    }
-                }
             }
         }
     }
 
-    private boolean isOverflowActive(AbstractCard card) {
-        boolean overflowActive = false;
+    public boolean isOverflowActive(AbstractCard source) {
+        boolean OVERFLOW = false;
 
-        if (card.hasTag(SneckoMod.OVERFLOW)) {
-            if (AbstractDungeon.player.hand.size() > 5 || AbstractDungeon.player.hasPower("CheatPower")) {
-                overflowActive = true;
+        if (source.hasTag(SneckoMod.OVERFLOW)) {
+            if (AbstractDungeon.player.hand.size() > 5 || (AbstractDungeon.player.hasPower(CheatPower.POWER_ID))) {
+                OVERFLOW = true;
             }
 
+            if (source.hasTag(NO_TYPHOON)) {
+                return false;
+            }
 
             if (AbstractDungeon.player.hasRelic(D8.ID)) {
                 D8 d8Relic = (D8) AbstractDungeon.player.getRelic(D8.ID);
                 if (d8Relic != null && d8Relic.card != null) {
-                    if (d8Relic.card.uuid.equals(card.uuid)) {
-                        overflowActive = true;
+                    if (d8Relic.card.uuid.equals(source.uuid)) {
+                        OVERFLOW = true;
                     }
                 }
             }
-
-            if (card instanceof TyphoonFang && card.purgeOnUse) {
-                overflowActive = false;
-            }
         }
 
-        return overflowActive;
+        return OVERFLOW;
     }
 
     private AbstractMonster getRandomAliveMonster() {

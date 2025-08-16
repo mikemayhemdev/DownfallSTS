@@ -25,30 +25,27 @@ public class StatusReplacePatch {
 
     @SpirePrefixPatch
     public static SpireReturn<AbstractCard> Prefix(AbstractCard abstractCard) {
-        // //SlimeboundMod.logger.info("making stat equivalent copy");
         if (abstractCard.type == AbstractCard.CardType.STATUS && !(abstractCard instanceof AbstractBossCard)) {
             if (AbstractDungeon.player != null && CardCrawlGame.isInARun()) {
                 if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-                    ////SlimeboundMod.logger.info("IS STATUS!");
                     if (AbstractDungeon.player.hasRelic(BronzeIdol.ID)) {
                         if (!abstractCard.hasTag(AutomatonMod.GOOD_STATUS)) {
 
                             AbstractCard newStatus = AutomatonMod.getGoodStatus(abstractCard);
-                            if(AbstractDungeon.player.hasRelic(MedicalKit.ID)&&!(newStatus instanceof UsefulSlime)){
-                                newStatus.cost=0;
-                                newStatus.costForTurn=0;
-                                newStatus.isCostModified=true;
-                                newStatus.isCostModifiedForTurn=true;
+                                if(AbstractDungeon.player.hasRelic(MedicalKit.ID)&&!(newStatus instanceof UsefulSlime)){
+                                    newStatus.cost=-2;
+                                    newStatus.costForTurn=-2;
+                                    newStatus.isCostModified=true;
+                                    newStatus.isCostModifiedForTurn=true;
+                                }
+                                return SpireReturn.Return(newStatus);
                             }
-                            //  //SlimeboundMod.logger.info("replacing with " + newStatus.name);
-                            return SpireReturn.Return(newStatus);
                         }
                     }
                 }
             }
+            return SpireReturn.Continue();
+
         }
-        return SpireReturn.Continue();
 
     }
-
-}
