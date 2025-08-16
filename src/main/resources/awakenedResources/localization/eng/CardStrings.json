@@ -74,7 +74,7 @@
   },
   "awakened:DemonGlyph": {
     "NAME": "Demon Glyph",
-    "DESCRIPTION": "Gain !M! Strength and Dexterity. NL When you awakened:Awaken, gain !awakened:m2! more."
+    "DESCRIPTION": "Gain !M! Strength and Dexterity. NL When you *Awaken, gain !awakened:m2! more."
   },
   "awakened:TakeFlight": {
     "NAME": "Take Flight",
@@ -206,7 +206,7 @@
   },
   "awakened:Rebirth": {
     "NAME": "Rebirth",
-    "DESCRIPTION": "When you would die or at the end of combat, remove all debuffs, awakened:Awaken, and heal !M! HP instead."
+    "DESCRIPTION": "When you would die or at the end of combat, remove all debuffs, *Awaken, and heal !M! HP instead."
   },
   "awakened:Archmagus": {
     "NAME": "Archmagus",

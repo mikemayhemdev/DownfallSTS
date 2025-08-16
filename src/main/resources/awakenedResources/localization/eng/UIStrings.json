@@ -29,8 +29,8 @@
     "TEXT": [
       "Spellbook",
       "Awakening",
-      "After playing 7 Powers, become #yAwakened [REMOVE_SPACE]! NL NL While #yAwakened [REMOVE_SPACE], #yConjured Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy.",
-      "After playing 7 Powers, become #yAwakened [REMOVE_SPACE]! NL NL While #yAwakened [REMOVE_SPACE], #yConjured Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy."
+      "After playing #b7 Powers, become #yAwakened [REMOVE_SPACE]! NL NL While #yAwakened [REMOVE_SPACE], #yConjured Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy.",
+      "After playing #b7 Powers, become #yAwakened [REMOVE_SPACE]! NL NL While #yAwakened [REMOVE_SPACE], #yConjured Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy."
     ]
   },
   "awakened:FullSpellbook": {
