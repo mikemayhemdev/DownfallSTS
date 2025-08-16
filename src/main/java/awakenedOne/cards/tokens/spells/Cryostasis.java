@@ -32,7 +32,7 @@ public class Cryostasis extends AbstractSpellCard {
         if (AbstractDungeon.player.hasPower(AphoticFountPower.POWER_ID)){
             AbstractDungeon.player.getPower(AphoticFountPower.POWER_ID).onSpecificTrigger();
             }
-        }
+    }
 
     public void upp() {
         upgradeBlock(3);
