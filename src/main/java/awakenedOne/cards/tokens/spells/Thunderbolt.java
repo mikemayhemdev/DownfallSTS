@@ -26,10 +26,10 @@ public class Thunderbolt extends AbstractSpellCard {
         baseDamage = 12;
         this.setBackgroundTexture("awakenedResources/images/512/bg_attack_awakened.png", "awakenedResources/images/1024/bg_attack_awakened.png");
         loadJokeCardImage(this, makeBetaCardPath(Thunderbolt.class.getSimpleName() + ".png"));
-        if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
-            isMultiDamage = true;
-        } else {
-            isMultiDamage = false;
+        if (CardCrawlGame.isInARun()) {
+            if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+                isMultiDamage = true;
+            }
         }
     }
 
