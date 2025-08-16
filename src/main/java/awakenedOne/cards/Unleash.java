@@ -24,7 +24,7 @@ public class Unleash extends AbstractAwakenedCard {
 
     public void calculateCardDamage(AbstractMonster mo) {
         int realBaseDamage = this.baseDamage;
-        this.baseDamage += AbstractDungeon.player.hand.size() - 1;
+        this.baseDamage += magicNumber * (AbstractDungeon.player.hand.size() - 1);
         super.calculateCardDamage(mo);
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
@@ -32,7 +32,7 @@ public class Unleash extends AbstractAwakenedCard {
 
     public void applyPowers() {
         int realBaseDamage = this.baseDamage;
-        this.baseDamage += AbstractDungeon.player.hand.size() - 1;
+        this.baseDamage += magicNumber * (AbstractDungeon.player.hand.size() - 1);
         super.applyPowers();
         this.baseDamage = realBaseDamage;
         this.isDamageModified = this.damage != this.baseDamage;
@@ -40,5 +40,6 @@ public class Unleash extends AbstractAwakenedCard {
 
     public void upp() {
         upgradeMagicNumber(1);
+      //  upgradeDamage(1);
     }
 }

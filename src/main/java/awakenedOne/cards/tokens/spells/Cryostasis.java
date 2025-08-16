@@ -19,7 +19,7 @@ public class Cryostasis extends AbstractSpellCard {
 
     public Cryostasis() {
         super(ID, 1, CardType.SKILL, CardTarget.SELF);
-        baseBlock = 9;
+        baseBlock = 10;
         this.setBackgroundTexture("awakenedResources/images/512/bg_skill_awakened.png", "awakenedResources/images/1024/bg_skill_awakened.png");
         loadJokeCardImage(this, makeBetaCardPath(Cryostasis.class.getSimpleName() + ".png"));
     }

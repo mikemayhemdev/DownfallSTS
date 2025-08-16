@@ -143,9 +143,13 @@ public class Wiz {
                     att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DemonGlyphPower.POWER_ID));
                 }
                 awakenedthiscombat = true;
+
                 if ((AbstractDungeon.player.chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE)) {
-                    Wiz.applyToSelf(new CuriosityPower(AbstractDungeon.player, 1));
+                    //Wiz.applyToSelf(new CuriosityPower(AbstractDungeon.player, 1));
+                    //No effect at this time, if a new one is added later, place it here
                 }
+
+
                 OrbitingSpells.upgradeall();
             }
         }

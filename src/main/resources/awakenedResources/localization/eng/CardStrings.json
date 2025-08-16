@@ -4,7 +4,7 @@
     "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
   },
   "awakened:BurningStudy": {
-    "NAME": "Burning Study",
+    "NAME": "Burning Gaze",
     "DESCRIPTION": "Retain. NL Gain !M! Strength. NL Apply !awakened:m2! Weak to ALL enemies."
   },
   "awakened:Cryostasis": {
@@ -47,8 +47,8 @@
   },
   "awakened:AwakenedForm": {
     "NAME": "Awakened Form",
-    "DESCRIPTION": "At the start of your turn, gain !M! Ritual.",
-    "UPGRADE_DESCRIPTION": "Now and at the start of your turn, gain !M! Ritual."
+    "DESCRIPTION": "Ethereal. NL Gain !M! awakened:Curiosity. NL Gain !M! Ritual.",
+    "UPGRADE_DESCRIPTION": "Gain !M! awakened:Curiosity. NL Gain !M! Ritual."
   },
   "awakened:Spellbinder": {
     "NAME": "Spellbinder",
@@ -86,7 +86,8 @@
   },
   "awakened:Peck": {
     "NAME": "Peck",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! card."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! cards."
   },
   "awakened:Extension": {
     "NAME": "Extension",
