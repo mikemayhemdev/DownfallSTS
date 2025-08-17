@@ -164,36 +164,38 @@ public class CharBossHermit extends AbstractCharBoss {
     @Override
     public void render(SpriteBatch sb) {
         super.render(sb);
-        if (chosenArchetype.turn < 1 && chosenArchetype instanceof ArchetypeAct2WheelOfFateSimple) {
-            noRender = true;
-        } else {
-            noRender = false;
-        }
-        if (hasPower(HermitWheelOfFortune.POWER_ID)) {
-            if (chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
-                if (previewCard == null && !((ArchetypeAct2WheelOfFateNewAge) chosenArchetype).mockDeck.isEmpty()) {
-                    AbstractCard q = ((ArchetypeAct2WheelOfFateNewAge) chosenArchetype).mockDeck.get(0);
-                    previewCard = q.makeStatEquivalentCopy();
-                }
+        if (chosenArchetype != null) {
+            if (chosenArchetype.turn < 1 && chosenArchetype instanceof ArchetypeAct2WheelOfFateSimple) {
+                noRender = true;
+            } else {
+                noRender = false;
             }
-
-            if (chosenArchetype instanceof ArchetypeAct2WheelOfFateSimple) {
-                if (previewCard == null && !((ArchetypeAct2WheelOfFateSimple) chosenArchetype).mockDeck.isEmpty()) {
-                    AbstractCard q = ((ArchetypeAct2WheelOfFateSimple) chosenArchetype).mockDeck.get(0);
-                    previewCard = q.makeStatEquivalentCopy();
+            if (hasPower(HermitWheelOfFortune.POWER_ID)) {
+                if (chosenArchetype instanceof ArchetypeAct2WheelOfFateNewAge) {
+                    if (previewCard == null && !((ArchetypeAct2WheelOfFateNewAge) chosenArchetype).mockDeck.isEmpty()) {
+                        AbstractCard q = ((ArchetypeAct2WheelOfFateNewAge) chosenArchetype).mockDeck.get(0);
+                        previewCard = q.makeStatEquivalentCopy();
+                    }
                 }
-            }
 
-            if (previewCard != null && !isDead && !isDying && !noRender) {
-                int cardsinrow = Math.min(3 - HAND_ROW_LENGTH * (int) Math.floor((float) 3 / (float) HAND_ROW_LENGTH), HAND_ROW_LENGTH);
-                float widthspacing = AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
-                int tar = 4;
-                previewCard.target_x = previewCard.current_x = Settings.WIDTH * .9F - ((cardsinrow + 0.5f) * (widthspacing * HAND_SCALE)) + (widthspacing * HAND_SCALE) * (tar % HAND_ROW_LENGTH);
-                previewCard.target_y = previewCard.current_y = Settings.HEIGHT * HAND_HEIGHT_OFFSET + (AbstractCard.IMG_HEIGHT_S * HAND_SCALE) * ((float) Math.floor(((float) tar) / (float) HAND_ROW_LENGTH) + (tar > HAND_ROW_LENGTH ? 0.0f : 1.0f));
-                previewCard.drawScale = previewCard.targetDrawScale = previewCard.hb.hovered ? HOVER_SCALE : HAND_SCALE;
-                previewCard.render(sb);
-                FontHelper.cardDescFont_N.getData().setScale(1.0f);
-                FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, hermit.characterStrings.TEXT[4], previewCard.current_x, previewCard.current_y - ((previewCard.hb.hovered ? 175 : 100) * Settings.scale));
+                if (chosenArchetype instanceof ArchetypeAct2WheelOfFateSimple) {
+                    if (previewCard == null && !((ArchetypeAct2WheelOfFateSimple) chosenArchetype).mockDeck.isEmpty()) {
+                        AbstractCard q = ((ArchetypeAct2WheelOfFateSimple) chosenArchetype).mockDeck.get(0);
+                        previewCard = q.makeStatEquivalentCopy();
+                    }
+                }
+
+                if (previewCard != null && !isDead && !isDying && !noRender) {
+                    int cardsinrow = Math.min(3 - HAND_ROW_LENGTH * (int) Math.floor((float) 3 / (float) HAND_ROW_LENGTH), HAND_ROW_LENGTH);
+                    float widthspacing = AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
+                    int tar = 4;
+                    previewCard.target_x = previewCard.current_x = Settings.WIDTH * .9F - ((cardsinrow + 0.5f) * (widthspacing * HAND_SCALE)) + (widthspacing * HAND_SCALE) * (tar % HAND_ROW_LENGTH);
+                    previewCard.target_y = previewCard.current_y = Settings.HEIGHT * HAND_HEIGHT_OFFSET + (AbstractCard.IMG_HEIGHT_S * HAND_SCALE) * ((float) Math.floor(((float) tar) / (float) HAND_ROW_LENGTH) + (tar > HAND_ROW_LENGTH ? 0.0f : 1.0f));
+                    previewCard.drawScale = previewCard.targetDrawScale = previewCard.hb.hovered ? HOVER_SCALE : HAND_SCALE;
+                    previewCard.render(sb);
+                    FontHelper.cardDescFont_N.getData().setScale(1.0f);
+                    FontHelper.renderFontCentered(sb, FontHelper.cardDescFont_N, hermit.characterStrings.TEXT[4], previewCard.current_x, previewCard.current_y - ((previewCard.hb.hovered ? 175 : 100) * Settings.scale));
+                }
             }
         }
     }
