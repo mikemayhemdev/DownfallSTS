@@ -32,11 +32,11 @@ public class DeathScreenCharUnlockPatch {
         if (label == TEXT[37]) {
             //////SlimeboundMod.logger.info("text patch fired");
             if (UnlockTracker.isCharacterLocked("Guardian")) {
-             //   //SlimeboundMod.logger.info("first if");
+                //   //SlimeboundMod.logger.info("first if");
                 __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
                 __instance.label = TEXT[40];
             } else if (UnlockTracker.isCharacterLocked("Hexaghost") && EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == GuardianEnum.GUARDIAN) {
-              //  //SlimeboundMod.logger.info("second if");
+                //  //SlimeboundMod.logger.info("second if");
                 __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
                 __instance.label = TEXT[40];
             } else if (UnlockTracker.isCharacterLocked("Champ") && EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == TheHexaghost.Enums.THE_SPIRIT) {
@@ -51,19 +51,15 @@ public class DeathScreenCharUnlockPatch {
                 //  //SlimeboundMod.logger.info("second if");
                 __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
                 __instance.label = TEXT[40];
-            }
-        } else if (UnlockTracker.isCharacterLocked("Awakened") && EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == CollectorChar.Enums.THE_COLLECTOR) {
-            //  //SlimeboundMod.logger.info("second if");
-            __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
-            __instance.label = TEXT[40];
-        }
-        else if (UnlockTracker.isCharacterLocked("Gremlin") && EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE) {
-            //  //SlimeboundMod.logger.info("second if");
-            __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
-            __instance.label = TEXT[40];
-        }
-
-            else if ((UnlockTracker.isCharacterLocked("Snecko")) &&
+            } else if (UnlockTracker.isCharacterLocked("Awakened") && EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == CollectorChar.Enums.THE_COLLECTOR) {
+                //  //SlimeboundMod.logger.info("second if");
+                __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
+                __instance.label = TEXT[40];
+            } else if (UnlockTracker.isCharacterLocked("Gremlin") && EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE) {
+                //  //SlimeboundMod.logger.info("second if");
+                __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
+                __instance.label = TEXT[40];
+            } else if ((UnlockTracker.isCharacterLocked("Snecko")) &&
                     !(UnlockTracker.isCharacterLocked("SlimeBoss")) &&
                     !(UnlockTracker.isCharacterLocked("Guardian")) &&
                     !(UnlockTracker.isCharacterLocked("Hexaghost")) &&
@@ -72,14 +68,15 @@ public class DeathScreenCharUnlockPatch {
                     !(UnlockTracker.isCharacterLocked("Gremlin")) &&
                     !(UnlockTracker.isCharacterLocked("Awakened")) &&
                     !(UnlockTracker.isCharacterLocked("Collector")) &&
-                    EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN){
-             //   //SlimeboundMod.logger.info("third if");
+                    EvilModeCharacterSelect.evilMode && AbstractDungeon.player.chosenClass == GremlinEnum.GREMLIN) {
+                //   //SlimeboundMod.logger.info("third if");
                 __instance.appear(Settings.WIDTH / 2.0F, Settings.HEIGHT * 0.15F, TEXT[40]);
                 __instance.label = TEXT[40];
             }
 
         }
     }
+}
 
 
 
