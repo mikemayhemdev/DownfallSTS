@@ -33,7 +33,6 @@ public class ArchetypeAct2MushroomsSimple extends ArchetypeBaseIronclad {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
 
-        if (!looped) {
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnSummonMushrooms());
@@ -59,7 +58,6 @@ public class ArchetypeAct2MushroomsSimple extends ArchetypeBaseIronclad {
                     turn = 0;
                     break;
             }
-        }
 
         return cardsList;
     }
