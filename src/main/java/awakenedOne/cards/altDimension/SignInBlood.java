@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import hermit.util.Wiz;
 import awakenedOne.cards.AbstractAwakenedCard;
+import sneckomod.SneckoMod;
 
 @NoCompendium
 @NoPools
@@ -30,6 +31,7 @@ public class SignInBlood extends AbstractAwakenedCard {
         frameString = "towertactics";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
 

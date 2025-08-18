@@ -47,8 +47,7 @@
   },
   "awakened:AwakenedForm": {
     "NAME": "Awakened Form",
-    "DESCRIPTION": "Ethereal. NL Gain !M! awakened:Curiosity. NL Gain !M! Ritual.",
-    "UPGRADE_DESCRIPTION": "Gain !M! awakened:Curiosity. NL Gain !M! Ritual."
+    "DESCRIPTION": "Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual."
   },
   "awakened:Spellbinder": {
     "NAME": "Spellbinder",
