@@ -17,6 +17,7 @@ public class ArchetypeAct2MushroomsSimple extends ArchetypeBaseIronclad {
         super("IC_MUSHROOM_ARCHETYPE", "Mushroom");
 
         maxHPModifier += 190;
+        maxHPModifierAsc = 20;
         actNum = 2;
         bossMechanicName = IroncladMushroomPower.NAME;
         bossMechanicDesc = IroncladMushroomPower.DESC[0];

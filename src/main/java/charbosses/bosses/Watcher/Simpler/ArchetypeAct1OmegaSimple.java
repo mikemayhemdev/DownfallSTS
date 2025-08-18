@@ -16,6 +16,7 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
     public ArchetypeAct1OmegaSimple() {
         super("WA_ARCHETYPE_CALM", "Calm");
         maxHPModifier += 118;
+        maxHPModifierAsc = 20;
         actNum = 1;
     }
 

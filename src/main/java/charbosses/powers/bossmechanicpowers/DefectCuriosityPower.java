@@ -1,6 +1,5 @@
 package charbosses.powers.bossmechanicpowers;
 
-import awakenedOne.powers.DoubleSpellPower;
 import basemod.interfaces.CloneablePowerInterface;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;

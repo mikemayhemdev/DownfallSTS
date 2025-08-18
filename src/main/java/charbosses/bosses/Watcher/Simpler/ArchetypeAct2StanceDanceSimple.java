@@ -14,6 +14,7 @@ public class ArchetypeAct2StanceDanceSimple extends ArchetypeBaseWatcher {
         super("WA_ARCHETYPE_RETAIN", "Retain");
 
         maxHPModifier += 198;
+        maxHPModifierAsc = 20;
         actNum = 2;
     }
 

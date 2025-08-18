@@ -14,6 +14,7 @@ public class ArchetypeAct3DivinitySimple extends ArchetypeBaseWatcher {
         super("WA_ARCHETYPE_DIVINITY", "Divinity");
 
         maxHPModifier += 348;
+        maxHPModifierAsc = 30;
         actNum = 3;
     }
 

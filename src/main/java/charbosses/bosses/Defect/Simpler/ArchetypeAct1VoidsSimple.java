@@ -4,11 +4,15 @@ import basemod.ReflectionHacks;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.blue.*;
+import charbosses.monsters.LouseTangerine;
+import charbosses.monsters.VoidCore;
 import com.esotericsoftware.spine.AnimationState;
 import com.esotericsoftware.spine.AnimationStateData;
+import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
@@ -17,14 +21,22 @@ public class ArchetypeAct1VoidsSimple extends ArchetypeBaseDefect {
 
     int darkOrbsChanneled = 0;
 
+    boolean doubleLooped = false;
+    public boolean minionDestroyedThisTurn = false;
+
     public ArchetypeAct1VoidsSimple() {
         super("DF_ARCHETYPE_STREAMLINE", "Streamline");
-        maxHPModifier += 105;
+        maxHPModifier += 85;
+        maxHPModifierAsc = 10;
         actNum = 1;
     }
 
     @Override
     public void addedPreBattle() {
+
+        AbstractMonster voidCore = new VoidCore(-400F, 200F);
+        AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(voidCore,true));
+        voidCore.usePreBattleAction();
 
         try {
             Method loadAnimationMethod = AbstractCreature.class.getDeclaredMethod("loadAnimation", new Class[] { String.class, String.class, float.class });
@@ -43,39 +55,36 @@ public class ArchetypeAct1VoidsSimple extends ArchetypeBaseDefect {
     public ArrayList<AbstractCard> getThisTurnCards() {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+       // boolean beamCells = AbstractDungeon.ascensionLevel >= 4;
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnMurderbot(), false);
+                  //  if (beamCells && !minionDestroyedThisTurn) addToList(cardsList, new EnBeamCell());
+                    if (!looped) addToList(cardsList, new EnMurderbot(), false);
+                    if (!doubleLooped) addToList(cardsList, new EnConsume(), false);
+                    addToList(cardsList, new EnDoomAndGloom(), extraUpgrades);
+                    if (doubleLooped) addToList(cardsList, new EnStrikeBlue());
                     turn++;
                     break;
                 case 1:
-                    //Turn 2
-                    addToList(cardsList, new EnDoomAndGloom(), extraUpgrades);
+                 //   if (beamCells && !minionDestroyedThisTurn) addToList(cardsList, new EnBeamCell());
+                    addToList(cardsList, new EnLeap());
+                    addToList(cardsList, new EnLeap());
                     turn++;
                     break;
                 case 2:
                     //Turn 3
-                    addToList(cardsList, new EnLeap());
-                    addToList(cardsList, new EnLeap());
+                  //  if (beamCells && !minionDestroyedThisTurn) addToList(cardsList, new EnBeamCell());
+                    addToList(cardsList, new EnRipAndTear(), false);
+                    addToList(cardsList, new EnDarkness(), extraUpgrades);
                     turn++;
                     break;
                 case 3:
                     //Turn 4
-                    addToList(cardsList, new EnRipAndTear(), false);
-
-                    turn++;
-                    break;
-                case 4:
-                    //Turn 4
-                    addToList(cardsList, new EnBuffer(), false);
+                  //  if (beamCells && !minionDestroyedThisTurn) addToList(cardsList, new EnBeamCell());
+                    addToList(cardsList, new EnBuffer(), extraUpgrades);
                     addToList(cardsList, new EnLoop(), false);
-
-                    turn++;
-                    break;
-                case 5:
-                    //Turn 4
-                    addToList(cardsList, new EnSunder(), false);
-                    turn = 1;
+                    turn = 0;
+                    if (looped) doubleLooped = true;
                     looped = true;
                     break;
             }
@@ -84,6 +93,8 @@ public class ArchetypeAct1VoidsSimple extends ArchetypeBaseDefect {
 
         return cardsList;
     }
+
+
 
 
 }

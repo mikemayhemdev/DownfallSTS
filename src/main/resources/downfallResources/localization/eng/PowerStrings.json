@@ -473,5 +473,12 @@
       "You have played #b",
       " non-Attacks. While this number exceeds or matches Attacks, Watcher is in #yCalm Stance."
     ]
+  },
+  "downfall:VoidOrbPower":{
+    "NAME": "Void Core",
+    "DESCRIPTIONS": [
+      "When killed, Void Core restores all HP and removes one #yDarkness Orb from Defect.",
+      " Gains 5 Max HP each time this occurs."
+    ]
   }
 }

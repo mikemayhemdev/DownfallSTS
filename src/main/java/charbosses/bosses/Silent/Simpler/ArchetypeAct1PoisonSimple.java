@@ -26,6 +26,7 @@ public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
 
 
         maxHPModifier += 100;
+        maxHPModifierAsc = 10;
         actNum = 1;
     }
 

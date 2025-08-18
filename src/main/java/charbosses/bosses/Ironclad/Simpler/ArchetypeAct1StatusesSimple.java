@@ -14,6 +14,7 @@ public class ArchetypeAct1StatusesSimple extends ArchetypeBaseIronclad {
         super("IC_STATUS_ARCHETYPE", "Status");
 
         maxHPModifier += 70;
+        maxHPModifierAsc = 10;
         actNum = 1;
     }
 
@@ -26,15 +27,11 @@ public class ArchetypeAct1StatusesSimple extends ArchetypeBaseIronclad {
         switch (turn) {
             case 0:
                 addToList(cardsList, new EnStatusMirror());
-                addToList(cardsList, new EnDisarm(), false);
+                addToList(cardsList, new EnRecklessCharge());
+                addToList(cardsList, new EnRecklessCharge());
                 turn++;
                 break;
             case 1:
-                addToList(cardsList, new EnRecklessCharge());
-                addToList(cardsList, new EnRecklessCharge());
-                turn++;
-                break;
-            case 2:
                 addToList(cardsList, new EnPowerThrough(true), extraUpgrades);
                 turn++;
                 break;

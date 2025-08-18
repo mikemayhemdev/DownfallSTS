@@ -9,10 +9,15 @@ import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import charbosses.bosses.Defect.Simpler.ArchetypeAct1VoidsSimple;
 import charbosses.bosses.Defect.Simpler.ArchetypeAct2ClawSimple;
 import charbosses.bosses.Defect.Simpler.ArchetypeAct3OrbsSimple;
+import charbosses.cards.AbstractBossCard;
+import charbosses.cards.blue.EnBeamCell;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
 import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
+import com.megacrit.cardcrawl.actions.utility.TextAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -21,10 +26,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
 import com.megacrit.cardcrawl.core.Settings;
+import downfall.actions.SpeechBubbleAction;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import downfall.util.LocalizeHelper;
 import expansioncontent.expansionContentMod;
+
+import static awakenedOne.util.Wiz.atb;
 
 public class CharBossDefect extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Defect");
@@ -51,6 +59,13 @@ public class CharBossDefect extends AbstractCharBoss {
         type = EnemyType.BOSS;
     }
 
+    @Override
+    public void applyEndOfTurnTriggers() {
+        super.applyEndOfTurnTriggers();
+        if (chosenArchetype instanceof ArchetypeAct1VoidsSimple){
+            ((ArchetypeAct1VoidsSimple)chosenArchetype).minionDestroyedThisTurn = false;
+        }
+    }
 
     @Override
     public void generateDeck() {
@@ -98,6 +113,29 @@ public class CharBossDefect extends AbstractCharBoss {
         if (AbstractDungeon.ascensionLevel >= 19) {
             archetype.initializeBonusRelic();
         }
+    }
+
+    public void refreshFromA1MinionDeath() {
+        if (!this.isDying) {
+
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    AbstractCard foundBeam = null;
+                    for (AbstractCard c: AbstractCharBoss.boss.hand.group){
+                        if (c instanceof EnBeamCell){
+                            foundBeam = c;
+                            break;
+                        }
+                    }
+                    if (foundBeam != null) {
+                        AbstractCharBoss.boss.hand.removeCard(foundBeam);
+                    }
+                }
+            });
+        }
+
     }
 
     public void damage(DamageInfo info) {
