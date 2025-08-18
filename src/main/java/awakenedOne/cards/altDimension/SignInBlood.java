@@ -24,6 +24,7 @@ public class SignInBlood extends AbstractAwakenedCard {
     public SignInBlood() {
         super(ID, 0, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 3;
+        tags.add(CardTags.HEALING);
 
         exhaust = true;
         frameString = "towertactics";

@@ -20,6 +20,7 @@ public class Daggerstorm extends AbstractAwakenedCard {
     public Daggerstorm() {
         super(ID, 2, CardRarity.RARE, CardType.POWER, CardTarget.SELF);
         baseMagicNumber = magicNumber = 4;
+        tags.add(CardTags.HEALING);
 
         frameString = "roguebook";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");

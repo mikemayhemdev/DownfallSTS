@@ -25,6 +25,7 @@ public class RealityRift extends AbstractAwakenedCard {
         exhaust = true;
         baseMagicNumber = magicNumber = 3;
         baseSecondMagic = secondMagic = 1;
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
