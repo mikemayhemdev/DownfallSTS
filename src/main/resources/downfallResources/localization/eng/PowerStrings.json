@@ -6,6 +6,13 @@
       "Ha! Fairy Potion, jerk!"
     ]
   },
+  "downfall:CultistRevivePower": {
+    "NAME": "False Worship",
+    "DESCRIPTIONS": [
+      "Heals to #b100% of Max HP instead of dying, removing this effect.",
+      "CAAAAWWWW!"
+    ]
+  },
   "downfall:SoulSteal": {
     "NAME": "Soul Stealer",
     "DESCRIPTIONS": [

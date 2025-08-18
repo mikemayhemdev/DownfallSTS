@@ -80,6 +80,10 @@
     "NAME": "End is Nigh",
     "DESCRIPTION": "Gain !M! Max HP. NL EVERYONE gains 1 Ritual."
   },
+  "downfall:FalseWorship": {
+    "NAME": "False Worship",
+    "DESCRIPTION": "Your Cultist revives once upon death, restoring all HP."
+  },
   "downfall:FleetingFaith": {
     "NAME": "Fleeting Faith",
     "DESCRIPTION": "Gain 1 Mantra when your opponent plays a card. Lose 5 at the start of your turn."
