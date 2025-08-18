@@ -57,7 +57,13 @@ public class CharBossDefect extends AbstractCharBoss {
         AbstractBossDeckArchetype archetype;
 
         if (downfallMod.overrideBossDifficulty) {
+
             archetype = new ArchetypeAct1TurboNewAge();
+
+            if (!downfallMod.useLegacyBosses) {
+                archetype = new ArchetypeAct1VoidsSimple();
+            }
+
             this.currentHealth -= 100;
             downfallMod.overrideBossDifficulty = false;
         } else

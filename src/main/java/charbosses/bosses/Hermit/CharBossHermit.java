@@ -69,6 +69,11 @@ public class CharBossHermit extends AbstractCharBoss {
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
             archetype = new ArchetypeAct1SharpshooterNewAge();
+
+            if (!downfallMod.useLegacyBosses) {
+                archetype = new ArchetypeAct1SharpshooterSimple();
+            }
+
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else
