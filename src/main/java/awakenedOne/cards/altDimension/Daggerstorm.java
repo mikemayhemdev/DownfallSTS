@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import awakenedOne.cards.AbstractAwakenedCard;
+import sneckomod.SneckoMod;
+
 import static awakenedOne.util.Wiz.applyToSelf;
 
 
@@ -24,6 +26,7 @@ public class Daggerstorm extends AbstractAwakenedCard {
         frameString = "roguebook";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
 

@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.util.Wiz;
 import awakenedOne.cards.AbstractAwakenedCard;
+import sneckomod.SneckoMod;
 
 @NoCompendium
 @NoPools
@@ -26,6 +27,7 @@ public class Minniegun extends AbstractAwakenedCard {
         frameString = "eden";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
 

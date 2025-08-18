@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.util.Wiz;
+import sneckomod.SneckoMod;
 
 import static awakenedOne.AwakenedOneMod.*;
 
@@ -25,6 +26,8 @@ public class RealityRift extends AbstractAwakenedCard {
         exhaust = true;
         baseMagicNumber = magicNumber = 3;
         baseSecondMagic = secondMagic = 1;
+
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

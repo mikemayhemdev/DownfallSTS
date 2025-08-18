@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.WeightyImpactEffect;
 import hermit.util.Wiz;
+import sneckomod.SneckoMod;
 
 @NoCompendium
 @NoPools
@@ -29,6 +30,7 @@ public class Crusher extends AbstractAwakenedCard implements onGenerateCardMidco
         frameString = "grift";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     @Override
