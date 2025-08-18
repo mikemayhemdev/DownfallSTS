@@ -26,6 +26,8 @@ public class CurvedSword extends CustomRelic {
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("CurvedSword.png")); //TODO: Images
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("CurvedSword.png"));
 
+    private static final int REQUIREMENT = 4;
+
     public CurvedSword() {
         super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.CLINK);
         tips.add(new CardPowerTip(new Ceremony()));
@@ -38,7 +40,7 @@ public class CurvedSword extends CustomRelic {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card instanceof AbstractSpellCard) {
             ++this.counter;
-            if (this.counter % 4 == 0) {
+            if (this.counter % REQUIREMENT == 0) {
                 this.flash();
                 this.counter = 0;
                 this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
@@ -54,7 +56,7 @@ public class CurvedSword extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + 4 + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + REQUIREMENT + DESCRIPTIONS[1];
     }
 
 }
