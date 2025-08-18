@@ -13,6 +13,8 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 
 import awakenedOne.cards.AbstractAwakenedCard;
+import sneckomod.SneckoMod;
+
 import static awakenedOne.util.Wiz.atb;
 
 @NoCompendium
@@ -29,6 +31,7 @@ public class PackRat extends AbstractAwakenedCard {
         frameString = "inscryp";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
 

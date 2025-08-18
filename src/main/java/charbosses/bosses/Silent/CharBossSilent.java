@@ -77,7 +77,13 @@ public class CharBossSilent extends AbstractCharBoss {
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
+
             archetype = new ArchetypeAct1PoisonNewAge();
+
+            if (!downfallMod.useLegacyBosses) {
+                archetype = new ArchetypeAct1PoisonSimple();
+            }
+
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else

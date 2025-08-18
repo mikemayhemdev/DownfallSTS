@@ -70,6 +70,11 @@ public class CharBossIronclad extends AbstractCharBoss {
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
             archetype = new ArchetypeAct1StatusesNewAge();
+
+            if (!downfallMod.useLegacyBosses) {
+                archetype = new ArchetypeAct1StatusesSimple();
+            }
+
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else

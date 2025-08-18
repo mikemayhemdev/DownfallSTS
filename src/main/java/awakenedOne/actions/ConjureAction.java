@@ -1,6 +1,8 @@
 package awakenedOne.actions;
 
+import awakenedOne.cards.tokens.spells.ESPSpell;
 import awakenedOne.powers.IntensifyDebuffPower;
+import awakenedOne.relics.ZenerDeck;
 import awakenedOne.ui.OrbitingSpells;
 import awakenedOne.util.OnConjureSubscriber;
 import awakenedOne.util.Wiz;
@@ -133,9 +135,6 @@ public class ConjureAction extends AbstractGameAction {
             }
             if (!bstudy) {
                 addToTop(new RemoveSpellCardAction(tar));
-//                if (!spellCards.isEmpty()) {
-//                    atb(new SetUpNextSpellAction());
-//                }
             } else {
                 addToTop(new RemoveSpellCardActionSpecial(tar));
             }
@@ -163,6 +162,9 @@ public class ConjureAction extends AbstractGameAction {
             } else {
                 for (int i = 0; i < 4; i++) {
                     availableCards.add(CardLibrary.getCard(spells.get(i)));
+                }
+                if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
+                    actualChoices.add(CardLibrary.getCard(ESPSpell.ID));
                 }
             }
             availableCards.forEach(q -> actualChoices.add(q.makeStatEquivalentCopy()));

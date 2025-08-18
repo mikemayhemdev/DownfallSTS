@@ -20,19 +20,18 @@ public class AwakenedForm extends AbstractAwakenedCard {
     public AwakenedForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
-        //baseSecondMagic = secondMagic = 3;
-        isEthereal = true;
+        baseSecondMagic = secondMagic = 1;
         tags.add(BaseModCardTags.FORM);
         loadJokeCardImage(this, makeBetaCardPath(AwakenedForm.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelfTop(new CuriosityPower(p, magicNumber));
-        applyToSelfTop(new RitualPower(p, magicNumber, true));
+        applyToSelfTop(new RitualPower(p, secondMagic, true));
     }
 
     @Override
     public void upp() {
-        isEthereal = false;
+        upgradeSecondMagic(1);
     }
 }

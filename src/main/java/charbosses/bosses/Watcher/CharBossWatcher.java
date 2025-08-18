@@ -97,7 +97,13 @@ public class CharBossWatcher extends AbstractCharBoss {
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
+
             archetype = new ArchetypeAct1RetainNewAge();
+
+            if (!downfallMod.useLegacyBosses) {
+                archetype = new ArchetypeAct1StanceDanceSimple();
+            }
+
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else
@@ -127,7 +133,7 @@ public class CharBossWatcher extends AbstractCharBoss {
                     archetype = new ArchetypeAct2CalmNewAge();
                     break;
                 case 3:
-                    archetype = new ArchetypeAct3DualityNewAge();
+                    archetype = new ArchetypeAct3DivinityNewAge();
                     break;
                 default:
                     archetype = new ArchetypeAct1RetainNewAge();
