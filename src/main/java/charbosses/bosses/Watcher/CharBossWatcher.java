@@ -101,7 +101,7 @@ public class CharBossWatcher extends AbstractCharBoss {
             archetype = new ArchetypeAct1RetainNewAge();
 
             if (!downfallMod.useLegacyBosses) {
-                archetype = new ArchetypeAct1StanceDanceSimple();
+                archetype = new ArchetypeAct1OmegaSimple();
             }
 
             downfallMod.overrideBossDifficulty = false;
