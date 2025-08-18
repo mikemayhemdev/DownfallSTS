@@ -18,6 +18,9 @@ public class RippedDoll extends CustomRelic {
 
     //Ripped Doll
 
+    //How many turns does this relic work for?
+    private static final int TURNS = 2;
+
     public RippedDoll() {
         super(ID, IMG, OUTLINE, RelicTier.STARTER, LandingSound.MAGICAL);
     }
@@ -37,11 +40,11 @@ public class RippedDoll extends CustomRelic {
 
     @Override
     public void atTurnStart() {
-        if (this.counter < 2 && this.counter != -1) {
+        if (this.counter < TURNS && this.counter != -1) {
             this.counter++;
             flash();
             atb(new ConjureAction(false, false));
-            if (this.counter == 2) {
+            if (this.counter == TURNS) {
                 this.counter = -1;
             }
         }
@@ -49,7 +52,7 @@ public class RippedDoll extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + 2 + DESCRIPTIONS[1];
+        return DESCRIPTIONS[0] + TURNS + DESCRIPTIONS[1];
     }
 
 }
