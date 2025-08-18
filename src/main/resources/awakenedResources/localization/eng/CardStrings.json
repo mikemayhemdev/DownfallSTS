@@ -165,7 +165,7 @@
   },
   "awakened:BirdsEye": {
     "NAME": "Byrd's Eye",
-    "DESCRIPTION": "Refresh your Spells. NL Choose a Spell to awakened:Conjure. NL Exhaust.",
+    "DESCRIPTION": "Choose a Spell to awakened:Conjure.",
     "UPGRADE_DESCRIPTION": "Refresh your Spells. Choose a Spell to awakened:Conjure."
   },
   "awakened:Initiation": {
