@@ -21,6 +21,7 @@ public class AwakenedForm extends AbstractAwakenedCard {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         //baseSecondMagic = secondMagic = 3;
+        isEthereal = true;
         tags.add(BaseModCardTags.FORM);
         loadJokeCardImage(this, makeBetaCardPath(AwakenedForm.class.getSimpleName() + ".png"));
     }
@@ -32,6 +33,6 @@ public class AwakenedForm extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        //upgradeMagicNumber(-1);
+        isEthereal = false;
     }
 }

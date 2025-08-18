@@ -23,6 +23,7 @@ public class Minniegun extends AbstractAwakenedCard {
         super(ID, 2, CardRarity.RARE, AbstractCard.CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 2;
         baseMagicNumber = magicNumber = 5;
+        tags.add(CardTags.HEALING);
 
         frameString = "eden";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");

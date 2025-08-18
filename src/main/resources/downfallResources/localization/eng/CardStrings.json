@@ -52,10 +52,6 @@
     "NAME": "Bag of Knives",
     "DESCRIPTION": "The first time you play a card that costs 2 or more each turn, gain 2 *Shivs."
   },
-  "downfall:GiveAntidote": {
-    "NAME": "Mad Scientist",
-    "DESCRIPTION": "Give your opponent an *Antidote."
-  },
   "downfall:Hallunication": {
     "NAME": "Hallucination",
     "DESCRIPTION": "Hide your real location each turn. When you or the illusion are Attacked, the illusion fades."
@@ -83,6 +79,10 @@
   "downfall:EndIsNigh": {
     "NAME": "End is Nigh",
     "DESCRIPTION": "Gain !M! Max HP. NL EVERYONE gains 1 Ritual."
+  },
+  "downfall:FalseWorship": {
+    "NAME": "False Worship",
+    "DESCRIPTION": "Your Cultist revives once upon death, restoring all HP."
   },
   "downfall:FleetingFaith": {
     "NAME": "Fleeting Faith",

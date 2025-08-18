@@ -26,8 +26,8 @@ public class RealityRift extends AbstractAwakenedCard {
         exhaust = true;
         baseMagicNumber = magicNumber = 3;
         baseSecondMagic = secondMagic = 1;
-
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
+        tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

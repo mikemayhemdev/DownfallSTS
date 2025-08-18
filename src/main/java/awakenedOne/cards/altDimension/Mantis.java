@@ -27,6 +27,7 @@ public class Mantis extends AbstractAwakenedCard {
         super(ID, 1, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         frameString = "inscryp";
+        tags.add(CardTags.HEALING);
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
 
         this.tags.add(SneckoMod.BANNEDFORSNECKO);

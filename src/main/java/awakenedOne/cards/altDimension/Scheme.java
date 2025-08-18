@@ -22,7 +22,8 @@ public class Scheme extends AbstractAwakenedCard {
     public Scheme() {
 
         super(ID, 1, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
+        tags.add(CardTags.HEALING);
 
 
         frameString = "vault";

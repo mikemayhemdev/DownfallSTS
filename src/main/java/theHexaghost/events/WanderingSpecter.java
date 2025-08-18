@@ -181,6 +181,9 @@ public class WanderingSpecter extends AbstractImageEvent {
 
                         cardsAdded.add(curse.cardID);
                         cardsAdded.add(rareCard.cardID);
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[9]);
+                        this.screen = CurScreen.END;
 
                         return;
                     case 1:
@@ -192,6 +195,9 @@ public class WanderingSpecter extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                         cardsAdded.add(curse.cardID);
                         maxHpAdded = 5;
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[9]);
+                        this.screen = CurScreen.END;
 
                         return;
                     case 2:
@@ -204,6 +210,9 @@ public class WanderingSpecter extends AbstractImageEvent {
 
                         cardsAdded.add(curse.cardID);
                         goldAdded = 100;
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[9]);
+                        this.screen = CurScreen.END;
 
                         return;
                     case 3:

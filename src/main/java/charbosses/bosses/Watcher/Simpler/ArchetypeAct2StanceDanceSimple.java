@@ -1,23 +1,20 @@
 package charbosses.bosses.Watcher.Simpler;
 
 import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
-import charbosses.cards.colorless.EnPanacea;
 import charbosses.cards.purple.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.purple.ReachHeaven;
-import com.megacrit.cardcrawl.cards.tempCards.ThroughViolence;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import java.util.ArrayList;
 
-public class ArchetypeAct1StanceDanceSimple extends ArchetypeBaseWatcher {
+public class ArchetypeAct2StanceDanceSimple extends ArchetypeBaseWatcher {
 
 
-    public ArchetypeAct1StanceDanceSimple() {
+    public ArchetypeAct2StanceDanceSimple() {
         super("WA_ARCHETYPE_RETAIN", "Retain");
 
-        maxHPModifier += 118;
-        actNum = 1;
+        maxHPModifier += 198;
+        actNum = 2;
     }
 
     @Override

@@ -393,7 +393,8 @@
   },
   "awakened:Scheme": {
     "NAME": "Scheme",
-    "DESCRIPTION": "The next !M! cards you play this turn that cost 1 or less are played twice."
+    "DESCRIPTION": "The next card you play this turn that cost 1 or less is played twice.",
+    "UPGRADE_DESCRIPTION": "The next !M! cards you play this turn that cost 1 or less are played twice."
   },
   "awakened:TheEncyclopedia": {
     "NAME": "The Encyclopedia",

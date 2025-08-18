@@ -26,6 +26,7 @@ public class PackRat extends AbstractAwakenedCard {
         baseDamage = 2;
         baseBlock = 2;
         exhaust = true;
+        tags.add(CardTags.HEALING);
 
         frameString = "inscryp";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");

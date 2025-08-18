@@ -21,6 +21,7 @@ public class TheEncyclopedia extends AbstractAwakenedCard {
         super(ID, 2, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = 6;
+        tags.add(CardTags.HEALING);
 
         frameString = "obelisk";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
