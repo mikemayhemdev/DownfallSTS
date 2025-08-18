@@ -3,30 +3,36 @@ package charbosses.powers.general;
 import basemod.ReflectionHacks;
 import basemod.interfaces.CloneablePowerInterface;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Hermit.CharBossHermit;
+import charbosses.bosses.Hermit.Simpler.ArchetypeAct2WheelOfFateSimple;
+import charbosses.bosses.Silent.CharBossSilent;
+import charbosses.bosses.Silent.Simpler.ArchetypeAct1PoisonSimple;
 import charbosses.cards.other.Antidote;
 import charbosses.powers.bossmechanicpowers.AbstractBossMechanicPower;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.common.ExhaustAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.combat.GainPowerEffect;
 import downfall.downfallMod;
 import downfall.monsters.NeowBossFinal;
 import downfall.util.TextureLoader;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-@Deprecated
+import static hermit.util.Wiz.atb;
+
 public class PoisonProtectionPower extends AbstractPower implements CloneablePowerInterface {
 
     public static final String POWER_ID = downfallMod.makeID("PoisonResist");
@@ -41,9 +47,10 @@ public class PoisonProtectionPower extends AbstractPower implements CloneablePow
     private float timer;
     private boolean firstTurn = true;
 
-    public PoisonProtectionPower(AbstractCreature owner) {
+    public PoisonProtectionPower(AbstractCreature owner, int amount) {
         this.ID = POWER_ID;
         this.owner = owner;
+        this.amount = amount;
         this.type = PowerType.BUFF;
         this.isTurnBased = false;
 
@@ -55,59 +62,34 @@ public class PoisonProtectionPower extends AbstractPower implements CloneablePow
         this.updateDescription();
     }
 
-    public void atStartOfCombat() {
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        if (damageAmount > 0 && target != this.owner && info.type == DamageInfo.DamageType.NORMAL) {
+            this.flash();
 
-    }
-
-//    public void atStartOfTurn() {
-//        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-//            boolean antidoteInHand = false;
-//            for (AbstractCard c : AbstractDungeon.player.hand.group) {
-//                if (c instanceof Antidote) {
-//                    antidoteInHand = true;
-//                    break;
-//                }
-//            }
-//            if (!antidoteInHand) {
-//                this.flash();
-//                this.addToBot(new MakeTempCardInHandAction(new Antidote()));
-//            }
-//        }
-//    }
-
-    @Override
-    public void update(int slot) {
-        super.update(slot);
-        if (firstTurn) {
-            if (this.timer <= 0F) {
-                ArrayList<AbstractGameEffect> effect2 = ReflectionHacks.getPrivate(this, AbstractPower.class, "effect");
-                effect2.add(new GainPowerEffect(this));
-                this.timer = 1F;
-                if (AbstractDungeon.player != null) {
-                    if (AbstractDungeon.player.hb.hovered) {
-                        firstTurn = false;
+            if(AbstractDungeon.player.hasPower(EnemyPoisonPower.POWER_ID) && AbstractDungeon.player.getPower(EnemyPoisonPower.POWER_ID).amount <= this.amount){
+                atb(new RemoveSpecificPowerAction(owner, owner, EnemyPoisonPower.POWER_ID));
+                if (AbstractCharBoss.boss != null){
+                    if (AbstractCharBoss.boss.chosenArchetype != null){
+                        if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct1PoisonSimple){
+                           // SlimeboundMod.logger.info("Resetting poison boss");
+                            ((CharBossSilent) AbstractCharBoss.boss).resetPoisonBoss();
+                        }
                     }
                 }
-            } else {
-                this.timer -= Gdx.graphics.getDeltaTime();
+            }else{
+                addToBot(new ReducePowerAction(owner, owner, EnemyPoisonPower.POWER_ID, this.amount));
             }
         }
-    }
 
+    }
 
     @Override
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0];
-    }
-
-
-    @Override
-    public void playApplyPowerSfx() {
-        //to prevent the 'last turn' warning from pinging audio all the time
+        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
     }
 
     @Override
     public AbstractPower makeCopy() {
-        return new PoisonProtectionPower(owner);
+        return new PoisonProtectionPower(owner, amount);
     }
 }

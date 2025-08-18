@@ -10,9 +10,10 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
+import downfall.downfallMod;
 
 public class EnemyPoisonPower extends AbstractPower {
-    public static final String POWER_ID = "Poison";
+    public static String POWER_ID = "Poison";
     private static final PowerStrings powerStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
@@ -51,7 +52,12 @@ public class EnemyPoisonPower extends AbstractPower {
     }
 
     public void updateDescription() {
+        if (downfallMod.useLegacyBosses) {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        } else {
+
+            this.description = CardCrawlGame.languagePack.getPowerStrings("downfall:OnPlayerPoison").DESCRIPTIONS[0] + this.amount + CardCrawlGame.languagePack.getPowerStrings("downfall:OnPlayerPoison").DESCRIPTIONS[1];
+        }
     }
 
 //     Damage action moved to SilentPoisonPower so that it happens after Afterlife activation

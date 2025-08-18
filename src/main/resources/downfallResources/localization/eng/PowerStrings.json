@@ -54,9 +54,17 @@
     ]
   },
   "downfall:PoisonResist": {
-    "NAME": "Poison Resistance",
+    "NAME": "Can't Slow Down",
     "DESCRIPTIONS": [
-      "#yPoison triggers at the end of your turn. NL At the end of your turn, spend all remaining [E] to remove 10 #yPoison per [E] spent."
+      "Whenever you deal unblocked #yAttack damage, remove #b",
+      " #yPoison."
+    ]
+  },
+  "downfall:OnPlayerPoison": {
+    "NAME": "Poison",
+    "DESCRIPTIONS": [
+      "At the end of your turn, take #b",
+      " damage."
     ]
   },
   "downfall:NeowBuff": {
@@ -158,7 +166,8 @@
   "downfall:SilentPoisonPower": {
     "NAME": "New Toxins",
     "DESCRIPTIONS": [
-      "#yPoison is blockable and deals damage at end of turn."
+      "#yPoison is blockable and deals damage at end of turn.",
+      "#yPoison is blockable, does not decay, and deals damage at end of turn."
     ]
   },
   "downfall:NeowHighlyToxic": {

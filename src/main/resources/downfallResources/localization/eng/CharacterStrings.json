@@ -243,6 +243,13 @@
     ],
     "TEXT": [
     ]
+  },
+  "downfall:CharBossSpeech": {
+    "NAMES": [
+      ""
+    ],
+    "TEXT": ["No, that cannot be! We need more toxins..."
+    ]
   }
 
 }
