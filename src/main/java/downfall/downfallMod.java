@@ -199,7 +199,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static boolean normalMapLayout = false;
     public static boolean sneckoNoModCharacters = false;
     public static boolean useIconsForAppliedProperties = false;
-    public static boolean useLegacyBosses = false;
+    public static boolean useLegacyBosses = true;
     public static boolean DeterministicConjure = true;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
@@ -1346,7 +1346,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelic(new ShatteredFragment(), RelicType.SHARED);
-        BaseMod.addRelic(new BlackCandle(), RelicType.SHARED);
         BaseMod.addRelic(new Hecktoplasm(), RelicType.SHARED);
         BaseMod.addRelic(new BrokenWingStatue(), RelicType.SHARED);
         BaseMod.addRelic(new CloakOfManyFaces(), RelicType.SHARED);
@@ -1365,7 +1364,10 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addRelic(new ExtraCursedBell(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedKey(), RelicType.SHARED);
 
-        if (downfallMod.disableBaseGameAdjustments = false) BaseMod.addRelic(new AwakenedUrn(), RelicType.SHARED);
+        if (downfallMod.disableBaseGameAdjustments = false){
+            BaseMod.addRelic(new BlackCandle(), RelicType.SHARED);
+            BaseMod.addRelicToCustomPool(new AwakenedUrn(), AwakenedOneChar.Enums.AWAKENED_BLUE);
+        }
         addPotions();
     }
 

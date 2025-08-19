@@ -39,7 +39,7 @@ public class Hecktoplasm extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return (AbstractDungeon.actNum <= 1 && evilMode);
+        return (AbstractDungeon.actNum <= 1 && evilMode && !downfallMod.disableBaseGameAdjustments);
     }
 
     public AbstractRelic makeCopy() {
