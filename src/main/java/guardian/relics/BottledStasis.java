@@ -125,6 +125,8 @@ public class BottledStasis extends CustomRelic implements CustomBottleRelic, Cus
             cardSelected = true;
             card = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             BottledStasisPatch.inBottledStasis.set(card, true);
+            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
             setDescriptionAfterLoading();
         }
     }
