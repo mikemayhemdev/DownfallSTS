@@ -35,15 +35,15 @@ public class ArchetypeAct1StatusesSimple extends ArchetypeBaseIronclad {
                 addToList(cardsList, new EnPowerThrough(true), extraUpgrades);
                 turn++;
                 break;
-            case 3:
+            case 2:
                 addToList(cardsList, new EnBash(), extraUpgrades);
                 turn++;
                 break;
-            case 4:
+            case 3:
                 addToList(cardsList, new EnImmolate(), extraUpgrades);
                 turn++;
                 break;
-            case 5:
+            case 4:
                 addToList(cardsList, new EnMetallicize(), true);
                 addToList(cardsList, new EnInflame());
                 turn=1;

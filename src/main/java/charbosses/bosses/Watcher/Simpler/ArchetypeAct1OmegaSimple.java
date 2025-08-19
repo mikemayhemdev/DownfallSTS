@@ -43,7 +43,6 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
                 break;
             case 1:
                 addToList(cardsList, new EnTruePeace());
-                addToList(cardsList, new EnOmega());
                 turn++;
                 break;
             case 2:

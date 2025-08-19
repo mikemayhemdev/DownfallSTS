@@ -199,7 +199,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static boolean normalMapLayout = false;
     public static boolean sneckoNoModCharacters = false;
     public static boolean useIconsForAppliedProperties = false;
-    public static boolean useLegacyBosses = false;
+    public static boolean useLegacyBosses = true;
     public static boolean DeterministicConjure = true;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
@@ -293,7 +293,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         configDefault.setProperty(PROP_NO_MUSIC, "FALSE");
         configDefault.setProperty(PROP_ICONS_FOR_APPLIED_PROPERTIES, "FALSE");
         configDefault.setProperty(NO_RNG_CONJURE, "TRUE");
-        configDefault.setProperty(LEGACY_BOSSES, "FALSE");
+        configDefault.setProperty(LEGACY_BOSSES, "TRUE");
 
 
         loadConfigData();
