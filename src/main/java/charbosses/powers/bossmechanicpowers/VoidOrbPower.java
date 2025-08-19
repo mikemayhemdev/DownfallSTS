@@ -6,18 +6,16 @@ import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Defect.Simpler.ArchetypeAct1VoidsSimple;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.megacrit.cardcrawl.actions.animations.TalkAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.vfx.TextAboveCreatureEffect;
 import com.megacrit.cardcrawl.vfx.combat.HealEffect;
 import downfall.downfallMod;
 import downfall.util.TextureLoader;
-import hermit.util.Wiz;
+
+import static awakenedOne.util.Wiz.atb;
 
 public class VoidOrbPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -28,7 +26,6 @@ public class VoidOrbPower extends AbstractPower implements CloneablePowerInterfa
     private static final Texture tex84 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/FairyPotion84.png"));
     private static final Texture tex32 = TextureLoader.getTexture(downfallMod.assetPath("images/powers/FairyPotion32.png"));
 
-    public static boolean CANNOT_END = false;
 
     public VoidOrbPower(final AbstractCreature owner) {
         this.ID = POWER_ID;
@@ -67,27 +64,36 @@ public class VoidOrbPower extends AbstractPower implements CloneablePowerInterfa
 
     @Override
     public void onDeath() {
-        CANNOT_END = true;
-        super.onDeath();
-        healUndead(owner, 9999);
-        AbstractDungeon.effectsQueue.add(new HealEffect(owner.hb.cX, owner.hb.cY, owner.maxHealth));
-        if (AbstractCharBoss.boss != null){
-            if (AbstractCharBoss.boss.chosenArchetype != null){
-                ((ArchetypeAct1VoidsSimple)AbstractCharBoss.boss.chosenArchetype).minionDestroyedThisTurn = true;
-                if (!AbstractCharBoss.boss.orbs.isEmpty()) {
-                    AbstractCharBoss.boss.removeNextOrb();
-                }
-                ((CharBossDefect)AbstractCharBoss.boss).refreshFromA1MinionDeath();
+        if (AbstractCharBoss.boss != null) {
+            if (!AbstractCharBoss.boss.isDying) {
+                super.onDeath();
+                healUndead(owner, 9999);
+                AbstractDungeon.effectsQueue.add(new HealEffect(owner.hb.cX, owner.hb.cY, owner.maxHealth));
+
+                atb(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        if (AbstractCharBoss.boss != null) {
+                            if (AbstractCharBoss.boss.chosenArchetype != null) {
+                                ((ArchetypeAct1VoidsSimple) AbstractCharBoss.boss.chosenArchetype).minionDestroyedThisTurn = true;
+                                if (!AbstractCharBoss.boss.orbs.isEmpty()) {
+                                    AbstractCharBoss.boss.removeNextOrb();
+                                }
+
+                            }
+                        }
+                    }
+                });
 
             }
+            //Wiz.applyToSelf(new VoidProtectionPower(AbstractDungeon.player));
         }
-        //Wiz.applyToSelf(new VoidProtectionPower(AbstractDungeon.player));
-        CANNOT_END = false;
     }
 
     @Override
     public void updateDescription() {
-        if (AbstractDungeon.ascensionLevel >= 19){
+        if (AbstractDungeon.ascensionLevel >= 19) {
             this.description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
         } else {
             this.description = DESCRIPTIONS[0];

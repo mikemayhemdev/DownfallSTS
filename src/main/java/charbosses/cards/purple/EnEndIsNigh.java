@@ -38,11 +38,13 @@ public class EnEndIsNigh extends AbstractBossCard {
         portrait = TextureLoader.getTextureAsAtlasRegion(expansionContentMod.makeCardPath("SummonMushrooms.png"));
         portraitImg = TextureLoader.getTexture(expansionContentMod.makeCardPath("SummonMushrooms.png"));
         this.loadJokeCardImage();
-        baseMagicNumber = magicNumber = 100;
+        baseMagicNumber = magicNumber = 2;
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
+
+        /*
         atb(new AbstractGameAction() {
             @Override
             public void update() {
@@ -58,13 +60,15 @@ public class EnEndIsNigh extends AbstractBossCard {
             }
         });
 
+         */
+
         Iterator var4 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
         while(var4.hasNext()) {
             AbstractMonster mo = (AbstractMonster)var4.next();
-            this.addToBot(new ApplyPowerAction(mo, m, new RitualPower(mo, 1, false), 1, true, AbstractGameAction.AttackEffect.NONE));
+            this.addToBot(new ApplyPowerAction(mo, m, new RitualPower(mo, magicNumber, false), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
         }
-        this.addToBot(new ApplyPowerAction(p, m, new RitualPower(p, 1, false), 1, true, AbstractGameAction.AttackEffect.NONE));
+        this.addToBot(new ApplyPowerAction(p, m, new RitualPower(p, magicNumber, false), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
 
     }
 

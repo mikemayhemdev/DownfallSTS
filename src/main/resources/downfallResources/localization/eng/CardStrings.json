@@ -78,11 +78,11 @@
   },
   "downfall:EndIsNigh": {
     "NAME": "End is Nigh",
-    "DESCRIPTION": "Gain !M! Max HP. NL EVERYONE gains 1 Ritual."
+    "DESCRIPTION": "EVERYONE gains !M! Ritual."
   },
   "downfall:FalseWorship": {
     "NAME": "False Worship",
-    "DESCRIPTION": "Your Cultist revives once upon death, restoring all HP."
+    "DESCRIPTION": "Revive your Cultist if he is dead. Otherwise, he revives upon death, restoring all HP."
   },
   "downfall:FleetingFaith": {
     "NAME": "Fleeting Faith",

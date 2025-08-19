@@ -15,8 +15,8 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
 
     public ArchetypeAct1OmegaSimple() {
         super("WA_ARCHETYPE_CALM", "Calm");
-        maxHPModifier += 118;
-        maxHPModifierAsc = 20;
+        maxHPModifier += 138;
+        maxHPModifierAsc = 10;
         actNum = 1;
     }
 
@@ -37,12 +37,13 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
         switch (turn) {
             case 0:
                 addToList(cardsList, new EnAlpha());
-                addToList(cardsList, new EnEndIsNigh());
                 if (AbstractDungeon.ascensionLevel >= 19) addToList(cardsList, new EnFalseWorship());
+                addToList(cardsList, new EnEndIsNigh());
                 turn++;
                 break;
             case 1:
                 addToList(cardsList, new EnTruePeace());
+                addToList(cardsList, new EnOmega());
                 turn++;
                 break;
             case 2:
@@ -50,7 +51,7 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
                 turn++;
                 break;
             case 3:
-                addToList(cardsList, new EnTruePeace());
+                addToList(cardsList, new EnFalseWorship());
                 turn++;
                 break;
             case 4:
@@ -66,7 +67,7 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
                 turn++;
                 break;
             case 7:
-                addToList(cardsList, new EnTruePeace());
+                addToList(cardsList, new EnFalseWorship());
                 turn++;
                 break;
             case 8:

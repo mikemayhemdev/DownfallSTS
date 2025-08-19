@@ -13,6 +13,7 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.EnBeamCell;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
+import charbosses.monsters.VoidCore;
 import com.esotericsoftware.spine.AnimationState;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
@@ -121,29 +122,6 @@ public class CharBossDefect extends AbstractCharBoss {
         }
     }
 
-    public void refreshFromA1MinionDeath() {
-        if (!this.isDying) {
-
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    AbstractCard foundBeam = null;
-                    for (AbstractCard c: AbstractCharBoss.boss.hand.group){
-                        if (c instanceof EnBeamCell){
-                            foundBeam = c;
-                            break;
-                        }
-                    }
-                    if (foundBeam != null) {
-                        AbstractCharBoss.boss.hand.removeCard(foundBeam);
-                    }
-                }
-            });
-        }
-
-    }
-
     public void damage(DamageInfo info) {
         if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0) {
             AnimationState.TrackEntry e = this.state.setAnimation(0, "Hit", false);
@@ -158,13 +136,13 @@ public class CharBossDefect extends AbstractCharBoss {
     public void die() {
         super.die();
 
-        if (hasPower(MinionPower.POWER_ID)) {
+
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (m instanceof BronzeOrbWhoReallyLikesDefectForSomeReason) {
+                if (m instanceof VoidCore) {
                     AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));
                 }
             }
-        }
+
     }
 
 }
