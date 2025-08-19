@@ -199,7 +199,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static boolean normalMapLayout = false;
     public static boolean sneckoNoModCharacters = false;
     public static boolean useIconsForAppliedProperties = false;
-    public static boolean useLegacyBosses = false;
+    public static boolean useLegacyBosses = true;
     public static boolean DeterministicConjure = true;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
