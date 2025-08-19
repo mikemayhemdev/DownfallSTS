@@ -171,9 +171,6 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
             SignatureMovePatch.inSignatureMove.set(card, true);
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-
-            AbstractDungeon.topLevelEffects.add(new ShowCardBrieflyEffect(card.makeStatEquivalentCopy()));
-
             setDescriptionAfterLoading();
         }
     }
