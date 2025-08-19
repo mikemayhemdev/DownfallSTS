@@ -164,7 +164,7 @@ public class ConjureAction extends AbstractGameAction {
                     availableCards.add(CardLibrary.getCard(spells.get(i)));
                 }
                 if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
-                    actualChoices.add(CardLibrary.getCard(ESPSpell.ID));
+                    availableCards.add(CardLibrary.getCard(ESPSpell.ID));
                 }
             }
             availableCards.forEach(q -> actualChoices.add(q.makeStatEquivalentCopy()));
