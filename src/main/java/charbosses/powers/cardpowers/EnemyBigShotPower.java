@@ -13,6 +13,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import downfall.downfallMod;
 import hermit.HermitMod;
@@ -59,7 +60,8 @@ public class EnemyBigShotPower extends AbstractPower implements CloneablePowerIn
         super.onAfterUseCard(card, action);
         if (card instanceof AbstractBossCard){
             if (card.hasTag(downfallMod.CHARBOSS_DEADON)){
-                if (owner.hasPower(HermitConcentrationPower.POWER_ID)){
+                AbstractPower concentration = this.owner.getPower(HermitConcentrationPower.POWER_ID);
+                if (concentration != null && concentration.amount > 0) {
                     Wiz.atb(new ApplyPowerAction(owner, owner, new VigorPower(owner, amount)));
                 }
             }

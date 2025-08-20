@@ -68,14 +68,7 @@ public class PoisonProtectionPower extends AbstractPower implements CloneablePow
 
             if(AbstractDungeon.player.hasPower(EnemyPoisonPower.POWER_ID) && AbstractDungeon.player.getPower(EnemyPoisonPower.POWER_ID).amount <= this.amount){
                 atb(new RemoveSpecificPowerAction(owner, owner, EnemyPoisonPower.POWER_ID));
-                if (AbstractCharBoss.boss != null){
-                    if (AbstractCharBoss.boss.chosenArchetype != null){
-                        if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct1PoisonSimple){
-                           // SlimeboundMod.logger.info("Resetting poison boss");
-                            ((CharBossSilent) AbstractCharBoss.boss).resetPoisonBoss();
-                        }
-                    }
-                }
+
             }else{
                 addToBot(new ReducePowerAction(owner, owner, EnemyPoisonPower.POWER_ID, this.amount));
             }

@@ -2,6 +2,8 @@ package charbosses.powers.general;
 
 import charbosses.actions.unique.EnemyPoisonDamageAction;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Silent.CharBossSilent;
+import charbosses.bosses.Silent.Simpler.ArchetypeAct1PoisonSimple;
 import charbosses.relics.CBR_SneckoSkull;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -11,6 +13,7 @@ import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import downfall.downfallMod;
+import slimebound.SlimeboundMod;
 
 public class EnemyPoisonPower extends AbstractPower {
     public static String POWER_ID = "Poison";
@@ -44,6 +47,19 @@ public class EnemyPoisonPower extends AbstractPower {
                                                         // by snecko skull
         if( (stackAmount >= 0) && AbstractCharBoss.boss.hasRelic(CBR_SneckoSkull.ID) ){
             this.amount ++;
+        }
+    }
+
+    @Override
+    public void onRemove() {
+        super.onRemove();
+        if (AbstractCharBoss.boss != null){
+            if (AbstractCharBoss.boss.chosenArchetype != null){
+                if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct1PoisonSimple){
+                    SlimeboundMod.logger.info("Resetting poison boss");
+                    ((CharBossSilent) AbstractCharBoss.boss).resetPoisonBoss();
+                }
+            }
         }
     }
 

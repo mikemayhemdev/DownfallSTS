@@ -9,7 +9,7 @@
   "downfall:CultistRevivePower": {
     "NAME": "False Worship",
     "DESCRIPTIONS": [
-      "Heals to #b100% of Max HP instead of dying, removing this effect.",
+      "Heals to #b50% of Max HP instead of dying, removing this effect.",
       "CAAAAWWWW!"
     ]
   },
@@ -382,7 +382,8 @@
     "NAME": "Deputy",
     "DESCRIPTIONS": [
       "When Tangerine dies, Hermit's #yConcentration breaks and he gains #b",
-      " #yStrength."
+      " #yStrength.",
+      "When Tangerine dies, Hermit's #yConcentration breaks."
     ]
   },
   "downfall:HermitWheelOfFortune": {

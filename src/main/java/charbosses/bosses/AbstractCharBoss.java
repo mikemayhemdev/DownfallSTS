@@ -52,6 +52,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.OddMushroom;
 import com.megacrit.cardcrawl.relics.RunicDome;
 import com.megacrit.cardcrawl.relics.SlaversCollar;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -484,6 +485,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                         for (int j = i + 1; j < hand.size(); j++) {
                             AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
                             c2.manualCustomVulnModifier = true;
+                            if (AbstractDungeon.player.hasRelic(OddMushroom.ID)){
+                                c2.manualCustomDamageModifierMult = 1.25F;
+                            } else {
+                                c2.manualCustomDamageModifierMult = 1.5F;
+                            }
+
                         }
                     }
                 }
