@@ -1,6 +1,8 @@
 package awakenedOne.cards;
 
+import awakenedOne.cards.altDimension.RealityRift;
 import awakenedOne.powers.FourthDimensionPower;
+import charbosses.cards.purple.EnCarveReality;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -36,6 +38,7 @@ public class FourthDimension extends AbstractAwakenedCard {
                     //applyToSelfTop(new FourthDimensionPower(magicNumber, c.makeStatEquivalentCopy()));
                     att(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
                 } else {
+                    shuffleIn(new RealityRift(), magicNumber);
                     AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, CardCrawlGame.languagePack.getUIString("awakened:FourthDimensionDupeAttempt").TEXT[0], true));
                 }
             }
