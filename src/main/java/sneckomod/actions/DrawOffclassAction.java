@@ -33,9 +33,11 @@ public class DrawOffclassAction extends AbstractGameAction {
                 .limit(draw)
                 .collect(Collectors.toList()));
 
+        tmp.shuffle();
+
         for (AbstractCard c : tmp.group) {
             if (Wiz.hand().size() < BaseMod.MAX_HAND_SIZE) {
-                addToBot(new FetchAction(Wiz.p().drawPile, AbstractDungeon.cardRandomRng.random(tmp.size() - 1)));
+                addToBot(new FetchAction(Wiz.p().drawPile, card -> card == c));
                 count++;
                 if (count >= draw) break;
             }
