@@ -1,0 +1,238 @@
+{
+  "awakened:IntensifyPower": {
+    "NAME": "Intensify",
+    "DESCRIPTIONS": [
+      "This turn, all Spell cards cost #b0 [REMOVE_SPACE].",
+      "For the next #b",
+      " turns, all Spell cards cards cost #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:IntensifyDebuffPower": {
+    "NAME": "Burnout",
+    "DESCRIPTIONS": [
+      "You cannot #yConjure for the rest of the turn.",
+      "You cannot #yConjure for the next #b",
+      " turns."
+    ]
+  },
+  "awakened:RisingChantPower": {
+    "NAME": "Rising Chorus",
+    "DESCRIPTIONS": [
+      "Whenever you play an activated #yChant card, gain #b",
+      " #yStrength [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:CursedStrength": {
+    "NAME": "Darkblessed",
+    "DESCRIPTIONS": [
+      "Whenever you are #yDrained [REMOVE_SPACE], gain #b",
+      " #yStrength [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:ThaumaturgyPower": {
+    "NAME": "Thaumaturgy",
+    "DESCRIPTIONS": [
+      "At the start of your next #b",
+      " turns, gain a #yCeremony [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:SacramentPower": {
+    "NAME": "Sacraments",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower [REMOVE_SPACE], gain #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:FlarePower": {
+    "NAME": "Feather Flare",
+    "DESCRIPTIONS": [
+      "Whenever you play a #ynon-Attack card this turn, ALL enemies lose #b",
+      " HP."
+    ]
+  },
+  "awakened:PrimacyPower": {
+    "NAME": "Primacy",
+    "DESCRIPTIONS": [
+      "The first time you gain #yStrength each turn, draw a card.",
+      "The first #b",
+      " times you gain #yStrength each turn, draw a card.",
+      " NL This effect can be triggered #b",
+      " more times this turn.",
+      " more time this turn.",
+      " NL This effect cannot be triggered again this turn."
+    ]
+  },
+  "awakened:SpellbinderPower": {
+    "NAME": "Spellbinder",
+    "DESCRIPTIONS": [
+      "At the start of your turn, #yConjure [REMOVE_SPACE].",
+      "At the start of your turn, #yConjure #b",
+      " times."
+    ]
+  },
+  "awakened:DarkEchoPower": {
+    "NAME": "Dark Echo",
+    "DESCRIPTIONS": [
+      "At the end of your turn, deal #b",
+      " damage to ALL enemies #b",
+      " times.",
+      " damage to ALL enemies."
+    ]
+  },
+  "awakened:MoonlitVisionPower": {
+    "NAME": "Moonlit Vision",
+    "DESCRIPTIONS": [
+      "The first #b",
+      " times you play a Spell each turn, gain [E] . #b",
+      " remaining this turn."
+    ]
+  },
+  "awakened:EclipseEmbracePower": {
+    "NAME": "Eclipse Embrace",
+    "DESCRIPTIONS": [
+      "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain [E] and draw a card next turn.",
+      "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain #b",
+      " [E] and draw #b",
+      " cards next turn."
+    ]
+  },
+  "awakened:SongOfSorrowPower": {
+    "NAME": "Song of Sorrow",
+    "DESCRIPTIONS": [
+      "Whenever you create a #yVoid [REMOVE_SPACE], ALL enemies lose #b",
+      " HP."
+    ]
+  },
+  "awakened:ShroudOfMiasmaPower": {
+    "NAME": "Shroud of Miasma",
+    "DESCRIPTIONS": [
+      "Whenever you attack an enemy with #yHex [REMOVE_SPACE], gain #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:StrengthReturnPower": {
+    "NAME": "Split Wide",
+    "DESCRIPTIONS": [
+      "Whenever you attack this enemy, gain #b",
+      " temporary #yStrength [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:ManaburnPower": {
+    "NAME": "Manaburn",
+    "DESCRIPTIONS": [
+      "Whenever you are #yDrained [REMOVE_SPACE], loses #b",
+      " HP."
+    ]
+  },
+  "awakened:ArchmagusPower": {
+    "NAME": "Archmagus",
+    "DESCRIPTIONS": [
+      "The first Spell you play each turn is played twice.",
+      "The first #b",
+      " Spells you play each turn are played twice.",
+      " NL (",
+      " Spell Repetitions remaining)"
+    ]
+  },
+  "awakened:DarknessFallsPower": {
+    "NAME": "Darkness Falls",
+    "DESCRIPTIONS": [
+      "Whenever you are #yDrained [REMOVE_SPACE], gain #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:VoidRefundPower": {
+    "NAME": "Clarion Call",
+    "DESCRIPTIONS": [
+      "The next time you are #yDrained [REMOVE_SPACE], gain [E] .",
+      "The next time you are #yDrained [REMOVE_SPACE], gain #b",
+      " [E] ."
+    ]
+  },
+  "awakened:DemonGlyphPower": {
+    "NAME": "Demon Glyph",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " #yStrength and #yDexterity when you #yAwaken [REMOVE_SPACE]."
+    ]
+  },
+    "awakened:ReverseRitualPower": {
+      "NAME": "Awakened Form",
+      "DESCRIPTIONS": [
+        "At the start of your turn, gain #b",
+        " #yRitual [REMOVE_SPACE]."
+      ]
+    },
+  "awakened:EnsorcelatePower": {
+    "NAME": "Ensorcelate",
+    "DESCRIPTIONS": [
+      "The next #yPower you play costs #b0 [REMOVE_SPACE].",
+      "The next #b",
+      " #yPowers you play cost #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:ConjureNextPower": {
+    "NAME": "Pluck",
+    "DESCRIPTIONS": [
+      "At the start of your next turn, #yConjure [REMOVE_SPACE].",
+      "At the start of your next turn, #yConjure #b",
+      " times."
+    ]
+  },
+  "awakened:ChosensVersePower": {
+    "NAME": "Chosen Verse",
+    "DESCRIPTIONS": [
+      "The next time you play a non-Attack card this turn, draw a card and gain #b",
+      " #yBlock [REMOVE_SPACE].",
+      "The next #b",
+      " times you play a non-Attack card this turn, draw a card and gain #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:AphoticFountPower": {
+    "NAME": "Aphotic Fount",
+    "DESCRIPTIONS": [
+      "Whenever you play #yCryostasis [REMOVE_SPACE], gain #b",
+      " #yPlated #yArmor [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:GrimoirePower": {
+    "NAME": "Storm Ruler",
+    "DESCRIPTIONS": [
+      "Your #yThunderbolts deal #b",
+      " more damage."
+    ]
+  },
+  "awakened:SpellshieldPower": {
+    "NAME": "Spellshield",
+    "DESCRIPTIONS": [
+      "Whenever you #yRetain a card, gain #b",
+      " #yBlock."
+    ]
+  },
+  "awakened:DaggerstormPower": {
+    "NAME": "Daggerstorm",
+    "DESCRIPTIONS": [
+      "Whenever you create a card, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "awakened:SchemePower": {
+    "NAME": "Scheme",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " cards played this turn that cost #b1 or less will be played twice.",
+      "The next card played this turn that costs #b1 or less will be played twice."
+    ]
+  },
+  "awakened:FourthDimensionPower": {
+    "NAME": "4th Dimension",
+    "DESCRIPTIONS": [
+      "At the start of your next #b",
+      " turn, ",
+      " turns, ",
+      "play and #yExhaust a copy of ",
+      " [REMOVE_SPACE]."
+    ]
+  }
+}
