@@ -40,7 +40,7 @@ public class EnEndIsNigh extends AbstractBossCard {
         portrait = TextureLoader.getTextureAsAtlasRegion(expansionContentMod.makeCardPath("SummonMushrooms.png"));
         portraitImg = TextureLoader.getTexture(expansionContentMod.makeCardPath("SummonMushrooms.png"));
         this.loadJokeCardImage();
-        baseMagicNumber = magicNumber = 1`;
+        baseMagicNumber = magicNumber = 1;
     }
 
     @Override
