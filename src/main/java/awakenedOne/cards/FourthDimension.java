@@ -39,6 +39,7 @@ public class FourthDimension extends AbstractAwakenedCard {
                     att(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
                 } else {
                     shuffleIn(new RealityRift(), magicNumber);
+                    att(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
                     AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, CardCrawlGame.languagePack.getUIString("awakened:FourthDimensionDupeAttempt").TEXT[0], true));
                 }
             }
