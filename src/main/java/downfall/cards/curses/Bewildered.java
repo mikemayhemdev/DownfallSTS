@@ -15,9 +15,11 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 import expansioncontent.cardmods.PropertiesMod;
+import hermit.util.Wiz;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleHandAction;
 import sneckomod.cards.AbstractSneckoCard;
+import sneckomod.powers.MuddleDrawnCardsPower;
 
 
 public class Bewildered extends CustomCard {
@@ -29,7 +31,7 @@ public class Bewildered extends CustomCard {
     private static final CardRarity RARITY = CardRarity.CURSE;
     private static final CardTarget TARGET = CardTarget.SELF;
     private static final CardStrings cardStrings;
-    private static final int COST = -2;
+    private static final int COST = 0;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -44,7 +46,7 @@ public class Bewildered extends CustomCard {
     public Bewildered() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
 //        this.magicNumber = this.baseMagicNumber = 1;
-        this.exhaust = true;
+        //this.exhaust = true;
         this.isEthereal = true;
         tags.add(downfallMod.DOWNFALL_CURSE);
     }
@@ -53,10 +55,12 @@ public class Bewildered extends CustomCard {
 
     }
 
+
     @Override
-    public void triggerWhenDrawn() {
-        AbstractDungeon.actionManager.addToBottom(new MuddleHandAction());
+    public void triggerOnExhaust() {
+        super.triggerOnExhaust();
         this.flash();
+        Wiz.applyToSelf(new MuddleDrawnCardsPower(5));
     }
 
     public AbstractCard makeCopy() {

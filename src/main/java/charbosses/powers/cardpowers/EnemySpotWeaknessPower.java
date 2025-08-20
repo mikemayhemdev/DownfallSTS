@@ -33,8 +33,7 @@ public class EnemySpotWeaknessPower extends AbstractPower {
         this.name = NAME;
         this.ID = "Spot Weakness";
         this.owner = owner;
-        this.amount = 0;
-        this.theoreticalGain = strengthGain;
+        this.amount = strengthGain;
         this.updateDescription();
         this.loadRegion("curiosity");
         isActive = false;
@@ -58,7 +57,7 @@ public class EnemySpotWeaknessPower extends AbstractPower {
         if (card.type.equals(AbstractCard.CardType.ATTACK) && !isActive) {
             this.flash();
             isActive = true;
-            amount = theoreticalGain;
+            //amount = theoreticalGain;
             updateDescription();
         }
     }
@@ -72,7 +71,11 @@ public class EnemySpotWeaknessPower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + this.theoreticalGain + DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2];
+        if (isActive) {
+            this.description = DESCRIPTIONS[2] + this.amount + DESCRIPTIONS[1];
+        } else {
+            this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        }
     }
 
     static {

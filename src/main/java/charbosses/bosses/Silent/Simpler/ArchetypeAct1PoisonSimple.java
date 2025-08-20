@@ -69,8 +69,7 @@ public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
             switch (turn) {
                 case 0: //Turn 1
                     if (looped){
-                        addToList(cardsList, new EnDeadlyPoison(), extraUpgrades);
-                        addToList(cardsList, new EnDeadlyPoison());
+                        addToList(cardsList, new EnBouncingFlask(), extraUpgrades);
                         addToList(cardsList, new EnNoxiousFumes(), extraUpgrades);
                     } else {
                         addToList(cardsList, new EnNewToxins());
@@ -104,6 +103,7 @@ public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
                     break;
 
                 case 4: //Turn 5
+                    addToList(cardsList, new EnDeadlyPoison(), extraUpgrades);
                     addToList(cardsList, new EnCatalyst(), true);
                     turn++;
 

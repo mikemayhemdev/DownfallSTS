@@ -68,33 +68,27 @@ public class ArchetypeAct1SharpshooterSimple extends ArchetypeBaseIronclad {
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnHyperfocused());
+                    addToList(cardsList, new EnSmokingBarrel());
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnDeadeye());
                     addToList(cardsList, new EnWideOpen());
+                    addToList(cardsList, new EnDeadeye(), extraUpgrades);
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnHeadshot());
-                    turn++;
-                    break;
-                case 3:
-                    addToList(cardsList, new EnGhostlyPresence());
+                    addToList(cardsList, new EnGhostlyPresence(), extraUpgrades);
                     addToList(cardsList, new EnSnapshot());
                     turn++;
                     break;
                 case 4:
-                    addToList(cardsList, new EnDive());
+                    addToList(cardsList, new EnHeadshot(), extraUpgrades);
                     addToList(cardsList, new EnRicochet());
                     turn++;
                     break;
                 case 5:
-                    addToList(cardsList, new EnRoughhouse());
-                    turn++;
-                    break;
-                case 6:
-                    addToList(cardsList, new EnSmokingBarrel());
+                    addToList(cardsList, new EnDive(), extraUpgrades);
+                    addToList(cardsList, new EnDive());
                     turn = 1;
                     looped = true;
                     break;

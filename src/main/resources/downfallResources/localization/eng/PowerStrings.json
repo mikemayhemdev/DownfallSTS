@@ -50,7 +50,10 @@
   "downfall:SpotWeakness": {
     "NAME": "Spot Weakness",
     "DESCRIPTIONS": [
-      "Every turn in which you play an attack card with this power active, this enemy gains #b"," #yStrength. Currently it will gain #b", " #yStrength [REMOVE_SPACE]."
+      "If you play an #yAttack this turn, enemy will gain #b",
+      " #yStrength.",
+      "You played an #yAttack this turn. The enemy will gain #b",
+      " #yStrength."
     ]
   },
   "downfall:FearNoEvil": {
@@ -241,7 +244,9 @@
     "NAME": "Synchronize",
     "DESCRIPTIONS": [
       "Whenever Ironclad generates a #yStatus card, a duplicate is added into your discard pile.",
-      "Whenever Ironclad generates a #yStatus card, it enters your discard pile instead."
+      "Whenever Ironclad generates a #yStatus card, it enters your discard pile instead. NL After losing #b",
+      " more HP, you gain a #yPurity with #yRetain.",
+      "Whenever Ironclad generates a #yStatus card, it enters your draw pile instead. NL After losing #b"
     ]
   },
   "downfall:NeowSyncronize": {

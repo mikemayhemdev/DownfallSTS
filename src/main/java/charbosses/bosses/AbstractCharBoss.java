@@ -405,6 +405,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     for (AbstractCard c : handAsBoss) {
                         newHand.add(c);
                         c.applyPowers();
+                        c.triggerWhenDrawn();
                     }
 
                     AbstractCharBoss.boss.hand.group = newHand;
@@ -1412,7 +1413,7 @@ public void damage(final DamageInfo info) {
         for (final AbstractCard c : this.hand.group) {
             if (c != null) {
                 c.atTurnStart();
-                c.triggerWhenDrawn();
+              //  c.triggerWhenDrawn();
             }
         }
         /*

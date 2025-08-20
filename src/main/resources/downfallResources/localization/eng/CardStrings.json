@@ -5,11 +5,11 @@
   },
   "downfall:Bewildered": {
     "NAME": "Bewildered",
-    "DESCRIPTION": "Unplayable. Ethereal. NL When drawn, sneckomod:Muddle your hand."
+    "DESCRIPTION": "Ethereal. NL When exhausted, sneckomod:Muddle the next 5 cards you draw."
   },
   "downfall:Icky": {
     "NAME": "Icky",
-    "DESCRIPTION": "Gain a *Slimed. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Exhaust."
   },
   "downfall:Haunted": {
     "NAME": "Haunted",
@@ -82,7 +82,7 @@
   },
   "downfall:FalseWorship": {
     "NAME": "False Worship",
-    "DESCRIPTION": "Revive your Cultist if he is dead. Otherwise, he revives upon death, restoring all HP."
+    "DESCRIPTION": "Revive your Cultist if he is dead. Otherwise, he revives upon death, restoring 50% HP."
   },
   "downfall:FleetingFaith": {
     "NAME": "Fleeting Faith",

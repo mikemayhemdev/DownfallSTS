@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.CurlUpPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
 
 public class LouseTangerine extends AbstractMonster {
     public static final String ID = "FuzzyLouseTangerine";
@@ -47,8 +48,17 @@ public class LouseTangerine extends AbstractMonster {
         if (AbstractDungeon.ascensionLevel >= 9) curl_amount = 12;
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new CurlUpPower(this, curl_amount)));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new TangerinePower(this,3)));
-        setMove((byte)1, AbstractMonster.Intent.SLEEP);
+
+        if (downfallMod.useLegacyBosses) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new TangerinePower(this, 3)));
+            setMove((byte)1, AbstractMonster.Intent.SLEEP);
+        } else {
+            if (AbstractDungeon.ascensionLevel >= 19){
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new TangerinePower(this, 4)));
+                sleepy = false;
+                setMove(MOVES[0], (byte) 4, Intent.BUFF);
+            }
+        }
     }
 
     @Override

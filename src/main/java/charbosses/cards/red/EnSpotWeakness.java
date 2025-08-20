@@ -46,6 +46,10 @@ public class EnSpotWeakness extends AbstractBossCard {
         return super.getPriority(hand) + 10;
     }
 
+    @Override
+    public void triggerWhenDrawn() {
+        this.addToBot(new ApplyPowerAction(AbstractCharBoss.boss, AbstractCharBoss.boss, new EnemySpotWeaknessPower(AbstractCharBoss.boss, magicNumber), magicNumber));
+    }
 
     @Override
     public void upgrade() {
