@@ -3,10 +3,8 @@ package downfall.events.shrines_evil;
 
 
 import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.curses.Pain;
 import downfall.cards.curses.Aged;
 import downfall.cards.curses.Malfunctioning;
-import downfall.cards.curses.Sapped;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -34,19 +32,16 @@ public class TransmogrifierEvil extends AbstractImageEvent {
     public static String[] OPTIONSALT;
     private CUR_SCREEN screen = CUR_SCREEN.INTRO;
 
-    private List<String> removedCards = new ArrayList<String>();
     private List<String> obtainedCards = new ArrayList<String>();
 
-    private boolean bonusShrine;
-    private boolean bonusShrine2;
-    private boolean bonusShrine3;
+    private boolean cardsSelected = false;
+    private int cardCount;
 
 
     public TransmogrifierEvil() {
         super(NAME, DIALOG_1, "images/events/shrine1.jpg");
         DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").DESCRIPTIONS;
         OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").OPTIONS;
-
 
         CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         Iterator var2 = AbstractDungeon.player.masterDeck.getPurgeableCards().group.iterator();
@@ -85,54 +80,53 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
         super.update();
 
-        if ((!AbstractDungeon.isScreenUp) && (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty())) {
-            AbstractCard c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0);
-            removedCards.add(c.cardID);
-
-            AbstractDungeon.player.masterDeck.removeCard(c);
-
-            AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
-            AbstractCard transCard = AbstractDungeon.getTransformedCard();
-            obtainedCards.add(transCard.cardID);
-            if (AbstractDungeon.gridSelectScreen.selectedCards.size() == 1) {
+        if (cardCount == 1){
+            if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
+                AbstractCard c = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
+                AbstractDungeon.player.masterDeck.removeCard(c);
+                AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
+                AbstractCard transCard = AbstractDungeon.getTransformedCard();
+                logMetricTransformCard("Transmorgrifier", "Transformed", c, transCard);
+                AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(transCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
-                logMetricTransformCards(ID, "Transformed", removedCards, obtainedCards);
-            }
-            AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect(transCard, com.megacrit.cardcrawl.core.Settings.WIDTH * 0.25F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
-
-
-            if (AbstractDungeon.gridSelectScreen.selectedCards.size() > 1) {
-
-                c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(1);
-                AbstractDungeon.player.masterDeck.removeCard(c);
-
-                AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
-
-                transCard = AbstractDungeon.getTransformedCard();
-
-
-                AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect(transCard, com.megacrit.cardcrawl.core.Settings.WIDTH * 0.75F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
-
-                c = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(2);
-                AbstractDungeon.player.masterDeck.removeCard(c);
-
-                AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
-
-                transCard = AbstractDungeon.getTransformedCard();
-
-
-                AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect(transCard, com.megacrit.cardcrawl.core.Settings.WIDTH * 0.75F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
-                AbstractCard curse = new Malfunctioning();
-                if (AbstractDungeon.ascensionLevel >= 15) {
-                    curse = new Aged();
-                }
-
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
-                obtainedCards.add(curse.cardID);
-
-                logMetricTransformCards(ID, "Desecrated", removedCards, obtainedCards);
             }
         }
+        else if (AbstractDungeon.gridSelectScreen.selectedCards.size() == cardCount && !this.cardsSelected) {
+            this.cardsSelected = true;
+            float displayCount = 0.0F;
+            Iterator<AbstractCard> i = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
+
+            List<String> transformedCards = new ArrayList<>();
+            while (i.hasNext()) {
+                AbstractCard card = (AbstractCard) i.next();
+                card.untip();
+                card.unhover();
+                transformedCards.add(card.cardID);
+                AbstractDungeon.player.masterDeck.removeCard(card);
+                AbstractDungeon.transformCard(card, false, AbstractDungeon.miscRng);
+                AbstractCard c = AbstractDungeon.getTransformedCard();
+                obtainedCards.add(c.cardID);
+                if (AbstractDungeon.screen != AbstractDungeon.CurrentScreen.TRANSFORM) {
+                    AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(c.makeCopy(), (float) Settings.WIDTH / 3.0F + displayCount, (float) Settings.HEIGHT / 2.0F, false));
+                    displayCount += (float) Settings.WIDTH / 6.0F;
+                }
+            }
+
+            AbstractCard curse = new Malfunctioning();
+            if (AbstractDungeon.ascensionLevel >= 15) {
+                curse = new Aged();
+            }
+
+            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
+            obtainedCards.add(curse.cardID);
+
+            // this.screen = CUR_SCREEN.COMPLETE;
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            logMetricTransformCards(ID, "Desecrated", transformedCards, obtainedCards);
+            AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
+        }
+
+
     }
 
     protected void buttonEffect(int buttonPressed) {
@@ -144,33 +138,27 @@ public class TransmogrifierEvil extends AbstractImageEvent {
                 switch (buttonPressed) {
 
                     case 0:
-                        removedCards.clear();
+                        cardCount = 3;
                         obtainedCards.clear();
+
                         this.screen = CUR_SCREEN.COMPLETE;
-
+                        this.transform(cardCount);
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
-
-                        AbstractDungeon.gridSelectScreen.open(
-                                com.megacrit.cardcrawl.cards.CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck
-                                        .getPurgeableCards()), 3, OPTIONS[2], false, false, false, false);
-
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
-
                         this.imageEventText.clearRemainingOptions();
 
                         break;
                     case 1:
-                        removedCards.clear();
+                        cardCount = 1;
                         obtainedCards.clear();
+
                         this.screen = CUR_SCREEN.COMPLETE;
-
-                        this.imageEventText.updateBodyText(DIALOG_2);
-
                         AbstractDungeon.gridSelectScreen.open(
                                 com.megacrit.cardcrawl.cards.CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck
-                                        .getPurgeableCards()), 1, OPTIONS[2], false, true, false, false);
+                                        .getPurgeableCards()), cardCount, OPTIONS[2], false, true, false, false);
 
 
+                        this.imageEventText.updateBodyText(DIALOG_2);
                         this.imageEventText.updateDialogOption(0, OPTIONS[1]);
 
                         this.imageEventText.clearRemainingOptions();
@@ -198,6 +186,17 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
                 openMap();
 
+        }
+
+    }
+
+    private void transform(int count) {
+        if (!AbstractDungeon.isScreenUp) {
+            AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getPurgeableCards(), count, CardCrawlGame.languagePack.getEventString("Drug Dealer").OPTIONS[5], false, false, false, false);
+        } else {
+            AbstractDungeon.dynamicBanner.hide();
+            AbstractDungeon.previousScreen = AbstractDungeon.screen;
+            AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getPurgeableCards(), count, CardCrawlGame.languagePack.getEventString("Drug Dealer").OPTIONS[5], false, false, false, false);
         }
 
     }
