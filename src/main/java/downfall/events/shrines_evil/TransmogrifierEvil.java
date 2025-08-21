@@ -72,8 +72,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
             AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect(transCard, com.megacrit.cardcrawl.core.Settings.WIDTH * 0.25F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
 
-            AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            if (bonusShrine3){
+            if (bonusShrine) {
                 AbstractCard card2 = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(1);
                 removedCards.add(c.cardID);
                 AbstractDungeon.player.masterDeck.removeCard(c);
@@ -92,7 +91,10 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
                 AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect(transCard2, com.megacrit.cardcrawl.core.Settings.WIDTH * 0.25F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
                 AbstractDungeon.effectsQueue.add(new com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect(transCard3, com.megacrit.cardcrawl.core.Settings.WIDTH * 0.25F, com.megacrit.cardcrawl.core.Settings.HEIGHT / 2.0F));
+            }
 
+            AbstractDungeon.gridSelectScreen.selectedCards.clear();
+            if (bonusShrine3){
                 AbstractCard curse = new Malfunctioning();
                 AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
                 obtainedCards.add(curse.cardID);
