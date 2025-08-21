@@ -2,6 +2,7 @@
 package downfall.events.shrines_evil;
 
 
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.curses.Pain;
 import downfall.cards.curses.Aged;
 import downfall.cards.curses.Malfunctioning;
@@ -16,6 +17,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 
@@ -44,10 +46,24 @@ public class TransmogrifierEvil extends AbstractImageEvent {
         super(NAME, DIALOG_1, "images/events/shrine1.jpg");
         DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").DESCRIPTIONS;
         OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").OPTIONS;
-        if (AbstractDungeon.ascensionLevel < 15) {
-            this.imageEventText.setDialogOption(OPTIONSALT[3], new Malfunctioning());
+
+
+        CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        Iterator var2 = AbstractDungeon.player.masterDeck.getPurgeableCards().group.iterator();
+
+        while(var2.hasNext()) {
+            AbstractCard card = (AbstractCard)var2.next();
+            tmp.addToTop(card);
+        }
+
+        if (tmp.size() >= 3) {
+            if (AbstractDungeon.ascensionLevel < 15) {
+                this.imageEventText.setDialogOption(OPTIONSALT[3], new Malfunctioning());
+            } else {
+                this.imageEventText.setDialogOption(OPTIONSALT[5], new Aged());
+            }
         } else {
-            this.imageEventText.setDialogOption(OPTIONSALT[5], new Aged());
+            this.imageEventText.setDialogOption(OPTIONSALT[6], true);
         }
         this.imageEventText.setDialogOption(OPTIONS[0]);
 
@@ -70,7 +86,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
             removedCards.add(c.cardID);
             AbstractDungeon.player.masterDeck.removeCard(c);
 
-            AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
+            //AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
             AbstractCard transCard = AbstractDungeon.getTransformedCard();
             obtainedCards.add(transCard.cardID);
 
@@ -78,18 +94,18 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
             if (bonusShrine) {
                 AbstractCard card2 = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(1);
-                removedCards.add(c.cardID);
-                AbstractDungeon.player.masterDeck.removeCard(c);
+                removedCards.add(card2.cardID);
+                AbstractDungeon.player.masterDeck.removeCard(card2);
 
-                AbstractDungeon.transformCard(card2, false, AbstractDungeon.miscRng);
+                //AbstractDungeon.transformCard(card2, false, AbstractDungeon.miscRng);
                 AbstractCard transCard2 = AbstractDungeon.getTransformedCard();
                 obtainedCards.add(transCard2.cardID);
 
                 AbstractCard card3 = (AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(2);
-                removedCards.add(c.cardID);
-                AbstractDungeon.player.masterDeck.removeCard(c);
+                removedCards.add(card3.cardID);
+                AbstractDungeon.player.masterDeck.removeCard(card3);
 
-                AbstractDungeon.transformCard(card3, false, AbstractDungeon.miscRng);
+               // AbstractDungeon.transformCard(card3, false, AbstractDungeon.miscRng);
                 AbstractCard transCard3 = AbstractDungeon.getTransformedCard();
                 obtainedCards.add(transCard3.cardID);
 
