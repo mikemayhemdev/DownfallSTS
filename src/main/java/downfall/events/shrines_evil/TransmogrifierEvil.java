@@ -65,8 +65,12 @@ public class TransmogrifierEvil extends AbstractImageEvent {
         } else {
             this.imageEventText.setDialogOption(OPTIONSALT[6], true);
         }
-        this.imageEventText.setDialogOption(OPTIONS[0]);
 
+        if (tmp.size() >= 1) {
+            this.imageEventText.setDialogOption(OPTIONS[0]);
+        } else {
+            this.imageEventText.setDialogOption(OPTIONSALT[6], true);
+        }
         this.imageEventText.setDialogOption(OPTIONS[1]);
 
     }
