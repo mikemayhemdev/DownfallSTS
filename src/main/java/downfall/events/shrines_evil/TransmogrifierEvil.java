@@ -98,7 +98,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
             }
 
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
-            if (bonusShrine3){
+            if (bonusShrine3) {
                 AbstractCard curse = new Malfunctioning();
                 if (AbstractDungeon.ascensionLevel >= 15) {
                     curse = new Aged();
