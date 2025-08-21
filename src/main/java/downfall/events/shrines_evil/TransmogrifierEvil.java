@@ -47,7 +47,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
         if (AbstractDungeon.ascensionLevel < 15) {
             this.imageEventText.setDialogOption(OPTIONSALT[3], new Malfunctioning());
         } else {
-            this.imageEventText.setDialogOption(OPTIONSALT[4], new Aged());
+            this.imageEventText.setDialogOption(OPTIONSALT[5], new Aged());
         }
         this.imageEventText.setDialogOption(OPTIONS[0]);
 
