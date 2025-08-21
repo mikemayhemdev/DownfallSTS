@@ -31,6 +31,6 @@ public class WaveOfMiasma extends AbstractAwakenedCard {
 
     public void upp() {
         //upgradeMagicNumber(2);
-        upgradeSecondMagic(3);
+        upgradeSecondMagic(4);
     }
 }
