@@ -44,7 +44,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
         super(NAME, DIALOG_1, "images/events/shrine1.jpg");
         DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").DESCRIPTIONS;
         OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").OPTIONS;
-        if (AbstractDungeon.ascensionLevel >= 15) {
+        if (AbstractDungeon.ascensionLevel < 15) {
             this.imageEventText.setDialogOption(OPTIONSALT[3], new Malfunctioning());
         } else {
             this.imageEventText.setDialogOption(OPTIONSALT[4], new Aged());
