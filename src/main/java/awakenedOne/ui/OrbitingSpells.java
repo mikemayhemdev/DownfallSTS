@@ -250,7 +250,7 @@ public class OrbitingSpells {
 
         if (hoveredCard != -1) {
             AbstractCard tar = spellCards.get(hoveredCard);
-            tar.target_x = tar.current_x = barBox.x + 350 * Settings.scale;
+            tar.target_x = tar.current_x = barBox.x + 500 * Settings.scale;
             tar.target_y = tar.current_y = Settings.HEIGHT - (POSITION_Y + 100 * Settings.scale);
             spellCards.get(hoveredCard).render(sb);
         }

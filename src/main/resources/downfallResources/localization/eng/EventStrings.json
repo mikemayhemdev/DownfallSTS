@@ -624,7 +624,9 @@
       " #rMax #rHP.",
       "[Desecrate] #gTransform #g2 #gcards. #rLose #r",
       "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rPain.",
-      " #rHP."
+      " #rHP.",
+      "[Locked] - Not enough cards."
+
     ]
   }
 }

@@ -124,7 +124,7 @@
 
   "expansioncontent:TakeFlight": {
     "NAME": "Revitalize",
-    "DESCRIPTION": "Heal !M! HP. NL awakened:Chant: Heal !DM! HP."
+    "DESCRIPTION": "Heal !M! HP. NL awakened:Chant: Heal !DM! HP instead."
   },
   "expansioncontent:BeatOfDeath": {
     "NAME": "Beat Of Death",

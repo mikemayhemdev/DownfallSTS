@@ -58,8 +58,7 @@ public class FullyLoadedAction extends AbstractGameAction {
                         this.p.createHandIsFullDialog();
                     } else {
                         p.drawPile.group.remove(card);
-                        p.drawPile.addToTop(card);
-                        this.addToBot(new DrawCardAction(1));
+                        p.hand.group.add(card);
                     }
                 }
             }
