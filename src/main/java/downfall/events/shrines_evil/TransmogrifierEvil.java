@@ -2,7 +2,6 @@
 package downfall.events.shrines_evil;
 import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import downfall.cards.curses.Malfunctioning;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -11,6 +10,7 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -49,12 +49,12 @@ public class TransmogrifierEvil extends AbstractImageEvent {
         }
 
         if (AbstractDungeon.player.masterDeck.getPurgeableCards().size() >= 2) {
-            this.imageEventText.setDialogOption(OPTIONSALT[2] + lifeCost + OPTIONSALT[5]);
+            this.imageEventText.setDialogOption(OPTIONSALT[3] + lifeCost + OPTIONSALT[5]);
         } else {
             this.imageEventText.setDialogOption(OPTIONS[6], true);
         }
-        this.imageEventText.setDialogOption(OPTIONS[1]);
         this.imageEventText.setDialogOption(OPTIONS[0]);
+        this.imageEventText.setDialogOption(OPTIONS[1]);
 
     }
 
@@ -68,6 +68,8 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
         super.update();
             if (cardCount == 1){
+
+              //  SlimeboundMod.logger.info("hit the card count 1 section");
                 if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                     AbstractCard c = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                     AbstractDungeon.player.masterDeck.removeCard(c);
@@ -79,29 +81,30 @@ public class TransmogrifierEvil extends AbstractImageEvent {
                     AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 }
             }
-            else if (AbstractDungeon.gridSelectScreen.selectedCards.size() == cardCount && !this.cardsSelected) {
+            else if (AbstractDungeon.gridSelectScreen.selectedCards.size() == cardCount && !this.cardsSelected && cardCount > 0) {
+             //   SlimeboundMod.logger.info("hit the card count more than 1 section");
                 this.cardsSelected = true;
                 float displayCount = 0.0F;
-                Iterator<AbstractCard> i = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
-                List<String> transformedCards = new ArrayList<>();
-                while (i.hasNext()) {
-                    AbstractCard card = (AbstractCard) i.next();
+              //  SlimeboundMod.logger.info("selected cards size:" + AbstractDungeon.gridSelectScreen.selectedCards.size());
+                for (AbstractCard card: AbstractDungeon.gridSelectScreen.selectedCards){
+
+              //      SlimeboundMod.logger.info(card.name);
                     card.untip();
                     card.unhover();
-                    transformedCards.add(card.cardID);
                     AbstractDungeon.player.masterDeck.removeCard(card);
                     AbstractDungeon.transformCard(card, false, AbstractDungeon.miscRng);
                     AbstractCard c = AbstractDungeon.getTransformedCard();
+                    SlimeboundMod.logger.info(c.name);
                     obtainedCards.add(c.cardID);
                     if (AbstractDungeon.screen != AbstractDungeon.CurrentScreen.TRANSFORM) {
-                        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(c.makeCopy(), (float) Settings.WIDTH / 3.0F + displayCount, (float) Settings.HEIGHT *.66F, false));
+                        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(c.makeCopy(), (float) Settings.WIDTH / 3.0F + displayCount, (float) Settings.HEIGHT / 2.0F, false));
                         displayCount += (float) Settings.WIDTH / 6.0F;
                     }
                 }
-               // this.screen = CUR_SCREEN.COMPLETE;
+
+
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
-                logMetricTransformCards(ID, "Became Test Subject", transformedCards, obtainedCards);
                 AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
             }
     }

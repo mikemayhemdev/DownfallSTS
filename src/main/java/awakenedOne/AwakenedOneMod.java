@@ -49,6 +49,7 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.SlimeboundMod;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -399,10 +400,13 @@ public class AwakenedOneMod implements
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
         if (abstractCard.type == AbstractCard.CardType.POWER){
+
             powersThisCombat++;
             awaken();
         }
         if (abstractCard instanceof AbstractSpellCard && !abstractCard.purgeOnUse){
+
+            SlimeboundMod.logger.info("incrementing Spells this turn from " + spellsThisTurn + " to " + (spellsThisTurn + 1) + ". card: " + abstractCard.name);
             spellsThisTurn++;
         }
     }
