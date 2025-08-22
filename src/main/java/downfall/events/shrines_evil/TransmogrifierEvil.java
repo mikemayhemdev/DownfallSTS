@@ -2,6 +2,10 @@
 package downfall.events.shrines_evil;
 
 
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.curses.Pain;
+import downfall.cards.curses.Aged;
 import downfall.cards.curses.Malfunctioning;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -34,6 +38,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
     private boolean cardsSelected = false;
     private int cardCount;
+    private int lifeCost;
 
 
     public TransmogrifierEvil() {
@@ -41,7 +46,13 @@ public class TransmogrifierEvil extends AbstractImageEvent {
         DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").DESCRIPTIONS;
         OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").OPTIONS;
 
-        this.imageEventText.setDialogOption(OPTIONSALT[3], new Malfunctioning());
+
+        if (AbstractDungeon.ascensionLevel >= 15){
+            lifeCost = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.15F);
+        } else {
+            lifeCost = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.10F);
+        }
+        this.imageEventText.setDialogOption(OPTIONSALT[2] + lifeCost + OPTIONSALT[5]);
         this.imageEventText.setDialogOption(OPTIONS[0]);
 
         this.imageEventText.setDialogOption(OPTIONS[1]);
@@ -64,8 +75,9 @@ public class TransmogrifierEvil extends AbstractImageEvent {
                     AbstractDungeon.player.masterDeck.removeCard(c);
                     AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
                     AbstractCard transCard = AbstractDungeon.getTransformedCard();
+                    AbstractDungeon.player.damage(new DamageInfo(null, this.lifeCost));
                     logMetricTransformCard("Transmorgrifier", "Transformed", c, transCard);
-                    AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(transCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(transCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT * .66F));
                     AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 }
             }
@@ -85,11 +97,10 @@ public class TransmogrifierEvil extends AbstractImageEvent {
                     AbstractCard c = AbstractDungeon.getTransformedCard();
                     obtainedCards.add(c.cardID);
                     if (AbstractDungeon.screen != AbstractDungeon.CurrentScreen.TRANSFORM) {
-                        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(c.makeCopy(), (float) Settings.WIDTH / 3.0F + displayCount, (float) Settings.HEIGHT / 2.0F, false));
+                        AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(c.makeCopy(), (float) Settings.WIDTH / 3.0F + displayCount, (float) Settings.HEIGHT *.66F, false));
                         displayCount += (float) Settings.WIDTH / 6.0F;
                     }
                 }
-
                // this.screen = CUR_SCREEN.COMPLETE;
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 logMetricTransformCards(ID, "Became Test Subject", transformedCards, obtainedCards);
@@ -108,7 +119,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
                 switch (buttonPressed) {
 
                     case 0:
-                        cardCount = 3;
+                        cardCount = 2;
                         obtainedCards.clear();
 
                         this.screen = CUR_SCREEN.COMPLETE;

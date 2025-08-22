@@ -388,31 +388,34 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 @Override
                 public void update() {
                     isDone = true;
-                    for (AbstractCard q : getThisTurnCards()) {
-                        AbstractCharBoss.boss.hand.addToTop(q);
-                        if (q instanceof AbstractBossCard) ((AbstractBossCard) q).bossDarken();
-                        q.current_y = Settings.HEIGHT / 2F;
-                        q.current_x = Settings.WIDTH;
-                    }
+                    if (AbstractCharBoss.boss != null)
+                        if (AbstractCharBoss.boss.hand != null) {
+                            for (AbstractCard q : getThisTurnCards()) {
+                                AbstractCharBoss.boss.hand.addToTop(q);
+                                if (q instanceof AbstractBossCard) ((AbstractBossCard) q).bossDarken();
+                                q.current_y = Settings.HEIGHT / 2F;
+                                q.current_x = Settings.WIDTH;
+                            }
 
-                    ArrayList<AbstractBossCard> handAsBoss = new ArrayList<>();
-                    for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-                        handAsBoss.add((AbstractBossCard) c);
-                    }
+                            ArrayList<AbstractBossCard> handAsBoss = new ArrayList<>();
+                            for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                                handAsBoss.add((AbstractBossCard) c);
+                            }
 
-                    Collections.sort(handAsBoss, new sortByNewPrio());
+                            Collections.sort(handAsBoss, new sortByNewPrio());
 
-                    ArrayList<AbstractCard> newHand = new ArrayList<>();
-                    for (AbstractCard c : handAsBoss) {
-                        newHand.add(c);
-                        c.applyPowers();
-                        c.triggerWhenDrawn();
-                    }
+                            ArrayList<AbstractCard> newHand = new ArrayList<>();
+                            for (AbstractCard c : handAsBoss) {
+                                newHand.add(c);
+                                c.applyPowers();
+                                c.triggerWhenDrawn();
+                            }
 
-                    AbstractCharBoss.boss.hand.group = newHand;
+                            AbstractCharBoss.boss.hand.group = newHand;
 
-                    AbstractCharBoss.boss.hand.refreshHandLayout();
-                    applyPowers();
+                            AbstractCharBoss.boss.hand.refreshHandLayout();
+                            applyPowers();
+                        }
                 }
             });
             addToBot(new WaitAction(0.2f));

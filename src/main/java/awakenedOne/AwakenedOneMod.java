@@ -402,7 +402,7 @@ public class AwakenedOneMod implements
             powersThisCombat++;
             awaken();
         }
-        if (abstractCard instanceof AbstractSpellCard){
+        if (abstractCard instanceof AbstractSpellCard && !abstractCard.purgeOnUse){
             spellsThisTurn++;
         }
     }
