@@ -48,6 +48,8 @@ public class ArchmagusPower extends AbstractTwoAmountAwakenedPower {
         SlimeboundMod.logger.info(AwakenedOneMod.spellsThisTurn );
         SlimeboundMod.logger.info(this.cardsDoubledThisTurn  );
         SlimeboundMod.logger.info( this.amount2);
+
+        SlimeboundMod.logger.info("stacks remaining this turn: " + this.amount2 + ", spells this turn: AwakenedOneMod.spellsThisTurn" + AwakenedOneMod.spellsThisTurn + ", cards doubled this turn: " + cardsDoubledThisTurn + ". Final resulting check is " + (AwakenedOneMod.spellsThisTurn - this.cardsDoubledThisTurn <= this.amount2));
         if (!card.purgeOnUse && this.amount2 > 0 && (card instanceof AbstractSpellCard) && AwakenedOneMod.spellsThisTurn - this.cardsDoubledThisTurn <= this.amount2) {
             this.flash();
             AbstractMonster m = null;
@@ -70,8 +72,10 @@ public class ArchmagusPower extends AbstractTwoAmountAwakenedPower {
             }
 
             tmp.purgeOnUse = true;
-            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
             --this.amount2;
+            cardsDoubledThisTurn ++;
+            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
+
             updateDescription();
         }
 

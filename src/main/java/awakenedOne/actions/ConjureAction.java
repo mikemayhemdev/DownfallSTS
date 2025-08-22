@@ -118,7 +118,7 @@ public class ConjureAction extends AbstractGameAction {
             }
             System.out.println("DEBUG: TARGET CARD: " + tar.name);
             if (tar instanceof EnApotheosis) {
-                tar = spellCards.get(0);
+                tar = spellCards.get(0).makeStatEquivalentCopy();
             }
 
             if (bstudy) {

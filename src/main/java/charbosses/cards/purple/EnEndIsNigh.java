@@ -1,6 +1,7 @@
 package charbosses.cards.purple;
 
 import basemod.ReflectionHacks;
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
 import com.badlogic.gdx.graphics.Texture;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.RegenPower;
 import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
@@ -38,7 +40,7 @@ public class EnEndIsNigh extends AbstractBossCard {
         portrait = TextureLoader.getTextureAsAtlasRegion(expansionContentMod.makeCardPath("SummonMushrooms.png"));
         portraitImg = TextureLoader.getTexture(expansionContentMod.makeCardPath("SummonMushrooms.png"));
         this.loadJokeCardImage();
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
     }
 
     @Override
@@ -66,9 +68,9 @@ public class EnEndIsNigh extends AbstractBossCard {
 
         while(var4.hasNext()) {
             AbstractMonster mo = (AbstractMonster)var4.next();
-            this.addToBot(new ApplyPowerAction(mo, m, new RitualPower(mo, magicNumber, false), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+            this.addToBot(new ApplyPowerAction(mo, m, new RitualPower(mo, 1, false), 1, true, AbstractGameAction.AttackEffect.NONE));
         }
-        this.addToBot(new ApplyPowerAction(p, m, new RitualPower(p, magicNumber, false), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+        this.addToBot(new ApplyPowerAction(p, m, new RitualPower(p, 1, false), 1, true, AbstractGameAction.AttackEffect.NONE));
 
     }
 

@@ -4,6 +4,9 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.colorless.EnPanacea;
 import charbosses.cards.purple.*;
+import charbosses.powers.bossmechanicpowers.CultistRevivePower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,7 +19,7 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
 
     public ArchetypeAct1OmegaSimple() {
         super("WA_ARCHETYPE_CALM", "Calm");
-        maxHPModifier += 118;
+        maxHPModifier += 168;
         maxHPModifierAsc = 10;
         actNum = 1;
     }
@@ -27,6 +30,9 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
 
         AbstractMonster cawcaw = new Cultist(-400F, 0);
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(cawcaw, true));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(cawcaw, cawcaw, new CultistRevivePower(cawcaw, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
+
+
 
     }
 
@@ -38,7 +44,6 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
         switch (turn) {
             case 0:
                 addToList(cardsList, new EnAlpha());
-                if (AbstractDungeon.ascensionLevel >= 19) addToList(cardsList, new EnFalseWorship());
                 addToList(cardsList, new EnEndIsNigh());
                 turn++;
                 break;

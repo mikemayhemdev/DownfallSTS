@@ -1,6 +1,7 @@
 package charbosses.cards.hermit;
 
 import basemod.helpers.CardTags;
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -26,6 +27,7 @@ public class EnDeadeye extends AbstractHermitBossCard {
         baseDamage = 5;
         baseMagicNumber = magicNumber = 2;
         tags.add(downfallMod.CHARBOSS_DEADON);
+        strengthGeneratedIfPlayed = 3;
     }
 
     @Override
@@ -41,7 +43,9 @@ public class EnDeadeye extends AbstractHermitBossCard {
     public void onSpecificTrigger() {
         intentActive = false;
         this.intent = AbstractMonster.Intent.ATTACK;
+        strengthGeneratedIfPlayed = 0;
         createIntent();
+        AbstractCharBoss.boss.preApplyIntentCalculations();
     }
 
     @Override

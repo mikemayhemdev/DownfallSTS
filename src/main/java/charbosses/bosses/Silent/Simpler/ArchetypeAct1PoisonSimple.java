@@ -70,7 +70,7 @@ public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
                 case 0: //Turn 1
                     if (looped){
                         addToList(cardsList, new EnBouncingFlask(), extraUpgrades);
-                        addToList(cardsList, new EnNoxiousFumes(), extraUpgrades);
+                        addToList(cardsList, new EnPoisonedStab(), false);
                     } else {
                         addToList(cardsList, new EnNewToxins());
                         addToList(cardsList, new EnBouncingFlask(), extraUpgrades);
@@ -90,21 +90,21 @@ public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
 
                     addToList(cardsList, new EnCripplingCloud(),false);
                     addToList(cardsList, new EnGlassKnife(glassKnives));
-                    glassKnives++;
                     turn++;
                     break;
 
                 case 3: //Turn 4
 
+                    glassKnives++; //this is here because it confirms glass knife actually got played, not reset
                     addToList(cardsList, new EnBane(), false);
-                    addToList(cardsList, new EnBane(), extraUpgrades);
+                    addToList(cardsList, new EnBane(), false);
 
                     turn++;
                     break;
 
                 case 4: //Turn 5
-                    addToList(cardsList, new EnDeadlyPoison(), extraUpgrades);
-                    addToList(cardsList, new EnCatalyst(), true);
+                    addToList(cardsList, new EnDeadlyPoison(), false);
+                    addToList(cardsList, new EnNoxiousFumes(), false);
                     turn++;
 
                     turn = 3;

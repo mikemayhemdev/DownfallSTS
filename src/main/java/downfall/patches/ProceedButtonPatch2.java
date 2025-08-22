@@ -21,7 +21,7 @@ public class ProceedButtonPatch2 {
 
     public static SpireReturn Prefix(ProceedButton __instance) {
         if (EvilModeCharacterSelect.evilMode) {
-            SlimeboundMod.logger.info("HIT THE DOUBLE BOSS PATCH!");
+         //   SlimeboundMod.logger.info("HIT THE DOUBLE BOSS PATCH!");
             AbstractDungeon.bossList.clear();
             AbstractDungeon.bossList.add(CharBossMerchant.ID); // This and clear - just for safety.
             AbstractDungeon.bossKey = CharBossMerchant.ID;

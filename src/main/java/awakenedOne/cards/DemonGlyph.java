@@ -20,9 +20,9 @@ public class DemonGlyph extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public DemonGlyph() {
-        super(ID, 0, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
-        baseSecondMagic = secondMagic = 2;
+        super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
+        baseSecondMagic = secondMagic = 1;
         loadJokeCardImage(this, makeBetaCardPath(DemonGlyph.class.getSimpleName() + ".png"));
     }
 

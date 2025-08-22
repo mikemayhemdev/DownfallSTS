@@ -49,6 +49,7 @@ public class CharBossSilent extends AbstractCharBoss {
     public static final String POISONSPEECH = LocalizeHelper.downfallCharacterSpeech.TEXT[0];
 
     public static boolean posStorage = false;
+    public static boolean resetThisTurn = false;
 
     public float origDX;
     public float origdY;
@@ -225,9 +226,10 @@ public class CharBossSilent extends AbstractCharBoss {
     }
 
     public void resetPoisonBoss() {
-        if (!this.isDying) {
+        if (!this.isDying && !resetThisTurn) {
+            resetThisTurn = true;
 
-            //SlimeboundMod.logger.info("Successful poison reset");
+            SlimeboundMod.logger.info("Successful poison reset");
             AbstractDungeon.actionManager.addToBottom(new TextAboveCreatureAction(this, TextAboveCreatureAction.TextType.INTERRUPTED));
             AbstractDungeon.actionManager.addToBottom(new SpeechBubbleAction(POISONSPEECH, this, 2F));
             atb(new AbstractGameAction() {
@@ -301,4 +303,15 @@ public class CharBossSilent extends AbstractCharBoss {
 
     }
 
+    @Override
+    public void startTurn() {
+        super.startTurn();
+        resetThisTurn = false;
+    }
+
+    @Override
+    public void endTurnStartTurn() {
+        super.endTurnStartTurn();
+        resetThisTurn = false;
+    }
 }
