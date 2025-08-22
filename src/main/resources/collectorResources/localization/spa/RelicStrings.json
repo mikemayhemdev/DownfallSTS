@@ -70,7 +70,7 @@
     "NAME": "Talismán Hexx",
     "FLAVOR": "\"Desde que lo uso, me pego en el pie dos veces más. ¡Creo que funciona!\" - Ranwid",
     "DESCRIPTIONS": [
-      "Al comienzo del combate, aplica #b1 de #yDébil y #yVulnerable a un enemigo aleatorio."
+      "Al comienzo del combate, aplica #b1 de #yDébil y #yVulnerable a un enemigo al azar."
     ]
   },
   "collector:Bagpipes": {

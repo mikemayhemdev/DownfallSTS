@@ -98,9 +98,9 @@
   },
   "bronze:BurnOut": {
     "NAME": "Quemado",
-    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio por TODAS tus cartas de Estado, las agota. NL Agota.",
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar por TODAS tus cartas de Estado, las agota. NL Agota.",
     "EXTENDED_DESCRIPTION": [
-      "Haz !D! de daño a un enemigo aleatorio por TODAS tus cartas de Estado (",
+      "Haz !D! de daño a un enemigo al azar por TODAS tus cartas de Estado (",
       "), las agota. NL Agota."
     ]
   },
@@ -296,7 +296,7 @@
   },
   "bronze:HardenedForm": {
     "NAME": "Orbe Endurecido",
-    "DESCRIPTION": "Siempre que crees o juegues una Función, gana !M! de Bloqueo y Hace !M! de daño a un enemigo aleatorio."
+    "DESCRIPTION": "Siempre que crees o juegues una Función, gana !M! de Bloqueo y Hace !M! de daño a un enemigo al azar."
   },
   "bronze:HyperBeam": {
     "NAME": "Hiper Rayo",

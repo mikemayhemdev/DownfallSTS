@@ -25,7 +25,7 @@
     "FLAVOR": "Ilegible, inentendible, entrega el jueves.",
     "DESCRIPTIONS": [
       "Cada vez que actives #b",
-      " efectos de #ysneckomod:Exceso, aplica #b1 #yDébil y #yVulnerable a un enemigo aleatorio."
+      " efectos de #ysneckomod:Exceso, aplica #b1 #yDébil y #yVulnerable a un enemigo al azar."
     ]
   },
   "sneckomod:CrystallizedMud": {
@@ -100,7 +100,7 @@
     "NAME": "Serpentija Joven",
     "FLAVOR": "Desconcertantemente adorable.",
     "DESCRIPTIONS": [
-      "Inflige #b9 de daño a un enemigo aleatorio y #ysneckomod:Confunde #b2 cartas aleatorias en tu mano (que no cuesten #b0, ni sean de costo #bX [REMOVE_SPACE], ni #yInjugables [REMOVE_SPACE]) al comienzo de tu turno."
+      "Inflige #b9 de daño a un enemigo al azar y #ysneckomod:Confunde #b2 cartas aleatorias en tu mano (que no cuesten #b0, ni sean de costo #bX [REMOVE_SPACE], ni #yInjugables [REMOVE_SPACE]) al comienzo de tu turno."
     ]
   },
   "sneckomod:SneckoCommon": {

@@ -1,7 +1,7 @@
 {
   "awakened:Thunderbolt": {
     "NAME": "Rayo",
-    "DESCRIPTION": "Retener. NL Inflige !D! de daño. NL Agotar."
+    "DESCRIPTION": "Retener. NL Haz !D! de daño. NL Agotar."
   },
   "awakened:BurningStudy": {
     "NAME": "Estudio Ardiente",
@@ -34,7 +34,7 @@
   },
   "awakened:Brainshock": {
     "NAME": "Shock Cerebral",
-    "DESCRIPTION": "Haz !D! daño. NL Añade un *Vacio a tu pila de descarte."
+    "DESCRIPTION": "Haz !D! de daño. NL Añade un *Vacio a tu pila de descarte."
   },
   "awakened:Intensify": {
     "NAME": "Intensificar",
@@ -43,7 +43,7 @@
   },
   "awakened:DarkEcho": {
     "NAME": "Eco Oscuro",
-    "DESCRIPTION": "Al final de tu turno, inflige !M! daño a TODOS los enemigos, aumentado por Fuerza."
+    "DESCRIPTION": "Al final de tu turno, haz !M! de daño a TODOS los enemigos, aumentado por Fuerza."
   },
   "awakened:AwakenedForm": {
     "NAME": "Forma Despierta",
@@ -77,7 +77,7 @@
   },
   "awakened:TakeFlight": {
     "NAME": "Despegar",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL awakened:Chant: El Bloqueo no se elimina al comienzo de tu próximo turno."
+    "DESCRIPTION": "Gana !B! Bloqueo. NL awakened:Canto: El Bloqueo no se elimina al comienzo de tu próximo turno."
   },
   "awakened:FeatherVeil": {
     "NAME": "Velo de Plumas",
@@ -106,7 +106,7 @@
   },
   "awakened:Recitation": {
     "NAME": "Recitación",
-    "DESCRIPTION": "Haz !D! de daño. NL awakened:Chant: Haz !D! de daño de nuevo."
+    "DESCRIPTION": "Haz !D! de daño. NL awakened:Canto: Haz !D! de daño de nuevo."
   },
   "awakened:ChosenVerse": {
     "NAME": "Verso Elegido",
@@ -153,7 +153,7 @@
   },
   "awakened:RavenStrike": {
     "NAME": "Golpe del Cuervo",
-    "DESCRIPTION": "Haz !D! de daño. NL awakened:Chant: Juega la carta superior de tu pila de robo."
+    "DESCRIPTION": "Haz !D! de daño. NL awakened:Canto: Juega la carta superior de tu pila de robo."
   },
   "awakened:Unleash": {
     "NAME": "Desatar",
@@ -183,7 +183,7 @@
   },
   "awakened:RisingChant": {
     "NAME": "Coro Ascendente",
-    "DESCRIPTION": "Cada vez que juegues una carta de awakened:Chant activada, gana !M! Fuerza."
+    "DESCRIPTION": "Cada vez que juegues una carta de awakened:Canto activada, gana !M! Fuerza."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Remolino de Plumas",
@@ -192,12 +192,12 @@
   },
   "awakened:Murder": {
     "NAME": "Asesinato",
-    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio !M! veces. NL Agota.",
-    "UPGRADE_DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio !M! veces."
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar !M! veces. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño a un enemigo al azar !M! veces."
   },
   "awakened:Nihil": {
     "NAME": "Nihilismo",
-    "DESCRIPTION": "Aplica !M! awakened:Manaburn. NL awakened:Chant: TODOS los enemigos pierden HP igual a su awakened:Manaburn."
+    "DESCRIPTION": "Aplica !M! awakened:Manaburn. NL awakened:Canto: TODOS los enemigos pierden HP igual a su awakened:Manaburn."
   },
   "awakened:MoonlitVision": {
     "NAME": "Visión de Luna",
@@ -205,7 +205,7 @@
   },
   "awakened:Rebirth": {
     "NAME": "Renacimiento",
-    "DESCRIPTION": "Cuando vayas a morir o al final del combate, elimina todos los debuffs, *Awaken, y sana !M! HP en su lugar."
+    "DESCRIPTION": "Cuando vayas a morir o al final del combate, elimina todos los debuffs, *Despertar, y sana !M! HP en su lugar."
   },
   "awakened:Archmagus": {
     "NAME": "Archimago",
@@ -218,8 +218,8 @@
   },
   "awakened:Spew": {
     "NAME": "Escupir",
-    "DESCRIPTION": "Haz !D! daño. NL Si se creó una carta este turno, gana [E] .",
-    "UPGRADE_DESCRIPTION": "Haz !D! daño. NL Si se creó una carta este turno, gana [E] [E] ."
+    "DESCRIPTION": "Haz !D! de daño. NL Si se creó una carta este turno, gana [E] .",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Si se creó una carta este turno, gana [E] [E] ."
   },
   "awakened:DarknessFalls": {
     "NAME": "Cae la Oscuridad",
@@ -227,7 +227,7 @@
   },
   "awakened:Eventide": {
     "NAME": "Anochecer",
-    "DESCRIPTION": "Haz !D! daño a un enemigo aleatorio dos veces. NL Añade un *Vacío a la parte superior de tu pila de robo."
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar dos veces. NL Añade un *Vacío a la parte superior de tu pila de robo."
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Acojer el Eclipse",
@@ -235,7 +235,7 @@
   },
   "awakened:Clutch": {
     "NAME": "Agarre",
-    "DESCRIPTION": "Haz !D! daño. NL Roba una carta de coste 0."
+    "DESCRIPTION": "Haz !D! de daño. NL Roba una carta de coste 0."
   },
   "awakened:Gloomguard": {
     "NAME": "Guardia de las Tinieblas",
@@ -243,7 +243,7 @@
   },
   "awakened:Carrionmaker": {
     "NAME": "Hacedor de Carroña",
-    "DESCRIPTION": "Haz !D! daño a un enemigo aleatorio. NL Repite por cada Hechizo jugado este turno.",
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar. NL Repite por cada Hechizo jugado este turno.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " Hechizo jugado.)",
@@ -260,12 +260,12 @@
   },
   "awakened:Dejection": {
     "NAME": "Repulsión",
-    "DESCRIPTION": "Haz !D! daño. NL Agota una carta. Si era un Hechizo, gana [E] ."
+    "DESCRIPTION": "Haz !D! de daño. NL Agota una carta. Si era un Hechizo, gana [E] ."
   },
   "awakened:BloodRite": {
     "NAME": "Rito de Sangre",
-    "DESCRIPTION": "Haz !D! daño. NL Gana un *Ceremonia.",
-    "UPGRADE_DESCRIPTION": "Haz !D! daño. NL Gana un *Ceremonia+."
+    "DESCRIPTION": "Haz !D! de daño. NL Gana un *Ceremonia.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Gana un *Ceremonia+."
   },
   "awakened:SongOfSorrow": {
     "NAME": "Canción de Lamento",
@@ -281,16 +281,16 @@
   },
   "awakened:Victuals": {
     "NAME": "Víveres",
-    "DESCRIPTION": "awakened:Chant: Gana [E] [E] . NL Agota.",
-    "UPGRADE_DESCRIPTION": "awakened:Chant: Gana [E] [E] [E] . NL Agota."
+    "DESCRIPTION": "awakened:Canto: Gana [E] [E] . NL Agota.",
+    "UPGRADE_DESCRIPTION": "awakened:Canto: Gana [E] [E] [E] . NL Agota."
   },
   "awakened:Gather": {
     "NAME": "Recolectar",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL awakened:Chant: Pon una carta de tu pila de descarte en tu mano."
+    "DESCRIPTION": "Gana !B! Bloqueo. NL awakened:Canto: Pon una carta de tu pila de descarte en tu mano."
   },
   "awakened:TheTower": {
     "NAME": "La Torre",
-    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Inflige !M! de daño adicional por cada carta creada en este combate."
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Haz !M! de daño adicional por cada carta creada en este combate."
   },
   "awakened:ArcaneNesting": {
     "NAME": "Nidificación Arcana",
@@ -310,7 +310,7 @@
   },
   "awakened:Caw": {
     "NAME": "Graznar",
-    "DESCRIPTION": "Haz !D! de daño. NL awakened:Chant: Aumenta el daño de todas las cartas *Graznar en !M! este combate."
+    "DESCRIPTION": "Haz !D! de daño. NL awakened:Canto: Aumenta el daño de todas las cartas *Graznar en !M! este combate."
   },
   "awakened:Scour": {
     "NAME": "Desgarrar",
@@ -326,7 +326,7 @@
   },
   "awakened:AphoticFount": {
     "NAME": "Fuente Afótica",
-    "DESCRIPTION": "awakened:Conjura. NL Siempre que juegues *Cryostasis, gana !M! expansioncontent:Plated *Armor."
+    "DESCRIPTION": "awakened:Conjura. NL Siempre que juegues *Criostasis, gana !M! *Armadura *de expansioncontent:Placas."
   },
   "awakened:Bloodthirst": {
     "NAME": "Sed de Sangre",
@@ -347,11 +347,11 @@
   },
   "awakened:Siphon": {
     "NAME": "Sifón",
-    "DESCRIPTION": "Inflige !D! de daño. NL awakened:Chant: gremlin:Roba !M! Fuerza este turno."
+    "DESCRIPTION": "Haz !D! de daño. NL awakened:Canto: gremlin:Roba !M! Fuerza este turno."
   },
   "awakened:PlumeJab": {
     "NAME": "Golpe de Pluma",
-    "DESCRIPTION": "Retener. NL Inflige !D! de daño a un enemigo aleatorio dos veces. NL Agotar."
+    "DESCRIPTION": "Retener. NL Haz !D! de daño a un enemigo al azar dos veces. NL Agotar."
   },
   "awakened:Primacy": {
     "NAME": "Primacía",
@@ -360,11 +360,11 @@
   },
   "awakened:Daggerstorm": {
     "NAME": "Tormenta de Dagas",
-    "DESCRIPTION": "Cada vez que creas una carta, inflige !M! de daño a un enemigo aleatorio."
+    "DESCRIPTION": "Cada vez que creas una carta, haz !M! de daño a un enemigo al azar."
   },
   "awakened:PackRat": {
     "NAME": "Rata de Paquete",
-    "DESCRIPTION": "Inflige !D! de daño y gana !B! Bloqueo dos veces. NL Obtén una poción aleatoria. NL Agotar."
+    "DESCRIPTION": "Haz !D! de daño y gana !B! Bloqueo dos veces. NL Obtén una poción aleatoria. NL Agotar."
   },
   "awakened:Mantis": {
     "NAME": "Mantis",
@@ -376,11 +376,11 @@
   },
   "awakened:Crusher": {
     "NAME": "Triturador",
-    "DESCRIPTION": "Retener. NL Inflige !D! de daño. NL Cuando se crea una carta, reduce el coste de esta carta en 1 hasta que se juegue."
+    "DESCRIPTION": "Retener. NL Haz !D! de daño. NL Cuando se crea una carta, reduce el coste de esta carta en 1 hasta que se juegue."
   },
   "awakened:Minniegun": {
     "NAME": "Minigun",
-    "DESCRIPTION": "Inflige !D! de daño !M! veces. NL Baraja un *Void en tu pila de robar."
+    "DESCRIPTION": "Haz !D! de daño !M! veces. NL Baraja un *Void en tu pila de robar."
   },
   "awakened:SignInBlood": {
     "NAME": "Firma en Sangre",

@@ -56,7 +56,7 @@
   },
   "Guardian:PolyBeam": {
     "NAME": "Rayo Poli",
-    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio !M! veces."
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar !M! veces."
   },
   "Guardian:TwinSlam": {
     "NAME": "Golpe Gemelo",
@@ -95,7 +95,7 @@
 },
 "Guardian:FloatingOrbs": {
   "NAME": "Orbes Flotantes",
-  "DESCRIPTION": "Cada vez que juegas una carta de coste 0, haz !M! de daño a un enemigo aleatorio."
+  "DESCRIPTION": "Cada vez que juegas una carta de coste 0, haz !M! de daño a un enemigo al azar."
 },
 "Guardian:OrbSlam": {
   "NAME": "Golpe Orbital",
@@ -386,7 +386,7 @@
 },
 "Guardian:GatlingBeam": {
   "NAME": "Torreta Láser",
-  "DESCRIPTION": "Haz !D! de daño. NL Coloca esta carta en guardianmod:Estasis. NL guardianmod:Estasis dura !M! turnos. NL guardianmod:Tic - Haz !D! de daño a un enemigo aleatorio."
+  "DESCRIPTION": "Haz !D! de daño. NL Coloca esta carta en guardianmod:Estasis. NL guardianmod:Estasis dura !M! turnos. NL guardianmod:Tic - Haz !D! de daño a un enemigo al azar."
 },
 "Guardian:ShieldCharger": {
   "NAME": "Cargador de Escudo",

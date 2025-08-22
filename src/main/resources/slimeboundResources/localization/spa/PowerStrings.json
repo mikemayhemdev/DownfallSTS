@@ -254,7 +254,7 @@
     "NAME": "Baba Residual",
     "DESCRIPTIONS": [
       "Aplica #b",
-      " de #yBaba a un enemigo aleatorio cada vez que pierdas PV."
+      " de #yBaba a un enemigo al azar cada vez que pierdas PV."
     ]
   },
   "Slimebound:TackleBuffPower": {

@@ -131,7 +131,7 @@
   },
   "sneckomod:PoisonParadise": {
     "NAME": "Paraíso Tóxico",
-    "DESCRIPTION": "Los efectos de sneckomod:Exceso también aplican !M! de sneckomod:Tóxico a un enemigo aleatorio."
+    "DESCRIPTION": "Los efectos de sneckomod:Exceso también aplican !M! de sneckomod:Tóxico a un enemigo al azar."
   },
   "sneckomod:PureSnecko": {
     "NAME": "Cambio de Forma",

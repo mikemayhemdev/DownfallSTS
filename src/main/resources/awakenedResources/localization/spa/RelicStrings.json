@@ -27,7 +27,7 @@
     "NAME": "Bomba de Maná",
     "FLAVOR": "3... 2...",
     "DESCRIPTIONS": [
-      "Cada vez que un enemigo muere, transfiere cualquier #yawakened:Quemadura de Maná que tenga a un enemigo aleatorio."
+      "Cada vez que un enemigo muere, transfiere cualquier #yawakened:Quemadura de Maná que tenga a un enemigo al azar."
     ]
   },
   "awakened:TomeOfPortalmancy": {

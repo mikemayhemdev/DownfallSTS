@@ -216,7 +216,7 @@
   },
   "hexamod:Poltergeist": {
     "NAME": "Poltergeist",
-    "DESCRIPTION": "Siempre que juegues una carta Etérea, un enemigo aleatorio pierde !M! PV."
+    "DESCRIPTION": "Siempre que juegues una carta Etérea, un enemigo al azar pierde !M! PV."
   },
   "hexamod:PhantomCloak": {
     "NAME": "Capa Fantasmal",
@@ -356,7 +356,7 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Liberar Espíritus",
-    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio. NL Repite por cada carta *Agotada en el turno anterior.",
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar. NL Repite por cada carta *Agotada en el turno anterior.",
     "UPGRADE_DESCRIPTION": " NL (Golpea !M! vez/veces.)"
   },
   "hexamod:UnlimitedPower": {
@@ -458,7 +458,7 @@
     },
   "hexamod:ParanormalForm": {
     "NAME": "Poltergeist",
-    "DESCRIPTION": "Siempre que juegues una carta Etérea, un enemigo aleatorio pierde !M! PV."
+    "DESCRIPTION": "Siempre que juegues una carta Etérea, un enemigo al azar pierde !M! PV."
     },
   "hexamod:RecurringNightmare": {
     "NAME": "Visión de Pesadilla",
