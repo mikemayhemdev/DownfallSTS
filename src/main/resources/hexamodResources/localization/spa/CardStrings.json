@@ -216,7 +216,7 @@
   },
   "hexamod:Poltergeist": {
     "NAME": "Poltergeist",
-    "DESCRIPTION": "Siempre que juegues una carta Etérea, un enemigo aleatorio pierde !M! PV."
+    "DESCRIPTION": "Siempre que juegues una carta Etérea, un enemigo al azar pierde !M! PV."
   },
   "hexamod:PhantomCloak": {
     "NAME": "Capa Fantasmal",
@@ -356,7 +356,7 @@
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Liberar Espíritus",
-    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio. NL Repite por cada carta *Agotada en el turno anterior.",
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar. NL Repite por cada carta *Agotada en el turno anterior.",
     "UPGRADE_DESCRIPTION": " NL (Golpea !M! vez/veces.)"
   },
   "hexamod:UnlimitedPower": {
@@ -413,10 +413,7 @@
   "hexamod:EtherStep": {
     "NAME": "Paso Etéreo",
     "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Agota 1 carta. NL Roba !M! carta(s). NL ",
-    "UPGRADE_DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Agota 1 carta. NL Roba !M! carta(s). NL ",
-    "EXTENDED_DESCRIPTION": [
-      "Haz !D! de daño."
-    ]
+    "UPGRADE_DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Agota 1 carta. NL Roba !M! carta(s). NL "
   },
   "hexamod:OpposingAction": {
     "NAME": "Acción Opuesta",
@@ -438,93 +435,93 @@
     "UPGRADE_DESCRIPTION": "Descarta !M! cartas. NL Haz !D! de daño."
   },
   "hexamod:SoulSteal": {
-    "NAME": "Living Bomb",
-    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. When it detonates, it affects ALL enemies."
+    "NAME": "Bomba Viva",
+    "DESCRIPTION": "Aplica !burny! hexamod:QuemarAlma. Al detonar, afecta a TODOS los enemigos."
   },
   "hexamod:ApocalypticArmor": {
-    "NAME": "Doomsday",
-    "DESCRIPTION": "The next time all !M! Ghostflames are *Ignited, take an extra turn.",
-    "UPGRADE_DESCRIPTION": "The next time at least !M! Ghostflames are *Ignited, take an extra turn."
+    "NAME": "Juicio Final",
+    "DESCRIPTION": "La próxima vez que todas las !M! llamas fantasmales estén *Incendiadas, juega un turno adicional.",
+    "UPGRADE_DESCRIPTION": "La próxima vez que al menos !M! llamas fantasmales estén *Incendiadas, juega un turno adicional."
   },
   "hexamod:RetreatToShadows": {
-    "NAME": "Incorporeal",
-    "DESCRIPTION": "hexamod:Retract. NL Lose !M! HP. NL Gain 1 Intangible. NL Exhaust."
+    "NAME": "Incorpóreo",
+    "DESCRIPTION": "hexamod:Retroceder. NL Pierde !M! PV. NL Gana 1 Intangible. NL Agota."
   },
   "hexamod:SpectralSpark": {
-    "NAME": "Naughty Spirit",
-    "DESCRIPTION": "Apply !burny! hexamod:Soulburn. NL If the current Ghostflame is hexamod:Ignited, return this card to your hand. hexamod:Retract."
+    "NAME": "Espíritu Travieso",
+    "DESCRIPTION": "Aplica !burny! hexamod:QuemarAlma. NL Si la llama fantasmal actual está hexamod:Incendiada, regresa esta carta a tu mano. hexamod:Retroceder."
   },
   "hexamod:Toasty": {
-    "NAME": "Flare Flick",
-    "DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame and hexamod:Advance.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL hexamod:Ignite the current Ghostflame. NL Choose to hexamod:Retract or hexamod:Advance."
+    "NAME": "Chispa Flamígera",
+    "DESCRIPTION": "Haz !D! de daño. NL hexamod:Incendia la llama actual y hexamod:avanza.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL hexamod:Incendia la llama actual. NL Elige entre hexamod:Retroceder o hexamod:Avanzar."
     },
   "hexamod:ParanormalForm": {
     "NAME": "Poltergeist",
-    "DESCRIPTION": "Whenever you play an Ethereal card, a random enemy loses !M! HP."
+    "DESCRIPTION": "Siempre que juegues una carta Etérea, un enemigo al azar pierde !M! PV."
     },
   "hexamod:RecurringNightmare": {
-    "NAME": "Nightmare Vision",
-    "DESCRIPTION": "Hexamod:Retract. NL expansioncontent:Exhume an *Ethereal card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Hexamod:Retract. NL expansioncontent:Exhume !M! *Ethereal cards. NL Exhaust.",
+    "NAME": "Visión de Pesadilla",
+    "DESCRIPTION": "hexamod:Retroceder. NL expansioncontent:Exhuma una carta *Etérea. NL Agota.",
+    "UPGRADE_DESCRIPTION": "hexamod:Retroceder. NL expansioncontent:Exhuma !M! cartas *Etéreas. NL Agota.",
     "EXTENDED_DESCRIPTION": [
-      "Choose an Ethereal card to return to your hand.",
-      "Choose ",
-      " Ethereal cards to return to your hand."
+      "Elige una carta Etérea para devolver a tu mano.",
+      "Elige ",
+      " cartas Etéreas para devolver a tu mano."
     ]
     },
   "hexamod:Haunt": {
-    "NAME": "Haunted Hand",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Draw !M! card. NL ",
-    "UPGRADE_DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL Draw !M! cards. NL ",
+    "NAME": "Mano Embrujada",
+    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Roba !M! carta. NL ",
+    "UPGRADE_DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Roba !M! cartas. NL ",
     "EXTENDED_DESCRIPTION": [
-      "Draw cards until you draw a non-Ethereal card."
+      "Roba cartas hasta que robes una que no sea Etérea."
     ]
   },
   "hexamod:InspiringFlames": {
-    "NAME": "Stoke the Fire",
-    "DESCRIPTION": "Gain !B! Block. NL For each *Ignited Ghostflame, Upgrade a random card in your hand."
+    "NAME": "Avivar la Llama",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Por cada llama fantasmal *Incendiada, mejora una carta aleatoria en tu mano."
     },
   "hexamod:SpectralAdrenaline": {
-    "NAME": "Bright Ritual",
-    "DESCRIPTION": "Gain [E] and draw 1 card for each *Ignited Ghostflame, then hexamod:Extinguish them. NL Exhaust."
+    "NAME": "Ritual Radiante",
+    "DESCRIPTION": "Gana [E] y roba 1 por cada llama fantasmal *Incendiada, luego hexamod:extinguir. NL Agota."
   },
   "hexamod:GhostOfSpirePresent": {
-    "NAME": "Here and Now",
-    "DESCRIPTION": "At the start of your turn, gain [E] . NL At the end of your turn, hexamod:Extinguish the current Ghostflame."
+    "NAME": "Aquí y Ahora",
+    "DESCRIPTION": "Al inicio de tu turno, gana [E]. NL Al final de tu turno, hexamod:Extingue la llama fantasmal actual."
   },
   "hexamod:GhostOfSpirePast": {
-    "NAME": "Devil's Dance",
-    "DESCRIPTION": "Whenever you hexamod:Retract, draw a card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you *Retract each turn, gain [E] and draw 1 card. NL hexamod:Retract."
+    "NAME": "Danza del Diablo",
+    "DESCRIPTION": "Siempre que hexamod:Retrocedas, roba una carta.",
+    "UPGRADE_DESCRIPTION": "Innato. NL La primera vez que *Retrocedas cada turno, gana [E] y roba 1 carta. NL hexamod:Retroceder."
     },
     "hexamod:GhostOfSpireFuture": {
-      "NAME": "Into Shadow",
-      "DESCRIPTION": "Ethereal. NL Whenever you hexamod:Retract, choose a card in your hand to play and Exhaust.",
-      "UPGRADE_DESCRIPTION": "Whenever you hexamod:Retract, choose a card in your hand to play and Exhaust.",
+      "NAME": "En la Sombra",
+      "DESCRIPTION": "Etérea. NL Siempre que hexamod:Retrocedas, elige una carta en tu mano para jugar y Agotar.",
+      "UPGRADE_DESCRIPTION": "Siempre que hexamod:Retrocedas, elige una carta en tu mano para jugar y Agotar.",
       "EXTENDED_DESCRIPTION": [
-        "play and Exhaust."
+        "juega y se Agota."
       ]
       },
   "hexamod:HexaLevel": {
     "NAME": "Forma Infernal",
-    "DESCRIPTION": "Al comienzo de tu turno, gana !M! de hexamod:Intensidad.",
-    "UPGRADE_DESCRIPTION": "Gana !M! de hexamod:Intensidad. NL Al comienzo de tu turno, gana !M! de hexamod:Intensidad."
+    "DESCRIPTION": "Al inicio de tu turno, gana !M! de hexamod: Intensidad.",
+    "UPGRADE_DESCRIPTION": "Gana !M! de hexamod: Intensidad. NL Al inicio de tu turno, gana !M! de hexamod: Intensidad."
   },
   "hexamod:SkipABeat": {
-    "NAME": "Kindle",
-    "DESCRIPTION": "If the current Ghostflame is not *Ignited, hexamod:Ignite it.",
-    "UPGRADE_DESCRIPTION": "hexamod:Ignite the current Ghostflame."
+    "NAME": "Avivar",
+    "DESCRIPTION": "Si la llama fantasmal actual no está *Incendiada, hexamod:Incendiala.",
+    "UPGRADE_DESCRIPTION": "hexamod:Incendia la llama fantasmal actual."
   },
   "hexamod:FlameSwitch": {
-      "NAME": "Bad Omen",
-      "DESCRIPTION": "Choose a Ghostflame type to change the current one into. NL Exhaust.",
-      "UPGRADE_DESCRIPTION": "Retain. NL Choose a Ghostflame type to change the current one into. NL Exhaust.",
+      "NAME": "Mal Presagio",
+      "DESCRIPTION": "Elige un tipo de llama fantasmal para reemplazar la actual. NL Agota.",
+      "UPGRADE_DESCRIPTION": "Retiene. NL Elige un tipo de llama fantasmal para reemplazar la actual. NL Agota.",
       "EXTENDED_DESCRIPTION": [
-        "Replace the current Ghostflame with a hexamod:Bolstering Ghostflame",
-        "Replace the current Ghostflame with a hexamod:Crushing Ghostflame",
-        "Replace the current Ghostflame with a hexamod:Searing Ghostflame",
-        "Don't replace."
+        "Reemplaza con una Llama Fantasmal hexamod:Fortalecedora.",
+        "Reemplaza con una Llama Fantasmal hexamod:Aplastante.",
+        "Reemplaza con una Llama Fantasmal hexamod:Abrasadora.",
+        "No reemplazar."
       ]
   }
 }

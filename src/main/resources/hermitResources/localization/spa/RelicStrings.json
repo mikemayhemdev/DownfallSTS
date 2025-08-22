@@ -17,8 +17,10 @@
     "NAME": "Vaso de Chupito",
     "FLAVOR": "Cualquier líquido dentro se transforma en otra cosa.",
     "DESCRIPTIONS": [
-      "Las primeras #b2 veces que uses una poción en cada combate, obtén una poción aleatoria. Solo puedes usar #b2 pociones por combate.",
-      "No puedes usar más pociones en este combate."
+      "Las primeras #b",
+      "No puedes usar más pociones en este combate.",
+      " veces que uses una poción en cada combate, obtén una poción aleatoria. Solo puedes usar #b",
+      " pociones cada combate."
     ]
   },
   "hermit:Horseshoe": {
@@ -39,7 +41,8 @@
     "NAME": "Bufanda Roja",
     "FLAVOR": "Es cálida y suave.",
     "DESCRIPTIONS": [
-      "Cada vez que apliques una nueva Desventaja a un enemigo, gana #b3 #yBloqueo."
+      "Cada vez que apliques una nueva Desventaja a un enemigo, gana #b",
+      " #yBloqueo."
     ]
   },
   "hermit:DentedPlate": {
@@ -60,44 +63,51 @@
     "NAME": "Guante Chamuscado",
     "FLAVOR": "Algunas partes aún brillan con cenizas sobrenaturales.",
     "DESCRIPTIONS": [
-      "Cada vez que robes una carta #rMaldición, tu siguiente ataque inflige #b3 de daño adicional."
+      "Cada vez que robes una carta #rMaldición, tu siguiente ataque inflige #b",
+      " de daño adicional."
     ]
   },
   "hermit:ClaspedLocket": {
     "NAME": "Medallón Cerrado",
     "FLAVOR": "Ya no se puede abrir.",
     "DESCRIPTIONS": [
-      "Reemplaza el #yMedallón #yViejo. La primera vez que robes una carta #rMaldición cada turno, #yAgótala y roba #b2 cartas. Al obtener esta reliquia, consigue #b2 #rInjurias.",
-      "Nunca más..."
+      "Reemplaza el #yMedallón #yViejo. La primera vez que robes una carta #rMaldición cada turno, #yAgótala y roba #b",
+      "Nunca Más...",
+      " cartas. Al obtener esta reliquia, consigue #b",
+      " #rInjurias [REMOVE_SPACE]."
     ]
   },
   "hermit:StraightRazor": {
     "NAME": "Navaja Recta",
     "FLAVOR": "Para un afeitado más apurado...",
     "DESCRIPTIONS": [
-      "Cada vez que elimines o #yTransformes una carta de tu mazo, cura #b15 de vida."
+      "Cada vez que elimines o #yTransformes una carta de tu mazo, cura #b",
+      " de vida."
     ]
   },
   "hermit:BrassTacks": {
     "NAME": "Clavos de Latón",
     "FLAVOR": "El brillo de estos clavos nunca parece desvanecerse.",
     "DESCRIPTIONS": [
-      "Al final de tu turno, gana #b2 #yBloqueo."
+      "Al final de tu turno, gana #b",
+      " de #yBloqueo."
     ]
   },
   "hermit:BlackPowder": {
     "NAME": "Pólvora Negra",
     "FLAVOR": "Manéjala con cuidado.",
     "DESCRIPTIONS": [
-      "Cada vez que actives un efecto de #yhermit:Preciso, inflige #b2 de daño a TODOS los enemigos."
+      "Cada vez que actives un efecto de #yhermit:Preciso, inflige #b",
+      " de daño a TODOS los enemigos."
     ]
   },
   "hermit:BloodyTooth": {
     "NAME": "Diente Roto",
     "FLAVOR": "Parece demasiado grande para ser de una mandíbula humana...",
     "DESCRIPTIONS": [
-      "Cada vez que derrotes a un enemigo de Élite, cura #b7 de vida y gana #b35 de oro."
+      "Cada vez que derrotes a un enemigo de Élite, cura #b",
+      " de vida y gana #b",
+      " de oro."
     ]
   }
 }
-

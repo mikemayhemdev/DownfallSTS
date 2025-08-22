@@ -168,7 +168,7 @@
     "DESCRIPTIONS": [
       "Los Ataques que cuestan 0 infligen #b",
       " más de daño. Cada vez que juegas un Ataque, inflige #b",
-      " de daño a un enemigo aleatorio."
+      " de daño a un enemigo al azar."
     ]
   },
   "Gremlin:TargetWeakness": {

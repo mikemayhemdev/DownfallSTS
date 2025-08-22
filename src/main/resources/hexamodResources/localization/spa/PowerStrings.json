@@ -139,7 +139,7 @@
   "hexamod:ParanormalFormPower": {
     "NAME": "Poltergeist",
     "DESCRIPTIONS": [
-      "Cada vez que juegues una carta #yEtérea, un enemigo aleatorio pierde #b",
+      "Cada vez que juegues una carta #yEtérea, un enemigo al azar pierde #b",
       " PV."
     ]
   },

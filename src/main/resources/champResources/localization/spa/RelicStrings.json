@@ -3,7 +3,7 @@
     "NAME": "Corona del Campeón",
     "FLAVOR": "¡ERES EL GANADOR!",
     "DESCRIPTIONS": [
-      "Al comienzo del combate, elige entrar en #yPostura #bchamp:Defensivo o #rchamp:Berserker [REMOVE_SPACE]."
+      "Al comienzo del combate, elige entrar en una #yPostura en la que no estés."
     ]
   },
   "champ:BlackKnightHelmet": {
@@ -17,14 +17,16 @@
     "NAME": "Mancuernas",
     "FLAVOR": "¿1000 repeticiones? Pff. Yo puedo hacer 1001.",
     "DESCRIPTIONS": [
-      "Siempre que entres a una Zona de Descanso, si tienes al menos #b10 cartas mejorables en tu mazo, #yMejora una al azar."
+      "Siempre que entres a una Zona de Descanso, si tienes al menos #b",
+      " cartas mejorables en tu mazo, #yMejora una al azar."
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
     "NAME": "Guía del Berserker",
     "FLAVOR": "El texto es ilegible.",
     "DESCRIPTIONS": [
-      "Al comienzo de tu turno, gana #b3 de #yVigor [REMOVE_SPACE]."
+      "Al comienzo de tu turno, gana #b",
+      " de #yVigor [REMOVE_SPACE]."
     ]
   },
   "champ:ChampionCrownUpgraded": {
@@ -32,14 +34,16 @@
     "FLAVOR": "¡Felicidaciones! Eres el mejor ganador.",
     "DESCRIPTIONS": [
       "Reemplaza ",
-      " [REMOVE_SPACE].[] NL Comienza cada combate en la #yPostura #ychamp:Definitiva [REMOVE_SPACE], que dura #b3 turnos."
+      " [REMOVE_SPACE].[] NL La primera vez que juegues un #ychamp:Final, roba #b",
+      " cartas y entra en una #yPostura aleatoria."
     ]
   },
   "champ:DefensiveTrainingManual": {
     "NAME": "Tesis Defensiva",
     "FLAVOR": "Consejo profesional: no te dejes golpear.",
     "DESCRIPTIONS": [
-      "El #bBono de #yFinal de la #yPostura #bchamp:Defensivo otorga #b3 más de #yBloqueo [REMOVE_SPACE]."
+      "El #bBono de #yFinal de la #yPostura #bchamp:Defensivo otorga #b",
+      " más de #yBloqueo [REMOVE_SPACE]."
     ]
   },
   "champ:DeflectingBracers": {
@@ -74,7 +78,8 @@
     "NAME": "Armadura Potenciada",
     "FLAVOR": "Comprada de segunda mano.",
     "DESCRIPTIONS": [
-      "Gana [E] al comienzo de tu turno. NL Tu máximo de #yVigor y #ychamp:Contraataque es #b10 [REMOVE_SPACE]."
+      "Gana [E] al comienzo de tu turno. NL Tu máximo de #yVigor y #ychamp:Contraataque es #b",
+      " [REMOVE_SPACE]."
     ]
   },
   "champ:RageAmulet": {
@@ -91,7 +96,8 @@
     "DESCRIPTIONS": [
       "Al obtenerla, elige un #ychamp:Final [REMOVE_SPACE]. Este #yFinal cuesta #b0 [REMOVE_SPACE], puede usarse sin una #yPostura [REMOVE_SPACE] y nunca te hará salir de tu #yPostura.",
       "Elige una carta para ",
-      " cuesta #b0 [REMOVE_SPACE], puede usarse sin una #yPostura [REMOVE_SPACE], y nunca te hará salir de tu #yPostura."
+      " cuesta #b0 [REMOVE_SPACE], puede usarse sin una #yPostura [REMOVE_SPACE], y nunca te hará salir de tu #yPostura.",
+      "La carta adjunta a esta reliquia a sido #rremovida de tu mazo, esta reliquia ya no funciona."
     ]
   },
   "champ:SpectersHand": {

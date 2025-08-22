@@ -1,0 +1,30 @@
+{
+  "awakened:PhaseSkip": {
+    "NAME": "Bebida del Ascendido",
+    "DESCRIPTIONS": [
+      "#yDespierta inmediatamente."
+    ]
+  },
+  "awakened:CultistsDelight": {
+    "NAME": "Delicia del Cultista",
+    "DESCRIPTIONS": [
+      "Cada vez que juegas una carta de #yPoder en este combate, gana #b",
+      " #yFuerza [REMOVE_SPACE]. Añade un #yPoder aleatorio a tu mano que cuesta #b0 este turno."
+    ]
+  },
+  "awakened:SacramentalWine": {
+    "NAME": "Vino Sacramental",
+    "DESCRIPTIONS": [
+      "Cada vez que juegas una carta de #yPoder en este combate, gana #b",
+      " #yBloqueo [REMOVE_SPACE]. Añade un #yPoder aleatorio a tu mano que cuesta #b0 este turno."
+    ]
+  },
+  "awakened:SneckoPowersPotion": {
+    "NAME": "Esencia de Snecko",
+    "DESCRIPTIONS": [
+      "Elige #b1 de #b3 poderes #yOffclass aleatorios para añadir a tu mano, cuesta #b0 este turno.",
+      "Elige #b1 de #b3 poderes #yOffclass aleatorios y añade #b",
+      " copias a tu mano, cuestan #b0 este turno."
+    ]
+  }
+}

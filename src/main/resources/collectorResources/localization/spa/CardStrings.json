@@ -21,7 +21,7 @@
   },
   "collector:BindingCall": {
     "NAME": "Llamado de Atadura",
-    "DESCRIPTION": "Gana !M! de expansioncontent:PV_Temp. NL collector:CabezaDeAntorcha obtiene \"Aplica !clm2! de collector:Condena a un enemigo aleatorio.\""
+    "DESCRIPTION": "Gana !M! de expansioncontent:PV_Temp. NL collector:CabezaDeAntorcha obtiene \"Aplica !clm2! de collector:Condena a un enemigo al azar.\""
   },
   "collector:Billow": {
     "NAME": "Humo Ondulante",
@@ -82,8 +82,8 @@
   },
   "collector:DarkLordForm": {
     "NAME": "Forma del Señor Oscuro",
-    "DESCRIPTION": "Al comienzo de tu turno, juega *¡Eres *Mío! contra un enemigo aleatorio.",
-    "UPGRADE_DESCRIPTION": "Al comienzo de tu turno, juega *¡Eres *Mío!+ contra un enemigo aleatorio."
+    "DESCRIPTION": "Al comienzo de tu turno, juega *¡Eres *Mío! contra un enemigo al azar.",
+    "UPGRADE_DESCRIPTION": "Al comienzo de tu turno, juega *¡Eres *Mío!+ contra un enemigo al azar."
   },
   "collector:Darkstorm": {
     "NAME": "Tormenta Oscura",
@@ -126,7 +126,7 @@
   },
   "collector:FeelMyPain": {
     "NAME": "Siente Mi Dolor",
-    "DESCRIPTION": "Siempre que *Agotes una carta, un enemigo aleatorio pierde !M! PV."
+    "DESCRIPTION": "Siempre que *Agotes una carta, un enemigo al azar pierde !M! PV."
   },
   "collector:FiendFire": {
     "NAME": "Fuego Demoníaco",
@@ -305,7 +305,7 @@
   },
   "collector:ScorchingRay": {
     "NAME": "Rayo Abrasador",
-    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio X veces."
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar X veces."
   },
   "collector:SeedOfDoubt": {
     "NAME": "Semilla de Duda",
@@ -559,7 +559,7 @@
   },
   "collector:ReptomancerCard": {
     "NAME": "Vibora Vidente",
-    "DESCRIPTION": "Gana !M! expansioncontent:PV_Temp. NL collector:CabezaDeAntorcha gana \"Aplica !clm2! de Veneno a un enemigo aleatorio.\""
+    "DESCRIPTION": "Gana !M! expansioncontent:PV_Temp. NL collector:CabezaDeAntorcha gana \"Aplica !clm2! de Veneno a un enemigo al azar.\""
   },
   "collector:RepulsorCard": {
     "NAME": "Repulsor",

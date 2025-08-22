@@ -85,7 +85,7 @@
     "DESCRIPTIONS": [
       "Siempre que crees o juegues una Función, gana #b",
       " de #yBloqueo e inflige #b",
-      " de daño a un enemigo aleatorio."
+      " de daño a un enemigo al azar."
     ]
   },
   "bronze:Hardcode": {

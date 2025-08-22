@@ -1,0 +1,46 @@
+{
+  "awakened:SpellDescriptor": {
+    "TEXT": [
+      "Hechizo"
+    ]
+  },
+  "awakened:ConjureMod": {
+    "TEXT": [
+      " NL awakened:Conjurar."
+    ]
+  },
+  "awakened:SpellMod": {
+    "TEXT": [
+      "[#12FAF0]Hechizo. NL"
+    ]
+  },
+  "awakened:DrainingMod": {
+    "TEXT": [
+      " NL En el siguiente turno, pierde [E]."
+    ]
+  },
+  "awakened:highlightChant": {
+    "TEXT": [
+      "awakened:Profecía: ",
+      "[awakenedIcon] [#12FAF0]Profecía: "
+    ]
+  },
+  "awakened:Spellbook": {
+    "TEXT": [
+      "Libro de Hechizos",
+      "Despertar",
+      "Después de jugar #b7 Poderes, #yDespierta [REMOVE_SPACE]! NL NL Mientras estás #yDespierta [REMOVE_SPACE], las cartas de Hechizo #yConjuradas están #yMejoradas [REMOVE_SPACE], aumentando su eficacia.",
+      "Después de jugar #b7 Poderes, #yDespierta [REMOVE_SPACE]! NL NL Mientras estás #yDespierta [REMOVE_SPACE], las cartas de Hechizo #yConjuradas están #yMejoradas [REMOVE_SPACE], aumentando su eficacia."
+    ]
+  },
+  "awakened:FullSpellbook": {
+    "TEXT": [
+      "¡Mi Libro de Hechizos está lleno!"
+    ]
+  },
+  "awakened:FourthDimensionDupeAttempt": {
+    "TEXT": [
+      "@¡Hacer@ @eso@ @rompería@ @el@ @continuo@ @espacio-tiempo!!!@"
+    ]
+  }
+}
