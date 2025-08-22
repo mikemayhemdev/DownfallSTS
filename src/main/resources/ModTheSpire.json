@@ -9,7 +9,7 @@
     "kiooeht - UI Code, Steam Packager, Support",
     "Evil Pickle - Character Boss Framework",
     "Blank the Evil - Main Menu Code, VFX, Code Support",
-    "Alchyr - Event Code & More",
+    "Alchyr - Event Code, Inverted Map, & More",
     "Gk - Souls System & More",
     "Rita-B - Costumes system",
     "Ellie - Named the mod!",
@@ -70,6 +70,7 @@
     "Cany0udance - Code Support",
     "yoshigospel - Code Support",
     "Erim-Nelhah - Code Support",
+    "tetraminus - Code Support",
     "Downfall Additional Design",
     "cheetah-shooter",
     "Mirli",
@@ -108,7 +109,7 @@
     "Mixed Realms",
     "Shiny Shoe",
     "Spider Nest Games"
-    
+
   ],
   "description": "${project.description}",
   "version": "${project.version}",
