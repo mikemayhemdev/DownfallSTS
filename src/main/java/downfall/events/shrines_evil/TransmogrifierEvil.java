@@ -1,7 +1,6 @@
 
 package downfall.events.shrines_evil;
 
-
 import downfall.cards.curses.Malfunctioning;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -41,9 +40,29 @@ public class TransmogrifierEvil extends AbstractImageEvent {
         DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").DESCRIPTIONS;
         OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").OPTIONS;
 
-        this.imageEventText.setDialogOption(OPTIONSALT[3], new Malfunctioning());
-        this.imageEventText.setDialogOption(OPTIONS[0]);
+        CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+        Iterator var2 = AbstractDungeon.player.masterDeck.getPurgeableCards().group.iterator();
 
+        while(var2.hasNext()) {
+            AbstractCard card = (AbstractCard)var2.next();
+            tmp.addToTop(card);
+        }
+
+        if (tmp.size() >= 3) {
+            if (AbstractDungeon.ascensionLevel < 15) {
+                this.imageEventText.setDialogOption(OPTIONSALT[3], new Malfunctioning());
+            } else {
+                this.imageEventText.setDialogOption(OPTIONSALT[5], new Aged());
+            }
+        } else {
+            this.imageEventText.setDialogOption(OPTIONSALT[6], true);
+        }
+
+        if (tmp.size() >= 1) {
+            this.imageEventText.setDialogOption(OPTIONS[0]);
+        } else {
+            this.imageEventText.setDialogOption(OPTIONSALT[6], true);
+        }
         this.imageEventText.setDialogOption(OPTIONS[1]);
 
     }
@@ -57,7 +76,6 @@ public class TransmogrifierEvil extends AbstractImageEvent {
     public void update() {
 
         super.update();
-
             if (cardCount == 1){
                 if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                     AbstractCard c = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
@@ -95,8 +113,6 @@ public class TransmogrifierEvil extends AbstractImageEvent {
                 logMetricTransformCards(ID, "Became Test Subject", transformedCards, obtainedCards);
                 AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
             }
-
-
     }
 
     protected void buttonEffect(int buttonPressed) {
@@ -181,5 +197,3 @@ public class TransmogrifierEvil extends AbstractImageEvent {
     }
 
 }
-
-

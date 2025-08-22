@@ -58,15 +58,15 @@ public class TrashCanPower extends AbstractPower implements CloneablePowerInterf
         updateDescription();
     }
 
-    @Override
-    public void atEndOfRound() {
-        this.flash();
-        Wiz.atb(new HandSelectAction(this.amount, (c) -> true, list -> {
-            for (AbstractCard c : list)
-            {
-                Wiz.p().hand.moveToExhaustPile(c);
-            }
-        }, null, uiStrings.TEXT[0],false,true,true));
+    public void atEndOfTurn(boolean isPlayer) {
+        if (isPlayer) {
+            this.flash();
+            Wiz.atb(new HandSelectAction(this.amount, (c) -> true, list -> {
+                for (AbstractCard c : list) {
+                    Wiz.p().hand.moveToExhaustPile(c);
+                }
+            }, null, uiStrings.TEXT[0], false, true, true));
+        }
     }
 
     @Override
