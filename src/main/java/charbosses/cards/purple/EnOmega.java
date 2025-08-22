@@ -23,7 +23,10 @@ public class EnOmega extends AbstractBossCard {
     public EnOmega() {
         super("Omega", cardStrings.NAME, "colorless/power/omega", 3, cardStrings.DESCRIPTION, CardType.POWER, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF, AbstractMonster.Intent.ATTACK);
         this.exhaust = true;
-        baseMagicNumber = magicNumber = 50;
+
+        baseDamage = baseMagicNumber = magicNumber = 50;
+        manualCustomDamageModifier = magicNumber;
+        damageType = damageTypeForTurn = DamageInfo.DamageType.THORNS;
     }
 
     public AbstractCard makeCopy() {

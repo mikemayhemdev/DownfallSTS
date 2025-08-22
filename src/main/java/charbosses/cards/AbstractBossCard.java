@@ -50,6 +50,7 @@ import com.megacrit.cardcrawl.vfx.ShieldParticleEffect;
 import com.megacrit.cardcrawl.vfx.combat.BuffParticleEffect;
 import com.megacrit.cardcrawl.vfx.combat.StunStarEffect;
 import com.megacrit.cardcrawl.vfx.combat.UnknownParticleEffect;
+import downfall.downfallMod;
 import hermit.characters.hermit;
 import hermit.util.TextureLoader;
 
@@ -61,8 +62,8 @@ import static charbosses.cards.blue.EnZap.getFocusAmountSafe;
 
 public abstract class AbstractBossCard extends AbstractCard {
 
-    public static final float HAND_SCALE = 0.35f;
-    public static final float HOVER_SCALE = 0.8f;
+    public static float HAND_SCALE = 0.65f;
+    public static float HOVER_SCALE = 0.85f;
     public static boolean recursionCheck = false;
     public AbstractCharBoss owner;
     public boolean hov2 = false;
@@ -128,6 +129,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.owner = AbstractCharBoss.boss;
         this.limit = 99;
 
+        setScale();
     }
 
     public AbstractBossCard(String id, String name, String img, int cost, String rawDescription, CardType type,
@@ -136,6 +138,8 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.owner = AbstractCharBoss.boss;
         this.limit = 99;
         this.intent = intent;
+
+        setScale();
 
     }
 
@@ -146,6 +150,7 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.limit = 99;
         this.intent = intent;
 
+        setScale();
         if (isCustomCard) {
             if (color == hermit.Enums.COLOR_YELLOW || this instanceof EnMemento) {
                 this.portrait = new TextureAtlas.AtlasRegion(new Texture(img), 0, 0, 250, 190);
@@ -165,6 +170,18 @@ public abstract class AbstractBossCard extends AbstractCard {
         this.limit = 99;
         if (this.type == CardType.CURSE || this.type == CardType.STATUS) {
             this.forceDraw = true;
+        }
+        setScale();
+    }
+
+    public void setScale(){
+        if (downfallMod.useLegacyBosses) {
+            HAND_SCALE = 0.35F;
+            HOVER_SCALE = 0.8F;
+        } else {
+            HAND_SCALE = 0.5F;
+            HOVER_SCALE = 0.8F;
+            intentOffsetY = -120F * Settings.scale;
         }
     }
 
@@ -324,15 +341,17 @@ public abstract class AbstractBossCard extends AbstractCard {
             this.owner = (AbstractCharBoss) mo;
         }
         if (mo != null) {
-            this.damage = MathUtils.floor(calculateDamage(mo, player, this.baseDamage));
-            this.intentDmg = MathUtils.floor(manualCustomDamageModifierMult * calculateDamage(mo, player, this.baseDamage + customIntentModifiedDamage() + manualCustomDamageModifier));
-            if (this instanceof EnCarveReality) {
-                if (((EnCarveReality)this).willUseSmite) {
-                    EnSmite enSmite = new EnSmite();
-                    enSmite.calculateCardDamage(this.owner);
-                    this.intentDmg += enSmite.intentDmg;
+                this.damage = MathUtils.floor(calculateDamage(mo, player, this.baseDamage));
+                this.intentDmg = MathUtils.floor(manualCustomDamageModifierMult * calculateDamage(mo, player, this.baseDamage + customIntentModifiedDamage() + manualCustomDamageModifier));
+                if (this instanceof EnCarveReality) {
+                    if (((EnCarveReality) this).willUseSmite) {
+                        EnSmite enSmite = new EnSmite();
+                        enSmite.calculateCardDamage(this.owner);
+                        this.intentDmg += enSmite.intentDmg;
+                    }
                 }
-            }
+
+
         }
         this.initializeDescription();
     }

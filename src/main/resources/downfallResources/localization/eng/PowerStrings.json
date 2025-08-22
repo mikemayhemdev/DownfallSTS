@@ -9,7 +9,7 @@
   "downfall:CultistRevivePower": {
     "NAME": "False Worship",
     "DESCRIPTIONS": [
-      "Heals to #b100% of Max HP instead of dying, removing this effect.",
+      "Heals to #b50% of Max HP instead of dying, removing this effect.",
       "CAAAAWWWW!"
     ]
   },
@@ -50,7 +50,10 @@
   "downfall:SpotWeakness": {
     "NAME": "Spot Weakness",
     "DESCRIPTIONS": [
-      "Every turn in which you play an attack card with this power active, this enemy gains #b"," #yStrength. Currently it will gain #b", " #yStrength [REMOVE_SPACE]."
+      "If you play an #yAttack this turn, enemy will gain #b",
+      " #yStrength.",
+      "You played an #yAttack this turn. The enemy will gain #b",
+      " #yStrength."
     ]
   },
   "downfall:FearNoEvil": {
@@ -241,7 +244,9 @@
     "NAME": "Synchronize",
     "DESCRIPTIONS": [
       "Whenever Ironclad generates a #yStatus card, a duplicate is added into your discard pile.",
-      "Whenever Ironclad generates a #yStatus card, it enters your discard pile instead."
+      "Whenever Ironclad generates a #yStatus card, it enters your discard pile instead. NL After losing #b",
+      " more HP, you gain a #yPurity with #yRetain.",
+      "Whenever Ironclad generates a #yStatus card, it enters your draw pile instead. NL After losing #b"
     ]
   },
   "downfall:NeowSyncronize": {
@@ -377,7 +382,8 @@
     "NAME": "Deputy",
     "DESCRIPTIONS": [
       "When Tangerine dies, Hermit's #yConcentration breaks and he gains #b",
-      " #yStrength."
+      " #yStrength.",
+      "When Tangerine dies, Hermit's #yConcentration breaks."
     ]
   },
   "downfall:HermitWheelOfFortune": {
@@ -472,6 +478,13 @@
     "DESCRIPTIONS": [
       "You have played #b",
       " non-Attacks. While this number exceeds or matches Attacks, Watcher is in #yCalm Stance."
+    ]
+  },
+  "downfall:VoidOrbPower":{
+    "NAME": "Void Core",
+    "DESCRIPTIONS": [
+      "When killed, Void Core restores all HP and removes one #yDarkness Orb from Defect.",
+      " Gains 5 Max HP each time this occurs."
     ]
   }
 }

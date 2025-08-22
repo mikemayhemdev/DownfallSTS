@@ -129,15 +129,9 @@
     "DESCRIPTIONS": [
       "The first Spell you play each turn is played twice.",
       "The first #b",
-      " Spells you play each turn are played twice."
-    ]
-  },
-  "awakened:DoubleSpellPower": {
-    "NAME": "Spell Repeat",
-    "DESCRIPTIONS": [
-      "The next Spell you play this turn is played twice.",
-      "The next #b",
-      " Spells you play this turn are played twice."
+      " Spells you play each turn are played twice.",
+      " NL (",
+      " Spell Repetitions remaining)"
     ]
   },
   "awakened:DarknessFallsPower": {

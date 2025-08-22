@@ -293,7 +293,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         configDefault.setProperty(PROP_NO_MUSIC, "FALSE");
         configDefault.setProperty(PROP_ICONS_FOR_APPLIED_PROPERTIES, "FALSE");
         configDefault.setProperty(NO_RNG_CONJURE, "TRUE");
-        configDefault.setProperty(LEGACY_BOSSES, "FALSE");
+        configDefault.setProperty(LEGACY_BOSSES, "TRUE");
 
 
         loadConfigData();

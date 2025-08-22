@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -26,6 +27,8 @@ public class EnFalseWorship extends AbstractBossCard {
     public static final String ID = "downfall:FalseWorship";
     private static final CardStrings cardStrings;
 
+    private boolean foundCultist;
+
     static {
         cardStrings = CardCrawlGame.languagePack.getCardStrings(ID);
     }
@@ -39,15 +42,21 @@ public class EnFalseWorship extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-
+        foundCultist = false;
         Iterator var4 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
-
+        AbstractMonster mo = null;
         while(var4.hasNext()) {
-            AbstractMonster mo = (AbstractMonster)var4.next();
-            if (mo instanceof Cultist) {
+            mo = (AbstractMonster)var4.next();
+            if (mo instanceof Cultist && !mo.isDeadOrEscaped()) {
+                foundCultist = true;
                 this.addToBot(new ApplyPowerAction(mo, m, new CultistRevivePower(mo, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
                 break;
             }
+        }
+
+        if (!foundCultist){
+            AbstractMonster cawcaw = new Cultist(-400F, 0);
+            AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(cawcaw, true));
         }
 
     }

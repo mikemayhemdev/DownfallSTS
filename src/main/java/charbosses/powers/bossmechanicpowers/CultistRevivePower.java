@@ -61,7 +61,7 @@ public class CultistRevivePower extends AbstractPower implements CloneablePowerI
     public void onDeath() {
         CANNOT_END = true;
         super.onDeath();
-        healUndead(owner, owner.maxHealth);
+        healUndead(owner, owner.maxHealth/2);
         AbstractDungeon.effectsQueue.add(new HealEffect(owner.hb.cX, owner.hb.cY, owner.maxHealth));
         addToTop(new RemoveSpecificPowerAction(owner, owner, CultistRevivePower.POWER_ID));
         addToTop(new TalkAction(owner, DESCRIPTIONS[1]));

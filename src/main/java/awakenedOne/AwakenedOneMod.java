@@ -5,6 +5,7 @@ import awakenedOne.cards.*;
 import awakenedOne.cards.cardvars.SecondDamage;
 import awakenedOne.cards.cardvars.SecondMagicNumber;
 import awakenedOne.cards.cardvars.ThirdMagicNumber;
+import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import awakenedOne.events.AbyssEvent;
 import awakenedOne.events.BackToBasicsAwakened;
 import awakenedOne.events.TheNestAwakened;
@@ -102,6 +103,7 @@ public class AwakenedOneMod implements
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags UP_NEXT;
     public static boolean awakenedthiscombat = false;
     public static int powersThisCombat = 0;
+    public static int spellsThisTurn = 0;
     private static String modID = "awakened";
 
     public AwakenedOneMod() {
@@ -333,6 +335,7 @@ public class AwakenedOneMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         awakenedthiscombat = false;
         powersThisCombat = 0;
+        spellsThisTurn = 0;
         ConjureAction.conjuresThisCombat = 0;
         OnLoseEnergyPowerPatch.EnergyLostThisCombat = 0;
         OnCreateCardSubscriber.CardsCreatedThisCombat = 0;
@@ -356,6 +359,7 @@ public class AwakenedOneMod implements
     public void receiveOnPlayerTurnStart() {
         OnCreateCardSubscriber.VoidCreatedThisTurn = false;
         OnCreateCardSubscriber.CardsCreatedThisTurn = 0;
+        spellsThisTurn = 0;
         ConjureAction.refreshedthisturn = false;
     }
 
@@ -397,6 +401,9 @@ public class AwakenedOneMod implements
         if (abstractCard.type == AbstractCard.CardType.POWER){
             powersThisCombat++;
             awaken();
+        }
+        if (abstractCard instanceof AbstractSpellCard){
+            spellsThisTurn++;
         }
     }
 }

@@ -13,6 +13,7 @@ public class ArchetypeAct3ShivsSimple extends ArchetypeBaseSilent {
         super("SI_SHIV_ARCHETYPE", "Shivs");
 
         maxHPModifier += 350;
+        maxHPModifierAsc = 30;
         actNum = 3;
     }
 

@@ -52,6 +52,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.OddMushroom;
 import com.megacrit.cardcrawl.relics.RunicDome;
 import com.megacrit.cardcrawl.relics.SlaversCollar;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -224,7 +225,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         */
         maxHealth += chosenArchetype.maxHPModifier;
         if (AbstractDungeon.ascensionLevel >= 9) {
-            maxHealth = Math.round(maxHealth * 1.2F);
+            if (downfallMod.useLegacyBosses) {
+                maxHealth = Math.round(maxHealth * 1.2F);
+            } else {
+                maxHealth += chosenArchetype.maxHPModifierAsc;
+            }
         }
         currentHealth = maxHealth;
         updateHealthBar();
@@ -401,6 +406,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     for (AbstractCard c : handAsBoss) {
                         newHand.add(c);
                         c.applyPowers();
+                        c.triggerWhenDrawn();
                     }
 
                     AbstractCharBoss.boss.hand.group = newHand;
@@ -479,6 +485,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                         for (int j = i + 1; j < hand.size(); j++) {
                             AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
                             c2.manualCustomVulnModifier = true;
+                            if (AbstractDungeon.player.hasRelic(OddMushroom.ID)){
+                                c2.manualCustomDamageModifierMult = 1.25F;
+                            } else {
+                                c2.manualCustomDamageModifierMult = 1.5F;
+                            }
+
                         }
                     }
                 }
@@ -1408,7 +1420,7 @@ public void damage(final DamageInfo info) {
         for (final AbstractCard c : this.hand.group) {
             if (c != null) {
                 c.atTurnStart();
-                c.triggerWhenDrawn();
+              //  c.triggerWhenDrawn();
             }
         }
         /*

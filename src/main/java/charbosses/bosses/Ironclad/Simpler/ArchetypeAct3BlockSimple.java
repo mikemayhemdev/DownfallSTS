@@ -22,6 +22,7 @@ public class ArchetypeAct3BlockSimple extends ArchetypeBaseIronclad {
         super("IC_BLOCK_ARCHETYPE", "Block");
 
         maxHPModifier += 300;
+        maxHPModifierAsc = 30;
         actNum = 3;
         bossMechanicName = IroncladFortificationPower.NAME;
         bossMechanicDesc = IroncladFortificationPower.DESC[0] + FORTIFICATION_AMOUNT + IroncladFortificationPower.DESC[1];

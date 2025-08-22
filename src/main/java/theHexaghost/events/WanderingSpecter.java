@@ -191,7 +191,7 @@ public class WanderingSpecter extends AbstractImageEvent {
 
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                         cardsAdded.add(curse.cardID);
-                        maxHpAdded = 5;
+                        maxHpAdded = 12;
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[9]);
                         this.screen = CurScreen.END;
@@ -206,7 +206,7 @@ public class WanderingSpecter extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
 
                         cardsAdded.add(curse.cardID);
-                        goldAdded = 100;
+                        goldAdded = 180;
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[9]);
                         this.screen = CurScreen.END;

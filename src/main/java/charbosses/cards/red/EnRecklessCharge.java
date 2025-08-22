@@ -12,6 +12,7 @@ import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
@@ -35,7 +36,11 @@ public class EnRecklessCharge extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        this.addToBot(new MakeTempCardInDiscardAction(new Dazed(), 1));
+        if (downfallMod.useLegacyBosses || AbstractDungeon.ascensionLevel < 19){
+            this.addToBot(new MakeTempCardInDiscardAction(new Dazed(), 1));
+        } else {
+            this.addToBot(new MakeTempCardInDrawPileAction(new Dazed(), 1, true, true));
+        }
         //don't need to create status in boss deck, will be added manually
     }
 

@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ExhaustCardEffect;
+import downfall.downfallMod;
 
 import java.util.ArrayList;
 
@@ -179,8 +180,14 @@ public class EnemyCardGroup extends CardGroup {
 				c.targetDrawScale = AbstractBossCard.HAND_SCALE;
 			}
             int cardsinrow = Math.min(this.group.size() - HAND_ROW_LENGTH * (int) Math.floor((float) i / (float) HAND_ROW_LENGTH), HAND_ROW_LENGTH);
-            float widthspacing = AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
-            c.target_x = Settings.WIDTH * .9F - ((cardsinrow + 0.5f) * (widthspacing * AbstractBossCard.HAND_SCALE)) + (widthspacing * AbstractBossCard.HAND_SCALE) * (i % HAND_ROW_LENGTH);
+            float widthspacing = 0;
+            if (downfallMod.useLegacyBosses) {
+                widthspacing= AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
+                c.target_x = Settings.WIDTH * .9F - ((cardsinrow + 0.5f) * (widthspacing * AbstractBossCard.HAND_SCALE)) + (widthspacing * AbstractBossCard.HAND_SCALE) * (i % HAND_ROW_LENGTH);
+            } else {
+                widthspacing=AbstractCard.IMG_WIDTH_S + 125.0f * Settings.scale;
+                c.target_x = Settings.WIDTH * .85F - ((cardsinrow + 0.5f) * (widthspacing * AbstractBossCard.HAND_SCALE)) + (widthspacing * AbstractBossCard.HAND_SCALE) * (i % HAND_ROW_LENGTH);
+            }
             c.target_y = Settings.HEIGHT * HAND_HEIGHT_OFFSET + (AbstractCard.IMG_HEIGHT_S * AbstractBossCard.HAND_SCALE) * ((float) Math.floor(((float) i) / (float) HAND_ROW_LENGTH) + (this.group.size() > HAND_ROW_LENGTH ? 0.0f : 1.0f));
             if (((AbstractBossCard) c).hov2 && c.hb.hovered) {
 				if (hoveredcard == null || EnemyCardGroup.hov2holder == c) {
