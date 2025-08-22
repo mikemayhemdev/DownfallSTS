@@ -8,7 +8,7 @@
       "powerpotion",
       "poción de poder"
     ],
-    "DESCRIPTION": "#yPotion [REMOVE_SPACE]: Choose #b1 of #b3 random #yPower cards to add to your hand, it costs #b0 this turn."
+    "DESCRIPTION": "#yPoción [REMOVE_SPACE]: Elije #b1 de #b3 cartas de #yPoder aleatorias para añadir a tu mano, cuesta #b0 este turno."
   },
   {
     "PROPER_NAME": "Conjuro",
@@ -22,14 +22,15 @@
       "conjura",
       "conjurar"
     ],
-    "DESCRIPTION": "Create the next card from your Spellbook in your hand."
+    "DESCRIPTION": "Crea la próxima carta de tu Libro de Hechizos en tu mano."
   },
   {
-    "PROPER_NAME": "Chant",
+    "PROPER_NAME": "Canto",
     "NAMES": [
-      "chant"
+      "chant",
+      "canto"
     ],
-    "DESCRIPTION": "Cards with #yChant effects become more powerful for the rest of combat if the last played card in combat was a #yPower card."
+    "DESCRIPTION": "Las cartas con efecto de #yCanto se vuelven más poderosas durante el resto del combate si la última carta jugada en combate fue una carta de #yPoder."
   },
   {
     "PROPER_NAME": "Hex",
@@ -38,7 +39,7 @@
       "hexxed",
       "hexx"
     ],
-    "DESCRIPTION": "Creatures with #yHex take #b20% more damage from the next Attack for each stack. #yHex is removed all at once after being attacked."
+    "DESCRIPTION": "Las criaturas con #yHex reciben #b20% más daño del próximo Ataque por cada acumulación. #yHex se elimina de una vez después de ser atacado."
   },
   {
     "PROPER_NAME": "Drenado",
@@ -47,14 +48,15 @@
       "drained",
       "drenado"
     ],
-    "DESCRIPTION": "Any effect that causes you to lose [E] , even if you had none to lose. (Does not include [E] spent playing cards.)"
+    "DESCRIPTION": "Cualquier efecto que cause que pierdas [E] , incluso si no tienes para perder. (No incluye [E] gastado al jugar cartas.)"
   },
   {
-    "PROPER_NAME": "Manaburn",
+    "PROPER_NAME": "Quemadura de Maná",
     "NAMES": [
-      "manaburn"
+      "manaburn",
+      "quemadura de maná"
     ],
-    "DESCRIPTION": "Whenever you lose [E] , even if you had none to lose, loses HP equal to its #yManaburn [REMOVE_SPACE]. (Does not include [E] spent playing cards.)"
+    "DESCRIPTION": "Cuando pierdes [E] , incluso si no tienes para perder, pierdes HP igual a tú #yQuemadura de Maná [REMOVE_SPACE]. (No incluye [E] gastado al jugar cartas.)"
   },
   {
     "PROPER_NAME": "Curiosidad",
@@ -62,6 +64,6 @@
       "curiosity",
       "curiosidad"
     ],
-    "DESCRIPTION": "Whenever you play a #yPower card, gain #b1 #yStrength [REMOVE_SPACE]."
+    "DESCRIPTION": "Siempre que juegues una carta de #yPoder, gana #b1 #yFuerza [REMOVE_SPACE]."
   }
 ]

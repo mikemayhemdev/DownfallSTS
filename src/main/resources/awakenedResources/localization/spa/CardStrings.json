@@ -26,7 +26,7 @@
   },
   "awakened:Strike": {
     "NAME": "Golpe",
-    "DESCRIPTION": "Haz !D! daño."
+    "DESCRIPTION": "Haz !D! de daño."
   },
   "awakened:Defend": {
     "NAME": "Defender",
@@ -102,7 +102,7 @@
   },
   "awakened:ClarionCall": {
     "NAME": "Llamado Clarion",
-    "DESCRIPTION": "Haz !D! de daño. NL La próxima vez que seas awakened:Drained, gana [E]."
+    "DESCRIPTION": "Haz !D! de daño. NL La próxima vez que seas awakened:Drenado, gana [E]."
   },
   "awakened:Recitation": {
     "NAME": "Recitación",
@@ -223,7 +223,7 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "Cae la Oscuridad",
-    "DESCRIPTION": "Siempre que estés awakened:Drained, gana !M! Bloqueo y !awakened:m2! Fuerza."
+    "DESCRIPTION": "Siempre que estés awakened:Drenado, gana !M! Bloqueo y !awakened:m2! Fuerza."
   },
   "awakened:Eventide": {
     "NAME": "Anochecer",
@@ -310,7 +310,7 @@
   },
   "awakened:Caw": {
     "NAME": "Graznar",
-    "DESCRIPTION": "Haz !D! de daño. NL awakened:Chant: Aumenta el daño de todas las cartas *Caw en !M! este combate."
+    "DESCRIPTION": "Haz !D! de daño. NL awakened:Chant: Aumenta el daño de todas las cartas *Graznar en !M! este combate."
   },
   "awakened:Scour": {
     "NAME": "Desgarrar",
