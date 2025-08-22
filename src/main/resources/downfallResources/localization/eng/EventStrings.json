@@ -622,10 +622,11 @@
       "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rAged.",
       "[Desecrate] #gRemove #g2 #gcards. #rLose #r",
       " #rMax #rHP.",
-      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rFlawed.",
+      "[Desecrate] #gTransform #g2 #gcards. #rLose #r",
       "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rPain.",
-      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rAged.",
-      "[Locked] - Not enough cards to Transform."
+      " #rHP.",
+      "[Locked] - Not enough cards."
+
     ]
   }
 }

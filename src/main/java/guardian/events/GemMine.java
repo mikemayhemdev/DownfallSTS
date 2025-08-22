@@ -146,8 +146,8 @@ public class GemMine extends AbstractImageEvent {
                         AbstractDungeon.player.damage(new DamageInfo(null, this.damage));
 
                         AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
-
-                        AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
+                        if (!AbstractDungeon.combatRewardScreen.rewards.isEmpty())
+                            AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
 
                         this.damageTaken += damage;
                         this.tookGems = true;

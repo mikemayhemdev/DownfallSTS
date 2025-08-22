@@ -1,7 +1,7 @@
 
 package downfall.events.shrines_evil;
-
-import downfall.cards.curses.Malfunctioning;
+import com.badlogic.gdx.math.MathUtils;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.events.AbstractImageEvent;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
+import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -33,6 +34,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
     private boolean cardsSelected = false;
     private int cardCount;
+    private int lifeCost;
 
 
     public TransmogrifierEvil() {
@@ -40,29 +42,18 @@ public class TransmogrifierEvil extends AbstractImageEvent {
         DESCRIPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").DESCRIPTIONS;
         OPTIONSALT = CardCrawlGame.languagePack.getEventString("downfall:EvilShrines").OPTIONS;
 
-        CardGroup tmp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        Iterator var2 = AbstractDungeon.player.masterDeck.getPurgeableCards().group.iterator();
-
-        while(var2.hasNext()) {
-            AbstractCard card = (AbstractCard)var2.next();
-            tmp.addToTop(card);
-        }
-
-        if (tmp.size() >= 3) {
-            if (AbstractDungeon.ascensionLevel < 15) {
-                this.imageEventText.setDialogOption(OPTIONSALT[3], new Malfunctioning());
-            } else {
-                this.imageEventText.setDialogOption(OPTIONSALT[5], new Aged());
-            }
+        if (AbstractDungeon.ascensionLevel >= 15){
+            lifeCost = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.15F);
         } else {
-            this.imageEventText.setDialogOption(OPTIONSALT[6], true);
+            lifeCost = MathUtils.ceil((float) AbstractDungeon.player.maxHealth * 0.10F);
         }
 
-        if (tmp.size() >= 1) {
-            this.imageEventText.setDialogOption(OPTIONS[0]);
+        if (AbstractDungeon.player.masterDeck.getPurgeableCards().size() >= 2) {
+            this.imageEventText.setDialogOption(OPTIONSALT[3] + lifeCost + OPTIONSALT[5]);
         } else {
-            this.imageEventText.setDialogOption(OPTIONSALT[6], true);
+            this.imageEventText.setDialogOption(OPTIONS[6], true);
         }
+        this.imageEventText.setDialogOption(OPTIONS[0]);
         this.imageEventText.setDialogOption(OPTIONS[1]);
 
     }
@@ -77,30 +68,34 @@ public class TransmogrifierEvil extends AbstractImageEvent {
 
         super.update();
             if (cardCount == 1){
+
+              //  SlimeboundMod.logger.info("hit the card count 1 section");
                 if (!AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                     AbstractCard c = (AbstractCard)AbstractDungeon.gridSelectScreen.selectedCards.get(0);
                     AbstractDungeon.player.masterDeck.removeCard(c);
                     AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
                     AbstractCard transCard = AbstractDungeon.getTransformedCard();
+                    AbstractDungeon.player.damage(new DamageInfo(null, this.lifeCost));
                     logMetricTransformCard("Transmorgrifier", "Transformed", c, transCard);
-                    AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(transCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT / 2.0F));
+                    AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(transCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT * .66F));
                     AbstractDungeon.gridSelectScreen.selectedCards.clear();
                 }
             }
-            else if (AbstractDungeon.gridSelectScreen.selectedCards.size() == cardCount && !this.cardsSelected) {
+            else if (AbstractDungeon.gridSelectScreen.selectedCards.size() == cardCount && !this.cardsSelected && cardCount > 0) {
+             //   SlimeboundMod.logger.info("hit the card count more than 1 section");
                 this.cardsSelected = true;
                 float displayCount = 0.0F;
-                Iterator<AbstractCard> i = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
-                List<String> transformedCards = new ArrayList<>();
-                while (i.hasNext()) {
-                    AbstractCard card = (AbstractCard) i.next();
+              //  SlimeboundMod.logger.info("selected cards size:" + AbstractDungeon.gridSelectScreen.selectedCards.size());
+                for (AbstractCard card: AbstractDungeon.gridSelectScreen.selectedCards){
+
+              //      SlimeboundMod.logger.info(card.name);
                     card.untip();
                     card.unhover();
-                    transformedCards.add(card.cardID);
                     AbstractDungeon.player.masterDeck.removeCard(card);
                     AbstractDungeon.transformCard(card, false, AbstractDungeon.miscRng);
                     AbstractCard c = AbstractDungeon.getTransformedCard();
+                    SlimeboundMod.logger.info(c.name);
                     obtainedCards.add(c.cardID);
                     if (AbstractDungeon.screen != AbstractDungeon.CurrentScreen.TRANSFORM) {
                         AbstractDungeon.topLevelEffectsQueue.add(new ShowCardAndObtainEffect(c.makeCopy(), (float) Settings.WIDTH / 3.0F + displayCount, (float) Settings.HEIGHT / 2.0F, false));
@@ -108,9 +103,8 @@ public class TransmogrifierEvil extends AbstractImageEvent {
                     }
                 }
 
-               // this.screen = CUR_SCREEN.COMPLETE;
+
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
-                logMetricTransformCards(ID, "Became Test Subject", transformedCards, obtainedCards);
                 AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
             }
     }
@@ -124,7 +118,7 @@ public class TransmogrifierEvil extends AbstractImageEvent {
                 switch (buttonPressed) {
 
                     case 0:
-                        cardCount = 3;
+                        cardCount = 2;
                         obtainedCards.clear();
 
                         this.screen = CUR_SCREEN.COMPLETE;

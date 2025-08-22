@@ -56,10 +56,13 @@ public class NeowBossSelector {
 
         ArrayList<String> results = new ArrayList<>();
         ArrayList<String> bosses = new ArrayList<>();
+        /*
         SlimeboundMod.logger.info("Bosses! " + downfallMod.Act1BossFaced + " " + validClass(downfallMod.Act1BossFaced) +
                 downfallMod.Act2BossFaced + " " + validClass(downfallMod.Act2BossFaced) +
                 downfallMod.Act3BossFaced + " " + validClass(downfallMod.Act3BossFaced));
+          */
         if (validClass(downfallMod.Act1BossFaced) && validClass(downfallMod.Act2BossFaced) && validClass(downfallMod.Act3BossFaced)) {
+
 
 
             results.add(charbossToGauntlet(downfallMod.Act1BossFaced));
