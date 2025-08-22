@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Provocación",
-    "DESCRIPTION": "Aplica !M! de Débil y 1 de Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Aplica 1 de Débil y 1 de Vulnerable a TODOS los enemigos."
+    "DESCRIPTION": "Aplica !M! Débil y 1 Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Aplica 1 Débil y 1 Vulnerable a TODOS los enemigos."
   },
   "champ:Execute": {
     "NAME": "Ejecutar",
@@ -37,7 +37,7 @@
   },
   "champ:FaceSlap": {
     "NAME": "Bofetón",
-    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Berserker: Aplica !M! de Vulnerable."
+    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Berserker: Aplica !M! Vulnerable."
   },
   "champ:FlashCut": {
     "NAME": "Golpe Relámpago",
@@ -61,7 +61,7 @@
   },
   "champ:SetATrap": {
     "NAME": "Poner una Trampa",
-    "DESCRIPTION": "Gana !B! de Bloqueo. NL champ:Combo *Defensivo: Aplica !M! de Débil a TODOS los enemigos."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL champ:Combo *Defensivo: Aplica !M! Débil a TODOS los enemigos."
   },
   "champ:Backstep": {
     "NAME": "Paso Atrás",
@@ -148,11 +148,11 @@
   },
   "champ:Haymaker": {
     "NAME": "Golpe Demoledor",
-    "DESCRIPTION": "Haz !D! de daño. NL Aplica 2 de Vulnerable. NL Aplica 2 de Débil."
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica 2 Vulnerable. NL Aplica 2 Débil."
   },
   "champ:ViciousMockery": {
     "NAME": "Burlas Crueles",
-    "DESCRIPTION": "Gana !M! de Vigor. NL Aplica !DM! de Débil. NL Activa el champ:Bono de tu Postura.",
+    "DESCRIPTION": "Gana !M! de Vigor. NL Aplica !DM! Débil. NL Activa el champ:Bono de tu Postura.",
     "EXTENDED_DESCRIPTION": [
       "champ:Combo *Berserker: Gana !M! de Fuerza temporal. NL ",
       "champ:Combo *Defensivo: Gana !M! de Destreza temporal."
@@ -181,7 +181,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "Lanzamiento de Espada",
-    "DESCRIPTION": "Haz !D! de daño !M! veces. NL Gana 2 de Débil. NL champ:Combo *Berserker: No ganas Débil."
+    "DESCRIPTION": "Haz !D! de daño !M! veces. NL Gana 2 Débil. NL champ:Combo *Berserker: No ganas Débil."
   },
   "champ:MurderStrike": {
     "NAME": "Golpe Asesino",
@@ -202,7 +202,7 @@
   },
   "champ:Shatter": {
     "NAME": "Quebrar",
-    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Cualquier *Postura: Aplica !M! de Débil y Vulnerable."
+    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Cualquier *Postura: Aplica !M! Débil y Vulnerable."
   },
   "champ:EnragedBash": {
     "NAME": "Embate Enfurecido",

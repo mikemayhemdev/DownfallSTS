@@ -90,7 +90,7 @@
   },
   "Slimebound:GoopSpray": {
     "NAME": "Rociada de Baba",
-    "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba y !M! de Débil a TODOS los enemigos."
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba y !M! Débil a TODOS los enemigos."
   },
   "Slimebound:GoopTackle": {
     "NAME": "Embestida Encadenada",
@@ -107,8 +107,8 @@
   },
   "Slimebound:HauntingLick": {
     "NAME": "Lamida Fantasmal",
-    "DESCRIPTION": "Aplica !M! de Vulnerable y !slime! slimeboundmod:Baba. NL Agota.",
-    "UPGRADE_DESCRIPTION": "Aplica !M! de Vulnerable y !slime! slimeboundmod:Baba. NL Roba una carta. NL Agota."
+    "DESCRIPTION": "Aplica !M! Vulnerable y !slime! slimeboundmod:Baba. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! Vulnerable y !slime! slimeboundmod:Baba. NL Roba una carta. NL Agota."
   },
   "Slimebound:HungryTackle": {
     "NAME": "Embestida Hambrienta",
@@ -146,7 +146,7 @@
   "Slimebound:Lick": {
     "NAME": "Lamida",
     "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba. NL Agota - slimeboundmod:Enterrada.",
-    "UPGRADE_DESCRIPTION": "Aplica !M! de Débil y !slime! slimeboundmod:Baba. NL Roba una carta. NL Agota - slimeboundmod:Enterrada."
+    "UPGRADE_DESCRIPTION": "Aplica !M! Débil y !slime! slimeboundmod:Baba. NL Roba una carta. NL Agota - slimeboundmod:Enterrada."
   },
   "Slimebound:LivingWall": {
     "NAME": "Muro Vivo",
@@ -163,8 +163,8 @@
   },
   "Slimebound:MegaLick": {
     "NAME": "Mega-Lamida",
-    "DESCRIPTION": "Aplica !M! de Débil y !slime! slimeboundmod:Baba a TODOS los enemigos. NL Agota.",
-    "UPGRADE_DESCRIPTION": "Aplica !M! de Débil y !slime! slimeboundmod:Baba a TODOS los enemigos. NL Roba una carta. NL Agota."
+    "DESCRIPTION": "Aplica !M! Débil y !slime! slimeboundmod:Baba a TODOS los enemigos. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! Débil y !slime! slimeboundmod:Baba a TODOS los enemigos. NL Roba una carta. NL Agota."
   },
   "Slimebound:MinionMaster": {
     "NAME": "Amo de los Esbirros",

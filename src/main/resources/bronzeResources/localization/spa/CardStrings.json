@@ -191,7 +191,7 @@
   },
   "bronze:Deprecate": {
     "NAME": "Obsoleto",
-    "DESCRIPTION": "Aplica !M! de Débil.",
+    "DESCRIPTION": "Aplica !M! Débil.",
     "EXTENDED_DESCRIPTION": [
       "antiguo",
       "Insulto"
@@ -318,7 +318,7 @@
   },
   "bronze:Invalidate": {
     "NAME": "Invalidar",
-    "DESCRIPTION": "Aplica !M! de Vulnerable.",
+    "DESCRIPTION": "Aplica !M! Vulnerable.",
     "EXTENDED_DESCRIPTION": [
       "inválido",
       "Error"
@@ -646,11 +646,11 @@
   },
   "bronze:GrievousWound": {
     "NAME": "Herida Grave",
-    "DESCRIPTION": "Aplica !M! de Vulnerable."
+    "DESCRIPTION": "Aplica !M! Vulnerable."
   },
   "bronze:Daze": {
     "NAME": "Aturdido",
-    "DESCRIPTION": "Etérea. NL Aplica !M! de Débil. NL Agota."
+    "DESCRIPTION": "Etérea. NL Aplica !M! Débil. NL Agota."
   },
   "bronze:UnknownStatus": {
     "NAME": "Confusión",

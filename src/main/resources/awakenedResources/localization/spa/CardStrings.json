@@ -5,15 +5,15 @@
   },
   "awakened:BurningStudy": {
     "NAME": "Estudio Ardiente",
-    "DESCRIPTION": "Retener. NL Gana !M! de Fuerza. NL Aplica !awakened:m2! de Débil a TODOS los enemigos."
+    "DESCRIPTION": "Retener. NL Gana !M! de Fuerza. NL Aplica !awakened:m2! Débil a TODOS los enemigos."
   },
   "awakened:Cryostasis": {
     "NAME": "Criostasis",
-    "DESCRIPTION": "Retener. NL Gana !B! Bloqueo. NL Agotar."
+    "DESCRIPTION": "Retener. NL Gana !B! de Bloqueo. NL Agotar."
   },
   "awakened:Darkleech": {
     "NAME": "Sanguijuela Oscura",
-    "DESCRIPTION": "Retener. NL Aplica !M! Vulnerabilidad. NL Aplica !awakened:m2! awakened:Manaburn. NL Agotar."
+    "DESCRIPTION": "Retener. NL Aplica !M! Vulnerable. NL Aplica !awakened:m2! awakened:Manaburn. NL Agotar."
   },
   "awakened:DeathCoil": {
     "NAME": "Espiral de Muerte",
@@ -30,7 +30,7 @@
   },
   "awakened:Defend": {
     "NAME": "Defender",
-    "DESCRIPTION": "Gana !B! Bloqueo."
+    "DESCRIPTION": "Gana !B! de Bloqueo."
   },
   "awakened:Brainshock": {
     "NAME": "Shock Cerebral",
@@ -64,29 +64,29 @@
   },
   "awakened:Hymn": {
     "NAME": "Himno",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Gana un *Ceremonia. NL El próximo turno, pierdes [E].",
-    "UPGRADE_DESCRIPTION": "Gana !B! Bloqueo. NL Gana un *Ceremonia+. NL El próximo turno, pierdes [E]."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Gana una *Ceremonia. NL El próximo turno, pierdes [E].",
+    "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo. NL Gana una *Ceremonia+. NL El próximo turno, pierdes [E]."
   },
   "awakened:Psalm": {
     "NAME": "Salmo",
-    "DESCRIPTION": "Haz !D! de daño y aplica !M! de Débil a TODOS los enemigos."
+    "DESCRIPTION": "Haz !D! de daño y aplica !M! Débil a TODOS los enemigos."
   },
   "awakened:DemonGlyph": {
     "NAME": "Glifo Demoníaco",
-    "DESCRIPTION": "Gana !M! Fuerza y Destreza. NL Cuando *Despiertas, gana !awakened:m2! más."
+    "DESCRIPTION": "Gana !M! de Fuerza y Destreza. NL Cuando *Despiertas, gana !awakened:m2! más."
   },
   "awakened:TakeFlight": {
     "NAME": "Despegar",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL awakened:Canto: El Bloqueo no se elimina al comienzo de tu próximo turno."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL awakened:Canto: El Bloqueo no se elimina al comienzo de tu próximo turno."
   },
   "awakened:FeatherVeil": {
     "NAME": "Velo de Plumas",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Pierde !M! Fuerza."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Pierde !M! de Fuerza."
   },
   "awakened:Peck": {
     "NAME": "Picoteo",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Haz !D! de daño. NL Roba !M! carta.",
-    "UPGRADE_DESCRIPTION": "Gana !B! Bloqueo. NL Haz !D! de daño. NL Roba !M! cartas."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Haz !D! de daño. NL Roba !M! carta.",
+    "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo. NL Haz !D! de daño. NL Roba !M! cartas."
   },
   "awakened:Extension": {
     "NAME": "Extensión",
@@ -110,7 +110,7 @@
   },
   "awakened:ChosenVerse": {
     "NAME": "Verso Elegido",
-    "DESCRIPTION": "Las próximas !M! cartas que juegues esta turno que no sean Ataque, roba una carta y gana !B! Bloqueo."
+    "DESCRIPTION": "Las próximas !M! cartas que juegues esta turno que no sean Ataque, roba una carta y gana !B! de Bloqueo."
   },
   "awakened:SoulStrike": {
     "NAME": "Golpe del Alma",
@@ -118,11 +118,11 @@
   },
   "awakened:Altar": {
     "NAME": "Altar",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Agota una carta. NL awakened:Conjurar."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Agota una carta. NL awakened:Conjurar."
   },
   "awakened:Envision": {
     "NAME": "Visualizar",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL awakened:Conjurar y coloca el Hechizo en la parte superior de tu pila de robo."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL awakened:Conjurar y coloca el Hechizo en la parte superior de tu pila de robo."
   },
   "awakened:Thaumaturgy": {
     "NAME": "Taumaturgia",
@@ -131,7 +131,7 @@
   },
   "awakened:WaveOfMiasma": {
     "NAME": "Ola de Miasma",
-    "DESCRIPTION": "Aplica !M! de Débil y !awakened:m2! awakened:Manaburn a TODOS los enemigos. NL Agota."
+    "DESCRIPTION": "Aplica !M! Débil y !awakened:m2! awakened:Manaburn a TODOS los enemigos. NL Agota."
   },
   "awakened:SludgeBomb": {
     "NAME": "Bomba de Lodo",
@@ -170,20 +170,20 @@
   },
   "awakened:Initiation": {
     "NAME": "Iniciación",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Gana un *Ceremonia.",
-    "UPGRADE_DESCRIPTION": "Gana !B! Bloqueo. NL Gana un *Ceremonia+."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Gana un *Ceremonia.",
+    "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo. NL Gana un *Ceremonia+."
   },
   "awakened:Ensorcelate": {
     "NAME": "Ensorcelar",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL El próximo Poder que juegues cuesta 0."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL El próximo Poder que juegues cuesta 0."
   },
   "awakened:Skyward": {
     "NAME": "Vara Celestial",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Roba !M! cartas. NL Cuesta 1 [E] menos por cada Poder jugado en este combate."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Roba !M! cartas. NL Cuesta 1 [E] menos por cada Poder jugado en este combate."
   },
   "awakened:RisingChant": {
     "NAME": "Coro Ascendente",
-    "DESCRIPTION": "Cada vez que juegues una carta de awakened:Canto activada, gana !M! Fuerza."
+    "DESCRIPTION": "Cada vez que juegues una carta de awakened:Canto activada, gana !M! de Fuerza."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Remolino de Plumas",
@@ -239,7 +239,7 @@
   },
   "awakened:Gloomguard": {
     "NAME": "Guardia de las Tinieblas",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Por cada Vacío en la mano, agótalo y gana [E] ."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Por cada Vacío en la mano, agótalo y gana [E] ."
   },
   "awakened:Carrionmaker": {
     "NAME": "Hacedor de Carroña",
@@ -252,11 +252,11 @@
   },
   "awakened:MirePit": {
     "NAME": "Foso de Pantano",
-    "DESCRIPTION": "TODOS los enemigos pierden !M! Fuerza este turno. NL El próximo turno, pierde [E]. NL Agota."
+    "DESCRIPTION": "TODOS los enemigos pierden !M! de Fuerza este turno. NL El próximo turno, pierde [E]. NL Agota."
   },
   "awakened:SingularityShield": {
     "NAME": "Escudo de Singularidad",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL El próximo turno, gana !B! Bloqueo y pierde [E]."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL El próximo turno, gana !B! de Bloqueo y pierde [E]."
   },
   "awakened:Dejection": {
     "NAME": "Repulsión",
@@ -286,7 +286,7 @@
   },
   "awakened:Gather": {
     "NAME": "Recolectar",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL awakened:Canto: Pon una carta de tu pila de descarte en tu mano."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL awakened:Canto: Pon una carta de tu pila de descarte en tu mano."
   },
   "awakened:TheTower": {
     "NAME": "La Torre",
@@ -294,15 +294,15 @@
   },
   "awakened:ArcaneNesting": {
     "NAME": "Nidificación Arcana",
-    "DESCRIPTION": "Injugable. NL Siempre que juegues un Poder mientras esto está en mano, gana !B! Bloqueo.",
+    "DESCRIPTION": "Injugable. NL Siempre que juegues un Poder mientras esto está en mano, gana !B! de Bloqueo.",
     "EXTENDED_DESCRIPTION": [
       "Debo jugar Poderes para ganar Bloqueo de esto."
     ]
   },
   "awakened:MiddenHeap": {
     "NAME": "Montón de Desechos",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Pon !M! cartas de Estado o Maldición de tu pila de robo o descarte en tu mano.",
-    "UPGRADE_DESCRIPTION": "Gana !B! Bloqueo. NL Pon !M! cartas de Estado o Maldición de tu pila de robo o descarte en tu mano.",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Pon !M! cartas de Estado o Maldición de tu pila de robo o descarte en tu mano.",
+    "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo. NL Pon !M! cartas de Estado o Maldición de tu pila de robo o descarte en tu mano.",
     "EXTENDED_DESCRIPTION": [
       "Selecciona una carta para mover a tu mano.",
       "Selecciona cartas para mover a tu mano."
@@ -347,7 +347,7 @@
   },
   "awakened:Siphon": {
     "NAME": "Sifón",
-    "DESCRIPTION": "Haz !D! de daño. NL awakened:Canto: gremlin:Roba !M! Fuerza este turno."
+    "DESCRIPTION": "Haz !D! de daño. NL awakened:Canto: gremlin:Roba !M! de Fuerza este turno."
   },
   "awakened:PlumeJab": {
     "NAME": "Golpe de Pluma",
@@ -364,15 +364,15 @@
   },
   "awakened:PackRat": {
     "NAME": "Rata de Paquete",
-    "DESCRIPTION": "Haz !D! de daño y gana !B! Bloqueo dos veces. NL Obtén una poción aleatoria. NL Agotar."
+    "DESCRIPTION": "Haz !D! de daño y gana !B! de Bloqueo dos veces. NL Obtén una poción aleatoria. NL Agotar."
   },
   "awakened:Mantis": {
     "NAME": "Mantis",
-    "DESCRIPTION": "Gana !M! Fuerza. NL Añade un *Golpe *de *Pluma a tu mano."
+    "DESCRIPTION": "Gana !M! de Fuerza. NL Añade un *Golpe *de *Pluma a tu mano."
   },
   "awakened:ManaShield": {
     "NAME": "Escudo de Maná",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL awakened:Conjure. NL Reduce el coste de un hechizo aleatorio en mano en 1."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL awakened:Conjure. NL Reduce el coste de un hechizo aleatorio en mano en 1."
   },
   "awakened:Crusher": {
     "NAME": "Triturador",

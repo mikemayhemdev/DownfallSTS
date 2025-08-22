@@ -1,7 +1,7 @@
 {
   "collector:ActOfAggression": {
     "NAME": "Acto de Agresión",
-    "DESCRIPTION": "Gana !B! de Bloqueo. NL Aplica !M! de Vulnerable a TODOS los enemigos."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Aplica !M! Vulnerable a TODOS los enemigos."
   },
   "collector:AlwaysMore": {
     "NAME": "Siempre Más",
@@ -34,7 +34,7 @@
   },
   "collector:BlackBindings": {
     "NAME": "Ataduras Negras",
-    "DESCRIPTION": "Aplica !M! de Débil, aplica !clm2! de collector:Condena por cada desventaja distinto en el enemigo."
+    "DESCRIPTION": "Aplica !M! Débil, aplica !clm2! de collector:Condena por cada desventaja distinto en el enemigo."
   },
   "collector:Blightning": {
     "NAME": "Relámpago Marchito",
@@ -70,7 +70,7 @@
   },
   "collector:Condemn": {
     "NAME": "Condenar",
-    "DESCRIPTION": "Aplica !M! de Vulnerable. NL Aplica !clm2! de collector:Condena."
+    "DESCRIPTION": "Aplica !M! Vulnerable. NL Aplica !clm2! de collector:Condena."
   },
   "collector:CursedWail": {
     "NAME": "Lamento Maldito",
@@ -210,7 +210,7 @@
   },
   "collector:InflictAgony": {
     "NAME": "Infligir Agonía",
-    "DESCRIPTION": "Haz !D! de daño. NL Si el enemigo no está collector:Afligido, aplica 2 de Débil y Vulnerable."
+    "DESCRIPTION": "Haz !D! de daño. NL Si el enemigo no está collector:Afligido, aplica 2 Débil y Vulnerable."
   },
   "collector:Invigorate": {
     "NAME": "Destello",
@@ -251,8 +251,8 @@
   },
   "collector:MiniCurse": {
     "NAME": "Mini-Maldición",
-    "DESCRIPTION": "collector:Pira. NL Aplica 1 de Débil y Vulnerable.",
-    "UPGRADE_DESCRIPTION": "collector:Pira. NL Aplica 1 de Débil y Vulnerable a TODOS los enemigos."
+    "DESCRIPTION": "collector:Pira. NL Aplica 1 Débil y Vulnerable.",
+    "UPGRADE_DESCRIPTION": "collector:Pira. NL Aplica 1 Débil y Vulnerable a TODOS los enemigos."
   },
   "collector:Misdirect": {
     "NAME": "Desviar",
@@ -296,7 +296,7 @@
   },
   "collector:RotwoodKindling": {
     "NAME": "Astilla de Madera Podrida",
-    "DESCRIPTION": "Injugable. NL Al *Agotarse, aplica !M! de Vulnerable y !clm2! de collector:Condena a TODOS los enemigos.",
+    "DESCRIPTION": "Injugable. NL Al *Agotarse, aplica !M! Vulnerable y !clm2! de collector:Condena a TODOS los enemigos.",
     "EXTENDED_DESCRIPTION": ["Debo encender esta astilla para usarla."]
   },
   "collector:SapStrength": {
@@ -348,7 +348,7 @@
   },
   "collector:SuckerPunch": {
     "NAME": "Golpe Bajo",
-    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! de Débil."
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! Débil."
   },
   "collector:Suffering": {
     "NAME": "Sufrimiento",
@@ -382,7 +382,7 @@
   },
   "collector:YouAreMine": {
     "NAME": "¡Eres Mío!",
-    "DESCRIPTION": "Aplica !M! de Débil. NL Aplica !M! de Vulnerable. Aplica !clm2! de collector:Condena."
+    "DESCRIPTION": "Aplica !M! Débil. NL Aplica !M! Vulnerable. Aplica !clm2! de collector:Condena."
   },
   "collector:Whomp": {
     "NAME": "Sopapo",
@@ -403,7 +403,7 @@
   },
   "collector:BlueSlaverCard": {
     "NAME": "Esclavista Azul",
-    "DESCRIPTION": "Haz !D! de daño. NL Aplica 1 de Débil. NL Duplica la Débil del enemigo."
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica 1 Débil. NL Duplica la Débil del enemigo."
   },
   "collector:BonfireSpiritsCard": {
     "NAME": "Espíritus de la Hoguera",
@@ -427,7 +427,7 @@
   },
   "collector:ChosenCard": {
     "NAME": "Elegido",
-    "DESCRIPTION": "Aplica !M! de Débil. NL Si el enemigo no piensa atacar, aplica !clm2! de Vulnerable."
+    "DESCRIPTION": "Aplica !M! Débil. NL Si el enemigo no piensa atacar, aplica !clm2! Vulnerable."
   },
   "collector:ClericCard": {
     "NAME": "Clérigo",
@@ -462,11 +462,11 @@
   },
   "collector:FatGremlinCard": {
     "NAME": "Gremlin Obeso",
-    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! de Débil."
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! Débil."
   },
   "collector:FungiBeastCard": {
     "NAME": "Bestia Hongo",
-    "DESCRIPTION": "Aplica !M! de Vulnerable. NL Aplica 1 de Vulnerable a TODOS los enemigos."
+    "DESCRIPTION": "Aplica !M! Vulnerable. NL Aplica 1 Vulnerable a TODOS los enemigos."
   },
   "collector:GiantHeadCardStageOne": {
     "NAME": "Tic",
@@ -526,7 +526,7 @@
   },
   "collector:MushroomCard": {
     "NAME": "Hongo",
-    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! de Débil o Vulnerable al azar."
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! Débil o Vulnerable al azar."
   },
   "collector:MysticCard": {
     "NAME": "Místico",
@@ -575,7 +575,7 @@
   },
   "collector:SentryCard": {
     "NAME": "Centinela",
-    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! de Débil. NL Repite si hay un *Centinela en tu pila de agotadas."
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! Débil. NL Repite si hay un *Centinela en tu pila de agotadas."
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Parásito con Caparazón",
@@ -663,7 +663,7 @@
   },
   "collector:CollectorCard": {
     "NAME": "Ouroboros",
-    "DESCRIPTION": "collector:Pira. NL Aplica !M! de Débil. NL Aplica !M! de Vulnerable. NL Gana !clm2! de expansioncontent:PV_Temp."
+    "DESCRIPTION": "collector:Pira. NL Aplica !M! Débil. NL Aplica !M! Vulnerable. NL Gana !clm2! de expansioncontent:PV_Temp."
   },
   "collector:Sapped": {
     "NAME": "Agotado",

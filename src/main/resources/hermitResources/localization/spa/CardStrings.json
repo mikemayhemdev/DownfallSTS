@@ -25,7 +25,7 @@
   },
   "hermit:WideOpen": {
     "NAME": "A Quemarropa",
-    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! de Vulnerable."
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! Vulnerable."
   },
   "hermit:Covet": {
     "NAME": "Codicia",
@@ -91,7 +91,7 @@
   },
   "hermit:GhostlyPresence": {
     "NAME": "Presencia Fantasmal",
-    "DESCRIPTION": "Gana !B! de Bloqueo. NL hermit:Preciso: NL Aplica !M! de Débil a TODOS los enemigos."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL hermit:Preciso: NL Aplica !M! Débil a TODOS los enemigos."
   },
   "hermit:Adapt": {
     "NAME": "Adaptarse",
@@ -116,8 +116,8 @@
   },
   "hermit:Glare": {
     "NAME": "Mirada Penetrante",
-    "DESCRIPTION": "Aplica !M! de Débil y Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Retiene. NL Aplica !M! de Débil y Vulnerable."
+    "DESCRIPTION": "Aplica !M! Débil y Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Retiene. NL Aplica !M! Débil y Vulnerable."
   },
   "hermit:TakeCover": {
     "NAME": "Cubrirse",
@@ -218,7 +218,7 @@
   },
   "hermit:Gestalt": {
     "NAME": "Gestalt",
-    "DESCRIPTION": "Gana 2 hermit:Resistente. NL Gana !M! de Vulnerable. NL Agota."
+    "DESCRIPTION": "Gana 2 hermit:Resistente. NL Gana !M! Vulnerable. NL Agota."
   },
   "hermit:RoundhouseKick": {
     "NAME": "Patada Circular",
@@ -281,7 +281,7 @@
   },
   "hermit:Coalescence": {
     "NAME": "Coalescencia",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Retiene hasta !M! cartas este turno."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Retiene hasta !M! cartas este turno."
   },
   "hermit:PistolWhip": {
     "NAME": "Culatazo",
@@ -301,7 +301,7 @@
   },
   "hermit:HoleUp": {
     "NAME": "Esconderse",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Gana !M! de Débil."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Gana !M! Débil."
   },
   "hermit:ItchyTrigger": {
     "NAME": "Gatillo Fácil",

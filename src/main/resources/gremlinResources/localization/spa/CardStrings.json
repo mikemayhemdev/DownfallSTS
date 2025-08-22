@@ -23,7 +23,7 @@
   },
   "Gremlin:BrokenShin": {
     "NAME": "Espinilla Rota",
-    "DESCRIPTION": "Aplica gremlin:Agonía por cada !M! acumulación de Débil que tenga el objetivo. NL Agota."
+    "DESCRIPTION": "Aplica gremlin:Agonía por cada !M! acumulación Débil que tenga el objetivo. NL Agota."
   },
   "Gremlin:BubbleBarrier": {
     "NAME": "Barrera de Burbujas",
@@ -35,7 +35,7 @@
   },
   "Gremlin:BurlyBlow": {
     "NAME": "Golpe Fornido",
-    "DESCRIPTION": "Haz !D! de daño. NL Repite por cada acumulación de Débil."
+    "DESCRIPTION": "Haz !D! de daño. NL Repite por cada acumulación Débil."
   },
   "Gremlin:CatScratch": {
     "NAME": "Arañazo Gatuno",
