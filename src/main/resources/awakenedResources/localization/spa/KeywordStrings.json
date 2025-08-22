@@ -1,20 +1,26 @@
 [
   {
-    "PROPER_NAME": "Power Potion",
+    "PROPER_NAME": "Poción de Poder",
     "NAMES": [
       "Power Potion",
       "Power_Potion",
       "power_potion",
-      "powerpotion"
+      "powerpotion",
+      "poción de poder"
     ],
     "DESCRIPTION": "#yPotion [REMOVE_SPACE]: Choose #b1 of #b3 random #yPower cards to add to your hand, it costs #b0 this turn."
   },
   {
-    "PROPER_NAME": "Conjure",
+    "PROPER_NAME": "Conjuro",
     "NAMES": [
       "conjure",
       "conjured",
-      "awaken"
+      "awaken",
+      "despertar",
+      "despierta",
+      "conjuro",
+      "conjura",
+      "conjurar"
     ],
     "DESCRIPTION": "Create the next card from your Spellbook in your hand."
   },
@@ -35,10 +41,11 @@
     "DESCRIPTION": "Creatures with #yHex take #b20% more damage from the next Attack for each stack. #yHex is removed all at once after being attacked."
   },
   {
-    "PROPER_NAME": "Drained",
+    "PROPER_NAME": "Drenado",
     "NAMES": [
       "drain",
-      "drained"
+      "drained",
+      "drenado"
     ],
     "DESCRIPTION": "Any effect that causes you to lose [E] , even if you had none to lose. (Does not include [E] spent playing cards.)"
   },
@@ -50,9 +57,10 @@
     "DESCRIPTION": "Whenever you lose [E] , even if you had none to lose, loses HP equal to its #yManaburn [REMOVE_SPACE]. (Does not include [E] spent playing cards.)"
   },
   {
-    "PROPER_NAME": "Curiosity",
+    "PROPER_NAME": "Curiosidad",
     "NAMES": [
-      "curiosity"
+      "curiosity",
+      "curiosidad"
     ],
     "DESCRIPTION": "Whenever you play a #yPower card, gain #b1 #yStrength [REMOVE_SPACE]."
   }

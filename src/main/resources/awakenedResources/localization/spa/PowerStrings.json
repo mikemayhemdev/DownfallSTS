@@ -1,237 +1,237 @@
 {
   "awakened:IntensifyPower": {
-    "NAME": "Intensify",
+    "NAME": "Intensificar",
     "DESCRIPTIONS": [
-      "This turn, all Spell cards cost #b0 [REMOVE_SPACE].",
-      "For the next #b",
-      " turns, all Spell cards cards cost #b0 [REMOVE_SPACE]."
+      "Este turno, todas las cartas de Hechizo cuestan #b0 [REMOVE_SPACE].",
+      "Por los próximos #b",
+      " turnos, todas las cartas de Hechizo cuestan #b0 [REMOVE_SPACE]."
     ]
   },
   "awakened:IntensifyDebuffPower": {
-    "NAME": "Burnout",
+    "NAME": "Agotar",
     "DESCRIPTIONS": [
-      "You cannot #yConjure for the rest of the turn.",
-      "You cannot #yConjure for the next #b",
-      " turns."
+      "No puedes #yConjurar por el resto del turno.",
+      "No puedes #yConjurar por los próximos #b",
+      " turnos."
     ]
   },
   "awakened:RisingChantPower": {
-    "NAME": "Rising Chorus",
+    "NAME": "Coro Ascendente",
     "DESCRIPTIONS": [
-      "Whenever you play an activated #yChant card, gain #b",
-      " #yStrength [REMOVE_SPACE]."
+      "Cada vez que juegues una carta de #yCántico activada, gana #b",
+      " #yFuerza [REMOVE_SPACE]."
     ]
   },
   "awakened:CursedStrength": {
-    "NAME": "Darkblessed",
+    "NAME": "Bendición Oscura",
     "DESCRIPTIONS": [
-      "Whenever you are #yDrained [REMOVE_SPACE], gain #b",
-      " #yStrength [REMOVE_SPACE]."
+      "Cada vez que seas #yDrenado [REMOVE_SPACE], gana #b",
+      " #yFuerza [REMOVE_SPACE]."
     ]
   },
   "awakened:ThaumaturgyPower": {
-    "NAME": "Thaumaturgy",
+    "NAME": "Taumaturgia",
     "DESCRIPTIONS": [
-      "At the start of your next #b",
-      " turns, gain a #yCeremony [REMOVE_SPACE]."
+      "Al comienzo de tus próximos #b",
+      " turnos, gana una #yCeremonia [REMOVE_SPACE]."
     ]
   },
   "awakened:SacramentPower": {
-    "NAME": "Sacraments",
+    "NAME": "Sacramentos",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower [REMOVE_SPACE], gain #b",
-      " #yBlock [REMOVE_SPACE]."
+      "Cada vez que juegues una carta de #yPoder [REMOVE_SPACE], gana #b",
+      " #yBloqueo [REMOVE_SPACE]."
     ]
   },
   "awakened:FlarePower": {
-    "NAME": "Feather Flare",
+    "NAME": "Destello de Plumas",
     "DESCRIPTIONS": [
-      "Whenever you play a #ynon-Attack card this turn, ALL enemies lose #b",
+      "Cada vez que juegues una carta #yno de Ataque en este turno, TODOS los enemigos pierden #b",
       " HP."
     ]
   },
   "awakened:PrimacyPower": {
-    "NAME": "Primacy",
+    "NAME": "Primacía",
     "DESCRIPTIONS": [
-      "The first time you gain #yStrength each turn, draw a card.",
-      "The first #b",
-      " times you gain #yStrength each turn, draw a card.",
-      " NL This effect can be triggered #b",
-      " more times this turn.",
-      " more time this turn.",
-      " NL This effect cannot be triggered again this turn."
+      "La primera vez que ganes #yFuerza cada turno, roba una carta.",
+      "Las primeras #b",
+      " veces que ganes #yFuerza cada turno, roba una carta.",
+      " NL Este efecto puede activarse #b",
+      " veces más este turno.",
+      " vez más este turno.",
+      " NL Este efecto no se puede activar de nuevo este turno."
     ]
   },
   "awakened:SpellbinderPower": {
-    "NAME": "Spellbinder",
+    "NAME": "Aglutinador de Hechizos",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yConjure [REMOVE_SPACE].",
-      "At the start of your turn, #yConjure #b",
-      " times."
+      "Al comienzo de tu turno, #yConjura [REMOVE_SPACE].",
+      "Al comienzo de tu turno, #yConjura #b",
+      " veces."
     ]
   },
   "awakened:DarkEchoPower": {
-    "NAME": "Dark Echo",
+    "NAME": "Eco Oscuro",
     "DESCRIPTIONS": [
-      "At the end of your turn, deal #b",
-      " damage to ALL enemies #b",
-      " times.",
-      " damage to ALL enemies."
+      "Al final de tu turno, inflige #b",
+      " daño a TODOS los enemigos #b",
+      " veces.",
+      " daño a TODOS los enemigos."
     ]
   },
   "awakened:MoonlitVisionPower": {
-    "NAME": "Moonlit Vision",
+    "NAME": "Visión de Luna",
     "DESCRIPTIONS": [
-      "The first #b",
-      " times you play a Spell each turn, gain [E] . #b",
-      " remaining this turn."
+      "Las primeras #b",
+      " veces que juegues un Hechizo cada turno, gana [E] . #b",
+      " restante este turno."
     ]
   },
   "awakened:EclipseEmbracePower": {
-    "NAME": "Eclipse Embrace",
+    "NAME": "Abrazo del Eclipse",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain [E] and draw a card next turn.",
-      "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain #b",
-      " [E] and draw #b",
-      " cards next turn."
+      "Cada vez que #yAgotes un #yVacio [REMOVE_SPACE], gana [E] y roba una carta el próximo turno.",
+      "Cada vez que #yAgotes un #yVacio [REMOVE_SPACE], gana #b",
+      " [E] y roba #b",
+      " cartas el próximo turno."
     ]
   },
   "awakened:SongOfSorrowPower": {
-    "NAME": "Song of Sorrow",
+    "NAME": "Canto de Pena",
     "DESCRIPTIONS": [
-      "Whenever you create a #yVoid [REMOVE_SPACE], ALL enemies lose #b",
+      "Cada vez que crees un #yVacio [REMOVE_SPACE], TODOS los enemigos pierden #b",
       " HP."
     ]
   },
   "awakened:ShroudOfMiasmaPower": {
-    "NAME": "Shroud of Miasma",
+    "NAME": "Velo de Miasma",
     "DESCRIPTIONS": [
-      "Whenever you attack an enemy with #yHex [REMOVE_SPACE], gain #b",
-      " #yBlock [REMOVE_SPACE]."
+      "Cada vez que ataques a un enemigo con #yHex [REMOVE_SPACE], gana #b",
+      " #yBloqueo [REMOVE_SPACE]."
     ]
   },
   "awakened:StrengthReturnPower": {
-    "NAME": "Split Wide",
+    "NAME": "Ruptura Total",
     "DESCRIPTIONS": [
-      "Whenever you attack this enemy, gain #b",
-      " temporary #yStrength [REMOVE_SPACE]."
+      "Cada vez que ataques a este enemigo, gana #b",
+      " #yFuerza temporal [REMOVE_SPACE]."
     ]
   },
   "awakened:ManaburnPower": {
-    "NAME": "Manaburn",
+    "NAME": "Quema de Maná",
     "DESCRIPTIONS": [
-      "Whenever you are #yDrained [REMOVE_SPACE], loses #b",
+      "Cada vez que seas #yDrenado [REMOVE_SPACE], pierdes #b",
       " HP."
     ]
   },
   "awakened:ArchmagusPower": {
-    "NAME": "Archmagus",
+    "NAME": "Archimago",
     "DESCRIPTIONS": [
-      "The first Spell you play each turn is played twice.",
-      "The first #b",
-      " Spells you play each turn are played twice.",
+      "El primer Hechizo que juegues cada turno se juega dos veces.",
+      "Los primeros #b",
+      " Hechizos que juegues cada turno se juegan dos veces.",
       " NL (",
-      " Spell Repetitions remaining)"
+      " Replicaciones de Hechizo restantes)"
     ]
   },
   "awakened:DarknessFallsPower": {
-    "NAME": "Darkness Falls",
+    "NAME": "Caída de la Oscuridad",
     "DESCRIPTIONS": [
-      "Whenever you are #yDrained [REMOVE_SPACE], gain #b",
-      " #yBlock [REMOVE_SPACE]."
+      "Cada vez que seas #yDrenado [REMOVE_SPACE], gana #b",
+      " #yBloqueo [REMOVE_SPACE]."
     ]
   },
   "awakened:VoidRefundPower": {
-    "NAME": "Clarion Call",
+    "NAME": "Llamado Clarion",
     "DESCRIPTIONS": [
-      "The next time you are #yDrained [REMOVE_SPACE], gain [E] .",
-      "The next time you are #yDrained [REMOVE_SPACE], gain #b",
+      "La próxima vez que seas #yDrenado [REMOVE_SPACE], gana [E] .",
+      "La próxima vez que seas #yDrenado [REMOVE_SPACE], gana #b",
       " [E] ."
     ]
   },
   "awakened:DemonGlyphPower": {
-    "NAME": "Demon Glyph",
+    "NAME": "Glifo Demoníaco",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yStrength and #yDexterity when you #yAwaken [REMOVE_SPACE]."
+      "Gana #b",
+      " #yFuerza y #yDestreza cuando #yDespiertes [REMOVE_SPACE]."
     ]
   },
     "awakened:ReverseRitualPower": {
-      "NAME": "Awakened Form",
+      "NAME": "Forma Despierta",
       "DESCRIPTIONS": [
-        "At the start of your turn, gain #b",
+        "Al comienzo de tu turno, gana #b",
         " #yRitual [REMOVE_SPACE]."
       ]
     },
   "awakened:EnsorcelatePower": {
-    "NAME": "Ensorcelate",
+    "NAME": "Encantar",
     "DESCRIPTIONS": [
-      "The next #yPower you play costs #b0 [REMOVE_SPACE].",
-      "The next #b",
-      " #yPowers you play cost #b0 [REMOVE_SPACE]."
+      "El próximo #yPoder que juegues cuesta #b0 [REMOVE_SPACE].",
+      "Los próximos #b",
+      " #yPoderes que juegues cuestan #b0 [REMOVE_SPACE]."
     ]
   },
   "awakened:ConjureNextPower": {
-    "NAME": "Pluck",
+    "NAME": "Arrancar",
     "DESCRIPTIONS": [
-      "At the start of your next turn, #yConjure [REMOVE_SPACE].",
-      "At the start of your next turn, #yConjure #b",
-      " times."
+      "Al comienzo de tu próximo turno, #yConjura [REMOVE_SPACE].",
+      "Al comienzo de tu próximo turno, #yConjura #b",
+      " veces."
     ]
   },
   "awakened:ChosensVersePower": {
-    "NAME": "Chosen Verse",
+    "NAME": "Verso Elegido",
     "DESCRIPTIONS": [
-      "The next time you play a non-Attack card this turn, draw a card and gain #b",
-      " #yBlock [REMOVE_SPACE].",
-      "The next #b",
-      " times you play a non-Attack card this turn, draw a card and gain #b",
-      " #yBlock [REMOVE_SPACE]."
+      "La próxima vez que juegues una carta no de ataque este turno, roba una carta y gana #b",
+      " #yBloqueo [REMOVE_SPACE].",
+      "Las próximas #b",
+      " veces que juegues una carta no de ataque este turno, roba una carta y gana #b",
+      " #yBloqueo [REMOVE_SPACE]."
     ]
   },
   "awakened:AphoticFountPower": {
-    "NAME": "Aphotic Fount",
+    "NAME": "Fuente Apótica",
     "DESCRIPTIONS": [
-      "Whenever you play #yCryostasis [REMOVE_SPACE], gain #b",
-      " #yPlated #yArmor [REMOVE_SPACE]."
+      "Cada vez que juegues #yCriostasis [REMOVE_SPACE], gana #b",
+      " #yArmadura Platinada [REMOVE_SPACE]."
     ]
   },
   "awakened:GrimoirePower": {
-    "NAME": "Storm Ruler",
+    "NAME": "Gobernante de Tormentas",
     "DESCRIPTIONS": [
-      "Your #yThunderbolts deal #b",
-      " more damage."
+      "Tus #yRelámpagos infligen #b",
+      " más daño."
     ]
   },
   "awakened:SpellshieldPower": {
-    "NAME": "Spellshield",
+    "NAME": "Escudo de Hechizo",
     "DESCRIPTIONS": [
-      "Whenever you #yRetain a card, gain #b",
-      " #yBlock."
+      "Cada vez que #yRetengas una carta, gana #b",
+      " #yBloqueo."
     ]
   },
   "awakened:DaggerstormPower": {
-    "NAME": "Daggerstorm",
+    "NAME": "Tormenta de Dagas",
     "DESCRIPTIONS": [
-      "Whenever you create a card, deal #b",
-      " damage to a random enemy."
+      "Cada vez que crees una carta, inflige #b",
+      " daño a un enemigo aleatorio."
     ]
   },
   "awakened:SchemePower": {
-    "NAME": "Scheme",
+    "NAME": "Plan",
     "DESCRIPTIONS": [
-      "The next #b",
-      " cards played this turn that cost #b1 or less will be played twice.",
-      "The next card played this turn that costs #b1 or less will be played twice."
+      "Las próximas #b",
+      " cartas jugadas este turno que cuesten #b1 o menos se jugarán dos veces.",
+      "La próxima carta jugada este turno que cueste #b1 o menos se jugará dos veces."
     ]
   },
   "awakened:FourthDimensionPower": {
-    "NAME": "4th Dimension",
+    "NAME": "4ta Dimensión",
     "DESCRIPTIONS": [
-      "At the start of your next #b",
-      " turn, ",
-      " turns, ",
-      "play and #yExhaust a copy of ",
+      "Al comienzo de tu próximo #b",
+      " turno, ",
+      " turnos, ",
+      "juega y #yAgota una copia de ",
       " [REMOVE_SPACE]."
     ]
   }

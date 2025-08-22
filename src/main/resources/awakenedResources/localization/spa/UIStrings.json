@@ -1,46 +1,46 @@
 {
   "awakened:SpellDescriptor": {
     "TEXT": [
-      "Spell"
+      "Hechizo"
     ]
   },
   "awakened:ConjureMod": {
     "TEXT": [
-      " NL awakened:Conjure."
+      " NL awakened:Conjurar."
     ]
   },
   "awakened:SpellMod": {
     "TEXT": [
-      "[#12FAF0]Spell. NL"
+      "[#12FAF0]Hechizo. NL"
     ]
   },
   "awakened:DrainingMod": {
     "TEXT": [
-      " NL Next turn, lose [E]."
+      " NL En el siguiente turno, pierde [E]."
     ]
   },
   "awakened:highlightChant": {
     "TEXT": [
-      "awakened:Chant: ",
-      "[awakenedIcon] [#12FAF0]Chant: "
+      "awakened:Profecía: ",
+      "[awakenedIcon] [#12FAF0]Profecía: "
     ]
   },
   "awakened:Spellbook": {
     "TEXT": [
-      "Spellbook",
-      "Awakening",
-      "After playing #b7 Powers, become #yAwakened [REMOVE_SPACE]! NL NL While #yAwakened [REMOVE_SPACE], #yConjured Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy.",
-      "After playing #b7 Powers, become #yAwakened [REMOVE_SPACE]! NL NL While #yAwakened [REMOVE_SPACE], #yConjured Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy."
+      "Libro de Hechizos",
+      "Despertar",
+      "Después de jugar #b7 Poderes, #yDespierta [REMOVE_SPACE]! NL NL Mientras estás #yDespierta [REMOVE_SPACE], las cartas de Hechizo #yConjuradas están #yMejoradas [REMOVE_SPACE], aumentando su eficacia.",
+      "Después de jugar #b7 Poderes, #yDespierta [REMOVE_SPACE]! NL NL Mientras estás #yDespierta [REMOVE_SPACE], las cartas de Hechizo #yConjuradas están #yMejoradas [REMOVE_SPACE], aumentando su eficacia."
     ]
   },
   "awakened:FullSpellbook": {
     "TEXT": [
-      "My Spellbook is full!"
+      "¡Mi Libro de Hechizos está lleno!"
     ]
   },
   "awakened:FourthDimensionDupeAttempt": {
     "TEXT": [
-      "@Doing@ @that@ @would@ @break@ @the@ @space-time@ @continuum!!!@"
+      "@¡Hacer@ @eso@ @rompería@ @el@ @continuo@ @espacio-tiempo!!!@"
     ]
   }
 }

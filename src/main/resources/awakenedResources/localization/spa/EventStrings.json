@@ -1,72 +1,72 @@
 {
   "awakened:Nest": {
-    "NAME": "The Nest",
+    "NAME": "El Nido",
     "DESCRIPTIONS": [
-      "You have found and returned to it. NL #pThe #pNest, the site of your ascension into the #b~living~ #b~avatar~ #b~of~ #b~a~ #b~god.~ The instant you enter, you are surrounded by Cultists, @cawing@ and @cheering@ for you! NL They know well that your arrivals often come with the requirements of a #r@tithe....@",
-      "The fights ahead will be difficult, and this is the perfect time to find a unique piece of weaponry to add to your arsenal. NL NL #r@...No@ #r@daggers@ #r@though.@ NL NL You perform a potent ritual to summon an extremely powerful #yrelic, but performing this ritual has taken a heavy toll on you. NL NL Drained, you leave the Nest, hopeful that your new weapon will create havoc in its wake.",
-      "More and more of the flock line up, bringing you offerings. NL NL Most are @worthless@ @trash,@ but one brings a particularly interesting offering: a #bpowerful #belixir that could greatly benefit you in battle. NL NL Soon after, you leave the Nest and continue your journey downwards the Spire.",
-      "The cultists surround you even more than they normally would upon seeing their prized statue return to them as well. NL As this is cause for celebration, you are showered in gifts and Souls! NL By the time the celebrations are over and you've left the Nest, you realize that you could have used this time to instead look for a valuable weapon... NL NL It's too late now, but you move forward anyways.",
-      "#r@\"BIRDGOD!!@ #r@RETURNED!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL The statue that you decided to not destroy has come in handy today for sure.",
+      "Lo has encontrado y has regresado. NL #pEl #pNido, el lugar de tu ascensión al #b~avatar~ #b~viviente~ #b~de~ #b~un~ #b~dios.~ Al instante de entrar, te rodean Cultistas, @gritando@ y @animándote@! NL Saben bien que tus llegadas suelen requerir un #r@tributo....@",
+      "Las batallas que vienen serán difíciles, y este es el momento perfecto para encontrar una pieza única de armamento para tu arsenal. NL NL #r@...No@ #r@dagas@ #r@por@ #r@favor.@ NL NL Realizas un potente ritual para invocar una #yreliquia extremadamente poderosa, pero realizar este ritual te ha dejado muy agotado. NL NL Exhausto, abandonas el Nido, esperando que tu nueva arma cause estragos.",
+      "Cada vez más miembros de la bandada se alinean, trayéndote ofrendas. NL NL La mayoría son @basura@ @inútil,@ pero uno trae una ofrenda particularmente interesante: un #belixir #bpotente que podría beneficiarte mucho en batalla. NL NL Poco después, dejas el Nido y continúas tu viaje descendiendo la Aguja.",
+      "Los cultistas te rodean aún más de lo normal al ver que su estatua preciada ha regresado. NL Como es motivo de celebración, te colman de regalos y Almas! NL Cuando termina la celebración y has dejado el Nido, te das cuenta de que podrías haber aprovechado este tiempo para buscar un arma valiosa... NL NL Ya es demasiado tarde, pero sigues adelante.",
+      "#r@\"¡DIOS PÁJARO!!@ #r@¡REGRESÓ!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL La estatua que decidiste no destruir ha sido útil hoy sin duda.",
       "",
       "",
-      "The Cultists surround you even more than they normally would upon seeing their prized statue return to them. NL As this is cause for celebration, you are showered in gifts and Souls! NL By the time the celebrations are over and you've left the Nest, you realize that you could have used this time to instead look for a valuable weapon... NL NL It's too late now, but you move forward anyways.",
-      "You quickly move to the Donation Box and treasury, intending to make full use of the coin and to find a #yRelic as well. NL NL The coins, paid for in blood itself, can act as a viable substitute for #bSouls. NL NL The #yRelic, of course, will also prove helpful in the trials ahead. NL NL You clutch the #rblood-soaked coins from the Donation Box, intending to make full use of them, but then you notice that the coffers are running quite low... NL NL NL ~...~",
-      "Were you... #r@robbed?@ The Nest, #pstolen from? NL NL Of course not, there's ~no~ ~way~ that would happen. NL NL NL That would be foolish, to even think of such a thing. NL NL NL ~...right?~ NL NL NL You push your #y~lingering~ #y~doubts~ aside and move on and away from the Nest."
+      "Los Cultistas te rodean aún más de lo normal al ver que su estatua preciada ha regresado. NL Como es motivo de celebración, te colman de regalos y Almas! NL Cuando termina la celebración y has dejado el Nido, te das cuenta de que podrías haber aprovechado este tiempo para buscar un arma valiosa... NL NL Ya es demasiado tarde, pero sigues adelante.",
+      "Te diriges rápidamente a la Caja de Donaciones y la tesorería, con la intención de aprovechar al máximo las monedas y encontrar una #yReliquia también. NL NL Las monedas, pagadas con sangre, pueden servir como sustituto viable de #bAlmas. NL NL La #yReliquia, por supuesto, también será útil en las pruebas venideras. NL NL Tomas las monedas #rbañadas en sangre de la Caja de Donaciones, con la intención de aprovecharlas al máximo, pero notas que las arcas están bastante vacías... NL NL NL ~...~",
+      "¿Te han... #r@robado?@ ¿El Nido, #probado? NL NL Por supuesto que no, ~no~ ~hay~ forma de que eso ocurra. NL NL NL Sería tonto siquiera pensarlo. NL NL NL ~...¿verdad?~ NL NL NL Apartas tus #y~dudas~ #y~persistentes~ y sigues adelante, alejándote del Nido."
     ],
     "OPTIONS": [
-      "[Return Statue] #rLose #rBroken #rWing #rStatue. #gGain #gmany #grewards.",
-      "[Locked] Requires Broken Wing Statue.",
-      "[Collect Offerings] #gGain #ga #gCuriosity #gPotion.",
-      "[Summon Weaponry] #gObtain #ga #gspecial #gRelic. #rLose #r",
-      " #rMax #rHP.",
-      "[Donation Box] #gGain #g",
-      " #gGold #gand #ga #gCommon #gRelic. #rBecome #rCursed #r- #rDoubt.",
-      "[Leave]",
-      "[Continue]",
-      "[Be Praised!] #gGain #grewards for returning the #gBroken #gWing #gStatue.",
-      "[Continue] - #rBecome #rCursed #r- #rDoubt."
+      "[Devolver Estatua] #rPierdes #rEstatua #rAla #rRota. #gObtienes #gmuchas #grecompensas.",
+      "[Bloqueado] Requiere Estatua Ala Rota.",
+      "[Recoger Ofrendas] #gObtienes #guna #gPoción #gCuriosa.",
+      "[Invocar Armamento] #gObtienes #guna #gReliquia #gespecial. #rPierdes #r",
+      " #rVida #rMáxima.",
+      "[Caja de Donaciones] #gObtienes #g",
+      " #gOro #gy #guna #gReliquia #gComún. #rTe #rMaldeces #r- #rDuda.",
+      "[Salir]",
+      "[Continuar]",
+      "[Ser Alabado!] #gObtienes #grecompensas por devolver la #gEstatua #gAla #gRota.",
+      "[Continuar] - #rTe #rMaldeces #r- #rDuda."
     ]
   },
   "awakened:WingStatue": {
-    "NAME": "Wing Statue",
+    "NAME": "Estatua de Ala",
     "DESCRIPTIONS": [
-      "Among the stone and boulders, you notice an intricate large blue statue depicting Mazaleth, God of Crows. NL NL You feel a sudden, intense anger and desire to destroy it. NL NL However, you know doing so will draw the ire of your benefactor.",
-      "You decide that it isn't worth the danger of destroying the statue, and instead decide to take the statue with you. NL You temporarily strain under its weight, but quickly get a handle of it and move on.",
-      "You lash out at the statue, shattering it into pieces! NL From the rubble, you find a sharp fragment of the statue which still possesses lingering magic. NL You leave, feeling a #pdark #penergy seep into your blood.",
-      "You walk past and continue onward.",
-      "CA...Caw?! Gift for BIRD GOD?",
-      "CA-CAAAW!!",
-      "An exchange? A fair offer...",
-      "The cult will be pleased."
+      "Entre las piedras y rocas, notas una gran estatua azul que representa a Mazaleth, Dios de los Cuervos. NL NL Sientes una intensa ira y deseo de destruirla. NL NL Sin embargo, sabes que hacerlo provocará la ira de tu benefactor.",
+      "Decides que no vale la pena el peligro de destruir la estatua, y en su lugar decides llevártela contigo. NL Te esfuerzas bajo su peso, pero pronto te acostumbras y sigues adelante.",
+      "Golpeas la estatua, ¡rompiéndola en pedazos! NL Entre los escombros, encuentras un fragmento afilado que aún posee magia residual. NL Te marchas, sintiendo una #penergía #poscura filtrarse en tu sangre.",
+      "Pasas de largo y continúas.",
+      "¿CA...Caw?! ¿Regalo para el DIOS PÁJARO?",
+      "¡CA-CAAAW!",
+      "¿Un intercambio? Una oferta justa...",
+      "El culto estará complacido."
     ],
     "OPTIONS": [
-      "[Destroy] #gGain #gSharpened #gFragment. #rBecome #rCursed #rTwice #r- #rHaemophilia.",
-      "[Collect] #rLose #r",
-      "[Leave]",
-      " #rHP. #gGain #gBroken #gWing #gStatue."
+      "[Destruir] #gObtienes #gFragmento #gAfilado. #rTe #rMaldeces #rdos #rveces #r- #rHemofilia.",
+      "[Recoger] #rPierdes #r",
+      "[Salir]",
+      " #rHP. #gObtienes #gEstatua #gAla #gRota."
     ]
   },
   "awakened:BackToBasics": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "Nothing matters except the struggle for life. The here and now."
+      "Nada importa excepto la lucha por la vida. El aquí y ahora."
     ],
     "OPTIONS": [
-      "[Desperation] #gYour #gStrikes #gand #gDefends #gbecome #gDraining.",
-      "[Locked] Requires a Strike or Defend."
+      "[Desesperación] #gTus #gGolpes #gy #gDefensas #gse #gvuelven #gDrenantes.",
+      "[Bloqueado] Requiere un Golpe o Defensa."
     ]
   },
   "awakened:AbyssEvent": {
-    "NAME": "From the Abyss",
+    "NAME": "Desde el Abismo",
     "DESCRIPTIONS": [
-      "This is some intro text.",
-      "This is some outro text - you took the thing!",
-      "This is some outro text - you didn't take the thing."
+      "Este es un texto de introducción.",
+      "Este es un texto de cierre - ¡tomaste el objeto!",
+      "Este es un texto de cierre - no tomaste el objeto."
     ],
     "OPTIONS": [
-      "[Reach] Gain #gReality #gRift. #rBecome #rCursed - #rAged.",
-      "[Leave] Second option which is currently just leaving.",
-      "[Leave]"
+      "[Alcanzar] Obtén #gFisura #gde #gRealidad. #rTe #rMaldeces - #rEnvejecido.",
+      "[Salir] Segunda opción que actualmente solo es salir.",
+      "[Salir]"
     ]
   }
 }

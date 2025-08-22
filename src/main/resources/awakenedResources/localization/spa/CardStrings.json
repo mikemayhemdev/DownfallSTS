@@ -1,413 +1,413 @@
 {
   "awakened:Thunderbolt": {
-    "NAME": "Thunderbolt",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
+    "NAME": "Rayo",
+    "DESCRIPTION": "Retener. NL Inflige !D! de daño. NL Agotar."
   },
   "awakened:BurningStudy": {
-    "NAME": "Burning Study",
-    "DESCRIPTION": "Retain. NL Gain !M! Strength. NL Apply !awakened:m2! Weak to ALL enemies."
+    "NAME": "Estudio Ardiente",
+    "DESCRIPTION": "Retener. NL Gana !M! de Fuerza. NL Aplica !awakened:m2! de Débil a TODOS los enemigos."
   },
   "awakened:Cryostasis": {
-    "NAME": "Cryostasis",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust."
+    "NAME": "Criostasis",
+    "DESCRIPTION": "Retener. NL Gana !B! Bloqueo. NL Agotar."
   },
   "awakened:Darkleech": {
-    "NAME": "Darkleech",
-    "DESCRIPTION": "Retain. NL Apply !M! Vulnerable. NL Apply !awakened:m2! awakened:Manaburn. NL Exhaust."
+    "NAME": "Sanguijuela Oscura",
+    "DESCRIPTION": "Retener. NL Aplica !M! Vulnerabilidad. NL Aplica !awakened:m2! awakened:Manaburn. NL Agotar."
   },
   "awakened:DeathCoil": {
-    "NAME": "Deathcoil",
-    "DESCRIPTION": "Apply !M! awakened:Manaburn. NL Next turn, lose [E]."
+    "NAME": "Espiral de Muerte",
+    "DESCRIPTION": "Aplica !M! awakened:Manaburn. NL El próximo turno, pierdes [E]."
   },
   "awakened:ESPSpell": {
     "NAME": "ESP",
-    "DESCRIPTION": "Retain. NL Draw !M! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust."
+    "DESCRIPTION": "Retener. NL Roba !M! carta. NL Agotar.",
+    "UPGRADE_DESCRIPTION": "Retener. NL Roba !M! cartas. NL Agotar."
   },
   "awakened:Strike": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "NAME": "Golpe",
+    "DESCRIPTION": "Haz !D! daño."
   },
   "awakened:Defend": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "Defender",
+    "DESCRIPTION": "Gana !B! Bloqueo."
   },
   "awakened:Brainshock": {
-    "NAME": "Brainshock",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Void into your discard pile."
+    "NAME": "Shock Cerebral",
+    "DESCRIPTION": "Haz !D! daño. NL Añade un *Vacio a tu pila de descarte."
   },
   "awakened:Intensify": {
-    "NAME": "Intensify",
-    "DESCRIPTION": "awakened:Conjure. NL This turn, Spells cost 0 and you cannot awakened:Conjure again.",
-    "UPGRADE_DESCRIPTION": "Retain. awakened:Conjure. NL This turn, Spells cost 0 and you cannot awakened:Conjure again."
+    "NAME": "Intensificar",
+    "DESCRIPTION": "awakened:Conjurar. NL Este turno, los Hechizos cuestan 0 y no puedes awakened:Conjurar de nuevo.",
+    "UPGRADE_DESCRIPTION": "Retener. awakened:Conjurar. NL Este turno, los Hechizos cuestan 0 y no puedes awakened:Conjurar de nuevo."
   },
   "awakened:DarkEcho": {
-    "NAME": "Dark Echo",
-    "DESCRIPTION": "At the end of your turn, deal !M! damage to ALL enemies, increased by Strength."
+    "NAME": "Eco Oscuro",
+    "DESCRIPTION": "Al final de tu turno, inflige !M! daño a TODOS los enemigos, aumentado por Fuerza."
   },
   "awakened:AwakenedForm": {
-    "NAME": "Awakened Form",
-    "DESCRIPTION": "Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual."
+    "NAME": "Forma Despierta",
+    "DESCRIPTION": "Obtén !M! awakened:Curiosidad. NL Obtén !awakened:m2! Ritual."
   },
   "awakened:Spellbinder": {
-    "NAME": "Spellbinder",
-    "DESCRIPTION": "At the start of your turn, awakened:Conjure."
+    "NAME": "Encantador",
+    "DESCRIPTION": "Al comienzo de tu turno, awakened:Conjurar."
   },
   "awakened:Ceremony": {
-    "NAME": "Ceremony",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Strength."
+    "NAME": "Ceremonia",
+    "DESCRIPTION": "Etéreo. NL Gana !M! de Fuerza.",
+    "UPGRADE_DESCRIPTION": "Retener. NL Gana !M! de Fuerza."
   },
   "awakened:TalonRake": {
-    "NAME": "Talon Rake",
-    "DESCRIPTION": "Deal !D! damage twice. NL awakened:Conjure."
+    "NAME": "Rasguño de Talón",
+    "DESCRIPTION": "Haz !D! de daño dos veces. NL awakened:Conjurar."
   },
   "awakened:Hymn": {
-    "NAME": "Hymn",
-    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony. NL Next turn, lose [E].",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+. NL Next turn, lose [E]."
+    "NAME": "Himno",
+    "DESCRIPTION": "Gana !B! Bloqueo. NL Gana un *Ceremonia. NL El próximo turno, pierdes [E].",
+    "UPGRADE_DESCRIPTION": "Gana !B! Bloqueo. NL Gana un *Ceremonia+. NL El próximo turno, pierdes [E]."
   },
   "awakened:Psalm": {
-    "NAME": "Psalm",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies."
+    "NAME": "Salmo",
+    "DESCRIPTION": "Haz !D! de daño y aplica !M! de Débil a TODOS los enemigos."
   },
   "awakened:DemonGlyph": {
-    "NAME": "Demon Glyph",
-    "DESCRIPTION": "Gain !M! Strength and Dexterity. NL When you *Awaken, gain !awakened:m2! more."
+    "NAME": "Glifo Demoníaco",
+    "DESCRIPTION": "Gana !M! Fuerza y Destreza. NL Cuando *Despiertas, gana !awakened:m2! más."
   },
   "awakened:TakeFlight": {
-    "NAME": "Take Flight",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Block is not removed at the start of your next turn."
+    "NAME": "Despegar",
+    "DESCRIPTION": "Gana !B! Bloqueo. NL awakened:Chant: El Bloqueo no se elimina al comienzo de tu próximo turno."
   },
   "awakened:FeatherVeil": {
-    "NAME": "Feather Veil",
-    "DESCRIPTION": "Gain !B! Block. NL Lose !M! Strength."
+    "NAME": "Velo de Plumas",
+    "DESCRIPTION": "Gana !B! Bloqueo. NL Pierde !M! Fuerza."
   },
   "awakened:Peck": {
-    "NAME": "Peck",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! cards."
+    "NAME": "Picoteo",
+    "DESCRIPTION": "Gana !B! Bloqueo. NL Haz !D! de daño. NL Roba !M! carta.",
+    "UPGRADE_DESCRIPTION": "Gana !B! Bloqueo. NL Haz !D! de daño. NL Roba !M! cartas."
   },
   "awakened:Extension": {
-    "NAME": "Extension",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a Power, return this card from the discard pile to your hand."
+    "NAME": "Extensión",
+    "DESCRIPTION": "Haz !D! de daño. NL Cada vez que juegues un Poder, regresa esta carta de la pila de descarte a tu mano."
   },
   "awakened:Pluck": {
-    "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, awakened:Conjure."
+    "NAME": "Arrancar",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Al comienzo de tu próximo turno, awakened:Conjurar."
   },
   "awakened:FlareShot": {
-    "NAME": "Feather Flare",
-    "DESCRIPTION": "Deal !D! damage. NL This turn, whenever you play a non-Attack card, ALL enemies lose !M! HP."
+    "NAME": "Destello de Plumas",
+    "DESCRIPTION": "Haz !D! de daño. NL Este turno, cada vez que juegues una carta que no sea un Ataque, TODOS los enemigos pierden !M! de HP."
   },
   "awakened:ClarionCall": {
-    "NAME": "Clarion Call",
-    "DESCRIPTION": "Deal !D! damage. NL The next time you are awakened:Drained, gain [E]."
+    "NAME": "Llamado Clarion",
+    "DESCRIPTION": "Haz !D! de daño. NL La próxima vez que seas awakened:Drained, gana [E]."
   },
   "awakened:Recitation": {
-    "NAME": "Recitation",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Deal !D! damage again."
+    "NAME": "Recitación",
+    "DESCRIPTION": "Haz !D! de daño. NL awakened:Chant: Haz !D! de daño de nuevo."
   },
   "awakened:ChosenVerse": {
-    "NAME": "Chosen Verse",
-    "DESCRIPTION": "The next !M! times you play a non-Attack card this turn, draw a card and gain !B! Block."
+    "NAME": "Verso Elegido",
+    "DESCRIPTION": "Las próximas !M! cartas que juegues esta turno que no sean Ataque, roba una carta y gana !B! Bloqueo."
   },
   "awakened:SoulStrike": {
-    "NAME": "Soul Strike",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less [E] for each Power played this turn."
+    "NAME": "Golpe del Alma",
+    "DESCRIPTION": "Haz !D! de daño !M! veces. NL Cuesta 1 [E] menos por cada Poder jugado este turno."
   },
   "awakened:Altar": {
     "NAME": "Altar",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. NL awakened:Conjure."
+    "DESCRIPTION": "Gana !B! Bloqueo. NL Agota una carta. NL awakened:Conjurar."
   },
   "awakened:Envision": {
-    "NAME": "Envision",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure and put the Spell on top of your draw pile."
+    "NAME": "Visualizar",
+    "DESCRIPTION": "Gana !B! Bloqueo. NL awakened:Conjurar y coloca el Hechizo en la parte superior de tu pila de robo."
   },
   "awakened:Thaumaturgy": {
-    "NAME": "Thaumaturgy",
-    "DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand."
+    "NAME": "Taumaturgia",
+    "DESCRIPTION": "Gana !awakened:m2! Destreza. NL Al comienzo de tus próximos !M! turnos, añade un *Ceremonia a tu mano.",
+    "UPGRADE_DESCRIPTION": "Gana !awakened:m2! Destreza. NL Al comienzo de tus próximos !M! turnos, añade un *Ceremonia a tu mano."
   },
   "awakened:WaveOfMiasma": {
-    "NAME": "Wave of Miasma",
-    "DESCRIPTION": "Apply !M! Weak and !awakened:m2! awakened:Manaburn to ALL enemies. NL Exhaust."
+    "NAME": "Ola de Miasma",
+    "DESCRIPTION": "Aplica !M! de Débil y !awakened:m2! awakened:Manaburn a TODOS los enemigos. NL Agota."
   },
   "awakened:SludgeBomb": {
-    "NAME": "Sludge Bomb",
-    "DESCRIPTION": "Can only be played if a *Void is Exhausted. NL Deal !D! damage twice. NL Erase a *Void from your Exhaust Pile.",
+    "NAME": "Bomba de Lodo",
+    "DESCRIPTION": "Solo se puede jugar si un *Vacío está Agotado. NL Haz !D! de daño dos veces. NL Borra un *Vacío de tu Pila de Descarte.",
     "EXTENDED_DESCRIPTION": [
-      "I do not have an Exhausted Void."
+      "No tengo un Vacío Agotado."
     ]
   },
   "awakened:KnifesEdge": {
-    "NAME": "Knife's Edge",
-    "DESCRIPTION": "Gain !awakened:m2! Strength. NL Add !M! *Voids into your discard pile."
+    "NAME": "Filo del Cuchillo",
+    "DESCRIPTION": "Gana !awakened:m2! Fuerza. NL Añade !M! *Vacíos a tu Pila de Descarte."
   },
   "awakened:FourthDimension": {
-    "NAME": "4th Dimension",
-    "DESCRIPTION": "Exhaust a card. NL Shuffle !M! copies of it into your draw pile. NL Exhaust.",
+    "NAME": "4ta Dimensión",
+    "DESCRIPTION": "Agota una carta. NL Baraja !M! copias de ella en tu pila de robo. NL Agota.",
     "EXTENDED_DESCRIPTION": [
-      "Exhaust for 4th Dimension."
-      ]
+      "Agota para 4ta Dimensión."
+    ]
   },
   "awakened:RavenStrike": {
-    "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Play the top card of your draw pile."
+    "NAME": "Golpe del Cuervo",
+    "DESCRIPTION": "Haz !D! de daño. NL awakened:Chant: Juega la carta superior de tu pila de robo."
   },
   "awakened:Unleash": {
-    "NAME": "Unleash",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each other card in your hand."
+    "NAME": "Desatar",
+    "DESCRIPTION": "Haz !D! de daño. NL Haz !M! de daño adicional por cada otra carta en tu mano."
   },
   "awakened:DesperatePrayer": {
-    "NAME": "Desperate Prayer",
-    "DESCRIPTION": "Gain !M! *Ceremony+ cards. NL Exhaust."
+    "NAME": "Oración Desesperada",
+    "DESCRIPTION": "Agrega !M! *Ceremonia+ a tu mano. NL Agota."
   },
   "awakened:BirdsEye": {
-    "NAME": "Byrd's Eye",
-    "DESCRIPTION": "Choose a Spell to awakened:Conjure.",
-    "UPGRADE_DESCRIPTION": "Refresh your Spells. Choose a Spell to awakened:Conjure."
+    "NAME": "Ojo de Pájaro",
+    "DESCRIPTION": "Elige un Hechizo para awakened:Conjurar.",
+    "UPGRADE_DESCRIPTION": "Recarga tus Hechizos. Elige un Hechizo para awakened:Conjurar."
   },
   "awakened:Initiation": {
-    "NAME": "Initiation",
-    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+."
+    "NAME": "Iniciación",
+    "DESCRIPTION": "Gana !B! Bloqueo. NL Gana un *Ceremonia.",
+    "UPGRADE_DESCRIPTION": "Gana !B! Bloqueo. NL Gana un *Ceremonia+."
   },
   "awakened:Ensorcelate": {
-    "NAME": "Ensorcelate",
-    "DESCRIPTION": "Gain !B! Block. NL The next Power you play costs 0."
+    "NAME": "Ensorcelar",
+    "DESCRIPTION": "Gana !B! Bloqueo. NL El próximo Poder que juegues cuesta 0."
   },
   "awakened:Skyward": {
-    "NAME": "Skyward",
-    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Costs 1 less [E] for each Power played this combat."
+    "NAME": "Vara Celestial",
+    "DESCRIPTION": "Gana !B! Bloqueo. NL Roba !M! cartas. NL Cuesta 1 [E] menos por cada Poder jugado en este combate."
   },
   "awakened:RisingChant": {
-    "NAME": "Rising Chorus",
-    "DESCRIPTION": "Whenever you play an activated awakened:Chant card, gain !M! Strength."
+    "NAME": "Coro Ascendente",
+    "DESCRIPTION": "Cada vez que juegues una carta de awakened:Chant activada, gana !M! Fuerza."
   },
   "awakened:FeatherWhirl": {
-    "NAME": "Feather Whirl",
-    "DESCRIPTION": "Gain X copies of *Plume *Jab.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 copies of *Plume *Jab."
+    "NAME": "Remolino de Plumas",
+    "DESCRIPTION": "Gana X copias de *Golpe *de *Pluma.",
+    "UPGRADE_DESCRIPTION": "Gana X+1 copias de *Golpe *de *Pluma."
   },
   "awakened:Murder": {
-    "NAME": "Murder",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+    "NAME": "Asesinato",
+    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio !M! veces. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio !M! veces."
   },
   "awakened:Nihil": {
-    "NAME": "Nihil",
-    "DESCRIPTION": "Apply !M! awakened:Manaburn. NL awakened:Chant: ALL enemies lose HP equal to their awakened:Manaburn."
+    "NAME": "Nihilismo",
+    "DESCRIPTION": "Aplica !M! awakened:Manaburn. NL awakened:Chant: TODOS los enemigos pierden HP igual a su awakened:Manaburn."
   },
   "awakened:MoonlitVision": {
-    "NAME": "Moonlit Vision",
-    "DESCRIPTION": "The first time you play a Spell each turn, NL gain [E]."
+    "NAME": "Visión de Luna",
+    "DESCRIPTION": "La primera vez que juegues un Hechizo cada turno, NL gana [E]."
   },
   "awakened:Rebirth": {
-    "NAME": "Rebirth",
-    "DESCRIPTION": "When you would die or at the end of combat, remove all debuffs, *Awaken, and heal !M! HP instead."
+    "NAME": "Renacimiento",
+    "DESCRIPTION": "Cuando vayas a morir o al final del combate, elimina todos los debuffs, *Awaken, y sana !M! HP en su lugar."
   },
   "awakened:Archmagus": {
-    "NAME": "Archmagus",
-    "DESCRIPTION": "The first Spell you play each turn is played twice."
+    "NAME": "Archimago",
+    "DESCRIPTION": "El primer Hechizo que juegues cada turno se juega dos veces."
   },
   "awakened:Planeswalk": {
-    "NAME": "Planeswalk",
-    "DESCRIPTION": "Gain [E] [E] . NL Shuffle a *Void into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E] . NL Shuffle a *Void into your draw pile."
+    "NAME": "Caminar entre Planos",
+    "DESCRIPTION": "Gana [E] [E] . NL Baraja un *Vacío en tu pila de robo.",
+    "UPGRADE_DESCRIPTION": "Gana [E] [E] [E] . NL Baraja un *Vacío en tu pila de robo."
   },
   "awakened:Spew": {
-    "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] .",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] [E] ."
+    "NAME": "Escupir",
+    "DESCRIPTION": "Haz !D! daño. NL Si se creó una carta este turno, gana [E] .",
+    "UPGRADE_DESCRIPTION": "Haz !D! daño. NL Si se creó una carta este turno, gana [E] [E] ."
   },
   "awakened:DarknessFalls": {
-    "NAME": "Darkness Falls",
-    "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength."
+    "NAME": "Cae la Oscuridad",
+    "DESCRIPTION": "Siempre que estés awakened:Drained, gana !M! Bloqueo y !awakened:m2! Fuerza."
   },
   "awakened:Eventide": {
-    "NAME": "Eventide",
-    "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Add a *Void to the top of your draw pile."
+    "NAME": "Anochecer",
+    "DESCRIPTION": "Haz !D! daño a un enemigo aleatorio dos veces. NL Añade un *Vacío a la parte superior de tu pila de robo."
   },
   "awakened:EclipseEmbrace": {
-    "NAME": "Eclipse Embrace",
-    "DESCRIPTION": "Whenever you Exhaust a *Void, gain [E] and draw a card next turn."
+    "NAME": "Acojer el Eclipse",
+    "DESCRIPTION": "Siempre que agotes un *Vacío, gana [E] y roba una carta el próximo turno."
   },
   "awakened:Clutch": {
-    "NAME": "Clutch",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a 0-cost card."
+    "NAME": "Agarre",
+    "DESCRIPTION": "Haz !D! daño. NL Roba una carta de coste 0."
   },
   "awakened:Gloomguard": {
-    "NAME": "Gloomguard",
-    "DESCRIPTION": "Gain !B! Block. NL For each Void in hand, Exhaust it and gain [E] ."
+    "NAME": "Guardia de las Tinieblas",
+    "DESCRIPTION": "Gana !B! Bloqueo. NL Por cada Vacío en la mano, agótalo y gana [E] ."
   },
   "awakened:Carrionmaker": {
-    "NAME": "Carrionmaker",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each Spell played this turn.",
+    "NAME": "Hacedor de Carroña",
+    "DESCRIPTION": "Haz !D! daño a un enemigo aleatorio. NL Repite por cada Hechizo jugado este turno.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
-      " Spell played.)",
-      " Spells played.)"
+      " Hechizo jugado.)",
+      " Hechizos jugados.)"
     ]
   },
   "awakened:MirePit": {
-    "NAME": "Mire Pit",
-    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Next turn, lose [E]. NL Exhaust."
+    "NAME": "Foso de Pantano",
+    "DESCRIPTION": "TODOS los enemigos pierden !M! Fuerza este turno. NL El próximo turno, pierde [E]. NL Agota."
   },
   "awakened:SingularityShield": {
-    "NAME": "Singularity Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain !B! Block and lose [E]."
+    "NAME": "Escudo de Singularidad",
+    "DESCRIPTION": "Gana !B! Bloqueo. NL El próximo turno, gana !B! Bloqueo y pierde [E]."
   },
   "awakened:Dejection": {
-    "NAME": "Dejection",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain [E] ."
+    "NAME": "Repulsión",
+    "DESCRIPTION": "Haz !D! daño. NL Agota una carta. Si era un Hechizo, gana [E] ."
   },
   "awakened:BloodRite": {
-    "NAME": "Blood Rite",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony+."
+    "NAME": "Rito de Sangre",
+    "DESCRIPTION": "Haz !D! daño. NL Gana un *Ceremonia.",
+    "UPGRADE_DESCRIPTION": "Haz !D! daño. NL Gana un *Ceremonia+."
   },
   "awakened:SongOfSorrow": {
-    "NAME": "Song of Sorrow",
-    "DESCRIPTION": "Whenever you create a *Void, ALL enemies lose !M! HP."
+    "NAME": "Canción de Lamento",
+    "DESCRIPTION": "Cada vez que creas un *Vacío, TODOS los enemigos pierden !M! HP."
   },
   "awakened:MysticOrder": {
-    "NAME": "Mystic Order",
-    "DESCRIPTION": "Draw !M! cards. NL awakened:Conjure."
+    "NAME": "Orden Mística",
+    "DESCRIPTION": "Roba !M! cartas. NL awakened:Conjura."
   },
   "awakened:ProfaneStrike": {
-    "NAME": "Profane Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Put a card in your hand on top of your draw pile."
+    "NAME": "Golpe Profano",
+    "DESCRIPTION": "Haz !D! de daño. NL Pon una carta de tu mano en la parte superior de tu pila de robo."
   },
   "awakened:Victuals": {
-    "NAME": "Victuals",
-    "DESCRIPTION": "awakened:Chant: Gain [E] [E] . NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "awakened:Chant: Gain [E] [E] [E] . NL Exhaust."
+    "NAME": "Víveres",
+    "DESCRIPTION": "awakened:Chant: Gana [E] [E] . NL Agota.",
+    "UPGRADE_DESCRIPTION": "awakened:Chant: Gana [E] [E] [E] . NL Agota."
   },
   "awakened:Gather": {
-    "NAME": "Gather",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Put a card from your discard pile into your hand."
+    "NAME": "Recolectar",
+    "DESCRIPTION": "Gana !B! Bloqueo. NL awakened:Chant: Pon una carta de tu pila de descarte en tu mano."
   },
   "awakened:TheTower": {
-    "NAME": "The Tower",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each card created this combat."
+    "NAME": "La Torre",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Inflige !M! de daño adicional por cada carta creada en este combate."
   },
   "awakened:ArcaneNesting": {
-    "NAME": "Arcane Nesting",
-    "DESCRIPTION": "Unplayable. NL Whenever you play a Power while this is in hand, gain !B! Block.",
+    "NAME": "Nidificación Arcana",
+    "DESCRIPTION": "Injugable. NL Siempre que juegues un Poder mientras esto está en mano, gana !B! Bloqueo.",
     "EXTENDED_DESCRIPTION": [
-      "I must play Powers to gain Block from this."
+      "Debo jugar Poderes para ganar Bloqueo de esto."
     ]
   },
   "awakened:MiddenHeap": {
-    "NAME": "Midden Heap",
-    "DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse card from your draw or discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse cards from your draw or discard pile into your hand.",
+    "NAME": "Montón de Desechos",
+    "DESCRIPTION": "Gana !B! Bloqueo. NL Pon !M! cartas de Estado o Maldición de tu pila de robo o descarte en tu mano.",
+    "UPGRADE_DESCRIPTION": "Gana !B! Bloqueo. NL Pon !M! cartas de Estado o Maldición de tu pila de robo o descarte en tu mano.",
     "EXTENDED_DESCRIPTION": [
-      "Select a card to move to your hand.",
-      "Select cards to move to your hand."
+      "Selecciona una carta para mover a tu mano.",
+      "Selecciona cartas para mover a tu mano."
     ]
   },
   "awakened:Caw": {
-    "NAME": "Caw",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Increase the damage of all *Caw cards by !M! this combat."
+    "NAME": "Graznar",
+    "DESCRIPTION": "Haz !D! de daño. NL awakened:Chant: Aumenta el daño de todas las cartas *Caw en !M! este combate."
   },
   "awakened:Scour": {
-    "NAME": "Scour",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Manaburn."
+    "NAME": "Desgarrar",
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! awakened:Manaburn."
   },
   "awakened:Manastorm": {
-    "NAME": "Manastorm",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure twice."
+    "NAME": "Tormenta de Maná",
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL awakened:Conjura dos veces."
   },
   "awakened:BringTheStorm": {
-    "NAME": "Storm Ruler",
-    "DESCRIPTION": "awakened:Conjure. NL *Thunderbolts deal !M! additional damage."
+    "NAME": "Traer la Tormenta",
+    "DESCRIPTION": "awakened:Conjura. NL *Thunderbolts infligen !M! de daño adicional."
   },
   "awakened:AphoticFount": {
-    "NAME": "Aphotic Fount",
-    "DESCRIPTION": "awakened:Conjure. NL Whenever you play *Cryostasis, gain !M! expansioncontent:Plated *Armor."
+    "NAME": "Fuente Afótica",
+    "DESCRIPTION": "awakened:Conjura. NL Siempre que juegues *Cryostasis, gana !M! expansioncontent:Plated *Armor."
   },
   "awakened:Bloodthirst": {
-    "NAME": "Bloodthirst",
-    "DESCRIPTION": "Deal !D! damage. NL If Fatal, gain a awakened:Power_Potion and Exhaust this card."
+    "NAME": "Sed de Sangre",
+    "DESCRIPTION": "Haz !D! de daño. NL Si es Fatal, gana una awakened:Power_Potion y Agota esta carta."
   },
   "awakened:Procession": {
-    "NAME": "Procession",
-    "DESCRIPTION": "Play a card in your draw pile and shuffle in *Voids equal to its cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Play a card in your draw pile and shuffle in *Voids equal to its cost."
+    "NAME": "Procesión",
+    "DESCRIPTION": "Juega una carta de tu pila de robo y baraja *Vacíos iguales a su coste. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Juega una carta de tu pila de robo y baraja *Vacíos iguales a su coste."
   },
   "awakened:SplitWide": {
-    "NAME": "Split Wide",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy, gain !M! temporary Strength. NL Exhaust."
+    "NAME": "Separar",
+    "DESCRIPTION": "Haz !D! de daño. NL Cada vez que ataques a este enemigo, gana !M! de Fuerza temporal. NL Agota."
   },
   "awakened:Spellshield": {
-    "NAME": "Spellshield",
-    "DESCRIPTION": "Whenever you Retain a card, gain !M! Block."
+    "NAME": "Escudo de Hechizo",
+    "DESCRIPTION": "Cada vez que retienes una carta, gana !M! Bloqueo."
   },
   "awakened:Siphon": {
-    "NAME": "Siphon",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: gremlin:Steal !M! Strength this turn."
+    "NAME": "Sifón",
+    "DESCRIPTION": "Inflige !D! de daño. NL awakened:Chant: gremlin:Roba !M! Fuerza este turno."
   },
   "awakened:PlumeJab": {
-    "NAME": "Plume Jab",
-    "DESCRIPTION": "Retain. NL Deal !D! damage to a random enemy twice. NL Exhaust."
+    "NAME": "Golpe de Pluma",
+    "DESCRIPTION": "Retener. NL Inflige !D! de daño a un enemigo aleatorio dos veces. NL Agotar."
   },
   "awakened:Primacy": {
-    "NAME": "Primacy",
-    "DESCRIPTION": "The first time you gain Strength each turn, draw a card.",
-    "UPGRADE_DESCRIPTION": "The first !M! times you gain Strength each turn, draw a card."
+    "NAME": "Primacía",
+    "DESCRIPTION": "La primera vez que ganas Fuerza cada turno, roba una carta.",
+    "UPGRADE_DESCRIPTION": "Las primeras !M! veces que ganas Fuerza cada turno, roba una carta."
   },
   "awakened:Daggerstorm": {
-    "NAME": "Daggerstorm",
-    "DESCRIPTION": "Whenever you create a card, deal !M! damage to a random enemy."
+    "NAME": "Tormenta de Dagas",
+    "DESCRIPTION": "Cada vez que creas una carta, inflige !M! de daño a un enemigo aleatorio."
   },
   "awakened:PackRat": {
-    "NAME": "Pack Rat",
-    "DESCRIPTION": "Deal !D! damage and gain !B! Block twice. NL Obtain a random potion. NL Exhaust."
+    "NAME": "Rata de Paquete",
+    "DESCRIPTION": "Inflige !D! de daño y gana !B! Bloqueo dos veces. NL Obtén una poción aleatoria. NL Agotar."
   },
   "awakened:Mantis": {
     "NAME": "Mantis",
-    "DESCRIPTION": "Gain !M! Strength. NL Add a *Plume *Jab into your hand."
+    "DESCRIPTION": "Gana !M! Fuerza. NL Añade un *Golpe *de *Pluma a tu mano."
   },
   "awakened:ManaShield": {
-    "NAME": "Mana Shield",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Reduce the cost of a random Spell in hand by 1."
+    "NAME": "Escudo de Maná",
+    "DESCRIPTION": "Gana !B! Bloqueo. NL awakened:Conjure. NL Reduce el coste de un hechizo aleatorio en mano en 1."
   },
   "awakened:Crusher": {
-    "NAME": "Crusher",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When a card is created, reduce this card's cost by 1 until played."
+    "NAME": "Triturador",
+    "DESCRIPTION": "Retener. NL Inflige !D! de daño. NL Cuando se crea una carta, reduce el coste de esta carta en 1 hasta que se juegue."
   },
   "awakened:Minniegun": {
-    "NAME": "Minniegun",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Shuffle a *Void into your draw pile."
+    "NAME": "Minigun",
+    "DESCRIPTION": "Inflige !D! de daño !M! veces. NL Baraja un *Void en tu pila de robar."
   },
   "awakened:SignInBlood": {
-    "NAME": "Sign in Blood",
-    "DESCRIPTION": "Take 3 damage. NL Draw !M! cards. NL Gain !M! temporary Strength. NL Exhaust."
+    "NAME": "Firma en Sangre",
+    "DESCRIPTION": "Haz 3 de daño. NL Roba !M! cartas. NL Gana !M! de Fuerza temporal. NL Agotar."
   },
   "awakened:SpreadingSpores": {
-    "NAME": "Spreading Spores",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns.  NL Shuffle a copy of this into your draw pile."
+    "NAME": "Esporas Extendidas",
+    "DESCRIPTION": "Etéreo. NL Gana !M! Espinas.  NL Baraja una copia de esto en tu pila de robar."
   },
   "awakened:Scheme": {
-    "NAME": "Scheme",
-    "DESCRIPTION": "The next card you play this turn that cost 1 or less is played twice.",
-    "UPGRADE_DESCRIPTION": "The next !M! cards you play this turn that cost 1 or less are played twice."
+    "NAME": "Esquema",
+    "DESCRIPTION": "La próxima carta que juegues este turno que cueste 1 o menos se juega dos veces.",
+    "UPGRADE_DESCRIPTION": "Las próximas !M! cartas que juegues este turno que cuesten 1 o menos se juegan dos veces."
   },
   "awakened:TheEncyclopedia": {
-    "NAME": "The Encyclopedia",
-    "DESCRIPTION": "Choose 2 of !M! random cards to add into your hand. They cost 2 less. NL Exhaust.",
+    "NAME": "La Enciclopedia",
+    "DESCRIPTION": "Elige 2 de !M! cartas aleatorias para agregar a tu mano. Cuestan 2 menos. NL Agotar.",
     "EXTENDED_DESCRIPTION": [
-      "Choose 2 cards to add to your draw pile."
+      "Elige 2 cartas para agregar a tu pila de robar."
     ]
   },
   "awakened:RealityRift": {
-    "NAME": "Reality Rift",
-    "DESCRIPTION": "Choose !awakened:m2! of !M! powerful cards from *ANOTHER *DIMENSION to gain. NL Add 2 Voids to your discard pile. Exhaust."
+    "NAME": "Fisura de Realidad",
+    "DESCRIPTION": "Elige !awakened:m2! de !M! cartas poderosas de *OTRA *DIMENSIÓN para ganar. NL Agrega 2 Voids a tu pila de descarte. Agotar."
   },
   "awakened:Inscribe": {
-    "NAME": "Inscribe",
-    "DESCRIPTION": "Choose a Spell. Add a copy to the Spellbook for the rest of combat, and a copy into your hand."
+    "NAME": "Inscribir",
+    "DESCRIPTION": "Elige un Hechizo. Agrega una copia al Libro de Hechizos por el resto del combate, y una copia a tu mano."
   }
 }

@@ -1,30 +1,30 @@
 {
   "awakened:PhaseSkip": {
-    "NAME": "Ascendant's Drink",
+    "NAME": "Bebida del Ascendido",
     "DESCRIPTIONS": [
-      "#yAwaken immediately."
+      "#yDespierta inmediatamente."
     ]
   },
   "awakened:CultistsDelight": {
-    "NAME": "Cultist's Delight",
+    "NAME": "Delicia del Cultista",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card this combat, gain #b",
-      " #yStrength [REMOVE_SPACE]. Add a random #yPower to your hand that costs #b0 for the turn."
+      "Cada vez que juegas una carta de #yPoder en este combate, gana #b",
+      " #yFuerza [REMOVE_SPACE]. Añade un #yPoder aleatorio a tu mano que cuesta #b0 este turno."
     ]
   },
   "awakened:SacramentalWine": {
-    "NAME": "Sacramental Wine",
+    "NAME": "Vino Sacramental",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card this combat, gain #b",
-      " #yBlock [REMOVE_SPACE]. Add a random #yPower to your hand that costs #b0 for the turn."
+      "Cada vez que juegas una carta de #yPoder en este combate, gana #b",
+      " #yBloqueo [REMOVE_SPACE]. Añade un #yPoder aleatorio a tu mano que cuesta #b0 este turno."
     ]
   },
   "awakened:SneckoPowersPotion": {
-    "NAME": "Snecko Essence",
+    "NAME": "Esencia de Snecko",
     "DESCRIPTIONS": [
-      "Choose #b1 of #b3 random #yOffclass #yPowers to add to your hand, it costs #b0 this turn.",
-      "Choose #b1 of #b3 random #yOffclass #yPowers and add #b",
-      " copies to your hand, they cost #b0 this turn."
+      "Elige #b1 de #b3 poderes #yOffclass aleatorios para añadir a tu mano, cuesta #b0 este turno.",
+      "Elige #b1 de #b3 poderes #yOffclass aleatorios y añade #b",
+      " copias a tu mano, cuestan #b0 este turno."
     ]
   }
 }
