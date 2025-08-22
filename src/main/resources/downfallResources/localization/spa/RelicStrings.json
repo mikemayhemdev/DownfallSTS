@@ -416,7 +416,8 @@
   "NAME": "Fragmento Afilado",
   "FLAVOR": "Alguna vez una estatua rota – ahora un arma improvisada.",
   "DESCRIPTIONS": [
-    "Durante combates contra Élites y Jefes, cada vez que juegues una carta de tipo #yPoder, gana #b1 de #yFuerza [REMOVE_SPACE]."
+    "Durante combates contra Élites y Jefes, cada vez que juegues una carta de tipo #yPoder, gana #b",
+    " de #yFuerza [REMOVE_SPACE]."
   ]
 },
 "downfall:RedIOU": {

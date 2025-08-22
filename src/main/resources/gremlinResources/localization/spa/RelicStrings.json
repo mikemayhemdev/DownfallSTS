@@ -72,7 +72,7 @@
     "NAME": "Escudos Puntiagudos",
     "FLAVOR": "Los Gremlins usan cualquier chatarra como arma o armadura. Algunas sirven como ambas.",
     "DESCRIPTIONS": [
-      "Cada vez que ganes #yBloqueo [REMOVE_SPACE], inflige #b", " de daño a un enemigo aleatorio."
+      "Cada vez que ganes #yBloqueo [REMOVE_SPACE], inflige #b", " de daño a un enemigo al azar."
     ]
   },
   "Gremlin:ShortStature": {

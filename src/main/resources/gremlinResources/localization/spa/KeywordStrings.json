@@ -38,7 +38,7 @@
   {
     "NAMES": ["sneaky gremlin","sneaky_gremlin","gremlin ladrón","gremlin_ladrón"],
     "PROPER_NAME": "Gremlin Ladrón",
-    "DESCRIPTION": "Los Ataques de coste 0 infligen #b2 de daño adicional. Después de jugar un Ataque, inflige #b2 de daño a un enemigo aleatorio."
+    "DESCRIPTION": "Los Ataques de coste 0 infligen #b2 de daño adicional. Después de jugar un Ataque, inflige #b2 de daño a un enemigo al azar."
   },
   {
     "NAMES": ["swap","cambia", "cambies"],

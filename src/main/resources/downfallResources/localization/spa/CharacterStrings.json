@@ -39,6 +39,7 @@
   },
   "downfall:Unlock": {
     "TEXT": [
+      "(Las victorias en el Acto 4 no cuentan)",
       "Este personaje se desbloquea al completar una partida con el Rey Babosa.",
       "Este personaje se desbloquea al completar una partida con el segundo personaje Villano.",
       "Este personaje se desbloquea al completar una partida con el Guardián.",
@@ -49,10 +50,11 @@
       "Este personaje se desbloquea al completar una partida con el quinto personaje Villano.",
       "Este personaje se desbloquea al completar una partida con el Autómata.",
       "Este personaje se desbloquea al completar una partida con el sexto personaje Villano.",
-      "Este personaje se desbloquea al completar una partida con los Gremlins.",
-      "(Las victorias en el Acto 4 no cuentan)",
+      "Este personaje se desbloquea al completar una partida con el Coleccionista.",
       "Este personaje se desbloquea al completar una partida con el séptimo personaje Villano.",
-      "Este personaje se desbloquea al completar una partida con el Coleccionista."
+      "Este personaje se desbloquea al completar una partida con el Despertado.",
+      "Este personaje se desbloquea al completar una partida con el octavo personaje Villano.",
+      "Este personaje se desbloquea al completar una partida con los Gremlins."
     ]
   },
   "downfall:HeartMerchant": {
@@ -236,5 +238,13 @@
       "Viejo Neow"
     ],
     "TEXT": []
+  },
+  "downfall:CharBossSpeech": {
+    "NAMES": [
+      ""
+    ],
+    "TEXT": ["No, ¡Eso no puede ser! Necesitamos más toxinas..."
+    ]
   }
+
 }

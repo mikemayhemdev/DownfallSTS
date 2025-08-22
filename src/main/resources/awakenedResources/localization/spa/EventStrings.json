@@ -1,0 +1,72 @@
+{
+  "awakened:Nest": {
+    "NAME": "El Nido",
+    "DESCRIPTIONS": [
+      "Lo has encontrado y has regresado. NL #pEl #pNido, el lugar de tu ascensión al #b~avatar~ #b~viviente~ #b~de~ #b~un~ #b~dios.~ Al instante de entrar, te rodean Cultistas, @gritando@ y @animándote@! NL Saben bien que tus llegadas suelen requerir un #r@tributo....@",
+      "Las batallas que vienen serán difíciles, y este es el momento perfecto para encontrar una pieza única de armamento para tu arsenal. NL NL #r@...No@ #r@dagas@ #r@por@ #r@favor.@ NL NL Realizas un potente ritual para invocar una #yreliquia extremadamente poderosa, pero realizar este ritual te ha dejado muy agotado. NL NL Exhausto, abandonas el Nido, esperando que tu nueva arma cause estragos.",
+      "Cada vez más miembros de la bandada se alinean, trayéndote ofrendas. NL NL La mayoría son @basura@ @inútil,@ pero uno trae una ofrenda particularmente interesante: un #belixir #bpotente que podría beneficiarte mucho en batalla. NL NL Poco después, dejas el Nido y continúas tu viaje descendiendo la Aguja.",
+      "Los cultistas te rodean aún más de lo normal al ver que su estatua preciada ha regresado. NL Como es motivo de celebración, te colman de regalos y Almas! NL Cuando termina la celebración y has dejado el Nido, te das cuenta de que podrías haber aprovechado este tiempo para buscar un arma valiosa... NL NL Ya es demasiado tarde, pero sigues adelante.",
+      "#r@\"¡DIOS PÁJARO!!@ #r@¡REGRESÓ!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL La estatua que decidiste no destruir ha sido útil hoy sin duda.",
+      "",
+      "",
+      "Los Cultistas te rodean aún más de lo normal al ver que su estatua preciada ha regresado. NL Como es motivo de celebración, te colman de regalos y Almas! NL Cuando termina la celebración y has dejado el Nido, te das cuenta de que podrías haber aprovechado este tiempo para buscar un arma valiosa... NL NL Ya es demasiado tarde, pero sigues adelante.",
+      "Te diriges rápidamente a la Caja de Donaciones y la tesorería, con la intención de aprovechar al máximo las monedas y encontrar una #yReliquia también. NL NL Las monedas, pagadas con sangre, pueden servir como sustituto viable de #bAlmas. NL NL La #yReliquia, por supuesto, también será útil en las pruebas venideras. NL NL Tomas las monedas #rbañadas en sangre de la Caja de Donaciones, con la intención de aprovecharlas al máximo, pero notas que las arcas están bastante vacías... NL NL NL ~...~",
+      "¿Te han... #r@robado?@ ¿El Nido, #probado? NL NL Por supuesto que no, ~no~ ~hay~ forma de que eso ocurra. NL NL NL Sería tonto siquiera pensarlo. NL NL NL ~...¿verdad?~ NL NL NL Apartas tus #y~dudas~ #y~persistentes~ y sigues adelante, alejándote del Nido."
+    ],
+    "OPTIONS": [
+      "[Devolver Estatua] #rPierdes #rEstatua #rAla #rRota. #gObtienes #gmuchas #grecompensas.",
+      "[Bloqueado] Requiere Estatua Ala Rota.",
+      "[Recoger Ofrendas] #gObtienes #guna #gPoción #gCuriosa.",
+      "[Invocar Armamento] #gObtienes #guna #gReliquia #gespecial. #rPierdes #r",
+      " #rVida #rMáxima.",
+      "[Caja de Donaciones] #gObtienes #g",
+      " #gOro #gy #guna #gReliquia #gComún. #rTe #rMaldeces #r- #rDuda.",
+      "[Salir]",
+      "[Continuar]",
+      "[Ser Alabado!] #gObtienes #grecompensas por devolver la #gEstatua #gAla #gRota.",
+      "[Continuar] - #rTe #rMaldeces #r- #rDuda."
+    ]
+  },
+  "awakened:WingStatue": {
+    "NAME": "Estatua de Ala",
+    "DESCRIPTIONS": [
+      "Entre las piedras y rocas, notas una gran estatua azul que representa a Mazaleth, Dios de los Cuervos. NL NL Sientes una intensa ira y deseo de destruirla. NL NL Sin embargo, sabes que hacerlo provocará la ira de tu benefactor.",
+      "Decides que no vale la pena el peligro de destruir la estatua, y en su lugar decides llevártela contigo. NL Te esfuerzas bajo su peso, pero pronto te acostumbras y sigues adelante.",
+      "Golpeas la estatua, ¡rompiéndola en pedazos! NL Entre los escombros, encuentras un fragmento afilado que aún posee magia residual. NL Te marchas, sintiendo una #penergía #poscura filtrarse en tu sangre.",
+      "Pasas de largo y continúas.",
+      "¿CA...Caw?! ¿Regalo para el DIOS PÁJARO?",
+      "¡CA-CAAAW!",
+      "¿Un intercambio? Una oferta justa...",
+      "El culto estará complacido."
+    ],
+    "OPTIONS": [
+      "[Destruir] #gObtienes #gFragmento #gAfilado. #rTe #rMaldeces #rdos #rveces #r- #rHemofilia.",
+      "[Recoger] #rPierdes #r",
+      "[Salir]",
+      " #rHP. #gObtienes #gEstatua #gAla #gRota."
+    ]
+  },
+  "awakened:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Nada importa excepto la lucha por la vida. El aquí y ahora."
+    ],
+    "OPTIONS": [
+      "[Desesperación] #gTus #gGolpes #gy #gDefensas #gse #gvuelven #gDrenantes.",
+      "[Bloqueado] Requiere un Golpe o Defensa."
+    ]
+  },
+  "awakened:AbyssEvent": {
+    "NAME": "Desde el Abismo",
+    "DESCRIPTIONS": [
+      "Este es un texto de introducción.",
+      "Este es un texto de cierre - ¡tomaste el objeto!",
+      "Este es un texto de cierre - no tomaste el objeto."
+    ],
+    "OPTIONS": [
+      "[Alcanzar] Obtén #gFisura #gde #gRealidad. #rTe #rMaldeces - #rEnvejecido.",
+      "[Salir] Segunda opción que actualmente solo es salir.",
+      "[Salir]"
+    ]
+  }
+}

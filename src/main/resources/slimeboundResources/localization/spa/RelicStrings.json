@@ -3,7 +3,9 @@
     "NAME": "Corazón de Baba",
     "FLAVOR": "Me siento... viscoso.",
     "DESCRIPTIONS": [
-      "Cada vez que #yslimeboundmod:Consume [REMOVE_SPACE], sana #b2 PV, hasta un máximo de #b8 por combate."
+      "Cada vez que #yslimeboundmod:Consume [REMOVE_SPACE], sana #b",
+      " PV, hasta un máximo de #b",
+      " por combate."
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
@@ -11,7 +13,9 @@
     "FLAVOR": "El secreto del moco.",
     "DESCRIPTIONS": [
       "Reemplaza ",
-      " [REMOVE_SPACE].[] NL Cada vez que #yslimeboundmod:Consume [REMOVE_SPACE], sana #b3 PV, hasta un máximo de #b15 por combate."
+      " [REMOVE_SPACE].[] NL Cada vez que #yslimeboundmod:Consume [REMOVE_SPACE], sana #b",
+      " PV, hasta un máximo de #b",
+      " por combate."
     ]
   },
   "Slimebound:SlimedTailRelic": {
@@ -86,7 +90,8 @@
     "NAME": "Equipo Protector",
     "FLAVOR": "La mejor defensa es una buena ofensiva.",
     "DESCRIPTIONS": [
-      "Reduce el daño que recibes por #yslimeboundmod:Embestidas en #b3 [REMOVE_SPACE]."
+      "Reduce el daño que recibes por #yslimeboundmod:Embestidas en #b",
+      " [REMOVE_SPACE]."
     ]
   },
   "Slimebound:TarBlob": {
@@ -100,7 +105,8 @@
     "NAME": "Cubo Gelatinoso",
     "FLAVOR": "Hey, se te pegó al cuerpo.",
     "DESCRIPTIONS": [
-      "Las primeras #b2 veces que robes una carta de #yEstado o una #rMaldición cada turno, roba #b1 carta. Si era un #yVacío [REMOVE_SPACE], obtén [E] [REMOVE_SPACE]."
+      "Cuando robes una carta de #yEstado o una #rMaldición, roba #b1 carta. gana #b",
+      " #yBloqueo [REMOVE_SPACE]."
     ]
   }
 }

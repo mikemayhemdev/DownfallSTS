@@ -76,5 +76,12 @@
     "MOVES": [],
     "NAME": "Daga Condenada",
     "DIALOG": []
+  },
+  "downfall:VoidCore": {
+    "MOVES": [
+    ],
+    "NAME": "Núcleo vacío",
+    "DIALOG": [
+    ]
   }
 }
