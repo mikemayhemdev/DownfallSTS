@@ -31,8 +31,9 @@
       "confusión",
       "confundida",
       "confundidas",
-	  "confunde",
-	  "confundelas"
+      "confunde",
+      "confundelas",
+      "confundela"
     ],
     "DESCRIPTION": "Confundir una carta cambia su coste este turno a un valor aleatorio entre #b0 y #b3."
   },
@@ -41,9 +42,9 @@
     "NAMES": [
       "offclass",
       "ajena",
-	  "ajenos",
-	  "ajeno",
-	  "ajenas"
+      "ajenos",
+      "ajeno",
+      "ajenas"
     ],
     "DESCRIPTION": "Una carta Ajena es cualquier carta obtenible de otra clase distinta a la tuya (incluyendo cartas Incoloras, Maldiciones y Estados)."
   },

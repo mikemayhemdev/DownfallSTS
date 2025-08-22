@@ -122,7 +122,8 @@
   },
   "sneckomod:OverwhelmingPresence": {
     "NAME": "Presencia Abrumadora",
-    "DESCRIPTION": "La primera vez que barajes tu mazo cada turno, obtén [E] y roba !M! carta."
+    "DESCRIPTION": "Etérea. NL La primera vez que juegues un sneckomod:Offclass cada turno, roba una carta.",
+    "UPGRADE_DESCRIPTION": "La primera vez que juegues un sneckomod:Offclass cada turno, roba una carta."
   },
   "sneckomod:RiskySword": {
     "NAME": "Espada Arriesgada",
@@ -138,7 +139,8 @@
   },
   "sneckomod:QuickBite": {
     "NAME": "Mordisco Rápido",
-    "DESCRIPTION": "Haz !D! de daño. NL sneckomod:Confunde la carta de mayor coste en tu mano."
+    "DESCRIPTION": "Haz !D! de daño. NL Roba !M! carta y sneckomod:Confundela.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño. NL Roba !M! cartas y sneckomod:Confundelas."
   },
   "sneckomod:QuickMove": {
     "NAME": "Movimiento Rápido",

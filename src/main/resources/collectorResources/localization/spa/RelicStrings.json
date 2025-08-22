@@ -87,14 +87,17 @@
       "Al obtenerla, #yMejora una carta en tu Colección. Comienza los combates con ella en la parte superior de tu pila Coleccionada.",
       "Comienza el combate con ",
       " en la parte superior de tu pila Coleccionada.",
-      "Selecciona una carta para embotellar para "
+      "Selecciona una carta para embotellar para ",
+      "La carta embotellada ha sido #rremovida de tu mazo, la reliquia ya no funciona."
+
     ]
   },
   "collector:TheContract": {
     "NAME": "El Contrato",
     "FLAVOR": "Firma con sangre.",
     "DESCRIPTIONS": [
-      "Al obtenerla, gana #b10 de #yEsencia [REMOVE_SPACE]."
+      "Al obtenerla, gana #b",
+      " de #yEsencia [REMOVE_SPACE]."
     ]
   },
   "collector:ForbiddenFruit": {
