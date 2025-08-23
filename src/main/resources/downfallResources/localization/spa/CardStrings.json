@@ -1,7 +1,7 @@
 {
   "downfall:Aged": {
     "NAME": "Envejecido",
-    "DESCRIPTION": "Injugable. Etérea. NL Al final de tu turno, añade un *Vacío a la parte superior de tu pila de robo."
+    "DESCRIPTION": "Injugable. Etérea. NL Al final de tu turno, añade un *Vacío a la parte superior de tu pila de extracción."
   },
   "downfall:Bewildered": {
     "NAME": "Desconcertado",
@@ -46,7 +46,7 @@
   },
   "downfall:Temptation": {
     "NAME": "Tentación",
-    "DESCRIPTION": "Baraja !M! Poderes aleatorios en la pila de robo de tu oponente."
+    "DESCRIPTION": "Baraja !M! Poderes aleatorios en la pila de extracción de tu oponente."
   },
   "downfall:BagOfKnives": {
     "NAME": "Bolsa de Cuchillos",

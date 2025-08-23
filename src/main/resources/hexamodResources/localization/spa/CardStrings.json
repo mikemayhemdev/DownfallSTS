@@ -216,7 +216,7 @@
   },
   "hexamod:Poltergeist": {
     "NAME": "Poltergeist",
-    "DESCRIPTION": "Siempre que juegues una carta Etérea, un enemigo al azar pierde !M! PV."
+    "DESCRIPTION": "Cada vez que juegues una carta Etérea, un enemigo al azar pierde !M! PV."
   },
   "hexamod:PhantomCloak": {
     "NAME": "Capa Fantasmal",
@@ -458,7 +458,7 @@
     },
   "hexamod:ParanormalForm": {
     "NAME": "Poltergeist",
-    "DESCRIPTION": "Siempre que juegues una carta Etérea, un enemigo al azar pierde !M! PV."
+    "DESCRIPTION": "Cada vez que juegues una carta Etérea, un enemigo al azar pierde !M! PV."
     },
   "hexamod:RecurringNightmare": {
     "NAME": "Visión de Pesadilla",

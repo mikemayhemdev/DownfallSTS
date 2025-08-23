@@ -6,7 +6,8 @@
       "Power_Potion",
       "power_potion",
       "powerpotion",
-      "poción de poder"
+      "poción de poder",
+      "Poción_de_Poder"
     ],
     "DESCRIPTION": "#yPoción [REMOVE_SPACE]: Elije #b1 de #b3 cartas de #yPoder aleatorias para añadir a tu mano, cuesta #b0 este turno."
   },
@@ -64,6 +65,6 @@
       "curiosity",
       "curiosidad"
     ],
-    "DESCRIPTION": "Siempre que juegues una carta de #yPoder, gana #b1 #yFuerza [REMOVE_SPACE]."
+    "DESCRIPTION": "Cada vez que juegues una carta de #yPoder, gana #b1 #yFuerza [REMOVE_SPACE]."
   }
 ]

@@ -368,8 +368,8 @@
   },
   "champ:WindUp": {
     "NAME": "Preparación",
-    "DESCRIPTION": "Elige una Postura para entrar. NL Busca un champ:Final en tu pila de robo. NL Agota.",
-    "UPGRADE_DESCRIPTION": "Elige una Postura para entrar. NL Busca un champ:Final en tu pila de robo.",
+    "DESCRIPTION": "Elige una Postura para entrar. NL Busca un champ:Final en tu pila de extracción. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Elige una Postura para entrar. NL Busca un champ:Final en tu pila de extracción.",
     "EXTENDED_DESCRIPTION": [
       "Entra en champ:Berserker.",
       "Entra en champ:Defensivo."
@@ -377,6 +377,6 @@
   },
   "champ:Headbutt": {
     "NAME": "Cabezazo",
-    "DESCRIPTION": "Haz !D! de daño. NL Coloca una carta de tu pila de descarte en la parte superior de tu pila de robo."
+    "DESCRIPTION": "Haz !D! de daño. NL Coloca una carta de tu pila de descarte en la parte superior de tu pila de extracción."
   }
 }

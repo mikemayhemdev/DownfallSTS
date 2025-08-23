@@ -113,7 +113,7 @@
   "awakened:StrengthReturnPower": {
     "NAME": "Ruptura Total",
     "DESCRIPTIONS": [
-      "Cada vez que ataques a este enemigo, gana #b",
+      "Al atacar a este enemigo, gana #b",
       " #yFuerza temporal [REMOVE_SPACE]."
     ]
   },

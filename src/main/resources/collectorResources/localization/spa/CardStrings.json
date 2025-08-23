@@ -29,12 +29,12 @@
   },
   "collector:Bellow": {
     "NAME": "Rugido",
-    "DESCRIPTION": "Etérea. NL Aplica collector:Condena igual al Bloqueo no utilizado del turno anterior. NL Agota.",
+    "DESCRIPTION": "Etérea. NL Aplica collector:Condena igual al Bloqueo no utilizado en el turno anterior. NL Agota.",
     "EXTENDED_DESCRIPTION": [" NL ( Aplica !M! de collector:Condena )"]
   },
   "collector:BlackBindings": {
     "NAME": "Ataduras Negras",
-    "DESCRIPTION": "Aplica !M! Débil, aplica !clm2! de collector:Condena por cada desventaja distinto en el enemigo."
+    "DESCRIPTION": "Aplica !M! Débil, aplica !clm2! de collector:Condena por cada desventaja distinta en el enemigo."
   },
   "collector:Blightning": {
     "NAME": "Relámpago Marchito",
@@ -87,7 +87,7 @@
   },
   "collector:Darkstorm": {
     "NAME": "Tormenta Oscura",
-    "DESCRIPTION": "Obtén un *Relámpago *Marchito. NL Baraja !M! más en tu pila de robo. NL Agota."
+    "DESCRIPTION": "Obtén un *Relámpago *Marchito. NL Baraja !M! más en tu pila de extracción. NL Agota."
   },
   "collector:DarkwoodKindling": {
     "NAME": "Leña de Sauce Oscuro",
@@ -105,7 +105,7 @@
   },
   "collector:DoMayhem": {
     "NAME": "Causar Caos",
-    "DESCRIPTION": "Al comienzo de tu turno, si algún enemigo tiene 25 o más de collector:Condena, juega la carta superior de tu pila de robo."
+    "DESCRIPTION": "Al comienzo de tu turno, si algún enemigo tiene 25 o más de collector:Condena, juega la carta superior de tu pila de extracción."
   },
   "collector:DragonsTrove": {
     "NAME": "Tesoro del Dragón",
@@ -370,7 +370,7 @@
   },
   "collector:WhirlingFlame": {
     "NAME": "Llama Giratoria",
-    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Coloca una carta de tu pila de descarte en la parte superior de tu pila de robo."
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Coloca una carta de tu pila de descarte en la parte superior de tu pila de extracción."
   },
   "collector:VoidArmor": {
     "NAME": "Armadura del Vacío",
@@ -378,11 +378,11 @@
   },
   "collector:Wildfire": {
     "NAME": "Fuego Salvaje",
-    "DESCRIPTION": "Haz !D! de daño por cada desventaja distinto en el enemigo."
+    "DESCRIPTION": "Haz !D! de daño por cada desventaja distinta en el enemigo."
   },
   "collector:YouAreMine": {
     "NAME": "¡Eres Mío!",
-    "DESCRIPTION": "Aplica !M! Débil. NL Aplica !M! Vulnerable. Aplica !clm2! de collector:Condena."
+    "DESCRIPTION": "Aplica !M! Débil. NL Aplica !M! Vulnerable. Aplica !clm2! collector:Condena."
   },
   "collector:Whomp": {
     "NAME": "Sopapo",
@@ -415,7 +415,7 @@
   },
   "collector:BronzeOrbCard": {
     "NAME": "Orbe de Bronce",
-    "DESCRIPTION": "Gana !B! de Bloqueo. NL Haz !D! de daño. NL La carta superior de tu pila de robo cuesta 0 hasta ser jugada."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Haz !D! de daño. NL La carta superior de tu pila de extracción cuesta 0 hasta ser jugada."
   },
   "collector:ByrdCard": {
     "NAME": "Jáparo",

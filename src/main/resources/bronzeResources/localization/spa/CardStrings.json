@@ -1,7 +1,7 @@
 {
   "bronze:Allocate": {
     "NAME": "Asignar",
-    "DESCRIPTION": "Gana [E] por cada Estado en tu pila de robo.",
+    "DESCRIPTION": "Gana [E] por cada Estado en tu pila de extracción.",
     "EXTENDED_DESCRIPTION": [
       " NL (Gana ",
       " [E] .)"
@@ -77,7 +77,7 @@
   },
   "bronze:BronzeOrb": {
     "NAME": "Orbe de Bronce",
-    "DESCRIPTION": "Innata. NL Haz !D! de daño. NL bronze:Codifica una carta aleatoria con *Codificar de tu pila de robo. Agota."
+    "DESCRIPTION": "Innata. NL Haz !D! de daño. NL bronze:Codifica una carta aleatoria con *Codificar de tu pila de extracción. Agota."
   },
   "bronze:BugBarrage": {
     "NAME": "Barrida de Errores",
@@ -207,8 +207,8 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "Buscar y Reemplazar",
-    "DESCRIPTION": "Busca una carta de tu pila de robo o de descarte. NL Agrega un *Desorientado donde estaba. NL Agota.",
-    "UPGRADE_DESCRIPTION": "Busca una carta de tu pila de robo o de descarte. NL Agota.",
+    "DESCRIPTION": "Busca una carta de tu pila de extracción o de descarte. NL Agrega un *Desorientado donde estaba. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Busca una carta de tu pila de extracción o de descarte. NL Agota.",
     "EXTENDED_DESCRIPTION": [
       "Elige."
     ]
@@ -300,7 +300,7 @@
   },
   "bronze:HyperBeam": {
     "NAME": "Hiper Rayo",
-    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Coloca 5 *Vacío en la parte superior de tu pila de robo."
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Coloca 5 *Vacío en la parte superior de tu pila de extracción."
   },
   "bronze:InfiniteBeams": {
     "NAME": "Rayos Infinitos",
@@ -422,8 +422,8 @@
   },
   "bronze:Return": {
     "NAME": "Regresar",
-    "DESCRIPTION": "Coloca una carta de tu pila de descarte en la parte superior de tu pila de robo. NL En el próximo turno, gana [E].",
-    "UPGRADE_DESCRIPTION": "Coloca una carta de tu pila de descarte en la parte superior de tu pila de robo. NL En el próximo turno, gana [E] [E]."
+    "DESCRIPTION": "Coloca una carta de tu pila de descarte en la parte superior de tu pila de extracción. NL En el próximo turno, gana [E].",
+    "UPGRADE_DESCRIPTION": "Coloca una carta de tu pila de descarte en la parte superior de tu pila de extracción. NL En el próximo turno, gana [E] [E]."
   },
   "bronze:Safeguard": {
     "NAME": "Salvaguarda",
@@ -529,7 +529,7 @@
   },
   "bronze:WildBeam": {
     "NAME": "Depurar",
-    "DESCRIPTION": "Haz !D! de daño. NL Agota una carta de Estado aleatoria de tu pila de robo.",
+    "DESCRIPTION": "Haz !D! de daño. NL Agota una carta de Estado aleatoria de tu pila de extracción.",
     "EXTENDED_DESCRIPTION": [
       "salvaje",
       "Rayo"

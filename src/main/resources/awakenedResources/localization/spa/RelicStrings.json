@@ -128,7 +128,7 @@
     "FLAVOR": "Una hoja favorecida por los magos debido a su capacidad de canalizar la magia lanzada de nuevo en sí misma.",
     "DESCRIPTIONS": [
       "Cada vez que juegues #b",
-      " Hechizos en un combate, gana un #yCeremonia [REMOVE_SPACE]."
+      " #yHechizos en un combate, gana una #yCeremonia [REMOVE_SPACE]."
     ]
   },
   "awakened:MoonTalisman": {

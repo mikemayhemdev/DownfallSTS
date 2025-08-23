@@ -244,11 +244,11 @@
   },
   "Slimebound:Replication": {
     "NAME": "Replicación",
-    "DESCRIPTION": "Elige una carta. NL Pon una copia encima de tu pila de robo. NL Agota.",
+    "DESCRIPTION": "Elige una carta. NL Pon una copia encima de tu pila de extracción. NL Agota.",
     "UPGRADE_DESCRIPTION": "Elige una carta. NL Obtén una copia de ella. NL Agota.",
     "EXTENDED_DESCRIPTION": [
       " para agregar una copia a tu mano.",
-      " para poner una copia encima de tu pila de robo."
+      " para poner una copia encima de tu pila de extracción."
     ]
   },
   "Slimebound:Repurpose": {
@@ -272,7 +272,7 @@
   },
   "Slimebound:SelfFormingGoo": {
     "NAME": "Baba Reformante",
-    "DESCRIPTION": "Obtén !B! de Bloqueo. NL Coloca una carta de tu pila de descarte encima de tu pila de robo."
+    "DESCRIPTION": "Obtén !B! de Bloqueo. NL Coloca una carta de tu pila de descarte encima de tu pila de extracción."
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Servir y Proteger",
@@ -285,7 +285,7 @@
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "Pelea Babosa",
-    "DESCRIPTION": "Juega la primera carta de tu pila de robo. Repite por cada una de tus Babas invocadas. NL Agota."
+    "DESCRIPTION": "Juega la primera carta de tu pila de extracción. Repite por cada una de tus Babas invocadas. NL Agota."
   },
   "Slimebound:SlimeCrush": {
     "NAME": "¡TRITURABABA!",

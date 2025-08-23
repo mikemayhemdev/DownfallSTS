@@ -182,7 +182,7 @@
 },
 "Guardian:Planning": {
   "NAME": "Planificación",
-  "DESCRIPTION": "Coloca las primeras !M! cartas de tu pila de robo en guardianmod:Estasis."
+  "DESCRIPTION": "Coloca las primeras !M! cartas de tu pila de extracción en guardianmod:Estasis."
 },
 "Guardian:Recover": {
   "NAME": "Recuperación",
@@ -200,7 +200,7 @@
 },
 "Guardian:Preprogram": {
   "NAME": "Preprogramar",
-  "DESCRIPTION": "Mira las primeras !M! cartas de tu pila de robo. Elige una y colócala en guardianmod:Estasis."
+  "DESCRIPTION": "Mira las primeras !M! cartas de tu pila de extracción. Elige una y colócala en guardianmod:Estasis."
 },
 "Guardian:GemFinder": {
   "NAME": "Detector de Gemas",
