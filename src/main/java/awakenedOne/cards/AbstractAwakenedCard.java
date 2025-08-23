@@ -10,7 +10,6 @@ import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -23,12 +22,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import hermit.actions.SoundAction;
 import hermit.util.TextureLoader;
-import slimebound.SlimeboundMod;
-
-import java.util.Objects;
 
 import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
+import static awakenedOne.AwakenedOneMod.makeID;
 import static awakenedOne.util.Wiz.atb;
 import static awakenedOne.util.Wiz.isChantActive;
 
@@ -271,6 +269,7 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     public void checkOnChant() {
         if (!this.hasTag(ACTIVECHANT)) {
             this.tags.add(ACTIVECHANT);
+            this.addToBot(new SoundAction(makeID("CHANT")));
             AwakenedTextHelper.colorCombos(this, false);
             this.initializeDescription();
         }

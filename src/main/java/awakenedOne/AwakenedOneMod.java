@@ -69,6 +69,7 @@ public class AwakenedOneMod implements
         PostInitializeSubscriber,
         OnStartBattleSubscriber,
         OnPlayerTurnStartSubscriber,
+        AddAudioSubscriber,
         OnCardUseSubscriber,
         PostPlayerUpdateSubscriber,
         SetUnlocksSubscriber {
@@ -395,6 +396,16 @@ public class AwakenedOneMod implements
 
                 AwakenedOneChar.Enums.AWAKENED_ONE
         );
+    }
+
+
+    @Override
+    public void receiveAddAudio() {
+        BaseMod.addAudio(makeID("THUNDERSPELL"), "awakenedResources/audio/thunderbolt.ogg");
+        BaseMod.addAudio(makeID("ICESPELL"), "awakenedResources/audio/cryostasis.ogg");
+        BaseMod.addAudio(makeID("DARKSPELL"), "awakenedResources/audio/darkleech.ogg");
+        BaseMod.addAudio(makeID("FIRESPELL"), "awakenedResources/audio/burning_study.ogg");
+        BaseMod.addAudio(makeID("CHANT"), "awakenedResources/audio/chant_activatev2.ogg");
     }
 
     @Override

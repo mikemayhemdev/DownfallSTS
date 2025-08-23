@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FrostOrbActivateEffect;
+import hermit.actions.SoundAction;
 
 import static awakenedOne.AwakenedOneMod.*;
 
@@ -20,7 +21,7 @@ public class Cryostasis extends AbstractSpellCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        CardCrawlGame.sound.play("ORB_FROST_CHANNEL", 0.1F);
+        this.addToBot(new SoundAction(makeID("ICESPELL")));
         AbstractDungeon.effectsQueue.add(new FrostOrbActivateEffect(p.hb.cX, p.hb.cY));
         blck();
 
