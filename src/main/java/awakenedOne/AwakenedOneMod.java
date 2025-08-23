@@ -389,8 +389,8 @@ public class AwakenedOneMod implements
                 DeadBird.ID,
                 ShardOfNowak.ID,
 
-                FourthDimension.ID,
-                BringTheStorm.ID,
+                StormRuler.ID,
+                Inscribe.ID,
                 AphoticFount.ID,
 
                 AwakenedOneChar.Enums.AWAKENED_ONE
