@@ -5,7 +5,7 @@
   },
   "downfall:Bewildered": {
     "NAME": "Bewildered",
-    "DESCRIPTION": "Ethereal. NL When exhausted, sneckomod:Muddle the next 5 cards you draw."
+    "DESCRIPTION": "When drawn, sneckomod:Muddle this card. NL Exhaust."
   },
   "downfall:Icky": {
     "NAME": "Icky",
