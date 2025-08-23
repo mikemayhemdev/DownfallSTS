@@ -1,0 +1,153 @@
+{
+  "awakened:RippedDoll": {
+    "NAME": "Muñeca Desgarrada",
+    "FLAVOR": "El último recordatorio de tu yo anterior. Todavía contiene magia latente.",
+    "DESCRIPTIONS": [
+      "Al comienzo de los primeros #b",
+      " turnos de combate, #yawakened:Conjurar [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:ShreddedDoll": {
+    "NAME": "Muñeca Destruida",
+    "FLAVOR": "Un recordatorio de tu debilidad, y aún así no puedes dejarlo ir.",
+    "DESCRIPTIONS": [
+      "Reemplaza ",
+      "[REMOVE_SPACE].[] NL Al comienzo de tu turno, #yawakened:Conjurar [REMOVE_SPACE]. NL La primera vez que renuevas tus Hechizos en cada combate, gana #b1 #yRitual [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:WhiteRibbon": {
+    "NAME": "Cinta Blanca",
+    "FLAVOR": "Da poder a las palabras habladas incluso sin ritual adecuado.",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues una carta con un efecto activo de #yawakened:Canto, gana #b",
+      "#yBloqueo [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:HexxBomb": {
+    "NAME": "Bomba de Maná",
+    "FLAVOR": "3... 2...",
+    "DESCRIPTIONS": [
+      "Cada vez que un enemigo muere, transfiere cualquier #yawakened:Quemadura de Maná que tenga a un enemigo al azar."
+    ]
+  },
+  "awakened:TomeOfPortalmancy": {
+    "NAME": "Tomo de Portales",
+    "FLAVOR": "Un grimorio que detalla la construcción y mantenimiento de puertas interplanares.",
+    "DESCRIPTIONS": [
+      "Siempre que un #yVacío sea #yExhausto [REMOVE_SPACE], aplica #b",
+      "#yawakened:Quemadura de Maná a TODOS los enemigos."
+    ]
+  },
+  "awakened:EyeOfTheOccult": {
+    "NAME": "Ojo del Oculto",
+    "FLAVOR": "Este espeluznante tallado imparte conocimiento mágico a su dueño.",
+    "DESCRIPTIONS": [
+      "#yRayo y #ySanguijuela Oscura apuntan a TODOS los enemigos."
+    ]
+  },
+  "awakened:DeadBird": {
+    "NAME": "Espíritu Corvídeo",
+    "FLAVOR": "Este espectro sigue de cerca a los condenados y malditos.",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, inflige #b",
+      " daño al enemigo con menos PV, aumentado por #yFuerza [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:AbyssBlade": {
+    "NAME": "Hoja del Abismo",
+    "FLAVOR": "Reembolso del Vacío.",
+    "DESCRIPTIONS": [
+      "La primera vez que eres #yawakened:Vaciado cada turno, gana [E] y roba una carta."
+    ]
+  },
+  "awakened:ShardOfNowak": {
+    "NAME": "Fragmento de Hueso Dorado",
+    "FLAVOR": "...No, no ese tipo de enfoque.",
+    "DESCRIPTIONS": [
+      "Comienza cada combate con #b",
+      "#yFuerza [REMOVE_SPACE]. Después de perder cualquier tipo de PV, pierde esa #yFuerza por el resto del combate."
+    ]
+  },
+  "awakened:VioletPlumage": {
+    "NAME": "Plumaje Violeta",
+    "FLAVOR": "Teñido por la oscuridad interminable del olvido.",
+    "DESCRIPTIONS": [
+      "La primera vez que termines tu turno con exceso de [E] en cada combate, roba #b",
+      " cartas adicionales al comienzo de tu próximo turno."
+    ]
+  },
+  "awakened:ZenerDeck": {
+    "NAME": "Mazo Zener",
+    "FLAVOR": "“Uno, dos, tres, todos los ojos deberían estar sobre mí.”",
+    "DESCRIPTIONS": [
+      "Al comienzo del combate, añade #yESP a tu Libro de Hechizos y #yawakened:Conjura."
+    ]
+  },
+  "awakened:CawingCask": {
+    "NAME": "Barril Graznando",
+    "FLAVOR": "Un barril ceremonialmente tallado que representa al dios cuervo Mazaleth, su contenido huele cuestionable...",
+    "DESCRIPTIONS": [
+      "Cada vez que uses una poción, gana #b",
+      "#yRitual [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:MiniBlackHole": {
+    "NAME": "Alethea",
+    "FLAVOR": "Desde el Abismo.",
+    "DESCRIPTIONS": [
+      "Si no juegas ningún #yPoder durante tu turno, roba una carta adicional en el siguiente turno."
+    ]
+  },
+  "awakened:StrengthBooster": {
+    "NAME": "Cuervo de Papel",
+    "FLAVOR": "Árbitro de dudas y maldiciones doblado mil veces...",
+    "DESCRIPTIONS": [
+      "Los enemigos reciben #b",
+      "% de daño adicional de #yawakened:Quemadura de Maná [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:CursedBlessing": {
+    "NAME": "Ritos Finales",
+    "FLAVOR": "Dejo todo lo que tengo a mi gato, Fideos. Adiós, mundo cruel. XOXO Juez",
+    "DESCRIPTIONS": [
+      "La primera vez que actives #b",
+      "#yawakened:efectos de Canto en un combate, gana #b",
+      "#yRitual [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:CurvedSwordMeme": {
+    "NAME": "Conjurar Hoja",
+    "FLAVOR": "Adelante, hazlo. Conjura una hoja, ahora mismo. Estoy mirando. :^)",
+    "DESCRIPTIONS": [
+      "Al comienzo del combate, añade #yConjurar #yHoja a tu mano?",
+      "NOTA: ¡EL JUGADOR NO PUEDE OBTENER ESTE RELIQUIA FUERA DE LA CONSOLA, ES UNA RELIQUIA DE BROMA!"
+    ]
+  },
+  "awakened:CurvedSword": {
+    "NAME": "Zetsumei",
+    "FLAVOR": "Una hoja favorecida por los magos debido a su capacidad de canalizar la magia lanzada de nuevo en sí misma.",
+    "DESCRIPTIONS": [
+      "Cada vez que juegues #b",
+      " Hechizos en un combate, gana un #yCeremonia [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:MoonTalisman": {
+    "NAME": "Talismán de Media Luna",
+    "FLAVOR": "“Por favor, solo... no me olvides. Incluso después de que muera.”",
+    "DESCRIPTIONS": [
+      "Al recoger, elige una carta que #rNO tenga #yawakened:Conjurar [REMOVE_SPACE]. Añade #yawakened:Conjurar a ella.",
+      "Elige una carta para ",
+      "El Talismán ha bendecido a ",
+      " y a añadido #yawakened:Conjurar a ella.",
+      "La carta adjunta a esta reliquia ha sido #rremovida de tu mazo, la reliquia ya no funciona."
+    ]
+  },
+  "awakened:AwakenedUrn": {
+    "NAME": "Jarrón con Cara de Pájaro",
+    "FLAVOR": "Esta urna muestra al dios cuervo Mazaleth con un aspecto travieso.",
+    "DESCRIPTIONS": [
+      "Las primeras #b4 veces que juegues una carta de #yPoder en cada combate, cura #b",
+      " HP."
+    ]
+  }
+}

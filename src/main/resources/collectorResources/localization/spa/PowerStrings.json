@@ -31,7 +31,7 @@
   "collector:DarkLordForm": {
     "NAME": "Forma del Señor Oscuro",
     "DESCRIPTIONS": [
-      "Al comienzo de tu turno, juega #y¡Eres #yMío! a un enemigo aleatorio.",
+      "Al comienzo de tu turno, juega #y¡Eres #yMío! a un enemigo al azar.",
       "Al comienzo de tu turno, juega #b",
       " copias de #y¡Eres #yMío! a enemigos aleatorios."
     ]
@@ -39,7 +39,7 @@
   "collector:DarkLordFormPlus": {
     "NAME": "Forma del Señor Oscuro+",
     "DESCRIPTIONS": [
-      "Al comienzo de tu turno, juega #y¡Eres #yMío!+ a un enemigo aleatorio.",
+      "Al comienzo de tu turno, juega #y¡Eres #yMío!+ a un enemigo al azar.",
       "Al comienzo de tu turno, juega #b",
       " copias de #y¡Eres #yMío!+ a enemigos aleatorios."
     ]
@@ -79,7 +79,7 @@
   "collector:FeelMyPain": {
     "NAME": "Siente Mi Dolor",
     "DESCRIPTIONS": [
-      "Cada vez que #yAgotes una carta, un enemigo aleatorio pierde #b",
+      "Cada vez que #yAgotes una carta, un enemigo al azar pierde #b",
       " PV."
     ]
   },
@@ -186,12 +186,12 @@
     "DESCRIPTIONS": [
       "Cada vez que juegues un #yAtaque, si tienes #yPV #yTemporales, CabezaDeAntorcha: NL ",
       "Aplica #b",
-      " de #yCondena a un enemigo aleatorio.",
+      " de #yCondena a un enemigo al azar.",
       "Inflige #b",
       " de daño a TODOS los enemigos.",
       "Gana #b",
       " de #yBloqueo.",
-      " #yVeneno a un enemigo aleatorio.",
+      " #yVeneno a un enemigo al azar.",
       "Roba #b",
       " carta.",
       " cartas."
@@ -209,7 +209,7 @@
     "NAME": "Llamado del Amo",
     "DESCRIPTIONS": [
       "Cada vez que juegues un Ataque, si tienes #yPV #yTemporales, inflige #b",
-      " de daño a un enemigo aleatorio."
+      " de daño a un enemigo al azar."
     ]
   },
    "collector:LouseCard": {
@@ -260,7 +260,7 @@
     "NAME": "Llamado Tóxico",
     "DESCRIPTIONS": [
       "Al final de tu turno, si tienes #yPV #yTemporales, aplica #b",
-      " de #yVeneno a un enemigo aleatorio."
+      " de #yVeneno a un enemigo al azar."
     ]
   },
   "collector:MoreBlockWithTempHP": {

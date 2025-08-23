@@ -8,8 +8,8 @@
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Hexaquema",
-    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio !M! veces. NL Agota.",
-    "UPGRADE_DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio !M! veces."
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar !M! veces. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño a un enemigo al azar !M! veces."
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Invencible",

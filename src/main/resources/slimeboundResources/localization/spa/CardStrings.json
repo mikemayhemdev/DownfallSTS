@@ -44,7 +44,7 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Dividir y Vencer",
-    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio por cada Baba. NL slimeboundmod:Absorbelas. NL Agota."
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar por cada Baba. NL slimeboundmod:Absorbelas. NL Agota."
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Empapar en Baba",
@@ -217,8 +217,8 @@
   },
   "Slimebound:RainOfGoop": {
     "NAME": "Lluvia de Baba",
-    "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba a un enemigo aleatorio !M! veces.",
-    "UPGRADE_DESCRIPTION": "Aplica !slime! slimeboundmod:Baba a un enemigo aleatorio !M! veces."
+    "DESCRIPTION": "Aplica !slime! slimeboundmod:Baba a un enemigo al azar !M! veces.",
+    "UPGRADE_DESCRIPTION": "Aplica !slime! slimeboundmod:Baba a un enemigo al azar !M! veces."
   },
   "Slimebound:RallyTheTroops": {
     "NAME": "Reunir al Escuadrón",

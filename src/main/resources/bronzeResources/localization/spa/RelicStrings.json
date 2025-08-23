@@ -10,14 +10,16 @@
     "NAME": "Gafas Protectores",
     "FLAVOR": "Mira de cerca.",
     "DESCRIPTIONS": [
-      "Si terminas tu turno sin cartas #yCodificadas, gana #b4 de #yBloqueo [REMOVE_SPACE]."
+      "Si terminas tu turno sin cartas #yCodificadas, gana #b",
+      " de #yBloqueo [REMOVE_SPACE]."
     ]
   },
   "bronze:DecasWashers": {
     "NAME": "Arandelas de Deca",
     "FLAVOR": "No está claro por qué Deca las colecciona.",
     "DESCRIPTIONS": [
-      "Al comienzo de los primeros #b3 turnos de cada combate, roba una carta adicional."
+      "Al comienzo de los primeros #b",
+      " turnos de cada combate, roba una carta adicional."
     ]
   },
   "bronze:Timepiece": {
@@ -67,7 +69,8 @@
     "FLAVOR": "Registro de cambios: experiencia de usuario mejorada.",
     "DESCRIPTIONS": [
       "Reemplaza ",
-      " [REMOVE_SPACE].[] NL Las primeras #b3 Funciones que crees en cada combate cuestan #b0 hasta que se jueguen."
+      " [REMOVE_SPACE].[] NL Las primeras #b",
+      " Funciones que crees en cada combate cuestan #b0 hasta que se jueguen."
     ]
   },
   "bronze:BottledCode": {
@@ -77,7 +80,8 @@
       "Al obtenerla, elige una carta con #yCodificar [REMOVE_SPACE]. Comienza cada combate con esta carta #yCodificada [REMOVE_SPACE].",
       "Elige una carta para ",
       "Comienza cada combate con #yCodificada ",
-      " [REMOVE_SPACE]."
+      " [REMOVE_SPACE].",
+      "La carta enbotellada ha sido #rremovida de tu mazo, la reliquia ya no funciona."
     ]
   },
   "bronze:DonusWashers": {

@@ -1,0 +1,69 @@
+[
+  {
+    "PROPER_NAME": "Poción de Poder",
+    "NAMES": [
+      "Power Potion",
+      "Power_Potion",
+      "power_potion",
+      "powerpotion",
+      "poción de poder"
+    ],
+    "DESCRIPTION": "#yPoción [REMOVE_SPACE]: Elije #b1 de #b3 cartas de #yPoder aleatorias para añadir a tu mano, cuesta #b0 este turno."
+  },
+  {
+    "PROPER_NAME": "Conjuro",
+    "NAMES": [
+      "conjure",
+      "conjured",
+      "awaken",
+      "despertar",
+      "despierta",
+      "conjuro",
+      "conjura",
+      "conjurar"
+    ],
+    "DESCRIPTION": "Crea la próxima carta de tu Libro de Hechizos en tu mano."
+  },
+  {
+    "PROPER_NAME": "Canto",
+    "NAMES": [
+      "chant",
+      "canto"
+    ],
+    "DESCRIPTION": "Las cartas con efecto de #yCanto se vuelven más poderosas durante el resto del combate si la última carta jugada en combate fue una carta de #yPoder."
+  },
+  {
+    "PROPER_NAME": "Hex",
+    "NAMES": [
+      "hex",
+      "hexxed",
+      "hexx"
+    ],
+    "DESCRIPTION": "Las criaturas con #yHex reciben #b20% más daño del próximo Ataque por cada acumulación. #yHex se elimina de una vez después de ser atacado."
+  },
+  {
+    "PROPER_NAME": "Drenado",
+    "NAMES": [
+      "drain",
+      "drained",
+      "drenado"
+    ],
+    "DESCRIPTION": "Cualquier efecto que cause que pierdas [E] , incluso si no tienes para perder. (No incluye [E] gastado al jugar cartas.)"
+  },
+  {
+    "PROPER_NAME": "Quemadura de Maná",
+    "NAMES": [
+      "manaburn",
+      "quemadura de maná"
+    ],
+    "DESCRIPTION": "Cuando pierdes [E] , incluso si no tienes para perder, pierdes HP igual a tú #yQuemadura de Maná [REMOVE_SPACE]. (No incluye [E] gastado al jugar cartas.)"
+  },
+  {
+    "PROPER_NAME": "Curiosidad",
+    "NAMES": [
+      "curiosity",
+      "curiosidad"
+    ],
+    "DESCRIPTION": "Siempre que juegues una carta de #yPoder, gana #b1 #yFuerza [REMOVE_SPACE]."
+  }
+]

@@ -172,8 +172,8 @@
     "NAME": "Fuente",
     "DESCRIPTIONS": [
       "Los efectos de #yExceso también aplican #b",
-      " de #yTóxico a un enemigo aleatorio.",
-      " de #yTóxico a un enemigo aleatorio."
+      " de #yTóxico a un enemigo al azar.",
+      " de #yTóxico a un enemigo al azar."
     ]
   },
   "sneckomod:TrashCanPower": {

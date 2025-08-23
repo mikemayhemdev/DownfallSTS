@@ -130,7 +130,7 @@
   },
   "hermit:SprayPray": {
     "NAME": "Disparos a Ciegas",
-    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio 3 veces. NL Baraja una *Duda en tu mazo de robo."
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar 3 veces. NL Baraja una *Duda en tu mazo de robo."
   },
   "hermit:Scavenge": {
     "NAME": "Rebuscar",
@@ -234,7 +234,7 @@
   },
   "hermit:Ricochet": {
     "NAME": "Ricochet",
-    "DESCRIPTION": "Haz !D! de daño. Repite contra un enemigo aleatorio por cada efecto hermit:Preciso activado este turno.",
+    "DESCRIPTION": "Haz !D! de daño. Repite contra un enemigo al azar por cada efecto hermit:Preciso activado este turno.",
     "EXTENDED_DESCRIPTION": [
       " NL (Repite !M! ",
       "vez.)",
@@ -323,7 +323,7 @@
   },
   "hermit:FromBeyond": {
     "NAME": "Desde el Más Allá",
-    "DESCRIPTION": "Por cada carta en tu pila de agotadas, un enemigo aleatorio pierde !M! de vida."
+    "DESCRIPTION": "Por cada carta en tu pila de agotadas, un enemigo al azar pierde !M! de vida."
   },
   "hermit:Virtue": {
     "NAME": "Virtud",

@@ -18,7 +18,7 @@
     "NAME": "Orbes Flotantes",
     "DESCRIPTIONS": [
       "Cada vez que juegas una carta de coste #y0, inflige #b",
-      " de daño a un enemigo aleatorio."
+      " de daño a un enemigo al azar."
     ]
   },
   "Guardian:OrbwalkPower": {

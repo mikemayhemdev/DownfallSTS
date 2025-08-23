@@ -64,7 +64,10 @@
       "Evitar que Snecko use barajas de otros mods.",
       "Desactivar música personalizada (requiere reiniciar el juego)",
       "Desbloquear todas las apariencias alternativas bloqueadas para personajes de Downfall",
-      "Usar íconos en lugar de texto adicional en las cartas para indicar propiedades aplicadas."
+      "Usar íconos en lugar de texto adicional en las cartas para indicar propiedades aplicadas.",
+      "El Libro de Hechizos resalta la próxima carta que Conjura robará.",
+      "Sin ajustes de Downfall a cartas y reliquias originales (Urna de Cara de Pájaro)",
+      "Usar Jefes de Downfall Legado (pre-6.0)"
     ]
   },
   "downfall:EnergyPanelTip": {

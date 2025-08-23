@@ -27,13 +27,9 @@
     ]
   },
   "champ:StanceDanceCrown": {
-    "NAME": "Corona del Campeón",
-    "DESCRIPTION": "Elige una Postura para entrar. NL Activa su champ:Bono.",
-    "UPGRADE_DESCRIPTION": "Elige una Postura para entrar. NL Activa su champ:Bono dos veces.",
-    "EXTENDED_DESCRIPTION": [
-      "Entra en champ:Berserker.",
-      "Entra en champ:Defensivo."
-    ]
+    "NAME": "Inspiración",
+    "DESCRIPTION": "Retener. NL Entra en una Postura en la que no estás. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Retener. NL Entra en una Postura en la que no estás."
   },
   "champ:SwordSigil": {
     "NAME": "Sello de la Victoria",
@@ -384,6 +380,3 @@
     "DESCRIPTION": "Haz !D! de daño. NL Coloca una carta de tu pila de descarte en la parte superior de tu pila de robo."
   }
 }
-
-
-
