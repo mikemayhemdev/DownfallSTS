@@ -401,7 +401,7 @@ public class AwakenedOneMod implements
 
     @Override
     public void receiveAddAudio() {
-        BaseMod.addAudio(makeID("THUNDERSPELL"), "awakenedResources/audio/thunderbolt.ogg");
+        BaseMod.addAudio(makeID("THUNDERSPELL"), "awakenedResources/audio/thunderboltv2.ogg");
         BaseMod.addAudio(makeID("ICESPELL"), "awakenedResources/audio/cryostasis.ogg");
         BaseMod.addAudio(makeID("DARKSPELL"), "awakenedResources/audio/darkleech.ogg");
         BaseMod.addAudio(makeID("FIRESPELL"), "awakenedResources/audio/burning_study.ogg");
