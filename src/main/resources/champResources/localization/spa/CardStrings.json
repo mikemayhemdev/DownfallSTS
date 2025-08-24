@@ -318,7 +318,7 @@
   },
   "champ:BerserkerStyle": {
     "NAME": "Afilar la Espada",
-    "DESCRIPTION": "Tus cartas \"Golpe\" Hacen !M! más de daño."
+    "DESCRIPTION": "Tus cartas \"Golpe\" Hacen !M! de daño adicional."
   },
   "champ:Riposte": {
     "NAME": "Estocada de Contraataque",

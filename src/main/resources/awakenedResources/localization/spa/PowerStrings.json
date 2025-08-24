@@ -74,9 +74,9 @@
     "NAME": "Eco Oscuro",
     "DESCRIPTIONS": [
       "Al final de tu turno, inflige #b",
-      " daño a TODOS los enemigos #b",
+      " de daño a TODOS los enemigos #b",
       " veces.",
-      " daño a TODOS los enemigos."
+      " de daño a TODOS los enemigos."
     ]
   },
   "awakened:MoonlitVisionPower": {
@@ -200,7 +200,7 @@
     "NAME": "Gobernante de Tormentas",
     "DESCRIPTIONS": [
       "Tus #yRelámpagos infligen #b",
-      " más daño."
+      " de daño adicional."
     ]
   },
   "awakened:SpellshieldPower": {
@@ -214,7 +214,7 @@
     "NAME": "Tormenta de Dagas",
     "DESCRIPTIONS": [
       "Cada vez que crees una carta, inflige #b",
-      " daño a un enemigo al azar."
+      " de daño a un enemigo al azar."
     ]
   },
   "awakened:SchemePower": {

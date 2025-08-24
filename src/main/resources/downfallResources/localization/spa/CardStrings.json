@@ -34,7 +34,7 @@
   },
   "downfall:BossMaintenance": {
     "NAME": "Mantenimiento",
-    "DESCRIPTION": "Los *Golpes Hacen !M! más de daño este combate. NL Gana !B! de Destreza. NL Esta carta cuesta 1 más durante este combate."
+    "DESCRIPTION": "Los *Golpes Hacen !M! de daño adicional este combate. NL Gana !B! de Destreza. NL Esta carta cuesta 1 más durante este combate."
   },
   "downfall:CuriousRobot": {
     "NAME": "Robot Curioso",

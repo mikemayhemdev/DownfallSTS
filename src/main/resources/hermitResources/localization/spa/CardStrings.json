@@ -204,7 +204,7 @@
   },
   "hermit:Maintenance": {
     "NAME": "Mantenimiento",
-    "DESCRIPTION": "*Golpes Hacen !M! más daño este combate. NL Gana !hermit:SecondMagic! de Destreza. NL Este cuesta 1 más este combate."
+    "DESCRIPTION": "*Golpes Hacen !M! de daño adicional este combate. NL Gana !hermit:SecondMagic! de Destreza. NL Este cuesta 1 más este combate."
   },
   "hermit:EternalForm": {
     "NAME": "Forma Eterna",

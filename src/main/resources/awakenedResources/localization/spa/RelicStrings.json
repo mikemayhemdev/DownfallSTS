@@ -50,7 +50,7 @@
     "FLAVOR": "Este espectro sigue de cerca a los condenados y malditos.",
     "DESCRIPTIONS": [
       "Al final de tu turno, inflige #b",
-      " daño al enemigo con menos PV, aumentado por #yFuerza [REMOVE_SPACE]."
+      " de daño al enemigo con menos PV, aumentado por #yFuerza [REMOVE_SPACE]."
     ]
   },
   "awakened:AbyssBlade": {

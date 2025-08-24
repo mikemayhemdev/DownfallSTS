@@ -13,11 +13,11 @@
   },
   "awakened:Darkleech": {
     "NAME": "Sanguijuela Oscura",
-    "DESCRIPTION": "Retener. NL Aplica !M! Vulnerable. NL Aplica !awakened:m2! awakened:Manaburn. NL Agotar."
+    "DESCRIPTION": "Retener. NL Aplica !M! Vulnerable. NL Aplica !awakened:m2! awakened:Quemadura_de_Maná. NL Agotar."
   },
   "awakened:DeathCoil": {
     "NAME": "Espiral de Muerte",
-    "DESCRIPTION": "Aplica !M! awakened:Manaburn. NL El próximo turno, pierdes [E]."
+    "DESCRIPTION": "Aplica !M! awakened:Quemadura_de_Maná. NL El próximo turno, pierdes [E]."
   },
   "awakened:ESPSpell": {
     "NAME": "ESP",
@@ -110,7 +110,7 @@
   },
   "awakened:ChosenVerse": {
     "NAME": "Verso Elegido",
-    "DESCRIPTION": "Las próximas !M! cartas que juegues esta turno que no sean Ataque, roba una carta y gana !B! de Bloqueo."
+    "DESCRIPTION": "Las próximas !M! veces que juegues una carta que no sea de Ataque este turno, roba una carta y gana !B! de Bloqueo."
   },
   "awakened:SoulStrike": {
     "NAME": "Golpe del Alma",
@@ -131,7 +131,7 @@
   },
   "awakened:WaveOfMiasma": {
     "NAME": "Ola de Miasma",
-    "DESCRIPTION": "Aplica !M! Débil y !awakened:m2! awakened:Manaburn a TODOS los enemigos. NL Agota."
+    "DESCRIPTION": "Aplica !M! Débil y !awakened:m2! awakened:Quemadura_de_Maná a TODOS los enemigos. NL Agota."
   },
   "awakened:SludgeBomb": {
     "NAME": "Bomba de Lodo",
@@ -197,7 +197,7 @@
   },
   "awakened:Nihil": {
     "NAME": "Nihilismo",
-    "DESCRIPTION": "Aplica !M! awakened:Manaburn. NL awakened:Canto: TODOS los enemigos pierden HP igual a su awakened:Manaburn."
+    "DESCRIPTION": "Aplica !M! awakened:Quemadura_de_Maná. NL awakened:Canto: TODOS los enemigos pierden HP igual a su awakened:Quemadura_de_Maná."
   },
   "awakened:MoonlitVision": {
     "NAME": "Visión de Luna",
@@ -314,7 +314,7 @@
   },
   "awakened:Scour": {
     "NAME": "Desgarrar",
-    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! awakened:Manaburn."
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica !M! awakened:Quemadura_de_Maná."
   },
   "awakened:Manastorm": {
     "NAME": "Tormenta de Maná",

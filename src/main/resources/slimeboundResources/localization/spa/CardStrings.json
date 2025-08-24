@@ -72,7 +72,7 @@
   },
   "Slimebound:FlameTackle": {
     "NAME": "Embestida Ígnea",
-    "DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño. NL Tus cartas \"Embestida\" Hacen !M! más de daño este combate."
+    "DESCRIPTION": "Haz !D! de daño. NL Recibes !SlimeboundSelfharm! de daño. NL Tus cartas \"Embestida\" Hacen !M! de daño adicional este combate."
   },
   "Slimebound:FormOfPuddle": {
     "NAME": "Forma de Charco",
