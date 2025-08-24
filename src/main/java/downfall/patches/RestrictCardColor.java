@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.helpers.CardLibrary;
 import hermit.characters.hermit;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
+import theHexaghost.TheHexaghost;
 
 @SpirePatch(clz = CardLibrary.class, method = "getAnyColorCard", paramtypez = {AbstractCard.CardRarity.class})
 public class RestrictCardColor {
@@ -33,6 +34,10 @@ public class RestrictCardColor {
             }
 
             //PLEASE WORK
+            if (card.hasTag(HexaMod.GHOSTWHEELCARD) && !(AbstractDungeon.player instanceof TheHexaghost)){
+                available = false;
+            }
+
             if (card.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE){
                 available = false;
             }
