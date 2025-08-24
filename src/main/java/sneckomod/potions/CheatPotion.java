@@ -52,7 +52,7 @@ public class CheatPotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        return 1;
+        return 3;
     }
 }
 
