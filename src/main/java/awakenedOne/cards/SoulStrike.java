@@ -7,11 +7,11 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.actions.SoundAction;
 
 import java.util.Iterator;
 
-import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
-import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
+import static awakenedOne.AwakenedOneMod.*;
 
 public class SoulStrike extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(SoulStrike.class.getSimpleName());
@@ -37,6 +37,7 @@ public class SoulStrike extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < this.magicNumber; i++) {
+            this.addToBot(new SoundAction(makeID("SOULSTRIKE")));
             dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
         }
     }

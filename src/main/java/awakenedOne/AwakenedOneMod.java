@@ -406,6 +406,7 @@ public class AwakenedOneMod implements
         BaseMod.addAudio(makeID("DARKSPELL"), "awakenedResources/audio/darkleech.ogg");
         BaseMod.addAudio(makeID("FIRESPELL"), "awakenedResources/audio/burning_study.ogg");
         BaseMod.addAudio(makeID("CHANT"), "awakenedResources/audio/chant_activatev2.ogg");
+        BaseMod.addAudio(makeID("SOULSTRIKE"), "awakenedResources/audio/awakenedoneattack.ogg");
     }
 
     @Override
