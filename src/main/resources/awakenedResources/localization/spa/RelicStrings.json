@@ -57,7 +57,7 @@
     "NAME": "Hoja del Abismo",
     "FLAVOR": "Reembolso del Vacío.",
     "DESCRIPTIONS": [
-      "La primera vez que eres #yawakened:Drenado cada turno, gana [E] y roba una carta."
+      "La primera vez seas #yawakened:Drenado cada turno, gana [E] y roba una carta."
     ]
   },
   "awakened:ShardOfNowak": {
@@ -147,7 +147,7 @@
     "FLAVOR": "Esta urna muestra al dios cuervo Mazaleth con un aspecto travieso.",
     "DESCRIPTIONS": [
       "Las primeras #b4 veces que juegues una carta de #yPoder en cada combate, cura #b",
-      " HP."
+      " PV."
     ]
   }
 }

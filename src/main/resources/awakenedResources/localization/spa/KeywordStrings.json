@@ -58,7 +58,7 @@
       "Quemadura de Maná",
       "quemadura_de_maná"
     ],
-    "DESCRIPTION": "Cuando pierdes [E] , incluso si no tienes para perder, pierdes HP igual a tú #yQuemadura de Maná [REMOVE_SPACE]. (No incluye [E] gastado al jugar cartas.)"
+    "DESCRIPTION": "Cuando pierdes [E] , incluso si no tienes para perder, pierdes PV igual a tú #yQuemadura de Maná [REMOVE_SPACE]. (No incluye [E] gastado al jugar cartas.)"
   },
   {
     "PROPER_NAME": "Curiosidad",

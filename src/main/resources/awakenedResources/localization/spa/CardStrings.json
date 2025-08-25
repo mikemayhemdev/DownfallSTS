@@ -98,7 +98,7 @@
   },
   "awakened:FlareShot": {
     "NAME": "Destello de Plumas",
-    "DESCRIPTION": "Haz !D! de daño. NL Este turno, cada vez que juegues una carta que no sea un Ataque, TODOS los enemigos pierden !M! de HP."
+    "DESCRIPTION": "Haz !D! de daño. NL Este turno, cada vez que juegues una carta que no sea un Ataque, TODOS los enemigos pierden !M! de PV."
   },
   "awakened:ClarionCall": {
     "NAME": "Llamado Clarion",
@@ -197,7 +197,7 @@
   },
   "awakened:Nihil": {
     "NAME": "Nihilismo",
-    "DESCRIPTION": "Aplica !M! awakened:Quemadura_de_Maná. NL awakened:Canto: TODOS los enemigos pierden HP igual a su awakened:Quemadura_de_Maná."
+    "DESCRIPTION": "Aplica !M! awakened:Quemadura_de_Maná. NL awakened:Canto: TODOS los enemigos pierden PV igual a su awakened:Quemadura_de_Maná."
   },
   "awakened:MoonlitVision": {
     "NAME": "Visión de Luna",
@@ -205,7 +205,7 @@
   },
   "awakened:Rebirth": {
     "NAME": "Renacimiento",
-    "DESCRIPTION": "Cuando vayas a morir o al final del combate, elimina todos los debuffs, *Despertar, y sana !M! HP en su lugar."
+    "DESCRIPTION": "Cuando vayas a morir o al final del combate, elimina todos los debuffs, *Despertar, y sana !M! PV en su lugar."
   },
   "awakened:Archmagus": {
     "NAME": "Archimago",
@@ -223,7 +223,7 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "Cae la Oscuridad",
-    "DESCRIPTION": "Siempre que estés awakened:Drenado, gana !M! de Bloqueo y !awakened:m2! Fuerza."
+    "DESCRIPTION": "Cada vez que seas awakened:Drenado, gana !M! de Bloqueo y !awakened:m2! Fuerza."
   },
   "awakened:Eventide": {
     "NAME": "Anochecer",
@@ -269,7 +269,7 @@
   },
   "awakened:SongOfSorrow": {
     "NAME": "Canción de Lamento",
-    "DESCRIPTION": "Cada vez que creas un *Vacío, TODOS los enemigos pierden !M! HP."
+    "DESCRIPTION": "Cada vez que creas un *Vacío, TODOS los enemigos pierden !M! PV."
   },
   "awakened:MysticOrder": {
     "NAME": "Orden Mística",
