@@ -1,7 +1,7 @@
 {
   "awakened:SpellDescriptor": {
     "TEXT": [
-      "주문
+      "주문"
     ]
   },
   "awakened:ConjureMod": {
@@ -43,4 +43,5 @@
       "@그걸@ @하면@ @시공간의@ @연속성이@ @붕괴해버릴@ @거야!!!@"
     ]
   }
+
 }
