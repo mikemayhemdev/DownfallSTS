@@ -114,7 +114,7 @@
     "NAME": "Ruptura Total",
     "DESCRIPTIONS": [
       "Al atacar a este enemigo, gana #b",
-      " #yFuerza temporal [REMOVE_SPACE]."
+      " #yFuerza #ytemporal [REMOVE_SPACE]."
     ]
   },
   "awakened:ManaburnPower": {

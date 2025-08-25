@@ -165,8 +165,8 @@
   },
   "awakened:BirdsEye": {
     "NAME": "Ojo de Pájaro",
-    "DESCRIPTION": "Elige un Hechizo para awakened:Conjura.",
-    "UPGRADE_DESCRIPTION": "Recarga tus Hechizos. Elige un Hechizo para awakened:Conjura."
+    "DESCRIPTION": "Elige un Hechizo para awakened:Conjurar.",
+    "UPGRADE_DESCRIPTION": "Recarga tus Hechizos. Elige un Hechizo para awakened:Conjurar."
   },
   "awakened:Initiation": {
     "NAME": "Iniciación",
@@ -205,7 +205,7 @@
   },
   "awakened:Rebirth": {
     "NAME": "Renacimiento",
-    "DESCRIPTION": "Cuando vayas a morir o al final del combate, elimina todos los debuffs, *Despertar, y sana !M! PV en su lugar."
+    "DESCRIPTION": "Cuando vayas a morir o al final del combate, elimina todas las desventajas, *Despierta, y sana !M! PV en su lugar."
   },
   "awakened:Archmagus": {
     "NAME": "Archimago",
@@ -227,7 +227,7 @@
   },
   "awakened:Eventide": {
     "NAME": "Anochecer",
-    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar dos veces. NL Añade un *Vacío a la parte superior de tu pila de extracción."
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar dos veces. NL Añade un *Vacío en la parte superior de tu pila de extracción."
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Acoger el Eclipse",
@@ -301,7 +301,7 @@
   },
   "awakened:MiddenHeap": {
     "NAME": "Montón de Desechos",
-    "DESCRIPTION": "Gana !B! de Bloqueo. NL Pon !M! cartas de Estado o Maldición de tu pila de extracción o descarte en tu mano.",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Pon !M! carta de Estado o Maldición de tu pila de extracción o descarte en tu mano.",
     "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo. NL Pon !M! cartas de Estado o Maldición de tu pila de extracción o descarte en tu mano.",
     "EXTENDED_DESCRIPTION": [
       "Selecciona una carta para mover a tu mano.",

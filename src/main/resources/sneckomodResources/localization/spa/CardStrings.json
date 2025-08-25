@@ -122,8 +122,8 @@
   },
   "sneckomod:OverwhelmingPresence": {
     "NAME": "Presencia Abrumadora",
-    "DESCRIPTION": "Etérea. NL La primera vez que juegues un sneckomod:Offclass cada turno, roba una carta.",
-    "UPGRADE_DESCRIPTION": "La primera vez que juegues un sneckomod:Offclass cada turno, roba una carta."
+    "DESCRIPTION": "Etérea. NL La primera vez que juegues una carta sneckomod:Ajena cada turno, roba una carta.",
+    "UPGRADE_DESCRIPTION": "La primera vez que juegues una carta sneckomod:Ajena cada turno, roba una carta."
   },
   "sneckomod:RiskySword": {
     "NAME": "Espada Arriesgada",
