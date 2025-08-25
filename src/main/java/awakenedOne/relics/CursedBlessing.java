@@ -2,11 +2,14 @@ package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.util.TexLoader;
+import awakenedOne.util.Wiz;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.RitualPower;
 
 import static awakenedOne.AwakenedOneMod.makeRelicOutlinePath;
@@ -57,16 +60,19 @@ public class CursedBlessing extends CustomRelic {
         return this.DESCRIPTIONS[0] + AMOUNT1 + DESCRIPTIONS[1] + AMOUNT2 + DESCRIPTIONS[2];
     }
 
-    public void onTrigger() {
-        if (this.counter != -1) {
-            this.counter++;
-            if (this.counter == AMOUNT1) {
-                this.counter = -1;
-                flash();
-                this.flash();
-                this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, AMOUNT2), AMOUNT2));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RitualPower(AbstractDungeon.player, AMOUNT2, true), AMOUNT2));
+    @Override
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        if (Wiz.isChantActive()) {
+            if (this.counter != -1) {
+                this.counter++;
+                if (this.counter == AMOUNT1) {
+                    this.counter = -1;
+                    flash();
+                    this.flash();
+                    this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                    //this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new StrengthPower(AbstractDungeon.player, AMOUNT2), AMOUNT2));
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new RitualPower(AbstractDungeon.player, AMOUNT2, true), AMOUNT2));
+                }
             }
         }
     }

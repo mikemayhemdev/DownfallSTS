@@ -273,15 +273,15 @@ public abstract class AbstractAwakenedCard extends CustomCard {
             AwakenedTextHelper.colorCombos(this, false);
             this.initializeDescription();
         }
-        if (AbstractDungeon.player.hasRelic(CursedBlessing.ID)) {
-            AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
-        }
-        if (AbstractDungeon.player.hasRelic(WhiteRibbon.ID)) {
-            AbstractDungeon.player.getRelic(WhiteRibbon.ID).onTrigger();
-        }
-        if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
-            AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
-        }
+//        if (AbstractDungeon.player.hasRelic(CursedBlessing.ID)) {
+//            AbstractDungeon.player.getRelic(CursedBlessing.ID).onTrigger();
+//        }
+//        if (AbstractDungeon.player.hasRelic(WhiteRibbon.ID)) {
+//            AbstractDungeon.player.getRelic(WhiteRibbon.ID).onTrigger();
+//        }
+//        if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
+//            AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
+//        }
         AwakenedTextHelper.colorCombos(this, false);
     }
 
