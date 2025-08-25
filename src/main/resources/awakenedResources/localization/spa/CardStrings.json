@@ -230,7 +230,7 @@
     "DESCRIPTION": "Haz !D! de daño a un enemigo al azar dos veces. NL Añade un *Vacío a la parte superior de tu pila de extracción."
   },
   "awakened:EclipseEmbrace": {
-    "NAME": "Acojer el Eclipse",
+    "NAME": "Acoger el Eclipse",
     "DESCRIPTION": "Siempre que agotes un *Vacío, gana [E] y roba una carta el próximo turno."
   },
   "awakened:Clutch": {
@@ -384,7 +384,7 @@
   },
   "awakened:SignInBlood": {
     "NAME": "Firma en Sangre",
-    "DESCRIPTION": "Haz 3 de daño. NL Roba !M! cartas. NL Gana !M! de Fuerza temporal. NL Agotar."
+    "DESCRIPTION": "Recibe 3 de daño. NL Roba !M! cartas. NL Gana !M! de Fuerza temporal. NL Agotar."
   },
   "awakened:SpreadingSpores": {
     "NAME": "Esporas Extendidas",

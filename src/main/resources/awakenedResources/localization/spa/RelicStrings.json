@@ -57,7 +57,7 @@
     "NAME": "Hoja del Abismo",
     "FLAVOR": "Reembolso del Vacío.",
     "DESCRIPTIONS": [
-      "La primera vez que eres #yawakened:Vaciado cada turno, gana [E] y roba una carta."
+      "La primera vez que eres #yawakened:Drenado cada turno, gana [E] y roba una carta."
     ]
   },
   "awakened:ShardOfNowak": {

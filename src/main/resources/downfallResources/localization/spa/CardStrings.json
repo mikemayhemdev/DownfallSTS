@@ -5,11 +5,11 @@
   },
   "downfall:Bewildered": {
     "NAME": "Desconcertado",
-    "DESCRIPTION": "Injugable. Etérea. NL Al ser robada, sneckomod:Confunde tu mano."
+    "DESCRIPTION": "Al robarla, sneckomod:Confunde esta carta. NL Agota."
   },
   "downfall:Icky": {
     "NAME": "Pegajoso",
-    "DESCRIPTION": "Gana un *Viscoso. NL Agota."
+    "DESCRIPTION": "Retiene. NL Agota."
   },
   "downfall:Haunted": {
     "NAME": "Embrujado",
@@ -25,7 +25,7 @@
   },
   "downfall:CurseOfBlood": {
     "NAME": "Haemophilia",
-    "DESCRIPTION": "Lose [E] at the start of your next turn. NL Exhaust.",
+    "DESCRIPTION": "Pierde [E] al inicio de tu próximo turno. NL Agota.",
     "EXTENDED_DESCRIPTION": ["Note for LOC: Hemophilia is a name for a disorder for when your blood doesn’t clot properly. I added the a in the middle for coolness factor."]
   },
   "downfall:SummonMushrooms": {
@@ -34,7 +34,7 @@
   },
   "downfall:BossMaintenance": {
     "NAME": "Mantenimiento",
-    "DESCRIPTION": "Los *Golpes Hacen !M! de daño adicional este combate. NL Gana !B! de Destreza. NL Esta carta cuesta 1 más durante este combate."
+    "DESCRIPTION": "Los *Golpes Hacen !M! de daño adicional este combate. NL Gana !B! de Destreza."
   },
   "downfall:CuriousRobot": {
     "NAME": "Robot Curioso",
