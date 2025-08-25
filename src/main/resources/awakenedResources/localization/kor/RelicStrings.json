@@ -4,7 +4,7 @@
     "FLAVOR": "과거의 자신을 떠오르게 하는 마지막 물건입니다. 마법을 품고 있습니다.",
     "DESCRIPTIONS": [
       "전투 시작 후 첫 #b",
-      " 턴 동안, #yawakened:영창합니다 [REMOVE_SPACE]."
+      " 턴 동안, #yawakened:영창합니다."
     ]
   },
   "awakened:ShreddedDoll": {
@@ -12,7 +12,7 @@
     "FLAVOR": "자신의 약한 부분을 떠오르게 만들지만, 아직은 버릴 수 없습니다.",
     "DESCRIPTIONS": [
       "",
-      "[REMOVE_SPACE] 을 대체합니다.[] NL 턴 시작 시, #yawakened:영창합니다 [REMOVE_SPACE]. NL 각 전투마다 처음으로 주문을 갱신할 때마다, #y의식을 #b1 얻습니다 [REMOVE_SPACE]."
+      "을 대체합니다.[] NL 턴 시작 시, #yawakened:영창합니다. NL 각 전투마다 처음으로 주문을 갱신할 때마다, #y의식을 #b1 얻습니다."
     ]
   },
   "awakened:WhiteRibbon": {
@@ -20,7 +20,7 @@
     "FLAVOR": "적합한 의식 과정 없이도, 내뱉는 말에 힘을 실어줍니다.",
     "DESCRIPTIONS": [
       "yawakened:암송 효과가 활성화된 카드를 사용할 때마다, #y방어도를 #b",
-      " 얻습니다 [REMOVE_SPACE]."
+      " 얻습니다."
     ]
   },
   "awakened:HexxBomb": {
@@ -34,7 +34,7 @@
     "NAME": "포탈술사의 서적",
     "FLAVOR": "차원 이동 관문의 건설 및 유지보수에 관한 자세한 설명이 실려있는 마법서입니다..",
     "DESCRIPTIONS": [
-      "#y공허가 #y소멸할 때마다 [REMOVE_SPACE], 적 전체에게 #yawakened:마나연소를 #b",
+      "#y공허가 #y소멸할 때마다, 적 전체에게 #yawakened:마나연소를 #b",
       " 부여합니다."
     ]
   },
@@ -50,7 +50,7 @@
     "FLAVOR": "이 악령은 저주받은 자와 죄지은 자의 뒤를 쫓습니다.",
     "DESCRIPTIONS": [
       "턴 종료 시, 가장 체력이 낮은 적에게 피해를 #b",
-      " 주며, 가하는 피해는 #y힘에 따라 증가합니다 [REMOVE_SPACE]."
+      " 주며, 가하는 피해는 #y힘에 따라 증가합니다."
     ]
   },
   "awakened:AbyssBlade": {
@@ -65,7 +65,7 @@
     "FLAVOR": "...아뇨, 집중 표시가 아닙니다.",
     "DESCRIPTIONS": [
       "전투 시작 시 #y힘을 #b",
-      " 얻습니다 [REMOVE_SPACE]. 어떤 방식이든 체력을 잃을 시, 남은 전투 동안 그 #y힘을 잃습니다."
+      " 얻습니다. 어떤 방식이든 체력을 잃을 시, 남은 전투 동안 그 #y힘을 잃습니다."
     ]
   },
   "awakened:VioletPlumage": {
@@ -88,7 +88,7 @@
     "FLAVOR": "의식을 통해 조각된 까마귀 신 마잘레스를 묘사하고 있는 통으로, 안의 내용물에선 수상쩍은 냄새가 납니다...",
     "DESCRIPTIONS": [
       "포션을 사용할 때마다, #y의식을 #b",
-      " 얻습니다[REMOVE_SPACE]."
+      " 얻습니다."
     ]
   },
   "awakened:MiniBlackHole": {
@@ -103,7 +103,7 @@
     "FLAVOR": "의심과 저주의 중재자는 천 번이나 접히게 됐습니다...",
     "DESCRIPTIONS": [
       "적들이 #yawakened:마나연소를 통해 #b",
-      "%의 피해를 추가로 받습니다. [REMOVE_SPACE]."
+      "%의 피해를 추가로 받습니다."
     ]
   },
   "awakened:CursedBlessing": {
@@ -112,7 +112,7 @@
     "DESCRIPTIONS": [
       "전투에서 처음으로 #b",
       "번까지 #yawakened:암송 효과를 발동할 때마다, #y의식을 #b",
-      " 얻습니다 [REMOVE_SPACE]."
+      " 얻습니다."
     ]
   },
   "awakened:CurvedSwordMeme": {
@@ -128,14 +128,14 @@
     "FLAVOR": "채널링한 마법을 다시 돌아오게 하는 능력으로 인해, 마법사들에게 선호되는 칼입니다.",
     "DESCRIPTIONS": [
       "전투에서 주문을 #b",
-      "장 사용할 때마다, #y제식을 1장 얻습니다 [REMOVE_SPACE]."
+      "장 사용할 때마다, #y제식을 1장 얻습니다."
     ]
   },
   "awakened:MoonTalisman": {
     "NAME": "신월의 부적",
     "FLAVOR": "“제발, 제가 죽은 뒤에도 절 잊지 말아주세요.”",
     "DESCRIPTIONS": [
-      "획득 시 #yawakened:영창 효과가 없는 카드 1장을 선택합니다 [REMOVE_SPACE]. 그 카드에 #yawakened:영창 효과를 추가합니다.",
+      "획득 시 #yawakened:영창 효과가 없는 카드 1장을 선택합니다. 그 카드에 #yawakened:영창 효과를 추가합니다.",
       "",
       "부적의 축복을 받았습니다: ",
       "의 효과로 yawakened:영창을 추가할 카드를 선택하세요.",
@@ -150,4 +150,5 @@
       " 회복합니다."
       ]
   }
+
 }
