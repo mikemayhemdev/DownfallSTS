@@ -4,7 +4,7 @@
     "FLAVOR": "El último recordatorio de tu yo anterior. Todavía contiene magia latente.",
     "DESCRIPTIONS": [
       "Al comienzo de los primeros #b",
-      " turnos de combate, #yawakened:Conjurar [REMOVE_SPACE]."
+      " turnos de cada combate, #yawakened:Conjurar [REMOVE_SPACE]."
     ]
   },
   "awakened:ShreddedDoll": {
@@ -20,7 +20,7 @@
     "FLAVOR": "Da poder a las palabras habladas incluso sin ritual adecuado.",
     "DESCRIPTIONS": [
       "Cada vez que juegues una carta con un efecto activo de #yawakened:Canto, gana #b",
-      "#yBloqueo [REMOVE_SPACE]."
+      " #yBloqueo [REMOVE_SPACE]."
     ]
   },
   "awakened:HexxBomb": {
@@ -35,7 +35,7 @@
     "FLAVOR": "Un grimorio que detalla la construcción y mantenimiento de puertas interplanares.",
     "DESCRIPTIONS": [
       "Siempre que un #yVacío sea #yExhausto [REMOVE_SPACE], aplica #b",
-      "#yawakened:Quemadura de Maná a TODOS los enemigos."
+      " #yawakened:Quemadura de Maná a TODOS los enemigos."
     ]
   },
   "awakened:EyeOfTheOccult": {
@@ -50,14 +50,14 @@
     "FLAVOR": "Este espectro sigue de cerca a los condenados y malditos.",
     "DESCRIPTIONS": [
       "Al final de tu turno, inflige #b",
-      " daño al enemigo con menos PV, aumentado por #yFuerza [REMOVE_SPACE]."
+      " de daño al enemigo con menos PV, aumentado por #yFuerza [REMOVE_SPACE]."
     ]
   },
   "awakened:AbyssBlade": {
     "NAME": "Hoja del Abismo",
     "FLAVOR": "Reembolso del Vacío.",
     "DESCRIPTIONS": [
-      "La primera vez que eres #yawakened:Vaciado cada turno, gana [E] y roba una carta."
+      "La primera vez que eres #yawakened:Drenado cada turno, gana [E] y roba una carta."
     ]
   },
   "awakened:ShardOfNowak": {
@@ -65,7 +65,7 @@
     "FLAVOR": "...No, no ese tipo de enfoque.",
     "DESCRIPTIONS": [
       "Comienza cada combate con #b",
-      "#yFuerza [REMOVE_SPACE]. Después de perder cualquier tipo de PV, pierde esa #yFuerza por el resto del combate."
+      " #yFuerza [REMOVE_SPACE]. Después de perder cualquier tipo de PV, pierde esa #yFuerza por el resto del combate."
     ]
   },
   "awakened:VioletPlumage": {
@@ -88,7 +88,7 @@
     "FLAVOR": "Un barril ceremonialmente tallado que representa al dios cuervo Mazaleth, su contenido huele cuestionable...",
     "DESCRIPTIONS": [
       "Cada vez que uses una poción, gana #b",
-      "#yRitual [REMOVE_SPACE]."
+      " #yRitual [REMOVE_SPACE]."
     ]
   },
   "awakened:MiniBlackHole": {
@@ -111,8 +111,8 @@
     "FLAVOR": "Dejo todo lo que tengo a mi gato, Fideos. Adiós, mundo cruel. XOXO Juez",
     "DESCRIPTIONS": [
       "La primera vez que actives #b",
-      "#yawakened:efectos de Canto en un combate, gana #b",
-      "#yRitual [REMOVE_SPACE]."
+      " #yawakened:efectos de Canto en un combate, gana #b",
+      " #yRitual [REMOVE_SPACE]."
     ]
   },
   "awakened:CurvedSwordMeme": {
@@ -128,7 +128,7 @@
     "FLAVOR": "Una hoja favorecida por los magos debido a su capacidad de canalizar la magia lanzada de nuevo en sí misma.",
     "DESCRIPTIONS": [
       "Cada vez que juegues #b",
-      " Hechizos en un combate, gana un #yCeremonia [REMOVE_SPACE]."
+      " #yHechizos en un combate, gana una #yCeremonia [REMOVE_SPACE]."
     ]
   },
   "awakened:MoonTalisman": {

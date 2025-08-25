@@ -127,7 +127,7 @@
     "NAME": "Anomalía Embotellada",
     "FLAVOR": "Girando y girando... y finalmente quebrándose.",
     "DESCRIPTIONS": [
-      "Al obtenerla, elige una carta. Al inicio de cada combate, remuévela de tu pila de robo. Al inicio del turno #b3 [REMOVE_SPACE], añádela a tu mano. Cuesta #b0 ese turno.",
+      "Al obtenerla, elige una carta. Al inicio de cada combate, remuévela de tu pila de extracción. Al inicio del turno #b3 [REMOVE_SPACE], añádela a tu mano. Cuesta #b0 ese turno.",
       "Elige una carta para ",
       "Comienza cada combate con ",
       " removida de tu mazo. Al inicio del turno #b3, añádela a tu mano. NL Cuesta #b0 ese turno.",

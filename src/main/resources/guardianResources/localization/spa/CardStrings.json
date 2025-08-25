@@ -72,8 +72,8 @@
   },
   "Guardian:VentSteam": {
     "NAME": "Liberar Vapor",
-    "DESCRIPTION": "Aplica !M! de Vulnerable a TODOS los enemigos.",
-    "UPGRADE_DESCRIPTION": "Aplica !M! de Vulnerable a TODOS los enemigos."
+    "DESCRIPTION": "Aplica !M! Vulnerable a TODOS los enemigos.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! Vulnerable a TODOS los enemigos."
   },
   "Guardian:CurlUp": {
     "NAME": "Replegarse",
@@ -134,8 +134,8 @@
 },
 "Guardian:SentryWave": {
   "NAME": "Ola Centinela",
-  "DESCRIPTION": "Aplica !M! de Débil. NL Coloca una *Explosión *Centinela en guardianmod:Estasis. NL Agota.",
-  "UPGRADE_DESCRIPTION": "Aplica !M! de Débil. NL guardianmod:Ensamblar 2. NL Coloca una *Explosión *Centinela+ en guardianmod:Estasis. NL Agota."
+  "DESCRIPTION": "Aplica !M! Débil. NL Coloca una *Explosión *Centinela en guardianmod:Estasis. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Aplica !M! Débil. NL guardianmod:Ensamblar 2. NL Coloca una *Explosión *Centinela+ en guardianmod:Estasis. NL Agota."
 },
 "Guardian:CompilePackage": {
   "NAME": "Compilar Paquete",
@@ -182,7 +182,7 @@
 },
 "Guardian:Planning": {
   "NAME": "Planificación",
-  "DESCRIPTION": "Coloca las primeras !M! cartas de tu pila de robo en guardianmod:Estasis."
+  "DESCRIPTION": "Coloca las primeras !M! cartas de tu pila de extracción en guardianmod:Estasis."
 },
 "Guardian:Recover": {
   "NAME": "Recuperación",
@@ -200,7 +200,7 @@
 },
 "Guardian:Preprogram": {
   "NAME": "Preprogramar",
-  "DESCRIPTION": "Mira las primeras !M! cartas de tu pila de robo. Elige una y colócala en guardianmod:Estasis."
+  "DESCRIPTION": "Mira las primeras !M! cartas de tu pila de extracción. Elige una y colócala en guardianmod:Estasis."
 },
 "Guardian:GemFinder": {
   "NAME": "Detector de Gemas",
@@ -350,8 +350,8 @@
 },
 "Guardian:Gem_Crimson": {
   "NAME": "Granate",
-  "DESCRIPTION": "guardianmod:Gema. NL Aplica 1 de Vulnerable a TODOS los enemigos.",
-  "UPGRADE_DESCRIPTION": "Aplica 1 de Vulnerable a TODOS los enemigos."
+  "DESCRIPTION": "guardianmod:Gema. NL Aplica 1 Vulnerable a TODOS los enemigos.",
+  "UPGRADE_DESCRIPTION": "Aplica 1 Vulnerable a TODOS los enemigos."
 },
 "Guardian:Gem_Blue": {
   "NAME": "Zafiro",

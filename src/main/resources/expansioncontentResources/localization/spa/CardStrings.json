@@ -17,7 +17,7 @@
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Rayo",
-    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Coloca un *Vacío en la parte superior de tu pila de robo. NL Agota."
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Coloca un *Vacío en la parte superior de tu pila de extracción. NL Agota."
   },
   "expansioncontent:LastStand": {
     "NAME": "Última Resistencia",
@@ -25,7 +25,7 @@
   },
   "expansioncontent:YouAreMine": {
     "NAME": "¡ERES MÍO!",
-    "DESCRIPTION": "Aplica !M! de Débil, !M! de Vulnerable y !DM! de expansioncontent:Condena a TODOS los enemigos. NL Agota."
+    "DESCRIPTION": "Aplica !M! Débil, !M! Vulnerable y !DM! de expansioncontent:Condena a TODOS los enemigos. NL Agota."
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "Curiosidad",
@@ -99,8 +99,8 @@
   },
   "expansioncontent:SuperGoopSpray": {
     "NAME": "Rociada de Baba",
-    "DESCRIPTION": "Aplica !M! de expansioncontent:Baba y !DM! de Débil.",
-    "UPGRADE_DESCRIPTION": "Aplica !M! de expansioncontent:Baba y !DM! de Débil a TODOS los enemigos."
+    "DESCRIPTION": "Aplica !M! de expansioncontent:Baba y !DM! Débil.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! de expansioncontent:Baba y !DM! Débil a TODOS los enemigos."
   },
   "expansioncontent:ChargeUp": {
     "NAME": "Placa Resistente",
@@ -109,8 +109,8 @@
   },
   "expansioncontent:SuperTaunt": {
     "NAME": "Provocación",
-    "DESCRIPTION": "Aplica !M! de Débil y de Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Aplica !M! de Débil y de Vulnerable a TODOS los enemigos."
+    "DESCRIPTION": "Aplica !M! Débil y Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! Débil y Vulnerable a TODOS los enemigos."
   },
   "expansioncontent:Torchfire": {
     "NAME": "Fuego Salvaje",
@@ -126,7 +126,7 @@
   },
   "expansioncontent:SuperViciousMockery": {
     "NAME": "Mofa Cruel",
-    "DESCRIPTION": "Obtén !M! de Vigor. NL Aplica !DM! de Débil."
+    "DESCRIPTION": "Obtén !M! de Vigor. NL Aplica !DM! Débil."
   },
   "expansioncontent:SuperClobber": {
     "NAME": "Golpe Demoledor",
@@ -138,7 +138,7 @@
   },
   "expansioncontent:SuperWhirlingFlame": {
     "NAME": "Llama Giratoria",
-    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Coloca una carta de tu pila de descarte en la parte superior de tu pila de robo."
+    "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL Coloca una carta de tu pila de descarte en la parte superior de tu pila de extracción."
   },
   "expansioncontent:Flail": {
     "NAME": "Azote",
@@ -164,7 +164,7 @@
   },
   "expansioncontent:Virus": {
     "NAME": "Virus",
-    "DESCRIPTION": "Agota hasta !M! cartas, baraja un *Rayo *Mayor en tu pila de robo por cada carta agotada. NL Agota."
+    "DESCRIPTION": "Agota hasta !M! cartas, baraja un *Rayo *Mayor en tu pila de extracción por cada carta agotada. NL Agota."
   },
   "expansioncontent:MajorBeam": {
     "NAME": "Rayo Mayor",
@@ -173,8 +173,8 @@
   },
   "expansioncontent:ManipulateTime": {
     "NAME": "Reflexión Tardía",
-    "DESCRIPTION": "Coloca una carta de tu pila de descarte al fondo de tu pila de robo. Cuesta 0 hasta ser jugada.",
-    "UPGRADE_DESCRIPTION": "Coloca una carta de tu pila de descarte al fondo de tu pila de robo. Cuesta 0 durante este combate."
+    "DESCRIPTION": "Coloca una carta de tu pila de descarte al fondo de tu pila de extracción. Cuesta 0 hasta ser jugada.",
+    "UPGRADE_DESCRIPTION": "Coloca una carta de tu pila de descarte al fondo de tu pila de extracción. Cuesta 0 durante este combate."
   },
   "expansioncontent:Pandemonium": {
     "NAME": "Pandemonio",
@@ -190,7 +190,7 @@
   },
   "expansioncontent:PeekPages": {
     "NAME": "Hojear Páginas",
-    "DESCRIPTION": "Baraja !M! *Revelación en tu pila de robo. NL Agota."
+    "DESCRIPTION": "Baraja !M! *Revelación en tu pila de extracción. NL Agota."
   },
   "expansioncontent:BloodBarrage": {
     "NAME": "Barrido Sangriento",

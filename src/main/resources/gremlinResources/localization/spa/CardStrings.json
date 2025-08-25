@@ -87,7 +87,7 @@
   },
   "Gremlin:Encore": {
     "NAME": "Otra Más",
-    "DESCRIPTION": "Gana 3 gremlin:Magia. NL gremlin:Magia hace !M! más de daño."
+    "DESCRIPTION": "Gana 3 gremlin:Magia. NL gremlin:Magia hace !M! de daño adicional."
   },
   "Gremlin:Enthusiasm": {
     "NAME": "Entusiasmo",
@@ -272,7 +272,7 @@
   },
   "Gremlin:Polish": {
     "NAME": "Pulir",
-    "DESCRIPTION": "Las Navajas Hacen !M! de daño adicional. NL Las *Protecciones otorgan !M! de Bloqueo adicional."
+    "DESCRIPTION": "Las Navajas Hacen !M! de daño adicional este combate. NL Las *Protecciones otorgan !M! de Bloqueo adicional este combate."
   },
   "Gremlin:PourSalt": {
     "NAME": "Echar Sal",
@@ -306,7 +306,7 @@
   },
   "Gremlin:Rhythm": {
     "NAME": "Ritmo",
-    "DESCRIPTION": "gremlin:Cambia al siguiente Gremlin. NL Trae una carta Básica de tu pila de robo. Cuesta 0 este turno."
+    "DESCRIPTION": "gremlin:Cambia al siguiente Gremlin. NL Trae una carta Básica de tu pila de extracción. Cuesta 0 este turno."
   },
   "Gremlin:Rush": {
     "NAME": "Embate",

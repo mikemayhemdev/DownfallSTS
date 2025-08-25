@@ -57,7 +57,7 @@
       "Se #yincendia al terminar tu turno.",
       "Se #yincendia al terminar tu turno mientras estás sobre ella.",
       " NL NL #yIncendiada [REMOVE_SPACE]: #yAdivina #b",
-      " y juega la primera carta de tu pila de robo, modificada por la #yIntensidad [REMOVE_SPACE]. ",
+      " y juega la primera carta de tu pila de extracción, modificada por la #yIntensidad [REMOVE_SPACE]. ",
       " NL NL Al final de tu turno, si está #yIncendiada [REMOVE_SPACE], #yAvanza a la siguiente llama fantasmal."
     ]
   }

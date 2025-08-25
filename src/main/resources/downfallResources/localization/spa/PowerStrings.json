@@ -166,7 +166,7 @@
   "downfall:NeowEnergyThief": {
     "NAME": "Ladrón de Energía",
     "DESCRIPTIONS": [
-      "Cuando Neow añade #rMaldiciones a tu pila de robo, también añade 1 carta de #yVacío a ella."
+      "Cuando Neow añade #rMaldiciones a tu pila de extracción, también añade 1 carta de #yVacío a ella."
     ]
   },
   "downfall:DefectAncientConstructPower": {
