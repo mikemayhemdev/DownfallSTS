@@ -118,7 +118,7 @@
     ]
   },
   "awakened:ManaburnPower": {
-    "NAME": "Quema de Maná",
+    "NAME": "Quemadura de Maná",
     "DESCRIPTIONS": [
       "Cada vez que seas #yDrenado [REMOVE_SPACE], pierde #b",
       " PV."
