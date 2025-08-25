@@ -320,7 +320,7 @@
     "NAME": "Manastorm",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure twice."
   },
-  "awakened:BringTheStorm": {
+  "awakened:StormRuler": {
     "NAME": "Storm Ruler",
     "DESCRIPTION": "awakened:Conjure. NL *Thunderbolts deal !M! additional damage."
   },

@@ -58,8 +58,7 @@ public class Bewildered extends CustomCard {
 
 
     @Override
-    public void triggerOnExhaust() {
-        super.triggerOnExhaust();
+    public void triggerWhenDrawn() {
         this.flash();
         Wiz.atb(new MuddleAction(this));
     }

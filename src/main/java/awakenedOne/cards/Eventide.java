@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.actions.SoundAction;
 
 import static awakenedOne.AwakenedOneMod.*;
 
@@ -22,6 +23,7 @@ public class Eventide extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < 2; ++i) {
+            this.addToBot(new SoundAction(makeID("SOULSTRIKE")));
             this.addToBot(new NewRipAndTearAction(this));
         }
         Wiz.atb(new MakeTempCardInDrawPileAction(new VoidCard(), 1, false, true, false));

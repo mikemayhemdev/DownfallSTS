@@ -75,7 +75,6 @@ public class TransmogrifierEvil extends AbstractImageEvent {
                     AbstractDungeon.player.masterDeck.removeCard(c);
                     AbstractDungeon.transformCard(c, false, AbstractDungeon.miscRng);
                     AbstractCard transCard = AbstractDungeon.getTransformedCard();
-                    AbstractDungeon.player.damage(new DamageInfo(null, this.lifeCost));
                     logMetricTransformCard("Transmorgrifier", "Transformed", c, transCard);
                     AbstractDungeon.effectsQueue.add(new ShowCardAndObtainEffect(transCard, (float)Settings.WIDTH / 2.0F, (float)Settings.HEIGHT * .66F));
                     AbstractDungeon.gridSelectScreen.selectedCards.clear();
@@ -118,9 +117,9 @@ public class TransmogrifierEvil extends AbstractImageEvent {
                 switch (buttonPressed) {
 
                     case 0:
+                        AbstractDungeon.player.damage(new DamageInfo(null, this.lifeCost));
                         cardCount = 2;
                         obtainedCards.clear();
-
                         this.screen = CUR_SCREEN.COMPLETE;
                         this.transform(cardCount);
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);

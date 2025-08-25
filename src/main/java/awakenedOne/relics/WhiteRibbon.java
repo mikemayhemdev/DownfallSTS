@@ -2,6 +2,7 @@ package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.util.TexLoader;
+import awakenedOne.util.Wiz;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
@@ -42,18 +43,18 @@ public class WhiteRibbon extends CustomRelic {
 //    }
 
 
-//    @Override
-//    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-//        if (card.type == AbstractCard.CardType.POWER) {
-//            this.flash();
-//            addToBot(new GainBlockAction(AbstractDungeon.player, AMOUNT));
-//        }
-//    }
-
-    public void onTrigger() {
-        flash();
-        addToBot(new GainBlockAction(AbstractDungeon.player, AMOUNT));
+    @Override
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        if (Wiz.isChantActive()) {
+            this.flash();
+            addToBot(new GainBlockAction(AbstractDungeon.player, AMOUNT));
+        }
     }
+
+//    public void onTrigger() {
+//        flash();
+//        addToBot(new GainBlockAction(AbstractDungeon.player, AMOUNT));
+//    }
 
 //    //Check AwakenButton.java. I'm just using this override for convenience.
 //    @Override

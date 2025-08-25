@@ -25,7 +25,6 @@ public class Brainshock extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         CardCrawlGame.sound.playA("ORB_LIGHTNING_EVOKE", 0.9F);
         CardCrawlGame.sound.playA("ORB_LIGHTNING_PASSIVE", -0.3F);
         vfx(new LightningEffect(m.hb.cX, m.hb.cY));

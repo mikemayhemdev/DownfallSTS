@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.patches.EnumPatch;
 import hermit.util.Wiz;
 import awakenedOne.cards.AbstractAwakenedCard;
 import sneckomod.SneckoMod;
@@ -34,7 +35,7 @@ public class Minniegun extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < magicNumber; i++) {
-            dmg(m, AbstractGameAction.AttackEffect.BLUNT_LIGHT);
+            dmg(m, EnumPatch.HERMIT_GUN3);
         }
         Wiz.atb(new MakeTempCardInDrawPileAction(new VoidCard(), 1, true, true));
     }

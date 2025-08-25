@@ -9,15 +9,15 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.*;
 
-public class BringTheStorm extends AbstractAwakenedCard {
-    public final static String ID = makeID(BringTheStorm.class.getSimpleName());
+public class StormRuler extends AbstractAwakenedCard {
+    public final static String ID = makeID(StormRuler.class.getSimpleName());
     // intellij stuff attack, enemy, uncommon, 9, 1, , , 3, 1
 
-    public BringTheStorm() {
+    public StormRuler() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         this.tags.add(AwakenedOneMod.DELVE);
         baseMagicNumber = magicNumber = 6;
-        loadJokeCardImage(this, makeBetaCardPath(BringTheStorm.class.getSimpleName() + ".png"));
+        loadJokeCardImage(this, makeBetaCardPath(StormRuler.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

@@ -59,13 +59,13 @@
   "awakened:AbyssEvent": {
     "NAME": "From the Abyss",
     "DESCRIPTIONS": [
-      "This is some intro text.",
-      "This is some outro text - you took the thing!",
-      "This is some outro text - you didn't take the thing."
+      "As you make your way through the city, you are suddenly stricken by an inexplicable feeling...as if reality itself is beginning to unravel before you. NL Your senses failing you otherwise, you can see a #pgrimoire sitting before you, and an otherworldly voice calling... NL \n\n\"AWAKENED CHILD. WALKER OF THE INFINITE PLANES. WE HAVE MUCH TO DISCUSS. TAKE MY HAND, AND I WILL GUIDE YOU TO THE KNOWLEDGE YOU SEEK...TO UNKNOWN WORLDS OF MONSTERS, MACHINES, AND MAGIC BEYOND THIS REALM'S UNDERSTANDING.",
+      "\"GOOD. OUR ALLIANCE WILL BE A POWERFUL ONE\"\n\n NL While that sense of #potherworldly #pmalaise remains, with the tome in hand you feel as if an infinite world of possibilities has opened up to you...",
+      "You manage to snap out of the trance, spreading your wings and leaving the strange grimoire behind."
     ],
     "OPTIONS": [
       "[Reach] Gain #gReality #gRift. #rBecome #rCursed - #rAged.",
-      "[Leave] Second option which is currently just leaving.",
+      "[Leave].",
       "[Leave]"
     ]
   }

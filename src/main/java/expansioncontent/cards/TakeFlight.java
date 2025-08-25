@@ -12,9 +12,9 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import expansioncontent.expansionContentMod;
+import hermit.actions.SoundAction;
 
-import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
-import static awakenedOne.AwakenedOneMod.CHANT;
+import static awakenedOne.AwakenedOneMod.*;
 
 public class TakeFlight extends AbstractExpansionCard {
     public static final String ID = makeID("TakeFlight");
@@ -51,6 +51,7 @@ public class TakeFlight extends AbstractExpansionCard {
 
         if (!this.hasTag(ACTIVECHANT) && this.hasTag(CHANT)) {
             this.tags.add(ACTIVECHANT);
+            this.addToBot(new SoundAction(AwakenedOneMod.makeID("CHANT")));
         }
 
         if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {

@@ -28,7 +28,7 @@ public class BolsterEngine extends CustomRelic {
 
     //variables
 
-    private static final int BLOCK = 6;
+    private static final int BLOCK = 4;
     private static final int STR = 1;
 
     @Override
