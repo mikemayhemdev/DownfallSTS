@@ -260,7 +260,8 @@
   },
   "awakened:Dejection": {
     "NAME": "Dejection",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain a *Ceremony.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain a *Ceremony+."
   },
   "awakened:BloodRite": {
     "NAME": "Blood Rite",
