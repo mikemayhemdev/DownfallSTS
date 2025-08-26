@@ -13,7 +13,7 @@
   },
   "downfall:Haunted": {
     "NAME": "Embrujado",
-    "DESCRIPTION": "Etérea. Injugable. NL Siempre que otra carta se *Agote mientras esta esté en tu mano, recibes 2 de daño."
+    "DESCRIPTION": "Etérea. Injugable. NL Siempre que otra carta se *Agote mientras esta esté en tu mano, recibes !M! de daño."
   },
   "downfall:Malfunctioning": {
     "NAME": "Defectuosa",

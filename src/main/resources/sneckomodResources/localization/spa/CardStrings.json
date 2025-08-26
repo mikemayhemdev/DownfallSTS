@@ -15,7 +15,10 @@
   "sneckomod:Cheat": {
     "NAME": "Suerte Pura",
     "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
-    "UPGRADE_DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "UPGRADE_DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:DangerNoodle": {
     "NAME": "Serpiente Peligrosa",
@@ -66,7 +69,10 @@
   },
   "sneckomod:ImmovableObject": {
     "NAME": "Objeto Inamovible",
-    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:IronFang": {
     "NAME": "Colmillo de Hierro",
@@ -158,7 +164,10 @@
   "sneckomod:Rotation": {
     "NAME": "Rotación",
     "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
-    "UPGRADE_DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "UPGRADE_DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:SerpentBottle": {
     "NAME": "Venta con Descuento",
@@ -182,7 +191,10 @@
   },
   "sneckomod:SnakeSap": {
     "NAME": "Savia de Serpiente",
-    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:SnekBeam": {
     "NAME": "Rayo Láser Ocular",
@@ -196,7 +208,10 @@
   "sneckomod:SoulCleanse": {
     "NAME": "Purificación de Alma",
     "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
-    "UPGRADE_DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "UPGRADE_DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:SoulDraw": {
     "NAME": "Robo Espiritual",
@@ -227,7 +242,10 @@
   },
   "sneckomod:Yearn": {
     "NAME": "Anhelo",
-    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:TailWhip": {
     "NAME": "Latigazo de Cola",
@@ -241,12 +259,16 @@
       "Elige una Reliquia para perder.",
       "Pierde ",
       " y obtiene otra ",
-      " Reliquia."
+      " Reliquia.",
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:ToxicPersonality": {
     "NAME": "Personalidad Tóxica",
-    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "De Basura a Tesoro",
@@ -560,19 +582,16 @@
   },
   "sneckomod:TrashCan": {
     "NAME": "Bote de Basura",
-    "DESCRIPTION": "Al inicio de tu turno, puedes Agotar una carta.",
-    "UPGRADE_DESCRIPTION": "Innato. NL Al inicio de tu turno, puedes Agotar una carta."
+    "DESCRIPTION": "Al inicio de tu turno, puedes Agotar una carta."
   },
   "sneckomod:Lacerate": {
     "NAME": "Lacerar",
-    "DESCRIPTION": "Haz !D! de daño. Cuando este enemigo reciba una desventaja este turno, gana !M! sneckomod:Tóxico. sneckomod:Regalo: *Veneno *Paralizador.",
-    "DESCRIPTION_BATTLE": "Haz !D! de daño. Cuando este enemigo reciba una desventaja este turno, gana !M! sneckomod:Tóxico."
+    "DESCRIPTION": "Aplica !D! sneckomod:Tóxico a TODOS los enemigos. NL Gana una *Nube *Paralizante. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Aplica !D! sneckomod:Tóxico a TODOS los enemigos. NL Gana una *Nube *Paralizante+. NL Agota."
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Sabueso Serpentino",
     "DESCRIPTION": "Etérea. NL Cuando juegues un Poder, gana [E]. NL sneckomod:Regalo: Poder Raro.",
-    "UPGRADE_DESCRIPTION": "Etérea. NL Cuando juegues un Poder, gana [E] [E]. NL sneckomod:Regalo: Poder Raro.",
-    "DESCRIPTION_BATTLE": "Etérea. NL Cuando juegues un Poder, gana [E].",
-    "UPGRADE_DESCRIPTION_BATTLE": "Etérea. NL Cuando juegues un Poder, gana [E] [E]."
-}
+    "DESCRIPTION_BATTLE": "Etérea. NL Cuando juegues un Poder, gana [E]."
+  }
 }

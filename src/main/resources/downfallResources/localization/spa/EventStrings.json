@@ -329,7 +329,8 @@
     "NAME": "Altar Olvidado",
     "DESCRIPTIONS": [
       "Te paras sobre el altar y canalizas la energía espiritual desde tu interior. NL Mientras las #bAlmas fluyen como ofrenda a la diosa, los brazos de la estatua se extienden y emiten una reconfortante #pmagia #pmaldita. NL Todo se vuelve oscuro. NL Despiertas un momento después, con tus heridas y lesiones completamente sanadas.",
-      "Después de tomarte un momento para admirar el mal que emana de la estatua, continúas tu camino por la Ciudad."
+      "Después de tomarte un momento para admirar el mal que emana de la estatua, continúas tu camino por la Ciudad.",
+      "Decides irte sin hacer ninguna ofrenda a la estatua, pero sientes #pVergüenza de no haberlo hecho."
     ],
     "OPTIONS": [
       "[Ofrendar Almas] #rPierde #r",
