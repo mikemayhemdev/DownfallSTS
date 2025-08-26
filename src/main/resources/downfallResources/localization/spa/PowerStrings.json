@@ -134,13 +134,11 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "Fe Fugaz",
     "DESCRIPTIONS": [
-      "La Vigilante gana #b1 #yMantra cada vez que juegues una carta. NL Cada vez que La Vigilante entre en #yDivinidad, ganará #b3 #yFuerza. NL La Vigilante pierde #b4 #yMantra al inicio de su turno. NL La Vigilante no sale de #yDivinidad al final de su turno."
-    ]
-  },
-    "downfall:WatcherDivinityNoRemovePower": {
-    "NAME": "Fe Recompensada",
-    "DESCRIPTIONS": [
-      "Una vez que La Vigilante entra en #Divinidad, no sale de ella al final de su turno."
+      "La Vigilante gana #b1 #yMantra y #b1 Intangible cada vez que juegues #b6 cartas en un turno.",
+      " NL Jugaste #b",
+      " cartas este turno.",
+      " NL (Ya se ha activado este turno)",
+      " NL NL Cuando La Vigilante entre en #yDivinidad, nunca saldrá de ella, pero #yDivinidad aumenta el daño solamente en 200%."
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -153,6 +151,14 @@
     "NAME": "Bolsa de Cuchillos",
     "DESCRIPTIONS": [
       "La primera vez que juegues una carta que cueste #b2 o más cada turno, La Silenciosa gana 2 #yNavajas [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:SilentDelayedWraithPower": {
+    "NAME": "Posesión Fatal",
+    "DESCRIPTIONS": [
+      "La primera vez que La Silenciosa alcanza 0 PV, activa #yForma #yEspectral",
+      " y se cura #b",
+      " PV."
     ]
   },
   "downfall:NeowBagOfKnives": {

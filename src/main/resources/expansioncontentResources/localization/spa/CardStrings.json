@@ -90,6 +90,10 @@
     "NAME": "Antídoto",
     "DESCRIPTION": "Retén. NL Pierde !M! de Veneno."
   },
+  "expansioncontent:AntidoteAsPower": {
+    "NAME": "No detenerse",
+    "DESCRIPTION": "Retener. NL Cada vez que inflijas daño de Ataque no bloqueado, pierde !M! de Veneno."
+  },
  "expansioncontent:SuperGhostShield": {
     "NAME": "Escudo Fantasma",
     "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL [#e087a4]Obtén[] [#e087a4]!B![] [#e087a4]de[] [#e087a4]Bloqueo.[] NL [#e087a4]Obtén[] [#e087a4]!M![] [#e087a4]de[] [#e087a4]Desenfoque.[]",

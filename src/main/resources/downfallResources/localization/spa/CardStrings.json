@@ -92,6 +92,10 @@
     "NAME": "Fe Recompensada",
     "DESCRIPTION": "Si entras en Divinidad, nunca puedes salir de ella."
   },
+  "downfall:Crusade": {
+    "NAME": "Crusada",
+    "DESCRIPTION": "Elimina todas las desventajas. NL Pierde todo el Mantra. Sana !M! PV y gana 1 de Fuerza por cada Mantra perdido."
+  },
   "downfall:Hyperfocused": {
     "NAME": "Foco Mortal",
     "DESCRIPTION": "Siempre obtiene efectos de *En Muerte. Después de recibir 10 de daño, elimina los efectos de *En Muerte por ese turno."
