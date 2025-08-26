@@ -33,7 +33,7 @@
   },
   "downfall:Enraging": {
     "NAME": "Última Defensa",
-    "DESCRIPTION": "Todos los enemigos ganan Fuerza y limpian sus desventajas en su próximo turno al ser reducidos al 50% de HP."
+    "DESCRIPTION": "Todos los enemigos ganan Fuerza y limpian sus desventajas en su próximo turno al ser reducidos al 50% de PV."
   },
   "downfall:Analytical": {
     "NAME": "Analítico",

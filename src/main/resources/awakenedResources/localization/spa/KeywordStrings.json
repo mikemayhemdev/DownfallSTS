@@ -6,7 +6,8 @@
       "Power_Potion",
       "power_potion",
       "powerpotion",
-      "poción de poder"
+      "Poción de Poder",
+      "poción_de_poder"
     ],
     "DESCRIPTION": "#yPoción [REMOVE_SPACE]: Elije #b1 de #b3 cartas de #yPoder aleatorias para añadir a tu mano, cuesta #b0 este turno."
   },
@@ -54,9 +55,10 @@
     "PROPER_NAME": "Quemadura de Maná",
     "NAMES": [
       "manaburn",
-      "quemadura de maná"
+      "Quemadura de Maná",
+      "quemadura_de_maná"
     ],
-    "DESCRIPTION": "Cuando pierdes [E] , incluso si no tienes para perder, pierdes HP igual a tú #yQuemadura de Maná [REMOVE_SPACE]. (No incluye [E] gastado al jugar cartas.)"
+    "DESCRIPTION": "Cuando pierdes [E] , incluso si no tienes para perder, pierde PV igual a #yQuemadura #yde #yManá [REMOVE_SPACE]. (No incluye [E] gastado al jugar cartas.)"
   },
   {
     "PROPER_NAME": "Curiosidad",
@@ -64,6 +66,6 @@
       "curiosity",
       "curiosidad"
     ],
-    "DESCRIPTION": "Siempre que juegues una carta de #yPoder, gana #b1 #yFuerza [REMOVE_SPACE]."
+    "DESCRIPTION": "Cada vez que juegues una carta de #yPoder, gana #b1 #yFuerza [REMOVE_SPACE]."
   }
 ]

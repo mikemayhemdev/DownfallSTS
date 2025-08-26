@@ -51,6 +51,8 @@ public class CharBossSilent extends AbstractCharBoss {
     public static boolean posStorage = false;
     public static boolean resetThisTurn = false;
 
+    public boolean cantDie = false;
+
     public float origDX;
     public float origdY;
     public float orighX;
@@ -188,6 +190,7 @@ public class CharBossSilent extends AbstractCharBoss {
 
     @Override
     public void die() {
+        if (cantDie) return;
         super.die();
 
         switch (MathUtils.random(1)) {

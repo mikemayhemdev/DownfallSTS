@@ -19,6 +19,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbPurple;
+import downfall.actions.SpeechBubbleAction;
 import downfall.downfallMod;
 import downfall.util.LocalizeHelper;
 
@@ -31,6 +32,8 @@ public class CharBossWatcher extends AbstractCharBoss {
     protected Skeleton eyeSkeleton;
     public AnimationState eyeState;
     protected AnimationStateData eyeStateData;
+
+    public static final String HALFHEALTHSPEECH = LocalizeHelper.downfallCharacterSpeech.TEXT[1];
 
 
     public CharBossWatcher() {
@@ -190,6 +193,12 @@ public class CharBossWatcher extends AbstractCharBoss {
             default:
                 break;
         }
+
+    }
+
+    public void playCrusaderSpeech(){
+
+            AbstractDungeon.actionManager.addToBottom(new SpeechBubbleAction(HALFHEALTHSPEECH, this, 2F));
 
     }
 

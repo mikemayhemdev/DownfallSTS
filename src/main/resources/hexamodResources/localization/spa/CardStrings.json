@@ -172,7 +172,7 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "Metal Ardiente",
-    "DESCRIPTION": "Haz !D! de daño. NL Aplica !burny! hexamod:QuemarAlma. NL Aplica !M! de Vulnerable."
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica !burny! hexamod:QuemarAlma. NL Aplica !M! Vulnerable."
   },
   "hexamod:HeatShield": {
     "NAME": "Escudo de Calor",
@@ -216,7 +216,7 @@
   },
   "hexamod:Poltergeist": {
     "NAME": "Poltergeist",
-    "DESCRIPTION": "Siempre que juegues una carta Etérea, un enemigo al azar pierde !M! PV."
+    "DESCRIPTION": "Cada vez que juegues una carta Etérea, un enemigo al azar pierde !M! PV."
   },
   "hexamod:PhantomCloak": {
     "NAME": "Capa Fantasmal",
@@ -245,8 +245,8 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Lluvia de Ascuas",
-    "DESCRIPTION": "Haz !D! de daño y aplica !M! de Débil X veces.",
-    "UPGRADE_DESCRIPTION": "Haz !D! de daño y aplica !M! de Débil X+1 veces."
+    "DESCRIPTION": "Haz !D! de daño y aplica !M! Débil X veces.",
+    "UPGRADE_DESCRIPTION": "Haz !D! de daño y aplica !M! Débil X+1 veces."
   },
   "hexamod:NightmareVision": {
     "NAME": "Visión de Pesadilla",
@@ -458,7 +458,7 @@
     },
   "hexamod:ParanormalForm": {
     "NAME": "Poltergeist",
-    "DESCRIPTION": "Siempre que juegues una carta Etérea, un enemigo al azar pierde !M! PV."
+    "DESCRIPTION": "Cada vez que juegues una carta Etérea, un enemigo al azar pierde !M! PV."
     },
   "hexamod:RecurringNightmare": {
     "NAME": "Visión de Pesadilla",

@@ -63,12 +63,8 @@ public class IroncladStatusPower extends AbstractBossMechanicPower {
         if (downfallMod.useLegacyBosses) {
             this.description = DESC[0];
         } else {
-            if (AbstractDungeon.ascensionLevel >= 19){
 
-                this.description = DESC[3] + amount + DESC[2];
-            } else {
-                this.description = DESC[1] + amount + DESC[2];
-            }
+            this.description = DESC[1] + amount + DESC[2];
         }
     }
 
