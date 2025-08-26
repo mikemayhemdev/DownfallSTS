@@ -31,7 +31,7 @@ public class BurningStudy extends AbstractSpellCard {
         this.addToBot(new SoundAction(makeID("FIRESPELL")));
         this.addToBot(new VFXAction(p, new InflameNoSound(p), 1.0F));
         applyToSelf(new StrengthPower(p, magicNumber));
-        Wiz.forAllMonstersLiving(q -> applyToEnemy(q, new VulnerablePower(q, secondMagic, false)));
+        Wiz.forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, secondMagic, false)));
     }
 
     public void upp() {
