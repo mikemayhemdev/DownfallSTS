@@ -28,6 +28,7 @@ public class EnProstrate extends AbstractBossCard {
         this.magicNumber = 2;
         this.baseBlock = 4;
         this.block = this.baseBlock;
+        strengthGeneratedIfPlayed = 2; //Faking intent for Brilliance
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

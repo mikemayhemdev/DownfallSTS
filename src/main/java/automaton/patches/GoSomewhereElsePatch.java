@@ -2,7 +2,7 @@ package automaton.patches;
 
 import automaton.FunctionHelper;
 import automaton.cardmods.EncodeMod;
-import awakenedOne.cards.BringTheStorm;
+import awakenedOne.cards.StormRuler;
 import awakenedOne.ui.OrbitingSpells;
 import basemod.helpers.CardModifierManager;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
@@ -54,18 +54,18 @@ public class GoSomewhereElsePatch {
             });
             return false;
         }
-        else if (card.cardID.equals(BringTheStorm.ID)) {
-            AbstractDungeon.player.limbo.addToTop(card);
-            AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    AbstractDungeon.player.limbo.removeCard(card);
-                    OrbitingSpells.addSpellCard(card);
-                }
-            });
-            return false;
-        }
+//        else if (card.cardID.equals(StormRuler.ID)) {
+//            AbstractDungeon.player.limbo.addToTop(card);
+//            AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
+//                @Override
+//                public void update() {
+//                    isDone = true;
+//                    AbstractDungeon.player.limbo.removeCard(card);
+//                    OrbitingSpells.addSpellCard(card);
+//                }
+//            });
+//            return false;
+//        }
         return true;
     }
 }

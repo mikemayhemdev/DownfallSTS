@@ -320,7 +320,7 @@
     "NAME": "Tormenta de Maná",
     "DESCRIPTION": "Haz !D! de daño a TODOS los enemigos. NL awakened:Conjura dos veces."
   },
-  "awakened:BringTheStorm": {
+  "awakened:StormRuler": {
     "NAME": "Traer la Tormenta",
     "DESCRIPTION": "awakened:Conjura. NL Todos los *Rayo hacen !M! de daño adicional este combate."
   },

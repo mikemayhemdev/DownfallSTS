@@ -32,7 +32,7 @@
 	  "#yIgnites when a #yPower is played.",
 	  "#yIgnites when a #yPower is played while on it.",
 	  " NL NL #yIgnition [REMOVE_SPACE]: Gain #b",
-	  " #yBlock and #b1 #yStrength.",
+	  " #yBlock and #b1 #yStrength [REMOVE_SPACE].",
 	  " NL NL At the end of your turn, if this is #yIgnited [REMOVE_SPACE], #yAdvance to the next Ghostflame."
     ]
   },

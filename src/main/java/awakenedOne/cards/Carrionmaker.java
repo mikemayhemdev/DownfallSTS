@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.actions.SoundAction;
 
 import static awakenedOne.AwakenedOneMod.*;
 
@@ -30,6 +31,7 @@ public class Carrionmaker extends AbstractAwakenedCard {
                 .count();
 
         for (int i = 0; i < count + 1; i++) {
+            this.addToBot(new SoundAction(makeID("SOULSTRIKE")));
             this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
         }
         this.initializeDescription();

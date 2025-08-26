@@ -134,13 +134,11 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "Fleeting Faith",
     "DESCRIPTIONS": [
-      "Watcher gains #b1 #yMantra whenever you play a card. NL Watcher loses #b6 #yMantra at the start of her turn."
-    ]
-  },
-  "downfall:WatcherDivinityNoRemovePower": {
-    "NAME": "Faith Rewarded",
-    "DESCRIPTIONS": [
-      "Once Watcher enters #Divinity, she does not exit it at the end of her turn."
+      "Watcher gains #b1 #yMantra and #b1 #yIntangible after you play #b6 cards in a single turn.",
+      " NL You have played #b",
+      " cards this turn.",
+      " NL (Has triggered already this turn)",
+      " NL NL When Watcher enters Divinity, she will never leave it, but Divinity increases damage by only 200%."
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -153,6 +151,14 @@
     "NAME": "Bag of Knives",
     "DESCRIPTIONS": [
       "The first time you play a card that costs #b2 or more each turn, Silent gains 2 #yShivs [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:SilentDelayedWraithPower": {
+    "NAME": "Fatal Possession",
+    "DESCRIPTIONS": [
+      "The first time Silent reaches 0 HP, she will activate #yWraith #yForm",
+      " and heal #b",
+      " HP."
     ]
   },
   "downfall:NeowBagOfKnives": {

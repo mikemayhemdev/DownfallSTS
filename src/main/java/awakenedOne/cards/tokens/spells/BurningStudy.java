@@ -1,12 +1,14 @@
 package awakenedOne.cards.tokens.spells;
 
+import awakenedOne.effects.InflameNoSound;
+import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
-import hermit.util.Wiz;
+import hermit.actions.SoundAction;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.applyToEnemy;
@@ -25,21 +27,13 @@ public class BurningStudy extends AbstractSpellCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-//        int roll = MathUtils.random(2);
-//        if (roll == 0) {
-//            AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1A"));
-//        } else if (roll == 1) {
-//            AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1B"));
-//        } else {
-//            AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1C"));
-//        }
-        this.addToBot(new VFXAction(p, new InflameEffect(p), 1.0F));
+        this.addToBot(new SoundAction(makeID("FIRESPELL")));
+        this.addToBot(new VFXAction(p, new InflameNoSound(p), 1.0F));
         applyToSelf(new StrengthPower(p, magicNumber));
         Wiz.forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, secondMagic, false)));
     }
 
     public void upp() {
         upgradeMagicNumber(1);
-        //upgradeSecondMagic(1);
     }
 }
