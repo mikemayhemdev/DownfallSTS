@@ -27,7 +27,7 @@
     "NAME": "Bomba de Maná",
     "FLAVOR": "3... 2...",
     "DESCRIPTIONS": [
-      "Cada vez que un enemigo muere, transfiere cualquier #yawakened:Quemadura de Maná que tenga a un enemigo al azar."
+      "Cada vez que un enemigo muere, transfiere cualquier #yQuemadura #yde #yManá que tenga a un enemigo al azar."
     ]
   },
   "awakened:TomeOfPortalmancy": {
@@ -35,7 +35,7 @@
     "FLAVOR": "Un grimorio que detalla la construcción y mantenimiento de puertas interplanares.",
     "DESCRIPTIONS": [
       "Siempre que un #yVacío sea #yExhausto [REMOVE_SPACE], aplica #b",
-      " #yawakened:Quemadura de Maná a TODOS los enemigos."
+      " #yQuemadura #yde #yManá a TODOS los enemigos."
     ]
   },
   "awakened:EyeOfTheOccult": {
@@ -57,7 +57,7 @@
     "NAME": "Hoja del Abismo",
     "FLAVOR": "Reembolso del Vacío.",
     "DESCRIPTIONS": [
-      "La primera vez que eres #yawakened:Drenado cada turno, gana [E] y roba una carta."
+      "La primera vez seas #yawakened:Drenado cada turno, gana [E] y roba una carta."
     ]
   },
   "awakened:ShardOfNowak": {
@@ -65,7 +65,7 @@
     "FLAVOR": "...No, no ese tipo de enfoque.",
     "DESCRIPTIONS": [
       "Comienza cada combate con #b",
-      " #yFuerza [REMOVE_SPACE]. Después de perder cualquier tipo de PV, pierde esa #yFuerza por el resto del combate."
+      " de #yFuerza [REMOVE_SPACE]. Después de perder cualquier tipo de PV, pierde esa #yFuerza por el resto del combate."
     ]
   },
   "awakened:VioletPlumage": {
@@ -103,7 +103,7 @@
     "FLAVOR": "Árbitro de dudas y maldiciones doblado mil veces...",
     "DESCRIPTIONS": [
       "Los enemigos reciben #b",
-      "% de daño adicional de #yawakened:Quemadura de Maná [REMOVE_SPACE]."
+      "% de daño adicional de #yQuemadura #yde #yManá [REMOVE_SPACE]."
     ]
   },
   "awakened:CursedBlessing": {
@@ -147,7 +147,7 @@
     "FLAVOR": "Esta urna muestra al dios cuervo Mazaleth con un aspecto travieso.",
     "DESCRIPTIONS": [
       "Las primeras #b4 veces que juegues una carta de #yPoder en cada combate, cura #b",
-      " HP."
+      " PV."
     ]
   }
 }

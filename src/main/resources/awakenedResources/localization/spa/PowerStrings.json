@@ -47,7 +47,7 @@
     "NAME": "Destello de Plumas",
     "DESCRIPTIONS": [
       "Cada vez que juegues una carta #yno de Ataque en este turno, TODOS los enemigos pierden #b",
-      " HP."
+      " PV."
     ]
   },
   "awakened:PrimacyPower": {
@@ -100,7 +100,7 @@
     "NAME": "Canto de Pena",
     "DESCRIPTIONS": [
       "Cada vez que crees un #yVacio [REMOVE_SPACE], TODOS los enemigos pierden #b",
-      " HP."
+      " PV."
     ]
   },
   "awakened:ShroudOfMiasmaPower": {
@@ -114,14 +114,14 @@
     "NAME": "Ruptura Total",
     "DESCRIPTIONS": [
       "Al atacar a este enemigo, gana #b",
-      " #yFuerza temporal [REMOVE_SPACE]."
+      " #yFuerza #ytemporal [REMOVE_SPACE]."
     ]
   },
   "awakened:ManaburnPower": {
-    "NAME": "Quema de Maná",
+    "NAME": "Quemadura de Maná",
     "DESCRIPTIONS": [
-      "Cada vez que seas #yDrenado [REMOVE_SPACE], pierdes #b",
-      " HP."
+      "Cada vez que seas #yDrenado [REMOVE_SPACE], pierde #b",
+      " PV."
     ]
   },
   "awakened:ArchmagusPower": {

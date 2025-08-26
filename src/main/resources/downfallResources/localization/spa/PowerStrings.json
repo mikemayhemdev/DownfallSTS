@@ -6,6 +6,13 @@
       "¡Ja! ¡Poción de Hada, idiota!"
     ]
   },
+    "downfall:CultistRevivePower": {
+    "NAME": "Falso Culto",
+    "DESCRIPTIONS": [
+      "Cura al #b50% de tus PV máximos en vez de morir, eliminando este efecto.",
+      "CAAAAWWWW!"
+    ]
+  },
   "downfall:SoulSteal": {
     "NAME": "Robo de Almas",
     "DESCRIPTIONS": [
@@ -43,9 +50,10 @@
   "downfall:SpotWeakness": {
     "NAME": "Ver Debilidades",
     "DESCRIPTIONS": [
-      "Cada turno en el que juegues una carta de ataque con este poder activo, este enemigo ganará #b",
-      " #yFuerza. Actualmente ha ganado #b",
-      " #yFuerza [REMOVE_SPACE]."
+      "Si juegas una carta de ataque este turno, este enemigo ganará #b",
+      " de #yFuerza.",
+      "Jugaste una carta de ataque este turno. El enemigo ganará #b",
+      " de #yFuerza."
     ]
   },
   "downfall:FearNoEvil": {
@@ -58,7 +66,15 @@
   "downfall:PoisonResist": {
     "NAME": "Resistencia al Veneno",
     "DESCRIPTIONS": [
-      "#yEl veneno se activa al final de tu turno. NL Al final de tu turno, gasta todo [E] restante para eliminar 10 #yVeneno por cada [E] gastado."
+      "Cada vez que inflijas daño de #yAtaque no bloqueado, remueve #b",
+      " #yVeneno."
+    ]
+  },
+    "downfall:OnPlayerPoison": {
+    "NAME": "Veneno",
+    "DESCRIPTIONS": [
+      "Al final de tu turno, recibe #b",
+      " de daño."
     ]
   },
   "downfall:NeowBuff": {
@@ -70,7 +86,8 @@
   "downfall:WatcherAngryPower": {
     "NAME": "Rabia Descontrolada",
     "DESCRIPTIONS": [
-      "Al final de su turno, si La Vigilante tiene el #b50% o menos de PV, entra en #yIra. NL La #yIra de La Vigilante aumenta el daño hecho y recibido en #b50% en lugar de #b100% [REMOVE_SPACE]."
+      "Al final de su turno, si La Vigilante tiene el #b50% o menos de PV, entra en #yIra. NL La #yIra de La Vigilante aumenta el daño hecho y recibido en #b50% en lugar de #b100% [REMOVE_SPACE].",
+      "La #yIra de La Vigilante aumenta el daño hecho y recibido en #b50% en lugar de #b100% [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -90,9 +107,14 @@
   "downfall:WatcherSkillPower": {
     "NAME": "Cazar en Desarmonía",
     "DESCRIPTIONS": [
-      "Cada vez que juegues una habilidad, La Vigilante gana #b",
-      " #yFuerza temporal.",
-      "Cada vez que juegues una habilidad, La Vigilante gana #yFuerza temporal [REMOVE_SPACE]."
+      "Cada vez que juegues un #yAtaque, La Vigilante gana #b",
+      " #yDestreza #ytemporal, #b",
+      " #yFuerza #ytemporal cuando juegas una #yHabilidad, y #b",
+      " de ambos cuando juegas un #yPoder.",
+      "Si juegas mas de #b",
+      " cartas en un turno, La Vigilante remueve todas sus desventajas.",
+      "Jugaste #b",
+      " cartas este turno."
     ]
   },
   "downfall:WrathNextTurnPower": {
@@ -112,7 +134,11 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "Fe Fugaz",
     "DESCRIPTIONS": [
-      "La Vigilante gana #b1 #yMantra cada vez que juegues una carta. NL Cada vez que La Vigilante entre en #yDivinidad, ganará #b3 #yFuerza. NL La Vigilante pierde #b4 #yMantra al inicio de su turno. NL La Vigilante no sale de #yDivinidad al final de su turno."
+      "La Vigilante gana #b1 #yMantra y #b1 Intangible cada vez que juegues #b6 cartas en un turno.",
+      " NL Jugaste #b",
+      " cartas este turno.",
+      " NL (Ya se ha activado este turno)",
+      " NL NL Cuando La Vigilante entre en #yDivinidad, nunca saldrá de ella, pero #yDivinidad aumenta el daño solamente en 200%."
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -125,6 +151,14 @@
     "NAME": "Bolsa de Cuchillos",
     "DESCRIPTIONS": [
       "La primera vez que juegues una carta que cueste #b2 o más cada turno, La Silenciosa gana 2 #yNavajas [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:SilentDelayedWraithPower": {
+    "NAME": "Posesión Fatal",
+    "DESCRIPTIONS": [
+      "La primera vez que La Silenciosa alcanza 0 PV, activa #yForma #yEspectral",
+      " y se cura #b",
+      " PV."
     ]
   },
   "downfall:NeowBagOfKnives": {
@@ -148,7 +182,8 @@
   "downfall:SilentPoisonPower": {
     "NAME": "Advertencia: Altamente Tóxico",
     "DESCRIPTIONS": [
-      "#yVeneno es bloqueable y causa daño al final del turno. NL Recibe un #yAntídoto al inicio del combate."
+      "#yVeneno es bloqueable y causa daño al final del turno.",
+      "#yVeneno es bloqueable, no decae y causa daño al final del turno."
     ]
   },
   "downfall:NeowHighlyToxic": {
@@ -185,16 +220,17 @@
     "NAME": "Cognición Imparcial",
     "DESCRIPTIONS": [
       "Cada vez que juegues una carta #yPoder, El Defectuoso gana #b",
-      " #yConcentración."
+      " #yConcentración [REMOVE_SPACE].",
+      " Los cambios a la #yFuerza del Defectuoso también afectan su #yConcentración [REMOVE_SPACE]."
     ]
   },
   "downfall:DefectBiasCuriosity": {
     "NAME": "Cognición Corregida",
     "DESCRIPTIONS": [
-      "El Defectuoso juega una #yCognición #yImparcial al inicio del combate. NL Cada vez que juegues una carta #yPoder, el #ySesgo de El Defectuoso pierde eficacia este turno.",
-      "Cada vez que juegues una carta #yPoder, el #ySesgo de El Defectuoso pierde eficacia este turno.",
-      "El #ySesgo de Defect pierde eficacia este turno.",
-      "Sesgo"
+      "El Defectuoso empieza el combate con #b4 #yConcentración y gana #b1 más cada vez que juegas una carta #yPoder [REMOVE_SPACE], pero también pierde #b1 #yConcentración al inicio de su turno.",
+      "El Defectuoso pierde #b",
+      " #yConcentración",
+      " al final de su turno."
     ]
   },
   "downfall:DefectCuriosityLighning": {
@@ -213,7 +249,10 @@
   "downfall:IroncladStatusPower": {
     "NAME": "Sincronizar",
     "DESCRIPTIONS": [
-      "Cada vez que El Blindado genere una carta #yEstado, se agrega una duplicada a tu pila de descarte."
+      "Cada vez que El Blindado genere una carta #yEstado, se agrega una duplicada a tu pila de descarte.",
+      "Cada vez que El Blindado genere una carta #yEstado, se agrega a tu pila de descarte en su lugar. NL Al perder #b",
+      " más PV, ganas #yPuridad con #yRetener.",
+      "Cada vez que El Blindado genere una carta #yEstado, se agrega a tu pila de extracción en su lugar. NL Al perder #b"
     ]
   },
   "downfall:NeowSyncronize": {
@@ -225,7 +264,9 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "Frenesí Alimentario",
     "DESCRIPTIONS": [
-      "La #yParca de El Blindado no se #yAgota y apunta a TODOS los Hongos. NL Cuando El Blindado mata un Hongo, gana #b1 #yFuerza [REMOVE_SPACE]."
+      "La #yParca de El Blindado no se #yAgota y apunta a TODOS los Hongos. NL Cuando El Blindado mata un Hongo, gana #b1 #yFuerza [REMOVE_SPACE].",
+      "La #yParca de El Blindado apunta a TODOS los Hongos. NL Cuando El Blindado mata un Hongo, gana #b",
+      " de #yFuerza [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowFeedingFrenzy": {
@@ -238,7 +279,8 @@
     "NAME": "Baluarte",
     "DESCRIPTIONS": [
       "El Blindado comienza la pelea con un #yFortificación, que le otorgará #b",
-      " #yBloqueo cada turno. NL Cuando la #yFortificación haya sido destruida, El Blindado pierde #yBarrera, pero gana #b5 #yFuerza al inicio de cada turno."
+      " #yBloqueo cada turno. NL Cuando la #yFortificación haya sido destruida, El Blindado pierde #yBarrera, pero gana #b5 de #yFuerza al inicio de cada turno.",
+      "Cuando se destruye, El Blindado pierde #yBarrera, pero gana #b5 de #yFuerza al inicio de cada turno."
     ]
   },
   "downfall:NeowBastion": {
@@ -346,13 +388,15 @@
     "NAME": "Deputado",
     "DESCRIPTIONS": [
       "Cuando Mandarina muere, la #yConcentración de El Hermitaño se rompe y gana #b",
-      " #yFuerza."
+      " #yFuerza.",
+      "Cuando Mandarina muere, la #yConcentración de El Hermitaño se rompe."
     ]
   },
   "downfall:HermitWheelOfFortune": {
     "NAME": "Rueda de la Fortuna",
     "DESCRIPTIONS": [
-      "Después de jugar un #yAtaque, El Hermitaño #yCicla su primera carta. El costo de las cartas de El Hermitaño no puede cambiar."
+      "Después de jugar un #yAtaque, El Hermitaño #yCicla su primera carta. El costo de las cartas de El Hermitaño no puede cambiar. . Cuando El Hermitaño roba #rNecronomicurse, gana #b2 de Fuerza.",
+      "Después de jugar un #yAtaque, El Hermitaño #yCicla su primera carta"
     ]
   },
   "downfall:HermitDoomsday": {
@@ -382,13 +426,14 @@
     ]
   },
   "downfall:NextTurnPowerPower": {
-    "NAME": "Next Turn",
+    "NAME": "Próximo Turno ",
     "DESCRIPTIONS": [
       "¡ERROR! No deberías ver esto",
       "El siguiente turno, gana #b",
-      " ",
-      ".",
-      "NOTA DE LOCALIZACIÓN: Por favor, mantén el espacio después de 'Siguiente Turno' en el campo de NOMBRE."
+      " #y",
+      " [REMOVE_SPACE].",
+      "NOTA DE LOCALIZACIÓN: Por favor, mantén el espacio después de 'Siguiente Turno' en el campo de NOMBRE.",
+      "finalized text should look like this: Next turn, gain #b7 #yVigor [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowStayAt1Hp": {
@@ -420,6 +465,32 @@
       "Cuando la #yInvencibilidad de Neow llegue a #b0 [REMOVE_SPACE], reduce su #yDios #yde #yVida en #b",
       " [REMOVE_SPACE]."
     ]
+  },
+  "downfall:DefectAttackVoidPower":{
+    "NAME": "Robo de Energía",
+    "DESCRIPTIONS": [
+      "Siempre que inflijas daño de ataque no bloqueado, añade un Vacío a la pila de descarte de tu oponente."
+    ]
+  },
+  "downfall:WatcherTrackerAttacksPower":{
+    "NAME": "Ojo por los Ataques",
+    "DESCRIPTIONS": [
+      "Has jugado #b",
+      " Ataques. Mientras este número supere a los no-Ataques, La Vigilante está en la postura de #yCólera."
+    ]
+  },
+  "downfall:WatcherTrackerSkillsPower":{
+    "NAME": "Ojo por las Habilidades",
+    "DESCRIPTIONS": [
+      "Has jugado #b",
+      " no-Ataques. Mientras este número supere o iguale a los Ataques, La Vigilante está en la postura de #yCalma."
+    ]
+  },
+  "downfall:VoidOrbPower":{
+    "NAME": "Núcleo del Vacío",
+    "DESCRIPTIONS": [
+      "Cuando es destruido, el Núcleo del Vacío restaura todos los PV y elimina un Orbe de #yOscuridad del Defecto.",
+      " Gana 5 PV Máx cada vez que esto ocurre."
+    ]
   }
 }
-

@@ -118,7 +118,8 @@
 },
 "Guardian:SphericShield": {
   "NAME": "Escudo Esférico",
-  "DESCRIPTION": "Gana !B! de Bloqueo. NL Entra en *Modo *Defensivo. NL Agota."
+  "DESCRIPTION": "Gana !B! de Bloqueo. NL Entra en *Modo *Defensivo. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Gana un guardianmod:Polishing_Oil. NL Agota."
 },
 "Guardian:Harden": {
   "NAME": "Endurecer",
