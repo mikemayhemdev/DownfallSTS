@@ -38,11 +38,8 @@ public class EnPowerThrough extends AbstractBossCard {
         if (downfallMod.useLegacyBosses) this.addToBot(new EnemyMakeTempCardInHandAction(new EnWound(), 2));
         this.addToBot(new GainBlockAction(m, m, this.block));
         if (addWoundsToPlayer) {
-            if (downfallMod.useLegacyBosses || AbstractDungeon.ascensionLevel < 19){
-                this.addToBot(new MakeTempCardInDiscardAction(new Wound(), 2));
-            } else {
-                this.addToBot(new MakeTempCardInDrawPileAction(new Wound(), 2, true, true));
-            }
+            this.addToBot(new MakeTempCardInDiscardAction(new Wound(), 2));
+
         }
     }
 
