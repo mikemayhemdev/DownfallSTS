@@ -439,7 +439,7 @@
   },
   "collector:DaggerCard": {
     "NAME": "Dagger",
-    "DESCRIPTION": "Pierde !M! de HP. NL Haz !D! de daño."
+    "DESCRIPTION": "Pierde !M! de PV. NL Haz !D! de daño."
   },
   "collector:DarklingsCard": {
     "NAME": "Prole Oscura",
@@ -571,7 +571,7 @@
   },
   "collector:ScrapOozeCard": {
     "NAME": "Babosa de Chatarra",
-    "DESCRIPTION": "collector:Pira. NL Pierde 3 de HP. NL Agrega !M! Ataques aleatorios a tu mano. NL Cuestan 0 este turno."
+    "DESCRIPTION": "collector:Pira. NL Pierde 3 de PV. NL Agrega !M! Ataques aleatorios a tu mano. NL Cuestan 0 este turno."
   },
   "collector:SentryCard": {
     "NAME": "Centinela",

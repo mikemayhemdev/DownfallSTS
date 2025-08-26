@@ -12,7 +12,7 @@
       "Almas",
       "Muestra cuántas Almas llevas contigo. Las Almas pueden ser ofrecidas al Corazón a cambio de recompensas.",
       "Estado del Comerciante",
-      "HP",
+      "PV",
       "¡Muerto!",
       "Fuerza",
       "Almas robadas",
@@ -26,7 +26,7 @@
       "Romper Esmeralda",
       "(Acción gratuita) Gasta 50 Almas: Destruye la llave para ",
       "iniciar combates contra Jefes con 1 de Fuerza.",
-      "iniciar combates contra Jefes con 10 de HP Temporal.",
+      "iniciar combates contra Jefes con 10 PV Temporales.",
       "iniciar combates contra Jefes con 1 de Destreza.",
       "¡Llave destruida!",
       "Se requieren ",
@@ -44,7 +44,7 @@
   "downfall:AscensionText": {
     "TEXT": [
       "19. Los jefes tienen una reliquia adicional.",
-      "20. El jefe del Acto 3 tiene Cola de Lagarto que cura todo el HP.",
+      "20. El jefe del Acto 3 tiene Cola de Lagarto que cura todos los PV.",
       "Obtén la Llave Rubí. Rómpela después.",
       "4. Los jefes tienen una carta extra mejorada."
     ]

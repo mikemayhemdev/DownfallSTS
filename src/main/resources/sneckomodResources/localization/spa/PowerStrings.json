@@ -42,9 +42,8 @@
   "sneckomod:OverwhelmingPresencePower": {
     "NAME": "Presencia Abrumadora",
     "DESCRIPTIONS": [
-      "La primera vez que barajes tu mazo en cada turno, gana [E] y roba #b1 carta.",
-      "La primera vez que barajes tu mazo en cada turno, gana ",
-      " [E] y roba #b",
+      "La primera vez que juegues una carta #yAjena cada turno, roba #b1 carta.",
+      "La primera vez que juegues una carta #yAjena cada turno, roba #b",
       " cartas."
     ]
   },

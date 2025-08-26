@@ -98,7 +98,7 @@
   },
   "awakened:FlareShot": {
     "NAME": "Destello de Plumas",
-    "DESCRIPTION": "Haz !D! de daño. NL Este turno, cada vez que juegues una carta que no sea un Ataque, TODOS los enemigos pierden !M! de HP."
+    "DESCRIPTION": "Haz !D! de daño. NL Este turno, cada vez que juegues una carta que no sea un Ataque, TODOS los enemigos pierden !M! de PV."
   },
   "awakened:ClarionCall": {
     "NAME": "Llamado Clarion",
@@ -165,8 +165,8 @@
   },
   "awakened:BirdsEye": {
     "NAME": "Ojo de Pájaro",
-    "DESCRIPTION": "Elige un Hechizo para awakened:Conjura.",
-    "UPGRADE_DESCRIPTION": "Recarga tus Hechizos. Elige un Hechizo para awakened:Conjura."
+    "DESCRIPTION": "Elige un Hechizo para awakened:Conjurar.",
+    "UPGRADE_DESCRIPTION": "Recarga tus Hechizos. Elige un Hechizo para awakened:Conjurar."
   },
   "awakened:Initiation": {
     "NAME": "Iniciación",
@@ -197,7 +197,7 @@
   },
   "awakened:Nihil": {
     "NAME": "Nihilismo",
-    "DESCRIPTION": "Aplica !M! awakened:Quemadura_de_Maná. NL awakened:Canto: TODOS los enemigos pierden HP igual a su awakened:Quemadura_de_Maná."
+    "DESCRIPTION": "Aplica !M! awakened:Quemadura_de_Maná. NL awakened:Canto: TODOS los enemigos pierden PV igual a su awakened:Quemadura_de_Maná."
   },
   "awakened:MoonlitVision": {
     "NAME": "Visión de Luna",
@@ -205,7 +205,7 @@
   },
   "awakened:Rebirth": {
     "NAME": "Renacimiento",
-    "DESCRIPTION": "Cuando vayas a morir o al final del combate, elimina todos los debuffs, *Despertar, y sana !M! HP en su lugar."
+    "DESCRIPTION": "Cuando vayas a morir o al final del combate, elimina todas las desventajas, *Despierta, y sana !M! PV en su lugar."
   },
   "awakened:Archmagus": {
     "NAME": "Archimago",
@@ -223,11 +223,11 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "Cae la Oscuridad",
-    "DESCRIPTION": "Siempre que estés awakened:Drenado, gana !M! de Bloqueo y !awakened:m2! Fuerza."
+    "DESCRIPTION": "Cada vez que seas awakened:Drenado, gana !M! de Bloqueo y !awakened:m2! Fuerza."
   },
   "awakened:Eventide": {
     "NAME": "Anochecer",
-    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar dos veces. NL Añade un *Vacío a la parte superior de tu pila de extracción."
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar dos veces. NL Añade un *Vacío en la parte superior de tu pila de extracción."
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Acoger el Eclipse",
@@ -269,7 +269,7 @@
   },
   "awakened:SongOfSorrow": {
     "NAME": "Canción de Lamento",
-    "DESCRIPTION": "Cada vez que creas un *Vacío, TODOS los enemigos pierden !M! HP."
+    "DESCRIPTION": "Cada vez que creas un *Vacío, TODOS los enemigos pierden !M! PV."
   },
   "awakened:MysticOrder": {
     "NAME": "Orden Mística",
@@ -301,7 +301,7 @@
   },
   "awakened:MiddenHeap": {
     "NAME": "Montón de Desechos",
-    "DESCRIPTION": "Gana !B! de Bloqueo. NL Pon !M! cartas de Estado o Maldición de tu pila de extracción o descarte en tu mano.",
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Pon !M! carta de Estado o Maldición de tu pila de extracción o descarte en tu mano.",
     "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo. NL Pon !M! cartas de Estado o Maldición de tu pila de extracción o descarte en tu mano.",
     "EXTENDED_DESCRIPTION": [
       "Selecciona una carta para mover a tu mano.",
