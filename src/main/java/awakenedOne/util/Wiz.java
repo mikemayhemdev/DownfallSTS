@@ -162,7 +162,9 @@ public class Wiz {
 
     public static boolean isChantActive() {
         if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() > 1) {
-            return (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).type == AbstractCard.CardType.POWER) || (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1).hasTag(ACTIVECHANT));
+            if ((AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1).hasTag(CHANT))) {
+                return (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 2).type == AbstractCard.CardType.POWER) || (AbstractDungeon.actionManager.cardsPlayedThisCombat.get(AbstractDungeon.actionManager.cardsPlayedThisCombat.size() - 1).hasTag(ACTIVECHANT));
+            }
         }
         return false;
     }
