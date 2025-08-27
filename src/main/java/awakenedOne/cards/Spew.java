@@ -50,7 +50,7 @@ public class Spew extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeDamage(5);
+        upgradeDamage(4);
         //upgradeMagicNumber(1);
     }
 }
