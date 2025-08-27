@@ -37,11 +37,8 @@ public class EnImmolate extends AbstractBossCard {
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         this.addToBot(new DamageAction(p, new DamageInfo(m, this.damage, this.damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        if (downfallMod.useLegacyBosses || AbstractDungeon.ascensionLevel < 19){
-            this.addToBot(new MakeTempCardInDiscardAction(new Burn(), 1));
-        } else {
-            this.addToBot(new MakeTempCardInDrawPileAction(new Burn(), 1, true, true));
-        }
+        this.addToBot(new MakeTempCardInDiscardAction(new Burn(), 1));
+
         //don't need to create status in boss deck, will be added manually
     }
 

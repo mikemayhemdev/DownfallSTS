@@ -67,7 +67,7 @@
     "NAME": "Alma del Caos",
     "FLAVOR": "Caos manifestado.",
     "DESCRIPTIONS": [
-      "La segunda #yLlama #yFantasmal #yAbrasadora se convierte en una #yLlama #yFantasmal #ydel #yCaos [REMOVE_SPACE]. NL La #yLlama #ydel #yCaos se activa al terminar tu turno sobre ella. NL #yIgnición [REMOVE_SPACE]: #yAdivina #bn y luego juega la primera carta de tu pila de robo, #bn es modificado por la #yIntensidad [REMOVE_SPACE]."
+      "La segunda #yLlama #yFantasmal #yAbrasadora se convierte en una #yLlama #yFantasmal #ydel #yCaos [REMOVE_SPACE]. NL La #yLlama #ydel #yCaos se activa al terminar tu turno sobre ella. NL #yIgnición [REMOVE_SPACE]: #yAdivina #bn y luego juega la primera carta de tu pila de extracción, #bn es modificado por la #yIntensidad [REMOVE_SPACE]."
     ]
   },
   "hexamod:JarOfFuel": {

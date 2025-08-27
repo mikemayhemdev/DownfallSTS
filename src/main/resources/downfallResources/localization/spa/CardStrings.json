@@ -1,19 +1,19 @@
 {
   "downfall:Aged": {
     "NAME": "Envejecido",
-    "DESCRIPTION": "Injugable. Etérea. NL Al final de tu turno, añade un *Vacío a la parte superior de tu pila de robo."
+    "DESCRIPTION": "Injugable. Etérea. NL Al final de tu turno, añade un *Vacío en la parte superior de tu pila de extracción."
   },
   "downfall:Bewildered": {
     "NAME": "Desconcertado",
-    "DESCRIPTION": "Injugable. Etérea. NL Al ser robada, sneckomod:Confunde tu mano."
+    "DESCRIPTION": "Al robarla, sneckomod:Confunde esta carta. NL Agota."
   },
   "downfall:Icky": {
     "NAME": "Pegajoso",
-    "DESCRIPTION": "Gana un *Viscoso. NL Agota."
+    "DESCRIPTION": "Retiene. NL Agota."
   },
   "downfall:Haunted": {
     "NAME": "Embrujado",
-    "DESCRIPTION": "Etérea. Injugable. NL Siempre que otra carta se *Agote mientras esta esté en tu mano, recibes 2 de daño."
+    "DESCRIPTION": "Etérea. Injugable. NL Siempre que otra carta se *Agote mientras esta esté en tu mano, recibes !M! de daño."
   },
   "downfall:Malfunctioning": {
     "NAME": "Defectuosa",
@@ -25,7 +25,7 @@
   },
   "downfall:CurseOfBlood": {
     "NAME": "Haemophilia",
-    "DESCRIPTION": "Lose [E] at the start of your next turn. NL Exhaust.",
+    "DESCRIPTION": "Pierde [E] al inicio de tu próximo turno. NL Agota.",
     "EXTENDED_DESCRIPTION": ["Note for LOC: Hemophilia is a name for a disorder for when your blood doesn’t clot properly. I added the a in the middle for coolness factor."]
   },
   "downfall:SummonMushrooms": {
@@ -34,7 +34,7 @@
   },
   "downfall:BossMaintenance": {
     "NAME": "Mantenimiento",
-    "DESCRIPTION": "Los *Golpes Hacen !M! más de daño este combate. NL Gana !B! de Destreza. NL Esta carta cuesta 1 más durante este combate."
+    "DESCRIPTION": "Los *Golpes Hacen !M! de daño adicional este combate. NL Gana !B! de Destreza."
   },
   "downfall:CuriousRobot": {
     "NAME": "Robot Curioso",
@@ -46,7 +46,7 @@
   },
   "downfall:Temptation": {
     "NAME": "Tentación",
-    "DESCRIPTION": "Baraja !M! Poderes aleatorios en la pila de robo de tu oponente."
+    "DESCRIPTION": "Baraja !M! Poderes aleatorios en la pila de extracción de tu oponente."
   },
   "downfall:BagOfKnives": {
     "NAME": "Bolsa de Cuchillos",
@@ -91,6 +91,10 @@
   "downfall:FaithRewarded": {
     "NAME": "Fe Recompensada",
     "DESCRIPTION": "Si entras en Divinidad, nunca puedes salir de ella."
+  },
+  "downfall:Crusade": {
+    "NAME": "Crusada",
+    "DESCRIPTION": "Elimina todas las desventajas. NL Pierde todo el Mantra. Sana !M! PV y gana 1 de Fuerza por cada Mantra perdido."
   },
   "downfall:Hyperfocused": {
     "NAME": "Foco Mortal",

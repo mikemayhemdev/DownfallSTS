@@ -19,7 +19,7 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
 
     public ArchetypeAct1OmegaSimple() {
         super("WA_ARCHETYPE_CALM", "Calm");
-        maxHPModifier += 168;
+        maxHPModifier += 138;
         maxHPModifierAsc = 10;
         actNum = 1;
     }
@@ -54,7 +54,7 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
                 break;
             case 2:
                 addToList(cardsList, new EnWishPlated(), extraUpgrades);
-                addToList(cardsList, new EnPanacea(), extraUpgrades);
+                addToList(cardsList, new EnPanacea(), false);
 
                 turn++;
                 break;
@@ -64,28 +64,28 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
                 turn++;
                 break;
             case 4:
+                addToList(cardsList, new EnTruePeace());
+                addToList(cardsList, new EnTruePeace());
+                turn++;
+                break;
+            case 5:
                 addToList(cardsList, new EnBeta());
                 addToList(cardsList, new EnDefendPurple(), false);
                 turn++;
                 break;
-            case 5:
+            case 6:
                 addToList(cardsList, new EnWaveOfTheHand());
                 addToList(cardsList, new EnDefendPurple());
                 turn++;
                 break;
-            case 6:
-                addToList(cardsList, new EnWishPlated(), extraUpgrades);
-                addToList(cardsList, new EnPanacea(), extraUpgrades);
-                turn++;
-                break;
             case 7:
-                addToList(cardsList, new EnFalseWorship());
-                addToList(cardsList, new EnStrikePurple(), false);
+                addToList(cardsList, new EnWishPlated(), extraUpgrades);
+                addToList(cardsList, new EnPanacea(), false);
                 turn++;
                 break;
             case 8:
-                addToList(cardsList, new EnOmega());
-                addToList(cardsList, new EnDefendPurple(), false);
+                addToList(cardsList, new EnFalseWorship());
+                addToList(cardsList, new EnStrikePurple(), false);
                 turn++;
                 break;
             case 9:
@@ -94,6 +94,16 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
                 turn++;
                 break;
             case 10:
+                addToList(cardsList, new EnOmega());
+                addToList(cardsList, new EnDefendPurple(), false);
+                turn++;
+                break;
+            case 11:
+                addToList(cardsList, new EnTruePeace());
+                addToList(cardsList, new EnTruePeace());
+                turn++;
+                break;
+            case 12:
                 addToList(cardsList, new EnJudgment());
                 addToList(cardsList, new EnTruePeace());
                 break;

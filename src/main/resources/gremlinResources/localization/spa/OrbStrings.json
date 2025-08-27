@@ -35,7 +35,7 @@
     "NAME": "Gremlin Ladrón",
     "DESCRIPTION": [
       "Los Ataques de coste 0 infligen #b",
-      " de daño adicional. Siempre que juegues un Ataque, inflige #b",
+      " de daño adicional. Cada vez que juegues un Ataque, inflige #b",
       " de daño a un enemigo al azar."
     ]
   }

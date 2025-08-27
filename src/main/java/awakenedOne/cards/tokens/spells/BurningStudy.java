@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
 import hermit.actions.SoundAction;
@@ -19,7 +20,7 @@ public class BurningStudy extends AbstractSpellCard {
     // intellij stuff skill, self, , , , , 2, 1
 
     public BurningStudy() {
-        super(ID, 1, CardType.POWER, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         baseSecondMagic = secondMagic = 1;
         this.setBackgroundTexture("awakenedResources/images/512/bg_power_awakened.png", "awakenedResources/images/1024/bg_power_awakened.png");

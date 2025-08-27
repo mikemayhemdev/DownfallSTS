@@ -88,7 +88,7 @@
     "NAME": "Arandelas de Donu",
     "FLAVOR": "Es bastante claro por qué Donu las colecciona.",
     "DESCRIPTIONS": [
-      "Al comienzo del combate, gana [E] [E] y añade #b1 #yVacío a tu pila de robo."
+      "Al comienzo del combate, gana [E] [E] y añade #b1 #yVacío a tu pila de extracción."
     ]
   },
   "bronze:BronzeIdol": {

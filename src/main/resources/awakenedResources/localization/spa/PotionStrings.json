@@ -22,8 +22,8 @@
   "awakened:SneckoPowersPotion": {
     "NAME": "Esencia de Snecko",
     "DESCRIPTIONS": [
-      "Elige #b1 de #b3 poderes #yOffclass aleatorios para añadir a tu mano, cuesta #b0 este turno.",
-      "Elige #b1 de #b3 poderes #yOffclass aleatorios y añade #b",
+      "Elige #b1 de #b3 poderes #yAjenos aleatorios para añadir a tu mano, cuesta #b0 este turno.",
+      "Elige #b1 de #b3 poderes #yAjenos aleatorios y añade #b",
       " copias a tu mano, cuestan #b0 este turno."
     ]
   }

@@ -6,10 +6,15 @@ import charbosses.cards.red.*;
 import charbosses.powers.bossmechanicpowers.DefectAttackVoidPower;
 import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.blue.Barrage;
+import com.megacrit.cardcrawl.cards.status.Slimed;
+import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import hermit.util.Wiz;
 
 import java.util.ArrayList;
 
@@ -31,6 +36,10 @@ public class ArchetypeAct1StatusesSimple extends ArchetypeBaseIronclad {
 
         AbstractCreature m = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new IroncladStatusPower(m)));
+
+        if (AbstractDungeon.ascensionLevel >= 19){
+            Wiz.atb(new MakeTempCardInDrawPileAction(new Slimed(), 3, true, true));
+        }
     }
 
     @Override
@@ -46,7 +55,7 @@ public class ArchetypeAct1StatusesSimple extends ArchetypeBaseIronclad {
                 break;
             case 1:
                 addToList(cardsList, new EnMetallicize(), false);
-                addToList(cardsList, new EnSpotWeakness(), false);
+                addToList(cardsList, new EnSpotWeakness(), extraUpgrades);
                 turn++;
                 break;
             case 2:
@@ -55,14 +64,14 @@ public class ArchetypeAct1StatusesSimple extends ArchetypeBaseIronclad {
                 turn++;
                 break;
             case 3:
-                addToList(cardsList, new EnBerserk(), extraUpgrades);
-                addToList(cardsList, new EnImmolate(), false);
+                addToList(cardsList, new EnBerserk(), false);
+                addToList(cardsList, new EnImmolate(), true);
                 turn++;
                 break;
             case 4:
-                addToList(cardsList, new EnIntimidate(), extraUpgrades);
+                addToList(cardsList, new EnIntimidate(), true);
                 if (looped) addToList(cardsList, new EnBarricade(), false);
-                if (!looped) addToList(cardsList, new EnDemonForm(), extraUpgrades);
+                if (!looped) addToList(cardsList, new EnDemonForm(), false);
                 turn=0;
                 looped = true;
                 break;
