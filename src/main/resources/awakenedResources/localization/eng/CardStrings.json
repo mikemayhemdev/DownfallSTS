@@ -5,7 +5,7 @@
   },
   "awakened:BurningStudy": {
     "NAME": "Burning Study",
-    "DESCRIPTION": "Retain. NL Gain !M! Strength. NL Apply !awakened:m2! Weak to ALL enemies."
+    "DESCRIPTION": "Retain. NL Gain !M! Strength. NL Apply !awakened:m2! Weak to ALL enemies. NL Exhaust."
   },
   "awakened:Cryostasis": {
     "NAME": "Cryostasis",

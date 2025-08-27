@@ -26,7 +26,7 @@ public class GhostShield extends AbstractHexaCard implements HexaPurpleTextInter
         baseMagicNumber = magicNumber = MAGIC;
         isEthereal = true;
         tags.add(HexaMod.AFTERLIFE);
-        expansionContentMod.loadJokeCardImage((AbstractCard)this, "GhostShield.png");
+        HexaMod.loadJokeCardImage(this, "GhostShield.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
