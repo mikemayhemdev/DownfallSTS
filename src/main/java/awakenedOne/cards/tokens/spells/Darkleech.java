@@ -40,7 +40,7 @@ public class Darkleech extends AbstractSpellCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new SoundAction(makeID("DARKSPELL")));
+        this.addToTop(new SoundAction(makeID("DARKSPELL")));
         if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
             this.addToBot(new VFXAction(new GiantEyeEffect(m.hb.cX, m.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
             this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));

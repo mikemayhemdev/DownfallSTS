@@ -28,7 +28,7 @@ public class BurningStudy extends AbstractSpellCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new SoundAction(makeID("FIRESPELL")));
+        this.addToTop(new SoundAction(makeID("FIRESPELL")));
         this.addToBot(new VFXAction(p, new InflameNoSound(p), 1.0F));
         applyToSelf(new StrengthPower(p, magicNumber));
         Wiz.forAllMonstersLiving(q -> applyToEnemy(q, new WeakPower(q, secondMagic, false)));

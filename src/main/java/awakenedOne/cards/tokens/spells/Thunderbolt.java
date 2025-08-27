@@ -43,7 +43,7 @@ public class Thunderbolt extends AbstractSpellCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new SoundAction(makeID("THUNDERSPELL")));
+        this.addToTop(new SoundAction(makeID("THUNDERSPELL")));
         if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
             vfx(new LightningEffect(m.hb.cX, m.hb.cY));
             dmg(m, AbstractGameAction.AttackEffect.NONE);

@@ -21,7 +21,7 @@ public class Cryostasis extends AbstractSpellCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new SoundAction(makeID("ICESPELL")));
+        this.addToTop(new SoundAction(makeID("ICESPELL")));
         AbstractDungeon.effectsQueue.add(new FrostOrbActivateEffect(p.hb.cX, p.hb.cY));
         blck();
 
