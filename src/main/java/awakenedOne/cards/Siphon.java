@@ -17,7 +17,7 @@ public class Siphon extends AbstractAwakenedCard {
 
     public Siphon() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 7;
+        baseDamage = 8;
         magicNumber = baseMagicNumber = 2;
         this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(Siphon.class.getSimpleName() + ".png"));

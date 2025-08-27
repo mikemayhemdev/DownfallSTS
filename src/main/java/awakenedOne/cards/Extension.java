@@ -15,8 +15,8 @@ public class Extension extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1
 
     public Extension() {
-        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 2;
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 11;
         loadJokeCardImage(this, makeBetaCardPath(Extension.class.getSimpleName() + ".png"));
     }
 
@@ -41,6 +41,6 @@ public class Extension extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
     }
 }
