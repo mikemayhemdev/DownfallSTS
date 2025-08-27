@@ -47,7 +47,8 @@
   },
   "awakened:AwakenedForm": {
     "NAME": "Awakened Form",
-    "DESCRIPTION": "Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual."
+    "DESCRIPTION": "Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual.",
+    "UPGRADE_DESCRIPTION": "Awaken immediately. NL Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual."
   },
   "awakened:Spellbinder": {
     "NAME": "Spellbinder",
@@ -218,8 +219,7 @@
   },
   "awakened:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] .",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] ."
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",

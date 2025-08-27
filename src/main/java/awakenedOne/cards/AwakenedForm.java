@@ -10,8 +10,7 @@ import com.megacrit.cardcrawl.powers.CuriosityPower;
 import com.megacrit.cardcrawl.powers.RitualPower;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.applyToSelf;
-import static awakenedOne.util.Wiz.applyToSelfTop;
+import static awakenedOne.util.Wiz.*;
 
 public class AwakenedForm extends AbstractAwakenedCard {
     public final static String ID = makeID(AwakenedForm.class.getSimpleName());
@@ -26,6 +25,7 @@ public class AwakenedForm extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (upgraded) awaken();
         applyToSelfTop(new CuriosityPower(p, magicNumber));
         applyToSelfTop(new RitualPower(p, secondMagic, true));
     }

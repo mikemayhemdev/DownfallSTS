@@ -21,7 +21,7 @@ public class Spew extends AbstractAwakenedCard {
 
     public Spew() {
         super(ID, COST, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 13;
+        baseDamage = 12;
         baseMagicNumber = magicNumber = 1;
         loadJokeCardImage(this, makeBetaCardPath(Spew.class.getSimpleName() + ".png"));
     }
@@ -50,6 +50,7 @@ public class Spew extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeDamage(4);
+        //upgradeMagicNumber(1);
     }
 }
