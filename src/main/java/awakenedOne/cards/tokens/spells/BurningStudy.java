@@ -20,7 +20,7 @@ public class BurningStudy extends AbstractSpellCard {
     // intellij stuff skill, self, , , , , 2, 1
 
     public BurningStudy() {
-        super(ID, 1, CardType.SKILL, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardTarget.ALL_ENEMY);
         baseMagicNumber = magicNumber = 1;
         baseSecondMagic = secondMagic = 1;
         this.setBackgroundTexture("awakenedResources/images/512/bg_power_awakened.png", "awakenedResources/images/1024/bg_power_awakened.png");
