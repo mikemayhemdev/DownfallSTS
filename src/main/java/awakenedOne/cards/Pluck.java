@@ -30,8 +30,8 @@ public class Pluck extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        applyToSelf(new ConjureNextPower(1));
-        //atb(new ConjureAction(false));
+        //applyToSelf(new ConjureNextPower(1));
+        atb(new ConjureAction(false));
     }
 
     @Override

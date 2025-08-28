@@ -26,7 +26,7 @@ public class Dejection extends AbstractAwakenedCard {
 
     public Dejection() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 7;
         this.cardsToPreview = new Ceremony();
         //this.baseMagicNumber = this.magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Dejection.class.getSimpleName() + ".png"));
