@@ -54,7 +54,7 @@ public class ProcessionAction extends AbstractGameAction {
                     AbstractCard c = (AbstractCard)var1.next();
                     AbstractDungeon.player.drawPile.group.remove(c);
                     AbstractDungeon.getCurrRoom().souls.remove(c);
-                    this.addToBot(new NewQueueCardAction(c, true, false, true));
+                    this.addToTop(new NewQueueCardAction(c, true, false, true));
                     if ((!c.freeToPlay() && !c.freeToPlayOnce && c.costForTurn > 0)) {
                         shuffleIn(new VoidCard(), c.costForTurn);
                     }
