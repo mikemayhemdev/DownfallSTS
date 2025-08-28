@@ -25,7 +25,7 @@ public class AwakenedForm extends AbstractAwakenedCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (upgraded) awaken();
+        if (upgraded) awaken(true);
         applyToSelfTop(new CuriosityPower(p, magicNumber));
         applyToSelfTop(new RitualPower(p, secondMagic, true));
     }
