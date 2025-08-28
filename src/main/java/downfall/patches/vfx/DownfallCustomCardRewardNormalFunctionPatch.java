@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.screens.CombatRewardScreen;
 import com.megacrit.cardcrawl.ui.buttons.ProceedButton;
 import downfall.util.ThirdSealReward;
 import guardian.rewards.GemReward;
+import guardian.rewards.GemRewardButRelicRng;
 import javassist.CtBehavior;
 import sneckomod.util.UpgradedUnknownReward;
 import theHexaghost.util.SealSealReward;
@@ -41,7 +42,12 @@ public class DownfallCustomCardRewardNormalFunctionPatch {
                 } else if ( rewardItem instanceof GemReward ) {
                     GemReward reward = (GemReward) rewardItem;
                     reward.generate_reward_cards();
-                } else if ( rewardItem instanceof UpgradedUnknownReward ) {
+                }
+                else if ( rewardItem instanceof GemRewardButRelicRng) {
+                    GemRewardButRelicRng reward = (GemRewardButRelicRng) rewardItem;
+                    reward.generate_reward_cards();
+                }
+                else if ( rewardItem instanceof UpgradedUnknownReward ) {
                     UpgradedUnknownReward reward = (UpgradedUnknownReward) rewardItem;
                     reward.generate_reward_cards();
                 }
