@@ -94,11 +94,11 @@
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure."
   },
   "awakened:FlareShot": {
     "NAME": "Feather Flare",
-    "DESCRIPTION": "Deal !D! damage. NL This turn, whenever you play a non-Attack card, ALL enemies lose !M! HP."
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, draw !M! additional card."
   },
   "awakened:ClarionCall": {
     "NAME": "Clarion Call",
