@@ -128,5 +128,18 @@
       "(Página: ",
       ")"
     ]
+  },
+  "HermitMod:AwakenedOneTutorials": {
+    "TEXT": [
+      "El Despertado tiene una poderosa selección de cartas de Hechizo que se encuentran dentro de su Libro de Hechizos.",
+      "Cada vez que juegas una carta con Conjurar, robas una carta de él. Vaciar el Libro de Hechizos refresca todos los Hechizos."
+    ],
+ "LABEL": [
+      "Siguiente",
+      "Entendido",
+      "El Despertado",
+      "(Página: ",
+      ")"
+    ]
   }
 }

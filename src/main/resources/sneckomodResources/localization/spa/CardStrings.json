@@ -15,7 +15,10 @@
   "sneckomod:Cheat": {
     "NAME": "Suerte Pura",
     "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
-    "UPGRADE_DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "UPGRADE_DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:DangerNoodle": {
     "NAME": "Serpiente Peligrosa",
@@ -66,11 +69,14 @@
   },
   "sneckomod:ImmovableObject": {
     "NAME": "Objeto Inamovible",
-    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:IronFang": {
     "NAME": "Colmillo de Hierro",
-    "DESCRIPTION": "Haz !D! de daño y aplica !M! de Débil a TODOS los enemigos."
+    "DESCRIPTION": "Haz !D! de daño y aplica !M! Débil a TODOS los enemigos."
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Ataque Improvisado",
@@ -122,8 +128,8 @@
   },
   "sneckomod:OverwhelmingPresence": {
     "NAME": "Presencia Abrumadora",
-    "DESCRIPTION": "Etérea. NL La primera vez que juegues un sneckomod:Offclass cada turno, roba una carta.",
-    "UPGRADE_DESCRIPTION": "La primera vez que juegues un sneckomod:Offclass cada turno, roba una carta."
+    "DESCRIPTION": "Etérea. NL La primera vez que juegues una carta sneckomod:Ajena cada turno, roba una carta.",
+    "UPGRADE_DESCRIPTION": "La primera vez que juegues una carta sneckomod:Ajena cada turno, roba una carta."
   },
   "sneckomod:RiskySword": {
     "NAME": "Espada Arriesgada",
@@ -144,7 +150,7 @@
   },
   "sneckomod:QuickMove": {
     "NAME": "Movimiento Rápido",
-    "DESCRIPTION": "Obtén !B! de Bloqueo. NL sneckomod:Exceso: Aplica !M! de Vulnerable a TODOS los enemigos."
+    "DESCRIPTION": "Obtén !B! de Bloqueo. NL sneckomod:Exceso: Aplica !M! Vulnerable a TODOS los enemigos."
   },
   "sneckomod:RainOfDice": {
     "NAME": "Lluvia de Dados",
@@ -158,7 +164,10 @@
   "sneckomod:Rotation": {
     "NAME": "Rotación",
     "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
-    "UPGRADE_DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "UPGRADE_DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:SerpentBottle": {
     "NAME": "Venta con Descuento",
@@ -182,7 +191,10 @@
   },
   "sneckomod:SnakeSap": {
     "NAME": "Savia de Serpiente",
-    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:SnekBeam": {
     "NAME": "Rayo Láser Ocular",
@@ -196,7 +208,10 @@
   "sneckomod:SoulCleanse": {
     "NAME": "Purificación de Alma",
     "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
-    "UPGRADE_DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "UPGRADE_DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:SoulDraw": {
     "NAME": "Robo Espiritual",
@@ -227,11 +242,14 @@
   },
   "sneckomod:Yearn": {
     "NAME": "Anhelo",
-    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:TailWhip": {
     "NAME": "Latigazo de Cola",
-    "DESCRIPTION": "Haz !D! de daño. NL sneckomod:Exceso: Aplica !M! de Débil y Vulnerable."
+    "DESCRIPTION": "Haz !D! de daño. NL sneckomod:Exceso: Aplica !M! Débil y Vulnerable."
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transmogrificar",
@@ -241,12 +259,16 @@
       "Elige una Reliquia para perder.",
       "Pierde ",
       " y obtiene otra ",
-      " Reliquia."
+      " Reliquia.",
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:ToxicPersonality": {
     "NAME": "Personalidad Tóxica",
-    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod."
+    "DESCRIPTION": "Esta carta no debería aparecer en una partida. NL Si estás leyendo esto, probablemente encontraste un error. NL Por favor, repórtalo a los desarrolladores del mod.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "De Basura a Tesoro",
@@ -412,11 +434,11 @@
   },
   "sneckomod:LilGuardian": {
     "NAME": "Mini Guardián",
-    "DESCRIPTION": "Gana !B! Bloqueo. Cada vez que juegues una carta que cueste 2 o más, juega esta carta desde tu mano."
+    "DESCRIPTION": "Gana !B! de Bloqueo. Cada vez que juegues una carta que cueste 2 o más, juega esta carta desde tu mano."
   },
   "sneckomod:CrystalBoomerang": {
     "NAME": "Bumerán de Cristal",
-    "DESCRIPTION": "Pon una carta de la pila de descarte en tu mano. NL Si es sneckomod:Ajena, gana !B! Bloqueo."
+    "DESCRIPTION": "Pon una carta de la pila de descarte en tu mano. NL Si es sneckomod:Ajena, gana !B! de Bloqueo."
   },
   "sneckomod:ViperEssence": {
     "NAME": "Esencia de Víbora",
@@ -424,8 +446,8 @@
   },
   "sneckomod:Amass": {
     "NAME": "Acumular",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Obtiene Bloqueo adicional igual al coste total en [E] de tu mano.",
-    "UPGRADE_DESCRIPTION": "Gana !B! Bloqueo. NL Obtiene Bloqueo adicional igual al doble del coste total en [E] de tu mano."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Obtiene Bloqueo adicional igual al coste total en [E] de tu mano.",
+    "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo. NL Obtiene Bloqueo adicional igual al doble del coste total en [E] de tu mano."
   },
   "sneckomod:Medusa": {
     "NAME": "Medusa",
@@ -434,8 +456,8 @@
   },
   "sneckomod:Cower": {
     "NAME": "Encogerse",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Añade un *Esconderse a tu mano. NL Agota.",
-    "UPGRADE_DESCRIPTION": "Gana !B! Bloqueo. NL Añade un *Esconderse+ a tu mano. NL Agota."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Añade un *Esconderse a tu mano. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Gana !B! de Bloqueo. NL Añade un *Esconderse+ a tu mano. NL Agota."
   },
   "sneckomod:WideSting": {
     "NAME": "Picadura Amplia",
@@ -444,7 +466,7 @@
   },
   "sneckomod:GildedShield": {
     "NAME": "Escudo Dorado",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL sneckomod:Confunde esta carta y luego devuélvela a tu mano."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL sneckomod:Confunde esta carta y luego devuélvela a tu mano."
   },
   "sneckomod:Mesmerize": {
     "NAME": "Hipnotizar",
@@ -461,8 +483,8 @@
   },
   "sneckomod:BeyondArmor": {
     "NAME": "Armadura del Más Allá",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Mueve !M! cartas sneckomod:Ajenas aleatorias de tu mazo en tu mano. NL sneckomod:Regalo: Común.",
-    "DESCRIPTION_BATTLE": "Gana !B! Bloqueo. NL Mueve !M! cartas sneckomod:Ajenas aleatorias de tu mazo en tu mano."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Mueve !M! cartas sneckomod:Ajenas aleatorias de tu mazo en tu mano. NL sneckomod:Regalo: Común.",
+    "DESCRIPTION_BATTLE": "Gana !B! de Bloqueo. NL Mueve !M! cartas sneckomod:Ajenas aleatorias de tu mazo en tu mano."
   },
   "sneckomod:BlunderGuard": {
     "NAME": "Guardia Torpe",
@@ -556,23 +578,20 @@
   },
   "sneckomod:FlashInThePan": {
     "NAME": "Chispa Fugaz",
-    "DESCRIPTION": "Gana !B! Bloqueo. NL Descarta tu mano. NL Roba esa misma cantidad de cartas en tu siguiente turno."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL Descarta tu mano. NL Roba esa misma cantidad de cartas en tu siguiente turno."
   },
   "sneckomod:TrashCan": {
     "NAME": "Bote de Basura",
-    "DESCRIPTION": "Al inicio de tu turno, puedes Agotar una carta.",
-    "UPGRADE_DESCRIPTION": "Innato. NL Al inicio de tu turno, puedes Agotar una carta."
+    "DESCRIPTION": "Al inicio de tu turno, puedes Agotar una carta."
   },
   "sneckomod:Lacerate": {
     "NAME": "Lacerar",
-    "DESCRIPTION": "Haz !D! de daño. Cuando este enemigo reciba una desventaja este turno, gana !M! sneckomod:Tóxico. sneckomod:Regalo: *Veneno *Paralizador.",
-    "DESCRIPTION_BATTLE": "Haz !D! de daño. Cuando este enemigo reciba una desventaja este turno, gana !M! sneckomod:Tóxico."
+    "DESCRIPTION": "Aplica !D! sneckomod:Tóxico a TODOS los enemigos. NL Gana una *Nube *Paralizante. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Aplica !D! sneckomod:Tóxico a TODOS los enemigos. NL Gana una *Nube *Paralizante+. NL Agota."
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Sabueso Serpentino",
     "DESCRIPTION": "Etérea. NL Cuando juegues un Poder, gana [E]. NL sneckomod:Regalo: Poder Raro.",
-    "UPGRADE_DESCRIPTION": "Etérea. NL Cuando juegues un Poder, gana [E] [E]. NL sneckomod:Regalo: Poder Raro.",
-    "DESCRIPTION_BATTLE": "Etérea. NL Cuando juegues un Poder, gana [E].",
-    "UPGRADE_DESCRIPTION_BATTLE": "Etérea. NL Cuando juegues un Poder, gana [E] [E]."
-}
+    "DESCRIPTION_BATTLE": "Etérea. NL Cuando juegues un Poder, gana [E]."
+  }
 }

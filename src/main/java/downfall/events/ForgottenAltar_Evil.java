@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.colorless.Apparition;
 import com.megacrit.cardcrawl.cards.curses.Pain;
 import com.megacrit.cardcrawl.cards.curses.Shame;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -40,14 +41,14 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
         this.screen = CurScreen.INTRO;
         this.noCardsInRewards = true;
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.hpLoss = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.3F);
+            this.hpLoss = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.25F);
         } else {
             this.hpLoss = MathUtils.round((float) AbstractDungeon.player.maxHealth * 0.2F);
         }
 
 
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.goldCost = 100;
+            this.goldCost = 75;
         } else {
             this.goldCost = 50;
         }
@@ -57,17 +58,17 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
         }
 
         if (AbstractDungeon.player.gold >= goldCost) {
-            this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldCost + OPTIONSALT[1] + (this.hpLoss + 10) + OPTIONSALT[2]);
+            this.imageEventText.setDialogOption(OPTIONSALT[0] + this.goldCost + OPTIONSALT[1] + (this.hpLoss) + OPTIONSALT[2]);
         } else {
             this.imageEventText.setDialogOption(OPTIONSALT[3] + this.goldCost + OPTIONSALT[4], true);
         }
 
         this.imageEventText.setDialogOption(OPTIONS[2] + 5 + OPTIONS[3] + this.hpLoss + OPTIONS[4]);
 
-        if (15 > AbstractDungeon.ascensionLevel) {
+        if (15 >= AbstractDungeon.ascensionLevel) {
             this.imageEventText.setDialogOption(OPTIONSALT[5]);
         } else {
-            this.imageEventText.setDialogOption(OPTIONSALT[6]);
+            this.imageEventText.setDialogOption(OPTIONSALT[6] + 5 + OPTIONSALT[7]);
         }
     }
 
@@ -102,8 +103,11 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
                             this.imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                             this.imageEventText.setDialogOption(OPTIONSALT[5]);
                         } else {
-                            Shame curse = new Shame();
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                            //Shame curse = new Shame();
+                            //AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                            AbstractDungeon.player.damage(new DamageInfo((AbstractCreature)null, 5, DamageInfo.DamageType.HP_LOSS));
+                            CardCrawlGame.sound.play("ATTACK_DAGGER_6");
+                            CardCrawlGame.sound.play("BLOOD_SPLAT");
                             this.imageEventText.updateBodyText(DESCRIPTIONSALT[2]);
                             this.imageEventText.setDialogOption(OPTIONSALT[5]);
                         }

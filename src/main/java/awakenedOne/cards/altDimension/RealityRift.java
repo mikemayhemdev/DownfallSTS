@@ -21,7 +21,7 @@ public class RealityRift extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public RealityRift() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF, CardColor.COLORLESS);
+        super(ID, 0, CardType.SKILL, CardRarity.SPECIAL, CardTarget.SELF, CardColor.COLORLESS);
         loadJokeCardImage(this, makeBetaCardPath(RealityRift.class.getSimpleName() + ".png"));
         exhaust = true;
         baseMagicNumber = magicNumber = 3;

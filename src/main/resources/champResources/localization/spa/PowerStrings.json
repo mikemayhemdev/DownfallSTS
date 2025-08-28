@@ -61,7 +61,7 @@
   "champ:ImprovisingPower": {
     "NAME": "Improvisar",
     "DESCRIPTIONS": [
-      "Al comienzo de tu turno, si no estás en una #yPostura [REMOVE_SPACE], entra en una #yPostura aleatoria [REMOVE_SPACE]. Cada vez que entres en una #yPostura [REMOVE_SPACE], activa su #yBono #b",
+      "Cada vez que entres en una #yPostura [REMOVE_SPACE], activa su #yBono #b",
       " veces."
     ]
   },

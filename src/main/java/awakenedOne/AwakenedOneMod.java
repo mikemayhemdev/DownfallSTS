@@ -69,6 +69,7 @@ public class AwakenedOneMod implements
         PostInitializeSubscriber,
         OnStartBattleSubscriber,
         OnPlayerTurnStartSubscriber,
+        AddAudioSubscriber,
         OnCardUseSubscriber,
         PostPlayerUpdateSubscriber,
         SetUnlocksSubscriber {
@@ -389,12 +390,23 @@ public class AwakenedOneMod implements
                 DeadBird.ID,
                 ShardOfNowak.ID,
 
-                FourthDimension.ID,
-                BringTheStorm.ID,
+                StormRuler.ID,
+                Inscribe.ID,
                 AphoticFount.ID,
 
                 AwakenedOneChar.Enums.AWAKENED_ONE
         );
+    }
+
+
+    @Override
+    public void receiveAddAudio() {
+        BaseMod.addAudio(makeID("THUNDERSPELL"), "awakenedResources/audio/thunderboltv3.ogg");
+        BaseMod.addAudio(makeID("ICESPELL"), "awakenedResources/audio/cryostasis.ogg");
+        BaseMod.addAudio(makeID("DARKSPELL"), "awakenedResources/audio/darkleech.ogg");
+        BaseMod.addAudio(makeID("FIRESPELL"), "awakenedResources/audio/burning_study.ogg");
+        BaseMod.addAudio(makeID("CHANT"), "awakenedResources/audio/chant_activatev2.ogg");
+        BaseMod.addAudio(makeID("SOULSTRIKE"), "awakenedResources/audio/awakenedoneattack.ogg");
     }
 
     @Override

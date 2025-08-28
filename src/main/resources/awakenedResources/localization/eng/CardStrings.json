@@ -5,7 +5,7 @@
   },
   "awakened:BurningStudy": {
     "NAME": "Burning Study",
-    "DESCRIPTION": "Retain. NL Gain !M! Strength. NL Apply !awakened:m2! Weak to ALL enemies."
+    "DESCRIPTION": "Retain. NL Gain !M! Strength. NL Apply !awakened:m2! Weak to ALL enemies. NL Exhaust."
   },
   "awakened:Cryostasis": {
     "NAME": "Cryostasis",
@@ -47,7 +47,8 @@
   },
   "awakened:AwakenedForm": {
     "NAME": "Awakened Form",
-    "DESCRIPTION": "Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual."
+    "DESCRIPTION": "Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual.",
+    "UPGRADE_DESCRIPTION": "Awaken immediately. NL Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual."
   },
   "awakened:Spellbinder": {
     "NAME": "Spellbinder",
@@ -94,11 +95,11 @@
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL At the start of your next turn, awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure."
   },
   "awakened:FlareShot": {
     "NAME": "Feather Flare",
-    "DESCRIPTION": "Deal !D! damage. NL This turn, whenever you play a non-Attack card, ALL enemies lose !M! HP."
+    "DESCRIPTION": "Deal !D! damage. NL Next turn, draw !M! additional card."
   },
   "awakened:ClarionCall": {
     "NAME": "Clarion Call",
@@ -218,8 +219,7 @@
   },
   "awakened:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] .",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] ."
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
@@ -260,7 +260,8 @@
   },
   "awakened:Dejection": {
     "NAME": "Dejection",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain a *Ceremony.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain a *Ceremony+."
   },
   "awakened:BloodRite": {
     "NAME": "Blood Rite",
@@ -320,7 +321,7 @@
     "NAME": "Manastorm",
     "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure twice."
   },
-  "awakened:BringTheStorm": {
+  "awakened:StormRuler": {
     "NAME": "Storm Ruler",
     "DESCRIPTION": "awakened:Conjure. NL *Thunderbolts deal !M! additional damage."
   },

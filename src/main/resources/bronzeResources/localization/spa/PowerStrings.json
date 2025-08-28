@@ -44,10 +44,10 @@
   "bronze:MaxOutput": {
     "NAME": "Rendimiento Máximo",
     "DESCRIPTIONS": [
-      "Roba #b1 carta adicional y añade #b1 carta #yAturdido a tu pila de robo cada turno.",
+      "Roba #b1 carta adicional y añade #b1 #yAturdido a tu pila de extracción cada turno.",
       "Roba #b",
       " cartas adicionales y añade #b",
-      " cartas #yAturdido a tu pila de robo cada turno."
+      " #yAturdido a tu pila de extracción cada turno."
     ]
   },
   "bronze:Return": {
@@ -75,8 +75,8 @@
   "bronze:BronzeHeatsink": {
     "NAME": "Disipador de Calor de Bronce",
     "DESCRIPTIONS": [
-      "Siempre que juegues una #yFunción [REMOVE_SPACE], roba #b1 carta.",
-      "Siempre que juegues una #yFunción [REMOVE_SPACE], roba #b",
+      "Cada vez que juegues una #yFunción [REMOVE_SPACE], roba #b1 carta.",
+      "Cada vez que juegues una #yFunción [REMOVE_SPACE], roba #b",
       " cartas."
     ]
   },

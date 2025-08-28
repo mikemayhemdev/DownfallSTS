@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import com.megacrit.cardcrawl.vfx.combat.ReaperEffect;
+import hermit.actions.SoundAction;
 import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
@@ -42,9 +43,8 @@ public class Thunderbolt extends AbstractSpellCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToTop(new SoundAction(makeID("THUNDERSPELL")));
         if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
-            CardCrawlGame.sound.playA("ORB_LIGHTNING_EVOKE", 0.9F);
-            CardCrawlGame.sound.playA("ORB_LIGHTNING_PASSIVE", -0.3F);
             vfx(new LightningEffect(m.hb.cX, m.hb.cY));
             dmg(m, AbstractGameAction.AttackEffect.NONE);
         } else {

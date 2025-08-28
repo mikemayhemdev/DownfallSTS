@@ -22,7 +22,7 @@ public class RallyTheTroops extends AbstractSlimeboundCard {
     private static final CardStrings cardStrings;
     private static final CardType TYPE = CardType.ATTACK;
     private static final CardRarity RARITY = CardRarity.RARE;
-    private static final CardTarget TARGET = CardTarget.SELF_AND_ENEMY;
+    private static final CardTarget TARGET = CardTarget.ENEMY;
     private static final int COST = 1;
     public static String UPGRADED_DESCRIPTION;
 

@@ -53,7 +53,7 @@ public class EnDivinityStance extends AbstractEnemyStance {
     }
 
     public float atDamageGive(float damage, DamageType type) {
-        return type == DamageType.NORMAL ? damage * 3.0F : damage;
+        return type == DamageType.NORMAL ? damage * 2.0F : damage;
     }
 
     public void updateDescription() {

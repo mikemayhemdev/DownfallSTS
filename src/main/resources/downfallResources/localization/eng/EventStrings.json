@@ -341,7 +341,8 @@
       "[Locked] Requires ",
       " Souls.",
       "[Leave]",
-      "[Leave] #rBecome #rCursed #r- #rShame."
+      "[Leave] #rLose #b",
+      " #rHP."
     ]
   },
   "downfall:Bandits": {

@@ -55,19 +55,18 @@ public class SoulConsumer extends CustomRelic {
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             GhostflameHelper.activeGhostFlame.charged = true; // for some special logic for end turn advance
             addToBot(new ChargeCurrentFlameAction());
-//            AbstractMonster m = AbstractDungeon.getRandomMonster();
-//            if(m != null) {
-//                this.addToTop(new ApplyPowerAction(m, AbstractDungeon.player, new VulnerablePower(m, 1, false), 1));
-//            }
-
         }
     }
 
-   // public void onVictory() {
-   //     this.counter = 0;
-  // }
+    public void onVictory() {
+        this.counter = -1;
+   }
 
-    //    @Override
+    @Override
+    public void atBattleStart() {
+        this.counter = 0;
+    }
+   //    @Override
 //    public void onUseCard(AbstractCard targetCard, UseCardAction useCardAction) {
 //        if(targetCard.hasTag(HexaMod.AFTERLIFE)){
 //            this.addToTop(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(DAMAGE, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE));

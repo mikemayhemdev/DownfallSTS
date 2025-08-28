@@ -10,7 +10,8 @@
     "NAME": "Llamado de Atadura",
     "DESCRIPTIONS": [
       "Cada vez que pierdas todos tus #yPV #yTemporales, aplica #b",
-      " de #yCondena a TODOS los enemigos."
+      " de #yCondena a TODOS los enemigos.",
+      "Translator Note: NOT USED"
     ]
   },
   "collector:CantTouchThis": {
@@ -48,9 +49,9 @@
     "NAME": "Causar Caos",
     "DESCRIPTIONS": [
       "Al comienzo de tu turno, si algún enemigo tiene #b",
-      " o más de #yCondena, juega la carta superior de tu pila de robo.",
+      " o más de #yCondena, juega la carta superior de tu pila de extracción.",
       " o más de #yCondena, juega las #b",
-      " primeras cartas de tu pila de robo."
+      " primeras cartas de tu pila de extracción."
     ]
   },
   "collector:Doom": {
@@ -139,14 +140,16 @@
     "NAME": "Llamado Protector",
     "DESCRIPTIONS": [
       "Al comienzo de tu turno, si tienes #yPV #yTemporales, gana #b",
-      " de #yBloqueo."
+      " de #yBloqueo.",
+      "Translator Note: NOT USED"
     ]
   },
   "collector:RagingCall": {
     "NAME": "Llamado Furioso",
     "DESCRIPTIONS": [
       "Al final de tu turno, si tienes #yPV #yTemporales, inflige #b",
-      " de daño a TODOS los enemigos."
+      " de daño a TODOS los enemigos.",
+      "Translator Note: NOT USED"
     ]
   },
   "collector:Reserve": {
@@ -209,7 +212,8 @@
     "NAME": "Llamado del Amo",
     "DESCRIPTIONS": [
       "Cada vez que juegues un Ataque, si tienes #yPV #yTemporales, inflige #b",
-      " de daño a un enemigo al azar."
+      " de daño a un enemigo al azar.",
+      "Translator Note: NOT USED"
     ]
   },
    "collector:LouseCard": {
