@@ -150,7 +150,7 @@
     "DESCRIPTION": "Exhaust a card. NL Shuffle !M! copies of it into your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for 4th Dimension."
-      ]
+    ]
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
@@ -385,7 +385,7 @@
   },
   "awakened:SignInBlood": {
     "NAME": "Sign in Blood",
-    "DESCRIPTION": "Take 3 damage. NL Draw !M! cards. NL Gain !M! temporary Strength. NL Exhaust."
+    "DESCRIPTION": "Take !awakened:m2! damage. NL Draw !M! cards. NL Gain !M! temporary Strength. NL Exhaust."
   },
   "awakened:SpreadingSpores": {
     "NAME": "Spreading Spores",
