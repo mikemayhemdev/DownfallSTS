@@ -47,7 +47,8 @@
   },
   "awakened:AwakenedForm": {
     "NAME": "Awakened Form",
-    "DESCRIPTION": "Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual."
+    "DESCRIPTION": "Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual.",
+    "UPGRADE_DESCRIPTION": "Awaken immediately. NL Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual."
   },
   "awakened:Spellbinder": {
     "NAME": "Spellbinder",
@@ -149,7 +150,7 @@
     "DESCRIPTION": "Exhaust a card. NL Shuffle !M! copies of it into your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for 4th Dimension."
-      ]
+    ]
   },
   "awakened:RavenStrike": {
     "NAME": "Raven Strike",
@@ -218,8 +219,7 @@
   },
   "awakened:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] .",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] ."
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
@@ -260,7 +260,8 @@
   },
   "awakened:Dejection": {
     "NAME": "Dejection",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain a *Ceremony.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain a *Ceremony+."
   },
   "awakened:BloodRite": {
     "NAME": "Blood Rite",
@@ -384,7 +385,7 @@
   },
   "awakened:SignInBlood": {
     "NAME": "Sign in Blood",
-    "DESCRIPTION": "Take 3 damage. NL Draw !M! cards. NL Gain !M! temporary Strength. NL Exhaust."
+    "DESCRIPTION": "Take !awakened:m2! damage. NL Draw !M! cards. NL Gain !M! temporary Strength. NL Exhaust."
   },
   "awakened:SpreadingSpores": {
     "NAME": "Spreading Spores",

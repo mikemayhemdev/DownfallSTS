@@ -385,7 +385,7 @@
   },
   "awakened:SignInBlood": {
     "NAME": "Sign in Blood",
-    "DESCRIPTION": "Take 3 damage. NL Draw !M! cards. NL Gain !M! temporary Strength. NL Exhaust."
+    "DESCRIPTION": "Take !awakened:m2! damage. NL Draw !M! cards. NL Gain !M! temporary Strength. NL Exhaust."
   },
   "awakened:SpreadingSpores": {
     "NAME": "Spreading Spores",
