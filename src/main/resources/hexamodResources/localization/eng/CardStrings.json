@@ -216,7 +216,7 @@
   "hexamod:InfernalForm": {
     "NAME": "Infernal Form",
     "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! Intensity. NL At the start of your turn, gain !M! hexamod:Intensity."
+    "UPGRADE_DESCRIPTION": "Gain !M! hexamod:Intensity. NL At the start of your turn, gain !M! hexamod:Intensity."
   },
   "hexamod:Incineration": {
     "NAME": "Incineration",
