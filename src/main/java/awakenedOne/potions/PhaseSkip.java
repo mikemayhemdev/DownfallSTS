@@ -4,6 +4,7 @@ import awakenedOne.AwakenedOneMod;
 import awakenedOne.ui.OrbitingSpells;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.unique.ApotheosisAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -41,6 +42,7 @@ public class PhaseSkip extends CustomPotion {
             awaken(true);
             //OrbitingSpells.upgradeall();
         }
+        this.addToBot(new ApotheosisAction());
     }
 
     public CustomPotion makeCopy() {

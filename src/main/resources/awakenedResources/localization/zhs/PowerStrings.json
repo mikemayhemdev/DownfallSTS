@@ -180,9 +180,9 @@
   "awakened:ConjureNextPower": {
     "NAME": "Pluck",
     "DESCRIPTIONS": [
-      "At the start of your next turn, #yConjure [REMOVE_SPACE].",
-      "At the start of your next turn, #yConjure #b",
-      " times."
+      "The next time you are #yDrained [REMOVE_SPACE], gain a #yPlume #yJab [REMOVE_SPACE].",
+      "The next time you are #yDrained [REMOVE_SPACE], gain #b",
+      " copies of #yPlume #yJab [REMOVE_SPACE]."
     ]
   },
   "awakened:ChosensVersePower": {

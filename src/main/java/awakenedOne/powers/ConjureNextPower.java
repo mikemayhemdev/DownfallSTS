@@ -1,12 +1,14 @@
 package awakenedOne.powers;
 
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.cards.tokens.PlumeJab;
+import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 import static awakenedOne.util.Wiz.atb;
 
-public class ConjureNextPower extends AbstractAwakenedPower {
+public class ConjureNextPower extends AbstractAwakenedPower implements OnLoseEnergyPower {
     // intellij stuff buff
     public static final String NAME = ConjureNextPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
@@ -17,11 +19,9 @@ public class ConjureNextPower extends AbstractAwakenedPower {
     }
 
     @Override
-    public void atStartOfTurn() {
-        flash();
-        for (int i = 0; i < amount; i++) {
-            atb(new ConjureAction(false));
-        }
+    public void LoseEnergyAction(int gained) {
+        this.flash();
+        Wiz.makeInHand(new PlumeJab(), this.amount);
         this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, ID));
     }
 
