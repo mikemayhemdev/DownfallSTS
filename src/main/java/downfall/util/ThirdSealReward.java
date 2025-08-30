@@ -3,6 +3,7 @@ package downfall.util;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomReward;
 import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,6 +12,12 @@ import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import downfall.patches.RewardItemTypeEnumPatch;
+import sneckomod.cards.unknowns.AbstractUnknownCard;
+import sneckomod.util.UpgradedUnknownReward;
+
+import java.util.ArrayList;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRng;
 
 
 public class ThirdSealReward extends CustomReward{
@@ -42,7 +49,40 @@ public class ThirdSealReward extends CustomReward{
 
     public void generate_reward_cards(){
         this.cards.clear();
-        this.cards.addAll(AbstractDungeon.getRewardCards());
+        this.cards.addAll((ThirdSealReward.getCards()));
+    }
+
+    public static ArrayList<AbstractCard> getCards() {
+        ArrayList<AbstractCard> cardsList = new ArrayList<>();
+        while (cardsList.size() < 3) {
+            AbstractCard q = getCommonCard();
+            if (!cardListDuplicate(cardsList, q)) {
+                AbstractCard r = q.makeCopy();
+                cardsList.add(r);
+            }
+        }
+        return cardsList;
+    }
+
+
+    public static AbstractCard getCommonCard() {
+        ArrayList<AbstractCard> list = new ArrayList<>();
+        for (AbstractCard c : AbstractDungeon.commonCardPool.group) {
+                AbstractCard q = c.makeCopy();
+                q.upgrade();
+                list.add(c);
+        }
+        return list.get(cardRng.random(list.size() - 1));// 1217
+    }
+
+
+    public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        for (AbstractCard alreadyHave : cardsList) {
+            if (alreadyHave.cardID.equals(card.cardID)) {
+                return true;
+            }
+        }
+        return false;
     }
 
 }
