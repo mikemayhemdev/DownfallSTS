@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.cards.tokens.PlumeJab;
 import awakenedOne.powers.ConjureNextPower;
 import awakenedOne.powers.EnsorcelatePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -21,17 +22,16 @@ public class Pluck extends AbstractAwakenedCard {
 
     public Pluck() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 6;
+        baseDamage = 5;
         isMultiDamage = true;
-        this.baseMagicNumber = this.magicNumber = 1;
-        this.tags.add(AwakenedOneMod.DELVE);
+        cardsToPreview = new PlumeJab();
         loadJokeCardImage(this, makeBetaCardPath(Pluck.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        //applyToSelf(new ConjureNextPower(1));
-        atb(new ConjureAction(false));
+        applyToSelf(new ConjureNextPower(1));
+        //atb(new ConjureAction(false));
     }
 
     @Override

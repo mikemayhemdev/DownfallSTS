@@ -32,6 +32,7 @@ public class Peck extends AbstractAwakenedCard {
     @Override
     public void upp() {
         //upgradeBlock(3);
+        upgradeDamage(1);
         upgradeMagicNumber(1);
     }
 }

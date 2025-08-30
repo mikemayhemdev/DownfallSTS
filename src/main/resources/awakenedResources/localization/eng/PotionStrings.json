@@ -2,7 +2,7 @@
   "awakened:PhaseSkip": {
     "NAME": "Ascendant's Drink",
     "DESCRIPTIONS": [
-      "#yAwaken immediately."
+      "#yAwaken immediately and #yUpgrade all cards for the rest of combat."
     ]
   },
   "awakened:CultistsDelight": {

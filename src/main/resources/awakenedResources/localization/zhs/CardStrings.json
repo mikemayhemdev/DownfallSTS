@@ -95,7 +95,7 @@
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL The next time you are awakened:Drained, gain a *Plume *Jab."
   },
   "awakened:FlareShot": {
     "NAME": "Feather Flare",
