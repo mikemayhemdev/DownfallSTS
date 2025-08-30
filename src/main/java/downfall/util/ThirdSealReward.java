@@ -9,6 +9,8 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.helpers.ModHelper;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.rewards.RewardItem;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import downfall.patches.RewardItemTypeEnumPatch;
@@ -54,7 +56,16 @@ public class ThirdSealReward extends CustomReward{
 
     public static ArrayList<AbstractCard> getCards() {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
-        while (cardsList.size() < 3) {
+        int numCards = 3;
+
+        for(AbstractRelic r : AbstractDungeon.player.relics) {
+            numCards = r.changeNumberOfCardsInReward(numCards);
+        }
+
+        if (ModHelper.isModEnabled("Binary")) {
+            --numCards;
+        }
+        while (cardsList.size() < numCards) {
             AbstractCard q = getCommonCard();
             if (!cardListDuplicate(cardsList, q)) {
                 AbstractCard r = q.makeCopy();
