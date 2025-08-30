@@ -17,7 +17,7 @@ public class SpectralSpark extends AbstractHexaCard {
 
     public final static String ID = makeID("NaughtySpirit");
 
-    private static final int MAGIC = 4;
+    private static final int MAGIC = 3;
 
     public SpectralSpark() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);

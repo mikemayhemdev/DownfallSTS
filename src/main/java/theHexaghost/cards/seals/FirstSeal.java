@@ -14,7 +14,7 @@ public class FirstSeal extends AbstractSealCard {
 
     //stupid intellij stuff POWER, SELF, UNCOMMON
 
-    public static final int MAGIC = 8;
+    public static final int MAGIC = 7;
 
     public FirstSeal() {
         super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);

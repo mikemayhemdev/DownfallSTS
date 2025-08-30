@@ -32,10 +32,10 @@ public class TheBrokenSeal extends CustomRelic {
     }
 
     //variables
-    public static final int MAX_HP = 10;
-    public static final int STR = 2;
-    public static final int DEX = 2;
-    public static final int INTENSITY = 2;
+    public static final int MAX_HP = 6;
+    public static final int STR = 1;
+    public static final int DEX = 1;
+    public static final int INTENSITY = 1;
 
     @Override
     public void onEquip() {
