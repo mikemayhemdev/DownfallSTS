@@ -384,7 +384,7 @@
   },
   "awakened:SignInBlood": {
     "NAME": "Firma en Sangre",
-    "DESCRIPTION": "Recibe 3 de daño. NL Roba !M! cartas. NL Gana !M! de Fuerza temporal. NL Agotar."
+    "DESCRIPTION": "Recibe !awakened:m2! de daño. NL Roba !M! cartas. NL Gana !awakened:m2! de Fuerza temporal. NL Agotar."
   },
   "awakened:SpreadingSpores": {
     "NAME": "Esporas Extendidas",
