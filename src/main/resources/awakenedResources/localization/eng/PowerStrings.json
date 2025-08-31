@@ -180,7 +180,7 @@
   "awakened:ConjureNextPower": {
     "NAME": "Pluck",
     "DESCRIPTIONS": [
-      "The next time you are #yDrained [REMOVE_SPACE], gain a #yPlume #yJab [REMOVE_SPACE].",
+      "The next time you are #yDrained [REMOVE_SPACE], add a #yPlume #yJab to your hand.",
       "The next time you are #yDrained [REMOVE_SPACE], gain #b",
       " copies of #yPlume #yJab [REMOVE_SPACE]."
     ]

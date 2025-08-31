@@ -24,7 +24,7 @@ public class SignInBlood extends AbstractAwakenedCard {
 
     public SignInBlood() {
         super(ID, 0, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
-        baseSecondMagic = secondMagic = 3;
+        baseSecondMagic = secondMagic = 2;
         baseMagicNumber = magicNumber = 3;
         tags.add(CardTags.HEALING);
 
@@ -39,8 +39,8 @@ public class SignInBlood extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, secondMagic, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
         Wiz.atb(new DrawCardAction(this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));
+        this.addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, secondMagic), secondMagic));
+        //this.addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));
     }
 
     public void upp() {

@@ -20,7 +20,7 @@ public class TheEncyclopedia extends AbstractAwakenedCard {
     public TheEncyclopedia() {
         super(ID, 2, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
         exhaust = true;
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 4;
         tags.add(CardTags.HEALING);
 
         frameString = "obelisk";
