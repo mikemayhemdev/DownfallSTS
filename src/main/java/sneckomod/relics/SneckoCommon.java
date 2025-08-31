@@ -35,7 +35,7 @@ public class SneckoCommon extends CustomRelic {
 
     public void onEquip() {
         AbstractDungeon.getCurrRoom().rewards.add(new ColorfulPowersReward());
-        AbstractDungeon.combatRewardScreen.open(this.DESCRIPTIONS[1]);
+        AbstractDungeon.combatRewardScreen.open();
         AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
         AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
     }
