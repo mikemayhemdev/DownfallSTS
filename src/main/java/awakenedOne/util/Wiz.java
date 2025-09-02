@@ -131,7 +131,7 @@ public class Wiz {
     }
 
     public static boolean isAwakened() {
-        return  awakenedthiscombat;
+        return awakenedthiscombat;
 
     }
 

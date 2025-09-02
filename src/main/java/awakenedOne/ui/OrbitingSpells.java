@@ -9,6 +9,7 @@ import awakenedOne.cards.tokens.spells.*;
 import awakenedOne.relics.ZenerDeck;
 import awakenedOne.util.TexLoader;
 import awakenedOne.util.Wiz;
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
@@ -31,14 +32,15 @@ import java.util.HashMap;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.ui.AwakenButton.awaken;
-import static awakenedOne.util.Wiz.atb;
-import static awakenedOne.util.Wiz.att;
+import static awakenedOne.util.Wiz.*;
 import static downfall.downfallMod.DeterministicConjure;
 
 public class OrbitingSpells {
 
     public static final float POSITION_X = 95F * Settings.scale;
     public static final float POSITION_Y = 300F * Settings.scale;
+    public static final float PANEL_BG_X = POSITION_X - (66F * Settings.scale);
+    public static final float PANEL_BG_Y = POSITION_Y + (110F * Settings.scale);
 
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Spellbook"));
 
@@ -47,12 +49,17 @@ public class OrbitingSpells {
     private static final HashMap<String, Color> cardColors = new HashMap<>();
     private static final Hitbox barBox = new Hitbox(POSITION_X - 75F * Settings.scale, Settings.HEIGHT - POSITION_Y - 350 * Settings.scale, 55 * Settings.scale, 55 * Settings.scale * 7);
     private static final Texture unfilledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled.png");
+    private static final Texture pipFillAnim1 = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled_2.png");
+    private static final Texture pipFillAnim2 = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled_3.png");
     private static final Texture filledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_filled.png");
     private static final Texture pipComplete = TexLoader.getTexture("awakenedResources/images/ui/pip_complete.png");
+    private static final Texture panelBG = TexLoader.getTexture("awakenedResources/images/ui/panelBg.png");
     private static final Color defaultNextColor = Color.GREEN.cpy();
     public static ArrayList<AbstractCard> spellCards = new ArrayList<>();
     public static ArrayList<Hitbox> boxes = new ArrayList<>();
     private static int hoveredCard = -1;
+
+    private static HashMap<Integer, Float> barSlotAnimTimers = new HashMap<>();
 
     static {
         for (int i = 0; i < 10; i++) {
@@ -76,6 +83,9 @@ public class OrbitingSpells {
         cardColors.put(ESPSpell.ID, Color.PINK.cpy());
         //cardColors.put(Grimoire.ID, Color.FIREBRICK.cpy());
 
+        for (int i = 0; i < POWERS_TO_AWAKEN; i++) {
+            barSlotAnimTimers.put(i, 0F);
+        }
     }
 
     static {
@@ -85,12 +95,12 @@ public class OrbitingSpells {
         spells.add(Darkleech.ID);
     }
 
-    private static Texture getIconForCard(AbstractCard tar) {
-        return cardIcons.getOrDefault(tar.cardID, TexLoader.getTexture("awakenedResources/images/ui/defaultSpell.png"));
+    private static Texture getIconForCard(String cardID) {
+        return cardIcons.getOrDefault(cardID, TexLoader.getTexture("awakenedResources/images/ui/defaultSpell.png"));
     }
 
-    private static Color getColorForCard(AbstractCard tar) {
-        return cardColors.getOrDefault(tar.cardID, defaultNextColor);
+    private static Color getColorForCard(String cardID) {
+        return cardColors.getOrDefault(cardID, defaultNextColor);
     }
 
     public static void refreshSpells() {
@@ -203,6 +213,10 @@ public class OrbitingSpells {
 
     public static void atBattleStart() {
         refreshSpells();
+        barSlotAnimTimers.clear();
+        for (int i = 0; i < POWERS_TO_AWAKEN; i++) {
+            barSlotAnimTimers.put(i, 0F);
+        }
     }
 
     public static void update() {
@@ -216,22 +230,51 @@ public class OrbitingSpells {
             }
         }
         barBox.update();
+        int powersPlayed = (int) AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count();
+        for (int i = 0; i < powersPlayed; i++) {
+            barSlotAnimTimers.put(i, barSlotAnimTimers.get(i) + Gdx.graphics.getDeltaTime());
+        }
+    }
+
+    private static Texture getPipForSlot(int index) {
+        if (Wiz.isAwakened()) return pipComplete;
+        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= index) {
+            if (barSlotAnimTimers.get(index) <= 0.1F) return pipFillAnim1;
+            if (barSlotAnimTimers.get(index) <= 0.2F) return pipFillAnim2;
+            return filledPip;
+        }
+        return unfilledPip;
     }
 
     public static void postPlayerRender(SpriteBatch sb) {
         sb.setColor(Color.WHITE.cpy());
+        sb.draw(panelBG, PANEL_BG_X, PANEL_BG_Y);
         FontHelper.renderFontLeftTopAligned(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], POSITION_X, Settings.HEIGHT - POSITION_Y + (50 * Settings.scale), Settings.GOLD_COLOR);
         int xr = 0;
 
+        String idNext = "";
+        HashMap<String, Integer> spellsFound = new HashMap<>();
         for (AbstractCard s : spellCards) {
-            drawTextureScaled(sb, getIconForCard(s), boxes.get(xr).x, boxes.get(xr).y);
-            float dist = FontHelper.getWidth(FontHelper.tipHeaderFont, s.name, 1.0F);
+            if (spellsFound.containsKey(s.cardID)) {
+                spellsFound.put(s.cardID, spellsFound.get(s.cardID)+1);
+            } else {
+                spellsFound.put(s.cardID, 1);
+            }
+            if (s.hasTag(UP_NEXT)) idNext = s.cardID;
+        }
+        for (String id : spellsFound.keySet()) {
+            drawTextureScaled(sb, getIconForCard(id), boxes.get(xr).x, boxes.get(xr).y);
 
             Color textColor = Color.WHITE.cpy();
-            if (s.hasTag(UP_NEXT) && DeterministicConjure) {
-                textColor = getColorForCard(s);
+            if (id.equals(idNext) && DeterministicConjure) {
+                textColor = getColorForCard(id);
             }
-            FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, s.name, boxes.get(xr).x + 40F, boxes.get(xr).y + 25F, textColor);
+            String toShow = CardLibrary.getCard(id).name;
+            if (Wiz.isAwakened()) toShow = toShow + "+";
+            if (spellsFound.get(id) > 1) {
+                toShow = toShow + " x" + spellsFound.get(id);
+            }
+            FontHelper.renderFontLeft(sb, FontHelper.tipHeaderFont, toShow, boxes.get(xr).x + 40F, boxes.get(xr).y + 25F, textColor);
             xr++;
         }
 
@@ -239,9 +282,8 @@ public class OrbitingSpells {
             h.render(sb);
         }
 
-        boolean woke = Wiz.isAwakened();
         for (int i = 0; i < Wiz.POWERS_TO_AWAKEN; i++) {
-            drawTextureScaled(sb, (woke ? pipComplete : (AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= i || AwakenedOneMod.awakenedthiscombat) ? filledPip : unfilledPip),
+            drawTextureScaled(sb, (getPipForSlot(i)),
                     barBox.x,
                     barBox.y + (55 * Settings.yScale) * i);
         }
@@ -250,8 +292,8 @@ public class OrbitingSpells {
 
         if (hoveredCard != -1) {
             AbstractCard tar = spellCards.get(hoveredCard);
-            tar.target_x = tar.current_x = barBox.x + 500 * Settings.scale;
-            tar.target_y = tar.current_y = Settings.HEIGHT - (POSITION_Y + 100 * Settings.scale);
+            tar.target_x = tar.current_x = (barBox.x + 500) * Settings.scale;
+            tar.target_y = tar.current_y = Settings.HEIGHT - ((POSITION_Y + 100) * Settings.scale);
             spellCards.get(hoveredCard).render(sb);
         }
         if (barBox != null) {
