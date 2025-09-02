@@ -82,6 +82,7 @@
   "awakened:MoonlitVisionPower": {
     "NAME": "Moonlit Vision",
     "DESCRIPTIONS": [
+      "The first time you play a Spell each turn, gain [E] . #b",
       "The first #b",
       " times you play a Spell each turn, gain [E] . #b",
       " remaining this turn."
@@ -129,7 +130,9 @@
     "DESCRIPTIONS": [
       "The first Spell you play each turn is played twice.",
       "The first #b",
-      " Spells you play each turn are played twice."
+      " Spells you play each turn are played twice.",
+      " NL (",
+      " Spell Repetitions remaining)"
     ]
   },
   "awakened:DoubleSpellPower": {
@@ -162,13 +165,13 @@
       " #yStrength and #yDexterity when you #yAwaken [REMOVE_SPACE]."
     ]
   },
-    "awakened:ReverseRitualPower": {
-      "NAME": "Awakened Form",
-      "DESCRIPTIONS": [
-        "At the start of your turn, gain #b",
-        " #yRitual [REMOVE_SPACE]."
-      ]
-    },
+  "awakened:ReverseRitualPower": {
+    "NAME": "Awakened Form",
+    "DESCRIPTIONS": [
+      "At the start of your turn, gain #b",
+      " #yRitual [REMOVE_SPACE]."
+    ]
+  },
   "awakened:EnsorcelatePower": {
     "NAME": "Ensorcelate",
     "DESCRIPTIONS": [
@@ -180,7 +183,7 @@
   "awakened:ConjureNextPower": {
     "NAME": "Pluck",
     "DESCRIPTIONS": [
-      "The next time you are #yDrained [REMOVE_SPACE], gain a #yPlume #yJab [REMOVE_SPACE].",
+      "The next time you are #yDrained [REMOVE_SPACE], add a #yPlume #yJab to your hand.",
       "The next time you are #yDrained [REMOVE_SPACE], gain #b",
       " copies of #yPlume #yJab [REMOVE_SPACE]."
     ]

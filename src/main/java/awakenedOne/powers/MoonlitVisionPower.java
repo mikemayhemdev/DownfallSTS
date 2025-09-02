@@ -50,7 +50,10 @@ public class MoonlitVisionPower extends AbstractTwoAmountAwakenedPower {
     }
 
     public void updateDescription() {
-        description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + Math.min(amount2, AwakenedOneMod.spellsThisTurn - this.activationsThisTurn) + DESCRIPTIONS[2];
+        if (amount == 1) {
+            description = DESCRIPTIONS[0] + DESCRIPTIONS[3] + Math.min(amount2, AwakenedOneMod.spellsThisTurn - activationsThisTurn) + DESCRIPTIONS[4];
+        } else {
+            description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] + Math.min(amount2, AwakenedOneMod.spellsThisTurn - activationsThisTurn) + DESCRIPTIONS[4];
+        }
     }
-
 }
