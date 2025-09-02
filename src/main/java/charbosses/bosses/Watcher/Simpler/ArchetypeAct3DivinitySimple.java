@@ -12,6 +12,10 @@ import charbosses.monsters.VoidCore;
 import charbosses.powers.bossmechanicpowers.DefectAttackVoidPower;
 import charbosses.powers.bossmechanicpowers.WatcherDivinityNoRemovePower;
 import charbosses.powers.bossmechanicpowers.WatcherDivinityPower;
+import charbosses.relics.CBR_MercuryHourglass;
+import charbosses.relics.CBR_OddMushroom;
+import charbosses.relics.CBR_PenNib;
+import charbosses.relics.CBR_TungstenRod;
 import charbosses.stances.EnDivinityStance;
 import com.esotericsoftware.spine.AnimationState;
 import com.esotericsoftware.spine.AnimationStateData;
@@ -45,6 +49,14 @@ public class ArchetypeAct3DivinitySimple extends ArchetypeBaseWatcher {
 
 
 
+    public void initialize() {
+
+        addRelic(new CBR_TungstenRod());
+        if (AbstractDungeon.ascensionLevel >= 19){
+            addRelic(new CBR_PenNib());
+        }
+    }
+
     @Override
     public void addedPreBattle() {
 
@@ -68,28 +80,33 @@ public class ArchetypeAct3DivinitySimple extends ArchetypeBaseWatcher {
                 looped = true;
             }
         } else {
-
             switch (turn) {
                 case 0:
                     //turn 1
+                    if (extraUpgrades) //Blessing of the Forge Potion
                     addToList(cardsList, new EnWish(), extraUpgrades);
-                    addToList(cardsList, new EnWallop(), true);
+                    addToList(cardsList, new EnProstrate());
                     turn++;
                     break;
                 case 1:
                     //turn 2
-                    addToList(cardsList, new EnBrilliance(), true);
-                    addToList(cardsList, new EnFleetingFaith(), extraUpgrades);
+                    addToList(cardsList, new EnBrilliance(), false);
+                    addToList(cardsList, new EnFleetingFaith(), false);
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnProtect(), true);
-                    addToList(cardsList, new EnBlind());
+                    addToList(cardsList, new EnWallop(), true);
+                    addToList(cardsList, new EnBlind(), extraUpgrades);
                     turn++;
                     break;
                 case 3:
+                    //new Regen card
+                    addToList(cardsList, new EnFleetingFaith(), false);
+                    turn++;
+                    break;
+                case 4:
                     //turn 4
-                    addToList(cardsList, new EnProstrate());
+                    addToList(cardsList, new EnProtect(), true);
                     AbstractBossCard c = new EnBrilliance();
                     //c.manualCustomDamageModifier = 2;
                     addToList(cardsList, c, true);

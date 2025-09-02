@@ -382,7 +382,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             config.setBool(PROP_ICONS_FOR_APPLIED_PROPERTIES, useIconsForAppliedProperties);
             config.setBool(NO_RNG_CONJURE, DeterministicConjure);
             config.setBool(NO_BASE_ADJUSTMENTS, disableBaseGameAdjustments);
-            config.setBool(LEGACY_BOSSES, useLegacyBosses);
+            //config.setBool(LEGACY_BOSSES, useLegacyBosses);
             config.save();
             GoldenIdol_Evil.save();
         } catch (IOException e) {
@@ -809,7 +809,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             settingsPanel.addUIElement(characterModCrossoverBtn);
             settingsPanel.addUIElement(noBaseAdjustmentsBtn);
             settingsPanel.addUIElement(NoRNGConjureButton);
-            settingsPanel.addUIElement(legacyBossesButton);
+           // settingsPanel.addUIElement(legacyBossesButton);
         }
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
@@ -832,7 +832,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 noMusic = config.getBool(PROP_NO_MUSIC);
                 useIconsForAppliedProperties = config.getBool(PROP_ICONS_FOR_APPLIED_PROPERTIES);
                 DeterministicConjure = config.getBool(NO_RNG_CONJURE);
-                useLegacyBosses = config.getBool(LEGACY_BOSSES);
+              //  useLegacyBosses = config.getBool(LEGACY_BOSSES);
             }
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
             crossoverModCharacters = config.getBool(PROP_MOD_CHAR_CROSSOVER);

@@ -50,18 +50,6 @@ public class EnemyPoisonPower extends AbstractPower {
         }
     }
 
-    @Override
-    public void onRemove() {
-        super.onRemove();
-        if (AbstractCharBoss.boss != null){
-            if (AbstractCharBoss.boss.chosenArchetype != null){
-                if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct1PoisonSimple){
-                    SlimeboundMod.logger.info("Resetting poison boss");
-                    ((CharBossSilent) AbstractCharBoss.boss).resetPoisonBoss();
-                }
-            }
-        }
-    }
 
     public void playApplyPowerSfx() {
         CardCrawlGame.sound.play("POWER_POISON", 0.05F);

@@ -5,6 +5,7 @@ import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.colorless.EnPanacea;
 import charbosses.cards.purple.*;
 import charbosses.powers.bossmechanicpowers.CultistRevivePower;
+import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
@@ -30,10 +31,16 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
 
         AbstractMonster cawcaw = new Cultist(-400F, 0);
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(cawcaw, true));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(cawcaw, cawcaw, new CultistRevivePower(cawcaw, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
+        //AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(cawcaw, cawcaw, new CultistRevivePower(cawcaw, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
 
+    }
 
+    public void initialize() {
 
+        addRelic(new CBR_OddMushroom());
+        if (AbstractDungeon.ascensionLevel >= 19){
+            addRelic(new CBR_MercuryHourglass());
+        }
     }
 
     @Override
@@ -43,6 +50,7 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
         switch (turn) {
             case 0:
+                if (extraUpgrades) //Essence of Steel Potion
                 addToList(cardsList, new EnAlpha());
                 addToList(cardsList, new EnEndIsNigh());
                 turn++;
@@ -95,7 +103,7 @@ public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
                 break;
             case 10:
                 addToList(cardsList, new EnOmega());
-                addToList(cardsList, new EnDefendPurple(), false);
+                addToList(cardsList, new EnTruePeace());
                 turn++;
                 break;
             case 11:

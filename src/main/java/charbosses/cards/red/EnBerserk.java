@@ -31,7 +31,7 @@ public class EnBerserk extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        //this.addToBot(new ApplyPowerAction(m, m, new EnemyBerserkPower(m), 1));
+        this.addToBot(new ApplyPowerAction(m, m, new EnemyBerserkPower(m), 1));
         //Make apply vulnerable to itself?
         if (m.hasPower(VulnerablePower.POWER_ID)){
             this.addToBot(new ApplyPowerAction(m, m, new VulnerablePower(p, this.magicNumber+1, true), this.magicNumber+1));

@@ -149,7 +149,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         AbstractCharBoss.boss = this;
         this.setHp(this.maxHealth);
         if (!downfallMod.useLegacyBosses){
-            this.energy.energyMaster = 99;
+            this.energy.energyMaster = 3;
         } else {
             this.energy.energyMaster = 2;
         }
@@ -300,10 +300,8 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     @Override
     public void update() {
         super.update();
-        if (downfallMod.useLegacyBosses) {
-            for (AbstractRelic r : this.relics) {
-                r.update();
-            }
+        for (AbstractRelic r : this.relics) {
+            r.update();
         }
 
         for (AbstractOrb o : this.orbs) {
@@ -318,13 +316,13 @@ public abstract class AbstractCharBoss extends AbstractMonster {
     public void applyEndOfTurnTriggers() {
         if (hasPower(StunMonsterPower.POWER_ID)) chosenArchetype.turn--;
 
-        if (downfallMod.useLegacyBosses) this.energy.recharge();
+         this.energy.recharge();
 
-        if (downfallMod.useLegacyBosses) {
+
             for (final AbstractPower p : AbstractCharBoss.boss.powers) {
                 p.onEnergyRecharge();
             }
-        }
+
 
         for (final AbstractCard c : this.hand.group) {
             c.triggerOnEndOfTurnForPlayingCard();
@@ -356,7 +354,7 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         for (AbstractCard c : hand.group) {
             ((AbstractBossCard) c).lockIntentValues = true;
         }
-        if (downfallMod.useLegacyBosses) this.applyStartOfTurnRelics();
+        this.applyStartOfTurnRelics();
         this.applyStartOfTurnPreDrawCards();
         this.applyStartOfTurnCards();
         //this.applyStartOfTurnPowers();
@@ -1246,7 +1244,7 @@ public void damage(final DamageInfo info) {
 
         AbstractCharBoss.boss = null;
         AbstractCharBoss.finishedSetup = false;
-        if (downfallMod.useLegacyBosses) relics.clear();
+        relics.clear();
         hand.clear();
         /*
         drawPile.clear();
@@ -1655,18 +1653,18 @@ public void damage(final DamageInfo info) {
         if (!this.isDead) {
             this.renderHand(sb);
             this.stance.render(sb);
-            if (downfallMod.useLegacyBosses) {
+
                 for (AbstractRelic r : this.relics) {
                     r.render(sb);
                 }
-            }
+
             if (!this.orbs.isEmpty()) {
 
                 for (AbstractOrb o : this.orbs) {
                     o.render(sb);
                 }
             }
-            if (downfallMod.useLegacyBosses)  this.energyPanel.render(sb);
+            this.energyPanel.render(sb);
         }
     }
 

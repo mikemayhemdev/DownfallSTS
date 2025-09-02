@@ -8,15 +8,27 @@ import charbosses.cards.other.Antidote;
 import charbosses.cards.other.AntidoteAsPower;
 import charbosses.cards.other.AntidoteAsPowerExpensive;
 import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
+import charbosses.powers.general.EnemyPoisonPower;
+import charbosses.relics.CBR_HornCleat;
+import charbosses.relics.CBR_MarkOfPain;
+import charbosses.relics.CBR_SneckoSkull;
+import charbosses.relics.CBR_TwistedFunnel;
 import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.actions.utility.TextAboveCreatureAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import downfall.actions.SpeechBubbleAction;
+import slimebound.SlimeboundMod;
 
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+
+import static awakenedOne.util.Wiz.atb;
+import static charbosses.bosses.Silent.CharBossSilent.POISONSPEECH;
 
 public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
 
@@ -36,16 +48,16 @@ public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
     public void addedPreBattle() {
         super.addedPreBattle();
 
-        boolean hardmode = AbstractDungeon.ascensionLevel >= 19;
-        if (hardmode){
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new AntidoteAsPowerExpensive(), 1));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new AntidoteAsPower(), 1));
-        }
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new AntidoteAsPower(), 1));
+
     }
 
     public void initialize() {
 
+        addRelic(new CBR_SneckoSkull());
+        if (AbstractDungeon.ascensionLevel >= 19){
+            addRelic(new CBR_HornCleat());
+        }
 
         // animation
         try {
@@ -66,12 +78,24 @@ public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
         //boolean WhetstoneUpgrades = AbstractDungeon.ascensionLevel >= 19;
+
+        if (!AbstractDungeon.player.hasPower(EnemyPoisonPower.POWER_ID)){
+
+            if (turn != 0) {
+                SlimeboundMod.logger.info("Successful poison reset");
+                AbstractDungeon.actionManager.addToBottom(new TextAboveCreatureAction(AbstractCharBoss.boss, TextAboveCreatureAction.TextType.INTERRUPTED));
+                AbstractDungeon.actionManager.addToBottom(new SpeechBubbleAction(POISONSPEECH, AbstractCharBoss.boss, 2F));
+                turn = 0;
+            }
+
+        }
             switch (turn) {
                 case 0: //Turn 1
                     if (looped){
                         addToList(cardsList, new EnBouncingFlask(), extraUpgrades);
                         addToList(cardsList, new EnPoisonedStab(), false);
                     } else {
+                        if (extraUpgrades) //Poison Potion
                         addToList(cardsList, new EnNewToxins());
                         addToList(cardsList, new EnBouncingFlask(), extraUpgrades);
                     }
