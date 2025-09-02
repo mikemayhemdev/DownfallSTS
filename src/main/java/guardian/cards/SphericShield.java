@@ -43,6 +43,7 @@ public class SphericShield extends AbstractGuardianCard {
         updateDescription();
         loadGemMisc();
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("SphericShield.png"));
+        this.tags.add(CardTags.HEALING);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

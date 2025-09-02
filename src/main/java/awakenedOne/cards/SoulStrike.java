@@ -38,7 +38,7 @@ public class SoulStrike extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < this.magicNumber; i++) {
             this.addToBot(new SoundAction(makeID("SOULSTRIKE")));
-            dmg(m, AbstractGameAction.AttackEffect.SLASH_HEAVY);
+            dmg(m, AbstractGameAction.AttackEffect.FIRE);
         }
     }
 

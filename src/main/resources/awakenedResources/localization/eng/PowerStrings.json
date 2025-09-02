@@ -82,9 +82,11 @@
   "awakened:MoonlitVisionPower": {
     "NAME": "Moonlit Vision",
     "DESCRIPTIONS": [
+      "The first time you play Spell each turn, gain [E] .",
       "The first #b",
-      " time(s) you play a Spell each turn, gain [E] . #b",
-      " remaining this turn."
+      " times you play a Spell each turn, gain [E] .",
+      " NL (#b",
+      "  remaining this turn.)"
     ]
   },
   "awakened:EclipseEmbracePower": {
@@ -129,7 +131,9 @@
     "DESCRIPTIONS": [
       "The first Spell you play each turn is played twice.",
       "The first #b",
-      " Spells you play each turn are played twice."
+      " Spells you play each turn are played twice.",
+      " NL (#b",
+      " Spell Repetitions remaining)"
     ]
   },
   "awakened:DoubleSpellPower": {
@@ -180,7 +184,7 @@
   "awakened:ConjureNextPower": {
     "NAME": "Pluck",
     "DESCRIPTIONS": [
-      "The next time you are #yDrained [REMOVE_SPACE], gain a #yPlume #yJab [REMOVE_SPACE].",
+      "The next time you are #yDrained [REMOVE_SPACE], add a #yPlume #yJab to your hand.",
       "The next time you are #yDrained [REMOVE_SPACE], gain #b",
       " copies of #yPlume #yJab [REMOVE_SPACE]."
     ]
