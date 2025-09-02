@@ -29,6 +29,7 @@ public class ArchetypeAct2ClawSimple extends ArchetypeBaseDefect {
         super("DF_ARCHETYPE_CLAW", "Claw");
 
         maxHPModifier += 195;
+        maxHPModifierAsc = 20;
         actNum = 2;
     }
 
@@ -72,6 +73,7 @@ public class ArchetypeAct2ClawSimple extends ArchetypeBaseDefect {
                     } else {
                         addToList(cardsList, new EnChill(), true);
                         addToList(cardsList, new EnChill(), true);
+                        addToList(cardsList, new EnChill(), true);
                         addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false); //1
                     }
                     turn++;
@@ -88,18 +90,17 @@ public class ArchetypeAct2ClawSimple extends ArchetypeBaseDefect {
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);//8th
-                    addToList(cardsList, new EnClaw((cB.clawsPlayed * 2+2)), false);//8th
+                    addToList(cardsList, new EnClaw(cB.clawsPlayed * 2), false);
+                    addToList(cardsList, new EnClaw((cB.clawsPlayed * 2+2)), false);
                     turn++;
                     break;
                 case 4:
-                    addToList(cardsList, new EnCoreSurge(), false);//5
-                    addToList(cardsList, new EnGeneticAlgorithm(14), true);  //removed
+                    addToList(cardsList, new EnCoreSurge(), false);
+                    addToList(cardsList, new EnGeneticAlgorithm(14), true);
                     turn++;
                     break;
                 case 5:
-                    //addToList(cardsList, new EnCoreSurge(), false);//5
-                    addToList(cardsList, new EnHyperbeam(), extraUpgrades);  //removed
+                    addToList(cardsList, new EnHyperbeam(), extraUpgrades);
                     turn = 0;
                     looped = true;
                     break;

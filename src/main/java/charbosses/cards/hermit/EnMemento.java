@@ -25,6 +25,7 @@ public class EnMemento extends AbstractHermitBossCard {
 
         super(ID, cardStrings.NAME, "hermitResources/images/cards/memento.png", 0, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.CURSE, CardRarity.COMMON, CardTarget.ALL, AbstractMonster.Intent.DEBUFF);
         baseMagicNumber = magicNumber = 1;
+        vulnGeneratedIfPlayed = 1;
     }
 
     @Override
@@ -33,10 +34,14 @@ public class EnMemento extends AbstractHermitBossCard {
 
         while(var4.hasNext()) {
             AbstractMonster mo = (AbstractMonster)var4.next();
-            this.addToBot(new ApplyPowerAction(mo, m, new VulnerablePower(mo, magicNumber, false), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+            if (m.hasPower(VulnerablePower.POWER_ID)){
+                this.addToBot(new ApplyPowerAction(mo, m, new VulnerablePower(mo, magicNumber, false), magicNumber+1, true, AbstractGameAction.AttackEffect.NONE));
+            } else {
+                this.addToBot(new ApplyPowerAction(mo, m, new VulnerablePower(mo, magicNumber+1, false), magicNumber+1, true, AbstractGameAction.AttackEffect.NONE));
+            }
 
             if (this.upgraded)
-                this.addToBot(new ApplyPowerAction(mo, m, new WeakPower(mo, magicNumber, false), magicNumber, true, AbstractGameAction.AttackEffect.NONE));
+                this.addToBot(new ApplyPowerAction(mo, m, new WeakPower(mo, magicNumber+1, false), magicNumber+1, true, AbstractGameAction.AttackEffect.NONE));
         }
 
         this.addToBot(new ApplyPowerAction(p, m, new VulnerablePower(p, magicNumber, false), magicNumber));

@@ -16,6 +16,7 @@ public class ArchetypeAct3BasicsSimple extends ArchetypeBaseIronclad {
         super("HERMIT_DOOMSDAY_ARCHETYPE", "Doomsday");
 
         maxHPModifier += 368;
+        maxHPModifierAsc = 30;
         actNum = 3;
     }
 
@@ -44,12 +45,13 @@ public class ArchetypeAct3BasicsSimple extends ArchetypeBaseIronclad {
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, turn23order.get(0), extraUpgrades);
+                    addToList(cardsList, turn23order.get(0), false);
                     addToList(cardsList, turn23order.get(1), true);
+                    addToList(cardsList, turn23order.get(2), extraUpgrades);
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, turn23order.get(3), false);
+                    addToList(cardsList, turn23order.get(3), extraUpgrades);
                     addToList(cardsList, turn23order.get(4), extraUpgrades);
                     addToList(cardsList, turn23order.get(5), true);
                     turn=0;

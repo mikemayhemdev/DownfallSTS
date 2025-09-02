@@ -5,12 +5,20 @@
 
 package charbosses.powers.bossmechanicpowers;
 
+import basemod.cardmods.RetainMod;
+import basemod.helpers.CardModifierManager;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.colorless.Purity;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.BufferPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
+import hermit.util.Wiz;
 
 public class IroncladStatusPower extends AbstractBossMechanicPower {
     public static final String POWER_ID = "downfall:IroncladStatusPower";
@@ -22,10 +30,32 @@ public class IroncladStatusPower extends AbstractBossMechanicPower {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        this.amount = 0;
+        if (downfallMod.useLegacyBosses) {
+            this.amount = 0;
+        } else {
+            this.amount = 40;
+        }
         this.updateDescription();
         loadRegion("curiosity");
         this.type = PowerType.BUFF;
+    }
+
+
+    @Override
+    public int onLoseHp(int damageAmount) {
+
+        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.player.hasPower(BufferPower.POWER_ID)) {
+
+            this.amount -= damageAmount;
+            if (amount <= 0){
+                amount = 40;
+                AbstractCard c = new Purity();
+                CardModifierManager.addModifier(c, new RetainMod());
+                Wiz.makeInHand(c);
+            }
+        }
+
+        return super.onLoseHp(damageAmount);
     }
 
     public void updateDescription() {
@@ -33,7 +63,8 @@ public class IroncladStatusPower extends AbstractBossMechanicPower {
         if (downfallMod.useLegacyBosses) {
             this.description = DESC[0];
         } else {
-            this.description = DESC[1];
+
+            this.description = DESC[1] + amount + DESC[2];
         }
     }
 

@@ -11,7 +11,9 @@ import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
+import hermit.actions.SoundAction;
 
 import java.util.Iterator;
 
@@ -38,6 +40,7 @@ public class Darkleech extends AbstractSpellCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToTop(new SoundAction(makeID("DARKSPELL")));
         if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
             this.addToBot(new VFXAction(new GiantEyeEffect(m.hb.cX, m.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
             this.addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, this.magicNumber, false), this.magicNumber));

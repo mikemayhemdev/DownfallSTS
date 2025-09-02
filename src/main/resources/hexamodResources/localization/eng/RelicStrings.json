@@ -99,7 +99,7 @@
     "FLAVOR": "Fire, fire, fire, fire, fire, FIRE!",
     "DESCRIPTIONS": [
       "Whenever you play #b",
-      " non-0 cost cards, gain an #ygremlin:Echo of a basic #yStrike [REMOVE_SPACE]. It costs #b0 [REMOVE_SPACE]."
+      " #bnon-0 cost cards, gain an #ygremlin:Echo of a basic #yStrike [REMOVE_SPACE]. It costs #b0 [REMOVE_SPACE]."
     ]
   },
   "hexamod:Libra": {

@@ -10,11 +10,13 @@ import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.BlurPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.vfx.combat.ShockWaveEffect;
+import downfall.downfallMod;
 import hermit.util.TextureLoader;
 
 public class TangerinePower extends AbstractPower {
@@ -60,7 +62,11 @@ public class TangerinePower extends AbstractPower {
     }
 
     public void updateDescription() {
-        this.description = DESC[0] + amount + DESC[1];
+        if (downfallMod.useLegacyBosses || AbstractDungeon.ascensionLevel >= 19) {
+            this.description = DESC[0] + amount + DESC[1];
+        } else {
+            this.description = DESC[2];
+        }
     }
 
     static {

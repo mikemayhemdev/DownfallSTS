@@ -344,6 +344,11 @@ public class SneckoMod implements
         ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
         possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) || c.color == AbstractDungeon.player.getCardColor() || c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE || c.color == AbstractCard.CardColor.CURSE || c.type == CURSE || c.rarity == AbstractCard.CardRarity.SPECIAL || c.rarity == AbstractCard.CardRarity.BASIC || c.type == STATUS || !q.test(c)  || c.hasTag(BANNEDFORSNECKO) || c.hasTag(GHOSTWHEELCARD));
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+            possList.removeIf(c -> c instanceof Exhume);
+            possList.removeIf(c -> c instanceof Nightmare);
+            possList.removeIf(c -> c instanceof HandOfGreed);
+            possList.removeIf(c -> c instanceof Magnetism);
+            possList.removeIf(c -> c instanceof Discovery);
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
         }
         if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));

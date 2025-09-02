@@ -2,6 +2,8 @@ package charbosses.powers.general;
 
 import charbosses.actions.unique.EnemyPoisonDamageAction;
 import charbosses.bosses.AbstractCharBoss;
+import charbosses.bosses.Silent.CharBossSilent;
+import charbosses.bosses.Silent.Simpler.ArchetypeAct1PoisonSimple;
 import charbosses.relics.CBR_SneckoSkull;
 import com.megacrit.cardcrawl.actions.AbstractGameAction.AttackEffect;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -10,9 +12,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
+import downfall.downfallMod;
+import slimebound.SlimeboundMod;
 
 public class EnemyPoisonPower extends AbstractPower {
-    public static final String POWER_ID = "Poison";
+    public static String POWER_ID = "Poison";
     private static final PowerStrings powerStrings;
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
@@ -46,12 +50,30 @@ public class EnemyPoisonPower extends AbstractPower {
         }
     }
 
+    @Override
+    public void onRemove() {
+        super.onRemove();
+        if (AbstractCharBoss.boss != null){
+            if (AbstractCharBoss.boss.chosenArchetype != null){
+                if (AbstractCharBoss.boss.chosenArchetype instanceof ArchetypeAct1PoisonSimple){
+                    SlimeboundMod.logger.info("Resetting poison boss");
+                    ((CharBossSilent) AbstractCharBoss.boss).resetPoisonBoss();
+                }
+            }
+        }
+    }
+
     public void playApplyPowerSfx() {
         CardCrawlGame.sound.play("POWER_POISON", 0.05F);
     }
 
     public void updateDescription() {
+        if (downfallMod.useLegacyBosses) {
             this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+        } else {
+
+            this.description = CardCrawlGame.languagePack.getPowerStrings("downfall:OnPlayerPoison").DESCRIPTIONS[0] + this.amount + CardCrawlGame.languagePack.getPowerStrings("downfall:OnPlayerPoison").DESCRIPTIONS[1];
+        }
     }
 
 //     Damage action moved to SilentPoisonPower so that it happens after Afterlife activation

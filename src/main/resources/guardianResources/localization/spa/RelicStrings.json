@@ -18,7 +18,9 @@
     "NAME": "Escamas de Obsidiana",
     "FLAVOR": "Mancha el cielo con tu sangre. Represalia contra todos los que te han atacado.",
     "DESCRIPTIONS": [
-      "Al inicio del combate, obtén #b3 de #yEspinas [REMOVE_SPACE]. Cada vez que recibas una desventaja o se te aplique uno, obtén #b1 de #yEspinas [REMOVE_SPACE]."
+      "Al inicio del combate, obtén #b",
+      " de #yEspinas [REMOVE_SPACE]. Cada vez que recibas una desventaja o se te aplique una, obtén #b",
+      " de #yEspinas [REMOVE_SPACE]."
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
@@ -39,7 +41,7 @@
     "NAME": "Centinela de Bolsillo de Arumba",
     "FLAVOR": "Modo Centinela activado. Objetivo adquirido. Nada personal.",
     "DESCRIPTIONS": [
-      "Cada 3 turnos, aplica #b1 de #yDébil a TODOS los enemigos."
+      "Cada #b3 turnos, aplica #b1 de #yDébil a TODOS los enemigos."
     ]
   },
   "Guardian:SackOfGems": {
@@ -95,7 +97,8 @@
       "Al obtenerla, elige una carta. Comienza cada combate con esta carta removida de tu mazo. Al inicio de tu turno #b4, vuelve a tu mano con #b2 copias.",
       "Elige una carta para ",
       "Comienza cada combate con ",
-      " removida de tu mazo. Al inicio del turno #b4, vuelve a tu mano con #b2 copias."
+      " removida de tu mazo. Al inicio del turno #b4, vuelve a tu mano con #b2 copias.",
+      "La carta adjunta a esta reliquia ha sido #rremovida de tu mazo, la reliquia ya no funciona."
     ]
   },
   "Guardian:TickHelperRelic": {
@@ -124,7 +127,7 @@
     "NAME": "Anomalía Embotellada",
     "FLAVOR": "Girando y girando... y finalmente quebrándose.",
     "DESCRIPTIONS": [
-      "Al obtenerla, elige una carta. Al inicio de cada combate, remuévela de tu pila de robo. Al inicio del turno #b3 [REMOVE_SPACE], añádela a tu mano. Cuesta #b0 ese turno.",
+      "Al obtenerla, elige una carta. Al inicio de cada combate, remuévela de tu pila de extracción. Al inicio del turno #b3 [REMOVE_SPACE], añádela a tu mano. Cuesta #b0 ese turno.",
       "Elige una carta para ",
       "Comienza cada combate con ",
       " removida de tu mazo. Al inicio del turno #b3, añádela a tu mano. NL Cuesta #b0 ese turno.",
@@ -132,4 +135,3 @@
     ]
   }
 }
-

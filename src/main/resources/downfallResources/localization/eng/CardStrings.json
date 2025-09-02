@@ -5,11 +5,11 @@
   },
   "downfall:Bewildered": {
     "NAME": "Bewildered",
-    "DESCRIPTION": "Unplayable. Ethereal. NL When drawn, sneckomod:Muddle your hand."
+    "DESCRIPTION": "When drawn, sneckomod:Muddle this card. NL Exhaust."
   },
   "downfall:Icky": {
     "NAME": "Icky",
-    "DESCRIPTION": "Gain a *Slimed. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Exhaust."
   },
   "downfall:Haunted": {
     "NAME": "Haunted",
@@ -52,10 +52,6 @@
     "NAME": "Bag of Knives",
     "DESCRIPTION": "The first time you play a card that costs 2 or more each turn, gain 2 *Shivs."
   },
-  "downfall:GiveAntidote": {
-    "NAME": "Mad Scientist",
-    "DESCRIPTION": "Give your opponent an *Antidote."
-  },
   "downfall:Hallunication": {
     "NAME": "Hallucination",
     "DESCRIPTION": "Hide your real location each turn. When you or the illusion are Attacked, the illusion fades."
@@ -82,15 +78,23 @@
   },
   "downfall:EndIsNigh": {
     "NAME": "End is Nigh",
-    "DESCRIPTION": "Gain !M! Max HP. NL EVERYONE gains 1 Ritual."
+    "DESCRIPTION": "EVERYONE gains !M! Ritual."
+  },
+  "downfall:FalseWorship": {
+    "NAME": "False Worship",
+    "DESCRIPTION": "Revive your Cultist if he is dead. Otherwise, he revives upon death, restoring 50% HP."
   },
   "downfall:FleetingFaith": {
-    "NAME": "Fleeting Faith",
-    "DESCRIPTION": "Gain 1 Mantra when your opponent plays a card. Lose 5 at the start of your turn."
+    "NAME": "Spectral Presence",
+    "DESCRIPTION": "Add !M! *Haunted cards to your opponent's discard pile."
   },
   "downfall:FaithRewarded": {
     "NAME": "Faith Rewarded",
-    "DESCRIPTION": "If you enter Divinity, you can never leave it."
+    "DESCRIPTION": "If you enter Divinity, you can never leave it. Divinity's damage bonus is reduced to 200%."
+  },
+  "downfall:Crusade": {
+    "NAME": "Crusade",
+    "DESCRIPTION": "Remove all Debuffs. NL Lose all Mantra. Heal !M! HP and gain 1 Strength for each Mantra lost."
   },
   "downfall:Hyperfocused": {
     "NAME": "Deadly Focus",

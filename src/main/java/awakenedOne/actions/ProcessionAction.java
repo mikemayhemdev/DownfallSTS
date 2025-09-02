@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.ChemicalX;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 import java.util.Iterator;
@@ -54,12 +55,17 @@ public class ProcessionAction extends AbstractGameAction {
                     AbstractCard c = (AbstractCard)var1.next();
                     AbstractDungeon.player.drawPile.group.remove(c);
                     AbstractDungeon.getCurrRoom().souls.remove(c);
-                    this.addToBot(new NewQueueCardAction(c, true, false, true));
+                    this.addToTop(new NewQueueCardAction(c, true, false, true));
                     if ((!c.freeToPlay() && !c.freeToPlayOnce && c.costForTurn > 0)) {
                         shuffleIn(new VoidCard(), c.costForTurn);
                     }
                     if (c.cost == -1) {
-                        shuffleIn(new VoidCard(), EnergyPanel.totalCount);
+                        if (!AbstractDungeon.player.hasRelic(ChemicalX.ID)) {
+                            shuffleIn(new VoidCard(), EnergyPanel.totalCount);
+                        }
+                        if (AbstractDungeon.player.hasRelic(ChemicalX.ID)) {
+                            shuffleIn(new VoidCard(), EnergyPanel.totalCount+2);
+                        }
                     }
                 }
 

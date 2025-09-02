@@ -39,6 +39,7 @@
   },
   "downfall:Unlock": {
     "TEXT": [
+      " (Act 4 Wins do not count)",
       "This character is unlocked by completing a run with the Slime Boss.",
       "This character is unlocked by completing a run with the 2nd Villain character.",
       "This character is unlocked by completing a run with the Guardian.",
@@ -49,10 +50,11 @@
       "This character is unlocked by completing a run with the 5th Villain character.",
       "This character is unlocked by completing a run with the Automaton.",
       "This character is unlocked by completing a run with the 6th Villain character.",
-      "This character is unlocked by completing a run with the Gremlins.",
-      " (Act 4 Wins do not count)",
+      "This character is unlocked by completing a run with the Collector.",
       "This character is unlocked by completing a run with the 7th Villain character.",
-      "This character is unlocked by completing a run with the Collector."
+      "This character is unlocked by completing a run with the Awakened One.",
+      "This character is unlocked by completing a run with the 8th Villain character.",
+      "This character is unlocked by completing a run with the Gremlins."
     ]
   },
   "downfall:HeartMerchant": {
@@ -240,6 +242,16 @@
       "Old Neow"
     ],
     "TEXT": [
+    ]
+  },
+  "downfall:CharBossSpeech": {
+    "NAMES": [
+      ""
+    ],
+    "TEXT": [
+      "No, that cannot be! We need more toxins...",
+      "Die, monster! You don't belong in this world!"
+
     ]
   }
 

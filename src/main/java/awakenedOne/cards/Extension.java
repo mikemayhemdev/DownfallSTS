@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.actions.SoundAction;
 
 import static awakenedOne.AwakenedOneMod.*;
 
@@ -14,12 +15,13 @@ public class Extension extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, common, 8, 3, , , 3, 1
 
     public Extension() {
-        super(ID, 0, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 3;
+        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        baseDamage = 11;
         loadJokeCardImage(this, makeBetaCardPath(Extension.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new SoundAction(makeID("SOULSTRIKE")));
         dmg(m, AbstractGameAction.AttackEffect.FIRE);
     }
 
@@ -39,6 +41,6 @@ public class Extension extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(2);
+        upgradeDamage(3);
     }
 }

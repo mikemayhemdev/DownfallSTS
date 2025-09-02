@@ -109,7 +109,7 @@
       "crushing",
       "aplastante"
     ],
-    "DESCRIPTION": "#yLlama #yFantasmal. Se #yincendia al jugar #b2 #yHabilidades mientras estás sobre ella. #yIncendiar: Al #yIncendiarse, inflige #b6 de daño a un enemigo aleatorio."
+    "DESCRIPTION": "#yLlama #yFantasmal. Se #yincendia al jugar #b2 #yHabilidades mientras estás sobre ella. #yIncendiar: Al #yIncendiarse, inflige #b6 de daño a un enemigo al azar."
   },
   {
     "PROPER_NAME": "Fortalecedora",
@@ -135,6 +135,6 @@
       "searing",
       "abrasadora"
     ],
-    "DESCRIPTION": "#yLlama #yFantasmal. #ySe enciende al jugar #b2 #yAtaques mientras estás sobre ella. #yIncendio: Al #yIncendiarse, aplica #b6 de #yQuemarAlma a un enemigo aleatorio, modificado dos veces por la #yIntensidad."
+    "DESCRIPTION": "#yLlama #yFantasmal. #ySe enciende al jugar #b2 #yAtaques mientras estás sobre ella. #yIncendio: Al #yIncendiarse, aplica #b6 de #yQuemarAlma a un enemigo al azar, modificado dos veces por la #yIntensidad."
   }
 ]

@@ -19,7 +19,6 @@ public class TalonRake extends AbstractAwakenedCard {
     public TalonRake() {
         super(ID, 2, CardType.ATTACK, CardRarity.BASIC, CardTarget.ENEMY);
         baseDamage = 5;
-        //this.tags.add(AwakenedOneMod.CHANT);
         this.tags.add(AwakenedOneMod.DELVE);
         loadJokeCardImage(this, makeBetaCardPath(TalonRake.class.getSimpleName() + ".png"));
     }
@@ -32,24 +31,10 @@ public class TalonRake extends AbstractAwakenedCard {
             dmg(m, AbstractGameAction.AttackEffect.FIRE);
         }
         atb(new ConjureAction(false));
-//        if (isTrig_chant()) {
-//            this.tags.add(ACTIVECHANT);
-//            chant();
-//        }
     }
 
-//    public void triggerOnGlowCheck() {
-//        this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;
-//    }
-
-    //    @Override
-    //    public void chant() {
-    //        atb(new ConjureAction(false));
-    //        checkOnChant();
-    //    }
 
     public void upp() {
         upgradeDamage(2);
-        //upgradeBaseCost(0);
     }
 }

@@ -88,5 +88,12 @@
     "NAME": "Doomed Dagger",
     "DIALOG": [
     ]
+  },
+  "downfall:VoidCore": {
+    "MOVES": [
+    ],
+    "NAME": "Void Core",
+    "DIALOG": [
+    ]
   }
 }

@@ -52,6 +52,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.*;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
+import com.megacrit.cardcrawl.relics.OddMushroom;
 import com.megacrit.cardcrawl.relics.RunicDome;
 import com.megacrit.cardcrawl.relics.SlaversCollar;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
@@ -224,7 +225,11 @@ public abstract class AbstractCharBoss extends AbstractMonster {
         */
         maxHealth += chosenArchetype.maxHPModifier;
         if (AbstractDungeon.ascensionLevel >= 9) {
-            maxHealth = Math.round(maxHealth * 1.2F);
+            if (downfallMod.useLegacyBosses) {
+                maxHealth = Math.round(maxHealth * 1.2F);
+            } else {
+                maxHealth += chosenArchetype.maxHPModifierAsc;
+            }
         }
         currentHealth = maxHealth;
         updateHealthBar();
@@ -383,30 +388,34 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                 @Override
                 public void update() {
                     isDone = true;
-                    for (AbstractCard q : getThisTurnCards()) {
-                        AbstractCharBoss.boss.hand.addToTop(q);
-                        if (q instanceof AbstractBossCard) ((AbstractBossCard) q).bossDarken();
-                        q.current_y = Settings.HEIGHT / 2F;
-                        q.current_x = Settings.WIDTH;
-                    }
+                    if (AbstractCharBoss.boss != null)
+                        if (AbstractCharBoss.boss.hand != null) {
+                            for (AbstractCard q : getThisTurnCards()) {
+                                AbstractCharBoss.boss.hand.addToTop(q);
+                                if (q instanceof AbstractBossCard) ((AbstractBossCard) q).bossDarken();
+                                q.current_y = Settings.HEIGHT / 2F;
+                                q.current_x = Settings.WIDTH;
+                            }
 
-                    ArrayList<AbstractBossCard> handAsBoss = new ArrayList<>();
-                    for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-                        handAsBoss.add((AbstractBossCard) c);
-                    }
+                            ArrayList<AbstractBossCard> handAsBoss = new ArrayList<>();
+                            for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                                handAsBoss.add((AbstractBossCard) c);
+                            }
 
-                    Collections.sort(handAsBoss, new sortByNewPrio());
+                            Collections.sort(handAsBoss, new sortByNewPrio());
 
-                    ArrayList<AbstractCard> newHand = new ArrayList<>();
-                    for (AbstractCard c : handAsBoss) {
-                        newHand.add(c);
-                        c.applyPowers();
-                    }
+                            ArrayList<AbstractCard> newHand = new ArrayList<>();
+                            for (AbstractCard c : handAsBoss) {
+                                newHand.add(c);
+                                c.applyPowers();
+                                c.triggerWhenDrawn();
+                            }
 
-                    AbstractCharBoss.boss.hand.group = newHand;
+                            AbstractCharBoss.boss.hand.group = newHand;
 
-                    AbstractCharBoss.boss.hand.refreshHandLayout();
-                    applyPowers();
+                            AbstractCharBoss.boss.hand.refreshHandLayout();
+                            applyPowers();
+                        }
                 }
             });
             addToBot(new WaitAction(0.2f));
@@ -479,6 +488,12 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                         for (int j = i + 1; j < hand.size(); j++) {
                             AbstractBossCard c2 = (AbstractBossCard) hand.group.get(j);
                             c2.manualCustomVulnModifier = true;
+                            if (AbstractDungeon.player.hasRelic(OddMushroom.ID)){
+                                c2.manualCustomDamageModifierMult = 1.25F;
+                            } else {
+                                c2.manualCustomDamageModifierMult = 1.5F;
+                            }
+
                         }
                     }
                 }
@@ -1408,7 +1423,7 @@ public void damage(final DamageInfo info) {
         for (final AbstractCard c : this.hand.group) {
             if (c != null) {
                 c.atTurnStart();
-                c.triggerWhenDrawn();
+              //  c.triggerWhenDrawn();
             }
         }
         /*

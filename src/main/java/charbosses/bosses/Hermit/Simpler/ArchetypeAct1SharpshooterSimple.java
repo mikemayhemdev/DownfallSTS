@@ -5,10 +5,13 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.hermit.*;
+import charbosses.cards.purple.EnDefendPurple;
 import charbosses.monsters.LouseTangerine;
+import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
 import com.esotericsoftware.spine.AnimationState;
 import com.esotericsoftware.spine.AnimationStateData;
 import com.esotericsoftware.spine.Skeleton;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -28,13 +31,17 @@ public class ArchetypeAct1SharpshooterSimple extends ArchetypeBaseIronclad {
     public ArchetypeAct1SharpshooterSimple() {
         super("HERMIT_SHARPSHOOTER_ARCHETYPE", "Dead On");
 
-        maxHPModifier += 98;
+        maxHPModifier += 88;
+        maxHPModifierAsc = 10;
         actNum = 1;
     }
 
     @Override
     public void addedPreBattle() {
         super.addedPreBattle();
+
+        AbstractCreature p = AbstractCharBoss.boss;
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitConcentrationPower(p), damageThreshold));
 
         AbstractMonster tangerine = new LouseTangerine(-400F, 0);
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(tangerine,true));
@@ -66,34 +73,28 @@ public class ArchetypeAct1SharpshooterSimple extends ArchetypeBaseIronclad {
 
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnHyperfocused());
+                    addToList(cardsList, new EnDeadeye(), extraUpgrades);
+                    addToList(cardsList, new EnDefendHermit());
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnDeadeye());
-                    addToList(cardsList, new EnWideOpen());
-                    turn++;
-                    break;
-                case 2:
-                    addToList(cardsList, new EnHeadshot());
-                    turn++;
-                    break;
-                case 3:
-                    addToList(cardsList, new EnGhostlyPresence());
+                    addToList(cardsList, new EnMemento());
                     addToList(cardsList, new EnSnapshot());
                     turn++;
                     break;
-                case 4:
-                    addToList(cardsList, new EnDive());
+                case 2:
+                    addToList(cardsList, new EnDive(), extraUpgrades);
+                    addToList(cardsList, new EnDefendHermit());
+                    turn++;
+                    break;
+                case 3:
+                    addToList(cardsList, new EnHeadshot(), extraUpgrades);
                     addToList(cardsList, new EnRicochet());
                     turn++;
                     break;
-                case 5:
-                    addToList(cardsList, new EnRoughhouse());
-                    turn++;
-                    break;
-                case 6:
+                case 4:
                     addToList(cardsList, new EnSmokingBarrel());
+                    addToList(cardsList, new EnGhostlyPresence(), extraUpgrades);
                     turn = 1;
                     looped = true;
                     break;

@@ -36,6 +36,7 @@ public class EnBash extends AbstractBossCard {
         if (AbstractCharBoss.boss.hasRelic(CBR_ChampionsBelt.ID)){
             artifactConsumedIfPlayed = 2;
         }
+        vulnGeneratedIfPlayed = magicNumber;
     }
 
     @Override

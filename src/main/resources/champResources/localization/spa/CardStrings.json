@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Provocación",
-    "DESCRIPTION": "Aplica !M! de Débil y 1 de Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Aplica 1 de Débil y 1 de Vulnerable a TODOS los enemigos."
+    "DESCRIPTION": "Aplica !M! Débil y 1 Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Aplica 1 Débil y 1 Vulnerable a TODOS los enemigos."
   },
   "champ:Execute": {
     "NAME": "Ejecutar",
@@ -27,13 +27,9 @@
     ]
   },
   "champ:StanceDanceCrown": {
-    "NAME": "Corona del Campeón",
-    "DESCRIPTION": "Elige una Postura para entrar. NL Activa su champ:Bono.",
-    "UPGRADE_DESCRIPTION": "Elige una Postura para entrar. NL Activa su champ:Bono dos veces.",
-    "EXTENDED_DESCRIPTION": [
-      "Entra en champ:Berserker.",
-      "Entra en champ:Defensivo."
-    ]
+    "NAME": "Inspiración",
+    "DESCRIPTION": "Retener. NL Entra en una Postura en la que no estás. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Retener. NL Entra en una Postura en la que no estás."
   },
   "champ:SwordSigil": {
     "NAME": "Sello de la Victoria",
@@ -41,7 +37,7 @@
   },
   "champ:FaceSlap": {
     "NAME": "Bofetón",
-    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Berserker: Aplica !M! de Vulnerable."
+    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Berserker: Aplica !M! Vulnerable."
   },
   "champ:FlashCut": {
     "NAME": "Golpe Relámpago",
@@ -65,7 +61,7 @@
   },
   "champ:SetATrap": {
     "NAME": "Poner una Trampa",
-    "DESCRIPTION": "Gana !B! de Bloqueo. NL champ:Combo *Defensivo: Aplica !M! de Débil a TODOS los enemigos."
+    "DESCRIPTION": "Gana !B! de Bloqueo. NL champ:Combo *Defensivo: Aplica !M! Débil a TODOS los enemigos."
   },
   "champ:Backstep": {
     "NAME": "Paso Atrás",
@@ -152,11 +148,11 @@
   },
   "champ:Haymaker": {
     "NAME": "Golpe Demoledor",
-    "DESCRIPTION": "Haz !D! de daño. NL Aplica 2 de Vulnerable. NL Aplica 2 de Débil."
+    "DESCRIPTION": "Haz !D! de daño. NL Aplica 2 Vulnerable. NL Aplica 2 Débil."
   },
   "champ:ViciousMockery": {
     "NAME": "Burlas Crueles",
-    "DESCRIPTION": "Gana !M! de Vigor. NL Aplica !DM! de Débil. NL Activa el champ:Bono de tu Postura.",
+    "DESCRIPTION": "Gana !M! de Vigor. NL Aplica !DM! Débil. NL Activa el champ:Bono de tu Postura.",
     "EXTENDED_DESCRIPTION": [
       "champ:Combo *Berserker: Gana !M! de Fuerza temporal. NL ",
       "champ:Combo *Defensivo: Gana !M! de Destreza temporal."
@@ -185,7 +181,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "Lanzamiento de Espada",
-    "DESCRIPTION": "Haz !D! de daño !M! veces. NL Gana 2 de Débil. NL champ:Combo *Berserker: No ganas Débil."
+    "DESCRIPTION": "Haz !D! de daño !M! veces. NL Gana 2 Débil. NL champ:Combo *Berserker: No ganas Débil."
   },
   "champ:MurderStrike": {
     "NAME": "Golpe Asesino",
@@ -206,7 +202,7 @@
   },
   "champ:Shatter": {
     "NAME": "Quebrar",
-    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Cualquier *Postura: Aplica !M! de Débil y Vulnerable."
+    "DESCRIPTION": "Haz !D! de daño. NL champ:Combo *Cualquier *Postura: Aplica !M! Débil y Vulnerable."
   },
   "champ:EnragedBash": {
     "NAME": "Embate Enfurecido",
@@ -322,7 +318,7 @@
   },
   "champ:BerserkerStyle": {
     "NAME": "Afilar la Espada",
-    "DESCRIPTION": "Tus cartas \"Golpe\" Hacen !M! más de daño."
+    "DESCRIPTION": "Tus cartas \"Golpe\" Hacen !M! de daño adicional."
   },
   "champ:Riposte": {
     "NAME": "Estocada de Contraataque",
@@ -372,8 +368,8 @@
   },
   "champ:WindUp": {
     "NAME": "Preparación",
-    "DESCRIPTION": "Elige una Postura para entrar. NL Busca un champ:Final en tu pila de robo. NL Agota.",
-    "UPGRADE_DESCRIPTION": "Elige una Postura para entrar. NL Busca un champ:Final en tu pila de robo.",
+    "DESCRIPTION": "Elige una Postura para entrar. NL Busca un champ:Final en tu pila de extracción. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Elige una Postura para entrar. NL Busca un champ:Final en tu pila de extracción.",
     "EXTENDED_DESCRIPTION": [
       "Entra en champ:Berserker.",
       "Entra en champ:Defensivo."
@@ -381,9 +377,6 @@
   },
   "champ:Headbutt": {
     "NAME": "Cabezazo",
-    "DESCRIPTION": "Haz !D! de daño. NL Coloca una carta de tu pila de descarte en la parte superior de tu pila de robo."
+    "DESCRIPTION": "Haz !D! de daño. NL Coloca una carta de tu pila de descarte en la parte superior de tu pila de extracción."
   }
 }
-
-
-

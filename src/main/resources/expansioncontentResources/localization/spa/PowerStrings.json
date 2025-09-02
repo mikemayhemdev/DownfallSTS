@@ -90,7 +90,7 @@
       "En #b",
       " turnos, inflige #b",
       "Al final de tu turno, inflige #b",
-      " de daño a un enemigo aleatorio #b6 veces."
+      " de daño a un enemigo al azar #b6 veces."
     ]
   },
   "expansioncontent:BeatOfDeathP": {

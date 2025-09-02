@@ -1,11 +1,15 @@
 package awakenedOne.powers;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.EnergizedBluePower;
+import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
 
 import static awakenedOne.util.Wiz.att;
 
@@ -25,6 +29,12 @@ public class VoidRefundPower extends AbstractAwakenedPower implements OnLoseEner
     @Override
     public void LoseEnergyAction(int gained) {
         this.flash();
+        
+        if (Settings.FAST_MODE) {
+            this.addToTop(new VFXAction(new MiracleEffect(Color.CYAN, Color.PURPLE, "ATTACK_MAGIC_SLOW_1"), 0.0F));
+        } else {
+            this.addToTop(new VFXAction(new MiracleEffect(Color.CYAN, Color.PURPLE, "ATTACK_MAGIC_SLOW_1"), 0.3F));
+        }
 
         if (!AbstractDungeon.actionManager.turnHasEnded) {
             att(new GainEnergyAction(this.amount));

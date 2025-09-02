@@ -1,6 +1,7 @@
 package charbosses.cards.purple;
 
 import basemod.ReflectionHacks;
+import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.AbstractBossCard;
 import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
 import com.badlogic.gdx.graphics.Texture;
@@ -14,6 +15,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.RegenPower;
 import com.megacrit.cardcrawl.powers.RitualPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
@@ -38,11 +40,13 @@ public class EnEndIsNigh extends AbstractBossCard {
         portrait = TextureLoader.getTextureAsAtlasRegion(expansionContentMod.makeCardPath("SummonMushrooms.png"));
         portraitImg = TextureLoader.getTexture(expansionContentMod.makeCardPath("SummonMushrooms.png"));
         this.loadJokeCardImage();
-        baseMagicNumber = magicNumber = 200;
+        baseMagicNumber = magicNumber = 1;
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
+
+        /*
         atb(new AbstractGameAction() {
             @Override
             public void update() {
@@ -57,6 +61,8 @@ public class EnEndIsNigh extends AbstractBossCard {
 
             }
         });
+
+         */
 
         Iterator var4 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 

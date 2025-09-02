@@ -56,7 +56,7 @@
   },
   "Guardian:PolyBeam": {
     "NAME": "Rayo Poli",
-    "DESCRIPTION": "Haz !D! de daño a un enemigo aleatorio !M! veces."
+    "DESCRIPTION": "Haz !D! de daño a un enemigo al azar !M! veces."
   },
   "Guardian:TwinSlam": {
     "NAME": "Golpe Gemelo",
@@ -72,8 +72,8 @@
   },
   "Guardian:VentSteam": {
     "NAME": "Liberar Vapor",
-    "DESCRIPTION": "Aplica !M! de Vulnerable a TODOS los enemigos.",
-    "UPGRADE_DESCRIPTION": "Aplica !M! de Vulnerable a TODOS los enemigos."
+    "DESCRIPTION": "Aplica !M! Vulnerable a TODOS los enemigos.",
+    "UPGRADE_DESCRIPTION": "Aplica !M! Vulnerable a TODOS los enemigos."
   },
   "Guardian:CurlUp": {
     "NAME": "Replegarse",
@@ -95,7 +95,7 @@
 },
 "Guardian:FloatingOrbs": {
   "NAME": "Orbes Flotantes",
-  "DESCRIPTION": "Cada vez que juegas una carta de coste 0, haz !M! de daño a un enemigo aleatorio."
+  "DESCRIPTION": "Cada vez que juegas una carta de coste 0, haz !M! de daño a un enemigo al azar."
 },
 "Guardian:OrbSlam": {
   "NAME": "Golpe Orbital",
@@ -118,7 +118,8 @@
 },
 "Guardian:SphericShield": {
   "NAME": "Escudo Esférico",
-  "DESCRIPTION": "Gana !B! de Bloqueo. NL Entra en *Modo *Defensivo. NL Agota."
+  "DESCRIPTION": "Gana !B! de Bloqueo. NL Entra en *Modo *Defensivo. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Gana un guardianmod:Polishing_Oil. NL Agota."
 },
 "Guardian:Harden": {
   "NAME": "Endurecer",
@@ -134,8 +135,8 @@
 },
 "Guardian:SentryWave": {
   "NAME": "Ola Centinela",
-  "DESCRIPTION": "Aplica !M! de Débil. NL Coloca una *Explosión *Centinela en guardianmod:Estasis. NL Agota.",
-  "UPGRADE_DESCRIPTION": "Aplica !M! de Débil. NL guardianmod:Ensamblar 2. NL Coloca una *Explosión *Centinela+ en guardianmod:Estasis. NL Agota."
+  "DESCRIPTION": "Aplica !M! Débil. NL Coloca una *Explosión *Centinela en guardianmod:Estasis. NL Agota.",
+  "UPGRADE_DESCRIPTION": "Aplica !M! Débil. NL guardianmod:Ensamblar 2. NL Coloca una *Explosión *Centinela+ en guardianmod:Estasis. NL Agota."
 },
 "Guardian:CompilePackage": {
   "NAME": "Compilar Paquete",
@@ -182,7 +183,7 @@
 },
 "Guardian:Planning": {
   "NAME": "Planificación",
-  "DESCRIPTION": "Coloca las primeras !M! cartas de tu pila de robo en guardianmod:Estasis."
+  "DESCRIPTION": "Coloca las primeras !M! cartas de tu pila de extracción en guardianmod:Estasis."
 },
 "Guardian:Recover": {
   "NAME": "Recuperación",
@@ -200,7 +201,7 @@
 },
 "Guardian:Preprogram": {
   "NAME": "Preprogramar",
-  "DESCRIPTION": "Mira las primeras !M! cartas de tu pila de robo. Elige una y colócala en guardianmod:Estasis."
+  "DESCRIPTION": "Mira las primeras !M! cartas de tu pila de extracción. Elige una y colócala en guardianmod:Estasis."
 },
 "Guardian:GemFinder": {
   "NAME": "Detector de Gemas",
@@ -350,8 +351,8 @@
 },
 "Guardian:Gem_Crimson": {
   "NAME": "Granate",
-  "DESCRIPTION": "guardianmod:Gema. NL Aplica 1 de Vulnerable a TODOS los enemigos.",
-  "UPGRADE_DESCRIPTION": "Aplica 1 de Vulnerable a TODOS los enemigos."
+  "DESCRIPTION": "guardianmod:Gema. NL Aplica 1 Vulnerable a TODOS los enemigos.",
+  "UPGRADE_DESCRIPTION": "Aplica 1 Vulnerable a TODOS los enemigos."
 },
 "Guardian:Gem_Blue": {
   "NAME": "Zafiro",
@@ -386,7 +387,7 @@
 },
 "Guardian:GatlingBeam": {
   "NAME": "Torreta Láser",
-  "DESCRIPTION": "Haz !D! de daño. NL Coloca esta carta en guardianmod:Estasis. NL guardianmod:Estasis dura !M! turnos. NL guardianmod:Tic - Haz !D! de daño a un enemigo aleatorio."
+  "DESCRIPTION": "Haz !D! de daño. NL Coloca esta carta en guardianmod:Estasis. NL guardianmod:Estasis dura !M! turnos. NL guardianmod:Tic - Haz !D! de daño a un enemigo al azar."
 },
 "Guardian:ShieldCharger": {
   "NAME": "Cargador de Escudo",

@@ -30,17 +30,19 @@ public class BanStuffPatch {
                 relicsToRemoveOnStart.add("Prismatic Shard");
             }
 
-            if (EvilModeCharacterSelect.evilMode || chosenClass == HERMIT) {
-                   relicsToRemoveOnStart.add("Blue Candle");
+            if (!downfallMod.disableBaseGameAdjustments) {
+                if (EvilModeCharacterSelect.evilMode) {
+                    relicsToRemoveOnStart.add("Ectoplasm");
+                }
+
+                if (EvilModeCharacterSelect.evilMode || chosenClass == HERMIT) {
+                relicsToRemoveOnStart.add("Blue Candle");
+                }
+
+                if (EvilModeCharacterSelect.evilMode || chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE) {
+                    relicsToRemoveOnStart.add(BirdFacedUrn.ID);
+                }
             }
-
-            if (EvilModeCharacterSelect.evilMode) {
-                relicsToRemoveOnStart.add("Ectoplasm");
-            }
-
-            if (!downfallMod.disableBaseGameAdjustments) relicsToRemoveOnStart.add(BirdFacedUrn.ID);
-
-
         }
     }
 }

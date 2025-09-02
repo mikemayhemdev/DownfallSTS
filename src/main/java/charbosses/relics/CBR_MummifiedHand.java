@@ -28,7 +28,7 @@ public class CBR_MummifiedHand extends AbstractCharbossRelic {
     public void onUseCard(AbstractCard card, UseCardAction action) {
         if (card.type == AbstractCard.CardType.POWER) {
             this.flash();
-            this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            this.addToTop(new RelicAboveCreatureAction(this.owner, this));
             //doesn't actually do anything, cost reduction in Silent 3
         }
 

@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.rooms.AbstractRoom.RoomPhase;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import com.megacrit.cardcrawl.vfx.combat.FlashAtkImgEffect;
+import downfall.downfallMod;
 
 public class EnemyPoisonDamageAction extends AbstractGameAction {
     private static final float DURATION = 0.33F;
@@ -49,11 +50,14 @@ public class EnemyPoisonDamageAction extends AbstractGameAction {
 
                 AbstractPower p = this.target.getPower("Poison");
                 if (p != null) {
-                    --p.amount;
-                    if (p.amount == 0) {
-                        this.target.powers.remove(p);
-                    } else {
-                        p.updateDescription();
+                    if (downfallMod.useLegacyBosses) {
+                        --p.amount;
+
+                        if (p.amount == 0) {
+                            this.target.powers.remove(p);
+                        } else {
+                            p.updateDescription();
+                        }
                     }
                 }
 

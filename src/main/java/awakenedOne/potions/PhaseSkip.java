@@ -4,11 +4,14 @@ import awakenedOne.AwakenedOneMod;
 import awakenedOne.ui.OrbitingSpells;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.unique.ApotheosisAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
+import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.vfx.combat.IntenseZoomEffect;
 
@@ -32,6 +35,8 @@ public class PhaseSkip extends CustomPotion {
         this.description = potionStrings.DESCRIPTIONS[0];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
+        this.tips.add(new PowerTip(TipHelper.capitalize(GameDictionary.UPGRADE.NAMES[0]), (String)GameDictionary.keywords.get(GameDictionary.UPGRADE.NAMES[0])));
+
     }
 
     public void use(AbstractCreature target) {
@@ -41,6 +46,7 @@ public class PhaseSkip extends CustomPotion {
             awaken(true);
             //OrbitingSpells.upgradeall();
         }
+        this.addToBot(new ApotheosisAction());
     }
 
     public CustomPotion makeCopy() {

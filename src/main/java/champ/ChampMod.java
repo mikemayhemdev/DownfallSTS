@@ -49,6 +49,7 @@ import com.megacrit.cardcrawl.relics.Calipers;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.stances.NeutralStance;
 import downfall.downfallMod;
+import downfall.patches.BanSharedContentPatch;
 import downfall.util.CardIgnore;
 import downfall.util.TextureLoader;
 import guardian.relics.ObsidianScales;
@@ -301,7 +302,7 @@ public class ChampMod implements
         BaseMod.addPotion(TechPotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, TechPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
         BaseMod.addPotion(UltimateStancePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, UltimateStancePotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
 
-//        BanSharedContentPatch.registerRunLockedPotion(ChampChar.Enums.THE_CHAMP, CounterstrikePotion.POTION_ID);
+        BanSharedContentPatch.registerRunLockedPotion(ChampChar.Enums.THE_CHAMP, CounterstrikePotion.POTION_ID);
 
         if (Loader.isModLoaded("widepotions")) {
             WidePotionsMod.whitelistSimplePotion(CounterstrikePotion.POTION_ID);

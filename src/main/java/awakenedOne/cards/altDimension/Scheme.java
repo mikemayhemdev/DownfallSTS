@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.util.Wiz;
 import awakenedOne.cards.AbstractAwakenedCard;
+import sneckomod.SneckoMod;
 
 import static awakenedOne.util.Wiz.applyToSelf;
 
@@ -19,12 +20,16 @@ public class Scheme extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Scheme.class.getSimpleName());
 
     public Scheme() {
+
         super(ID, 1, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 1;
+        tags.add(CardTags.HEALING);
 
 
         frameString = "vault";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
+
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
 
     }
 

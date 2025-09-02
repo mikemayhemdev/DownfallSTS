@@ -9,10 +9,16 @@ import charbosses.bosses.Defect.NewAge.ArchetypeAct3OrbsNewAge;
 import charbosses.bosses.Defect.Simpler.ArchetypeAct1VoidsSimple;
 import charbosses.bosses.Defect.Simpler.ArchetypeAct2ClawSimple;
 import charbosses.bosses.Defect.Simpler.ArchetypeAct3OrbsSimple;
+import charbosses.cards.AbstractBossCard;
+import charbosses.cards.blue.EnBeamCell;
 import charbosses.core.EnemyEnergyManager;
 import charbosses.monsters.BronzeOrbWhoReallyLikesDefectForSomeReason;
+import charbosses.monsters.VoidCore;
 import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
+import com.megacrit.cardcrawl.actions.utility.TextAboveCreatureAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -21,10 +27,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbBlue;
 import com.megacrit.cardcrawl.core.Settings;
+import downfall.actions.SpeechBubbleAction;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import downfall.util.LocalizeHelper;
 import expansioncontent.expansionContentMod;
+
+import static awakenedOne.util.Wiz.atb;
 
 public class CharBossDefect extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Defect");
@@ -51,13 +60,26 @@ public class CharBossDefect extends AbstractCharBoss {
         type = EnemyType.BOSS;
     }
 
+    @Override
+    public void applyEndOfTurnTriggers() {
+        super.applyEndOfTurnTriggers();
+        if (chosenArchetype instanceof ArchetypeAct1VoidsSimple){
+            ((ArchetypeAct1VoidsSimple)chosenArchetype).minionDestroyedThisTurn = false;
+        }
+    }
 
     @Override
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
 
         if (downfallMod.overrideBossDifficulty) {
+
             archetype = new ArchetypeAct1TurboNewAge();
+
+            if (!downfallMod.useLegacyBosses) {
+                archetype = new ArchetypeAct1VoidsSimple();
+            }
+
             this.currentHealth -= 100;
             downfallMod.overrideBossDifficulty = false;
         } else
@@ -114,13 +136,13 @@ public class CharBossDefect extends AbstractCharBoss {
     public void die() {
         super.die();
 
-        if (hasPower(MinionPower.POWER_ID)) {
+
             for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                if (m instanceof BronzeOrbWhoReallyLikesDefectForSomeReason) {
+                if (m instanceof VoidCore) {
                     AbstractDungeon.actionManager.addToBottom(new InstantKillAction(m));
                 }
             }
-        }
+
     }
 
 }

@@ -1,5 +1,6 @@
 package charbosses.bosses.Silent;
 
+import automaton.FunctionHelper;
 import basemod.interfaces.CloneablePowerInterface;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
@@ -20,6 +21,8 @@ import com.evacipated.cardcrawl.modthespire.lib.SpireSuper;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.SetMoveAction;
+import com.megacrit.cardcrawl.actions.utility.TextAboveCreatureAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer.PlayerClass;
@@ -31,16 +34,24 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.MinionPower;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbGreen;
 import com.megacrit.cardcrawl.vfx.combat.SmokeBombEffect;
+import downfall.actions.SpeechBubbleAction;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import downfall.util.LocalizeHelper;
 import expansioncontent.expansionContentMod;
+import slimebound.SlimeboundMod;
+
+import static awakenedOne.util.Wiz.atb;
 
 public class CharBossSilent extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Silent");
     public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[2];
+    public static final String POISONSPEECH = LocalizeHelper.downfallCharacterSpeech.TEXT[0];
 
     public static boolean posStorage = false;
+    public static boolean resetThisTurn = false;
+
+    public boolean cantDie = false;
 
     public float origDX;
     public float origdY;
@@ -69,7 +80,13 @@ public class CharBossSilent extends AbstractCharBoss {
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
+
             archetype = new ArchetypeAct1PoisonNewAge();
+
+            if (!downfallMod.useLegacyBosses) {
+                archetype = new ArchetypeAct1PoisonSimple();
+            }
+
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else
@@ -173,6 +190,7 @@ public class CharBossSilent extends AbstractCharBoss {
 
     @Override
     public void die() {
+        if (cantDie) return;
         super.die();
 
         switch (MathUtils.random(1)) {
@@ -208,6 +226,27 @@ public class CharBossSilent extends AbstractCharBoss {
         p.hb.x = temphX;
         p.hb.y = temphY;
         posStorage = !posStorage;
+    }
+
+    public void resetPoisonBoss() {
+        if (!this.isDying && !resetThisTurn) {
+            resetThisTurn = true;
+
+            SlimeboundMod.logger.info("Successful poison reset");
+            AbstractDungeon.actionManager.addToBottom(new TextAboveCreatureAction(this, TextAboveCreatureAction.TextType.INTERRUPTED));
+            AbstractDungeon.actionManager.addToBottom(new SpeechBubbleAction(POISONSPEECH, this, 2F));
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    AbstractCharBoss.boss.hand.clear();
+                    chosenArchetype.looped = true;
+                    chosenArchetype.turn = 0;
+                    endTurnStartTurn();
+                }
+            });
+        }
+
     }
 
     public void spawnImage(boolean noSmoke) {
@@ -267,4 +306,15 @@ public class CharBossSilent extends AbstractCharBoss {
 
     }
 
+    @Override
+    public void startTurn() {
+        super.startTurn();
+        resetThisTurn = false;
+    }
+
+    @Override
+    public void endTurnStartTurn() {
+        super.endTurnStartTurn();
+        resetThisTurn = false;
+    }
 }

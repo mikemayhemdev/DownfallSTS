@@ -1,9 +1,11 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.cards.tokens.Ceremony;
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -24,7 +26,8 @@ public class Dejection extends AbstractAwakenedCard {
 
     public Dejection() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 6;
+        baseDamage = 7;
+        this.cardsToPreview = new Ceremony();
         //this.baseMagicNumber = this.magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Dejection.class.getSimpleName() + ".png"));
     }
@@ -35,7 +38,15 @@ public class Dejection extends AbstractAwakenedCard {
             for (AbstractCard c : list) {
                 Wiz.p().hand.moveToExhaustPile(c);
                 if (c instanceof AbstractSpellCard) {
-                    atb(new GainEnergyAction(1));
+
+                    AbstractCard ce = new Ceremony();
+                    if (upgraded) {
+                        ce.upgrade();
+                    }
+                    awakenedOne.util.Wiz.atb(new MakeTempCardInHandAction(ce, 1));
+
+
+                    //atb(new GainEnergyAction(1));
                 }
 
             }
@@ -46,6 +57,7 @@ public class Dejection extends AbstractAwakenedCard {
 
     @Override
     public void upp() {
+        cardsToPreview.upgrade();
         upgradeDamage(3);
     }
 }

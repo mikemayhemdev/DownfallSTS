@@ -45,7 +45,9 @@ public class ColorfulPowersReward extends CustomReward {
     private ArrayList<AbstractCard> getDebugFallbackCards() {
         ArrayList<AbstractCard> debugCards = new ArrayList<>();
         for (AbstractCard card : CardLibrary.getAllCards()) {
-            debugCards.add(card.makeCopy());
+            if (!card.tags.contains(SneckoMod.BANNEDFORSNECKO) && card.color != AbstractDungeon.player.getCardColor() && card.type == AbstractCard.CardType.POWER && card.rarity == AbstractCard.CardRarity.UNCOMMON) {
+                debugCards.add(card.makeCopy());
+            }
         }
         return debugCards;
     }

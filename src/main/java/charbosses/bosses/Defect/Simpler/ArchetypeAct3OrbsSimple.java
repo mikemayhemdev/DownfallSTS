@@ -23,6 +23,7 @@ public class ArchetypeAct3OrbsSimple extends ArchetypeBaseDefect {
         super("DF_ARCHETYPE_ORBS", "Orbs");
 
         maxHPModifier += 295;
+        maxHPModifierAsc = 30;
         actNum = 3;
        }
 

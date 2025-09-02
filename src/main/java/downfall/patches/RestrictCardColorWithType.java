@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.CardLibrary;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
+import theHexaghost.TheHexaghost;
 
 @SpirePatch(clz = CardLibrary.class, method = "getAnyColorCard", paramtypez = {AbstractCard.CardType.class, AbstractCard.CardRarity.class})
 public class RestrictCardColorWithType {
@@ -28,6 +29,10 @@ public class RestrictCardColorWithType {
       }
       else if (!card.hasTag(SneckoMod.BANNEDFORSNECKO) && !card.hasTag(HexaMod.GHOSTWHEELCARD)) {
         available = true;
+      }
+
+      if (card.hasTag(HexaMod.GHOSTWHEELCARD) && !(AbstractDungeon.player instanceof TheHexaghost)){
+        available = false;
       }
 
       if (card.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE){

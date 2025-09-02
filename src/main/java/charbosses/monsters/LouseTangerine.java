@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.localization.UIStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.CurlUpPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import downfall.downfallMod;
 
 public class LouseTangerine extends AbstractMonster {
     public static final String ID = "FuzzyLouseTangerine";
@@ -24,16 +25,16 @@ public class LouseTangerine extends AbstractMonster {
     public boolean sleepy = true;
 
     public LouseTangerine(float x, float y) {
-        super(NAME, "FuzzyLouseNormal", 48, 0.0F, -5.0F, 180.0F, 140.0F, (String)null, x, y);
+        super(NAME, "FuzzyLouseNormal", 38, 0.0F, -5.0F, 180.0F, 140.0F, (String)null, x, y);
         this.loadAnimation("expansioncontentResources/images/bosses/hermit/1/tangerine/skeleton_2.atlas", "expansioncontentResources/images/bosses/hermit/1/tangerine/skeleton_2.json", 1.0F);
         AnimationState.TrackEntry e = state.setAnimation(0, "idle", true);
         e.setTime(e.getEndTime() * MathUtils.random());
 
         // Set damage.
         if (AbstractDungeon.ascensionLevel >= 9) {
-            biteDamage = AbstractDungeon.monsterHpRng.random(6, 8);
+            biteDamage = 8;
         } else {
-            biteDamage = AbstractDungeon.monsterHpRng.random(5, 7);
+            biteDamage = 6;
         }
 
         damage.add(new DamageInfo(this, biteDamage));
@@ -42,13 +43,23 @@ public class LouseTangerine extends AbstractMonster {
     @Override
     public void usePreBattleAction()
     {
-        int curl_amount = AbstractDungeon.monsterHpRng.random(8);
-
+        int curl_amount = 8;
         if (AbstractDungeon.ascensionLevel >= 9) curl_amount = 12;
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new CurlUpPower(this, curl_amount)));
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new TangerinePower(this,3)));
-        setMove((byte)1, AbstractMonster.Intent.SLEEP);
+
+        if (downfallMod.useLegacyBosses) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new TangerinePower(this, 3)));
+            setMove((byte)1, AbstractMonster.Intent.SLEEP);
+        } else {
+            if (AbstractDungeon.ascensionLevel >= 19){
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new TangerinePower(this, 3)));
+                sleepy = false;
+                this.setMove(MOVES[0], (byte)4, Intent.BUFF);
+            } else {
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new TangerinePower(this, 0)));
+            }
+        }
     }
 
     @Override

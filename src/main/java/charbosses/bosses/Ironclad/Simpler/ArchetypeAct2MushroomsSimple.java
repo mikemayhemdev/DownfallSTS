@@ -17,6 +17,7 @@ public class ArchetypeAct2MushroomsSimple extends ArchetypeBaseIronclad {
         super("IC_MUSHROOM_ARCHETYPE", "Mushroom");
 
         maxHPModifier += 190;
+        maxHPModifierAsc = 20;
         actNum = 2;
         bossMechanicName = IroncladMushroomPower.NAME;
         bossMechanicDesc = IroncladMushroomPower.DESC[0];
@@ -33,7 +34,6 @@ public class ArchetypeAct2MushroomsSimple extends ArchetypeBaseIronclad {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
 
-        if (!looped) {
             switch (turn) {
                 case 0:
                     addToList(cardsList, new EnSummonMushrooms());
@@ -59,7 +59,6 @@ public class ArchetypeAct2MushroomsSimple extends ArchetypeBaseIronclad {
                     turn = 0;
                     break;
             }
-        }
 
         return cardsList;
     }

@@ -2,6 +2,7 @@ package charbosses.cards.hermit;
 
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
 import charbosses.powers.general.EnemyPoisonPower;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -12,6 +13,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.WeakPower;
 import downfall.downfallMod;
 import hermit.cards.Headshot;
 import hermit.cards.Ricochet;
@@ -35,19 +37,21 @@ public class EnRicochet extends AbstractHermitBossCard {
                 new DamageAction(p, new DamageInfo(m, damage, damageTypeForTurn),
                         EnumPatch.HERMIT_GUN2));
 
-        if (owner.hasPower(HermitConcentrationPower.POWER_ID)){
-
+        AbstractPower concentration = this.owner.getPower(HermitConcentrationPower.POWER_ID);
+        if (concentration != null && concentration.amount > 0) {
             AbstractDungeon.actionManager.addToBottom(
                     new DamageAction(p, new DamageInfo(m, damage, damageTypeForTurn),
                             EnumPatch.HERMIT_GUN3));
         }
 
-    }
 
+    }
 
     @Override
     public String overrideIntentText() {
-        if (owner.hasPower(HermitConcentrationPower.POWER_ID)) {
+
+        AbstractPower concentration = this.owner.getPower(HermitConcentrationPower.POWER_ID);
+        if (concentration != null && concentration.amount > 0) {
             return intentDmg + "x2";
         }
         return super.overrideIntentText();

@@ -341,7 +341,8 @@
       "[Locked] Requires ",
       " Souls.",
       "[Leave]",
-      "[Leave] #rBecome #rCursed #r- #rShame."
+      "[Leave] #rLose #b",
+      " #rHP."
     ]
   },
   "downfall:Bandits": {
@@ -622,8 +623,11 @@
       "[Desecrate] #gDuplicate #g2 #gcards. #rCursed #r- #rAged.",
       "[Desecrate] #gRemove #g2 #gcards. #rLose #r",
       " #rMax #rHP.",
-      "[Desecrate] #gTransform #g3 #gcards. #rCursed #r- #rFlawed.",
-      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rPain."
+      "[Desecrate] #gTransform #g2 #gcards. #rLose #r",
+      "[Desecrate] #gUpgrade #g2 #gcards. #rCursed #r- #rPain.",
+      " #rHP.",
+      "[Locked] - Not enough cards."
+
     ]
   }
 }

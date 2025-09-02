@@ -5,6 +5,7 @@ import awakenedOne.cards.*;
 import awakenedOne.cards.cardvars.SecondDamage;
 import awakenedOne.cards.cardvars.SecondMagicNumber;
 import awakenedOne.cards.cardvars.ThirdMagicNumber;
+import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import awakenedOne.events.AbyssEvent;
 import awakenedOne.events.BackToBasicsAwakened;
 import awakenedOne.events.TheNestAwakened;
@@ -48,6 +49,7 @@ import javassist.CtClass;
 import javassist.Modifier;
 import javassist.NotFoundException;
 import org.clapper.util.classutil.*;
+import slimebound.SlimeboundMod;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -67,6 +69,7 @@ public class AwakenedOneMod implements
         PostInitializeSubscriber,
         OnStartBattleSubscriber,
         OnPlayerTurnStartSubscriber,
+        AddAudioSubscriber,
         OnCardUseSubscriber,
         PostPlayerUpdateSubscriber,
         SetUnlocksSubscriber {
@@ -102,6 +105,7 @@ public class AwakenedOneMod implements
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags UP_NEXT;
     public static boolean awakenedthiscombat = false;
     public static int powersThisCombat = 0;
+    public static int spellsThisTurn = 0;
     private static String modID = "awakened";
 
     public AwakenedOneMod() {
@@ -333,6 +337,7 @@ public class AwakenedOneMod implements
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
         awakenedthiscombat = false;
         powersThisCombat = 0;
+        spellsThisTurn = 0;
         ConjureAction.conjuresThisCombat = 0;
         OnLoseEnergyPowerPatch.EnergyLostThisCombat = 0;
         OnCreateCardSubscriber.CardsCreatedThisCombat = 0;
@@ -356,6 +361,7 @@ public class AwakenedOneMod implements
     public void receiveOnPlayerTurnStart() {
         OnCreateCardSubscriber.VoidCreatedThisTurn = false;
         OnCreateCardSubscriber.CardsCreatedThisTurn = 0;
+        spellsThisTurn = 0;
         ConjureAction.refreshedthisturn = false;
     }
 
@@ -384,19 +390,36 @@ public class AwakenedOneMod implements
                 DeadBird.ID,
                 ShardOfNowak.ID,
 
-                FourthDimension.ID,
-                BringTheStorm.ID,
+                StormRuler.ID,
+                Inscribe.ID,
                 AphoticFount.ID,
 
                 AwakenedOneChar.Enums.AWAKENED_ONE
         );
     }
 
+
+    @Override
+    public void receiveAddAudio() {
+        BaseMod.addAudio(makeID("THUNDERSPELL"), "awakenedResources/audio/thunderboltv3.ogg");
+        BaseMod.addAudio(makeID("ICESPELL"), "awakenedResources/audio/cryostasis.ogg");
+        BaseMod.addAudio(makeID("DARKSPELL"), "awakenedResources/audio/darkleech.ogg");
+        BaseMod.addAudio(makeID("FIRESPELL"), "awakenedResources/audio/burning_study.ogg");
+        BaseMod.addAudio(makeID("CHANT"), "awakenedResources/audio/chant_activatev2.ogg");
+        BaseMod.addAudio(makeID("SOULSTRIKE"), "awakenedResources/audio/awakenedoneattack.ogg");
+    }
+
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
         if (abstractCard.type == AbstractCard.CardType.POWER){
+
             powersThisCombat++;
             awaken();
+        }
+        if (abstractCard instanceof AbstractSpellCard && !abstractCard.purgeOnUse){
+
+            SlimeboundMod.logger.info("incrementing Spells this turn from " + spellsThisTurn + " to " + (spellsThisTurn + 1) + ". card: " + abstractCard.name);
+            spellsThisTurn++;
         }
     }
 }

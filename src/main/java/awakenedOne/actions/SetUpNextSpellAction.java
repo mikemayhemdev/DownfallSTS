@@ -2,6 +2,10 @@ package awakenedOne.actions;
 
 import awakenedOne.ui.OrbitingSpells;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+
+import static awakenedOne.AwakenedOneMod.UP_NEXT;
+import static awakenedOne.ui.OrbitingSpells.spellCards;
 
 public class SetUpNextSpellAction extends AbstractGameAction {
     public SetUpNextSpellAction() {
@@ -10,6 +14,17 @@ public class SetUpNextSpellAction extends AbstractGameAction {
     @Override
     public void update() {
         isDone = true;
-        OrbitingSpells.setupnext();
+
+        boolean setup = true;
+
+        for (AbstractCard c : spellCards) {
+            if (c.hasTag(UP_NEXT)) {
+                setup = false;
+            }
+        }
+
+        if (setup) {
+            OrbitingSpells.setupnext();
+        }
     }
 }

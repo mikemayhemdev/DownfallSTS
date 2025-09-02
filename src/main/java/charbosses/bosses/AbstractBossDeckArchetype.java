@@ -23,6 +23,7 @@ public abstract class AbstractBossDeckArchetype {
     public String bossMechanicDesc;
 
     public int maxHPModifier;
+    public int maxHPModifierAsc = 0;
     public int actNum;
 
     /*

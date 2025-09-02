@@ -3,8 +3,8 @@ package charbosses.bosses.Watcher;
 import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.NewAge.*;
-import charbosses.bosses.Watcher.Simpler.ArchetypeAct1StanceDanceSimple;
-import charbosses.bosses.Watcher.Simpler.ArchetypeAct2OmegaSimple;
+import charbosses.bosses.Watcher.Simpler.ArchetypeAct2StanceDanceSimple;
+import charbosses.bosses.Watcher.Simpler.ArchetypeAct1OmegaSimple;
 import charbosses.bosses.Watcher.Simpler.ArchetypeAct3DivinitySimple;
 import charbosses.core.EnemyEnergyManager;
 import com.badlogic.gdx.Gdx;
@@ -19,10 +19,9 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.ui.panels.energyorb.EnergyOrbPurple;
+import downfall.actions.SpeechBubbleAction;
 import downfall.downfallMod;
-import downfall.monsters.NeowBoss;
 import downfall.util.LocalizeHelper;
-import expansioncontent.expansionContentMod;
 
 public class CharBossWatcher extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Watcher");
@@ -33,6 +32,8 @@ public class CharBossWatcher extends AbstractCharBoss {
     protected Skeleton eyeSkeleton;
     public AnimationState eyeState;
     protected AnimationStateData eyeStateData;
+
+    public static final String HALFHEALTHSPEECH = LocalizeHelper.downfallCharacterSpeech.TEXT[1];
 
 
     public CharBossWatcher() {
@@ -99,7 +100,13 @@ public class CharBossWatcher extends AbstractCharBoss {
     public void generateDeck() {
         AbstractBossDeckArchetype archetype;
         if (downfallMod.overrideBossDifficulty) {
+
             archetype = new ArchetypeAct1RetainNewAge();
+
+            if (!downfallMod.useLegacyBosses) {
+                archetype = new ArchetypeAct1OmegaSimple();
+            }
+
             downfallMod.overrideBossDifficulty = false;
             this.currentHealth -= 100;
         } else
@@ -108,16 +115,16 @@ public class CharBossWatcher extends AbstractCharBoss {
         if (!downfallMod.useLegacyBosses) {
             switch (AbstractDungeon.actNum) {
                 case 1:
-                    archetype = new ArchetypeAct1StanceDanceSimple();
+                    archetype = new ArchetypeAct1OmegaSimple();
                     break;
                 case 2:
-                    archetype = new ArchetypeAct2OmegaSimple();
+                    archetype = new ArchetypeAct2StanceDanceSimple();
                     break;
                 case 3:
                     archetype = new ArchetypeAct3DivinitySimple();
                     break;
                 default:
-                    archetype = new ArchetypeAct1StanceDanceSimple();
+                    archetype = new ArchetypeAct1OmegaSimple();
                     break;
             }
         } else {
@@ -129,7 +136,7 @@ public class CharBossWatcher extends AbstractCharBoss {
                     archetype = new ArchetypeAct2CalmNewAge();
                     break;
                 case 3:
-                    archetype = new ArchetypeAct3DualityNewAge();
+                    archetype = new ArchetypeAct3DivinityNewAge();
                     break;
                 default:
                     archetype = new ArchetypeAct1RetainNewAge();
@@ -186,6 +193,12 @@ public class CharBossWatcher extends AbstractCharBoss {
             default:
                 break;
         }
+
+    }
+
+    public void playCrusaderSpeech(){
+
+            AbstractDungeon.actionManager.addToBottom(new SpeechBubbleAction(HALFHEALTHSPEECH, this, 2F));
 
     }
 

@@ -79,7 +79,7 @@
   },
   "hermit:Roughhouse": {
     "NAME": "Roughhouse",
-    "DESCRIPTION": "Deal !D! damage. hermit:Dead_On\: NL Gain !B! Block."
+    "DESCRIPTION": "Deal !D! damage. hermit:Dead_On: NL Gain !B! Block."
   },
   "hermit:Malice": {
     "NAME": "Malice",
@@ -87,11 +87,11 @@
   },
   "hermit:Deadeye": {
     "NAME": "Deadeye",
-    "DESCRIPTION": "Deal !D! damage. NL hermit:Dead_On\: NL Gain !M! Strength."
+    "DESCRIPTION": "Deal !D! damage. NL hermit:Dead_On: NL Gain !M! Strength."
   },
   "hermit:GhostlyPresence": {
     "NAME": "Ghostly Presence",
-    "DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On\: NL Apply !M! Weak to ALL enemies."
+    "DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On: NL Apply !M! Weak to ALL enemies."
   },
   "hermit:Adapt": {
     "NAME": "Adapt",
@@ -99,7 +99,7 @@
   },
   "hermit:Dive": {
     "NAME": "Dive",
-    "DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On\: NL Gain !M! expansioncontent:Plated *Armor."
+    "DESCRIPTION": "Gain !B! Block. NL hermit:Dead_On: NL Gain !M! expansioncontent:Plated *Armor."
   },
   "hermit:FlashPowder": {
     "NAME": "Flash Powder",

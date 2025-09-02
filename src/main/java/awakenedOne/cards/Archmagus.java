@@ -1,7 +1,6 @@
 package awakenedOne.cards;
 
 import awakenedOne.powers.ArchmagusPower;
-import awakenedOne.powers.DoubleSpellPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
@@ -19,7 +18,6 @@ public class Archmagus extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new ArchmagusPower(1));
-        applyToSelf(new DoubleSpellPower(1));
     }
 
     public void upp() {

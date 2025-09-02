@@ -14,6 +14,7 @@ public class ArchetypeAct2MirrorImageSimple extends ArchetypeBaseSilent {
         super("SI_MIRROR_ARCHETYPE", "Mirror");
 
         maxHPModifier += 240;
+        maxHPModifierAsc = 20;
         actNum = 2;
     }
 

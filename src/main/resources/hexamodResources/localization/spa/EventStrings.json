@@ -18,8 +18,8 @@
       "[Ahuyentar] #gObtén una #bVela #bNegra. #rPierde #r5 #rPV.",
       "[Ahuyentar] Marcharte.",
       "[Intercambiar por Poder] #gObtén una carta #yRara #galeatoria. #rTe vuelves #rMaldito - #rAleatorio.",
-      "[Intercambiar por Vida] #gObtén #g5 #gPV #gMáximos. #rTe vuelves #rMaldito - #rAleatorio.",
-      "[Intercambiar por Almas] #gObtén #g100 #gAlmas. #rTe vuelves #rMaldito - #rAleatorio.",
+      "[Intercambiar por Vida] #gObtén #g12 #gPV #gMáximos. #rTe vuelves #rMaldito - #rAleatorio.",
+      "[Intercambiar por Almas] #gObtén #g180 #gAlmas. #rTe vuelves #rMaldito - #rAleatorio.",
       "[Bloqueado] Intercambio Completado.",
       "[Marcharte]"
     ]
@@ -55,6 +55,7 @@
       "Tú, libre de las débiles leyes de la gravedad, ~flotas~ sobre el abismo sin sufrir daño.",
       " NL O simplemente flotas a voluntad."
     ],
+    "preview": "Mientras caes libremente, consideras tus opciones: Aterrizar de forma segura con tus mejores técnicas. Canalizar un Poder para sobrevivir a la caída. Atacar la pared para aferrarte a ella.",
     "OPTIONS": [
       "[Flotar] #gNo pierdes #gnada...",
       "[Marcharte]"

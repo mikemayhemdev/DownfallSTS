@@ -1,6 +1,9 @@
 package awakenedOne.powers;
 
+import awakenedOne.util.Wiz;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class RisingChantPower extends AbstractAwakenedPower {
@@ -17,9 +20,11 @@ public class RisingChantPower extends AbstractAwakenedPower {
     }
 
     @Override
-    public void onSpecificTrigger() {
-        applyToSelf(new StrengthPower(AbstractDungeon.player, amount));
-        flash();
+    public void onPlayCard(AbstractCard card, AbstractMonster m) {
+        if (Wiz.isChantActive()) {
+            applyToSelf(new StrengthPower(AbstractDungeon.player, amount));
+            flash();
+        }
     }
 
 }

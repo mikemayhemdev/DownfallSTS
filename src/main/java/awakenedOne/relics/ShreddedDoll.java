@@ -22,11 +22,10 @@ public class ShreddedDoll extends CustomRelic implements OnAwakenRelic {
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("ShreddedDoll.png"));
     private boolean activatedthiscombat = false;
 
+    //Shredded Doll
+
     public ShreddedDoll() {
         super(ID, IMG, OUTLINE, RelicTier.BOSS, LandingSound.MAGICAL);
-
-        //Shredded Doll
-
     }
 
 

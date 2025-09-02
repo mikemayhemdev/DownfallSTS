@@ -9,12 +9,15 @@ import sneckomod.SneckoMod;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.actions.RetractAction;
+import theHexaghost.ghostflames.CrushingGhostflame;
+import theHexaghost.ghostflames.InfernoGhostflame;
+import theHexaghost.ghostflames.SearingGhostflame;
 
 public class SpectralSpark extends AbstractHexaCard {
 
     public final static String ID = makeID("NaughtySpirit");
 
-    private static final int MAGIC = 4;
+    private static final int MAGIC = 3;
 
     public SpectralSpark() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
@@ -46,7 +49,15 @@ public class SpectralSpark extends AbstractHexaCard {
     }
 
     public void triggerOnGlowCheck() {
-        this.glowColor = GhostflameHelper.activeGhostFlame.charged ? AbstractCard.GOLD_BORDER_GLOW_COLOR : AbstractCard.BLUE_BORDER_GLOW_COLOR;
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR;
+
+        if (GhostflameHelper.activeGhostFlame instanceof CrushingGhostflame) {
+            if(GhostflameHelper.activeGhostFlame.getActiveFlamesTriggerCount() == 1){
+                this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
+            }
+        }
+
+        if(GhostflameHelper.activeGhostFlame.charged) this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR;
     }
 
     public void upgrade() {

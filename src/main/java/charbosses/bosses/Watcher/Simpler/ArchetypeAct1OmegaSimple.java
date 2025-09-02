@@ -2,7 +2,11 @@ package charbosses.bosses.Watcher.Simpler;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
+import charbosses.cards.colorless.EnPanacea;
 import charbosses.cards.purple.*;
+import charbosses.powers.bossmechanicpowers.CultistRevivePower;
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.SpawnMonsterAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,12 +15,13 @@ import com.megacrit.cardcrawl.monsters.exordium.Cultist;
 
 import java.util.ArrayList;
 
-public class ArchetypeAct2OmegaSimple extends ArchetypeBaseWatcher {
+public class ArchetypeAct1OmegaSimple extends ArchetypeBaseWatcher {
 
-    public ArchetypeAct2OmegaSimple() {
+    public ArchetypeAct1OmegaSimple() {
         super("WA_ARCHETYPE_CALM", "Calm");
-        maxHPModifier += 198;
-        actNum = 2;
+        maxHPModifier += 138;
+        maxHPModifierAsc = 10;
+        actNum = 1;
     }
 
     @Override
@@ -25,6 +30,10 @@ public class ArchetypeAct2OmegaSimple extends ArchetypeBaseWatcher {
 
         AbstractMonster cawcaw = new Cultist(-400F, 0);
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(cawcaw, true));
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(cawcaw, cawcaw, new CultistRevivePower(cawcaw, 1), 1, true, AbstractGameAction.AttackEffect.NONE));
+
+
+
     }
 
     @Override
@@ -37,58 +46,66 @@ public class ArchetypeAct2OmegaSimple extends ArchetypeBaseWatcher {
                 addToList(cardsList, new EnAlpha());
                 addToList(cardsList, new EnEndIsNigh());
                 turn++;
-//                    AbstractCharBoss.boss.powerhouseTurn = true;
                 break;
             case 1:
-                addToList(cardsList, new EnWishPlated(), false);
+                addToList(cardsList, new EnWaveOfTheHand());
+                addToList(cardsList, new EnDefendPurple());
                 turn++;
-//                    AbstractCharBoss.boss.powerhouseTurn = true;
                 break;
             case 2:
-                addToList(cardsList, new EnTruePeace());
+                addToList(cardsList, new EnWishPlated(), extraUpgrades);
+                addToList(cardsList, new EnPanacea(), false);
+
                 turn++;
-//                    AbstractCharBoss.boss.powerhouseTurn = true;
                 break;
             case 3:
-                addToList(cardsList, new EnTruePeace());
+                addToList(cardsList, new EnFalseWorship());
+                addToList(cardsList, new EnStrikePurple(), false);
                 turn++;
-//                    AbstractCharBoss.boss.powerhouseTurn = true;
                 break;
             case 4:
-                addToList(cardsList, new EnBeta());
+                addToList(cardsList, new EnTruePeace());
+                addToList(cardsList, new EnTruePeace());
                 turn++;
-//                    AbstractCharBoss.boss.powerhouseTurn = true;
                 break;
             case 5:
-                addToList(cardsList, new EnWishPlated(), false);
+                addToList(cardsList, new EnBeta());
+                addToList(cardsList, new EnDefendPurple(), false);
                 turn++;
-//                    AbstractCharBoss.boss.powerhouseTurn = true;
                 break;
             case 6:
-                addToList(cardsList, new EnTruePeace());
+                addToList(cardsList, new EnWaveOfTheHand());
+                addToList(cardsList, new EnDefendPurple());
                 turn++;
-//                    AbstractCharBoss.boss.powerhouseTurn = true;
                 break;
             case 7:
-                addToList(cardsList, new EnTruePeace());
+                addToList(cardsList, new EnWishPlated(), extraUpgrades);
+                addToList(cardsList, new EnPanacea(), false);
                 turn++;
-//                    AbstractCharBoss.boss.powerhouseTurn = true;
                 break;
             case 8:
-                addToList(cardsList, new EnOmega());
+                addToList(cardsList, new EnFalseWorship());
+                addToList(cardsList, new EnStrikePurple(), false);
                 turn++;
-//                    AbstractCharBoss.boss.powerhouseTurn = true;
                 break;
             case 9:
                 addToList(cardsList, new EnTruePeace());
                 addToList(cardsList, new EnTruePeace());
-                addToList(cardsList, new EnTruePeace());
-                //addToList(cardsList, new EnBlasphemy());
                 turn++;
-//                    AbstractCharBoss.boss.powerhouseTurn = true;
                 break;
             case 10:
+                addToList(cardsList, new EnOmega());
+                addToList(cardsList, new EnDefendPurple(), false);
+                turn++;
+                break;
+            case 11:
+                addToList(cardsList, new EnTruePeace());
+                addToList(cardsList, new EnTruePeace());
+                turn++;
+                break;
+            case 12:
                 addToList(cardsList, new EnJudgment());
+                addToList(cardsList, new EnTruePeace());
                 break;
         }
 

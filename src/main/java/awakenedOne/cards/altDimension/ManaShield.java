@@ -17,6 +17,7 @@ import static awakenedOne.util.Wiz.atb;
 import static awakenedOne.util.Wiz.att;
 
 import awakenedOne.cards.AbstractAwakenedCard;
+import sneckomod.SneckoMod;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,11 +29,13 @@ public class ManaShield extends AbstractAwakenedCard {
 
     public ManaShield() {
         super(ID, 2, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
-        baseBlock = 12;
+        baseBlock = 14;
+        tags.add(CardTags.HEALING);
 
         frameString = "gordian";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

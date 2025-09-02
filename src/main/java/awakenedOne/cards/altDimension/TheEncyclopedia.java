@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.util.Wiz;
 
 import awakenedOne.cards.AbstractAwakenedCard;
+import sneckomod.SneckoMod;
 
 @NoCompendium
 @NoPools
@@ -19,11 +20,13 @@ public class TheEncyclopedia extends AbstractAwakenedCard {
     public TheEncyclopedia() {
         super(ID, 2, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
         exhaust = true;
-        baseMagicNumber = magicNumber = 6;
+        baseMagicNumber = magicNumber = 4;
+        tags.add(CardTags.HEALING);
 
         frameString = "obelisk";
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
 
+        this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 
 

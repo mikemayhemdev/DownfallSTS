@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import com.megacrit.cardcrawl.vfx.combat.ReaperEffect;
+import hermit.actions.SoundAction;
 import slimebound.powers.TackleBuffPower;
 import slimebound.powers.TackleDebuffPower;
 
@@ -26,6 +27,11 @@ public class Thunderbolt extends AbstractSpellCard {
         baseDamage = 12;
         this.setBackgroundTexture("awakenedResources/images/512/bg_attack_awakened.png", "awakenedResources/images/1024/bg_attack_awakened.png");
         loadJokeCardImage(this, makeBetaCardPath(Thunderbolt.class.getSimpleName() + ".png"));
+        if (CardCrawlGame.isInARun()) {
+            if (AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
+                isMultiDamage = true;
+            }
+        }
     }
 
     @Override
@@ -37,37 +43,14 @@ public class Thunderbolt extends AbstractSpellCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToTop(new SoundAction(makeID("THUNDERSPELL")));
         if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
-            CardCrawlGame.sound.playA("ORB_LIGHTNING_EVOKE", 0.9F);
-            CardCrawlGame.sound.playA("ORB_LIGHTNING_PASSIVE", -0.3F);
             vfx(new LightningEffect(m.hb.cX, m.hb.cY));
-
-            isMultiDamage = false;
             dmg(m, AbstractGameAction.AttackEffect.NONE);
         } else {
-            //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
             this.addToBot(new VFXAction(new ReaperEffect()));
-            isMultiDamage = true;
             this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         }
-
-        /*
-        if (upgraded) {
-            if (!AbstractDungeon.player.hasRelic(EyeOfTheOccult.ID)) {
-                CardCrawlGame.sound.playA("ORB_LIGHTNING_EVOKE", 0.9F);
-                CardCrawlGame.sound.playA("ORB_LIGHTNING_PASSIVE", -0.3F);
-                vfx(new LightningEffect(m.hb.cX, m.hb.cY));
-                isMultiDamage = false;
-                dmg(m, AbstractGameAction.AttackEffect.NONE);
-            } else {
-                //AbstractDungeon.player.getRelic(EyeOfTheOccult.ID).flash();
-                this.addToBot(new VFXAction(new ReaperEffect()));
-                isMultiDamage = true;
-                this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-            }
-        }
-
-         */
 
     }
 

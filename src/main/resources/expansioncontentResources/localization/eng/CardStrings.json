@@ -91,6 +91,10 @@
     "NAME": "Antidote",
     "DESCRIPTION": "Retain. NL Lose !M! Poison."
   },
+  "expansioncontent:AntidoteAsPower": {
+    "NAME": "Can't Slow Down",
+    "DESCRIPTION": "Retain. NL Whenever you deal unblocked Attack damage, lose !M! Poison."
+  },
   "expansioncontent:SuperGhostShield": {
     "NAME": "Specter Shield",
     "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Gain[] [#e087a4]!B![] [#e087a4]Block.[] NL [#e087a4]Gain[] [#e087a4]!M![] [#e087a4]Blur.[]",
@@ -120,7 +124,7 @@
 
   "expansioncontent:TakeFlight": {
     "NAME": "Revitalize",
-    "DESCRIPTION": "Heal !M! HP. NL awakened:Chant: Heal !DM! HP."
+    "DESCRIPTION": "Heal !M! HP. NL awakened:Chant: Heal !DM! HP instead."
   },
   "expansioncontent:BeatOfDeath": {
     "NAME": "Beat Of Death",

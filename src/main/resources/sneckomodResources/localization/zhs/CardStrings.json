@@ -162,9 +162,9 @@
     "DESCRIPTION": "抽 !M! 张牌。 NL sneckomod:混淆 之。"
   },
   "sneckomod:QuickBite": {
-    "NAME": "蛇耙",
+    "NAME": "蛇削",
     "DESCRIPTION": "造成 !D! 点伤害。 NL 抽 !M! 张牌。 NL sneckomod:混淆 之。",
-    "UPGRADE_DESCRIPTION": "造成 !D! 伤害。 NL 抽 !M! 张牌。 NL sneckomod:混淆 之。"
+    "UPGRADE_DESCRIPTION": "造成 !D! 點傷害。 NL 抽 !M! 張牌。 NL sneckomod:混淆 這幾張牌。"
   },
   "sneckomod:QuickMove": {
     "NAME": "迅捷步伐",

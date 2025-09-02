@@ -4,7 +4,13 @@ import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Silent.ArchetypeBaseSilent;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.green.*;
+import charbosses.cards.other.Antidote;
+import charbosses.cards.other.AntidoteAsPower;
+import charbosses.cards.other.AntidoteAsPowerExpensive;
+import charbosses.powers.bossmechanicpowers.SilentPoisonPower;
 import com.esotericsoftware.spine.AnimationState;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -14,14 +20,29 @@ import java.util.ArrayList;
 
 public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
 
+    private int glassKnives;
     public ArchetypeAct1PoisonSimple() {
         super("SI_POISON_ARCHETYPE", "Poison");
 
 
         maxHPModifier += 100;
+        maxHPModifierAsc = 10;
         actNum = 1;
     }
 
+
+
+    @Override
+    public void addedPreBattle() {
+        super.addedPreBattle();
+
+        boolean hardmode = AbstractDungeon.ascensionLevel >= 19;
+        if (hardmode){
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new AntidoteAsPowerExpensive(), 1));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new AntidoteAsPower(), 1));
+        }
+    }
 
     public void initialize() {
 
@@ -38,6 +59,8 @@ public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
         }
     }
 
+
+
     @Override
     public ArrayList<AbstractCard> getThisTurnCards() {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
@@ -46,13 +69,11 @@ public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
             switch (turn) {
                 case 0: //Turn 1
                     if (looped){
-                        addToList(cardsList, new EnBouncingFlask());
-                        addToList(cardsList, new EnCatalyst());
-                        addToList(cardsList, new EnGiveAntidote());
+                        addToList(cardsList, new EnBouncingFlask(), extraUpgrades);
+                        addToList(cardsList, new EnPoisonedStab(), false);
                     } else {
                         addToList(cardsList, new EnNewToxins());
-                        addToList(cardsList, new EnBouncingFlask());
-                        addToList(cardsList, new EnGiveAntidote());
+                        addToList(cardsList, new EnBouncingFlask(), extraUpgrades);
                     }
 
                     turn++;
@@ -60,44 +81,33 @@ public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
 
                 case 1: //Turn 2
 
-                    addToList(cardsList, new EnPoisonedStab(), false);
-                    addToList(cardsList, new EnPoisonedStab(), false);
+                    addToList(cardsList, new EnDodgeAndRoll());
+                    addToList(cardsList, new EnDodgeAndRoll());
                     turn++;
                     break;
 
                 case 2: //Turn 3
 
-                    addToList(cardsList, new EnFootwork(),extraUpgrades);
-                    addToList(cardsList, new EnDodgeAndRoll());
+                    addToList(cardsList, new EnCripplingCloud(),false);
+                    addToList(cardsList, new EnGlassKnife(glassKnives));
                     turn++;
                     break;
 
                 case 3: //Turn 4
 
-                    addToList(cardsList, new EnNoxiousFumes());
+                    glassKnives++; //this is here because it confirms glass knife actually got played, not reset
+                    addToList(cardsList, new EnBane(), false);
+                    addToList(cardsList, new EnBane(), false);
 
                     turn++;
                     break;
 
                 case 4: //Turn 5
-
-                    addToList(cardsList, new EnBane());
-                    addToList(cardsList, new EnBane());
-
+                    addToList(cardsList, new EnDeadlyPoison(), false);
+                    addToList(cardsList, new EnNoxiousFumes(), false);
                     turn++;
 
-                    break;
-
-                case 5: //Turn 6
-
-                    if (looped){
-                        addToList(cardsList, new EnLegSweep());
-                    } else {
-                        addToList(cardsList, new EnTerror());
-                    }
-                turn = 0;
-                looped = true;
-
+                    turn = 3;
                     break;
 
 

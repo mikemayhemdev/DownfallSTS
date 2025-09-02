@@ -1,18 +1,14 @@
 package awakenedOne.cards.tokens.spells;
 
 import awakenedOne.powers.AphoticFountPower;
-import awakenedOne.relics.EyeOfTheOccult;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import com.megacrit.cardcrawl.vfx.combat.FrostOrbActivateEffect;
+import hermit.actions.SoundAction;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.atb;
 
 public class Cryostasis extends AbstractSpellCard {
     public final static String ID = makeID(Cryostasis.class.getSimpleName());
@@ -25,7 +21,7 @@ public class Cryostasis extends AbstractSpellCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        CardCrawlGame.sound.play("ORB_FROST_CHANNEL", 0.1F);
+        this.addToTop(new SoundAction(makeID("ICESPELL")));
         AbstractDungeon.effectsQueue.add(new FrostOrbActivateEffect(p.hb.cX, p.hb.cY));
         blck();
 

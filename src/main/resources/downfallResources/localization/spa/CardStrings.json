@@ -1,19 +1,19 @@
 {
   "downfall:Aged": {
     "NAME": "Envejecido",
-    "DESCRIPTION": "Injugable. Etérea. NL Al final de tu turno, añade un *Vacío a la parte superior de tu pila de robo."
+    "DESCRIPTION": "Injugable. Etérea. NL Al final de tu turno, añade un *Vacío en la parte superior de tu pila de extracción."
   },
   "downfall:Bewildered": {
     "NAME": "Desconcertado",
-    "DESCRIPTION": "Injugable. Etérea. NL Al ser robada, sneckomod:Confunde tu mano."
+    "DESCRIPTION": "Al robarla, sneckomod:Confunde esta carta. NL Agota."
   },
   "downfall:Icky": {
     "NAME": "Pegajoso",
-    "DESCRIPTION": "Gana un *Viscoso. NL Agota."
+    "DESCRIPTION": "Retiene. NL Agota."
   },
   "downfall:Haunted": {
     "NAME": "Embrujado",
-    "DESCRIPTION": "Etérea. Injugable. NL Siempre que otra carta se *Agote mientras esta esté en tu mano, recibes 2 de daño."
+    "DESCRIPTION": "Etérea. Injugable. NL Siempre que otra carta se *Agote mientras esta esté en tu mano, recibes !M! de daño."
   },
   "downfall:Malfunctioning": {
     "NAME": "Defectuosa",
@@ -23,12 +23,93 @@
     "NAME": "Disperso",
     "DESCRIPTION": "Al final de tu turno, si esta carta está en tu mano, añade una copia de ella a tu pila de descarte. NL Agota."
   },
+  "downfall:CurseOfBlood": {
+    "NAME": "Haemophilia",
+    "DESCRIPTION": "Pierde [E] al inicio de tu próximo turno. NL Agota.",
+    "EXTENDED_DESCRIPTION": ["Note for LOC: Hemophilia is a name for a disorder for when your blood doesn’t clot properly. I added the a in the middle for coolness factor."]
+  },
   "downfall:SummonMushrooms": {
     "NAME": "Hongos Entre Nosotros",
     "DESCRIPTION": "Mata todos los Hongos. Cura PV igual a sus PV restantes. NL Invoca dos Hongos."
   },
   "downfall:BossMaintenance": {
     "NAME": "Mantenimiento",
-    "DESCRIPTION": "Los *Golpes Hacen !M! más de daño este combate. NL Gana !B! de Destreza. NL Esta carta cuesta 1 más durante este combate."
+    "DESCRIPTION": "Los *Golpes Hacen !M! de daño adicional este combate. NL Gana !B! de Destreza."
+  },
+  "downfall:CuriousRobot": {
+    "NAME": "Robot Curioso",
+    "DESCRIPTION": "Cuando tu oponente juega un Poder, gana 1 Foco. Tu Fuerza afecta a tu Foco."
+  },
+  "downfall:Murderbot": {
+    "NAME": "Ladrón de Energía",
+    "DESCRIPTION": "Cada vez que infliges daño de ataque no bloqueado, añade un *Vacío a la pila de descarte de tu oponente."
+  },
+  "downfall:Temptation": {
+    "NAME": "Tentación",
+    "DESCRIPTION": "Baraja !M! Poderes aleatorios en la pila de extracción de tu oponente."
+  },
+  "downfall:BagOfKnives": {
+    "NAME": "Bolsa de Cuchillos",
+    "DESCRIPTION": "La primera vez que juegas una carta que cuesta 2 o más cada turno, gana 2 *Shivs."
+  },
+  "downfall:Hallunication": {
+    "NAME": "Alucinación",
+    "DESCRIPTION": "Oculta tu ubicación real cada turno. Cuando tú o la ilusión son Atacados, la ilusión se desvanece."
+  },
+  "downfall:NewToxins": {
+    "NAME": "Nuevas Toxinas",
+    "DESCRIPTION": "El Veneno ya no se desvanece, pero es bloqueable y causa daño al final del turno en lugar del inicio."
+  },
+  "downfall:FeedingFrenzy": {
+    "NAME": "Frenesí Alimenticio",
+    "DESCRIPTION": "*Segador también apunta a TODOS los *Hongos. Gana 1 de Fuerza cuando matas a tu propio *Hongo."
+  },
+  "downfall:StatusMirror": {
+    "NAME": "Espejo Mágico",
+    "DESCRIPTION": "Las cartas de Estado que genera este personaje se añaden a ti en su lugar."
+  },
+  "downfall:EyeForAnEye": {
+    "NAME": "Ojo por Ojo",
+    "DESCRIPTION": "Si tu oponente ha jugado más Ataques que no Ataques, estás en Ira. Si no, estás en Calma."
+  },
+  "downfall:TruePeace": {
+    "NAME": "Verdadera Paz",
+    "DESCRIPTION": "No hacer nada. Esperar el fin inevitable de todas las cosas."
+  },
+  "downfall:EndIsNigh": {
+    "NAME": "El Fin está Cerca",
+    "DESCRIPTION": "TODOS ganan !M! Ritual."
+  },
+  "downfall:FalseWorship": {
+    "NAME": "Falsa Adoración",
+    "DESCRIPTION": "Revive a tu Cultista si está muerto. De lo contrario, revive al morir, restaurando 50% de PV."
+  },
+  "downfall:FleetingFaith": {
+    "NAME": "Fe Fugaz",
+    "DESCRIPTION": "Gana 1 Mantra cuando tu oponente juega una carta. Pierde 5 al inicio de tu turno."
+  },
+  "downfall:FaithRewarded": {
+    "NAME": "Fe Recompensada",
+    "DESCRIPTION": "Si entras en Divinidad, nunca puedes salir de ella."
+  },
+  "downfall:Crusade": {
+    "NAME": "Crusada",
+    "DESCRIPTION": "Elimina todas las desventajas. NL Pierde todo el Mantra. Sana !M! PV y gana 1 de Fuerza por cada Mantra perdido."
+  },
+  "downfall:Hyperfocused": {
+    "NAME": "Foco Mortal",
+    "DESCRIPTION": "Siempre obtiene efectos de *En Muerte. Después de recibir 10 de daño, elimina los efectos de *En Muerte por ese turno."
+  },
+  "downfall:Arsenal": {
+    "NAME": "Arsenal Viviente",
+    "DESCRIPTION": "Invoca un *Daga *Condenada."
+  },
+  "downfall:Steady": {
+    "NAME": "Estable",
+    "DESCRIPTION": "*Ira ahora incrementa el daño infligido y recibido en un 50% en lugar de un 100%."
+  },
+  "downfall:Revolver": {
+    "NAME": "Revólver",
+    "DESCRIPTION": "Los turnos futuros son dictados por la *Rueda *del *Destino. Al ser atacado, la *Rueda avanza un paso."
   }
 }

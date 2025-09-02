@@ -77,10 +77,9 @@ public class WanderingSpecter extends AbstractImageEvent {
             shopForMore2 = true;
         }
         if ((!AbstractDungeon.player.hasRelic(BlueCandle.ID)) || (!AbstractDungeon.player.hasRelic(BlackCandle.ID))) {
-            if (EvilModeCharacterSelect.evilMode || (AbstractDungeon.player instanceof hermit)) {
+            if (EvilModeCharacterSelect.evilMode || (AbstractDungeon.player instanceof hermit) && !downfallMod.disableBaseGameAdjustments) {
                 this.imageEventText.setDialogOption(OPTIONS[3], new BlackCandle());
-            }
-            if (!EvilModeCharacterSelect.evilMode && !(AbstractDungeon.player instanceof hermit)) {
+            } else {
                 this.imageEventText.setDialogOption(OPTIONS[3], new BlueCandle());
             }
         } else {
@@ -143,17 +142,15 @@ public class WanderingSpecter extends AbstractImageEvent {
 //                            AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), new BlueCandle());// 83
                             AbstractDungeon.player.damage(new DamageInfo(null, 5, DamageInfo.DamageType.HP_LOSS));
                             AbstractDungeon.getCurrRoom().rewards.clear();
-                            if (!EvilModeCharacterSelect.evilMode && !(AbstractDungeon.player instanceof hermit)) {
+                            if (!EvilModeCharacterSelect.evilMode && !(AbstractDungeon.player instanceof hermit) && !downfallMod.disableBaseGameAdjustments) {
                                 AbstractDungeon.getCurrRoom().addRelicToRewards(new BlueCandle());
-                            }
-                            if (EvilModeCharacterSelect.evilMode || (AbstractDungeon.player instanceof hermit)) {
-                               //AbstractDungeon.getCurrRoom().addRelicToRewards(new BlueCandle());
+                                downfallMod.removeAnyRelicFromPools(BlueCandle.ID);
+                            } else {
                                 AbstractDungeon.getCurrRoom().addRelicToRewards(new BlackCandle());
+                                downfallMod.removeAnyRelicFromPools(BlackCandle.ID);
                             }
                             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
                             AbstractDungeon.combatRewardScreen.open();
-                            downfallMod.removeAnyRelicFromPools(BlueCandle.ID);
-                            downfallMod.removeAnyRelicFromPools(BlackCandle.ID);
                         }
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[9]);
@@ -181,6 +178,9 @@ public class WanderingSpecter extends AbstractImageEvent {
 
                         cardsAdded.add(curse.cardID);
                         cardsAdded.add(rareCard.cardID);
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[9]);
+                        this.screen = CurScreen.END;
 
                         return;
                     case 1:
@@ -191,7 +191,10 @@ public class WanderingSpecter extends AbstractImageEvent {
 
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                         cardsAdded.add(curse.cardID);
-                        maxHpAdded = 5;
+                        maxHpAdded = 12;
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[9]);
+                        this.screen = CurScreen.END;
 
                         return;
                     case 2:
@@ -203,7 +206,10 @@ public class WanderingSpecter extends AbstractImageEvent {
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
 
                         cardsAdded.add(curse.cardID);
-                        goldAdded = 100;
+                        goldAdded = 180;
+                        this.imageEventText.clearAllDialogs();
+                        this.imageEventText.setDialogOption(OPTIONS[9]);
+                        this.screen = CurScreen.END;
 
                         return;
                     case 3:

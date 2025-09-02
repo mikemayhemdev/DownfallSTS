@@ -54,6 +54,6 @@
     "NAMES": [
       "curiosity"
     ],
-    "DESCRIPTION": "Whenever you play a #yPower card, gain 1 #yStrength."
+    "DESCRIPTION": "Whenever you play a #yPower card, gain #b1 #yStrength [REMOVE_SPACE]."
   }
 ]

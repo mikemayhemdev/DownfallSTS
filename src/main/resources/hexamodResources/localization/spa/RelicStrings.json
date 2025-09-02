@@ -3,14 +3,17 @@
     "NAME": "Marca Espiritual",
     "FLAVOR": "Un protector encadenado.",
     "DESCRIPTIONS": [
-      "La primera vez que #yIncendies una llama fantasmal cada turno, gana #b4 de #yBloqueo [REMOVE_SPACE]."
+      "La primera vez que #yIncendies una llama fantasmal cada turno, gana #b",
+      " de #yBloqueo [REMOVE_SPACE]."
     ]
   },
   "hexamod:TheBrokenSeal": {
     "NAME": "El Sello Roto",
     "FLAVOR": "Poder ilimitado, desenfrenado e insaciable.",
     "DESCRIPTIONS": [
-      "Al obtenerlo, aumenta tu PV Máx. en #b10 [REMOVE_SPACE], luego cura todo tu PV. Comienza cada combate con #b2 de #yFuerza [REMOVE_SPACE], #b2 de #yDestreza [REMOVE_SPACE] y #b2 de #yIntensidad [REMOVE_SPACE]. No puedes volver a recibir #pEl #pSello #pRoto ni otros sellos."
+      "Al obtenerlo, aumenta tu PV Máx. en #b",
+      " [REMOVE_SPACE], luego cura todo tu PV. Comienza cada combate con #b2",
+      " de #yFuerza [REMOVE_SPACE], #yDestreza [REMOVE_SPACE] e #yIntensidad [REMOVE_SPACE]. No puedes volver a recibir #pEl #pSello #pRoto ni otros sellos."
     ]
   },
   "hexamod:UnbrokenSoul": {
@@ -18,21 +21,24 @@
     "FLAVOR": "Veamos si podemos hacerlo... mejor.",
     "DESCRIPTIONS": [
       "Reemplaza ",
-      " [REMOVE_SPACE].[] NL Cada vez que #yIncendies una llama fantasmal, gana #b4 de #yBloqueo [REMOVE_SPACE]."
+      " [REMOVE_SPACE].[] NL Cada vez que #yIncendies una llama fantasmal, gana #b",
+      " de #yBloqueo [REMOVE_SPACE]."
     ]
   },
   "hexamod:IceCube": {
     "NAME": "Amuleto Helado de Xanatos",
     "FLAVOR": "Siento... frío.",
     "DESCRIPTIONS": [
-      "Gana [E] al inicio de tu turno. Comienza cada combate con #b1 menos de #yIntensidad [REMOVE_SPACE], y no recibes #yIntensidad de la #yLlama #yFantasmal #yInfernal [REMOVE_SPACE]."
+      "Gana [E] al inicio de tu turno. Comienza cada combate con #b",
+      " menos de #yIntensidad [REMOVE_SPACE], y no recibes #yIntensidad de la #yLlama #yFantasmal #yInfernal [REMOVE_SPACE]."
     ]
   },
   "hexamod:SoulStone": {
     "NAME": "Piedra de Almas",
     "FLAVOR": "¡Un alma animaría esto!",
     "DESCRIPTIONS": [
-      "Cada vez que #yAgotes #b3 cartas, #yIncendia la llama fantasmal actual."
+      "Cada vez que #yAgotes #b",
+      " cartas, #yIncendia la llama fantasmal actual."
     ]
   },
   "hexamod:RecyclingMachine": {
@@ -53,14 +59,15 @@
     "NAME": "Frasco de TOBSCo",
     "FLAVOR": "Un poco más de calor lo mejora todo.",
     "DESCRIPTIONS": [
-      "Comienza cada combate con #b1 de #yIntensidad [REMOVE_SPACE]."
+      "Comienza cada combate con #b",
+      " de #yIntensidad [REMOVE_SPACE]."
     ]
   },
   "hexamod:SoulOfChaos": {
     "NAME": "Alma del Caos",
     "FLAVOR": "Caos manifestado.",
     "DESCRIPTIONS": [
-      "La segunda #yLlama #yFantasmal #yAbrasadora se convierte en una #yLlama #yFantasmal #ydel #yCaos [REMOVE_SPACE]. NL La #yLlama #ydel #yCaos se activa al terminar tu turno sobre ella. NL #yIgnición [REMOVE_SPACE]: #yAdivina #bn y luego juega la primera carta de tu pila de robo, #bn es modificado por la #yIntensidad [REMOVE_SPACE]."
+      "La segunda #yLlama #yFantasmal #yAbrasadora se convierte en una #yLlama #yFantasmal #ydel #yCaos [REMOVE_SPACE]. NL La #yLlama #ydel #yCaos se activa al terminar tu turno sobre ella. NL #yIgnición [REMOVE_SPACE]: #yAdivina #bn y luego juega la primera carta de tu pila de extracción, #bn es modificado por la #yIntensidad [REMOVE_SPACE]."
     ]
   },
   "hexamod:JarOfFuel": {
@@ -74,21 +81,25 @@
     "NAME": "Vara de Fortalecimiento de Tricky",
     "FLAVOR": "Respaldada por el estudio de mil libros. ¡El conocimiento es poder!",
     "DESCRIPTIONS": [
-      "La primera vez que juegas una carta de #yPoder en cada combate, gana #b6 de #yBloqueo y #b1 de #yFuerza [REMOVE_SPACE]."
+      "La primera vez que juegas una carta de #yPoder en cada combate, gana #b",
+      " de #yBloqueo y #b",
+      " de #yFuerza [REMOVE_SPACE]."
     ]
   },
   "hexamod:CandleOfCauterizing": {
     "NAME": "Vela Roja",
     "FLAVOR": "El fuego QUEMA...",
     "DESCRIPTIONS": [
-      "Cada vez que apliques #yQuemarAlma [REMOVE_SPACE], aplica #b3 #yQuemarAlma adicionales [REMOVE_SPACE]."
+      "Cada vez que apliques #yQuemarAlma [REMOVE_SPACE], aplica #b",
+      " #yQuemarAlma adicionales [REMOVE_SPACE]."
     ]
   },
   "hexamod:Sixitude": {
     "NAME": "Marca de Seis Puntas",
     "FLAVOR": "¡Fuego, fuego, fuego, fuego, fuego, FUEGO!",
     "DESCRIPTIONS": [
-      "Cada vez que juegues #b6 cartas, obtén un #ygremlin:Eco de un #yGolpe básico [REMOVE_SPACE]. Cuesta #b0 [REMOVE_SPACE]."
+      "Cada vez que juegues #b",
+      " cartas de coste mayor a 0, obtén un #ygremlin:Eco de un #yGolpe básico [REMOVE_SPACE]. Cuesta #b0 [REMOVE_SPACE]."
     ]
   },
   "hexamod:Libra": {

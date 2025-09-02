@@ -24,7 +24,8 @@
     "NAME": "Anillo de la Serpentija",
     "FLAVOR": "Ilegible, inentendible, entrega el jueves.",
     "DESCRIPTIONS": [
-      "Cada vez que actives #b3 efectos de #ysneckomod:Exceso, aplica #b1 #yDébil y #yVulnerable a un enemigo aleatorio."
+      "Cada vez que actives #b",
+      " efectos de #ysneckomod:Exceso, aplica #b1 #yDébil y #yVulnerable a un enemigo al azar."
     ]
   },
   "sneckomod:CrystallizedMud": {
@@ -38,7 +39,8 @@
     "NAME": "Dado Cargado",
     "FLAVOR": "Relleno de queso.",
     "DESCRIPTIONS": [
-      "Cada vez que una carta sea #ysneckomod:Confundida, obtén #b1 de #yBloqueo [REMOVE_SPACE]."
+      "Cada vez que una carta sea #ysneckomod:Confundida, obtén #b",
+      " de #yBloqueo [REMOVE_SPACE]."
     ]
   },
   "sneckomod:RareBoosterPack": {
@@ -90,14 +92,15 @@
       "Al obtener esta reliquia, elige una carta con efecto de #ysneckomod:Exceso. Cada vez que la juegues, obtén #b4 de #yBloqueo y activa su efecto de #yExceso incluso si no tienes más de #b5 cartas en la mano.",
       "Elige una carta para ",
       "Cada vez que se juegue ",
-      ", obtén #b4 de #yBloqueo y activa su efecto de #ysneckomod:Exceso incluso si no tienes más de #b5 cartas en la mano."
+      ", obtén #b4 de #yBloqueo y activa su efecto de #ysneckomod:Exceso incluso si no tienes más de #b5 cartas en la mano.",
+      "La carta adjunta a esta reliquia ha sido #rremovida de tu mazo, la reliquia ya no funciona."
     ]
   },
   "sneckomod:BabySnecko": {
     "NAME": "Serpentija Joven",
     "FLAVOR": "Desconcertantemente adorable.",
     "DESCRIPTIONS": [
-      "Inflige #b9 de daño a un enemigo aleatorio y #ysneckomod:Confunde #b2 cartas aleatorias en tu mano (que no cuesten #b0, ni sean de costo #bX [REMOVE_SPACE], ni #yInjugables [REMOVE_SPACE]) al comienzo de tu turno."
+      "Inflige #b9 de daño a un enemigo al azar y #ysneckomod:Confunde #b2 cartas aleatorias en tu mano (que no cuesten #b0, ni sean de costo #bX [REMOVE_SPACE], ni #yInjugables [REMOVE_SPACE]) al comienzo de tu turno."
     ]
   },
   "sneckomod:SneckoCommon": {

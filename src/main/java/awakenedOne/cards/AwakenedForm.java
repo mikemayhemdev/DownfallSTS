@@ -10,8 +10,7 @@ import com.megacrit.cardcrawl.powers.CuriosityPower;
 import com.megacrit.cardcrawl.powers.RitualPower;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.applyToSelf;
-import static awakenedOne.util.Wiz.applyToSelfTop;
+import static awakenedOne.util.Wiz.*;
 
 public class AwakenedForm extends AbstractAwakenedCard {
     public final static String ID = makeID(AwakenedForm.class.getSimpleName());
@@ -20,18 +19,19 @@ public class AwakenedForm extends AbstractAwakenedCard {
     public AwakenedForm() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
-        //baseSecondMagic = secondMagic = 3;
+        baseSecondMagic = secondMagic = 1;
         tags.add(BaseModCardTags.FORM);
         loadJokeCardImage(this, makeBetaCardPath(AwakenedForm.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        if (upgraded) awaken(true);
         applyToSelfTop(new CuriosityPower(p, magicNumber));
-        applyToSelfTop(new RitualPower(p, magicNumber, true));
+        applyToSelfTop(new RitualPower(p, secondMagic, true));
     }
 
     @Override
     public void upp() {
-        //upgradeMagicNumber(-1);
+        upgradeSecondMagic(1);
     }
 }

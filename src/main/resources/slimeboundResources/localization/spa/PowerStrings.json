@@ -37,28 +37,28 @@
   "Slimebound:BuffAttackSlimesPower": {
     "NAME": "Mejora: Bruta",
     "DESCRIPTIONS": [
-      "La Baba #yBruta inflige #b",
+      "Las Babas #yBrutas infligen #b",
       " de daño adicional."
     ]
   },
   "Slimebound:BuffPoisonSlimesPower": {
     "NAME": "Mejora: Ácida",
     "DESCRIPTIONS": [
-      "La Baba #yVenenosa aplica #b",
+      "Las Babas #yVenenosas aplican #b",
       " más de #yVeneno [REMOVE_SPACE]."
     ]
   },
   "Slimebound:BuffSlimingSlimesPower": {
     "NAME": "Mejora: Lodosa",
     "DESCRIPTIONS": [
-      "La Baba #yLodosa aplican #b",
+      "Las Babas #yLodosas aplican #b",
       " más de #yBaba [REMOVE_SPACE]."
     ]
   },
   "Slimebound:BuffShieldSlimesPower": {
     "NAME": "Mejora: Absorbente",
     "DESCRIPTIONS": [
-      "La Baba #yAbsorbente inflige #b",
+      "Las Babas #yAbsorbentes infligen #b",
       " de daño adicional."
     ]
   },
@@ -83,7 +83,8 @@
     "DESCRIPTIONS": [
       "#yDividir cuesta #b",
       " PV menos. Agrega #b",
-      " carta(s) #yDivididas aleatorias a tu mano cada turno."
+      " carta #yDividida aleatoria a tu mano cada turno.",
+      " cartas #yDivididas aleatorias a tu mano cada turno."
     ]
   },
   "Slimebound:ComboAttackPower": {
@@ -111,7 +112,8 @@
     "DESCRIPTIONS": [
       "Obtén #b",
       " [E] adicional en el próximo turno.",
-	  " [E] adicionales en el próximo turno."
+	    " [E] adicionales en el próximo turno.",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
     ]
   },
   "Slimebound:SelfFormingGooPower": {
@@ -254,7 +256,7 @@
     "NAME": "Baba Residual",
     "DESCRIPTIONS": [
       "Aplica #b",
-      " de #yBaba a un enemigo aleatorio cada vez que pierdas PV."
+      " de #yBaba a un enemigo al azar cada vez que pierdas PV."
     ]
   },
   "Slimebound:TackleBuffPower": {

@@ -33,6 +33,7 @@ import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.downfallMod;
+import downfall.monsters.AwakenedOneMirror;
 import downfall.monsters.GremlinMirror;
 import downfall.monsters.SneckoMirror;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
@@ -150,11 +151,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
                             AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
                         }
                         else if (AbstractDungeon.player instanceof AwakenedOneChar) {
-                            AbstractMonster m = new AwakenedOne(0,0);
-                            m.maxHealth = Math.round(m.maxHealth * .4F);
-                            m.currentHealth = m.maxHealth;
-                            m.powers.add(new StrengthPower(m, -4));
-                            AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(m);
+                            AbstractDungeon.getCurrRoom().monsters = new MonsterGroup(new AwakenedOneMirror(0,0));
                         } else {
                             ArrayList<String> list = new ArrayList();
                             list.add("Slime Boss");
