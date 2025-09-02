@@ -50,7 +50,6 @@ public class ArchetypeAct3DivinitySimple extends ArchetypeBaseWatcher {
 
         AbstractCreature m = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new WatcherDivinityPower(m)));
-        if (AbstractDungeon.ascensionLevel >= 19) AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new IntangiblePower(m, 1)));
 
     }
 

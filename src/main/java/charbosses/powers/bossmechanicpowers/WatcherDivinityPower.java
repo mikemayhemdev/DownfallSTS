@@ -25,6 +25,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.vfx.combat.DevotionEffect;
 import com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect;
@@ -65,7 +66,7 @@ public class WatcherDivinityPower extends AbstractBossMechanicPower {
                 this.amount++;
                 if (this.amount == 6) {
                     Wiz.atb(new VFXAction(new DevotionEffect(), 0.4F));
-                    this.addToBot(new ApplyPowerAction(this.owner, this.owner, new IntangiblePower(this.owner, 1), 1));
+                    this.addToBot(new ApplyPowerAction(this.owner, this.owner, new IntangiblePlayerPower(this.owner, 1), 1));
                     this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyMantraPower(this.owner, 1), 1));
                 }
             }
