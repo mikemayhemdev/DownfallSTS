@@ -24,7 +24,7 @@ public class Icky extends CustomCard {
     private static final CardRarity RARITY = CardRarity.CURSE;
     private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardStrings cardStrings;
-    private static final int COST = 2;
+    private static final int COST = 1;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
@@ -42,7 +42,7 @@ public class Icky extends CustomCard {
         this.magicNumber = this.baseMagicNumber = 1;
        // cardsToPreview = new Slimed();
         this.exhaust = true;
-        selfRetain = true;
+       // selfRetain = true;
         tags.add(downfallMod.DOWNFALL_CURSE);
     }
 
