@@ -255,7 +255,7 @@ public class OrbitingSpells {
 
     public static void postPlayerRender(SpriteBatch sb) {
         sb.setColor(Color.WHITE.cpy());
-        drawTextureScaled(sb, panelBG, PANEL_BG_X, PANEL_BG_Y)
+        drawTextureScaled(sb, panelBG, PANEL_BG_X, PANEL_BG_Y);
         FontHelper.renderFontLeftTopAligned(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], POSITION_X, Settings.HEIGHT - POSITION_Y + (50 * Settings.scale), Settings.GOLD_COLOR);
         int xr = 0;
 
