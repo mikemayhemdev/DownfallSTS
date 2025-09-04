@@ -153,10 +153,15 @@
   "hexamod:PastPower": {
     "NAME": "Devil's Dance",
     "DESCRIPTIONS": [
-      "Whenever you #yRetract, draw #b",
-      " card.",
-      " cards."
+      "The first time you #yAdvance or #yRetract each turn, draw a card.",
+      "The first #b",
+      " times you gain #yAdvance or #yRetract each turn, draw a card.",
+      " NL This effect can be triggered #b",
+      " more times this turn.",
+      " more time this turn.",
+      " NL This effect cannot be triggered again this turn."
     ]
+  }
   },
   "hexamod:PotionPostCombatPower": {
     "NAME": "Sealed Reward: Potion",
