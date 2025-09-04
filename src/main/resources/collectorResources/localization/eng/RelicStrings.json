@@ -103,10 +103,9 @@
     "NAME": "Forbidden Fruit",
     "FLAVOR": "This species of fruit looks completely unfamiliar.",
     "DESCRIPTIONS": [
-      "Upon pickup, choose and obtain one Common, Uncommon, and Rare card from all available. Then, obtain a #ySapped [REMOVE_SPACE].",
-      "Choose a Rare card to add to your deck.",
-      "Choose an Uncommon card to add to your deck.",
-      "Choose a Common card to add to your deck."
+      "Upon pickup, add a #rParasite to your deck and gain #b",
+      " Max HP. Start each combat with #b",
+      " #yDexterity [REMOVE_SPACE]."
     ]
   },
   "collector:RoughDiamond": {
