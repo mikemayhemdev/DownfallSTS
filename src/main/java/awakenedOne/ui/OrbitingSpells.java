@@ -230,15 +230,22 @@ public class OrbitingSpells {
             }
         }
         barBox.update();
-        int powersPlayed = (int) AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count();
-        for (int i = 0; i < powersPlayed; i++) {
+        for (int i = 0; i < cappedPowersThisCombat(); i++) {
             barSlotAnimTimers.put(i, barSlotAnimTimers.get(i) + Gdx.graphics.getDeltaTime());
         }
     }
 
+    private static int cappedPowersThisCombat(){
+        int powers = powersThisCombat;
+        if (powers > POWERS_TO_AWAKEN - 1) {
+            powers = POWERS_TO_AWAKEN - 1;
+        }
+        return powers;
+    }
+
     private static Texture getPipForSlot(int index) {
         if (Wiz.isAwakened()) return pipComplete;
-        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= index) {
+        if (cappedPowersThisCombat() >= index) {
             if (barSlotAnimTimers.get(index) <= 0.1F) return pipFillAnim1;
             if (barSlotAnimTimers.get(index) <= 0.2F) return pipFillAnim2;
             return filledPip;

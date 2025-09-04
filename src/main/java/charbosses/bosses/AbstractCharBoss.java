@@ -426,24 +426,30 @@ public abstract class AbstractCharBoss extends AbstractMonster {
                     public void update() {
                         isDone = true;
                         int budget = energyPanel.getCurrentEnergy();
-                        for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-                            if (c.costForTurn <= budget && c.costForTurn != -2 && c instanceof AbstractBossCard) {
-                                ((AbstractBossCard) c).createIntent();
-                                ((AbstractBossCard) c).bossLighten();
-                                budget -= c.costForTurn;
-                                budget += ((AbstractBossCard) c).energyGeneratedIfPlayed;
-                                if (budget < 0) budget = 0;
-                            } else if (c.costForTurn == -2 && c.type == AbstractCard.CardType.CURSE && c.color == AbstractCard.CardColor.CURSE) {
-                                ((AbstractBossCard) c).bossLighten();
+                        if (AbstractCharBoss.boss != null) {
+                            if (AbstractCharBoss.boss.hand != null) {
+                                for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                                    if (c.costForTurn <= budget && c.costForTurn != -2 && c instanceof AbstractBossCard) {
+                                        ((AbstractBossCard) c).createIntent();
+                                        ((AbstractBossCard) c).bossLighten();
+                                        budget -= c.costForTurn;
+                                        budget += ((AbstractBossCard) c).energyGeneratedIfPlayed;
+                                        if (budget < 0) budget = 0;
+                                    } else if (c.costForTurn == -2 && c.type == AbstractCard.CardType.CURSE && c.color == AbstractCard.CardColor.CURSE) {
+                                        ((AbstractBossCard) c).bossLighten();
+                                    }
+                                }
+
+                                for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
+                                    AbstractBossCard cB = (AbstractBossCard) c;
+                                    cB.refreshIntentHbLocation();
+                                }
                             }
-                        }
-                        for (AbstractCard c : AbstractCharBoss.boss.hand.group) {
-                            AbstractBossCard cB = (AbstractBossCard) c;
-                            cB.refreshIntentHbLocation();
                         }
 
                     }
                 });
+
             }
 
             this.cardsPlayedThisTurn = 0;
