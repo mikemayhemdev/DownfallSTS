@@ -63,7 +63,7 @@ public class OrbitingSpells {
 
     static {
         for (int i = 0; i < 10; i++) {
-            boxes.add(new Hitbox(POSITION_X, Settings.HEIGHT - (POSITION_Y + (i * (70F * Settings.scale))) - 35 * Settings.scale, 200F * Settings.scale, 45F * Settings.scale));
+            boxes.add(new Hitbox(POSITION_X - (5F * Settings.scale), Settings.HEIGHT - (POSITION_Y + (i * (70F * Settings.scale))) - 35 * Settings.scale, 200F * Settings.scale, 45F * Settings.scale));
         }
 
         cardIcons.put(BurningStudy.ID, TexLoader.getTexture("awakenedResources/images/ui/BurningStudy.png"));
