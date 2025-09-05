@@ -20,7 +20,7 @@
     "FLAVOR": "Gives power to spoken words even without proper ritual.",
     "DESCRIPTIONS": [
       "Whenever you play a card with a #yawakened:Chant effect, gain #b",
-      " #yBlock, even if it is not active."
+      " #yBlock [REMOVE_SPACE], even if it is not active."
     ]
   },
   "awakened:HexxBomb": {
