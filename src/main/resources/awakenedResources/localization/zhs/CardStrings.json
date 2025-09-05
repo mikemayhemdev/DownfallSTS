@@ -184,7 +184,7 @@
   },
   "awakened:RisingChant": {
     "NAME": "Rising Chorus",
-    "DESCRIPTION": "Whenever you play an activated awakened:Chant card, gain !M! Strength."
+    "DESCRIPTION": "Gain !M! Strength. NL Whenever you play an activated awakened:Chant card, gain !M! Strength."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
