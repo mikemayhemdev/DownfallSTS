@@ -15,7 +15,7 @@ public class Scour extends AbstractAwakenedCard {
     public Scour() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 6;
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 5;
         loadJokeCardImage(this, makeBetaCardPath(Scour.class.getSimpleName() + ".png"));
     }
 

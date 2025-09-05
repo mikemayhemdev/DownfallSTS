@@ -28,6 +28,7 @@ public class Thaumaturgy extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        upgradeSecondMagic(1);
+        //upgradeMagicNumber(1);
     }
 }
