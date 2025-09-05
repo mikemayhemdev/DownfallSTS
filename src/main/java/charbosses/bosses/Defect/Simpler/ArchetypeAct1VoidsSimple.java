@@ -6,6 +6,7 @@ import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnPowerUp;
+import charbosses.cards.colorless.potioncards.PowerPotionCard;
 import charbosses.cards.curses.EnDecay;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnVoid;
@@ -77,8 +78,13 @@ public class ArchetypeAct1VoidsSimple extends ArchetypeBaseDefect {
        // boolean beamCells = AbstractDungeon.ascensionLevel >= 4;
             switch (turn) {
                 case 0:
-                    if (!looped && extraUpgrades) //Power Potion for Buffer
-                    if (!looped || !doubleLooped){
+                    if (!looped && extraUpgrades) {
+                        addToList(cardsList, new PowerPotionCard(), false);
+                        AbstractCard bf = new EnBuffer();
+                        bf.modifyCostForCombat(-99);
+                        addToList(cardsList, bf, false);
+                    }
+                    if (!looped){
                         addToList(cardsList, new EnConsume(), false);
                         addToList(cardsList, new EnDarkness(), true);
                     } else {
@@ -94,14 +100,13 @@ public class ArchetypeAct1VoidsSimple extends ArchetypeBaseDefect {
                     break;
                 case 2:
                     addToList(cardsList, new EnDoomAndGloom(), false);
-                    addToList(cardsList, new EnDoomAndGloom(), false);
+                    addToList(cardsList, new EnBuffer(), false);
                     turn++;
                     break;
                 case 3:
                     addToList(cardsList, new EnDualcast(), false);
                     addToList(cardsList, new EnLoop(), false);
                     turn = 0;
-                    if (looped) doubleLooped = true;
                     looped = true;
                     break;
             }
