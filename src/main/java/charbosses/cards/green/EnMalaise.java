@@ -20,7 +20,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import java.util.ArrayList;
 
 public class EnMalaise extends AbstractBossCard {
-    public static final String ID = "downfall_Charboss:Bane";
+    public static final String ID = "downfall_Charboss:Malaise";
     private static final CardStrings cardStrings;
 
     static {
@@ -28,13 +28,13 @@ public class EnMalaise extends AbstractBossCard {
     }
 
     public EnMalaise() {
-        super(ID, EnMalaise.cardStrings.NAME, "green/skill/malaise", -1, EnMalaise.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.STRONG_DEBUFF);
+        super(ID, EnMalaise.cardStrings.NAME, "green/skill/malaise", 3, EnMalaise.cardStrings.DESCRIPTION, CardType.SKILL, CardColor.GREEN, CardRarity.RARE, CardTarget.ENEMY, AbstractMonster.Intent.STRONG_DEBUFF);
         this.exhaust = true;
     }
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        this.addToBot(new EnemyMalaiseAction((AbstractCharBoss)m, this.upgraded, this.freeToPlayOnce, EnemyEnergyPanel.totalCount));// 31
+        this.addToBot(new EnemyMalaiseAction((AbstractCharBoss)m, this.upgraded, false, 3));// 31
     }
 
     @Override

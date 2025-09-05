@@ -14,9 +14,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.BarricadePower;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ArchetypeAct3BlockSimple extends ArchetypeBaseIronclad {
     public static final int FORTIFICATION_AMOUNT = 10;
+    private boolean lastTurnWasBodySlam;
+    private int trueTurn=0;
+    private ArrayList<Integer> turnOrder;
 
     public ArchetypeAct3BlockSimple() {
         super("IC_BLOCK_ARCHETYPE", "Block");
@@ -26,6 +30,7 @@ public class ArchetypeAct3BlockSimple extends ArchetypeBaseIronclad {
         actNum = 3;
         bossMechanicName = IroncladFortificationPower.NAME;
         bossMechanicDesc = IroncladFortificationPower.DESC[0] + FORTIFICATION_AMOUNT + IroncladFortificationPower.DESC[1];
+        turnOrder = new ArrayList<>();
     }
 
     @Override
@@ -34,8 +39,39 @@ public class ArchetypeAct3BlockSimple extends ArchetypeBaseIronclad {
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new BarricadePower(p)));
         AbstractDungeon.actionManager.addToBottom(new SpawnMonsterAction(new Fortification(), true));
-
+        resetMidTurnOrder();
     }
+
+    public void resetMidTurnOrder(){
+        ArrayList<Integer> newTurnOrder = new ArrayList<>();
+        newTurnOrder.add(1);
+        newTurnOrder.add(2);
+        newTurnOrder.add(3);
+        Collections.shuffle(newTurnOrder, AbstractDungeon.monsterRng.random);
+        turnOrder.addAll(newTurnOrder);
+        advanceTurn();
+    }
+
+    public void advanceTurn(){
+        turn = turnOrder.get(trueTurn);
+        trueTurn++;
+        if (trueTurn == 4){
+            trueTurn = 0;
+            looped = true;
+        }
+    }
+
+
+
+    public void initialize() {
+
+        addRelic(new CBR_Calipers());
+        if (AbstractDungeon.ascensionLevel >= 19){
+            addRelic(new CBR_Anchor());
+        }
+    }
+
+
 
     @Override
     public ArrayList<AbstractCard> getThisTurnCards() {
@@ -43,33 +79,35 @@ public class ArchetypeAct3BlockSimple extends ArchetypeBaseIronclad {
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
 
 
+        if (AbstractCharBoss.boss.currentBlock >= 10 && !lastTurnWasBodySlam){
+            lastTurnWasBodySlam = true;
+            addToList(cardsList, new EnIronWave());
+            addToList(cardsList, new EnBodySlam());
+
+            return cardsList;
+        }
 
         switch (turn) {
             case 0:
-                addToList(cardsList, new EnImpervious(), extraUpgrades);
+                if (extraUpgrades && !looped) //Metallicize Potion
+                addToList(cardsList, new EnImpervious(), false);
                 addToList(cardsList, new EnIntimidate());
-                turn++;
+                advanceTurn();
+                lastTurnWasBodySlam = false;
                 break;
             case 1:
-                addToList(cardsList, new EnIronWave());
-                addToList(cardsList, new EnBodySlam());
-                turn++;
+                if (extraUpgrades && !looped) //Metallicize Potion
+                addToList(cardsList, new EnMetallicize(), false);
+                addToList(cardsList, new EnRampage());
+                advanceTurn();
+                lastTurnWasBodySlam = false;
                 break;
             case 2:
-                addToList(cardsList, new EnMetallicize(), extraUpgrades);
-                addToList(cardsList, new EnMetallicize(), extraUpgrades);
-                turn++;
-                break;
-            case 3:
+                if (extraUpgrades && !looped) //Metallicize Potion
                 addToList(cardsList, new EnGhostlyArmor());
-                addToList(cardsList, new EnDisarm(), extraUpgrades);
-                turn++;
-                break;
-            case 4:
-                addToList(cardsList, new EnIronWave());
-                addToList(cardsList, new EnBodySlam());
-                turn = 0;
-                looped = true;
+                addToList(cardsList, new EnFlameBarrier());
+                advanceTurn();
+                lastTurnWasBodySlam = false;
                 break;
         }
 

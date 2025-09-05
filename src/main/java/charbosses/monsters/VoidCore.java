@@ -32,7 +32,7 @@ public class VoidCore extends AbstractMonster {
     private int count;
 
     public VoidCore(float x, float y) {
-        super(monsterStrings.NAME, ID, 10, 0.0F, 0.0F, 160.0F, 160.0F, downfallMod.assetPath("images/monsters/Voidorb.png"), x, y);
+        super(monsterStrings.NAME, ID, 15, 0.0F, 0.0F, 160.0F, 160.0F, downfallMod.assetPath("images/monsters/Voidorb.png"), x, y);
 
     }
 

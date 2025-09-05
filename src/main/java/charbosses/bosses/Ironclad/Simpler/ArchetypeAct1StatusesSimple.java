@@ -1,10 +1,15 @@
 package charbosses.bosses.Ironclad.Simpler;
 
+import charbosses.bosses.AbstractBossDeckArchetype;
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.bosses.Ironclad.ArchetypeBaseIronclad;
 import charbosses.cards.red.*;
 import charbosses.powers.bossmechanicpowers.DefectAttackVoidPower;
 import charbosses.powers.bossmechanicpowers.IroncladStatusPower;
+import charbosses.powers.cardpowers.EnemyBerserkPower;
+import charbosses.relics.CBR_ChampionsBelt;
+import charbosses.relics.CBR_Ginger;
+import charbosses.relics.CBR_MarkOfPain;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
@@ -26,7 +31,7 @@ public class ArchetypeAct1StatusesSimple extends ArchetypeBaseIronclad {
 
         maxHPModifier += 90;
         maxHPModifierAsc = 10;
-        actNum = 1;
+
     }
 
 
@@ -37,8 +42,9 @@ public class ArchetypeAct1StatusesSimple extends ArchetypeBaseIronclad {
         AbstractCreature m = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new IroncladStatusPower(m)));
 
+        addRelic(new CBR_Ginger());
         if (AbstractDungeon.ascensionLevel >= 19){
-            Wiz.atb(new MakeTempCardInDrawPileAction(new Slimed(), 3, true, true));
+            addRelic(new CBR_MarkOfPain());
         }
     }
 
@@ -60,12 +66,16 @@ public class ArchetypeAct1StatusesSimple extends ArchetypeBaseIronclad {
                 break;
             case 2:
                 addToList(cardsList, new EnPowerThrough(true), false);
-                addToList(cardsList, new EnWildStrike(), extraUpgrades);
+                int x = 1;
+                if (AbstractCharBoss.boss.hasPower(EnemyBerserkPower.POWER_ID)){
+                    x = x + AbstractCharBoss.boss.getPower(EnemyBerserkPower.POWER_ID).amount;
+                }
+                addToList(cardsList, new EnWhirlwind(x), false);
                 turn++;
                 break;
             case 3:
                 addToList(cardsList, new EnBerserk(), false);
-                addToList(cardsList, new EnImmolate(), true);
+                addToList(cardsList, new EnImmolate(), false);
                 turn++;
                 break;
             case 4:

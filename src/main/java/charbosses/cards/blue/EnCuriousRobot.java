@@ -34,7 +34,6 @@ public class EnCuriousRobot extends AbstractBossCard {
 
     @Override
     public void use(final AbstractPlayer p, final AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(m, m, new DefectCuriosityPower(m)));
     }
 
     @Override

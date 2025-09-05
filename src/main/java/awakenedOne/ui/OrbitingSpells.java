@@ -63,7 +63,7 @@ public class OrbitingSpells {
 
     static {
         for (int i = 0; i < 10; i++) {
-            boxes.add(new Hitbox(POSITION_X, Settings.HEIGHT - (POSITION_Y + (i * (70F * Settings.scale))) - 35 * Settings.scale, 200F * Settings.scale, 45F * Settings.scale));
+            boxes.add(new Hitbox(POSITION_X - (5F * Settings.scale), Settings.HEIGHT - (POSITION_Y + (i * (70F * Settings.scale))) - 35 * Settings.scale, 200F * Settings.scale, 45F * Settings.scale));
         }
 
         cardIcons.put(BurningStudy.ID, TexLoader.getTexture("awakenedResources/images/ui/BurningStudy.png"));
@@ -230,15 +230,22 @@ public class OrbitingSpells {
             }
         }
         barBox.update();
-        int powersPlayed = (int) AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count();
-        for (int i = 0; i < powersPlayed; i++) {
+        for (int i = 0; i < cappedPowersThisCombat(); i++) {
             barSlotAnimTimers.put(i, barSlotAnimTimers.get(i) + Gdx.graphics.getDeltaTime());
         }
     }
 
+    private static int cappedPowersThisCombat(){
+        int powers = powersThisCombat;
+        if (powers > POWERS_TO_AWAKEN - 1) {
+            powers = POWERS_TO_AWAKEN - 1;
+        }
+        return powers;
+    }
+
     private static Texture getPipForSlot(int index) {
         if (Wiz.isAwakened()) return pipComplete;
-        if (AbstractDungeon.actionManager.cardsPlayedThisCombat.stream().filter(card -> card.type == AbstractCard.CardType.POWER).count() - 1 >= index) {
+        if (cappedPowersThisCombat() >= index) {
             if (barSlotAnimTimers.get(index) <= 0.1F) return pipFillAnim1;
             if (barSlotAnimTimers.get(index) <= 0.2F) return pipFillAnim2;
             return filledPip;
@@ -248,7 +255,7 @@ public class OrbitingSpells {
 
     public static void postPlayerRender(SpriteBatch sb) {
         sb.setColor(Color.WHITE.cpy());
-        sb.draw(panelBG, PANEL_BG_X, PANEL_BG_Y);
+        drawTextureScaled(sb, panelBG, PANEL_BG_X, PANEL_BG_Y);
         FontHelper.renderFontLeftTopAligned(sb, FontHelper.tipHeaderFont, uiStrings.TEXT[0], POSITION_X, Settings.HEIGHT - POSITION_Y + (50 * Settings.scale), Settings.GOLD_COLOR);
         int xr = 0;
 

@@ -161,7 +161,6 @@
       " more time this turn.",
       " NL This effect cannot be triggered again this turn."
     ]
-  }
   },
   "hexamod:PotionPostCombatPower": {
     "NAME": "Sealed Reward: Potion",
