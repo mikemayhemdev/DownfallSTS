@@ -15,28 +15,41 @@ import java.util.ArrayList;
 
 public class EnemyCardGroup extends CardGroup {
     public static final int HAND_ROW_LENGTH = 10;
-    public static final float HAND_HEIGHT_OFFSET = 0.56F;
+    public static float HAND_HEIGHT_OFFSET = 0.56F;
     public AbstractCharBoss owner;
 	public static AbstractBossCard hov2holder = null;
 
     public EnemyCardGroup(CardGroupType type) {
         super(type);
         this.owner = AbstractCharBoss.boss;
+        if (downfallMod.useLegacyBosses) {
+            HAND_HEIGHT_OFFSET = 0.61F;
+        }
     }
 
     public EnemyCardGroup(CardGroupType type, AbstractCharBoss owner) {
         super(type);
         this.owner = owner;
+        if (downfallMod.useLegacyBosses) {
+            HAND_HEIGHT_OFFSET = 0.61F;
+        }
     }
 
     public EnemyCardGroup(CardGroup group, CardGroupType type) {
         super(group, type);
         this.owner = AbstractCharBoss.boss;
+        if (downfallMod.useLegacyBosses) {
+            HAND_HEIGHT_OFFSET = 0.61F;
+        }
     }
 
     public EnemyCardGroup(CardGroup group, CardGroupType type, AbstractCharBoss owner) {
         super(group, type);
         this.owner = owner;
+
+        if (downfallMod.useLegacyBosses) {
+            HAND_HEIGHT_OFFSET = 0.61F;
+        }
     }
 
     public void moveToDiscardPile(final AbstractCard c) {
@@ -185,8 +198,8 @@ public class EnemyCardGroup extends CardGroup {
                 widthspacing= AbstractCard.IMG_WIDTH_S + 100.0f * Settings.scale;
                 c.target_x = Settings.WIDTH * .9F - ((cardsinrow + 0.5f) * (widthspacing * AbstractBossCard.HAND_SCALE)) + (widthspacing * AbstractBossCard.HAND_SCALE) * (i % HAND_ROW_LENGTH);
             } else {
-                widthspacing=AbstractCard.IMG_WIDTH_S + 125.0f * Settings.scale;
-                c.target_x = Settings.WIDTH * .85F - ((cardsinrow + 0.5f) * (widthspacing * AbstractBossCard.HAND_SCALE)) + (widthspacing * AbstractBossCard.HAND_SCALE) * (i % HAND_ROW_LENGTH);
+                widthspacing=AbstractCard.IMG_WIDTH_S + 115.0f * Settings.scale;
+                c.target_x = Settings.WIDTH * (.85F + (cardsinrow -2) * .05F) - ((cardsinrow + 0.5f) * (widthspacing * AbstractBossCard.HAND_SCALE)) + (widthspacing * AbstractBossCard.HAND_SCALE) * (i % HAND_ROW_LENGTH);
             }
             c.target_y = Settings.HEIGHT * HAND_HEIGHT_OFFSET + (AbstractCard.IMG_HEIGHT_S * AbstractBossCard.HAND_SCALE) * ((float) Math.floor(((float) i) / (float) HAND_ROW_LENGTH) + (this.group.size() > HAND_ROW_LENGTH ? 0.0f : 1.0f));
             if (((AbstractBossCard) c).hov2 && c.hb.hovered) {

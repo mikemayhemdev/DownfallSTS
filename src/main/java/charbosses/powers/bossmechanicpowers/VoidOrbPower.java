@@ -93,11 +93,7 @@ public class VoidOrbPower extends AbstractPower implements CloneablePowerInterfa
 
     @Override
     public void updateDescription() {
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            this.description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0];
-        }
+        this.description = DESCRIPTIONS[0];
     }
 
     @Override
