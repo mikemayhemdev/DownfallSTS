@@ -12,7 +12,7 @@ public class Spellshield extends AbstractAwakenedCard {
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
     public Spellshield() {
-        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Spellshield.class.getSimpleName() + ".png"));
     }

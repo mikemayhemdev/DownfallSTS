@@ -23,7 +23,7 @@ public class CursedBlessing extends CustomRelic {
 
 
     //required triggers
-    private static final int AMOUNT1 = 4;
+    private static final int AMOUNT1 = 3;
     //strength gain
     private static final int AMOUNT2 = 1;
 

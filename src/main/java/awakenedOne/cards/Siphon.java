@@ -16,7 +16,7 @@ public class Siphon extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public Siphon() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
         magicNumber = baseMagicNumber = 2;
         this.tags.add(AwakenedOneMod.CHANT);
