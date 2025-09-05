@@ -405,7 +405,7 @@
   },
   "awakened:RealityRift": {
     "NAME": "Reality Rift",
-    "DESCRIPTION": "Choose !awakened:m2! of !M! powerful cards from *ANOTHER *DIMENSION to gain. NL Add 2 Voids to your discard pile. Exhaust."
+    "DESCRIPTION": "Choose !awakened:m2! of !M! powerful cards from *ANOTHER *DIMENSION to gain. NL Add 2 *Voids to your discard pile. Exhaust."
   },
   "awakened:Inscribe": {
     "NAME": "Inscribe",
