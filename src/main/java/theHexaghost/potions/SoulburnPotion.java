@@ -23,7 +23,7 @@ public class SoulburnPotion extends CustomPotion {
 
 
     public SoulburnPotion() {
-        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.SPHERE, PotionColor.FAIRY);
+        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.SPHERE, PotionColor.WHITE);
         this.isThrown = true;
         this.targetRequired = true;
         this.labOutlineColor = HexaMod.placeholderColor;
