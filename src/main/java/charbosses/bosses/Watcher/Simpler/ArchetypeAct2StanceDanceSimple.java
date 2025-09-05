@@ -45,11 +45,10 @@ public class ArchetypeAct2StanceDanceSimple extends ArchetypeBaseWatcher {
                     //Turn 3
                    // addToList(cardsList, new EnPanacea());
                     addToList(cardsList, new EnMentalFortress());
-                    addToList(cardsList, new EnFasting());
+                    addToList(cardsList, new EnWallop());
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnWallop());
                     turn++;
                     break;
                 case 4:

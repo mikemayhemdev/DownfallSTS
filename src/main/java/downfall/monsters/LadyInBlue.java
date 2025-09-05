@@ -109,7 +109,7 @@ public class LadyInBlue extends AbstractMonster {
                 AbstractDungeon.actionManager.addToBottom(new ChangeStateAction(this, "ATTACK"));
                 usedEmergency = true;
                 addToBot(new VFXAction(new PotionThrowEffect("downfallResources/images/vfx/GhostInAJar.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new IntangiblePower(this, 1), 1));
+                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new IntangiblePlayerPower(this, 1), 1));
                 addToBot(new VFXAction(new PotionThrowEffect("downfallResources/images/vfx/FairyinaBottle.png", this.hb.cX, this.hb.cY, this.hb.cX, this.hb.cY, 2F, 0.6F, false, true), 0.6F));
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new FairyPotionPower(this, 1), 1));
                 break;

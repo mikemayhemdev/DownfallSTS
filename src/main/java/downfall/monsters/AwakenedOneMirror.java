@@ -394,8 +394,9 @@ public class AwakenedOneMirror extends AbstractMonster {
             }
 
             this.onBossVictoryLogic();
-            UnlockTracker.hardUnlockOverride("CROW");
-            UnlockTracker.unlockAchievement("CROW");
+           // UnlockTracker.hardUnlockOverride("CROW");
+            //UnlockTracker.unlockAchievement("CROW");
+           // this.onFinalBossVictoryLogic();
         }
 
     }
