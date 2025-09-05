@@ -200,7 +200,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     cB.orbsAsEn().get(3).evokeMult = 2;
                     //Lightning Lightning Lightning 4e
                     addToList(cardsList, new EnFusion(true,false),true);
-                    addToList(cardsList, new EnNormality());
+                    addToList(cardsList, new EnInjury());
                     addToList(cardsList, new EnForceField());
                     //Lightning Lightning Lightning Plasma 3e
                     turn++;
