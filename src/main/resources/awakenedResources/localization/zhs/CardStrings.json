@@ -239,7 +239,7 @@
   },
   "awakened:Gloomguard": {
     "NAME": "Gloomguard",
-    "DESCRIPTION": "Gain !B! Block. NL For each Void in hand, Exhaust it and gain [E] ."
+    "DESCRIPTION": "Gain !B! Block. NL Costs 0 if a *Void is in hand."
   },
   "awakened:Carrionmaker": {
     "NAME": "Carrionmaker",

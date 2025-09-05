@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
@@ -16,20 +18,38 @@ public class Gloomguard extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public Gloomguard() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = 8;
-        //  baseMagicNumber = magicNumber = 3;
         loadJokeCardImage(this, makeBetaCardPath(Gloomguard.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
-        for (AbstractCard c : p.hand.group) {
+    }
+
+    @Override
+    public void triggerOnGlowCheck() {
+        if (checkVoid()) {
+            this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
+        } else {
+            this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        }
+    }
+
+    public static boolean checkVoid() {
+        boolean hasVoid = false;
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c instanceof VoidCard || c instanceof IntoTheVoid) {
-                Wiz.atb(new ExhaustSpecificCardAction(c, p.hand));
-                Wiz.atb(new GainEnergyAction(1));
+                hasVoid = true;
             }
         }
+        return hasVoid;
+    }
+
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        this.keywords.add(GameDictionary.VOID.NAMES[0].toLowerCase());
     }
 
     public void upp() {
