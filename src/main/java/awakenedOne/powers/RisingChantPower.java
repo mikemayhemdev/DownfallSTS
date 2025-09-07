@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 
+import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
+
 public class RisingChantPower extends AbstractAwakenedPower {
     // intellij stuff buff
     public static final String NAME = RisingChantPower.class.getSimpleName();
@@ -20,8 +22,8 @@ public class RisingChantPower extends AbstractAwakenedPower {
     }
 
     @Override
-    public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (Wiz.isChantActive()) {
+    public void onAfterCardPlayed(AbstractCard card) {
+        if (card.hasTag(ACTIVECHANT)) {
             applyToSelf(new StrengthPower(AbstractDungeon.player, amount));
             flash();
         }
