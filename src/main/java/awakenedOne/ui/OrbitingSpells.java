@@ -49,7 +49,7 @@ public class OrbitingSpells {
     private static final HashMap<String, Color> cardColors = new HashMap<>();
     private static final Hitbox barBox = new Hitbox(POSITION_X - 75F * Settings.scale, Settings.HEIGHT - POSITION_Y - 350 * Settings.scale, 55 * Settings.scale, 55 * Settings.scale * 7);
     private static final Texture unfilledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled.png");
-    private static final Texture pipFillAnim1 = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled_2.png");
+    private static final Texture pipFillAnim1 = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled.png");
     private static final Texture pipFillAnim2 = TexLoader.getTexture("awakenedResources/images/ui/pip_unfilled_3.png");
     private static final Texture filledPip = TexLoader.getTexture("awakenedResources/images/ui/pip_filled.png");
     private static final Texture pipComplete = TexLoader.getTexture("awakenedResources/images/ui/pip_complete.png");
@@ -89,8 +89,8 @@ public class OrbitingSpells {
     }
 
     static {
-        spells.add(BurningStudy.ID);
         spells.add(Thunderbolt.ID);
+        spells.add(BurningStudy.ID);
         spells.add(Cryostasis.ID);
         spells.add(Darkleech.ID);
     }
@@ -246,8 +246,10 @@ public class OrbitingSpells {
     private static Texture getPipForSlot(int index) {
         if (Wiz.isAwakened()) return pipComplete;
         if (cappedPowersThisCombat() >= index) {
-            if (barSlotAnimTimers.get(index) <= 0.1F) return pipFillAnim1;
-            if (barSlotAnimTimers.get(index) <= 0.2F) return pipFillAnim2;
+            if (powersThisCombat >= index) {
+                if (barSlotAnimTimers.get(index) <= 0.1F) return pipFillAnim1;
+                if (barSlotAnimTimers.get(index) <= 0.2F) return pipFillAnim2;
+            }
             return filledPip;
         }
         return unfilledPip;
