@@ -91,8 +91,8 @@ public class OrbitingSpells {
     static {
         spells.add(Thunderbolt.ID);
         spells.add(BurningStudy.ID);
-        spells.add(Cryostasis.ID);
         spells.add(Darkleech.ID);
+        spells.add(Cryostasis.ID);
     }
 
     private static Texture getIconForCard(String cardID) {
