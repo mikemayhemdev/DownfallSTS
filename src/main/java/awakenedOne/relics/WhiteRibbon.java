@@ -44,7 +44,7 @@ public class WhiteRibbon extends CustomRelic {
 
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
-        if (card.hasTag(CHANT) || card.hasTag(ACTIVECHANT)) {
+        if (Wiz.isChantActive() || card.hasTag(CHANT)) {
             this.flash();
             addToBot(new GainBlockAction(AbstractDungeon.player, AMOUNT));
         }

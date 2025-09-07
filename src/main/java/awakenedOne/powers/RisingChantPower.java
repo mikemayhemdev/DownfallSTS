@@ -23,7 +23,7 @@ public class RisingChantPower extends AbstractAwakenedPower {
 
     @Override
     public void onAfterCardPlayed(AbstractCard card) {
-        if (card.hasTag(ACTIVECHANT)) {
+        if (Wiz.isChantActive()) {
             applyToSelf(new StrengthPower(AbstractDungeon.player, amount));
             flash();
         }
