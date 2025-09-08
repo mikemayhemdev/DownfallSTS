@@ -34,7 +34,7 @@
     "NAME": "Tome of Portalmancy",
     "FLAVOR": "A grimoire detailing the construction and maintenance of interplanar gates.",
     "DESCRIPTIONS": [
-      "Whenever a #yVoid is #yExhausted [REMOVE_SPACE], apply #b",
+      "Whenever you create a #yVoid [REMOVE_SPACE], apply #b",
       " #yawakened:Manaburn to ALL enemies."
     ]
   },

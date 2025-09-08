@@ -73,7 +73,7 @@ public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPowe
         AbstractDungeon.actionManager.addToTop(new HealAction(abstractPlayer, abstractPlayer, this.amount));
         AbstractDungeon.actionManager.addToTop(new VFXAction(this.owner, new IntenseZoomEffect(this.owner.hb.cX, this.owner.hb.cY, true), 0.05F, true));
         AbstractDungeon.actionManager.addToTop(new SFXAction("VO_AWAKENEDONE_1"));
-        awaken();
+        awaken(true);
         OrbitingSpells.upgradeall();
     }
 

@@ -28,7 +28,7 @@ public class TomeOfPortalmancy extends CustomRelic {
     private static final Texture IMG = TexLoader.getTexture(makeRelicPath("TomeOfPortalmancy.png")); //TODO: Images
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("TomeOfPortalmancy.png"));
 
-    private static final int AMOUNT = 4;
+    private static final int AMOUNT = 2;
 
     public TomeOfPortalmancy() {
         super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.MAGICAL);
@@ -36,8 +36,7 @@ public class TomeOfPortalmancy extends CustomRelic {
 
     //tome of portalmancy
 
-    public void onExhaust(AbstractCard card) {
-        if (card.cardID == VoidCard.ID) {
+    public void onSpecificTrigger() {
             this.flash();
             Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
@@ -51,7 +50,6 @@ public class TomeOfPortalmancy extends CustomRelic {
             }
 
         }
-    }
 
     @Override
     public String getUpdatedDescription() {

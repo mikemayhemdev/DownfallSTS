@@ -21,8 +21,8 @@ public class DemonGlyph extends AbstractAwakenedCard {
 
     public DemonGlyph() {
         super(ID, 1, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 1;
+        baseMagicNumber = magicNumber = 1;
+        baseSecondMagic = secondMagic = 2;
         loadJokeCardImage(this, makeBetaCardPath(DemonGlyph.class.getSimpleName() + ".png"));
     }
 
