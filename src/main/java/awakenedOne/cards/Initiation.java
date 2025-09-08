@@ -25,16 +25,14 @@ public class Initiation extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         AbstractCard c = new Ceremony();
-        if (upgraded) {
-            c.upgrade();
-        }
+
         Wiz.atb(new MakeTempCardInHandAction(c, 1));
     }
 
 
     @Override
     public void upp() {
-        cardsToPreview.upgrade();
+        //cardsToPreview.upgrade();
         upgradeBlock(3);
     }
 }

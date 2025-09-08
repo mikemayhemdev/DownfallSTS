@@ -56,8 +56,7 @@
   },
   "awakened:Ceremony": {
     "NAME": "Ceremony",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Strength."
+    "DESCRIPTION": "Retain. NL Gain !M! Strength."
   },
   "awakened:TalonRake": {
     "NAME": "Talon Rake",
@@ -65,8 +64,7 @@
   },
   "awakened:Hymn": {
     "NAME": "Hymn",
-    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony. NL Next turn, lose [E].",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+. NL Next turn, lose [E]."
+    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony. NL Next turn, lose [E]."
   },
   "awakened:Psalm": {
     "NAME": "Psalm",
@@ -127,8 +125,7 @@
   },
   "awakened:Thaumaturgy": {
     "NAME": "Thaumaturgy",
-    "DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand."
+    "DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand."
   },
   "awakened:WaveOfMiasma": {
     "NAME": "Wave of Miasma",
@@ -162,7 +159,7 @@
   },
   "awakened:DesperatePrayer": {
     "NAME": "Desperate Prayer",
-    "DESCRIPTION": "Gain !M! *Ceremony+ cards. NL Exhaust."
+    "DESCRIPTION": "Gain !M! *Ceremony cards. NL Exhaust."
   },
   "awakened:BirdsEye": {
     "NAME": "Byrd's Eye",
@@ -171,8 +168,7 @@
   },
   "awakened:Initiation": {
     "NAME": "Initiation",
-    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+."
+    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony."
   },
   "awakened:Ensorcelate": {
     "NAME": "Ensorcelate",
@@ -260,13 +256,11 @@
   },
   "awakened:Dejection": {
     "NAME": "Dejection",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain a *Ceremony.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain a *Ceremony+."
+    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain a *Ceremony."
   },
   "awakened:BloodRite": {
     "NAME": "Blood Rite",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony+."
+    "DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony."
   },
   "awakened:SongOfSorrow": {
     "NAME": "Song of Sorrow",
