@@ -16,21 +16,22 @@ public class WaveOfMiasma extends AbstractAwakenedCard {
 
     public WaveOfMiasma() {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 5;
+        baseSecondMagic = secondMagic = 4;
+        baseBlock = 12;
         this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(WaveOfMiasma.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         Wiz.forAllMonstersLiving(q -> {
-            Wiz.applyToEnemy(q, new WeakPower(q, magicNumber, false));
             Wiz.applyToEnemy(q, new ManaburnPower(q, secondMagic));
         });
     }
 
     public void upp() {
         //upgradeMagicNumber(2);
-        upgradeSecondMagic(4);
+        upgradeBlock(4);
+        upgradeSecondMagic(3);
     }
 }

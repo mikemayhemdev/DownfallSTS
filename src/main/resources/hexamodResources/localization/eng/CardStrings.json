@@ -157,8 +157,8 @@
   },
   "hexamod:DevilsDance": {
     "NAME": "Devil's Dance",
-    "DESCRIPTION": "Whenever you hexamod:Retract, draw a card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you *Retract each turn, gain [E] and draw 1 card. NL hexamod:Retract."
+    "DESCRIPTION": "The first time you hexamod:Advance or hexamod:Retract each turn, draw a card.",
+    "UPGRADE_DESCRIPTION": "The first !M! times you hexamod:Advance or hexamod:Retract each turn, draw a card."
   },
   "hexamod:HereAndNow": {
     "NAME": "Here and Now",

@@ -95,7 +95,7 @@
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL The next time you are awakened:Drained, gain a *Plume *Jab."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain a *Plume *Jab."
   },
   "awakened:FlareShot": {
     "NAME": "Feather Flare",
@@ -132,7 +132,7 @@
   },
   "awakened:WaveOfMiasma": {
     "NAME": "Wave of Miasma",
-    "DESCRIPTION": "Apply !M! Weak and !awakened:m2! awakened:Manaburn to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !awakened:m2! awakened:Manaburn to ALL enemies. NL Exhaust."
   },
   "awakened:SludgeBomb": {
     "NAME": "Sludge Bomb",
@@ -219,7 +219,7 @@
   },
   "awakened:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL [E] spent on this card counts as being awakened:Drained."
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
