@@ -1,5 +1,6 @@
 package expansioncontent.cardmods;
 
+import awakenedOne.actions.ConjureAction;
 import basemod.abstracts.AbstractCardModifier;
 import basemod.helpers.CardModifierManager;
 import basemod.helpers.TooltipInfo;
@@ -8,8 +9,10 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
+import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -19,6 +22,9 @@ import expansioncontent.expansionContentMod;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import static awakenedOne.util.Wiz.atb;
+import static expansioncontent.expansionContentMod.ECHO;
 
 @AbstractCardModifier.SaveIgnore
 public class PropertiesMod extends AbstractCardModifier {
@@ -62,8 +68,8 @@ public class PropertiesMod extends AbstractCardModifier {
     //I think that it is the best way to make sure that all of the properties are applied.
     private void applyProperties(AbstractCard card) {
         if (bonusProperties.contains(supportedProperties.ECHO))
-            if (!card.hasTag(expansionContentMod.ECHO))
-                card.tags.add(expansionContentMod.ECHO);
+            if (!card.hasTag(ECHO))
+                card.tags.add(ECHO);
 
         if (bonusProperties.contains(supportedProperties.ETHEREAL) || bonusPropertiesForThisTurn.contains(supportedProperties.ETHEREAL)) {
             card.isEthereal = true;
@@ -193,35 +199,41 @@ public class PropertiesMod extends AbstractCardModifier {
                 return;
             }
         }
+        if (!properties.contains(supportedProperties.ECHO)) {
+            if (properties.contains(supportedProperties.ETHEREAL)) {
 
-        if (properties.contains(supportedProperties.ETHEREAL)) {
-            description.append(uiStrings.TEXT[6]);
-            description.append(uiStrings.TEXT[9]);
-            counter++;
-            if (properties.size() > counter)
-                description.append(uiStrings.TEXT[4]);
-            else {
-                description.append(uiStrings.TEXT[5]);
-                return;
+                description.append(uiStrings.TEXT[6]);
+                description.append(uiStrings.TEXT[9]);
+                counter++;
+                if (properties.size() > counter)
+                    description.append(uiStrings.TEXT[4]);
+                else {
+                    description.append(uiStrings.TEXT[5]);
+                    return;
+                }
             }
         }
 
-        if (properties.contains(supportedProperties.RETAIN)) {
-            description.append(uiStrings.TEXT[6]);
-            description.append(uiStrings.TEXT[10]);
-            counter++;
-            if (properties.size() > counter)
-                description.append(uiStrings.TEXT[4]);
-            else {
-                description.append(uiStrings.TEXT[5]);
-                return;
+        if (!properties.contains(supportedProperties.ECHO)) {
+            if (properties.contains(supportedProperties.RETAIN)) {
+                description.append(uiStrings.TEXT[6]);
+                description.append(uiStrings.TEXT[10]);
+                counter++;
+                if (properties.size() > counter)
+                    description.append(uiStrings.TEXT[4]);
+                else {
+                    description.append(uiStrings.TEXT[5]);
+                    return;
+                }
             }
         }
 
-        if (properties.contains(supportedProperties.EXHAUST)) {
-            description.append(uiStrings.TEXT[6]);
-            description.append(uiStrings.TEXT[11]);
-            description.append(uiStrings.TEXT[5]);
+        if (!properties.contains(supportedProperties.ECHO)) {
+            if (properties.contains(supportedProperties.EXHAUST)) {
+                description.append(uiStrings.TEXT[6]);
+                description.append(uiStrings.TEXT[11]);
+                description.append(uiStrings.TEXT[5]);
+            }
         }
     }
 
@@ -238,10 +250,12 @@ public class PropertiesMod extends AbstractCardModifier {
             thingsToAdd.append(uiStrings.TEXT[12]); //" "
         }
 
-        if (bonusProperties.contains(supportedProperties.ETHEREAL) || bonusPropertiesForThisTurn.contains(supportedProperties.ETHEREAL)) {
-            thingsToAdd.append(uiStrings.TEXT[9]); //ETHEREAL
-            thingsToAdd.append(uiStrings.TEXT[5]); //"."
-            thingsToAdd.append(uiStrings.TEXT[12]); //" "
+        if (!bonusProperties.contains(supportedProperties.ECHO)) {
+            if (bonusProperties.contains(supportedProperties.ETHEREAL) || bonusPropertiesForThisTurn.contains(supportedProperties.ETHEREAL)) {
+                thingsToAdd.append(uiStrings.TEXT[9]); //ETHEREAL
+                thingsToAdd.append(uiStrings.TEXT[5]); //"."
+                thingsToAdd.append(uiStrings.TEXT[12]); //" "
+            }
         }
 
         if (bonusProperties.contains(supportedProperties.RETAIN) || bonusPropertiesForThisTurn.contains(supportedProperties.RETAIN)) {
@@ -255,12 +269,22 @@ public class PropertiesMod extends AbstractCardModifier {
             rawDescription = thingsToAdd + rawDescription;
         }
 
-        if (bonusProperties.contains(supportedProperties.EXHAUST) || bonusPropertiesForThisTurn.contains(supportedProperties.EXHAUST)) {thingsToAdd.append(uiStrings.TEXT[10]);
-            rawDescription = rawDescription
-                    + uiStrings.TEXT[12] //" "
-                    + uiStrings.TEXT[13] //"NL "
-                    + uiStrings.TEXT[11] //"Exhaust"
-                    + uiStrings.TEXT[5]; //"."
+        if (!bonusProperties.contains(supportedProperties.ECHO)) {
+            if (bonusProperties.contains(supportedProperties.EXHAUST) || bonusPropertiesForThisTurn.contains(supportedProperties.EXHAUST)) {
+                thingsToAdd.append(uiStrings.TEXT[10]);
+                rawDescription = rawDescription
+                        + uiStrings.TEXT[12] //" "
+                        + uiStrings.TEXT[13] //"NL "
+                        + uiStrings.TEXT[11] //"Exhaust"
+                        + uiStrings.TEXT[5]; //"."
+            }
+        }
+
+        if (bonusProperties.contains(supportedProperties.ECHO) || bonusPropertiesForThisTurn.contains(supportedProperties.ECHO)) {
+            thingsToAdd.append(uiStrings.TEXT[6]); //#y
+            thingsToAdd.append(uiStrings.TEXT[7]); //ECHO
+            thingsToAdd.append(uiStrings.TEXT[5]); //"."
+            thingsToAdd.append(uiStrings.TEXT[12]); //" "
         }
 
         return rawDescription;
@@ -359,11 +383,21 @@ public class PropertiesMod extends AbstractCardModifier {
 
     //Retain Override - do not remove - even if it is technically different from how the game usually works, I will do what I am allowed to force the mechanics to work as they are described - Stanek
     //sorry - blue
+
+    @Override
+    public void onUse(AbstractCard card, AbstractCreature target, UseCardAction action) {
+        super.onUse(card, target, action);
+        if ((card.hasTag(ECHO))) {
+            card.exhaust = true;
+        }
+    }
+
    @Override
     public void onRetained(AbstractCard card) {
-        if (card.isEthereal)
-            AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand, true));
-    }
+       if ((card.isEthereal) || (card.hasTag(ECHO))) {
+           AbstractDungeon.actionManager.addToTop(new ExhaustSpecificCardAction(card, AbstractDungeon.player.hand, true));
+       }
+   }
 
     public enum supportedProperties {
         ECHO,
