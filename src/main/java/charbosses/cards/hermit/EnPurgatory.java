@@ -34,7 +34,7 @@ public class EnPurgatory extends AbstractHermitBossCard {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new ShortScreenFire(), 0.5F));
         addToBot(new DamageAction(p, new DamageInfo(m, this.damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
-        if (!downfallMod.useLegacyBosses) {
+        if (downfallMod.useLegacyBosses) {
             for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
                 if (!m2.isDead && !m2.isDying && m2 instanceof SnakeDagger) {
                     addToBot(new VFXAction(m2, new InflameEffect(m), 0.2F));
