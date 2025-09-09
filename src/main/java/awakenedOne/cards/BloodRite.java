@@ -20,7 +20,7 @@ public class BloodRite extends AbstractAwakenedCard {
     public BloodRite() {
         super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = 8;
-       // this.cardsToPreview = new Ceremony();
+        this.cardsToPreview = new Ceremony();
         loadJokeCardImage(this, makeBetaCardPath(BloodRite.class.getSimpleName() + ".png"));
     }
 
