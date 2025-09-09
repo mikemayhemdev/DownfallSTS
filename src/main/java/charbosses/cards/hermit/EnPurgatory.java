@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.localization.CardStrings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.monsters.beyond.SnakeDagger;
 import com.megacrit.cardcrawl.vfx.combat.InflameEffect;
+import downfall.downfallMod;
 import hermit.cards.Purgatory;
 import hermit.characters.hermit;
 import hermit.vfx.ShortScreenFire;
@@ -32,8 +33,17 @@ public class EnPurgatory extends AbstractHermitBossCard {
     public void use(final AbstractPlayer p, final AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new VFXAction(p, new ShortScreenFire(), 0.5F));
         addToBot(new DamageAction(p, new DamageInfo(m, this.damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
-        addToBot(new DamageAction(m, new DamageInfo(m, this.damage, damageTypeForTurn), AbstractGameAction.AttackEffect.FIRE));
 
+        if (!downfallMod.useLegacyBosses) {
+            for (AbstractMonster m2 : AbstractDungeon.getMonsters().monsters) {
+                if (!m2.isDead && !m2.isDying && m2 instanceof SnakeDagger) {
+                    addToBot(new VFXAction(m2, new InflameEffect(m), 0.2F));
+                    addToBot(new SuicideAction(m2));
+                    addToBot(new HideHealthBarAction(m2));
+                }
+            }
+            addToBot(new SpawnMonsterAction(ArchetypeAct3DoomsdayNewAge.getDoomedSnake(), true));
+        }
     }
 
     @Override
