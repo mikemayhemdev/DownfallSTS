@@ -1,15 +1,15 @@
-{
+﻿{
 "hermit:Concentration": {
         "NAME": "집중",
-        "DESCRIPTIONS": ["이번 턴에 다음으로 사용하는 #y정조준 카드의 효과는 위치와 관계없이 발동합니다."]
+        "DESCRIPTIONS": ["이번 턴에 다음 사용하는 #y정조준 카드의 효과는 위치와 관계없이 발동합니다."]
 },
 "hermit:HighNoonPower": {
         "NAME": "정오",
-        "DESCRIPTIONS": ["#y타격 또는 #y수비를 사용할 때마다, 카드를 #b", " 장 뽑습니다.", " 장 뽑습니다."]
+        "DESCRIPTIONS": ["#y타격 또는 #y수비를 사용할 때마다 카드를 #b", " 장 뽑습니다.", " 장 뽑습니다."]
 },
 "hermit:FatalDesirePower": {
         "NAME": "파멸의 욕망",
-        "DESCRIPTIONS": ["내 턴 시작 시, 카드를 #b", " 장 뽑고, #y상처를 #b", " 장 얻습니다.", " 장 얻습니다."]
+        "DESCRIPTIONS": ["내 턴 시작 시 #b", " 카드를 뽑고 #y상처를 #b", " 장 얻습니다.", " 장 얻습니다."]
 },
 "hermit:ShadowCloakPower": {
         "NAME": "그림자 망토",
@@ -17,11 +17,11 @@
 },
 "hermit:TakeAimPower": {
         "NAME": "겨냥",
-        "DESCRIPTIONS": ["턴 시작 시 #y집중합니다."]
+        "DESCRIPTIONS": ["내 턴 시작 시 #y집중합니다."]
 },
 "hermit:AdaptPower": {
         "NAME": "적응",
-        "DESCRIPTIONS": ["턴 종료 시 최대 #b", " 장의 카드를 소멸시킵니다. 소멸시켰다면 방어도를 #b8 얻습니다." , " 장의 카드를 소멸시킵니다. 소멸시켰다면 방어도를 #b8 얻습니다."]
+        "DESCRIPTIONS": ["턴 종료 시 최대 #b", " 장의 카드를 소멸시킵니다. 소멸시킨 카드 한 장당 방어도를 #b8 얻습니다." , " 장의 카드를 소멸시킵니다. 소멸시킨 카드 한 장당 방어도를 #b8 얻습니다."]
 },
 "hermit:Bruise": {
         "NAME": "타박상",
@@ -29,11 +29,11 @@
 },
 "hermit:HorrorPower": {
         "NAME": "참상",
-        "DESCRIPTIONS": ["다음 #b", " 턴 동안 타박상이 사라지지 않습니다.", " 턴 동안 타박상이 사라지지 않습니다."]
+        "DESCRIPTIONS": ["#b", " 턴 동안 #y타박상이 사라지지 않습니다.", " 턴 동안 #y타박상이 사라지지 않습니다."]
 },
 "hermit:ComboPower": {
         "NAME": "연계",
-        "DESCRIPTIONS": ["이번 동안 #y정조준 효과가 발동한 카드를 #b", " 장 가져옵니다.", " 장 가져옵니다."]
+        "DESCRIPTIONS": ["이번 턴 동안 #y정조준 효과가 발동한 카드를 #b", " 장 가져옵니다.", " 장 가져옵니다."]
 },
 "hermit:BigShotPower": {
         "NAME": "달궈진 총구",
@@ -41,11 +41,11 @@
 },
 "hermit:BrawlPower": {
         "NAME": "난투",
-        "DESCRIPTIONS": ["내 턴 시작 시 적 전체에게 타박상을 #b", " 부여합니다."]
+        "DESCRIPTIONS": ["내 턴 시작 시 적 전체에게 #y타박상을 #b", " 부여합니다."]
 },
 "hermit:Rugged": {
         "NAME": "강인함",
-        "DESCRIPTIONS": ["막히지 않은 공격 피해를 다음 #b", " 번까지 피해량을 #b2 으로 줄입니다.", " 번까지 피해량을 #b2 으로 줄입니다"]
+        "DESCRIPTIONS": ["막히지 않은 공격 피해를 다음 #b", " 번까지 피해량을 #b2 으로 줄입니다.", " 번까지 피해량을 #b2 으로 줄입니다."]
 },
 "hermit:EternalPower": {
         "NAME": "영겁의 힘",
@@ -53,11 +53,11 @@
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "압도적인 힘",
-        "DESCRIPTIONS": ["턴 종료 시 에너지가 0이라면 체력을 #b"," 잃습니다."]
+        "DESCRIPTIONS": ["내 턴 종료 시 에너지가 #b0 이면 체력을 #b"," 잃습니다."]
 },
 "hermit:Bounty": {
         "NAME": "현상금",
-        "DESCRIPTIONS": ["현재 현상금: "]
+        "DESCRIPTIONS": ["현재 현상금: #b"]
 },
 "hermit:Drained": {
         "NAME": "탈진",
@@ -73,11 +73,11 @@
 },
 "hermit:PetGhostPower": {
         "NAME": "꼬마 유령",
-        "DESCRIPTIONS": ["죽을 수 없습니다.", " 다음 턴에 죽습니다.", " 이번 턴에 죽습니다."]
+        "DESCRIPTIONS": ["죽지 않습니다.", " 다음 턴에 죽습니다.", " 이번 턴에 죽습니다."]
 },
 "hermit:SnipePower": {
         "NAME": "저격",
-        "DESCRIPTIONS": ["이번 턴에 사용하는 정조준 효과가 다음 #b", " 번까지 두 번 발동됩니다.", " 번까지 두 번 발동됩니다."]
+        "DESCRIPTIONS": ["이번 턴에 사용하는 #y정조준 효과가 다음 #b", " 번까지 두 번 발동됩니다.", " 번까지 두 번 발동됩니다."]
 },
 "hermit:CoalescencePower": {
         "NAME": "융합",

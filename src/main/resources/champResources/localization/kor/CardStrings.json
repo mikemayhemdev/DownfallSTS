@@ -1,4 +1,4 @@
-{
+﻿{
   "champ:Strike": {
     "NAME": "타격",
     "DESCRIPTION": "피해를 !D! 줍니다."
@@ -10,7 +10,7 @@
   "champ:Taunt": {
     "NAME": "도발",
     "DESCRIPTION": "약화를 !M! 부여합니다. NL 취약을 1 부여합니다.",
-    "UPGRADE_DESCRIPTION": "적 전체에게 약화 와 취약을 1 부여합니다."
+    "UPGRADE_DESCRIPTION": "적 전체에게 약화와 취약을 1 부여합니다."
   },
   "champ:Execute": {
     "NAME": "처형",
@@ -19,8 +19,8 @@
   },
   "champ:StanceDance": {
     "NAME": "춤 자세",
-    "DESCRIPTION": "선택한 champ:자세를 취합니다. NL 선택한 champ:자세의 *스킬 카드 champ:보너스를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선택한 champ:자세를 취합니다. NL 선택한 champ:자세의 *스킬 카드 champ:보너스를 2번 얻습니다.",
+    "DESCRIPTION": "선택한 champ:자세를 취합니다. NL 선택한 *자세의 *스킬 *카드 champ:보너스를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선택한 champ:자세를 취합니다. NL 선택한 *자세의 *스킬 *카드 champ:보너스를 2번 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "champ:광폭화 자세를 취합니다.",
       "champ:수비 자세를 취합니다."
@@ -28,12 +28,8 @@
   },
   "champ:StanceDanceCrown": {
     "NAME": "챔피언의 왕관",
-    "DESCRIPTION": "선택한 champ:자세를 취합니다. NL 선택한 champ:자세의 *스킬 카드 champ:보너스를 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선택한 champ:자세를 취합니다. NL 선택한 champ:자세의 *스킬 카드 champ:보너스를 2번 얻습니다.",
-    "EXTENDED_DESCRIPTION": [
-      "champ:광폭화 자세를 취합니다.",
-      "champ:수비 자세를 취합니다."
-    ]
+    "DESCRIPTION": "보존. NL 취하지 않은 자세를 취합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보존. NL 취하지 않은 자세를 취합니다."
   },
   "champ:SwordSigil": {
     "NAME": "승리의 인장",
@@ -49,7 +45,7 @@
   },
   "champ:DefensiveShout": {
     "NAME": "수비 함성",
-    "DESCRIPTION": "champ:반격을 !M! 얻습니다. champ:수비 자세를 취합니다."
+    "DESCRIPTION": "champ:반격을 !M! 얻습니다. NL champ:수비 자세를 취합니다."
   },
   "champ:ShieldSigil": {
     "NAME": "쇠사슬 채찍",
@@ -57,11 +53,11 @@
   },
   "champ:FocusedDefense": {
     "NAME": "상하좌우",
-    "DESCRIPTION": "champ:광폭화 자세를 취합니다. NL 방어도를 !B! 얻습니다. NL 활력 을 !M! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL expansioncontent:활력을 !M! 얻습니다. NL champ:광폭화 자세를 취합니다."
   },
   "champ:FocusedBerserking": {
     "NAME": "총력전",
-    "DESCRIPTION": "소멸. NL champ:자세에서 벗어나지 않습니다. 이 효과를 !M! 번 발동합니다:"
+    "DESCRIPTION": "소멸. NL champ:자세에서 벗어나지 않습니다. 이 효과를 !M! 번 발동합니다: "
   },
   "champ:SetATrap": {
     "NAME": "함정 설치",
@@ -73,15 +69,15 @@
   },
   "champ:BerserkersShout": {
     "NAME": "광폭화 함성",
-    "DESCRIPTION": "활력 을 !M! 얻습니다. NL champ:광폭화 자세를 취합니다."
+    "DESCRIPTION": "expansioncontent:활력을 !M! 얻습니다. NL champ:광폭화 자세를 취합니다."
   },
   "champ:RageSigil": {
     "NAME": "싸움 계획",
-    "DESCRIPTION": "champ:수비 자세를 취합니다. NL 방어도를 !B! 얻습니다. NL 예지 !M! ."
+    "DESCRIPTION": "champ:수비 자세를 취합니다. NL 방어도를 !B! 얻습니다. NL 예지 !M!."
   },
   "champ:GutPunch": {
     "NAME": "내장 파괴",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL *자세 champ:연계: 1턴 동안 champ:궁극의 자세를 취합니다 NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *자세 champ:연계: 1턴 동안 champ:궁극의 자세를 취합니다. NL 소멸."
   },
   "champ:FanOfKnives": {
     "NAME": "칼날 폭풍",
@@ -90,7 +86,7 @@
   },
   "champ:Devastate": {
     "NAME": "완파",
-    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. 이번 전투에 사용된 champ:마무리 카드의 수만큼 이 카드의 비용이 [E] 감소합니다."
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL 이번 전투에 사용된 champ:마무리 카드의 수만큼 이 카드의 비용이 [E] 감소합니다."
   },
   "champ:Circumvent": {
     "NAME": "우회",
@@ -103,7 +99,7 @@
   "champ:TornadoPunch": {
     "NAME": "회오리 주먹",
     "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL *수비 champ:연계: 공격한 적 하나당 방어도를 !B! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL *수비 champ:연계: 공격한 적 하나당 방어도를 !B! 얻습니다."
+    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 수비 champ:연계: 공격한 적 하나당 방어도를 !B! 얻습니다."
   },
   "champ:EnGarde": {
     "NAME": "준비 시작!",
@@ -130,9 +126,9 @@
   },
   "champ:ShieldThrow": {
     "NAME": "방패 투척",
-    "DESCRIPTION": "현재 방어도 만큼 피해를 2번 줍니다.",
+    "DESCRIPTION": "현재 방어도만큼 피해를 2번 줍니다. NL champ:수비 자세를 취하고 있지 않다면 다음 턴에 카드로 방어도를 얻을 수 없습니다.",
     "EXTENDED_DESCRIPTION": [
-      "현재 방어도 !D! 만큼 피해를 2번 줍니다."
+      "현재 방어도 !D! 만큼 피해를 2번 줍니다. NL champ:수비 자세를 취하고 있지 않다면 다음 턴에 카드로 방어도를 얻을 수 없습니다."
     ]
   },
   "champ:FalseCounter": {
@@ -162,9 +158,9 @@
   },
   "champ:ViciousMockery": {
     "NAME": "악랄한 조롱",
-    "DESCRIPTION": "활력 을 !M! 얻습니다. NL 약화를 !DM! 부여합니다. NL 현재 자세의 *스킬 *카드 champ:보너스를 얻습니다.",
+    "DESCRIPTION": "expansioncontent:활력을 !M! 얻습니다. NL 약화를 !DM! 부여합니다. NL 현재 자세의 *스킬 *카드 champ:보너스를 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      "광폭화 champ:연계: 힘을 !M! 얻습니다. 이번 턴이 끝날 때 힘을 !M! 잃습니다. NL ",
+      "광폭화 champ:연계: 힘을 !M! 얻습니다. NL 이번 턴이 끝날 때 힘을 !M! 잃습니다. NL ",
       "수비 champ:연계: 민첩을 !M! 얻습니다. 이번 턴이 끝날 때 민첩을 !M! 잃습니다."
     ]
   },
@@ -174,7 +170,7 @@
   },
   "champ:CrookedStrike": {
     "NAME": "졸렬한 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 활력 을 소모하지 않습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL expansioncontent:활력을 소모하지 않습니다."
   },
   "champ:RapidStrikes": {
     "NAME": "재빠른 타격",
@@ -193,34 +189,33 @@
   },
   "champ:SwordThrow": {
     "NAME": "검 투척",
-    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL 약화를 2 얻습니다. NL *광폭화 champ:연계: 약화를 2 잃습니다."
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL champ:광폭화 자세를 취하고 있지 않다면 다음 턴에 *공격 *카드를 사용할 수 없습니다."
   },
   "champ:MurderStrike": {
     "NAME": "죽이는 타격",
-    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 이번 전투 동안 *스킬 *카드 champ:보너스를 얻을 때마다 이 카드의 피해량을 !M! 증가시킵니다."
+    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL *스킬 *카드를 사용할 때마다 이번 전투에서 이 카드의 피해량이 !M! 증가합니다."
   },
   "champ:HeavySlash": {
     "NAME": "숙달된 베기",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴 시작 시 막히지 않은 피해만큼 활력 을 얻습니다.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 강화된 스킬 카드를 1장 얻습니다. NL 그 카드의 비용은 0이 됩니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 내 다음 턴 시작 시 막히지 않은 피해만큼 expansioncontent:활력을 얻습니다."
   },
   "champ:CheapShot": {
     "NAME": "비열한 일격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 보스라면 피해를 3번 줍니다. 아니라면 적을 hermit:기절시킵니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 보스라면 피해를 3번 주고 아니라면 적을 hermit:기절시킵니다. NL 소멸."
   },
   "champ:RisingSlash": {
     "NAME": "수직 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 직전에 champ:마무리 카드를 사용했다면 피해를 2번 줍니다."
+    "DESCRIPTION": "보존. NL 피해를 !D! 줍니다. NL 직전에 champ:마무리 카드를 사용했다면 피해를 2번 줍니다."
   },
   "champ:Shatter": {
     "NAME": "산산조각",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL *자세 champ:연계: 약화 와 취약을 !M! 부여합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *자세 champ:연계: 약화와 취약을 !M! 부여합니다."
   },
   "champ:EnragedBash": {
     "NAME": "불타는 맹공격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL *광폭화 champ:연계: 이번 전투에서 피해 횟수가 1 증가합니다. 자세를 바꿔도 유지됩니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *광폭화 champ:연계: 이번 전투에서 이 카드의 피해 횟수가 1번 증가합니다.",
     "EXTENDED_DESCRIPTION": [
-      "피해를 !D! 만큼 !M! 번 줍니다. NL *광폭화 champ:연계: 이번 전투에서 피해 횟수가 1 증가합니다. 자세를 바꿔도 유지됩니다."
+      "피해를 !D! 만큼 !M! 번 줍니다. NL *광폭화 champ:연계: 이번 전투에서 이 카드의 피해 횟수가 1번 증가합니다."
     ]
   },
   "champ:VampiricStrike": {
@@ -229,7 +224,7 @@
   },
   "champ:AdrenalArmor": {
     "NAME": "흉갑",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 힘을 !M! 얻습니다. 이번 턴이 끝날 때 힘을 !M! 잃습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 힘을 !M! 얻습니다. NL 이번 턴이 끝날 때 힘을 !M! 잃습니다."
   },
   "champ:HeartStrike": {
     "NAME": "마무리 짓기",
@@ -245,7 +240,7 @@
   },
   "champ:Encircle": {
     "NAME": "포위",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 공격한 대상 하나당 카드를 !M! 장 뽑습니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 공격한 적 하나당 카드를 !M! 장 뽑습니다."
   },
   "champ:LastStand": {
     "NAME": "최후의 저항",
@@ -270,18 +265,18 @@
   },
   "champ:DeathBlow": {
     "NAME": "치명적인 강타",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 활력 을 !M! 얻습니다. NL 소멸."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL expansioncontent:활력을 !M! 얻습니다. NL 소멸."
   },
   "champ:ArenaPreparation": {
     "NAME": "아레나 준비",
-    "DESCRIPTION": "무작위 스킬 카드를 !M! 장 얻습니다. NL 그 카드들을 보존합니다. NL 소멸."
+    "DESCRIPTION": "무작위 *스킬 카드를 !M! 장 얻습니다. NL 그 카드들은 보존됩니다. NL 소멸."
   },
   "champ:SteelEdge": {
     "NAME": "강철 칼날",
     "DESCRIPTION": "피해를 !D! 만큼 X번 줍니다. NL 이 효과를 1번 이상 X 번 발동합니다:",
     "EXTENDED_DESCRIPTION": [
       "광폭화 champ:연계: 피해를 !D! 만큼 X번 줍니다. NL ",
-      "수비 champ:연계: 방어도를 X번 !B! 얻습니다.",
+      "수비 champ:연계: 방어도를 !B! 만큼 X번 얻습니다.",
       "검투사: 카드를 1장 뽑고 [E] 를 얻습니다.",
       "검투사: 카드를 2장 뽑고 [E] 를 얻습니다.",
       "champ:연계 NL "
@@ -289,7 +284,7 @@
   },
   "champ:Improvising": {
     "NAME": "증강",
-    "DESCRIPTION": "턴 시작 시 자세를 취하고 있지 않다면 무작위 자세를 취합니다. NL 자세를 취하면 *스킬 *카드 champ:보너스를 !M! 번 얻습니다."
+      "DESCRIPTION": "자세를 취할 때마다 해당 자세의 *스킬 *카드 champ:보너스를 !M! 번 얻습니다."
   },
   "champ:CalledShot": {
     "NAME": "원기 회복",
@@ -308,7 +303,7 @@
   },
   "champ:GladiatorForm": {
     "NAME": "검투사의 형상",
-    "DESCRIPTION": "매 턴 시작 시 저번 턴에 소모한 활력 3당 활력 과 champ:반격을 !M! 얻습니다."
+    "DESCRIPTION": "내 턴 시작 시 저번 턴에 소모한 활력 3당 expansioncontent:활력과 champ:반격을 !M! 얻습니다."
   },
   "champ:Duel": {
     "NAME": "도전",
@@ -317,20 +312,20 @@
   },
   "champ:DancingMaster": {
     "NAME": "춤 전문가",
-    "DESCRIPTION": "매 턴 처음으로 champ:마무리 카드를 사용한다면 [E] 를 얻고 카드를 1장 뽑습니다."
+    "DESCRIPTION": "매 턴 처음으로 champ:마무리 카드를 사용하면 [E] 를 얻고 카드를 1장 뽑습니다."
   },
   "champ:StrikeOfGenius": {
     "NAME": "천재적인 타격",
-    "DESCRIPTION": "내 턴 시작 시 이름에 \"타격\" 이 포함된 무작위 gremlin:메아리를 얻습니다. NL 그 카드의 비용은 사용하기 전까지 0입니다.",
-    "UPGRADE_DESCRIPTION": "내 턴 시작 시 이름에 강화된 \"타격\" 이 포함된 무작위 gremlin:메아리를 얻습니다. NL 그 카드의 비용은 사용하기 전까지 0입니다."
+    "DESCRIPTION": "내 턴 시작 시 이름에 \"타격\" 이 포함된 무작위 gremlin:메아리를 얻습니다. NL 그 카드의 비용은 사용하기 전까지 0 입니다.",
+    "UPGRADE_DESCRIPTION": "내 턴 시작 시 이름에 강화된 \"타격\" 이 포함된 무작위 gremlin:메아리를 얻습니다. NL 그 카드의 비용은 사용하기 전까지 0 입니다."
   },
   "champ:DefensiveStyle": {
     "NAME": "이중 태세",
-    "DESCRIPTION": "*스킬 *카드 champ:보너스의 활력 과 champ:반격을 !M! 증가시킵니다."
+    "DESCRIPTION": "*스킬 *카드 champ:보너스의 expansioncontent:활력과 champ:반격을 !M! 증가시킵니다."
   },
   "champ:GladiatorStyle": {
     "NAME": "건투",
-    "DESCRIPTION": "*광폭화 champ:연계: 힘을 !M! 얻습니다. NL *수비 champ:연계: 민첩을 !M! 얻습니다."
+    "DESCRIPTION": "*광폭화 champ:연계: NL 힘을 !M! 얻습니다. NL *수비 champ:연계: NL 민첩을 !M! 얻습니다."
   },
   "champ:BerserkerStyle": {
     "NAME": "칼갈이",
@@ -342,20 +337,20 @@
   },
   "champ:Endure": {
     "NAME": "감내",
-    "DESCRIPTION": "champ:수비 자세를 취합니다. NL 방어도를 !B! 얻습니다. NL 이 카드의 방어도는 힘 만큼 증가합니다.",
+    "DESCRIPTION": "champ:수비 자세를 취합니다. NL 방어도를 !B! 얻습니다. NL 이 카드의 방어도는 민첩 대신 힘 만큼 증가합니다.",
     "UPGRADE_DESCRIPTION": "champ:수비 자세를 취합니다. NL 방어도를 !B! 얻습니다. NL 이 카드의 방어도는 힘 만큼 증가합니다."
   },
   "champ:PreemptiveStrike": {
     "NAME": "우선 타격",
-    "DESCRIPTION": "적 전체에게 현재 champ:반격만큼 피해를 줍니다. NL champ:반격을 절반 잃습니다.",
+    "DESCRIPTION": "적 전체에게 현재 champ:반격만큼 피해를 줍니다. *반격을 절반 잃습니다. NL *수비 champ:연계: champ:반격을 잃지 않습니다.",
     "EXTENDED_DESCRIPTION": [
-      " NL (피해를 !D! 줍니다)",
+      " NL (피해를 !D! 줍니다.)",
       "그건 어리석은 짓이다."
     ]
   },
   "champ:Parry": {
     "NAME": "받아치기",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL champ:반격을 !M! 얻습니다. NL 이번 턴에 champ:반격한다면 *응수를 1장 추가로 얻습니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL champ:반격을 !M! 얻습니다. NL 이번 턴에 champ:반격하면 *응수 *타격을 얻습니다.",
     "UPGRADE_DESCRIPTION": "휘발성. NL champ:반격한 만큼 피해를 줍니다. NL 소멸."
   },
   "champ:EnchantCrown": {
@@ -371,15 +366,15 @@
   },
   "champ:UltimateStance": {
     "NAME": "궁극의 자세",
-    "DESCRIPTION": "다음 턴 동안 champ:궁극의 자세를 취합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "*수비 또는 *광폭화 자세를 사용할 수 있습니다. NL !M! 턴 동안 champ:궁극의 자세를 취합니다.",
+    "DESCRIPTION": "다음 턴 동안 champ:궁극의 *자세를 취합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "*수비 또는 *광폭화 자세를 취해야 합니다. NL champ:궁극의 *자세를 !M! 턴 동안 취합니다.",
     "EXTENDED_DESCRIPTION": [
       "자세를 취하고 있지 않다."
     ]
   },
   "champ:FancyFootwork": {
     "NAME": "기묘한 발놀림",
-    "DESCRIPTION": "취하지 않은 자세를 취합니다. NL 이번 턴 동안 다음으로 champ:마무리 카드를 사용한다면 적 전체에게 피해를 !M! 줍니다."
+    "DESCRIPTION": "취하지 않은 자세를 취합니다. NL 이번 턴 동안 다음으로 champ:마무리 카드를 사용하면 적 전체에게 피해를 !M! 줍니다."
   },
   "champ:TripleStrike": {
     "NAME": "삼중 타격",
@@ -388,8 +383,8 @@
   },
   "champ:WindUp": {
     "NAME": "뒤처리",
-    "DESCRIPTION": "선택한 자세를 취합니다. NL 뽑을 카드 더미에서 champ:마무리 카드를 가져옵니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "선택한 자세를 취합니다. NL 뽑을 카드 더미에서 champ:마무리 카드를 가져옵니다.",
+    "DESCRIPTION": "선택한 champ:자세를 취합니다. NL 뽑을 카드 더미에서 champ:마무리 카드를 가져옵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "선택한 champ:자세를 취합니다. NL 뽑을 카드 더미에서 champ:마무리 카드를 가져옵니다.",
     "EXTENDED_DESCRIPTION": [
       "champ:광폭화 자세를 취합니다.",
       "champ:수비 자세를 취합니다."
@@ -397,6 +392,6 @@
   },
   "champ:Headbutt": {
     "NAME": "박치기",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 버린 카드 더미에서 카드를 1 장 선택해 뽑을 카드 더미 맨 위에 놓습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 버린 카드 더미에서 카드를 1장 선택해 뽑을 카드 더미 맨 위에 놓습니다."
   }
 }

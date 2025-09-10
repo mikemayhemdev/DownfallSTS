@@ -1,4 +1,4 @@
-{
+﻿{
   "collector:CollectionReward": {
     "TEXT": [
       "수집할 카드를 선택하십시오."
@@ -24,7 +24,7 @@
   },
   "collector:CombatCollectionPileButton": {
     "TEXT": [
-      "수집품 더미",
+      "장 더 뽑습니다.",
       "이번 전투 동안 여기에서 뽑지 않은 #y수집품 카드를 보여줍니다. NL 매 턴 시작 시 여기서 카드를 #b1 장 뽑습니다. NL NL 여기있는 카드를 보려면 클릭하십시오. (섞여있음).",
       "수집된 카드가 없다!"
     ]
@@ -44,7 +44,7 @@
   "collector:PyreInfo": {
     "TEXT": [
       "장작",
-      "이 카드를 사용하려면 추가로 카드를 1장 소멸시켜야합니다."
+      "이 카드를 사용하려면 추가로 카드를 1장 소멸시켜야 합니다."
     ]
   },
   "collector:CollectedCardMod": {
@@ -56,7 +56,7 @@
   "collector:CollectibleCardReward": {
     "TEXT": [
       "수집: ",
-      "이것을 얻을 수 있습니다"
+      "이것을 얻을 수 있습니다."
     ]
   },
   "collector:HoardedMod": {
@@ -79,7 +79,7 @@
   },
   "collector:PyreModText": {
     "TEXT": [
-      "소멸 시킬 카드가 없다!"
+      "소멸시킬 카드가 없다!"
     ]
   },
   "collector:StashAwayCampfireOption": {
@@ -98,7 +98,7 @@
   },
   "collector:EssenceReward": {
     "TEXT": [
-      "",
+      " ",
       " 정수"
     ]
   },

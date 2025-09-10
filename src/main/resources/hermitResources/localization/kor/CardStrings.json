@@ -1,4 +1,4 @@
-{
+﻿{
   "hermit:Strike_Hermit": {
     "NAME": "타격",
     "DESCRIPTION": "피해를 !D! 줍니다."
@@ -29,8 +29,8 @@
   },
   "hermit:Covet": {
     "NAME": "갈망",
-    "DESCRIPTION": "카드를 1장 버립니다. NL 카드를 !M! 장 뽑습니다. 저주를 버린다면 소멸시킵니다.",
-    "UPGRADE_DESCRIPTION": "카드를 1장 버립니다. NL 카드를 !M! 장 뽑습니다. 저주를 버린다면 소멸시킵니다."
+    "DESCRIPTION": "카드를 1장 버립니다. NL 카드를 !M! 장 뽑습니다. NL 저주를 버린다면 소멸시킵니다.",
+    "UPGRADE_DESCRIPTION": "카드를 1장 버립니다. NL 카드를 !M! 장 뽑습니다. NL 저주를 버린다면 소멸시킵니다."
   },
   "hermit:HighCaliber": {
     "NAME": "대구경",
@@ -79,27 +79,27 @@
   },
   "hermit:Roughhouse": {
     "NAME": "난장판",
-    "DESCRIPTION": "피해를 !D! 줍니다. hermit:정조준\: NL 방어도를 !B! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. hermit:정조준: NL 방어도를 !B! 얻습니다."
   },
   "hermit:Malice": {
     "NAME": "악의",
-    "DESCRIPTION": "손에 있는 카드를 1장 소멸시킵니다. NL 피해를 !D! 줍니다. NL 저주를 소멸시켰다면 적 전체에게 피해를 줍니다."
+    "DESCRIPTION": "카드를 1장 소멸시킵니다. NL 피해를 !D! 줍니다. NL 저주가 소멸되면 적 전체에게 피해를 줍니다."
   },
   "hermit:Deadeye": {
     "NAME": "명사수",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL hermit:정조준\: NL 힘을 !M! 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL hermit:정조준: NL 힘을 !M! 얻습니다."
   },
   "hermit:GhostlyPresence": {
     "NAME": "유령적 존재",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준\: NL 적 전체에게 약화를 !M! 부여합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준: NL 적 전체에게 약화를 !M! 부여합니다."
   },
   "hermit:Adapt": {
     "NAME": "적응",
-    "DESCRIPTION": "내 턴 시작 시 손에 있는 카드 중 1장을 선택해 소멸시킵니다. *소멸시켰다면 방어도를 8 얻습니다."
+    "DESCRIPTION": "내 턴 시작 시 카드를 1장 소멸시킵니다. NL 카드가 소멸되면 방어도를 8 얻습니다."
   },
   "hermit:Dive": {
     "NAME": "급하강",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준\: NL expansioncontent:판금_갑옷을 !M! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준: NL expansioncontent:판금 *갑옷을 !M! 얻습니다."
   },
   "hermit:FlashPowder": {
     "NAME": "섬광탄",
@@ -116,8 +116,8 @@
   },
   "hermit:Glare": {
     "NAME": "응시",
-    "DESCRIPTION": "약화를 !M! 부여합니다. NL 취약을 !M! 부여합니다.",
-    "UPGRADE_DESCRIPTION": "보존. NL 약화를 !M! 부여합니다. NL 취약을 !M! 부여합니다."
+    "DESCRIPTION": "약화와 취약을 !M! 부여합니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 약화와 취약을 !M! 부여합니다."
   },
   "hermit:TakeCover": {
     "NAME": "엄폐",
@@ -134,7 +134,7 @@
   },
   "hermit:Scavenge": {
     "NAME": "청소부",
-    "DESCRIPTION": "expansioncontent:판금_갑옷을 !M! 얻습니다. NL hermit:정조준: NL 골드를 !hermit:SecondMagic! 얻습니다. NL 소멸."
+    "DESCRIPTION": "expansioncontent:판금 *갑옷을 !M! 얻습니다. NL hermit:정조준: NL 골드를 !hermit:SecondMagic! 얻습니다. NL 소멸."
   },
   "hermit:ImpendingDoom": {
     "NAME": "임박한 종말",
@@ -154,7 +154,7 @@
   },
   "hermit:Spite": {
     "NAME": "앙심",
-    "DESCRIPTION": "손에 있는 사용불가 카드를 모두 소멸시킵니다. NL 방어도를 !B! 얻습니다. NL 카드를 !M! 장 뽑습니다. "
+    "DESCRIPTION": "손에 있는 사용불가 카드를 모두 소멸시킵니다. NL 방어도를 !B! 얻습니다. NL 카드를 !M! 장 뽑습니다."
   },
   "hermit:Manifest": {
     "NAME": "현현",
@@ -182,8 +182,8 @@
   },
   "hermit:Vantage": {
     "NAME": "위치 선점",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준: NL 카드를 1장 뽑고 그 카드를 강화합니다.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준: NL 카드를 !M! 장 뽑고 그 카드를 강화합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준: 카드를 1장 뽑고 그 카드를 강화합니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL hermit:정조준: 카드를 !M! 장 뽑고 그 카드를 강화합니다."
   },
   "hermit:Brawl": {
     "NAME": "난투",
@@ -200,11 +200,11 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "압도적인 힘",
-    "DESCRIPTION": "[E] [E] [E] 를 얻습니다. NL 카드를 !hermit:SecondMagic! 장 뽑습니다. NL  [E] 가 0인 상태로 내 턴을 끝날 때마다 체력을 !M! 잃습니다."
+    "DESCRIPTION": " [E] [E] [E] 를 얻습니다. NL 카드를 !hermit:SecondMagic! 장 뽑습니다. NL [E] 가 0인 상태로 내 턴을 끝날 때마다 체력을 !M! 잃습니다."
   },
   "hermit:Maintenance": {
     "NAME": "유지보수",
-    "DESCRIPTION": "이번 전투 동안 *타격의 피해량을 !M! 증가시키고 이 카드의 비용을 [E] 증가시킵니다. NL 민첩을 !hermit:SecondMagic! 얻습니다."
+    "DESCRIPTION": "이번 전투 동안 *타격의 피해량이 !M! 증가합니다. NL 민첩을 !hermit:SecondMagic! 얻습니다. NL 이번 전투 동안 이 카드의 비용은 1 증가합니다."
   },
   "hermit:EternalForm": {
     "NAME": "영겁의 형상",
@@ -226,7 +226,7 @@
   },
   "hermit:CursedWeapon": {
     "NAME": "저주받은 무기",
-    "DESCRIPTION": "체력을 !M! 잃습니다. NL 피해를 !D! 줍니다. NL 모든 *저주받은 *무기의 피해량이 영구적으로 !hermit:SecondMagic! 상승합니다. 소멸."
+    "DESCRIPTION": "체력을 !M! 잃습니다. NL 피해를 !D! 줍니다. NL 모든 *저주받은 *무기의 피해량이 영구적으로 !hermit:SecondMagic! 상승합니다. NL 소멸."
   },
   "hermit:Enervate": {
     "NAME": "쇠약",
@@ -243,7 +243,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "외톨이",
-    "DESCRIPTION": "카드를 선택합니다. NL 그 카드의 비용이 이번 턴 동안 0이 됩니다. NL 다른 카드를 모두 버립니다."
+    "DESCRIPTION": "카드를 선택합니다. NL 이번 턴에 그 카드의 비용은 0이 됩니다. NL 다른 카드를 모두 버립니다."
   },
   "hermit:HighNoon": {
     "NAME": "정오",
@@ -256,7 +256,7 @@
   "hermit:TakeAim": {
     "NAME": "겨냥",
     "DESCRIPTION": "내 턴 시작 시 hermit:집중합니다.",
-    "UPGRADE_DESCRIPTION": "hermit:집중합니다. NL 내 턴 시작 시 hermit:집중합니다."
+	"UPGRADE_DESCRIPTION": "hermit:집중합니다. NL 내 턴 시작 시 hermit:집중합니다."
   },
   "hermit:Magnum": {
     "NAME": "매그넘",
@@ -273,11 +273,11 @@
   },
   "hermit:LuckOfTheDraw": {
     "NAME": "행운의 뽑기",
-    "DESCRIPTION": "뽑은 카드의 [E]  합이 !M! 이상 될 때까지 카드를 뽑습니다."
+    "DESCRIPTION": "뽑은 카드의 비용 합이 !M! 이상 될 때까지 카드를 뽑습니다."
   },
   "hermit:Coalescence": {
     "NAME": "융합",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 내 턴 종료 시 손에 있는 카드 중 최대 !M! 장을 선택해 보존합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 카드 중 최대 !M! 장을 선택해 보존합니다."
   },
   "hermit:PistolWhip": {
     "NAME": "권총패기",
@@ -305,17 +305,17 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "태풍의 눈",
-    "DESCRIPTION": "hermit:집중합니다. NL 최대  [E] 보다 모자란 만큼  [E] 를 얻습니다. NL 소멸."
+    "DESCRIPTION": "hermit:집중합니다. NL 최대  [E] 보다 모자란 만큼  [E] 를 얻습니다.  NL 소멸."
   },
   "hermit:FinalCanter": {
     "NAME": "최후의 위선",
-    "DESCRIPTION": "보존. 손에 있는 저주 한 장당 피해를 !D! 줍니다. NL 소멸.",
+    "DESCRIPTION": "보존. NL 손에 있는 저주 한 장당 피해를 !D! 줍니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": " NL (저주가 !M! 장 있습니다.)",
     "EXTENDED_DESCRIPTION": [" NL (저주가 !M! 장 있습니다.)"]
   },
   "hermit:HeroicBravado": {
     "NAME": "영웅적 객기",
-    "DESCRIPTION": "휘발성. NL hermit:강인함을 1 얻습니다. NL 이번 전투 동안 이 카드의 비용을 !M! 증가시킵니다."
+    "DESCRIPTION": "휘발성. NL hermit:강인함을 1 얻습니다. NL 이번 전투 동안 이 카드의 비용이 !M! 증가합니다."
   },
   "hermit:FromBeyond": {
     "NAME": "저 너머에서",
@@ -323,6 +323,6 @@
   },
   "hermit:Virtue": {
     "NAME": "선행",
-    "DESCRIPTION": "보존. NL 내 보유한 모든 해로운 효과를 !M! 감소시킵니다."
+    "DESCRIPTION": "보존. NL 내 보유한 해로운 효과를 각각 !M! 만큼 감소시킵니다."
   }
 }

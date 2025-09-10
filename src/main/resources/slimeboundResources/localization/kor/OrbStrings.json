@@ -1,4 +1,4 @@
-{
+﻿{
   "Slimebound:EmptySlimeSlot": {
     "NAME": "슬라임 슬롯",
     "DESCRIPTION": [
@@ -8,7 +8,7 @@
   "Slimebound:BronzeSlime": {
     "NAME": "청동 슬라임",
     "DESCRIPTION": [
-      "내 턴 시작 시 적 전체에게 피해를 #b",
+      "적 전체에게 피해를 #b",
       " 주고 공격 했다면 이 청동 슬라임의 다음 공격 턴을 넘깁니다.",
       ""
     ]
@@ -17,28 +17,28 @@
     "NAME": "싸움꾼 슬라임",
     "DESCRIPTION": [
       "내 턴 시작 시 피해를 #b",
-      " 만큼 2번 줍니다."
+      " 만큼 #b2 번 줍니다."
     ]
   },
   "Slimebound:ScrapOozeSlime": {
     "NAME": "날붙이 수액",
     "DESCRIPTION": [
       "내 턴 시작 시 피해를 #b",
-      " 줍니다. NL #y흡수되어도 되살아납니다."
+      " 줍니다. NL #y흡수돼도 되살아날 수 있습니다."
     ]
   },
   "Slimebound:GreedOozeSlime": {
     "NAME": "욕심쟁이 수액",
     "DESCRIPTION": [
       "내 턴 시작 시 피해를 #b",
-      " 줍니다. NL #y흡수되어도 되살아납니다."
+      " 줍니다. NL #y흡수돼도 되살아날 수 있습니다."
     ]
   },
   "Slimebound:TorchHeadSlime": {
     "NAME": "불머리 슬라임",
     "DESCRIPTION": [
       "내 턴 시작 시 피해를 #b",
-      " 줍니다. 내 증가된 #y힘만큼 피해량이 증가합니다."
+      " 줍니다. 내 #y힘만큼 피해량이 증가합니다."
     ]
   },
   "Slimebound:CultistSlime": {
@@ -72,10 +72,10 @@
     ]
   },
   "Slimebound:HexSlime": {
-    "NAME": "유령불꽃 슬라임",
+    "NAME": "유령불꽃 장벽",
     "DESCRIPTION": [
       "내 턴 시작 시 피해를 #b",
-      " 주고 #y영혼불꽃을 #b",
+      " 주고 #y영혼화상을 #b",
       " 부여합니다."
     ]
   },
@@ -100,7 +100,7 @@
     "DESCRIPTION": [
       "내 턴 시작 시 피해를 #b",
       " 주고 #y가시를 #b",
-      " 얻습니다. 턴 종료 시 이 효과로 얻은 #y가시를 잃습니다."
+      " 얻습니다. 내 턴 종료 턴 종료 시 이 효과로 얻은 #y가시를 잃습니다."
     ]
   },
   "Slimebound:DrawingSlime": {
@@ -108,14 +108,14 @@
     "DESCRIPTION": [
       "내 턴 시작 시 피해를 #b",
       " 주고 카드를 #b",
-      " 장 뽑아줍니다. 카드를 뽑아주는 효과는 잠재력으로 증가하지 않습니다."
+      " 장 뽑아줍니다. 카드를 뽑아주는 효과는 #y잠재력으로 증가하지 않습니다."
     ]
   },
   "Slimebound:DarklingSlime": {
     "NAME": "어두미 슬라임",
     "DESCRIPTION": [
       "내 턴 시작 시 피해를 #b",
-      " 줍니다. 명령 시 모든 어두미 슬라임이 공격합니다."
+      " 줍니다. #y명령하면 자리와 관계없이 모든 #y어두미 슬라임이 공격합니다."
     ]
   }
 }

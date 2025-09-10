@@ -1,10 +1,10 @@
-{
+﻿{
   "slimeboundConfigMenuText": {
     "TEXT": [
       "Allow other characters to encounter some Slimebound relics.",
       "Allow other characters to encounter some Slimebound potions.",
       "Allow other characters to encounter some Slimebound events.",
-      "모든 것을 해금합니다(비추천)"
+      "모든 것을 해금합니다 (비추천)."
     ]
   },
   "slimeboundmod:CommandMod": {

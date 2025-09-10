@@ -1,4 +1,4 @@
-{
+﻿{
   "Guardian:Strike_Guardian": {
     "NAME": "타격",
     "DESCRIPTION": "피해를 !D! 줍니다."
@@ -9,18 +9,18 @@
   },
   "Guardian:Gem_Red": {
     "NAME": "루비",
-    "DESCRIPTION": "guardianmod:보석. NL 힘을 2 얻습니다. 이번 턴이 끝날 때 힘을 2 잃습니다.",
-    "UPGRADE_DESCRIPTION": "힘을 2 얻습니다. 이번 턴이 끝날 때 힘을 2 잃습니다."
+    "DESCRIPTION": "guardianmod:보석. NL 힘을 2 얻습니다. NL 이번 턴이 끝날 때 힘을 2 잃습니다.",
+    "UPGRADE_DESCRIPTION": "힘을 2 얻습니다. NL 이번 턴이 끝날 때 힘을 2 잃습니다."
   },
   "Guardian:Gem_Green": {
     "NAME": "에메랄드",
-    "DESCRIPTION": "guardianmod:보석. NL 민첩을 2 얻습니다. 이번 턴이 끝날 때 민첩을 2 잃습니다.",
-    "UPGRADE_DESCRIPTION": "민첩을 2 얻습니다. 이번 턴이 끝날 때 민첩을 2 잃습니다."
+    "DESCRIPTION": "guardianmod:보석. NL 민첩을 2 얻습니다. NL 이번 턴이 끝날 때 민첩을 2 잃습니다.",
+    "UPGRADE_DESCRIPTION": "민첩을 2 얻습니다. NL 이번 턴이 끝날 때 힘을 2 잃습니다."
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "토르말린",
-    "DESCRIPTION": "guardianmod:보석. NL 가시를 4 얻습니다. 이번 턴이 끝날 때 가시를 4 잃습니다.",
-    "UPGRADE_DESCRIPTION": "가시를 4 얻습니다. 이번 턴이 끝날 때 가시를 4 잃습니다."
+    "DESCRIPTION": "guardianmod:보석. NL 가시를 4 얻습니다. NL 이번 턴이 끝날 때 가시를 4 잃습니다.",
+    "UPGRADE_DESCRIPTION": "가시를 4 얻습니다. NL 이번 턴이 끝날 때 가시를 4 잃습니다."
   },
   "Guardian:Gem_White": {
     "NAME": "석영",
@@ -34,12 +34,12 @@
   },
   "Guardian:Gem_Cyan": {
     "NAME": "아쿠아 마린",
-    "DESCRIPTION": "guardianmod:보석. NL *크리스탈 *수호를 1장 얻습니다.",
-    "UPGRADE_DESCRIPTION": "*크리스탈 *수호를 1장 얻습니다."
+    "DESCRIPTION": "guardianmod:보석. NL *크리스탈 *수호를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "*크리스탈 *수호를 얻습니다."
   },
   "Guardian:ChargeUp": {
     "NAME": "충전 중",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴 동안 힘을 !M! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 힘을 !M! 얻습니다. NL 다음 턴이 끝날 때 힘을 !M! 잃습니다."
   },
   "Guardian:DonusPower": {
     "NAME": "과적",
@@ -48,7 +48,7 @@
   },
   "Guardian:DecasProtection": {
     "NAME": "고대의 파워",
-    "DESCRIPTION": "힘 과 민첩을 !M! 얻습니다. NL 이번 턴이 끝날 때 힘 과 민첩을 !M! 잃습니다."
+    "DESCRIPTION": "힘과 민첩을 !M! 얻습니다. NL 이번 턴이 끝날 때 힘과 민첩을 !M! 잃습니다."
   },
   "Guardian:FierceBash": {
     "NAME": "매서운 강타",
@@ -77,8 +77,8 @@
   },
   "Guardian:CurlUp": {
     "NAME": "웅크리기",
-    "DESCRIPTION": "무작위 카드 1장을 guardianmod:정지장에 넣습니다. NL guardianmod:대비를 !M! 합니다.",
-    "UPGRADE_DESCRIPTION": "카드 1장을 guardianmod:정지장에 넣습니다. NL guardianmod:대비를 !M! 합니다."
+    "DESCRIPTION": "무작위 카드를 1장 guardianmod:정지장에 넣습니다. NL guardianmod:대비를 !M! 합니다.",
+    "UPGRADE_DESCRIPTION": "카드를 1장 guardianmod:정지장에 넣습니다. NL guardianmod:대비를 !M! 합니다."
   },
   "Guardian:TimeBomb": {
     "NAME": "시한폭탄",
@@ -90,8 +90,8 @@
   },
   "Guardian:BronzeArmor": {
     "NAME": "탄력적인 갑옷",
-    "DESCRIPTION": "보유한 모든 해로운 효과를 !M! 감소시킵니다. NL guardianmod:대비를 8 합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "보유한 모든 해로운 효과를 !M! 감소시킵니다. NL guardianmod:대비를 8 합니다."
+    "DESCRIPTION": "보유한 해로운 효과를 각각 !M! 만큼 감소시킵니다. NL guardianmod:대비를 8 합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "보유한 해로운 효과를 각각 !M! 만큼 감소시킵니다. NL guardianmod:대비를 8 합니다."
   },
   "Guardian:FloatingOrbs": {
     "NAME": "부유 구체",
@@ -118,24 +118,25 @@
   },
   "Guardian:SphericShield": {
     "NAME": "구체 방어",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL guardianmod:수비_모드로 전환합니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL guardianmod:연마유를 1개 얻습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "guardianmod:연마유를 1개 얻습니다. NL 소멸."
   },
   "Guardian:Harden": {
     "NAME": "경화",
-    "DESCRIPTION": "방어도 가 20 이상 필요합니다. NL guardianmod:대비를 !GuardianSecondM! 하고 가시를 !M! 얻습니다.",
+    "DESCRIPTION": "방어도가 20 이상 필요합니다. NL guardianmod:대비를 !GuardianSecondM! 하고 가시를 !M! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      "방어도가 더 필요하다."
+      "방어도 더 필요."
     ]
   },
   "Guardian:SentryBeam": {
     "NAME": "보초기 폭발",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL *보초기 *파동을 1장 guardianmod:정지장에 넣습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *보초기 *파동+을 1장 guardianmod:정지장에 넣습니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *보초기 *파동을 guardianmod:정지장에 넣습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *보초기 *파동+을 guardianmod:정지장에 넣습니다. NL 소멸."
   },
   "Guardian:SentryWave": {
     "NAME": "보초기 파동",
-    "DESCRIPTION": "약화를 !M! 부여합니다. NL *보초기 *폭발을 1장 guardianmod:정지장에 넣습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "약화를 !M! 부여합니다. NL guardianmod:대비를 2 합니다. NL *보초기 *폭발+을 1장 guardianmod:정지장에 넣습니다. NL 소멸."
+    "DESCRIPTION": "약화를 !M! 부여합니다. NL *보초기 *폭발을 guardianmod:정지장에 넣습니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "약화를 !M! 부여합니다. NL guardianmod:대비를 2 합니다. NL *보초기 *폭발+을 guardianmod:정지장에 넣습니다. NL 소멸."
   },
   "Guardian:CompilePackage": {
     "NAME": "컴파일 패키지",
@@ -166,7 +167,7 @@
     "UPGRADE_DESCRIPTION": "*보초기 *폭발+ 1장, *보초기 *파동+ 2장을 얻습니다. NL 소멸."
   },
   "Guardian:PackageWalker": {
-    "NAME": "패키지: 구체 보조기",
+    "NAME": "패키지: 구체 순찰기",
     "DESCRIPTION": "*구체 *순찰기, *순찰기 *할퀴기, *소각을 얻습니다. NL 소멸.",
     "UPGRADE_DESCRIPTION": "*구체 *순찰기+, *순찰기 *할퀴기+, *소각+을 얻습니다. NL 소멸."
   },
@@ -181,8 +182,8 @@
     "UPGRADE_DESCRIPTION": "*재편성+, *사전 *구성+, *시간 *축전기+를 얻습니다. NL 소멸."
   },
   "Guardian:Planning": {
-    "NAME": "계획",
-    "DESCRIPTION": "뽑을 카드 더미 위에서 !M! 장을 guardianmod:정지장에 넣습니다."
+    "NAME": "저장 방패",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 보유한 해로운 효과를 각각 !M! 만큼 감소시킵니다."
   },
   "Guardian:Recover": {
     "NAME": "복구",
@@ -191,7 +192,7 @@
   "Guardian:Emergency": {
     "NAME": "긴급 상황",
     "DESCRIPTION": "guardianmod:정지장에 있는 모든 카드를 guardianmod:가속합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "guardianmod:정지장에 있는 모든 카드를 2번 guardianmod:가속합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "guardianmod:정지장에 있는 모든 카드를 두 번 guardianmod:가속합니다. NL 소멸."
   },
   "Guardian:Clone": {
     "NAME": "복제",
@@ -212,16 +213,16 @@
   },
   "Guardian:Metallicize": {
     "NAME": "경화",
-    "DESCRIPTION": "expansioncontent:판금_갑옷을 !M! 얻습니다."
+    "DESCRIPTION": "expansioncontent:판금 *갑옷을 !M! 얻습니다."
   },
   "Guardian:StasisStrike": {
     "NAME": "정지장 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL guardianmod:정지장 슬롯을 1 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *정지장 슬롯을 1 얻습니다."
   },
   "Guardian:FuturePlans": {
     "NAME": "미래 계획",
-    "DESCRIPTION": "턴 종료 시 카드를 !M! 장 guardianmod:정지장에 넣습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 턴 종료 시 카드를 !M! 장 guardianmod:정지장에 넣습니다."
+    "DESCRIPTION": "턴 종료 시 카드를 최대 !M! 장 guardianmod:정지장에 넣습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 턴 종료 시 카드를 최대 !M! 장 guardianmod:정지장에 넣습니다."
   },
   "Guardian:Suspension": {
     "NAME": "완충장치",
@@ -235,7 +236,7 @@
   },
   "Guardian:TimeCapacitor": {
     "NAME": "시간 축전기",
-    "DESCRIPTION": "정지장 슬롯을 !M! 개 얻습니다."
+    "DESCRIPTION": "정지장 슬롯을 !M! 얻습니다."
   },
   "Guardian:ConstructionForm": {
     "NAME": "구조물의 형상",
@@ -253,11 +254,11 @@
   },
   "Guardian:ChargeCore": {
     "NAME": "코어 충전",
-    "DESCRIPTION": "피해를 !D! 주고 guardianmod:정지장에 넣습니다. NL guardianmod:째깍할 때 카드를 1장 뽑습니다. NL guardianmod:불안정."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL guardianmod:정지장에 넣습니다. NL guardianmod:째깍할 때 카드를 1장 뽑습니다. NL guardianmod:불안정."
   },
   "Guardian:Reroute": {
     "NAME": "재편성",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴 동안 다음으로 사용하는 카드를 guardianmod:정지장에 넣습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 다음 사용하는 카드를 guardianmod:정지장에 넣습니다."
   },
   "Guardian:PiercingHide": {
     "NAME": "가시 외골격",
@@ -266,7 +267,7 @@
   },
   "Guardian:ShieldSpikes": {
     "NAME": "가시 방패",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL guardianmod:대비를 8 합니다. NL guardianmod:수비_모드라면 가시를 !M! 얻습니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL guardianmod:수비_모드라면 가시를 !M! 얻습니다.  guardianmod:대비를 8 합니다."
   },
   "Guardian:PrismaticBeam": {
     "NAME": "프리즘 광선",
@@ -291,11 +292,11 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "굴절 광선",
-    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL 강화 횟수에 제한이 없습니다."
+    "DESCRIPTION": "피해를 !D! 만큼 !M! 번 줍니다. NL 강화 횟수에 제한이 없습니다. NL 강화 +1 당 효과:"
   },
   "Guardian:MultiBeam": {
     "NAME": "다중 광선",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 X번 줍니다. NL guardianmod:째깍할 때 이 카드의 피해량이 !M! 만큼 증가합니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 X번 줍니다. NL guardianmod:째깍할 때 이 카드의 피해량이 !M! 증가합니다."
   },
   "Guardian:BaubleBeam": {
     "NAME": "큐빅 폭발",
@@ -307,8 +308,8 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "회피 규약",
-    "DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 모든 해로운 효과를 !M! 감소시킵니다. NL 내 턴 시작 시 guardianmod:대비를 !GuardianSecondM! 합니다.",
-    "UPGRADE_DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 모든 해로운 효과를 !M! 감소시킵니다. NL 내 턴 시작 시 guardianmod:대비를 !GuardianSecondM! 합니다."
+    "DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 보유한 해로운 효과를 각각 !M! 만큼 감소시킵니다. NL guardianmod:대비를 !GuardianSecondM! 합니다.",
+    "UPGRADE_DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 보유한 해로운 효과를 각각 !M! 만큼 감소시킵니다. NL guardianmod:대비를 !GuardianSecondM! 합니다."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "가시 돋친 규약",
@@ -316,7 +317,7 @@
     "UPGRADE_DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 가시를 !M! 얻습니다. NL guardianmod:대비를 !GuardianSecondM! 합니다."
   },
   "Guardian:ArmoredProtocol": {
-    "NAME": "무장 규약",
+    "NAME": "무장 규약 (번역 금지)",
     "DESCRIPTION": "guardianmod:수비_모드 동안 턴 종료 시 방어도를 !M! 얻습니다. NL 내 턴 시작 시 guardianmod:대비를 3 합니다."
   },
   "Guardian:TimeSifter": {
@@ -327,7 +328,7 @@
   "Guardian:AncientConstruct": {
     "NAME": "고대의 구조",
     "DESCRIPTION": "인공물을 1 얻습니다. NL 내 턴 시작 시 인공물이 없다면 인공물을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "인공물을 2 얻습니다. NL 내 턴 시작 시 인공물이 없다면 인공물을 !M! 얻습니다."
+    "UPGRADE_DESCRIPTION": "인공물을 1 얻습니다. NL 내 턴 시작 시 인공물이 없다면 인공물을 !M! 얻습니다."
   },
   "Guardian:CrystalBeam": {
     "NAME": "크리스탈 광선",
@@ -373,16 +374,16 @@
   },
   "Guardian:Repulse": {
     "NAME": "격퇴",
-    "DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주를 뽑으면 소멸시키고 카드를 1장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주를 뽑으면 소멸시키고 카드를 1장 뽑습니다."
+    "DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주를 뽑았다면 그 카드를 소멸시키고 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주를 뽑았다면 그 카드를 소멸시키고 카드를 1장 뽑습니다."
   },
   "Guardian:BronzeOrb": {
     "NAME": "구체 보조기",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 막히지 않은 피해를 받은만큼  guardianmod:대비합니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 막히지 않은 피해를 받은만큼 guardianmod:대비합니다. NL 소멸."
   },
   "Guardian:RevengeProtocol": {
     "NAME": "복수 규약",
-    "DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 힘을 !M! 얻습니다. NL 내 턴 시작 시 guardianmod:대비를 !GuardianSecondM! 합니다."
+    "DESCRIPTION": "수비_모드로 전환할 때마다 힘을 !M! 얻습니다. NL 내 턴 시작 시 guardianmod:대비를 !GuardianSecondM! 합니다."
   },
   "Guardian:GatlingBeam": {
     "NAME": "광선 포탑",
@@ -399,7 +400,7 @@
   },
   "Guardian:HammerDown": {
     "NAME": "전속력 내려치기",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 힘 과 민첩을 2배로 늘립니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 힘과 민첩을 두 배로 만듭니다. NL 소멸."
   },
   "Guardian:OmegaCannon": {
     "NAME": "오메가 대포",
@@ -407,8 +408,8 @@
   },
   "Guardian:ModeShift": {
     "NAME": "모드 전환",
-    "DESCRIPTION": "힘 과 민첩 의 수치를 서로 바꿉니다. NL 카드를 1장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "보존. NL 힘 과 민첩 의 수치를 서로 바꿉니다. NL 카드를 1장 뽑습니다."
+    "DESCRIPTION": "힘과 민첩 의 수치를 서로 바꿉니다. NL 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL 힘과 민첩 의 수치를 서로 바꿉니다. NL 카드를 1장 뽑습니다."
   },
   "Guardian:PackageConstruct": {
     "NAME": "패키지: 구조",
@@ -426,8 +427,8 @@
   },
   "Guardian:MassTimeBomb": {
     "NAME": "폭탄 더미",
-    "DESCRIPTION": "빈 guardianmod:정지장 슬롯마다 *시한 *폭탄을 넣습니다. NL 시한 폭탄이 2장 이상 생성된다면 이 카드를 소멸시킵니다.",
-    "UPGRADE_DESCRIPTION": "빈 guardianmod:정지장 슬롯마다 *시한 *폭탄+을 넣습니다. NL 시한 폭탄이 2장 이상 생성된다면 이 카드를 소멸시킵니다."
+    "DESCRIPTION": "빈 guardianmod:정지장 슬롯마다 *시한폭탄을 넣습니다. NL 시한 폭탄이 2장 이상 생성된다면 이 카드를 소멸시킵니다.",
+    "UPGRADE_DESCRIPTION": "빈 guardianmod:정지장 슬롯마다 *시한폭탄+을 넣습니다. NL 시한 폭탄이 2장 이상 생성된다면 이 카드를 소멸시킵니다."
   },
   "Guardian:MassSlam": {
     "NAME": "단체 강타",
@@ -449,11 +450,11 @@
   },
   "Guardian:SecondStrikePreviewCard": {
     "NAME": "두 번째 강타",
-    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL *두 *번 *강타의 guardianmod:소켓에 장착된 *보석이 이 카드의 guardianmod:소켓에 장착됩니다. NL 피해를 !D! 줍니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL 피해를 !D! 줍니다. NL *두 *번 *강타에 장착된 *보석이 이 카드에 장착됩니다. NL 소멸."
   },
   "Guardian:StrikeForStrike": {
     "NAME": "연쇄 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 피해를 !M! 줍니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 공격할 의도가 있다면 피해를 !M! 줍니다."
   },
   "Guardian:GearUp": {
     "NAME": "정비",

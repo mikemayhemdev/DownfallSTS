@@ -1,4 +1,4 @@
-{
+﻿{
   "sneckomod:BlunderGuardPower": {
     "NAME": "해일",
     "DESCRIPTIONS": [
@@ -26,25 +26,24 @@
   "sneckomod:MuddleDrawnCardsPower": {
     "NAME": "뽑는 카드 뒤엉킴",
     "DESCRIPTIONS": [
-      "다음으로 뽑은 카드가 #y뒤엉킵니다.",
-      "이번 턴 동안 다음 #b",
-      " 번까지 뽑은 카드가 #y뒤엉킵니다. (",
-      " 지속됩니다.)"
+      "다음 뽑는 카드가 #y뒤엉킵니다.",
+      "다음 #b",
+      " 장 뽑는 뽑는 카드가 #y뒤엉킵니다. ( #b",
+      " 장 남음)"
     ]
   },
   "sneckomod:MudshieldPower": {
     "NAME": "진흙 방패",
     "DESCRIPTIONS": [
-      "카드를 #y뒤엉키게 할 때마다 #y방어도를 #b",
+      "카드가 #y뒤엉킬 때마다 #y방어도를 #b",
       " 얻습니다."
     ]
   },
   "sneckomod:OverwhelmingPresencePower": {
     "NAME": "위압",
     "DESCRIPTIONS": [
-      "매 턴 처음으로 덱이 섞이면 [E] 를 얻고 카드를 #b1 장 뽑습니다.",
-      "매 턴 처음으로 덱이 섞이면 ",
-      " [E] 를 얻고 카드를 #b",
+      "매 턴 처음으로 #y다른 #y직업 카드를 사용하면 카드를 #b1 장 뽑습니다.",
+      "매 턴 처음으로 #y다른 #y직업 카드를 사용하면 카드를 #b ",
       " 장 뽑습니다."
     ]
   },
@@ -59,7 +58,7 @@
   "sneckomod:SerpentMindPower": {
     "NAME": "외세의 형상",
     "DESCRIPTIONS": [
-      "내 턴 종료 시 이번 턴에 사용한 무색, 직업 카드 종류 하나당  #y힘을 #b",
+      "내 턴 종료 시 이번 턴에 사용한 무색, 직업 카드 종류 하나당 #y힘을 #b",
       " 얻습니다.",
       " 얻습니다."
     ]
@@ -67,9 +66,9 @@
   "sneckomod:SnakeEyesPower": {
     "NAME": "뱀의 눈",
     "DESCRIPTIONS": [
-      "이번 턴에 다음으로 사용하는 #y다른 #y직업 카드 #b1 장이 2번 사용됩니다.",
+      "이번 턴에 다음으로 사용하는 #y다른 #y직업 카드 #b1 장이 #b2 번 사용됩니다.",
       "이번 턴에 다음으로 사용하는 #y다른 #y직업 카드 #b",
-      " 장이 2번 사용됩니다."
+      " 장이 #b2 번 사용됩니다."
     ]
   },
   "sneckomod:UnendingSupplyPower": {
@@ -86,7 +85,7 @@
       "At the end of combat, obtain #b",
       " additional #yUpgraded #yUnidentified cards.",
       " additional #yUpgraded #yUnidentified card.",
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+      "NOTE FOR LOC: 번역하지 마세요."
 
     ]
   },
@@ -101,45 +100,45 @@
     "DESCRIPTIONS": [
       " 유물이 ",
       " 유물으로 변환됐습니다.",
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+      "NOTE FOR LOC: 번역하지 마세요."
     ]
   },
   "sneckomod:ToxicPersonalityPower": {
     "NAME": "Toxic Personality",
     "DESCRIPTIONS": [
       "Whenever you apply a debuff to an enemy, apply #b",
-      " #yVenom.",
-      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+      " #yVenom [REMOVE_SPACE].",
+      "NOTE FOR LOC: 번역하지 마세요."
     ]
   },
   "sneckomod:TyphoonPower": {
     "NAME": "태풍",
     "DESCRIPTIONS": [
-      "이번 턴에 #y과중 효과를 발동시킬 때마다 #y태풍의 #y송곳니를 복사해 사용합니다.",
+      "이번 턴에 #y과중 효과를 발동시킬 때마다 #y태풍의 #y송곳니를 사용합니다.",
       "이번 턴에 #y과중 효과를 발동시킬 때마다 #y태풍의 #y송곳니를 #b",
-      " 번 복사해 사용합니다."
+      " 장 사용합니다."
     ]
   },
   "sneckomod:TyphoonPlusPower": {
     "NAME": "태풍+",
     "DESCRIPTIONS": [
-      "이번 턴에 #y과중 효과를 발동시킬 때마다 #y태풍의 #y송곳니+를 복사해 사용합니다.",
+      "이번 턴에 #y과중 효과를 발동시킬 때마다 #y태풍의 송곳니+를 사용합니다.",
       "이번 턴에 #y과중 효과를 발동시킬 때마다 #y태풍의 #y송곳니+를 #b",
-      " 번 복사해 사용합니다."
+      " 장 사용합니다."
     ]
   },
   "sneckomod:SerpentineSleuthPower": {
     "NAME": "뱀 탐정",
     "DESCRIPTIONS": [
-      "#y파워 카드를 사용할 때마다 #b",
-      " [E] 를 얻습니다.",
-      " [E] 를 얻습니다."
+      "#y파워 카드를 사용할 때마다 #y에너지를 #b",
+      " 얻습니다.",
+      " 얻습니다."
     ]
   },
   "sneckomod:BigGunsStrengthPower": {
     "NAME": "신의 한 수",
     "DESCRIPTIONS": [
-      "비용이 3 이상인 카드를 사용할 때마다 #y힘을 #b",
+      "비용이 #b3 이상인 카드를 사용할 때마다 #y힘을 #b",
       " 얻습니다.",
       " 얻습니다."
     ]
@@ -147,7 +146,7 @@
       "sneckomod:BigGunsBlockPower": {
         "NAME": "어쩌다 수호",
         "DESCRIPTIONS": [
-          "비용이 3 이상인 카드를 사용할 때마다 #y방어도를 #b",
+          "비용이 #b3 이상인 카드를 사용할 때마다 #y방어도를 #b",
           " 얻습니다.",
           " 얻습니다."
         ]
@@ -155,7 +154,7 @@
   "sneckomod:AceOfWandsPower": {
     "NAME": "펜타클의 여왕",
     "DESCRIPTIONS": [
-      "적에게 해로운 효과를 부여할 때마다 #y방어도를 #b",
+      "해로운 효과를 부여할 때마다 #y방어도를 #b",
       " 얻습니다.",
       " 얻습니다."
     ]
@@ -163,7 +162,7 @@
   "sneckomod:LacerateDebuff": {
     "NAME": "갈기갈기",
     "DESCRIPTIONS": [
-      "이번 턴에 이 적에게 해로운 효과를 부여할 때마다 #y뱀독을 #b",
+      "이번 턴에 해로운 효과를 부여할 때마다 대상에게 #y뱀독을 #b",
       " 부여합니다.",
       " 부여합니다."
     ]
@@ -179,8 +178,8 @@
   "sneckomod:TrashCanPower": {
     "NAME": "쓰레기통",
     "DESCRIPTIONS": ["내 턴 시작 시 카드를 #y소멸시킵니다.",
-      "내 턴 시작 시 카드를 #b",
-      " 장까지 소멸시킵니다."
+      "내 턴 시작 시 카드를 최대 #b",
+      " 장 #y소멸시킵니다."
   ]
       },
 

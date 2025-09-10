@@ -1,34 +1,115 @@
-{
+﻿{
   "downfall:Aged": {
     "NAME": "노쇠",
     "DESCRIPTION": "사용불가. NL 휘발성. NL 내 턴 종료 시 뽑을 더미 맨 위에 *공허를 놓습니다."
   },
   "downfall:Bewildered": {
     "NAME": "당혹",
-    "DESCRIPTION": "사용불가. NL 휘발성. NL 이 카드를 뽑을 때 손에 있는 모든 카드가 sneckomod:뒤엉킵니다."
+    "DESCRIPTION": "이 카드를 뽑을 때 손에 있는 모든 카드가 sneckomod:뒤엉킵니다. NL 소멸."
   },
   "downfall:Icky": {
     "NAME": "질척임",
-    "DESCRIPTION": "*점액투성이를 1장 얻습니다. NL 소멸."
+    "DESCRIPTION": "보존. NL 소멸."
   },
   "downfall:Haunted": {
     "NAME": "귀신들림",
-    "DESCRIPTION": "사용불가. NL 휘발성. NL 이 카드가 손에 있다면 이 카드 이외의 카드가 소멸할 때마다 피해를 2 받습니다."
+    "DESCRIPTION": "사용불가. NL 휘발성. NL 이 카드가 손에 있다면 이 카드 이외의 카드가 소멸될 때마다 피해를 !M! 받습니다."
   },
   "downfall:Malfunctioning": {
     "NAME": "결함",
-    "DESCRIPTION": "내 턴 종료 시 손에 있는 모든 카드를 무작위 상태이상 카드로 변환합니다. NL 소멸."
+    "DESCRIPTION": "내 턴 종료 시 손에 있는 모든 카드를 무작위 상태이상 카드로 sneckomod:변화시킵니다. NL 소멸."
   },
   "downfall:Scatterbrained": {
     "NAME": "주의산만",
     "DESCRIPTION": "내 턴 종료 시 이 카드가 손에 있다면 이 카드를 1장 복사해 버린 카드 더미에 넣고 섞습니다. NL 소멸."
   },
+  "downfall:CurseOfBlood": {
+    "NAME": "혈우병",
+    "DESCRIPTION": "내 다음 턴 시작 시 [E] 을 잃습니다. NL 소멸.",
+    "EXTENDED_DESCRIPTION": ["  "]
+  },
   "downfall:SummonMushrooms": {
     "NAME": "균류 무리",
-    "DESCRIPTION": "모든 버섯을 죽입니다. 버섯의 남아있던 체력만큼 체력을 회복합니다. NL 버섯을 2개 소환합니다."
+    "DESCRIPTION": "모든 버섯을 죽입니다. 버섯의 남아있던 체력만큼 체력을 회복합니다. NL버섯을 2개 소환합니다."
   },
   "downfall:BossMaintenance": {
     "NAME": "유지보수",
-    "DESCRIPTION": "이번 전투 동안 *타격의 피해량을 !M! 증가시키고 이 카드의 비용을 [E] 증가시킵니다. NL 민첩을 !B! 얻습니다."
+    "DESCRIPTION": "이번 전투 동안 *타격의 피해량이 !M! 증가합니다. NL 민첩을 !B! 얻습니다."
+  },
+  "downfall:CuriousRobot": {
+    "NAME": "호기심 많은 로봇",
+    "DESCRIPTION": "내가 파워를 사용할 의도가 있다면 밀집을 1 얻습니다. 힘이 밀집에 영향을 줍니다."
+  },
+  "downfall:Murderbot": {
+    "NAME": "에너지 도둑",
+    "DESCRIPTION": "막히지 않은 피해를 줄 때마다 상대의 버린 카드 더미에 *공허를 섞어 넣습니다."
+  },
+  "downfall:Temptation": {
+    "NAME": "유도",
+    "DESCRIPTION": "상대의 뽑을 카드 더미에 무작위 파워 카드를 !M! 장 섞어 넣습니다."
+  },
+  "downfall:BagOfKnives": {
+    "NAME": "칼날 꾸러미",
+    "DESCRIPTION": "매 턴 내가 비용이 2 이상인 카드를 처음으로 사용하면 단도를 2장 얻습니다."
+  },
+  "downfall:Hallunication": {
+    "NAME": "환각",
+    "DESCRIPTION": "매 턴 진짜 내가 어디에 있는지 숨깁니다. 본체나 분신을 공격하면 분신은 제거됩니다."
+  },
+  "downfall:NewToxins": {
+    "NAME": "위험: 유독 과다",
+    "DESCRIPTION": "중독이 사라지지 않으며 내 턴 시작 시가 아니라 내 턴 종료시 방어도에 막히는 피해를 주게 됩니다."
+  },
+  "downfall:FeedingFrenzy": {
+    "NAME": "광란의 포식",
+    "DESCRIPTION": "*사신이 모든 *버섯을 대상으로 삼습니다. 죽인 *버섯당 힘을 1 얻습니다."
+  },
+  "downfall:StatusMirror": {
+    "NAME": "마법 거울",
+    "DESCRIPTION": "이 캐릭터가 생성하는 상태이상이 당신에게 대신 생성됩니다."
+  },
+  "downfall:EyeForAnEye": {
+    "NAME": "눈에는 눈",
+    "DESCRIPTION": "상대가 공격 카드가 아닌 카드보다 공격 카드를 많이 사용했다면 진노합니다. 아니라면 명상합니다."
+  },
+  "downfall:TruePeace": {
+    "NAME": "진정한 평화",
+    "DESCRIPTION": "행동하지 않습니다. 만물의 필연적 종말을 기다립니다."
+  },
+  "downfall:EndIsNigh": {
+    "NAME": "머지 않은 최후",
+    "DESCRIPTION": "모두 의식을 !M! 얻습니다."
+  },
+  "downfall:FalseWorship": {
+    "NAME": "헛된 숭배",
+    "DESCRIPTION": "광신자가 죽었다면 부활시킵니다. 아니라면 광신자가 죽으면 50% 체력으로 부활시킵니다."
+  },
+  "downfall:FleetingFaith": {
+    "NAME": "영적인 존재",
+    "DESCRIPTION": "상대의 버린 카드 더미에 *귀신들림을 !M! 장 섞어 넣습니다."
+  },
+  "downfall:FaithRewarded": {
+    "NAME": "믿음의 대가",
+    "DESCRIPTION": "강림 *경지라면 절대 벗어나지 않습니다. 대신 강림 시 공격이 2배의 피해를 줍니다."
+  },
+  "downfall:Crusade": {
+    "NAME": "진군",
+    "DESCRIPTION": "모든 해로운 효과를 제거합니다. NL 모든 만트라를 잃습니다. 잃은 만트라 하나당 힘을 1 얻고 체력을 !M! 회복합니다."
+  },
+  "downfall:Hyperfocused": {
+    "NAME": "초집중",
+    "DESCRIPTION": "*정조준 효과가 항상 부여됩니다. 피해를 10 받으면 그 턴에 *정조준 효과가 제거됩니다."
+  },
+  "downfall:Arsenal": {
+    "NAME": "살아있는 무기고",
+    "DESCRIPTION": "*파멸의 *단검을 소환합니다."
+  },
+  "downfall:Steady": {
+    "NAME": "진노 표출",
+    "DESCRIPTION": "*진노로 받는 피해량이 100% 대신 50%로 증가합니다."
+  },
+  "downfall:Revolver": {
+    "NAME": "리볼버",
+    "DESCRIPTION": "앞으로 턴이 *숙명의 *돌림판으로 결정됩니다. 공격 시 *돌림판이 한 칸 앞으로 갑니다."
   }
 }
