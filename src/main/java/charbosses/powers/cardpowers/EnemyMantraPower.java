@@ -56,7 +56,7 @@ public class EnemyMantraPower extends AbstractPower {
             public void update() {
                 System.out.println("Following up.");
 
-                int reducedAmount = Math.min(6, initialAmount);
+                int reducedAmount = Math.min(5, initialAmount);
                 System.out.println("Predicted amount removed: " + reducedAmount);
 
                 int previousMantraGained = AbstractCharBoss.boss.mantraGained;
