@@ -157,8 +157,8 @@
   },
   "hexamod:DevilsDance": {
     "NAME": "악마의 춤",
-    "DESCRIPTION": "hexamod:수축할 때마다 카드를 1장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 처음으로 hexamod:수축하면 [E] 를 얻고 카드를 1장 뽑습니다. NL hexamod:수축합니다."
+    "DESCRIPTION": "매 턴 처음으로 hexamod:팽창 또는 hexamod:수축할 때마다 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 최대 !M! 번 hexamod:팽창 또는 hexamod:수축할 때마다 카드를 1장 뽑습니다."
   },
   "hexamod:HereAndNow": {
     "NAME": "지금 당장",
@@ -531,8 +531,8 @@
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "악마의 춤",
-    "DESCRIPTION": "hexamod:수축할 때마다 카드를 1장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 처음으로 hexamod:수축하면 [E] 를 얻고 카드를 1장 뽑습니다. NL hexamod:수축합니다."
+    "DESCRIPTION": "매 턴 처음으로 hexamod:팽창 또는 hexamod:수축할 때마다 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL 매 턴 최대 !M! 번 hexamod:팽창 또는 hexamod:수축할 때마다 카드를 1장 뽑습니다."
     },
     "hexamod:GhostOfSpireFuture": {
       "NAME": "그림자 속으로",
