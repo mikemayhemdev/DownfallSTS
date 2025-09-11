@@ -87,7 +87,7 @@
   "collector:HealIfDieThisTurn": {
     "NAME": "종결",
     "DESCRIPTIONS": [
-      " ",
+      "",
       " 적이 죽으면 내 체력을 #b",
       " 회복합니다."
     ]
@@ -117,8 +117,8 @@
     "NAME": "추가 난제",
     "DESCRIPTIONS": [
       "이번 턴에 다음 사용하는 #y수집품 카드가 #b2 번 사용됩니다.",
-      "이번 턴에 다음 사용하는 #y수집품 카드가 #b",
-      " 번 사용됩니다."
+      "이번 턴에 다음 사용하는 최대 #b",
+      " 번 다음 사용하는 #y수집품 카드가 #b2 번 사용됩니다."
     ]
   },
   "collector:NextTurnReserve": {
@@ -248,7 +248,7 @@
   "collector:BookOfStabbingCard": {
     "NAME": "칼부림",
     "DESCRIPTIONS": [
-      "막히지 않은 피해를 줄 때마다 #b",
+      "막히지 않은 피해를 줄 때마다 #y파멸을 #b",
       " 부여합니다."
     ]
   },
