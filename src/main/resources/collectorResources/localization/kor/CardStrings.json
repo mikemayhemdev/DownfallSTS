@@ -542,7 +542,7 @@
   },
   "collector:MadGremlinCard": {
     "NAME": "화난 그렘린",
-    "DESCRIPTION": "힘을 !M! 얻습니다. NL 이번 턴이 끝날 때 힘을 !M! 잃습니다.\""
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 이번 턴이 끝날 때 힘을 !M! 잃습니다."
   },
   "collector:MawCard": {
     "NAME": "아귀",
