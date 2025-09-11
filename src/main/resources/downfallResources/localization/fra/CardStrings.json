@@ -5,15 +5,15 @@
   },
   "downfall:Bewildered": {
     "NAME": "Perplexité",
-    "DESCRIPTION": "Quand vous jouez une autre carte que celle ci, sneckomod:Confondez votre main, puis défaussez ceci. NL Épuisement."
+    "DESCRIPTION": "Quand cette carte est piochée, sneckomod:Confondez-la. NL Épuisement."
   },
   "downfall:Icky": {
     "NAME": "Dégoût",
-    "DESCRIPTION": "Ajouté un Englué dans votre main. NL Épuisement."
+    "DESCRIPTION": "Retenue. NL Épuisement."
   },
   "downfall:Haunted": {
     "NAME": "Hantise",
-    "DESCRIPTION": "Éthérée. Injouable. NL Quand cette carte est piochée, ajoutez Ethérée à toutes les cartes de votre main."
+    "DESCRIPTION": "Injouable. Éthérée. NL Quand une carte est *Épuisée avec ceci en main, prenez !M! dégâts."
   },
   "downfall:Malfunctioning": {
     "NAME": "Vicié",
@@ -23,12 +23,89 @@
     "NAME": "Écervellé",
     "DESCRIPTION": "Injouable. NL Quand cette carte est piochée, si c'est votre tour, remplissez votre main avec des gremlin:Échos de cette carte."
   },
+  "downfall:CurseOfBlood": {
+    "NAME": "Hémophilie",
+    "DESCRIPTION": "Perdez [E] au début de votre prochain tour. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": ["Note for LOC: Hemophilia is a name for a disorder for when your blood doesn’t clot properly. I added the a in the middle for coolness factor."]
+  },
   "downfall:SummonMushrooms": {
     "NAME": "Fungus Among Us",
     "DESCRIPTION": "Tuez tous les Champignons. Soignez vous autant de leurs PV restants. NL Invoquez deux Champignons."
   },							   
   "downfall:BossMaintenance": {
     "NAME": "Entretien",
-    "DESCRIPTION": "Vos *Frappes infligent !M! dégâts supplémentaires ce combat. NL Gagnez !B! de Dexterité. NL Cette carte coûte 1 [E] de plus ce combat."
+    "DESCRIPTION": "Vos *Frappes infligent !M! dégâts supplémentaires ce combat. NL Gagnez !B! de Dextérité."
+  },
+  "downfall:CuriousRobot": {
+    "NAME": "Robot Curieux",
+    "DESCRIPTION": "Lorsque votre adversaire joue un Pouvoir, gagnez 1 de Concentration. Votre Force affecte votre Concentration."
+  },
+  "downfall:Murderbot": {
+    "NAME": "Voleur d'Énergie",
+    "DESCRIPTION": "Lorsque vous infligez des dégâts non-bloqués, ajoutez un *Néant dans la défausse de votre adversaire."
+  },
+  "downfall:Temptation": {
+    "NAME": "Tentation",
+    "DESCRIPTION": "Mélangez !M! Pouvoirs aléatoires, dans la pioche de votre adversaire."
+  },
+  "downfall:BagOfKnives": {
+    "NAME": "Sac de Couteaux",
+    "DESCRIPTION": "La première fois que vous jouez une carte qui coûte 2 [E] ou plus chaque tour, gagnez 2 *Surins."
+  },
+  "downfall:Hallunication": {
+    "NAME": "Hallucination",
+    "DESCRIPTION": "Cachez votre véritable emplacement à chaque tour. Lorsque vous ou l'illusion êtes Attaqués, l'illusion disparaît."
+  },
+  "downfall:NewToxins": {
+    "NAME": "Nouvelles Toxines",
+    "DESCRIPTION": "Le Poison ne se dissipe plus, mais peut être bloqué et inflige des dégâts à la fin du tour plutôt qu'au début."
+  },
+  "downfall:FeedingFrenzy": {
+    "NAME": "Faim Frénétique",
+    "DESCRIPTION": "*Faucheuse cible également TOUS les *Champignons. Gagnez 1 de Force lorsque vous tuez votre propre *Champignon."
+  },
+  "downfall:StatusMirror": {
+    "NAME": "Miroir magique",
+    "DESCRIPTION": "Les cartes Statut que ce personnage génère vous sont ajoutées à vous à la place."
+  },
+  "downfall:EyeForAnEye": {
+    "NAME": "Œil pour Œil",
+    "DESCRIPTION": "Si votre adversaire a joué plus d'Attaques que d'autres cartes, vous entrez en Colère. Sinon, vous êtes en Calme."
+  },
+  "downfall:TruePeace": {
+    "NAME": "Paix véritable",
+    "DESCRIPTION": "Ne faites rien. Attendez la fin inévitable de toutes choses."
+  },
+  "downfall:EndIsNigh": {
+    "NAME": "Fin prochaine",
+    "DESCRIPTION": "TOUT LE MONDE gagne !M! de Rituel."
+  },
+  "downfall:FalseWorship": {
+    "NAME": "Faux culte",
+    "DESCRIPTION": "Ressucitez votre Cultiste s'il est mort. Sinon, il ressucite lorsqu'il mourra avec 50% de ses PV Max."
+  },
+  "downfall:FleetingFaith": {
+    "NAME": "Foi éphémère",
+    "DESCRIPTION": "Gagnez 1 de Mantra lorsque votre adversaire joue une carte. Perdez-en 5 au début de votre tour."
+  },
+  "downfall:FaithRewarded": {
+    "NAME": "Foi Récompensée",
+    "DESCRIPTION": "Lorsque vous entrez en Divinité, vous ne pouvez plus la quitter."
+  },
+  "downfall:Hyperfocused": {
+    "NAME": "Focus mortel",
+    "DESCRIPTION": "Obtenez toujours vos effets *Dans *Le *Mille. Après avoir reçu 10 dégâts, perdez vos effets *Dans *Le *Mille pour ce tour."
+  },
+  "downfall:Arsenal": {
+    "NAME": "Arsenal vivant",
+    "DESCRIPTION": "Invoquez une *Dague *Condamnée."
+  },
+  "downfall:Steady": {
+    "NAME": "Stabilité",
+    "DESCRIPTION": "La *Colère augmente les dégâts infligés et reçus de 50% au lieu de 100%."
+  },
+  "downfall:Revolver": {
+    "NAME": "Revolver",
+    "DESCRIPTION": "Les tours futurs seront dictées par la *Roue *de *la *Destinée. Lorsqu'elle est attaquée, la *Roue avance d'une étape."
   }
 }
