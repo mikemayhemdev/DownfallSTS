@@ -667,7 +667,7 @@
   },
   "collector:TransientCard": {
     "NAME": "과도자",
-    "DESCRIPTION": "힘을 !M! 얻습니다. 6턴 후 죽습니다."
+    "DESCRIPTION": "힘을 !M! 얻습니다. NL 6턴 후 죽습니다."
   },
   "collector:VagrantCard": {
     "NAME": "부랑자",
