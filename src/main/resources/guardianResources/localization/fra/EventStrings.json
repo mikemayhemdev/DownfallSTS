@@ -7,15 +7,15 @@
       "Bien que la perspective d'un trésor soit attrayante, vous préférez gardez votre armure pour des aventures plus importantes.",
       "Ayant réussi à conquérir l'ancienne mine, vous repartez avec un sentiment de satisfaction.  Et des appendices de bronze douloureux.",
       "Vous volez la pioche du camp de Diablotins, qui semble être de mauvaise qualité. Vous pouvez l'utiliser ici pour gagner des pierres précieuses, ou le mettre de côté pour l'utiliser plus tard dans votre ascension.",
-      "Utilisant la pioche, vous frappez le mur et taillez une pierre précieuse. Celle-ci s'use un peu dans le processus, mais mieux vaut l'abîmer que vos propres griffes."
+      "Utilisant la pioche, vous frappez le mur et taillez plusieures pierres précieuses. La pioche s'est détruite dans le processus, mais mieux vaut maintenant que l'abîmer avec vos propres griffes."
     ],
     "OPTIONS": [
-      "[Creuser avec les griffes] #gGagnez #gune #gGemme #galéatoire. #rPerdez #r",
+      "[Creuser avec les griffes] #gObtenez #gune #gGemme #galéatoire. #rPerdez #r",
       " #rPV.",
       "[Quitter]",
-      "[Voler] #rFight #rGremlins. #gGain #gPick #gof #gRhapsody.",
-      "[Miner avec la Pioche] #gGagnez #gune #gGemme #galéatoire. #rPerdez #rune #rcharge #rde #rla #rPioche.",
-      "[Verrouillé] Pioche #rCassée."
+      "[Voler] #rCombattez #rdes #rDiablotins. #gObtenez #gPioche #gde #gchez #gRhapsody.",
+      "[Miner avec la Pioche] #gObtenez #g3 #gGemmes #galéatoires. #rPerdez #rPioche #rde #rchez #rRhapsody.",
+      "[Verrouillé] Pioche Cassée."
     ]
   },
   "Guardian:StasisEgg": {
@@ -30,7 +30,8 @@
       "[Utiliser] #gGagnez #gChambre #gQuantique. #rDevenez #rMaudit #r- #rVieillesse",
       "[Détruire] #gGagnez #g",
       " #gPV #gMax. #rDevenez #rMaudit #r- #rDouleur",
-      "[Quitter]"
+      "[Quitter]",
+      "[Verrouillé] Requiert une carte non Embouteillée"
     ]
   },
   "Guardian:AccursedBlacksmith": {
@@ -39,7 +40,7 @@
       "Vous décidez d'utiliser la forge et... NL #y@CLANG@ #y@CLAAANG@ #y@CLANG!@ NL ...de faire de la place dans votre arsenal pour de nouvelles gemmes."
     ],
     "OPTIONS": [
-      "[Trafiquer] #gAjoutez #gune #gcavité #gpour #gn'importe #gquelle #gcarte #gpouvant #gavoir #gune #gcavité.",
+      "[Trafiquer] #gAjoutez #gune #gCavité #gpour #gn'importe #gquelle #gcarte #gpouvant #gavoir #gune #gCavité.",
       "Ajoutez une Cavité à une carte.",
       "[Verrouillé] Requiert une carte avec des cavités."
     ]
@@ -77,10 +78,10 @@
       "Profitant de cette pause dans votre ascension, vous placez une pierre précieuse dans votre équipement, sentant instantanément votre puissance augmenter."
     ],
     "OPTIONS": [
-      "[Démonter] #rRetirez une Carte Encastrée. Gagnez ses #gGemmes.",
+      "[Démonter] #rRetirez une Carte Encastrée. Obtenez ses #gGemmes.",
       "[Verrouillé] Requiert une Carte Encastrée avec une Gemme installée.",
       "[Forcer] #rDétruisez toutes les #gGemmes dans une carte Encastrée.",
-      "[Transmettre] #rRetirez une carte. Gagnez une #gGemme aléatoire.",
+      "[Transmettre] #rRetirez une carte. Obtenez une #gGemme aléatoire.",
       "[Verrouillé] Déjà utilisée.",
       "[Quitter]",
       "[Optimiser] Ajoutez une #gGemme dans une #gCavité.",
