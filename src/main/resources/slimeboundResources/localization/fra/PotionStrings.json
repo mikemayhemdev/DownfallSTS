@@ -3,11 +3,11 @@
     "NAME": "Jarre de Slime",
     "DESCRIPTIONS": [
       "Appliquez #b",
-      " de #yGoop."
+      " de #yGoop [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SlimyTonguePotion": {
-    "NAME": "Elixir visqueux",
+    "NAME": "Élixir visqueux",
     "DESCRIPTIONS": [
       "Lorsqu'un effet applique du #yGoop durant ce combat, appliquez-en #b",
       " de plus."
@@ -16,8 +16,8 @@
   "Slimebound:SpawnSlimePotion": {
     "NAME": "Armée dans une bouteille",
     "DESCRIPTIONS": [
-      "Divisez-vous en #b",
-      " Slimes aléatoires (Normaux or #ySpécialistes)."
+      "#yDivisez-vous en #b",
+      " Slimes aléatoires (Normaux or #ySpécialistes [REMOVE_SPACE])."
     ]
   },
   "Slimebound:ThreeZeroPotion": {
