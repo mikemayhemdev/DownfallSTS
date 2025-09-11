@@ -1,7 +1,7 @@
 ﻿{
   "downfall:ChangingTotem": {
     "MOVES": [
-      ""
+      "Transformative Gaze"
     ],
     "NAME": "변화의 머리",
     "DIALOG": [
@@ -10,7 +10,7 @@
   },
   "downfall:ForgetfulTotem": {
     "MOVES": [
-      ""
+      "Forgetful Stare"
     ],
     "NAME": "망각의 머리",
     "DIALOG": [
@@ -19,7 +19,7 @@
   },
   "downfall:GrowingTotem": {
     "MOVES": [
-      ""
+      "Growth Beam"
     ],
     "NAME": "성장의 머리",
     "DIALOG": [
@@ -28,9 +28,9 @@
   },
   "downfall:FleeingMerchant": {
     "MOVES": [
-      ""
+      "Soul Steal"
     ],
-    "NAME": "성장의 머리",
+    "NAME": "영혼 강탈",
     "DIALOG": [
       ""
     ]
