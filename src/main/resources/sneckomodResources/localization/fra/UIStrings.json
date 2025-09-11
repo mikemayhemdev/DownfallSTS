@@ -44,7 +44,7 @@
   "sneckomod:ChallengeMode": {
     "TEXT": [
       "Mode Challenge - Geckobra pur",
-      "Les cartes Inconnues peuvent être de n'importe quelle classe. Recommandé pour les joueurs de Geckobra experts."
+      "Les Cadeaux peuvent être de n'importe quelle classe. Recommandé pour les joueurs de Geckobra experts."
     ]
   },
   "sneckomod:LockInBonfireOptions": {
@@ -54,6 +54,24 @@
       "Requiert une carte Inconnue.",
       "Sélectionnez une carte à ajouter dans votre deck, retirant son côté Inconnu.",
       "[Action gratuite] Verrouillez une carte Inconnue en carte permanente."
+    ]
+  },
+  "sneckomod:CommonAttackReward": {
+    "TEXT": [
+      "Ajoutez une carte Hors-classe dans votre deck",
+      "Prenez une Carte."
+    ]
+  },
+  "sneckomod:DiceRollPotionReward": {
+    "TEXT": [
+      "Ajoutez une carte Améliorée dans votre deck.",
+      "Prenez une Carte."
+    ]
+  },
+  "sneckomod:ColorfulPowersCardReward": {
+    "TEXT": [
+      "Ajoutez un Pouvoir Amélioré dans votre deck.",
+      "Prenez une Carte."
     ]
   },
   "sneckomod:AtGameStart": {
