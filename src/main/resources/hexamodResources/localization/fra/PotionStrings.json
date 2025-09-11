@@ -3,30 +3,30 @@
     "NAME": "Cocktail molotov",
     "DESCRIPTIONS": [
       "Appliquez #b",
-      " de #yBrûlure."
+      " de #yBrûlure [REMOVE_SPACE]."
     ]
   },
   "hexamod:DoubleChargePotion": {
     "NAME": "Fluide combustible",
     "DESCRIPTIONS": [
-      "#yEnflammez le Feu Follet #yActif #b",
+      "#yEnflammez le Feu Follet actuel #b",
       " fois."
     ]
   },
   "hexamod:EctoCoolerPotion": {
-    "NAME": "Potion Ethérée",
+    "NAME": "Ecto-Fraîcheur",
     "DESCRIPTIONS": [
-      "Choisissez #b1 carte #yEthérée parmi #b3 aléatoires de n'importe quelle classe dans votre main. Elle coûte #b0 ce tour.",
-      "hoisissez #b1 carte #yEthérée parmi #b3 aléatoires de n'importe quelle classe et ajoutez-en #b",
+      "Choisissez #b1 carte #yEthérée parmi #b3 aléatoires à obtenir dans votre main. Elle coûte #b0 ce tour.",
+      "Choisissez #b1 carte #yEthérée parmi #b3 aléatoires et ajoutez-en #b",
       " copies dans votre main. Elles coûtent #b0 ce tour."
     ]
   },
   "hexamod:InfernoChargePotion": {
     "NAME": "Potion infernale",
     "DESCRIPTIONS": [
-      "Vos feu follet affecte tous les ennemies pour se combat.",
-      "Vos feu follet affecte tous les ennemies #b",
-      " fois pour se combat."
+      "Vos Feux Follets affecte TOUS les ennemies pour ce combat.",
+      "Vos Feux Follets affecte TOUS les ennemies #b",
+      " fois pour ce combat."
     ]
   }
 }

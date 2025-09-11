@@ -21,10 +21,10 @@
       "Chevalier Noir"
     ],
     "OPTIONS": [
-      "[Défendre le titre] #rCombattre le Chevalier Noir. #gGagnez #gplusieurs #grécompenses.",
-      "[Participer] #rCombattre un Héros Captif. #gGagnez #gplusieurs #grécompenses.",
+      "[Défendre le titre] #rCombattre #rle #rChevalier #rNoir. #gGagnez #gplusieurs #grécompenses.",
+      "[Participer] #rCombattre #run #rHéros #rCaptif. #gGagnez #gplusieurs #grécompenses.",
       "[Quitter]",
-      "[FIGHT!]",
+      "[COMBATTRE !]",
       "[Continuer]"
     ]
   },
@@ -35,7 +35,7 @@
       "Vous passez beaucoup de temps à chercher dans les couloirs des tomes et des guides, jusqu'à ce que vous trouviez enfin le livre que vous cherchiez. NL NL En vous installant dans le fauteuil confortable, vous prenez le temps de réviser les positions et les styles oubliés. Même un combattant parfait comme vous sait que l'esprit est tout aussi important que le corps et qu'il doit être exercé."
     ],
     "OPTIONS": [
-      "[Chercher] Localisez un #gLivre sur le Combat.",
+      "[Chercher] #gLocalisez #gun #gLivre #gsur #gle #gCombat.",
       "[Verrouillé] Déjà possédé tous les tomes de Combat."
     ]
   },
@@ -49,12 +49,12 @@
       "Quel que soit le prix à payer, il en valait la peine pour acquérir ce précieux savoir. Il vous faut beaucoup d'efforts pour vous détacher de l'emprise du livre sur vous, mais vous y parvenez. NL NL  Les enseignements du tome étant encore frais dans votre esprit, vous partez à la recherche d'une nouvelle victime sur laquelle les tester.."
     ],
     "OPTIONS": [
-      "[Lire] Choisissez une Attaque à gagner le #y'#yBonus de #yCompétence'. #rPerdez #r",
+      "[Lire] Choisissez une Attaque à gagner #y'#yDéclenchez #yle #yBonus de #yCompétence'. #rPerdez #r",
       " #rPV.",
       "[Quitter]",
       "[Verrouillé] Requiert une Attaque.",
-      "Choisissez une carte à gagner le Bonus de Compétence.",
-      "[Lire] Choisissez une carte à gagner le #y'#yBonus de #yCompétence'. #rDevenez #rMaudit #r- #rFierté."
+      "Choisissez une carte à gagner 'Déclenchez le Bonus de Compétence'.",
+      "[Lire] Choisissez une Attaque à gagner #y'#yDéclenchez #yle #yBonus de #yCompétence'. #rDevenez #rMaudit #r- #rFierté."
     ]
   },
   "champ:Gym": {
@@ -69,7 +69,7 @@
       "[Cardio] #gGagnez #g",
       " #gPV #gMax.",
       "[Combat d'entraînement] Choisissez une carte n'ayant pas Finisher pour gagner 'Adoptez la Pose (Choisie)'.",
-      "[Soulever des poids] #gGagnez #g1 #gde #gForce #gDéfinitivement.",
+      "[Soulever des poids] #gGagnez #g1 #gde #gForce #gde #gfaçon #gpermanente.",
       "[Quitter]",
       "Choisissez une carte n'ayant pas Finisher pour gagner 'Adoptez la Pose Défensive'.",
       "Choisissez une carte n'ayant pas Finisher pour gagner 'Adoptez la Pose du Gladiateur'.",
@@ -86,7 +86,7 @@
     "OPTIONS": [
       "[Combattre Centurion & Mystique] #gGagnez #gAttache #gde #gCape",
       "[Combattre le Diablotin Nob] #gGagnez #gCeinture #gde #gChampion",
-      "[Combattre un duo d'Esclavagistes] #gGagnez #gPoignard",
+      "[Combattre un duo d'Esclavagistes] #gGagnez #gFer #gà #Cheval",
       "[Quitter]"
     ]
   },

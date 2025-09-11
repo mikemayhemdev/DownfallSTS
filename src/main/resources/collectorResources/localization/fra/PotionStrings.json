@@ -2,35 +2,35 @@
   "collector:MiniCursePotion": {
     "NAME": "Extrait d'âme",
     "DESCRIPTIONS": [
-      "Applique #b1 #yFaiblesse, #b1 #yVulnérable, et #b6 #yMaudit.",
-      "Applique #b",
-      " #yFaiblesse, #b",
-      " #yVulnérable, and #b",
-      " #yMaudit [REMOVE_SPACE]."
+      "Appliquez #b1 de #yFaiblesse, #b1 de #yVulnérabilité, et #b6 de #yCondamnation.",
+      "Appliquez #b",
+      " de #yFaiblesse, #b",
+      " de #yVulnérabilité, et #b",
+      " de #yCondamnation [REMOVE_SPACE]."
     ]
   },
   "collector:ReservePotion": {
     "NAME": "Potion de réserve",
     "DESCRIPTIONS": [
-      "Gagnez #b2 #yRéserve.",
+      "Gagnez #b2 de #yRéserve.",
       "Gagnez #b",
-      " #yRéserve [REMOVE_SPACE]."
+      " de #yRéserve [REMOVE_SPACE]."
     ]
   },
   "collector:DebuffDoublePotion": {
     "NAME": "Huiles d'embaumement",
     "DESCRIPTIONS": [
-      "Double les débuff de la cible.",
-      "Multiplie les débuff de la cible par #b",
+      "Doublez les débuffs de la cible.",
+      "Multipliez les débuff de la cible par #b",
       "."
     ]
   },
   "collector:TempHPPotion": {
-    "NAME": "Eau gangrené",
+    "NAME": "Eau-Fel",
     "DESCRIPTIONS": [
-      "Gagnez #b8 #yPV #ytemporaire",
+      "Gagnez #b8 #yPV #yTemporaires",
       "Gagnez #b",
-      " #yPV #ytemporaire [REMOVE_SPACE]."
+      " #yPV #yTemporaires [REMOVE_SPACE]."
     ]
   }
 }

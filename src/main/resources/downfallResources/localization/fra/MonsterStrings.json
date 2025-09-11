@@ -88,5 +88,12 @@
     "NAME": "Dague Maudite",
     "DIALOG": [
     ]
-  }
+  },
+  "downfall:VoidCore": {
+    "MOVES": [
+    ],
+    "NAME": "Noyau vide",
+    "DIALOG": [
+    ]
+}
 }

@@ -9,7 +9,8 @@
   "bronze:UnplayableMod": {
     "TEXT": [
       "Injouable. NL ",
-      "ERR_NULL_PTR"
+      "ERR_NULL_PTR",
+      "Conservé uniquement pour le pointeur Zéro."
     ]
   },
   "bronze:EncodeAndShuffleMod": {
@@ -19,7 +20,7 @@
   },
   "bronze:DoublePlayModifier": {
     "TEXT": [
-      " NL Jouez ceci une seconde fois."
+      " NL Jouez ceci à nouveau."
     ]
   },
   "bronze:MiscStrings": {
@@ -30,8 +31,8 @@
       "ERR: SEQUENCE_EMPTY",
       " - Ajoutez une copie de #yBoucle #yInfinie dans votre main avec #b",
       " de dégâts supplémentaires.",
-      " à Muter.",
-      " à Encoder.",
+      "Mutez.",
+      "Encodez.",
       ""
     ]
   },

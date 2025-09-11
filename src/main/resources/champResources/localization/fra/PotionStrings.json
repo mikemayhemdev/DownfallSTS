@@ -2,21 +2,21 @@
   "champ:OpenerPotion": {
     "NAME": "Potion de stratégie",
     "DESCRIPTIONS": [
-      "Choisissez #b1 carte parmi #b2 qui permenttent d'adopter une #yPose à ajouter dans votre main (une pour chaque #yPose). Elle coûte #b0 ce tour.",
-      " Ajoutez #b",
-      " copie de celle-ci dans votre main.",
-      " copies de celle-ci dans votre main."
+      "Choisissez #b1 carte parmi #b2 qui permettent d'adopter une #yPose à ajouter dans votre main (une pour chaque #yPose [REMOVE_SPACE]). Elle coûte #b0 ce tour.",
+      " Obtenez #b",
+      " copie de celle-ci.",
+      " copies de celle-ci."
     ]
   },
   "champ:TechniquePotion": {
     "NAME": "Technique Embouteillée",
     "DESCRIPTIONS": [
-      "Utilisez la #yTechnique #b",
+      "Utilisez le #yBonus #yde #yCompétence de votre #Pose actuelle #b",
       " fois."
     ]
   },
   "champ:UltimateStancePotion": {
-    "NAME": "Substance à la légalité douteuse",
+    "NAME": "Stimpack",
     "DESCRIPTIONS": [
       "Adoptez la #yPose #yUltime pour #b",
       " tours."

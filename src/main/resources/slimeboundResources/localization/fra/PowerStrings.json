@@ -11,7 +11,7 @@
     "NAME": "Goop",
     "DESCRIPTIONS": [
       "La prochaine #yAttaque contre cette ennemi infligera #b",
-      " dégâts de plus, consumant tout le #yGoop."
+      " dégâts de plus, consumant tout le #yGoop [REMOVE_SPACE]."
     ]
   },
   "Slimebound:PreventTackleDamagePower": {
@@ -45,14 +45,14 @@
     "NAME": "Amélioration : Acide",
     "DESCRIPTIONS": [
       "Les Slimes #yVenimeux appliquent #b",
-      " de #yPoison en plus."
+      " de #yPoison en plus [REMOVE_SPACE]."
     ]
   },
   "Slimebound:BuffSlimingSlimesPower": {
     "NAME": "Amélioration : Bourbier",
     "DESCRIPTIONS": [
       "Les Slimes #yBourbier appliquent #b",
-      " de #yGoop en plus."
+      " de #yGoop en plus [REMOVE_SPACE]."
     ]
   },
   "Slimebound:BuffShieldSlimesPower": {
@@ -100,7 +100,7 @@
     ]
   },
   "Slimebound:RetainCardsOneTurnPower": {
-    "NAME": "Preparing Cards",
+    "NAME": "Préparation des cartes",
     "DESCRIPTIONS": [
       "Retenez #b",
       " carte ce tour.",
@@ -120,14 +120,14 @@
     "NAME": "Reformation",
     "DESCRIPTIONS": [
       "Lorsque vous Absorbez un Slime, gagnez #b",
-      " de Force."
+      " de Force [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SelfFormingGooPowerPlus": {
     "NAME": "Reformation+",
     "DESCRIPTIONS": [
       "Lorsque vous Absorbez un Slime, gagnez #b",
-      " de Dextérité."
+      " de Dextérité [REMOVE_SPACE]."
     ]
   },
   "Slimebound:LoseSlimesPower": {
@@ -161,17 +161,17 @@
   "Slimebound:PreventSlimeDecayPower": {
     "NAME": "Recouvert de Slime",
     "DESCRIPTIONS": [
-      "La prochaine fois qu'une #yAttaque est utilisée sur cet ennemi, les bénéfices du #yGoop vont s'appliquer sans retirer de #yGoop.",
+      "La prochaine fois qu'une #yAttaque est utilisée sur cet ennemi, les bénéfices du #yGoop vont s'appliquer sans retirer de #yGoop [REMOVE_SPACE].",
       "Les #b",
-      " prochaines fois qu'une #yAttaque est utilisée sur cet ennemi, les bénéfices du #yGoop vont s'appliquer sans retirer de #yGoop."
+      " prochaines fois qu'une #yAttaque est utilisée sur cet ennemi, les bénéfices du #yGoop vont s'appliquer sans retirer de #yGoop [REMOVE_SPACE]."
     ]
   },
   "Slimebound:DuplicatedFormPower": {
     "NAME": "Forme dupliquée",
     "DESCRIPTIONS": [
-      "Chaque tour, la première carte que vous jouez qui cible des ennemis est jouée deux fois.",
-      "Chaque tour, les #b",
-      " premières cartes que vous jouez qui ciblent des ennemis sont jouées deux fois."
+      "La première carte que vous jouez chaque tour qui cible des ennemis est jouée deux fois.",
+      "Les #b",
+      " premières cartes que vous jouez chaque tour qui ciblent des ennemis sont jouées deux fois."
     ]
   },
   "Slimebound:DuplicatedFormNoHealPower": {
@@ -212,7 +212,7 @@
     "NAME": "Goop acide",
     "DESCRIPTIONS": [
       "Appliquez #b",
-      " #yPoison lorsque vous #yAttaquez un ennemi qui a du #yGoop."
+      " #yPoison lorsque vous #yAttaquez un ennemi qui a du #yGoop [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SlimeRitualPower": {
@@ -241,7 +241,7 @@
     "NAME": "Langue acide",
     "DESCRIPTIONS": [
       "Appliquez #b",
-      " #yPoison lorsque vous appliquez du #yGoop."
+      " #yPoison lorsque vous appliquez du #yGoop [REMOVE_SPACE]."
     ]
   },
   "Slimebound:AcidTonguePowerUpgraded": {
@@ -252,7 +252,7 @@
     ]
   },
   "Slimebound:SelfDamageSlimedPower": {
-    "NAME": "Stray Goop",
+    "NAME": "Goop errant",
     "DESCRIPTIONS": [
       "Appliquez #b",
       " #yGoop à un ennemi aléatoire lorsque vous perdez des PV."
@@ -406,18 +406,18 @@
     ]
   },
   "Slimebound:StudyGuardianPower": {
-    "NAME": "Étude Guardien",
+    "NAME": "Étude Gardien",
     "DESCRIPTIONS": [
-      "Gagnez une carte aléatoire du Guardien au début de votre prochain tour.",
-      "Gagnez une carte aléatoire du Guardien au début de vos ",
+      "Gagnez une carte aléatoire du Gardien au début de votre prochain tour.",
+      "Gagnez une carte aléatoire du Gardien au début de vos ",
       " prochains tours."
     ]
   },
   "Slimebound:StudyGuardianPowerUpgraded": {
-    "NAME": "Étude Guardien+",
+    "NAME": "Étude Gardien+",
     "DESCRIPTIONS": [
-      "Gagnez une carte aléatoire Améliorée du Guardien au début de votre prochain tour.",
-      "Gagnez une carte aléatoire Améliorée du Guardien au début de vos ",
+      "Gagnez une carte aléatoire Améliorée du Gardien au début de votre prochain tour.",
+      "Gagnez une carte aléatoire Améliorée du Gardien au début de vos ",
       " prochains tours."
     ]
   },
@@ -484,7 +484,7 @@
   "Slimebound:BuffSecondarySlimeEffectsPower": {
     "NAME": "Maître des sbires",
     "DESCRIPTIONS": [
-      "Lorsque vous jouez une carte avec l'effet #yCommande, #yCommandez une autre fois.",
+      "Lorsque vous jouez une carte avec l'effet #yCommande, #yCommandez une fois de plus.",
       "Lorsque vous jouez une carte avec l'effet #yCommande, #yCommandez #b",
       " fois de plus."
     ]

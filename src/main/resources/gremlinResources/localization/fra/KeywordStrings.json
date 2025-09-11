@@ -1,6 +1,7 @@
 [
   {
     "NAMES": [
+      "l'agonie",
       "agonie",
       "agony"
     ],
@@ -14,23 +15,17 @@
       "cripple"
     ],
     "PROPER_NAME": "Paralysie",
-    "DESCRIPTION": "Les ennemis #yParalysés ne peuvent plus perdre de #yFaiblesse désormais. À la fin de leur tour, ils perdent des PV d'une quantité égale de leur #yFaiblesse."
+    "DESCRIPTION": "Les ennemis #yParalysés ne peuvent plus perdre de #yFaiblesse désormais. À la fin de leur tour, ils perdent des PV d'une quantité égale à leur #yFaiblesse."
   },
   {
     "NAMES": [
       "écho",
-      "echo"
-    ],
-    "PROPER_NAME": "Écho",
-    "DESCRIPTION": "Un écho est une copie d'une carte avec #yÉthérée et #yÉpuisement."
-  },
-  {
-    "NAMES": [
+      "echo",
       "échos",
       "echoes"
     ],
-    "PROPER_NAME": "Échos",
-    "DESCRIPTION": "Des échos sont des copies d'une carte avec #yÉthérée et #yÉpuisement."
+    "PROPER_NAME": "Écho",
+    "DESCRIPTION": "Un écho est une copie d'une carte avec #yÉthérée et #yÉpuisement [REMOVE_SPACE]. Les Échos ne peuvent pas reproduire des Échos."
   },
   {
     "NAMES": [
@@ -40,7 +35,7 @@
       "fat_gremlin"
     ],
     "PROPER_NAME": "Gros diablotin",
-    "DESCRIPTION": "Lorsque vous jouez une Attaque, appliquez #b1 de #yFaiblesse toutes les cibles."
+    "DESCRIPTION": "Lorsque vous jouez une Attaque, appliquez #b1 de #yFaiblesse à toutes les cibles."
   },
   {
     "NAMES": [
@@ -50,7 +45,7 @@
       "gremlin_wizard"
     ],
     "PROPER_NAME": "Diablotin sorcier",
-    "DESCRIPTION": "Lorsque vous jouez une Compétence, gagnez #b1 de #yMagie."
+    "DESCRIPTION": "Lorsque vous jouez une Compétence, gagnez #b1 de #yMagie [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -60,7 +55,7 @@
       "mad_gremlin"
     ],
     "PROPER_NAME": "Diablotin fou",
-    "DESCRIPTION": "Gagnez #b2 de #yForce #yTemporaire quand vous êtes attaqué."
+    "DESCRIPTION": "Gagnez #b2 de #yForce #yTemporaire lorsque vous êtes attaqué."
   },
   {
     "NAMES": [
@@ -70,7 +65,7 @@
       "shield_gremlin"
     ],
     "PROPER_NAME": "Diablotin à bouclier",
-    "DESCRIPTION": "Lorsque vous jouez une Compétence, gagnez #b2 #yd'Armure."
+    "DESCRIPTION": "Lorsque vous jouez une Compétence, gagnez #b2 #yd'Armure [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -80,7 +75,7 @@
       "sneaky_gremlin"
     ],
     "PROPER_NAME": "Diablotin sournois",
-    "DESCRIPTION": "Lorsque vous jouez une attaque, Infligez #b3 dégâts à un ennemi aléatoire."
+    "DESCRIPTION": "Les Attaques coûtant 0 infligent #b2 dégâts supplémentaires. Après avoir joué une Attaque, infligez #b2 dégâts à un ennemi aléatoire."
   },
   {
     "NAMES": [
@@ -105,6 +100,13 @@
     ],
     "PROPER_NAME": "Vol",
     "DESCRIPTION": "La cible perd une quantité spécifiée de ressources. Vous gagnez le montant qui a été perdu."
+  },
+  {
+    "NAMES": [
+      "nob"
+    ],
+    "PROPER_NAME": "Diablotin Nob",
+    "DESCRIPTION": "Au début de votre tour, ajoutez #b1 #ySoufflet , #yBriser #yle #ycrâne et #yRuée à votre main."
   }
 ]
 

@@ -24,7 +24,9 @@
       "Art alternatif de l'Hexaplasme déverrouillé!",
       "Art alternatif du Geckobra déverrouillé!",
       "Art alternatif du Champion déverrouillé!",
-      "Art alternatif de l'Automate déverrouillé!"
+      "Art alternatif de l'Automate déverrouillé!",
+      "Art alternatif des Diablotins déverrouillé!",
+      "Art alternatif du Collecteur déverrouillé!"
     ]
   },
 
@@ -80,6 +82,14 @@
       "C'est le jour du linge."
     ]
   },
+    "reskinContent:ReSkinGremlin": {
+    "TEXT": [
+      "Chats"
+    ],
+    "EXTRA_TEXT": [
+      "Euuuuuh.... Miaou ?"
+    ]
+  },
   "reskinContent:ReSkinBronze": {
     "TEXT": [
       "Automate",
@@ -93,4 +103,3 @@
     ]
   }
 }
-

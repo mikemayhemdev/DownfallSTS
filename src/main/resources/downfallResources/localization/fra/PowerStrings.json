@@ -6,6 +6,13 @@
       "Ha! Potion féérique, idiot!"
     ]
   },
+  "downfall:CultistRevivePower": {
+    "NAME": "Faux Culte",
+    "DESCRIPTIONS": [
+      "Soigne #b50% de ses PV Max au lieu de mourir, retirant cet effet.",
+      "CAAAAWWWW!"
+    ]
+  },
   "downfall:SoulSteal": {
     "NAME": "Voleur d'âmes",
     "DESCRIPTIONS": [
@@ -41,9 +48,12 @@
     ]
   },
   "downfall:SpotWeakness": {
-    "NAME": "Spot Weakness",
+    "NAME": "Repérer les faiblesses",
     "DESCRIPTIONS": [
-      "Chaque tour que vous jouez une Attaque avec ce pouvoir actif, cet ennemi gagne #b", " de #yForce. Actuellement, il va gagner #b", " de #yForce."
+      "Si vous jouez une #yAttaque ce tour, l'ennemi gagnera #b",
+      " de #yForce.",
+      "Vous avez joué une Attaque ce tour. l'ennemi va gagner #b",
+      " de #yForce."    
     ]
   },
   "downfall:FearNoEvil": {
@@ -54,9 +64,17 @@
     ]
   },
   "downfall:PoisonResist": {
-    "NAME": "Résistance au poison",
+    "NAME": "Impossible de ralentir",
     "DESCRIPTIONS": [
-      "Le #yPoison se déclenche à la fin de votre tour. À la fin de votre tour, dépensez toutes les [E] restantes pour retirer 10 #yPoison par [E] dépensée."
+      "Lorsque vous infligez des dégâts #yd'Attaque, perdez #b",
+      " de #yPoison."
+    ]
+  },
+  "downfall:OnPlayerPoison": {
+    "NAME": "Poison",
+    "DESCRIPTIONS": [
+      "À la fin de votre tour, prenez #b",
+      " dégâts."
     ]
   },
   "downfall:NeowBuff": {
@@ -66,9 +84,10 @@
     ]
   },
   "downfall:WatcherAngryPower": {
-    "NAME": "Rage débridée",
+    "NAME": "Stabilité",
     "DESCRIPTIONS": [
-      "À la fin du tour, si la Gardienne est à #b50% de ses PV ou moins, elle entre en #yColère. NL La #yColère de la Gardienne augmente les dégâts infligés et reçus de #b50% au lieu de #b100%."
+      "À la fin du tour, si la Gardienne est à #b50% de ses PV ou moins, elle entre en #yColère. NL La #yColère de la Gardienne augmente les dégâts infligés et reçus de #b50% au lieu de #b100%.",
+      "La #yColre de la Gardienne augmente les dégâts reçus et infligés de #b50% au lieu de #b100% [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -88,15 +107,20 @@
   "downfall:WatcherSkillPower": {
     "NAME": "En proie à la discorde",
     "DESCRIPTIONS": [
-      "Chaque fois que vous jouez une compétence, la Gardienne gagne #b",
-      " temporary #yStrength.",
-      "Chaque fois que vous jouez une compétence, la Gardienne gagne #yTemporary #yStrength [REMOVE_SPACE]."
+      "Lorsque vous jouez une Attaque, la Gardienne gagne #b",
+      " de #yDextérité Temporaire, #b",
+      " de #yForce Temporaire quand vous jouez une #yCompétence, et #b",
+      " des deux quand vous jouez un #yPouvoir.",
+      "Si vous jouez plus de #b",
+      " cartes en un tour, la Gardienne retire TOUS ses débuffs.",
+      "Vous avez joué #b",
+      " cartes ce tour."
     ]
   },
   "downfall:WrathNextTurnPower": {
     "NAME": "Colère au prochain tour",
     "DESCRIPTIONS": [
-      "Au début de son tour, la Gardienne entrera en #yWrath [REMOVE_SPACE]."	 																			
+      "Au début de son tour, la Gardienne entrera en #yColère [REMOVE_SPACE]."	 																			
     ]
   },
   "downfall:NeowBlasphemersDemise": {
@@ -110,7 +134,11 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "Foi éphémère",
     "DESCRIPTIONS": [
-      "La Gardienne gagne #b1 de Mantra lorsque vous jouez une carte. NL La Gardienne perd #b5 de Mantra au début de son tour. NL La Gardienne ne quitte pas sa position de Divinité à la fin de son tour."
+      "La Gardienne gagne #b1 de Mantra et #b1 #yd'Intangibilité après que vous ayez joué #b6 cartes en un tour.",
+      " NL Vous avez joué #b",
+      " cartes ce tour.",
+      " NL (A déjà été déclenché ce tour)",
+      " NL NL Une fois que La Gardienne entre en Divinité, elle ne la quitte pas pour le reste du combat, mais la Divinité augmente les dégâts de 200% seulement."
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -123,6 +151,14 @@
     "NAME": "Sac de couteaux",
     "DESCRIPTIONS": [
       "La première fois que vous jouez une carte qui coûte #b2 ou plus chaque tour, la Silencieuse gagne 2 #ySurins."
+    ]
+  },
+  "downfall:SilentDelayedWraithPower": {
+    "NAME": "Possession fatale",
+    "DESCRIPTIONS": [
+      "La première fois que la Silencieuse atteint 0 PV, elle activera #yForme #ySpectrale",
+      " et se soignera de #b",
+      " PV."
     ]
   },
   "downfall:NeowBagOfKnives": {
@@ -144,9 +180,10 @@
     ]
   },
   "downfall:SilentPoisonPower": {
-    "NAME": "Attention: Hautement toxique",
+    "NAME": "Nouvelles Toxines",
     "DESCRIPTIONS": [
-      "Le Poison peut être défendu et inflige des dégâts à la fin du tour. NL Recevez un #yAntidote au début de votre tour."
+      "Le #yPoison peut être bloqué et inflige des dégâts à la fin du tour.",
+      "Le #yPoison peut être bloqué, ne se dégrade pas, et inflige des dégâts à la fin du tour."
     ]
   },
   "downfall:NeowHighlyToxic": {
@@ -183,14 +220,24 @@
     "NAME": "Cognition Impartiale",
     "DESCRIPTIONS": [
       "Lorsque vous jouez une carte #yPouvoir, le Défectueux gagne #b",
-      " de #yConcentration."
+      " de #yConcentration [REMOVE_SPACE].",
+      " Les changements de la Force du Défecteux change également sa #yConcentration [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:DefectBiasCuriosity": {
+    "NAME": "Cognition corrigée",
+    "DESCRIPTIONS": [
+      "Le Défectueux commence avec #b4 de #yConcentration et en gagne #b1 de plus lorsque vous jouez un #yPouvoir [REMOVE_SPACE], mais perd également #b1 de #yConcentration au début de leur tour.",
+      "Le Défectueux perd #b",
+      " de #yConcentration",
+      " à la fin de leur tour."
     ]
   },
   "downfall:DefectCuriosityLighning": {
-    "NAME": "Cognition impartiale",
+    "NAME": "Biais",
     "DESCRIPTIONS": [
-      "Chaque fois que vous jouez une carte #yPower, le Défectueux canalise #b",
-      " #yLightning #yOrb [REMOVE_SPACE]."
+      "Lorsque vous jouez un #yPouvoir [REMOVE_SPACE], le Défectueux canalise #b",
+      " #yOrbe #yKéraunique [REMOVE_SPACE]."
     ]
   },								   
   "downfall:NeowUnbiasedCognition": {
@@ -202,7 +249,10 @@
   "downfall:IroncladStatusPower": {
     "NAME": "Synchronisation",
     "DESCRIPTIONS": [
-      "Lorsque le Soldat de Fer génère une carte Statut, un doublon est ajouté dans votre défausse."
+      "Lorsque le Soldat de Fer génère une carte #yStatut, un doublon est ajouté dans votre défausse.",
+      "Lorsque le Soldat de Fer génère une carte #yStatut, elle entre dans votre défausse à la place. NL Après avoir perdu #b",
+      " PV de plus, vous obtenez une #yPureté avec #yRetenue.",
+      "Lorsque le Soldat de Fer génère une carte #yStatut, elle entre dans votre pioche à la place. NL Après avoir perdu #b"
     ]
   },
   "downfall:NeowSyncronize": {
@@ -214,7 +264,9 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "Faim Frénétique",
     "DESCRIPTIONS": [
-      "La #yFaucheuse du Soldat de Fer ne #ys'Épuise pas et cible TOUS les Champignons. NL Quand le Soldat de Fer tue un Champignon, il gagne #b1 de #yForce."
+      "La #yFaucheuse du Soldat de Fer ne #ys'Épuise pas et cible TOUS les Champignons. NL Quand le Soldat de Fer tue un Champignon, il gagne #b1 de #yForce [REMOVE_SPACE].",
+      "La #yFaucheuse du Soldat de Fer cible TOUS les Champignons. NL Quand le Soldat de Fer tue un Champignon, il gagne #b",
+      " de #yForce [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowFeedingFrenzy": {
@@ -227,7 +279,8 @@
     "NAME": "Bastion",
     "DESCRIPTIONS": [
       "Le Soldat de fer commence le combat avec une #yFortification, qui lui octroie #b",
-      " #yd'Armure chaque tour. NL Quand la #yFortification est détruite, le Soldat de Fer perd #yBarricade, mais gagne #b5 de #yForce par tour."
+      " #yd'Armure chaque tour. NL Quand la #yFortification est détruite, le Soldat de Fer perd #yBarricade, mais gagne #b5 de #yForce au début de chaque tour.",
+      "Quand détruite, le Soldat de Fer perd #yBarricade, mais gagne #b5 de #yForce au début de chaque tour."
     ]
   },
   "downfall:NeowBastion": {
@@ -239,7 +292,7 @@
   "downfall:MerchantStrengthPower": {
     "NAME": "Voleur d'Âmes",
     "DESCRIPTIONS": [
-      "Le Marchand a toujours la #yForce obtenue par ses vols d'Âmes durant cette run, et gagne de la Dextérité égale à sa Force."
+      "Le Marchand a le double de la #yForce obtenue par ses vols d'Âmes durant cette run, et gagne un montant égal de Dextérité."
     ]
   },
   "downfall:NeowMantra": {
@@ -334,20 +387,22 @@
   "downfall:TangerinePower": {
     "NAME": "Député",
     "DESCRIPTIONS": [
-      "Quand Mandarine meurt, l'Ermite brise sa #yConcentration et gagnes #b",
-      " #yStrength."
+      "Quand Mandarine meurt, l'Ermite brise sa #yConcentration et gagne #b",
+      " de #yForce.",
+      "Quand Mandarine meurt, l'Ermite brise sa #yConcentration."
     ]
   },							  	
   "downfall:HermitWheelOfFortune": {
-    "NAME": "Roue de la Fortune",
+    "NAME": "Roue de la Destinée",
     "DESCRIPTIONS": [
-      "Lorsque vous attaquez l'Ermite, sa carte la plus à gauche est défaussée et il pioche une carte."
+      "Lorsque vous jouez une Attaque, l'Ermite #yCycle sa première carte. Le coût des cartes de l'Ermite ne peut pas changer. Lorsque l'Ermite pioche #rMalédiction #rFatale, il gagne #b2 de Force.",
+      "Lorsque vous jouez une Attaque, l'Ermite #yCycle sa première carte."
     ]
   },
   "downfall:HermitDoomsday": {
     "NAME": "Doomsday",
     "DESCRIPTIONS": [
-      "Au début de votre tour, gagnez un #rDestin #rImminent avec #yRetenue."
+      "L'Ermite commence avec #b1 de Rituel [REMOVE_SPACE]. Lorsque l'Ermite joue #yPurgatoire [REMOVE_SPACE], il invoque une #rDague #rCondamnée [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowEclipse": {
@@ -361,7 +416,7 @@
     "DESCRIPTIONS": [
       "Toutes les #b",
       " cartes que vous jouez, Neow gagne #b",
-      " de #yForce."
+      " de #yForce [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowDistracting": {
@@ -376,8 +431,10 @@
       "BUG! You should not see this",
       "Au prochain tour, gagnez #b",
       " ",
-      ".",
-      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field."
+      " #y",
+      " [REMOVE_SPACE].",
+      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field.",
+      "finalized text should look like this: Next turn, gain #b7 #yVigor [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowStayAt1Hp": {
@@ -404,10 +461,37 @@
     ]
   },
   "downfall:HeartsFavorPower": {
-    "NAME": "Faveur du coeur",
+    "NAME": "Faveur du Cœur",
     "DESCRIPTIONS": [
-      "Chaque fois que #yInvincible de Neow atteint #b0 [REMOVE_SPACE], Réduit sa #yGod #yof #yLife de #b",
+      "Chaque fois que #yl'Invincibilité de Neow atteint #b0 [REMOVE_SPACE], réduisez sa compétence #yDieu #yde #yla #yVie de #b",
       " [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:DefectAttackVoidPower":{
+    "NAME": "Energy Thief",
+    "DESCRIPTIONS": [
+      "Lorsque vous infligez des dégâts non-bloqués, ajoutez un Néant dans la défausse de l'adversaire."
+    ]
+  },
+  "downfall:WatcherTrackerAttacksPower":{
+    "NAME": "Œil pour les attaques",
+    "DESCRIPTIONS": [
+      "Vous avez joué #b",
+      " Attaques. Lorsque ce nombre dépasse les non-Attaques, la Gardienne est en #yColère."
+    ]
+  },
+  "downfall:WatcherTrackerSkillsPower":{
+    "NAME": "Œil pour les Compétences",
+    "DESCRIPTIONS": [
+      "Vous avez joué #b",
+      " non-Attaques. Lorsque ce nombre dépasse ou égale celui des Attaques, la Gardienne est en #yCalme."
+    ]
+  },
+  "downfall:VoidOrbPower":{
+    "NAME": "Void Core",
+    "DESCRIPTIONS": [
+      "Quand tué, le Noyau Vide restaure tous ses PV et retire un Orbe #yObscur du Défectueux.",
+      " Gagne 5 PV max chaque fois que cela occure."
     ]
   }
 }

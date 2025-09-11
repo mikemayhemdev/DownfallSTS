@@ -2,17 +2,17 @@
   "sneckomod:D8": {
     "NAME": "Octaèdre mystique",
     "DESCRIPTIONS": [
-      "Approchez l'octaèdre mystique.",
+      "À travers la brume, vous arrivez dans un espace tranquille. Au centre des ruines, un #goctaèdre #mystérieux flotte silencieusement. Il tourne lentement, sa surface #b~brillant~ #b~faiblement,~ comme s'il s'agissait d'un #y~artéfact~ #y~primordial.~ NL Alors que vous tendez la main, sur le point de toucher sa surface, l'octaèdre #b~soudainement~ #b~s'illumine,~ et des runes complexes défilent dans un flot de lumière. Vous sentez un #r@léger@ #r@tremblement@ s'élever du sol, l'air environnant devient #pde #pplus #pen #pplus #plourd, et l'espace entier semble retenir son souffle, attendant votre prochaine action. Vous décidez...",
       "La relique fait boom.",
       "Vous obtenez la relique.",
       "Vous décidez de partir."
     ],
     "OPTIONS": [
       "[Mettre en pièces] #rPerdez #r",
-      " #rPV . #gGagnez #g5 #gcartes #gInconnues",
-      "[Prendre] #gGagnez #gOctaèdre #gmystique. #rMaudit #r- #rDouleur.",
+      " #rPV . #gChoisissez #b1 Carte #yHors-Classe Rare parmi #b3 à Obtenir.",
+      "[Prendre] #gObtenez #gOctaèdre #gmystique. #rMaudit #r- #rDouleur.",
       "[Quitter]",
-      "[Verrouillé] Requiert une carte qui choisit un nombre aléatoire."
+      "[Verrouillé] Requiert une carte Excédente."
     ]
   },
   "sneckomod:BackToBasics": {
@@ -33,7 +33,7 @@
       "Le serpent vous regarde d'un air extrêmement déçu, mais finit par sourire et vous souhaite un bon voyage."
     ],
     "OPTIONS": [
-      "[D'accord] #gGagnez #gune #gRelique #galéatoire. #rSoyez #rMaudit #r- #rPerplexité.",
+      "[D'accord] #gObtenez #gune #gRelique #gdu #gGeckobra. #rSoyez #rMaudit #r- #rPerplexité.",
       "[Pas d'accord]",
       "[Quitter]"
     ]
@@ -46,7 +46,7 @@
       "Le serpent vous regarde d'un air extrêmement déçu, alors que vous quittez la maison."
     ],
     "OPTIONS": [
-      "[Secourir] #gGagnez #gJeune #gGeckobra. #rSoyez #rMaudit #r- #rPerplexité.",
+      "[Secourir] #gGagnez #gJeune #gGeckobra. #rCombattez #run #rCenturion #ren #rColère.",
       "[Quitter]"
     ]
   }

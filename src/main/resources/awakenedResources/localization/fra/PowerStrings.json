@@ -1,0 +1,248 @@
+{
+  "awakened:IntensifyPower": {
+    "NAME": "Intensification",
+    "DESCRIPTIONS": [
+      "Ce tour, tous les Sorts coûtent #b0 [REMOVE_SPACE].",
+      "Pour les #b",
+      " prochaisn tours, tous les Sorts coûtent #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:IntensifyDebuffPower": {
+    "NAME": "Burnout",
+    "DESCRIPTIONS": [
+      "You cannot #yConjure for the rest of the turn.",
+      "You cannot #yConjure for the next #b",
+      " turns."
+    ]
+  },
+  "awakened:RisingChantPower": {
+    "NAME": "Refrain ascendant",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une carte ayant activé son effet #yChant, gagnez #b",
+      " de #yForce [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:CursedStrength": {
+    "NAME": "Béni par les ténèbres",
+    "DESCRIPTIONS": [
+      "Lorsque vous êtes #yDrainé [REMOVE_SPACE], gagnez #b",
+      " de #yForce [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:ThaumaturgyPower": {
+    "NAME": "Thaumaturgie",
+    "DESCRIPTIONS": [
+      "Au début de vos #b",
+      " prochains tours, obtenez une #yCérémonie [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:SacramentPower": {
+    "NAME": "Sacrements",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez un #yPouvoir [REMOVE_SPACE], gagnez #b",
+      " #yd'Armure [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:FlarePower": {
+    "NAME": "Éclat de Plumes",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une carte #yn'étant #ypas #yune #yAttaque ce tour, TOUS les ennemis perdent #b",
+      " PV."
+    ]
+  },
+  "awakened:PrimacyPower": {
+    "NAME": "Primauté",
+    "DESCRIPTIONS": [
+      "La première fois que vous gagnez de la #yForce chaque tour, piochez une carte.",
+      "Les #b",
+      " premières fois que vous gagnez de la #yForce chaque tour, piochez une carte.",
+      " NL Cet effet peut être encore déclenché #b",
+      " fois ce tour.",
+      " fois ce tour.",
+      " NL Cet effet ne peut pas être déclenché à nouveau pendant ce tour."
+    ]
+  },
+  "awakened:SpellbinderPower": {
+    "NAME": "Envoûteur",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, #yConjurez [REMOVE_SPACE].",
+      "Au début de votre tour, #yConjurez #b",
+      " fois."
+    ]
+  },
+  "awakened:DarkEchoPower": {
+    "NAME": "Écho obscur",
+    "DESCRIPTIONS": [
+      "À la fin de votre tour, infligez #b",
+      " dégâts à TOUS les ennemis #b",
+      " fois.",
+      " dégâts à TOUS les ennemis."
+    ]
+  },
+  "awakened:MoonlitVisionPower": {
+    "NAME": "Vision lunaire",
+    "DESCRIPTIONS": [
+      "La première fois que vous jouez un Sort chaque tour, gagnez [E] .",
+      "Les #b",
+      " premières fois que vous jouez un Sort chaque tour, gagnez [E] .",
+      " NL (#b",
+      "  restants ce tour.)"
+    ]
+  },
+  "awakened:EclipseEmbracePower": {
+    "NAME": "Étreinte de l’Éclipse",
+    "DESCRIPTIONS": [
+      "Lorsque vous #yÉpuisez un #yNéant [REMOVE_SPACE], gagnez [E] et piochez une carte au prochain tour.",
+      "Lorsque vous #yÉpuisez un #yNéant [REMOVE_SPACE], gagnez #b",
+      " [E] et piochez #b",
+      " cartes au prochain tour."
+    ]
+  },
+  "awakened:SongOfSorrowPower": {
+    "NAME": "Chanson du chagrin",
+    "DESCRIPTIONS": [
+      "Lorsque vous créez un #yNéant [REMOVE_SPACE], TOUS les ennemis perdent #b",
+      " PV."
+    ]
+  },
+  "awakened:ShroudOfMiasmaPower": {
+    "NAME": "Linceul de Miasme",
+    "DESCRIPTIONS": [
+      "Lorsque vous attaquez un ennemi avec du #yMaléfice [REMOVE_SPACE], gagnez #b",
+      " #yd'Armure [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:StrengthReturnPower": {
+    "NAME": "Flagellé",
+    "DESCRIPTIONS": [
+      "Lorsque vous attaquez cet ennemi, gagnez #b",
+      " de #yForce #yTemporaire [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:ManaburnPower": {
+    "NAME": "Manabrûlure",
+    "DESCRIPTIONS": [
+      "Lorsque vous êtes #yDrainé [REMOVE_SPACE], perd #b",
+      " PV."
+    ]
+  },
+  "awakened:ArchmagusPower": {
+    "NAME": "Archimage",
+    "DESCRIPTIONS": [
+      "Le premier Sort que vous jouez chaque tour est joué deux fois.",
+      "Les #b",
+      " premiers Sorts que vous jouez chaque tour sont jouées deux fois.",
+      " NL (#b",
+      " répétitions de Sorts restantes)"
+    ]
+  },
+  "awakened:DoubleSpellPower": {
+    "NAME": "Répétition de sort",
+    "DESCRIPTIONS": [
+      "Le prochain Sort que vous jouez ce tour sera joué deux fois.",
+      "Les #b",
+      " prochains Sorts que vous jouez ce tour seront joués deux fois."
+    ]
+  },
+  "awakened:DarknessFallsPower": {
+    "NAME": "Nuit Tombante",
+    "DESCRIPTIONS": [
+      "Lorsque vous êtes #yDrainé [REMOVE_SPACE], gagnez #b",
+      " #yd'Armure [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:VoidRefundPower": {
+    "NAME": "Appel du clairon",
+    "DESCRIPTIONS": [
+      "La prochaine fois que vous êtes #yDrainé [REMOVE_SPACE], gagnez [E] .",
+      "La prochaine fois que vous êtes #yDrainé [REMOVE_SPACE], gagnez #b",
+      " [E] ."
+    ]
+  },
+  "awakened:DemonGlyphPower": {
+    "NAME": "Glyphe Démoniaque",
+    "DESCRIPTIONS": [
+      "Gagnez #b",
+      " de #yForce et de #yDextérité lorsque vous vous #yÉveillez [REMOVE_SPACE]."
+    ]
+  },
+    "awakened:ReverseRitualPower": {
+      "NAME": "Forme Éveillée",
+      "DESCRIPTIONS": [
+        "Au début de votre tour, gagnez #b",
+        " de #yRituel [REMOVE_SPACE]."
+      ]
+    },
+  "awakened:EnsorcelatePower": {
+    "NAME": "Ensorcelage",
+    "DESCRIPTIONS": [
+      "Le prochain #yPouvoir que vous jouez coûte #b0 [REMOVE_SPACE].",
+      "Les #b",
+      " prchains #yPouvoirs qur vous jouez coûtent #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:ConjureNextPower": {
+    "NAME": "Picore",
+    "DESCRIPTIONS": [
+      "La prochaine fois que vous êtes #yDrainé [REMOVE_SPACE], ajoutez un #yJab #yPlume dans votre main.",
+      "La prochaine fois que vous êtes #yDrainé [REMOVE_SPACE], obtenez #b",
+      " copies de #yJab #yPlume [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:ChosensVersePower": {
+    "NAME": "Verset choisi",
+    "DESCRIPTIONS": [
+      "La prochaine fois que vous jouez une carte n'étant pas une Attaque ce tour, piochez une carte et gagnez #b",
+      " #yd'Armure [REMOVE_SPACE].",
+      "Les #b",
+      " prochaines fois que vous jouez une carte n'étant pas une Attaque ce tour, piochez une carte et gagnez #b",
+      " #yd'Armure [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:AphoticFountPower": {
+    "NAME": "Source aphotique",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez #yCryostase [REMOVE_SPACE], gagnez #b",
+      " #yd'Armure #yPlaquée [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:GrimoirePower": {
+    "NAME": "Maître des tempêtes",
+    "DESCRIPTIONS": [
+      "Vos #yTonerres infligent #b",
+      " dégâts supplémentaires."
+    ]
+  },
+  "awakened:SpellshieldPower": {
+    "NAME": "Bouclier sortilègeux",
+    "DESCRIPTIONS": [
+      "Lorsque vous #yRetenez une carte, gagnez #b",
+      " #yd'Armure."
+    ]
+  },
+  "awakened:DaggerstormPower": {
+    "NAME": "Tempête de dagues",
+    "DESCRIPTIONS": [
+      "Lorsque vous créez une carte, infligez #b",
+      " dégâts à un ennemi aléatoire."
+    ]
+  },
+  "awakened:SchemePower": {
+    "NAME": "Schéma",
+    "DESCRIPTIONS": [
+      "Les #b",
+      " prochaines cartes jouées ce tour qui coûtent #b1 [E] ou moins seront jouées deux fois.",
+      "La prochaine carte jouée ce tour qui coûte #b1 [E] ou moins sera jouée deux fois."
+    ]
+  },
+  "awakened:FourthDimensionPower": {
+    "NAME": "4ème Dimension",
+    "DESCRIPTIONS": [
+      "Au début de vos #b",
+      " prochain tour, ",
+      " prochains tours, ",
+      " jouez et #yÉpuisez une copie de ",
+      " [REMOVE_SPACE]."
+    ]
+  }
+}

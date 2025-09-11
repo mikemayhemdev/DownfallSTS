@@ -14,7 +14,7 @@
   },
   "HermitMod:GuardianTutorials": {
     "TEXT": [
-      "Le Gardien peut s'Enrouler lorsqu'il a atteint un certain taux de Renforcement.",
+      "Le Gardien peut s'Enrouler après qu'il ait atteint un certain taux de Renforcement.",
       "Il peut également introduire des Gemmes dans certaines cartes dans le but d'augmenter leurs effets."
     ],
     "LABEL": [
@@ -46,22 +46,100 @@
     "LABEL": [
       "Suivant",
       "Compris",
-      "Les Spire Slayers",
+      "Les Chasseurs de la Tour",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:ChampTutorials": {
+    "TEXT": [
+      "Le Champion peut passer d'une Pose de Gladiateur à une autre, la Pose du Destructeur et la Pose Défensive. Jouer des Compétences lorsque vous êtes dans une de ces Poses déclenchent leurs Bonus de Compétences, jusqu'à trois fois.",
+      "Il peut également utiliser de puissantes cartes Finisher lorsqu'il se trouve dans ces Poses, au prix de devoir les quitter."
+    ],
+    "LABEL": [
+      "Suivant",
+      "Compris",
+      "Le Champion",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:AutomatonTutorials": {
+    "TEXT": [
+      "L'Automate peut utiliser des cartes Encoder pour les ajouter à une séquence (jusqu'à trois cartes) et les combiner en une carte Fonction unique.",
+      "Certaines cartes ont des effets de Compilation spéciaux qui s'activent lorsqu'elles sont combinées en une Fonction, qui peut être positive ou négative (on parle alors d'Erreur de Compilation)."
+    ],
+    "LABEL": [
+      "Suivant",
+      "Compris",
+      "L'Automate",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:SneckoTutorials": {
+    "TEXT": [
+      "Le Geckobra peut Confondre ses cartes pour remplacer temporairement leur coût avec un nombre entre 0 et 3. Confondre modifiera toujours le coût d’une carte, et ne le relancera jamais vers le même nombre.",
+      "Il peut également trouver des cartes Cadeaux qui qui lui permettent d'obtenir des cartes d'autres personnages lorsqu'il les prend."
+    ],
+    "LABEL": [
+      "Suivant",
+      "Compris",
+      "Le Geckobra",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:GremlinsTutorials": {
+    "TEXT": [
+      "Les Diablotins sont cinq personnages en un et ont chacun leur effet unique et PVs.",
+      "Vous pouvez les Permuter en utilisant certaines cartes."
+    ],
+    "LABEL": [
+      "Suivant",
+      "Compris",
+      "Les Diablotins",
+      "(Page: ",
+      ")"
+    ]
+  },
+  "HermitMod:SlimeBossTutorials": {
+    "TEXT": [
+      "Le Parrain Slime peut appliquer du Goop sur les ennemis pour augmenter les dégâts qu'ils prendront la prochaine fois qu'ils seront attaqués, retirant alors tout le Goop et activant n'importe quel effet de Consumation.",
+      "Il peut également se Diviser en Slimes sbires qui attaquent au début de son tour et lorsqu'il Commande."
+    ],
+    "LABEL": [
+      "Suivant",
+      "Compris",
+      "Le Parrain Slime",
       "(Page: ",
       ")"
     ]
   },
   "HermitMod:CollectorTutorials": {
     "TEXT": [
-      "Collector takes Essences from foes. You can spend Essences to add their spirits into your Collection.",
-      "The Collection is a separate deck. You draw one card from it each turn."
+      "Le Collecteur prend les Essences des ennemis. Vous pouvez dépenser des Essences pour ajouter leurs esprits à votre Collection.",
+      "La Collection est un deck à part entière. Vous piochez une carte de ce deck à chaque tour."
     ],
     "LABEL": [
       "Suivant",
       "Compris",
-      "Le collecteur",
+      "Le Collecteur",
       "(Page: ",
       ")"
-    ]	
+    ]
+  },
+  "HermitMod:AwakenedOneTutorials": {
+    "TEXT": [
+      "L'Éveillé a une d'une puissante sélection de cartes Sort dans son Grimoire.",
+      "Lorsque vous jouez une carte avec Conjuration, vous piochez une carte de celui-ci. Vider le Grimoire régénère tous les Sorts."
+    ],
+    "LABEL": [
+      "Suivant",
+      "Compris",
+      "L'Éveillé",
+      "(Page: ",
+      ")"
+    ]
   }
 }

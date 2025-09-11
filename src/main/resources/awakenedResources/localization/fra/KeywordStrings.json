@@ -1,0 +1,71 @@
+[
+  {
+    "PROPER_NAME": "Potion de Pouvoir",
+    "NAMES": [
+      "Power Potion",
+      "Power_Potion",
+      "power_potion",
+      "powerpotion",
+      "Potion de Pouvoir",
+      "Potion_de_Pouvoir",
+      "potion_de_pouvoir",
+      "potiondepouvoir"
+    ],
+    "DESCRIPTION": "#yPotion [REMOVE_SPACE]: Choisissez #b1 #yPouvoir aléatoire parmi #b3 à mettre dans votre main, il coûte #b0 ce tour."
+  },
+  {
+    "PROPER_NAME": "Conjuration",
+    "NAMES": [
+      "conjure",
+      "conjured",
+      "awaken",
+      "conjurez",
+      "conjurer",
+      "conjurez-le",
+      "conjurez-la"
+    ],
+    "DESCRIPTION": "Créez la prochaine carte du Livre de Sorts dans votre main."
+  },
+  {
+    "PROPER_NAME": "Chant",
+    "NAMES": [
+      "chant"
+    ],
+    "DESCRIPTION": "Les cartes avec des effets #yChant deviennent plus puissantes pour le reste du combat si la dernière carte jouée était un #yPouvoir [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Maléfice",
+    "NAMES": [
+      "hex",
+      "hexxed",
+      "hexx",
+      "maléfice"
+    ],
+    "DESCRIPTION": "Les créatures avec #yMaléfice subissent #b20% de dégâts supplémentaires de la prochaine Attaque pour chaque pile. Tout le #yMaléfice est retiré après avoir été attaqué."
+  },
+  {
+    "PROPER_NAME": "Drainé",
+    "NAMES": [
+      "drain",
+      "drained",
+      "drainé"
+    ],
+    "DESCRIPTION": "N'importe quel effet vous faisant perdre des [E] , même si vous n'en aviez pas à perdre. (N'inclut pas les [E] dépensées en jouant des cartes.)"
+  },
+  {
+    "PROPER_NAME": "Manabrûle",
+    "NAMES": [
+      "manaburn",
+      "manabrûle"
+    ],
+    "DESCRIPTION": "Lorsque vous perdez des [E] , même si vous n'en aviez pas à perdre, perd des PV égaux à son #yManabrûle [REMOVE_SPACE]. (N'inclut pas les [E] dépensées en jouant des cartes.)"
+  },
+  {
+    "PROPER_NAME": "Curiosité",
+    "NAMES": [
+      "curiosity",
+      "curiosité"
+    ],
+    "DESCRIPTION": "Lorsque vous jouez une carte #yPouvoir, gagnez #b1 de #yForce [REMOVE_SPACE]."
+  }
+]

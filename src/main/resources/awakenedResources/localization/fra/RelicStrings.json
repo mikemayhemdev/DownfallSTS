@@ -1,0 +1,153 @@
+{
+  "awakened:RippedDoll": {
+    "NAME": "Poupée déchirée",
+    "FLAVOR": "Le dernier souvenir de votre ancien soi. Il recèle encore des pouvoirs magiques latents.",
+    "DESCRIPTIONS": [
+      "Au début des #b",
+      " premiers tours du combat, #yawakened:Conjurez [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:ShreddedDoll": {
+    "NAME": "Poupée déchiquetée",
+    "FLAVOR": "Un rappel de votre faiblesse, et pourtant vous ne pouvez toujours pas lâcher prise.",
+    "DESCRIPTIONS": [
+      "Repmplace ",
+      " [REMOVE_SPACE].[] NL Au début de votre tour, #yawakened:Conjurez [REMOVE_SPACE]. NL La première fois que vous rafraîchissez vos Sorts à chaque combat, gagnez #b1 de #yRituel. [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:WhiteRibbon": {
+    "NAME": "Ruban blanc",
+    "FLAVOR": "Donne du pouvoir aux paroles prononcées, même sans rituel approprié.",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une carte avec un effet #yawakened:Chant, gagnez #b",
+      " #yd'Armure [REMOVE_SPACE], même si cet effet n'est pas actif."
+    ]
+  },
+  "awakened:HexxBomb": {
+    "NAME": "Manabombe",
+    "FLAVOR": "3... 2...",
+    "DESCRIPTIONS": [
+     "Lorsqu'un ennemi meurt, transférez sa #yawakened:Manabrûlure vers un ennemi aléatoire."
+    ]
+  },
+  "awakened:TomeOfPortalmancy": {
+    "NAME": "Tome de Portalmancie",
+    "FLAVOR": "Un grimoire détaillant la construction et l'entretien des portails interplanaires.",
+    "DESCRIPTIONS": [
+      "Lorsque vous créez un #yNéant [REMOVE_SPACE], appliquez #b",
+      " de #yawakened:Manabrûlure à TOUS les ennemis."
+    ]
+  },
+  "awakened:EyeOfTheOccult": {
+    "NAME": "Œil de l'Occulte",
+    "FLAVOR": "Cette sculpture macabre confère à son propriétaire des connaissances magiques.",
+    "DESCRIPTIONS": [
+      "#yTonnerre et #yDrain #yobscur cible maintenant TOUS les ennemis."
+    ]
+  },
+  "awakened:DeadBird": {
+    "NAME": "Esprit corvidé",
+    "FLAVOR": "Ce spectre suit de près les damnés et les maudits..",
+    "DESCRIPTIONS": [
+      "À la fin de votre tour, infligez #b",
+      " dégâts à l'ennemi ayant le moins de PV, augmenté par la #yForce [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:AbyssBlade": {
+    "NAME": "Lame abyssale",
+    "FLAVOR": "Remboursement des Néants.",
+    "DESCRIPTIONS": [
+      "La première fois que vous êtes #yawakened:Drainé chaque tour, gagnez [E] et piochez une carte."
+    ]
+  },
+  "awakened:ShardOfNowak": {
+    "NAME": "Fragment d'os doré",
+    "FLAVOR": "...Non, pas ce genre de concentration.",
+    "DESCRIPTIONS": [
+      "Commencez chaque combat avec #b",
+      " de #yForce [REMOVE_SPACE]. Après avoir perdu n'importe quel type de PV, perdez cette #yForce pour le reste du combat."
+    ]
+  },
+  "awakened:VioletPlumage": {
+    "NAME": "Plumage violet",
+    "FLAVOR": "Teinté par l'obscurité sans fin du chaos.",
+    "DESCRIPTIONS": [
+      "La première fois que vous terminez votre tour avec des [E] excédents à chaque combat, piochez #b",
+      " cartes supplémentaires au début de votre prochain tour."
+    ]
+  },
+  "awakened:ZenerDeck": {
+    "NAME": "Cartes de Zener",
+    "FLAVOR": "“Un, deux, trois, tous les regards doivent être tournés vers moi.”",
+    "DESCRIPTIONS": [
+      "Au début de combat, ajoutez #yExtrasenseur à votre Livre de Sorts et #yawakened:Conjurez-le."
+    ]
+  },
+  "awakened:CawingCask": {
+    "NAME": "Fût croassant",
+    "FLAVOR": "Un tonneau sculpté de manière cérémonielle représentant le dieu corbeau Mazaleth, dont le contenu dégage une odeur douteuse...",
+    "DESCRIPTIONS": [
+      "Lorsque vous utilisez une potion, gagnez #b",
+      " de #yRituel [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:MiniBlackHole": {
+    "NAME": "Alethea",
+    "FLAVOR": "Abyssale.",
+    "DESCRIPTIONS": [
+      "Si vous ne jouez pas de #yPouvoirs durant votre tour, piochez une carte supplémentaire au prochain tour."
+    ]
+  },
+  "awakened:StrengthBooster": {
+    "NAME": "Corbeau en papier",
+    "FLAVOR": "Arbitre du doute et des malédictions mille fois repliées...",
+    "DESCRIPTIONS": [
+      "Les ennemis prennent #b",
+      "% de dégâts supplémentaires de la #yawakened:Manabrûlure [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:CursedBlessing": {
+    "NAME": "Rites funéraires",
+    "FLAVOR": "Je lègue tous mes biens à mon chat, Noodles. Adieu, monde cruel. Bisous, Joûteur",
+    "DESCRIPTIONS": [
+      "La première fois que vous activez #b",
+      " effets de #yawakened:Chant dans un combat, gagnez #b",
+      " de #yRituel [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:CurvedSwordMeme": {
+    "NAME": "Lame conjurée",
+    "FLAVOR": "Allez-y, faites-le. Conjurez une lame, tout de suite. Je vous observe. :^)",
+    "DESCRIPTIONS": [
+      "At the start of combat, add #yConjure #yBlade into your hand?",
+      "NOTE: THE PLAYER CANNOT OBTAIN THIS RELIC OUTSIDE OF CONSOLE, IT'S A JOKE RELIC!"
+    ]
+  },
+  "awakened:CurvedSword": {
+    "NAME": "Zetsumei",
+    "FLAVOR": "A blade favored by mages due Une lame appréciée des mages pour sa capacité à canaliser la magie lancée vers elle-même.",
+    "DESCRIPTIONS": [
+      "Chaque fois que vous jouez #b",
+      " Sorts dans un combat, gagnez une #yCérémonie [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:MoonTalisman": {
+    "NAME": "Talisman en croissant",
+    "FLAVOR": "“S'il vous plaît, ne m'oubliez pas. Même après ma mort.”",
+    "DESCRIPTIONS": [
+      "Lorsque vous récupérez cette relique, choisissez une carte qui n'a PAS #yawakened:Conjurez [REMOVE_SPACE]. Ajoutez #yawakened:Conjurez à celle-ci.",
+      "Choisissez une carte pour ",
+      "Le Talisman a béni ",
+      " et a ajouté #yawakened:Conjurez à celle-ci.",
+      "La carte attachée à cette relique a été #rretirée de votre deck, la relique ne fonctionne plus désormais."
+    ]
+  },
+  "awakened:AwakenedUrn": {
+    "NAME": "Urne à tête d'oiseau",
+    "FLAVOR":  "Cette urne représente le dieu corbeau Mazaleth avec un air malicieux.",
+    "DESCRIPTIONS": [
+      "Les #b4 premières fois que vous jouez une carte #yPouvoir chaque combat, soignez-vous de #b",
+      " PV."
+      ]
+  }
+}

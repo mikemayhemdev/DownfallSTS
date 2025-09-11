@@ -10,15 +10,15 @@
       "socketed"
     ],
     "PROPER_NAME": "Cavité",
-    "DESCRIPTION": "Une Gemme peut être placée dans une Cavité dans un Site de Repos pour combiner les effets de la carte et les effets de la Gemme."
+    "DESCRIPTION": "Une #yGemme peut être placée dans cette Cavité à un Site de Repos."
   },
   {
     "NAMES": [
-      "stasis",
-      "stase"
+      "stase",
+      "stasis"
     ],
     "PROPER_NAME": "Stase",
-    "DESCRIPTION": "Une carte en #yStase gagne un compteur de tour égal à son coût plus #b1. NL Le compteur de tour est réduit de #b1 au début de votre tour. NL Lorsque le compteur atteint #b0, elle retourne dans votre main et coûte #b0 jusqu'à ce qu'elle soit jouée."
+    "DESCRIPTION": "Une carte en Stase gagne un compteur de tours égal à son coût plus #b1 [REMOVE_SPACE]. NL Le compteur de tour est réduit de #b1 au début de votre tour. NL Lorsque le compteur atteint #b0, elle retourne dans votre main et coûte #b0 jusqu'à ce qu'elle soit jouée."
   },
   {
     "NAMES": [
@@ -28,26 +28,27 @@
       "gems"
     ],
     "PROPER_NAME": "Gemme",
-    "DESCRIPTION": "Des #yGemmes peuvent être placées dans des #yCavités dans certaines cartes dans un site de Repos. Ne peut pas être #yAméliorée."
+    "DESCRIPTION": "Des #yGemmes peuvent être placées dans des #yCavités dans certaines cartes à un site de Repos. Ne peut pas être #yAméliorée."
   },
   {
-    "PROPER_NAME": "Mode défensif",
+    "PROPER_NAME": "Mode Défensif",
     "NAMES": [
       "defensive mode",
       "defensive_mode",
-      "Mode défensif",
+      "mode défensif",
       "mode_défensif",
       "défensif",
       "defensive"
     ],
-    "DESCRIPTION": "#yPose. NL Lorsque vous êtes en Mode défensif , vous avez #b3 #yd'Épines, gagnez #b10 #yd'Armure au début de votre tour, et votre #yArmure n'expire pas."  },
+    "DESCRIPTION": "#yPose. NL Lorsque vous êtes en Mode Défensif, vous avez #b3 #yd'Épines et votre #yArmure n'expire pas."  
+  },
   {
     "NAMES": [
       "accelerate",
       "accélérez"
     ],
-    "PROPER_NAME": "Accélérer",
-    "DESCRIPTION": "Réduisez le compteur de tours de 1 de la carte la plus à droite en #yStase de #b1. Si le compteur de la carte est maintenant à #b0, remettez-la dans votre main. Elle coûte #b0 jusqu'à ce qu'elle soit jouée."
+    "PROPER_NAME": "Accélération",
+    "DESCRIPTION": "Réduisez le compteur de tours de la carte la plus à droite en #yStase de #b1 [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -56,14 +57,28 @@
       "packages"
     ],
     "PROPER_NAME": "Colis",
-    "DESCRIPTION": "Une #yCompétence #ys'Épuisant qui génère trois cartes inspirées d'un Gardien de la Tour."
+    "DESCRIPTION": "Une #yCompétence #ys'Épuisant qui génère trois cartes inspirées d'un androïde de la Tour."
   },
   {
     "NAMES": [
       "volatile"
     ],
     "PROPER_NAME": "Volatile",
-    "DESCRIPTION": "Lorsque cette carte quitte son état de #yStase, #yÉpuisez-la au lieu de la remettre dans votre main."
+    "DESCRIPTION": "Lorsque cette carte quitte son état de #yStase, elle #ys'Épuise [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": [
+      "Polishing Oil",
+      "Polishing_Oil",
+      "polishing_oil",
+      "polishingoil",
+      "Huile de lustrage",
+      "Huile_de_lustrage",
+      "huile_de_lustrage",
+      "huiledelustrage"
+    ],
+    "PROPER_NAME": "Huile de lustrage",
+    "DESCRIPTION": "#yPotion [REMOVE_SPACE]: Gagnez #b16 #yd'Armure [REMOVE_SPACE]. Entrez en #yMode #yDéfensif [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -71,7 +86,7 @@
       "tick"
     ],
     "PROPER_NAME": "Tic",
-    "DESCRIPTION": "Cet effet se déclenche lorsque le compteur de tours de la carte est réduit lorsqu'elle est en #yStase."
+    "DESCRIPTION": "Cet effet se déclenche lorsque le compteur de tours de la carte est réduit."
   },
   {
     "NAMES": [
@@ -86,15 +101,7 @@
       "renforcez",
       "brace"
     ],
-    "PROPER_NAME": "Renforcement",
-    "DESCRIPTION": "Réduisez la perte de PV nécessaire pour déclencher le Changement de mode de X, déclenchant le Changement de mode si la perte de PV nécessaire est maintenant à 0."
-  },
-  {
-    "NAMES": [
-      "downgrade",
-      "Rétrogradez"
-    ],
-    "PROPER_NAME": "Rétrogradation",
-    "DESCRIPTION": "Retirez une amélioration d'une carte."
+    "PROPER_NAME": "Renforcement X",
+    "DESCRIPTION": "Réduisez la perte de PV nécessaire pour déclencher le #yChangement #yde #yMode de X."
   }
 ]

@@ -1,20 +1,59 @@
 [
   {
+    "PROPER_NAME": "Flou",
+    "ID": "blur",
+    "NAMES": [
+      "blur",
+      "flou"
+    ],
+    "DESCRIPTION": "#yL'Armure n'est pas retirée lors de votre prochain tour."
+  },
+  {
+    "PROPER_NAME": "Vibrancy",
+    "NAMES": [
+      "vibrancy"
+    ],
+    "DESCRIPTION": "NOT USED DO NOT TL"
+  },
+  {
+    "PROPER_NAME": "Opulence",
+    "NAMES": [
+      "opulence"
+    ],
+    "DESCRIPTION": "NOT USED DO NOT TL"
+  },
+  {
+    "PROPER_NAME": "Régénération",
+    "NAMES": [
+      "regen",
+      "régénération"
+    ],
+    "DESCRIPTION": "À la fin de votre tour, soignez-vous d'autant de PV que de votre #yRégénération puis réduisez la #yRégénération de #b1 [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Armure Plaquée",
+    "NAMES": [
+      "Plaquée",
+      "plated"
+    ],
+    "DESCRIPTION": "À la fin de votre tour, gagnez de l'Armure égale à votre #yArmure #yPlaquée [REMOVE_SPACE]. Prendre des dégâts d'attaque non-bloqués réduit #yl'Armure #yPlaquée de #b1 [REMOVE_SPACE]."
+  },
+  {
     "PROPER_NAME": "Boss",
     "NAMES": [
-      "boss",
       "boss"
     ],
     "DESCRIPTION": "Vous ne pouvez jouer #bqu'1 carte de #yBoss pendant votre tour."
   },
   {
-    "PROPER_NAME": "Invincibilité",
+    "PROPER_NAME": "Echo",
+    "ID": "echo",
     "NAMES": [
-      "d'invincibilité",
-      "invincibilité",
-      "invincible"
+      "echo",
+      "écho",
+      "échos"
     ],
-    "DESCRIPTION": "Vous ne pouvez pas perdre plus d'une certaine quantité de PV pendant un tour. NL À la fin de n'importe quel tour dans lequel Invincibilité a empêché la perte de PV, retirez cet effet"
+    "DESCRIPTION": "Ajoutez une copie d'une carte dans votre main, elle est #yÉthérée et #ys'Épuise [REMOVE_SPACE]. NL Vous ne pouvez pas obtenir des Échos d'Échos."
   },
   {
     "PROPER_NAME": "Exhumation",
@@ -26,12 +65,28 @@
     "DESCRIPTION": "Choisissez une carte Épuisée et mettez-la dans votre main."
   },
   {
+    "PROPER_NAME": "Invincibilité",
+    "NAMES": [
+      "d'invincibilité",
+      "invincibilité",
+      "invincible"
+    ],
+    "DESCRIPTION": "Vous ne pouvez pas perdre plus d'une certaine quantité de PV pendant un tour. NL À la fin de n'importe quel tour dans lequel Invincibilité a empêché la perte de PV, retirez cet effet"
+  },
+  {
     "PROPER_NAME": "Recyclage",
     "NAMES": [
       "recyclez",
       "reclaim"
     ],
     "DESCRIPTION": "Choisissez une carte Épuisée et mettez-la dans votre défausse."
+  },
+  {
+    "PROPER_NAME": "Goop",
+    "NAMES": [
+      "goop"
+    ],
+    "DESCRIPTION": "La prochaine attaque inflige #b1 dégât de plus par #yGoop [REMOVE_SPACE], retirant alors tout le #yGoop et déclenchant les effets de #yConsumation."
   },
   {
     "PROPER_NAME": "Enchaîné",
@@ -42,12 +97,67 @@
     "DESCRIPTION": "Les créatures enchaînées perdent de la #yForce pour un tour."
   },
   {
-    "PROPER_NAME": "PV temporaire",
+    "PROPER_NAME": "PV temporaires",
     "ID": "temp_hp",
     "NAMES": [
-      "pv_temporaire",
-      "temp_hp"
+      "pv temporaires",
+      "pv_temporaires"
     ],
-    "DESCRIPTION": "jusqu'a la fin du combat, prevois les perte de PV."
+    "DESCRIPTION": "Jusqu'à la fin du combat, empêche les dégâts sur les PV"
+  },
+   {
+    "PROPER_NAME": "Bûcher",
+    "NAMES": [
+      "bûcher",
+      "pyre"
+    ],
+    "DESCRIPTION": "Nécessite l'épuisement d'une carte en main en plus de payer son coût en énergie."
+  },
+  {
+    "PROPER_NAME": "Condamnation",
+    "NAMES": [
+      "condamnation",
+      "condamnées",
+      "doom",
+      "doomed"
+    ],
+    "DESCRIPTION": "Les créatures condamnées perdent des PV au début de leur tour, puis la Condamnation est retirée #bsauf si la créature est #yAffligée (a à la fois #yFaible et #yVulnérable [REMOVE_SPACE])."
+  },
+
+  {
+    "NAMES": [
+      "goop",
+      "goopées",
+      "gooped"
+    ],
+    "PROPER_NAME": "Goop",
+    "DESCRIPTION": "La prochaine attaque inflige #b1 dégât de plus par #yGoop [REMOVE_SPACE], retirant alors tout le #yGoop et déclenchant les effets de #yConsumation."
+  },
+
+  {
+    "NAMES": [
+      "constriction",
+      "constricted"
+    ],
+    "PROPER_NAME": "Constricton",
+    "DESCRIPTION": "Les créatures contraintes subissent des dégâts à la fin de leur tour."
+  },
+
+  {
+    "PROPER_NAME": "Chant",
+    "NAMES": [
+      "chant",
+      "Chant",
+      "Chants"
+    ],
+    "DESCRIPTION": "Les effets Chant sur une carte s'activent pendant le jeu si vous avez joué une carte Pouvoir alors qu'elle était dans votre main."},
+  {
+    "PROPER_NAME": "Transformation",
+    "ID": "transform",
+    "NAMES": [
+      "transformez",
+      "transform"
+    ],
+    "DESCRIPTION": "#yÉpuisez une carte, la remplaçant avec une carte différente."
   }
 ]

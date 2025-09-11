@@ -8,10 +8,33 @@
     "DESCRIPTION": "Les cartes Gekoproof ne sont pas affectées par la #yConfusion et ne peuvent pas être #yConfondues."
   },
   {
+  "PROPER_NAME": "Couleur",
+  "NAMES": [
+  "suit",
+  "suits"
+],
+  "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+  },
+  {
+    "PROPER_NAME": "Excédent",
+    "NAMES": [
+      "Overflow", 
+      "overflow",
+      "Excédent",
+      "Excédente",
+      "Excédentes",
+      "excédent",
+      "excédente",
+      "excédentes"      
+    ],
+    "DESCRIPTION": "Les effets des cartes Excédentes s'activent si vous avez plus de #b5 cartes en main."
+  },
+  {
     "PROPER_NAME": "Confondre",
     "NAMES": [
       "confondez",
       "confondues",
+      "confondez-la",
       "muddle",
       "muddled"
     ],
@@ -24,8 +47,16 @@
       "hors-classe",
       "offclass"
     ],
-    "DESCRIPTION": "Une carte Hors-classe est n'importe quelle carte obtensible d'une classe autre que la vôtre (y compris les cartes Incolores, les Malédictions et les Statuts)."
+    "DESCRIPTION": "Une carte Hors-classe est est une carte d'une autre classe que la vôtre (y compris les cartes Incolores, les Malédictions et les Statuts)."
   },
+  {
+    "PROPER_NAME": "Cadeau",
+    "NAMES": [
+      "gift",
+      "cadeau"
+    ],
+    "DESCRIPTION": "Lorsque vous obtenez cette carte, obtenez une récompense avec le type de carte suivant."
+  },  
   {
     "PROPER_NAME": "Identification",
     "NAMES": [
@@ -36,12 +67,20 @@
     "DESCRIPTION": "Remplace une carte #yInconnue par sa carte aléatoire actuelle de façon permanente."
   },
   {
+    "PROPER_NAME": "Venin",
+    "NAMES": [
+      "venom",
+      "venin"
+    ],
+    "DESCRIPTION": "Les Créatures avec du #yVenin perdent des PVs lorsque vous leur appliquez un débuff qui n'est pas du #yVenin."
+  },  
+  {
     "PROPER_NAME": "Chanceux",
     "NAMES": [
       "lucky",
       "Chanceux",
       "chanceux"
     ],
-    "DESCRIPTION": "Les cartes qui génèrent un nombre aléatoire pour leurs effets choisissent le nombre maximal possible. (N'affecte pas l'action de Confondre)"
+    "DESCRIPTION": "Les effets des cartes Excédentes s'activeront ce tour, peu importe la taille de la main."
   }
 ]
