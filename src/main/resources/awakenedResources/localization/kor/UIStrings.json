@@ -1,4 +1,4 @@
-{
+﻿{
   "awakened:SpellDescriptor": {
     "TEXT": [
       "주문"
@@ -6,7 +6,7 @@
   },
   "awakened:ConjureMod": {
     "TEXT": [
-      " NL awakened:영창합니다."
+      " NL awakened:시전합니다."
     ]
   },
   "awakened:SpellMod": {
@@ -16,7 +16,7 @@
   },
   "awakened:DrainingMod": {
     "TEXT": [
-      " NL 다음 턴에, [E] 를 잃습니다."
+      " NL 다음 턴에 [E] 를 잃습니다."
     ]
   },
   "awakened:highlightChant": {
@@ -28,9 +28,9 @@
   "awakened:Spellbook": {
     "TEXT": [
       "주문서",
-      "깨어납니다",
-      "파워를 #b7장 사용한 후에 #y깨어납니다! NL NL #y깨어난 동안, #y시전하는 주문 카드가 #y강화되어, 효과가 크게 향상됩니다.",
-      "파워를 #b7장 사용한 후에 #y깨어납니다! NL NL #y깨어난 동안, #y시전하는 주문 카드가 #y강화되어, 효과가 크게 향상됩니다."
+      "각성",
+      "파워 카드를 #b7장 사용한 후에 #y깨어납니다! NL NL #y깨어난 동안 #y시전하는 주문 카드가 #y강화되어 효과가 크게 향상됩니다.",
+      "파워 카드를 #b7장 사용한 후에 #y깨어납니다! NL NL #y깨어난 동안 #y시전하는 주문 카드가 #y강화되어 효과가 크게 향상됩니다."
     ]
   },
   "awakened:FullSpellbook": {
@@ -43,6 +43,4 @@
       "@그걸@ @하면@ @시공간의@ @연속성이@ @붕괴해버릴@ @거야!!!@"
     ]
   }
-
 }
-
