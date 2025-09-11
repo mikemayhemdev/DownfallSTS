@@ -78,7 +78,7 @@
   },
   "collector:CursedWail": {
     "NAME": "저주받은 통곡",
-    "DESCRIPTION": "collector:고초된 적의 힘을 !clm2! 감소시킵니다.  NL 이번 턴 동안 적 전체의 힘을 !M! 감소시킵니다. NL 소멸."
+    "DESCRIPTION": "collector:고초된 적의 힘을 !clm2! 감소시킵니다. NL 이번 턴 동안 적 전체의 힘을 !M! 감소시킵니다. NL 소멸."
   },
   "collector:DarkApotheosis": {
     "NAME": "어둠의 정점",
