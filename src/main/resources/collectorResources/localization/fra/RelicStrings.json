@@ -103,10 +103,9 @@
     "NAME": "Fruit défendu",
     "FLAVOR": "Cette espèce de fruit semble complètement inconnue.",
     "DESCRIPTIONS": [
-      "Lorsque vous récupérez, choissisez et obtenez une carte Commune, Peu Commune, et Rare parmi toutes celles disponibles. Ensuite, obtenez un #ySapé [REMOVE_SPACE].",
-      "Choisissez une carte Rare à ajouter à votre deck.",
-      "Choisissez une carte Peu Commune à ajouter à votre deck.",
-      "Choisissez une carte Commune à ajouter à votre deck."
+      "Lorsque vous récupérez cette relique, ajoutez un #rParasite dans votre deck et gagnez #b",
+      " PV Max. Commencez chaque combat avec #b",
+      " de #yDextérité [REMOVE_SPACE]."
     ]
   },
   "collector:RoughDiamond": {
