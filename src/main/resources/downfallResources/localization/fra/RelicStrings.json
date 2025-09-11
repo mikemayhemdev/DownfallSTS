@@ -3,8 +3,8 @@
     "NAME": "Bénédiction de Neow",
     "FLAVOR": "Apaisez votre rage. Soyez aussi rude et inflexible que la Tour elle-même.",
     "DESCRIPTIONS": [
-      "Le Boss a augmenté ses PV Max, n'a pas de relique de starter, pioche 2 cartes de moins, et a 1 ",
-      " de moins . NL Au début du combat, le Boss gagne un effet de Buff unique."
+      "Le Boss a augmenté ses PV Max, n'a pas de relique de starter, pioche 2 cartes de moins, et a #b1 ",
+      " de moins . NL Au début du combat, le Boss gagne un effet de Buff unique. Ne peut pas être #yÉtourdi"
     ]
   },
   "downfall:NeowBlessing_Player": {
@@ -43,7 +43,7 @@
   },
   "downfall:BlackStar": {
     "DESCRIPTIONS": [
-      " NL Boss a acquis ",
+      " NL Le Boss a acquis ",
       " reliques supplémentaires, mais commence avec moins de vie maximale."
     ]
   },
@@ -156,7 +156,7 @@
     "NAME": "Évènement : Duplicateur",
     "FLAVOR": "Devant vous trône un autel décoré consacré à une divinité antique.",
     "DESCRIPTIONS": [
-      "Boss duplicated a powerful card."
+      "Le Boss a dupliqué une carte puissante."
     ]
   },
   "downfall:BigFish": {
@@ -185,7 +185,7 @@
       "Le Boss a été soigné au maximum.",
       "La Roue a retiré ",
       " du deck du Boss.",
-      "La roue a infligé des dégâts au Boss."
+      "La Roue a infligé des dégâts au Boss."
     ]
   },
   "downfall:Falling": {
@@ -213,7 +213,7 @@
   },
   "downfall:Bandits": {
     "NAME": "Évènement : Bandits",
-    "FLAVOR": "Get em Bear!",
+    "FLAVOR": "Vas-y Balourd!",
     "DESCRIPTIONS": [
       "Le Boss a battu les Bandits, gagnant le Masque Rouge, mais commence avec moins de vie maximale."
     ]
@@ -313,7 +313,7 @@
     ]
   },
   "downfall:FaceTrader": {
-    "NAME": "Évènement : Echangeur de visages",
+    "NAME": "Évènement : Échangeur de visages",
     "FLAVOR": "Visage. Laissez-moi toucher? Peut-être échanger?",
     "DESCRIPTIONS": [
       "Le Boss a obtenu une relique de visage aléatoire."
@@ -377,7 +377,7 @@
   },
   "downfall:GremlinSack": {
     "NAME": "Sac de diablotin",
-    "FLAVOR": "Le Gremlin et son garde du corps n'ont pas fait le poids face à vous.",
+    "FLAVOR": "Le Diablotin et son garde du corps n'ont pas fait le poids face à vous.",
     "DESCRIPTIONS": [
       "Lorsque vous le ramassez, ajoutez les cartes suivantes dans votre deck: NL ",
       "Lorsque vous le ramassez, ajoutez 6 cartes du jeu des Paires à votre deck.",
@@ -390,7 +390,7 @@
     ]
   },
   "downfall:GremlinWheel": {
-    "NAME": "Roue du changement",
+    "NAME": "Roue du Changement",
     "FLAVOR": "Il a dit : pas le droit à plusieurs essais.",
     "DESCRIPTIONS": [
       "À chaque site de repos, vous pouvez tourner la roue une fois. Prendre cette option et collecter la récompense utilise la relique..",
@@ -408,22 +408,24 @@
     "NAME": "Statue ailée brisée",
     "FLAVOR": "Un morceau brisé d'une statue autrefois magnifique.",
     "DESCRIPTIONS": [
-      "Les cultistes qui vénèrent l'Éveillé seront peut-être intéréssés par ceci...."
+      "Les cultistes qui vénèrent l'Éveillé seront peut-être intéréssés par ceci....",
+      "Au début de chaque combat, si les ennemis appartiennent au groupe des Cultistes, ils vous prendront cette relique et s'échapperont du combat."
     ]
   },
   "downfall:ShatteredFragment": {
     "NAME": "Fragment aiguisé",
     "FLAVOR": "Une statue brisée autrefois - aujourd'hui une arme de fortune.",
     "DESCRIPTIONS": [
-      "Au début de chaque tour, ajoutez un #ySurin #yde #ycristal à votre main."
+      "Pendant les combats d'Élites et de Boss, chaque fois que vous jouez une carte #yPouvoir [REMOVE_SPACE], gagnez #b",
+      " de #yForce [REMOVE_SPACE]."
     ]
   },
   "downfall:RedIOU": {
     "NAME": "Contrat de bandit",
     "FLAVOR": "Un accord du trio de Bandits - en partie contre un bibelot, mais surtout en échange de leurs vies.",
     "DESCRIPTIONS": [
-      "Au début du #b3ème combat de boss, les Bandits au Masque Rouge iront vous assister.",
-      "Il es temps de travailler, les gars!",
+      "Au début du #b3ème combat de boss, les Bandits au Masque Rouge viendront vous aider.",
+      "Au boulot, les gars!",
       "Vas-y Balourd!",
       "Un deal est un deal. NL On arrête ici.",
       "Vive le nouveau NL ~Seigneur~ ~au~  ~Masque~ ~Rouge!~",
@@ -434,35 +436,42 @@
     "NAME": "Contrat de Bandit+",
     "FLAVOR": "Un accord du trio de Bandits - en partie contre un bibelot, mais surtout en échange de leurs vies.",
     "DESCRIPTIONS": [
-      "Au début du #b3ème combat de boss, les Bandits au Masque Rouge iront vous assister."
+      "Au début du #b3ème combat de boss, les Bandits au Masque Rouge viendront vous aider."
     ]
   },
   "downfall:KnowingSkull": {
     "NAME": "Crâne savant",
     "FLAVOR": "Lâche-moi!",
     "DESCRIPTIONS": [
-      "Au début de chaque combat vous pouvez faire le voeu d'avoir des Âmes, du Succès ou un Remontant. ."
+      "Au début de chaque combat vous pouvez faire le voeu d'avoir des Âmes, des Potions ou une carte Incolore au prix de vos PV."
     ]
   },
   "downfall:HeartBlessingRed": {
-    "NAME": "Bénédiction de Rubis du Cœur",
+    "NAME": "Bénédiction du Cœur de Rubis",
     "FLAVOR": "Le Cœur est puissant.",
     "DESCRIPTIONS": [
       "Durant les combats de Boss, gagnez #b1 de #yForce."
     ]
   },
   "downfall:HeartBlessingBlue": {
-    "NAME": "Bénédiction de Saphir du Cœur",
+    "NAME": "Bénédiction du Cœur de Saphir",
     "FLAVOR": "Le Cœur est satisfait.",
     "DESCRIPTIONS": [
-      "Durant les combats de Boss, gagnez #10 PV Temporaires."
+      "Au début des combats de Boss, soignez-vous de #b10 PV."
     ]
   },
   "downfall:HeartBlessingGreen": {
-    "NAME": "Bénédiction d'Émeraude du Cœur",
+    "NAME": "Bénédiction du Cœur d'Émeraude",
     "FLAVOR": "Le Cœur est tout.",
     "DESCRIPTIONS": [
       "Durant les combats de Boss, gagnez #b1 de #yDexterité."
+    ]
+  },
+  "downfall:BurdenOfKnowledge": {
+    "NAME": "Fardeau du savoir",
+    "FLAVOR": "La vérité fait mal.",
+    "DESCRIPTIONS": [
+      "Lorsque vous le ramassez, #rperdez #rTOUTES #rles #rBénédictions #rdu #rCœur et #b20 PV Max. #yAméliorez #yTOUTES #yvos #ycartes #rPARTOUT de façon permanente. Commencez les combats avec #b2 de #yForce en moins et #b2 de #yDextérité en moins."
     ]
   },
   "downfall:TeleportStone": {
@@ -486,14 +495,23 @@
     "NAME": "Hecktoplasme",
     "FLAVOR": "Cette boule de slime semble déborder d'énergie de centaines d'âmes. Pas étonnant que personne n'en veut. ",
     "DESCRIPTIONS": [
-      "Vous ne pouvez plus obtenir d'#yÂmes. Briser des clés ne coûte pas d'#yÂmes. Gagnez [E] au début de votre tour."
+      "Gagnez [E] au début de votre tour. Vous ne pouvez plus obtenir d'#yÂmes [REMOVE_SPACE]. Briser des clés ne coûte pas d'#yÂmes [REMOVE_SPACE].",
+      "Hecktoplasm"
+    ]
+  },
+  "downfall:BlackCandle": {
+    "NAME": "Bougie noire",
+    "FLAVOR": "La flamme brille encore plus fort dans l'obscurité.",
+    "DESCRIPTIONS": [
+      "Les #rMalédictions #yInjouables peuvent être jouées et les #rMalédictions jouables coûtent désormais #b0 [REMOVE_SPACE]. Lorsque vous jouez une carte #rMalédiction #yInjouable ou à prix réduit, #yÉpuisez-la et perdez #b1 PV.",
+      "Black Candle"
     ]
   },
   "downfall:replacements": {
     "NAME": "",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Durant les combats d'Elite, de Marchand et de Boss, gagnez [E] au déébut de votre tour.",
+      "Durant les combats d'Élite, de Marchand et de Boss, gagnez [E] au début de votre tour.",
       "Pièce maudite",
       "Peu de gens connaissent le véritable coût de cette pièce.",
       "Carte BPP",
@@ -502,7 +520,7 @@
       "Courrier corrompu",
       "Le Cœur réapprovisionne les cartes, reliques, et les potions. Tous les prix sont réduits de #b20%.",
       "Les récompenses de combat contiennent désormais des cartes Incolores et des cartes de la couleur des Héros.",
-      "Gagnez [E] au début de votre tour. Vous ne pouvez plus obtenir #yd'Âmes. Briser les clés ne coûte pas d'Âmes."
+      "Gagnez [E] au début de votre tour. Vous ne pouvez plus obtenir #yd'Âmes. Briser les clés ne coûte pas #yd'Âmes."
     ]
   },
   "downfall:LizardTail": {
@@ -534,6 +552,13 @@
       "La cloche sonne deux fois...",
       "Passer les récompenses",
       "Fermer"
+    ]
+    },
+  "downfall:BustedCrownGagText": {
+    "NAME": "Couronne brisée",
+    "FLAVOR": "L'imitation est la forme la plus sincère de flatterie... ou pas ? Elle ne ressemble même pas à votre couronne. C'est même très insultant.",
+    "DESCRIPTIONS": [
+      "Gagnez [E] au début de votre tour. Les prochaines récompenses de carte auront 2 choix de cartes en moins."
     ]
   }
 }
