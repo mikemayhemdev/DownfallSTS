@@ -64,7 +64,10 @@
       "Prevent Snecko from using card pools from other mods.",
       "Désactive le remplacement de la musique (requiert un restart du jeu)",
       "Débloque tous les déguisements alternatifs des personnages Downfall",
-      "Utilisez des icônes au lieu de texte pour les propriétés appliquées."
+      "Utilisez des icônes au lieu de texte pour les propriétés appliquées.",
+      "Le grimoire met en évidence la prochaine carte que Conjure va piocher.",
+      "Aucun ajustement de Downfall pour les cartes et reliques originales (Urne à tête d'oiseau)",
+      "Utilisez les Boss de Downfall Legacy (avant la 6.0)"
     ]
   },
   "downfall:EnergyPanelTip": {
@@ -135,15 +138,55 @@
       "Choisissez une carte."
     ]
   },
+  "downfall:ColorfulUncommonCardReward": {
+    "TEXT": [
+      "Ajoutez une carte ",
+      " à votre deck",
+      "Choisissez une carte."
+    ]
+  },
+  "downfall:ColorfulRareCardReward": {
+    "TEXT": [
+      "Ajoutez une carte ",
+      " à votre deck",
+      "Choisissez une carte."
+    ]
+  },
+  "downfall:DiceRollPotionReward": {
+    "TEXT": [
+      "Ajoutez une carte Améliorée ",
+      " à votre deck",
+      "Choisissez une carte."
+    ]
+  },
+  "downfall:ColorfulPowersCardReward": {
+    "TEXT": [
+      "Ajoutez un Pouvoir Amélioré ",
+      " à votre deck",
+      "Choisissez une carte."
+    ]
+  },
   "downfall:RunHistoryMonsterNames": {
     "TEXT": [
-      "Têtes vivantes"
+      "Têtes vivantes",
+      "Le Soldat de Fer",
+      "La Silencieuse",
+      "Le Défectueux",
+      "The Watcher",
+      "Marchand",
+      "L'Ermite"
     ]
   },
   "downfall:WhaleHunter": {
     "TEXT": [
       "Chasseur de baleine",
       "Vous avez fini le cycle."
+    ]
+    },
+  "downfall:Unfettered": {
+    "TEXT": [
+      "Sans entraves",
+      "Vous avez obtenu le Sceau Brisé."
     ]
   },
   "downfall:SingleCardViewPopup": {
