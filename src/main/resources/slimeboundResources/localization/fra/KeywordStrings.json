@@ -9,7 +9,7 @@
       "absorbed"
     ],
     "PROPER_NAME": "Absorber",
-    "DESCRIPTION": "Recombinez-vous avec votre #ySlime en tête, vous donnant 1 de #yForce."
+    "DESCRIPTION": "Recombinez-vous avec votre #ySlime en tête, vous donnant 1 de #yForce [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -19,7 +19,7 @@
       "splitting"
     ],
     "PROPER_NAME": "Division",
-    "DESCRIPTION": "Faites apparaître un sbire Slime, qui attaque au début de chaque tour. NL NL Si vous n'avez pas d'emplacement de Slime, votre Slime le plus ancien est automatiquement #yAbsorbé pour faire de la place, vous donnant 1 de #yForce."
+    "DESCRIPTION": "Faites apparaître un sbire Slime, qui attaque au début de chaque tour. NL NL Si vous n'avez pas d'emplacement de Slime libre, votre Slime le plus ancien est automatiquement #yAbsorbé pour faire de la place, vous donnant 1 de #yForce [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -29,7 +29,7 @@
       "gooped"
     ],
     "PROPER_NAME": "Goop",
-    "DESCRIPTION": "La prochaine attaque inflige #b1 dégât de plus par #yGoop, retirant alors tout le #yGoop et déclenchant les effets de #yConsumation."
+    "DESCRIPTION": "La prochaine attaque inflige #b1 dégât de plus par #yGoop [REMOVE_SPACE], retirant alors tout le #yGoop et déclenchant les effets de #yConsumation."
   },
   {
     "NAMES": [
@@ -74,7 +74,7 @@
       "bruiser"
     ],
     "PROPER_NAME": "Slime cogneur",
-    "DESCRIPTION": "Inflige #b5 dégâts chaque tour."
+    "DESCRIPTION": "Inflige #b3 dégâts deux fois chaque tour."
   },
   {
     "NAMES": [
@@ -160,15 +160,7 @@
       "ghostflame_slime"
     ],
     "PROPER_NAME": "Slime follet",
-    "DESCRIPTION": "Inflige #b3 dégâts et applique #b5 de #yBrûlure chaque tour."
-  },
-  {
-    "NAMES": [
-      "morphez",
-      "morph"
-    ],
-    "PROPER_NAME": "Morpher",
-    "DESCRIPTION": "Remplacez cette carte avec une carte aléatoire de votre classe, peu importe son type. Elle coûte #b1 énergie de moins."
+    "DESCRIPTION": "Inflige #b3 dégâts et applique #b6 de #yBrûlure chaque tour."
   },
   {
     "NAMES": [
@@ -176,7 +168,7 @@
       "slow"
     ],
     "PROPER_NAME": "Ralenti",
-    "DESCRIPTION": "Une créature ralentie reçoit #b10% de dégâts en plus par carte jouée dans un tour."
+    "DESCRIPTION": "Reçoit #b10% de dégâts en plus par carte jouée dans un tour."
   },
   {
     "NAMES": [
@@ -254,7 +246,7 @@
       "consume"
     ],
     "PROPER_NAME": "Consumer",
-    "DESCRIPTION": "Effet bonus qui s'active quand une #yAttaque est utilisée sur un ennemi qui a du #yGoop."
+    "DESCRIPTION": "Effet bonus qui s'active quand une #yAttaque est utilisée sur un ennemi qui a du #yGoop [REMOVE_SPACE]."
   },
   {
     "NAMES": [
