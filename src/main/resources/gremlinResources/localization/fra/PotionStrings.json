@@ -16,14 +16,14 @@
   "gremlin:SwapPotion": {
     "NAME": "Leurre embouteillé",
     "DESCRIPTIONS": [
-      "#ySwap to a random Gremlin."
+      "#yPermutez vers un Diablotin aléatoire."
     ]
   },
   "gremlin:WizPotion": {
     "NAME": "Potion magique",
     "DESCRIPTIONS": [
       "Gagnez #b",
-      " de #yVigueur."
+      " de #yVigueur [REMOVE_SPACE]."
     ]
   }
 }
