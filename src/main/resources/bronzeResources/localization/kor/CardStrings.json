@@ -643,7 +643,7 @@
   },
   "bronze:IntoTheVoid": {
     "NAME": "공허 속으로",
-    "DESCRIPTION": "휘발성. NL 이번 턴 동안 적의 힘을 동안 !M! 감소시킵니다. NL 이 카드를 뽑을 때마다 [E] 를 잃습니다. NL 소멸."
+    "DESCRIPTION": "휘발성. NL 이번 턴 동안 적의 힘을 !M! 감소시킵니다. NL 이 카드를 뽑을 때마다 [E] 를 잃습니다. NL 소멸."
   },
   "bronze:Lubricant": {
     "NAME": "윤활유",
