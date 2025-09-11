@@ -31,7 +31,7 @@
     "NAME": "고함",
     "DESCRIPTION": "휘발성. NL 저번 턴에 남은 방어도만큼 collector:파멸을 부여합니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
-      " NL ( collector:파멸을 !M! 부여합니다.)\""
+      " NL ( collector:파멸을 !M! 부여합니다.)"
     ]
   },
   "collector:BlackBindings": {
