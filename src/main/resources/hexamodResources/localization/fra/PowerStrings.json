@@ -153,9 +153,13 @@
   "hexamod:PastPower": {
     "NAME": "Danse du Démon",
     "DESCRIPTIONS": [
-      "À chaque fois que vous #yRétractez, piochez #b",																							 
-      " carte.",
-      " cartes."
+      "La première fois que vous #yAvancez ou #yRétractez chaque tour, piochez une carte.",
+      "Les #b",
+      " premières fois que vous #yAvancez ou #yRétractez chaque tour, piochez une carte.",
+      " NL Cet effet peut être encore déclenché #b",
+      " fois de plus ce tour.",
+      " fois de plus ce tour.",
+      " NL Cet effet ne peut pas déclenché à nouveau ce tour."
     ]
   },
   "hexamod:PotionPostCombatPower": {
