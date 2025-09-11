@@ -216,7 +216,7 @@
   "hexamod:InfernalForm": {
     "NAME": "Forme infernale",
     "DESCRIPTION": "Au début de votre tour, gagnez !M! hexamod:d'Intensité.",
-    "UPGRADE_DESCRIPTION": "Gagnez !M! d'Intensité. NL Au début de votre tour, gagnez !M! hexamod:d'Intensité."
+    "UPGRADE_DESCRIPTION": "Gagnez !M! hexamod:d'Intensité. NL Au début de votre tour, gagnez !M! hexamod:d'Intensité."
   },
   "hexamod:Incineration": {
     "NAME": "Incinération",
@@ -531,8 +531,8 @@
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Danse du démon",
-    "DESCRIPTION": "Chaque fois que vous hexamod:Rétractez , piochez 1 carte.",
-    "UPGRADE_DESCRIPTION": "Inné. NL La première fois que vous hexamod:Rétractez chaque tour, gagnez [E] et piochez 1 carte. NL hexamod:Rétractez."
+    "DESCRIPTION": "La première fois que vous hexamod:Avancez ou hexamod:Rétractez chaque tour, piochez une carte.",
+    "UPGRADE_DESCRIPTION": "Les !M! premières fois que vous hexamod:Avancez ou hexamod:Rétractez chaque tour, piochez une carte."
   },
     "hexamod:GhostOfSpireFuture": {
     "NAME": "Dans les ombres",
