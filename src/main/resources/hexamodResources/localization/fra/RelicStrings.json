@@ -99,7 +99,7 @@
     "FLAVOR": "Feu, feu, feu, feu, feu, FEU!",
     "DESCRIPTIONS": [
       "Lorsque vous jouez #b",
-      " cartes qui ne coûtent pas 0, obtenez un #gremlin:Écho d'une #yFrappe basique. Elle coûte #b0 [REMOVE_SPACE]."
+      " cartes qui ne coûtent pas #b0, obtenez un #gremlin:Écho d'une #yFrappe basique. Elle coûte #b0 [REMOVE_SPACE]."
     ]
   },
   "hexamod:Libra": {
