@@ -10,7 +10,7 @@
   "bronze:AlphaBuild": {
     "NAME": "얼리 액세스",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 상태이상을 bronze:투입합니다. NL bronze:컴파일 - *베타 *빌드를 bronze:투입합니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 피해를 !D! 줍니다. NL 무작위 상태이상을 bronze:투입합니다. NL bronze:컴파일 - *베타 *빌드를 bronze:투입합니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL \u00A0 피해를 !D! 줍니다. NL 무작위 상태이상을 bronze:투입합니다. NL bronze:컴파일 - *베타 *빌드를 bronze:투입합니다.",
     "EXTENDED_DESCRIPTION": [
       "조잡한",
       "알파"
@@ -22,7 +22,7 @@
   },
   "bronze:Backtrace": {
     "NAME": "역추적",
-    "DESCRIPTION": "선천성. NL 피해를 !D! 줍니다. NL bronze:컴파일 *오류 - 함수 카드에 소멸 효과가 추가됩니다.",
+    "DESCRIPTION": "선천성. NL \u00A0 피해를 !D! 줍니다. NL bronze:컴파일 *오류 - 함수 카드에 소멸 효과가 추가됩니다.",
     "EXTENDED_DESCRIPTION": [
       "무단",
       "추적"
@@ -136,7 +136,7 @@
   },
   "bronze:Constructor": {
     "NAME": "생성자",
-    "DESCRIPTION": "방어도를 !B! 얻습니다.   이 카드가 순차열의 처음으로 bronze:부호화되면 이 카드의 방어도를 !M! 증가시킵니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. \u202F 이 카드가 순차열의 처음으로 bronze:부호화되면 이 카드의 방어도를 !M! 증가시킵니다.",
     "EXTENDED_DESCRIPTION": [
       "설계",
       "슬픔",
@@ -409,7 +409,7 @@
   },
   "bronze:Replicate": {
     "NAME": "복제",
-    "DESCRIPTION": "피해를 !D! 줍니다.   NL *부호화되면 이 카드를 한 장 복사해 버린 카드 더미에 섞어 넣습니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. \u202F NL *부호화되면 이 카드를 한 장 복사해 버린 카드 더미에 섞어 넣습니다.",
     "EXTENDED_DESCRIPTION": [
       "복사한",
       "복사"
@@ -435,7 +435,7 @@
   },
   "bronze:Separator": {
     "NAME": "분리기",
-    "DESCRIPTION": "피해를 !D! 줍니다.   처음이나 마지막으로 bronze:부호화되지 않는다면 이 카드의 피해량이 !M! 증가합니다.",
+    "DESCRIPTION": "피해를 !D! 줍니다. \u202F 처음이나 마지막으로 bronze:부호화되지 않는다면 이 카드의 피해량이 !M! 증가합니다.",
     "EXTENDED_DESCRIPTION": [
       "하위",
       "노드"
