@@ -134,13 +134,11 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "Foi éphémère",
     "DESCRIPTIONS": [
-      "La Gardienne gagne #b1 de Mantra lorsque vous jouez une carte. NL La Gardienne perd #b6 de Mantra au début de son tour."
-    ]
-  },
-  "downfall:WatcherDivinityNoRemovePower": {
-    "NAME": "Foi récompensée",
-    "DESCRIPTIONS": [
-      "Une fois que La Gardienne entre en Divinité, elle ne la quitte pas pour le reste du combat."
+      "La Gardienne gagne #b1 de Mantra et #b1 #yd'Intangibilité après que vous ayez joué #b6 cartes en un tour.",
+      " NL Vous avez joué #b",
+      " cartes ce tour.",
+      " NL (A déjà été déclenché ce tour)",
+      " NL NL Une fois que La Gardienne entre en Divinité, elle ne la quitte pas pour le reste du combat, mais la Divinité augmente les dégâts de 200% seulement."
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -153,6 +151,14 @@
     "NAME": "Sac de couteaux",
     "DESCRIPTIONS": [
       "La première fois que vous jouez une carte qui coûte #b2 ou plus chaque tour, la Silencieuse gagne 2 #ySurins."
+    ]
+  },
+  "downfall:SilentDelayedWraithPower": {
+    "NAME": "Possession fatale",
+    "DESCRIPTIONS": [
+      "La première fois que la Silencieuse atteint 0 PV, elle activera #yForme #ySpectrale",
+      " et se soignera de #b",
+      " PV."
     ]
   },
   "downfall:NeowBagOfKnives": {
