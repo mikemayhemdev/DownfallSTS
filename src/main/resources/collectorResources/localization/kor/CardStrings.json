@@ -119,7 +119,7 @@
   },
   "collector:Ember": {
     "NAME": "불씨",
-    "DESCRIPTION": "보존. NL 소멸. NL 소멸되면 힘을 !M! 얻습니다.",
+    "DESCRIPTION": "보존. NL 소멸되면 힘을 !M! 얻습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "사용할 수 없다. 불씨는 지펴져야만 하지."
     ]
