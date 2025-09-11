@@ -389,7 +389,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "가시 채찍",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. hermit:타박상을 !M! 부여합니다. NL 단도를 얻습니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 주고 hermit:타박상을 !M! 부여합니다. NL 단도를 얻습니다."
   },
   "collector:Torchbearer": {
     "NAME": "횃불 봉송자",
