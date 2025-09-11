@@ -583,7 +583,7 @@
   },
   "collector:RedSlaverCard": {
     "NAME": "붉은 노예 상인",
-    "DESCRIPTION": "이번 턴 동안 적의 힘을 동안 !M! 감소시킵니다."
+    "DESCRIPTION": "이번 턴 동안 적의 힘을 !M! 감소시킵니다."
   },
   "collector:ReptomancerCard": {
     "NAME": "파충류 주술사",
