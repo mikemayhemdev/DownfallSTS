@@ -26,7 +26,7 @@
   "downfall:CurseOfBlood": {
     "NAME": "혈우병",
     "DESCRIPTION": "내 다음 턴 시작 시 [E] 을 잃습니다. NL 소멸.",
-    "EXTENDED_DESCRIPTION": ["  "]
+    "EXTENDED_DESCRIPTION": ["Note for LOC: Hemophilia is a name for a disorder for when your blood doesn’t clot properly. I added the a in the middle for coolness factor."]
   },
   "downfall:SummonMushrooms": {
     "NAME": "균류 무리",
