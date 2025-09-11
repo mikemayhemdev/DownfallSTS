@@ -9,7 +9,7 @@
   },
   "downfall:Icky": {
     "NAME": "Dégoût",
-    "DESCRIPTION": "Retenue. NL Épuisement."
+    "DESCRIPTION": "Épuisement."
   },
   "downfall:Haunted": {
     "NAME": "Hantise",
@@ -85,12 +85,16 @@
     "DESCRIPTION": "Ressucitez votre Cultiste s'il est mort. Sinon, il ressucite lorsqu'il mourra avec 50% de ses PV Max."
   },
   "downfall:FleetingFaith": {
-    "NAME": "Foi éphémère",
-    "DESCRIPTION": "Gagnez 1 de Mantra lorsque votre adversaire joue une carte. Perdez-en 5 au début de votre tour."
+    "NAME": "Présence spectrale",
+    "DESCRIPTION": "Ajoutez !M! cartes *Hanté dans la défausse de votre adversaire."
   },
   "downfall:FaithRewarded": {
     "NAME": "Foi Récompensée",
-    "DESCRIPTION": "Lorsque vous entrez en Divinité, vous ne pouvez plus la quitter."
+    "DESCRIPTION": "Lorsque vous entrez en Divinité, vous ne pouvez plus la quitter. Les dégâts bonus de la Divinité sont réduits à 200%."
+  },
+  "downfall:Crusade": {
+    "NAME": "Croisade",
+    "DESCRIPTION": "Retirez tous les Débuffs. NL Perdez tout votre Mantra. soignez-vous de !M! PV et gagnez 1 de Force pour chaque Mantra perdu."
   },
   "downfall:Hyperfocused": {
     "NAME": "Focus mortel",
