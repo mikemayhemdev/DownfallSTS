@@ -135,7 +135,7 @@
     "NAME": "Crescent Talisman",
     "FLAVOR": "“Please, just... don't forget me. Even after I die.”",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card that does #rNOT have #yawakened:Conjure [REMOVE_SPACE]. Add #yawakened:Conjure to it.",
+      "Upon pickup, choose a card that does #rNOT have #yawakened:Conjure [REMOVE_SPACE], and add #yawakened:Conjure to it.",
       "Choose a card for ",
       "The Talisman has blessed ",
       " and added #yawakened:Conjure to it.",

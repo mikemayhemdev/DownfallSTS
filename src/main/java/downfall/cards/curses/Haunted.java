@@ -1,6 +1,7 @@
 package downfall.cards.curses;
 
 
+import automaton.cards.goodstatus.IntoTheVoid;
 import basemod.abstracts.CustomCard;
 import basemod.helpers.CardModifierManager;
 import collector.cards.OnOtherCardExhaustInHand;
@@ -9,6 +10,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -77,9 +79,22 @@ public class Haunted extends CustomCard implements OnOtherCardExhaustInHand {
 
     @Override
     public void onOtherCardExhaustWhileInHand(AbstractCard card) {
-        if (card != this) {
-            flash(Color.PURPLE.cpy());
-            this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+        if (!AbstractDungeon.actionManager.turnHasEnded) {
+            if (card != this) {
+                flash(Color.PURPLE.cpy());
+                this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+            }
+        }
+    }
+
+    public void triggerOnEndOfTurnForPlayingCard() {
+            for (AbstractCard c : AbstractDungeon.player.hand.group) {
+                if (c.isEthereal) {
+                    if (c != this) {
+                        flash(Color.PURPLE.cpy());
+                        this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+                    }
+                }
         }
     }
 
