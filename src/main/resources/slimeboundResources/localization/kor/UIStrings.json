@@ -1,9 +1,9 @@
 ﻿{
   "slimeboundConfigMenuText": {
     "TEXT": [
-      "Allow other characters to encounter some Slimebound relics.",
-      "Allow other characters to encounter some Slimebound potions.",
-      "Allow other characters to encounter some Slimebound events.",
+      "다른 캐릭터에게 대왕 슬라임의 유물이 등장하게 됩니다.",
+      "다른 캐릭터에게 대왕 슬라임의 포션이 등장하게 됩니다.",
+      "다른 캐릭터에게 대왕 슬라임의 이벤트가 등장하게 됩니다.",
       "모든 것을 해금합니다 (비추천)."
     ]
   },

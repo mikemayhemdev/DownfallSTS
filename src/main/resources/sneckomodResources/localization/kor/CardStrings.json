@@ -48,7 +48,7 @@
   },
   "sneckomod:DiceCrush": {
     "NAME": "주사위 으깨기",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL sneckomod:과중 시 카드를 2 장 뽑습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL sneckomod:과중 시 카드를 2장 뽑습니다."
   },
   "sneckomod:DragonsHoard": {
     "NAME": "용의 보물",
@@ -178,7 +178,7 @@
   },
   "sneckomod:Restock": {
     "NAME": "재보급",
-    "DESCRIPTION": "카드를 전부 버립니다. NL 카드를 !M! 장 뽑고 손에 있는 카드를 sneckomod:뒤엉키게 합니다. NL 소멸."
+    "DESCRIPTION": "카드를 전부 버립니다. NL, 카드를 !M! 장 뽑고 손에 있는 카드를 sneckomod:뒤엉키게 합니다. NL 소멸."
   },
   "sneckomod:Rotation": {
     "NAME": "순환",
@@ -195,11 +195,11 @@
   },
   "sneckomod:SerpentIdol": {
     "NAME": "구렁이 우상",
-    "DESCRIPTION": "무작위 sneckomod:다른 *직업 카드 !M! 장 중 하나를 선택해 얻습니다. 그 카드의 비용은 0 이 됩니다. NL 소멸."
+    "DESCRIPTION": "무작위 sneckomod:다른 *직업 카드 !M! 장 중 하나를 선택해 얻습니다. 이번 턴에 그 카드의 비용은 0이 됩니다. NL 소멸."
   },
   "sneckomod:SerpentMind": {
     "NAME": "외세의 형상",
-    "DESCRIPTION": "휘발성. 내 턴 종료 시 이번 턴에 사용한 무색, 직업 카드 종류 하나당 힘을 !M! 얻습니다. NL sneckomod:선물: 희귀 카드.",
+    "DESCRIPTION": "휘발성. NL 내 턴 종료 시 이번 턴에 사용한 무색, 직업 카드 종류 하나당 힘을 !M! 얻습니다. NL sneckomod:선물: 희귀 카드.",
     "UPGRADE_DESCRIPTION": "내 턴 종료 시 이번 턴에 사용한 무색, 직업 카드 종류 하나당 힘을 !M! 얻습니다. NL sneckomod:선물: 희귀 카드.",
     "DESCRIPTION_BATTLE": "내 턴 종료 시 이번 턴에 사용한 무색, 직업 카드 종류 하나당 힘을 !M! 얻습니다."
   },
@@ -276,7 +276,7 @@
     "EXTENDED_DESCRIPTION": [
       "바꿀 유물이이이 업섯서서.",
       "잃을 유물을 고르십시오.",
-      "  ",
+      " ",
       " 유물을 잃고 ",
       " 유물을 얻습니다.",
       "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
@@ -485,7 +485,7 @@
   },
   "sneckomod:GildedShield": {
     "NAME": "도금 방패",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이 카드를 sneckomod:뒤엉키게 하고 이 카드를 가져옵니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이 카드를 sneckomod:뒤엉키게 했다면 이 카드를 가져옵니다."
   },
   "sneckomod:Mesmerize": {
     "NAME": "최면",
@@ -563,7 +563,7 @@
   },
   "sneckomod:RoundaboutSwing": {
     "NAME": "양립",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 뽑을 더미 맨 위에 놓습니다. NL 다음 턴에 카드를 !M! 장 더 뽑습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 뽑을 더미 맨 위에 놓습니다. NL 다음 턴에 카드를 !M! 장 더 뽑습니다."
   },
   "sneckomod:MarkedCard": {
     "NAME": "표시해 둔 카드",

@@ -150,7 +150,7 @@
   },
   "Slimebound:LivingWall": {
     "NAME": "살아있는 벽",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 공격한 대상에게 slimeboundmod:점액을 !slime! 부여합니다."
+		"DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 공격을 받을 때마다 공격한 대상에게 slimeboundmod:점액을 !slime! 부여합니다."
   },
   "Slimebound:MassFeed": {
     "NAME": "대량 섭취",
@@ -194,7 +194,7 @@
   "Slimebound:Prepare": {
     "NAME": "준비 동작",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 다음 턴에 [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "NL 다음 턴에 [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 이번 턴에 카드 중 최대 !M! 장을 선택해 보존합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "다음 턴에 [E] 를 얻고 카드를 !M! 장 뽑습니다. NL 이번 턴에 카드 중 최대 !M! 장을 선택해 보존합니다. NL 소멸."
   },
   "Slimebound:PrepareCrush": {
     "NAME": "준비: 으깨기",
@@ -228,7 +228,7 @@
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 무작위 *핥기 카드를 1장 expansioncontent:발굴합니다.",
     "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 무작위 *핥기 카드를 2장 expansioncontent:발굴합니다.",
     "EXTENDED_DESCRIPTION": [
-      "소멸된 게... 없어..."
+			"소멸된 게.. 없어.."
     ]
   },
   "Slimebound:Recycling": {
@@ -284,7 +284,7 @@
   },
   "Slimebound:SlimeBrawl": {
     "NAME": "슬라임 난투",
-    "DESCRIPTION": "뽑을 카드 더미 맨 위에 있는 카드를 사용합니다. 슬라임 하나당 반복합니다. NL 소멸."
+    "DESCRIPTION": "슬라임 수만큼 뽑을 더미 맨 위에 있는 카드를 사용합니다. NL 소멸."
   },
   "Slimebound:SlimeCrush": {
     "NAME": "슬라임 으깬다!!!",
@@ -297,7 +297,7 @@
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "슬라임 가시",
-    "DESCRIPTION": "방어도를 !B! 얻고 가시를 !M! 얻습니다. 이번 턴이 끝날 때 가시를 !M! 잃습니다."
+    "DESCRIPTION": "방어도를 !B! 얻고 가시를 !M! 얻습니다. 내 다음 턴 시작 시 가시를 !M! 잃습니다."
   },
   "Slimebound:SlimeTap": {
     "NAME": "슬라임 회수",
@@ -341,12 +341,12 @@
   },
   "Slimebound:SplitScrap": {
     "NAME": "되살아나는 날붙이",
-    "DESCRIPTION": "보존. 날붙이 수액을 소환합니다. NL 소멸."
+		"DESCRIPTION": "보존. NL 날붙이 수액을 소환합니다. NL 소멸."
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "분열: 전문가",
     "DESCRIPTION": "slimeboundmod:전문가 3종류 중 1가지를 선택해 slimeboundmod:분열합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:전문가 3종류 중 1가지를 선택해 slimeboundmod:분열합니다. NL slimeboundmod:명령합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "slimeboundmod:전문가 3종류 중 1가지를 선택해 slimeboundmod:분열하고 slimeboundmod:명령합니다. NL 소멸."
   },
   "Slimebound:Strike_Slimebound": {
     "NAME": "타격",

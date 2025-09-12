@@ -95,7 +95,7 @@
   },
   "hermit:Adapt": {
     "NAME": "적응",
-    "DESCRIPTION": "내 턴 시작 시 카드를 1장 소멸시킵니다. NL 카드가 소멸되면 방어도를 8 얻습니다."
+    "DESCRIPTION": "내 턴 시작 시 카드를 최대 1장 소멸시킵니다. NL 카드가 소멸되면 방어도를 8 얻습니다."
   },
   "hermit:Dive": {
     "NAME": "급하강",
@@ -204,7 +204,7 @@
   },
   "hermit:Maintenance": {
     "NAME": "유지보수",
-    "DESCRIPTION": "이번 전투 동안 *타격의 피해량이 !M! 증가합니다. NL 민첩을 !hermit:SecondMagic! 얻습니다. NL 이번 전투 동안 이 카드의 비용은 1 증가합니다."
+    "DESCRIPTION": "이번 전투 동안 *타격의 피해량이 !M! 증가합니다. NL 민첩을 !hermit:SecondMagic! 얻습니다. NL 이번 전투 동안 이 카드의 비용이 1 증가합니다."
   },
   "hermit:EternalForm": {
     "NAME": "영겁의 형상",
@@ -305,7 +305,7 @@
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "태풍의 눈",
-    "DESCRIPTION": "hermit:집중합니다. NL 최대  [E] 보다 모자란 만큼  [E] 를 얻습니다.  NL 소멸."
+    "DESCRIPTION": "hermit:집중합니다. NL 최대  [E] 보다 모자란 만큼  [E] 를 얻습니다. NL 소멸."
   },
   "hermit:FinalCanter": {
     "NAME": "최후의 위선",

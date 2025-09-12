@@ -20,7 +20,7 @@
   },
   "hexamod:BacktrackSmack": {
     "NAME": "되짚어 치기",
-    "DESCRIPTION": "피해를 !D! 만큼 두 번 줍니다. NL hexamod:수축합니다."
+    "DESCRIPTION": "피해를 !D! 만큼 2번 줍니다. NL hexamod:수축합니다."
   },
   "hexamod:BurningQuestion": {
     "NAME": "불타는 의문",
@@ -320,7 +320,7 @@
   },
   "hexamod:ShieldOfDarkness": {
     "NAME": "밤의 방패",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 예지 !M!. NL *예지로 버린 휘발성 카드를 소멸시킵니다."
+    "DESCRIPTION": "예지 !M!. NL *예지로 버린 휘발성 카드를 소멸시킵니다. NL 방어도를 !B! 얻습니다."
   },
   "hexamod:Kindle": {
     "NAME": "불붙이기",
@@ -363,7 +363,7 @@
   },
   "hexamod:SwordOfDarkness": {
     "NAME": "밤의 검",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 예지 !M!. NL *예지로 버린 휘발성 카드를 소멸시킵니다."
+    "DESCRIPTION": "예지 !M! . NL *예지로 버린 휘발성 카드를 소멸시킵니다. NL 피해를 !D! 줍니다."
   },
   "hexamod:ThermalTransfer": {
     "NAME": "열전사",
@@ -385,8 +385,8 @@
   },
   "hexamod:TurnItUp": {
     "NAME": "때의 도래",
-    "DESCRIPTION": "hexamod:극열, 힘, 민첩을 !M! 얻습니다. NL 내 턴 종료 시 이 카드로 얻은 *극열, *힘, *민첩을 모두 잃습니다.\"",
-    "UPGRADE_DESCRIPTION": "보존. NL hexamod:극열, 힘, 민첩을 !M! 얻습니다. NL 내 턴 종료 시 이 카드로 얻은 *극열, *힘, *민첩을 모두 잃습니다.\""
+    "DESCRIPTION": "hexamod:극열, 힘, 민첩을 !M! 얻습니다. NL 내 턴 종료 시 이 카드로 얻은 *극열, *힘, *민첩을 모두 잃습니다.",
+    "UPGRADE_DESCRIPTION": "보존. NL hexamod:극열, 힘, 민첩을 !M! 얻습니다. NL 내 턴 종료 시 이 카드로 얻은 *극열, *힘, *민첩을 모두 잃습니다."
   },
   "hexamod:UnleashSpirits": {
     "NAME": "퍼져나가는 영",
@@ -413,8 +413,8 @@
   },
   "hexamod:SecondSeal": {
     "NAME": "두 번째 봉인",
-    "DESCRIPTION": "휘발성. hexamod:봉인. NL 전투 종료 시 영혼을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "hexamod:봉인. NL 전투 종료 시 영혼을 !M! 얻습니다."
+    "DESCRIPTION": "휘발성. hexamod:봉인. NL 전투 종료 시 영혼 을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "hexamod:봉인. NL 전투 종료 시 영혼 을 !M! 얻습니다."
   },
   "hexamod:ThirdSeal": {
     "NAME": "세 번째 봉인",

@@ -28,12 +28,12 @@
     "NAME": "봉인된 제단",
     "DESCRIPTIONS": [
       "위협적인 동상이 앞에 놓여있습니다. 대부분 이들은 접근조차 하지 못하겠지만 당신은 이것의 용도와 어떻게 사용하면 도움이 될지 알고 있습니다. NL 당신은 제단에 들어가서 #r대가를 준비합니다...",
-      "영혼의 일부를 바치고 봉인을 획득합니다. 이로서 무한한 힘에 한 발짝 더 나아갑니다. ",
+      "영혼의 일부를 바치고 봉인을 획득합니다. 이로서 무한한 힘에 한 발짝 더 나아갑니다.",
       "당신은 상황을 고려해서 봉인된 제단에 대가를 바치지 않기로 합니다. 여정에 필요한건 이미 다 있으니까요.",
       "이 봉인은 앞으로 전투에서 유용하게 사용될 것입니다."
     ],
     "OPTIONS": [
-      "[바친다] #r ",
+      "[바친다] #r",
       " #r체력을 #r잃습니다. #g첫 #g번째 #g봉인을 #g얻습니다.",
       " #r영혼을 #r잃습니다. #g두 #g번째 #g봉인을 #g얻습니다.",
       " #r잃습니다. #g세 #g번째 #g봉인을 #g얻습니다.",
@@ -45,7 +45,7 @@
       "[잠김] 바쳐서 봉인을 얻었습니다.",
       " #r잃습니다.  #g다섯 #g번째 #g봉인을 #g얻습니다.",
       "[잠김] 강화된 카드가 필요합니다.",
-      "  #r최대 #r체력을 #r잃습니다. #g여섯 #g번째 #g봉인을 #g얻습니다.",
+      " #r최대 #r체력을 #r잃습니다. #g여섯 #g번째 #g봉인을 #g얻습니다.",
       "[잠김] 최대 체력이 2 필요합니다."
     ]
   },
@@ -58,7 +58,7 @@
     "Translator Note": "the second sentence above is added after the vanilla one, which offers 3 choices [land](skill), [channel](power) and [strike](attack), you can preview below",
     "preview": "While in free fall you consider your options: Land safely with your greatest techniques. Channel a Power to survive the fall. Strike at the wall to hang on to it.",
     "OPTIONS": [
-      "[떠오른다] #g아무것도 #g잃지 #g않아..",
+      "[떠오른다] #g아무것도 #g잃지 #g않아...",
       "[떠난다]"
     ]
   },

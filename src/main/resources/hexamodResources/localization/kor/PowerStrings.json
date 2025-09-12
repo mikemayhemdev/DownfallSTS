@@ -76,7 +76,7 @@
   "hexamod:EtherealRefundPower": {
     "NAME": "휘발성 환불",
     "DESCRIPTIONS": [
-      "#y휘발성 카드를 사용할 때마다  ",
+      "#y휘발성 카드를 사용할 때마다 ",
       " 를 얻습니다."
     ],
     "TRANSLATOR_NOTE": "사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함"
@@ -237,9 +237,9 @@
   "hexamod:InfernoPotionPower": {
     "NAME": "육각염",
     "DESCRIPTIONS": [
-      "이번 전투 동안 유령불꽃이 적 전체에게 영향을 미칩니다.",
-      "이번 전투 동안 유령 불꽃이 적 전체에게 #b",
-      " 영향을 미칩니다."
+      "이번 전투 동안 유령불꽃이 적 전체를 대상으로 합니다.",
+      "이번 전투 동안 유령 불꽃이 #b",
+      " 번 적 전체를 대상으로 합니다."
     ]
   },
   "hexamod:PlayCardAndExhaustPower": {
