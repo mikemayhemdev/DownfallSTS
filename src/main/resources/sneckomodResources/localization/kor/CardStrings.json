@@ -178,7 +178,7 @@
   },
   "sneckomod:Restock": {
     "NAME": "재보급",
-    "DESCRIPTION": "카드를 전부 버립니다. NL, 카드를 !M! 장 뽑고 손에 있는 카드를 sneckomod:뒤엉키게 합니다. NL 소멸."
+    "DESCRIPTION": "카드를 전부 버립니다. NL 카드를 !M! 장 뽑고 손에 있는 카드를 sneckomod:뒤엉키게 합니다. NL 소멸."
   },
   "sneckomod:Rotation": {
     "NAME": "순환",
