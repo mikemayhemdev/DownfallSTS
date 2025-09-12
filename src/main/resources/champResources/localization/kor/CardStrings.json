@@ -99,7 +99,7 @@
   "champ:TornadoPunch": {
     "NAME": "회오리 주먹",
     "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL *수비 champ:연계: 공격한 적 하나당 방어도를 !B! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 수비 champ:연계: 공격한 적 하나당 방어도를 !B! 얻습니다."
+    "UPGRADE_DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL *수비 champ:연계: 공격한 적 하나당 방어도를 !B! 얻습니다."
   },
   "champ:EnGarde": {
     "NAME": "준비 시작!",
@@ -160,7 +160,7 @@
     "NAME": "악랄한 조롱",
     "DESCRIPTION": "expansioncontent:활력을 !M! 얻습니다. NL 약화를 !DM! 부여합니다. NL 현재 자세의 *스킬 *카드 champ:보너스를 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      "광폭화 champ:연계: 힘을 !M! 얻습니다. NL 이번 턴이 끝날 때 힘을 !M! 잃습니다. NL ",
+      "광폭화 champ:연계: 힘을 !M! 얻습니다. 이번 턴이 끝날 때 힘을 !M! 잃습니다. NL ",
       "수비 champ:연계: 민첩을 !M! 얻습니다. 이번 턴이 끝날 때 민첩을 !M! 잃습니다."
     ]
   },
@@ -325,7 +325,7 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "건투",
-    "DESCRIPTION": "*광폭화 champ:연계: NL 힘을 !M! 얻습니다. NL *수비 champ:연계: NL 민첩을 !M! 얻습니다."
+    "DESCRIPTION": "*광폭화 champ:연계: 힘을 !M! 얻습니다. NL *수비 champ:연계: NL 민첩을 !M! 얻습니다."
   },
   "champ:BerserkerStyle": {
     "NAME": "칼갈이",

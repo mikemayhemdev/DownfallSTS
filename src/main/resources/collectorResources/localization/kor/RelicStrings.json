@@ -10,7 +10,7 @@
     "NAME": "프리즘 횃불",
     "FLAVOR": "행운의 은총처럼 타오르는 변화무쌍한 불꽃입니다.",
     "DESCRIPTIONS": [
-      " ",
+      "",
       "과[] 교체합니다. 전투 시작 시 #y불씨를 얻고 #ycollector:비축을 #b1 얻습니다. 매 턴 #y불씨가 처음 #y소멸되면 #ycollector:비축을 #b1 얻습니다."
     ]
   },
@@ -48,7 +48,7 @@
     "NAME": "제어 깍지",
     "FLAVOR": "첨탑의 가장 작은 영웅들이 입었던 옷입니다.",
     "DESCRIPTIONS": [
-      "#yexpansioncontent:임시 체력을 #b",
+      "#yexpansioncontent:임시 #y체력을 #b",
       " 얻은 채로 전투를 시작합니다. #y임시 #y체력이 있는 동안 카드의 #y방어도가 #b1 증가합니다."
     ]
   },

@@ -30,7 +30,7 @@
   },
   "downfall:SummonMushrooms": {
     "NAME": "균류 무리",
-    "DESCRIPTION": "모든 버섯을 죽입니다. 버섯의 남아있던 체력만큼 체력을 회복합니다. NL버섯을 2개 소환합니다."
+    "DESCRIPTION": "모든 버섯을 죽입니다. 버섯의 남아있던 체력만큼 체력을 회복합니다. NL 버섯을 2개 소환합니다."
   },
   "downfall:BossMaintenance": {
     "NAME": "유지보수",

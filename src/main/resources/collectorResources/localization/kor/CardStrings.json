@@ -17,7 +17,7 @@
   },
   "collector:AshesAndDust": {
     "NAME": "먼지와 재",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 X번 줍니다.  NL X 가 5 이상일 경우 2번 더 피해를 줍니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 X번 줍니다. NL X 가 5 이상일 경우 2번 더 피해를 줍니다."
   },
   "collector:BindingCall": {
     "NAME": "번제의 부름",
@@ -470,7 +470,7 @@
     "DESCRIPTION": "체력을 !M! 잃습니다. NL 피해를 !D! 줍니다."
   },
   "collector:DarklingsCard": {
-    "NAME": "어두미들",
+    "NAME": "어두미",
     "DESCRIPTION": "collector:장작. NL 피해를 !D! 줍니다. *수집품 카드를 expansioncontent:발굴합니다.",
     "EXTENDED_DESCRIPTION": [
       "복사할 카드를 선택하십시오."
@@ -635,7 +635,7 @@
   },
   "collector:SpikeSlimeCard": {
     "NAME": "가시 슬라임",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 공격받을 때마다 공격한 대상에게 피해를  줍니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 이번 턴에 공격받을 때마다 공격한 대상에게 피해를 !M! 줍니다."
   },
   "collector:SpireGrowthCard": {
     "NAME": "첨탑 암종",
@@ -663,7 +663,7 @@
   },
   "collector:TorchHeadCard": {
     "NAME": "횃불 머리",
-    "DESCRIPTION": "무작위 *횃불 머리 *부름을 1장 얻습니다. NL 이번 턴에 그 카드의 비용은 0이 됩니다."
+    "DESCRIPTION": "무작위 collector:횃불 *머리 *부름을 1장 얻습니다. NL 이번 턴에 그 카드의 비용은 0이 됩니다."
   },
   "collector:TransientCard": {
     "NAME": "과도자",

@@ -49,7 +49,7 @@
     "EXTENDED_DESCRIPTION": [
       "도누의 힘",
       "힘을 !M! 얻습니다.",
-      "도누의 방패",
+      "데카의 방패",
       "*판금 *갑옷을 !M! 얻습니다."
     ]
   },
@@ -141,7 +141,7 @@
 
   "expansioncontent:SuperSomberShield": {
     "NAME": "거무스름한 방패",
-    "DESCRIPTION": "expansioncontent:장작. NL 방어도를 !B! 얻습니다. NL 다음 턴에 이 카드로 소멸시킨 카드를 복사해 얻습니다."
+    "DESCRIPTION": "collector:장작. NL 방어도를 !B! 얻습니다. NL 다음 턴에 이 카드로 소멸시킨 카드를 복사해 얻습니다."
   },
 
   "expansioncontent:SuperWhirlingFlame": {
@@ -201,7 +201,7 @@
   },
   "expansioncontent:PeekPages": {
     "NAME": "염탐",
-    "DESCRIPTION": "뽑을 카드 더미 위에 *통찰을 !M! 장 섞어 넣습니다. NL 소멸."
+    "DESCRIPTION": "뽑을 카드 더미 위에 *통찰을 !M! 장 놓습니다. NL 소멸."
   },
   "expansioncontent:BloodBarrage": {
     "NAME": "피의 장벽",
@@ -213,7 +213,7 @@
   },
   "expansioncontent:BloodySacrifice": {
     "NAME": "피로 물든 희생",
-    "DESCRIPTION": "휘발성. NL 최대 체력의 !M! % 만큼 체력을 잃습니다. NL 의식을 1 얻습니다. NL 소멸.",
+    "DESCRIPTION": "휘발성. NL 최대 체력의 !M! % 만큼 체력을 잃습니다. 의식을 1 얻습니다. NL 소멸.",
     "EXTENDED_DESCRIPTION":[
       " NL (체력을 {amount} 잃습니다.)"
     ]

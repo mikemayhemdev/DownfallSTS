@@ -15,7 +15,7 @@
   "Guardian:Gem_Green": {
     "NAME": "에메랄드",
     "DESCRIPTION": "guardianmod:보석. NL 민첩을 2 얻습니다. NL 이번 턴이 끝날 때 민첩을 2 잃습니다.",
-    "UPGRADE_DESCRIPTION": "민첩을 2 얻습니다. NL 이번 턴이 끝날 때 힘을 2 잃습니다."
+    "UPGRADE_DESCRIPTION": "민첩을 2 얻습니다. NL 이번 턴이 끝날 때 민첩을 2 잃습니다."
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "토르말린",
@@ -254,7 +254,7 @@
   },
   "Guardian:ChargeCore": {
     "NAME": "코어 충전",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL guardianmod:정지장에 넣습니다. NL guardianmod:째깍할 때 카드를 1장 뽑습니다. NL guardianmod:불안정."
+    "DESCRIPTION": "피해를 !D! 주고 guardianmod:정지장에 넣습니다. NL guardianmod:째깍할 때 카드를 1장 뽑습니다. NL guardianmod:불안정."
   },
   "Guardian:Reroute": {
     "NAME": "재편성",
@@ -267,7 +267,7 @@
   },
   "Guardian:ShieldSpikes": {
     "NAME": "가시 방패",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL guardianmod:수비_모드라면 가시를 !M! 얻습니다.  guardianmod:대비를 8 합니다."
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL guardianmod:대비를 8 합니다. NL guardianmod:수비_모드라면 가시를 !M! 얻습니다."
   },
   "Guardian:PrismaticBeam": {
     "NAME": "프리즘 광선",
@@ -317,8 +317,8 @@
     "UPGRADE_DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 가시를 !M! 얻습니다. NL guardianmod:대비를 !GuardianSecondM! 합니다."
   },
   "Guardian:ArmoredProtocol": {
-    "NAME": "무장 규약 (번역 금지)",
-    "DESCRIPTION": "guardianmod:수비_모드 동안 턴 종료 시 방어도를 !M! 얻습니다. NL 내 턴 시작 시 guardianmod:대비를 3 합니다."
+    "NAME": "Armored Protocol (Deprecated card do not TL!)",
+    "DESCRIPTION": "Gain !M! Block at the end of each turn while in *Defensive *Mode. NL At the start of your turn, guardianmod:Brace 3."
   },
   "Guardian:TimeSifter": {
     "NAME": "시간 선별기",
@@ -374,8 +374,8 @@
   },
   "Guardian:Repulse": {
     "NAME": "격퇴",
-    "DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주를 뽑았다면 그 카드를 소멸시키고 카드를 1장 뽑습니다.",
-    "UPGRADE_DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주를 뽑았다면 그 카드를 소멸시키고 카드를 1장 뽑습니다."
+    "DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주를 뽑으면 그 카드를 소멸시키고 카드를 1장 뽑습니다.",
+    "UPGRADE_DESCRIPTION": "매 턴 처음으로 상태이상 또는 저주를 뽑으면 그 카드를 소멸시키고 카드를 1장 뽑습니다."
   },
   "Guardian:BronzeOrb": {
     "NAME": "구체 보조기",
@@ -383,7 +383,7 @@
   },
   "Guardian:RevengeProtocol": {
     "NAME": "복수 규약",
-    "DESCRIPTION": "수비_모드로 전환할 때마다 힘을 !M! 얻습니다. NL 내 턴 시작 시 guardianmod:대비를 !GuardianSecondM! 합니다."
+    "DESCRIPTION": "guardianmod:수비_모드로 전환할 때마다 힘을 !M! 얻습니다. NL 내 턴 시작 시 guardianmod:대비를 !GuardianSecondM! 합니다."
   },
   "Guardian:GatlingBeam": {
     "NAME": "광선 포탑",
@@ -400,7 +400,7 @@
   },
   "Guardian:HammerDown": {
     "NAME": "전속력 내려치기",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 힘과 민첩을 두 배로 만듭니다. NL 소멸."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 힘과 민첩을 2배로 늘립니다. NL 소멸."
   },
   "Guardian:OmegaCannon": {
     "NAME": "오메가 대포",

@@ -161,7 +161,7 @@
     "NAME": "돌풍",
     "DESCRIPTION": "이번 턴에 사용된 카드 한 장당 피해를 !D! 줍니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
-      " NL (카드를",
+      " NL (카드를 ",
       " 장 사용했습니다.)",
       " 장 사용했습니다.)"
     ]
@@ -204,8 +204,8 @@
     "NAME": "그렘린의 춤",
     "DESCRIPTION": "피해를 !D! 줍니다. NL 현재 맨 앞에 있는 그렘린에 따라 효과가 추가됩니다.",
     "EXTENDED_DESCRIPTION": ["피해를 !D! 줍니다.",
-    " 적 전체에게 피해를 줍니다.", ".  NL 이번 턴 동안 적의 힘을 !M! 감소시킵니다.",
-    ".  NL 방어도를 !B! 얻습니다.", ".  NL 카드를 !M! 장 뽑습니다.", ".  NL gremlin:마법을 !M! 얻습니다.", ".  NL 힘을 !M! 얻습니다."]
+    " 적 전체에게 피해를 줍니다.", ". NL 이번 턴 동안 적의 힘을 !M! 감소시킵니다.",
+    ". NL 방어도를 !B! 얻습니다.", ". NL 카드를 !M! 장 뽑습니다.", ". NL gremlin:마법을 !M! 얻습니다.", ". NL 힘을 !M! 얻습니다."]
   },
 
   "Gremlin:GremlinOffensive": {
@@ -314,7 +314,7 @@
   "Gremlin:PinNeedle": {
     "NAME": "바늘 핀",
     "DESCRIPTION": "피해를 !D! 줍니다. NL *성가신 *구멍을 !M! 장 bronze:투입합니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *성가신 구멍+을 !M! 장 bronze:투입합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL *성가신 *구멍+을 !M! 장 bronze:투입합니다. NL 소멸."
   },
 
   "Gremlin:Pinprick": {
@@ -385,7 +385,7 @@
     "DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 카드 한 장당 단도를 손이 가득찰 때까지 얻습니다.",
     "UPGRADE_DESCRIPTION": "피해를 !D! 줍니다. NL 이번 턴에 사용한 카드 한 장당 강화된 단도를 손이 가득찰 때까지 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      " NL (카드를",
+      " NL (카드를 ",
       " 장 사용했습니다.)",
       " 장 사용했습니다.)"
     ]

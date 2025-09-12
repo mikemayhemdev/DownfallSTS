@@ -10,7 +10,7 @@
     "NAME": "연마유",
     "DESCRIPTIONS": [
       "#y방어도를 #b",
-      " 얻습니다. 얻습니다. #y수비 #y모드로 전환합니다."
+      " 얻습니다. #y수비 #y모드로 전환합니다."
     ]
   },
   "Guardian:BlockOnCardUsePotion": {

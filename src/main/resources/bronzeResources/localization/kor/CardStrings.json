@@ -4,7 +4,7 @@
     "DESCRIPTION": "뽑을 카드 더미에 있는 상태이상 한 장당 [E] 를 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       " NL ( [E] 를 ",
-      " 얻습니다."
+      " 얻습니다.)"
     ]
   },
   "bronze:AlphaBuild": {
@@ -101,7 +101,7 @@
     "DESCRIPTION": "bronze:소유한 상태이상 한 장당 무작위 적들에게 피해를 !D! 주고 그 카드를 모두 소멸시킵니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "bronze:소유한 상태이상 한 장당 무작위 적들에게 피해를 !D! 주고 그 카드를 모두 소멸시킵니다. NL 소멸. (피해를 ",
-      " 번 줍니다.) NL 소멸."
+      " 번 줍니다.)"
     ]
   },
   "bronze:ChildClass": {
@@ -262,7 +262,7 @@
   },
   "bronze:Frontload": {
     "NAME": "초기 책정",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL bronze:컴파일- 함수에 보존 효과가 추가됩니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL bronze:컴파일 - 함수에 보존 효과가 추가됩니다.",
     "EXTENDED_DESCRIPTION": [
       "견고한",
       "벽"
@@ -292,7 +292,7 @@
   },
   "bronze:Hardcode": {
     "NAME": "하드코드",
-    "DESCRIPTION": "다음으로 생성하는 함수 카드를 덱에 추가합니다. NL 함수 카드에 사용된 카드들과 이 카드를 영구적으로 제거합니다."
+    "DESCRIPTION": "다음으로 생성하는 함수 카드를 덱에 추가합니다. NL 함수 카드에 사용된 카드들과 이 카드를 영구적으로 덱에서 제거합니다."
   },
   "bronze:HardenedForm": {
     "NAME": "구체 소환",
@@ -401,7 +401,7 @@
   },
   "bronze:Repair": {
     "NAME": "수리",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL bronze:컴파일- 체력을 !M! 회복합니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL bronze:컴파일 - 체력을 !M! 회복합니다.",
     "EXTENDED_DESCRIPTION": [
       "어설픈",
       "스패너"
@@ -444,7 +444,7 @@
   "bronze:Shell": {
     "NAME": "블록체인",
     "DESCRIPTION": "bronze:흐릿함을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "bronze:흐릿함을 !M! 얻습니다. NL bronze:컴파일- bronze:흐릿함을 !M! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "bronze:흐릿함을 !M! 얻습니다. NL bronze:컴파일 - bronze:흐릿함을 !M! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
       "블록",
       "체인"
@@ -468,8 +468,8 @@
   },
   "bronze:SpaghettiCode": {
     "NAME": "스파게티 코드",
-    "DESCRIPTION": "순차열이 가득 찰 때까지 무작위 카드 3장 중 1장을 선택해 bronze:부호화합니다.  NL 소멸.",
-    "UPGRADE_DESCRIPTION": "순차열이 가득 찰 때까지 무작위 카드 3장 중 1장을 선택해 bronze:부호화합니다. "
+    "DESCRIPTION": "순차열이 가득 찰 때까지 무작위 카드 3장 중 1장을 선택해 bronze:부호화합니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "순차열이 가득 찰 때까지 무작위 카드 3장 중 1장을 선택해 bronze:부호화합니다."
   },
   "bronze:Strike": {
     "NAME": "타격",
@@ -502,8 +502,8 @@
   },
   "bronze:Turbo": {
     "NAME": "터보",
-    "DESCRIPTION": "[E] [E] 를 얻습니다. NL *공허를 버린 카드 더미에 섞어 넣습니다.",
-    "UPGRADE_DESCRIPTION": "[E] [E] [E] 를 얻습니다. NL *공허를 버린 카드 더미에 섞어 넣습니다."
+    "DESCRIPTION": " [E] [E] 를 얻습니다. NL *공허를 버린 카드 더미에 섞어 넣습니다.",
+    "UPGRADE_DESCRIPTION": " [E] [E] [E] 를 얻습니다. NL *공허를 버린 카드 더미에 섞어 넣습니다."
   },
   "bronze:Undervolt": {
     "NAME": "저전압",
@@ -584,7 +584,7 @@
   },
   "bronze:DecaBeam": {
     "NAME": "시제품-방패",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL bronze:컴파일- expansioncontent:판금 *갑옷을 !M! 얻고 *어지러움을 !bauto! 장 bronze:투입합니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL bronze:컴파일 - expansioncontent:판금 *갑옷을 !M! 얻고 *어지러움을 !bauto! 장 bronze:투입합니다.",
     "EXTENDED_DESCRIPTION": [
       "들쭉날쭉한",
       "보호막"
