@@ -39,7 +39,7 @@ public class BanStuffPatch {
                 relicsToRemoveOnStart.add("Blue Candle");
                 }
 
-                if (EvilModeCharacterSelect.evilMode || chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE) {
+                if (chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE && !downfallMod.disableBaseGameAdjustments) {
                     relicsToRemoveOnStart.add(BirdFacedUrn.ID);
                     relicsToRemoveOnStart.add(MummifiedHand.ID);
                 }
