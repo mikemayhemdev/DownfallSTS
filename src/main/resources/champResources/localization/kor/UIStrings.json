@@ -1,4 +1,4 @@
-{
+﻿{
   "champ:SealCommonReward": {
     "TEXT": [
       "덱에 일반 카드 추가"
@@ -18,7 +18,7 @@
     "TEXT": [
       " NL champ:광폭화 자세를 취합니다.",
       " NL champ:수비 자세를 취합니다.",
-      "champ:검투사 자세를 취합니다 NL "
+      "champ:검투사 자세를 취합니다. NL "
     ]
   },
   "champ:RetainCardMod": {

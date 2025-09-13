@@ -87,7 +87,7 @@
       "ignite",
       "ignited"
     ],
-    "DESCRIPTION": "육각령을 둘러싼 유령불꽃에 아이콘으로 표시된 효과를 발동시킵니다."
+    "DESCRIPTION": "육각령을 둘러싼 유령불꽃을 지피며, 아이콘으로 표시된 효과를 발동시킵니다."
   },
   {
     "PROPER_NAME": "봉인",
@@ -131,7 +131,7 @@
       "작열",
       "searing"
     ],
-    "DESCRIPTION": "#y유령불꽃의 한 종류입니다. NL #y공격 카드를 2번 사용한다면 점화됩니다. #y점화 시 무작위 적에게 #y영혼화상을 #b4 부여합니다.",
+    "DESCRIPTION": "#y유령불꽃의 한 종류입니다. NL #y공격 카드를 2번 사용한다면 점화됩니다. #y점화 시 무작위 적에게 #y영혼화상을 #b6 부여합니다.",
     "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   },
   {
@@ -154,6 +154,7 @@
     "ID": "plated",
     "PROPER_NAME": "판금 갑옷",
     "NAMES": [
+      "판금",
       "판금_갑옷",
       "판금_갑옷을",
       "판금_갑옷과",

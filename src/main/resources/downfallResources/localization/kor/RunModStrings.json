@@ -1,19 +1,19 @@
-{
+﻿{
   "downfall:WorldOfGoo": {
     "NAME": "끈적이 천지",
     "DESCRIPTION": "막히지 않은 피해를 받을 때마다 점액투성이 상태이상을 버린 카드 더미에 넣고 섞습니다."
   },
   "downfall:Hexed": {
     "NAME": "육각으로",
-    "DESCRIPTION": "벨벳 초커를 가지고 시작합니다. 뽑은 카드에 휘발성 효과가 추가됩니다."
+    "DESCRIPTION": "벨벳 초커를 가지고 시작합니다. 뽑은 카드에 휘발성이 추가됩니다."
   },
   "downfall:Improvised": {
     "NAME": "즉흥적",
-    "DESCRIPTION": "미확인 카드를 10장 가진 채로 시작합니다."
+    "DESCRIPTION": "Unknown 카드를 10장 가진 채로 시작합니다."
   },
   "downfall:Jewelcrafting": {
     "NAME": "보석세공",
-    "DESCRIPTION": "복사한 보석 활용 2장과 광시곡의 곡괭이를 가진 채로 시작합니다."
+    "DESCRIPTION": "추가 보석 활용 2장과 광시곡의 곡괭이를 가진 채로 시작합니다."
   },
   "downfall:EvilRun": {
     "NAME": "악마의 도전",
@@ -37,7 +37,7 @@
   },
   "downfall:Analytical": {
     "NAME": "분석가",
-    "DESCRIPTION": "매 턴 시작 시 무작위 부호화 카드를 얻습니다. 그 카드에는 휘발성 효과가 추가됩니다. 시작 타격과 수비에 부호화 효과가 추가됩니다."
+    "DESCRIPTION": "매 턴 시작 시 무작위 부호화 카드를 얻습니다. 그 카드에는 휘발성이 추가됩니다. 시작 타격과 수비에 부호화 효과가 추가됩니다."
   },
   "downfall:StatusAbuse": {
     "NAME": "고장 수리",
@@ -49,7 +49,7 @@
   },
   "downfall:Wizzardry": {
     "NAME": "마아아법",
-    "DESCRIPTION": "마법사 모자, 마법사 지팡이, 복사한 마법 기술 1장을 가진 채 시작합니다."
+    "DESCRIPTION": "마법사 모자, 마법사 지팡이, 추가 마법 기술을 가진 채 시작합니다."
   },
   "downfall:TransformRewards": {
     "NAME": "변화됨",

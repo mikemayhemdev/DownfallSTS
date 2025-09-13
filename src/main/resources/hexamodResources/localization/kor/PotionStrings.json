@@ -1,4 +1,4 @@
-{
+﻿{
   "hexamod:SoulburnPotion": {
     "NAME": "화염병",
     "DESCRIPTIONS": [
@@ -9,7 +9,7 @@
   "hexamod:DoubleChargePotion": {
     "NAME": "가연성 가스",
     "DESCRIPTIONS": [
-      "#y활성화된 유령불꽃을 #b",
+      "현재 유령불꽃을 #b",
       " 번 #y점화합니다."
     ]
   },
@@ -26,7 +26,7 @@
     "DESCRIPTIONS": [
       "이번 전투 동안 유령불꽃 효과가 적 전체에게 #b1 번 적용됩니다.",
       "이번 전투 동안 유령불꽃 효과가 적 전체에게 #b",
-      " 적용됩니다."
+      " 번 적용됩니다."
     ]
   }
 }
