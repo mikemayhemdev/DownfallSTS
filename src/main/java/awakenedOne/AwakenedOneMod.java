@@ -44,6 +44,7 @@ import com.megacrit.cardcrawl.events.city.Nest;
 import com.megacrit.cardcrawl.events.exordium.GoldenWing;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
+import downfall.relics.BlackCandle;
 import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -298,6 +299,13 @@ public class AwakenedOneMod implements
         BaseMod.addRelic(new ShardOfNowak(), RelicType.SHARED); //uncommon shared
         BaseMod.addRelic(new MiniBlackHole(), RelicType.SHARED);//shop shared
         BaseMod.addRelic(new DeadBird(), RelicType.SHARED);//rare shared
+
+
+        //relic overrides
+        if (downfallMod.disableBaseGameAdjustments = false) {
+            BaseMod.addRelicToCustomPool(new AwakenedUrn(), AwakenedOneChar.Enums.AWAKENED_BLUE);
+            BaseMod.addRelicToCustomPool(new NerfedMummifiedHand(), AwakenedOneChar.Enums.AWAKENED_BLUE);
+        }
     }
 
     public void addPotions() {

@@ -1367,8 +1367,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         if (downfallMod.disableBaseGameAdjustments = false){
             BaseMod.addRelic(new BlackCandle(), RelicType.SHARED);
-            BaseMod.addRelicToCustomPool(new AwakenedUrn(), AwakenedOneChar.Enums.AWAKENED_BLUE);
-            BaseMod.addRelicToCustomPool(new NerfedMummifiedHand(), AwakenedOneChar.Enums.AWAKENED_BLUE);
         }
         addPotions();
     }
