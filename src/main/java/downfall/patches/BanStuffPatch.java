@@ -41,6 +41,7 @@ public class BanStuffPatch {
 
                 if (EvilModeCharacterSelect.evilMode || chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE) {
                     relicsToRemoveOnStart.add(BirdFacedUrn.ID);
+                    relicsToRemoveOnStart.add(MummifiedHand.ID);
                 }
             }
         }
