@@ -35,7 +35,7 @@
       "Il n'y a pas de force sans unité."
     ],
     "OPTIONS": [
-      "[Unification] Toutes les #gFrappes et #gDéfenses gagnent #gEncode.",
+      "[Unification] Toutes les #gFrappes et #gDéfenses gagnent #gEncode [REMOVE_SPACE].",
       "[Verrouillé] Requiert une Frappe ou une Défense."
     ]
   },

@@ -6,19 +6,19 @@
 
   "Gremlin:ArmsTheft": {
     "NAME": "Vol d'armes",
-    "DESCRIPTION": "gremlin:Volez !M! de Force. NL Épuisement."
+    "DESCRIPTION": "Appliquez !M! de Faiblesse. NL gremlin:Volez !M! de Force. NL Épuisement."
   },
 	
   "Gremlin:Astound": {
     "NAME": "Étonnement",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Si vous avez 3 de gremlin:Magie ou plus, ajoutez !M! Protections dans votre main.",
-    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Si vous avez 3 de gremlin:Magie ou plus, ajoutez !M! Protections Améliorées dans votre main."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Si vous avez 3 de gremlin:Magie ou plus, obtenez !M! *Protections.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Si vous avez 3 de gremlin:Magie ou plus, ajoutez !M! *Protections Améliorées."
   },
 
   "Gremlin:Bang": {
     "NAME": "Bang",
-    "DESCRIPTION": "Infligez !D! dégâts !M! fois. Ajoutez une copie de Wizzz dans votre défausse. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts !M! fois. Ajoutez une copie de Wizzz Améliorée dans votre défausse. NL Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. Ajoutez un *Wizzz dans votre défausse. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts !M! fois. Ajoutez un *Wizzz+ dans votre défausse. NL Épuisement."
   },
 
   "Gremlin:Bellow": {
@@ -28,7 +28,7 @@
 
   "Gremlin:BrokenShin": {
     "NAME": "Casse-tibias",
-    "DESCRIPTION": "Appliquez gremlin:Agonie pour toutes les !M! piles de Faiblesse que l'ennemi a. NL Épuisement."
+    "DESCRIPTION": "Appliquez de gremlin:l'Agonie pour toutes les !M! piles de Faiblesse que l'ennemi a. NL Épuisement."
   },
 
   "Gremlin:BubbleBarrier": {
@@ -38,7 +38,7 @@
 
   "Gremlin:BulkUp": {
     "NAME": "Gonflette",
-    "DESCRIPTION": "Gagnez !M! de PV Temporaires. NL gremlin:Permutez vers le gremlin:Gros_Diablotin."
+    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_Temporaires. NL gremlin:Permutez vers le gremlin:Gros_Diablotin."
   },
 
   "Gremlin:BurlyBlow": {
@@ -52,20 +52,19 @@
   },
 
   "Gremlin:Changeo": {
-    "NAME": "Change-o!",
+    "NAME": "Pouf !",
     "DESCRIPTION": "Gagnez !B! d'Armure et !M! de gremlin:Magie."
   },
 
   "Gremlin:CongaLine": {
-    "NAME": "Ligne de Conga",
-    "DESCRIPTION": "Au début de votre tour, gagnez [E] et gremlin:Permutez au prochain Diablotin.",
-    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, gagnez [E] et gremlin:Permutez au prochain Diablotin."
+    "NAME": "Chenille",
+    "DESCRIPTION": "Au début de votre tour, gagnez [E] et gremlin:Permutez vers le prochain Diablotin.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, gagnez [E] et gremlin:Permutez vers le prochain Diablotin."
   },
 
   "Gremlin:CounterStrike": {
-    "NAME": "Contre frappe",
-    "DESCRIPTION": "Infligez !D! dégâts. Si l'ennemi a l'intention d'attaquer, ajoutez !M! Protections dans votre main.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Si l'ennemi a l'intention d'attaquer, ajoutez !M! Protections Améliorées dans votre main."
+    "NAME": "Contre Frappe",
+    "DESCRIPTION": "Infligez !D! dégâts. Si l'ennemi a l'intention d'attaquer, déclenchez le Bonus du Diablotin actuel !M! fois."
   },
 
   "Gremlin:CowerChoice": {
@@ -77,16 +76,16 @@
   "Gremlin:CowerChoiceB": {
     "NAME": "Battre en retraite",
     "DESCRIPTION": "Perdez définitivement votre Diablotin le plus à l'arrière.",
-    "EXTENDED_DESCRIPTION": ["Bien. Vous pouvez dégager le reste !", "Ouais! Dégagez!"]
+    "EXTENDED_DESCRIPTION": ["Bien. Le reste, dégagez !", "Ouais! Dégagez !"]
   },
 
   "Gremlin:DaggerDance": {
-    "NAME": "Danse de dagues",
+    "NAME": "Danse des dagues",
     "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis !M! fois."
   },
 
   "Gremlin:Dazzle": {
-    "NAME": "Aveuglement",
+    "NAME": "Éblouissement",
     "DESCRIPTION": "Infligez !D! dégâts. NL Si vous avez 3 de gremlin:Magie ou plus, gremlin:volez 2 de Force. NL Épuisement."
   },
 
@@ -97,18 +96,18 @@
 
   "Gremlin:Duplicate": {
     "NAME": "Duplication",
-    "DESCRIPTION": "Créez !M! gremlin:Échos d'une Attaque de votre main. Ils coûtent 1 de moins. Épuisement.",
-    "UPGRADE_DESCRIPTION": "Créez !M! gremlin:Échos d'une Attaque de votre main. Ils coûtent 1 de moins."
+    "DESCRIPTION": "Choisissez une Attaque. Créez !M! gremlin:Échos de celle-ci. Ces Échos* coûtent 1 de moins. Épuisement.",
+    "UPGRADE_DESCRIPTION": "Choisissez une Attaque. Créez !M! gremlin:Échos de celle-ci. Ces Échos* coûtent 1 de moins."
   },
 
   "Gremlin:EdibleArmor": {
     "NAME": "Armure comestible",
-    "DESCRIPTION": "Convertissez votre Armure en PV temporaires."
+    "DESCRIPTION": "Convertissez votre Armure en expansioncontent:PV_Temporaires. Épuisement."
   },
 
   "Gremlin:Encore": {
     "NAME": "Encore",
-    "DESCRIPTION": "Gagnez 3 de gremlin:Magie. NL Lorsque vous consumez la gremlin:Magie, infligez !M! dégâts à TOUS les ennemis."
+    "DESCRIPTION": "Gagnez 3 de gremlin:Magie. NL La gremlin:Magie inflige !M! dégâts supplémentaires."
   },
 
   "Gremlin:Enthusiasm": {
@@ -122,19 +121,19 @@
   },
 
   "Gremlin:Exacerbate": {
-    "NAME": "Envenimement",
-    "DESCRIPTION": "Infligez !D! dégâts. gremlin:Paralysez l'ennemi. NL Épuisement."
+    "NAME": "Aggravation",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Lorsque vous appliquez de la Faiblesse à cet ennemi, celui-ci perd !M! PV. NL Épuisement."
   },
 
   "Gremlin:FairyDust": {
     "NAME": "Poudre féérique",
-    "DESCRIPTION": "Ajoutez !M! Protections dans votre main et piochez !M! cartes. NL Épuisement."
+    "DESCRIPTION": "Obtenez !M! *Protections et piochez !M! cartes. NL Épuisement."
   },
 
   "Gremlin:SleeveOfAces": {
     "NAME": "Manche d'As",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez 1 Surin dans votre main pour chaque pile de gremlin:Magie que vous avez.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez 1 Surin Amélioré dans votre main pour chaque pile de gremlin:Magie que vous avez."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Obtenez 1 Surin pour chaque pile de gremlin:Magie que vous avez.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Obtenez 1 Surin Amélioré pour chaque pile de gremlin:Magie que vous avez."
   },
 
   "Gremlin:FatGremlin": {
@@ -143,7 +142,7 @@
   },
 
   "Gremlin:FeelTheAudience": {
-    "NAME": "Sentir le public",
+    "NAME": "Sentir la foule",
     "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Gagnez 1 de !M! gremlin:Magie pour chaque ennemi qui a l'intention d'attaquer."
   },
 
@@ -155,7 +154,7 @@
 
   "Gremlin:FlipOut": {
     "NAME": "Pétage de plomb",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Lorsque vous gagnez de l'Armure ce tour, à la place infligez autant de dégâts à TOUS les ennemis."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Lorsque vous gagnez de l'Armure ce tour, infligez à la place autant de dégâts à TOUS les ennemis."
   },
 
   "Gremlin:Flurry": {
@@ -169,7 +168,7 @@
   },
 
   "Gremlin:FollowThrough": {
-    "NAME": "Jusqu'au bout",
+    "NAME": "Pour Le Chef !",
     "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez !M! de Force Temporaire."
   },
 
@@ -180,19 +179,20 @@
 
   "Gremlin:Glimmer": {
     "NAME": "Miroi-coup",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez 2 Protections dans votre main.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez 2 Protections Améliorées dans votre main."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Obtenez 2 *Protections.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Obtenez 2 *Protections Améliorées."
   },
 
   "Gremlin:GlitterGuard": {
     "NAME": "Garde scintillante",
-    "DESCRIPTION": "Ajoutez !M! Protections dans votre main. NL gremlin:Permutez vers le gremlin:Diablotin_à_Bouclier.",
-    "UPGRADE_DESCRIPTION": "Ajoutez !M! Protections Améliorées dans votre main. NL gremlin:Permutez vers le gremlin:Diablotin_à_Bouclier."
+    "DESCRIPTION": "Obtenez !M! *Protections. NL gremlin:Permutez vers le gremlin:Diablotin_à_Bouclier.",
+    "UPGRADE_DESCRIPTION": "Obtenez !M! *Protections Améliorées. NL gremlin:Permutez vers le gremlin:Diablotin_à_Bouclier."
   },
 
   "Gremlin:GremlinArms": {
     "NAME": "Aux armes !",
-    "DESCRIPTION": "Ajoutez un assortiment aléatoire de !M! Surins et Protections dans votre main."
+    "DESCRIPTION": "Déclenchez le bonus de votre Diablotin actuel, puis gremlin:Permutez vers un Diablotin vivant de votre choix.",
+    "UPGRADE_DESCRIPTION": "Déclenchez le bonus de votre Diablotin actuel deux fois, puis gremlin:Permutez vers un Diablotin vivant de votre choix."
   },
 
   "Gremlin:GremlinMeal": {
@@ -205,19 +205,19 @@
     "DESCRIPTION": "Infligez !D! dégâts. NL A un effet bonus selon le Diablotin que vous êtes.",
     "EXTENDED_DESCRIPTION": ["Infligez !D! dégâts",
     " à TOUS les ennemis.", ". NL L'ennemi perd !M! de Force ce tour.",
-    ". NL Gagnez !B! d'Armure.", ". NL Piochez !M! cartes.", ". NL Cette attaque ne consume pas de gremlin:Magie.", ". NL Gagnez !M! de Force."]
+    ". NL Gagnez !B! d'Armure.", ". NL Piochez !M! cartes.", ". NL Gagnez !M! de gremlin:Magie.", ". NL Gagnez !M! de Force."]
   },
 
   "Gremlin:GremlinOffensive": {
     "NAME": "Offensive malicieuse",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une Offensive malicieuse dans votre main. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une Offensive malicieuse Améliorée dans votre main. NL Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Obtenez une *Offensive *malicieuse. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Obtenez une *Offensive *malicieuse Améliorée. NL Épuisement."
   },
 
   "Gremlin:GremlinToss": {
     "NAME": "Lancer de diablotin",
-    "DESCRIPTION": "Infligez des dégâts égaux à votre Armure actuelle et vos PV Temporaires.",
-    "UPGRADE_DESCRIPTION": "Gagnez !M! PV Temporaires. NL Infligez des dégâts égaux à votre Armure actuelle et vos PV Temporaires.",
+    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_Temporaires. Infligez des dégâts égaux à votre Armure actuelle et vos *PV *Temporaires.",
+    "UPGRADE_DESCRIPTION": "Gagnez !M! expansioncontent:PV_Temporaires. NL Infligez des dégâts égaux à votre Armure actuelle et vos *PV *Temporaires.",
     "EXTENDED_DESCRIPTION": [" NL (Infligez !D! dégâts.)"]
   },
 
@@ -228,18 +228,18 @@
 
   "Gremlin:Heckle": {
     "NAME": "Chahut",
-    "DESCRIPTION": "Lorsque vous appliquez un débuff à un ennemi, gagnez !M! PV Temporaires."
+    "DESCRIPTION": "Lorsque vous appliquez un débuff à un ennemi, gagnez !M! expansioncontent:PV_Temporaires."
   },
 
   "Gremlin:InfiniteBlocks": {
     "NAME": "Armure infinie",
-    "DESCRIPTION": "Au début de votre tour, ajoutez une Protection dans votre main.",
-    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, ajoutez une Protection dans votre main."
+    "DESCRIPTION": "Au début de votre tour, obtenez une *Protection.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, obtenez une *Protection."
   },
 
   "Gremlin:IrksomeBlow": {
     "NAME": "Coup fâcheux",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Coup fâcheux est affecté par la Force !M! fois."
+    "DESCRIPTION": "Infligez !D! dégâts. NL La Force affecte cette carte !M! fois."
   },
 
   "Gremlin:Irritability": {
@@ -249,17 +249,17 @@
 
   "Gremlin:Jeer": {
     "NAME": "Raillerie",
-    "DESCRIPTION": "Infligez !D! dégâts. Si l'ennemi a un débuff, gagnez !M! PV Temporaires."
+    "DESCRIPTION": "Infligez !D! dégâts. Si l'ennemi a un débuff, gagnez !M! expansioncontent:PV_Temporaires."
   },
 
   "Gremlin:Kablamo": {
     "NAME": "Kablamo!",
-    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Cette attaque ne consume pas de gremlin:Magie."
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis deux fois. NL Cette attaque ne consume pas de gremlin:Magie."
   },
 
   "Gremlin:LeaderChoice": {
     "NAME": "Faire un choix",
-    "DESCRIPTION": "Abandonnez votre ami?"
+    "DESCRIPTION": "Abandonner votre ami ?"
   },
 
   "Gremlin:MadGremlin": {
@@ -286,50 +286,50 @@
 
   "Gremlin:Nob": {
     "NAME": "NOB",
-    "DESCRIPTION": "Gagnez !M! PV Temporaires. NL Mutez-vous en Diablotin Gremlin Nob jusqu'à ce que vous n'avez plus de PV Temporaires."
+    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_Temporaires. NL Transformez-vous en Diablotin Nob jusqu'à ce que vous n'avez plus de *PV *Temporaires."
   },
 
   "Gremlin:NobChoice": {
     "NAME": "Faire un choix",
-    "DESCRIPTION": "Diablos chétifs donner Or?"
+    "DESCRIPTION": "Diablos chétifs donner Or ?"
   },
 
   "Gremlin:PartyStick": {
     "NAME": "Bâton de joie",
-    "DESCRIPTION": "Injouable. NL Lorsque vous gremlin:Permutez alors que cette carte est dans votre main, gagnez [E]",
-    "UPGRADE_DESCRIPTION": "Injouable. NL Lorsque vous gremlin:Permutez alors que cette carte est dans votre main, gagnez [E] [E]",
+    "DESCRIPTION": "Éthérée. Injouable. NL Lorsque vous gremlin:Permutez, gagnez [E]",
+    "UPGRADE_DESCRIPTION": "Injouable. NL Lorsque vous gremlin:Permutez, gagnez [E]",
     "EXTENDED_DESCRIPTION": ["Personne n'est autorisé de jouer avec le Bâton de Joie."]
   },
 
   "Gremlin:Patsy": {
     "NAME": "Bouc émissaire",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL gremlin:Permutez au prochain Diablotin."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL gremlin:Permutez vers le prochain Diablotin."
   },
 
   "Gremlin:Pickpocket": {
     "NAME": "Pickpocket",
-    "DESCRIPTION": "gremlin:Volez tout l'Artéfact de l'ennemi. NL Infligez !D! dégâts. NL Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez !M! d'Or. NL Épuisement."
   },
 
   "Gremlin:PinNeedle": {
     "NAME": "Aiguille d'épingle",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Mélangez !M! Piqûre d'aiguille dans votre pioche. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Mélangez !M! Piqûre d'aiguille Améliorées dans votre pioche. NL Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts. NL bronze:Insérez !M! *Piqûres *d'épingles. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL bronze:Insérez !M! *Piqûres *d'épingles Améliorées. NL Épuisement."
   },
 
   "Gremlin:Pinprick": {
     "NAME": "Piqûre d'épingle",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Piochez une carte. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Lorsque vous piochez cette carte, ajoutez un gremlin:Évcho de celle-ci dans votre main. NL Infligez !D! dégâts. NL Piochez une carte . NL Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Piochez une carte. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Lorsque vous piochez cette carte, obtenez un gremlin:Écho de celle-ci. NL Infligez !D! dégâts. NL Piochez une carte. NL Épuisement."
   },
 
   "Gremlin:Polish": {
     "NAME": "Polissage",
-    "DESCRIPTION": "Les Surins infligent !M! dégâts supplémentaires. NL Les protections donnent !M! d'Armure supplémentaire."
+    "DESCRIPTION": "Les Surins infligent !M! dégâts supplémentaires. NL Les *Protections donnent !M! d'Armure supplémentaire."
   },
 
   "Gremlin:PourSalt": {
-    "NAME": "Ajouter du sel",
+    "NAME": "Grain de sel",
     "DESCRIPTION": "Infligez !D! dégâts. Si l'ennemi est Affaibli, retirez une pile de celle-ci et ajoutez !M! Surins dans votre main."
   },
 
@@ -340,7 +340,7 @@
 
   "Gremlin:Pretaliation": {
     "NAME": "Représailles",
-    "DESCRIPTION": "Infligez !D! dégâts si l'ennemi a l'intention d'attaquer. NL Infligez !blamage! dégâts sinon."
+    "DESCRIPTION": "Infligez !D! dégâts deux fois. NL L'ennemi vous attaque pour !M! dégâts."
   },
 
   "Gremlin:ProperTools": {
@@ -351,7 +351,7 @@
   "Gremlin:RageBreak": {
     "NAME": "Crise de rage",
     "DESCRIPTION": "Doublez votre Force. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Doublez votre Force."
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Doublez votre Force. NL Épuisement."
   },
 
   "Gremlin:Raid": {
@@ -367,7 +367,7 @@
 
   "Gremlin:Rhythm": {
     "NAME": "Rythme",
-    "DESCRIPTION": "gremlin:Permutez au prochain Diablotin. NL Récupérez une carte Basique de votre pioche. Elle coûte 0 ce tour."
+    "DESCRIPTION": "gremlin:Permutez vers le prochain Diablotin. NL Récupérez une carte Basique de votre pioche. Elle coûte 0 ce tour."
   },
 
   "Gremlin:Rush": {
@@ -376,14 +376,14 @@
   },
 
   "Gremlin:Scatter": {
-    "NAME": "Dispersez-vous!",
-    "DESCRIPTION": "La prochaine fois que vous perdez des PV, à la place gremlin:Permutez au Diablotin suivant. NL Épuisement."
+    "NAME": "Dispersion !",
+    "DESCRIPTION": "La prochaine fois que vous perdez des PV, à la place gremlin:Permutez vers le Diablotin suivant. NL Épuisement."
   },
 
   "Gremlin:SecondVolley": {
     "NAME": "Seconde salve",
-    "DESCRIPTION": "Infligez !D! dégâts. Ajoutez un Surin dans votre main pour chaque carte jouée ce tour.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Ajoutez un Surin Amélioré dans votre main pour chaque carte jouée ce tour.",
+    "DESCRIPTION": "Infligez !D! dégâts. Obtenez un Surin pour chaque carte jouée ce tour, ou jusqu'à ce que votre main soit pleine.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. Obtenez un Surin Amélioré pour chaque carte jouée ce tour, ou jusqu'à ce que votre main soit pleine.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " carte jouée.)",
@@ -393,13 +393,13 @@
 
   "Gremlin:ShadowShiv": {
     "NAME": "Surin obscur",
-    "DESCRIPTION": "Lorsque vous jouez une Attaque qui ne s'Épuise pas, ajoutez un Surin dans votre main."
+    "DESCRIPTION": "Lorsque vous jouez une Attaque qui ne s'Épuise pas, obtenez un Surin."
   },
 
   "Gremlin:ShankStone": {
-    "NAME": "Tige et pierre",
-    "DESCRIPTION": "Injouable. NL Lorsque vous piochez cette carte, ajoutez !M! Surins dans votre main.",
-    "EXTENDED_DESCRIPTION": ["I can't play this card."]
+    "NAME": "Pierre d’estoc",
+    "DESCRIPTION": "Injouable. NL Lorsque vous piochez cette carte, obtenez !M! Surins.",
+    "EXTENDED_DESCRIPTION": ["Je ne peux pas jouer cette carte."]
   },
 
   "Gremlin:SharpenBlades": {
@@ -409,7 +409,7 @@
   },
 
   "Gremlin:ShieldGremlin": {
-    "NAME": "Shield Gremlin",
+    "NAME": "Diablotin à bouclier",
     "DESCRIPTION": "gremlin:Permutez vers le gremlin:Diablotin_à_Bouclier."
   },
 
@@ -427,7 +427,7 @@
 
   "Gremlin:SkullBash": {
     "NAME": "Briser le crâne",
-    "DESCRIPTION": "Éthérée. NL Infligez !D! dégâts. NL Appliquez !M! Vulnerabilité. NL Épuisement."
+    "DESCRIPTION": "Éthérée. NL Infligez !D! dégâts. NL Appliquez !M! de Vulnerabilité. NL Épuisement."
   },
 
   "Gremlin:SneakyGremlin": {
@@ -447,13 +447,13 @@
 
   "Gremlin:SupplyScrollCard": {
     "NAME": "Parchemin d'équipement",
-    "DESCRIPTION": "Ajoutez un assortiment aléatoire de 4 Surins et Protections dans votre main. NL Épuisement."
+    "DESCRIPTION": "Obtenez un assortiment aléatoire de !M! Surins et *Protections. NL Épuisement."
   },
 
   "Gremlin:Tadah": {
     "NAME": "Tada!",
-    "DESCRIPTION": "Ajoutez un gremlin:Écho d'une Compétence aléatoire. NL gremlin:Permutez vers le gremlin:Diablotin_Sorcier.",
-    "UPGRADE_DESCRIPTION": "Ajoutez un gremlin:Écho d'une Compétence aléatoire. Elle coûte 1 de moins. NL gremlin:Permutez vers le gremlin:Diablotin_Sorcier."
+    "DESCRIPTION": "Obtenez une *Protection. NL gremlin:Permutez vers le gremlin:Diablotin_Sorcier.",
+    "UPGRADE_DESCRIPTION": "Obtenez une *Protection améliorée. NL gremlin:Permutez vers le gremlin:Diablotin_Sorcier."
   },
 
   "Gremlin:TagTeam": {
@@ -474,13 +474,13 @@
 
   "Gremlin:TwistTheKnife": {
     "NAME": "Poignard tordu",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez 1 Surin dans votre main.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez 1 Surin Amélioré dans votre main."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Obtenez 1 Surin.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Obtenez 1 Surin Amélioré."
   },
 
   "Gremlin:ToeStub": {
     "NAME": "Coup à l'orteil",
-    "DESCRIPTION": "Infligez !D! dégâts. Si l'ennemi est Affaibli, appliquez !M! Vulnérabilité."
+    "DESCRIPTION": "Infligez !D! dégâts. Si l'ennemi est Affaibli, appliquez !M! de Vulnérabilité."
   },
 
   "Gremlin:Unforgiving": {
@@ -495,8 +495,8 @@
 
   "Gremlin:Whiz": {
     "NAME": "Wizzz",
-    "DESCRIPTION": "Gagnez !M! de gremlin:Magie. Au prochain tour, ajoutez Bang dans votre main. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Gagnez !M! de gremlin:Magie. Au prochain tour, ajoutez Bang Améliorée dans votre main. NL Épuisement."
+    "DESCRIPTION": "Gagnez !M! de gremlin:Magie. Au prochain tour, obtenez un *Bang. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Gagnez !M! de gremlin:Magie. Au prochain tour, obtenez un *Bang Amélioré. NL Épuisement."
   },
 
   "Gremlin:Wizardry": {

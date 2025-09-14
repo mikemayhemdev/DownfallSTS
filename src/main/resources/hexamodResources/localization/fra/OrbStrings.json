@@ -2,63 +2,63 @@
   "hexamod:SearingGhostflame": {
     "NAME": "Feu Follet Incinérateur",
     "DESCRIPTION": [
-      "#yEnflammé. ",
+      "#yEnflammé [REMOVE_SPACE]. ",
 	  "Est #yEnflammé lorsque #b" ,
 	  " #yAttaque est jouée.",
 	  " #yAttaques sont jouées.",
 	  "Est #yEnflammé lorsque 2 #b2 #yAttaques sont jouées pendant que vous êtes sur celui-ci.",
-	  " NL NL #yInflammation: Appliquez #b",
+	  " NL NL #yInflammation [REMOVE_SPACE]: Appliquez #b",
 	  " de #yBrûlure à un ennemi aléatoire.",
-	  " NL NL À la fin de votre tour, si ceci est #yEnflammé, #yAvancez au prochain Feu Follet."
+	  " NL NL À la fin de votre tour, si ceci est #yEnflammé [REMOVE_SPACE], #yAvancez au prochain Feu Follet."
     ]
   }, 
   "hexamod:CrushingGhostflame": {
-    "NAME": "Feu Follet Écrasent",
+    "NAME": "Feu Follet Écrasant",
     "DESCRIPTION": [
-      "#yEnflammé. ",
+      "#yEnflammé [REMOVE_SPACE]. ",
 	  "Est #yEnflammé lorsque #b" ,
 	  " #yCompétence est jouée.",
 	  " #yCompétences sont jouées.",
-	  "Est #yEnflammé lorsque #b2 #yCompétences sont jouées pendant que vous êtes sur celui-ci.",
-	  " NL NL #yInflammation: Infligez #b",
+	  "#yS'enflamme lorsque #b2 #yCompétences sont jouées pendant que vous êtes sur celui-ci.",
+	  " NL NL #yInflammation [REMOVE_SPACE]: Infligez #b",
 	  " dégâts à un ennemi aléatoire.",
-		" NL NL À la fin de votre tour, si ceci est #yEnflammé, #yAvancez au prochain Feu Follet."
+		" NL NL À la fin de votre tour, si ceci est #yEnflammé [REMOVE_SPACE], #yAvancez au prochain Feu Follet."
     ]
   },
   "hexamod:BolsteringGhostflame": {
     "NAME": "Feu Follet Renforceur",
     "DESCRIPTION": [
-      "#yEnflammé. ",
+      "#yEnflammé [REMOVE_SPACE]. ",
 	  "Est #yEnflammé lorsqu'un #yPouvoir est joué.",
 	  "Est #yEnflammé lorsqu'un #yPouvoir est joué pendant que vous êtes sur celui-ci.",
-	  " NL NL #yInflammation: Gagnez #b",
+	  " NL NL #yInflammation [REMOVE_SPACE]: Gagnez #b",
 	  " #yd'Armure et #b1 de #yForce.",
-		" NL NL À la fin de votre tour, si ceci est #yEnflammé, #yAvancez au prochain Feu Follet."
+		" NL NL À la fin de votre tour, si ceci est #yEnflammé [REMOVE_SPACE], #yAvancez au prochain Feu Follet."
     ]
   },
     "hexamod:InfernoGhostflame": {
     "NAME": "Feu Follet Infernal",
     "DESCRIPTION": [
-      "#yEnflammé. S'éteindra à la fin de chaque tour. ",
+      "#yEnflammé [REMOVE_SPACE]. S'éteindra à la fin de chaque tour. ",
 	  "Est #yEnflammé lorsque vous dépensez [E] [E] [E] .",
 	  "Est #yEnflammé lorsque vous dépensez [E] [E] .",
 	  "Est #yEnflammé lorsque vous dépensez [E] .",
 	  "Error. Please report to mod dev: ",
 	  "Est #yEnflammé lorsque vous dépensez [E] [E] [E] pendant que vous êtes sur celui-ci. S'éteindra à la fin de chaque tour.",
 	  " NL NL #yInflammation: Infligez #b",
-	  " dégâts à un ennemi aléatoire pour chaque #yFeu #yFollet #yEnflammé, puis #yÉteignez-les. si tous les feu follet etait #yEnflammé, gagnez #b2 #yIntensité.",
-	  " NL NL À la fin de votre tour, si ceci est #yEnflammé, #yAvancez au prochain Feu Follet."
+	  " dégâts à un ennemi aléatoire pour chaque #yFeu #yFollet #yEnflammé [REMOVE_SPACE], puis #yÉteignez-les. Si tous les Feux Follets sont #yEnflammés [REMOVE_SPACE], gagnez #b2 #yIntensité [REMOVE_SPACE].",
+	  " NL NL À la fin de votre tour, si ceci est #yEnflammé [REMOVE_SPACE], #yAvancez au prochain Feu Follet."
     ]
   }, 
   "hexamod:MayhemGhostflame": {
     "NAME": "Feu Follet Chaotique",
     "DESCRIPTION": [
-      "#yEnflammé. ",
+      "#yEnflammé [REMOVE_SPACE]. ",
 	  "Est #yEnflammé lorsque vous terminez votre tour.",
 	  "Est #yEnflammé lorsque vou terminez votre tour sur celui-ci.",
-	  " NL NL #yInflammation: #yScrutez #b.",
-	  " puis jouez la carte au dessus de la pioche.",
-		" NL NL À la fin de votre tour, si ceci est #yEnflammé, #yAvancez au prochain Feu Follet."
+	  " NL NL #yInflammation [REMOVE_SPACE]: #yScrutez #b.",
+	  " puis jouez la carte au dessus de la pioche, modifié par #yl'Intensité [REMOVE_SPACE].",
+		" NL NL À la fin de votre tour, si ceci est #yEnflammé [REMOVE_SPACE], #yAvancez au prochain Feu Follet."
     ]
   }
 }

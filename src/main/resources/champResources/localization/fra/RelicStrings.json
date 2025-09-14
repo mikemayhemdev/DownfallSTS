@@ -3,93 +3,108 @@
     "NAME": "Couronne du champion",
     "FLAVOR": "VOUS ÊTES LE GAGNANT!",
     "DESCRIPTIONS": [
-      "Au début du combat, entrez en Pose #bDéfensive ou en Pose du #rDestructeur"
+      "Une fois par combat, vous pouvez entrer dans une #yPose dans laquelle vous n'êtes pas actuellement."
     ]
   },
   "champ:BlackKnightHelmet": {
     "NAME": "Casque du Chevalier noir",
     "FLAVOR": "Seulement une petite blessure.",
     "DESCRIPTIONS": [
-      "La première fois que vous adoptez une Pose chaque combat: NL #bDéfensive: Gagnez 2 de Dextérité, Perdez 1 de Force. NL #rDestructeur: Gagnez 2 de Force, Perdez 1 de Dextérité."
+      "La première fois que vous adoptez une #yPose chaque combat: NL #bchamp:Défensive: Gagnez 2 de Dextérité, Perdez 1 de Force [REMOVE_SPACE]. NL #rchamp:Destructeur: Gagnez 2 de Force, Perdez 1 de Dextérité [REMOVE_SPACE]."
     ]
   },
   "champ:Barbells": {
     "NAME": "Haltères",
     "FLAVOR": "1000 pompes ? Pff. Je peux en faire 1001.",
     "DESCRIPTIONS": [
-      "Lorsque vous êtes dans un feu de camp, si vous avez au moins #b10 cartes non-Améliorées dans votre deck, #yAméliorez-en une aléatoirement."
+      "Lorsque vous êtes dans un feu de camp, si vous avez au moins #b", 
+      "cartes non-Améliorées dans votre deck, #yAméliorez-en une aléatoirement."
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
     "NAME": "Guide du Destructeur",
     "FLAVOR": "Le texte est illisible.",
     "DESCRIPTIONS": [
-      "Au début de votre tour, gagnez #b3 de Vigueur."
+      "Au début de votre tour, gagnez #b",
+      "de Vigueur [REMOVE_SPACE]."
     ]
   },
   "champ:ChampionCrownUpgraded": {
     "NAME": "Couronne du victorieux",
     "FLAVOR": "Félissitations!! Vous êtes le plus grand vainqueur.",
     "DESCRIPTIONS": [
-      "Remplace la #rCouronne #rdu #rChampion. NL Commencez chaque combat en #yPose #yUltime, qui dure pendant #b2 tours."
+      "Remplace ",
+      " [REMOVE_SPACE]. NL La prochaine fois que vous jouez un champ:Finisher à chaque tour, piochez #b",
+      " cartes et entrez dans une #yPose aléatoire."
     ]
   },
   "champ:DefensiveTrainingManual": {
     "NAME": "Thèse défensive",
     "FLAVOR": "Pro tip: Ne vous faites pas toucher.",
     "DESCRIPTIONS": [
-      "Le #yBonus de #yFinisher de la Pose Défensive donne #b5 #yd'Armure supplémentaire."
+      "Le #yBonus de #ychamp:Finisher de la #bPose #bchamp:Défensive donne #b",
+      "#yd'Armure supplémentaire."
     ]
   },
   "champ:DeflectingBracers": {
     "NAME": "Bracelets déflecteurs",
     "FLAVOR": "Si vous pensiez que se protéger était bien...",
     "DESCRIPTIONS": [
-      "Au début de votre tour, gagnez du #ychamp:Contre équivalent à l'Armure que vous avez perdu."
+      "Au début de votre tour, gagnez du #ychamp:Contre équivalent à la moitié de l'Armure expirée [REMOVE_SPACE]."
     ]
   },
   "champ:DuelingGlove": {
     "NAME": "Gants de duel",
     "FLAVOR": "Comptez à partir de dix...",
     "DESCRIPTIONS": [
-      "Après avoir utilisé une #yAttaque à cible unique, si la cible n'était pas #yVulnérable, appliquez #b1 de #yVulnérabilité."
+      "Après avoir utilisé une #yAttaque à cible unique [REMOVE_SPACE], si la cible n'était pas #yVulnérable [REMOVE_SPACE], appliquez #b1 de #yVulnérabilité [REMOVE_SPACE]."
     ]
   },
   "champ:FightingForDummies": {
     "NAME": "Combattre pour les Nuls",
     "FLAVOR": "Étape 1. Battre l'ennemi",
     "DESCRIPTIONS": [
-      "Si vous terminez votre tour dans aucune #yPose, gagnez 6 d'Armure."
+      "Si vous terminez votre tour dans aucune #yPose [REMOVE_SPACE], piochez #b1 carte supplémentaire au prochain tour."
     ]
   },
   "champ:GladiatorsBookOfMartialProwess": {
     "NAME": "Manuel de gladiateur",
     "FLAVOR": "Essayez tout - quelque chose marchera sûrement.",
     "DESCRIPTIONS": [
-      "Lorsque vous jouez un #yCombo, un #yFinisher, et que vous entrez dans une #yPose dans le même tour, gagnez #b1 de #yForce et de #yDextérité."
+      "Lorsque vous jouez un #yCombo [REMOVE_SPACE], un #yFinisher [REMOVE_SPACE], et que vous adoptez une #yPose dans le même tour, gagnez #b1 de #yForce et de #yDextérité [REMOVE_SPACE]."
     ]
   },
   "champ:PowerArmor": {
     "NAME": "Armure de Puissance",
     "FLAVOR": "Achetée d'occasion.",
     "DESCRIPTIONS": [
-      "Au début de votre tour, gagnez [E]. NL Votre #Vigueur et votre #Contre maximum est de #b30."
+      "Au début de votre tour, gagnez [E]. NL Votre #Vigueur et votre #Contre maximum est de #b",
+      "[REMOVE_SPACE]."
+    ]
+  },
+  "champ:RageAmulet": {
+    "NAME": "Amulette d'inflexibilité",
+    "FLAVOR": "Une force que l'on croyait éphémère vous envahit comme si elle avait toujours été là.",
+    "DESCRIPTIONS": [
+      "Chaque fois que vous dépensez de la #yVigueur [REMOVE_SPACE], gagnez #b1 de #yForce tous les #b",
+      " de #yVigueur dépensés."
     ]
   },
   "champ:SignatureFinisher": {
     "NAME": "Attaque Signature",
     "FLAVOR": "Et maintenant, il est l'heure d'utiliser mon ATTAQUE LA PLUS PUISSANTE!",
     "DESCRIPTIONS": [
-      "Lorsque vous la récupérez, choisisssez un #yFinisher. Ce #yFinisher coûte 0, peut être utilisée sans être dans une #yPose, et ne fait plus quitter votre #yPose.",
+      "Lorsque vous la récupérez, choisisssez un #yFinisher [REMOVE_SPACE]. Ce #yFinisher coûte 0 [REMOVE_SPACE], peut être utilisée sans être dans une #yPose [REMOVE_SPACE], et ne fait plus quitter votre #yPose.",
       "Choisissez une carte pour ",
-      " coûte 0, peut être utilisée sans être dans une #yPose, et ne fait plus quitter votre #yPose."
+      " coûte 0 [REMOVE_SPACE], peut être utilisée sans être dans une #yPose [REMOVE_SPACE], et ne fait plus quitter votre #yPose.",
+      "La carte attachée à cette relique a été #rretirée de votre deck, cette relique ne fonctionne plus dorénavant."
     ]
   },
   "champ:SpectersHand": {
     "NAME": "Main de spectre",
     "FLAVOR": "Certaines victoires restent avec vous.",
     "DESCRIPTIONS": [
-      "Lorsque vous Adoptez une Pose, ajoutez une #yFrappe ou une #yDéfense dans votre main. Elle coûte #b0 et a #yÉpuisement."
+      "Lorsque vous Adoptez une Pose [REMOVE_SPACE], ajoutez une #yFrappe ou une #yDéfense dans votre main [REMOVE_SPACE]. Elle coûte #b0 et a #yÉpuisement [REMOVE_SPACE]."
     ]
   },
   "champ:LiftRelic": {
@@ -97,14 +112,21 @@
     "FLAVOR": "Il s'agit de l'épée gigantesque dans ton coeur.",
     "DESCRIPTIONS": [
       "Commencez chaque combat avec #b",
-      " de #yForce."
+      " de #yForce [REMOVE_SPACE]."
     ]
   },
   "champ:ChampStancesModRelic": {
     "NAME": "New Challenger",
     "FLAVOR": "Réussirez-vous à prendre la Couronne?",
     "DESCRIPTIONS": [
-      "Commencez chaque combat dans une #yPose aléatoire du Champion."
+      "Commencez chaque combat dans une #yPose aléatoire du Champion [REMOVE_SPACE]."
+    ]
+  },
+  "champ:BustedCrownGagText": {
+    "NAME": "Couronne fêlée",
+    "FLAVOR": "L'imitation est la forme la plus sincère de flatterie... ou pas ? Elle ne ressemble même pas à votre couronne. En réalité, c'est assez insultant.",
+    "DESCRIPTIONS": [
+      "Au début de chaque tour, gagnez [E]. Aux écrans de sélection de cartes, vous disposez de 2 cartes de moins parmi lesquelles choisir."
     ]
   }
 }

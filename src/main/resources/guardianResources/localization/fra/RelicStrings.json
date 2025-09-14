@@ -3,27 +3,37 @@
     "NAME": "Engrenage de bronze",
     "FLAVOR": "De la protection lorsque vous en avez le plus besoin.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, obtenez #yEngrenage NL Le Gardien commence la run avec une #yGemme commune aléatoire."    ]
+      "Au début de chaque combat, obtenez #yEngrenage [REMOVE_SPACE]. NL Le Gardien commence l'aventure avec une #yGemme commune aléatoire."    ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "Engrenage de gardien",
     "FLAVOR": "Remplacez ceci tous les 3,000 étages.",
     "DESCRIPTIONS": [
-      "Remplace #rEngrenage #rde #rBronze. NL Commencez chaque combat en #yguardianmod:Mode_Défensif, qui persiste pour #b3 tours."
+      "Remplace",
+      "[REMOVE_SPACE]. Au début de chaque combat, obtenez #yEngrenage [REMOVE_SPACE]. Lorsque vous entrez en #yMode #yDéfensif [REMOVE_SPACE], gagnez [E] et piochez #b2 cartes."
     ]
+  },
+  "Guardian:ObsidianScales": {
+    "NAME": "Écailles d'obsidienne",
+    "FLAVOR": "Tâchez le ciel de noir avec votre sang. Ripostez contre tous ceux qui vous ont attaqué.",
+    "DESCRIPTIONS": [
+      "Au début du combat, gagnez #b",
+      " #yd'Épines [REMOVE_SPACE]. Lorsque vous êtes ou subissez un débuff, gagnez #b",
+      " #yd'Épines [REMOVE_SPACE]."
+    ]  
   },
   "Guardian:DefensiveModeMoreBlock": {
     "NAME": "Plaque royale de Baalor",
     "FLAVOR": "On n'a jamais assez d'Armure.",
     "DESCRIPTIONS": [
-      "Lorsque vous #yguardianmod:Renforcez, #yRenforcez 1 de plus."
+      "Lorsque vous #yguardianmod:Renforcez, #yRenforcez 1 fois de plus."
     ]
   },
   "Guardian:guardianmod:GemCopier": {
     "NAME": "Gobelet de pierres précieuses",
     "FLAVOR": "Seules les plus pures feront l'affaire.",
     "DESCRIPTIONS": [
-      "Lorsque vous jouez une #yguardianmod:Gemme , jouez une copie de celle-ci."
+      "Lorsque vous jouez une #yguardianmod:Gemme [REMOVE_SPACE], jouez une copie de celle-ci."
     ]
   },
   "Guardian:PocketSentry": {
@@ -37,19 +47,19 @@
     "NAME": "Sacoche de gemmes",
     "FLAVOR": "Ooh... brillant!",
     "DESCRIPTIONS": [
-      "Lorsque vous la récupérez, ajoutez #b5 #yguardianmod:Gemmes aléatoires dans votre deck."
+      "Lorsque vous la récupérez, vous pouvez ajouter jusqu'à #b5 #yguardianmod:Gemmes aléatoires dans votre deck."
     ]
   },
   "Guardian:StasisCodex": {
     "NAME": "Codex de Pilote",
     "FLAVOR": "Des designs et des diagrammes des premiers prototypes à commande manuelle de la Tour, par le maître pilote David.",
     "DESCRIPTIONS": [
-      " Si vous n'avez pas de carte en #yguardianmod:Stase à la fin de votre tour, choisissez-en #b1 parmi #b3 cards à placer en #yguardianmod:Stase."
+      "À la fin de vos 3 premiers tours, si vous n'avez pas de carte en #yguardianmod:Stase à la fin de votre tour, choisissez-en #b1 parmi #b3 cards à placer en #yguardianmod:Stase."
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
-    "NAME": "Tiny Police Box",
-    "FLAVOR": "It's bigger on the inside...",
+    "NAME": "Cabine temporelle minuscule",
+    "FLAVOR": "C'est plus grand à l'intérieur...",
     "DESCRIPTIONS": [
       "Commencez chaque combat avec #b2 emplacements de #yguardianmod:Stase supplémentaires."
     ]
@@ -58,7 +68,7 @@
     "NAME": "Drones errants",
     "FLAVOR": "Ces drones trouvent les meilleures pièces de récupération, mais requiert de la puissance pour se maintenir.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, perdez #b2 emplacements de #yguardianmod:Stase. NL Gagnez [E] au début de votre tour."
+      "Au début de chaque combat, perdez #b1 emplacement de #yguardianmod:Stase. NL Gagnez [E] au début de votre tour."
     ]
   },
   "Guardian:StasisUpgradeRelic": {
@@ -86,12 +96,13 @@
       "Lorsque vous la récupérez, choisissez une carte. Commencez chaque combat avec cette carte retirée de votre deck. Au début du #b4e tour, remettez #b2 copies de cette carte dans votre main.",
       "Choisissez une carte pour ",
       "Commencez chaque combat avec ",
-      " retirée de vootre deck. Au début du #b4e tour, remettez #b2 copies de celle-ci dans votre main."
+      " retirée de votre deck. Au début du #b4e tour, remettez #b2 copies de celle-ci dans votre main.",
+      "La carte attachée à cette relique a été #rretirée du deck, cette relique ne fonctionne plus."
     ]
   },
   "Guardian:TickHelperRelic": {
     "NAME": "Cooling Fluid",
-    "FLAVOR": "Hazardous. Do not consume.",
+    "FLAVOR": "Dangereux. Ne pas ingérer.",
     "DESCRIPTIONS": [
       "Start each combat with #b2 additional #yguardianmod:Stasis slots. NL When a card enters #yguardianmod:Stasis, increase its turn counter by #b2."
     ]
@@ -100,7 +111,7 @@
     "NAME": "Pioche de chez Rhapsody",
     "FLAVOR": "Avec toutes les pierres précieuses qui jonchent la Tour, il est difficile d'imaginer que quelqu'un soit si malchanceux qu'il ait eu besoin de cette pioche pour l'aider.",
     "DESCRIPTIONS": [
-      "Vous pouvez désormais #gMiner pour récupérer #b2 #yguardianmod:Gemmes aux feux de camp (jusqu'à #b3 fois)."
+      "Lorsque vous battez un ennemi d'Élite, ajoutez une #yguardianmod:Gemme aléatoire parmi les récompenses."
     ]
   },
   "Guardian:GemstoneGun": {
@@ -108,7 +119,7 @@
     "FLAVOR": "Pan! Pan! Pan! Hé, J'en ai eu trois!",
     "DESCRIPTIONS": [
       "Quand vous le prenez, choisissez #b3 #yguardianmod:Gemmes. Au début de chaque combat, obtenez une carte avec Retenue, Épuisement et a ces trois Gemmes encastrées.",
-      "Choose a Gem to load the Gem Gun."
+      "Choisissez une Gemme à recharger dans le Fusil à gemme."
     ]
   },
   "Guardian:BottledAnomaly": {

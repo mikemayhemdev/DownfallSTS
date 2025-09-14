@@ -39,6 +39,7 @@
   },
   "downfall:Unlock": {
     "TEXT": [
+      " (Les victoires de l'Acte 4 ne comptent pas)",
       "Ce personnage se déverouille en complétant une run avec le Parrain Slime.",
       "Ce personnage se déverouille en complétant une run avec le 2ème vilain.",
       "Ce personnage se déverouille en complétant une run avec le Gardien.",
@@ -49,10 +50,11 @@
       "Ce personnage se déverouille en complétant une run avec le 5ème vilain.",
       "Ce personnage se déverouille en complétant une run avec l'Automate.",
       "Ce personnage se déverouille en complétant une run avec le 6ème vilain.",
-      "Ce personnage se déverouille en complétant une run avec les Diablotins.",
-      " (Les victoires de l'Acte 4 ne comptent pas)",
-      "This character is unlocked by completing a run with the 7th Villain character.",
-      "This character is unlocked by completing a run with Snecko."
+      "Ce personnage se déverouille en complétant une run avec le Collecteur.",
+      "Ce personnage se déverouille en complétant une run avec le 7ème vilain.",
+      "Ce personnage se déverouille en complétant une run avec l'Éveillé.",
+      "Ce personnage se déverouille en complétant une run avec le 8ème vilain.",
+      "Ce personnage se déverouille en complétant une run avec les Diablotins."
     ]
   },
   "downfall:HeartMerchant": {
@@ -173,9 +175,9 @@
       "Division: Temporel"
     ],
     "TEXT": [
-      "Perdez 3 PV. NL Gagnez 40 Âmes.",
-      "Perdez 1 PV. NL Ajoutez une carte Incolore aléatoire dans votre main.",
-      "Perdez 5 PV. NL Gagnez une potion aléatoire.",
+      "Perdez 3 PV. NL Obtenez 15 Âmes.",
+      "Perdez 3 PV. NL Ajoutez une carte Incolore aléatoire dans votre main.",
+      "Perdez 7 PV. NL Obtenez une potion aléatoire.",
       "Obtenez des cartes du Gardien expansioncontent:Boss.",
       "Obtenez des cartes de l'Hexaplasme expansioncontent:Boss.",
       "Obtenez des cartes du Parrain Slime expansioncontent:Boss.",
@@ -197,9 +199,9 @@
       "Divisez vous en slimeboundmod:Slime_Guerrier.",
       "Divisez vous en slimeboundmod:Slime_Bourbier.",
       "Divisez vous en slimeboundmod:Slime_Sangsue.",
-      "Perdez 3 PV. NL Obtenez 50 Âmes.",
-      "Perdez 1 PV. NL Ajoutez une carte Incolore Améliorée aléatoire dans votre main.",
-      "Perdez 2 PV. NL Obtenez une Potion aléatoire"
+      "Perdez 3 PV. NL Obtenez 20 Âmes.",
+      "Perdez 3 PV. NL Ajoutez une carte Incolore Améliorée aléatoire dans votre main.",
+      "Perdez 5 PV. NL Obtenez une Potion aléatoire"
     ]
   },
   "downfall:lazyStorage": {
@@ -240,6 +242,15 @@
       "Ancien Neow"
     ],
     "TEXT": [
+    ]
+  },
+  "downfall:CharBossSpeech": {
+    "NAMES": [
+      ""
+    ],
+    "TEXT": [
+      "Non, ce n'est pas possible ! On a besoin de plus de toxines...",
+      "Meurs, monstre! Tu n'appartiens pas à ce monde !"
     ]
   }
 

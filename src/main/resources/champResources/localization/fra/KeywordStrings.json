@@ -1,20 +1,32 @@
 [
   {
-    "PROPER_NAME": "Technique",
+    "PROPER_NAME": "Bonus de Compétence",
     "NAMES": [
+      "bonus",
+      "bonuses",      
       "technique",
       "techniques",
       "champ:[crown_icon]",
       "[crown_icon]"
     ],
-    "DESCRIPTION": "Si vous êtes dans une #yPose, déclenchez son bonus de Technique."
+    "DESCRIPTION": "Si vous êtes dans une #yPose [REMOVE_SPACE], déclenchez son bonus de Technique. NL #yBonus #yde #yCompétence du #rDestructeur : Gagnez #b2 de #yVigueur [REMOVE_SPACE]. NL #yBonus #yde #yCompétence #bDéfensive : Gagnez #b3 de #yContre [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Combo",
     "NAMES": [
       "combo"
     ],
-    "DESCRIPTION": "Un effet supplémentaire lorsque cette carte est jouée dans la #yPose listée, ou si vous êtes entré dans cette #yPose ce tour."
+    "DESCRIPTION": "Un effet supplémentaire lorsque cette carte est jouée dans la #yPose listée [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Frappe",
+    "NAMES": [
+      "frappe",
+      "frappes",      
+      "strike",
+      "strikes"
+    ],
+    "DESCRIPTION": "N'importe quelle carte contenant \"Frappe\" dans son nom. A ne pas confondre avec les #yFrappes, qui fait référence aux cartes Frappes communes exclusivement."
   },
   {
     "PROPER_NAME": "Finisher",
@@ -24,7 +36,7 @@
       "[fist_icon]",
       "champ:[fist_icon]"
     ],
-    "DESCRIPTION": "Ceci requiert d'être dans une Pose. NL Après avoir joué un Finisher, si vous êtes dans une #yPose, quittez-la et déclenchez son bonus de Finisher."
+    "DESCRIPTION": "Ceci requiert d'être dans une Pose. NL Après avoir joué un Finisher, quittez votre #yPose et déclenchez son bonus de Finisher. #yBonus #yde #yFinisher du #rDestructeur : gagnez #b1 de #yForce[REMOVE_SPACE]. #yBonus #yde #yFinisher #bDéfensive : Gagnez #b8 #bd'Armure [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Contre",
@@ -32,7 +44,7 @@
       "counter",
       "contre"
     ],
-    "DESCRIPTION": "La prochaine fois que vous prenez des dégâts #yd'Attaque, infligez ces dégâts en retour."
+    "DESCRIPTION": "La prochaine fois que vous prenez des dégâts #yd'Attaque, obtenez une #yFrappe #yRiposte qui inflige autant de dégâts que de Contre."
   },
   {
     "PROPER_NAME": "Defensive",
@@ -42,7 +54,7 @@
       "defensive",
       "defensive."
     ],
-    "DESCRIPTION": "#yPose. NL Bonus de #yCompétence: Gagnez #b3 de #yContre. NL Bonus de #yFinisher: Gagnez #b8 #yd'Armure."
+    "DESCRIPTION": "#yPose. NL Bonus de #yCompétence: Gagnez #b3 de #yContre [REMOVE_SPACE]. NL Bonus de #yFinisher: Gagnez #b8 #yd'Armure [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Destructeur",
@@ -52,7 +64,7 @@
       "berserker",
       "berserker."
     ],
-      "DESCRIPTION": "#yPose. NL Bonus de #yCompétence: Gagnez #b2 de #yVigeur. NL Bonus de #yFinisher: Gagnez #b1 de #yForce."
+      "DESCRIPTION": "#yPose. NL Bonus de #yCompétence: Gagnez #b2 de #yVigeur. NL Bonus de #yFinisher: Gagnez #b1 de #yForce.[REMOVE_SPACE][REMOVE_SPACE]"
   },
   {
     "PROPER_NAME": "Gladiateur",
@@ -72,7 +84,7 @@
       "ultimate",
       "ultimate."
     ],
-    "DESCRIPTION": "#yPose. Compte comme les #yPoses de #rDestructeur et #bDéfensive pour tous les usages. NL Si vous quittez cette position prématurément, revenez-y immédiatement."
+    "DESCRIPTION": "#yPose. Compte comme les #yPoses du #rDestructeur et #bDéfensive en même temps [REMOVE_SPACE]. NL Si vous quittez cette position prématurément, revenez-y immédiatement [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Fatigue",
