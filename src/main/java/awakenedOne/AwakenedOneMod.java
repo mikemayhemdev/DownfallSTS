@@ -107,6 +107,11 @@ public class AwakenedOneMod implements
     public static boolean awakenedthiscombat = false;
     public static int powersThisCombat = 0;
     public static int spellsThisTurn = 0;
+
+    public static boolean CultistTalked = false;
+    public static boolean ChosenTalked = false;
+    public static boolean CultistPerish = false;
+
     private static String modID = "awakened";
 
     public AwakenedOneMod() {
@@ -336,6 +341,10 @@ public class AwakenedOneMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        CultistTalked = false;
+        CultistPerish = false;
+        ChosenTalked = false;
+
         awakenedthiscombat = false;
         powersThisCombat = 0;
         spellsThisTurn = 0;

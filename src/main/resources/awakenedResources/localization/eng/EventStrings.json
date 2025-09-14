@@ -59,14 +59,30 @@
   "awakened:AbyssEvent": {
     "NAME": "From the Abyss",
     "DESCRIPTIONS": [
-      "As you make your way through the city, you are suddenly stricken by an inexplicable feeling...as if reality itself is beginning to unravel before you. NL Your senses failing you otherwise, you can see a #pgrimoire sitting before you, and an otherworldly voice calling... NL \n\n\"AWAKENED CHILD. WALKER OF THE INFINITE PLANES. WE HAVE MUCH TO DISCUSS. TAKE MY HAND, AND I WILL GUIDE YOU TO THE KNOWLEDGE YOU SEEK...TO UNKNOWN WORLDS OF MONSTERS, MACHINES, AND MAGIC BEYOND THIS REALM'S UNDERSTANDING.",
+      "As you make your way through the city, you are suddenly stricken by an inexplicable feeling...as if #preality itself is beginning to @unravel@ before you. NL Your senses failing you otherwise, you can see a #pgrimoire sitting before you, and an ~otherworldly~ ~voice~ calling... NL \n\n\"AWAKENED CHILD. WALKER OF THE INFINITE PLANES. WE HAVE MUCH TO DISCUSS. TAKE MY HAND, AND I WILL GUIDE YOU TO THE KNOWLEDGE YOU SEEK...TO UNKNOWN WORLDS OF MONSTERS, MACHINES, AND MAGIC BEYOND THIS REALM'S UNDERSTANDING.",
       "\"GOOD. OUR ALLIANCE WILL BE A POWERFUL ONE\"\n\n NL While that sense of #potherworldly #pmalaise remains, with the tome in hand you feel as if an infinite world of possibilities has opened up to you...",
-      "You manage to snap out of the trance, spreading your wings and leaving the strange grimoire behind."
+      "You manage to snap out of the trance, spreading your wings and leaving the strange #pgrimoire behind."
     ],
     "OPTIONS": [
       "[Reach] Gain #gReality #gRift. #rBecome #rCursed - #rAged.",
       "[Leave].",
       "[Leave]"
+    ]
+  },
+  "awakened:CultTalk": {
+    "NAME": "TalkStrings",
+    "DESCRIPTIONS": [
+    "@MASTER!@ @FORGIVE@ @ME!@",
+    "@MY@ @TIME@ @HAS@ @COME!@",
+    "@CAWWWWWW!@ @CAW@ @CAW@ @CAW@ @CAWWWWWW!!!!@",
+
+    "@MY@ @BLOOD@ @FOR@ @THE@ @BIRD@ @GOD!@",
+    "@I@ @AM@ @NOT@ @WORTHY!@",
+    "@I@ @DIE@ @SO@ @THE@ @FLOCK@ @MAY@ @PROSPER!!!@",
+
+     "~Let~ ~this~ ~serve~ ~as~ ~my~ ~redemption…~",
+      "~...~",
+      "~You~ ~leave~ ~me~ ~no~ ~choice…~"
     ]
   }
 }
