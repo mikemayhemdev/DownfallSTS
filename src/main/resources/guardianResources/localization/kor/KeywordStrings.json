@@ -99,6 +99,7 @@
       "대비",
       "대비를",
       "대비할",
+      "대비합니다",
       "brace"
     ],
     "PROPER_NAME": "대비",
@@ -115,5 +116,17 @@
     ],
     "PROPER_NAME": "퇴화",
     "DESCRIPTION": "카드의 강화를 제거합니다."
+  },
+  {
+    "NAMES": [
+      "연마유",
+      "연마유를",
+      "Polishing Oil",
+      "Polishing_Oil",
+      "polishing_oil",
+      "polishingoil"
+    ],
+    "PROPER_NAME": "연마유",
+    "DESCRIPTION": "#y물약 : #y방어도를 #b16 얻습니다. #y수비 #y모드로 전환합니다 ."
   }
 ]

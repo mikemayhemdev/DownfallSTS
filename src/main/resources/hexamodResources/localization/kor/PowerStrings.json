@@ -1,12 +1,12 @@
-{
+﻿{
   "hexamod:AgainPower": {
     "NAME": "지금 당장",
     "DESCRIPTIONS": [
       "이번 턴 종료 시 #y팽창하지 않습니다.",
       "다음 #b",
-      " 턴까지 #y팽창하지 않습니다."
+      " 턴 동안 #y팽창하지 않습니다."
     ],
-    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+    "TRANSLATOR_NOTE": "사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함"
   },
   "hexamod:ApocalypticArmorPower": {
     "NAME": "최후의 심판",
@@ -22,7 +22,7 @@
       "다음 내 턴 시작 시 적 전체에게 #y영혼화상을 #b",
       " 부여합니다."
     ],
-    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+    "TRANSLATOR_NOTE": "사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함"
   },
   "hexamod:BurnPerTurnPower": {
     "NAME": "녹아내리는 금속",
@@ -30,7 +30,7 @@
       "이 적의 #y영혼화상이 체력을 잃게 하고 제거된다면 #y영혼화상을 #b",
       " 부여합니다."
     ],
-    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+    "TRANSLATOR_NOTE": "사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함"
   },
   "hexamod:BurnPower": {
     "NAME": "영혼화상",
@@ -47,12 +47,12 @@
       "막히지 않은 피해를 줄 때마다 #y영혼화상을 #b",
       " 부여합니다."
     ],
-    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+    "TRANSLATOR_NOTE": "사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함"
   },
   "hexamod:CommonPostCombatPower": {
     "NAME": "봉인의 대가: 카드",
     "DESCRIPTIONS": [
-      "전투 종료 시 일반 카드를 추가로 #b",
+      "전투 종료 시 일반 카드 보상을 추가로 #b",
       " 개 얻습니다.",
       " 개 얻습니다."
     ]
@@ -70,7 +70,7 @@
       "유령불꽃의 #y점화 시 피해량, #y영혼화상, #y방어도 증가: #b",
       " .",
       "유령불꽃의 #y점화 시 피해량, #y영혼화상, #y방어도 감소: #b",
-      "타오르는 유령불에 두 배의 효과를 가집니다."
+      "#y작열 유령불꽃의 효과를 두 배로 만듭니다."
     ]
   },
   "hexamod:EtherealRefundPower": {
@@ -79,7 +79,7 @@
       "#y휘발성 카드를 사용할 때마다 ",
       " 를 얻습니다."
     ],
-    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+    "TRANSLATOR_NOTE": "사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함"
   },
   "hexamod:FuturePower": {
     "NAME": "그림자 속으로",
@@ -109,7 +109,7 @@
       "이번 턴 동안 공격을 받을 때마다 공격한 대상에게 #y영혼화상을 #b",
       " 부여합니다."
     ],
-    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+    "TRANSLATOR_NOTE": "사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함"
   },
   "hexamod:GiftsFromBeyondPower": {
     "NAME": "카드 선물",
@@ -141,7 +141,7 @@
       " 턴 후에 #y극열을 #b",
       " 잃습니다."
     ],
-    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+    "TRANSLATOR_NOTE": "사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함"
   },
   "hexamod:ParanormalFormPower": {
     "NAME": "폴터가이스트",
@@ -153,9 +153,13 @@
   "hexamod:PastPower": {
     "NAME": "악마의 춤",
     "DESCRIPTIONS": [
-      "#y수축할 때마다 카드를 #b",
-      " 장 뽑습니다.",
-      " 장 뽑습니다."
+      "매 턴 처음으로 #y팽창 또는 #y수축할 때마다 카드를 #b1 장 뽑습니다.",
+      "매 턴 최대 #b",
+      " 번 #y팽창 또는 #y수축할 때마다 카드를 #b1 장 뽑습니다.",
+      " NL 이 효과는 이번 턴에 #b",
+      " 번 더 발동할 수 있습니다.",
+      " 번 더 발동할 수 있습니다.",
+      " NL 이번 턴에 더 이상 발동하지 않습니다."
     ]
   },
   "hexamod:PotionPostCombatPower": {
@@ -180,13 +184,13 @@
       " 개 얻습니다.",
       " 개 얻습니다."
     ],
-    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+    "TRANSLATOR_NOTE": "사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함사용안함"
   },
   "hexamod:TimeStopPower": {
     "NAME": "종말의 도래",
     "DESCRIPTIONS": [
       "내 턴 종료 시 즉시 내 턴을 시작합니다.",
-      "내 턴 종료 시 다음 ",
+      "내 턴 종료 시 다음 #b",
       " 턴 동안 즉시 내 턴을 시작합니다."
     ]
   },
@@ -233,9 +237,9 @@
   "hexamod:InfernoPotionPower": {
     "NAME": "육각염",
     "DESCRIPTIONS": [
-      "이번 전투 동안 유령 불꽃이 적 전체에게 영향을 미칩니다.",
-      "이번 전투 동안 유령 불꽃이 적 전체에게 #b",
-      " 번 영향을 미칩니다."
+      "이번 전투 동안 유령불꽃이 적 전체를 대상으로 합니다.",
+      "이번 전투 동안 유령 불꽃이 #b",
+      " 번 적 전체를 대상으로 합니다."
     ]
   },
   "hexamod:PlayCardAndExhaustPower": {

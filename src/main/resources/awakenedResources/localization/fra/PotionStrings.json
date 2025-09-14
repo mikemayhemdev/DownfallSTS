@@ -1,0 +1,30 @@
+{
+  "awakened:PhaseSkip": {
+    "NAME": "Boisson de l'Ascendant",
+    "DESCRIPTIONS": [
+      "#yÉveillez-vous immédiatement et #yAméliorez toutes vos cartes pour le reste du combat."
+    ]
+  },
+  "awakened:CultistsDelight": {
+    "NAME": "Délice du Cultiste",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une carte #yPouvoir ce combat, gagnez #b",
+      " de #yForce [REMOVE_SPACE]. Ajoutez un #yPouvoir aléatoire qui coûte #b0 dans votre main pour ce tour."
+    ]
+  },
+  "awakened:SacramentalWine": {
+    "NAME": "Vin de messe",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une carte #yPouvoir ce combat, gagnez #b",
+      " #yd'Armure [REMOVE_SPACE]. Ajoutez un #yPouvoir aléatoire qui coûte #b0 dans votre main pour ce tour."
+    ]
+  },
+  "awakened:SneckoPowersPotion": {
+    "NAME": "Essence de Geckobra",
+    "DESCRIPTIONS": [
+      "Choisissez #b1 #yPouvoir #yHors-Classe parmi #b3 à ajouter dans votre main, il coûte #b0 ce tour.",
+      "Choisissez #b1 #yPouvoir #yHors-Classe parmi #b3 et ajoutez #b",
+      " copies de celui-ci dans votre main, ils coûtent #b0 ce tour."
+    ]
+  }
+}

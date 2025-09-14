@@ -44,8 +44,6 @@ public class Designer_Evil extends AbstractImageEvent {
 
     private CurrentScreen curScreen;
     private OptionChosen option;
-    private boolean adjustmentUpgradesOne;
-    private boolean cleanUpRemovesCards;
     private int hpLoss;
 
 
@@ -54,8 +52,6 @@ public class Designer_Evil extends AbstractImageEvent {
         this.curScreen = CurrentScreen.LOOTER;
         this.option = null;
         this.option = OptionChosen.NONE;
-        this.adjustmentUpgradesOne = AbstractDungeon.miscRng.randomBoolean();
-        this.cleanUpRemovesCards = AbstractDungeon.miscRng.randomBoolean();
         if (AbstractDungeon.ascensionLevel >= 15) {
             this.hpLoss = 12;
         } else {
@@ -235,17 +231,10 @@ public class Designer_Evil extends AbstractImageEvent {
             case INTRO:
                 this.imageEventText.updateBodyText(DESC[3]);
                 this.imageEventText.removeDialogOption(0);
-                if (this.adjustmentUpgradesOne) {
-                    this.imageEventText.updateDialogOption(0, OPTIONSALT[0] + OPTIONS[9], !AbstractDungeon.player.masterDeck.hasUpgradableCards());
-                } else {
-                    this.imageEventText.updateDialogOption(0, OPTIONSALT[0] + OPTIONS[7] + 2 + OPTIONS[8], !AbstractDungeon.player.masterDeck.hasUpgradableCards());
-                }
+                this.imageEventText.updateDialogOption(0, OPTIONSALT[0] + OPTIONS[7] + 2 + OPTIONS[8], !AbstractDungeon.player.masterDeck.hasUpgradableCards());
 
-                if (this.cleanUpRemovesCards) {
-                    this.imageEventText.setDialogOption(OPTIONSALT[1] + OPTIONS[10], CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).size() == 0);
-                } else {
-                    this.imageEventText.setDialogOption(OPTIONSALT[1] + OPTIONS[11] + 2 + OPTIONS[12], CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).size() < 2);
-                }
+                this.imageEventText.setDialogOption(OPTIONSALT[1] + OPTIONS[11] + 2 + OPTIONS[12], CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).size() < 2);
+
 
                 this.imageEventText.setDialogOption(OPTIONSALT[2] + OPTIONS[13], CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck).size() == 0);
                 this.imageEventText.setDialogOption(OPTIONSALT[4]);
@@ -255,22 +244,14 @@ public class Designer_Evil extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         this.imageEventText.updateBodyText(DESC[4]);
-                        if (this.adjustmentUpgradesOne) {
-                            this.option = OptionChosen.UPGRADE;
-                            AbstractDungeon.gridSelectScreen.open(AbstractDungeon.player.masterDeck.getUpgradableCards(), 1, OPTIONS[15], true, false, false, false);
-                        } else {
-                            this.upgradeTwoRandomCards();
-                        }
+
+                        this.upgradeTwoRandomCards();
                         break;
                     case 1:
                         this.imageEventText.updateBodyText(DESC[4]);
-                        if (this.cleanUpRemovesCards) {
-                            this.option = OptionChosen.REMOVE;
-                            AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 1, OPTIONS[17], false, false, false, true);
-                        } else {
-                            this.option = OptionChosen.TRANSFORM;
-                            AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 2, OPTIONS[16], false, false, false, false);
-                        }
+                        this.option = OptionChosen.TRANSFORM;
+                        AbstractDungeon.gridSelectScreen.open(CardGroup.getGroupWithoutBottledCards(AbstractDungeon.player.masterDeck.getPurgeableCards()), 2, OPTIONS[16], false, false, false, false);
+
                         break;
                     case 2:
                         this.imageEventText.updateBodyText(DESC[4]);

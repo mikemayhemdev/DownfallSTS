@@ -3,100 +3,111 @@
     "NAME": "Vieux médaillon",
     "FLAVOR": "Une photo délavée se trouve à l'intérieur.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, ajoutez un #yMemento à votre main."
+      "Au début de chaque combat, ajoutez un #yMémento à votre main."
     ]
   },
   "hermit:RyeStalk": {
     "NAME": "Tige de seigle",
     "FLAVOR": "Toujours en parfait état, malgré le fait qu'il ait été mâchouillé pendant si longtemps.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, TOUS les ennemis perdent #b2 de #yForce."
+      "Lorsque vous perdez des PV durant le tour de l'ennemi, piochez #b1 carte."
     ]
   },
   "hermit:BartenderGlass": {
     "NAME": "Verre à shot",
     "FLAVOR": "Tout liquide placé à l'intérieur se transforme en quelque chose d'autre.",
     "DESCRIPTIONS": [
-      "Les #b2 premières fois que vous utilisez une potion chaque combat, gagnez une potion aléatoire. Vous ne pouvez utiliser que #b2 potions chaque combat.",
-      "Vous ne pouvez plus utiliser de potions ce combat."
+      "Les #b",
+      "Vous ne pouvez plus utiliser de potions ce combat.",
+      " premières fois que vous utilisez une potion chaque combat, gagnez une potion aléatoire. Vous ne pouvez utiliser que #b",
+      " potions chaque combat."
     ]
   },
   "hermit:Horseshoe": {
     "NAME": "Fer à cheval",
     "FLAVOR": "Porte-bonheur. Ça va manquer à quelqu'un.",
     "DESCRIPTIONS": [
-      "Lorsque vous gagnez de la #yFaiblesse, #yFragilité ou #yVulnérabilité, gagnez-en #b1 de moins."
+      "Lorsque vous gagnez de la #yFaiblesse [REMOVE_SPACE], de la #yFragilité ou de la #yVulnérabilité [REMOVE_SPACE], gagnez-en #b1 de moins."
     ]
   },
   "hermit:Spyglass": {
     "NAME": "Longue-vue",
     "FLAVOR": "Propriété de Kestin Highfin.",
     "DESCRIPTIONS": [
-      "Si vous terminez votre tour #yhermit:Concentré, gagnez une [E] supplémentaire au prochain tour."
+      "Si vous terminez votre tour #yhermit:Concentré [REMOVE_SPACE], gagnez une [E] supplémentaire au prochain tour."
     ]
   },
   "hermit:RedScarf": {
     "NAME": "Écharpe rouge",
     "FLAVOR": "Chaude et confortable.",
     "DESCRIPTIONS": [
-      "Lorsque vous appliquez un débuff à un ennemi, gagnez #b2 #yd'Armure."
+      "Lorsque vous appliquez un nouveau débuff à un ennemi, gagnez #b",
+      " #yd'Armure [REMOVE_SPACE]."
     ]
   },
   "hermit:DentedPlate": {
     "NAME": "Plaque cabossée",
     "FLAVOR": "Plusieures balles sont restées logées à l'intérieur.",
     "DESCRIPTIONS": [
-      "Lorsque vous êtes à #b50% ou moins de vos PV maximum, gagnez [E] et piochez #b1 carte au début de votre tour."
+      "Lorsque vous êtes à #b50% ou moins de vos PV maximum [REMOVE_SPACE], gagnez [E] et piochez #b1 carte au début de votre tour."
     ]
   },
   "hermit:PetGhost": {
     "NAME": "Fantôme de compagnie",
     "FLAVOR": "Pauvre chou.",
     "DESCRIPTIONS": [
-      "La 1ère fois que vous seriez mort chaque combat, survivez avec #b1 PV à la place."
+      "Empêchez votre première perte de PV mortelle à chaque combat."
     ]
   },
   "hermit:CharredGlove": {
     "NAME": "Gant carbonisé",
     "FLAVOR": "Certaines parties de ce gant brillent encore de cendres d'un autre monde.",
     "DESCRIPTIONS": [
-      "Lorsque vous piochez une #rMalédiction, votre prochaine attaque inflige #b3 dégâts supplémentaires."
+      "Lorsque vous piochez une #rMalédiction [REMOVE_SPACE], votre prochaine attaque inflige #b",
+      " dégâts supplémentaires."
     ]
   },
   "hermit:ClaspedLocket": {
     "NAME": "Médaillon agrafé",
     "FLAVOR": "Il ne veut plus s'ouvrir à présent.",
     "DESCRIPTIONS": [
-      "Remplace #yVieux #yMédaillon. La première fois que vous piochez une Malédiction chaque tour, #yÉpuisez-la et piochez #b2 cartes. Lorsque vous la récupérez, obtenez #b2 #rBlessures.",
-      "Plus jamais..."
+      "Remplace #yVieux #yMédaillon [REMOVE_SPACE]. La première fois que vous piochez une #rMalédiction chaque tour, #yÉpuisez-la et piochez #b",
+      "Plus jamais...",
+      " cartes. Lorsque vous la récupérez, obtenez #b",
+      " #rBlessures [REMOVE_SPACE]."
     ]
   },
   "hermit:StraightRazor": {
     "NAME": "Coupe-choux",
     "FLAVOR": "Pour un rasage plus net...",
     "DESCRIPTIONS": [
-      "Lorsque vous retirez une carte de votre deck, soignez-vous de #b15 PV."
+      "Lorsque vous retirez ou #yTransformez une carte de votre deck, soignez-vous de #b",
+      " PV."
     ]
   },
   "hermit:BrassTacks": {
     "NAME": "Punaises en laiton",
     "FLAVOR": "The luster on these tacks never seems to fade.",
     "DESCRIPTIONS": [
-      "Commencez chaque combat avec #b2 de #yMétallisation."
+      "À la fin de votre tour, gagnez #b",
+      " #yd'Armure [REMOVE_SPACE]."
     ]
   },
   "hermit:BlackPowder": {
     "NAME": "Poudre noire",
     "FLAVOR": "À manipuler avec précaution.",
     "DESCRIPTIONS": [
-      "À la fin de votre tour, infligez #b2 dégâts à TOUS les ennemis pour chaque effet #yhermit:Dans_Le_Mille déclenché."
+      "Lorsque vous déclenchez un effet #yhermit:Dans_Le_Mille, infligez #b",
+      " dégâts à TOUS les ennemis."
     ]
   },
   "hermit:BloodyTooth": {
     "NAME": "Dent cassée",
-    "FLAVOR": "Elle semble trop large pour être venue d'une machoîre humaine...",
+    "FLAVOR": "Elle semble trop large pour être venue d'une mâchoire humaine...",
     "DESCRIPTIONS": [
-      "Lorsque vous battez un ennemi d'Élite, gagnez #b1 de #yForce au début de chaque combat pour le reste de l'Acte."
+      "Lorsque vous battez un ennemi d'Élite, soignez-vous de #b",
+      " PV et gagnez #b",
+      " d'Or."
     ]
   }
 }

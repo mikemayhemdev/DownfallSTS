@@ -14,6 +14,7 @@
       "avancé",
       "avancer",
       "n'avancez",
+      "d'avancer",
       "advance",
       "advanced",
       "advancing"
@@ -39,7 +40,7 @@
       "d'intensité",
       "intensity"
     ],
-    "DESCRIPTION": "L'Intensité augmente les dégâts, l'Armure et la Brûlure appliqués par les Feu Follets lorsqu'ils sont Enflammés ."
+    "DESCRIPTION": "L'Intensité augmente les dégâts, la #yBrûlure [REMOVE_SPACE], et #yl'Armure [REMOVE_SPACE] appliqués par les Feu Follets lorsqu'ils sont #yEnflammés [REMOVE_SPACE]."
   },
   {
 	"ID": "soulburn",
@@ -62,7 +63,7 @@
       "extinguish",
       "extinguished"
     ],
-    "DESCRIPTION": "Permet au Feu Follet d'être Enflammé à nouveau, réinitialisant ses conditions d'Inflammation."
+    "DESCRIPTION": "Permet au Feu Follet d'être #yEnflammé à nouveau, réinitialisant ses conditions d'Inflammation."
   },
   {
     "PROPER_NAME": "Inflammation",
@@ -83,7 +84,7 @@
       "sceau",
       "seal"
     ],
-    "DESCRIPTION": "Si les #b6 Sceaux ont été joués ce combat, obtenez #pLe #pSceau #pBrisé et retirez les Sceaux de votre deck."
+    "DESCRIPTION": "Les cartes Sceau peuvent être obtenues lors des combats d'Élite et de Boss. Plus vous jouez une carte Sceau, plus vous avez de chances d'en trouver d'autres de différents types. Si les #b6 Sceaux ont été joués pendant un combat, obtenez #pLe #pSceau #pBrisé et retirez les Sceaux de votre deck."
   },
   {
 	"ID": "afterlife",
@@ -91,15 +92,16 @@
     "NAMES": [
       "après-vie"
     ],
-    "DESCRIPTION": "Si cette carte est Épuisée, ses effets s'activent."
+    "DESCRIPTION": "L'effet en violet sera également déclenché si cette carte est #yÉpuisée [REMOVE_SPACE]."
   },
   {
-    "PROPER_NAME": "Écrasent",
+    "PROPER_NAME": "Écrasant",
     "NAMES": [
-      "écrasent",
+      "écrasant",
       "crushing"
     ],
-    "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsque #b2 #yCompétences sont jouées alors que celui-ci est #yActif. #yInflammation: Lorsqu'il est #yEnflammé, infligez #b4 dégâts à un ennemi aléatoire deux fois."
+    "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsque #b2 #yCompétences sont jouées alors que celui-ci est #yActif. #yInflammation [REMOVE_SPACE]: Lorsqu'il est #yEnflammé [REMOVE_SPACE], infligez #b4 dégâts à un ennemi aléatoire deux fois.",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   },
   {
     "PROPER_NAME": "Renforceur",
@@ -107,7 +109,17 @@
       "renforceur",
       "bolstering"
     ],
-    "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsqu'un #yPouvoir est joué alors que celui-ci est #yActif. #yInflammation: Lorsqu'il est #yEnflammé, gagnez #b4 #yd'Armure et #b1 de #yForce."
+    "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsqu'un #yPouvoir est joué alors que celui-ci est #yActif. #yInflammation [REMOVE_SPACE]: Lorsqu'il est #yEnflammé [REMOVE_SPACE], gagnez #b4 #yd'Armure et #b1 de #yForce [REMOVE_SPACE].",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
+  },
+  {
+    "ID": "plated",
+    "PROPER_NAME": "Armure plaquée",
+    "NAMES": [
+      "plated",
+      "plaquée"
+    ],
+    "DESCRIPTION": "À la fin de votre tour, gagnez de #yl'Armure égale à votre #yArmure #yPlaquée [REMOVE_SPACE]. Subir des dégâts d'Attaque non-bloqués réduit votre #yArmure #yPlaquée de #b1 [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Incinérateur",
@@ -115,6 +127,7 @@
       "incinérateur",
       "searing"
     ],
-    "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsque #b2 #yAttaques sont jouées alors que celui-ci est #yActif. #yInflammation: Lorsqu'il est #yEnflammé, appliquez #b4 de #yBrûlure à un ennemi aléatoire."
+    "DESCRIPTION": "#yFeu #yFollet. #yEnflammé lorsque #b2 #yAttaques sont jouées alors que celui-ci est #yActif. #yInflammation [REMOVE_SPACE]: Lorsqu'il est #yEnflammé [REMOVE_SPACE], appliquez #b4 de #yBrûlure à un ennemi aléatoire, modifié deux fois par #yl'Intensité [REMOVE_SPACE].",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   }
 ]

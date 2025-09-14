@@ -3,7 +3,7 @@
     "NAME": "Pectos impeccables",
     "FLAVOR": "Glorieux.",
     "DESCRIPTIONS": [
-      "Lorsque vous gagnez de la #yForce, gagnez un nombre équivalent de #yPV #yTemporaires. NL Commencez chaque combat avec #b1 de #yForce."
+      "Lorsque vous gagnez de la #yForce [REMOVE_SPACE], gagnez un nombre équivalent de #yPV #yTemporaires [REMOVE_SPACE]. NL Commencez chaque combat avec #b1 de #yForce [REMOVE_SPACE]."
     ]
   },
   "Gremlin:FragmentationGrenade": {
@@ -65,11 +65,11 @@
     "NAME": "Maillet magique",
     "FLAVOR": "Écrase le petit doigt deux fois plus fort.",
     "DESCRIPTIONS": [
-      "Lorsque vous appliquez de la #yFaiblesse, gagnez #b1 de #yMagie, au maximum de #b3 fois par tour."
+      "Lorsque vous appliquez de la #yFaiblesse, gagnez #b1 de #yMagie [REMOVE_SPACE], au maximum de #b3 fois par tour."
     ]
   },
   "Gremlin:PricklyShields": {
-    "NAME": "Bouclier d'épines",
+    "NAME": "Bouclier épineux",
     "FLAVOR": "Les diablotins utilisent n'importe quoi pourvu que ça peut servir d'arme ou d'armure. Certains objets servent aux deux.",
     "DESCRIPTIONS": [
       "Lorsque vous appliquez de #yl'Armure, infligez #b", " dégâts à un ennemi aléatoire."
@@ -87,46 +87,46 @@
     "NAME": "Marchandise volée",
     "FLAVOR": "\"Saleté de voleurs, ces diablotins!\".",
     "DESCRIPTIONS": [
-      "Lorsque vous #yPermutez, ajoutez un #yÉcho d'une carte Incolore aléatoire dans votre main. NL Au début du combat, le Marchand gagne #b",
-      " de Force.",
-      "Bande de bons à rien de voleurs!",
-      "Espèce de lâche, misérable vermine!",
-      "Vous êtes vraiment avides et cupides!"
+      "Lorsque vous #yPermutez [REMOVE_SPACE], ajoutez un #yÉcho d'une carte Incolore aléatoire dans votre main. NL Au début du combat, le Marchand gagne #b",
+      " de #yForce [REMOVE_SPACE].",
+      "Bande de bons à rien de voleurs !",
+      "Espèces de lâches, misérables vermines !",
+      "Vous êtes vraiment avides et cupides !"
     ]
   },
   "Gremlin:SupplyScroll": {
     "NAME": "Parchemin d'équipement",
     "FLAVOR": "Un inventaire surprenamment détaillé des différents équipements de la bande.",
     "DESCRIPTIONS": [
-      "Au début du 3ème tour, gagnez [E] et piochez #b2 cartes."
+      "Au début du 3ème tour, gagnez [E] [E] et piochez #b2 cartes."
     ]
   },
   "Gremlin:TagTeamwork": {
     "NAME": "Travail d'équipe",
-    "FLAVOR": "Le travail d'équipe fait marcher le rêve.",
+    "FLAVOR": "L’union fait la force.",
     "DESCRIPTIONS": [
-      "Lorsque vous piochez #yTandem, piochez une autre carte. NL Lorsque vous récupérez cette relique, ajoutez deux copies de #yTandem dans votre deck."
+      "Lorsque vous piochez #yTandem [REMOVE_SPACE], piochez une autre carte. NL Lorsque vous récupérez cette relique, ajoutez deux copies de #yTandem dans votre deck."
     ]
   },
   "Gremlin:WizardHat": {
     "NAME": "Chapeau de sorcier",
     "FLAVOR": "La robe qui l'accompagnait a été volée depuis.",
     "DESCRIPTIONS": [
-      "Lorsque vous consumez de la #yMagie, retirez un débuff aléatoire."
+      "Lorsque vous consumez de la #yMagie [REMOVE_SPACE], retirez un débuff aléatoire."
     ]
   },
   "Gremlin:WizardStaff": {
     "NAME": "Bâton de sorcier",
     "FLAVOR": "La fierté et la joie de chaque Diablotin Sorcier, ce bâton est une cible fréquente de vol par les bandes rivales.",
     "DESCRIPTIONS": [
-      "La Magie inflige #b7 dégâts supplémentaires."
+      "La #yMagie inflige #b7 dégâts supplémentaires."
     ]
   },
   "Gremlin:WoundPoker": {
     "NAME": "Tisonnier blessant",
-    "FLAVOR": "Est-ce que ça fait mal si je fais ça?.",
+    "FLAVOR": "Est-ce que ça fait mal si je fais ça ?",
     "DESCRIPTIONS": [
-      "À la fin de votre tour, infliigez #b", " dégâts à chaque ennemi #yAffaibli."
+      "À la fin de votre tour, infligez #b", " dégâts à chaque ennemi #yAffaibli."
     ]
   },
   "Gremlin:PatchFixes": {

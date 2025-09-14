@@ -3,23 +3,25 @@
     "PROPER_NAME": "Affligé",
     "NAMES": [
       "affligé",
-	  "afflicted"
+      "affligés",
+	    "afflicted"
     ],
-    "DESCRIPTION": "Les créature sont affligé quand elle sont #yVulnérable et #yAffaiblis."
+    "DESCRIPTION": "Une créature est affligée quand elle est #yVulnérable et #yAffaiblie."
   },
   {
-    "PROPER_NAME": "Malédiction",
+    "PROPER_NAME": "Condamnation",
     "NAMES": [
-      "malédiction",
-      "maudite",
-	  "doom",
+      "condamnation",
+      "condamnée",
+  	  "doom",
       "doomed"
     ],
-    "DESCRIPTION": "Les créatures maudites perdent des PV au début de leur tour, ensuite la malédiction est retirez #bsauf_si la créature est #yAffligé (#yAffaiblis et #yVulnérable [REMOVE_SPACE])."
+    "DESCRIPTION": "Les créatures condamnées perdent des PV au début de leur tour, ensuite la condamnation est retirée #bsauf #bsi la créature est #yAffligée (#yAffaiblie et #yVulnérable en même temps)."
   },
   {
     "PROPER_NAME": "Bûcher",
     "NAMES": [
+      "pyre",
       "bûcher"
     ],
     "DESCRIPTION": "Nécessite d'épuiser une carte en main en plus de payer son coût en énergie."
@@ -27,23 +29,27 @@
   {
     "PROPER_NAME": "Réserve",
     "NAMES": [
+      "reserve",
+      "reserves",
       "réserve",
       "réserves"
     ],
-    "DESCRIPTION": "Un type alternatif d'énergie stockée au fil des tours."
+    "DESCRIPTION": "Un autre type d'énergie qui est stockée entre les tours."
   },
   {
-    "PROPER_NAME": "MegaÉthérée",
+    "PROPER_NAME": "Méga-Éthérée",
     "NAMES": [
-      "megaÉthérée"
+      "megathereal",
+      "méga-éthérée"
     ],
-    "DESCRIPTION": "Les cartes MegaÉthérée vont dans la défausse quand jouez ou a la fin du tour, peu importe ou elle sont."
+    "DESCRIPTION": "Les cartes Méga-Éthérées quand elles sont jouées ET à la fin de votre tour, peu importe leur emplacement."
   },
   {
     "PROPER_NAME": "Tête de torche",
     "NAMES": [
-      "têtedetorche"
+      "torchhead",
+      "tête_de_torche"
     ],
-    "DESCRIPTION": "Quand vous avez des #yPV #yTemporaire, chaque attaque que vous jouez déclenche Tête de torche."
+    "DESCRIPTION": "Lorsque vous avez des #yPV #yTemporaires, chaque Attaque que vous jouez déclenche Tête de Torche."
   }
 ]

@@ -92,6 +92,39 @@
       "A la fin de votre tour, infligez #b",
       " dégâts à un ennemi aléatoire #b6 fois."
     ]
+     },
+  "expansioncontent:BeatOfDeathP": {
+    "NAME": "Pulsation de la mort",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez une carte, infligez #b",
+      " dégâts à TOUS les ennemis."
+    ]
+  },
+  "expansioncontent:PandemoniumPower":{
+    "NAME": "Pandémonium",
+    "DESCRIPTIONS": [
+      "Au début de votre tour, jouez une carte aléatoire de votre défausse.",
+      "Au début de votre tour, jouez #b",
+      " cartes aléatoires de votre défausse."
+    ]
+  },
+  "expansioncontent:EvilWithinPower":{
+    "NAME": "Mal intérieur",
+    "DESCRIPTIONS": [
+      "Infligez #b",
+      " dégâts à TOUS les ennemis après avoir appliqué #b",
+      " debuffs supplémentaires.",
+      " debuff supplémentaire."
+    ]
+  },
+  "expansioncontent:ReveriePower":{
+  "NAME": "Rêverie",
+  "DESCRIPTIONS": [
+    "Au début de votre tour, regardez la carte du dessus de votre défausse et ajoutez-la à votre main.",
+    "Au début de votre tour, regardez les #b",
+    " cartes du dessus de votre défausse et choisissez-en une à ajouter à votre main.",
+    "Choisissez une carte à ajouter à votre main."
+  ]
   },
   "expansioncontent:VexVinciblePower": {
     "NAME": "Invincibilité",

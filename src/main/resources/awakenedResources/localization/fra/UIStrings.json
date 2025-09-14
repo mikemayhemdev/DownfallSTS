@@ -1,0 +1,46 @@
+{
+  "awakened:SpellDescriptor": {
+    "TEXT": [
+      "Sort"
+    ]
+  },
+  "awakened:ConjureMod": {
+    "TEXT": [
+      " NL awakened:Conjurez."
+    ]
+  },
+  "awakened:SpellMod": {
+    "TEXT": [
+      "[#12FAF0]Sort. NL"
+    ]
+  },
+  "awakened:DrainingMod": {
+    "TEXT": [
+      " NL Au prochain tour, perdez [E]."
+    ]
+  },
+  "awakened:highlightChant": {
+    "TEXT": [
+      "awakened:Chant: ",
+      "[awakenedIcon] [#12FAF0]Chant: "
+    ]
+  },
+  "awakened:Spellbook": {
+    "TEXT": [
+      "Livre de sorts",
+      "Éveil",
+      "Après avoir joué #b7 Pouvoirs, devenez #yÉveillé [REMOVE_SPACE]! NL NL Lorsque vous êtes #yÉveillé [REMOVE_SPACE], les Sorts #yConjurés sont #yAméliorés [REMOVE_SPACE], augmentant drastiquement leur efficacité.",
+      "Après avoir joué #b7 Pouvoirs, devenez #yÉveillé [REMOVE_SPACE]! NL NL Lorsque vous êtes #yÉveillé [REMOVE_SPACE], les Sorts #yConjurés sont #yAméliorés [REMOVE_SPACE], augmentant drastiquement leur efficacité."
+    ]
+  },
+  "awakened:FullSpellbook": {
+    "TEXT": [
+      "Mon livre de Sorts est rempli !"
+    ]
+  },
+  "awakened:FourthDimensionDupeAttempt": {
+    "TEXT": [
+      "@Faire@ @ceci@ @briserait@ @le@ @continuum@ @espace-temps@ @!!!@"
+    ]
+  }
+}
