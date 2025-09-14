@@ -245,9 +245,9 @@
   "hexamod:PlayCardAndExhaustPower": {
     "NAME": "Shadowy Shift",
     "DESCRIPTIONS": [
-      "Your next card is free to play then #yExhausts [REMOVE_SPACE].",
+      "Your next card is free to play and #yExhausts [REMOVE_SPACE].",
       "Your next #b",
-      " cards are free to play then #yExhaust [REMOVE_SPACE]."
+      " cards are free to play and #yExhaust [REMOVE_SPACE]."
     ]
   }
 }

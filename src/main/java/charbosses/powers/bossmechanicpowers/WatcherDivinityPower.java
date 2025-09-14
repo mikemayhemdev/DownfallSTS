@@ -29,6 +29,7 @@ import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import com.megacrit.cardcrawl.powers.IntangiblePower;
 import com.megacrit.cardcrawl.vfx.combat.DevotionEffect;
 import com.megacrit.cardcrawl.vfx.combat.TimeWarpTurnEndEffect;
+import downfall.downfallMod;
 import hermit.util.Wiz;
 
 public class WatcherDivinityPower extends AbstractBossMechanicPower {
@@ -50,16 +51,19 @@ public class WatcherDivinityPower extends AbstractBossMechanicPower {
     }
 
     public void updateDescription() {
-        if (this.amount >= 6){
-
-            this.description = DESC[0] + DESC[4];;
-        } else {
-            this.description = DESC[0] + DESC[1] + this.amount + DESC[2] + DESC[4];
-
-        }
+        this.description = DESC[0];
     }
 
     public void onAfterUseCard(AbstractCard card, UseCardAction action) {
+        if (downfallMod.useLegacyBosses) {
+            if (!(card instanceof AbstractBossCard)) {
+                this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyMantraPower(this.owner, 1), 1));
+            }
+        }
+
+
+
+        if (!downfallMod.useLegacyBosses) {
         if (!(card instanceof AbstractBossCard) && !card.purgeOnUse) {
             if (this.amount < 6) {
                 flash();
@@ -70,7 +74,7 @@ public class WatcherDivinityPower extends AbstractBossMechanicPower {
                     this.addToBot(new ApplyPowerAction(this.owner, this.owner, new EnemyMantraPower(this.owner, 1), 1));
                 }
             }
-
+        }
         }
     }
 

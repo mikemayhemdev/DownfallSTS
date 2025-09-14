@@ -19,6 +19,7 @@ import automaton.util.*;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.relics.AwakenedUrn;
+import awakenedOne.relics.NerfedMummifiedHand;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -1346,7 +1347,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelic(new ShatteredFragment(), RelicType.SHARED);
-        BaseMod.addRelic(new Hecktoplasm(), RelicType.SHARED);
         BaseMod.addRelic(new BrokenWingStatue(), RelicType.SHARED);
         BaseMod.addRelic(new CloakOfManyFaces(), RelicType.SHARED);
         BaseMod.addRelic(new BurdenOfKnowledge(), RelicType.SHARED);
@@ -1364,9 +1364,11 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addRelic(new ExtraCursedBell(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedKey(), RelicType.SHARED);
 
-        if (downfallMod.disableBaseGameAdjustments = false){
+        if (!disableBaseGameAdjustments) {
+            BaseMod.addRelic(new Hecktoplasm(), RelicType.SHARED);
             BaseMod.addRelic(new BlackCandle(), RelicType.SHARED);
             BaseMod.addRelicToCustomPool(new AwakenedUrn(), AwakenedOneChar.Enums.AWAKENED_BLUE);
+            BaseMod.addRelicToCustomPool(new NerfedMummifiedHand(), AwakenedOneChar.Enums.AWAKENED_BLUE);
         }
         addPotions();
     }
