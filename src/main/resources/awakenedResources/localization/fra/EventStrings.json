@@ -1,0 +1,72 @@
+{
+  "awakened:Nest": {
+    "NAME": "Le Nid",
+    "DESCRIPTIONS": [
+      "Vous l'avez trouvé. Vous êtes enfin revenu. NL #pLe#pNid, le site de votre ascension vers #b~l'avatar~ #b~vivant~ #b~d'un~ #b~dieu.~ Dès que vous entrez, vous êtes entouré de Cultistes, @acclamant@ et vous @applaudissant@ ! NL Ils savent bien que votre arrivée s'accompagne souvent d'une #r@dîme....@",
+      "Les combats à venir seront difficiles, et c'est le moment idéal pour trouver une arme unique à ajouter à votre arsenal. NL NL #r@...Pas@ #r@de@ #r@dagues@ #r@à@ #r@l'horizon...@ NL NL Vous accomplissez un rituel puissant pour invoquer une #yrelique extrêmement puissante, mais réaliser ce rituel vous a coûté cher. NL NL Drainé, vous quittez le Nid, espérant que votre nouvelle arme sèmera le chaos sur son passage.",
+      "De plus en plus de membres du groupe s'alignent pour vous apporter leurs offrandes. NL NL La plupart sont @des@ @déchets@ @sans@ @valeur,@ mais l'un d'eux apporte une offrande particulièrement intéressante : un #bélixir #bpuissant qui pourrait vous être très utile au combat. NL NL Peu après, vous quittez le Nid et poursuivez votre descente dans la Tour.",
+      "Les cultistes vous entourent encore plus que d'habitude en voyant leur précieuse statue leur revenir. NL Comme c'est un événement à célébrer, vous êtes comblé de cadeaux et d'Âmes ! NL Une fois les célébrations terminées et après avoir quitté le Nid, vous réalisez que vous auriez pu profiter de ce temps pour chercher une arme précieuse... NL NL Il est trop tard maintenant, mais vous continuez quand même votre chemin.",
+      "#r@\"DIEU@ #r@OISEAU@ #r@EST@ #r@REVENU!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL La statue que vous avez décidé de ne pas détruire s'est avérée très utile aujourd'hui.",
+      "",
+      "",
+      "Les Cultistes vous entourent encore plus que d'habitude en voyant leur précieuse statue leur revenir. NL Tel un motif de réjouissance, vous êtes comblé de cadeaux et d'Âmes ! NL Une fois les célébrations terminées et après avoir quitté le Nid, vous réalisez que vous auriez pu profiter de ce temps pour chercher une arme précieuse... NL NL Il est trop tard maintenant, mais vous continuez quand même votre chemin.",
+      "Vous vous précipitez vers la boîte de dons et le trésor, avec l'intention d'utiliser pleinement la pièce et de trouver également une #yRelique. NL NL Les pièces, payées au prix du sang, peuvent remplacer avantageusement les #bÂmes. NL NL La #yRelique, bien sûr, s'avérera également utile dans les épreuves à venir. NL NL Vous empochez les pièces trempées de #rsang de la boîte de dons, avec l'intention de les utiliser pleinement, mais vous remarquez alors que les caisses sont presque vides... NL NL NL ~...~",
+      "Avez-vous été... #r@volé?@ Le Nid, #pcambriolé ? NL NL Bien sûr que non, il n'y a ~aucune~ ~chance~ que cela arrive. NL NL NL Ce serait idiot, rien que d'y penser. NL NL NL ~...n'est-ce~ ~pas~ ~?~ NL NL NL Vous mettez de côté vos  #y~doutes~ #y~tenaces~ et vous éloignez du Nid."
+    ],
+    "OPTIONS": [
+      "[Rendre la statue] #rPerdez #rla #rStatue #rAilée #rBrisée. #gObtenez #gplusieures #grécompenses.",
+      "[Verrouillé] Reqiert la Statue Ailée Brisée.",
+      "[Collecter les offrandes] #gObtenez #gune #gPotion #gde #gCuriosité.",
+      "[Invoquer une arme] #gObtenez #gune #gRelique #gspéciale. #rPerdez #r",
+      " #rPV #rMax.",
+      "[Boîte de dons] #gGagnez #g",
+      " #gd'Or #get #gune #gRelique #gCommune. #rDevenez #rMaudit #r- #rDoute.",
+      "[Quitter]",
+      "[Continuer]",
+      "[Soyez loué !] #gGagnez #gdes #grécompenses pour avoir rendu la #gStatue #gAilée #gBrisée.",
+      "[Continuer] - #rDevenez #rMaudit #r- #rDoute."
+    ]
+  },
+  "awakened:WingStatue": {
+    "NAME": "Statue ailée",
+    "DESCRIPTIONS": [
+      "Parmi les pierres et les rochers, vous remarquez une grande statue bleue complexe représentant Mazaleth, le dieu des corbeaux. NL NL Vous ressentez soudainement une colère intense et l'envie de la détruire. NL NL Cependant, vous savez que cela attirerait la colère de votre bienfaiteur.",
+      "Vous décidez que cela ne vaut pas la peine de risquer de détruire la statue et décidez plutôt de l'emporter avec vous. NL Vous peinez temporairement sous son poids, mais vous vous en emparez rapidement et continuez votre chemin.",
+      "Vous vous jetez sur la statue et la réduisez en morceaux ! NL Dans les décombres, vous trouvez un fragment pointu de la statue qui possède encore une magie résiduelle. NL Vous partez, sentant une #pénergie #psombre s'infiltrer dans votre sang.",
+      "You walk past and continue onward.",
+      "CA...Caw?! Cadeau pour DIEU OISEAU ?",
+      "CA-CAAAW!!",
+      "Un échange ? Une offre équitable...",
+      "Le culte sera satisfait."
+    ],
+    "OPTIONS": [
+      "[Détruire] #gObtenez #gFragment #gAiguisé. #rDevenez #rMaudit #rDeux #rFois #r- #rHémophilie.",
+      "[Collecter] #rPerdez #r",
+      "[Quitter]",
+      " #rPV. #gObtenez #gla #gStatue #gAilée #gBrisée."
+    ]
+  },
+  "awakened:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Rien ne compte plus que la lutte pour la vie. Le présent."
+    ],
+    "OPTIONS": [
+      "[Désespoir] #gVos #gFrappes #get #gDéfenses #gdeviennent #gDrainantes.",
+      "[Verrouillé] Requiert une Frappe ou une Défense."
+    ]
+  },
+  "awakened:AbyssEvent": {
+    "NAME": "Depuis les Abysses",
+    "DESCRIPTIONS": [
+      "Alors que vous vous promenez dans la ville, vous êtes soudainement envahi par un sentiment inexplicable...comme si la réalité elle-même commençait à se défaire sous vos yeux. NL Vos sens vous faisant défaut, vous pouvez voir un #pgrimoire devant vous, et une voix d'un autre monde vous parlant... NL \n\n\"ENFANT ÉVEILLÉ. VOYAGEUR DES PLANS INFINIS. NOUS AVONS BEAUCOUP À DISCUTER. PRENDS MA MAIN, ET JE TE GUIDERAI VERS LA CONNAISSANCE QUE TU RECHERCHES... VERS DES MONDES INCONNUS DE MONSTRES, DE MACHINES ET DE MAGIE AU-DELÀ DE LA COMPRÉHENSION DE CE ROYAUME.",
+      "\"BIEN. NOTRE ALLIANCE SERA PUISSANTE.\"\n\n NL Alors que ce sentiment de #pmalaise #psurnaturel persiste, avec ce livre entre les mains, vous avez l'impression qu'un monde infini de possibilités s'ouvre à vous...",
+      "Vous parvenez à sortir de votre transe, déployer vos ailes et laisser derrière vous l'étrange grimoire."
+    ],
+    "OPTIONS": [
+      "[Accéder] Obtenez #gFracture #gde #gla #gréalité. #rDevenez #rMaudit - #rAgé.",
+      "[Quitter].",
+      "[Quitter]"
+    ]
+  }
+}

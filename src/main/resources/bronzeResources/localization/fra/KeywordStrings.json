@@ -2,25 +2,26 @@
   {
     "PROPER_NAME": "Encode",
     "NAMES": [
-      "encode",
       "encodé",
       "encodée",
       "encodées",
       "encodez",
       "encoder",
+      "encode",
       "encoded"
     ],
-    "DESCRIPTION": "Ajoutez la carte à la Séquence. NL Quand 3 cartes sont dans la Séquence, leurs effets (autre que Encode) sont fusionnés en une Fonction dont le coût est égal au coût de la carte la plus chère."
+    "DESCRIPTION": "Ajoutez la carte à la Séquence. NL Quand 3 cartes sont dans la Séquence, leurs effets (autre que Encode) sont fusionnés en une Fonction qui coûte #b1 [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Compilation",
     "NAMES": [
       "compilation",
       "compilé",
+      "compilés",
       "compile",
       "compiled"
     ],
-    "DESCRIPTION": "Un effet additionnel qui se déclenche lorsque cette carte, alors qu'elle est dans cette Séquence, est combinée dans une Fonction. NL Peut être un effet négatif, qui est référré en tant qu''Erreur'."
+    "DESCRIPTION": "Un effet qui se déclenche lorsque cette carte est fusionnée dans la Fonction. NL Peut être un effet négatif, qui est référé en tant qu''Erreur'."
   },
   {
     "PROPER_NAME": "Flou",
@@ -44,6 +45,6 @@
       "cyclez",
       "cycle"
     ],
-    "DESCRIPTION": "Défaussez une carte et piochez en une pour la remplacer."
+    "DESCRIPTION": "Défaussez une carte et piochez-en une pour la remplacer."
   }
 ]

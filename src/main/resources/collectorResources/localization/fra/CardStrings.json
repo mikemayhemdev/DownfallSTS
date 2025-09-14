@@ -1,102 +1,102 @@
 {
   "collector:ActOfAggression": {
     "NAME": "Acte d'agression",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Appliquez !M! Vulnérable a TOUS les ennemis."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Appliquez !M! de Vulnérabilité à TOUS les ennemis."
   },
   "collector:AlwaysMore": {
-    "NAME": "Toujours plus",
-    "DESCRIPTION": "collector:Bûcher. NL gagnez !M! Or."
+    "NAME": "Toujours Plus",
+    "DESCRIPTION": "collector:Bûcher. NL Gagnez !M! d'Or."
   },
   "collector:AshenStrike": {
     "NAME": "Frappe cendrée",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez un *Charbon."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Obtenez une *Braise."
   },
   "collector:Arrogance": {
     "NAME": "Arrogance",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Votre prochaine attaque a ce tour inflige !M! collector:Malédiction."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Votre prochaine Attaque ce tour applique !M! de collector:Condamnation."
   },
   "collector:AshesAndDust": {
     "NAME": "Cendres et poussière",
-    "DESCRIPTION": "Infligez !D! dégâts a TOUS les ennemis X fois. NL Si X est 5 ou plus, frappe 2 fois de plus."
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis X fois. NL Si X est 5 ou plus, frappe deux fois de plus."
   },
   "collector:BindingCall": {
     "NAME": "Appel contraignant",
-    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaire. NL collector:Têtedetorche gagne \"Applique !clm2! collector:Malédiction a un ennemi aléatoire.\""
+    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaires. NL collector:Tête_de_torche gagne \"Appliquez !clm2! de collector:Condamnation à un ennemi aléatoire.\""
   },
   "collector:Billow": {
-    "NAME": "Onduler",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Au prochain tour, ajoute *Onduler a votre main."
+    "NAME": "Volute",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Au prochain tour, ajoutez *Vocifère dans votre main."
   },
   "collector:Bellow": {
-    "NAME": "Mugir",
-    "DESCRIPTION": "Éthérée. NL Applique collector:Malédiction égale à l'Armure inutiliser du tour précédant. NL Épuisement.",
+    "NAME": "Vocifère",
+    "DESCRIPTION": "Éthérée. NL Appliquez autant de collector:Condamnation que d'Armure inutilisée au tour précédent. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
-      " NL ( Appliques !M! collector:Malédiction )"
+      " NL ( Appliquez !M! de collector:Condamnation )"
     ]
   },
   "collector:BlackBindings": {
-    "NAME": "Reliures noires",
-    "DESCRIPTION": "Applique !M! Faiblesse, Puis applique !clm2! collector:Malédiction pour chaque débuff unique sur l'ennemi."
+    "NAME": "Chaînes Noires",
+    "DESCRIPTION": "Appliquez !M! de Faiblesse, puis appliquez !clm2! de collector:Condamnation pour chaque débuff unique sur l'ennemi."
   },
   "collector:Blightning": {
-    "NAME": "Éclair de flétrissement",
-    "DESCRIPTION": "Applique !M! collector:Malédiction. NL Infligez !D! dégâts. NL Piochez 1 carte de votre pile de collection. NL Épuisement."
+    "NAME": "Fléaudre",
+    "DESCRIPTION": "Appliquez !M! de collector:Condamnation. NL Infligez !D! dégâts. NL Piochez 1 carte de votre pile de Collection. NL Épuisement."
   },
   "collector:Bonfire": {
-    "NAME": "Feu de camp",
+    "NAME": "Feu de joie",
     "DESCRIPTION": "collector:Bûcher. NL Gagnez !B! d'Armure. NL Au prochain tour, gagnez 1 collector:Réserve."
   },
   "collector:BrainDrain": {
-    "NAME": "Exode des cerveaux",
-    "DESCRIPTION": "L'ennemi perd !M! PV. NL ajoutez leur carte collecé a votre main. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "L'ennemi perd !M! PV. NL ajoutez leur carte collecé a votre main et améliorer la. NL Épuisement."
+    "NAME": "Drain Mental",
+    "DESCRIPTION": "L'ennemi perd !M! PV. NL Ajoutez leur carte Collectée à votre main. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "L'ennemi perd !M! PV. NL Ajoutez leur carte Collectée à votre main et Améliorez-la. NL Épuisement."
   },
   "collector:BramblesparKindling": {
-    "NAME": "Petit bois de ronces",
-    "DESCRIPTION": "Injouable. NL quand *Epuiser, Ajoutez une *Frappe *Brûlante a votre main.",
-    "UPGRADE_DESCRIPTION": "Injouable. NL quand *Epuiser, Ajoutez une *Frappe *Brûlante a votre main.",
+    "NAME": "Allume-Ronces",
+    "DESCRIPTION": "Injouable. NL Lorsque cette carte est *Épuisée, ajoutez une *Frappe *Brûlante dans votre main.",
+    "UPGRADE_DESCRIPTION": "Injouable. NL Lorsque cette carte est *Épuisée, ajoutez une *Frappe *Brûlante+ dans votre main.",
     "EXTENDED_DESCRIPTION": [
       "Je dois allumer ce petit bois pour l'utiliser."
     ]
   },
   "collector:BurningStrike": {
     "NAME": "Frappe brûlante",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Pioche une carte.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Pioche !M! cartes."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Piochez une carte.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Piochez !M! cartes."
   },
   "collector:CantTouchThis": {
     "NAME": "Intouchable",
-    "DESCRIPTION": "Gagnez !M! Dextérité. NL Lorsque vous bloquez complètement une attaque, appliquez !clm2! collector:Malédiction a l'attaquent."
+    "DESCRIPTION": "Gagnez !M! de Dextérité. NL Lorsque vous bloquez complètement une Attaque, appliquez !clm2! de collector:Condamnation à l'attaquant."
   },
   "collector:CoffinNail": {
-    "NAME": "Clou de cercueil",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Quand *Épuiser, retournez-la dans votre main au prochain tour avec !M! dégâts de plus."
+    "NAME": "Clou du cercueil",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Lorsque cette carte est *Épuisée, remettez-la dans votre main au prochain tour avec !M! dégâts supplémentaires."
   },
   "collector:Condemn": {
     "NAME": "Condamner",
-    "DESCRIPTION": "Appliquez !M! Vulnérable. NL Appliquez !clm2! collector:Malédiction."
+    "DESCRIPTION": "Appliquez !M! de Vulnérabilité. NL Appliquez !clm2! de collector:Condamnation."
   },
   "collector:CursedWail": {
     "NAME": "Lamentation maudite",
-    "DESCRIPTION": "TOUS les ennemis perdent !M! Force ce tour. NL Les ennemis collector:Affligé perdent !clm2! Force. NL Épuisement."
+    "DESCRIPTION": "TOUS les ennemis perdent !M! de Force ce tour. NL Les ennemis collector:Affligés perdent !clm2! de Force. NL Épuisement."
   },
   "collector:DarkApotheosis": {
     "NAME": "Apothéose sombre",
-    "DESCRIPTION": "Améliorer la pile de collection pour le reste du combat. NL Épuisement."
+    "DESCRIPTION": "Améliorez la pile de Collection pour le reste du combat. NL Épuisement."
   },
   "collector:DarkLordForm": {
     "NAME": "Forme du Seigneur des Ténèbres",
-    "DESCRIPTION": "Au début de votre tour, joue *Tu *Est *Mien a un ennemi aléatoire.",
-    "UPGRADE_DESCRIPTION": "Au début de votre tour, joue #Tu #Est #Mien+ a un ennemi aléatoire."
+    "DESCRIPTION": "Au début de votre tour, jouez *VOUS *ÊTES *À *MOI sur un ennemi aléatoire.",
+    "UPGRADE_DESCRIPTION": "Au début de votre tour, jouez *VOUS *ÊTES *À *MOI+ sur un ennemi aléatoire."
   },
   "collector:Darkstorm": {
     "NAME": "Tempête sombre",
-    "DESCRIPTION": "Gagnez un *Éclair *de *flétrissement. NL Mélangez en !M! de plus dans votre pioche. NL Épuisement."
+    "DESCRIPTION": "Obtenez un *Fléaudre. NL Mélangez en !M! de plus dans votre pioche. NL Épuisement."
   },
   "collector:DarkwoodKindling": {
-    "NAME": "Bois d'allumage en saule",
-    "DESCRIPTION": "Injouable. NL Quand *Épuiser, gagnez !M! collector:Réserve au prochain tour.",
-    "UPGRADE_DESCRIPTION": "Injouable. NL Retenue. NL Quand *Épuiser, gagnez !M! collector:Réserve au prochain tour.",
+    "NAME": "Allume-Saule Noir",
+    "DESCRIPTION": "Injouable. NL Lorsque cette carte est *Épuisée, gagnez !M! collector:Réserves au prochain tour.",
+    "UPGRADE_DESCRIPTION": "Injouable. NL Retenue. NL Lorsque cette carte est *Épuisée, gagnez !M! collector:Réserves au prochain tour.",
     "EXTENDED_DESCRIPTION": [
       "Je dois allumer ce petit bois pour l'utiliser."
     ]
@@ -107,142 +107,142 @@
   },
   "collector:DoubleTrouble": {
     "NAME": "Double Trouble",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Votre prochaine carte collecté a ce tour et jouez 2 fois."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Votre prochaine carte Collectée jouée ce tour est jouée deux fois."
   },
   "collector:DoMayhem": {
     "NAME": "Faire du chaos",
-    "DESCRIPTION": "Au début de votre tour, si un ennemi a 25 de collector:Malédiction ou plus, jouez la carte au dessus de votre pioche."
+    "DESCRIPTION": "Au début de votre tour, si un ennemi a 25 de collector:Condamnation ou plus, jouez la carte en haut de votre pioche."
   },
   "collector:DragonsTrove": {
-    "NAME": "Le trésor du dragon",
-    "DESCRIPTION": "collector:Bûcher. NL Piochez 2 cartes de votre pile de collection. NL Gagnez !M! collector:Réserve. NL Épuisement."
+    "NAME": "Trésor du dragon",
+    "DESCRIPTION": "collector:Bûcher. NL Piochez 2 cartes de votre pile de Collection. NL Gagnez !M! collector:Réserve. NL Épuisement."
   },
   "collector:Ember": {
-    "NAME": "Charbon",
-    "DESCRIPTION": "Retenue. NL Épuisement. NL Quand *Épuiser, gagnez !M! Force.",
+    "NAME": "Braise",
+    "DESCRIPTION": "Retenue. NL Épuisement. NL Lorsque cette carte est *Épuisée, gagnez !M! de Force.",
     "EXTENDED_DESCRIPTION": [
       "Ces braises doivent être allumées, pas jouées."
     ]
   },
   "collector:Empower": {
     "NAME": "Potentiel",
-    "DESCRIPTION": "Gagnez X Force au début de vos prochains !M! tours."
+    "DESCRIPTION": "Gagnez X de Force au début de vos !M! prochains tours."
   },
   "collector:Extricate": {
-    "NAME": "Couper l'âme",
-    "DESCRIPTION": "Épuiser toutes les cartes non-attaque de votre main. NL Infligez !D! dégâts."
+    "NAME": "Déchirure d'âme",
+    "DESCRIPTION": "Épuisez toutes les cartes qui ne sont pas des Attaques de votre main. NL Infligez !D! dégâts."
   },
   "collector:FeelMyPain": {
-    "NAME": "Ressent ma douleur",
-    "DESCRIPTION": "A chaque fois que vous *Épuiser une carte, une ennemi aléatoire perd !M! PV."
+    "NAME": "Ressens ma douleur",
+    "DESCRIPTION": "Lorsque vous *Épuisez une carte, un ennemi aléatoire perd !M! PV."
   },
   "collector:FiendFire": {
     "NAME": "Feu démoniaque",
-    "DESCRIPTION": "Épuiser votre main. NL Infligez !D! dégâts pour chaque carte *Épuiser. NL Épuisement."
+    "DESCRIPTION": "Épuisez votre main. NL Infligez !D! dégâts pour chaque carte *Épuisée. NL Épuisement."
   },
   "collector:Finalize": {
     "NAME": "Finalisé",
-    "DESCRIPTION": "Quand l'ennemi meurt, soigne !clm2! PV. NL Appliquez !M! collector:Malédiction. NL Épuisement."
+    "DESCRIPTION": "Quand l'ennemi meurt, soignez-vous de !clm2! PV. NL Appliquez !M! de collector:Condamnation. NL Épuisement."
   },
   "collector:FingerOfDeath": {
     "NAME": "Doigt de la mort",
-    "DESCRIPTION": "Seule la collector:Réserves peux être dépensez pour cette carte. NL Appliquez !M! collector:Malédiction.",
-    "UPGRADE_DESCRIPTION": "Only collector:Réserves may be spent on this. NL Apply !M! collector:Malédiction to ALL enemies."
+    "DESCRIPTION": "Seule les collector:Réserves peuvent être dépensées pour cette carte. NL Appliquez !M! de collector:Condamnation.",
+    "UPGRADE_DESCRIPTION": "Seule les collector:Réserves peuvent être dépensées pour cette carte. NL Appliquez !M! de collector:Condamnation à TOUS les ennemis."
   },
   "collector:FlameLash": {
-    "NAME": "Fouet de flamme",
-    "DESCRIPTION": "collector:Bûcher. NL Infligez !D! dégâts, ensuite ajoutez les dégâts de la carte *Bûcher.",
-    "UPGRADE_DESCRIPTION": "collector:Bûcher. NL Infligez !D! dégâts, ensuite ajoutez les dégâts de la carte *Bûcher plus !M!."
+    "NAME": "Fouet enflammé",
+    "DESCRIPTION": "collector:Bûcher. NL Infligez !D! dégâts, puis ajoutez les dégâts de la carte qui a servi au *Bûcher.",
+    "UPGRADE_DESCRIPTION": "collector:Bûcher. NL Infligez !D! dégâts, puis ajoutez les dégâts de la carte qui a servi au *Bûcher plus !M!."
   },
   "collector:FleetingEmbers": {
-    "NAME": "Charbons éphémères",
-    "DESCRIPTION": "collector:Bûcher. NL Gagnez !B! d'Armure. NL Ajoutez !M! *Charbons a votre main."
+    "NAME": "Braises éphémères",
+    "DESCRIPTION": "collector:Bûcher. NL Gagnez !B! d'Armure. NL Ajoutez !M! *Braises a votre main."
   },
   "collector:Forgery": {
     "NAME": "Falsification",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Choisissez 1 carte sur !M! de votre pile de collection et gagnez en une copie.",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Choisissez 1 carte parmi !M! de votre pile de Collection et gagnez-en une copie.",
     "EXTENDED_DESCRIPTION": [
-      "a ajoutez a votre main."
+      "à ajouter dans votre main."
     ]
   },
   "collector:FuelTheFire": {
     "NAME": "Alimenter le feu",
-    "DESCRIPTION": "collector:Bûcher. NL Au prochain tour, gagnez !M! collector:Réserve.",
-    "UPGRADE_DESCRIPTION": "collector:Bûcher. NL Au prochain tour, gagnez !M! collector:Réserve et piochez une carte."
+    "DESCRIPTION": "collector:Bûcher. NL Au prochain tour, gagnez !M! collector:Réserves.",
+    "UPGRADE_DESCRIPTION": "collector:Bûcher. NL Au prochain tour, gagnez !M! collector:Réserves et piochez une carte."
   },
   "collector:Goodbye": {
-    "NAME": "Aurevoir",
-    "DESCRIPTION": "Double la collector:Malédiction de l'ennemi. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Triple la collector:Malédiction de l'ennemi. NL Épuisement."
+    "NAME": "Au Revoir",
+    "DESCRIPTION": "Doublez la collector:Condamnation de l'ennemi. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Triplez la collector:Condamnation de l'ennemi. NL Épuisement."
   },
   "collector:GourmandsGaze": {
-    "NAME": "Le regard du gourmand",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Si vous avez jouez une carte collector:Collecté a ce tour, gagnez !B! d'Armure."
+    "NAME": "Regard du gourmand",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si vous avez jouée une carte Collectée durant ce tour, gagnez !B! d'Armure."
   },
   "collector:GreaterHurting": {
-    "NAME": "Plus de souffrance",
-    "DESCRIPTION": "Éthérée. NL Infligez !D! dégâts. NL Si cette carte est Épuiser, gagnez *Le *plus *grand *mal.",
-    "UPGRADE_DESCRIPTION": "Éthérée. NL Infligez !D! dégâts. NL Si cette carte est Épuiser, gagnez *Le *plus *grand *mal+."
+    "NAME": "Supplice Accru",
+    "DESCRIPTION": "Éthérée. NL Infligez !D! dégâts. NL Si cette carte est Épuisée, obtenez *Supplice *Suprême.",
+    "UPGRADE_DESCRIPTION": "Éthérée. NL Infligez !D! dégâts. NL Si cette carte est Épuisée, obtenez *Supplice *Suprême+."
   },
   "collector:GreatestHurting": {
-    "NAME": "Le plus grand mal",
-    "DESCRIPTION": "Éthérée. NL Infligez !D! dégâts. NL Si cette carte est Épuiser, gagnez un *Charbon."
+    "NAME": "Supplice Suprême",
+    "DESCRIPTION": "Éthérée. NL Infligez !D! dégâts. NL Si cette carte est Épuisée, obtenez une *Braise."
   },
   "collector:GreenpyreLocus": {
     "NAME": "Locus du Bûcher Vert",
-    "DESCRIPTION": "Choisissez 1 carte collecté parmis 3 a ajoutez a votre main. Ajoutez !M! copie de cette carte a votre pile de collection.",
+    "DESCRIPTION": "Choisissez 1 carte Collectée parmi 3 à ajouter dans votre main. Ajoutez !M! copies de cette carte dans votre pile de Collection.",
     "EXTENDED_DESCRIPTION": [
-      "Choisissez une carte a ajoutez a votre main."
+      "Choisissez une carte à ajouter dans votre main."
     ]
   },
   "collector:Heatwave": {
     "NAME": "Canicule",
-    "DESCRIPTION": "Infligez !D! dégâts a TOUS les ennemis. NL Gagnez un *Charbon."
+    "DESCRIPTION": "Infligez !D! dégâts a TOUS les ennemis. NL Obtenez une *Braise."
   },
   "collector:Hoard": {
-    "NAME": "Provision",
-    "DESCRIPTION": "collector:Bûcher. NL Piochez !M! cartes. NL Elles seront Retenues à ce tour."
+    "NAME": "Provisions",
+    "DESCRIPTION": "collector:Bûcher. NL Piochez !M! cartes. NL Elles seront Retenues ce tour."
   },
   "collector:HoardersStrike": {
-    "NAME": "Frappe du collectionneur",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Jouez la carte au dessus de votre pile de collection."
+    "NAME": "Frappe du Collectionneur",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Jouez la carte au dessus de votre pile de Collection."
   },
   "collector:Hurting": {
-    "NAME": "Blesser",
-    "DESCRIPTION": "Éthérée. NL Infligez !D! dégâts. NL Si cette carte est Épuiser, gagnez a *Le *plus *Grand *mal.",
-    "UPGRADE_DESCRIPTION": "Éthérée. NL Infligez !D! dégâts. NL Si cette carte est Épuiser, gagnez a *Le *plus *Grand *mal+."
+    "NAME": "Supplice",
+    "DESCRIPTION": "Éthérée. NL Infligez !D! dégâts. NL Si cette carte est Épuisée, obtenez un *Supplice *Accru.",
+    "UPGRADE_DESCRIPTION": "Éthérée. NL Infligez !D! dégâts. NL Si cette carte est Épuisée, obtenez un *Supplice *Accru+."
   },
   "collector:IllTakeThat": {
     "NAME": "Je vais prendre ça",
-    "DESCRIPTION": "Volez jusqu'a !M! d'Armure a l'ennemi. NL Infligez !D! dégâts."
+    "DESCRIPTION": "Volez jusqu'à !M! d'Armure de l'ennemi. NL Infligez !D! dégâts."
   },
   "collector:InevitableDemise": {
     "NAME": "Décès inévitable",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Prévien la prochaine fois que la collector:Malédiction de la cible est retiré."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Prévenez la prochaine fois que la collector:Condamnation de la cible se retire."
   },
   "collector:InflictAgony": {
-    "NAME": "Infliger l'agonie",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Si l'ennemi n'est pas collector:Affligé, appliquez 2 Faiblesse et Vulnérable."
+    "NAME": "Infliger l'Agonie",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si l'ennemi n'est pas collector:Affligé, appliquez 2 de Faiblesse et de Vulnérabilité."
   },
   "collector:Invigorate": {
     "NAME": "Flash",
-    "DESCRIPTION": "collector:Bûcher. NL Choisissez d'obtenir *Trébucher ou *Aveuglement. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "collector:Bûcher. NL Choisissez d'obtenir *Trébucher+ ou *Aveuglement+. NL Épuisement.",
+    "DESCRIPTION": "collector:Bûcher. NL Choisissez d'obtenir *Croche-pied ou *Aveuglement. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "collector:Bûcher. NL Choisissez d'obtenir *Croche-pied+ ou *Aveuglement+. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "Choisissez une carte a ajoutez a votre main."
     ]
   },
   "collector:IronbarkKindling": {
-    "NAME": "Bois d'allumage de fer",
-    "DESCRIPTION": "Injouable. NL Quand *Épuiser, gagnez !B! d'Armure.",
-    "UPGRADE_DESCRIPTION": "Injouable. Retenue. NL Quand *Épuiser, gagnez !B! d'Armure.",
+    "NAME": "Allume-Bois de fer",
+    "DESCRIPTION": "Injouable. NL Lorsque cette carte est *Épuisée, gagnez !B! d'Armure.",
+    "UPGRADE_DESCRIPTION": "Injouable. Retenue. NL Lorsque cette carte est *Épuisée, gagnez !B! d'Armure.",
     "EXTENDED_DESCRIPTION": [
       "Je dois allumer ce petit bois pour l'utiliser."
     ]
   },
   "collector:ItMattersNot": {
-    "NAME": "Cela n'a pas d'importance",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Augmente la Faiblesse et la Vulnérable de TOUS les ennemis de !M!."
+    "NAME": "Aucune importance",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Augmentez la Faiblesse et la Vulnérabilité de TOUS les ennemis de !M!."
   },
   "collector:JadedJabs": {
     "NAME": "Coups blasés",
@@ -254,11 +254,11 @@
     "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, gagnez !M! d'Armure. NL Si un ennemi est collector:Affligé, gagnez en !clm2! de plus."
   },
   "collector:LanternFlare": {
-    "NAME": "Flamme de lanterne",
-    "DESCRIPTION": "collector:Bûcher. NL Appliquez !M! collector:Malédiction. NL L'ennemi en gagne !clm2! de plus a la fin de chaque tour."
+    "NAME": "Lanterne Flamboyante",
+    "DESCRIPTION": "collector:Bûcher. NL Appliquez !M! de collector:Condamnation. NL L'ennemi en gagne !clm2! de plus à la fin de chaque tour."
   },
   "collector:LuckyWick": {
-    "NAME": "Mèche porte-bonheur",
+    "NAME": "Mèche Providentielle",
     "DESCRIPTION": "Gagnez !B! d'Armure. NL Infligez !D! dégâts."
   },
   "collector:MastersCall": {
@@ -267,32 +267,32 @@
   },
   "collector:MiniCurse": {
     "NAME": "Mini-Malédiction",
-    "DESCRIPTION": "collector:Bûcher. NL Appliquez 1 Faiblesse et Vulnérable.",
-    "UPGRADE_DESCRIPTION": "collector:Bûcher. NL Appliquez 1 Faiblesse et Vulnérable a TOUS les ennemis."
+    "DESCRIPTION": "collector:Bûcher. NL Appliquez 1 de Faiblesse et de Vulnérabilité.",
+    "UPGRADE_DESCRIPTION": "collector:Bûcher. NL Appliquez 1 de Faiblesse et de Vulnérabilité à TOUS les ennemis."
   },
   "collector:Misdirect": {
-    "NAME": "Mauvaise direction",
+    "NAME": "Désorientation",
     "DESCRIPTION": "Gagnez !B! d'Armure. NL Au prochain tour, gagnez 1 collector:Réserve."
   },
   "collector:MysteryWeaving": {
-    "NAME": "Tissage mystère",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Obtenez 2 d'Armure en moins pour chaque carte dans votre main."
+    "NAME": "Tissage Occulte",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Donne 2 d'Armure en moins pour chaque carte dans votre main."
   },
   "collector:OakbrimKindling": {
-    "NAME": "Bois d'allumage en chêne",
-    "DESCRIPTION": "Injouable. NL Quand *Épuiser, piochez !M! cartes.",
+    "NAME": "Allume-Chêne",
+    "DESCRIPTION": "Injouable. NL Lorsque cette carte est *Épuisée, piochez !M! cartes.",
     "EXTENDED_DESCRIPTION": [
       "Je dois allumer ce petit bois pour l'utiliser."
     ]
   },
   "collector:Omen": {
     "NAME": "Présage",
-    "DESCRIPTION": "Chaque fois que vous jouez une carte collecté, gagnez 1 Force.",
-    "UPGRADE_DESCRIPTION": "Inné. NL Chaque fois que vous jouez une carte collecté, gagnez 1 Force."
+    "DESCRIPTION": "Chaque fois que vous jouez une carte Collectée, gagnez 1 de Force.",
+    "UPGRADE_DESCRIPTION": "Inné. NL Chaque fois que vous jouez une carte Collectée, gagnez 1 de Force.."
   },
   "collector:ProtectingCall": {
     "NAME": "Appel de protection",
-    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaire. NL collector:Têtedetorche gagne \"Gagnez !clm2! d'Armure.\""
+    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaires. NL collector:Tête_de_torche gagne \"Gagnez !clm2! d'Armure.\""
   },
   "collector:Pyromancy": {
     "NAME": "Pyromancie",
@@ -301,41 +301,41 @@
   },
   "collector:RagingCall": {
     "NAME": "Appel enragé",
-    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaire. NL collector:Têtedetorche gagne \"Infligez !clm2! dégâts a TOUS les ennemis.\"."
+    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaires. NL collector:Tête_de_torche gagne \"Infligez !clm2! dégâts a TOUS les ennemis.\"."
   },
   "collector:ReceiveTribute": {
-    "NAME": "Recevoir un hommage",
-    "DESCRIPTION": "collector:Bûcher. NL Choisissez 1 carte de boss parmis !M! Boss a obtenir. Elle gagne Retenue. NL Épuisement.",
+    "NAME": "Tribut Reçu",
+    "DESCRIPTION": "collector:Bûcher. NL Choisissez 1 carte de Boss parmi !M! à Obtenir. Elle gagne Retenue. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
-      "Choisissez une carte a ajoutez a votre main."
+      "Choisissez une carte à ajouter dans votre main."
     ]
   },
   "collector:Roast": {
-    "NAME": "Rôtir",
+    "NAME": "Rôtissage",
     "DESCRIPTION": "collector:Bûcher. NL Infligez !D! dégâts."
   },
   "collector:RotwoodKindling": {
-    "NAME": "Bois d'allumage pourri",
-    "DESCRIPTION": "Injouable. NL Quand *Épuiser, appliquez !M! Vulnérable et !clm2! collector:Malédiction a TOUS les ennemis.",
+    "NAME": "Allume-Bois pourri",
+    "DESCRIPTION": "Injouable. NL Lorsque cette carte est *Épuisée, appliquez !M! de Vulnérabilité et !clm2! de collector:Condamnation à TOUS les ennemis.",
     "EXTENDED_DESCRIPTION": [
       "Je dois allumer ce petit bois pour l'utiliser."
     ]
   },
   "collector:SapStrength": {
     "NAME": "Marque mortelle",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Au prochain tour, l'ennemi perd des PV égaux à 2 fois les dégâts non-bloqués infligés."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Au prochain tour, l'ennemi perd des PV égaux à deux fois les dégâts non-bloqués infligés."
   },
   "collector:ScorchingRay": {
-    "NAME": "Rayon brûlant",
-    "DESCRIPTION": "Infligez !D! dégâts a un ennemi aléatoire X fois."
+    "NAME": "Rayon ardent",
+    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire X fois."
   },
   "collector:SeedOfDoubt": {
     "NAME": "Graine du doute",
-    "DESCRIPTION": "Appliquez !M! collector:Malédiction. NL Chaque fois que cette carte est *Épuiser quand elle est dans votre main, augmentez sa *Malédiction de !clm2!."
+    "DESCRIPTION": "Appliquez !M! de collector:Condamnation. NL Chaque fois que cette carte est *Épuisée quand elle est dans votre main, augmentez sa *Condamnation de !clm2!."
   },
   "collector:ShadowDaggers": {
     "NAME": "Dagues de l'Ombre",
-    "DESCRIPTION": "Infligez !D! dégâts pour chaque carte collecté jouez a ce combat. NL Épuisement.",
+    "DESCRIPTION": "Infligez !D! dégâts pour chaque carte Collectée jouée ce combat. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       " NL (Touche ",
       " fois.)",
@@ -344,16 +344,16 @@
   },
   "collector:SomberShield": {
     "NAME": "Bouclier sombre",
-    "DESCRIPTION": "collector:Bûcher. NL Gagnez !B! d'Armure. NL Au prochain tour, gagnez une copie de la carte *Épuiser."
+    "DESCRIPTION": "collector:Bûcher. NL Gagnez !B! d'Armure. NL Au prochain tour, gagnez une copie de la carte *Épuisée."
   },
   "collector:SoulSnare": {
     "NAME": "Piège d'âme",
-    "DESCRIPTION": "Appliquez !M! collector:Malédiction. NL Épuisement."
+    "DESCRIPTION": "Appliquez !M! de collector:Condamnation. NL Épuisement."
   },
   "collector:Soulforge": {
     "NAME": "Forgeâme",
-    "DESCRIPTION": "Piochez une carte de votre pile de collection. Gagnez en !M! copie améliorer. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Piochez une carte de votre pile de collection. Gagnez en !M! copies améliorées. NL Épuisement."
+    "DESCRIPTION": "Piochez une carte de votre pile de collection. Gagnez-en !M! copie améliorée. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Piochez une carte de votre pile de collection. Gagnez-en !M! copies améliorées. NL Épuisement."
   },
   "collector:Spark": {
     "NAME": "Étincelle",
@@ -365,160 +365,160 @@
     "DESCRIPTION": "Infligez !D! dégâts. NL Si l'ennemi est collector:Affligé, gagnez !B! d'Armure."
   },
   "collector:StashAway": {
-    "NAME": "Se cacher",
-    "DESCRIPTION": "Gagnez !B! d'Armure X fois. NL Au prochain tour, gagnez X collector:Réserve. NL Épuisement."
+    "NAME": "Planquer",
+    "DESCRIPTION": "Gagnez !B! d'Armure X fois. NL Au prochain tour, gagnez X collector:Réserves. NL Épuisement."
   },
   "collector:Strike": {
     "NAME": "Frappe",
     "DESCRIPTION": "Infligez !D! dégâts."
   },
   "collector:SuckerPunch": {
-    "NAME": "Coup de poing vicieux",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez !M! Faiblesse."
+    "NAME": "Coup bas",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez !M! de Faiblesse."
   },
   "collector:Suffering": {
     "NAME": "Souffrance",
-    "DESCRIPTION": "Chaque fois que vous appliquez *Faiblesse ou *Vulnérable a un ennemi, appliquez leur aussi !M! collector:Malédiction."
+    "DESCRIPTION": "Chaque fois que vous appliquez de la *Faiblesse ou de la *Vulnérabilité sur un ennemi, appliquez-leur aussi !M! de collector:Condamnation."
   },
   "collector:SunbloomKindling": {
-    "NAME": "Bois d'allumage ensoleillé",
-    "DESCRIPTION": "Injouable. NL Quand *Épuiser, gagnez !M! Force et Ajoutez 2 *Charbons a votre main.",
+    "NAME": "Allume-Fleur de Soleil",
+    "DESCRIPTION": "Injouable. NL Lorsque cette carte est *Épuisée, gagnez !M! de Force et Ajoutez 2 *Braises dans votre main.",
     "EXTENDED_DESCRIPTION": [
       "Je dois allumer ce petit bois pour l'utiliser."
     ]
   },
   "collector:ThornWhip": {
     "NAME": "Fouet épineux",
-    "DESCRIPTION": "Infligez !D! dégâts et appliquez !M! hermit:Meurtri a TOUS les ennemis. NL Gagnez un *Surin."
+    "DESCRIPTION": "Infligez !D! dégâts et appliquez !M! de hermit:Meurtri à TOUS les ennemis. NL Obtenez un *Surin."
   },
   "collector:Torchbearer": {
     "NAME": "Porteur du flambeau",
-    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaire. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Si vous avez des expansioncontent:PV_temporaire, Épuisement. NL Gagnez !M! expansioncontent:PV_temporaire."
+    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaires. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Si vous avez des expansioncontent:PV_temporaires, Épuisement. NL Gagnez !M! expansioncontent:PV_temporaires."
   },
   "collector:WhirlingFlame": {
     "NAME": "Flamme tourbillonnante",
-    "DESCRIPTION": "Infligez !D! dégâts a TOUS les ennemis. NL Mettez une carte de votre défausse sur le dessus de votre pioche."
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Mettez une carte de votre défausse sur le dessus de votre pioche."
   },
   "collector:VoidArmor": {
     "NAME": "Armure du Vide",
-    "DESCRIPTION": "TOUS le monde gagne !B! d'Armure et 1 bronze:Flou."
+    "DESCRIPTION": "TOUT le monde gagne !B! d'Armure et 1 de bronze:Flou."
   },
   "collector:Wildfire": {
     "NAME": "Feu de forêt",
     "DESCRIPTION": "Infligez !D! dégâts pour chaque débuff unique sur l'ennemi."
   },
   "collector:YouAreMine": {
-    "NAME": "Tu est mien!",
-    "DESCRIPTION": "Appliquez !M! Faiblesse. NL Appliquez !M! Vulnérable. Appliquez !clm2! collector:Malédiction."
+    "NAME": "VOUS ÊTES À MOI !",
+    "DESCRIPTION": "Appliquez !M! de Faiblesse. NL Appliquez !M! de Vulnérabilité. Appliquez !clm2! de collector:Condamnation."
   },
   "collector:Whomp": {
     "NAME": "Whomp",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez !M! expansioncontent:PV_temporaire. NL Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez !M! expansioncontent:PV_temporaires. NL Épuisement."
   },
   "collector:AcidSlimeCard": {
-    "NAME": "Boue acide",
-    "DESCRIPTION": "Ajoutez !M! carte aléatoire coûtent 0 à votre main.",
-    "UPGRADE_DESCRIPTION": "Ajoutez !M! cartes aléatoires coûtent 0 à votre main."
+    "NAME": "Slime acide",
+    "DESCRIPTION": "Ajoutez !M! carte aléatoire coûtant 0 à votre main.",
+    "UPGRADE_DESCRIPTION": "Ajoutez !M! cartes aléatoires coûtant 0 à votre main."
   },
   "collector:AugmenterCard": {
-    "NAME": "Augmenter",
-    "DESCRIPTION": "Perdez 3 PV. NL Gagnez !M! Force."
+    "NAME": "Dealer",
+    "DESCRIPTION": "Perdez 3 PV. NL Gagnez !M! de Force."
   },
   "collector:BearCard": {
-    "NAME": "Endurer",
+    "NAME": "Balourd",
     "DESCRIPTION": "Gagnez !B! d'Armure. NL Enlevez l'Armure de l'ennemi. NL Infligez !D! dégâts."
   },
   "collector:BlueSlaverCard": {
-    "NAME": "Esclave bleu",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez 1 Faiblesse. NL Doublez la Faiblesse de l'ennemi."
+    "NAME": "Esclavagiste bleu",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez 1 de Faiblesse. NL Doublez la Faiblesse de l'ennemi."
   },
   "collector:BonfireSpiritsCard": {
-    "NAME": "Esprits du feu de joie",
-    "DESCRIPTION": "collector:Bûcher. NL Soignez !M! PV. NL Si la carte Épuiser etait Rare, augmentez vos PV max de 1."
+    "NAME": "Esprits du feu de camp",
+    "DESCRIPTION": "collector:Bûcher. NL Soignez-vous de !M! PV. NL Si la carte Épuisée était Rare, augmentez vos PV max de 1."
   },
   "collector:BookOfStabbingCard": {
-    "NAME": "Livre du poignardage",
-    "DESCRIPTION": "Chaque fois que vous ingligez des dégâts non-bloquées, appliquez !M! collector:Malédiction."
+    "NAME": "Manuel d'assassinat",
+    "DESCRIPTION": "Chaque fois que vous ingligez des dégâts non-bloqués, appliquez !M! de collector:Condamnation."
   },
   "collector:BronzeOrbCard": {
-    "NAME": "Orbe en bronze",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Infligez !D! dégâts. NL La carte du haut de votre pioche coûtera 0 jusqu'à être jouée."
+    "NAME": "Orbe",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Infligez !D! dégâts. NL La carte du haut de votre pioche coûtera 0 jusqu'à ce qu'elle soit jouée."
   },
   "collector:ByrdCard": {
-    "NAME": "Vautours",
+    "NAME": "Oizo",
     "DESCRIPTION": "Infligez !D! dégâts 5 fois."
   },
   "collector:CenturionCard": {
     "NAME": "Centurion",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Gagnez !M! Dextérité."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Gagnez !M! de Dextérité."
   },
   "collector:ChosenCard": {
     "NAME": "Élu",
-    "DESCRIPTION": "Appliquez !M! Faiblesse. NL Si l'ennemi na pas l'intention d'attaquer, appliquez !clm2! Vulnérable."
+    "DESCRIPTION": "Appliquez !M! de Faiblesse. NL Si l'ennemi na pas l'intention d'attaquer, appliquez !clm2! de Vulnérabilité."
   },
   "collector:ClericCard": {
     "NAME": "Clerc",
-    "DESCRIPTION": "collector:Bûcher. NL Gagnez !M! expansioncontent:PV_temporaire."
+    "DESCRIPTION": "collector:Bûcher. NL Gagnez !M! expansioncontent:PV_temporaires."
   },
   "collector:CultistCard": {
     "NAME": "Cultiste",
-    "DESCRIPTION": "collector:Bûcher. NL Gagnez 1 Force au début de vos 3 prochain tour."
+    "DESCRIPTION": "collector:Bûcher. NL Gagnez 1 de Force au début de vos 3 prochains tours."
   },
   "collector:DaggerCard": {
     "NAME": "Dague",
     "DESCRIPTION": "Perdez !M! PV. NL Infligez !D! dégâts."
   },
   "collector:DarklingsCard": {
-    "NAME": "Ténébreux",
-    "DESCRIPTION": "collector:Bûcher. NL Infligez !D! dégâts. expansioncontent:Exhumer une carte collectée.",
+    "NAME": "Êtres sombres",
+    "DESCRIPTION": "collector:Bûcher. NL Infligez !D! dégâts. expansioncontent:Exhumez une carte Collectée.",
     "EXTENDED_DESCRIPTION": [
       "Pour en créer 2 copies."
     ]
   },
   "collector:DesignerInSpireCard": {
     "NAME": "Designer-In-Spire",
-    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaire. NL collector:Têtedetorche gagne \"Pioche 1 carte.\""
+    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaires. NL collector:Tête_de_torche gagne \"Pioche 1 carte.\""
   },
   "collector:FinalBossCard": {
     "NAME": "Fin de partie",
-    "DESCRIPTION": "Enlevez l'invincibilité des ennemis et étourdissez-les. NL Épuisement."
+    "DESCRIPTION": "Enlevez l'Invincibilité de l'ennemi et Étourdissez-le. NL Épuisement."
   },
   "collector:FaceTraderCard": {
-    "NAME": "Marchand de visage",
-    "DESCRIPTION": "Ajoutez !M! cartes aléatoires de toute couleur a votre main. NL Elle devienne Éthérée."
+    "NAME": "Échangeur de visage",
+    "DESCRIPTION": "Ajoutez !M! cartes aléatoires de n'importe quelle couleur dans votre main. NL Elles deviennent Éthérées."
   },
   "collector:FatGremlinCard": {
     "NAME": "Gros diablotin",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez !M! Faiblesse."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez !M! de Faiblesse."
   },
   "collector:FungiBeastCard": {
     "NAME": "Champi-bête",
-    "DESCRIPTION": "Appliquez !M! Vulnérable. NL Appliquez 1 Vulnérable a TOUS les ennemis."
+    "DESCRIPTION": "Appliquez !M! de Vulnérabilité. NL Appliquez 1 de Vulnérabilité à TOUS les ennemis."
   },
   "collector:GiantHeadCardStageOne": {
     "NAME": "Tic",
-    "DESCRIPTION": "Au prochain tour, gagnez un *Toc."
+    "DESCRIPTION": "Au prochain tour, gagnez un *Tac."
   },
   "collector:GiantHeadCardStageTwo": {
-    "NAME": "Toc",
+    "NAME": "Tac",
     "DESCRIPTION": "Au prochain tour, gagnez un *Coup *de *tête."
   },
   "collector:GiantHeadCardStageThree": {
     "NAME": "Coup de tête",
-    "DESCRIPTION": "Infligez !D! dégâts a TOUS les ennemis."
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis."
   },
   "collector:GremlinLeaderCard": {
-    "NAME": "Chef des diablotins",
-    "DESCRIPTION": "Ajoutez !M! diablotin collecté aléatoire a votre main."
+    "NAME": "Diablotin en chef",
+    "DESCRIPTION": "Ajoutez !M! Collectionables de Diablotin aléatoires dans votre main."
   },
   "collector:GremlinNobCard": {
-    "NAME": "Diablotin bourgeois",
-    "DESCRIPTION": "Chaque fois que vous jouez une compétence, gagnez !M! Vigueur."
+    "NAME": "Diablotin Nob",
+    "DESCRIPTION": "Chaque fois que vous jouez une Compétence, gagnez !M! de Vigueur."
   },
   "collector:GremlinWizardCard": {
-    "NAME": "Diablotin magicien",
-    "DESCRIPTION": "Au prochain tour, NL gagnez !M! Vigueur et 1 collector:Réserve."
+    "NAME": "Diablotin sorcier",
+    "DESCRIPTION": "Au prochain tour, NL gagnez !M! de Vigueur et 1 collector:Réserve."
   },
   "collector:JawWormCard": {
     "NAME": "Mâchouilleur",
@@ -530,87 +530,87 @@
   },
   "collector:LagavulinCard": {
     "NAME": "Lagavulin",
-    "DESCRIPTION": "TOUS les ennemis perdent !M! Force."
+    "DESCRIPTION": "TOUS les ennemis perdent !M! de Force."
   },
   "collector:LivingWallCard": {
     "NAME": "Mur vivant",
-    "DESCRIPTION": "collector:Bûcher. NL Gagnez une carte améliorer aléatoire. NL Elle coûtera 0 jusqu'à être jouée."
+    "DESCRIPTION": "collector:Bûcher. NL Obtenez une carte Améliorée aléatoire. NL Elle coûtera 0 jusqu'à ce qu'elle soit jouée."
   },
   "collector:LouseCard": {
     "NAME": "Pou",
-    "DESCRIPTION": "Gagnez 1 bronze:Flou. NL La prochaine fois que vous recevrez des dégâts non bloqués, gagnez !B! d'Armure."
+    "DESCRIPTION": "Gagnez 1 de bronze:Flou. NL La prochaine fois que vous recevrez des dégâts non-bloqués, gagnez !B! d'Armure."
   },
   "collector:MadGremlinCard": {
-    "NAME": "Diablotin furieux",
-    "DESCRIPTION": "Gagnez !M! Force temporaire."
+    "NAME": "Diablotin fou",
+    "DESCRIPTION": "Gagnez !M! de Force Temporaire."
   },
   "collector:MawCard": {
-    "NAME": "La gueule",
+    "NAME": "La Gueule",
     "DESCRIPTION": "Infligez !D! dégâts."
   },
   "collector:MerchantCard": {
     "NAME": "Marchand",
-    "DESCRIPTION": "Ajoutez !M! cartes incolore aléatoire a votre main. NL Elle coûtent 0 a ce tour."
+    "DESCRIPTION": "Ajoutez !M! cartes incolores aléatoires dans votre main. NL Elle coûtent 0 ce tour."
   },
   "collector:MushroomCard": {
     "NAME": "Champignon",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez !M! Faiblesse et Vulnérable aléatoirement."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez !M! de Faiblesse et de Vulnérabilité aléatoirement."
   },
   "collector:MysticCard": {
-    "NAME": "Mystique",
-    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaire."
+    "NAME": "Soigneur",
+    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaires."
   },
   "collector:NemesisCard": {
-    "NAME": "Nemesis",
+    "NAME": "Némésis",
     "DESCRIPTION": "Gagnez 1 Intangible."
   },
   "collector:NlothCard": {
     "NAME": "N'Loth",
-    "DESCRIPTION": "collector:Bûcher. NL Ajoutez une carte rare aléatoire dans votre main. NL Elle coûtent 1 de moin.",
-    "UPGRADE_DESCRIPTION": "collector:Bûcher. NL Ajoutez une carte rare aléatoire dans votre main. NL Elle coûtera 0."
+    "DESCRIPTION": "collector:Bûcher. NL Ajoutez une carte Rare aléatoire dans votre main. NL Elle coûte 1 [E] de moins.",
+    "UPGRADE_DESCRIPTION": "collector:Bûcher. NL Ajoutez une carte Rare aléatoire dans votre main. NL Elle coûte 0."
   },
   "collector:OrbWalkerCard": {
-    "NAME": "Gardien sphérique",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez !M! *Charbons a votre main."
+    "NAME": "L'Orbiste",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez !M! *Braises dans votre main."
   },
   "collector:PointyCard": {
-    "NAME": "Pointue",
-    "DESCRIPTION": "Infligez !D! dégâts 2 fois. NL Piochez 1 carte."
+    "NAME": "Pointu",
+    "DESCRIPTION": "Infligez !D! dégâts deux fois. NL Piochez 1 carte."
   },
   "collector:RanwidCard": {
     "NAME": "Ranwid",
-    "DESCRIPTION": "Gagnez 1 potion et une carte additionnelle à la fin du combat."
+    "DESCRIPTION": "Gagnez 1 Récompense de Potion et de Carte supplémentaire à la fin du combat."
   },
   "collector:RedSlaverCard": {
     "NAME": "Esclavagiste rouge",
     "DESCRIPTION": "L'ennemi perd !M! Force pour ce tour."
   },
   "collector:ReptomancerCard": {
-    "NAME": "Reptomancer",
-    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaire. NL collector:Têtedetorche gagne \"Applique !clm2! Poison a un ennemi aléatoire.\""
+    "NAME": "Reptomancien",
+    "DESCRIPTION": "Gagnez !M! expansioncontent:PV_temporaires. NL collector:Tête_de_torche gagne \"Applique !clm2! de Poison à un ennemi aléatoire.\""
   },
   "collector:RepulsorCard": {
-    "NAME": "Répulseur",
+    "NAME": "Répugnant",
     "DESCRIPTION": "collector:Bûcher. NL Piochez !M! cartes."
   },
   "collector:RomeoCard": {
-    "NAME": "Romeo",
-    "DESCRIPTION": "Votre prochaine attaque coûtera 0 et infligera !M! dégâts additionnelle."
+    "NAME": "Roméo",
+    "DESCRIPTION": "Votre prochaine Attaque coûtera 0 et infligera !M! dégâts supplémentaires."
   },
   "collector:ScrapOozeCard": {
-    "NAME": "Limon de ferraille",
-    "DESCRIPTION": "collector:Bûcher. NL Perdez 3 PV. NL Ajoutez !M! attaques aléatoire a votre main. NL Elle coûteront 0 a ce tour."
+    "NAME": "Slime de ferraille",
+    "DESCRIPTION": "collector:Bûcher. NL Perdez 3 PV. NL Ajoutez !M! Attaques aléatoires dans votre main. NL Elle coûteront 0 ce tour."
   },
   "collector:SentryCard": {
     "NAME": "Sentinelle",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez !M! Faiblesse. NL Répétez s'il y a des *Sentinelle dans votre pile d'Épuisement."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez !M! de Faiblesse. NL Répétez ceci s'il y a des *Sentinelles dans votre pile d'Épuisement."
   },
   "collector:ShelledParasiteCard": {
-    "NAME": "Carapace parasitée",
-    "DESCRIPTION": "Gagnez !M! D'armure plaquée."
+    "NAME": "Parasite en carapace",
+    "DESCRIPTION": "Gagnez !M! *d'Armure expansioncontent:Plaquée."
   },
   "collector:ShieldGremlinCard": {
-    "NAME": "Diablotin bouclier",
+    "NAME": "Diablotin à bouclier",
     "DESCRIPTION": "Gagnez !B! d'Armure."
   },
   "collector:SnakePlantCard": {
@@ -622,79 +622,79 @@
     "DESCRIPTION": "Infligez !D! dégâts. NL Piochez 1 carte."
   },
   "collector:SneckoCard": {
-    "NAME": "Snecko",
+    "NAME": "Geckobra",
     "DESCRIPTION": "Piochez !M! cartes. NL sneckomod:Confondez votre main."
   },
   "collector:SphericGuardianCard": {
     "NAME": "Gardien sphérique",
-    "DESCRIPTION": "Gagnez !M! expansioncontent:Flou."
+    "DESCRIPTION": "Gagnez !M! de expansioncontent:Flou."
   },
   "collector:SpikerCard": {
     "NAME": "Épineux",
-    "DESCRIPTION": "Gagnez !M! piques."
+    "DESCRIPTION": "Gagnez !M! d'Épines."
   },
   "collector:SpikeSlimeCard": {
-    "NAME": "Slime à pointes",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Chaque fois que vous êtes attaqué à ce tour, Infligez !M! dégâts en retour."
+    "NAME": "Slime épineux",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Chaque fois que vous êtes attaqué ce tour, infligez !M! dégâts en retour."
   },
   "collector:SpireGrowthCard": {
-    "NAME": "Croissance du spire",
-    "DESCRIPTION": "L'ennemi subit !M! dégâts a la fin de chacun de ses tours."
+    "NAME": "Excroissance de la Tour",
+    "DESCRIPTION": "L'ennemi subit !M! dégâts à la fin de chacun de ses tours."
   },
   "collector:SpireShieldCard": {
-    "NAME": "Bouclier du spire",
-    "DESCRIPTION": "Gagnez !M! Dextérité."
+    "NAME": "Bouclier de la Tour",
+    "DESCRIPTION": "Gagnez !M! de Dextérité."
   },
   "collector:SpireSpearCard": {
-    "NAME": "Lance du spire",
-    "DESCRIPTION": "Gagnez !M! Force."
+    "NAME": "Lance de la Tour",
+    "DESCRIPTION": "Gagnez !M! de Force."
   },
   "collector:SsserpentCard": {
     "NAME": "Ssserpent",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez *Doute a votre main."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez un *Doute dans votre main."
   },
   "collector:TaskmasterCard": {
     "NAME": "Tyran",
-    "DESCRIPTION": "Appliquez !clm2! collector:Malédiction. NL Infligez !D! dégâts. NL Gagnez !M! Force."
+    "DESCRIPTION": "Appliquez !clm2! de collector:Condamnation. NL Infligez !D! dégâts. NL Gagnez !M! de Force."
   },
   "collector:ThievesCard": {
-    "NAME": "Voleur",
-    "DESCRIPTION": "Prennais !M! dégâts de moins a ce tour."
+    "NAME": "Brigands",
+    "DESCRIPTION": "Prenez !M! dégâts de moins des attaques ce tour."
   },
   "collector:TorchHeadCard": {
     "NAME": "Tête de torche",
-    "DESCRIPTION": "Ajoutez une carte appel aléatoire de Tête de torche dans votre main.. NL Elle coûtera a ce tour."
+    "DESCRIPTION": "Ajoutez une carte Appel aléatoire de Tête de torche dans votre main.. NL Elle coûte 0 ce tour."
   },
   "collector:TransientCard": {
-    "NAME": "Éphémère",
-    "DESCRIPTION": "Gagnez !M! Force. NL Meurt dans 6 tour."
+    "NAME": "L'Éphémère",
+    "DESCRIPTION": "Gagnez !M! de Force. NL Mourrez dans 6 tours."
   },
   "collector:VagrantCard": {
     "NAME": "Vagabond",
-    "DESCRIPTION": "Gagnez !M! collector:Réserve. NL Ajoutez une *Honte dans votre main."
+    "DESCRIPTION": "Gagnez !M! collector:Réserves. NL Ajoutez une *Honte dans votre main."
   },
   "collector:WomanInBlueCard": {
     "NAME": "Femme en bleu",
-    "DESCRIPTION": "Gagnez une potion aléatoire. NL Perdez TOUTES vos potion a la fin du combat."
+    "DESCRIPTION": "Gagnez une potion aléatoire. NL Perdez TOUTES vos potions à la fin du combat."
   },
   "collector:WrithingMassCard": {
-    "NAME": "Foule frémissante",
-    "DESCRIPTION": "Scrutez !M!. NL Jouez la carte au dessus de votre pioche."
+    "NAME": "Masse agonisante",
+    "DESCRIPTION": "Scrutez !M! cartes. NL Jouez la carte au dessus de votre pioche."
   },
   "collector:DefaultCollectibleCard": {
     "NAME": "Coque sans âme",
-    "DESCRIPTION": "Cet ennemi n'a pas encore de collection unique! NL Gagnez !M! Force and Dextérité."
+    "DESCRIPTION": "Cet ennemi n'a pas encore de Collectionable unique! NL Gagnez !M! de Force et de Dextérité."
   },
   "collector:ShootingStar": {
     "NAME": "Étoile filante",
-    "DESCRIPTION": "La premiere fois que vous collector:Bûcher une attaque a ce tour, gagnez en 1 copie. NL Elle coûtera 0 jusqu'à être jouée."
+    "DESCRIPTION": "La première fois que vous mettez une Attaque au collector:Bûcher ce tour, obtenez une copie de celle-ci. NL Elle coûte 0 jusqu'à ce qu'elle soit jouée."
   },
   "collector:CollectorCard": {
     "NAME": "Ouroboros",
-    "DESCRIPTION": "collector:Bûcher. NL Appliquez !M! Faiblesse. NL Appliquez !M! Vulnérable. NL Gagnez !clm2! PV_temporaire."
+    "DESCRIPTION": "collector:Bûcher. NL Appliquez !M! de Faiblesse. NL Appliquez !M! de Vulnérabilité. NL Gagnez !clm2! PV_temporaires."
   },
   "collector:Sapped": {
-    "NAME": "Saper",
-    "DESCRIPTION": "collector:Bûcher. NL Épuisement. NL Ne peut pas être enlever de votre deck."
+    "NAME": "Sapé",
+    "DESCRIPTION": "collector:Bûcher. Lorsqu'elle est piochée, perdez [E]. NL Épuisement. NL Ne peut pas être enlevée de votre deck."
   }
 }

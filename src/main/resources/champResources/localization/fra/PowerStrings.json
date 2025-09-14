@@ -2,7 +2,7 @@
   "champ:CounterPower": {
     "NAME": "Contre",
     "DESCRIPTIONS": [
-      "La prochaine fois que vous recevez des dégâts d'une #yAttaque, infligez #b",
+      "La prochaine fois que vous recevez des dégâts d'une #yAttaque, obtenez une #yFrappe #yRiposte #b",
       " ces dégâts en retour."
     ]
   },
@@ -10,21 +10,21 @@
     "NAME": "Concentré : Pose Défensive",
     "DESCRIPTIONS": [
       "La prochaine fois que vous jouez un #yFinisher ce tour, gagnez #b",
-      " #yd'Armure."
+      " #yd'Armure [REMOVE_SPACE]."
     ]
   },
   "champ:FocusedBerPower": {
-    "NAME": "Concentré : Pose du Destructeur",
+    "NAME": "Fancy Footwork",
     "DESCRIPTIONS": [
-      "La prochaine fois que vous jouez un #yFinisher ce tour, infligez #b",
-      " dégâts à TOUS les ennemis."
+      "La prochaine fois que vous utilisez un #yFinisher ce tour, TOUS les ennemis perdent #b",
+      " PV."
     ]
   },
   "champ:ShieldWallPower": {
     "NAME": "Mur de boucliers",
     "DESCRIPTIONS": [
       "À la fin de votre tour, gagnez #b",
-      " de #yContre."
+      " de #yContre [REMOVE_SPACE]."
     ]
   },
   "champ:EntangleNextTurnPower": {
@@ -36,7 +36,7 @@
     ]
   },
   "champ:DrawLessNextTurnPower": {
-    "NAME": "Couronne lancée",
+    "NAME": "Réduction de pioche",
     "DESCRIPTIONS": [
       "Piochez #b",
       " carte de moins au prochain tour.",
@@ -47,29 +47,30 @@
     "NAME": "Ignorant la douleur",
     "DESCRIPTIONS": [
       "Vous ne pouvez pas perdre de PV ce tour.",
-      "Vous ne pouvez pas perdre de PV ce tour et les #b",
-      " prochains."
+      "Vous ne pouvez pas perdre de PV pendant les #b",
+      " prochains tours."
     ]
   },
   "champ:WorseRupturePower": {
     "NAME": "Rage sans fin",
     "DESCRIPTIONS": [
       "Lorsque vous perdez des PV lors de votre tour, gagnez #b",
-      " de #yForce temporaire."
+      " de #yForce temporaire [REMOVE_SPACE]."
     ]
   },
   "champ:ImprovisingPower": {
     "NAME": "Improvisation",
     "DESCRIPTIONS": [
-      "At the start of your turn, if you are not in a Stance, enter a random Stance."
+      "Au début de votre tour, si vous n'êtes pas dans une #yPose [REMOVE_SPACE], adoptez une #yPose aléatoire. Lorsque vous adoptez une #yPose [REMOVE_SPACE], déclenchez son #yBonus #yde #yCompétence #b",
+      " fois."
     ]
   },
   "champ:CalledShotPower": {
-    "NAME": "Called Shot",
+    "NAME": "Coup annoncé",
     "DESCRIPTIONS": [
-      "La prochaine fois que vous jouez un #yFinisher, ne quittez pas votre #yPose.",
+      "La prochaine fois que vous jouez un #yFinisher [REMOVE_SPACE], ne quittez pas votre #yPose [REMOVE_SPACE].",
       "Les #b",
-      " prochaines fois que vous jouez un #yFinisher, ne quittez pas votre #yPose."
+      " prochaines fois que vous jouez un #yFinisher [REMOVE_SPACE], ne quittez pas votre #yPose [REMOVE_SPACE]."
     ]
   },
   "champ:DancingMasterPower": {
@@ -78,7 +79,7 @@
       "La troisième fois que vous adoptez une #yPose chaque tour, gagnez #b",
       " [E] et piochez #b",
       " cartes. ",
-      " restants.",
+      "",
       "Utilisé ce tour.",
 	  ""
     ]
@@ -86,24 +87,24 @@
   "champ:StrikeOfGeniusPower": {
     "NAME": "Frappé de génie",
     "DESCRIPTIONS": [
-      "Au début de votre tour, ajoutez une carte aléatoire contenant \"Frappe\" dans votre main. Elle coûte #b0 jusqu'à ce qu'elle soit jouée et gagne Épuisement.",
+      "Au début de votre tour, ajoutez un #yÉcho de \"Frappe\" aléatoire dans votre main [REMOVE_SPACE]. Elle coûte #b0 jusqu'à ce qu'elle soit jouée.",
       "Au début de votre tour, ajoutez #b",
-      " cartes aléatoires contenant \"Frappe\" dans votre main. Elles coûtent #b0 jusqu'à ce qu'elle soit jouées et gagnent Épuisement."
+      " #yÉchos de \"Frappe\" dans votre main [REMOVE_SPACE]. Elles coûtent #b0 jusqu'à ce qu'elle soit jouées."
     ]
   },
   "champ:StrikeOfGeniusUpgradedPower": {
     "NAME": "Frappé de génie+",
     "DESCRIPTIONS": [
-      "Au début de votre tour, ajoutez une carte aléatoire #yaméliorée contenant \"Frappe\" dans votre main. Elle coûte #b0 jusqu'à ce qu'elle soit jouée et gagne Épuisement.",
+      "Au début de votre tour, ajoutez un #yÉcho #yamélioré de \"Frappe\" aléatoire dans votre main [REMOVE_SPACE]. Elle coûte #b0 jusqu'à ce qu'elle soit jouée.",
       "Au début de votre tour, ajoutez #b",
-      " cartes aléatoires #yaméliorées contenant \"Frappe\" dans votre main. Elles coûtent #b0 jusqu'à ce qu'elle soit jouées et gagnent Épuisement."
+      " #yÉchos #yaméliorés de \"Frappe\" dans votre main [REMOVE_SPACE]. Elles coûtent #b0 jusqu'à ce qu'elle soit jouées."
     ]
   },
   "champ:DefensiveStylePower": {
     "NAME": "Style défensif",
     "DESCRIPTIONS": [
       "Les #yTechniques de la pose #yDéfensive donnent #b",
-      " de #yContre supplémentaires."
+      " de #yContre supplémentaires [REMOVE_SPACE]."
     ]
   },
   "champ:GladiatorStylePower": {
@@ -129,11 +130,11 @@
     ]
   },
   "champ:EnergizedDurationPower": {
-    "NAME": "Couronne enchantée",
+    "NAME": "Énergisé",
     "DESCRIPTIONS": [
-      "Gagnez [E] au début de votre tour.",
-      "Gagnez [E] au début de vos #b",
-      " prochains tours.",
+      "Gagnez #b",
+      " [E] supplémentaire au prochain tour.",
+      " [E] supplémentaires au prochain tour.",
       " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
     ]
   },
@@ -145,9 +146,9 @@
     ]
   },
   "champ:IronFortressVigorPower": {
-    "NAME": "Gabarit technique : Destructeur",
+    "NAME": "Dispositif technique : Destructeur",
     "DESCRIPTIONS": [
-      "Lorsque vous adoptez une Pose, déclenchez la technique de la Pose du Destructeur",
+      "Lorsque vous adoptez une Pose, déclenchez le #yBonus #yde #yCompétence de la Pose du Destructeur",
       " #b",
       " fois."
     ]
@@ -163,7 +164,7 @@
     "NAME": "Forme gladiatrice",
     "DESCRIPTIONS": [
       "Au début de votre tour, gagnez #b",
-      " de #yVigueur lorsque vous en dépensez 3 ce tour, puis faites la même chose pour le #yContre."
+      " de #yVigueur pour chaque 3 points dépensés pendant ce tour, puis faites la même chose pour le #yContre."
     ]
   },
   "champ:NoBlockNextTurnPower": {
@@ -183,9 +184,9 @@
     ]
   },
   "champ:UltimateFormNextTurnPower": {
-    "NAME": "Preparing Ultimate",
+    "NAME": "Préparation Ultime",
     "DESCRIPTIONS": [
-      "Au début de votre prochain tour, entrez en #yPose #yUltime.",
+      "Au début de votre prochain tour, adoptez la #yPose #yUltime.",
       " NL Elle persistera pendant #b",
       " tours."
     ]
@@ -200,14 +201,14 @@
   "champ:ParryPower": {
     "NAME": "Parade",
     "DESCRIPTIONS": [
-      "Si votre Contre est utilisé ce tour, ajoutez Riposte dans votre main."
+      "Si votre Contre est utilisé ce tour, obtenez une #yFrappe #yRiposte supplémentaire."
     ]
   },
   "champ:BoomerangPower": {
     "NAME": "Boomerang",
     "DESCRIPTIONS": [
       "Au début de votre prochain tour, remettez ",
-      " dans votre main. Elle coûte #b0 jusqu'à ce qu'elle soit jouée."
+      " dans votre main. Elle coûte #b0 et ne reviendra plus."
     ]
   },
   "champ:ResolvePower": {
@@ -219,9 +220,9 @@
   "champ:DualPlaySrikePower": {
     "NAME": "Frappes en rafale",
     "DESCRIPTIONS": [
-      "Votre prochaine #yFrappe est jouée deux fois ce tour.",
+      "Votre prochaine #y\"Frappe\" est jouée deux fois ce tour.",
       "Vos ",
-      " prochaines #yFrappes sont jouées deux fois ce tour."
+      " prochaines #y\"Frappes\" sont jouées deux fois ce tour."
     ]
   },
   "champ:LastStandPower": {
@@ -233,11 +234,18 @@
       "@UNE@ @DÉFAITE??@ NL @IMPOSSIBLE!!@"
     ]
   },
+    "champ:HonePower": {
+    "NAME": "Lame affûtée",
+    "DESCRIPTIONS": [
+      "Vos cartes #y\"Frappe\" infligent #b",
+      " dégâts supplémentaires."
+    ]
+  },
   "champ:DoubleStyleThisTurnPower": {
     "NAME": "Fouet de chaînes",
     "DESCRIPTIONS": [
-      "Pendant ce tour, les Bonus de #yCompétence accordent #b",
-      " d'effet supplémentaire."
+      "Pendant ce tour, les #yBonus #yde #yCompétence accordent #b",
+      " d'effets supplémentaires."
     ]
   }
 }

@@ -1,4 +1,4 @@
-{
+﻿{
   "Slimebound:SlimedPotion": {
     "NAME": "점액 병",
     "DESCRIPTIONS": [
@@ -10,14 +10,14 @@
     "NAME": "점액질 엘릭서",
     "DESCRIPTIONS": [
       "이번 전투에서 #y점액을 부여할 때마다 #b",
-      " 만큼 더 부여합니다."
+      " 더 부여합니다."
     ]
   },
   "Slimebound:SpawnSlimePotion": {
     "NAME": "병 속의 군단",
     "DESCRIPTIONS": [
-      "#y전문가를 포함한 무작위 슬라임을 #b",
-      " 마리 생성합니다."
+      "#y전문가를 포함한 무작위 슬라임 #b",
+      " 마리로 #y분열합니다."
     ]
   },
   "Slimebound:ThreeZeroPotion": {

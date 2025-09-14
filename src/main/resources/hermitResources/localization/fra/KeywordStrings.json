@@ -29,14 +29,14 @@
   },
   {
     "ID": "bruise",
-    "PROPER_NAME": "Meurtri",
+    "PROPER_NAME": "Contusion",
     "NAMES": [
       "bruise",
-      "meurtri",
-      "meurtris",
+      "contusion",
+      "contusions",
       "bruised"
     ],
-  "DESCRIPTION": "Les cibles meurtries prennent plus de dégâts des attaques. Chaque coup, le taux de Meurtri est réduit de #b1. S'estompe à la fin du tour."
+  "DESCRIPTION": "Les cibles victimes de contusions prennent plus de dégâts des Attaques. S'estompe à la fin du tour."
 },
   {
     "ID": "rugged",

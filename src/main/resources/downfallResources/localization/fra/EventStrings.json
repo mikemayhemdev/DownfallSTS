@@ -106,9 +106,9 @@
 	  "Vous tendez la main pour #ptake... NL Les esprits @shriek,@ ~tourbillonne~ autour du vortex qui émerge de ta paume dans des tentatives inutiles de fuite. NL Bientôt, leurs esprits eux-mêmes ne sont rien de plus qu'un objet de votre collection."																																												  
     ],
     "OPTIONS": [
-      "[Offrir] #rPerdez #r150 #rÂmes. #gGagnez #g10 #gPV #gMax.",
+      "[Offrir] #rPerdez #r150 #rÂmes. #gGagnez #g10 #gPV #gMax #get #gSoignez-vous entièrement.",
       "[Verrouillé] Requiert 150 Âmes.",
-      "[Offrir] #rPerdez #r150 #rÂmes. #gChaque #gDiablotin #gGagne #g2 #gPV #gMax.",
+      "[Offrir] #rPerdez #r150 #rÂmes. #gGagnez #g2 #gPV #gMax #get #Soignez #gchaque #gDiablotin #gentièrement.",
       "[Prendre]"
     ]
   },
@@ -214,15 +214,16 @@
       "Vous la contournez, vous demandant ce qui aurait pu se passer."
     ],
     "OPTIONS": [
-      "[Entrer] #gAméliorez #g3 #gcartes #galéatoires. #rDevenez #rMaudit #r- #rVicié.",
+      "[Entrer] #gAméliorez #g",
       "[Quitter]",
-      "[Améliorer] Requiert: des Cartes Améliorables"
+      "[Verrouillé] Requiert: des Cartes Améliorables",
+      " #gcartes #galéatoires. #rDevenez #rMaudit #r- #rVicié."
     ]
   },
   "downfall:WorldOfGoop": {
     "NAME": "Monde visqueux",
     "DESCRIPTIONS": [
-      "Vous tombez dans une flaque. NL @ELLE@ @EST@ @REMPLIE@ @D'UNE@ #g@SUBSTANCE@ #g@VISQUEUSE!!@ NL Vous pouvez la ressentir dans votre nez, vos oreilles, partout. NL NL En sortant, vous remarquez que, collé à votre corps, se trouve un Slime #yjaune d'apparence unique. On dirait qu'il a collecté des #yÂmes des malhereux aventuriers qui sont tombés dans la flaque. Quelle chance.",
+      "Vous tombez dans une flaque. NL @ELLE@ @EST@ @REMPLIE@ @D'UNE@ #g@SUBSTANCE@ #g@VISQUEUSE!!@ NL En sortant, vous remarquez que, collé à votre corps, se trouve un Slime #yjaune d'apparence unique. On dirait qu'il a collecté des #yÂmes des malhereux aventuriers qui sont tombés dans la flaque. Quelle chance.",
       "Ne voulant pas faire de cet incident de flaque sans récompense, vous frappez ce slime #yjaune. NL NL Il @éclate@ en morceaux! NL NL Vous ne pensez pas que c'était possible, mais vous vous trouvez encore plus couvert de cette matière visqueuse que vous ne l'étiez avant.",
       "Vous débarassant du slime #yjaune, vous continuez votre voyage, bien que vous soyez encore partiellement couvert de matière visqueuse. Cela ajoute certainement de l'esthétique menaçante."
     ],
@@ -267,8 +268,9 @@
     "OPTIONS": [
       "[Détruire] #rPerdez #r",
       " #rPV. #gGagnez #gFragment #gaiguisé.",
-      "[Collecter] #gGagnez #gStatue #gailée #gbrisée.",
-      "[Quitter]"
+      "[Collecter] #rPerdez #r",
+      "[Quitter]",
+      " #rPV. #gGagnez #gStatue #gailée #gbrisée."
     ]
   },
   "downfall:GoldenIdol": {
@@ -308,7 +310,8 @@
     "NAME": "Conseil des Fantômes ",
     "DESCRIPTIONS": [
       "Alors que vous continuez votre descente, une #p~épaisse~ #p~fumée~ #p~noire~ commence à émaner du sol et des murs autour de vous, se regroupant en trois formes masquées qui commencent à parler. NL ~\"Un~ ~autre~ ~pantin~ #r~du~ #r~Cœur~ ~il~ ~me~ ~semble.\"~ NL #r@\"EN@ #r@EFFET!@ #r@IL@ #r@ENVOIE@ #r@TOUJOURS@ #r@LES@ #r@PIONS@ #r@LES@ #r@PLUS@ #r@FAIBLES!\"@ NL Vous remarquez un sourire surdimensionné alors que le troisième s'adresse à vous. NL \"Ignore les autres...  Voudrais-tu goûter à notre #y~pouvoir?\"~ ",
-      "\"Une @offrande!@ Que c'est ~tentant...\"~ NL NL Alors que le fantôme parle, vous remarquez que la grande bouche s'ouvre de plus en plus. À l'intérieur de votre corps, vous sentez les #b~âmes~ récupérées des morts se faire aspirer dans l'énorme mâchoire du fantôme. Cela prend toute votre force pour ne pas être aspiré par celle-ci. NL NL Alors que vos forces commençaient à s'épuiser, le vortex s'arrête, et les esprits se confondent dans la brume. NL NL Vous reprenez votre route, vous sentant légèrement #bvide."
+      "\"Une @offrande!@ Que c'est ~tentant...\"~ NL NL Alors que le fantôme parle, vous remarquez que la grande bouche s'ouvre de plus en plus. À l'intérieur de votre corps, vous sentez les #b~âmes~ récupérées des morts se faire aspirer dans l'énorme mâchoire du fantôme. Cela prend toute votre force pour ne pas être aspiré par celle-ci. NL NL Alors que vos forces commençaient à s'épuiser, le vortex s'arrête, et les esprits se confondent dans la brume. NL NL Vous reprenez votre route, vous sentant légèrement #bvide.",
+      "Les #p~fantômes~ ricanent à votre approche. NL NL #r@\"AH!@ #r@NOTRE@ #r@BON@ #r@AMI@ #r@!@ NL Leurs #p~formes~ #p~gazeuses~ se répandent dans la pièce... NL NL \"Ici pour le ~travail,~ nous présumons ?\""
     ],
     "OPTIONS": [
       "[Offrir] #rPerdez #r",
@@ -328,7 +331,8 @@
     "NAME": "Autel oublié",
     "DESCRIPTIONS": [
       "Face à la statue, vous canalisez votre énergie spirituelle. NL Alors que les #bâmes sont retirées de vous en tant qu'offrande à la déesse, les bras de la statue s'étendent et dégagent une #p~magie~ #p~noire~ apaisante. NL Tout devient sombre. NL Vous vous réveillez peu de temps après, vos plaies et vos blessures soudainement guéries.",
-      "Après avoir pris un moment à admirer le mal à l'intérieur de cette statue, vous repartez, traversant la Cité."
+      "Après avoir pris un moment à admirer le mal à l'intérieur de cette statue, vous repartez, traversant la Cité.",
+      "Vous décidez de partir sans faire d'offrande à la statue, mais vous ressentez une honte tenace de ne pas avoir fait d'offrande."
     ],
     "OPTIONS": [
       "[Offrir des Âmes] #rPerdez #r",
@@ -336,7 +340,9 @@
       " #gPV.",
       "[Verrouillé] Requiert ",
       " Âmes.",
-      "[Quitter]"
+      "[Quitter]",
+      "[Quitter] #rPerdez #b",
+      " #rPV."
     ]
   },
   "downfall:Bandits": {
@@ -468,7 +474,7 @@
     "OPTIONS": [
       "[L'Écho] #rCombattez #rvous-même. #gObtenez #gune #gRelique #gRare.",
       "[La Gourmandise] #gGagnez #g999 #gÂmes. #rMaudit #r- #r2 #rNormalité.",
-      "[Le Complet] #gAméliorez #gtoutes #gvos #gCartes. #rPerdez #rtoutes #rles #rBénédictions #rdu #rCœur et #r10 #rPV #rMax.",
+      "[Le Complet] #gAméliorez #gtoutes #gvos #gCartes. #rVous #rne #rpouvez #rplus #rvous #rSoigner",
       "[Verrouillé] Requiert Les 3 Bénédictions du Cœur.",
       "[Quitter]",
       "[Le Complet] #gAméliorez #gtoutes #gvos #gCartes. #rPerdez #rtoutes #rles #rBénédictions #rdu #rCœur et #r2 #rPV #rMax.."
@@ -546,7 +552,7 @@
       "En remontant lentement les chemins tortueux, vous vous retrouvez dans les infâmes couloirs labyrinthiques de l'Au-Delà. Un être inférieur deviendrait fou à essayer de se diriger dans ces couloirs, mais pour vous, ils sont aussi familiers qu'un vieil ami. NL NL Les #p~voix~ qui vous #p~chuchotent~ à l'oreille vous facilitent la tâche alors que vous décidez quel chemin prendre."
     ],
     "OPTIONS": [
-      "[Gauche] #gExplorez #gun #gEvènement.",
+      "[Gauche] #gExplorez #gun #gÉvènement.",
       "[Droite] #gCherchez #gla #gTrésorerie #gpour #gune #gRelique.",
       "[Tout droit] #gTraquez #gle #gMarchand."
     ]
@@ -554,7 +560,7 @@
   "downfall:Joust": {
     "NAME": "La joute",
     "DESCRIPTIONS": [
-      "En traversant les grands bâtiments, vous arrivez devant un pont long et étroit et repérez deux chevaliers de chaque côté, se faisant face à face. Vous vous approchez et ils s'écartèrent, se regardant l'un l'autre. NL \"Un monstre ! Vous le combattez, si vous êtes si fort à tuer des choses!\" NL \"Non, vous, COMBATTEZ-le ! Vous connaissez mieux les monstres, avec ce ~chat~ ~démoniaque!~\" NL NL Ils ne veulent pas arrêter de se chamailler. Vous devez vous décider....",
+      "En traversant les grands bâtiments, vous arrivez devant un pont long et étroit et repérez deux chevaliers de chaque côté, se faisant face à face. Vous vous approchez et ils s'écartèrent, se regardant l'un l'autre. NL \"Un monstre ! Vous le combattez, si vous êtes si fort à tuer des choses!\" NL \"Non, vous, COMBATTEZ-le ! Vous connaissez mieux les monstres, avec ce ~chat~ démoniaque!\" NL NL Ils ne veulent pas arrêter de se chamailler. Vous devez vous décider....",
       "Ce chevalier était clairement plus fort que l'autre, et malgré vos efforts, vous vous faites battre. NL \"J'aurais aimé vous voir combattre cette bête!\" dit-il à l'autre chevalier alors qu'ils partent en se chamaillant..",
       "Vous évitez sans peine les attaques du chevalier et le #rtuez sans pitié, tout en aspirant ses #gâmes joyeusement. L'autre chevalier se met alors à crier et s'enfuit. Quel trouillard...",
       "Le chevalier trouillard vous donne quelques égratinures avec son épée, avant de s'enfuir en criant. L'autre chevalier le poursuit, énervé. Vous retournez à votre travail, irrité de cette situation.",
@@ -614,10 +620,13 @@
     "DESCRIPTIONS": [
       "Vous seul devriez avoir ce pouvoir. Vous mettez en pièces l'autel. NL Un gémissement obscur vous entoure, et vous pouvez ressentir la  #p~magie~ #p~maudite~ de l'Autel s'infiltrer dans votre corps."    ],
     "OPTIONS": [
-      "[Profaner] #gDupliquez #g2 #gcartes. #rMaudit #r- #rAléatoire.",
-      "[Profaner] #gRetirez #g3 #gcartes. #rMaudit #r- #rAléatoire.",
-      "[Profaner] #gTransformez #g3 #gcartes. #rMaudit #r- #rAléatoire.",
-      "[Profaner] #gAméliorez #g2 #gcartes. #rMaudit #r- #rAléatoire."
+      "[Profaner] #gDupliquez #g2 #gcartes. #rMaudit #r- #rVieilliesse.",
+      "[Profaner] #gRetirez #g2 #gcartes. #rPerdez #r",
+      " #rPV #rMax",
+      "[Profaner] #gTransformez #g2 #gcartes. #rPerdez #r",
+      "[Profaner] #gAméliorez #g2 #gcartes. #rMaudit #r- #rDouleur.",
+      " #rPV.",
+      "[Verrouillé] - Pas assez de cartes."
     ]
   }
 }

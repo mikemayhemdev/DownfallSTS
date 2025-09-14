@@ -1,4 +1,4 @@
-{
+﻿{
   "collector:CollectionReward": {
     "TEXT": [
       "수집할 카드를 선택하십시오."
@@ -44,7 +44,7 @@
   "collector:PyreInfo": {
     "TEXT": [
       "장작",
-      "이 카드를 사용하려면 추가로 카드를 1장 소멸시켜야합니다."
+      "이 카드를 사용하려면 추가로 카드를 1장 소멸시켜야 합니다."
     ]
   },
   "collector:CollectedCardMod": {
@@ -56,7 +56,7 @@
   "collector:CollectibleCardReward": {
     "TEXT": [
       "수집: ",
-      "이것을 얻을 수 있습니다"
+      "이것을 얻을 수 있습니다."
     ]
   },
   "collector:HoardedMod": {
@@ -79,7 +79,7 @@
   },
   "collector:PyreModText": {
     "TEXT": [
-      "소멸 시킬 카드가 없다!"
+      "소멸시킬 카드가 없다!"
     ]
   },
   "collector:StashAwayCampfireOption": {

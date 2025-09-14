@@ -11,7 +11,7 @@
   },
   "champ:TechniqueMod": {
     "TEXT": [
-      "NL Déclenchez votre *Bonus de *Compétence."
+      "NL Déclenchez votre champ:Bonus *de *Compétence."
     ]
   },
   "champ:OpenerMod": {

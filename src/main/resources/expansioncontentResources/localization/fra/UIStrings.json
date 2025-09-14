@@ -1,48 +1,48 @@
 {
   "downfall:PropertiesMod": {
     "TEXT": [
-      "Applied properties.",
-      "Additional properties: ",
-      "Additional properties for this turn: ",
-      " NL Also for this turn: ",
+      "Propriétés appliquées.",
+      "Propriétés supplémentaires : ",
+      "Propriétés supplémentaires pour ce tour : ",
+      " NL Aussi pour ce tour : ",
       ", ",
       ".",
       "#y",
-      "Echo",
-      "Unplayable",
-      "Ethereal",
-      "Retain",
-      "Exhaust",
+      "Écho",
+      "Injouable",
+      "Éthérée",
+      "Retenue",
+      "Épuisement",
       " ",
       "NL ",
-      "Echo: "
+      "Écho: "
     ]
   },
   "downfall:EtherealMod": {
     "TEXT": [
-      "Ethereal. NL "
+      "Éthérée. NL "
     ]
   },
   "downfall:ExhaustMod": {
     "TEXT": [
-      " NL Exhaust."
+      " NL Épuisement."
     ]
   },
   "downfall:InnateMod": {
     "TEXT": [
-      "Innate. NL "
+      "Inné. NL "
     ]
   },
   "downfall:RetainCardMod": {
     "TEXT": [
-      "Retain. NL "
+      "Retenue. NL "
     ]
   },
   "downfall:UnplayableMod": {
     "TEXT": [
-      "Unplayable. NL ",
-      "This card can't be played.",
-      "This card can't be played this turn."
+      "Injouable. NL ",
+      "Cette carte ne peut pas être jouée.",
+      "Cette carte ne peut pas être jouée ce tour."
     ]
   },
   "expansioncontent:CannotUseBossCardMessage": {
