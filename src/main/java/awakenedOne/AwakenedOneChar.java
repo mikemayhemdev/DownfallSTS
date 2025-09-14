@@ -80,9 +80,9 @@ public class AwakenedOneChar extends CustomPlayer {
     public AwakenedOneChar(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "awakenedResources/images/mainChar/orb/vfx.png", null, (String) null);
         initializeClass(null,
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER1,
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER2,
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].CORPSE,
+                CharacterSelectScreenPatches.characters[6].skins[CharacterSelectScreenPatches.characters[6].reskinCount].SHOULDER1,
+                CharacterSelectScreenPatches.characters[6].skins[CharacterSelectScreenPatches.characters[6].reskinCount].SHOULDER2,
+                CharacterSelectScreenPatches.characters[6].skins[CharacterSelectScreenPatches.characters[6].reskinCount].CORPSE,
                 getLoadout(), 0.0F, -30.0F, 270.0F, 310.0F, new EnergyManager(3));
 
         this.reloadAnimation();
