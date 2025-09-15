@@ -110,7 +110,7 @@ public class GemMine extends AbstractImageEvent {
                             AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
 
                             AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
-                            
+
                             AbstractDungeon.combatRewardScreen.open();
 
                             //Mayhem: No clue what this is trying to do but it can cause a crash if trying to remove something that doesn't exist.
