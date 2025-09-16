@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Taunt",
-    "DESCRIPTION": "Apply !M! Weak and 1 Vulnerable.",
-    "UPGRADE_DESCRIPTION": "Apply 1 Weak and 1 Vulnerable to ALL enemies."
+    "DESCRIPTION": "Apply !M! Weak and Vulnerable.",
+    "UPGRADE_DESCRIPTION": "Apply !M! Weak and Vulnerable to ALL enemies."
   },
   "champ:Execute": {
     "NAME": "Execute",
