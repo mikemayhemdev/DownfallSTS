@@ -133,7 +133,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "Sludge Bomb",
-    "DESCRIPTION": "Spends an Exhausted *Void. NL Deal !D! damage twice.",
+    "DESCRIPTION": "Requires and erases an Exhausted *Void. NL Deal !D! damage twice.",
     "EXTENDED_DESCRIPTION": [
       "I do not have an Exhausted Void."
     ]
