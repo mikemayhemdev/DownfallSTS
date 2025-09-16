@@ -154,7 +154,7 @@
     "NAME": "Dessicated Hand",
     "FLAVOR": "It demands true power, resisting your occultic magicks.",
     "DESCRIPTIONS": [
-      "Whenever you play a Power card that #rISN'T #yCeremony [REMOVE_SPACE], a random card in your hand costs #b0 that turn."
+      "Whenever you play a #yPower card that #rISN'T #yCeremony [REMOVE_SPACE], a random card in your hand costs #b0 that turn."
     ]
   }
 }
