@@ -25,7 +25,7 @@ public class Hymn extends AbstractAwakenedCard {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(Hymn.class.getSimpleName() + ".png"));
         baseBlock = 3;
-       // this.cardsToPreview = new Ceremony();
+        this.cardsToPreview = new Ceremony();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
