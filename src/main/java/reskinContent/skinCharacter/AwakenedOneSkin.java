@@ -12,7 +12,7 @@ import reskinContent.vfx.ReskinUnlockedTextEffect;
 
 
 public class AwakenedOneSkin extends AbstractSkinCharacter {
-    public static final String ID = CardCrawlGame.languagePack.getCharacterString("awakenedOne").NAMES[0];
+    public static final String ID = CardCrawlGame.languagePack.getCharacterString("awakened:awakenedOne").NAMES[0];
     public static final AbstractSkin[] SKINS = new AbstractSkin[]{
             new AwakenedOneOriginal()
     };
