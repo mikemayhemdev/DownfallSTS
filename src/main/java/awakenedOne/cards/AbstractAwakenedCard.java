@@ -258,7 +258,7 @@ public abstract class AbstractAwakenedCard extends CustomCard {
     }
 
     public boolean isTrig_chant() {
-        if (isChantActive()) {
+        if (isChantActive() || this.hasTag(ACTIVECHANT)) {
             this.trig_chant = true;
             AwakenedTextHelper.colorCombos(this, false);
         }
