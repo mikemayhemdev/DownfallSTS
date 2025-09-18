@@ -39,43 +39,6 @@ public class BetterEndingPatches {
         }
     }
 
-    @SpirePatch(clz = SpireHeart.class, method = "buttonEffect")
-    public static class MoveToAct4 {
-        @SpirePrefixPatch
-        public static SpireReturn<Void> Prefix(SpireHeart __instance) {
-
-            if (EvilModeCharacterSelect.evilMode) {
-                if (AbstractDungeon.actNum == 3 &&
-                        AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) &&
-                        AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player) &&
-                        AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player)
-                ) {
-                /*
-                __instance.roomEventText.clear();
-                __instance.hasFocus = false;
-                __instance.roomEventText.hide();
-                Color color = (Color)ReflectionHacks.getPrivate(__instance, SpireHeart.class, "fadeColor");
-                ReflectionHacks.setPrivate(__instance, SpireHeart.class, "fadeColor", new Color(color.r, color.g, color.b, 0F));
-
-                CardCrawlGame.mode = CardCrawlGame.GameMode.GAMEPLAY;
-                CardCrawlGame.nextDungeon = "TheEnding";
-                CardCrawlGame.music.fadeOutBGM();
-                CardCrawlGame.music.fadeOutTempBGM();
-                AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
-                AbstractDungeon.fadeOut();
-                AbstractDungeon.isDungeonBeaten = true;
-                */
-                    return SpireReturn.Continue();
-                } else {
-                    Settings.hasRubyKey = false;
-                    Settings.hasEmeraldKey = false;
-                    Settings.hasSapphireKey = false;
-                }
-                return SpireReturn.Continue();
-            } else {
-                return SpireReturn.Continue();
-            }
-        }
 
         //Change effect when showing the player the score
         @SpirePatch(clz = SpireHeart.class, method = "buttonEffect")
@@ -117,4 +80,4 @@ public class BetterEndingPatches {
             }
         }
     }
-}
+

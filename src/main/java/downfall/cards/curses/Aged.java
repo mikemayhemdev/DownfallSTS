@@ -2,6 +2,7 @@ package downfall.cards.curses;
 
 
 import basemod.abstracts.CustomCard;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
@@ -54,7 +55,7 @@ public class Aged extends CustomCard {
         super.triggerOnEndOfTurnForPlayingCard();
         this.flash();
         this.superFlash();
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new VoidCard(),1, false, false, false));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new VoidCard(),1));
 
     }
 

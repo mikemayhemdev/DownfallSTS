@@ -1,3 +1,4 @@
+/*
 package downfall.patches;
 
 import charbosses.bosses.AbstractCharBoss;
@@ -18,3 +19,5 @@ public class HecktoplasmPatch {
         }
     }
 }
+
+ */

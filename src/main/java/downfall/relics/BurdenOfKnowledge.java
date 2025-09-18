@@ -1,6 +1,7 @@
 package downfall.relics;
 
 import basemod.abstracts.CustomRelic;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import champ.relics.Barbells;
 import champ.relics.PowerArmor;
 import collector.CollectorCollection;
@@ -32,6 +33,8 @@ import sneckomod.relics.UnknownEgg;
 import java.util.ArrayList;
 import java.util.List;
 
+@NoCompendium
+//This is a deprecated relic but remains for old saves so it doesn't become a circlet.
 public class BurdenOfKnowledge extends CustomRelic {
 
     public static final String ID = downfallMod.makeID("BurdenOfKnowledge");
@@ -96,9 +99,9 @@ public class BurdenOfKnowledge extends CustomRelic {
         }
 
 
-        AbstractDungeon.player.loseRelic(HeartBlessingRed.ID);
-        AbstractDungeon.player.loseRelic(HeartBlessingBlue.ID);
-        AbstractDungeon.player.loseRelic(HeartBlessingGreen.ID);
+       // AbstractDungeon.player.loseRelic(HeartBlessingRed.ID);
+       // AbstractDungeon.player.loseRelic(HeartBlessingBlue.ID);
+      //  AbstractDungeon.player.loseRelic(HeartBlessingGreen.ID);
     }
 
     public void onPreviewObtainCard(AbstractCard c) {

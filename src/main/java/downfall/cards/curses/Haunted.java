@@ -21,7 +21,7 @@ import expansioncontent.cardmods.PropertiesMod;
 import sneckomod.cards.TyphoonFang;
 
 
-public class Haunted extends CustomCard implements OnOtherCardExhaustInHand {
+public class Haunted extends CustomCard {
     public static final String ID = downfallMod.makeID("Haunted");
     public static final String NAME;
     public static final String DESCRIPTION;
@@ -30,7 +30,7 @@ public class Haunted extends CustomCard implements OnOtherCardExhaustInHand {
     private static final CardRarity RARITY = CardRarity.CURSE;
     private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardStrings cardStrings;
-    private static final int COST = -2;
+    private static final int COST = 0;
     private static final int BLOCK = 5;
     private static final int UPGRADE_BONUS = 3;
     public static String UPGRADED_DESCRIPTION;
@@ -45,7 +45,7 @@ public class Haunted extends CustomCard implements OnOtherCardExhaustInHand {
     public Haunted() {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
 
-        this.magicNumber = this.baseMagicNumber = 2;
+        this.magicNumber = this.baseMagicNumber = 6;
 
         this.isEthereal = true;
         tags.add(downfallMod.DOWNFALL_CURSE);
@@ -74,9 +74,16 @@ public class Haunted extends CustomCard implements OnOtherCardExhaustInHand {
     }
 
     @Override
+    public void triggerOnExhaust() {
+        this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+
+    }
+
+    @Override
     public void atTurnStart() {
     }
 
+    /*
     @Override
     public void onOtherCardExhaustWhileInHand(AbstractCard card) {
         if (!AbstractDungeon.actionManager.turnHasEnded) {
@@ -87,6 +94,9 @@ public class Haunted extends CustomCard implements OnOtherCardExhaustInHand {
         }
     }
 
+     */
+
+    /*
     public void triggerOnEndOfTurnForPlayingCard() {
             for (AbstractCard c : AbstractDungeon.player.hand.group) {
                 if (c.isEthereal) {
@@ -97,6 +107,8 @@ public class Haunted extends CustomCard implements OnOtherCardExhaustInHand {
                 }
         }
     }
+
+     */
 
 
     public AbstractCard makeCopy() {

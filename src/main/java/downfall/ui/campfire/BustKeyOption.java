@@ -2,6 +2,7 @@ package downfall.ui.campfire;
 
 import basemod.ReflectionHacks;
 import champ.relics.DeflectingBracers;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -26,7 +27,7 @@ public class BustKeyOption extends AbstractCampfireOption {
     private boolean used;
     private boolean hacked;
     private float hackTime = 0F;
-    private int soulToCost = 50;
+    private int soulToCost = 0;
 
     public BustKeyOption() {
         this(Keys.RUBY);
@@ -34,7 +35,7 @@ public class BustKeyOption extends AbstractCampfireOption {
 
     public BustKeyOption(Keys key) {
         this.key = key;
-        if (AbstractDungeon.player.hasRelic(Ectoplasm.ID) || AbstractDungeon.player.hasRelic(Hecktoplasm.ID)) soulToCost = 0;
+        calcCost(key);
         if (AbstractDungeon.player.gold < soulToCost) {
             this.usable = false;
             updateImage(key);
@@ -43,14 +44,22 @@ public class BustKeyOption extends AbstractCampfireOption {
             updateImage(key);
         }
     }
-
+    public void calcCost(Keys key) {
+        switch (key) {
+            case SAPPHIRE:
+                soulToCost = 65;
+                break;
+            case EMERALD:
+                soulToCost = 80;
+                break;
+            default:
+                soulToCost = 50;
+        }
+    }
 
     public void updateImage(Keys key) {
-        if (AbstractDungeon.player.hasRelic(Ectoplasm.ID) || AbstractDungeon.player.hasRelic(Hecktoplasm.ID)) {
-            this.description = TEXT[10];
-        } else {
-            this.description = TEXT[3];
-        }
+
+        this.description = TEXT[3];
         switch (key) {
             case SAPPHIRE:
                 this.label = TEXT[1];
@@ -61,12 +70,12 @@ public class BustKeyOption extends AbstractCampfireOption {
                 }
                 if (!this.used) {
                     if (this.usable) {
-                        this.description += TEXT[5];
+                        this.description = this.description + soulToCost + TEXT[11] + TEXT[5];
                     } else {
                         this.description = TEXT[8] + soulToCost + TEXT[9];
                     }
                 } else {
-                    this.description = TEXT[7];
+                    this.description = TEXT[7]; //"Key Shattered!"
                 }
                 break;
             case EMERALD:
@@ -78,12 +87,12 @@ public class BustKeyOption extends AbstractCampfireOption {
                 }
                 if (!this.used) {
                     if (this.usable) {
-                        this.description += TEXT[6];
+                        this.description = this.description + soulToCost + TEXT[11] + TEXT[6];
                     } else {
                         this.description = TEXT[8] + soulToCost + TEXT[9];
                     }
                 } else {
-                    this.description = TEXT[7];
+                    this.description = TEXT[7]; //"Key Shattered!"
                 }
                 break;
             default:
@@ -95,12 +104,12 @@ public class BustKeyOption extends AbstractCampfireOption {
                 }
                 if (!this.used) {
                     if (this.usable) {
-                        this.description += TEXT[4];
+                        this.description = this.description + soulToCost + TEXT[11] + TEXT[4];
                     } else {
                         this.description = TEXT[8] + soulToCost + TEXT[9];
                     }
                 } else {
-                    this.description = TEXT[7];
+                    this.description = TEXT[7]; //"Key Shattered!"
                 }
         }
     }
@@ -158,42 +167,48 @@ public class BustKeyOption extends AbstractCampfireOption {
     public void useOption() {
 
         if (this.usable) {
-            AbstractDungeon.effectList.add(new BustKeyEffect());
             AbstractPlayer p = AbstractDungeon.player;
             p.loseGold(soulToCost);
-            if (soulToCost == 0) {
 
-                if (AbstractDungeon.player.hasRelic(Hecktoplasm.ID)) {
-                    AbstractDungeon.player.getRelic(Hecktoplasm.ID).flash();
-                    System.out.println("Saved Souls with Hecktoplasm.");
-                }
-
-                if (AbstractDungeon.player.hasRelic(Ectoplasm.ID)) {
-                    AbstractDungeon.player.getRelic(Ectoplasm.ID).flash();
-                    System.out.println("Saved Souls with Ectoplasm.");
-                }
-
-            }
             this.used = true;
             this.usable = false;
             switch (key) {
                 case SAPPHIRE:
+
+                    AbstractDungeon.effectList.add(new BustKeyEffect(2, 4, AbstractCard.CardRarity.UNCOMMON, TEXT[5]));
                     AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(p, true);
+
+                    /*
                     if (!AbstractDungeon.player.hasRelic(BurdenOfKnowledge.ID)) {
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingBlue());
                     }
+
+                     */
                     break;
                 case EMERALD:
+
+                    AbstractDungeon.effectList.add(new BustKeyEffect(1, 3, AbstractCard.CardRarity.RARE, TEXT[6]));
                     AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(p, true);
+
+                    /*
                     if (!AbstractDungeon.player.hasRelic(BurdenOfKnowledge.ID)) {
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingGreen());
                     }
+                     */
                     break;
+
                 default:
+                    AbstractDungeon.effectList.add(new BustKeyEffect(2, 6, AbstractCard.CardRarity.COMMON, TEXT[4]));
                     AddBustKeyButtonPatches.KeyFields.bustedRuby.set(p, true);
+
+                    /*
                     if (!AbstractDungeon.player.hasRelic(BurdenOfKnowledge.ID)) {
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingRed());
                     }
+
+                     */
+
+
                     }
             updateImage(key);
         }
