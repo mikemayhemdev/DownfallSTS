@@ -54,10 +54,10 @@ public class BustKeyOption extends AbstractCampfireOption {
     public void calcCost(Keys key) {
         switch (key) {
             case SAPPHIRE:
-                soulToCost = 65;
+                soulToCost = 75;
                 break;
             case EMERALD:
-                soulToCost = 80;
+                soulToCost = 100;
                 break;
             default:
                 soulToCost = 50;
