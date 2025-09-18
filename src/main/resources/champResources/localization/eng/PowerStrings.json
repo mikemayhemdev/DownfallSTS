@@ -104,7 +104,7 @@
     "NAME": "Defensive Style",
     "DESCRIPTIONS": [
       "#bDefensive #ySkill #yBonuses grant #b",
-      " additional #yCounter [REMOVE_SPACE]."
+      " additional #yCounter."
     ]
   },
   "champ:GladiatorStylePower": {

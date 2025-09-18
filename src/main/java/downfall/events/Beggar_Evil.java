@@ -59,7 +59,7 @@ public class Beggar_Evil extends AbstractImageEvent {
             this.gold = 75;
         }
 
-        if (Cleric_Evil.encountered) {
+        if (Cleric_Evil.heDead) {
             this.gold = this.gold*2;
         }
 
