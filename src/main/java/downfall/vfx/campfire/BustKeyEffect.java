@@ -18,10 +18,12 @@ import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.UpgradeShineEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
+import downfall.ui.campfire.BustKeyOption;
 import guardian.GuardianMod;
 import guardian.cards.AbstractGuardianCard;
 import slimebound.SlimeboundMod;
 
+import java.util.Collections;
 import java.util.Iterator;
 
 public class BustKeyEffect extends AbstractGameEffect {
@@ -92,26 +94,14 @@ public class BustKeyEffect extends AbstractGameEffect {
             }
 
             AbstractDungeon.gridSelectScreen.open(group, numCards, msgShown, false, false, true, false);
-
-        }
-
-
-        if (this.duration < 0.5F && !AbstractDungeon.isScreenUp && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && pickCard && !rewardDone) {
-            rewardDone = true;
-            AbstractCard c = ((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(0)).makeCopy();
-            if (AbstractDungeon.gridSelectScreen.selectedCards.size() >= 2) {
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH * 0.4F, (float) Settings.HEIGHT * 0.4F));
-                c = ((AbstractCard) AbstractDungeon.gridSelectScreen.selectedCards.get(1)).makeCopy();
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH * 0.6F, (float) Settings.HEIGHT * 0.6F));
-            } else {
-                AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
-            }
-            this.duration = 5F; //this is super long but the crash happens after this point and before 5 seconds are up.
+            AbstractDungeon.overlayMenu.cancelButton.show(AbstractDungeon.overlayMenu.cancelButton.buttonText);
 
         }
 
         if (this.duration < 0.0F) {
             this.isDone = true;
+            SlimeboundMod.logger.info("SIZE " + AbstractDungeon.gridSelectScreen.selectedCards.size());
+            BustKeyOption.cardsChosen.addAll(AbstractDungeon.gridSelectScreen.selectedCards);
             if (CampfireUI.hidden) {
                 AbstractRoom.waitTimer = 0.0F;
                 if (AbstractDungeon.getCurrRoom() instanceof RestRoom) {

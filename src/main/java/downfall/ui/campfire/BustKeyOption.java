@@ -3,6 +3,7 @@ package downfall.ui.campfire;
 import basemod.ReflectionHacks;
 import champ.relics.DeflectingBracers;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -14,11 +15,15 @@ import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.rooms.CampfireUI;
 import com.megacrit.cardcrawl.rooms.RestRoom;
 import com.megacrit.cardcrawl.ui.campfire.AbstractCampfireOption;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
 import downfall.patches.ui.campfire.AddBustKeyButtonPatches;
 import downfall.relics.*;
 import downfall.util.TextureLoader;
 import downfall.vfx.campfire.BustKeyEffect;
+import slimebound.SlimeboundMod;
+
+import java.util.ArrayList;
 
 public class BustKeyOption extends AbstractCampfireOption {
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("BustKeyButton"));
@@ -28,6 +33,8 @@ public class BustKeyOption extends AbstractCampfireOption {
     private boolean hacked;
     private float hackTime = 0F;
     private int soulToCost = 0;
+
+    public static ArrayList<AbstractCard> cardsChosen = new ArrayList<>();
 
     public BustKeyOption() {
         this(Keys.RUBY);
@@ -149,6 +156,7 @@ public class BustKeyOption extends AbstractCampfireOption {
 
         if (this.used && !this.hacked) {
             this.hacked = true;
+
             campfire.somethingSelected = false;
             campfire.touchOption = null;
             campfire.confirmButton.hide();
@@ -159,6 +167,21 @@ public class BustKeyOption extends AbstractCampfireOption {
             AbstractDungeon.overlayMenu.proceedButton.hideInstantly();
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
 
+        }
+
+        if (!cardsChosen.isEmpty()){
+            SlimeboundMod.logger.info("SIZE IN OPTION " + cardsChosen.size());
+            if (!cardsChosen.isEmpty()) {
+                AbstractCard c = ((AbstractCard) cardsChosen.get(0)).makeCopy();
+                if (cardsChosen.size() >= 2) {
+                    AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH * 0.4F, (float) Settings.HEIGHT * 0.4F));
+                    c = ((AbstractCard) cardsChosen.get(1)).makeCopy();
+                    AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH * 0.6F, (float) Settings.HEIGHT * 0.6F));
+                } else {
+                    AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
+                }
+                cardsChosen.clear();
+            }
         }
     }
 
