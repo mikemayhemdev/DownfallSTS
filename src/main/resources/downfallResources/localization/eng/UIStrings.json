@@ -24,14 +24,15 @@
       "Break Ruby",
       "Break Sapphire",
       "Break Emerald",
-      "(Free Action) Spend 50 Souls: Destroy key to ",
-      "start Boss combats with 1 Strength.",
-      "start Boss combats with 10 Temporary HP.",
-      "start Boss combats with 1 Dexterity.",
+      "(Free Action) Spend ",
+      "Choose up to 2 of 6 Common cards to gain.",
+      "Choose up to 2 of 4 Uncommon cards to gain.",
+      "Choose up to 1 of 3 Rare cards to gain.",
       "Key shattered!",
       "Requires ",
       " Souls.",
-      "(Free Action) Destroy key to "
+      "(Free Action) Destroy key to ",
+      " Souls: Destroy key to "
     ]
   },
   "downfall:WheelSpinButton": {

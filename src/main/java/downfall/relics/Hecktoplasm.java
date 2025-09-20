@@ -1,3 +1,4 @@
+
 package downfall.relics;
 
 import basemod.abstracts.CustomRelic;
@@ -39,7 +40,7 @@ public class Hecktoplasm extends CustomRelic {
     }
 
     public boolean canSpawn() {
-        return (AbstractDungeon.actNum <= 1 && evilMode && !downfallMod.disableBaseGameAdjustments);
+        return false;
     }
 
     public AbstractRelic makeCopy() {

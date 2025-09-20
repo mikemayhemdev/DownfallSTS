@@ -51,7 +51,6 @@ import collector.CollectorMod;
 import collector.potions.TempHPPotion;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import downfall.cards.MajorBeam;
-import downfall.cards.curses.Sapped;
 import collector.util.CollectibleCardReward;
 import collector.util.EssenceReward;
 import com.badlogic.gdx.Gdx;
@@ -497,7 +496,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addCard(new Aged());
         BaseMod.addCard(new Pride());
         BaseMod.addCard(new Scatterbrained());
-        BaseMod.addCard(new Sapped());
+       // BaseMod.addCard(new Sapped());
         BaseMod.addCard(new CurseOfBlood());
 /*
         BaseMod.addCard(new Slug());
@@ -1355,9 +1354,9 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addRelic(new RedIOU(), RelicType.SHARED);
         BaseMod.addRelic(new RedIOUUpgrade(), RelicType.SHARED);
         BaseMod.addRelic(new KnowingSkull(), RelicType.SHARED);
-        BaseMod.addRelic(new HeartBlessingBlue(), RelicType.SHARED);
-        BaseMod.addRelic(new HeartBlessingGreen(), RelicType.SHARED);
-        BaseMod.addRelic(new HeartBlessingRed(), RelicType.SHARED);
+        //BaseMod.addRelic(new HeartBlessingBlue(), RelicType.SHARED);
+        //BaseMod.addRelic(new HeartBlessingGreen(), RelicType.SHARED);
+        //BaseMod.addRelic(new HeartBlessingRed(), RelicType.SHARED);
         BaseMod.addRelic(new TeleportStone(), RelicType.SHARED);
         BaseMod.addRelic(new HeartsMalice(), RelicType.SHARED);
         BaseMod.addRelic(new NeowBlessing(), RelicType.SHARED);
@@ -1365,7 +1364,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addRelic(new ExtraCursedKey(), RelicType.SHARED);
 
         if (!disableBaseGameAdjustments) {
-            BaseMod.addRelic(new Hecktoplasm(), RelicType.SHARED);
+           // BaseMod.addRelic(new Hecktoplasm(), RelicType.SHARED);
             BaseMod.addRelic(new BlackCandle(), RelicType.SHARED);
             BaseMod.addRelicToCustomPool(new AwakenedUrn(), AwakenedOneChar.Enums.AWAKENED_BLUE);
             BaseMod.addRelicToCustomPool(new NerfedMummifiedHand(), AwakenedOneChar.Enums.AWAKENED_BLUE);

@@ -133,7 +133,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "Sludge Bomb",
-    "DESCRIPTION": "Can only be played if a *Void is Exhausted. NL Deal !D! damage twice. NL Erase a *Void from your Exhaust Pile.",
+    "DESCRIPTION": "Requires and erases an Exhausted *Void. NL Deal !D! damage twice.",
     "EXTENDED_DESCRIPTION": [
       "I do not have an Exhausted Void."
     ]

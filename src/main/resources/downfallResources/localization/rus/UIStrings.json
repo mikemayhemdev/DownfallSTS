@@ -21,6 +21,22 @@
   },
   "downfall:BustKeyButton": {
     "TEXT": [
+      "Break Ruby",
+      "Break Sapphire",
+      "Break Emerald",
+      "(Free Action) Spend ",
+      "Choose up to 2 of 6 Common cards to gain.",
+      "Choose up to 2 of 4 Uncommon cards to gain.",
+      "Choose up to 1 of 3 Rare cards to gain.",
+      "Key shattered!",
+      "Requires ",
+      " Souls.",
+      "(Free Action) Destroy key to ",
+      " Souls: Destroy key to "
+    ]
+  },
+  "downfall:BustKeyButtonBackupForTranslators": {
+    "TEXT": [
       "Разбить ключ-Рубин",
       "Разбить ключ-Сапфир",
       "Разбить ключ-Изумруд",
@@ -31,7 +47,8 @@
       "Ключ уже разбит!",
       "Требуется ",
       " душ.",
-      "(Не тратит действие) Разбейте ключ и "
+      "(Не тратит действие) Разбейте ключ и ",
+      "Souls: Destroy key to "
     ]
   },
   "downfall:WheelSpinButton": {

@@ -111,7 +111,7 @@ public class GemMine extends AbstractImageEvent {
 
                             AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
 
-
+                            AbstractDungeon.combatRewardScreen.open();
 
                             //Mayhem: No clue what this is trying to do but it can cause a crash if trying to remove something that doesn't exist.
                             //I addded the if gate before this action to prevent the crash.
@@ -119,7 +119,6 @@ public class GemMine extends AbstractImageEvent {
                                 AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size() - 1);
                             }
 
-                            AbstractDungeon.combatRewardScreen.open();
 
                             AbstractDungeon.player.getRelic(PickAxe.ID).onTrigger();
                             if (AbstractDungeon.player.getRelic(PickAxe.ID).counter == -2) {
