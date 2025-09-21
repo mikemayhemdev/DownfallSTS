@@ -29,7 +29,7 @@ public class VoidRefundPower extends AbstractAwakenedPower implements OnLoseEner
     @Override
     public void LoseEnergyAction(int gained) {
         this.flash();
-        
+
         if (Settings.FAST_MODE) {
             this.addToTop(new VFXAction(new MiracleEffect(Color.CYAN, Color.PURPLE, "ATTACK_MAGIC_SLOW_1"), 0.0F));
         } else {

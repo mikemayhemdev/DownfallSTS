@@ -2,7 +2,6 @@ package awakenedOne.cards.altDimension;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.AbstractAwakenedCard;
-import awakenedOne.cards.AphoticFount;
 import awakenedOne.util.onGenerateCardMidcombatInterface;
 import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
@@ -23,13 +22,14 @@ public class Crusher extends AbstractAwakenedCard implements onGenerateCardMidco
 
     private static final int COST = 5;
     public boolean enabled = false;
+
     public Crusher() {
         super(ID, COST, CardRarity.RARE, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 25;
         selfRetain = true;
         frameString = "grift";
         tags.add(CardTags.HEALING);
-        this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
+        this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png", "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
 
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
@@ -53,8 +53,8 @@ public class Crusher extends AbstractAwakenedCard implements onGenerateCardMidco
         Wiz.atb(new AbstractGameAction() {
             @Override
             public void update() {
-                Crusher.this.modifyCostForCombat(COST-Crusher.this.cost);
-                Crusher.this.isCostModified=false;
+                Crusher.this.modifyCostForCombat(COST - Crusher.this.cost);
+                Crusher.this.isCostModified = false;
                 isDone = true;
             }
         });

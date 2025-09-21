@@ -37,11 +37,16 @@ public class Caw extends AbstractAwakenedCard {
         }
     }
 
+
     @Override
     public void chant() {
-        this.addToBot(new GashCawAction(this, this.magicNumber));
+        int times = checkChantEffectBonus();
+        for (int i = 0; i < times; i++) {
+            this.addToBot(new GashCawAction(this, this.magicNumber));
+        }
         checkOnChant();
     }
+
 
     public void triggerOnGlowCheck() {
         this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;

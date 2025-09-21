@@ -27,10 +27,12 @@ public class Gather extends AbstractAwakenedCard {
         }
     }
 
+
     @Override
     public void chant() {
-        //addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new PlatedArmorPower(AbstractDungeon.player, magicNumber), magicNumber));
-        atb(new BetterDiscardPileToHandAction(1));
+
+        int times = checkChantEffectBonus();
+        atb(new BetterDiscardPileToHandAction(times));
         checkOnChant();
     }
 

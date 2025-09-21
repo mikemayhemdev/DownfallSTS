@@ -44,7 +44,6 @@ import com.megacrit.cardcrawl.events.city.Nest;
 import com.megacrit.cardcrawl.events.exordium.GoldenWing;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
-import downfall.relics.BlackCandle;
 import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -421,12 +420,12 @@ public class AwakenedOneMod implements
 
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
-        if (abstractCard.type == AbstractCard.CardType.POWER){
+        if (abstractCard.type == AbstractCard.CardType.POWER) {
 
             powersThisCombat++;
             awaken();
         }
-        if (abstractCard instanceof AbstractSpellCard && !abstractCard.purgeOnUse){
+        if (abstractCard instanceof AbstractSpellCard && !abstractCard.purgeOnUse) {
 
             SlimeboundMod.logger.info("incrementing Spells this turn from " + spellsThisTurn + " to " + (spellsThisTurn + 1) + ". card: " + abstractCard.name);
             spellsThisTurn++;

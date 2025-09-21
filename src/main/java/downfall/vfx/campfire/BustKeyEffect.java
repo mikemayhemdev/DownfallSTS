@@ -36,6 +36,7 @@ public class BustKeyEffect extends AbstractGameEffect {
     private boolean pickCard = false;
     private boolean rewardDone = false;
 
+
     public BustKeyEffect(int cards, int cardsToShow, AbstractCard.CardRarity raritySelected, String msg) {
         this.numCards = cards;
         this.shownCards = cardsToShow;

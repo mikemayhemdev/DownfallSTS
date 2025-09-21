@@ -32,9 +32,9 @@ public class ConjureAction extends AbstractGameAction {
     private final boolean choose;
     private final boolean ontop;
     private final boolean bstudy;
+    AbstractCard pick;
     private int permaAdd;
     private int extraCreate;
-    AbstractCard pick;
 
     public ConjureAction(boolean choose) {
         this.choose = choose;
@@ -154,7 +154,7 @@ public class ConjureAction extends AbstractGameAction {
             ArrayList<AbstractCard> possCards = new ArrayList<>();
             ArrayList<AbstractCard> availableCards = new ArrayList<>();
             ArrayList<AbstractCard> actualChoices = new ArrayList<>();
-            if (permaAdd == 0){
+            if (permaAdd == 0) {
                 possCards.addAll(spellCards);
                 while (!possCards.isEmpty()) {
                     availableCards.add(possCards.remove(AbstractDungeon.cardRandomRng.random(possCards.size() - 1)));
@@ -173,13 +173,10 @@ public class ConjureAction extends AbstractGameAction {
                 if (isAwakened()) {
                     q.upgrade();
                 }
+                if (permaAdd == 0) {
                 addToTop(new MakeTempCardInHandAction(q));
-                if (permaAdd == 0){
                     addToTop(new RemoveSpellCardAction(q));
                 } else {
-                    for (int i = 0; i < extraCreate-1; i++) {
-                        addToTop(new MakeTempCardInHandAction(q));
-                    }
                     for (int i = 0; i < permaAdd; i++) {
                         spellCards.add(q.makeStatEquivalentCopy());
                     }

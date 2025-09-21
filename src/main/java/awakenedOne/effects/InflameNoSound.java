@@ -7,7 +7,6 @@ package awakenedOne.effects;
 
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.core.AbstractCreature;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
 import com.megacrit.cardcrawl.vfx.ExhaustEmberEffect;
@@ -25,11 +24,11 @@ public class InflameNoSound extends AbstractGameEffect {
     public void update() {
 
         int i;
-        for(i = 0; i < 75; ++i) {
+        for (i = 0; i < 75; ++i) {
             AbstractDungeon.effectsQueue.add(new FlameParticleEffect(this.x, this.y));
         }
 
-        for(i = 0; i < 20; ++i) {
+        for (i = 0; i < 20; ++i) {
             AbstractDungeon.effectsQueue.add(new ExhaustEmberEffect(this.x, this.y));
         }
 

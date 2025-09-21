@@ -9,11 +9,6 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.EventStrings;
 import com.megacrit.cardcrawl.monsters.city.Chosen;
-import com.megacrit.cardcrawl.monsters.exordium.Cultist;
-import com.megacrit.cardcrawl.monsters.exordium.SlimeBoss;
-import expansioncontent.relics.StudyCardRelic;
-import slimebound.SlimeboundMod;
-import slimebound.characters.SlimeboundCharacter;
 
 
 @SpirePatch(clz = Chosen.class, method = "takeTurn")

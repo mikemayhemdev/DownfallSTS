@@ -9,7 +9,7 @@
   },
   "downfall:Icky": {
     "NAME": "Icky",
-    "DESCRIPTION": "Draw 1 fewer card next turn. NL Exhaust."
+    "DESCRIPTION": "Draw 1 less card next turn. NL Exhaust."
   },
   "downfall:Haunted": {
     "NAME": "Haunted",

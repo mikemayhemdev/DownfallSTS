@@ -33,6 +33,22 @@ public class BustKeyOption extends AbstractCampfireOption {
     private boolean hacked;
     private float hackTime = 0F;
     private int soulToCost = 0;
+    private int lastKnownKeysBroken = 0;
+
+    private int const_FirstKeyCardsShown = 5;
+    private int const_FirstKeyCardsToGain = 1;
+    private AbstractCard.CardRarity const_FirstKeyCardsRarity = AbstractCard.CardRarity.COMMON;
+    private int const_FirstKeySoulsCost = 25;
+
+    private int const_SecondKeyCardsShown = 4;
+    private int const_SecondKeyCardsToGain = 1;
+    private AbstractCard.CardRarity const_SecondKeyCardsRarity = AbstractCard.CardRarity.UNCOMMON;
+    private int const_SecondKeySoulsCost = 75;
+
+    private int const_ThirdKeyCardsShown = 3;
+    private int const_ThirdKeyCardsToGain = 1;
+    private AbstractCard.CardRarity const_ThirdKeyCardsRarity = AbstractCard.CardRarity.RARE;
+    private int const_ThirdKeySoulsCost = 125;
 
     public static ArrayList<AbstractCard> cardsChosen = new ArrayList<>();
 
@@ -43,6 +59,7 @@ public class BustKeyOption extends AbstractCampfireOption {
     public BustKeyOption(Keys key) {
         this.key = key;
         calcCost(key);
+        lastKnownKeysBroken = downfallMod.getNumKeysBroken();
         if (AbstractDungeon.player.gold < soulToCost) {
             this.usable = false;
             updateImage(key);
@@ -52,21 +69,20 @@ public class BustKeyOption extends AbstractCampfireOption {
         }
     }
     public void calcCost(Keys key) {
-        switch (key) {
-            case SAPPHIRE:
-                soulToCost = 80;
+        switch (downfallMod.getNumKeysBroken()) {
+            case 1:
+                soulToCost = const_SecondKeySoulsCost;
                 break;
-            case EMERALD:
-                soulToCost = 120;
+            case 2:
+                soulToCost = const_ThirdKeySoulsCost;
                 break;
             default:
-                soulToCost = 40;
+                soulToCost = const_FirstKeySoulsCost;
         }
     }
 
     public void updateImage(Keys key) {
 
-        this.description = TEXT[3];
         switch (key) {
             case SAPPHIRE:
                 this.label = TEXT[1];
@@ -74,15 +90,6 @@ public class BustKeyOption extends AbstractCampfireOption {
                     this.img = TextureLoader.getTexture(downfallMod.assetPath("images/ui/campfire/sapphire.png"));
                 } else {
                     this.img = TextureLoader.getTexture(downfallMod.assetPath("images/ui/campfire/sapphireDisabled.png"));
-                }
-                if (!this.used) {
-                    if (this.usable) {
-                        this.description = this.description + soulToCost + TEXT[11] + TEXT[5];
-                    } else {
-                        this.description = TEXT[8] + soulToCost + TEXT[9];
-                    }
-                } else {
-                    this.description = TEXT[7]; //"Key Shattered!"
                 }
                 break;
             case EMERALD:
@@ -92,15 +99,6 @@ public class BustKeyOption extends AbstractCampfireOption {
                 } else {
                     this.img = TextureLoader.getTexture(downfallMod.assetPath("images/ui/campfire/emeraldDisabled.png"));
                 }
-                if (!this.used) {
-                    if (this.usable) {
-                        this.description = this.description + soulToCost + TEXT[11] + TEXT[6];
-                    } else {
-                        this.description = TEXT[8] + soulToCost + TEXT[9];
-                    }
-                } else {
-                    this.description = TEXT[7]; //"Key Shattered!"
-                }
                 break;
             default:
                 this.label = TEXT[0];
@@ -109,9 +107,37 @@ public class BustKeyOption extends AbstractCampfireOption {
                 } else {
                     this.img = TextureLoader.getTexture(downfallMod.assetPath("images/ui/campfire/rubyDisabled.png"));
                 }
+        }
+
+        this.description = TEXT[3];
+
+        switch (downfallMod.getNumKeysBroken()) {
+            case 1:
                 if (!this.used) {
                     if (this.usable) {
-                        this.description = this.description + soulToCost + TEXT[11] + TEXT[4];
+                        this.description = this.description + soulToCost + TEXT[11] + const_SecondKeyCardsToGain + TEXT[12] + const_SecondKeyCardsShown + TEXT[5] + TEXT[13];
+                    } else {
+                        this.description = TEXT[8] + soulToCost + TEXT[9];
+                    }
+                } else {
+                    this.description = TEXT[7]; //"Key Shattered!"
+                }
+                break;
+            case 2:
+                if (!this.used) {
+                    if (this.usable) {
+                        this.description = this.description + soulToCost + TEXT[11] + const_ThirdKeyCardsToGain + TEXT[12] + const_ThirdKeyCardsShown + TEXT[6] + TEXT[13];
+                    } else {
+                        this.description = TEXT[8] + soulToCost + TEXT[9];
+                    }
+                } else {
+                    this.description = TEXT[7]; //"Key Shattered!"
+                }
+                break;
+            default:
+                if (!this.used) {
+                    if (this.usable) {
+                        this.description = this.description + soulToCost + TEXT[11] + const_FirstKeyCardsToGain + TEXT[12] + const_FirstKeyCardsShown + TEXT[4] + TEXT[13];
                     } else {
                         this.description = TEXT[8] + soulToCost + TEXT[9];
                     }
@@ -141,12 +167,16 @@ public class BustKeyOption extends AbstractCampfireOption {
         super.update();
 
         if (!this.used) {
-            if (AbstractDungeon.player.gold < soulToCost && this.usable) {
+            if (lastKnownKeysBroken != downfallMod.getNumKeysBroken() || (AbstractDungeon.player.gold < soulToCost && this.usable)) {
+                lastKnownKeysBroken = downfallMod.getNumKeysBroken();
                 this.usable = false;
+                calcCost(key);
                 updateImage(key);
             }
-            if (AbstractDungeon.player.gold >= soulToCost && !this.usable) {
+            if (lastKnownKeysBroken != downfallMod.getNumKeysBroken() || (AbstractDungeon.player.gold >= soulToCost && !this.usable)) {
+                lastKnownKeysBroken = downfallMod.getNumKeysBroken();
                 this.usable = true;
+                calcCost(key);
                 updateImage(key);
             }
         }
@@ -181,6 +211,7 @@ public class BustKeyOption extends AbstractCampfireOption {
                     AbstractDungeon.topLevelEffects.add(new ShowCardAndObtainEffect(c, (float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F));
                 }
                 cardsChosen.clear();
+                AbstractDungeon.gridSelectScreen.selectedCards.clear();
             }
         }
     }
@@ -195,10 +226,10 @@ public class BustKeyOption extends AbstractCampfireOption {
 
             this.used = true;
             this.usable = false;
-            switch (key) {
-                case SAPPHIRE:
+            switch (downfallMod.getNumKeysBroken()) {
+                case 1:
 
-                    AbstractDungeon.effectList.add(new BustKeyEffect(2, 4, AbstractCard.CardRarity.UNCOMMON, TEXT[5]));
+                    AbstractDungeon.effectList.add(new BustKeyEffect(const_SecondKeyCardsToGain, const_SecondKeyCardsShown, const_SecondKeyCardsRarity, TEXT[5]));
                     AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(p, true);
 
                     /*
@@ -208,9 +239,9 @@ public class BustKeyOption extends AbstractCampfireOption {
 
                      */
                     break;
-                case EMERALD:
+                case 2:
 
-                    AbstractDungeon.effectList.add(new BustKeyEffect(1, 3, AbstractCard.CardRarity.RARE, TEXT[6]));
+                    AbstractDungeon.effectList.add(new BustKeyEffect(const_ThirdKeyCardsToGain, const_ThirdKeyCardsShown, const_ThirdKeyCardsRarity, TEXT[6]));
                     AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(p, true);
 
                     /*
@@ -221,7 +252,7 @@ public class BustKeyOption extends AbstractCampfireOption {
                     break;
 
                 default:
-                    AbstractDungeon.effectList.add(new BustKeyEffect(2, 6, AbstractCard.CardRarity.COMMON, TEXT[4]));
+                    AbstractDungeon.effectList.add(new BustKeyEffect(const_FirstKeyCardsToGain, const_FirstKeyCardsShown, const_FirstKeyCardsRarity, TEXT[4]));
                     AddBustKeyButtonPatches.KeyFields.bustedRuby.set(p, true);
 
                     /*

@@ -1,24 +1,23 @@
 package awakenedOne.powers;
 
-import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
-import com.megacrit.cardcrawl.powers.PlatedArmorPower;
 
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.atb;
+import static awakenedOne.util.Wiz.att;
 
 public class FourthDimensionPower extends AbstractAwakenedPower {
     // intellij stuff buff
     public static final String NAME = FourthDimensionPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
 
-    private AbstractCard card;
+    private final AbstractCard card;
 
-    public FourthDimensionPower(int amount,  AbstractCard held) {
+    public FourthDimensionPower(int amount, AbstractCard held) {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
         card = held;
         canGoNegative = false;

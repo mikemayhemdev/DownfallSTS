@@ -28,7 +28,10 @@ public class Victuals extends AbstractAwakenedCard {
 
     @Override
     public void chant() {
-        atb(new GainEnergyAction(magicNumber));
+        int times = checkChantEffectBonus();
+        for (int i = 0; i < times; i++) {
+            atb(new GainEnergyAction(magicNumber));
+        }
         checkOnChant();
     }
 

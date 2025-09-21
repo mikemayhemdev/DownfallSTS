@@ -9,8 +9,6 @@ import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -37,19 +35,19 @@ public class TomeOfPortalmancy extends CustomRelic {
     //tome of portalmancy
 
     public void onSpecificTrigger() {
-            this.flash();
-            Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
+        this.flash();
+        Iterator var2 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
-            while (var2.hasNext()) {
-                AbstractMonster mo = (AbstractMonster) var2.next();
-                if (!mo.isDead && !mo.isDying) {
-                    atb(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, AMOUNT), AMOUNT));
-                    this.addToBot(new VFXAction(new GiantEyeEffect(mo.hb.cX, mo.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
-                    this.addToTop(new RelicAboveCreatureAction(mo, this));
-                }
+        while (var2.hasNext()) {
+            AbstractMonster mo = (AbstractMonster) var2.next();
+            if (!mo.isDead && !mo.isDying) {
+                atb(new ApplyPowerAction(mo, AbstractDungeon.player, new ManaburnPower(mo, AMOUNT), AMOUNT));
+                this.addToBot(new VFXAction(new GiantEyeEffect(mo.hb.cX, mo.hb.cY + 300.0F * Settings.scale, new Color(1.0F, 0.3F, 1.0F, 0.0F))));
+                this.addToTop(new RelicAboveCreatureAction(mo, this));
             }
-
         }
+
+    }
 
     @Override
     public String getUpdatedDescription() {
