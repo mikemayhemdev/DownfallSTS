@@ -85,7 +85,7 @@
       "The first time you play Spell each turn, gain [E] .",
       "The first #b",
       " times you play a Spell each turn, gain [E] .",
-      " NL ( [REMOVE_SPACE] #b",
+      " NL ( [REMOVE_SPACE]#b",
       " remaining this turn.)"
     ]
   },
