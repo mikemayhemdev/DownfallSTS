@@ -1,6 +1,5 @@
 package awakenedOne.potions;
 
-import awakenedOne.AwakenedOneMod;
 import basemod.ReflectionHacks;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;

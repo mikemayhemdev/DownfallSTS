@@ -1,7 +1,6 @@
 package awakenedOne.actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -16,12 +15,17 @@ import hermit.util.Wiz;
 import java.util.ArrayList;
 
 public class EncyclopediaAction extends AbstractGameAction {
-    private static final UIStrings uiStrings;
     public static final String[] TEXT;
-    private AbstractPlayer p;
-    private String text;
+    private static final UIStrings uiStrings;
 
-    private int amount;
+    static {
+        uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
+        TEXT = uiStrings.TEXT;
+    }
+
+    private final AbstractPlayer p;
+    private final String text;
+    private final int amount;
 
     public EncyclopediaAction(int amount, String text) {
         this.p = AbstractDungeon.player;
@@ -38,8 +42,8 @@ public class EncyclopediaAction extends AbstractGameAction {
             CardGroup tmp = new CardGroup(CardGroupType.UNSPECIFIED);
 
 
-            for (AbstractCard c:generateCardChoices()
-                 ) {
+            for (AbstractCard c : generateCardChoices()
+            ) {
                 tmp.addToBottom(c);
             }
 
@@ -50,7 +54,7 @@ public class EncyclopediaAction extends AbstractGameAction {
                 this.isDone = true;
             } else if (tmp.size() <= 2) {
                 for (AbstractCard abstractCard : tmp.group) {
-                    Wiz.atb(new MakeTempCardInHandAction(abstractCard,1));
+                    Wiz.atb(new MakeTempCardInHandAction(abstractCard, 1));
                 }
                 this.isDone = true;
             } else {
@@ -60,7 +64,7 @@ public class EncyclopediaAction extends AbstractGameAction {
         } else {
             if (AbstractDungeon.gridSelectScreen.selectedCards.size() != 0) {
                 for (AbstractCard abstractCard : AbstractDungeon.gridSelectScreen.selectedCards) {
-                    Wiz.atb(new MakeTempCardInHandAction(abstractCard,1));
+                    Wiz.atb(new MakeTempCardInHandAction(abstractCard, 1));
                 }
                 AbstractDungeon.gridSelectScreen.selectedCards.clear();
             }
@@ -68,17 +72,10 @@ public class EncyclopediaAction extends AbstractGameAction {
         }
     }
 
-    static {
-        uiStrings = CardCrawlGame.languagePack.getUIString("ExhaustAction");
-        TEXT = uiStrings.TEXT;
-    }
-
-
-
     private ArrayList<AbstractCard> generateCardChoices() {
         ArrayList<AbstractCard> derp = new ArrayList<>();
 
-        while(derp.size() != amount) {
+        while (derp.size() != amount) {
             boolean dupe = false;
             AbstractCard tmp = null;
             tmp = AbstractDungeon.returnTrulyRandomCardInCombat().makeCopy();

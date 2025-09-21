@@ -1,10 +1,7 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.PlumeJab;
-import awakenedOne.powers.ConjureNextPower;
-import awakenedOne.powers.EnsorcelatePower;
 import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
@@ -14,8 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
-import static awakenedOne.util.Wiz.applyToSelf;
-import static awakenedOne.util.Wiz.atb;
 
 public class Pluck extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Pluck.class.getSimpleName());

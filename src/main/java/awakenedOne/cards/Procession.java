@@ -1,18 +1,11 @@
 package awakenedOne.cards;
 
 import awakenedOne.actions.ProcessionAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
-import com.megacrit.cardcrawl.actions.watcher.OmniscienceAction;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.atb;
 
 public class Procession extends AbstractAwakenedCard {
     public final static String ID = makeID(Procession.class.getSimpleName());
@@ -35,7 +28,7 @@ public class Procession extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        this.exhaust = false;;
+        this.exhaust = false;
         //upgradeSecondMagic(1);
     }
 }

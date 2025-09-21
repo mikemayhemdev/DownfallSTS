@@ -1,15 +1,10 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.patches.OnCreateCardSubscriber;
 import awakenedOne.patches.OnLoseEnergyPowerPatch;
 import awakenedOne.powers.OnLoseEnergyPower;
 import awakenedOne.relics.OnLoseEnergyRelic;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
@@ -18,7 +13,6 @@ import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
-import static awakenedOne.util.Wiz.atb;
 
 public class Spew extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Spew.class.getSimpleName());

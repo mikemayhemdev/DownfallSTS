@@ -25,8 +25,8 @@ public class FeatherVeil extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new StrengthPower(p, -magicNumber), -magicNumber));
-    }
 
+    }
 
     @Override
     public void upp() {

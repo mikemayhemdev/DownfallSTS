@@ -12,8 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.LightningEffect;
 import com.megacrit.cardcrawl.vfx.combat.ReaperEffect;
 import hermit.actions.SoundAction;
-import slimebound.powers.TackleBuffPower;
-import slimebound.powers.TackleDebuffPower;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.vfx;

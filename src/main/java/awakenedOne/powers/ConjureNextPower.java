@@ -1,12 +1,9 @@
 package awakenedOne.powers;
 
-import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.PlumeJab;
 import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-
-import static awakenedOne.util.Wiz.atb;
 
 public class ConjureNextPower extends AbstractAwakenedPower implements OnLoseEnergyPower {
     // intellij stuff buff

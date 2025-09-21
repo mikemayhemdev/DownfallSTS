@@ -1417,6 +1417,14 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         }
     }
 
+    public static int getNumKeysBroken(){
+        int count=0;
+        if (AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player)) count++;
+        if (AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player)) count++;
+        if (AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player)) count++;
+        return count;
+    }
+
     public static void resetBossList() {
         possEncounterList.clear();
         possEncounterList.add(CharBossIronclad.ID);

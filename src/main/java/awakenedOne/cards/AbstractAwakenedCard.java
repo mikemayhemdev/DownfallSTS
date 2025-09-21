@@ -3,9 +3,8 @@ package awakenedOne.cards;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.AwakenedTextHelper;
+import awakenedOne.powers.AbstractTwoAmountAwakenedPower;
 import awakenedOne.powers.RisingChantPower;
-import awakenedOne.relics.CursedBlessing;
-import awakenedOne.relics.WhiteRibbon;
 import basemod.abstracts.CustomCard;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.files.FileHandle;
@@ -58,7 +57,7 @@ public abstract class AbstractAwakenedCard extends CustomCard {
         this(cardID, cost, type, rarity, target, AwakenedOneChar.Enums.AWAKENED_BLUE);
     }
 
-    public AbstractAwakenedCard(final String cardID, final int cost, final CardRarity rarity, final CardType type,  final CardTarget target) {
+    public AbstractAwakenedCard(final String cardID, final int cost, final CardRarity rarity, final CardType type, final CardTarget target) {
         this(cardID, cost, type, rarity, target, AwakenedOneChar.Enums.AWAKENED_BLUE);
     }
 
@@ -283,6 +282,17 @@ public abstract class AbstractAwakenedCard extends CustomCard {
 //            AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
 //        }
         AwakenedTextHelper.colorCombos(this, false);
+    }
+
+
+    public int checkChantEffectBonus() {
+        if (AbstractDungeon.player.hasPower(RisingChantPower.POWER_ID)) {
+            if (((AbstractTwoAmountAwakenedPower) AbstractDungeon.player.getPower(RisingChantPower.POWER_ID)).amount2 > 0) {
+                AbstractDungeon.player.getPower(RisingChantPower.POWER_ID).onSpecificTrigger();
+                return 2;
+            }
+        }
+        return 1;
     }
 
 

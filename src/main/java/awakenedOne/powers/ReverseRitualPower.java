@@ -3,7 +3,6 @@ package awakenedOne.powers;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.RitualPower;
-import com.megacrit.cardcrawl.powers.StrengthPower;
 
 public class ReverseRitualPower extends AbstractAwakenedPower {
     // intellij stuff buff

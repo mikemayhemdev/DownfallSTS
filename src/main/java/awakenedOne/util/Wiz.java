@@ -2,7 +2,6 @@ package awakenedOne.util;
 
 import automaton.cards.goodstatus.IntoTheVoid;
 import awakenedOne.AwakenedOneChar;
-import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.DemonGlyph;
 import awakenedOne.powers.DemonGlyphPower;
 import awakenedOne.ui.AwakenButton;
@@ -22,7 +21,6 @@ import com.megacrit.cardcrawl.helpers.Hitbox;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.CuriosityPower;
 import com.megacrit.cardcrawl.random.Random;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
@@ -32,7 +30,6 @@ import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.ui.AwakenButton.awaken;
 
 public class Wiz {
     public static int POWERS_TO_AWAKEN = 7;
@@ -137,6 +134,7 @@ public class Wiz {
         for (AbstractCard c : AbstractDungeon.player.hand.group) {
             if (c instanceof VoidCard || c instanceof IntoTheVoid) {
                 hasVoid = true;
+                break;
             }
         }
         return hasVoid;
@@ -148,12 +146,12 @@ public class Wiz {
     }
 
     public static void awaken() {
-    awaken(false);
+        awaken(false);
     }
 
-    public static void awaken(boolean instant){
-        if (!awakenedthiscombat){
-            if (powersThisCombat >= POWERS_TO_AWAKEN || instant){
+    public static void awaken(boolean instant) {
+        if (!awakenedthiscombat) {
+            if (powersThisCombat >= POWERS_TO_AWAKEN || instant) {
                 if (AbstractDungeon.player.hasPower(DemonGlyphPower.POWER_ID)) {
                     AwakenButton.awaken(10);
                     att(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, DemonGlyphPower.POWER_ID));

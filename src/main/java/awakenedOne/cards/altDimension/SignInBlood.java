@@ -1,6 +1,7 @@
 package awakenedOne.cards.altDimension;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.cards.AbstractAwakenedCard;
 import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
@@ -11,10 +12,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.LoseStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import hermit.util.Wiz;
-import awakenedOne.cards.AbstractAwakenedCard;
 import sneckomod.SneckoMod;
 
 @NoCompendium
@@ -30,7 +29,7 @@ public class SignInBlood extends AbstractAwakenedCard {
 
         exhaust = true;
         frameString = "towertactics";
-        this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
+        this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png", "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
 
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }

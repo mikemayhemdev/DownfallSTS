@@ -1,7 +1,6 @@
 package awakenedOne.ui;
 
 import awakenedOne.AwakenedOneChar;
-import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.actions.SetUpNextSpellAction;
 import awakenedOne.cards.Caw;
@@ -41,10 +40,8 @@ public class OrbitingSpells {
     public static final float POSITION_Y = 300F * Settings.scale;
     public static final float PANEL_BG_X = POSITION_X - (66F * Settings.scale);
     public static final float PANEL_BG_Y = POSITION_Y + (110F * Settings.scale);
-
-    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Spellbook"));
-
     public static final ArrayList<String> spells = new ArrayList<>();
+    private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Spellbook"));
     private static final HashMap<String, Texture> cardIcons = new HashMap<>();
     private static final HashMap<String, Color> cardColors = new HashMap<>();
     private static final Hitbox barBox = new Hitbox(POSITION_X - 75F * Settings.scale, Settings.HEIGHT - POSITION_Y - 350 * Settings.scale, 55 * Settings.scale, 55 * Settings.scale * 7);
@@ -59,7 +56,7 @@ public class OrbitingSpells {
     public static ArrayList<Hitbox> boxes = new ArrayList<>();
     private static int hoveredCard = -1;
 
-    private static HashMap<Integer, Float> barSlotAnimTimers = new HashMap<>();
+    private static final HashMap<Integer, Float> barSlotAnimTimers = new HashMap<>();
 
     static {
         for (int i = 0; i < 10; i++) {
@@ -235,7 +232,7 @@ public class OrbitingSpells {
         }
     }
 
-    private static int cappedPowersThisCombat(){
+    private static int cappedPowersThisCombat() {
         int powers = powersThisCombat;
         if (powers > POWERS_TO_AWAKEN - 1) {
             powers = POWERS_TO_AWAKEN - 1;
@@ -265,7 +262,7 @@ public class OrbitingSpells {
         HashMap<String, Integer> spellsFound = new HashMap<>();
         for (AbstractCard s : spellCards) {
             if (spellsFound.containsKey(s.cardID)) {
-                spellsFound.put(s.cardID, spellsFound.get(s.cardID)+1);
+                spellsFound.put(s.cardID, spellsFound.get(s.cardID) + 1);
             } else {
                 spellsFound.put(s.cardID, 1);
             }

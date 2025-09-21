@@ -1,9 +1,6 @@
 package awakenedOne.cards;
 
 import automaton.cards.goodstatus.IntoTheVoid;
-import awakenedOne.util.Wiz;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -23,6 +20,17 @@ public class Gloomguard extends AbstractAwakenedCard {
         loadJokeCardImage(this, makeBetaCardPath(Gloomguard.class.getSimpleName() + ".png"));
     }
 
+    public static boolean checkVoid() {
+        boolean hasVoid = false;
+        for (AbstractCard c : AbstractDungeon.player.hand.group) {
+            if (c instanceof VoidCard || c instanceof IntoTheVoid) {
+                hasVoid = true;
+                break;
+            }
+        }
+        return hasVoid;
+    }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
     }
@@ -34,16 +42,6 @@ public class Gloomguard extends AbstractAwakenedCard {
         } else {
             this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         }
-    }
-
-    public static boolean checkVoid() {
-        boolean hasVoid = false;
-        for (AbstractCard c : AbstractDungeon.player.hand.group) {
-            if (c instanceof VoidCard || c instanceof IntoTheVoid) {
-                hasVoid = true;
-            }
-        }
-        return hasVoid;
     }
 
     @Override

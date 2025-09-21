@@ -1,7 +1,6 @@
 package awakenedOne.relics;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import awakenedOne.cards.tokens.spells.Darkleech;
 import awakenedOne.cards.tokens.spells.Thunderbolt;
 import awakenedOne.util.TexLoader;

@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import java.util.Objects;
-
 import static awakenedOne.AwakenedOneMod.*;
 
 public class SludgeBomb extends AbstractAwakenedCard {
