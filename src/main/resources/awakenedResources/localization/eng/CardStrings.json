@@ -406,6 +406,6 @@
   "awakened:Inscribe": {
     "NAME": "Inscribe",
     "DESCRIPTION": "Choose a Spell. Add !M! copies to the Spellbook for the rest of combat.",
-    "UPGRADE_DESCRIPTION": "awakened:Conjure. NL Choose a Spell. Add a copy to the Spellbook for the rest of combat."
+    "UPGRADE_DESCRIPTION": "awakened:Conjure. NL Choose a Spell. Add !M! copies to the Spellbook for the rest of combat."
   }
 }
