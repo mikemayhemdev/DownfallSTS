@@ -1,10 +1,8 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.actions.ConjureAction;
 import awakenedOne.cards.tokens.PlumeJab;
-import awakenedOne.powers.ConjureNextPower;
-import awakenedOne.powers.EnsorcelatePower;
+import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -13,8 +11,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.loadJokeCardImage;
 import static awakenedOne.AwakenedOneMod.makeBetaCardPath;
-import static awakenedOne.util.Wiz.applyToSelf;
-import static awakenedOne.util.Wiz.atb;
 
 public class Pluck extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Pluck.class.getSimpleName());
@@ -22,7 +18,7 @@ public class Pluck extends AbstractAwakenedCard {
 
     public Pluck() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
-        baseDamage = 5;
+        baseDamage = 2;
         isMultiDamage = true;
         cardsToPreview = new PlumeJab();
         loadJokeCardImage(this, makeBetaCardPath(Pluck.class.getSimpleName() + ".png"));
@@ -30,7 +26,8 @@ public class Pluck extends AbstractAwakenedCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.BLUNT_HEAVY));
-        applyToSelf(new ConjureNextPower(1));
+        Wiz.makeInHand(new PlumeJab(), 1);
+        //applyToSelf(new ConjureNextPower(1));
         //atb(new ConjureAction(false));
     }
 

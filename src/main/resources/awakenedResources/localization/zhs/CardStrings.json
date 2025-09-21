@@ -95,7 +95,7 @@
   },
   "awakened:Pluck": {
     "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL The next time you are awakened:Drained, gain a *Plume *Jab."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain a *Plume *Jab."
   },
   "awakened:FlareShot": {
     "NAME": "Feather Flare",
@@ -132,7 +132,7 @@
   },
   "awakened:WaveOfMiasma": {
     "NAME": "Wave of Miasma",
-    "DESCRIPTION": "Apply !M! Weak and !awakened:m2! awakened:Manaburn to ALL enemies. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Apply !awakened:m2! awakened:Manaburn to ALL enemies. NL Exhaust."
   },
   "awakened:SludgeBomb": {
     "NAME": "Sludge Bomb",
@@ -184,7 +184,7 @@
   },
   "awakened:RisingChant": {
     "NAME": "Rising Chorus",
-    "DESCRIPTION": "Whenever you play an activated awakened:Chant card, gain !M! Strength."
+    "DESCRIPTION": "Gain !M! Strength. NL Whenever you play an activated awakened:Chant card, gain !M! Strength."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
@@ -219,7 +219,7 @@
   },
   "awakened:Spew": {
     "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL If a card was created this turn, gain [E] ."
+    "DESCRIPTION": "Deal !D! damage. NL [E] spent on this card counts as being awakened:Drained."
   },
   "awakened:DarknessFalls": {
     "NAME": "Darkness Falls",
@@ -239,7 +239,7 @@
   },
   "awakened:Gloomguard": {
     "NAME": "Gloomguard",
-    "DESCRIPTION": "Gain !B! Block. NL For each Void in hand, Exhaust it and gain [E] ."
+    "DESCRIPTION": "Gain !B! Block. NL Costs 0 if a *Void is in hand."
   },
   "awakened:Carrionmaker": {
     "NAME": "Carrionmaker",
@@ -405,7 +405,7 @@
   },
   "awakened:RealityRift": {
     "NAME": "Reality Rift",
-    "DESCRIPTION": "Choose !awakened:m2! of !M! powerful cards from *ANOTHER *DIMENSION to gain. NL Add 2 Voids to your discard pile. Exhaust."
+    "DESCRIPTION": "Choose !awakened:m2! of !M! powerful cards from *ANOTHER *DIMENSION to gain. NL Add 2 *Voids to your discard pile. Exhaust."
   },
   "awakened:Inscribe": {
     "NAME": "Inscribe",

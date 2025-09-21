@@ -6,6 +6,7 @@ import charbosses.bosses.Defect.ArchetypeBaseDefect;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnPowerUp;
+import charbosses.cards.colorless.potioncards.PowerPotionCard;
 import charbosses.cards.curses.EnDecay;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnVoid;
@@ -13,6 +14,7 @@ import charbosses.monsters.LouseTangerine;
 import charbosses.monsters.VoidCore;
 import charbosses.powers.bossmechanicpowers.DefectAttackVoidPower;
 import charbosses.powers.bossmechanicpowers.DefectVoidPower;
+import charbosses.relics.*;
 import com.esotericsoftware.spine.AnimationState;
 import com.esotericsoftware.spine.AnimationStateData;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -37,6 +39,14 @@ public class ArchetypeAct1VoidsSimple extends ArchetypeBaseDefect {
         maxHPModifier += 75;
         maxHPModifierAsc = 10;
         actNum = 1;
+    }
+
+
+    public void initialize() {
+        addRelic(new CBR_Vajra());
+        if (AbstractDungeon.ascensionLevel >= 19){
+            addRelic(new CBR_SymbioticVirus());
+        }
     }
 
     @Override
@@ -68,30 +78,35 @@ public class ArchetypeAct1VoidsSimple extends ArchetypeBaseDefect {
        // boolean beamCells = AbstractDungeon.ascensionLevel >= 4;
             switch (turn) {
                 case 0:
-                    if (!looped || !doubleLooped){
+                    if (!looped && extraUpgrades) {
+                        addToList(cardsList, new PowerPotionCard(), false);
+                        AbstractCard bf = new EnBuffer();
+                        bf.modifyCostForCombat(-99);
+                        addToList(cardsList, bf, false);
+                    }
+                    if (!looped){
                         addToList(cardsList, new EnConsume(), false);
-                        addToList(cardsList, new EnDoomAndGloom(), extraUpgrades);
+                        addToList(cardsList, new EnDarkness(), true);
                     } else {
-                        addToList(cardsList, new EnDoomAndGloom(), extraUpgrades);
+                        addToList(cardsList, new EnDarkness(), true);
                         addToList(cardsList, new EnStrikeBlue());
                     }
                     turn++;
                     break;
                 case 1:
-                    addToList(cardsList, new EnLeap());
-                    addToList(cardsList, new EnLeap());
+                    addToList(cardsList, new EnRipAndTear(), false);
+                    addToList(cardsList, new EnChargeBattery(), true);
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnRipAndTear(), false);
-                    addToList(cardsList, new EnDarkness(), extraUpgrades);
+                    addToList(cardsList, new EnDoomAndGloom(), false);
+                    addToList(cardsList, new EnBuffer(), false);
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnBuffer(), extraUpgrades);
+                    addToList(cardsList, new EnDualcast(), false);
                     addToList(cardsList, new EnLoop(), false);
                     turn = 0;
-                    if (looped) doubleLooped = true;
                     looped = true;
                     break;
             }

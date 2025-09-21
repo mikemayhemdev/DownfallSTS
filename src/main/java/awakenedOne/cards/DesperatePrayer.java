@@ -1,12 +1,10 @@
 package awakenedOne.cards;
 
-import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.tokens.Ceremony;
 import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
@@ -21,13 +19,13 @@ public class DesperatePrayer extends AbstractAwakenedCard {
         exhaust = true;
         baseMagicNumber = magicNumber = 3;
         AbstractCard c = new Ceremony();
-        c.upgrade();
+        //c.upgrade();
         this.cardsToPreview = c;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard c = new Ceremony();
-        c.upgrade();
+        //c.upgrade();
         Wiz.atb(new MakeTempCardInHandAction(c, magicNumber));
     }
 

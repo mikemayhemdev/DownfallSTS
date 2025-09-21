@@ -1,7 +1,6 @@
 package awakenedOne.potions;
 
 import awakenedOne.AwakenedOneMod;
-import awakenedOne.ui.OrbitingSpells;
 import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.unique.ApotheosisAction;
@@ -35,7 +34,7 @@ public class PhaseSkip extends CustomPotion {
         this.description = potionStrings.DESCRIPTIONS[0];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(GameDictionary.UPGRADE.NAMES[0]), (String)GameDictionary.keywords.get(GameDictionary.UPGRADE.NAMES[0])));
+        this.tips.add(new PowerTip(TipHelper.capitalize(GameDictionary.UPGRADE.NAMES[0]), GameDictionary.keywords.get(GameDictionary.UPGRADE.NAMES[0])));
 
     }
 

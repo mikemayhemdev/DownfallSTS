@@ -228,27 +228,6 @@ public class CharBossSilent extends AbstractCharBoss {
         posStorage = !posStorage;
     }
 
-    public void resetPoisonBoss() {
-        if (!this.isDying && !resetThisTurn) {
-            resetThisTurn = true;
-
-            SlimeboundMod.logger.info("Successful poison reset");
-            AbstractDungeon.actionManager.addToBottom(new TextAboveCreatureAction(this, TextAboveCreatureAction.TextType.INTERRUPTED));
-            AbstractDungeon.actionManager.addToBottom(new SpeechBubbleAction(POISONSPEECH, this, 2F));
-            atb(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    AbstractCharBoss.boss.hand.clear();
-                    chosenArchetype.looped = true;
-                    chosenArchetype.turn = 0;
-                    endTurnStartTurn();
-                }
-            });
-        }
-
-    }
-
     public void spawnImage(boolean noSmoke) {
 
         AbstractDungeon.actionManager.addToBottom(new WaitAction(0.1F));

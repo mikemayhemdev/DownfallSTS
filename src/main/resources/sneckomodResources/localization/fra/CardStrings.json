@@ -1,16 +1,33 @@
 {
+  "sneckomod:Blunderbus": {
+    "NAME": "Trombourde",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Répétez ceci pour chaque carte coûtant 3 [E] dans votre main."
+  },
+  "sneckomod:Tsunami": {
+    "NAME": "Tsunami",
+    "DESCRIPTION": "Les effets sneckomod:Excédents donnent également !M! d'Armure."
+  },
   "sneckomod:CheapStock": {
     "NAME": "Stock bon marché",
-    "DESCRIPTION": "Au début de votre tour, réduisez de 1 le coût de la carte sneckomod:Hors-Classe de votre main coûtant le plus."
+    "DESCRIPTION": "Au début de votre tour, sneckomod:Confondez la carte coûtant le plus d'énergie dans votre main.",
+       "UPGRADE_DESCRIPTION": "Au début de votre tour, sneckomod:Confondez les !M! cartes coûtant le plus d'énergie dans votre main."
   },
   "sneckomod:Cheat": {
-    "NAME": "Pure chance",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Obtenez sneckomod:Chanceux jusqu'à la fin du tour. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Obtenez sneckomod:chanceux jusqu'à la fin du tour."
+    "NAME": "Pure Luck",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]  
   },
   "sneckomod:DangerNoodle": {
-    "NAME": "Danger Noodle",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Répétez ceci pour chaque carte sneckomod:Hors-Classe dans votre main, puis Épuisez ces cartes."
+    "NAME": "Nouille mortelle",
+    "DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Confondez une carte. NL sneckomod:Cadeau: Coûtant 3 [E]",
+    "DESCRIPTION_BATTLE": "nfligez !D! dégâts. NL sneckomod:Confondez une carte."
+  },
+  "sneckomod:Deception": {
+    "NAME": "Deception",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez une *Onde de choc dans votre main. NL Épuisement."
   },
   "sneckomod:Defend": {
     "NAME": "Défense",
@@ -18,315 +35,583 @@
   },
   "sneckomod:DefensiveFlair": {
     "NAME": "Flair passif",
-    "DESCRIPTION": "Gagnez !B! d'Armure, augmenté de !M! pour chaque carte sneckomod:Hors-Classe dans votre main."
+    "DESCRIPTION": "Gagnez !B! d'Armure, augmenté de !M! pour chaque carte sneckomod:Hors-Classe dans votre main. NL sneckomod:Cadeau: Peu Commune",
+    "DESCRIPTION_BATTLE": "Gagnez !B! d'Armure, augmenté de !M! pour chaque carte sneckomod:Hors-Classe dans votre main."
   },
   "sneckomod:DiceBlock": {
     "NAME": "Armure de dés",
-    "DESCRIPTION": "Gagnez !M! - !B! d'Armure."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL sneckomod:Excédent : Gagnez !B! d'Armure à nouveau."
   },
   "sneckomod:DiceBoulder": {
     "NAME": "Fléau de dés",
-    "DESCRIPTION": "Infligez !M! - !D! dégâts. NL Peut être Améliorée à l'infini."
+    "DESCRIPTION": "Gagnez !B! d'Armure. Augmentez l'Armure de cette carte de !M! et son coût de !qqq! ce combat."
   },
   "sneckomod:DiceCrush": {
     "NAME": "Coup de dés",
-    "DESCRIPTION": "Infligez !M! - !D! dégâts."
+    "DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Excédent : Piochez 2 cartes."
+  },
+    "sneckomod:DragonsHoard": {
+    "NAME": "Magot du dragon",
+    "DESCRIPTION": "Éthérée. NL Gagnez de !M! Force. NL Gagnez !M! de Dextérité.",
+    "UPGRADE_DESCRIPTION": "Gagnez de !M! Force. NL Gagnez !M! de Dextérité."
+  },
+  "sneckomod:FourOfAKind": {
+    "NAME": "Carré",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Pari gagnant",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Gagnez !M! - 30 *Âmes. NL Épuisement."
+    "DESCRIPTION": "Injouable. NL Ne peut pas être retirée de votre deck. NL sneckomod:Cadeau: Rare Améliorée et !M! d'Or.",
+    "UPGRADE_DESCRIPTION": "Injouable. Éthérée. NL Ne peut pas être retirée de votre deck. NL sneckomod:Cadeau: Rare Améliorée et !M! d'Or.",
+    "DESCRIPTION_BATTLE": "Injouable.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Injouable. NL Éthérée."
+  },
+    "sneckomod:ImmovableObject": {
+    "NAME": "Immovable Object",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:IronFang": {
     "NAME": "Crocs d'acier",
-    "DESCRIPTION": "Gagnez !M! - !B! d'Armure. NL Infligez !qqq! - !D! dégâts."
+    "DESCRIPTION": "Infligez !D! dégâts et appliquez !M! de Faiblesse à TOUS les ennemis."
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Attaque improvisée",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une Attaque sneckomod:Hors-Classe aléatoire dans votre main et sneckomod:Confondez-la."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:ImprovisedGuard": {
     "NAME": "Garde improvisée",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez une Compétence sneckomod:Hors-Classe aléatoire dans votre main et sneckomod:Confondez-la."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]  
+  },
+    "sneckomod:LuckyBreak": {
+    "NAME": "Coup de bol",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Piochez !M! carte pour que carte en main coûtant 2 [E] ou plus."
   },
   "sneckomod:Nope": {
     "NAME": "Nope",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez une carte de votre main. NL Remplacez-la par une carte aléatoire de la même classe.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez une carte de votre main. NL Remplacez-la par une carte aléatoire de la même classe. Elle coûte 1 [E] de moins.",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Épuisez une carte. Si c'est une couleur, gagnez une carte aléatoire de la même classe.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Épuisez une carte. Si c'est une couleur, gagnez une carte aléatoire de la même classe.",
     "EXTENDED_DESCRIPTION": [
       " à Épuiser pour Nope."
     ]
   },
-  "sneckomod:MasterEye": {
-    "NAME": "Œil magique",
-    "DESCRIPTION": "Devenez Confus. NL Piochez !M! cartes supplémentaires au début de chaque tour.",
-    "UPGRADE_DESCRIPTION": "Devenez Confus. NL Piochez !M! cartes supplémentaires au début de chaque tour."
+  "sneckomod:SnakeEyes": {
+    "NAME": "Snake Eyes",
+    "DESCRIPTION": "Ce tour, votre prochaine carte sneckomod:Hors-classe est jouée deux fois. NL sneckomod:Cadeau: Compétence Rare.",
+    "UPGRADE_DESCRIPTION": "Ce tour, vos 2 prochaines cartes sneckomod:Hors-classe sont jouées deux fois. NL sneckomod:Cadeau: Compétence Rare.",
+    "DESCRIPTION_BATTLE": "Ce tour, votre prochaine carte sneckomod:Hors-classe est jouée deux fois.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Ce tour, vos 2 prochaines cartes sneckomod:Hors-classe sont jouées deux fois."
   },
   "sneckomod:Memorize": {
-    "NAME": "Mémorisation",
-    "DESCRIPTION": "sneckomod:Gekoproof. Éphémère. NL Choisissez une carte de votre main qui était *Inconnue, et sneckomod:Identifiez-la.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. Éphémère. Retenue. NL Choisissez une carte de votre main qui était *Inconnue, et sneckomod:Identifiez-la.",
+    "NAME": "Memorize",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
-      " à Identifier."
+      " to Identify.",
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
+  },
+    "sneckomod:MintCondition": {
+    "NAME": "État impeccable",
+    "DESCRIPTION": "sneckomod:Excédent: Gagnez !M! de Force."
   },
   "sneckomod:MixItUp": {
     "NAME": "Cocktail explosif",
-    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL *Transformez vos Potions. NL Épuisement."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]  
   },
   "sneckomod:MorePower": {
     "NAME": "Plus de puissance!",
-    "DESCRIPTION": "Obtenez une carte *Inconnue Améliorée supplémentaire lors des récompenses de fin de combat."
+        "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:Mudshield": {
     "NAME": "Bouclier de boue",
-    "DESCRIPTION": "Lorsque vous sneckomod:Confondez une carte, gagnez !M! d'Armure.",
-    "UPGRADE_DESCRIPTION": "Inné. NL Lorsque vous sneckomod:Confondez une carte, gagnez !M! d'Armure."
+    "DESCRIPTION": "Lorsque vous sneckomod:Confondez une carte, gagnez !M! d'Armure."
+  },
+    "sneckomod:OverwhelmingPresence": {
+    "NAME": "Déferlante",
+    "DESCRIPTION": "Éthérée. NL La première fois que vous jouez une carte sneckomod:Hors-Classe chaque tour, piochez une carte.",
+    "UPGRADE_DESCRIPTION": "La première fois que vous jouez une carte sneckomod:Hors-Classe chaque tour, piochez une carte."
+  },
+  "sneckomod:RiskySword": {
+    "NAME": "Épée risquée",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Quand elle est sneckomod:Confondue, augmentez les dégâts de cette carte de !M! pour le combat."
+  },
+  "sneckomod:PoisonParadise": {
+    "NAME": "Fontaine",
+    "DESCRIPTION": "Les effets sneckomod:Excédents appliquent également !M! de sneckomod:Venin à un ennemi aléatoire."
   },
   "sneckomod:PureSnecko": {
     "NAME": "Shift",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez toutes les cartes sneckomod:Hors-Classe dans votre main, les remplaçant avec des nouvelles them with new ones.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez toutes les cartes sneckomod:Hors-Classe dans votre main, les remplaçant avec des nouvelles qui coûtent 1 [E] de moins."
+    "DESCRIPTION": "Piochez !M! cartes et sneckomod:Confondez-les."
   },
   "sneckomod:QuickBite": {
     "NAME": "Coupe du serpent",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Piochez !M! - 2 cartes. NL sneckomod:Confondez la carte coûtant le plus dans votre main."
+    "DESCRIPTION": "Infligez !D! dégâts. NL Piochez !M! carte et sneckomod:Confondez-la.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Piochez !M! cartes et sneckomod:Confondez-les."
   },
   "sneckomod:QuickMove": {
     "NAME": "Mouvement vif",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL sneckomod:Confondez la carte coûtant le plus dans votre main.",
-    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL sneckomod:Confondez les !M! cartes coûtant le plus dans votre main."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL sneckomod:Excédent : Appliquez !M! de Vulnérabilité à TOUS les ennemis."
   },
   "sneckomod:RainOfDice": {
     "NAME": "Pluie de dés",
-    "DESCRIPTION": "Infligez !qqq! - !D! dégâts à un ennemi aléatoire. NL sneckomod:Confondez cette carte et remettez-la dans votre main."
+    "DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Confondez une carte puis ajoutez *Pluie *de *Dés dans votre main. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Confondez une carte puis ajoutez *Pluie *de *Dés+ dans votre main. NL Épuisement."
   },
   "sneckomod:Restock": {
     "NAME": "Réapprovisionnement",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Défaussez votre main. NL Piochez 5-10 cartes. NL Épuisement."
+    "DESCRIPTION": "Défaussez votre main. NL Piochez !M! cartes, puis sneckomod:Confondez votre main. NL Épuisement."
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Défaussez toutes les cartes sneckomod:Hors-Classe. NL Piochez autant de cartes.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Défaussez toutes les cartes sneckomod:Hors-Classe. NL Piochez autant de cartes plus !M!."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
+  },
+    "sneckomod:SerpentBottle": {
+    "NAME": "Vente au rabais",
+    "DESCRIPTION": "Piochez !qqq! cartes. NL sneckomod:Confondez une carte. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Piochez !qqq! cartes. NL sneckomod:Confondez !M! cartes. NL Épuisement."
   },
   "sneckomod:SerpentIdol": {
     "NAME": "Idole serpentine",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Choisissez 1 carte sneckomod:Hors-Classe parmi 3 à ajouter dans votre main. NL Elle coûte 0 ce tour-ci. NL Épuisement."
+    "DESCRIPTION": "Choisissez 1 carte sneckomod:Hors-Classe parmi 3 à ajouter dans votre main. NL Elle coûte 0 ce tour. NL Épuisement."
   },
   "sneckomod:SerpentMind": {
     "NAME": "Forme exotique",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Lorsque vous jouez une carte sneckomod:Hors-Classe, piochez 1 carte.",
-    "UPGRADE_DESCRIPTION": "Lorsque vous jouez une carte sneckomod:Hors-Classe, piochez 1 carte."
+    "DESCRIPTION": "Éthérée. À la fin de votre tour, gagnez !M! de Force pour chaque couleur unique jouée. NL sneckomod:Cadeau: Rare.",
+    "UPGRADE_DESCRIPTION": "À la fin de votre tour, gagnez !M! de Force pour chaque couleur unique jouée. NL sneckomod:Cadeau: Rare.",
+    "DESCRIPTION_BATTLE": "À la fin de votre tour, gagnez !M! de Force pour chaque couleur unique jouée."
   },
-  "sneckomod:SlitherStrike": {
-    "NAME": "Frappe rampante",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Réduisez le coût de vos cartes sneckomod:Hors-Classe de votre main de 1 pour ce tour."
+  "sneckomod:SlitherThrough": {
+    "NAME": "Glissement sinueux",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Réduisez le coût des cartes sneckomod:Hors-Classe de votre main de !M! ce tours. NL sneckomod:Cadeau: Peu Commune.",
+    "DESCRIPTION_BATTLE": "Infligez !D! dégâts. NL Réduisez le coût des cartes sneckomod:Hors-Classe de votre main de !M! ce tours."
   },
   "sneckomod:SnakeSap": {
     "NAME": "Sève de serpent",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Infligez !qqq! - !D! dégâts. NL Gagnez 1 - !M! [E] . NL Épuisement."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]  
   },
   "sneckomod:SnekBeam": {
-    "NAME": "Laser Geko",
-    "DESCRIPTION": "Infligez autant de dégâts à TOUS les ennemis qu'il y a de cartes Inconnues dans votre deck. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Infligez autant de dégâts à TOUS les ennemis qu'il y a de cartes Inconnues dans votre deck.",
-    "EXTENDED_DESCRIPTION": [
-      " NL (Inflige !D! dégâts.) NL Épuisement.",
-      " NL (Inflige !D! dégâts.)"
-    ]
+    "NAME": "Yeux laser",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez [E]."
   },
   "sneckomod:SnekBite": {
     "NAME": "Morsure de geko",
-    "DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Confondez la carte coûtant le plus dans votre main.",
+    "DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Confondez une carte.",
     "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Confondez les !M! cartes le coûtant le plus dans votre main."
   },
   "sneckomod:SoulCleanse": {
     "NAME": "Nettoyage de l'âme",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL sneckomod:Confondez votre main. Les cartes sneckomod:Confondues de cette façon ne peuvent pas coûter 3. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL sneckomod:Confondez votre main. Les cartes sneckomod:Confondues de cette façon ne peuvent pas coûter 3."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
   },
   "sneckomod:SoulDraw": {
     "NAME": "Tirage de l'âme",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Ajoutez !M! cartes sneckomod:Hors-Classe aléatoires dans votre main. NL Épuisement"
+    "DESCRIPTION": "Obtenez !M! cartes sneckomod:Hors-Classe aléatoires. Elles gagnent Retenue. NL Épuisement"
   },
   "sneckomod:SoulExchange": {
     "NAME": "Échange de l'âme",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Piochez 1 carte, et choisissez une carte de votre main. *Transformez toute votre main cartes aléatoires de sa classe.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Piochez !M! cartes, et choisissez une carte de votre main. *Transformez toute votre main cartes aléatoires de sa classe.",
-    "EXTENDED_DESCRIPTION": [
-      "à Épuiser pour Échange de l'âme."
-    ]
+    "DESCRIPTION": "Retain. NL sneckomod:Muddle your hand. NL Épuisement."
   },
   "sneckomod:SoulRoll": {
     "NAME": "Lancer de l'âme",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL sneckomod:Confondez votre main.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL sneckomod:Confondez votre main. NL Piochez 1 carte."
+    "DESCRIPTION": "Retenue. NL Gagnez !B! d'Armure. NL sneckomod:Confondez une carte. NL Épuisement."
   },
   "sneckomod:Strike": {
     "NAME": "Frappe",
     "DESCRIPTION": "Infligez !D! dégâts."
   },
+  "sneckomod:ToothAndClaw": {
+    "NAME": "Dents et griffes",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez un Surin pour chaque carte couleur unique dans votre main. NL sneckomod:Cadeau: Peu Commune.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Gagnez un Surin Amélioré pour chaque carte couleur unique dans votre main. NL sneckomod:Cadeau: Peu Commune.",
+    "DESCRIPTION_BATTLE": "Infligez !D! dégâts. NL Gagnez un Surin pour chaque carte couleur unique dans votre main.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Infligez !D! dégâts. NL Gagnez un Surin Amélioré pour chaque carte couleur unique dans votre main."
+  },
+  "sneckomod:TyphoonFang": {
+    "NAME": "Morsure Typhon",
+    "DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Excédent: Ce tour, lorsque vous activez un effet sneckomod:Excédent, jouez une copie de cette carte."
+  },
+  "sneckomod:Yearn": {
+    "NAME": "Aspiration",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
+  },  
   "sneckomod:TailWhip": {
     "NAME": "Fouet de queue",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez !M! - 2 de Faiblesse. NL Appiquez !M! - 2 Vulnérabilité."
+    "DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Excédent : Appliquez !M! de Faiblesse et de Vulnérabilité."
   },
   "sneckomod:Transmogrify": {
     "NAME": "Transfiguration",
-    "DESCRIPTION": "Choisissez 1 Relique à perdre parmi 2. NL Obtenez une Relique aléatoire de la même rareté. NL Épuisement.",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": [
       "Je n'ai aucune Relique à échanger.",
       "Choisissez une Relique à perdre.",
       "Perdez ",
       " et obtenez une autre Relique ",
-      " ."
+      " .",
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
+  },
+    "sneckomod:ToxicPersonality": {
+    "NAME": "Toxic Personality",
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
     ]
   },
   "sneckomod:TrashToTreasure": {
     "NAME": "Déchet en trésor",
-    "DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez une carte. NL Gagnez autant de [E] que son coût. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Gekoproof. NL Épuisez une carte. NL Gagnez autant de [E] que son coût."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Épuisez une carte. NL Gagnez autant de [E] que son coût. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Épuisez une carte. NL Gagnez autant de [E] que son coût."
   },
   "sneckomod:UnendingSupply": {
     "NAME": "Source inépuisable",
-    "DESCRIPTION": "Au début de chaque tour, ajoutez une carte sneckomod:Hors-Classe aléatoire à votre main."
+    "DESCRIPTION": "At the start of each turn, gain an gremlin:Echo of a random sneckomod:Offclass card.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of each turn, gain an gremlin:Echo of a random sneckomod:Offclass card."
   },
   "sneckomod:Unknown": {
     "NAME": "??? Basique",
-    "DESCRIPTION": "Carte *Inconnue du deck de départ d'un Personnage.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée du deck de départ d'un Personnage."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:Unknown0Cost": {
     "NAME": "??? coûtant 0",
-    "DESCRIPTION": "Carte *Inconnue coûtant 0.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée coûtant 0."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:Unknown1Cost": {
     "NAME": "??? coûtant 1",
-    "DESCRIPTION": "Carte *Inconnue coûtant 1.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée coûtant 1."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:Unknown2Cost": {
     "NAME": "??? coûtant 2",
-    "DESCRIPTION": "Carte *Inconnue coûtant 2.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée coûtant 2."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:Unknown3Cost": {
     "NAME": "??? coûtant 3",
-    "DESCRIPTION": "Carte *Inconnue coûtant 3.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée coûtant 3."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownBlock": {
     "NAME": "??? Armure",
-    "DESCRIPTION": "Carte *Inconnue d'Armure.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée d'Armure."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownBoss": {
     "NAME": "??? Boss",
-    "DESCRIPTION": "Carte Boss *Inconnue.",
-    "UPGRADE_DESCRIPTION": "Carte Boss *Inconnue Améliorée."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownClass": {
     "NAME": "??? Class",
-    "DESCRIPTION": "*Unknown YouShouldNeverSeeThis-ReportToDev Card.",
-    "UPGRADE_DESCRIPTION": "Carte *Unknown YouShouldNeverSeeThis-ReportToDev Améliorée."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownColorless": {
     "NAME": "??? Incolore",
-    "DESCRIPTION": "Carte *Inconnue Incolore.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée Incolore."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownCommonAttack": {
     "NAME": "??? Attaque C",
-    "DESCRIPTION": "Carte Attaque *Inconnue Commune.",
-    "UPGRADE_DESCRIPTION": "Carte Attaque *Inconnue Améliorée Commune."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownCommonSkill": {
     "NAME": "??? Compétence C",
-    "DESCRIPTION": "Carte Compétence *Inconnue Commune.",
-    "UPGRADE_DESCRIPTION": "Carte Compétence *Inconnue Améliorée Commune."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownDexterity": {
     "NAME": "??? Dextérité",
-    "DESCRIPTION": "Carte *Inconnue qui donne de la Dextérité.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée qui donne de la Dextérité."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownDraw": {
     "NAME": "??? Pioche",
-    "DESCRIPTION": "Carte *Inconnue qui fait Piocher.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée qui fait Piocher."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownEthereal": {
     "NAME": "??? Éthérée",
-    "DESCRIPTION": "Carte *Inconnue Éthérée.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée Éthérée."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownExhaust": {
     "NAME": "??? Épuisable",
-    "DESCRIPTION": "Carte *Inconnue ayant Épuisement.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée ayant Épuisement."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownRareAttack": {
     "NAME": "??? Attaque R",
-    "DESCRIPTION": "Carte Attaque *Inconnue Rare.",
-    "UPGRADE_DESCRIPTION": "Carte Attaque *Inconnue Améliorée Rare."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownRarePower": {
     "NAME": "??? Pouvoir R",
-    "DESCRIPTION": "Carte Pouvoir *Inconnue Rare.",
-    "UPGRADE_DESCRIPTION": "Carte Pouvoir *Inconnue Améliorée Rare."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownRareSkill": {
     "NAME": "??? Compétence R",
-    "DESCRIPTION": "Carte Compétence *Inconnue Rare.",
-    "UPGRADE_DESCRIPTION": "Carte Compétence *Inconnue Améliorée Rare."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownStrength": {
     "NAME": "??? Force",
-    "DESCRIPTION": "Carte *Inconnue qui donne de la Force.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée qui donne de la Force."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownStrike": {
     "NAME": "??? Frappe",
-    "DESCRIPTION": "Carte Frappe *Inconnue.",
-    "UPGRADE_DESCRIPTION": "Carte Frappe *Inconnue Améliorée."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownUncommonAttack": {
     "NAME": "??? Attaque PC",
-    "DESCRIPTION": "Carte Attaque *Inconnue Peu Commune.",
-    "UPGRADE_DESCRIPTION": "Carte Attaque *Inconnue Améliorée Peu Commune."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownUncommonPower": {
     "NAME": "??? Pouvoir PC",
-    "DESCRIPTION": "Carte Pouvoir *Inconnue Peu Commune.",
-    "UPGRADE_DESCRIPTION": "Carte Pouvoir *Inconnue Améliorée Peu Commune."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownUncommonSkill": {
     "NAME": "??? Compétence PC",
-    "DESCRIPTION": "Carte Compétence *Inconnue Peu Commune.",
-    "UPGRADE_DESCRIPTION": "Carte Compétence *Inconnue Améliorée Peu Commune."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownVulnerable": {
     "NAME": "??? Vulnérabilité",
-    "DESCRIPTION": "Carte *Inconnue qui donne de la Vulnérabilité.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée qui donne de la Vulnérabilité."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownWeak": {
     "NAME": "??? Faiblesse",
-    "DESCRIPTION": "Carte *Inconnue qui donne de la Faiblesse.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée qui donne de la Faiblesse."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownX": {
     "NAME": "??? coûtant X",
-    "DESCRIPTION": "Carte *Inconnue coûtant X.",
-    "UPGRADE_DESCRIPTION": "Carte *Inconnue Améliorée coûtant X."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnlimitedRolls": {
     "NAME": "Lancers illimités",
-    "DESCRIPTION": "Au début de votre tour, ajoutez un gremlin:Écho de *Lancer *de *l'âme à votre main.",
-    "UPGRADE_DESCRIPTION": "Inné. NL Au début de votre tour, ajoutez un gremlin:Écho de *Lancer *de *l'âme à votre main."
+    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "EXTENDED_DESCRIPTION": [
+      "NOTE FOR LOC: You can just copy paste whatever this tls as for all of these removed cards."
+    ]
+  },
+    "sneckomod:Behold": {
+    "NAME": "Contemplez !",
+    "DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Excédent: Gagnez !M! Surins.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Excédent: Gagnez !M! Surins."
+  },
+  "sneckomod:SaveForLater": {
+    "NAME": "Sous le coude",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Retenez !M! carte à la fin de votre tour.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Retenez !M! cartes à la fin de votre tour."
+  },
+  "sneckomod:PowerShot": {
+    "NAME": "Cartouche spéciale",
+    "DESCRIPTION": "Infligez !D! dégâts. Lorsque vous jouez un Pouvoir, remettez cette carte de votre défausse à votre main."
+  },
+  "sneckomod:LilGuardian": {
+    "NAME": "P'tit Gardien",
+    "DESCRIPTION": "Gagnez !B! d'Armure. Lorsque vous jouez une carte coûtant 2 [E] ou plus, jouez ceci de votre main."
+  },
+  "sneckomod:CrystalBoomerang": {
+    "NAME": "Boomerang de cristal",
+    "DESCRIPTION": "Mettez une carte de votre défausse à votre main. NL Si c'est une carte sneckomod:Hors-Classe, gagnez !B! d'Armure."
+  },
+  "sneckomod:ViperEssence": {
+    "NAME": "Essence de vipère",
+    "DESCRIPTION": "Éthérée. NL sneckomod:Hors-Classe. NL Gagnez !M! de Force."
+  },
+  "sneckomod:Amass": {
+    "NAME": "Amassage",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Gagne de l'Armure supplémentaire égale au coût total en [E] de la main.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Gagne de l'Armure supplémentaire égale à deux fois le coût total en [E] de la main."
+  },
+  "sneckomod:Medusa": {
+    "NAME": "Méduse",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez !M! de sneckomod:Venin. NL sneckomod:Cadeau: Débuff Commun.",
+    "DESCRIPTION_BATTLE": "Infligez !D! dégâts. NL Appliquez !M! de sneckomod:Venin."
+  },
+  "sneckomod:Cower": {
+    "NAME": "Recroquevillement",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez une *Planque dans votre main. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Ajoutez une *Planque+ dans votre main. NL Épuisement."
   },
   "sneckomod:WideSting": {
     "NAME": "Piqûre profonde",
-    "DESCRIPTION": "Infligez !M! - !D! dégâts à TOUS les ennemis. NL Améliorez toutes les cartes sneckomod:Hors-Classe de votre main."
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Améliorez toutes les cartes sneckomod:Hors-Classe dans votre main. NL sneckomod:Cadeau: Commune.",
+    "DESCRIPTION_BATTLE": "Infligez !D! dégâts à TOUS les ennemis. NL Améliorez toutes les cartes sneckomod:Hors-Classe dans votre main."
+  },
+  "sneckomod:GildedShield": {
+    "NAME": "Bouclier doré",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL sneckomod:Confondez cette carte, puis remettez-la dans votre main."
+  },
+  "sneckomod:Mesmerize": {
+    "NAME": "Envoûtement",
+    "DESCRIPTION": "TOUS les ennemis perdent !M! de Force. NL sneckomod:Confondez une carte. NL Épuisement."
+  },
+  "sneckomod:Serpentscale": {
+    "NAME": "Peau écailleuse",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez 1 d'Armure* expansioncontent:Plaquée. NL sneckomod:Excédent: Gagnez !M! d'Armure* Plaquée* à la place instead."
+  },
+  "sneckomod:OtherworldlySlash": {
+    "NAME": "Tranche inter-monde",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si vous avez joué une carte sneckomod:Hors-Classe ce tour, infligez !D! dégâts à nouveau. NL sneckomod:Cadeau: Commune.",
+    "DESCRIPTION_BATTLE": "Infligez !D! dégâts. NL Si vous avez joué une carte sneckomod:Hors-Classe ce tour, infligez !D! dégâts à nouveau."
+  },
+  "sneckomod:BeyondArmor": {
+    "NAME": "Armure de l'Au-delà",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Mettez !M! cartes sneckomod:Hors-Classe aléatoires de votre pioche dans votre main. NL sneckomod:Cadeau: Commune.",
+    "DESCRIPTION_BATTLE": "Gagnez !B! d'Armure. NL Mettez !M! cartes sneckomod:Hors-Classe aléatoires de votre pioche dans votre main."
+  },
+  "sneckomod:BlunderGuard": {
+    "NAME": "Garde improvisée",
+    "DESCRIPTION": "Lorsque vous jouez une carte coûtant 3 [E] ou plus, gagnez !qqq! d'Armure et !M! de Force.",
+    "UPGRADE_DESCRIPTION": "Lorsque vous jouez une carte coûtant 3 [E] ou plus, gagnez !qqq! d'Armure et !M! de Force."
+  },
+  "sneckomod:WideAngle": {
+    "NAME": "Grand angle",
+    "DESCRIPTION": "Retenue. NL Infligez !D! dégâts à TOUS les ennemis."
+  },
+  "sneckomod:SerpentsNest": {
+    "NAME": "Nid de serpents",
+    "DESCRIPTION": "Lorsque vous jouez un Pouvoir, infligez !M! dégâts à TOUS les ennemis. NL sneckomod:Cadeau: Pouvoir Peu Commun.",
+    "DESCRIPTION_BATTLE": "Lorsque vous jouez un Pouvoir, infligez !M! dégâts à TOUS les ennemis."
+  },
+  "sneckomod:Whack": {
+    "NAME": "Vlan !",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez un *Fracas dans votre main. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez un *Fracas+ dans votre main. NL Épuisement."
+  },
+  "sneckomod:CobraCoil": {
+    "NAME": "Spire du cobra",
+    "DESCRIPTION": "Infligez !D! dégâts. NL L'ennemi prend !M! dégâts à la fin de chacun de ses tours. NL sneckomod:Cadeau: Attaque Rare."
+  },
+  "sneckomod:Belittle": {
+    "NAME": "Dépréciation",
+    "DESCRIPTION": "L'ennemi perd !M! PVs pour chaque débuff unique qu'ils ont. NL sneckomod:Cadeau: Débuff Peu Commun.",
+    "DESCRIPTION_BATTLE": "L'ennemi perd !M! PVs pour chaque débuff unique qu'ils ont."
+  },
+  "sneckomod:Jackpot": {
+    "NAME": "Jackpot",
+    "DESCRIPTION": "Retenue. NL Gagnez [E] [E]. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Gagnez [E] [E] [E]. NL Épuisement."
+  },
+  "sneckomod:MakeshiftBlade": {
+    "NAME": "Lame de fortune",
+    "DESCRIPTION": "Infligez !D! dégâts. Si la cible a au moins !M! débuffs, piochez !qqq! cartes. NL sneckomod:Cadeau: Débuff.",
+    "DESCRIPTION_BATTLE": "Infligez !D! dégâts. Si la cible a au moins !M! débuffs, piochez !qqq! cartes."
+  },
+  "sneckomod:LatchOn": {
+    "NAME": "Parasitage",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Ajoutez une *Essence *de *Vipère dans votre main."
+  },
+  "sneckomod:ComboString": {
+    "NAME": "Chaîne de combos",
+    "DESCRIPTION": "Infligez !D! dégâts pour chaque carte sneckomod:Hors-Classe jouée ce tour. NL sneckomod:Cadeau: Peu Commune.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (touche ",
+      " x fois.)"
+    ],
+    "DESCRIPTION_BATTLE": "Infligez !D! dégâts pour chaque carte sneckomod:Hors-Classe jouée ce tour."
+  },
+  "sneckomod:ThrowingCards": {
+    "NAME": "Lancer de cartes",
+    "DESCRIPTION": "Ajoutez X copies de *FTL dans votre main. NL Gagnez [E]. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Ajoutez X copies de *FTL+ dans votre main. NL Gagnez [E]. NL Épuisement."
+  },
+  "sneckomod:RoundaboutSwing": {
+    "NAME": "Swing circulaire",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Placez une carte de votre main au dessus de votre pioche. NL Piochez !M! cartes supplémentaires au prochain tour."
+  },
+  "sneckomod:MarkedCard": {
+    "NAME": "Carte Marquée",
+    "DESCRIPTION": "sneckomod:Confondez une carte. NL Elle sera toujours moins chère. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL sneckomod:Confondez une carte. NL Elle sera toujours moins chère. NL Épuisement."
+  },
+  "sneckomod:InertBlade": {
+    "NAME": "Lame inerte",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si ceci coûte... NL 1 [E] ou plus : Piochez !M! cartes. NL 2 [E] ou plus : Gagnez !M! de Force. NL 3 [E] ou plus : Gagnez [E].",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Si ceci coûte... NL 1 [E] ou plus : Piochez !M! cartes. NL 2 [E] ou plus : Gagnez !M! de Force. NL 3 [E] ou plus : Gagnez [E] [E]."
+  },
+  "sneckomod:PerpetualSerpent": {
+    "NAME": "Serpent perpétuel",
+    "DESCRIPTION": "Infligez !D! dégâts. NL sneckomod:Excédent : Gagnez [E] [E]."
+  },
+  "sneckomod:LastStrike": {
+    "NAME": "Frappe finale",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Répétez ceci pour chaque carte Frappe unique jouée ce combat. NL sneckomod:Cadeau: Frappe.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Répétez ceci pour chaque carte Frappe unique jouée ce combat. NL sneckomod:Cadeau: Frappe.",
+    "DESCRIPTION_BATTLE": "Infligez !D! dégâts. NL Répétez ceci pour chaque carte Frappe unique jouée ce combat.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Infligez !D! dégâts. NL Répétez ceci pour chaque carte Frappe unique jouée ce combat.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (touche ",
+      " x fois supplémentaires.)"
+    ]
+  },
+  "sneckomod:AceOfWands": {
+    "NAME": "Reine des Pentacles",
+    "DESCRIPTION": "Éthérée. NL Lorsque vous appliquez un débuff sur un ennemi, gagnez !M! d'Armure. NL sneckomod:Cadeau: Débuff.",
+    "UPGRADE_DESCRIPTION": "Lorsque vous appliquez un débuff sur un ennemi, gagnez !M! d'Armure. NL sneckomod:Cadeau: Débuff."
+  },
+  "sneckomod:FlashInThePan": {
+    "NAME": "Feu de paille",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Défaussez votre main. NL Piochez autant de cartes au prochain tour."
+  },
+  "sneckomod:TrashCan": {
+    "NAME": "Vide-ordures",
+    "DESCRIPTION": "À la fin de votre tour, vous pouvez Épuiser une carte."
+  },
+  "sneckomod:Lacerate": {
+    "NAME": "Lacération",
+    "DESCRIPTION": "Appliquez !M! de sneckomod:Venin à TOUS les ennemis. NL Obtenez un *Nuage *Paralysant. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Appliquez !M! de sneckomod:Venin à TOUS les ennemis. NL Obtenez un *Nuage *Paralysant+. NL Épuisement."
+  },
+  "sneckomod:SerpentineSleuth": {
+    "NAME": "Détective serpent",
+    "DESCRIPTION": "Éthérée. NL Lorsque vous jouez un Pouvoir, gagnez [E]. NL sneckomod:Cadeau: Pouvoir Rare.",
+    "DESCRIPTION_BATTLE": "Éthérée. NL Lorsque vous jouez un Pouvoir, gagnez [E]."
   }
 }
+

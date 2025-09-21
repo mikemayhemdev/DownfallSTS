@@ -1,5 +1,8 @@
+/*
 package downfall.cards.curses;
 
+import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
+import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
 import collector.cards.AbstractCollectorCard;
 import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.SoulboundField;
 import com.megacrit.cardcrawl.actions.unique.LoseEnergyAction;
@@ -11,7 +14,8 @@ import downfall.downfallMod;
 import expansioncontent.expansionContentMod;
 
 import static collector.CollectorMod.makeID;
-
+@NoCompendium
+@NoPools
 public class Sapped extends AbstractCollectorCard {
     public final static String ID = makeID(Sapped.class.getSimpleName());
     // intellij stuff skill, none, special, , , , , 1, 1
@@ -39,3 +43,5 @@ public class Sapped extends AbstractCollectorCard {
     }
     
 }
+
+ */

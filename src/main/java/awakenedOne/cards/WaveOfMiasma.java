@@ -3,7 +3,6 @@ package awakenedOne.cards;
 import awakenedOne.powers.ManaburnPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import hermit.util.Wiz;
 
 import static awakenedOne.AwakenedOneMod.*;
@@ -15,22 +14,23 @@ public class WaveOfMiasma extends AbstractAwakenedCard {
     //Shroud of Miasma
 
     public WaveOfMiasma() {
-        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseMagicNumber = magicNumber = 2;
-        baseSecondMagic = secondMagic = 5;
+        super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        baseSecondMagic = secondMagic = 6;
+        baseBlock = 16;
         this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(WaveOfMiasma.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        blck();
         Wiz.forAllMonstersLiving(q -> {
-            Wiz.applyToEnemy(q, new WeakPower(q, magicNumber, false));
             Wiz.applyToEnemy(q, new ManaburnPower(q, secondMagic));
         });
     }
 
     public void upp() {
         //upgradeMagicNumber(2);
-        upgradeSecondMagic(4);
+        upgradeBlock(4);
+        upgradeSecondMagic(3);
     }
 }

@@ -28,7 +28,7 @@ public class Nihil extends AbstractAwakenedCard {
 
     public Nihil() {
         super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 12;
+        baseMagicNumber = magicNumber = 13;
         this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(Nihil.class.getSimpleName() + ".png"));
     }
@@ -42,13 +42,17 @@ public class Nihil extends AbstractAwakenedCard {
             } else {
                 this.addToBot(new VFXAction(m, new OfferingEnemyEffect(m), 0.5F));
             }
-            this.addToBot(new TriggerMarksAction(this));
             chant();
         }
     }
 
     @Override
     public void chant() {
+
+        int times = checkChantEffectBonus();
+        for (int i = 0; i < times; i++) {
+            this.addToBot(new TriggerMarksAction(this));
+        }
         checkOnChant();
     }
 

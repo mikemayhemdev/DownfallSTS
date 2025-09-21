@@ -31,18 +31,22 @@ public class RavenStrike extends AbstractAwakenedCard {
         }
     }
 
+
     @Override
     public void chant() {
-        addToBot(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                att(new PlayTopCardAction(AbstractDungeon.getRandomMonster(), false));
-            }
-        });
+
+        int times = checkChantEffectBonus();
+        for (int i = 0; i < times; i++) {
+            addToBot(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    att(new PlayTopCardAction(AbstractDungeon.getRandomMonster(), false));
+                }
+            });
+        }
         checkOnChant();
     }
-
 
     public void triggerOnGlowCheck() {
         this.glowColor = isChantActiveGlow(this) ? GOLD_BORDER_GLOW_COLOR : BLUE_BORDER_GLOW_COLOR;

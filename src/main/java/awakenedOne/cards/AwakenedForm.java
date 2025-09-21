@@ -1,16 +1,14 @@
 package awakenedOne.cards;
 
-import awakenedOne.powers.ReverseRitualPower;
 import basemod.helpers.BaseModCardTags;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.CuriosityPower;
 import com.megacrit.cardcrawl.powers.RitualPower;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.*;
+import static awakenedOne.util.Wiz.applyToSelfTop;
+import static awakenedOne.util.Wiz.awaken;
 
 public class AwakenedForm extends AbstractAwakenedCard {
     public final static String ID = makeID(AwakenedForm.class.getSimpleName());

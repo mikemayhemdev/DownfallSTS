@@ -48,24 +48,24 @@ public class FunctionHelper {
     public static final float SEQUENCED_CARD_SIZE = 0.225f;
     public static final float FUNC_CARD_SIZE = 0.45f;
 
-    public static final float BG_X = 150f * Settings.scale;
-    public static final float BG_Y = 700f * Settings.scale;
-    public static final float HEIGHT_SEQUENCE = 800f * Settings.yScale;
-    public static final float HEIGHT_SPOT = 700f * Settings.yScale;
-    public static final float HEIGHT_FUNCTION = 820f * Settings.yScale;
+    public static final float BG_X = 650f * Settings.scale;
+    public static final float BG_Y = 600f * Settings.scale;
+    public static final float HEIGHT_SEQUENCE = 700f * Settings.yScale;
+    public static final float HEIGHT_SPOT = 600f * Settings.yScale;
+    public static final float HEIGHT_FUNCTION = 720f * Settings.yScale;
 
     public static final Vector2[] cardPositions = {
-            new Vector2(218f * Settings.xScale, HEIGHT_SEQUENCE),
-            new Vector2(293f * Settings.xScale, HEIGHT_SEQUENCE),
-            new Vector2(368f * Settings.xScale, HEIGHT_SEQUENCE),
-            new Vector2(443f * Settings.xScale, HEIGHT_SEQUENCE)
+            new Vector2(718f * Settings.xScale, HEIGHT_SEQUENCE),
+            new Vector2(793f * Settings.xScale, HEIGHT_SEQUENCE),
+            new Vector2(868f * Settings.xScale, HEIGHT_SEQUENCE),
+            new Vector2(943f * Settings.xScale, HEIGHT_SEQUENCE)
     };
 
     public static final Vector2[] floaterStartPositions = {
-            new Vector2(177F * Settings.xScale, HEIGHT_SPOT),
-            new Vector2(252f * Settings.xScale, HEIGHT_SPOT),
-            new Vector2(327f * Settings.xScale, HEIGHT_SPOT),
-            new Vector2(402f * Settings.xScale, HEIGHT_SPOT)
+            new Vector2(677F * Settings.xScale, HEIGHT_SPOT),
+            new Vector2(752f * Settings.xScale, HEIGHT_SPOT),
+            new Vector2(827f * Settings.xScale, HEIGHT_SPOT),
+            new Vector2(902f * Settings.xScale, HEIGHT_SPOT)
     };
 
     public static BobEffect[] bobEffects = {
@@ -76,8 +76,8 @@ public class FunctionHelper {
     };
 
     public static final Vector2[] funcPositions = {
-            new Vector2(480f * Settings.xScale, HEIGHT_FUNCTION),
-            new Vector2(560f * Settings.xScale, HEIGHT_FUNCTION)
+            new Vector2(980f * Settings.xScale, HEIGHT_FUNCTION),
+            new Vector2(1060f * Settings.xScale, HEIGHT_FUNCTION)
     };
 
     private static final Texture bg = TextureLoader.getTexture("bronzeResources/images/ui/sequenceframe.png");

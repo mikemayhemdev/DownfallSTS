@@ -10,10 +10,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.localization.PowerStrings;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import theHexaghost.HexaMod;
+import theHexaghost.util.OnAdvanceOrRetractSubscriber;
 import theHexaghost.util.OnRetractSubscriber;
 import downfall.util.TextureLoader;
 
-public class PastPower extends AbstractPower implements CloneablePowerInterface, OnRetractSubscriber {
+public class PastPower extends AbstractPower implements CloneablePowerInterface, OnAdvanceOrRetractSubscriber {
 
     public static final String POWER_ID = HexaMod.makeID("PastPower");
 
@@ -41,37 +42,37 @@ public class PastPower extends AbstractPower implements CloneablePowerInterface,
 
     @Override
     public void atStartOfTurnPostDraw() {
-//        activation_count = 0;
-//        updateDescription();
+        activation_count = 0;
+        updateDescription();
     }
 
-    @Override
-    public void onRetract() {
-//        if (activation_count < amount) {
-            this.flash();
-//            addToBot(new GainEnergyAction(1));
-            addToBot(new DrawCardAction(amount));
-//        }
-//        activation_count++;
-//        updateDescription();
+    public void onAdvanceOrRetract(boolean endTurn) {
+        if (!endTurn) {
+            if (activation_count < amount) {
+                this.flash();
+                addToBot(new DrawCardAction(1));
+            }
+            activation_count++;
+            updateDescription();
+        }
     }
 
-    @Override
     public void updateDescription() {
-        StringBuilder sb = new StringBuilder();
-        sb.append(DESCRIPTIONS[0]);
 
-        if (amount == 1)
-            sb.append(DESCRIPTIONS[1]);
-        else
-            sb.append(amount).append(DESCRIPTIONS[2]);
-//        sb.append(DESCRIPTIONS[3]).append(activation_count);
-//        if (activation_count == 1)
-//            sb.append(DESCRIPTIONS[4]);
-//        else
-//            sb.append(DESCRIPTIONS[5]);
-//
-        this.description = sb.toString();
+
+        if (this.amount == 1) {
+            this.description = DESCRIPTIONS[0];
+        } else {
+            this.description = (DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2]);
+        }
+
+        if (activation_count >= this.amount) {
+            this.description += DESCRIPTIONS[6];
+        } else if ((this.amount - activation_count) > 1) {
+            this.description += DESCRIPTIONS[3] + (this.amount - activation_count) + DESCRIPTIONS[4];
+        } else {
+            this.description += DESCRIPTIONS[3] + (this.amount - activation_count) + DESCRIPTIONS[5];
+        }
     }
 
     @Override

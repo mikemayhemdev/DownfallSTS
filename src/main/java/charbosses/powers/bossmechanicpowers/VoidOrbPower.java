@@ -45,7 +45,7 @@ public class VoidOrbPower extends AbstractPower implements CloneablePowerInterfa
 
     private void healUndead(AbstractCreature m, int healAmount) {
         if (m.isDying) m.isDying = false;
-        if (AbstractDungeon.ascensionLevel >= 19) m.maxHealth += 5;
+       // if (AbstractDungeon.ascensionLevel >= 19) m.maxHealth += 5;
         for (AbstractPower p : m.powers) {
             p.onHeal(healAmount);
         }
@@ -93,11 +93,7 @@ public class VoidOrbPower extends AbstractPower implements CloneablePowerInterfa
 
     @Override
     public void updateDescription() {
-        if (AbstractDungeon.ascensionLevel >= 19) {
-            this.description = DESCRIPTIONS[0] + DESCRIPTIONS[1];
-        } else {
-            this.description = DESCRIPTIONS[0];
-        }
+        this.description = DESCRIPTIONS[0];
     }
 
     @Override

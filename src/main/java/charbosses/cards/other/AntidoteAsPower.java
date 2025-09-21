@@ -22,7 +22,7 @@ public class AntidoteAsPower extends AbstractDownfallCard {
 
     public AntidoteAsPower() {
         super(ID, cardStrings.NAME, IMG_PATH, 1, cardStrings.DESCRIPTION, CardType.POWER, CardColor.COLORLESS, CardRarity.SPECIAL, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 2;
+        baseMagicNumber = magicNumber = 3;
         selfRetain = true;
     }
 

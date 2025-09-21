@@ -4,12 +4,14 @@ import automaton.cards.goodstatus.IntoTheVoid;
 import awakenedOne.AwakenedTextHelper;
 import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.powers.SongOfSorrowPower;
+import awakenedOne.relics.TomeOfPortalmancy;
 import com.evacipated.cardcrawl.mod.stslib.StSLib;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.relics.AbstractRelic;
 
 import static awakenedOne.AwakenedOneMod.ACTIVECHANT;
 
@@ -61,6 +63,11 @@ public class OnCreateCardSubscriber {
                     //                                atb(new ExhaustSpecificCardAction(q, AbstractDungeon.player.limbo));
                     //                                atb(new WaitAction(0.1F));
                     //                            }
+                    for (AbstractRelic r : AbstractDungeon.player.relics) {
+                        if (r instanceof TomeOfPortalmancy) {
+                            ((TomeOfPortalmancy) r).onSpecificTrigger();
+                        }
+                    }
                     if (AbstractDungeon.player.hasPower(SongOfSorrowPower.POWER_ID)) {
                         AbstractDungeon.player.getPower(SongOfSorrowPower.POWER_ID).onSpecificTrigger();
                     }

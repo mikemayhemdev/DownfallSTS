@@ -12,17 +12,16 @@ public class RisingChant extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public RisingChant() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 1;
-        this.magicNumber = this.baseMagicNumber;
+        super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(RisingChant.class.getSimpleName() + ".png"));
+        isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        applyToSelf(new RisingChantPower(this.magicNumber));
+        applyToSelf(new RisingChantPower(1));
     }
 
     public void upp() {
-        upgradeMagicNumber(1);
+        this.isEthereal = false;
     }
 }

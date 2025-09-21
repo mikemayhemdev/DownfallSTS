@@ -17,25 +17,22 @@ public class Initiation extends AbstractAwakenedCard {
 
     public Initiation() {
         super(ID, 2, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 10;
+        baseBlock = 11;
         this.cardsToPreview = new Ceremony();
-        this.tags.add(AwakenedOneMod.CHANT);
         loadJokeCardImage(this, makeBetaCardPath(Initiation.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         blck();
         AbstractCard c = new Ceremony();
-        if (upgraded) {
-            c.upgrade();
-        }
+
         Wiz.atb(new MakeTempCardInHandAction(c, 1));
     }
 
 
     @Override
     public void upp() {
-        cardsToPreview.upgrade();
+        //cardsToPreview.upgrade();
         upgradeBlock(3);
     }
 }

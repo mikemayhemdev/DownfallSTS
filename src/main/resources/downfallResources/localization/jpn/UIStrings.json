@@ -21,6 +21,22 @@
   },
   "downfall:BustKeyButton": {
     "TEXT": [
+      "Break Ruby",
+      "Break Sapphire",
+      "Break Emerald",
+      "(Free Action) Spend ",
+      "Choose up to 2 of 6 Common cards to gain.",
+      "Choose up to 2 of 4 Uncommon cards to gain.",
+      "Choose up to 1 of 3 Rare cards to gain.",
+      "Key shattered!",
+      "Requires ",
+      " Souls.",
+      "(Free Action) Destroy key to ",
+      " Souls: Destroy key to "
+    ]
+  },
+  "downfall:BustKeyButtonBackupForTranslators": {
+    "TEXT": [
       "ルビーの鍵を壊す",
       "サファイアの鍵を壊す",
       "エメラルドの鍵を壊す",
@@ -31,7 +47,8 @@
       "鍵は破壊された！",
       "要求 ",
       " ソウル",
-      "(行動消費なし) 鍵を破壊する "
+      "(行動消費なし) 鍵を破壊する ",
+      "Souls: Destroy key to "
     ]
   },
   "downfall:WheelSpinButton": {

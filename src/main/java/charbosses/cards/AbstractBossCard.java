@@ -179,9 +179,9 @@ public abstract class AbstractBossCard extends AbstractCard {
             HAND_SCALE = 0.35F;
             HOVER_SCALE = 0.8F;
         } else {
-            HAND_SCALE = 0.5F;
-            HOVER_SCALE = 0.8F;
-            intentOffsetY = -120F * Settings.scale;
+            HAND_SCALE = 0.45F;
+            HOVER_SCALE = 0.7F;
+            intentOffsetY = -100F * Settings.scale;
         }
     }
 

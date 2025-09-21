@@ -19,12 +19,12 @@
     "DESCRIPTION": "NL Infligez !D! dégâts à TOUS les ennemis. NL Au début de votre prochain tour, perdez [E]. NL Épuisement."
   },
   "expansioncontent:LastStand": {
-    "NAME": "Last Stand",
+    "NAME": "Vent final",
     "DESCRIPTION": "Retirez tous vos Débuffs. NL Gagnez 1 de Force. NL Si vous êtes en-dessous de la moitié de vos PV, gagnez 2 de Force.",
     "UPGRADE_DESCRIPTION": "Retirez tous vos Débuffs. NL Gagnez 1 de Force. NL Si vous êtes en-dessous de la moitié de vos PV, soignez-vous de !M! PV et gagnez 2 de Force."
   },
   "expansioncontent:YouAreMine": {
-    "NAME": "VOUS ÊTES À MOI!",
+    "NAME": "VOUS ÊTES À MOI !!!",
     "DESCRIPTION": "Retirez TOUTE l'Armure de l'ennemi. NL Appliquez !M! de Faiblesse et de Vulnérabilité à TOUS les ennemis. NL Épuisement."
   },
   "expansioncontent:AwakenDeath": {
@@ -59,6 +59,10 @@
     "DESCRIPTION": "Gagnez !B! d'Armure. NL Au prochain tour, obtenez [E] [E] [E] et *SLIME *CRUSH. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Au prochain tour, obtenez [E] [E] [E] et *SLIME *CRUSH+. NL Épuisement."
   },
+  "expansioncontent:SuperLivingWall": {
+    "NAME": "Mur gélatineux",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Appliquez !M! de expansioncontent:Goop aux attaquants ce tour."
+  },
   "expansioncontent:StudyTheSpire": {
     "NAME": "Étude de la tour",
     "DESCRIPTION": "Ajoutez une carte *Boss aléatoire dans votre main au début de vos !M! prochains tours. Elles coûtent 0 jusqu'à ce qu'elles soient jouées.",
@@ -74,15 +78,141 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "Mal intérieur",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une carte *Boss aléatoire dans votre main. Elle coûte 0 jusqu'à ce qu'elle soit jouée. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez une carte *Boss aléatoire Améliorée dans votre main. Elle coûte 0 jusqu'à ce qu'elle soit jouée. NL Épuisement."
+    "DESCRIPTION": "Lorsque vous appliquez !DM! debuffs, infligez !M! dégâts à TOUS les ennemis."
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Crâne savant",
-    "DESCRIPTION": "Éthérée. NL Dépensez des PV pour obtenir des Âmes, du Succès ou un Remontant. NL Épuisement."
+    "DESCRIPTION": "Éthérée. NL Dépensez des PV pour *Souhaiter *des *Âmes, des *Potions ou une carte *Incolore. NL Épuisement."
   },
   "expansioncontent:Antidote": {
     "NAME": "Antidote",
     "DESCRIPTION": "Perdez tout votre Poison."
+  },
+  "expansioncontent:AntidoteAsPower": {
+    "NAME": "Impossible de ralentir",
+    "DESCRIPTION": "Retenue. NL Lorsque vous infligez des dégâts d'Attaque non-bloqués, perdez !M! de Poison."
+  },
+  "expansioncontent:SuperGhostShield": {
+    "NAME": "Bouclier spectral",
+    "DESCRIPTION": "Ethérée. [#e087a4]Après-vie.[] NL [#e087a4]Gagnez[] [#e087a4]!B![] [#e087a4]d'Armure.[] NL [#e087a4]Gagnez[] [#e087a4]!M![] [#e087a4]de [#e087a4]Flou.[]",
+    "EXTENDED_DESCRIPTION": [
+      "Gagnez !B! d'Armure."
+    ]
+  },
+  "expansioncontent:SuperGoopSpray": {
+    "NAME": "Projection gluante",
+    "DESCRIPTION": "Appliqez !M! de expansioncontent:Goop et !DM! de Faiblesse.",
+    "UPGRADE_DESCRIPTION": "Appliquez !M! de expansioncontent:Goop et !DM! de Faiblesse à TOUS les ennemis."
+  },
+  "expansioncontent:ChargeUp": {
+    "NAME": "Plaque purificatrice",
+    "DESCRIPTION": "Réduisez chacun de vos debuffs de !M!. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Réduisez chacun de vos debuffs de !M!."
+  },
+  "expansioncontent:SuperTaunt": {
+    "NAME": "Provoc",
+    "DESCRIPTION": "Appliquez !M! de Faiblesse et de Vulnérabilité.",
+    "UPGRADE_DESCRIPTION": "Appliquez !M! de Faiblesse et de Vulnérabilité à TOUS les ennemis."
+  },
+  "expansioncontent:Torchfire": {
+    "NAME": "Feu sauvage",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Répétez pour chaque debuff unique sur l'ennemi."
+  },
+
+  "expansioncontent:TakeFlight": {
+    "NAME": "Revitalisation",
+    "DESCRIPTION": "Soignez-vous de !M! PV. NL awakened:Chant: Soignez-vous de !DM! PV à la place."
+  },
+  "expansioncontent:BeatOfDeath": {
+    "NAME": "Pulsation de la Mort",
+    "DESCRIPTION": "Whenever you play a card, deal !M! damage to ALL enemies."
+  },
+  "expansioncontent:SuperViciousMockery": {
+    "NAME": "Moquerie",
+    "DESCRIPTION": "Gagnez !M! de Vigueur. NL Appliquez !DM! de Faiblesse."
+  },
+  "expansioncontent:SuperClobber": {
+    "NAME": "Frappe écrasante",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Gagnez autant d'Armure que de dégâts non-bloqués."
+  },
+
+  "expansioncontent:SuperSomberShield": {
+    "NAME": "Bouclier du Brasier Vert",
+    "DESCRIPTION": "expansioncontent:Bûcher. NL Gagnez !B! d'Armure. NL Au prochain tour, obtenez une copie de la carte *Épuisée."
+  },
+
+  "expansioncontent:SuperWhirlingFlame": {
+    "NAME": "Braise tourbillonnante",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Mettez une carte de votre défausse sur le haut de votre pioche."
+  },
+  "expansioncontent:Flail": {
+    "NAME": "Frappes du Fléau",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis !DM! fois. NL Gagnez !M! d'Artéfact. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "flailing",
+      "Flail"
+    ]
+  },
+  "expansioncontent:SuperBloodthirst": {
+    "NAME": "Soif de sang",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si Fatal, obtenez une potion aléatoire et Épuisez cette carte."
+  },
+  "expansioncontent:SuperBodyCrash": {
+    "NAME": "Body Smash",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Infligez autant de dégâts que votre Armure.",
+    "UPGRADE_DESCRIPTION": " NL (Inflige !D! dégâts.)"
+  },
+  "expansioncontent:SuperEtherStep": {
+    "NAME": "Pas spectral",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Épuisez 1 carte. NL Piochez !M! carte.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Épuisez 1 carte. NL Piochez !M! cartes. "
+  },
+
+  "expansioncontent:Virus": {
+    "NAME": "Virus 404",
+    "DESCRIPTION": "Épuisez jusqu'à !M! cartes, mélangez un *Rayon *majeur dans la pioche pour chaque carte épuisée. NL Épuisement."
+  },
+
+  "expansioncontent:MajorBeam": {
+    "NAME": "Rayon majeur",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Piochez !M! carte.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts. NL Piochez !M! cartes."
+  },
+
+  "expansioncontent:ManipulateTime": {
+    "NAME": "Rétrospective",
+    "DESCRIPTION": "Placez une carte de votre défausse en bas de votre pioche. Elle coûte 0 jusqu'à ce qu'elle soit jouée.",
+    "UPGRADE_DESCRIPTION": "Placez une carte de votre défausse en bas de votre pioche. Elle coûte 0 ce combat."
+  },
+  "expansioncontent:Pandemonium": {
+    "NAME": "Pandémonium",
+    "DESCRIPTION": "Au début de votre tour, jouez une carte au hasard dans votre défausse."
+  },
+  "expansioncontent:Reverie": {
+    "NAME": "Rêverie",
+    "DESCRIPTION": "Au début de votre tour, mettez dans votre main l'une des !M! cartes du dessus de votre défausse."
+  },
+  "expansioncontent:ExploitVulnerability": {
+    "NAME": "Rayon Donu",
+    "DESCRIPTION": "Retirez toute l'Armure de l'ennemi, puis gagnez autant d'Armure. NL Infligez !D! dégâts deux fois."
+  },
+  "expansioncontent:PeekPages": {
+    "NAME": "Feuilleter les pages",
+    "DESCRIPTION": "Placez !M! *Perspicacités en haut de votre pioche. NL Épuisement."
+  },
+  "expansioncontent:BloodBarrage": {
+    "NAME": "Barrage de sang",
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL Épuisement."
+  },
+  "expansioncontent:DoubleAct": {
+    "NAME": "Double acte",
+    "DESCRIPTION": "Au début de votre prochain tour, piochez des cartes et gagnez [E] une fois de plus. NL Épuisement."
+  },
+  "expansioncontent:BloodySacrifice": {
+    "NAME": "Sacrifice sanglant",
+    "DESCRIPTION": "Éthérée. NL Perdez !M! % de vos PV Max. NL Gagnez 1 Rituel. Épuisement.",
+    "EXTENDED_DESCRIPTION":[
+      " NL (Perdez {amount} PV max. )"
+    ]
   }
 }

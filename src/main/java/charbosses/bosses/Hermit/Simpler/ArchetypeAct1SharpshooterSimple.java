@@ -8,6 +8,9 @@ import charbosses.cards.hermit.*;
 import charbosses.cards.purple.EnDefendPurple;
 import charbosses.monsters.LouseTangerine;
 import charbosses.powers.bossmechanicpowers.HermitConcentrationPower;
+import charbosses.relics.CBR_BrassTacks;
+import charbosses.relics.CBR_FossilizedHelix;
+import charbosses.relics.CBR_SymbioticVirus;
 import com.esotericsoftware.spine.AnimationState;
 import com.esotericsoftware.spine.AnimationStateData;
 import com.esotericsoftware.spine.Skeleton;
@@ -62,8 +65,12 @@ public class ArchetypeAct1SharpshooterSimple extends ArchetypeBaseIronclad {
     }
 
 
-    public void initialize() {
 
+    public void initialize() {
+        addRelic(new CBR_BrassTacks());
+        if (AbstractDungeon.ascensionLevel >= 19){
+           //Horseshow
+        }
     }
 
     @Override
@@ -73,28 +80,29 @@ public class ArchetypeAct1SharpshooterSimple extends ArchetypeBaseIronclad {
 
             switch (turn) {
                 case 0:
-                    addToList(cardsList, new EnDeadeye(), extraUpgrades);
+                    if (!looped && extraUpgrades) //Strength Potion
+                    addToList(cardsList, new EnDeadeye(), false);
                     addToList(cardsList, new EnDefendHermit());
                     turn++;
                     break;
                 case 1:
                     addToList(cardsList, new EnMemento());
-                    addToList(cardsList, new EnSnapshot());
+                    addToList(cardsList, new EnSnapshot(), true);
                     turn++;
                     break;
                 case 2:
-                    addToList(cardsList, new EnDive(), extraUpgrades);
+                    addToList(cardsList, new EnDive(), false);
                     addToList(cardsList, new EnDefendHermit());
                     turn++;
                     break;
                 case 3:
-                    addToList(cardsList, new EnHeadshot(), extraUpgrades);
+                    addToList(cardsList, new EnHeadshot(), false);
                     addToList(cardsList, new EnRicochet());
                     turn++;
                     break;
                 case 4:
                     addToList(cardsList, new EnSmokingBarrel());
-                    addToList(cardsList, new EnGhostlyPresence(), extraUpgrades);
+                    addToList(cardsList, new EnGhostlyPresence(), true);
                     turn = 1;
                     looped = true;
                     break;

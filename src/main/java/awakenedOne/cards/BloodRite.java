@@ -27,15 +27,13 @@ public class BloodRite extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         dmg(m, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL);
         AbstractCard c = new Ceremony();
-        if (upgraded) {
-            c.upgrade();
-        }
+
         Wiz.atb(new MakeTempCardInHandAction(c, 1));
     }
 
     @Override
     public void upp() {
-        cardsToPreview.upgrade();
+        //cardsToPreview.upgrade();
         upgradeDamage(3);
     }
 }

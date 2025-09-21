@@ -3,7 +3,6 @@ package downfall.events.shrines_evil;
 
 
 import com.megacrit.cardcrawl.cards.curses.Pain;
-import downfall.cards.curses.Sapped;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;

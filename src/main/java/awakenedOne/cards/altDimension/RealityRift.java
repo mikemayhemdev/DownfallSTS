@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.util.Wiz;
 import sneckomod.SneckoMod;
@@ -39,8 +40,8 @@ public class RealityRift extends AbstractAwakenedCard {
             public void update() {
                 isDone = true;
 
-                for (AbstractCard c:AbstractDungeon.player.hand.group){
-                    if (c instanceof Crusher){
+                for (AbstractCard c : AbstractDungeon.player.hand.group) {
+                    if (c instanceof Crusher) {
                         ((Crusher) c).enabled = true;
                         return;
                     }
@@ -49,9 +50,14 @@ public class RealityRift extends AbstractAwakenedCard {
         });
     }
 
+    @Override
+    public void initializeDescription() {
+        super.initializeDescription();
+        this.keywords.add(GameDictionary.VOID.NAMES[0].toLowerCase());
+    }
 
     public void upp() {
         upgradeMagicNumber(2);
-       // upgradeSecondMagic(1);
+        // upgradeSecondMagic(1);
     }
 }

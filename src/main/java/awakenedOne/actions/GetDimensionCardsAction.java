@@ -18,8 +18,8 @@ public class GetDimensionCardsAction extends AbstractGameAction {
     private int cardsToSelect = 0;
     private boolean retrieveCard = false;
 
-    private ArrayList<AbstractCard> cards = new ArrayList<>();
-    private ArrayList<Integer> numbers = new ArrayList<>();
+    private final ArrayList<AbstractCard> cards = new ArrayList<>();
+    private final ArrayList<Integer> numbers = new ArrayList<>();
 
     public GetDimensionCardsAction(int count, int grabCount) {
         this.actionType = ActionType.CARD_MANIPULATION;

@@ -1,0 +1,408 @@
+{
+  "awakened:Thunderbolt": {
+    "NAME": "Tonnerre",
+    "DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL Épuisement."
+  },
+  "awakened:BurningStudy": {
+    "NAME": "Étude brûlante",
+    "DESCRIPTION": "Retenue. NL Gagnez !M! de Force. NL Appliquez !awakened:m2! de Faiblesse à TOUS les ennemis. NL Épuisement."
+  },
+  "awakened:Cryostasis": {
+    "NAME": "Cryostase",
+    "DESCRIPTION": "Retenue. NL Gagnez !B! d'Armure. NL Épuisement."
+  },
+  "awakened:Darkleech": {
+    "NAME": "Drain obscur",
+    "DESCRIPTION": "Retenue. NL Appliquez !M! de Vulnérabilité. NL Appliquez !awakened:m2! de awakened:Manabrûlure. NL Épuisement."
+  },
+  "awakened:DeathCoil": {
+    "NAME": "Spirale mortelle",
+    "DESCRIPTION": "Appliquez !M! de awakened:Manabrûlure. NL Au prochain tour, perdez [E]."
+  },
+  "awakened:ESPSpell": {
+    "NAME": "Extrasenseur",
+    "DESCRIPTION": "Retenue. NL Piochez !M! carte. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Retenue. NL Piochez !M! cartes. NL Épuisement."
+  },
+  "awakened:Strike": {
+    "NAME": "Frappe",
+    "DESCRIPTION": "Infligez !D! dégâts."
+  },
+  "awakened:Defend": {
+    "NAME": "Défense",
+    "DESCRIPTION": "Gagnez !B! d'Armure."
+  },
+  "awakened:Brainshock": {
+    "NAME": "Choc cérébral",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Ajoutez un *Néant dans votre pile de défausse."
+  },
+  "awakened:Intensify": {
+    "NAME": "Intensification",
+    "DESCRIPTION": "awakened:Conjurez. NL Ce tour, les Sorts coûtent 0 et vous ne pouvez plus awakened:Conjurer à nouveau.",
+    "UPGRADE_DESCRIPTION": "Retenue. awakened:Conjurez. NL Ce tour, les Sorts coûtent 0 et vous ne pouvez plus awakened:Conjurer à nouveau."
+  },
+  "awakened:DarkEcho": {
+    "NAME": "Écho obscur",
+    "DESCRIPTION": "À la fin de votre tour, infligez !M! dégâts à TOUS les ennemis, augmenté par la Force."
+  },
+  "awakened:AwakenedForm": {
+    "NAME": "Forme Éveillée",
+    "DESCRIPTION": "Gagnez !M! de awakened:Curiosité. NL Gagnez !awakened:m2! de Rituel.",
+    "UPGRADE_DESCRIPTION": "Éveillez-vous immédiatement. NL Gagnez !M! de awakened:Curiosité. NL Gagnez !awakened:m2! de Rituel."
+  },
+  "awakened:Spellbinder": {
+    "NAME": "Lieur de sorts",
+    "DESCRIPTION": "Au début de votre tour, awakened:Conjurez."
+  },
+  "awakened:Ceremony": {
+    "NAME": "Cérémonie",
+    "DESCRIPTION":"Retenue. NL Gagnez !M! de Force."
+  },
+  "awakened:TalonRake": {
+    "NAME": "Griffes faucheuses",
+    "DESCRIPTION": "Infligez !D! dégâts deux fois. NL awakened:Conjurez."
+  },
+  "awakened:Hymn": {
+    "NAME": "Hymne",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Obtenez une *Cérémonie. NL Au prochain tour, perdez [E]."
+  },
+  "awakened:Psalm": {
+    "NAME": "Psaume",
+    "DESCRIPTION": "Infligez !D! dégâts et appliquez !M! de Faiblesse à TOUS les ennemis."
+  },
+  "awakened:DemonGlyph": {
+    "NAME": "Glyphe démoniaque",
+    "DESCRIPTION": "Gagnez !M! de Force et de Dextérité. NL Lorsque vous vous *Éveillez, gagnez-en !awakened:m2! de plus."
+  },
+  "awakened:TakeFlight": {
+    "NAME": "Prendre son envol",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL awakened:Chant: L'Armure n'est pas retirée au début de votre prochain tour."
+  },
+  "awakened:FeatherVeil": {
+    "NAME": "Voile plume",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Perdez !M! de Force."
+  },
+  "awakened:Peck": {
+    "NAME": "Picore",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Infligez !D! dégâts. NL Piochez !M! carte.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Infligez !D! dégâts. NL Piochez !M! cartes."
+  },
+  "awakened:Extension": {
+    "NAME": "Extension",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Lorsque vous jouez un Pouvoir, remettez cette carte de la défausse vers votre main."
+  },
+  "awakened:Pluck": {
+    "NAME": "Picore",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Obtenez un *Jab *Plume."
+  },
+  "awakened:FlareShot": {
+    "NAME": "Éclat de Plumes",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Au prochain tour, piochez !M! carte supplémentaire."
+  },
+  "awakened:ClarionCall": {
+    "NAME": "Appel du clairon",
+    "DESCRIPTION": "Infligez !D! dégâts. NL La prochaine fois que vous êtes awakened:Drainé, gagnez [E]."
+  },
+  "awakened:Recitation": {
+    "NAME": "Récitation",
+    "DESCRIPTION": "Infligez !D! dégâts. NL awakened:Chant: Infligez !D! dégâts à nouveau."
+  },
+  "awakened:ChosenVerse": {
+    "NAME": "Verset choisi",
+    "DESCRIPTION": "Les !M! prochaines fois que vous jouez une carte n'étant pas une Attaque ce tour, piochez une carte et gagnez !B! d'Armure."
+  },
+  "awakened:SoulStrike": {
+    "NAME": "Frappe de l'âme",
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL Coûte 1 [E] de moins pour chaque Pouvoir joué ce tour."
+  },
+  "awakened:Altar": {
+    "NAME": "Autel",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Épuisez une carte. NL awakened:Conjurez."
+  },
+  "awakened:Envision": {
+    "NAME": "Envisagement",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL awakened:Conjurez et mettez le Sort en haut de votre Pioche."
+  },
+  "awakened:Thaumaturgy": {
+    "NAME": "Thaumaturgie",
+    "DESCRIPTION": "Gagnez !awakened:m2! de Dextérité. NL Au début de vos !M! prochains tours, ajoutez une *Cérémonie dans votre main."
+  },
+  "awakened:WaveOfMiasma": {
+    "NAME": "Vague de Miasmes",
+    "DESCRIPTION": "Gagnez !B! d'Armure. Appliquez !awakened:m2! de awakened:Manabrûlure à TOUS les ennemis. NL Épuisement."
+  },
+  "awakened:SludgeBomb": {
+    "NAME": "Bomb-beurk",
+    "DESCRIPTION": "Ne peut être Jouée que si un *Néant a été Épuisé. NL Infligez !D! dégâts deux fois. NL Effacez un *Néant de votre pile d'Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Je n'ai pas de Néant Épuisé."
+    ]
+  },
+  "awakened:KnifesEdge": {
+    "NAME": "Fil du Rasoir",
+    "DESCRIPTION": "Gagnez !awakened:m2! de Force. NL Ajoutez !M! *Néants dans votre défausse."
+  },
+  "awakened:FourthDimension": {
+    "NAME": "4ème Dimension",
+    "DESCRIPTION": "Épuisez une carte. NL Mélangez !M! copies de celle-ci dans votre pioche. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Choisissez une carte à Épuiser pour 4ème Dimension."
+      ]
+  },
+  "awakened:RavenStrike": {
+    "NAME": "Frappe du corbeau",
+    "DESCRIPTION": "Infligez !D! dégâts. NL awakened:Chant: Jouez la carte du haut de votre pioche."
+  },
+  "awakened:Unleash": {
+    "NAME": "Déchaînement",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Inflige !M! dégâts supplémentaires pour chaque autre carte dans votre main."
+  },
+  "awakened:DesperatePrayer": {
+    "NAME": "Prière désespérée",
+    "DESCRIPTION": "Obtenez !M! cartes *Cérémonie. NL Épuisement."
+  },
+  "awakened:BirdsEye": {
+    "NAME": "Œil de l'Oizo",
+    "DESCRIPTION": "Choisissez un Sort à awakened:Conjurer.",
+    "UPGRADE_DESCRIPTION": "Rafraîchissez vos Sorts. Choisissez un Sort à awakened:Conjurer."
+  },
+  "awakened:Initiation": {
+    "NAME": "Initiation",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Obtenez une *Cérémonie."
+  },
+  "awakened:Ensorcelate": {
+    "NAME": "Ensorcelage",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Le prochain Pouvoir que vous jouez coûte 0."
+  },
+  "awakened:Skyward": {
+    "NAME": "Vers les cieux",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Piochez !M! carte. NL Coûte 1 [E] de moins pour chaque Pouvoir joué ce combat."
+  },
+  "awakened:RisingChant": {
+    "NAME": "Refrain ascendant",
+    "DESCRIPTION": "Gagnez !M! de Force. Lorsque vous jouez une carte ayant activé son effet awakened:Chant, gagnez !M! de Force."
+  },
+  "awakened:FeatherWhirl": {
+    "NAME": "Ouragan de plumes",
+    "DESCRIPTION": "Obtenez X copies de *Jab *Plume.",
+    "UPGRADE_DESCRIPTION": "Obtenez X+1 copies de *Jab *Plume."
+  },
+  "awakened:Murder": {
+    "NAME": "Meurtre",
+    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire !M! fois. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire !M! fois."
+  },
+  "awakened:Nihil": {
+    "NAME": "Nihil",
+    "DESCRIPTION": "Appliquez !M! de awakened:Manabrûlure. NL awakened:Chant: TOUS les ennemis perdent autant de PV que leur awakened:Manabrûlure."
+  },
+  "awakened:MoonlitVision": {
+    "NAME": "Vision lunaire",
+    "DESCRIPTION": "La première fois que vous jouez un Sort chaque tour, gagnez [E]."
+  },
+  "awakened:Rebirth": {
+    "NAME": "Renaissance",
+    "DESCRIPTION": "Lorsque vous auriez dû mourir ou à la fin du combat, supprimez tous les malus, *Éveillez-vous, et soignez-vous de !M! PV à la place."
+  },
+  "awakened:Archmagus": {
+    "NAME": "Archimage",
+    "DESCRIPTION": "Le premier Sort que vous jouez chaque tour est joué deux fois."
+  },
+  "awakened:Planeswalk": {
+    "NAME": "Saut planaire",
+    "DESCRIPTION": "Gagnez [E] [E] . NL Mélangez un *Néant dans votre pioche.",
+    "UPGRADE_DESCRIPTION": "Gagnez [E] [E] [E] . NL Mélangez un *Néant dans votre pioche."
+  },
+  "awakened:Spew": {
+    "NAME": "Crachat",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Les [E] dépensées sur cette carte comptent comme étant awakened:Drainé."
+  },
+  "awakened:DarknessFalls": {
+    "NAME": "Nuit tombante",
+    "DESCRIPTION": "Lorsque vous êtes awakened:Drainé, gagnez !M! d'Armure et !awakened:m2! de Force."
+  },
+  "awakened:Eventide": {
+    "NAME": "Crépuscule",
+    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire deux fois. NL Ajoutez un *Néant en haut de votre pioche."
+  },
+  "awakened:EclipseEmbrace": {
+    "NAME": "Étreinte de l’Éclipse",
+    "DESCRIPTION": "Lorsque vous Épuisez un *Néant, gagnez [E] et piochez une carte au prochain tour."
+  },
+  "awakened:Clutch": {
+    "NAME": "Emprise",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Piochez une carte coûtant 0."
+  },
+  "awakened:Gloomguard": {
+    "NAME": "Garde-ténèbres",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Coûte 0 si un *Néant est en main."
+  },
+  "awakened:Carrionmaker": {
+    "NAME": "Charognard",
+    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire. NL Répétez ceci pour chaque Sort joué ce tour.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " Sort joué.)",
+      " Sorts joués.)"
+    ]
+  },
+  "awakened:MirePit": {
+    "NAME": "Fosse marécageuse",
+    "DESCRIPTION": "TOUS les ennemis perdent !M! de Force ce tour. NL Au prochain tour, perdez [E]. NL Épuisement."
+  },
+  "awakened:SingularityShield": {
+    "NAME": "Bouclier singularité",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Au prochain tour, gagnez !B! d'Armure et perdez [E]."
+  },
+  "awakened:Dejection": {
+    "NAME": "Découragement",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Épuisez une carte. Si c'était un Sort, gagnez une *Cérémonie."
+  },
+  "awakened:BloodRite": {
+    "NAME": "Rite du Sang",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Obtenez une *Cérémonie."
+  },
+  "awakened:SongOfSorrow": {
+    "NAME": "Chanson du chagrin",
+    "DESCRIPTION": "Lorsque vous créez un *Néant, TOUS les ennemis perdent !M! PV."
+  },
+  "awakened:MysticOrder": {
+    "NAME": "Ordre mystique",
+    "DESCRIPTION": "Piochez !M! cartes. NL awakened:Conjurez."
+  },
+  "awakened:ProfaneStrike": {
+    "NAME": "Frappe profane",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Mettez une carte de votre main vers le haut de votre pioche."
+  },
+  "awakened:Victuals": {
+    "NAME": "Provisions",
+    "DESCRIPTION": "awakened:Chant: Gagnez [E] [E] . NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "awakened:Chant: Gagnez [E] [E] [E] . NL Épuisement."
+  },
+  "awakened:Gather": {
+    "NAME": "Rassemblement",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL awakened:Chant: Mettez une carte de votre défausse vers votre main."
+  },
+  "awakened:TheTower": {
+    "NAME": "La Tour",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL Inflige !M! dégâts supplémentaires pour chaque carte créée ce combat."
+  },
+  "awakened:ArcaneNesting": {
+    "NAME": "Nid arcanique",
+    "DESCRIPTION": "Injouable. NL Lorsque vous jouez un Pouvoir avec cette carte en main, gagnez !B! d'Armure.",
+    "EXTENDED_DESCRIPTION": [
+      "Je dois jouer des Pouvoirs pour gagner de l'Armure de ceci."
+    ]
+  },
+  "awakened:MiddenHeap": {
+    "NAME": "Tas d’ordures",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Mettez !M! carte Statut ou Malédiction de votre pioche ou pile de défausse dans votre main.",
+    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Mettez !M! cartes Statut ou Malédiction de votre pioche ou pile de défausse dans votre main.",
+    "EXTENDED_DESCRIPTION": [
+      "Sélectionnez une carte à mettre dans votre main.",
+      "Sélectionnez des cartes à mettre dans votre main."
+    ]
+  },
+  "awakened:Caw": {
+    "NAME": "Caw",
+    "DESCRIPTION": "Infligez !D! dégâts. NL awakened:Chant: Augmentez les dégâts de toutes les cartes *Caw de !M! ce combat."
+  },
+  "awakened:Scour": {
+    "NAME": "Ratissage",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Appliquez !M! de awakened:Manabrûlure."
+  },
+  "awakened:Manastorm": {
+    "NAME": "Manatempête",
+    "DESCRIPTION": "Infligez !D! dégâts à TOUS les ennemis. NL awakened:Conjurez deux fois."
+  },
+  "awakened:StormRuler": {
+    "NAME": "Maître des tempêtes",
+    "DESCRIPTION": "awakened:Conjurez. NL Les *Tonnerres infligent !M! dégâts supplémentaires."
+  },
+  "awakened:AphoticFount": {
+    "NAME": "Source aphotique",
+    "DESCRIPTION": "awakened:Conjurez. NL Lorsque vous jouez *Cryostase, gagnez !M! *d'Armure expansioncontent:Plaquée."
+  },
+  "awakened:Bloodthirst": {
+    "NAME": "Soif de sang",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Si Fatal, obtenez une awakened:Potion_de_Pouvoir et Épuisez cette carte."
+  },
+  "awakened:Procession": {
+    "NAME": "Cortège",
+    "DESCRIPTION": "Jouez une carte de votre pioche et mélangez autant de *Néants que son coût. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Jouez une carte de votre pioche et mélangez autant de *Néants que son coût."
+  },
+  "awakened:SplitWide": {
+    "NAME": "Flagellation",
+    "DESCRIPTION": "Infligez !D! dégâts. NL Lorsque vous attaquez cet ennemi, gagnez !M! de Force Temporaire. NL Épuisement."
+  },
+  "awakened:Spellshield": {
+    "NAME": "Bouclier sortilègeux",
+    "DESCRIPTION": "Lorsque vous Retenez une carte, gagnez !M! d'Armure."
+  },
+  "awakened:Siphon": {
+    "NAME": "Siphon",
+    "DESCRIPTION": "Infligez !D! dégâts. NL awakened:Chant: gremlin:Volez !M! de Force ce tour."
+  },
+  "awakened:PlumeJab": {
+    "NAME": "Jab Plume",
+    "DESCRIPTION": "Retenue. NL Infligez !D! dégâts à un ennemi aléatoire deux fois. NL Épuisement."
+  },
+  "awakened:Primacy": {
+    "NAME": "Primauté",
+    "DESCRIPTION": "La première fois que vous gagnez de la Force à chaque tour, piochez une carte.",
+    "UPGRADE_DESCRIPTION": "Les !M! premières fois que vous gagnez de la Force à chaque tour, piochez une carte."
+  },
+  "awakened:Daggerstorm": {
+    "NAME": "Tempête de dagues",
+    "DESCRIPTION": "Lorsque vous créez une carte, infligez !M! dégâts à un ennemi aléatoire."
+  },
+  "awakened:PackRat": {
+    "NAME": "Rat sac à dos",
+    "DESCRIPTION": "Infligez !D! dégâts et gagnez !B! d'Armure deux fois. NL Obtenez une potion aléatoire. NL Épuisement."
+  },
+  "awakened:Mantis": {
+    "NAME": "Mante",
+    "DESCRIPTION": "Gagnez !M! de Force. NL Ajoutez un *Jab *Plume dans votre main."
+  },
+  "awakened:ManaShield": {
+    "NAME": "Bouclier Mana",
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL awakened:Conjurez. NL Réduisez le coût d'un Sort aléatoire en main de 1."
+  },
+  "awakened:Crusher": {
+    "NAME": "Broyeur",
+    "DESCRIPTION": "Retenue. NL Infligez !D! dégâts. NL Lorsqu'une carte est créée, réduisez le coût de cette carte de 1 jusqu'à ce qu'elle soit jouée."
+  },
+  "awakened:Minniegun": {
+    "NAME": "Minniegun",
+    "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL Mélangez un *Néant dans votre pioche."
+  },
+  "awakened:SignInBlood": {
+    "NAME": "Signature de sang",
+    "DESCRIPTION": "Prenez !awakened:m2! dégâts. NL Piochez !M! cartes. NL Gagnez !awakened:m2! de Force. NL Épuisement."
+  },
+  "awakened:SpreadingSpores": {
+    "NAME": "Spores disséminées",
+    "DESCRIPTION": "Éthérée. NL Gagnez !M! d'Épines. NL Mélangez une copie de ceci dans votre pioche."
+  },
+  "awakened:Scheme": {
+    "NAME": "Schéma",
+    "DESCRIPTION": "La prochaine carte que vous jouez ce tour coûtant 1 [E] ou moins sera jouée deux fois.",
+    "UPGRADE_DESCRIPTION": "Les !M! prochaines cartes que vous jouez ce tour coûtant 1 [E] ou moins seront jouées deux fois."
+  },
+  "awakened:TheEncyclopedia": {
+    "NAME": "L'Encyclopédie",
+    "DESCRIPTION": "Choisissez 2 cartes parmi !M! aléatoires à ajouter dans votre main. Elles coûtent 2 [E] de moins. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "Choose 2 cards to add to your draw pile."
+    ]
+  },
+  "awakened:RealityRift": {
+    "NAME": "Fracture de la Réalité",
+    "DESCRIPTION": "Choisissez !awakened:m2! cartes puissantes d'une *AUTRE *DIMENSION parmi !M! à obtenir. NL Ajoutez 2 *Néants dans votre défausse. Épuisement."
+  },
+  "awakened:Inscribe": {
+    "NAME": "Gravure",
+    "DESCRIPTION": "Choisissez un Sort. Ajoutez une copie de celui-ci dans le Livre de Sorts pour le reste du combat, et une copie dans votre main."
+  }
+}

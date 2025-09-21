@@ -1,6 +1,5 @@
 package awakenedOne.powers;
 
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class GrimoirePower extends AbstractAwakenedPower {

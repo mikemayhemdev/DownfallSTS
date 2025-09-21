@@ -45,6 +45,6 @@ public class Skyward extends AbstractAwakenedCard {
 
     public void upp() {
         upgradeBlock(6);
-      //  upgradeMagicNumber(1);
+        //  upgradeMagicNumber(1);
     }
 }

@@ -10,21 +10,23 @@
     "NAME": "Lunettes de protection",
     "FLAVOR": "Regardez attentivement.",
     "DESCRIPTIONS": [
-      "Si vous finissez votre tour sans cartes dans la #ySéquence, gagnez #b4 d'#yArmure."
+      "Si vous finissez votre tour sans cartes #yEncodées, gagnez #b",
+      " d'#yArmure [REMOVE_SPACE]."
     ]
   },
   "bronze:DecasWashers": {
     "NAME": "Rondelles de Deca",
-    "FLAVOR": "Ce n'est pas très clair sur le pourquoi Deca les collecte.",
+    "FLAVOR": "Ce n'est pas très clair sur pourquoi Deca les collecte.",
     "DESCRIPTIONS": [
-      "Au début des #b3 premièrs tours, piochez une carte supplémentaire."
+      "Au début des #b",
+      " premiers tours, piochez une carte supplémentaire."
     ]
   },
   "bronze:Timepiece": {
-    "NAME": "Fragment de temps",
-    "FLAVOR": "Vient de sa collection d'anciennes horloges.",
+    "NAME": "Apprêt Antigel",
+    "FLAVOR": "22 grammes de composé chimique Ar22, durée de conservation : 22 ans. À conserver de préférence dans un réfrigérateur en acajou.",
     "DESCRIPTIONS": [
-      "Toutes les #yFonctions que vous #yCompilez gagnent #yRetenue."
+      "Toutes les Fonctions que vous créez gagnent #yRetenue [REMOVE_SPACE]."
     ]
   },
   "bronze:Mallet": {
@@ -52,7 +54,7 @@
     "NAME": "Bobine de fil",
     "FLAVOR": "Emmêlée...",
     "DESCRIPTIONS": [
-      "Ajoutez une copie de la première carte que vous jouez avec #yEncode chaque combat dans la Séquence."
+      "#yEncodez une copie de la première carte #yEncodable que vous jouez à chaque combat."
     ]
   },
   "bronze:ElectromagneticCoil": {
@@ -67,29 +69,31 @@
     "FLAVOR": "Changelog: Expérience de l'utilisateur améliorée.",
     "DESCRIPTIONS": [
       "Remplace ",
-      ".[] NL Les #b3 premières #yFonctions que vous créez chaque combat coûtent #b0 jusqu'à ce qu'elles soient jouées."
+      " [REMOVE_SPACE].[] NL Les #b",
+      " premières #yFonctions que vous créez chaque combat coûtent #b0 jusqu'à ce qu'elles soient jouées."
     ]
   },
   "bronze:BottledCode": {
-    "NAME": "Code embouteillée",
+    "NAME": "Code embouteillé",
     "FLAVOR": "En fait, j'ai du code pour cette même chose...",
     "DESCRIPTIONS": [
-      "Lorsque vous la ramassez, choisissez une carte avec #yEncode. Commencez chaque combat avec cette carte dans la #ySéquence.",
+      "Lorsque vous la ramassez, choisissez une carte avec #yEncode [REMOVE_SPACE]. Commencez chaque combat avec cette carte #yEncodée [REMOVE_SPACE].",
       "Choissisez une carte pour ",
       "Commencez chaque combat avec ",
-      " dans la #ySéquence."
+      " #yEncodé [REMOVE_SPACE].",
+      "La carte embouteillée a été #rretirée de votre deck, cette relique ne fonctionne plus désormais."
     ]
   },
   "bronze:DonusWashers": {
     "NAME": "Rondelles de Donu",
-    "FLAVOR": "C'est plutôt clair sur le pourquoi Donu les collecte.",
+    "FLAVOR": "C'est plutôt clair sur pourquoi Donu les collecte.",
     "DESCRIPTIONS": [
       "Au début de chaque combat, gagnez [E] [E] et ajoutez #b1 #Néant dans votre pioche."
     ]
   },
   "bronze:BronzeIdol": {
     "NAME": "Idole de bronze",
-    "FLAVOR": "Un antivirus armé et antique - qui sait par qui il a été créé, et pourquoi?",
+    "FLAVOR": "Un antivirus armé et antique - qui sait par qui il a été créé, et pourquoi ?",
     "DESCRIPTIONS": [
       "Les cartes #yStatut peuvent maintenant être jouées pour des effets utiles."
     ]
@@ -98,7 +102,7 @@
     "NAME": "Artéfact paradoxe",
     "FLAVOR": "Vous n'avez jamais vu un fou du codage comme celui-là auparavant.",
     "DESCRIPTIONS": [
-      "Au début de chaque tour, ajoutez une carte aléatoire with #yEncode dans votre main et rendez-la #yEtherée."
+      "Au début de chaque tour, ajoutez une carte aléatoire avec #yEncode dans votre main et rendez-la #yEthérée [REMOVE_SPACE]."
     ]
   }
 }

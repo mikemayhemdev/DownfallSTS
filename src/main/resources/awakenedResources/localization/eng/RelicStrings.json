@@ -19,8 +19,8 @@
     "NAME": "White Ribbon",
     "FLAVOR": "Gives power to spoken words even without proper ritual.",
     "DESCRIPTIONS": [
-      "Whenever you play a card with an active #yawakened:Chant effect, gain #b",
-      " #yBlock [REMOVE_SPACE]."
+      "Whenever you play a card with a #yawakened:Chant effect, gain #b",
+      " #yBlock [REMOVE_SPACE], even if it is not active."
     ]
   },
   "awakened:HexxBomb": {
@@ -34,7 +34,7 @@
     "NAME": "Tome of Portalmancy",
     "FLAVOR": "A grimoire detailing the construction and maintenance of interplanar gates.",
     "DESCRIPTIONS": [
-      "Whenever a #yVoid is #yExhausted [REMOVE_SPACE], apply #b",
+      "Whenever you create a #yVoid [REMOVE_SPACE], apply #b",
       " #yawakened:Manaburn to ALL enemies."
     ]
   },
@@ -135,7 +135,7 @@
     "NAME": "Crescent Talisman",
     "FLAVOR": "“Please, just... don't forget me. Even after I die.”",
     "DESCRIPTIONS": [
-      "Upon pickup, choose a card that does #rNOT have #yawakened:Conjure [REMOVE_SPACE]. Add #yawakened:Conjure to it.",
+      "Upon pickup, choose a card that does #rNOT have #yawakened:Conjure [REMOVE_SPACE], and add #yawakened:Conjure to it.",
       "Choose a card for ",
       "The Talisman has blessed ",
       " and added #yawakened:Conjure to it.",
@@ -149,5 +149,12 @@
       "The first #b4 times you play a #yPower card each combat, heal #b",
       " HP."
       ]
+  },
+  "awakened:NerfedMummifiedHand": {
+    "NAME": "Dessicated Hand",
+    "FLAVOR": "It demands true power, resisting your occultic magicks.",
+    "DESCRIPTIONS": [
+      "Whenever you play a #yPower card that #rISN'T #yCeremony [REMOVE_SPACE], a random card in your hand costs #b0 that turn."
+    ]
   }
 }

@@ -44,7 +44,7 @@ public class IroncladStatusPower extends AbstractBossMechanicPower {
     @Override
     public int onLoseHp(int damageAmount) {
 
-        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.player.hasPower(BufferPower.POWER_ID)) {
+        if (!downfallMod.useLegacyBosses && AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT && !AbstractDungeon.player.hasPower(BufferPower.POWER_ID)) {
 
             this.amount -= damageAmount;
             if (amount <= 0){

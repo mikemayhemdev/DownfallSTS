@@ -13,6 +13,7 @@ import java.util.ArrayList;
 
 public class ArchetypeAct2MushroomsSimple extends ArchetypeBaseIronclad {
 
+    private boolean usedPot;
     public ArchetypeAct2MushroomsSimple() {
         super("IC_MUSHROOM_ARCHETYPE", "Mushroom");
 
@@ -33,6 +34,10 @@ public class ArchetypeAct2MushroomsSimple extends ArchetypeBaseIronclad {
     public ArrayList<AbstractCard> getThisTurnCards() {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;
+
+        if (AbstractDungeon.ascensionLevel >= 4 && !usedPot){
+            //Blood Potion
+        }
 
             switch (turn) {
                 case 0:

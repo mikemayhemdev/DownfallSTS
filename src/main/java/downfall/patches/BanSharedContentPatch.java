@@ -147,7 +147,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.curseCardPool.removeCard(PrideStandard.ID);
                 AbstractDungeon.curseCardPool.removeCard(Malfunctioning.ID);
                 AbstractDungeon.curseCardPool.removeCard(Scatterbrained.ID);
-                AbstractDungeon.curseCardPool.removeCard(Sapped.ID);
+               // AbstractDungeon.curseCardPool.removeCard(Sapped.ID);
 
                 AbstractDungeon.srcCurseCardPool.removeCard(Aged.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(Icky.ID);
@@ -156,7 +156,7 @@ public class BanSharedContentPatch {
                 AbstractDungeon.srcCurseCardPool.removeCard(PrideStandard.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(Malfunctioning.ID);
                 AbstractDungeon.srcCurseCardPool.removeCard(Scatterbrained.ID);
-                AbstractDungeon.srcCurseCardPool.removeCard(Sapped.ID);
+               // AbstractDungeon.srcCurseCardPool.removeCard(Sapped.ID);
             }
 
             if (AbstractDungeon.player instanceof SlimeboundCharacter) {

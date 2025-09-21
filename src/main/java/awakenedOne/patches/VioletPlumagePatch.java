@@ -1,9 +1,11 @@
 package awakenedOne.patches;
 //
 
+import awakenedOne.cards.Gloomguard;
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import awakenedOne.powers.EnsorcelatePower;
 import awakenedOne.powers.IntensifyPower;
+import awakenedOne.util.Wiz;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -30,6 +32,10 @@ public class VioletPlumagePatch {
                 if (__instance.cost != 0) {
                     return (AbstractDungeon.player.hasRelic(BlackCandle.ID));
                 }
+            }
+
+            if (isIndeedWithoutADoubtInCombat() && __instance instanceof Gloomguard) {
+                return Wiz.checkVoid();
             }
 
             if (isIndeedWithoutADoubtInCombat() && __instance instanceof AbstractSpellCard && (AbstractDungeon.player.hasPower(IntensifyPower.POWER_ID))) {

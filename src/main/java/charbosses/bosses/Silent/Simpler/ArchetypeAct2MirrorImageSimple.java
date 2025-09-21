@@ -26,7 +26,7 @@ public class ArchetypeAct2MirrorImageSimple extends ArchetypeBaseSilent {
 
         switch (turn) {
             case 0:
-                //Turn 1
+                if (extraUpgrades) //Ghost in the Jar
                 addToList(cardsList, new EnHallunication());
                 addToList(cardsList, new EnBackstab(), extraUpgrades);
                 turn++;
@@ -45,7 +45,7 @@ public class ArchetypeAct2MirrorImageSimple extends ArchetypeBaseSilent {
             case 3:
                 //Turn 4
                 addToList(cardsList, new EnDash(), extraUpgrades);
-
+                addToList(cardsList, new EnNeutralize(), extraUpgrades);
                 turn++;
                 break;
             case 4:
@@ -56,7 +56,6 @@ public class ArchetypeAct2MirrorImageSimple extends ArchetypeBaseSilent {
                 break;
             case 5:
                 //Turn 4
-                addToList(cardsList, new EnAfterImage());
                 addToList(cardsList, new EnAfterImage());
                 addToList(cardsList, new EnAfterImage());
                 turn = 1;

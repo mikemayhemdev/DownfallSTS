@@ -23,7 +23,7 @@ public class DoomedDagger extends AbstractMonster{
     public boolean firstMove = true;
 
     public DoomedDagger(float x, float y) {
-        super(NAME, ID, AbstractDungeon.monsterHpRng.random(30, 40), 0.0F, -50.0F, 140.0F, 130.0F, null, x, y);
+        super(NAME, ID, AbstractDungeon.monsterHpRng.random(45, 55), 0.0F, -50.0F, 140.0F, 130.0F, null, x, y);
         this.initializeAnimation();
         this.damage.add(new DamageInfo(this, 9));
         this.damage.add(new DamageInfo(this, 25));

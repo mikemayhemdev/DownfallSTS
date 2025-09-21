@@ -1,6 +1,5 @@
 package awakenedOne.actions;
 
-import awakenedOne.ui.OrbitingSpells;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.utility.NewQueueCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -20,7 +19,12 @@ import static awakenedOne.util.Wiz.shuffleIn;
 public class ProcessionAction extends AbstractGameAction {
 
     public static final String[] TEXT;
-    private AbstractPlayer player;
+
+    static {
+        TEXT = CardCrawlGame.languagePack.getUIString("WishAction").TEXT;
+    }
+
+    private final AbstractPlayer player;
     private int playAmt;
 
     public ProcessionAction() {
@@ -37,8 +41,8 @@ public class ProcessionAction extends AbstractGameAction {
                 CardGroup temp = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
                 Iterator var6 = this.player.drawPile.group.iterator();
 
-                while(var6.hasNext()) {
-                    AbstractCard c = (AbstractCard)var6.next();
+                while (var6.hasNext()) {
+                    AbstractCard c = (AbstractCard) var6.next();
                     temp.addToTop(c);
                 }
 
@@ -51,8 +55,8 @@ public class ProcessionAction extends AbstractGameAction {
             if (!AbstractDungeon.gridSelectScreen.selectedCards.isEmpty()) {
                 Iterator var1 = AbstractDungeon.gridSelectScreen.selectedCards.iterator();
 
-                while(var1.hasNext()) {
-                    AbstractCard c = (AbstractCard)var1.next();
+                while (var1.hasNext()) {
+                    AbstractCard c = (AbstractCard) var1.next();
                     AbstractDungeon.player.drawPile.group.remove(c);
                     AbstractDungeon.getCurrRoom().souls.remove(c);
                     this.addToTop(new NewQueueCardAction(c, true, false, true));
@@ -64,7 +68,7 @@ public class ProcessionAction extends AbstractGameAction {
                             shuffleIn(new VoidCard(), EnergyPanel.totalCount);
                         }
                         if (AbstractDungeon.player.hasRelic(ChemicalX.ID)) {
-                            shuffleIn(new VoidCard(), EnergyPanel.totalCount+2);
+                            shuffleIn(new VoidCard(), EnergyPanel.totalCount + 2);
                         }
                     }
                 }
@@ -75,9 +79,5 @@ public class ProcessionAction extends AbstractGameAction {
 
             this.tickDuration();
         }
-    }
-
-    static {
-        TEXT = CardCrawlGame.languagePack.getUIString("WishAction").TEXT;
     }
 }

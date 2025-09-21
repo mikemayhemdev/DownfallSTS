@@ -48,18 +48,8 @@ public class LouseTangerine extends AbstractMonster {
 
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new CurlUpPower(this, curl_amount)));
 
-        if (downfallMod.useLegacyBosses) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new TangerinePower(this, 3)));
-            setMove((byte)1, AbstractMonster.Intent.SLEEP);
-        } else {
-            if (AbstractDungeon.ascensionLevel >= 19){
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new TangerinePower(this, 3)));
-                sleepy = false;
-                this.setMove(MOVES[0], (byte)4, Intent.BUFF);
-            } else {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new TangerinePower(this, 0)));
-            }
-        }
+        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new TangerinePower(this, 3)));
+        setMove((byte)1, AbstractMonster.Intent.SLEEP);
     }
 
     @Override

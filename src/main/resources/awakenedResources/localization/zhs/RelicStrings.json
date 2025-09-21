@@ -19,22 +19,22 @@
     "NAME": "White Ribbon",
     "FLAVOR": "Gives power to spoken words even without proper ritual.",
     "DESCRIPTIONS": [
-      "Whenever you play a card with an active #yawakened:Chant effect, gain #b",
-      " #yBlock [REMOVE_SPACE]."
+      "Whenever you play a card with a #yawakened:Chant effect, gain #b",
+      " #yBlock [REMOVE_SPACE], even if it is not active."
     ]
   },
   "awakened:HexxBomb": {
     "NAME": "Manabomb",
     "FLAVOR": "3... 2...",
     "DESCRIPTIONS": [
-     "Whenever an enemy dies, transfer any #yawakened:Manaburn it has to a random enemy."
+      "Whenever an enemy dies, transfer any #yawakened:Manaburn it has to a random enemy."
     ]
   },
   "awakened:TomeOfPortalmancy": {
     "NAME": "Tome of Portalmancy",
     "FLAVOR": "A grimoire detailing the construction and maintenance of interplanar gates.",
     "DESCRIPTIONS": [
-      "Whenever a #yVoid is #yExhausted [REMOVE_SPACE], apply #b",
+      "Whenever you create a #yVoid [REMOVE_SPACE], apply #b",
       " #yawakened:Manaburn to ALL enemies."
     ]
   },
@@ -148,6 +148,6 @@
     "DESCRIPTIONS": [
       "The first #b4 times you play a #yPower card each combat, heal #b",
       " HP."
-      ]
+    ]
   }
 }

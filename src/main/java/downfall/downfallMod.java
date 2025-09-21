@@ -19,6 +19,7 @@ import automaton.util.*;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.relics.AwakenedUrn;
+import awakenedOne.relics.NerfedMummifiedHand;
 import basemod.BaseMod;
 import basemod.ModLabeledToggleButton;
 import basemod.ModPanel;
@@ -50,7 +51,6 @@ import collector.CollectorMod;
 import collector.potions.TempHPPotion;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import downfall.cards.MajorBeam;
-import downfall.cards.curses.Sapped;
 import collector.util.CollectibleCardReward;
 import collector.util.EssenceReward;
 import com.badlogic.gdx.Gdx;
@@ -382,7 +382,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             config.setBool(PROP_ICONS_FOR_APPLIED_PROPERTIES, useIconsForAppliedProperties);
             config.setBool(NO_RNG_CONJURE, DeterministicConjure);
             config.setBool(NO_BASE_ADJUSTMENTS, disableBaseGameAdjustments);
-            config.setBool(LEGACY_BOSSES, useLegacyBosses);
+            //config.setBool(LEGACY_BOSSES, useLegacyBosses);
             config.save();
             GoldenIdol_Evil.save();
         } catch (IOException e) {
@@ -496,7 +496,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addCard(new Aged());
         BaseMod.addCard(new Pride());
         BaseMod.addCard(new Scatterbrained());
-        BaseMod.addCard(new Sapped());
+       // BaseMod.addCard(new Sapped());
         BaseMod.addCard(new CurseOfBlood());
 /*
         BaseMod.addCard(new Slug());
@@ -809,7 +809,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             settingsPanel.addUIElement(characterModCrossoverBtn);
             settingsPanel.addUIElement(noBaseAdjustmentsBtn);
             settingsPanel.addUIElement(NoRNGConjureButton);
-            settingsPanel.addUIElement(legacyBossesButton);
+           // settingsPanel.addUIElement(legacyBossesButton);
         }
 
         BaseMod.registerModBadge(badgeTexture, "downfall", "Downfall Team", "A very evil Expansion.", settingsPanel);
@@ -832,7 +832,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 noMusic = config.getBool(PROP_NO_MUSIC);
                 useIconsForAppliedProperties = config.getBool(PROP_ICONS_FOR_APPLIED_PROPERTIES);
                 DeterministicConjure = config.getBool(NO_RNG_CONJURE);
-                useLegacyBosses = config.getBool(LEGACY_BOSSES);
+              //  useLegacyBosses = config.getBool(LEGACY_BOSSES);
             }
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
             crossoverModCharacters = config.getBool(PROP_MOD_CHAR_CROSSOVER);
@@ -1346,7 +1346,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     @Override
     public void receiveEditRelics() {
         BaseMod.addRelic(new ShatteredFragment(), RelicType.SHARED);
-        BaseMod.addRelic(new Hecktoplasm(), RelicType.SHARED);
         BaseMod.addRelic(new BrokenWingStatue(), RelicType.SHARED);
         BaseMod.addRelic(new CloakOfManyFaces(), RelicType.SHARED);
         BaseMod.addRelic(new BurdenOfKnowledge(), RelicType.SHARED);
@@ -1355,18 +1354,20 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         BaseMod.addRelic(new RedIOU(), RelicType.SHARED);
         BaseMod.addRelic(new RedIOUUpgrade(), RelicType.SHARED);
         BaseMod.addRelic(new KnowingSkull(), RelicType.SHARED);
-        BaseMod.addRelic(new HeartBlessingBlue(), RelicType.SHARED);
-        BaseMod.addRelic(new HeartBlessingGreen(), RelicType.SHARED);
-        BaseMod.addRelic(new HeartBlessingRed(), RelicType.SHARED);
+        //BaseMod.addRelic(new HeartBlessingBlue(), RelicType.SHARED);
+        //BaseMod.addRelic(new HeartBlessingGreen(), RelicType.SHARED);
+        //BaseMod.addRelic(new HeartBlessingRed(), RelicType.SHARED);
         BaseMod.addRelic(new TeleportStone(), RelicType.SHARED);
         BaseMod.addRelic(new HeartsMalice(), RelicType.SHARED);
         BaseMod.addRelic(new NeowBlessing(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedBell(), RelicType.SHARED);
         BaseMod.addRelic(new ExtraCursedKey(), RelicType.SHARED);
 
-        if (downfallMod.disableBaseGameAdjustments = false){
+        if (!disableBaseGameAdjustments) {
+           // BaseMod.addRelic(new Hecktoplasm(), RelicType.SHARED);
             BaseMod.addRelic(new BlackCandle(), RelicType.SHARED);
             BaseMod.addRelicToCustomPool(new AwakenedUrn(), AwakenedOneChar.Enums.AWAKENED_BLUE);
+            BaseMod.addRelicToCustomPool(new NerfedMummifiedHand(), AwakenedOneChar.Enums.AWAKENED_BLUE);
         }
         addPotions();
     }
@@ -1414,6 +1415,14 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
             AbstractDungeon.gridSelectScreen.selectedCards.clear();
         }
+    }
+
+    public static int getNumKeysBroken(){
+        int count=0;
+        if (AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player)) count++;
+        if (AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player)) count++;
+        if (AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player)) count++;
+        return count;
     }
 
     public static void resetBossList() {

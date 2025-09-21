@@ -18,8 +18,9 @@
   "awakened:RisingChantPower": {
     "NAME": "Rising Chorus",
     "DESCRIPTIONS": [
-      "Whenever you play an activated #yChant card, gain #b",
-      " #yStrength [REMOVE_SPACE]."
+      "The first #b",
+      " #yChant effect(s) activated this turn are triggered twice. NL #b",
+      " Effect(s) remaining this turn."
     ]
   },
   "awakened:CursedStrength": {
@@ -85,8 +86,8 @@
       "The first time you play Spell each turn, gain [E] .",
       "The first #b",
       " times you play a Spell each turn, gain [E] .",
-      " NL (#b",
-      "  remaining this turn.)"
+      " NL #b",
+      " remaining this turn."
     ]
   },
   "awakened:EclipseEmbracePower": {

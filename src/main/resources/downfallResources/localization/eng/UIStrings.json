@@ -24,14 +24,17 @@
       "Break Ruby",
       "Break Sapphire",
       "Break Emerald",
-      "(Free Action) Spend 50 Souls: Destroy key to ",
-      "start Boss combats with 1 Strength.",
-      "start Boss combats with 10 Temporary HP.",
-      "start Boss combats with 1 Dexterity.",
+      "(Free Action) Spend ",
+      " Common cards to gain.",
+      " Uncommon cards to gain.",
+      " Rare cards to gain.",
       "Key shattered!",
       "Requires ",
       " Souls.",
-      "(Free Action) Destroy key to "
+      "(Free Action) Destroy key to ",
+      " Souls: Choose up to ",
+      " of ",
+      " Enhance future key breaks."
     ]
   },
   "downfall:WheelSpinButton": {
@@ -66,7 +69,7 @@
       "Unlock all locked alternative skin for Downfall characters",
       "Use icons instead of adding to text to cards for applied properties.",
       "The Spellbook highlights the next card Conjure will draw.",
-      "No Downfall adjustments to original cards & relics (Bird-Faced Urn)",
+      "No Downfall adjustments to original cards & relics (requires game restart)",
       "Use Legacy Downfall Bosses (pre-6.0)"
     ]
   },
