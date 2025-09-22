@@ -6,6 +6,8 @@ import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
+import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
@@ -40,6 +42,8 @@ public class Malfunctioning extends CustomCard {
         super(ID, NAME, IMG_PATH, COST, DESCRIPTION, TYPE, CardColor.CURSE, RARITY, TARGET);
         this.exhaust = true;
         tags.add(downfallMod.DOWNFALL_CURSE);
+        this.cardsToPreview = new Wound();
+        this.isEthereal = true;
 
     }
 
@@ -52,13 +56,7 @@ public class Malfunctioning extends CustomCard {
         super.triggerOnEndOfTurnForPlayingCard();
         this.flash();
         this.superFlash();
-        for (AbstractCard c:AbstractDungeon.player.hand.group){
-            addToBot(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand, true));
-            addToBot(new MakeTempCardInDiscardAction(OffclassHelper.getARandomStatus(), 1));
-        }
-        addToBot(new WaitAction(0.1F));
-        addToBot(new WaitAction(0.1F));
-        addToBot(new WaitAction(0.1F));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Wound(),1));
     }
 
     public AbstractCard makeCopy() {
