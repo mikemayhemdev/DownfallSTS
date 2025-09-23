@@ -75,7 +75,7 @@ public class Murder extends AbstractAwakenedCard {
 //    }
 
     public void upp() {
-        this.retain = true;
+        this.selfRetain = true;
         //upgradeMagicNumber(1);
     }
 }
