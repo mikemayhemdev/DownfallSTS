@@ -71,6 +71,7 @@ public class CompilePackage extends AbstractGuardianCard {
         cardsList.add(new PackageSentry());
         cardsList.add(new PackageDonuDeca());
         cardsList.add(new PackageAutomaton());
+        this.tags.add(CardTags.HEALING);
         //MultiCardPreview.add(this, new PackageDefect(), new PackageWalker(), new PackageSphere(), new PackageShapes(), new PackageSentry(), new PackageDonuDeca(), new PackageAutomaton());
 
         GuardianMod.loadJokeCardImage(this, makeBetaCardPath("CompilePackage.png"));
