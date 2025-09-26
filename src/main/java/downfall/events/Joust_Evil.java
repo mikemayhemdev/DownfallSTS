@@ -70,7 +70,7 @@ public class Joust_Evil extends AbstractImageEvent {
                            // logMetricTakeDamage(ID, "Fought Strong Knight", damage);
                            // imageEventText.updateBodyText(DESCRIPTIONSALT[1]);
                         }
-                        if (AbstractDungeon.ascensionLevel >= 10){
+                        if (AbstractDungeon.ascensionLevel >= 15){
                             gold = 175;
                         } else {
                             gold = 200;
@@ -88,7 +88,7 @@ public class Joust_Evil extends AbstractImageEvent {
                             //logMetricTakeDamage(ID, "Fought Weak Knight", damage);
                           //  imageEventText.updateBodyText(DESCRIPTIONSALT[3]);
                         }
-                        if (AbstractDungeon.ascensionLevel >= 10){
+                        if (AbstractDungeon.ascensionLevel >= 15){
                             gold = 75;
                         } else {
                             gold = 100;

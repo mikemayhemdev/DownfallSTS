@@ -86,6 +86,8 @@ public class FleeingMerchant extends AbstractMonster {
     private static byte ESCAPE = 2;
     private static byte SOULSTEAL = 3;
 
+    private int multi;
+
     private int turn = 0;
     private boolean boss = false;
 
@@ -106,7 +108,7 @@ public class FleeingMerchant extends AbstractMonster {
      //   }
 
   //      if (!(AbstractDungeon.floorNum < 50)) {
-                    type = EnemyType.NORMAL;
+                    type = EnemyType.ELITE;
         //        }
 
 
@@ -117,7 +119,19 @@ public class FleeingMerchant extends AbstractMonster {
         halfDead = false;
 
         damage.add(new DamageInfo(this, 2));
-        setHp(400);
+
+        if (AbstractDungeon.ascensionLevel >= 8) {
+            setHp(400);
+        } else {
+            setHp(375);
+        }
+
+        if (AbstractDungeon.ascensionLevel >= 3) {
+            this.multi = 5;
+        } else {
+            this.multi = 4;
+        }
+
         this.currentHealth = CURRENT_HP;
     }
 
@@ -135,10 +149,15 @@ public class FleeingMerchant extends AbstractMonster {
 
     @Override
     public void usePreBattleAction() {
+        if (AbstractDungeon.ascensionLevel >= 18) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
+        }
         //AbstractDungeon.getCurrRoom().cannotLose = true;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BarricadePower(this)));
 
         //AbstractDungeon.actionManager.addToTop(new TalkAction(this, (abuse >= 3 ? DIALOG[2] : DIALOG[0]), 0.5F, 3.0F));
+
+
 
         if (CURRENT_STRENGTH > 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, CURRENT_STRENGTH), CURRENT_STRENGTH));
@@ -184,7 +203,7 @@ public class FleeingMerchant extends AbstractMonster {
         } else if (nextMove == ATTACK) {
             this.addToBot(new MerchantThrowGoldAction(AbstractDungeon.player, this, 5, false));
             this.addToBot(new ForceWaitAction(1.6f));
-            for (int i = 0; i < 5; ++i) {
+            for (int i = 0; i < multi; ++i) {
                 this.addToBot(new DamageAction(AbstractDungeon.player, damage.get(0), true));
             }
 
@@ -246,7 +265,7 @@ public class FleeingMerchant extends AbstractMonster {
             return;
         }
         if (turn == 1) {
-            setMove(ATTACK, Intent.ATTACK, ((DamageInfo) this.damage.get(0)).base, 5, true);
+            setMove(ATTACK, Intent.ATTACK, ((DamageInfo) this.damage.get(0)).base, multi, true);
             return;
         }
         if (turn == 2) {
