@@ -97,7 +97,7 @@
   },
   "awakened:FlareShot": {
     "NAME": "Éclat de Plumes",
-    "DESCRIPTION": "Infligez !D! dégâts. NL Au prochain tour, piochez !M! carte supplémentaire."
+    "DESCRIPTION": "Infligez !D! dégâts. NL awakened:Chant: Au prochain tour, piochez !M! carte supplémentaire."
   },
   "awakened:ClarionCall": {
     "NAME": "Appel du clairon",
@@ -133,7 +133,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "Bomb-beurk",
-    "DESCRIPTION": "Ne peut être Jouée que si un *Néant a été Épuisé. NL Infligez !D! dégâts deux fois. NL Effacez un *Néant de votre pile d'Épuisement.",
+    "DESCRIPTION": "Requiert un *Néant Épuisé qui sera effacé. NL Infligez !D! dégâts deux fois.",
     "EXTENDED_DESCRIPTION": [
       "Je n'ai pas de Néant Épuisé."
     ]
@@ -180,7 +180,8 @@
   },
   "awakened:RisingChant": {
     "NAME": "Refrain ascendant",
-    "DESCRIPTION": "Gagnez !M! de Force. Lorsque vous jouez une carte ayant activé son effet awakened:Chant, gagnez !M! de Force."
+    "DESCRIPTION": "Éthérée. NL Le premier effet awakened:Chant que vous jouez chaque tour est activé deux fois.",
+    "UPGRADE_DESCRIPTION": "Le premier effet awakened:Chant que vous jouez chaque tour est activé deux fois."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Ouragan de plumes",
@@ -189,8 +190,8 @@
   },
   "awakened:Murder": {
     "NAME": "Meurtre",
-    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire !M! fois. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire !M! fois."
+    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire !M! fois.",
+    "UPGRADE_DESCRIPTION": "Retenue. Infligez !D! dégâts à un ennemi aléatoire !M! fois."
   },
   "awakened:Nihil": {
     "NAME": "Nihil",
@@ -220,6 +221,7 @@
   "awakened:DarknessFalls": {
     "NAME": "Nuit tombante",
     "DESCRIPTION": "Lorsque vous êtes awakened:Drainé, gagnez !M! d'Armure et !awakened:m2! de Force."
+    "UPGRADE_DESCRIPTION": "Inné. NL Lorsque vous êtes awakened:Drainé, gagnez !M! d'Armure et !awakened:m2! de Force."
   },
   "awakened:Eventide": {
     "NAME": "Crépuscule",
@@ -403,6 +405,7 @@
   },
   "awakened:Inscribe": {
     "NAME": "Gravure",
-    "DESCRIPTION": "Choisissez un Sort. Ajoutez une copie de celui-ci dans le Livre de Sorts pour le reste du combat, et une copie dans votre main."
+    "DESCRIPTION": "Choisissez un Sort. Ajoutez-en !M! copies dans le Livre de Sorts pour le reste du combat."
+    "UPGRADE_DESCRIPTION": "awakened:Conjurez. NL Choisissez un Sort. Ajoutez-en !M! copies dans le Livre de Sorts pour le reste du combat."
   }
 }
