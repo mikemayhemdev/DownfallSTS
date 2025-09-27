@@ -43,8 +43,7 @@ public class Malfunctioning extends CustomCard {
         this.exhaust = true;
         tags.add(downfallMod.DOWNFALL_CURSE);
         this.cardsToPreview = new Wound();
-        this.isEthereal = true;
-
+        //this.isEthereal = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
