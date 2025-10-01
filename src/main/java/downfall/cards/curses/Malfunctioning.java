@@ -27,7 +27,7 @@ public class Malfunctioning extends CustomCard {
     private static final CardRarity RARITY = CardRarity.CURSE;
     private static final CardTarget TARGET = CardTarget.NONE;
     private static final CardStrings cardStrings;
-    private static final int COST = 1;
+    private static final int COST = 2;
     public static String UPGRADED_DESCRIPTION;
 
     static {
@@ -43,7 +43,6 @@ public class Malfunctioning extends CustomCard {
         this.exhaust = true;
         tags.add(downfallMod.DOWNFALL_CURSE);
         this.cardsToPreview = new Wound();
-        this.isEthereal = true;
 
     }
 

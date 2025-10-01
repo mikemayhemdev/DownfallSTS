@@ -17,7 +17,7 @@
   },
   "downfall:Malfunctioning": {
     "NAME": "Flawed",
-    "DESCRIPTION": "Ethereal. NL At the end of your turn, add a *Wound to your discard pile. NL Exhaust."
+    "DESCRIPTION": "At the end of your turn, add a *Wound to your discard pile. NL Exhaust."
   },
   "downfall:Scatterbrained": {
     "NAME": "Scatterbrained",
