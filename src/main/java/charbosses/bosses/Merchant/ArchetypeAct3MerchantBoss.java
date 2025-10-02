@@ -41,9 +41,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
         addRelic(new CBR_TungstenRod());
         addRelic(new CBR_IceCream());
-        //addRelic(new CBR_FusionHammer());
-
-
+        addRelic(new CBR_Vajra());
     }
 
 

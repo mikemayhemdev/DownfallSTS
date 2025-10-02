@@ -19,8 +19,8 @@ public class HyperBeam extends AbstractBronzeCard {
 
     //stupid intellij stuff attack, all_enemy, rare
 
-    private static final int DAMAGE = 19;
-    private static final int UPG_DAMAGE = 9;
+    private static final int DAMAGE = 25;
+    private static final int UPG_DAMAGE = 10;
 
     public HyperBeam() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
@@ -48,6 +48,6 @@ public class HyperBeam extends AbstractBronzeCard {
     }
 
     public void upp() {
-        upgradeDamage(7);
+        upgradeDamage(10);
     }
 }

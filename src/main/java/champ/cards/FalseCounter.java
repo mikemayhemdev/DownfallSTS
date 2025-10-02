@@ -18,7 +18,7 @@ public class FalseCounter extends AbstractChampCard {
         super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         tags.add(ChampMod.FINISHER);
-        baseBlock = block = 10;
+        baseBlock = block = 8;
         loadJokeCardImage(this, "FalseCounter.png");
     }
 
