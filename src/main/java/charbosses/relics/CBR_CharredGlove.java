@@ -35,7 +35,7 @@ public class CBR_CharredGlove extends AbstractCharbossRelic {
                         AbstractCharBoss.boss.hand.applyPowers();
                     }
                 });
-                if (!AbstractCharBoss.boss.isDead) {
+                if (AbstractCharBoss.boss != null && !AbstractCharBoss.boss.isDead && !AbstractCharBoss.boss.isDying) {
                     for (AbstractCard q : AbstractCharBoss.boss.hand.group) {
                         if (q.type == AbstractCard.CardType.CURSE || q.color == AbstractCard.CardColor.CURSE) {
                             flash();
