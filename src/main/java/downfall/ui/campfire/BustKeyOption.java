@@ -228,42 +228,24 @@ public class BustKeyOption extends AbstractCampfireOption {
             this.usable = false;
             switch (downfallMod.getNumKeysBroken()) {
                 case 1:
-
                     AbstractDungeon.effectList.add(new BustKeyEffect(const_SecondKeyCardsToGain, const_SecondKeyCardsShown, const_SecondKeyCardsRarity, TEXT[5]));
-                    AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(p, true);
-
-                    /*
-                    if (!AbstractDungeon.player.hasRelic(BurdenOfKnowledge.ID)) {
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingBlue());
-                    }
-
-                     */
                     break;
                 case 2:
-
                     AbstractDungeon.effectList.add(new BustKeyEffect(const_ThirdKeyCardsToGain, const_ThirdKeyCardsShown, const_ThirdKeyCardsRarity, TEXT[6]));
-                    AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(p, true);
-
-                    /*
-                    if (!AbstractDungeon.player.hasRelic(BurdenOfKnowledge.ID)) {
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingGreen());
-                    }
-                     */
                     break;
-
                 default:
                     AbstractDungeon.effectList.add(new BustKeyEffect(const_FirstKeyCardsToGain, const_FirstKeyCardsShown, const_FirstKeyCardsRarity, TEXT[4]));
+                    }
+            switch (this.key) {
+                case SAPPHIRE:
+                    AddBustKeyButtonPatches.KeyFields.bustedSapphire.set(p, true);
+                case EMERALD:
+                    AddBustKeyButtonPatches.KeyFields.bustedEmerald.set(p, true);
+                    break;
+                default:
                     AddBustKeyButtonPatches.KeyFields.bustedRuby.set(p, true);
 
-                    /*
-                    if (!AbstractDungeon.player.hasRelic(BurdenOfKnowledge.ID)) {
-                        AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new HeartBlessingRed());
-                    }
-
-                     */
-
-
-                    }
+            }
             updateImage(key);
         }
 
