@@ -24,14 +24,17 @@
       "Casser le Rubis",
       "Casser le Saphir",
       "Casser l'Émeraude",
-      "(Action Gratuite) Dépensez 50 Âmes : Détruisez la clé pour ",
-      "gagner 1 de Force durant les combats de Boss.",
-      "gagner 10 PV Temporaires durant les combats de Boss.",
-      "gagner 1 de Dextérité durant les combats de Boss.",
+      "(Free Action) Dépensez ",
+      " Communes à obtenir.",
+      " Peu Communes à obtenir.",
+      " Rares à obtenir.",
       "Clé détruite!",
       "Requiert ",
       " Âmes.",
       "(Action gratuite) Détruisez la clé pour "
+      " Âmes: Choisissez jusqu'à ",
+      " cartes parmi ",
+      " Augmentez les destructions de clés futures."
     ]
   },
   "downfall:WheelSpinButton": {
@@ -66,7 +69,7 @@
       "Débloque tous les déguisements alternatifs des personnages Downfall",
       "Utilisez des icônes au lieu de texte pour les propriétés appliquées.",
       "Le grimoire met en évidence la prochaine carte que Conjure va piocher.",
-      "Aucun ajustement de Downfall pour les cartes et reliques originales (Urne à tête d'oiseau)",
+      "Aucun ajustement de Downfall pour les cartes et reliques originales (requiert un redémarrage du jeu)",
       "Utilisez les Boss de Downfall Legacy (avant la 6.0)"
     ]
   },
