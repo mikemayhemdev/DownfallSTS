@@ -48,7 +48,7 @@
   "awakened:AwakenedForm": {
     "NAME": "Forme Éveillée",
     "DESCRIPTION": "Gagnez !M! de awakened:Curiosité. NL Gagnez !awakened:m2! de Rituel.",
-    "UPGRADE_DESCRIPTION": "Éveillez-vous immédiatement. NL Gagnez !M! de awakened:Curiosité. NL Gagnez !awakened:m2! de Rituel."
+    "UPGRADE_DESCRIPTION": "*Éveillez-vous immédiatement. NL Gagnez !M! de awakened:Curiosité. NL Gagnez !awakened:m2! de Rituel."
   },
   "awakened:Spellbinder": {
     "NAME": "Lieur de sorts",
