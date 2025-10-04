@@ -147,7 +147,8 @@
   },
   "sneckomod:OverwhelmingPresence": {
     "NAME": "圧倒",
-    "DESCRIPTION": "各ターン、初めてシャッフルした時に [E] を得て カードを !M! 枚引く。"
+    "DESCRIPTION": "エセリアル NL 各ターンで初めて sneckomod:オフクラス カードをプレイする度カードを1枚引く。",
+    "UPGRADE_DESCRIPTION": "各ターンで初めて sneckomod:オフクラス カードをプレイする度カードを1枚引く。"
   },
   "sneckomod:RiskySword": {
     "NAME": "リスキーソード",
@@ -163,8 +164,8 @@
   },
   "sneckomod:QuickBite": {
     "NAME": "スネークレーキ",
-    "DESCRIPTION": " !D! ダメージを与える。 NL !M! 枚カードを引き、それらのカードを sneckomod:泥まみれ にする。",
-    "UPGRADE_DESCRIPTION": " !D! ダメージを与える。 NL !M! 枚カードを引き、それらのカードを sneckomod:泥まみれ にする。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL カードを !M! 枚引き、それらを sneckomod:泥まみれ にする。",
+    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL カードを !M! 枚引き、それらを sneckomod:泥まみれ にする。"
   },
   "sneckomod:QuickMove": {
     "NAME": "素早い動き",
@@ -353,7 +354,7 @@
     "DESCRIPTION": "*未識別 NL コモン スキル カード",
     "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL コモン スキル カード"
   },
-  "sneckomod:UnknownDexterity": {
+  "sneckomod:Unknown敏捷性": {
     "NAME": "??? 敏捷性",
     "DESCRIPTION": "*未識別 NL 敏捷性 カード",
     "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 敏捷性 カード"
@@ -363,12 +364,12 @@
     "DESCRIPTION": "*未識別 NL ドロー カード",
     "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL ドロー カード"
   },
-  "sneckomod:UnknownEthereal": {
+  "sneckomod:Unknownエセリアル": {
     "NAME": "??? エセリアル",
     "DESCRIPTION": "*未識別 NL エセリアル カード",
     "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL エセリアル カード"
   },
-  "sneckomod:UnknownExhaust": {
+  "sneckomod:Unknown廃棄": {
     "NAME": "??? 廃棄 ",
     "DESCRIPTION": "*未識別 NL 廃棄 カード",
     "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 廃棄 カード"
@@ -388,7 +389,7 @@
     "DESCRIPTION": "*未識別 NL レア スキル カード",
     "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL レア スキル カード"
   },
-  "sneckomod:UnknownStrength": {
+  "sneckomod:Unknown筋力": {
     "NAME": "??? 筋力",
     "DESCRIPTION": "*未識別 NL 筋力 カード",
     "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 筋力 カード"
@@ -413,12 +414,12 @@
     "DESCRIPTION": "*未識別 NL アンコモン スキル カード",
     "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL アンコモン スキル カード"
   },
-  "sneckomod:UnknownVulnerable": {
+  "sneckomod:Unknown弱体": {
     "NAME": "??? 弱体",
     "DESCRIPTION": "*未識別 NL 弱体 カード",
     "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 弱体 カード"
   },
-  "sneckomod:UnknownWeak": {
+  "sneckomod:Unknown脱力": {
     "NAME": "??? 脱力",
     "DESCRIPTION": "*未識別 NL 脱力 カード",
     "UPGRADE_DESCRIPTION": "アップグレード済み NL *未識別 NL 脱力 カード"
@@ -525,7 +526,7 @@
   },
   "sneckomod:CobraCoil": {
     "NAME": "コブラコイル",
-    "DESCRIPTION": "!D! ダメージを与える。 NL *締め付け !M! を与える。 NL sneckomod:ギフト : レアアタック"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 対象は各ターン終了時に !M! ダメージを受けるようになる。 NL sneckomod:ギフト レアアタック"
   },
   "sneckomod:Belittle": {
     "NAME": "軽視",
@@ -566,8 +567,8 @@
   },
   "sneckomod:MarkedCard": {
     "NAME": "目印付きカード",
-    "DESCRIPTION": "保留 NL 手札を1枚 sneckomod:泥まみれ にする。 NL それは常にコストが下がる。 NL 廃棄 ",
-    "UPGRADE_DESCRIPTION": "保留 NL 手札を !M! 枚 sneckomod:泥まみれ にする。 NL それらは常にコストが下がる。 NL 廃棄 "
+    "DESCRIPTION": "手札を1枚 sneckomod:泥まみれ にする。 NL それは常にコストが下がる。 NL 廃棄 ",
+    "UPGRADE_DESCRIPTION": "保留 NL 手札を1枚 sneckomod:泥まみれ にする。 NL それは常にコストが下がる。 NL 廃棄 "
   },
   "sneckomod:InertBlade": {
     "NAME": "不活性ブレード",
@@ -600,19 +601,16 @@
   },
   "sneckomod:TrashCan": {
     "NAME": "ゴミ箱",
-    "DESCRIPTION": "ターン開始時、 手札を1枚 廃棄 出来る。",
-    "UPGRADE_DESCRIPTION": "天賦 NL 手札を1枚 廃棄 出来る。"
+    "DESCRIPTION": "ターン終了時、あなたはカードを1枚 廃棄 してもよい。"
   },
   "sneckomod:Lacerate": {
     "NAME": "切り傷",
-    "DESCRIPTION": "!D! ダメージを与える。 このターン、敵がデバフを受ける度に sneckomod:猛毒 !M! を受ける。 sneckomod:ギフト : *劇毒",
-    "DESCRIPTION_BATTLE": "!D! ダメージを与える。 Wこのターン、敵がデバフを受ける度に sneckomod:猛毒 !M! を受ける。"
+    "DESCRIPTION": "敵全体に sneckomod:猛毒 !M! を与える。 NL 手札に *劇毒 を加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "敵全体に sneckomod:猛毒 !M! を与える。 NL 手札に *劇毒+ を加える。 NL 廃棄"
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "蛇探偵",
-    "DESCRIPTION": "エセリアル NL パワーをプレイする度、 [E] を得る。 NL sneckomod:ギフト : レアパワー",
-    "UPGRADE_DESCRIPTION": "エセリアル NL パワーをプレイする度、 [E] [E] を得る。 NL sneckomod:ギフト : レアパワー",
-    "DESCRIPTION_BATTLE": "エセリアル NL パワーをプレイする度、 [E] を得る。",
-    "UPGRADE_DESCRIPTION_BATTLE": "エセリアル NL パワーをプレイする度、 [E] [E] を得る。"
+    "DESCRIPTION": "エセリアル NL パワーをプレイする度 [E] を得る。 NL sneckomod:ギフト レアパワー",
+    "DESCRIPTION_BATTLE": "エセリアル NL パワーをプレイする度 [E] を得る。"
   }
 }

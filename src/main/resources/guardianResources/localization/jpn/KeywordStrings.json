@@ -62,6 +62,17 @@
   },
   {
     "NAMES": [
+      "Polishing Oil",
+      "Polishing_Oil",
+      "polishing_oil",
+      "polishingoil",
+      "磨き油"
+    ],
+    "PROPER_NAME": "磨き油",
+    "DESCRIPTION": "#yポーション : #b16 #yブロックを得て、 #yディフェンシブモード に入る。"
+  },
+  {
+    "NAMES": [
       "tick",
       "チック"
     ],
