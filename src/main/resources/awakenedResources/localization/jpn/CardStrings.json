@@ -305,8 +305,8 @@
     ]
   },
   "awakened:Caw": {
-    "NAME": "カァ",
-    "DESCRIPTION": "!D! ダメージを与える。 NL awakened:詠唱 : この戦闘中全ての *カァ のダメージを !M! 増加させる。"
+    "NAME": "カァ!",
+    "DESCRIPTION": "!D! ダメージを与える。 NL awakened:詠唱 : この戦闘中全ての *カァ! のダメージを !M! 増加させる。"
   },
   "awakened:Scour": {
     "NAME": "スカー",
