@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "도발",
-    "DESCRIPTION": "약화를 !M! 부여합니다. NL 취약을 1 부여합니다.",
-    "UPGRADE_DESCRIPTION": "적 전체에게 약화와 취약을 1 부여합니다."
+    "DESCRIPTION": "약화를 !M! 부여합니다. NL 취약을 !M! 부여합니다.",
+    "UPGRADE_DESCRIPTION": "적 전체에게 약화와 취약을 !M! 부여합니다."
   },
   "champ:Execute": {
     "NAME": "처형",

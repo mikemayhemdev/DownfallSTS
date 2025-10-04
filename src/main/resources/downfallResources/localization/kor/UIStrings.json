@@ -21,18 +21,20 @@
   },
   "downfall:BustKeyButton": {
     "TEXT": [
-      "Break Ruby",
-      "Break Sapphire",
-      "Break Emerald",
-      "(Free Action) Spend ",
-      "Choose up to 2 of 6 Common cards to gain.",
-      "Choose up to 2 of 4 Uncommon cards to gain.",
-      "Choose up to 1 of 3 Rare cards to gain.",
-      "Key shattered!",
-      "Requires ",
-      " Souls.",
-      "(Free Action) Destroy key to ",
-      " Souls: Destroy key to "
+      "루비 파괴",
+      "사파이어 파괴",
+      "에메랄드 파괴",
+      "(자유 행동) 영혼을 ",
+      " 장 일반 카드를 획득합니다.",
+      " 장 특별 카드를 획득합니다.",
+      " 장 희귀 카드를 획득합니다.",
+      "열쇠를 깨트렸다!",
+      "영혼을 ",
+      " 필요로 합니다.",
+      "(자유 행동) 열쇠를 파괴합니다. ",
+      " 소모하고 ",
+      " 장 중 최대 ",
+      " 열쇠는 파괴 후 강화됩니다."
     ]
   },
   "downfall:BustKeyButtonBackupForTranslators": {
@@ -47,7 +49,7 @@
       "열쇠를 깨트렸다!",
       "영혼이 ",
       " 필요합니다.",
-      "(자유 행동) 열쇠를 파괴합니다. ",
+      "(자유 행동) 열쇠를 파괴합니다. "
     ]
   },
   "downfall:WheelSpinButton": {
@@ -82,7 +84,7 @@
       "Downfall 모드 캐릭터의 모든 잠긴 교체 스킨을 해금합니다.",
       "적용된 속성에 대해 설명문 추가하는 대신 아이콘을 사용합니다.",
       "주문서가 암송으로 뽑을 다음 카드를 표시합니다.",
-      "Downfall 모드의 기본 카드와 유물의 밸런스 조정을 없앱니다 (새 머리 항아리).",
+      "Downfall 모드의 기본 카드와 유물의 밸런스 조정을 없앱니다 (재시작 필요).",
       "과거 Downfall 보스가 출현합니다 (pre-6.0)."
     ]
   },

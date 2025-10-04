@@ -97,7 +97,7 @@
   },
   "awakened:FlareShot": {
     "NAME": "깃털 섬광",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴에 카드를 !M! 장 더 뽑습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL awakened:암송: 다음 턴에 카드를 !M! 장 더 뽑습니다."
   },
   "awakened:ClarionCall": {
     "NAME": "날카로운 울음소리",
@@ -133,7 +133,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "오물 폭탄",
-    "DESCRIPTION": "소멸된 *공허 가 있을 때만 사용할 수 있습니다. NL 피해를 !D! 만큼 두 번 줍니다. NL 소멸된 *공허 를 1장 삭제합니다.",
+    "DESCRIPTION": "제거 혹은 소멸된 *공허 가 있을 때만 사용할 수 있습니다. NL 피해를 !D! 만큼 두 번 줍니다.",
     "EXTENDED_DESCRIPTION": [
       "소멸한 공허가 존재하지 않아."
     ]
@@ -180,7 +180,8 @@
   },
   "awakened:RisingChant": {
     "NAME": "고조되는 합창",
-    "DESCRIPTION": "힘을 !M! 얻습니다. NL 활성화된 awakened:암송 카드를 사용할 때마다 힘을 !M! 얻습니다."
+    "DESCRIPTION": "휘발성. NL 매 턴 처음으로 활성화된 암송 카드를 사용하면 두 번 활성화합니다.",
+    "UPGRADE_DESCRIPTION": "매 턴 처음으로 활성화된 암송 카드를 사용하면 두 번 활성화합니다."
   },
   "awakened:FeatherWhirl": {
     "NAME": "깃털 선회",
@@ -190,7 +191,7 @@
   "awakened:Murder": {
     "NAME": "살해",
     "DESCRIPTION": "무작위 적들에게 피해를 !D! 만큼 !M! 번 줍니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "무작위 적들에게 피해를 !D! 만큼 !M! 번 줍니다."
+    "UPGRADE_DESCRIPTION": "보존. NL 무작위 적들에게 피해를 !D! 만큼 !M! 번 줍니다."
   },
   "awakened:Nihil": {
     "NAME": "무가치",
@@ -219,7 +220,8 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "드리우는 어둠",
-    "DESCRIPTION": "awakened:고갈될 때마다 방어도를 !M! 얻고 힘을 !awakened:m2! 얻습니다."
+    "DESCRIPTION": "awakened:고갈될 때마다 방어도를 !M! 얻고 힘을 !awakened:m2! 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL awakened:고갈될 때마다 방어도를 !M! 얻고 힘을 !awakened:m2! 얻습니다."
   },
   "awakened:Eventide": {
     "NAME": "황혼",
@@ -403,6 +405,7 @@
   },
   "awakened:Inscribe": {
     "NAME": "각인",
-    "DESCRIPTION": "주문을 선택합니다. 이번 전투 동안 그 카드를 복사해 주문서에 섞어 넣고 그 카드를 얻습니다."
+    "DESCRIPTION": "주문을 선택합니다. 이번 전투 동안 그 카드를 !M! 장 복사해 주문서에 섞어 넣고 그 카드를 얻습니다.",
+    "UPGRADE_DESCRIPTION": "awakened:시전합니다. NL 주문을 선택합니다. 이번 전투 동안 그 카드를 !M! 장 복사해 주문서에 섞어 넣고 그 카드를 얻습니다."
   }
 }
