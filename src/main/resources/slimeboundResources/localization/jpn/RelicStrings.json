@@ -3,7 +3,9 @@
     "NAME": "ベタつく心臓",
     "FLAVOR": "とてもいい気分だ！",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:泥食い を行うたびに HPを #b2 回復する。1戦闘中 #b8 HPまで。"
+      "#yslimeboundmod:泥食い を行うたびに HPを #b",
+      " 回復する。一度の戦闘中に最大 #b",
+      " HP回復出来る。"
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
@@ -11,7 +13,9 @@
     "FLAVOR": "ウーズの秘密",
     "DESCRIPTIONS": [
       " ",
-      " [] と置き換える。 NL #yslimeboundmod:泥食い を行うたびに HPを #b3 回復する。1戦闘中 #b15 HPまで。"
+      " [] と置き換える。 NL #yslimeboundmod:泥食い を行うたびに HPを #b",
+      " 回復する。一度の戦闘中に最大 #b",
+      " HP回復出来る。"
     ]
   },
   "Slimebound:SlimedTailRelic": {
@@ -86,7 +90,8 @@
     "NAME": "プロテクトギア",
     "FLAVOR": "最高の護りこそが最適な攻撃だ",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:タックル の自傷ダメージを #b3 軽減する。"
+      "#yslimeboundmod:タックル の自傷ダメージを #b",
+      " 軽減する。"
     ]
   },
   "Slimebound:TarBlob": {
@@ -100,7 +105,8 @@
     "NAME": "ゼラチナスキューブ",
     "FLAVOR": "やあ、身体にくっついてしまったよ",
     "DESCRIPTIONS": [
-      "各ターンで #b2 枚 まで、 #y状態異常 または #r呪い カードを引いた時 カードを #b1 枚引く。 また、 #y空虚 カードを引いた時は [E] を得る。"
+      "あなたが #y状態異常 または #r呪い カードを引いた時 #b",
+      " #yブロック を得る。"
     ]
   }
 }

@@ -61,7 +61,7 @@
   "champ:ImprovisingPower": {
     "NAME": "即興",
     "DESCRIPTIONS": [
-      "ターン開始時 #yスタンス に入っていなければランダムな #yスタンス に入る。 #yスタンス に入った時、 *スキルボーナス を #b",
+      "#yスタンス に入った時、 *スキルボーナス を #b",
       " 回得る。"
     ]
   },
@@ -170,9 +170,9 @@
   "champ:NoBlockNextTurnPower": {
     "NAME": "シールドスロー",
     "DESCRIPTIONS": [
-      "次のターンブロックを得られない。",
+      "次のターン #yブロック を得られない。",
       "あと #b",
-      " ターンの間ブロックを得られない。"
+      " ターンの間 #yブロック を得られない。"
     ]
   },
   "champ:UltimateStancePower": {

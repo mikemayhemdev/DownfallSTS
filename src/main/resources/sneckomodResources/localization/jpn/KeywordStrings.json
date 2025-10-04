@@ -62,7 +62,7 @@
       "venom",
       "猛毒"
     ],
-    "DESCRIPTION": "#y猛毒 を持つ敵は #y猛毒 以外のデバフを受けた時、HPを失う。"
+    "DESCRIPTION": "#y猛毒 を持つ敵に #y猛毒 以外のデバフを与えた時HPを減少させる。"
   },
   {
     "PROPER_NAME": "抹消",

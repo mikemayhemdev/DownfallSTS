@@ -149,7 +149,7 @@
     "UPGRADE_DESCRIPTION": "脱力 !M! と slimeboundmod:汚泥 !slime! を与える。 NL カードを1枚引く。 NL 廃棄 - slimeboundmod:埋没"
   },
   "Slimebound:LivingWall": {
-    "NAME": "リビングウォール",
+    "NAME": "壁形態",
     "DESCRIPTION": "!B! ブロックを得る。 NL このターン攻撃してきた相手に slimeboundmod:汚泥 !slime! を与える。"
   },
   "Slimebound:MassFeed": {
@@ -368,7 +368,7 @@
   },
   "Slimebound:TongueLash": {
     "NAME": "乱れ舌さばき",
-    "DESCRIPTION": "!D! ダメージを与える。 NL 廃棄山にある「舐める」カードの枚数x !M! のダメージが追加される。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 廃棄札にある「舐める」カードの枚数x !M! のダメージが追加される。"
   },
   "Slimebound:ViciousTackle": {
     "NAME": "凶悪なタックル",

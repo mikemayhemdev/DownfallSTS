@@ -13,7 +13,7 @@
 },
 "hermit:ShadowCloakPower": {
         "NAME": "シャドウクローク",
-        "DESCRIPTIONS": ["呪い を引くか 廃棄 する度に #b", " ブロックを得る。"]
+        "DESCRIPTIONS": ["#r呪い を引くか 廃棄 する度に #b", " ブロックを得る。"]
 },
 "hermit:TakeAimPower": {
         "NAME": "狙う",
@@ -61,7 +61,7 @@
 },
 "hermit:Drained": {
         "NAME": "ドレイン",
-        "DESCRIPTIONS": ["次のターンエナジーを #b", " 失う。"]
+        "DESCRIPTIONS": ["次のターン [E] を #b", " 失う。"]
 },
 "hermit:DeterminationPower": {
         "NAME": "決意",

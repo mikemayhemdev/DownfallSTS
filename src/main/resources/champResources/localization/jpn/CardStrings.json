@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "誘い",
-    "DESCRIPTION": "脱力 !M! と 弱体 1 を与える。",
-    "UPGRADE_DESCRIPTION": "敵全体に 脱力 1 と 弱体 1 を与える。"
+    "DESCRIPTION": "脱力 と 弱体 !M! を与える。",
+    "UPGRADE_DESCRIPTION": "敵全体に 脱力 と 弱体 !M! を与える。。"
   },
   "champ:Execute": {
     "NAME": "エクスキュート",
@@ -27,17 +27,13 @@
     ]
   },
   "champ:StanceDanceCrown": {
-    "NAME": "王者の冠",
-    "DESCRIPTION": "入るスタンスを選択。 NL champ:スキルボーナス を得る。",
-    "UPGRADE_DESCRIPTION": "入るスタンスを選択。 NL champ:スキルボーナス を2回得る。",
-    "EXTENDED_DESCRIPTION": [
-      "champ:狂化 に入る。",
-      "champ:守護 に入る。"
-    ]
+    "NAME": "閃き",
+    "DESCRIPTION": "保留 NL 別のスタンスに入る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "保留 NL 別のスタンスに入る。"
   },
   "champ:SwordSigil": {
     "NAME": "勝利の紋章",
-    "DESCRIPTION": "現在のスタンスの champ:スキルボーナス を !M! 回得る。"
+    "DESCRIPTION": "現在の *スタンス の champ:スキルボーナス を !M! 回得る。"
   },
   "champ:FaceSlap": {
     "NAME": "平手打ち",
@@ -130,9 +126,9 @@
   },
   "champ:ShieldThrow": {
     "NAME": "シールドスロー",
-    "DESCRIPTION": "現在のブロックと同等のダメージを2回与える。",
+    "DESCRIPTION": "現在のブロックと同等のダメージを2回与える。 NL champ:守護 スタンスでない場合、次のターンカードから *ブロック を得られなくなる。 ",
     "EXTENDED_DESCRIPTION": [
-      "現在のブロックと同等のダメージ( !D! )を2回与える。"
+      "現在のブロックと同等のダメージ( !D! )を2回与える。 NL champ:守護 スタンスでない場合、次のターンカードから *ブロック を得られなくなる。"
     ]
   },
   "champ:FalseCounter": {
@@ -146,7 +142,7 @@
   },
   "champ:Lariat": {
     "NAME": "ラリアット",
-    "DESCRIPTION": "!B! ブロックを X 回得る。 NL champ:スキルボーナス を X 回得る。"
+    "DESCRIPTION": "!B! ブロックを X 回得る。 NL 現在の *スタンス の champ:スキルボーナス を X 回得る。"
   },
   "champ:HoldFirm": {
     "NAME": "鋼鉄の意思",
@@ -162,7 +158,7 @@
   },
   "champ:ViciousMockery": {
     "NAME": "悪意ある嘲笑",
-    "DESCRIPTION": "気力 !M! を得る。 NL 脱力 !DM! を与える。 NL champ:スキルボーナス を得る。",
+    "DESCRIPTION": "気力 !M! を得る。 NL 脱力 !DM! を与える。 NL 現在の *スタンス の champ:スキルボーナス を得る。",
     "EXTENDED_DESCRIPTION": [
       "狂化 champ:コンボ: 一時的な 筋力 !M! を得る。 NL ",
       "守護 champ:コンボ: 一時的な 敏捷性 !M! を得る。"
@@ -193,7 +189,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "ソードスロー",
-    "DESCRIPTION": "!D! ダメージを !M! 回与える。 NL 脱力 2 を受ける。 NL *狂化 champ:コンボ: 脱力を受けない。"
+    "DESCRIPTION": "!D! ダメージを !M! 回与える。 NL champ:狂化 スタンスでない場合、次のターン *アタック をプレイ出来なくなる。"
   },
   "champ:MurderStrike": {
     "NAME": "マーダーストライク",
@@ -201,8 +197,7 @@
   },
   "champ:HeavySlash": {
     "NAME": "達人の一撃",
-    "DESCRIPTION": "!D! ダメージを与える。 NL 次のターン開始時、 防御されなかったダメージに等しい 気力 を得る。",
-    "UPGRADE_DESCRIPTION": "!D! ダメージを与える。 NL ランダムな スキル+ を1枚手札に加える。 NL それはコストが0になる。"
+    "DESCRIPTION": "!D! ダメージを与える。 NL 次のターン開始時、 防御されなかったダメージに等しい 気力 を得る。"
   },
   "champ:CheapShot": {
     "NAME": "卑劣な攻撃",
@@ -210,7 +205,7 @@
   },
   "champ:RisingSlash": {
     "NAME": "ライジングストライク",
-    "DESCRIPTION": "!D! ダメージを与える。 NL 最後にプレイされたカードが champ:フィニッシャー だった場合もう一度 !D! ダメージを与える。"
+    "DESCRIPTION": "保留 NL !D! ダメージを与える。 NL 直前にプレイしたカードが champ:フィニッシャー だった場合もう一度 !D! ダメージを与える。"
   },
   "champ:Shatter": {
     "NAME": "シャッターストライク",
@@ -289,7 +284,7 @@
   },
   "champ:Improvising": {
     "NAME": "即興",
-    "DESCRIPTION": "ターン開始時スタンスに入っていなければランダムなスタンスに入る。 NL スタンスに入る時、 champ:スキルボーナス を !M! 回得る。"
+    "DESCRIPTION": "あなたが スタンス に入る度に、 champ:スキルボーナス を !M! 回発動する。"
   },
   "champ:CalledShot": {
     "NAME": "リフレッシュ",
@@ -342,7 +337,7 @@
   },
   "champ:Endure": {
     "NAME": "耐える",
-    "DESCRIPTION": "champ:守護 のスタンスに入る。 NL !B! ブロックを得る。 NL このカードは *筋力 の影響も受ける。",
+    "DESCRIPTION": "champ:守護 のスタンスに入る。 NL !B! ブロックを得る。 NL このカードは *敏捷性 の代わりに *筋力 の影響を受ける。",
     "UPGRADE_DESCRIPTION": "champ:守護 のスタンスに入る。 NL !B! ブロックを得る。 NL このカードは *筋力 の影響も受ける。"
   },
   "champ:PreemptiveStrike": {

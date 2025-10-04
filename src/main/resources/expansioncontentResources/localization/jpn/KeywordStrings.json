@@ -60,7 +60,7 @@
 			"exhume",
 			"発掘"
 		],
-		"DESCRIPTION": "廃棄山からカードを手札に戻す。"
+		"DESCRIPTION": "廃棄札からカードを手札に戻す。"
 	},
 	{
 		"PROPER_NAME": "回収",
@@ -68,7 +68,7 @@
 			"reclaim",
 			"回収"
 		],
-		"DESCRIPTION": "廃棄山からカードを捨て札に戻す。"
+		"DESCRIPTION": "廃棄札からカードを捨て札に戻す。"
 	},
 	{
 		"PROPER_NAME": "束縛",

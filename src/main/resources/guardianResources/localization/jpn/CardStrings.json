@@ -118,7 +118,8 @@
   },
   "Guardian:SphericShield": {
     "NAME": "球状シールド",
-    "DESCRIPTION": "!B! ブロックを得る。 NL guardianmod:ディフェンシブモード を発動。 NL 廃棄"
+    "DESCRIPTION": "エセリアル NL guardianmod:磨き油 を得る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "guardianmod:磨き油 を得る。 NL 廃棄"
   },
   "Guardian:Harden": {
     "NAME": "硬化",
@@ -181,8 +182,8 @@
     "UPGRADE_DESCRIPTION": "強化済み NL *経路変更 NL *先行プログラム NL *タイムキャパシター NL 廃棄"
   },
   "Guardian:Planning": {
-    "NAME": "プランニング",
-    "DESCRIPTION": "山札の上から !M! 枚のカードを guardianmod:停滞 させる。"
+    "NAME": "格納シールド",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 自分のデバフを !M! 減少させる。"
   },
   "Guardian:Recover": {
     "NAME": "リカバー",

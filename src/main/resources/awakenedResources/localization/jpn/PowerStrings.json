@@ -1,0 +1,249 @@
+{
+  "awakened:IntensifyPower": {
+    "NAME": "増幅",
+    "DESCRIPTIONS": [
+      "このターン、スペルカードのコストは #b0 になる。",
+      "あと #b",
+      " ターンの間、スペルカードのコストは #b0 になる。"
+    ]
+  },
+  "awakened:IntensifyDebuffPower": {
+    "NAME": "バーンアウト",
+    "DESCRIPTIONS": [
+      "このターン、 #y召喚 は発動しない。",
+      "あと #b",
+      " ターンの間、 #y召喚 は発動しない。"
+    ]
+  },
+  "awakened:RisingChantPower": {
+    "NAME": "高まるコーラス",
+    "DESCRIPTIONS": [
+      "各ターン最初に発動する #b",
+      " #y詠唱 の効果は2回発動する。 NL 残り #b",
+      " 回。"
+    ]
+  },
+  "awakened:CursedStrength": {
+    "NAME": "闇の祝福",
+    "DESCRIPTIONS": [
+      "あなたが #y枯渇 状態になった時 #y筋力  #b",
+      " を得る。"
+    ]
+  },
+  "awakened:ThaumaturgyPower": {
+    "NAME": "魔術",
+    "DESCRIPTIONS": [
+      "あと #b",
+      " ターンの間、ターン開始時に #yセレモニー を手札に加える。"
+    ]
+  },
+  "awakened:SacramentPower": {
+    "NAME": "秘跡",
+    "DESCRIPTIONS": [
+      " #yパワー をプレイする度、 #b",
+      " #yブロック を得る。"
+    ]
+  },
+  "awakened:FlarePower": {
+    "NAME": "フェザーフレア",
+    "DESCRIPTIONS": [
+      "このターン中に #y非アタック カードをプレイした時、敵全体が #b",
+      " HPを失う。"
+    ]
+  },
+  "awakened:PrimacyPower": {
+    "NAME": "プライマシー",
+    "DESCRIPTIONS": [
+      "各ターンで最初に #y筋力 を得た時、 カードを 1 枚引く。",
+      "各ターンで #b",
+      " 回まで #y筋力 を得た時、 カードを 1 枚引く。",
+      " NL このターンあと #b",
+      " 回効果を起動出来る。",
+      " 回効果を起動出来る。",
+      " NL このターン、もう効果は起動しない。"
+    ]
+  },
+  "awakened:SpellbinderPower": {
+    "NAME": "スペルバインダー",
+    "DESCRIPTIONS": [
+      "ターン開始時、 #y召喚 ",
+      "ターン開始時、 #y召喚 を #b",
+      " 回行う。"
+    ]
+  },
+  "awakened:DarkEchoPower": {
+    "NAME": "ダークエコー",
+    "DESCRIPTIONS": [
+      "ターン終了時、敵全体に #b",
+      " ダメージを #b",
+      " 回与える。",
+      " ダメージを与える。"
+    ]
+  },
+  "awakened:MoonlitVisionPower": {
+    "NAME": "月明かりの幻影",
+    "DESCRIPTIONS": [
+      "各ターンで初めてスペルをプレイした時、 [E] を得る。",
+      "各ターンで #b",
+      " 回まで スペルをプレイした時、 [E]  を得る。",
+      " NL #b",
+      " 回発動可能。"
+    ]
+  },
+  "awakened:EclipseEmbracePower": {
+    "NAME": "月蝕の抱擁",
+    "DESCRIPTIONS": [
+      "#y空虚 を #y廃棄 した次のターン、 [E] を得て カードを 1 枚引く。",
+      "#y空虚 を #y廃棄 した次のターン #b",
+      " [E] を得てカードを #b",
+      " 枚引く。"
+    ]
+  },
+  "awakened:SongOfSorrowPower": {
+    "NAME": "哀歌",
+    "DESCRIPTIONS": [
+      "#y空虚 を生成した時、敵全体が #b",
+      " HPを失う。"
+    ]
+  },
+  "awakened:ShroudOfMiasmaPower": {
+    "NAME": "瘴気の波",
+    "DESCRIPTIONS": [
+      "#y呪詛 を持つ相手に攻撃した際、 #b",
+      " #yブロック を得る。"
+    ]
+  },
+  "awakened:StrengthReturnPower": {
+    "NAME": "引き裂き",
+    "DESCRIPTIONS": [
+      "この敵に攻撃した際一時的な #y筋力 #b",
+      " を得る。"
+    ]
+  },
+  "awakened:ManaburnPower": {
+    "NAME": "マナバーン",
+    "DESCRIPTIONS": [
+      "#y枯渇 が発動した時 #b",
+      " HPを失う。"
+    ]
+  },
+  "awakened:ArchmagusPower": {
+    "NAME": "アークメイジ",
+    "DESCRIPTIONS": [
+      "各ターン最初にプレイされたスペルは2回プレイされる。",
+      "各ターン #b",
+      " 回まで、プレイされたスペルは2回プレイされる。",
+      " NL (あと #b",
+      " 回発動する。)"
+    ]
+  },
+  "awakened:DoubleSpellPower": {
+    "NAME": "多重詠唱",
+    "DESCRIPTIONS": [
+      "このターン、次にプレイされたスペルは2回プレイされる。",
+      "このターン #b",
+      " 回まで、プレイされたスペルは2回プレイされる。"
+    ]
+  },
+  "awakened:DarknessFallsPower": {
+    "NAME": "降りる暗闇",
+    "DESCRIPTIONS": [
+      " #y枯渇 が発動した時、 #b",
+      " #yブロック を得る。"
+    ]
+  },
+  "awakened:VoidRefundPower": {
+    "NAME": "呼び寄せる声",
+    "DESCRIPTIONS": [
+      "次に #y枯渇 が発動した時 [E] を得る。",
+      "次に #y枯渇 が発動した時 #b",
+      " [E] を得る。"
+    ]
+  },
+  "awakened:DemonGlyphPower": {
+    "NAME": "デーモングリフ",
+    "DESCRIPTIONS": [
+      "#y覚醒 した時、 #b",
+      " の #y筋力 と #y敏捷性 を得る。"
+    ]
+  },
+  "awakened:ReverseRitualPower": {
+    "NAME": "覚醒化",
+    "DESCRIPTIONS": [
+      "ターン開始時、 #y儀式 #b",
+      " を得る。"
+    ]
+  },
+  "awakened:EnsorcelatePower": {
+    "NAME": "魔力付与",
+    "DESCRIPTIONS": [
+      "次にプレイする #yパワー のコストは #b0 になる。",
+      "あと #b",
+      " 回まで、 プレイする #yパワー のコストは #b0 になる。"
+    ]
+  },
+  "awakened:ConjureNextPower": {
+    "NAME": "掻き毟り",
+    "DESCRIPTIONS": [
+      "次に #y枯渇 が発動した時、手札に #y羽根撃ち を加える。",
+      "次に #y枯渇 が発動した時、手札に #b",
+      " 枚の #y羽根撃ち を加える。"
+    ]
+  },
+  "awakened:ChosensVersePower": {
+    "NAME": "選ばれた詩句",
+    "DESCRIPTIONS": [
+      "このターン、次に #y非アタック カードをプレイした時、 カードを 1 枚引き #b",
+      " #yブロック を得る。",
+      "このターン、 #b",
+      " 回まで #y非アタック カードをプレイした時、 カードを 1 枚引き #b",
+      " #yブロック を得る。"
+    ]
+  },
+  "awakened:AphoticFountPower": {
+    "NAME": "暗黒の泉",
+    "DESCRIPTIONS": [
+      " #yクリオスタシス をプレイした時、 #yプレートアーマー #b",
+      " を得る。 "
+    ]
+  },
+  "awakened:GrimoirePower": {
+    "NAME": "ストームルーラー",
+    "DESCRIPTIONS": [
+      "#yサンダーボルト が追加で #b",
+      " ダメージを与える。"
+    ]
+  },
+  "awakened:SpellshieldPower": {
+    "NAME": "スペルシールド",
+    "DESCRIPTIONS": [
+      "カードを #y保留 する度、 #b",
+      " #yブロック を得る。"
+    ]
+  },
+  "awakened:DaggerstormPower": {
+    "NAME": "ダガーストーム",
+    "DESCRIPTIONS": [
+      "カードを生成した時、ランダムな敵に #b",
+      " ダメージを与える。"
+    ]
+  },
+  "awakened:SchemePower": {
+    "NAME": "スキーム",
+    "DESCRIPTIONS": [
+      "次の #b",
+      " 枚の コストが #b1 以下のカードは2回プレイされる。",
+      "次のコストが #b1 以下のカードは2回プレイされる。"
+    ]
+  },
+  "awakened:FourthDimensionPower": {
+    "NAME": "第四次元",
+    "DESCRIPTIONS": [
+      "あと #b",
+      " ターンの間、ターン開始時に",
+      " ターンの間、ターン開始時に",
+      " のコピーがプレイされ、 #y廃棄 される。 ",
+      " "
+    ]
+  }
+}

@@ -308,7 +308,7 @@
 
   "Gremlin:Pickpocket": {
     "NAME": "ピックポケット",
-    "DESCRIPTION": "!D! ダメージを与える。 NL このターン、対象は 筋力 !M! を2回失う。 NL !blamage! ゴールドを得る。 NL 廃棄"
+    "DESCRIPTION": "!D! ダメージを与える。 NL !M! ゴールドを得る。 NL 廃棄"
   },
 
   "Gremlin:PinNeedle": {
