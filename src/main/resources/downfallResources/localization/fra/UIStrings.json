@@ -1,0 +1,216 @@
+{
+  "downfall:EvilMenuPanel": {
+    "TEXT": [
+      "Downfall",
+      "Défendez le Cœur des intrus qui s'aventurent et veulent d'emparer de la Tour.",
+      "Choisissez Votre Vilain",
+      "Campagne"
+    ]
+  },
+  "downfall:SoulToGoldChanges": {
+    "TEXT": [
+      "Âmes",
+      "Montre combien d'Âmes vous possédez. Les Âmes peuvent être données au Cœur pour des récompenses.",
+      "Statut du Marchand",
+      "PV",
+      "Mort!",
+      "de Force",
+      "Âmes volées",
+      "Perte"			
+    ]
+  },
+  "downfall:BustKeyButton": {
+    "TEXT": [
+      "Casser le Rubis",
+      "Casser le Saphir",
+      "Casser l'Émeraude",
+      "(Free Action) Dépensez ",
+      " Communes à obtenir.",
+      " Peu Communes à obtenir.",
+      " Rares à obtenir.",
+      "Clé détruite!",
+      "Requiert ",
+      " Âmes.",
+      "(Action gratuite) Détruisez la clé pour "
+      " Âmes: Choisissez jusqu'à ",
+      " cartes parmi ",
+      " Augmentez les destructions de clés futures."
+    ]
+  },
+  "downfall:WheelSpinButton": {
+    "TEXT": [
+      "Tournez la roue",
+      "(Action gratuite) Tourner la roue.",
+      "Impossible de tourner la roue."
+    ]
+  },
+  "downfall:AscensionText": {
+    "TEXT": [
+      "19. Les Boss possèdent une relique supplémentaire.",
+      "20. Le Boss de l'Acte 3 a une Queue de lézard qui soigne tous les PV.",
+      "Obtenez la clé de Rubis que vous pourrez briser plus tard.",
+      "4. Les Boss possèdent une carte supplémentaire améliorée."
+    ]
+  },
+  "downfall:ConfigMenuText": {
+    "TEXT": [
+      "Permet aux runs standard de rencontrer des reliques globales des personnages de Downfall.",
+      "Permet aux runs standard de rencontrer des potions globales de Downfall.",
+      "Permet aux runs standard de rencontrer des évènements globaux de Downfall.",
+      "Permet aux runs standard de rencontrer des cartes Boss de Downfall.",
+      "Permet aux personnages standard de faire des runs Downfall, et aux Vilains de faire des runs standard.",
+      "Allow modded characters to play Downfall runs.",
+      "Permet aux runs standard de rencontrer des cartes Malédiction de Downfall.",
+      "Les runs Downfall utilisent la disposition normale de la carte  - le feu avant le boss, pas au départ.",
+      "Débloque toutes les cartes verrouillées et les reliques des personnages Downfall (requiert un restart du jeu)",
+      "Désactive l'aide pour les poses du Champion - pour les Champions expérimentés",
+      "Prevent Snecko from using card pools from other mods.",
+      "Désactive le remplacement de la musique (requiert un restart du jeu)",
+      "Débloque tous les déguisements alternatifs des personnages Downfall",
+      "Utilisez des icônes au lieu de texte pour les propriétés appliquées.",
+      "Le grimoire met en évidence la prochaine carte que Conjure va piocher.",
+      "Aucun ajustement de Downfall pour les cartes et reliques originales (requiert un redémarrage du jeu)",
+      "Utilisez les Boss de Downfall Legacy (avant la 6.0)"
+    ]
+  },
+  "downfall:EnergyPanelTip": {
+    "TEXT": [
+      "L'Énergie actuelle de l'ennemi. Les cartes requièrent de l'énergie pour les jouer."
+    ],
+    "EXTRA_TEXT": [
+      "Energy"
+    ]
+  },
+  "downfall:RemoveCardReward": {
+  "TEXT": [
+    "Retirez une carte de votre deck",
+    "Choisissez une carte à Retirer"
+  ]
+},
+  "downfall:TransformCardReward": {
+    "TEXT": [
+      "Transformez une carte de votre deck",
+      "Choisissez une carte à Transformer"
+    ]
+  },
+  "downfall:UpgradeCardReward": {
+    "TEXT": [
+      "Améliorez une carte de votre deck",
+      "Choisissez une carte à Améliorer"
+    ]
+  },
+  "downfall:BossRelicReward": {
+    "TEXT": [
+      "Choisissez 1 Relique de Boss parmi 3 à obtenir.",
+      "Obtenez un ",
+      ".",
+      "Choisissez une Relique.. en quelque sorte"
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "Ethérée. NL "
+    ]
+  },
+  "downfall:JaxReward": {
+    "TEXT": [
+      "Trouvé de la D.O.P.E!"
+    ]
+  },
+  "downfall:RareCardReward": {
+    "TEXT": [
+      "Ajoutez une carte Rare à votre deck"
+    ]
+  },
+  "downfall:OctoChoiceAction": {
+    "TEXT": [
+      "Choisissez une option.",
+      "Vous auriez jamais dû voir ça. Oups"
+    ]
+  },
+  "downfall:BossCardReward": {
+    "TEXT": [
+      "Ajoutez une carte de Boss à votre deck",
+      "Choisissez une carte."
+    ]
+  },
+  "downfall:ColorfulCardReward": {
+    "TEXT": [
+      "Ajoutez une carte ",
+      " à votre deck",
+      "Choisissez une carte."
+    ]
+  },
+  "downfall:ColorfulUncommonCardReward": {
+    "TEXT": [
+      "Ajoutez une carte ",
+      " à votre deck",
+      "Choisissez une carte."
+    ]
+  },
+  "downfall:ColorfulRareCardReward": {
+    "TEXT": [
+      "Ajoutez une carte ",
+      " à votre deck",
+      "Choisissez une carte."
+    ]
+  },
+  "downfall:DiceRollPotionReward": {
+    "TEXT": [
+      "Ajoutez une carte Améliorée ",
+      " à votre deck",
+      "Choisissez une carte."
+    ]
+  },
+  "downfall:ColorfulPowersCardReward": {
+    "TEXT": [
+      "Ajoutez un Pouvoir Amélioré ",
+      " à votre deck",
+      "Choisissez une carte."
+    ]
+  },
+  "downfall:RunHistoryMonsterNames": {
+    "TEXT": [
+      "Têtes vivantes",
+      "Le Soldat de Fer",
+      "La Silencieuse",
+      "Le Défectueux",
+      "The Watcher",
+      "Marchand",
+      "L'Ermite"
+    ]
+  },
+  "downfall:WhaleHunter": {
+    "TEXT": [
+      "Chasseur de baleine",
+      "Vous avez fini le cycle."
+    ]
+    },
+  "downfall:Unfettered": {
+    "TEXT": [
+      "Sans entraves",
+      "Vous avez obtenu le Sceau Brisé."
+    ]
+  },
+  "downfall:SingleCardViewPopup": {
+    "TEXT": [
+      "Munitions"
+    ]
+  },
+  "downfall:MainMenuAd": {
+    "TEXT": [
+      "Vous en voulez plus?",
+      "De nombreux autres mods,",
+      "dont Downfall, sont disponibles pour ",
+      "le jeu Slay the Spire sur",
+      "le Steam Workshop.",
+      "Cliquez ici pour savoir comment !"
+    ]
+  },
+  "downfall:CantEscapeGauntlet": {
+    "TEXT": [
+      "Je suis dépassé."
+    ],
+    "Translator note": "This pops up when you try to escape the gauntlet fight, where there are more than 1 hero alive yet, so you are overwhelmed by number thus cant escape."
+  }
+}
