@@ -88,5 +88,12 @@
     "NAME": "ドゥームダガー",
     "DIALOG": [
     ]
+  },
+  "downfall:VoidCore": {
+    "MOVES": [
+    ],
+    "NAME": "虚無の核",
+    "DIALOG": [
+    ]
   }
 }

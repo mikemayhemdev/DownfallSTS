@@ -300,7 +300,7 @@
   },
   "bronze:HyperBeam": {
     "NAME": "ハイパービーム",
-    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL 5枚の *空虚 が山札の一番上に置かれる。"
+    "DESCRIPTION": "保留 NL 敵全体に !D! ダメージを与える。 NL !M! 枚の *空虚 が山札の一番上に置かれる。"
   },
   "bronze:InfiniteBeams": {
     "NAME": "無限のビーム",

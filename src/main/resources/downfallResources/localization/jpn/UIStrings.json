@@ -21,34 +21,20 @@
   },
   "downfall:BustKeyButton": {
     "TEXT": [
-      "Break Ruby",
-      "Break Sapphire",
-      "Break Emerald",
-      "(Free Action) Spend ",
-      "Choose up to 2 of 6 Common cards to gain.",
-      "Choose up to 2 of 4 Uncommon cards to gain.",
-      "Choose up to 1 of 3 Rare cards to gain.",
-      "Key shattered!",
-      "Requires ",
-      " Souls.",
-      "(Free Action) Destroy key to ",
-      " Souls: Destroy key to "
-    ]
-  },
-  "downfall:BustKeyButtonBackupForTranslators": {
-    "TEXT": [
       "ルビーの鍵を壊す",
       "サファイアの鍵を壊す",
       "エメラルドの鍵を壊す",
-      "(行動消費なし) 50 ソウルを消費: 鍵を破壊 ",
-      "ボス戦で筋力 1 を得る。",
-      "ボス戦で一時的な HP を 10 得る。",
-      "ボス戦で敏捷性 1 を得る。",
+      "(行動消費なし)",
+      "コモンカードを得る：",
+      "アンコモンカードを得る：",
+      "レアカードを得る：",
       "鍵は破壊された！",
-      "要求 ",
-      " ソウル",
+      " ",
+      " ソウルが必要",
       "(行動消費なし) 鍵を破壊する ",
-      "Souls: Destroy key to "
+      " ソウルを消費: 最大 ",
+      " 枚の中から選択",
+      " 以降の鍵破壊は強化される。"
     ]
   },
   "downfall:WheelSpinButton": {
@@ -81,7 +67,10 @@
       "スネッコが他のMODのカードを使用できなくする",
       "音楽の変更を許可しない (再起動が必要)",
       "Downfall キャラクター のスキンをすべて解除。",
-      "カード特性のテキストの代わりにアイコンを利用する。"
+      "カード特性のテキストの代わりにアイコンを利用する。",
+      "次に召喚で魔導書から引くカードをハイライトする。",
+      "StSオリジナルカードとレリックの調整は行わない (ゲームを再起動して下さい)",
+      "Downfallのレガシーボスを使用する (6.0以前の仕様にする)"
     ]
   },
   "downfall:EnergyPanelTip": {
