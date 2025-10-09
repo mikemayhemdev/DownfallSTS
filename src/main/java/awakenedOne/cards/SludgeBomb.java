@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
-import java.util.Objects;
-
 import static awakenedOne.AwakenedOneMod.*;
 
 public class SludgeBomb extends AbstractAwakenedCard {
@@ -38,7 +36,7 @@ public class SludgeBomb extends AbstractAwakenedCard {
 
     @Override
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
-        if (AbstractDungeon.player.exhaustPile.group.stream().noneMatch(card -> Objects.equals(card.cardID, VoidCard.ID))) {
+        if (AbstractDungeon.player.exhaustPile.group.stream().noneMatch(card -> ((card instanceof VoidCard) || (card instanceof IntoTheVoid)))) {
             cantUseMessage = cardStrings.EXTENDED_DESCRIPTION[0];
             return false;
         }

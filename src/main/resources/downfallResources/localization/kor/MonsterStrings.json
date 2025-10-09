@@ -1,4 +1,4 @@
-{
+﻿{
   "downfall:ChangingTotem": {
     "MOVES": [
       "Transformative Gaze"
@@ -86,6 +86,13 @@
     "MOVES": [
     ],
     "NAME": "파멸의 단검",
+    "DIALOG": [
+    ]
+  },
+  "downfall:VoidCore": {
+    "MOVES": [
+    ],
+    "NAME": "공허 핵심",
     "DIALOG": [
     ]
   }

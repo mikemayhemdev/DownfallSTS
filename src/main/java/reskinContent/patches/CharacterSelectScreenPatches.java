@@ -56,7 +56,8 @@ public class CharacterSelectScreenPatches {
             new HexaghostSkin(),
             new SneckoSkin(),
             new ChampSkin(),
-            new AutomatonSkin()
+            new AutomatonSkin(),
+            new AwakenedOneSkin()
     };
 
 

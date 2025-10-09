@@ -1,0 +1,66 @@
+[
+  {
+    "PROPER_NAME": "パワーポーション",
+    "NAMES": [
+      "Power Potion",
+      "Power_Potion",
+      "power_potion",
+      "powerpotion",
+      "パワーポーション"
+    ],
+    "DESCRIPTION": "#yポーション : ランダムな #yパワー カード #b3 枚の中から #b1 枚を選び、手札に加える。このターン、そのコストは #b0 。"
+  },
+  {
+    "PROPER_NAME": "召喚",
+    "NAMES": [
+      "conjure",
+      "conjured",
+      "awaken",
+      "召喚"
+    ],
+    "DESCRIPTION": "魔導書から次のカードを作り出し、手札に加える。"
+  },
+  {
+    "PROPER_NAME": "詠唱",
+    "NAMES": [
+      "chant",
+      "詠唱"
+    ],
+    "DESCRIPTION": "直前にプレイしたカードが #yパワー なら、 #y詠唱 を持つカードはより強力な効果を得る。一度効果を発動した場合戦闘終了後まで効果を得る。"
+  },
+  {
+    "PROPER_NAME": "呪詛",
+    "NAMES": [
+      "hex",
+      "hexxed",
+      "hexx",
+      "呪詛"
+    ],
+    "DESCRIPTION": "#y呪詛 を持つ敵は、スタックごとに次の攻撃から受けるダメージが #b20% 増加する。攻撃を受けた後、 #y呪詛 は全て解除される。"
+  },
+  {
+    "PROPER_NAME": "枯渇",
+    "NAMES": [
+      "drain",
+      "drained",
+      "枯渇"
+    ],
+    "DESCRIPTION": " [E] を失う効果全般を指す。 [E] が残っていなくても発動する。（カードをプレイするための [E] 消費は含まない）"
+  },
+  {
+    "PROPER_NAME": "マナバーン",
+    "NAMES": [
+      "manaburn",
+      "マナバーン"
+    ],
+    "DESCRIPTION": "[E] を失う度、例え [E] がなくても、 #yマナバーン に等しいHPを失う。（カードをプレイするための [E] 消費は含まない）"
+  },
+  {
+    "PROPER_NAME": "キュリオシティ",
+    "NAMES": [
+      "curiosity",
+      "キュリオシティ"
+    ],
+    "DESCRIPTION": "#yパワー カードをプレイする度、 #y筋力 #b1 を得る。"
+  }
+]

@@ -1,7 +1,5 @@
 package awakenedOne.powers;
 
-import awakenedOne.cards.tokens.spells.AphoticShield;
-import awakenedOne.ui.OrbitingSpells;
 import awakenedOne.util.Wiz;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.PlatedArmorPower;

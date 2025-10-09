@@ -1,8 +1,6 @@
 package awakenedOne.cards;
 
 import awakenedOne.cards.altDimension.RealityRift;
-import awakenedOne.powers.FourthDimensionPower;
-import charbosses.cards.purple.EnCarveReality;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -14,7 +12,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.ThoughtBubble;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.ui.OrbitingSpells.spellCards;
 import static awakenedOne.util.Wiz.*;
 
 public class FourthDimension extends AbstractAwakenedCard {
@@ -33,15 +30,9 @@ public class FourthDimension extends AbstractAwakenedCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         atb(new SelectCardsInHandAction(cardStrings.EXTENDED_DESCRIPTION[0], (cards) -> {
             for (AbstractCard c : cards) {
-                if (!(c instanceof FourthDimension) && !(c instanceof Nightmare)) {
-                    shuffleIn(c.makeStatEquivalentCopy(), magicNumber);
-                    //applyToSelfTop(new FourthDimensionPower(magicNumber, c.makeStatEquivalentCopy()));
-                    att(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
-                } else {
-                    shuffleIn(new RealityRift(), magicNumber);
-                    att(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
-                    AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, CardCrawlGame.languagePack.getUIString("awakened:FourthDimensionDupeAttempt").TEXT[0], true));
-                }
+                shuffleIn(c.makeStatEquivalentCopy(), magicNumber);
+                //applyToSelfTop(new FourthDimensionPower(magicNumber, c.makeStatEquivalentCopy()));
+                att(new ExhaustSpecificCardAction(c, AbstractDungeon.player.hand));
             }
         }));
 

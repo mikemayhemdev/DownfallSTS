@@ -1,9 +1,9 @@
 package awakenedOne.cards.altDimension;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.cards.AbstractAwakenedCard;
 import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
@@ -11,7 +11,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import hermit.patches.EnumPatch;
 import hermit.util.Wiz;
-import awakenedOne.cards.AbstractAwakenedCard;
 import sneckomod.SneckoMod;
 
 @NoCompendium
@@ -27,7 +26,7 @@ public class Minniegun extends AbstractAwakenedCard {
         tags.add(CardTags.HEALING);
 
         frameString = "eden";
-        this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
+        this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png", "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
 
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }

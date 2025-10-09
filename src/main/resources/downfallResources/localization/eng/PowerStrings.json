@@ -134,6 +134,12 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "Fleeting Faith",
     "DESCRIPTIONS": [
+      "Watcher gains #b1 #yMantra whenever you play a card. NL Whenever Watcher enters #yDivinity, she gains #b3 #yStrength. NL Watcher loses #b5 #yMantra at the start of her turn. NL Watcher does not exit #yDivinity at the end of her turn."
+    ]
+  },
+  "downfall:SimpleWatcherDivinityPower": {
+    "NAME": "Fleeting Faith",
+    "DESCRIPTIONS": [
       "Watcher gains #b1 #yMantra and #b1 #yIntangible after you play #b6 cards in a single turn.",
       " NL You have played #b",
       " cards this turn.",
@@ -395,7 +401,7 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "Wheel of Fate",
     "DESCRIPTIONS": [
-      "After you play an #yAttack, Hermit #yCycles his first card. Hermit's card cost can't change. Whenever Hermit draws #rNecronomicurse, he gains #b2 Strength.",
+      "After you play an #yAttack, Hermit #yCycles his first card. Hermit's card cost can't change. Whenever Hermit draws #rNecronomicurse, he gains #b2 #yStrength.",
       "After you play an #yAttack, Hermit #yCycles his first card."
     ]
   },

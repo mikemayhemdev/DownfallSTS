@@ -40,8 +40,8 @@ public class RealityRift extends AbstractAwakenedCard {
             public void update() {
                 isDone = true;
 
-                for (AbstractCard c:AbstractDungeon.player.hand.group){
-                    if (c instanceof Crusher){
+                for (AbstractCard c : AbstractDungeon.player.hand.group) {
+                    if (c instanceof Crusher) {
                         ((Crusher) c).enabled = true;
                         return;
                     }
@@ -58,6 +58,6 @@ public class RealityRift extends AbstractAwakenedCard {
 
     public void upp() {
         upgradeMagicNumber(2);
-       // upgradeSecondMagic(1);
+        // upgradeSecondMagic(1);
     }
 }

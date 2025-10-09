@@ -1,11 +1,13 @@
 package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.powers.RisingChantPower;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.MiracleEffect;
 
@@ -33,8 +35,11 @@ public class Recitation extends AbstractAwakenedCard {
             } else {
                 this.addToTop(new VFXAction(new MiracleEffect(Color.CYAN, Color.PURPLE, "ATTACK_MAGIC_SLOW_1"), 0.3F));
             }
-            dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
-            chant();
+
+            int times = checkChantEffectBonus();
+            for (int i = 0; i < times; i++) {
+                dmg(m, AbstractGameAction.AttackEffect.SLASH_DIAGONAL);
+            }
         }
 
     }
@@ -47,7 +52,6 @@ public class Recitation extends AbstractAwakenedCard {
     public void chant() {
         checkOnChant();
     }
-
 
     @Override
     public void upp() {

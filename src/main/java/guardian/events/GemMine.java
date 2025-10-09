@@ -98,20 +98,27 @@ public class GemMine extends AbstractImageEvent {
                     case 0:
                         if (AbstractDungeon.player.hasRelic(PickAxe.ID)) {
                             this.imageEventText.updateBodyText(DIALOG_MINEPICK);
-                            ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 1);
-                            AbstractCard card = gems.get(0);
-                            cardsAdded.add(card.cardID);
+                            //ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 1);
+                            //AbstractCard card = gems.get(0);
+                            //cardsAdded.add(card.cardID);
 
-                            AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
+                            //AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(card, (float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2)));
                             CardCrawlGame.sound.play("MONSTER_BOOK_STAB_0");
-
+                            AbstractDungeon.getCurrRoom().rewards.clear();
                             AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
 
                             AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
 
                             AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
 
-                            AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
+                            AbstractDungeon.combatRewardScreen.open();
+
+                            //Mayhem: No clue what this is trying to do but it can cause a crash if trying to remove something that doesn't exist.
+                            //I addded the if gate before this action to prevent the crash.
+                            if (!AbstractDungeon.combatRewardScreen.rewards.isEmpty()) {
+                                AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size() - 1);
+                            }
+
 
                             AbstractDungeon.player.getRelic(PickAxe.ID).onTrigger();
                             if (AbstractDungeon.player.getRelic(PickAxe.ID).counter == -2) {
@@ -136,7 +143,7 @@ public class GemMine extends AbstractImageEvent {
                         return;
                     case 1:
                         this.imageEventText.updateBodyText(DIALOG_MINE);
-
+                        AbstractDungeon.getCurrRoom().rewards.clear();
                       //  ArrayList<AbstractCard> gems = GuardianMod.getRewardGemCards(false, 1);
                      //   AbstractCard card = gems.get(0);
                       //  cardsAdded.add(card.cardID);
@@ -146,9 +153,7 @@ public class GemMine extends AbstractImageEvent {
                         AbstractDungeon.player.damage(new DamageInfo(null, this.damage));
 
                         AbstractDungeon.getCurrRoom().rewards.add(new GemReward());
-                        if (!AbstractDungeon.combatRewardScreen.rewards.isEmpty())
-                            AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
-
+                        AbstractDungeon.combatRewardScreen.open();
                         this.damageTaken += damage;
                         this.tookGems = true;
                         return;

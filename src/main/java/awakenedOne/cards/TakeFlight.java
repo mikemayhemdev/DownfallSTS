@@ -31,7 +31,11 @@ public class TakeFlight extends AbstractAwakenedCard {
 
     @Override
     public void chant() {
-        applyToSelf((new BlurPower(AbstractDungeon.player, 1)));
+
+        int times = checkChantEffectBonus();
+        for (int i = 0; i < times; i++) {
+            applyToSelf((new BlurPower(AbstractDungeon.player, 1)));
+        }
         checkOnChant();
     }
 

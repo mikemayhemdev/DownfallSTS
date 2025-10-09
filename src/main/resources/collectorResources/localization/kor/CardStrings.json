@@ -1,4 +1,4 @@
-{
+﻿{
   "collector:ActOfAggression": {
     "NAME": "공격의 장",
     "DESCRIPTION": "방어도를 !B! 얻습니다. NL 적 전체에게 취약을 !M! 부여합니다."
@@ -17,11 +17,11 @@
   },
   "collector:AshesAndDust": {
     "NAME": "먼지와 재",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 X 번 줍니다. NL X 가 5이상일 경우 2번 더 피해를 줍니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 만큼 X번 줍니다. NL X 가 5 이상일 경우 2번 더 피해를 줍니다."
   },
   "collector:BindingCall": {
     "NAME": "번제의 부름",
-    "DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL collector:횃불_머리에게 \" 무작위 적에게 collector:파멸을 !clm2! 부여합니다. \" 행동을 추가합니다."
+    "DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL collector:횃불 *머리에게 \"무작위 적에게 collector:파멸을 !clm2! 부여합니다.\" 행동을 추가합니다."
   },
   "collector:Billow": {
     "NAME": "연기",
@@ -29,7 +29,7 @@
   },
   "collector:Bellow": {
     "NAME": "고함",
-    "DESCRIPTION": "휘발성. NL 저번 턴에 남은 방어도 만큼 collector:파멸을 부여합니다. NL 소멸.",
+    "DESCRIPTION": "휘발성. NL 저번 턴에 남은 방어도만큼 collector:파멸을 부여합니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       " NL ( collector:파멸을 !M! 부여합니다.)"
     ]
@@ -49,14 +49,14 @@
   "collector:BrainDrain": {
     "NAME": "두뇌 흡수",
     "DESCRIPTION": "적이 체력을 !M! 잃습니다. NL 적의 collector:수집품 카드를 얻습니다. NL 소멸.",
-    "UPGRADE_DESCRIPTION": "적이 체력을 !M! 잃습니다. NL 적의 collector:수집품 카드를 얻고 강화합니다. NL 소멸."
+    "UPGRADE_DESCRIPTION": "적이 체력을 !M! 잃습니다. NL 적의 강화된 collector:수집품 카드를 얻습니다. NL 소멸."
   },
   "collector:BramblesparKindling": {
     "NAME": "가시나무서 쏘시개",
     "DESCRIPTION": "사용불가. NL 소멸되면 *불타는 *타격을 얻습니다.",
     "UPGRADE_DESCRIPTION": "사용불가. NL 소멸되면 *불타는 *타격+을 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      "불쏘시개에는 불을 부쳐야 하지 않겠나."
+      "불쏘시개에는 불을 붙여야 하지 않겠나."
     ]
   },
   "collector:BurningStrike": {
@@ -82,7 +82,7 @@
   },
   "collector:DarkApotheosis": {
     "NAME": "어둠의 정점",
-    "DESCRIPTION": "모든 수집품 카드를 이번 전투 동안 강화합니다. NL 소멸."
+    "DESCRIPTION": "모든 *수집품 카드를 이번 전투 동안 강화합니다. NL 소멸."
   },
   "collector:DarkLordForm": {
     "NAME": "어둠 군주의 형상",
@@ -98,7 +98,7 @@
     "DESCRIPTION": "사용불가. NL 소멸되면 다음 턴에 collector:비축을 !M! 얻습니다.",
     "UPGRADE_DESCRIPTION": "사용불가. NL 보존. NL 소멸되면 다음 턴에 collector:비축을 !M! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      "불쏘시개에는 불을 부쳐야 하지 않겠나."
+      "불쏘시개에는 불을 붙여야 하지 않겠나."
     ]
   },
   "collector:Defend": {
@@ -115,7 +115,7 @@
   },
   "collector:DragonsTrove": {
     "NAME": "용의 비보",
-    "DESCRIPTION": "collector:장작. NL 수집품 카드를 2장 뽑습니다. NL collector:비축을 !M! 얻습니다. NL 소멸."
+    "DESCRIPTION": "collector:장작. NL *수집품 카드를 2장 뽑습니다. NL collector:비축을 !M! 얻습니다. NL 소멸."
   },
   "collector:Ember": {
     "NAME": "불씨",
@@ -134,7 +134,7 @@
   },
   "collector:FeelMyPain": {
     "NAME": "나의 고통을 느껴라",
-    "DESCRIPTION": "카드를 소멸시킬 때마다 무작위 적들의 체력을 !M! 잃게합니다."
+    "DESCRIPTION": "카드가 소멸될 때마다 무작위 적들의 체력을 !M! 잃게합니다."
   },
   "collector:FiendFire": {
     "NAME": "지옥불",
@@ -168,7 +168,7 @@
   "collector:FuelTheFire": {
     "NAME": "연료 공급",
     "DESCRIPTION": "collector:장작. NL 다음 턴에 collector:비축을 !M! 얻습니다.",
-    "UPGRADE_DESCRIPTION": "collector:장작. NL 다음 턴에 collector:비축을 !M! 얻습니다. 카드를 1장 뽑습니다."
+    "UPGRADE_DESCRIPTION": "collector:장작. NL 다음 턴에 collector:비축을 !M! 얻고 카드를 1장 뽑습니다."
   },
   "collector:Goodbye": {
     "NAME": "잘 가거라",
@@ -190,9 +190,9 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "머무는 녹색 불꽃",
-    "DESCRIPTION": "collector:수집품 카드 3장 중 1장을 선택해 얻습니다. NL *수집품 카드 더미에 그 카드를 !M! 장 복사해 섞어 넣습니다.",
+    "DESCRIPTION": "collector:수집품 카드 3장 중 1장을 선택해 얻습니다. *수집품 카드 더미에 그 카드를 !M! 장 복사해 섞어 넣습니다.",
     "EXTENDED_DESCRIPTION": [
-      "가져올 카드를 선택하십시오."
+      "얻을 카드를 선택하십시오."
     ]
   },
   "collector:Heatwave": {
@@ -201,11 +201,11 @@
   },
   "collector:Hoard": {
     "NAME": "저축",
-    "DESCRIPTION": "collector:장작. NL 카드를 !M! 장 뽑습니다. NL 이번 턴 동안 그 카드에 보존 효과가 추가됩니다."
+    "DESCRIPTION": "collector:장작. NL 카드를 !M! 장 뽑습니다. NL 이번 턴 동안 그 카드를 보존합니다."
   },
   "collector:HoardersStrike": {
     "NAME": "저축가의 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 수집품 카드 더미 맨 위에 있는 카드를 사용합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL *수집품 카드 더미 맨 위에 있는 카드를 사용합니다."
   },
   "collector:Hurting": {
     "NAME": "아픔",
@@ -214,7 +214,7 @@
   },
   "collector:IllTakeThat": {
     "NAME": "거둬들이마",
-    "DESCRIPTION": "적의 방어도를 !M! 까지 gremlin:강탈합니다. NL 피해를 !D! 줍니다."
+    "DESCRIPTION": "적의 방어도를 최대 !M! gremlin:강탈합니다. NL 피해를 !D! 줍니다."
   },
   "collector:InevitableDemise": {
     "NAME": "필연적 종말",
@@ -237,7 +237,7 @@
     "DESCRIPTION": "사용불가. NL 소멸되면 방어도를 !B! 얻습니다.",
     "UPGRADE_DESCRIPTION": "사용불가. 보존. NL 소멸되면 방어도를 !B! 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      "불쏘시개에는 불을 부쳐야 하지 않겠나."
+      "불쏘시개에는 불을 붙여야 하지 않겠나."
     ]
   },
   "collector:ItMattersNot": {
@@ -267,8 +267,8 @@
   },
   "collector:MiniCurse": {
     "NAME": "옅은 저주",
-    "DESCRIPTION": "collector:장작. NL 취약 과 약화를 1 부여합니다.",
-    "UPGRADE_DESCRIPTION": "collector:장작. NL 적 전체에게 취약 과 약화를 1 부여합니다."
+    "DESCRIPTION": "collector:장작. NL 취약과 약화를 1 부여합니다.",
+    "UPGRADE_DESCRIPTION": "collector:장작. NL 적 전체에게 취약과 약화를 1 부여합니다."
   },
   "collector:Misdirect": {
     "NAME": "방향 상실",
@@ -282,17 +282,17 @@
     "NAME": "참나무널 쏘시개",
     "DESCRIPTION": "사용불가. NL 소멸되면 카드를 !M! 장 뽑습니다.",
     "EXTENDED_DESCRIPTION": [
-      "불쏘시개에는 불을 부쳐야 하지 않겠나."
+      "불쏘시개에는 불을 붙여야 하지 않겠나."
     ]
   },
   "collector:Omen": {
     "NAME": "징조",
-    "DESCRIPTION": "수집품 카드를 사용할 때마다 힘을 1 얻습니다.",
-    "UPGRADE_DESCRIPTION": "선천성. NL 수집품 카드를 사용할 때마다 힘을 1 얻습니다."
+    "DESCRIPTION": "*수집품 카드를 사용할 때마다 힘을 1 얻습니다.",
+    "UPGRADE_DESCRIPTION": "선천성. NL *수집품 카드를 사용할 때마다 힘을 1 얻습니다."
   },
   "collector:ProtectingCall": {
     "NAME": "수호의 부름",
-    "DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL collector:횃불_머리에게 \" 방어도를 !clm2! 얻습니다. \" 행동을 추가합니다."
+    "DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL collector:횃불 *머리에게 \" 방어도를 !clm2! 얻습니다. \" 행동을 추가합니다."
   },
   "collector:Pyromancy": {
     "NAME": "불점",
@@ -301,11 +301,11 @@
   },
   "collector:RagingCall": {
     "NAME": "거센 부름",
-    "DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL collector:횃불_머리에게 \" 적 전체에게 피해를 !clm2! 줍니다.\" 행동을 추가합니다."
+    "DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL collector:횃불 *머리에게 \" 적 전체에게 피해를 !clm2! 줍니다. \" 행동을 추가합니다."
   },
   "collector:ReceiveTribute": {
     "NAME": "공물 징수",
-    "DESCRIPTION": "collector:장작. NL expansioncontent:보스 카드 !M! 장 중 1장을 선택해 얻습니다. 그 카드에 보존효과를 추가합니다. NL 소멸.",
+    "DESCRIPTION": "collector:장작. NL expansioncontent:보스 카드 !M! 장 중 1장을 선택해 얻습니다. 그 카드에 보존 효과가 추가됩니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "얻을 카드를 선택하십시오."
     ]
@@ -316,14 +316,14 @@
   },
   "collector:RotwoodKindling": {
     "NAME": "부목 쏘시개",
-    "DESCRIPTION": "사용불가. NL 소멸되면 적 전체에게 취약을 !M! 부여합니다.",
+    "DESCRIPTION": "사용불가. NL 소멸되면 적 전체에게 취약을 !M! 부여하고 collector:파멸을 !clm2! 부여합니다.",
     "EXTENDED_DESCRIPTION": [
-      "불쏘시개에는 불을 부쳐야 하지 않겠나."
+      "불쏘시개에는 불을 붙여야 하지 않겠나."
     ]
   },
   "collector:SapStrength": {
     "NAME": "죽음의 낙인",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴에 적이 체력을 두 배로 잃습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 다음 턴에 적이 받은 막히지 않은 피해량의 두 배만큼 체력을 잃습니다."
   },
   "collector:ScorchingRay": {
     "NAME": "맹렬한 광선",
@@ -331,7 +331,7 @@
   },
   "collector:SeedOfDoubt": {
     "NAME": "의심의 씨앗",
-    "DESCRIPTION": "collector:파멸을 !M! 부여합니다. NL 이 카드가 손에 있다면 카드가 소멸할 때마다 이 카드의 *파멸이 !clm2! 증가합니다."
+    "DESCRIPTION": "collector:파멸을 !M! 부여합니다. NL 이 카드가 손에 있다면 카드가 소멸될 때마다 이 카드의 *파멸이 !clm2! 증가합니다."
   },
   "collector:ShadowDaggers": {
     "NAME": "그림자 단검",
@@ -366,7 +366,7 @@
   },
   "collector:StashAway": {
     "NAME": "은닉",
-    "DESCRIPTION": "방어도를 !B! 만큼 X 번 얻습니다. NL 다음 턴에 collector:비축을 X 얻습니다. NL 소멸."
+    "DESCRIPTION": "방어도를 !B! 만큼 X번 얻습니다. NL 다음 턴에 collector:비축을 X 얻습니다. NL 소멸."
   },
   "collector:Strike": {
     "NAME": "타격",
@@ -384,12 +384,12 @@
     "NAME": "햇살꽃 쏘시개",
     "DESCRIPTION": "사용불가. NL 소멸되면 힘을 !M! 얻고 *불씨를 2장 얻습니다.",
     "EXTENDED_DESCRIPTION": [
-      "불쏘시개에는 불을 부쳐야 하지 않겠나."
+      "불쏘시개에는 불을 붙여야 하지 않겠나."
     ]
   },
   "collector:ThornWhip": {
     "NAME": "가시 채찍",
-    "DESCRIPTION": "피해를 !D! 줍니다. 적 전체에게 hermit:타박상을 !M! 부여합니다. NL 단도를 1장 얻습니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 주고 hermit:타박상을 !M! 부여합니다. NL 단도를 얻습니다."
   },
   "collector:Torchbearer": {
     "NAME": "횃불 봉송자",
@@ -398,7 +398,7 @@
   },
   "collector:WhirlingFlame": {
     "NAME": "회오리 불",
-    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 버린 카드 더미 카드를 1장 뽑을 카드 더미 맨 위에 놓습니다."
+    "DESCRIPTION": "적 전체에게 피해를 !D! 줍니다. NL 버린 카드 더미에서 카드를 1장 선택해 뽑을 카드 더미 맨 위에 놓습니다."
   },
   "collector:VoidArmor": {
     "NAME": "공허 갑옷",
@@ -406,7 +406,7 @@
   },
   "collector:Wildfire": {
     "NAME": "들불",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 적이 보유한 효과의 종류 하나당 피해를 !D! 줍니다."
+    "DESCRIPTION": "적이 보유한 효과의 종류 하나당 피해를 !D! 줍니다."
   },
   "collector:YouAreMine": {
     "NAME": "넌 나의 것이다!",
@@ -471,22 +471,22 @@
   },
   "collector:DarklingsCard": {
     "NAME": "어두미",
-    "DESCRIPTION": "collector:장작. NL 피해를 !D! 줍니다. NL 수집품 카드를 expansioncontent:발굴합니다.",
+    "DESCRIPTION": "collector:장작. NL 피해를 !D! 줍니다. *수집품 카드를 expansioncontent:발굴합니다.",
     "EXTENDED_DESCRIPTION": [
       "복사할 카드를 선택하십시오."
     ]
   },
   "collector:DesignerInSpireCard": {
     "NAME": "탑-클래스 디자이너",
-    "DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL collector:횃불_머리에게 \" 카드를 1장 뽑습니다. \" 행동을 추가합니다."
+    "DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL collector:횃불 *머리에게 \" 카드를 1장 뽑습니다. \" 행동을 추가합니다."
   },
   "collector:FinalBossCard": {
     "NAME": "마지막 게임",
-    "DESCRIPTION": "적의 *천하무적을 제거하고 적 전체를 기절 시킵니다. NL 소멸."
+    "DESCRIPTION": "적의 *천하무적을 제거하고 hermit:기절시킵니다. NL 소멸."
   },
   "collector:FaceTraderCard": {
     "NAME": "얼굴 상인",
-    "DESCRIPTION": "무작위 색상 카드를 !M! 장 얻습니다. NL 그 카드에  휘발성 효과가 추가됩니다."
+    "DESCRIPTION": "무작위 색상 카드를 !M! 장 얻습니다. NL 그 카드에 휘발성 효과가 추가됩니다."
   },
   "collector:FatGremlinCard": {
     "NAME": "뚱뚱한 그렘린",
@@ -510,7 +510,7 @@
   },
   "collector:GremlinLeaderCard": {
     "NAME": "그렘린 리더",
-    "DESCRIPTION": "수집 목록 중 무작위 그렘린 카드를 !M! 장 얻습니다."
+    "DESCRIPTION": "*수집품 목록 중 무작위 그렘린 카드를 !M! 장 얻습니다."
   },
   "collector:GremlinNobCard": {
     "NAME": "귀족 그렘린",
@@ -550,11 +550,11 @@
   },
   "collector:MerchantCard": {
     "NAME": "상인",
-    "DESCRIPTION": "무색 카드를 !M! 장 얻습니다. NL 이번 턴에 그 카드의 비용이 0이 됩니다."
+    "DESCRIPTION": "무작위 무색 카드를 !M! 장 얻습니다. NL 이번 턴에 그 카드들의 비용은 0이 됩니다."
   },
   "collector:MushroomCard": {
     "NAME": "버섯",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화 또는 취약을 !M! 부여합니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 무작위 적에게 약화 또는 취약을 !M! 부여합니다."
   },
   "collector:MysticCard": {
     "NAME": "신비주의자",
@@ -566,7 +566,7 @@
   },
   "collector:NlothCard": {
     "NAME": "느로스",
-    "DESCRIPTION": "collector:장작. NL 무작위 희귀 카드를 1장 얻습니다. NL 그 카드의 비용을 1 감소시킵니다.",
+    "DESCRIPTION": "collector:장작. NL 무작위 희귀 카드를 1장 얻습니다. NL 그 카드의 비용을 1 낮춥니다.",
     "UPGRADE_DESCRIPTION": "collector:장작. NL 무작위 희귀 카드를 1장 얻습니다. NL 그 카드의 비용은 0이 됩니다."
   },
   "collector:OrbWalkerCard": {
@@ -587,7 +587,7 @@
   },
   "collector:ReptomancerCard": {
     "NAME": "파충류 주술사",
-    "DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL collector:횃불_머리에게 \" 무작위 적에게 중독을 !clm2! 부여합니다. \" 행동을 추가합니다."
+    "DESCRIPTION": "expansioncontent:임시 *체력을 !M! 얻습니다. NL collector:횃불 *머리에게 \"무작위 적에게 중독을 !clm2! 부여합니다.\" 행동을 추가합니다."
   },
   "collector:RepulsorCard": {
     "NAME": "현혹기",
@@ -599,15 +599,15 @@
   },
   "collector:ScrapOozeCard": {
     "NAME": "날붙이 수액",
-    "DESCRIPTION": "collector:장작. NL 체력을 3 잃습니다. NL 무작위 공격 카드를 !M! 장 얻습니다. NL 이번 턴에 그 카드의 비용이 0이 됩니다."
+    "DESCRIPTION": "collector:장작. NL 체력을 3 잃습니다. NL 무작위 공격 카드를 !M! 장 얻습니다. NL 이번 턴에 그 카드들의 비용은 0이 됩니다."
   },
   "collector:SentryCard": {
     "NAME": "보초기",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화를 !M! 부여합니다. NL 소멸된 카드 더미에 *보초기가 있다면 피해를 !D! 줍니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 약화를 !M! 부여합니다. NL 소멸된 카드 더미에 있는 *보초기 한 장당 반복합니다."
   },
   "collector:ShelledParasiteCard": {
     "NAME": "갑각 기생충",
-    "DESCRIPTION": "expansioncontent:판금_갑옷을 !M! 얻습니다."
+    "DESCRIPTION": "expansioncontent:판금 *갑옷을 !M! 얻습니다."
   },
   "collector:ShieldGremlinCard": {
     "NAME": "방패 그렘린",
@@ -639,7 +639,7 @@
   },
   "collector:SpireGrowthCard": {
     "NAME": "첨탑 암종",
-    "DESCRIPTION": "적 턴이 종료할 때마다 피해를 !M! 줍니다."
+    "DESCRIPTION": "대상의 턴이 종료할 때마다 피해를 !M! 줍니다."
   },
   "collector:SpireShieldCard": {
     "NAME": "첨탑의 방패",
@@ -663,7 +663,7 @@
   },
   "collector:TorchHeadCard": {
     "NAME": "횃불 머리",
-    "DESCRIPTION": "무작위 collector:횃불_머리 *부름을 1장 얻습니다. NL 이번 턴에 그 카드의 비용은 0이 됩니다."
+    "DESCRIPTION": "무작위 collector:횃불 *머리 *부름을 1장 얻습니다. NL 이번 턴에 그 카드의 비용은 0이 됩니다."
   },
   "collector:TransientCard": {
     "NAME": "과도자",
@@ -683,11 +683,11 @@
   },
   "collector:DefaultCollectibleCard": {
     "NAME": "영혼 없는 허물",
-    "DESCRIPTION": "이 적은 아직 고유한 수집품 카드가 없습니다! NL 힘 과 민첩을 !M! 얻습니다."
+    "DESCRIPTION": "이 적은 아직 고유한 수집품 카드가 없습니다! NL 힘과 민첩을 !M! 얻습니다."
   },
   "collector:ShootingStar": {
     "NAME": "유성",
-    "DESCRIPTION": "매 턴 처음 collector:장작으로 공격 카드 소멸 시 그 카드를 복사해 얻습니다. NL 사용하기 전까지 그 카드의 비용은 0이 됩니다."
+    "DESCRIPTION": "매 턴 처음 collector:장작으로 공격 카드 소멸 시 그 카드를 복사해 얻습니다. NL 사용하기 전까지 그 카드의 비용이 0이 됩니다."
   },
   "collector:CollectorCard": {
     "NAME": "우로보로스",

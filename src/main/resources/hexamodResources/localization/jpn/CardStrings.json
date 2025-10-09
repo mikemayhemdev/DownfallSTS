@@ -157,8 +157,8 @@
   },
   "hexamod:DevilsDance": {
     "NAME": "デビルズダンス",
-    "DESCRIPTION": " *後退 を行う度、 カードを1枚引く。",
-    "UPGRADE_DESCRIPTION": "天賦 NL *後退 を行う度、 [E] を得てカードを1枚引く。"
+    "DESCRIPTION": "各ターンで初めて hexamod:前進 または hexamod:後退 を行った時、 カードを1枚引く。",
+    "UPGRADE_DESCRIPTION": "各ターンで !M! 回まで hexamod:前進 または hexamod:後退 を行った時、 カードを1枚引く。"
   },
   "hexamod:HereAndNow": {
     "NAME": "今ここで",
@@ -280,7 +280,7 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "劫火の雨",
-    "DESCRIPTION": "!D! ダメージと 脱力 !M! を X 回与える。",
+    "DESCRIPTION": "!D! ダメージを与え、 !M! を X 回与える。",
     "UPGRADE_DESCRIPTION": "!D! ダメージと 脱力 !M! を X+1 回与える。"
   },
   "hexamod:NightmareVision": {
@@ -449,11 +449,8 @@
   },
   "hexamod:EtherStep": {
     "NAME": "エーテルステップ",
-    "DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL 手札を1枚 廃棄 する。 NL カードを !M! 枚引く。 NL ",
-    "UPGRADE_DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL 手札を1枚 廃棄 する。 NL カードを !M! 枚引く。 NL ",
-    "EXTENDED_DESCRIPTION": [
-      "!D! ダメージを与える。"
-    ]
+    "DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL !D! [#e087a4]ダメージを与える。[]  NL 手札を1枚 廃棄 する。 NL カードを !M! 枚引く。",
+    "UPGRADE_DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL !D! [#e087a4]ダメージを与える。[]  NL 手札を1枚 廃棄 する。 NL カードを !M! 枚引く。"
   },
   "hexamod:OpposingAction": {
     "NAME": "反抗",
@@ -535,10 +532,10 @@
     "DESCRIPTION": "At the start of your turn, gain [E] . NL At the end of your turn, hexamod:Extinguish the current Ghostflame."
   },
   "hexamod:GhostOfSpirePast": {
-    "NAME": "Devil's Dance",
-    "DESCRIPTION": "Whenever you hexamod:Retract, draw a card.",
-    "UPGRADE_DESCRIPTION": "Innate. NL The first time you *Retract each turn, gain [E] and draw 1 card. NL hexamod:Retract."
-    },
+    "NAME": "デビルズダンス",
+    "DESCRIPTION": "各ターンで初めて hexamod:前進 または hexamod:後退 を行った時、 カードを1枚引く。",
+    "UPGRADE_DESCRIPTION": "各ターンで !M! 回まで hexamod:前進 または hexamod:後退 を行った時、 カードを1枚引く。"
+  },
     "hexamod:GhostOfSpireFuture": {
       "NAME": "Into Shadow",
       "DESCRIPTION": "Ethereal. NL Whenever you hexamod:Retract, choose a card in your hand to play and Exhaust.",

@@ -1,14 +1,12 @@
 package awakenedOne.cards.altDimension;
 
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.cards.AbstractAwakenedCard;
 import awakenedOne.powers.DaggerstormPower;
 import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
 import basemod.patches.com.megacrit.cardcrawl.screens.compendium.CardLibraryScreen.NoCompendium;
-import com.megacrit.cardcrawl.cards.tempCards.Shiv;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
-import awakenedOne.cards.AbstractAwakenedCard;
 import sneckomod.SneckoMod;
 
 import static awakenedOne.util.Wiz.applyToSelf;
@@ -25,7 +23,7 @@ public class Daggerstorm extends AbstractAwakenedCard {
         tags.add(CardTags.HEALING);
 
         frameString = "roguebook";
-        this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png",       "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
+        this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png", "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
 
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }

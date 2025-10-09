@@ -1,12 +1,10 @@
 package awakenedOne.cards;
 
 import awakenedOne.actions.ConjureAction;
-import awakenedOne.powers.PrimacyPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 import static awakenedOne.AwakenedOneMod.*;
-import static awakenedOne.util.Wiz.applyToSelf;
 import static awakenedOne.util.Wiz.atb;
 
 public class Inscribe extends AbstractAwakenedCard {
@@ -14,18 +12,17 @@ public class Inscribe extends AbstractAwakenedCard {
     // intellij stuff power, self, uncommon, , , , , 3, 1
 
     public Inscribe() {
-        super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 1;
+        super(ID, 0, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
+        baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Inscribe.class.getSimpleName() + ".png"));
         tags.add(DELVE);
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
-        atb(new ConjureAction(true, 1, magicNumber));
+        if (upgraded) atb(new ConjureAction(false));
+        atb(new ConjureAction(true, magicNumber, 0));
     }
 
     public void upp() {
-        upgradeBaseCost(0);
     }
 }

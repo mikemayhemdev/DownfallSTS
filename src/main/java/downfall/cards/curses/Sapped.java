@@ -1,3 +1,4 @@
+/*
 package downfall.cards.curses;
 
 import basemod.patches.com.megacrit.cardcrawl.dungeons.AbstractDungeon.NoPools;
@@ -42,3 +43,5 @@ public class Sapped extends AbstractCollectorCard {
     }
     
 }
+
+ */

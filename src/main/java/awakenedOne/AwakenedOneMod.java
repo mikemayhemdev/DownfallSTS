@@ -106,6 +106,11 @@ public class AwakenedOneMod implements
     public static boolean awakenedthiscombat = false;
     public static int powersThisCombat = 0;
     public static int spellsThisTurn = 0;
+
+    public static boolean CultistTalked = false;
+    public static boolean ChosenTalked = false;
+    public static boolean CultistPerish = false;
+
     private static String modID = "awakened";
 
     public AwakenedOneMod() {
@@ -335,6 +340,10 @@ public class AwakenedOneMod implements
 
     @Override
     public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        CultistTalked = false;
+        CultistPerish = false;
+        ChosenTalked = false;
+
         awakenedthiscombat = false;
         powersThisCombat = 0;
         spellsThisTurn = 0;
@@ -411,12 +420,12 @@ public class AwakenedOneMod implements
 
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
-        if (abstractCard.type == AbstractCard.CardType.POWER){
+        if (abstractCard.type == AbstractCard.CardType.POWER) {
 
             powersThisCombat++;
             awaken();
         }
-        if (abstractCard instanceof AbstractSpellCard && !abstractCard.purgeOnUse){
+        if (abstractCard instanceof AbstractSpellCard && !abstractCard.purgeOnUse) {
 
             SlimeboundMod.logger.info("incrementing Spells this turn from " + spellsThisTurn + " to " + (spellsThisTurn + 1) + ". card: " + abstractCard.name);
             spellsThisTurn++;

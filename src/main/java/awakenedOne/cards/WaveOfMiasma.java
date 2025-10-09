@@ -3,7 +3,6 @@ package awakenedOne.cards;
 import awakenedOne.powers.ManaburnPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.WeakPower;
 import hermit.util.Wiz;
 
 import static awakenedOne.AwakenedOneMod.*;
@@ -31,7 +30,7 @@ public class WaveOfMiasma extends AbstractAwakenedCard {
 
     public void upp() {
         //upgradeMagicNumber(2);
-        upgradeBlock(4);
-        upgradeSecondMagic(3);
+        upgradeBlock(3);
+        upgradeSecondMagic(2);
     }
 }

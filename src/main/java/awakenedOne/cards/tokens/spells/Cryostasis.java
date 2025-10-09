@@ -2,7 +2,6 @@ package awakenedOne.cards.tokens.spells;
 
 import awakenedOne.powers.AphoticFountPower;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.FrostOrbActivateEffect;
@@ -25,9 +24,9 @@ public class Cryostasis extends AbstractSpellCard {
         AbstractDungeon.effectsQueue.add(new FrostOrbActivateEffect(p.hb.cX, p.hb.cY));
         blck();
 
-        if (AbstractDungeon.player.hasPower(AphoticFountPower.POWER_ID)){
+        if (AbstractDungeon.player.hasPower(AphoticFountPower.POWER_ID)) {
             AbstractDungeon.player.getPower(AphoticFountPower.POWER_ID).onSpecificTrigger();
-            }
+        }
     }
 
     public void upp() {

@@ -25,7 +25,7 @@ public class Hymn extends AbstractAwakenedCard {
         super(ID, 0, CardType.SKILL, CardRarity.BASIC, CardTarget.SELF);
         loadJokeCardImage(this, makeBetaCardPath(Hymn.class.getSimpleName() + ".png"));
         baseBlock = 3;
-       // this.cardsToPreview = new Ceremony();
+        this.cardsToPreview = new Ceremony();
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -36,7 +36,7 @@ public class Hymn extends AbstractAwakenedCard {
             this.addToTop(new VFXAction(new MiracleEffect(Color.CYAN, Color.PURPLE, "ATTACK_MAGIC_SLOW_1"), 0.3F));
         }
         AbstractCard c = new Ceremony();
-       // if (upgraded) c.upgrade();
+        // if (upgraded) c.upgrade();
         Wiz.atb(new MakeTempCardInHandAction(c, 1));
         this.addToBot(new ApplyPowerAction(p, p, new Drained(p, p, 1), 1));
     }

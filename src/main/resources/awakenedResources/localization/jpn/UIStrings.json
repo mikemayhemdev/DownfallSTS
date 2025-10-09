@@ -1,0 +1,46 @@
+{
+  "awakened:SpellDescriptor": {
+    "TEXT": [
+      "スペル"
+    ]
+  },
+  "awakened:ConjureMod": {
+    "TEXT": [
+      " NL awakened:召喚"
+    ]
+  },
+  "awakened:SpellMod": {
+    "TEXT": [
+      "[#12FAF0]スペル NL"
+    ]
+  },
+  "awakened:DrainingMod": {
+    "TEXT": [
+      " NL 次のターン、 [E] を失う。"
+    ]
+  },
+  "awakened:highlightChant": {
+    "TEXT": [
+      "awakened:詠唱 ",
+      "[awakenedIcon] [#12FAF0]詠唱 "
+    ]
+  },
+  "awakened:Spellbook": {
+    "TEXT": [
+      "魔導書",
+      "覚醒",
+      "#b7 枚のパワーをプレイすると #y覚醒 する！ NL NL #y覚醒 中、 #y召喚 したスペルカードは #yアップグレード され、その効果が大幅に強化される。",
+      "#b7 枚のパワーをプレイすると #y覚醒 する！ NL NL #y覚醒 中、 #y召喚 したスペルカードは #yアップグレード され、その効果が大幅に強化される。"
+    ]
+  },
+  "awakened:FullSpellbook": {
+    "TEXT": [
+      "魔導書が一杯だ！"
+    ]
+  },
+  "awakened:FourthDimensionDupeAttempt": {
+    "TEXT": [
+      "@そんな事をしたら時空連続体が崩壊してしまう！！@"
+    ]
+  }
+}

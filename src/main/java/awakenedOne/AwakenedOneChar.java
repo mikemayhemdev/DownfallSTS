@@ -80,9 +80,9 @@ public class AwakenedOneChar extends CustomPlayer {
     public AwakenedOneChar(String name, PlayerClass setClass) {
         super(name, setClass, orbTextures, "awakenedResources/images/mainChar/orb/vfx.png", null, (String) null);
         initializeClass(null,
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER1,
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].SHOULDER2,
-                CharacterSelectScreenPatches.characters[5].skins[CharacterSelectScreenPatches.characters[5].reskinCount].CORPSE,
+                CharacterSelectScreenPatches.characters[6].skins[CharacterSelectScreenPatches.characters[6].reskinCount].SHOULDER1,
+                CharacterSelectScreenPatches.characters[6].skins[CharacterSelectScreenPatches.characters[6].reskinCount].SHOULDER2,
+                CharacterSelectScreenPatches.characters[6].skins[CharacterSelectScreenPatches.characters[6].reskinCount].CORPSE,
                 getLoadout(), 0.0F, -30.0F, 270.0F, 310.0F, new EnergyManager(3));
 
         this.reloadAnimation();
@@ -262,9 +262,9 @@ public class AwakenedOneChar extends CustomPlayer {
     @Override
     public void doCharSelectScreenSelectEffect() {
         if (MathUtils.randomBoolean()) {
-            CardCrawlGame.sound.play("VO_AWAKENEDONE_2", 0.3F);
+            CardCrawlGame.sound.play("awakened:CHANT");
         } else {
-            CardCrawlGame.sound.play("VO_AWAKENEDONE_1", 0.3F);
+            CardCrawlGame.sound.play("awakened:CHANT");
         }
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.LOW, ScreenShake.ShakeDur.SHORT, false);
     }
@@ -272,9 +272,9 @@ public class AwakenedOneChar extends CustomPlayer {
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
         if (MathUtils.randomBoolean()) {
-            return "VO_CULTIST_1A";
+            return "awakened:CHANT";
         } else {
-            return "VO_CULTIST_1B";
+            return "awakened:CHANT";
         }
     }
 

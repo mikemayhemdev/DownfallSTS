@@ -42,13 +42,17 @@ public class Nihil extends AbstractAwakenedCard {
             } else {
                 this.addToBot(new VFXAction(m, new OfferingEnemyEffect(m), 0.5F));
             }
-            this.addToBot(new TriggerMarksAction(this));
             chant();
         }
     }
 
     @Override
     public void chant() {
+
+        int times = checkChantEffectBonus();
+        for (int i = 0; i < times; i++) {
+            this.addToBot(new TriggerMarksAction(this));
+        }
         checkOnChant();
     }
 

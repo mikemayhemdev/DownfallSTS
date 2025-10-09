@@ -1,4 +1,4 @@
-{
+﻿{
   "awakened:IntensifyPower": {
     "NAME": "격화",
     "DESCRIPTIONS": [
@@ -10,143 +10,154 @@
   "awakened:IntensifyDebuffPower": {
     "NAME": "탈진",
     "DESCRIPTIONS": [
-      "이번 턴 동안 #y영창할 수 없습니다.",
+      "이번 턴 동안 #y시전할 수 없습니다.",
       "다음 #b",
-      " 턴 동안 #y영창할 수 없습니다."
+      " 턴 동안 #y시전할 수 없습니다."
     ]
   },
   "awakened:RisingChantPower": {
     "NAME": "고조되는 합창",
     "DESCRIPTIONS": [
-      "활성화된 #y암송 카드를 사용할 때마다, #y힘을 #b",
-      " 얻습니다."
+      "다음 #b",
+      " 번 활성화된 #y암송 카드를 사용하면 사용하면 두 번 활성화합니다. NL 이번 턴에 #b",
+      " 번 가능합니다."
     ]
   },
   "awakened:CursedStrength": {
     "NAME": "어둠의 축복",
     "DESCRIPTIONS": [
-      "#y흡수될 때마다, #y힘을 #b",
-      " 획득합니다."
+      "#y고갈될 때마다 #y힘을 #b",
+      " 얻습니다."
     ]
   },
   "awakened:ThaumaturgyPower": {
     "NAME": "신비술",
     "DESCRIPTIONS": [
       "다음 #b",
-      "턴 동안 내 턴 시작 시 #y제식을 손으로 가져옵니다."
+      " 턴 동안 내 턴 시작 시 #y제식을 손으로 가져옵니다."
     ]
   },
   "awakened:SacramentPower": {
     "NAME": "성찬식",
     "DESCRIPTIONS": [
-      "#y파워를 사용할 때마다, #y방어도를 #b",
+      "#y파워 카드를 사용할 때마다 #y방어도를 #b",
       " 얻습니다."
     ]
   },
   "awakened:FlarePower": {
     "NAME": "깃털 섬광",
     "DESCRIPTIONS": [
-      "이번 턴에 #y공격 #y카드를 #y제외한 카드를 사용할 때마다, 모든 적이 체력을 #b",
+      "이번 턴에 #y공격 #y카드를 #y제외한 카드를 사용할 때마다 모든 적이 체력을 #b",
       " 잃습니다."
     ]
   },
   "awakened:PrimacyPower": {
     "NAME": "우두머리",
     "DESCRIPTIONS": [
-      "턴마다 처음으로 #y힘을 얻을 시, 카드를 1장 뽑습니다.",
-      "턴마다 처음으로 #b",
-      "번까지 #y힘을 얻을 시, 카드를 1장 뽑습니다.",
+      "매 턴 처음으로 #y힘을 얻으면 카드를 1장 뽑습니다.",
+      "매 턴 최대 #b",
+      " 번 #y힘을 얻을 때마다 카드를 #b1 장 뽑습니다.",
       " NL 이 효과는 이번 턴에 #b",
-      "번 더 발동할 수 있습니다.",
-      "번 더 발동할 수 있습니다.",
-      " NL 이 효과는 이번 턴에 더 이상 발동할 수 없습니다."
+      " 번 더 발동할 수 있습니다.",
+      " 번 더 발동할 수 있습니다.",
+      " NL 이번 턴에 더 이상 발동하지 않습니다."
     ]
   },
   "awakened:SpellbinderPower": {
     "NAME": "주문구속자",
     "DESCRIPTIONS": [
-      "내 턴 시작 시, #y영창합니다.",
-      "내 턴 시작 시, #b",
-      "번 #y영창합니다."
+      "내 턴 시작 시 #y시전합니다.",
+      "내턴 시작 시 #b",
+      " 번 #y시전합니다."
     ]
   },
   "awakened:DarkEchoPower": {
     "NAME": "어둠의 메아리",
     "DESCRIPTIONS": [
-      "턴 종료 시, 모든 적에게 피해를 #b",
+      "내 턴 종료 시 적 전체에게 피해를 #b",
       " 만큼 #b",
-      "번 줍니다.",
+      " 번 #y줍니다.",
       " 줍니다."
     ]
   },
   "awakened:MoonlitVisionPower": {
     "NAME": "월광 시야",
     "DESCRIPTIONS": [
-      "턴마다 처음으로 #b",
-      "번까지 주문을 사용 시 [E] 를 얻습니다. 이번 턴에는 #b",
-      "번 남았습니다."
+      "매 턴 처음으로 주문을 사용하면 [E] 를 얻습니다.",
+      "매 턴 최대 #b",
+      " 번 주문을 사용할 때마다 [E] 를 얻습니다.",
+      " NL 이번 턴 #b",
+      "  번 남았습니다."
     ]
   },
   "awakened:EclipseEmbracePower": {
     "NAME": "암흑의 수용",
     "DESCRIPTIONS": [
-      "#y공허가 #y소멸할 때마다, 다음 턴에 [E] 를 얻고 카드를 1장 뽑습니다.",
-      "#y공허가 #y소멸할 때마다, 다음 턴에 [E] 를 #b",
-      "번 얻고 카드를 #b",
-      "장 뽑습니다."
+      "#y공허가 #y소멸될 때마다 다음 턴에 에너지를 #b1 얻고 카드를 1장 뽑습니다.",
+      "#y공허가 #y소멸될 때마다 다음 턴에 에너지를 #b",
+      " 얻고 카드를 #b",
+      " 장 뽑습니다."
     ]
   },
   "awakened:SongOfSorrowPower": {
     "NAME": "비탄의 노래",
     "DESCRIPTIONS": [
-      "#y공허를 생성할 때마다, 모든 적이 체력을 #b",
+      "#y공허를 생성할 때마다 적 전체가 체력을 #b",
       " 잃습니다."
     ]
   },
   "awakened:ShroudOfMiasmaPower": {
     "NAME": "물결치는 독기",
     "DESCRIPTIONS": [
-      "#y주술을 지닌 적을 공격할 때마다, #y방어도를 #b",
+      "#y주술을 지닌 적을 공격할 때마다 #y방어도를 #b",
       " 얻습니다."
     ]
   },
   "awakened:StrengthReturnPower": {
     "NAME": "베어 가르기",
     "DESCRIPTIONS": [
-      "이 적을 공격할 때마다, 일시적으로 #y힘을 #b",
-      " 얻습니다."
+      "이 적을 공격할 때마다 #y힘을 #b",
+      " 얻고 턴 종료 시 잃습니다."
     ]
   },
   "awakened:ManaburnPower": {
-    "NAME": "마나연소",
+    "NAME": "마나 연소",
     "DESCRIPTIONS": [
-      "#y흡수될 때마다, 체력을 #b",
+      "#y고갈될 때마다 체력을 #b",
       " 잃습니다."
     ]
   },
   "awakened:ArchmagusPower": {
     "NAME": "대마법사",
     "DESCRIPTIONS": [
-      "턴마다 처음으로 사용하는 주문이 2번 사용됩니다..",
-      "턴마다 처음으로 사용하는 주문 #b",
-      "장이 2번 사용됩니다.",
-      " NL (주문 반복 ",
-      "번 남음)"
+      "매 턴 처음으로 사용하는 주문이 #b2 번 사용됩니다.",
+      "매 턴 다음 사용하는 주문이 최대 #b",
+      " 장 #b2 번 사용됩니다.",
+      " NL (주문 반복이 #b",
+      " 번 남았습니다.)"
+    ]
+  },
+  "awakened:DoubleSpellPower": {
+    "NAME": "주문 반복",
+    "DESCRIPTIONS": [
+      "이번 턴에 다음 사용하는 주문이 #b2 번 사용됩니다.",
+      "이번 턴에 최대 #b",
+      " 번 다음 사용하는 주문이 #b2 번 사용됩니다."
     ]
   },
   "awakened:DarknessFallsPower": {
     "NAME": "드리우는 어둠",
     "DESCRIPTIONS": [
-      "#y흡수될 때마다, #y방어도를 #b",
+      "#y고갈될 때마다 #y힘을 #b",
       " 얻습니다."
     ]
   },
   "awakened:VoidRefundPower": {
     "NAME": "날카로운 울음소리",
     "DESCRIPTIONS": [
-      "다음에 #y흡수될 시, [E] 를 얻습니다.",
-      "다음에 #y흡수될 시, [E]를 #b",
-      "번 얻습니다."
+      "다음에 #y고갈되면 #y에너지를 #b1 얻습니다.",
+      "다음에 #y고갈되면 #y에너지를 #b",
+      " 얻습니다."
     ]
   },
   "awakened:DemonGlyphPower": {
@@ -156,86 +167,83 @@
       " 얻습니다."
     ]
   },
-    "awakened:ReverseRitualPower": {
-      "NAME": "각성의 형상",
-      "DESCRIPTIONS": [
-        "턴 시작 시, #y의식을 #b",
-        " 얻습니다."
-      ]
-    },
+  "awakened:ReverseRitualPower": {
+    "NAME": "각성의 형상",
+    "DESCRIPTIONS": [
+      "내 턴 시작 시 #y의식을 #b",
+      " 얻습니다."
+    ]
+  },
   "awakened:EnsorcelatePower": {
     "NAME": "매혹",
     "DESCRIPTIONS": [
-      "다음에 사용하는 #y파워의 비용이 #b0이 됩니다.",
-      "다음에 사용하는 #y파워 #b",
-      "장의 비용이 #b0이 됩니다."
+      "다음 사용하는 #y파워 카드의 비용이 #b0이 됩니다.",
+      "이번 턴에 최대 #b",
+      " 번 다음 사용하는 #y파워 카드의 비용이 #b0이 됩니다."
     ]
   },
   "awakened:ConjureNextPower": {
     "NAME": "쥐어뜯기",
     "DESCRIPTIONS": [
-      "다음 턴 시작 시, #y영창합니다.",
-      "다음 턴 시작 시, #b",
-      "번 #y영창합니다."
+      "다음에 #y고갈되면 #y깃털 #y찌르기를 얻습니다.",
+      "다음에 #y고갈되면 #y깃털 #y찌르기를 #b",
+      " 장 얻습니다."
     ]
   },
   "awakened:ChosensVersePower": {
     "NAME": "선택받은 구절",
     "DESCRIPTIONS": [
-      "이번 턴에 공격 카드를 제외한 카드를 사용할 때마다, 카드를 1장 뽑고 #y방어도를 #b",
+      "이번 턴에 다음으로 공격 카드를 제외한 카드를 사용하면 카드를 1장 뽑고 #y방어도를 #b",
       " 얻습니다.",
-      "이번 턴에 공격 카드를 제외한 카드를  #b",
-      "장 사용할 때마다, 카드를 1장 뽑고 #y방어도를 #b",
+      "이번 턴에 최대 #b",
+      " 번 다음으로 공격 카드를 제외한 카드를 사용할 때마다 카드를 1장 뽑고 #y방어도를 #b",
       " 얻습니다."
     ]
   },
   "awakened:AphoticFountPower": {
     "NAME": "무광의 샘",
     "DESCRIPTIONS": [
-      "#y냉동수면을 사용할 때마다, #y판금 #y갑옷을 #b",
+      "#y냉동수면을 사용할 때마다 #y판금 #y갑옷을 #b",
       " 얻습니다."
     ]
   },
   "awakened:GrimoirePower": {
     "NAME": "폭풍의 지배자",
     "DESCRIPTIONS": [
-      "#y낙뢰가 추가로 피해를 #b",
-      " 줍니다."
+      "#y날뢰의 피해량이 #b",
+      " 증가합니다."
     ]
   },
   "awakened:SpellshieldPower": {
     "NAME": "주문 방패",
     "DESCRIPTIONS": [
-      "카드를 #y보존할 때마다, #y방어도를 #b",
+      "카드가 #y보존될 때마다 #y방어도를 #b",
       " 얻습니다."
     ]
   },
   "awakened:DaggerstormPower": {
     "NAME": "단검 폭풍",
     "DESCRIPTIONS": [
-      "카드를 생성할 때마다, 무작위 적에게 피해를 #b",
+      "카드를 생성할 때마다 무작위 적에게 피해를 #b",
       " 줍니다."
     ]
   },
   "awakened:SchemePower": {
     "NAME": "책략",
     "DESCRIPTIONS": [
-      "이번 턴에 사용하는 비용이 #b1 이하인 다음 #b",
-      "장의 카드가 두 번 사용됩니다.",
-      "이번 턴에 사용하는 비용이 #b1 이하인 다음 카드가 두 번 사용됩니다."
+      "이번 턴에 최대 #b",
+      " 번 다음으로 사용하는 비용이 #b1 이하인 카드가 두 번 사용됩니다.",
+      "이번 턴에 다음으로 사용하는 비용이 #b1 이하인 카드가 두 번 사용됩니다."
     ]
   },
   "awakened:FourthDimensionPower": {
     "NAME": "4차원",
     "DESCRIPTIONS": [
       "다음 #b",
-      "턴 시작 시, ",
-      "턴 시작 시, ",
-      "",
-      "의 복사본을 사용하고 #y소멸시킵니다."
+      " 턴 동안 내 턴 시작 시 ",
+      " 턴 동안 내 턴 시작 시 ",
+      "카드를 복사해 사용하고 복사한 ",
+      " 카드를 #y소멸시킵니다."
     ]
   }
-
 }
-
-

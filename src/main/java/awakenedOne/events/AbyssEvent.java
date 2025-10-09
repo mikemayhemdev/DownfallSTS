@@ -27,10 +27,10 @@ public class AbyssEvent extends AbstractImageEvent {
     }
 
     private int screenNum = 0;
-    private boolean pickCard = false;
-    private int hpCost = 5;
-    private int hpSpent = 0;
-    private ArrayList<String> cardsTeched = new ArrayList<>();
+    private final boolean pickCard = false;
+    private final int hpCost = 5;
+    private final int hpSpent = 0;
+    private final ArrayList<String> cardsTeched = new ArrayList<>();
     private int prideGained;
 
     public AbyssEvent() {

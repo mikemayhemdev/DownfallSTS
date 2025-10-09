@@ -13,7 +13,7 @@ public class MoonlitVisionPower extends AbstractTwoAmountAwakenedPower {
     public static final String NAME = MoonlitVisionPower.class.getSimpleName();
     public static final String POWER_ID = makeID(NAME);
 
-    private  int activationsThisTurn;
+    private int activationsThisTurn;
 
     public MoonlitVisionPower() {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, 1);
@@ -45,7 +45,7 @@ public class MoonlitVisionPower extends AbstractTwoAmountAwakenedPower {
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         amount2 = amount;
-        activationsThisTurn =0;
+        activationsThisTurn = 0;
         updateDescription();
     }
 

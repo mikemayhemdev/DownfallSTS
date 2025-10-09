@@ -2,9 +2,6 @@ package awakenedOne.powers;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
@@ -13,8 +10,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import slimebound.SlimeboundMod;
 
-import static awakenedOne.util.Wiz.atb;
-
 public class ArchmagusPower extends AbstractTwoAmountAwakenedPower {
     // intellij stuff buff
     public static final String NAME = ArchmagusPower.class.getSimpleName();
@@ -22,6 +17,7 @@ public class ArchmagusPower extends AbstractTwoAmountAwakenedPower {
 
 
     private int cardsDoubledThisTurn = 0;
+
     public ArchmagusPower(int amount) {
         super(NAME, PowerType.BUFF, false, AbstractDungeon.player, null, amount);
         amount2 = 1 - AwakenedOneMod.spellsThisTurn;
@@ -45,9 +41,9 @@ public class ArchmagusPower extends AbstractTwoAmountAwakenedPower {
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        SlimeboundMod.logger.info(AwakenedOneMod.spellsThisTurn );
-        SlimeboundMod.logger.info(this.cardsDoubledThisTurn  );
-        SlimeboundMod.logger.info( this.amount2);
+        SlimeboundMod.logger.info(AwakenedOneMod.spellsThisTurn);
+        SlimeboundMod.logger.info(this.cardsDoubledThisTurn);
+        SlimeboundMod.logger.info(this.amount2);
 
         SlimeboundMod.logger.info("stacks remaining this turn: " + this.amount2 + ", spells this turn: AwakenedOneMod.spellsThisTurn" + AwakenedOneMod.spellsThisTurn + ", cards doubled this turn: " + cardsDoubledThisTurn + ". Final resulting check is " + (AwakenedOneMod.spellsThisTurn - this.cardsDoubledThisTurn <= this.amount2));
         if (!card.purgeOnUse && this.amount2 > 0 && (card instanceof AbstractSpellCard) && AwakenedOneMod.spellsThisTurn - this.cardsDoubledThisTurn <= this.amount2) {
@@ -73,7 +69,7 @@ public class ArchmagusPower extends AbstractTwoAmountAwakenedPower {
 
             tmp.purgeOnUse = true;
             --this.amount2;
-            cardsDoubledThisTurn ++;
+            cardsDoubledThisTurn++;
             AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, card.energyOnUse, true, true), true);
 
             updateDescription();
@@ -84,9 +80,9 @@ public class ArchmagusPower extends AbstractTwoAmountAwakenedPower {
 
     public void updateDescription() {
         if (amount == 1) {
-            description = DESCRIPTIONS[0] + DESCRIPTIONS[3] + Math.min(amount2, AwakenedOneMod.spellsThisTurn - this.cardsDoubledThisTurn) + DESCRIPTIONS[4];
+            description = DESCRIPTIONS[0] + DESCRIPTIONS[3] + " [REMOVE_SPACE]" + Math.min(amount2, AwakenedOneMod.spellsThisTurn - this.cardsDoubledThisTurn) + DESCRIPTIONS[4];
         } else {
-            description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] + Math.min(amount2, AwakenedOneMod.spellsThisTurn - this.cardsDoubledThisTurn) + DESCRIPTIONS[4];
+            description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] + " [REMOVE_SPACE]" + Math.min(amount2, AwakenedOneMod.spellsThisTurn - this.cardsDoubledThisTurn) + DESCRIPTIONS[4];
         }
     }
 }
