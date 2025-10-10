@@ -18,8 +18,9 @@
   "awakened:RisingChantPower": {
     "NAME": "Refrain ascendant",
     "DESCRIPTIONS": [
-      "Lorsque vous jouez une carte ayant activé son effet #yChant, gagnez #b",
-      " de #yForce [REMOVE_SPACE]."
+      "Le(s) #b",
+      " premier(s) effet(s) #yChant activé(s) ce tour est/sont déclenché(s) deux fois. NL #b",
+      " Effet(s) restant(s) ce tour."
     ]
   },
   "awakened:CursedStrength": {
@@ -85,8 +86,8 @@
       "La première fois que vous jouez un Sort chaque tour, gagnez [E] .",
       "Les #b",
       " premières fois que vous jouez un Sort chaque tour, gagnez [E] .",
-      " NL (#b",
-      "  restants ce tour.)"
+      " NL #b",
+      "  fois restantes ce tour."
     ]
   },
   "awakened:EclipseEmbracePower": {
@@ -132,7 +133,7 @@
       "Le premier Sort que vous jouez chaque tour est joué deux fois.",
       "Les #b",
       " premiers Sorts que vous jouez chaque tour sont jouées deux fois.",
-      " NL (#b",
+      " NL ( [REMOVE_SPACE]#b",
       " répétitions de Sorts restantes)"
     ]
   },

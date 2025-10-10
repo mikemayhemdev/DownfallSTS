@@ -134,6 +134,12 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "Foi éphémère",
     "DESCRIPTIONS": [
+      "La Gardienne gagne #b1 de #yMantra lorsque vous jouez une carte. NL Lorsque la Gardienne entre en #yDivinité, elle gagne #b3 de #yForce. NL La Gardienne perd #b5 de #yMantra au début de son tour. NL La Gardienne ne quitte pas sa #yDivinité à la fin de son tour."
+    ]
+  },
+  "downfall:SimpleWatcherDivinityPower": {
+    "NAME": "Foi éphémère",
+    "DESCRIPTIONS": [
       "La Gardienne gagne #b1 de Mantra et #b1 #yd'Intangibilité après que vous ayez joué #b6 cartes en un tour.",
       " NL Vous avez joué #b",
       " cartes ce tour.",
@@ -395,7 +401,7 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "Roue de la Destinée",
     "DESCRIPTIONS": [
-      "Lorsque vous jouez une Attaque, l'Ermite #yCycle sa première carte. Le coût des cartes de l'Ermite ne peut pas changer. Lorsque l'Ermite pioche #rMalédiction #rFatale, il gagne #b2 de Force.",
+      "Lorsque vous jouez une Attaque, l'Ermite #yCycle sa première carte. Le coût des cartes de l'Ermite ne peut pas changer. Lorsque l'Ermite pioche #rMalédiction #rFatale, il gagne #b2 de #yForce.",
       "Lorsque vous jouez une Attaque, l'Ermite #yCycle sa première carte."
     ]
   },
