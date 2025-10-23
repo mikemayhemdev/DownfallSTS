@@ -2,6 +2,7 @@ package awakenedOne.cards;
 
 import awakenedOne.AwakenedOneMod;
 import awakenedOne.actions.ConjureAction;
+import awakenedOne.ui.AwakenButton;
 import awakenedOne.ui.OrbitingSpells;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -27,6 +28,7 @@ public class BirdsEye extends AbstractAwakenedCard {
                 public void update() {
                     isDone = true;
                     OrbitingSpells.refreshSpells();
+                    AwakenButton.awaken(5);
                 }
             });
         }
