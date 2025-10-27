@@ -1,6 +1,7 @@
 package downfall.cards.curses;
 
 
+import basemod.ReflectionHacks;
 import basemod.abstracts.CustomCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -49,8 +50,10 @@ public class Icky extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new DrawReductionPower(p, 1)));
+        DrawReductionPower pow = new DrawReductionPower(p,1);
+        ReflectionHacks.setPrivate(pow,DrawReductionPower.class,"justApplied",false);
 
+        this.addToBot(new ApplyPowerAction(p, p, pow, 1));
     }
 
     public AbstractCard makeCopy() {
