@@ -39,7 +39,7 @@ public class OrbitingSpells {
     public static final float POSITION_X = 95F * Settings.scale;
     public static final float POSITION_Y = 300F * Settings.scale;
     public static final float PANEL_BG_X = POSITION_X - (66F * Settings.scale);
-    public static final float PANEL_BG_Y = POSITION_Y + (110F * Settings.scale);
+    public static final float PANEL_BG_Y = Settings.HEIGHT - POSITION_Y - 370F * Settings.scale;//POSITION_Y;//Settings.HEIGHT - (POSITION_Y);// (-110F * Settings.scale));
     public static final ArrayList<String> spells = new ArrayList<>();
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Spellbook"));
     private static final HashMap<String, Texture> cardIcons = new HashMap<>();
