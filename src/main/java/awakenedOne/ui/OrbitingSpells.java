@@ -260,10 +260,12 @@ public class OrbitingSpells {
 
         String idNext = "";
         HashMap<String, Integer> spellsFound = new HashMap<>();
+        ArrayList<AbstractCard> orderedSpells = new ArrayList<>();
         for (AbstractCard s : spellCards) {
             if (spellsFound.containsKey(s.cardID)) {
                 spellsFound.put(s.cardID, spellsFound.get(s.cardID) + 1);
             } else {
+                orderedSpells.add(s);
                 spellsFound.put(s.cardID, 1);
             }
             if (s.hasTag(UP_NEXT)) idNext = s.cardID;
@@ -297,7 +299,7 @@ public class OrbitingSpells {
 
 
         if (hoveredCard != -1) {
-            AbstractCard tar = spellCards.get(hoveredCard);
+            AbstractCard tar = orderedSpells.get(hoveredCard);
             tar.target_x = tar.current_x = (barBox.x + (500 * Settings.scale));
             tar.target_y = tar.current_y = Settings.HEIGHT - ((POSITION_Y + 100 * Settings.scale));
             spellCards.get(hoveredCard).render(sb);
