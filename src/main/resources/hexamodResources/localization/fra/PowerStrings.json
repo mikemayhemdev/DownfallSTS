@@ -245,9 +245,9 @@
   "hexamod:PlayCardAndExhaustPower": {
     "NAME": "Ombre déplacée",
     "DESCRIPTIONS": [
-      "Votre prochaine carte est gratuite puis sera #yÉpuisée [REMOVE_SPACE].",
+      "Votre prochaine carte est gratuite puis #ys'Épuise [REMOVE_SPACE].",
       "Vos #b",
-      " prochaines cartes seront gratuites puis seront #yÉpuisées [REMOVE_SPACE]."
+      " prochaines cartes seront gratuites puis #ys'Épuisent [REMOVE_SPACE]."
     ]
   }
 }

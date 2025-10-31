@@ -135,7 +135,7 @@
     "NAME": "Talisman en croissant",
     "FLAVOR": "“S'il vous plaît, ne m'oubliez pas. Même après ma mort.”",
     "DESCRIPTIONS": [
-      "Lorsque vous récupérez cette relique, choisissez une carte qui n'a PAS #yawakened:Conjurez [REMOVE_SPACE]. Ajoutez #yawakened:Conjurez à celle-ci.",
+      "Lorsque vous récupérez cette relique, choisissez une carte qui n'a PAS #yawakened:Conjurez [REMOVE_SPACE]et ajoutez l'effet #yawakened:Conjurez à celle-ci.",
       "Choisissez une carte pour ",
       "Le Talisman a béni ",
       " et a ajouté #yawakened:Conjurez à celle-ci.",
@@ -149,5 +149,12 @@
       "Les #b4 premières fois que vous jouez une carte #yPouvoir chaque combat, soignez-vous de #b",
       " PV."
       ]
+  },
+  "awakened:NerfedMummifiedHand": {
+    "NAME": "Main disséquée",
+    "FLAVOR": "Elle exige un véritable pouvoir, capable de résister à vos magies occultes.",
+    "DESCRIPTIONS": [
+      "Lorsque vous jouez un #yPouvoir qui #rN'EST #PAS #yCérémonie [REMOVE_SPACE], le coût d'une carte aléatoire de votre main passe à #b0 ce tour."
+    ]
   }
 }
