@@ -17,7 +17,7 @@ public class SludgeBomb extends AbstractAwakenedCard {
 
     public SludgeBomb() {
         super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 9;
+        baseDamage = 12;
         loadJokeCardImage(this, makeBetaCardPath(SludgeBomb.class.getSimpleName() + ".png"));
     }
 
