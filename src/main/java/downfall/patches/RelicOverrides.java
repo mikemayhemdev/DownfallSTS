@@ -383,78 +383,78 @@ public class RelicOverrides {
         }
     }
 
-    @SpirePatch(
-            clz = PrismaticShard.class,
-            method = "getUpdatedDescription"
-    )
-    public static class prismaticDesc {
-        @SpirePrefixPatch
-        public static void Postfix(PrismaticShard _instance) {
-            if (evilMode) {
-                //ReflectionHacks.setPrivateStaticFinal(Courier.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[6]);
-               // _instance.description = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[8];
-
-            }
-
-        }
-    }
-
-    @SpirePatch(
-            clz = Ectoplasm.class,
-            method = "getUpdatedDescription"
-    )
-    public static class EctoImage {
-        @SpirePrefixPatch
-        public static void Prefix(Ectoplasm _instance) {
-            if (evilMode) {
-                _instance.imgUrl = null;
-                ReflectionHacks.setPrivateStaticFinal(Ectoplasm.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:Hecktoplasm").DESCRIPTIONS[1]);
-                _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/ectoplasmEvil.png"));
-                _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/ectoplasmEvil.png"));
-                _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:Hecktoplasm").FLAVOR;
-            }
-
-        }
-    }
-
-    @SpirePatch(
-            clz = Ectoplasm.class,
-            method = "setDescription"
-    )
-    public static class EctoDesc {
-        @SpirePrefixPatch
-        public static SpireReturn<String> Prefix() {
-
-            if (evilMode) {
-                return SpireReturn.Return(CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[9]);
-            }
-
-            return SpireReturn.Continue();
-        }
-    }
-
-    @SpirePatch(
-            clz=AbstractRelic.class,
-            method= SpirePatch.CONSTRUCTOR
-    )
-    public static class EctoTitle {
-        @SpireInsertPatch(
-                locator = Locator.class
-        )
-        public static void Insert(AbstractRelic __instance,String setId, String imgName, AbstractRelic.RelicTier tier, AbstractRelic.LandingSound sfx) {
-            if(Objects.equals(__instance.relicId, "Ectoplasm") && evilMode) {
-                ReflectionHacks.setPrivateFinal(__instance, AbstractRelic.class, "relicStrings", CardCrawlGame.languagePack.getRelicStrings("downfall:Hecktoplasm").NAME);
-
-            }
-        }
-
-        private static class Locator extends SpireInsertLocator {
-            public int[] Locate(CtBehavior ctMethodToPatch) throws CannotCompileException, PatchingException {
-                Matcher finalMatcher = new Matcher.MethodCallMatcher(ImageMaster.class, "loadRelicImg");
-                return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
-            }
-        }
-    }
+//    @SpirePatch(
+//            clz = PrismaticShard.class,
+//            method = "getUpdatedDescription"
+//    )
+//    public static class prismaticDesc {
+//        @SpirePrefixPatch
+//        public static void Postfix(PrismaticShard _instance) {
+//            if (evilMode) {
+//                //ReflectionHacks.setPrivateStaticFinal(Courier.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[6]);
+//               // _instance.description = CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[8];
+//
+//            }
+//
+//        }
+//    }
+//
+//    @SpirePatch(
+//            clz = Ectoplasm.class,
+//            method = "getUpdatedDescription"
+//    )
+//    public static class EctoImage {
+//        @SpirePrefixPatch
+//        public static void Prefix(Ectoplasm _instance) {
+//            if (evilMode) {
+//                _instance.imgUrl = null;
+//                ReflectionHacks.setPrivateStaticFinal(Ectoplasm.class, "name", CardCrawlGame.languagePack.getRelicStrings("downfall:Hecktoplasm").DESCRIPTIONS[1]);
+//                _instance.img = TextureLoader.getTexture(downfallMod.assetPath("images/relics/ectoplasmEvil.png"));
+//                _instance.outlineImg = TextureLoader.getTexture(downfallMod.assetPath("images/relics/Outline/ectoplasmEvil.png"));
+//                _instance.flavorText = CardCrawlGame.languagePack.getRelicStrings("downfall:Hecktoplasm").FLAVOR;
+//            }
+//
+//        }
+//    }
+//
+//    @SpirePatch(
+//            clz = Ectoplasm.class,
+//            method = "setDescription"
+//    )
+//    public static class EctoDesc {
+//        @SpirePrefixPatch
+//        public static SpireReturn<String> Prefix() {
+//
+//            if (evilMode) {
+//                return SpireReturn.Return(CardCrawlGame.languagePack.getRelicStrings("downfall:replacements").DESCRIPTIONS[9]);
+//            }
+//
+//            return SpireReturn.Continue();
+//        }
+//    }
+//
+//    @SpirePatch(
+//            clz=AbstractRelic.class,
+//            method= SpirePatch.CONSTRUCTOR
+//    )
+//    public static class EctoTitle {
+//        @SpireInsertPatch(
+//                locator = Locator.class
+//        )
+//        public static void Insert(AbstractRelic __instance,String setId, String imgName, AbstractRelic.RelicTier tier, AbstractRelic.LandingSound sfx) {
+//            if(Objects.equals(__instance.relicId, "Ectoplasm") && evilMode) {
+//                ReflectionHacks.setPrivateFinal(__instance, AbstractRelic.class, "relicStrings", CardCrawlGame.languagePack.getRelicStrings("downfall:Hecktoplasm").NAME);
+//
+//            }
+//        }
+//
+//        private static class Locator extends SpireInsertLocator {
+//            public int[] Locate(CtBehavior ctMethodToPatch) throws CannotCompileException, PatchingException {
+//                Matcher finalMatcher = new Matcher.MethodCallMatcher(ImageMaster.class, "loadRelicImg");
+//                return LineFinder.findInOrder(ctMethodToPatch, finalMatcher);
+//            }
+//        }
+//    }
 /*
     @SpirePatch(
             clz = Courier.class,
