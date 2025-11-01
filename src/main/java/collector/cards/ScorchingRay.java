@@ -35,7 +35,7 @@ public class ScorchingRay extends AbstractCollectorCard {
                 //ScorchingRayAction couldn't cut it.
                 AbstractMonster q = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
                 atb(new VFXAction(new ColoredVerticalAttackEffect(q.hb.x + MathUtils.random(q.hb.width / 3, ((q.hb.width / 3) * 2)), q.hb.cY, true, new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1))));
-                this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
+                dmg(q, AbstractGameAction.AttackEffect.FIRE);
             }
             return true;
         }));
