@@ -68,7 +68,7 @@ public class ShadowGuise extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBlock(3);
+            upgradeBlock(2);
         }
     }
 

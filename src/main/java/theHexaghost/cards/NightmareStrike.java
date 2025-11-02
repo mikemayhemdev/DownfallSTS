@@ -44,6 +44,7 @@ public class NightmareStrike extends AbstractHexaCard implements HexaPurpleTextI
         if (!upgraded) {
             upgradeName();
             this.cardsToPreview.upgrade();
+            upgradeDamage(1);
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }
