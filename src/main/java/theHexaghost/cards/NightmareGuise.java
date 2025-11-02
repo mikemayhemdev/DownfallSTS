@@ -15,7 +15,7 @@ public class NightmareGuise extends AbstractHexaCard implements HexaPurpleTextIn
 
     public NightmareGuise() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 3;
+        baseBlock = 4;
         isEthereal = true;
         cardsToPreview = new ShadowGuise();
         tags.add(HexaMod.AFTERLIFE);
