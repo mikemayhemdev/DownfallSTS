@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
+import hermit.util.Wiz;
 import theHexaghost.cards.RecurringNightmare;
 
 import java.util.ArrayList;
@@ -53,7 +54,12 @@ public class RecurringNightmareAction extends AbstractGameAction {
             if (canExhume.size() <= amount) {
                 for (AbstractCard c : canExhume) {
                     c.unfadeOut();
-                    addToBot(new MakeTempCardInHandAction(c));
+                    if (Wiz.hand().size() < BaseMod.MAX_HAND_SIZE) {
+                        this.p.hand.addToHand(c);
+                    } else {
+                        AbstractDungeon.player.createHandIsFullDialog();
+                        this.p.discardPile.addToTop(c);
+                    }
                     this.p.exhaustPile.removeCard(c);
                     c.unhover();
                     c.fadingOut = false;
