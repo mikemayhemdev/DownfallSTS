@@ -67,7 +67,8 @@ public class Floatwork extends AbstractHexaCard implements HexaPurpleTextInterfa
         }else if (Settings.language == Settings.GameLanguage.RUS){
             this.keywords.add("plated");
         }else{
-            this.keywords.add("plated");
+            String blur_name = downfallMod.keywords_and_proper_names.get("plated");
+            this.keywords.add(blur_name);
         }
 
 
