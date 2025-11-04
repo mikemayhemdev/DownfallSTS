@@ -2,11 +2,13 @@ package theHexaghost.actions;
 
 import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import theHexaghost.cards.RecurringNightmare;
 
 import java.util.ArrayList;
@@ -51,7 +53,11 @@ public class RecurringNightmareAction extends AbstractGameAction {
             if (canExhume.size() <= amount) {
                 for (AbstractCard c : canExhume) {
                     c.unfadeOut();
-                    this.p.hand.addToHand(c);
+                    if (AbstractDungeon.player.hand.size() + canExhume.size() < BaseMod.MAX_HAND_SIZE) {
+                        this.p.hand.addToHand(c);
+                    } else {
+                        addToBot(new MakeTempCardInHandAction(c));
+                    }
                     this.p.exhaustPile.removeCard(c);
                     c.unhover();
                     c.fadingOut = false;
