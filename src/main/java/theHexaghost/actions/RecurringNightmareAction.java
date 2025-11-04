@@ -53,11 +53,7 @@ public class RecurringNightmareAction extends AbstractGameAction {
             if (canExhume.size() <= amount) {
                 for (AbstractCard c : canExhume) {
                     c.unfadeOut();
-                    if (AbstractDungeon.player.hand.size() + canExhume.size() < BaseMod.MAX_HAND_SIZE) {
-                        this.p.hand.addToHand(c);
-                    } else {
-                        addToBot(new MakeTempCardInHandAction(c));
-                    }
+                    addToBot(new MakeTempCardInHandAction(c));
                     this.p.exhaustPile.removeCard(c);
                     c.unhover();
                     c.fadingOut = false;
