@@ -232,20 +232,11 @@ public class AwakenedOneMod implements
      */
 
     public void receivePostInitialize() {
-
         BaseMod.addEvent(new AddEventParams.Builder(TheNestAwakened.ID, TheNestAwakened.class) //Event ID//
                 //Event Spawn Condition//
                 .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
                 //Event ID to Override//
                 .overrideEvent(Nest.ID)
-                //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
-
-        BaseMod.addEvent(new AddEventParams.Builder(TheNestAwakened.ID, TheNestAwakened.class) //Event ID//
-                //Event Spawn Condition//
-                .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
-                //Event ID to Override//
                 .overrideEvent(TheNest_Evil.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
@@ -256,15 +247,9 @@ public class AwakenedOneMod implements
                 //Event Spawn Condition//
                 .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
                 //Event ID to Override//
-                .overrideEvent(WingStatue_Evil.ID)                //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
-
-        BaseMod.addEvent(new AddEventParams.Builder(WingStatueAwakened.ID, WingStatueAwakened.class) //Event ID//
-                //Event Spawn Condition//
-                .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
-                //Event ID to Override//
-                .overrideEvent(GoldenWing.ID)                //Event Type//
+                .overrideEvent(GoldenWing.ID)
+                .overrideEvent(WingStatue_Evil.ID)
+                //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
@@ -282,7 +267,6 @@ public class AwakenedOneMod implements
                 //Event Spawn Condition//
                 .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
                 .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
-
                 //Event Type//
                 .eventType(EventUtils.EventType.SHRINE)
                 .create());
