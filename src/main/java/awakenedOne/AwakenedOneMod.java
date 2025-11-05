@@ -44,6 +44,7 @@ import com.megacrit.cardcrawl.events.city.Nest;
 import com.megacrit.cardcrawl.events.exordium.GoldenWing;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
+import downfall.events.WingStatue_Evil;
 import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -245,7 +246,7 @@ public class AwakenedOneMod implements
                 .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
                 //Event ID to Override//
                 .overrideEvent(GoldenWing.ID)
-                //Event Type//
+                .overrideEvent(WingStatue_Evil.ID)                //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
