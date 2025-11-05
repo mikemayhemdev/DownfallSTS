@@ -44,6 +44,7 @@ import com.megacrit.cardcrawl.events.city.Nest;
 import com.megacrit.cardcrawl.events.exordium.GoldenWing;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
+import downfall.events.TheNest_Evil;
 import downfall.events.WingStatue_Evil;
 import downfall.util.CardIgnore;
 import javassist.CtClass;
@@ -234,16 +235,26 @@ public class AwakenedOneMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(TheNestAwakened.ID, TheNestAwakened.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
+                .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
                 //Event ID to Override//
                 .overrideEvent(Nest.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
+        BaseMod.addEvent(new AddEventParams.Builder(TheNestAwakened.ID, TheNestAwakened.class) //Event ID//
+                //Event Spawn Condition//
+                .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
+                //Event ID to Override//
+                .overrideEvent(TheNest_Evil.ID)
+                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+
         BaseMod.addEvent(new AddEventParams.Builder(WingStatueAwakened.ID, WingStatueAwakened.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
+                .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
                 //Event ID to Override//
                 .overrideEvent(WingStatue_Evil.ID)                //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
@@ -251,7 +262,7 @@ public class AwakenedOneMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(WingStatueAwakened.ID, WingStatueAwakened.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
+                .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
                 //Event ID to Override//
                 .overrideEvent(GoldenWing.ID)                //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
@@ -269,6 +280,7 @@ public class AwakenedOneMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(AbyssEvent.ID, AbyssEvent.class) //Event ID//
                 //Event Spawn Condition//
+                .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
                 .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
 
                 //Event Type//
