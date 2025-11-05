@@ -245,8 +245,15 @@ public class AwakenedOneMod implements
                 //Event Spawn Condition//
                 .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
                 //Event ID to Override//
-                .overrideEvent(GoldenWing.ID)
                 .overrideEvent(WingStatue_Evil.ID)                //Event Type//
+                .eventType(EventUtils.EventType.FULL_REPLACE)
+                .create());
+
+        BaseMod.addEvent(new AddEventParams.Builder(WingStatueAwakened.ID, WingStatueAwakened.class) //Event ID//
+                //Event Spawn Condition//
+                .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
+                //Event ID to Override//
+                .overrideEvent(GoldenWing.ID)                //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
