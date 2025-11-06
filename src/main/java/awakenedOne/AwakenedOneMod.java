@@ -242,7 +242,6 @@ public class AwakenedOneMod implements
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
-
         BaseMod.addEvent(new AddEventParams.Builder(WingStatueAwakened.ID, WingStatueAwakened.class) //Event ID//
                 //Event Spawn Condition//
                 .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
