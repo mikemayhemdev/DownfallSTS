@@ -111,7 +111,7 @@ public class SignatureFinisher extends CustomRelic implements CustomBottleRelic,
             return;
         }
         super.atBattleStartPreDraw();
-        counter = 0;
+        //counter = 0;
         for (AbstractCard c : AbstractDungeon.player.drawPile.group) {
             if (SignatureMovePatch.inSignatureMove.get(card)) {
                 addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
