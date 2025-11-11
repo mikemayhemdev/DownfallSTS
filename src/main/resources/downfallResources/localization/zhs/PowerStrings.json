@@ -419,5 +419,12 @@
       "每当你使 #y涅奥 耗尽 #y坚不可摧 时，降低其 #y生命之神 #b",
       " 层。"
     ]
+  },
+    "downfall:CultistRevivePower": {
+    "NAME": "妄奉",
+    "DESCRIPTIONS": [
+      "抵抗一次死亡，并将生命回复至 #b50% 。",
+      "咔咔！"
+    ]
   }
 }
