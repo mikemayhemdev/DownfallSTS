@@ -76,14 +76,12 @@ public class Libra extends CustomRelic {
         //it wasn't
         super.update(); // Todo, verify the trigger condition is fine for controller input too
         if (!this.calledTransform && (no_cards_to_select)) {
-            this.calledTransform = true;
-            AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
             this.giveCards(AbstractDungeon.gridSelectScreen.selectedCards);
         }
     }
 
     public void giveCards(ArrayList<AbstractCard> group) {
-
+        this.calledTransform = true;
         Iterator<AbstractCard> i = group.iterator();
 
         CardGroup new_cards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
