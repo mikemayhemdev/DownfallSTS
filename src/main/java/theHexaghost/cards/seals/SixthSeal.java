@@ -16,7 +16,7 @@ public class SixthSeal extends AbstractSealCard {
     public final static String ID = makeID("SixthSeal");
     private static int count_cards = 0;
     public SixthSeal() {
-        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 3, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 0;
         baseBurn = burn = 13;
         tags.add(AbstractCard.CardTags.HEALING);
@@ -62,7 +62,7 @@ public class SixthSeal extends AbstractSealCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(1);
+            upgradeBaseCost(2);
 //            rawDescription = UPGRADE_DESCRIPTION;
 //            initializeDescription();
         }
