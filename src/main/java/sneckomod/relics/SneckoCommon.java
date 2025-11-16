@@ -46,7 +46,7 @@ public class SneckoCommon extends CustomRelic {
                 cardsToReward.add(newCard.makeCopy());
             }
         }
-        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, TEXT[2]);
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "");
         AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
     }
 
