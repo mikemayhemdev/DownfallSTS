@@ -13,7 +13,7 @@ public class RecurringNightmare extends AbstractHexaCard {
     public final static String ID = makeID("NightmareVision");
 
     public RecurringNightmare() {
-        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         exhaust = true;
         baseMagicNumber = magicNumber = 1;
         tags.add(HexaMod.GHOSTWHEELCARD);
@@ -30,9 +30,10 @@ public class RecurringNightmare extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
+            upgradeBaseCost(0);
+            //upgradeMagicNumber(1);
+            //rawDescription = UPGRADE_DESCRIPTION;
+            //initializeDescription();
         }
     }
 }

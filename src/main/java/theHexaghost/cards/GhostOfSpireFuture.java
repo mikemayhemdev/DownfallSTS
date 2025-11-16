@@ -24,10 +24,10 @@ public class GhostOfSpireFuture extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(2);
-            //this.isEthereal = false;
-            //rawDescription = UPGRADE_DESCRIPTION;
-            //initializeDescription();
+            //upgradeBaseCost(2);
+            this.isEthereal = false;
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }
