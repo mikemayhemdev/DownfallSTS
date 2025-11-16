@@ -37,7 +37,7 @@ public class VioletPlumagePatch {
             }
 
             if (isIndeedWithoutADoubtInCombat() && __instance.hasTag(ChampMod.FINISHER)) {
-            return (SignatureMovePatch.inSignatureMove.get(__instance));
+                return (SignatureMovePatch.inSignatureMove.get(__instance));
             }
 
             if (isIndeedWithoutADoubtInCombat() && __instance instanceof Gloomguard) {
