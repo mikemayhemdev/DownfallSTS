@@ -6,6 +6,7 @@ import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import awakenedOne.powers.EnsorcelatePower;
 import awakenedOne.powers.IntensifyPower;
 import awakenedOne.util.Wiz;
+import champ.ChampMod;
 import champ.patches.SignatureMovePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
@@ -35,7 +36,7 @@ public class VioletPlumagePatch {
                 }
             }
 
-            if (isIndeedWithoutADoubtInCombat() && (SignatureMovePatch.inSignatureMove.get(__instance))) {
+            if (isIndeedWithoutADoubtInCombat() && __instance.hasTag(ChampMod.FINISHER)) {
             return (SignatureMovePatch.inSignatureMove.get(__instance));
             }
 
