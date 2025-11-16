@@ -53,8 +53,11 @@ public class AwakenDeathPower extends AbstractPower implements OnPlayerDeathPowe
 
     @Override
     public boolean onPlayerDeath(AbstractPlayer abstractPlayer, DamageInfo damageInfo) {
-        trigger(abstractPlayer);
-        return false;
+        if (!abstractPlayer.hasRelic("Mark of the Bloom")) {
+            trigger(abstractPlayer);
+            return false;
+        }
+        return true;
     }
 
     public void onVictory() {

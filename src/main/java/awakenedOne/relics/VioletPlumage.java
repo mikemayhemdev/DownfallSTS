@@ -64,6 +64,7 @@ public class VioletPlumage extends CustomRelic {
 
     public void onVictory() {
         this.grayscale = false;
+        this.stopPulse();
     }
 
     @Override

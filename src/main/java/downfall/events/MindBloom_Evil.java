@@ -74,7 +74,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
 
         if (AddBustKeyButtonPatches.KeyFields.bustedRuby.get(AbstractDungeon.player) && AddBustKeyButtonPatches.KeyFields.bustedEmerald.get(AbstractDungeon.player) && AddBustKeyButtonPatches.KeyFields.bustedSapphire.get(AbstractDungeon.player)) {
             if (AbstractDungeon.player instanceof GremlinCharacter) {
-                this.imageEventText.setDialogOption(OPTIONSALT[5]);
+                this.imageEventText.setDialogOption(OPTIONSALT[2]);
             } else {
                 //this.imageEventText.setDialogOption(OPTIONSALT[2]);
                 //if ruining the surprise is important use this instead
@@ -82,7 +82,7 @@ public class MindBloom_Evil extends AbstractImageEvent {
             }
         } else {
             if (AbstractDungeon.player instanceof GremlinCharacter) {
-                this.imageEventText.setDialogOption(OPTIONSALT[5]);
+                this.imageEventText.setDialogOption(OPTIONSALT[2]);
             } else {
                 this.imageEventText.setDialogOption(OPTIONSALT[2]);
                 //if ruining the surprise is important use this instead

@@ -17,7 +17,7 @@ public class NightmareStrike extends AbstractHexaCard implements HexaPurpleTextI
 
     public NightmareStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 3;
+        baseDamage = 4;
         isEthereal = true;
         cardsToPreview = new ShadowStrike();
         tags.add(CardTags.STRIKE);
@@ -44,6 +44,7 @@ public class NightmareStrike extends AbstractHexaCard implements HexaPurpleTextI
         if (!upgraded) {
             upgradeName();
             this.cardsToPreview.upgrade();
+            upgradeDamage(1);
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
         }

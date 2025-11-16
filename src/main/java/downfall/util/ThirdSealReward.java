@@ -56,15 +56,16 @@ public class ThirdSealReward extends CustomReward{
 
     public static ArrayList<AbstractCard> getCards() {
         ArrayList<AbstractCard> cardsList = new ArrayList<>();
-        int numCards = 3;
+        int numCards = 1;
 
-        for(AbstractRelic r : AbstractDungeon.player.relics) {
-            numCards = r.changeNumberOfCardsInReward(numCards);
-        }
+//        for(AbstractRelic r : AbstractDungeon.player.relics) {
+//            numCards = r.changeNumberOfCardsInReward(numCards);
+//        }
+//
+//        if (ModHelper.isModEnabled("Binary")) {
+//            --numCards;
+//        }
 
-        if (ModHelper.isModEnabled("Binary")) {
-            --numCards;
-        }
         while (cardsList.size() < numCards) {
             AbstractCard q = getCommonCard();
             if (!cardListDuplicate(cardsList, q)) {

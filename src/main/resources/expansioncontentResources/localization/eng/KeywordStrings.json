@@ -33,7 +33,7 @@
     "NAMES": [
       "plated"
     ],
-    "DESCRIPTION": "At the end of your turn, gain Block equal to your #yPlated #yArmor [REMOVE_SPACE]. Taking unblocked attack damage reduces #yPlated #yArmor by #b1 [REMOVE_SPACE]."
+    "DESCRIPTION": "At the end of your turn, gain Block equal to your #yPlated #yArmor [REMOVE_SPACE]. Taking unblocked attack damage reduces #yPlated #yArmor by #b1."
   },
   {
     "PROPER_NAME": "Boss",

@@ -50,7 +50,6 @@ public class Shatter extends AbstractChampCard {
 
 
     public void upp() {
-        upgradeName();
         upgradeDamage(2);
         upgradeMagicNumber(1);
     }

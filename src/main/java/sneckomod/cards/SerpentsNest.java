@@ -24,7 +24,7 @@ public class SerpentsNest extends AbstractSneckoCard implements OnObtainCard {
 
     public SerpentsNest() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 9;
+        baseMagicNumber = magicNumber = 7;
 
         SneckoMod.loadJokeCardImage(this, "SerpentsNest.png");
     }
