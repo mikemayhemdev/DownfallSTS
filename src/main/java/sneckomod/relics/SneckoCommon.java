@@ -40,14 +40,14 @@ public class SneckoCommon extends CustomRelic {
             for (AbstractRelic r : AbstractDungeon.player.relics) {
                 r.onPreviewObtainCard(newCard);
             }
-            AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
+            //AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
             CardGroup c = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
             if (!isDuplicate(cardsToReward, newCard)) {
                 cardsToReward.add(newCard.makeCopy());
             }
         }
         AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "");
-        AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
+        //AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
     }
 
 
