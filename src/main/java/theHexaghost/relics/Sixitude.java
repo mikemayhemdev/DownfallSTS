@@ -44,6 +44,7 @@ public class Sixitude extends CustomRelic {
                 this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 // this.addToBot(new DamageRandomEnemyAction(new DamageInfo(null, 6, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
                 AbstractCard c2 = new Strike_Hermit();
+                c2.updateCost(-1);
                 addToBot(new EchoACardAction(c2, true));
             }
         }
