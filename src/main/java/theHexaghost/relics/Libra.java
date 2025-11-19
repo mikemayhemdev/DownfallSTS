@@ -11,6 +11,7 @@ import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import downfall.util.TextureLoader;
+import guardian.cards.ExploitGems;
 import hermit.relics.Memento;
 import theHexaghost.HexaMod;
 import theHexaghost.cards.Defend;
@@ -48,76 +49,26 @@ public class Libra extends CustomRelic {
     }
 
     public void onEquip() {
-        this.calledTransform = false;
-
-        CardGroup starters = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
-            if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || c.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
-                starters.addToBottom(c);
-            }
-        }
-
-        this.number_of_cards_to_transform = starters.size();
-
-        if (starters.group.isEmpty()) {
-            this.no_cards_to_select = true;
-        } else {
-
-            if (AbstractDungeon.isScreenUp) {
-                AbstractDungeon.dynamicBanner.hide();
-                AbstractDungeon.previousScreen = AbstractDungeon.screen;
-            }
-            AbstractDungeon.gridSelectScreen.open(starters, starters.group.size(), true, this.DESCRIPTIONS[2]);
-        }
-
-    }
-
-    public void update() {
-        //it wasn't
-        super.update(); // Todo, verify the trigger condition is fine for controller input too
-        if (!this.calledTransform && (no_cards_to_select)) {
-            this.giveCards(AbstractDungeon.gridSelectScreen.selectedCards);
+        for (AbstractCard card : AbstractDungeon.player.masterDeck.group) {
+            if (card.hasTag(AbstractCard.CardTags.STARTER_STRIKE) || card.hasTag(AbstractCard.CardTags.STARTER_DEFEND)) {
+                AbstractDungeon.player.masterDeck.removeCard(card);
+                AbstractCard c = AbstractDungeon.returnTrulyRandomCard().makeCopy();
+                if (card.type == AbstractCard.CardType.SKILL) {
+                    while(c.type != AbstractCard.CardType.ATTACK){
+                        c = AbstractDungeon.returnTrulyRandomCard().makeCopy();
+                    }
+                    UnlockTracker.markCardAsSeen(c.cardID);
+                    c.isSeen = true;
+                }else{
+                    while(c.type != AbstractCard.CardType.SKILL){
+                        c = AbstractDungeon.returnTrulyRandomCard().makeCopy();
+                    }
+                    UnlockTracker.markCardAsSeen(c.cardID);
+                    c.isSeen = true;
+                }
+                AbstractDungeon.player.masterDeck.addToTop(c);}
         }
     }
-
-    public void giveCards(ArrayList<AbstractCard> group) {
-        this.calledTransform = true;
-        Iterator<AbstractCard> i = group.iterator();
-
-        CardGroup new_cards = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        while (i.hasNext()) {
-            AbstractCard card = i.next();
-            card.untip();
-            card.unhover();
-            AbstractDungeon.player.masterDeck.removeCard(card);
-            AbstractCard c = AbstractDungeon.returnTrulyRandomCard().makeCopy();
-            if (card.type == AbstractCard.CardType.SKILL) {
-                while(c.type != AbstractCard.CardType.ATTACK){
-                    c = AbstractDungeon.returnTrulyRandomCard().makeCopy();
-                }
-                UnlockTracker.markCardAsSeen(c.cardID);
-                c.isSeen = true;
-
-                for (AbstractRelic r : AbstractDungeon.player.relics) {
-                    r.onPreviewObtainCard(c);
-                }
-            }else{
-                while(c.type != AbstractCard.CardType.SKILL){
-                    c = AbstractDungeon.returnTrulyRandomCard().makeCopy();
-                }
-                UnlockTracker.markCardAsSeen(c.cardID);
-                c.isSeen = true;
-
-                for (AbstractRelic r : AbstractDungeon.player.relics) {
-                    r.onPreviewObtainCard(c);
-                }
-            }
-            new_cards.addToBottom(c);
-            AbstractDungeon.player.masterDeck.removeCard(card);
-        }
-        AbstractDungeon.gridSelectScreen.openConfirmationGrid(new_cards, this.DESCRIPTIONS[1]);
-    }
-
 
     public boolean canSpawn() {
     //requires at least 1 strike or defend to spawn
