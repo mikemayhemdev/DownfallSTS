@@ -38,7 +38,7 @@ public class SoulConsumer extends CustomRelic {
     }
 
     //variables
-    public static final int EXHAUST_REQUIREMENT = 3;
+    public static final int EXHAUST_REQUIREMENT = 4;
 
     public void onEquip() {
         this.counter = 0;
