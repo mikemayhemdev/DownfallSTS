@@ -51,7 +51,6 @@ public class Lacerate extends AbstractSneckoCard {
             AbstractCard q = new CripplingPoison();
             q.upgrade();
             cardsToPreview = q;
-            upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }
