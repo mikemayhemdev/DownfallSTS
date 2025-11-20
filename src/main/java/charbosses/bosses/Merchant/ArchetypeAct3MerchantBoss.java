@@ -2,6 +2,7 @@ package charbosses.bosses.Merchant;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.colorless.*;
+import charbosses.cards.curses.EnClumsy;
 import charbosses.powers.bossmechanicpowers.MerchantStrengthPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -41,7 +42,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
         addRelic(new CBR_TungstenRod());
         addRelic(new CBR_IceCream());
-        addRelic(new CBR_Vajra());
+        addRelic(new CBR_Torii());
     }
 
 
@@ -76,7 +77,8 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                     //Bomb goes Boom.
                     addToList(cardsList, new EnPanacea(), true); // +2 artifact, +5 total??????? remove clockwork and replace with another relic (abacus?)
                     addToList(cardsList, new EnPanicButton(), true);
-                    addToList(cardsList, new EnSadisticNature(), true); // sadistic here fills up a slot because there was an extra unaccounted for bomb
+                    addToList(cardsList, new EnClumsy());
+                    //addToList(cardsList, new EnSadisticNature(), true); // sadistic here fills up a slot because there was an extra unaccounted for bomb
                     turn++;
                     break;
                 case 3:

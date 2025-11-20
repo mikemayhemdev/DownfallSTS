@@ -70,7 +70,7 @@ public class FleeingMerchant extends AbstractMonster {
     public static final String SOULSTEALNAME = CardCrawlGame.languagePack.getMonsterStrings(ID).MOVES[0];
     public static final float DRAW_X = Settings.WIDTH * 0.5F + 34.0F * Settings.scale;
     public static final float DRAW_Y = AbstractDungeon.floorY - 109.0F * Settings.scale;
-    public static final int START_HP = 400;
+    public static final int START_HP = 360;
 
     public static int CURRENT_HP = 400;
     public static int CURRENT_STRENGTH = 0;
@@ -123,11 +123,14 @@ public class FleeingMerchant extends AbstractMonster {
         if (AbstractDungeon.ascensionLevel >= 8) {
             setHp(400);
         } else {
-            setHp(375);
+            setHp(360);
         }
 
         if (AbstractDungeon.ascensionLevel >= 3) {
             this.multi = 5;
+            if (AbstractDungeon.ascensionLevel >= 18) {
+                this.multi++;
+            }
         } else {
             this.multi = 4;
         }
@@ -149,9 +152,6 @@ public class FleeingMerchant extends AbstractMonster {
 
     @Override
     public void usePreBattleAction() {
-        if (AbstractDungeon.ascensionLevel >= 18) {
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, 1), 1));
-        }
         //AbstractDungeon.getCurrRoom().cannotLose = true;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BarricadePower(this)));
 
