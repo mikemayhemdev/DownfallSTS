@@ -45,7 +45,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_ThreadAndNeedle());
         addRelic(new CBR_Torii());
-        addRelic(new CBR_Girya(2));
+        addRelic(new CBR_Girya(3));
         addRelic(new CBR_VelvetChoker());
     }
 
