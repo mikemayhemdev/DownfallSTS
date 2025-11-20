@@ -67,7 +67,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
                     //turn 2
                     //25~ damage
                     addToList(cardsList, new EnWaveOfTheHand());
-                    addToList(cardsList, new EnBrilliance(), extraUpgrades);  // This is probably a terrible idea. This is where the Blind was, which was moved to where the Strike was.
+                    addToList(cardsList, new EnBrilliance(), true);  // This is probably a terrible idea. This is where the Blind was, which was moved to where the Strike was.
                     addToList(cardsList, new EnSwivel());
                     turn++;
                     break;
@@ -92,7 +92,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
                     //big attack
                     addToList(cardsList, new EnExpunger());     //Big Attack // I mean, not really that big compared to what time eater hits for.
                     addToList(cardsList, new EnBlind()); // blind moved here to replace the strike
-                    addToList(cardsList, new EnNormality());
+                    addToList(cardsList, new EnNormality(), extraUpgrades);
                     turn = 0;
                     looped = true;
                     break;
