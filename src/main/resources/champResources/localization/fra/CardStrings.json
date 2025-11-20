@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Provoc",
-    "DESCRIPTION": "Appliquez !M! de Faiblesse et 1 de Vulnérabilité.",
-    "UPGRADE_DESCRIPTION": "Appliquez 1 de Faiblesse et 1 de Vulnérabilité à TOUS les ennemis."
+    "DESCRIPTION": "Appliquez !M! de Faiblesse et de Vulnérabilité.",
+    "UPGRADE_DESCRIPTION": "Appliquez !M! de Faiblesse et de Vulnérabilité à TOUS les ennemis."
   },
   "champ:Execute": {
     "NAME": "Exécution",
