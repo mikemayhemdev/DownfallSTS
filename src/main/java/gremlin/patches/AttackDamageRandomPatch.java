@@ -9,7 +9,8 @@ import gremlin.relics.FragmentationGrenade;
 
 @SpirePatch(
         clz= AttackDamageRandomEnemyAction.class,
-        method=SpirePatch.CONSTRUCTOR
+        method=SpirePatch.CONSTRUCTOR,
+        paramtypez={AttackDamageRandomEnemyAction.class}
 )
 public class AttackDamageRandomPatch {
     public static void Postfix(AttackDamageRandomEnemyAction __instance){
