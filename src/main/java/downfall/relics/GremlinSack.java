@@ -6,9 +6,11 @@ import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.events.shrines.GremlinMatchGame;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.downfallMod;
+import downfall.events.GremlinMatchGame_Evil;
 import slimebound.SlimeboundMod;
 
 import java.util.ArrayList;
@@ -82,7 +84,8 @@ public class GremlinSack extends CustomRelic {
     }
 
     public void onEquip() {
-
+        AbstractDungeon.eventList.remove(GremlinMatchGame.ID);
+        AbstractDungeon.eventList.remove(GremlinMatchGame_Evil.ID);
         if (sackCards == null) onTrigger();
         for (AbstractCard c : sackCards) {
             AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(c, (MathUtils.random((float) Settings.WIDTH * 0.1F, (float) Settings.WIDTH * 0.9F)), (MathUtils.random((float) Settings.HEIGHT * 0.2F, (float) Settings.HEIGHT * 0.8F))));

@@ -27,7 +27,6 @@ import com.megacrit.cardcrawl.monsters.exordium.GremlinNob;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import downfall.relics.GremlinSack;
-import slimebound.SlimeboundMod;
 
 import java.util.*;
 
