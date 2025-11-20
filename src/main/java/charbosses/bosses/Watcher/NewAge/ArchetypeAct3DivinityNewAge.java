@@ -84,7 +84,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
                     //off turn / mercy
                     addToList(cardsList, new EnProtect(), true);
                     addToList(cardsList, new EnEmptyFist(), true);    //Exit Divinity
-                    addToList(cardsList, new EnNormality());
+                    addToList(cardsList, new EnDevotion());
                     turn++;
                     break;
                 case 4:
@@ -92,7 +92,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
                     //big attack
                     addToList(cardsList, new EnExpunger());     //Big Attack // I mean, not really that big compared to what time eater hits for.
                     addToList(cardsList, new EnBlind()); // blind moved here to replace the strike
-                    addToList(cardsList, new EnDevotion());
+                    addToList(cardsList, new EnNormality());
                     turn = 0;
                     looped = true;
                     break;
