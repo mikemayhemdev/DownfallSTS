@@ -251,8 +251,7 @@ public class AwakenedOneMod implements
                 .overrideEvent(GoldenWing.ID)
                 .overrideEvent(WingStatue_Evil.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsAwakened.ID, BackToBasicsAwakened.class) //Event ID//
                 //Event Character//
