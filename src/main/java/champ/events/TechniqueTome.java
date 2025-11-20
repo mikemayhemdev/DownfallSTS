@@ -77,11 +77,17 @@ public class TechniqueTome extends AbstractImageEvent {
             }
             this.hpCost = this.hpCost * 2;
             if (this.hpCost > 20) {
-
-                this.imageEventText.updateDialogOption(0, OPTIONS[5], new PrideStandard());
+                if (getNonTechniqueCards().size() == 0) {
+                    this.imageEventText.updateDialogOption(0, OPTIONS[5], true);
+                } else {
+                    this.imageEventText.updateDialogOption(0, OPTIONS[5], new PrideStandard());
+                }
             } else {
-
-                this.imageEventText.updateDialogOption(0, OPTIONS[0] + this.hpCost + OPTIONS[1]);
+                if (getNonTechniqueCards().size() == 0) {
+                    this.imageEventText.updateDialogOption(0, OPTIONS[0] + this.hpCost + OPTIONS[1], true);
+                } else {
+                    this.imageEventText.updateDialogOption(0, OPTIONS[0] + this.hpCost + OPTIONS[1]);
+                }
             }
 
         }
