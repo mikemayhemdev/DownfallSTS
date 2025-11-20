@@ -77,8 +77,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
                     //Bomb goes Boom.
                     addToList(cardsList, new EnPanacea(), true); // +2 artifact, +5 total??????? remove clockwork and replace with another relic (abacus?)
                     addToList(cardsList, new EnPanicButton(), true);
-                    addToList(cardsList, new EnClumsy());
-                    //addToList(cardsList, new EnSadisticNature(), true); // sadistic here fills up a slot because there was an extra unaccounted for bomb
+                    addToList(cardsList, new EnSadisticNature(), true); // sadistic here fills up a slot because there was an extra unaccounted for bomb
                     turn++;
                     break;
                 case 3:
