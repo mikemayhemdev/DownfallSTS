@@ -60,7 +60,7 @@
     "FLAVOR": "A little extra heat makes everything better.",
     "DESCRIPTIONS": [
       "Start each combat with #b",
-      " #yhexamod:Intensity [REMOVE_SPACE]."
+      " #yhexamod:Intensity."
     ]
   },
   "hexamod:SoulOfChaos": {
@@ -99,7 +99,7 @@
     "FLAVOR": "Fire, fire, fire, fire, fire, FIRE!",
     "DESCRIPTIONS": [
       "Whenever you play #b",
-      " #bnon-0 cost cards, gain an #ygremlin:Echo of a basic #yStrike [REMOVE_SPACE]. It costs #b0 [REMOVE_SPACE]."
+      " #bnon-0 cost cards, gain an #ygremlin:Echo of a basic #yStrike [REMOVE_SPACE]. It costs #b0."
     ]
   },
   "hexamod:Libra": {

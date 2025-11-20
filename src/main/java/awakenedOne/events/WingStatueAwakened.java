@@ -13,7 +13,7 @@ import downfall.relics.BrokenWingStatue;
 import downfall.relics.ShatteredFragment;
 
 public class WingStatueAwakened extends AbstractImageEvent {
-    public static final String ID = "awakened:WingStatue";
+    public static final String ID = "awakened:WingStatueAwakened";
     public static final String NAME;
     public static final String[] DESCRIPTIONS;
     public static final String[] OPTIONS;

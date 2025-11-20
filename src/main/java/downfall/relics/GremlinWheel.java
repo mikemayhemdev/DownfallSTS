@@ -2,7 +2,10 @@ package downfall.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.events.shrines.GremlinWheelGame;
 import downfall.downfallMod;
+import downfall.events.GremlinWheelGame_Evil;
 
 public class GremlinWheel extends CustomRelic {
 
@@ -15,6 +18,11 @@ public class GremlinWheel extends CustomRelic {
     public GremlinWheel() {
         super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.FLAT);
         this.counter = 1;
+    }
+
+    public void onEquip() {
+        AbstractDungeon.eventList.remove(GremlinWheelGame.ID);
+        AbstractDungeon.eventList.remove(GremlinWheelGame_Evil.ID);
     }
 
     @Override

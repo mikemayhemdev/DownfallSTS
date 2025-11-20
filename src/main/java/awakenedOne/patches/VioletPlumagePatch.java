@@ -6,6 +6,8 @@ import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import awakenedOne.powers.EnsorcelatePower;
 import awakenedOne.powers.IntensifyPower;
 import awakenedOne.util.Wiz;
+import champ.ChampMod;
+import champ.patches.SignatureMovePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.evacipated.cardcrawl.modthespire.lib.SpirePostfixPatch;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -32,6 +34,10 @@ public class VioletPlumagePatch {
                 if (__instance.cost != 0) {
                     return (AbstractDungeon.player.hasRelic(BlackCandle.ID));
                 }
+            }
+
+            if (isIndeedWithoutADoubtInCombat() && __instance.hasTag(ChampMod.FINISHER)) {
+                return (SignatureMovePatch.inSignatureMove.get(__instance));
             }
 
             if (isIndeedWithoutADoubtInCombat() && __instance instanceof Gloomguard) {

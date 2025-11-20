@@ -3,7 +3,7 @@
     "NAME": "Heart of Goo",
     "FLAVOR": "I feel so funky.",
     "DESCRIPTIONS": [
-      "Whenever you #yslimeboundmod:Consume [REMOVE_SPACE], heal #b",
+      "Whenever you #yslimeboundmod:Consume, heal #b",
       " HP, up to #b",
       " each combat."
     ]
@@ -13,7 +13,7 @@
     "FLAVOR": "The Secret of the Ooze.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL Whenever you #yslimeboundmod:Consume [REMOVE_SPACE], heal #b",
+      " [REMOVE_SPACE].[] NL Whenever you #yslimeboundmod:Consume, heal #b",
       " HP, up to #b",
       " each combat."
     ]

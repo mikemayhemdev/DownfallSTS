@@ -30,8 +30,6 @@ public class TripleStrike extends AbstractChampCard {
         r.updateCost(-999);
         PropertiesMod mod = new PropertiesMod(PropertiesMod.supportedProperties.ECHO, false);
         CardModifierManager.addModifier(r, mod);
-        CardModifierManager.addModifier(r, new EtherealMod());
-        CardModifierManager.addModifier(r, new ExhaustMod());
         CardModifierManager.addModifier(r, new TechniqueMod());
         cardsToPreview = r;
       //  CardModifierManager.addModifier(this, new TechniqueMod());
