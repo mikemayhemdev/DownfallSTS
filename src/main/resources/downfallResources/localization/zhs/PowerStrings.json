@@ -173,7 +173,8 @@
   "downfall:SilentPoisonPower": {
     "NAME": "警告：剧毒",
     "DESCRIPTIONS": [
-      " #y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消。 NL 战斗开始时获得 #b1 张 #y解毒剂 。"
+      " #y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消。",
+      " #y中毒 在你的回合结束时触发、伤害能被 #y格挡 抵消，且层数不衰减。"
     ]
   },
   "downfall:NeowHighlyToxic": {
@@ -452,6 +453,14 @@
     "DESCRIPTIONS": [
       "抵抗一次死亡，并将生命回复至 #b50% 。",
       "咔咔！"
+    ]
+  },
+  "downfall:SilentDelayedWraithPower": {
+    "NAME": "Fatal Possession",
+    "DESCRIPTIONS": [
+      "#y静默猎手 首次生命值降至 #b0 时，免死并开启 #y幽魂形态 ",
+      " ，再回复 #b",
+      " 点生命。"
     ]
   }
 }
