@@ -31,7 +31,6 @@ public class BrokenShin extends AbstractGremlinCard {
     public BrokenShin()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
-
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
