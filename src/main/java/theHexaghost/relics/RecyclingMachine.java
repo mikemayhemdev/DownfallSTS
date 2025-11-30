@@ -20,7 +20,7 @@ public class RecyclingMachine extends CustomRelic {
     public boolean activated = false;
 
     public RecyclingMachine() {
-        super(ID, IMG, OUTLINE, RelicTier.COMMON, LandingSound.HEAVY);
+        super(ID, IMG, OUTLINE, RelicTier.UNCOMMON, LandingSound.HEAVY);
     }
 
     @Override
