@@ -1,6 +1,7 @@
 package charbosses.cards.colorless;
 
 import charbosses.cards.AbstractBossCard;
+import charbosses.powers.cardpowers.EnemySadisticPower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.colorless.SadisticNature;
@@ -27,7 +28,8 @@ public class EnSadisticNature extends AbstractBossCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(m, m, new SadisticPower(m, this.magicNumber), this.magicNumber));
+        //basically identical except it checks for ginger and turnip
+        this.addToBot(new ApplyPowerAction(m, m, new EnemySadisticPower(m, this.magicNumber), this.magicNumber));
     }
 
     public void upgrade() {
