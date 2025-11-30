@@ -37,7 +37,7 @@ public static class DropSeals {
 //                __instance.rewards.add(new SealSealReward());
 //            }
 
-            if (__instance instanceof MonsterRoomElite || __instance instanceof MonsterRoomBoss) {
+            if (__instance instanceof MonsterRoomElite) {
                 __instance.rewards.add(new SealSealReward());
             }
 
