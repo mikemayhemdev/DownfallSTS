@@ -6,6 +6,7 @@ import automaton.relics.BronzeIdol;
 import automaton.relics.DecasWashers;
 import automaton.relics.DonusWashers;
 import awakenedOne.AwakenedOneChar;
+import awakenedOne.potions.CultistsDelight;
 import awakenedOne.relics.*;
 import champ.ChampChar;
 import champ.potions.CounterstrikePotion;
@@ -359,6 +360,7 @@ public class BanSharedContentPatch {
                 PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
                 PotionHelper.potions.remove(WizPotion.POTION_ID);
                 PotionHelper.potions.remove(BossPotion.POTION_ID);
+                PotionHelper.potions.remove(CultistsDelight.POTION_ID);
                 //   PotionHelper.potions.remove(TempHPPotion.POTION_ID);
             }
             // edit: below probably not functioning too but lazy to implement
