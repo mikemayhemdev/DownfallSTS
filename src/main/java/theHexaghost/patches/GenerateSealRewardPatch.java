@@ -36,10 +36,10 @@ public static class DropSeals {
 //            if (AbstractDungeon.potionRng.random(0, 99) <= chance) {
 //                __instance.rewards.add(new SealSealReward());
 //            }
-
-            if (__instance instanceof MonsterRoomElite) {
-                __instance.rewards.add(new SealSealReward());
-            }
+//
+           // if (__instance instanceof MonsterRoomElite) {
+          //      __instance.rewards.add(new SealSealReward());
+         //   }
 
         }
     }

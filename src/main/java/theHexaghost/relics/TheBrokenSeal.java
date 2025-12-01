@@ -28,7 +28,7 @@ public class TheBrokenSeal extends CustomRelic {
     public static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("Unfettered"));
 
     public TheBrokenSeal() {
-        super(ID, IMG, OUTLINE, RelicTier.SPECIAL, LandingSound.MAGICAL);
+        super(ID, IMG, OUTLINE, RelicTier.DEPRECATED, LandingSound.MAGICAL);
     }
 
     //variables
