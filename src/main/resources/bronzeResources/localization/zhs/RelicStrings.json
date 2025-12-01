@@ -10,7 +10,7 @@
     "NAME": "护目镜",
     "FLAVOR": "仔细观察。",
     "DESCRIPTIONS": [
-      "回合结束时若 #ybronze:队列 为空，获得 #b"，
+      "回合结束时若 #ybronze:队列 为空，获得 #b",
       " 点 #y格挡 。"
     ]
   },
