@@ -18,7 +18,7 @@ public class ViciousMockery extends AbstractChampCard {
 
     public ViciousMockery() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseMagicNumber = magicNumber = 4;
+        baseMagicNumber = magicNumber = 3;
         baseDownfallMagic = downfallMagic = 1;
         postInit();
         loadJokeCardImage(this, "ViciousMockery.png");
@@ -48,7 +48,7 @@ public class ViciousMockery extends AbstractChampCard {
     }
 
     public void upp() {
-        //upgradeMagicNumber(1);
+        upgradeMagicNumber(1);
         upgradeDownfall(1);
     }
 }
