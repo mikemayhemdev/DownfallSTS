@@ -535,12 +535,12 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 .create());
                 */
 
-        BaseMod.addEvent(new AddEventParams.Builder(ArtOfSlimeWar.ID, ArtOfSlimeWar.class) //Event ID//
-                //Act//
-                .dungeonIDs(TheCity.ID, "TheJungle")
-                //Only in Evil if content sharing is disabled
-                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
-                .create());
+//        BaseMod.addEvent(new AddEventParams.Builder(ArtOfSlimeWar.ID, ArtOfSlimeWar.class) //Event ID//
+//                //Act//
+//                .dungeonIDs(TheCity.ID, "TheJungle")
+//                //Only in Evil if content sharing is disabled
+//                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
+//                .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class) //Event ID//
                 //Event Character//

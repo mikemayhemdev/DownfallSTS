@@ -43,12 +43,10 @@ import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
-import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import collector.CollectorChar;
 import collector.CollectorMod;
-import collector.potions.TempHPPotion;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import downfall.cards.MajorBeam;
 import collector.util.CollectibleCardReward;
@@ -142,14 +140,12 @@ import slimebound.characters.SlimeboundCharacter;
 import slimebound.potions.ThreeZeroPotion;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
-import sneckomod.cards.unknowns.*;
 import sneckomod.potions.MuddlingPotion;
 import sneckomod.util.ColorfulCardReward;
 
 import sneckomod.util.UpgradedUnknownReward;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
-import theHexaghost.potions.SoulburnPotion;
 import theHexaghost.util.SealSealReward;
 
 import java.io.IOException;

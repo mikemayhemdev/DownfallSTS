@@ -1,6 +1,7 @@
 package guardian.powers;
 
 
+import champ.powers.DefensiveStylePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
@@ -8,8 +9,10 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.ArtifactPower;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import guardian.relics.ObsidianScales;
+import hermit.powers.DeterminationPower;
 import sneckomod.relics.LoadedDie;
 
 
@@ -69,6 +72,11 @@ public class LoseThornsPower extends AbstractGuardianPower {
                 this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, 1), 1));
                 OScalesInstance.flash();
             }
+
+            if (AbstractDungeon.player.hasPower(DeterminationPower.POWER_ID)) {
+                this.addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, AbstractDungeon.player.getPower(DeterminationPower.POWER_ID).amount), AbstractDungeon.player.getPower(DeterminationPower.POWER_ID).amount));
+            }
+
         }
     }
 

@@ -39,9 +39,10 @@ public class PickAxe extends CustomRelic {
 
     @Override
     public void onTrigger() {
-        //super.onTrigger();
-      //  this.counter = -2;
-      //  setCounter(this.counter);
+        super.onTrigger();
+        this.counter = -2;
+        this.grayscale = true;
+        setCounter(this.counter);
     }
 
     public void setCounter(int counter) {

@@ -34,7 +34,7 @@ public class ExhaustVirusAction extends AbstractGameAction {
         this.p = AbstractDungeon.player;
         this.canPickZero = canPickZero;
         this.isRandom = isRandom;
-        this.amount = 5;
+        this.amount = 3;
         this.duration = this.startDuration = Settings.ACTION_DUR_FAST;
         this.actionType = ActionType.EXHAUST;
     }
@@ -98,7 +98,7 @@ public class ExhaustVirusAction extends AbstractGameAction {
 
             if (!this.isRandom) {
                 numExhausted = this.amount;
-                AbstractDungeon.handCardSelectScreen.open(TEXT[0], 5, this.anyNumber, this.canPickZero);
+                AbstractDungeon.handCardSelectScreen.open(TEXT[0], 3, this.anyNumber, this.canPickZero);
                 this.tickDuration();
                 return;
             }

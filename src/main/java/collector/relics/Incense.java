@@ -29,7 +29,7 @@ public class Incense extends CustomRelic implements OnReceivePowerRelic {
     @Override
     public boolean onReceivePower(AbstractPower beingApplied, AbstractCreature source) {
         if (beingApplied.ID.equals(WeakPower.POWER_ID) || beingApplied.ID.equals(VulnerablePower.POWER_ID) || beingApplied.ID.equals(FrailPower.POWER_ID)) {
-            if (AbstractDungeon.player.hasPower(WeakPower.POWER_ID) || AbstractDungeon.player.hasPower(VulnerablePower.POWER_ID) || AbstractDungeon.player.hasPower(FrailPower.POWER_ID)) {
+            if (AbstractDungeon.player.hasPower(beingApplied.ID)) {
                 flash();
                 addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 return false;

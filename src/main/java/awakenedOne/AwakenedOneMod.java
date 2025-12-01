@@ -238,7 +238,6 @@ public class AwakenedOneMod implements
                 //.playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
                 //Event ID to Override//
                 .overrideEvent(Nest.ID)
-                .overrideEvent(TheNest_Evil.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
@@ -246,10 +245,8 @@ public class AwakenedOneMod implements
         BaseMod.addEvent(new AddEventParams.Builder(WingStatueAwakened.ID, WingStatueAwakened.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
-                //.playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
                 //Event ID to Override//
                 .overrideEvent(GoldenWing.ID)
-                .overrideEvent(WingStatue_Evil.ID)
                 //Event Type//
                 .eventType(EventUtils.EventType.FULL_REPLACE).create());
 

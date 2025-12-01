@@ -45,7 +45,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_ThreadAndNeedle());
         addRelic(new CBR_Torii());
-        addRelic(new CBR_Girya(2));
+        addRelic(new CBR_Girya(3));
         addRelic(new CBR_VelvetChoker());
     }
 
@@ -74,17 +74,17 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
                 case 2:
                     //turn 3
                     //off turn
+                    addToList(cardsList, new EnDevotion(), extraUpgrades);
                     addToList(cardsList, new EnSwiftStrike());
-                    addToList(cardsList, new EnConjurBlade(), false);
-                    addToList(cardsList, new EnSanctity());    //Not played
+                    addToList(cardsList, new EnConjurBlade(), true);
                     turn++;
                     break;
                 case 3:
                     //turn 4
                     //off turn / mercy
                     addToList(cardsList, new EnProtect(), true);
-                    addToList(cardsList, new EnEmptyFist(), true);    //Exit Divinity
-                    addToList(cardsList, new EnDevotion(), extraUpgrades);
+                    addToList(cardsList, new EnEmptyFist(), true);
+                    addToList(cardsList, new EnSanctity());    //Not played
                     turn++;
                     break;
                 case 4:

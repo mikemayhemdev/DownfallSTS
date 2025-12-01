@@ -32,6 +32,7 @@ public class WideSting extends AbstractSneckoCard {
     public WideSting() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ALL_ENEMY);
         baseDamage = DAMAGE;
+        this.isMultiDamage = true;
         SneckoMod.loadJokeCardImage(this, "WideSting.png");
     }
 

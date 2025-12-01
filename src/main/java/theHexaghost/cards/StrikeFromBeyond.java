@@ -16,7 +16,7 @@ public class StrikeFromBeyond extends AbstractHexaCard {
 
     public StrikeFromBeyond() {
         super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 4;
+        baseDamage = 3;
         this.tags.add(CardTags.STRIKE);
         HexaMod.loadJokeCardImage(this, "StrikeFromBeyond.png");
     }
