@@ -471,11 +471,11 @@ public class HexaMod implements
                 .bonusCondition(() -> (AbstractDungeon.cardRandomRng.random(0, 2) == 2))
                 .create());
 
-        BaseMod.addEvent(new AddEventParams.Builder(SealChamber.ID, SealChamber.class) //Event ID//
-                .spawnCondition(() -> !AbstractDungeon.player.hasRelic(TheBrokenSeal.ID) && !hasAllSeals())
-                //Event Character//
-                .playerClass(TheHexaghost.Enums.THE_SPIRIT)
-                .create());
+//        BaseMod.addEvent(new AddEventParams.Builder(SealChamber.ID, SealChamber.class) //Event ID//
+//                 .spawnCondition(() -> !AbstractDungeon.player.hasRelic(TheBrokenSeal.ID) && !hasAllSeals())
+//                 //Event Character//
+//                 .playerClass(TheHexaghost.Enums.THE_SPIRIT)
+//                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(HexaFalling.ID, HexaFalling.class) //Event ID//
                 //Event Character//
