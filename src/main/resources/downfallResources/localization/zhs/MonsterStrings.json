@@ -88,5 +88,12 @@
     "NAME": "末日匕首",
     "DIALOG": [
     ]
+  },
+  "downfall:VoidCore": {
+    "MOVES": [
+    ],
+    "NAME": "虚空之核",
+    "DIALOG": [
+    ]
   }
 }

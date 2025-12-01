@@ -32,7 +32,7 @@
   "champ:ImprovisingPower": {
     "NAME": "触类旁通",
     "DESCRIPTIONS": [
-      "你的回合开始时，若未处于 #y姿态 ，随机进入 #y战狂 或 #y防守 。 每当你进入 #y姿态 时，获得其 champ:技术 奖励 #b",
+      "每当你进入 #y姿态 时，获得其 champ:技术 奖励 #b",
       " 次 。"
     ]
   },
@@ -134,9 +134,9 @@
   "champ:NoBlockNextTurnPower": {
     "NAME": "爆甲",
     "DESCRIPTIONS": [
-      "你下回合不能获得格挡。",
+      "你下回合不能从卡牌获得格挡。",
       "你下 #b",
-      " 个回合不能获得格挡。"
+      " 个回合不能从卡牌获得格挡。"
     ]
   },
   "champ:UltimateStancePower": {

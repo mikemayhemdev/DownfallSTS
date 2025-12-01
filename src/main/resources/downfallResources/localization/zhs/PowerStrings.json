@@ -43,7 +43,10 @@
   "downfall:SpotWeakness": {
     "NAME": "观察弱点",
     "DESCRIPTIONS": [
-      "每当你每打出一张攻击牌，这名敌人将获得 #b"," 点 #y力量 。目前将获得 #b", " 点 #y力量 。"
+      "若你本回合打出一张攻击，该单位获得 #b",
+      " 点 #y力量 。",
+      "你本回合已打出一张攻击，该单位将获得 #b",
+      " 点 #y力量 。"
     ]
   },
   "downfall:FearNoEvil": {
@@ -54,9 +57,17 @@
     ]
   },
   "downfall:PoisonResist": {
-    "NAME": "抗毒",
+    "NAME": "拭毒",
     "DESCRIPTIONS": [
-      " #y中毒 将在你回合结束时触发。回合结束时，你每有 [E] ，使用并失去 #b10 层 #y中毒 。"
+      "每当你造成 #y攻击 伤害，失去 #b",
+      " 层 #y中毒 。"
+    ]
+  },
+  "downfall:OnPlayerPoison": {
+    "NAME": "中毒",
+    "DESCRIPTIONS": [
+      "你的回合结束时，受到 #b",
+      " 点伤害。"
     ]
   },
   "downfall:NeowBuff": {
@@ -68,7 +79,8 @@
   "downfall:WatcherAngryPower": {
     "NAME": "无遏狂怒",
     "DESCRIPTIONS": [
-      " #y观者 的回合结束时，若其生命不高于 #b50% ，她将永久进入 #y愤怒 。 NL #y愤怒 时造成与受到的伤害增加 #b50% 而非 #b100% 。"
+      " #y观者 的回合结束时，若其生命不高于 #b50% ，她将永久进入 #y愤怒 。 NL #y愤怒 时造成与受到的伤害增加 #b50% 而非 #b100% 。",
+      "#y观者 的 #y愤怒 姿态使其造成与受到的伤害增加 #b50% 而非 #b100% 。"
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -88,9 +100,14 @@
   "downfall:WatcherSkillPower": {
     "NAME": "失谐掠夺者",
     "DESCRIPTIONS": [
-      "每当你打出技能牌时，观者将获得 #b",
-      " 点 #y临时 #y力量 。",
-      "每当你打出技能牌时，观者将获得 #y临时 #y力量 。"
+      "每当你打出一张 #y攻击 ， #y观者 获得 #b",
+      " 层 #y临时敏捷 ，打出 #y技能 时获得 #b",
+      " 层 #y临时力量 ，打出能力时均获得。",
+      "",
+      "若你在一回合打出超过 #b",
+      " 张牌， #y观者 失去所有负面效果。",
+      "本回合你已打出 #b",
+      " 张牌。"
     ]
   },
   "downfall:WrathNextTurnPower": {
@@ -110,7 +127,17 @@
   "downfall:WatcherDivinityPower": {
     "NAME": "消逝的信仰",
     "DESCRIPTIONS": [
-      "每当你打出 #b1 张牌时， #y观者 获得 #b1 层 #p真言 ，你的回合开始时其失去 #b4 层 。 NL 当 #y观者 进入 #y神格 时，她将获得 #b3 点 #y力量 ，而且不会自动退出 #y神格 。"
+      "每当你打出 #b1 张牌时， #y观者 获得 #b1 层 #p真言 ，你的回合开始时其失去 #b5 层 。 NL 当 #y观者 进入 #y神格 时，她将获得 #b3 点 #y力量 ，而且不会自动退出 #y神格 。"
+    ]
+  },
+  "downfall:SimpleWatcherDivinityPower": {
+    "NAME": "消逝的信仰",
+    "DESCRIPTIONS": [
+      "若你在一回合打出 #b6 张牌， #y观者 获得 #b1 层 #y真言 与 #y无实体 。",
+      " NL 本回合你已打出 #b",
+      " 张牌。",
+      " NL (本回合已触发)",
+      " NL NL #y观者 不会退出 #p神格 ，但造成的伤害仅提升 #b200% 。"
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -146,7 +173,8 @@
   "downfall:SilentPoisonPower": {
     "NAME": "警告：剧毒",
     "DESCRIPTIONS": [
-      " #y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消。 NL 战斗开始时获得 #b1 张 #y解毒剂 。"
+      " #y中毒 在你的回合结束时触发且伤害能被 #y格挡 抵消。",
+      " #y中毒 在你的回合结束时触发、伤害能被 #y格挡 抵消，且层数不衰减。"
     ]
   },
   "downfall:NeowHighlyToxic": {
@@ -418,6 +446,21 @@
     "DESCRIPTIONS": [
       "每当你使 #y涅奥 耗尽 #y坚不可摧 时，降低其 #y生命之神 #b",
       " 层。"
+    ]
+  },
+    "downfall:CultistRevivePower": {
+    "NAME": "妄奉",
+    "DESCRIPTIONS": [
+      "抵抗一次死亡，并将生命回复至 #b50% 。",
+      "咔咔！"
+    ]
+  },
+  "downfall:SilentDelayedWraithPower": {
+    "NAME": "Fatal Possession",
+    "DESCRIPTIONS": [
+      "#y静默猎手 首次生命值降至 #b0 时，免死并开启 #y幽魂形态 ",
+      " ，再回复 #b",
+      " 点生命。"
     ]
   }
 }
