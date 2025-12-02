@@ -1,6 +1,7 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.GiftsFromTheDeadPower;
@@ -23,6 +24,15 @@ public class GiftsFromTheDead extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeBaseCost(1);
+        }
+    }
+
+    @Override
+    public float getTitleFontSize() {
+        if(Settings.language != Settings.GameLanguage.ENG) {
+            return -1.0F;
+        }else {
+            return 20.0F;
         }
     }
 }
