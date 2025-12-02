@@ -48,7 +48,7 @@ public class BurningQuestion extends AbstractHexaCard implements HexaPurpleTextI
     @Override
     public float getTitleFontSize() {
         if(Settings.language != Settings.GameLanguage.ENG) {
-            return -1.0F;
+            return 19.0F;
         }else {
             return 20.0F;
         }
