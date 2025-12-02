@@ -26,21 +26,21 @@ public class RainOfEmbers extends AbstractHexaCard {
         if (energyOnUse < EnergyPanel.totalCount) {
             energyOnUse = EnergyPanel.totalCount;
         }
-        if(upgraded){
-            EmbersAction r = new EmbersAction(1, p, m, damage, damageTypeForTurn, 0, 1);
-            atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
-        }else {
+       // if(upgraded){
+        //    EmbersAction r = new EmbersAction(1, p, m, damage, damageTypeForTurn, 0, 1);
+         //   atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
+       // }else {
             EmbersAction r = new EmbersAction(0, p, m, damage, damageTypeForTurn, 0, 1);
             atb(new PerformXAction(r, p, energyOnUse, freeToPlayOnce));
-        }
+     //   }
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            rawDescription = UPGRADE_DESCRIPTION;
-            initializeDescription();
-//            upgradeDamage(3);
+  //          rawDescription = UPGRADE_DESCRIPTION;
+//            initializeDescription();
+            upgradeDamage(3);
 //            upgradeBurn(2);
         }
     }
