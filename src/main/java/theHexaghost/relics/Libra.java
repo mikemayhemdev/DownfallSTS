@@ -75,7 +75,7 @@ public class Libra extends CustomRelic {
 
     public void update() {
         super.update(); // Todo, verify the trigger condition is fine for controller input too
-        if (!this.calledTransform && (no_cards_to_select || (AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered && (InputHelper.justClickedLeft || CInputActionSet.proceed.isJustPressed())))) {
+        if (!this.calledTransform && (no_cards_to_select || (AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered && InputHelper.justClickedLeft) || CInputActionSet.proceed.isJustPressed())) {
             AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered = false;
             this.calledTransform = true;
             AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
