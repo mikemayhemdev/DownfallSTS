@@ -3,7 +3,7 @@
     "NAME": "Spirit Brand",
     "FLAVOR": "A bound protector.",
     "DESCRIPTIONS": [
-      "The first time you #yIgnite a Ghostflame each turn, gain #b",
+      "The first time you #yhexamod:Ignite a Ghostflame each turn, gain #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -21,7 +21,7 @@
     "FLAVOR": "Let's see if we can do... better.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL Whenever you #yIgnite a Ghostflame, gain #b",
+      " [REMOVE_SPACE].[] NL Whenever you #yhexamod:Ignite a Ghostflame, gain #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
