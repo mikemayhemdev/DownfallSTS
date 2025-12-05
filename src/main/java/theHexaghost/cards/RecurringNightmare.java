@@ -38,12 +38,12 @@ public class RecurringNightmare extends AbstractHexaCard {
         }
     }
 
-    @Override
-    public float getTitleFontSize() {
-        if(Settings.language != Settings.GameLanguage.ENG) {
-            return 19.0F;
-        }else {
-            return 20.0F;
-        }
-    }
+//    @Override
+//    public float getTitleFontSize() {
+//        if(Settings.language != Settings.GameLanguage.ENG) {
+//            return 19.0F;
+//        }else {
+//            return 20.0F;
+//        }
+//    }
 }
