@@ -63,25 +63,25 @@ public class Libra extends CustomRelic {
         if (starters.group.isEmpty()) {
             this.no_cards_to_select = true;
         } else {
-
-            if (AbstractDungeon.isScreenUp) {
-                AbstractDungeon.dynamicBanner.hide();
-                AbstractDungeon.previousScreen = AbstractDungeon.screen;
-            }
-            AbstractDungeon.gridSelectScreen.open(starters, starters.group.size(), true, this.DESCRIPTIONS[2]);
+            giveCards(starters.group);
+            //if (AbstractDungeon.isScreenUp) {
+             //   AbstractDungeon.dynamicBanner.hide();
+             //   AbstractDungeon.previousScreen = AbstractDungeon.screen;
+          //  }
+          //  AbstractDungeon.gridSelectScreen.open(starters, starters.group.size(), true, this.DESCRIPTIONS[2]);
         }
 
     }
 
-    public void update() {
-        super.update(); // Todo, verify the trigger condition is fine for controller input too
-        if (!this.calledTransform && (no_cards_to_select || (AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered && InputHelper.justClickedLeft) || CInputActionSet.proceed.isJustPressed())) {
-            AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered = false;
-            this.calledTransform = true;
-            AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
-            this.giveCards(AbstractDungeon.gridSelectScreen.selectedCards);
-        }
-    }
+//    public void update() {
+//        super.update(); // Todo, verify the trigger condition is fine for controller input too
+//        if (!this.calledTransform && (no_cards_to_select || (AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered && InputHelper.justClickedLeft) || CInputActionSet.proceed.isJustPressed())) {
+//            AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered = false;
+//            this.calledTransform = true;
+//            AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
+//            this.giveCards(AbstractDungeon.gridSelectScreen.selectedCards);
+//        }
+//    }
 
     public void giveCards(ArrayList<AbstractCard> group) {
 
