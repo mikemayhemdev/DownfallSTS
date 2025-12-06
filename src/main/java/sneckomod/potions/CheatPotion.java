@@ -37,7 +37,7 @@ public class CheatPotion extends CustomPotion {
         }
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        //this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle(SneckoMod.makeID("lucky"))), BaseMod.getKeywordDescription(SneckoMod.makeID("lucky"))));
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle(SneckoMod.makeID("overflow"))), BaseMod.getKeywordDescription(SneckoMod.makeID("overflow"))));
 
     }
 
