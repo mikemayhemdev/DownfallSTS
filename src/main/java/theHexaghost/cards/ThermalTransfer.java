@@ -4,6 +4,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import theHexaghost.HexaMod;
 import com.megacrit.cardcrawl.vfx.combat.FireballEffect;
@@ -47,4 +48,13 @@ public class ThermalTransfer extends AbstractHexaCard {
             upgradeBlock(UPG_BLOCK);
         }
     }
+
+//    @Override
+//    public float getTitleFontSize() {
+//        if(Settings.language != Settings.GameLanguage.ENG) {
+//            return 19.0F;
+//        }else {
+//            return 20.0F;
+//        }
+//    }
 }

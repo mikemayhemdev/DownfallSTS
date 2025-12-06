@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
 import com.megacrit.cardcrawl.actions.utility.WaitAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
@@ -67,4 +68,13 @@ public class UnlimitedPower extends AbstractHexaCard {
             upgradeBaseCost(3);
         }
     }
+
+//    @Override
+//    public float getTitleFontSize() {
+//        if(Settings.language != Settings.GameLanguage.ENG) {
+//            return 19.0F;
+//        }else {
+//            return 20.0F;
+//        }
+//    }
 }

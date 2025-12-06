@@ -14,7 +14,7 @@ public class IgnorePain extends AbstractChampCard {
     //stupid intellij stuff skill, self, rare
 
     public IgnorePain() {
-        super(ID, 2, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 3, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         exhaust = true;
         tags.add(ChampMod.FINISHER);
        // tags.add(ChampMod.TECHNIQUE);
@@ -33,6 +33,6 @@ public class IgnorePain extends AbstractChampCard {
     }
 
     public void upp() {
-        upgradeBaseCost(1);
+        upgradeBaseCost(2);
     }
 }

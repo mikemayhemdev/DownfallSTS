@@ -46,11 +46,9 @@ public class SoulConsumer extends CustomRelic {
 
     @Override
     public void onExhaust(AbstractCard card) {
-        this.img = TextureLoader.getTexture(makeRelicPath("SoulStone.png"));
         ++this.counter;
         if (this.counter % EXHAUST_REQUIREMENT == 0) {
             this.counter = 0;
-            this.img = TextureLoader.getTexture(makeRelicPath("SoulConsumerOn.png"));
             this.flash();
             this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
             GhostflameHelper.activeGhostFlame.charged = true; // for some special logic for end turn advance
