@@ -45,14 +45,14 @@ public class BurningQuestion extends AbstractHexaCard implements HexaPurpleTextI
         }
     }
 
-//    @Override
-//    public float getTitleFontSize() {
-//        if(Settings.language != Settings.GameLanguage.ENG) {
-//            return 19.0F;
-//        }else {
-//            return 20.0F;
-//        }
-//    }
+    @Override
+    public float getTitleFontSize() {
+        if(Settings.language != Settings.GameLanguage.ENG) {
+            return 25.0F;
+        } else {
+            return 23.0F;
+        }
+    }
 
     // to still show afterlife tooltip. because the format [purple]hexamod:afterlife[] doesnt get displayed correctly
     // we are only using [purple]afterlife[] here for easier text comprehension for new players, but doing this
