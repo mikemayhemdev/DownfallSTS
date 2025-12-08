@@ -18,7 +18,7 @@ public class Incense extends CustomRelic implements OnReceivePowerRelic {
     private static final String OUTLINE_IMG_PATH = Incense.class.getSimpleName() + ".png";
 
     public Incense() {
-        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.RARE, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.UNCOMMON, LandingSound.MAGICAL);
     }
 
     @Override
