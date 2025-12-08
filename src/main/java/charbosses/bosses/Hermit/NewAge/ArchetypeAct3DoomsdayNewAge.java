@@ -50,7 +50,7 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitDoomsday(p), 1));
 
         //Cultist Potion!!!
-        AbstractDungeon.actionManager.addToBottom(new VFXAction(new PotionThrowEffect("downfallResources/images/vfx/CultistPotion.png", p.hb.cX-240, p.hb.cY-150, p.hb.cX-240, p.hb.cY-150, 2F, 0.6F, false, true), 0.6F));
+        AbstractDungeon.actionManager.addToBottom(new VFXAction(new PotionThrowEffect("downfallResources/images/vfx/CultistPotion.png", p.hb.cX, p.hb.cY, p.hb.cX, p.hb.cY, 2F, 0.6F, false, true), 0.6F));
             int roll = MathUtils.random(2);
             if (roll == 0) {
                 AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1A"));
