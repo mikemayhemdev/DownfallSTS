@@ -63,7 +63,7 @@ public class CompilePackage extends AbstractGuardianCard {
         loadGemMisc();
 
         //cardsList.add(new PackageDefect());
-
+        this.tags.add(CardTags.HEALING);
         cardsList.add(new PackageDefect());
         cardsList.add(new PackageWalker());
         cardsList.add(new PackageSphere());
