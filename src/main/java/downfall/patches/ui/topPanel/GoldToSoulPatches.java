@@ -6,6 +6,7 @@ import com.badlogic.gdx.graphics.Texture;
 import com.evacipated.cardcrawl.modthespire.lib.*;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
@@ -302,7 +303,11 @@ public class GoldToSoulPatches {
     }
 
     public static void UpdateMerchantTip() {
-        String result = uiStrings.TEXT[3] + ": " + (FleeingMerchant.DEAD ? uiStrings.TEXT[4] : FleeingMerchant.CURRENT_HP + "/" + FleeingMerchant.START_HP)
+        int vibe = 360;
+        if (AbstractDungeon.ascensionLevel >= 8) {
+            vibe = 400;
+        }
+        String result = uiStrings.TEXT[3] + ": " + (FleeingMerchant.DEAD ? uiStrings.TEXT[4] : FleeingMerchant.CURRENT_HP + "/" + vibe)
                 + " NL " + uiStrings.TEXT[5] + ": " + FleeingMerchant.CURRENT_STRENGTH
                 + " NL " + uiStrings.TEXT[6] + ": " + FleeingMerchant.CURRENT_SOULS;
       /*  if (FleeingMerchant.CURRENT_DOOM > 0) {

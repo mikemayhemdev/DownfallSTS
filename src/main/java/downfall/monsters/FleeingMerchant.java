@@ -93,9 +93,6 @@ public class FleeingMerchant extends AbstractMonster {
 
     public FleeingMerchant() {
         super(NAME, ID, START_HP, -10.0F, -30.0F, 180.0F, 150.0F, null, 0.0F, 0.0F);
-        if (AbstractDungeon.ascensionLevel >= 8) {
-            START_HP = 400;
-        }
 
         drawX = 1260.0F * Settings.scale;
         drawY = AbstractDungeon.floorY + 30.0F * Settings.scale;
