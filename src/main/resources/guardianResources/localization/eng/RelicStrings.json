@@ -27,7 +27,7 @@
     "NAME": "Baalor's Lordly Plate",
     "FLAVOR": "One can never have enough armor.",
     "DESCRIPTIONS": [
-      "Whenever you #yguardianmod:Brace [REMOVE_SPACE], #yBrace 1 more."
+      "Whenever you #yguardianmod:Brace [REMOVE_SPACE], #yBrace #b1 more."
     ]
   },
   "Guardian:guardianmod:GemCopier": {
