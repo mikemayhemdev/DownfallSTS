@@ -399,7 +399,7 @@
   },
   "hexamod:VolcanoVisage": {
     "NAME": "Volcano Visage",
-    "DESCRIPTION": "Whenever you *Ignite a Ghostflame, apply !M! hexamod:Soulburn to ALL enemies."
+    "DESCRIPTION": "Whenever you hexamod:Ignite a Ghostflame, apply !M! hexamod:Soulburn to ALL enemies."
   },
   "hexamod:WildfireWeapon": {
     "NAME": "Wildfire Weapon",

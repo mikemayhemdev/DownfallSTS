@@ -14,7 +14,7 @@ public class HexaLevel extends AbstractHexaCard {
 
     //infernal form
 
-    private static final int MAGIC = 1;
+    private static final int MAGIC = 2;
 
     public HexaLevel() {
         super(ID, 3, CardType.POWER, CardRarity.RARE, CardTarget.SELF);
@@ -26,16 +26,16 @@ public class HexaLevel extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        //applyToSelf(new HexalevelPower(magicNumber));
+        applyToSelf(new HexalevelPower(magicNumber));
         if (upgraded) applyToSelf(new EnhancePower(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeMagicNumber(1);
-//            rawDescription = UPGRADE_DESCRIPTION;
-//            initializeDescription();
+            //upgradeMagicNumber(1);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 }

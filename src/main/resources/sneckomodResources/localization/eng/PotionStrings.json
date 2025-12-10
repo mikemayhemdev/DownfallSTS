@@ -10,8 +10,8 @@
   "sneckomod:CheatPotion": {
     "NAME": "Liquid Luck",
     "DESCRIPTIONS": [
-      "Overflow effects always activate this turn regardless of hand size.",
-      "Overflow effects always activate for #b",
+      "#yOverflow effects always activate this turn regardless of hand size.",
+      "#yOverflow effects always activate for #b",
       " turns regardless of hand size."
     ]
   },

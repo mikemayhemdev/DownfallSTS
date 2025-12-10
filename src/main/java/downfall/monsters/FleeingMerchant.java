@@ -70,7 +70,7 @@ public class FleeingMerchant extends AbstractMonster {
     public static final String SOULSTEALNAME = CardCrawlGame.languagePack.getMonsterStrings(ID).MOVES[0];
     public static final float DRAW_X = Settings.WIDTH * 0.5F + 34.0F * Settings.scale;
     public static final float DRAW_Y = AbstractDungeon.floorY - 109.0F * Settings.scale;
-    public static final int START_HP = 360;
+    public static int START_HP = 360;
 
     public static int CURRENT_HP = 400;
     public static int CURRENT_STRENGTH = 0;
@@ -93,7 +93,6 @@ public class FleeingMerchant extends AbstractMonster {
 
     public FleeingMerchant() {
         super(NAME, ID, START_HP, -10.0F, -30.0F, 180.0F, 150.0F, null, 0.0F, 0.0F);
-
 
         drawX = 1260.0F * Settings.scale;
         drawY = AbstractDungeon.floorY + 30.0F * Settings.scale;
@@ -284,7 +283,7 @@ public class FleeingMerchant extends AbstractMonster {
         AbstractDungeon.getCurrRoom().rewardAllowed = false;
         AbstractDungeon.getCurrRoom().rewards.clear();
         */
-        int increaseGold = 150;
+        int increaseGold = 100;
         if (FleeingMerchant.CURRENT_SOULS > 0)
             increaseGold += FleeingMerchant.CURRENT_SOULS;
 
