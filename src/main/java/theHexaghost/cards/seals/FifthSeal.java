@@ -19,7 +19,7 @@ public class FifthSeal extends AbstractSealCard {
 
     //THIS IS SIXTH SEAL!
     public FifthSeal() {
-        super(ID, 3, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
+        super(ID, 2, CardType.POWER, CardRarity.SPECIAL, CardTarget.SELF);
         baseMagicNumber = magicNumber = MAGIC;
 //
 //        cardsList.add(new FirstSeal());
@@ -38,7 +38,7 @@ public class FifthSeal extends AbstractSealCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(2);
+            upgradeBaseCost(1);
         }
     }
 
