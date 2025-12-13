@@ -508,7 +508,7 @@
   },
   "bronze:HyperBeam": {
     "NAME": "超能射线",
-    "DESCRIPTION": " 对所有敌人造成 !D! 点伤害。 NL 将5张 *虚空 加入抽牌堆顶部。"
+    "DESCRIPTION": "保留 。 NL 对所有敌人造成 !D! 点伤害。 NL 将 !M! 张 *虚空 加入抽牌堆顶部。"
   },
   "bronze:Hardcode": {
     "NAME": "硬编码",
@@ -652,3 +652,4 @@
     "DESCRIPTION": "所有敌人失去 !M! 点 力量。 NL 获得两张 *灼伤 。 NL 消耗 。"
   }
 }
+
