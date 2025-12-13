@@ -1,72 +1,88 @@
 {
   "awakened:Nest": {
-    "NAME": "The Nest",
+    "NAME": "巢穴",
     "DESCRIPTIONS": [
-      "You have found and returned to it. NL #pThe #pNest, the site of your ascension into the #b~living~ #b~avatar~ #b~of~ #b~a~ #b~god.~ The instant you enter, you are surrounded by Cultists, @cawing@ and @cheering@ for you! NL They know well that your arrivals often come with the requirements of a #r@tithe....@",
-      "The fights ahead will be difficult, and this is the perfect time to find a unique piece of weaponry to add to your arsenal. NL NL #r@...No@ #r@daggers@ #r@though.@ NL NL You perform a potent ritual to summon an extremely powerful #yrelic, but performing this ritual has taken a heavy toll on you. NL NL Drained, you leave the Nest, hopeful that your new weapon will create havoc in its wake.",
-      "More and more of the flock line up, bringing you offerings. NL NL Most are @worthless@ @trash,@ but one brings a particularly interesting offering: a #bpowerful #belixir that could greatly benefit you in battle. NL NL Soon after, you leave the Nest and continue your journey downwards the Spire.",
-      "The cultists surround you even more than they normally would upon seeing their prized statue return to them as well. NL As this is cause for celebration, you are showered in gifts and Souls! NL By the time the celebrations are over and you've left the Nest, you realize that you could have used this time to instead look for a valuable weapon... NL NL It's too late now, but you move forward anyways.",
-      "#r@\"BIRDGOD!!@ #r@RETURNED!!\"@ NL #b~\"CAW~ #b~CAW~ #b~CAAAAAWWW!\"~ NL The statue that you decided to not destroy has come in handy today for sure.",
+      "你找到并回到 #p巢穴 , 那是你超渡成 #b~神的活化身~ 的场所 ｡ 进去的一刻 , 你被邪教徒所包围 , 周围充满为你奏鸣的 @咔叫声@ 与 @欢呼声@ ! 与此同时 , 他们知道你的大驾光临必定伴随着缴纳 #r@奉献@ 的要求… ",
+      "前路的战斗将更为艰难 , 而这是寻找独一无二的兵械添加到武器库的大好时机 ｡ NL NL #r…@不过没有匕首喔@ #r@｡@  NL NL 你举行了召唤 #y遗物 的庄重仪式 , 但进行仪式使你大伤元气 ｡ NL NL 力竭之际 , 你离开巢穴 , 但望新武器会在苏醒之时带来浩劫 ｡",
+      "越来越多信众列队 , 为你带来祭品 ｡ NL NL 大部分都 @渣滓不如@ , 不过有一位教徒带来的祭品特别引人入胜 : 一瓶能在战斗中助益良多的 #b强力药水 ｡ NL NL 未久 , 你离开巢穴并继续崩坠的旅程 ｡",
+      "望见他们珍重的雕像 , 把你重重包围的的教徒比平时更为多 ｡ NL 此为喜庆之时 , 礼品与灵魂如潮水般向你涌来 ! NL 在喜庆完毕离开巢穴之际 , 你忽然想起刚才的时间其实可以用来寻找宝贵的武器… NL NL 为时已晚 , 你抱着无谓执着的心情勇往直前 ｡ ",
+      "#r@\"鸟神回归了!!\"@ NL #b~\"咔～咔～咔～～～!\"~ NL 刚才决定不破坏的雕像现在派上用场了 ｡",
       "",
       "",
-      "The Cultists surround you even more than they normally would upon seeing their prized statue return to them. NL As this is cause for celebration, you are showered in gifts and Souls! NL By the time the celebrations are over and you've left the Nest, you realize that you could have used this time to instead look for a valuable weapon... NL NL It's too late now, but you move forward anyways.",
-      "You quickly move to the Donation Box and treasury, intending to make full use of the coin and to find a #yRelic as well. NL NL The coins, paid for in blood itself, can act as a viable substitute for #bSouls. NL NL The #yRelic, of course, will also prove helpful in the trials ahead. NL NL You clutch the #rblood-soaked coins from the Donation Box, intending to make full use of them, but then you notice that the coffers are running quite low... NL NL NL ~...~",
-      "Were you... #r@robbed?@ The Nest, #pstolen from? NL NL Of course not, there's ~no~ ~way~ that would happen. NL NL NL That would be foolish, to even think of such a thing. NL NL NL ~...right?~ NL NL NL You push your #y~lingering~ #y~doubts~ aside and move on and away from the Nest."
+      "望见他们珍重的雕像 , 把你重重包围的的教徒比平时更为多 ｡ NL 此为喜庆之时 , 礼品与灵魂如潮水般向你涌来 ! NL 在喜庆完毕离开巢穴之际 , 你忽然想起刚才的时间其实可以用来寻找宝贵的武器… NL NL 为时已晚 , 你抱着无谓执着的心情勇往直前 ｡",
+      "你迅速步移到捐款箱及库房 , 务求精用金币和寻找一件遗物 ｡ NL NL 以血代偿的金币可以用作替代 #y灵魂 支付的货币 , 而 #y遗物 必能对前路的试炼有所帮助 ｡ NL NL 你从捐款箱中紧抓 #r血染的 金币 , 打算把它们充分利用 , 但你却发现箱里的资金接近干渴… NL NL NL ~…~ ",
+      "你被… #r@掠夺了吗@ #r@?@ 巢穴 , 被 #p偷窃 了 ? 才怪呢 , 这种事才 ~没可能~ 发生 ｡ NL NL NL 能联想到这程度的 , 也太愚昧了 ｡ NL NL NL ~…~ ~吧~ ~?~ NL NL NL 你把 #y~积累的疑虑~ 甩开 , 从巢穴离去 ｡"
     ],
     "OPTIONS": [
-      "[Return Statue] #rLose #rBroken #rWing #rStatue. #gGain #gmany #grewards.",
-      "[Locked] Requires Broken Wing Statue.",
-      "[Collect Offerings] #gGain #ga #gCuriosity #gPotion.",
-      "[Summon Weaponry] #gObtain #ga #gspecial #gRelic. #rLose #r",
-      " #rMax #rHP.",
-      "[Donation Box] #gGain #g",
-      " #gGold #gand #ga #gCommon #gRelic. #rBecome #rCursed #r- #rDoubt.",
-      "[Leave]",
-      "[Continue]",
-      "[Be Praised!] #gGain #grewards for returning the #gBroken #gWing #gStatue.",
-      "[Continue] - #rBecome #rCursed #r- #rDoubt."
+      "[归还雕像] #r失去破碎的翅膀雕像 ｡ #g获得许多回报 ｡",
+      "[锁定] 需要破碎的翅膀雕像 ｡",
+      "[收集祭品] #g获得邪教徒药水 ｡",
+      "[召唤武器] #g获得一件特别的遗物 ｡ #r失去 #r",
+      " #r最大生命",
+      "[善款箱] #g获得 #g",
+      " #g金币及普通遗物 ｡ #r被诅咒 #r- #r疑虑 ｡",
+      "[离开]",
+      "[继续]",
+      "[受赞颂 !] 获得归还 #g破碎的翅膀雕像 的 #g回报 ｡",
+      "[继续] - #r被诅咒 #r- #r疑虑 ｡"
     ]
   },
   "awakened:WingStatueAwakened": {
-    "NAME": "Wing Statue",
+    "NAME": "翅膀雕像",
     "DESCRIPTIONS": [
-      "Among the stone and boulders, you notice an intricate large blue statue depicting Mazaleth, God of Crows. NL NL You feel a sudden, intense anger and desire to destroy it. NL NL However, you know doing so will draw the ire of your benefactor.",
-      "You decide that it isn't worth the danger of destroying the statue, and instead decide to take the statue with you. NL You temporarily strain under its weight, but quickly get a handle of it and move on.",
-      "You lash out at the statue, shattering it into pieces! NL From the rubble, you find a sharp fragment of the statue which still possesses lingering magic. NL You leave, feeling a #pdark #penergy seep into your blood.",
-      "You walk past and continue onward.",
-      "CA...Caw?! Gift for BIRD GOD?",
-      "CA-CAAAW!!",
-      "An exchange? A fair offer...",
-      "The cult will be pleased."
+      "于巨石与漂砾之间 , 你看见一尊做工精细 , 描绘乌鸦之神马扎勒斯的蓝色雕像 ｡ NL NL 你突然感受到一股想摧毁它的强劲欲望 , NL NL 但是你知道这行为会触动到施主的震怒 ｡",
+      "你觉得不值得冒险把雕像摧毁 , 最后決定把它傍身攜带 ｡ NL 你在其重量下暂时扭伤 , 不过很快便重新振作继续上路 ｡",
+      "你对雕像发泄 , 使其散落成一地的零块 ! NL 在瓦砾之中 , 你发现一块仍然滞留些少剩余魔力的尖锐碎片 ｡ NL 你转身离去 , 然而你感觉到 #p黑暗的能量 渗入你的血丝 ｡",
+      "你径直走开 , 继续旅程 ｡",
+      "咔… 咔 ? ! 给鸟神的贡品 ?",
+      "咔 - 咔 !!",
+      "交换 ? 公平公道……",
+      "教团会满意的"
     ],
     "OPTIONS": [
-      "[Destroy] #gGain #gSharpened #gFragment. #rBecome #rCursed #rTwice #r- #rHaemophilia.",
-      "[Collect] #rLose #r",
-      "[Leave]",
-      " #rHP. #gGain #gBroken #gWing #gStatue."
+      "[摧毁] #g获得 #y尖锐碎片 ｡ #r被双倍诅咒 #r- #r血友 ｡",
+      "[收集] #r失去 #r",
+      "[离开]",
+      "#r点生命 ｡ #g获得 #y破碎的翅膀雕像 ｡"
     ]
   },
   "awakened:BackToBasics": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "Nothing matters except the struggle for life. The here and now."
+      "此刻此地 , 除了为生存而挣扎以外 , 一切毫无意义 ｡"
     ],
     "OPTIONS": [
-      "[Desperation] #gYour #gStrikes #gand #gDefends #gbecome #gDraining.",
-      "[Locked] Requires a Strike or Defend."
+      "[拼命] #g将所有打击与防御附加力竭 ｡",
+      "[锁定] 需要一张打击或防御 ｡"
     ]
   },
   "awakened:AbyssEvent": {
-    "NAME": "From the Abyss",
+    "NAME": "來自深淵",
     "DESCRIPTIONS": [
-      "As you make your way through the city, you are suddenly stricken by an inexplicable feeling...as if reality itself is beginning to unravel before you. NL Your senses failing you otherwise, you can see a #pgrimoire sitting before you, and an otherworldly voice calling... NL \n\n\"AWAKENED CHILD. WALKER OF THE INFINITE PLANES. WE HAVE MUCH TO DISCUSS. TAKE MY HAND, AND I WILL GUIDE YOU TO THE KNOWLEDGE YOU SEEK...TO UNKNOWN WORLDS OF MONSTERS, MACHINES, AND MAGIC BEYOND THIS REALM'S UNDERSTANDING.",
-      "\"GOOD. OUR ALLIANCE WILL BE A POWERFUL ONE\"\n\n NL While that sense of #potherworldly #pmalaise remains, with the tome in hand you feel as if an infinite world of possibilities has opened up to you...",
-      "You manage to snap out of the trance, spreading your wings and leaving the strange grimoire behind."
+      "穿梳于城市之间 , 你突然被难以解释的感觉所侵袭… 仿佛 #p现实 本身开始在你面前 @崩溃@ ｡ NL 在感知开始朦胧之际 , 你看见一本 #p魔法书 在你面前屹立着 , 并听见一道 ~来自异界的声音~ 呼唤你… NL \n\n\"觉醒之子、无尽次元的游走者 , 吾等有事商量 ｡ 接受吾伸出的援手 , 吾将引领汝到所望寻找的知识… 至颠覆此领域所知 , 来自未知世界的魔兽、魔偶、及魔法 ｡",
+      "\"好 ｡ 吾等结盟实属无敌 ｡ \"\n\n NL 在 #p异界的萎靡 仍然存在之际 , 魔法书执在手中的你感觉到无限世界的可能性被打开…",
+      "你成功从恍惚中清醒过来 , 留下怪异的 #p魔法书 后展翅翱翔 ｡"
     ],
     "OPTIONS": [
-      "[Reach] Gain #gReality #gRift. #rBecome #rCursed - #rAged.",
-      "[Leave].",
-      "[Leave]"
+      "[伸手] 获得 #g次元狭缝 ｡ #r被诅咒 #r- #r岁月 ｡",
+      "[离开] ｡",
+      "[离开]"
+    ]
+  },
+  "awakened:CultTalk": {
+    "NAME": "TalkStrings",
+    "DESCRIPTIONS": [
+      "@主人!求祢宽恕我!@",
+      "@我的时辰已到!@",
+      "@咔～～～@ @!@ @咔咔咔咔～～～@ @!!@",
+
+      "@为鸟神献上我的鲜血@ @!@",
+      "@我不配成为祢的羔羊@ @!@",
+      "@我为教团的兴盛牺牲@ @!!@",
+
+      "~让此成为我的救赎…~",
+      "~…~",
+      "~祢逼使我无选择的余地…~"
     ]
   }
 }

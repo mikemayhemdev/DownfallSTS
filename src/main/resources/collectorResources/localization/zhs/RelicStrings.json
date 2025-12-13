@@ -95,7 +95,8 @@
     "NAME": "交易契约",
     "FLAVOR": "以血落成。",
     "DESCRIPTIONS": [
-      "拾起时，获得 #b10 #g魂粹 。"
+      "拾起时，获得 #b",
+      " #g魂粹 。"
     ]
   },
   "collector:ForbiddenFruit": {

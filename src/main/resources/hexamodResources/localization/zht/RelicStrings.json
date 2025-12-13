@@ -3,14 +3,17 @@
     "NAME": "精神烙印",
     "FLAVOR": "對約束的一道保護。",
     "DESCRIPTIONS": [
-      "每回合首次 #y點燃 時，獲得 #b4 點 #y格擋 。"
+      "每回合首次 #y點燃 時，獲得 #b",
+      " 點 #y格擋 。"
     ]
   },
   "hexamod:TheBrokenSeal": {
     "NAME": "掙破的封印",
     "FLAVOR": "未阻，無限，不滅的力量。",
     "DESCRIPTIONS": [
-      "拾起時，獲得 #b10 點最大生命並回復所有生命。戰鬥開始時獲得 #b2 點 #y力量 、 #y敏捷 與 #yhexamod:熱烈 。無法再獲得 #y破損容器 。"
+      "拾起時，獲得 #b",
+      " 點最大生命並回復所有生命。戰鬥開始時獲得 #b",
+      " 點 #y力量 、 #y敏捷 與 #yhexamod:熱烈 。無法再獲得 #y破損容器 。"
     ]
   },
   "hexamod:UnbrokenSoul": {
@@ -25,14 +28,16 @@
     "NAME": "幽靈雪花",
     "FLAVOR": "我感覺……好冷。",
     "DESCRIPTIONS": [
-      "回合開始時獲得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才引爆，失去 #b1 點 #yhexamod:熱烈 。"
+      "回合開始時獲得 [E] 。 #yhexamod:灼魂 需要 #r4 回合才引爆，失去 #b",
+      " 點 #yhexamod:熱烈 。"
     ]
   },
   "hexamod:SoulStone": {
     "NAME": "保暖石",
     "FLAVOR": "一點火苗就能激活這東西了！",
     "DESCRIPTIONS": [
-      "若本場戰鬥引爆過 #yhexamod:灼魂 ，戰鬥勝利時回復 #b4 點生命。"
+      "若本場戰鬥引爆過 #yhexamod:灼魂 ，戰鬥勝利時回復 #b",
+      " 點生命。"
     ]
   },
   "hexamod:RecyclingMachine": {
@@ -53,14 +58,15 @@
     "NAME": "火種",
     "FLAVOR": "火使一切更美好。",
     "DESCRIPTIONS": [
-      "戰鬥開始時獲得 #b1 點 #yhexamod:熱烈 。"
+      "戰鬥開始時獲得 #b",
+      " 點 #yhexamod:熱烈 。"
     ]
   },
   "hexamod:SoulOfChaos": {
-    "NAME": "混沌靈魂",
-    "FLAVOR": "混亂，現出真身。",
+    "NAME": "混沌灵魂",
+    "FLAVOR": "混乱，现出真身。",
     "DESCRIPTIONS": [
-      "第 #b4 枚 #y鬼火 變為 #y紊乱鬼火 。 NL 若停留在 #y紊乱鬼火 ，回合結束時其自動 #y點燃 。 NL #y點燃 ：打出抽牌堆頂部的牌。"
+      "回合开始时，随机切换至一枚鬼火并将其随机替换。回合结束时，打出抽牌堆顶部的牌。 "
     ]
   },
   "hexamod:JarOfFuel": {
@@ -74,21 +80,25 @@
     "NAME": "高熱之杖",
     "FLAVOR": "火焰護身！火焰助力。",
     "DESCRIPTIONS": [
-      "每場戰鬥首次打出 #y能力 牌時，獲得 #b6 點 #y格擋 與 #b1 點 #y力量 。"
+      "每場戰鬥首次打出 #y能力 牌時，獲得 #b",
+      " 點 #y格擋 與 #b",
+      " 點 #y力量 。"
     ]
   },
   "hexamod:CandleOfCauterizing": {
     "NAME": "紅蠟燭",
     "FLAVOR": "烈焰炙烤...",
     "DESCRIPTIONS": [
-      "每當你造成未被 #y格擋 的 #y攻擊 傷害，給予 #b2 層 #yhexamod:灼魂 。"
+      "每當你造成未被 #y格擋 的 #y攻擊 傷害，給予 #b",
+      " 層 #yhexamod:灼魂 。"
     ]
   },
   "hexamod:Sixitude": {
     "NAME": "六點烙印",
     "FLAVOR": "點火，點火，點火，點火，點火，點 火！",
     "DESCRIPTIONS": [
-      "每當你打出 #b6 張牌，獲得 1 張耗能為0的基礎 #y打擊 的 #ygremlin:回響 。"
+      "每當你打出 #b",
+      " 張牌，獲得 1 張耗能為0的基礎 #y打擊 的 #ygremlin:回響 。"
     ]
   }
 }

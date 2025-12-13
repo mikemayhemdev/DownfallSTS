@@ -80,7 +80,10 @@
       "禁止异蛇使用其他Mod的角色牌池。",
       "禁用主菜单音乐替换（需要重启游戏）。",
       "解锁所有崩坠角色的皮肤。",
-      "为牌附加例如保留、虚无等效果时，使用图标而非文字。"
+      "为牌附加例如保留、虚无等效果时，使用图标而非文字。",
+      "The Spellbook highlights the next card Conjure will draw.",
+      "No Downfall adjustments to original cards & relics (requires game restart)",
+      "Use Legacy Downfall Bosses (pre-6.0)"
     ]
   },
   "downfall:EnergyPanelTip": {
