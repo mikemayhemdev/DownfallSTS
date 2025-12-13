@@ -1,23 +1,23 @@
 {
   "downfall:Aged": {
     "NAME": "岁月",
-    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 回合结束时， NL 将 *虚空 加入抽牌堆顶。"
+    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 回合结束时， NL 将 *虚空 加入弃牌堆。"
   },
   "downfall:Bewildered": {
     "NAME": "困惑",
-    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 抽到时  ， NL  sneckomod:混淆 其他手牌 。"
+    "DESCRIPTION": "抽到时 ， NL sneckomod:混淆 本牌 。 NL 消耗 。"
   },
   "downfall:Icky": {
     "NAME": "黏液缠身",
-    "DESCRIPTION": "获得一张 *黏液 。 NL 消耗 。"
+    "DESCRIPTION": "下回合少抽一张牌。 NL 消耗 。"
   },
   "downfall:Haunted": {
     "NAME": "闹鬼",
-    "DESCRIPTION": "虚无 。 NL 不能被打出 。 NL 消耗 牌时若本牌在手， NL 受到2点伤害。"
+    "DESCRIPTION": "本牌被 消耗 时， NL 受到 !M! 点伤害。"
   },
   "downfall:Malfunctioning": {
     "NAME": "纰漏",
-    "DESCRIPTION": "回合结束时若本牌在手， NL 将手牌全变为随机状态。 NL 消耗 。"
+    "DESCRIPTION": "回合结束时若本牌在手， NL 加入一张 *伤口 至弃牌堆。 NL 消耗 。"
   },
   "downfall:Scatterbrained": {
     "NAME": "漫不经心",
@@ -29,6 +29,88 @@
   },
   "downfall:BossMaintenance": {
     "NAME": "维护",
-    "DESCRIPTION": "*打击 额外造成 !M! 点伤害。 NL 获得 !B! 点 敏捷 。 NL 本场战斗耗能加1。"
+    "DESCRIPTION": "*打击 额外造成 !M! 点伤害。 NL 获得 !B! 点 敏捷 。"
+  },
+    "downfall:CurseOfBlood": {
+    "NAME": "血友病",
+    "DESCRIPTION": "下回合失去 [E] 。 NL 消耗 。"
+  },
+  "downfall:CuriousRobot": {
+    "NAME": "Curious Robot",
+    "DESCRIPTION": "When your opponent plays a Power, gain 1 Focus. Your Strength affects your Focus."
+  },
+  "downfall:Murderbot": {
+    "NAME": "Energy Thief",
+    "DESCRIPTION": "Whenever you deal unblocked attack damage, add a *Void to your opponent's discard pile."
+  },
+  "downfall:Temptation": {
+    "NAME": "Temptation",
+    "DESCRIPTION": "Shuffle !M! random Powers into your opponent's draw pile."
+  },
+  "downfall:BagOfKnives": {
+    "NAME": "Bag of Knives",
+    "DESCRIPTION": "The first time you play a card that costs 2 or more each turn, gain 2 *Shivs."
+  },
+  "downfall:Hallunication": {
+    "NAME": "Hallucination",
+    "DESCRIPTION": "Hide your real location each turn. When you or the illusion are Attacked, the illusion fades."
+  },
+  "downfall:NewToxins": {
+    "NAME": "New Toxins",
+    "DESCRIPTION": "Poison no longer decays, but is blockable and deals damage at the end of turn instead of the start."
+  },
+  "downfall:FeedingFrenzy": {
+    "NAME": "Feeding Frenzy",
+    "DESCRIPTION": "*Reaper also targets ALL *Mushrooms. Gain 1 Strength when you kill your own *Mushroom."
+  },
+  "downfall:StatusMirror": {
+    "NAME": "Magic Mirror",
+    "DESCRIPTION": "Status cards this character generates are added to you instead."
+  },
+  "downfall:EyeForAnEye": {
+    "NAME": "Eye for an Eye",
+    "DESCRIPTION": "If your opponent has played more Attacks than non-Attacks, you are in Wrath. Else, you are in Calm."
+  },
+  "downfall:TruePeace": {
+    "NAME": "True Peace",
+    "DESCRIPTION": "Do nothing. Wait for the inevitable end of all things."
+  },
+  "downfall:EndIsNigh": {
+    "NAME": "End is Nigh",
+    "DESCRIPTION": "EVERYONE gains !M! Ritual."
+  },
+  "downfall:FalseWorship": {
+    "NAME": "False Worship",
+    "DESCRIPTION": "Revive your Cultist if he is dead. Otherwise, he revives upon death, restoring 50% HP."
+  },
+  "downfall:FleetingFaith": {
+    "NAME": "Spectral Presence",
+    "DESCRIPTION": "Add !M! *Haunted cards to your opponent's discard pile."
+  },
+  "downfall:FaithRewarded": {
+    "NAME": "Faith Rewarded",
+    "DESCRIPTION": "If you enter Divinity, you can never leave it. Divinity's damage bonus is reduced to 200%."
+  },
+  "downfall:Crusade": {
+    "NAME": "Crusade",
+    "DESCRIPTION": "Remove all Debuffs. NL Lose all Mantra. Heal !M! HP and gain 1 Strength for each Mantra lost."
+  },
+  "downfall:Hyperfocused": {
+    "NAME": "Deadly Focus",
+    "DESCRIPTION": "Always gain *Dead *On effects. After receiving 10 damage, remove *Dead *On effects for that turn."
+  },
+  "downfall:Arsenal": {
+    "NAME": "Living Arsenal",
+    "DESCRIPTION": "Summon a *Doomed *Dagger."
+  },
+  "downfall:Steady": {
+    "NAME": "Steady",
+    "DESCRIPTION": "*Wrath now increases damage dealt and receive by 50% instead of 100%."
+  },
+  "downfall:Revolver": {
+    "NAME": "Revolver",
+    "DESCRIPTION": "Future turns are dictated by the *Wheel *of *Fate. When attacked, the *Wheel advances one step."
   }
 }
+
+

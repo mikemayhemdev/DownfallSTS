@@ -179,9 +179,9 @@
     "DESCRIPTION": "!B! ブロックを得る。 NL カードを !M! 枚引く。 NL この戦闘中にプレイされたパワー1枚につき、コストが [E] 減少する。"
   },
   "awakened:RisingChant": {
-    "NAME": "高まる合唱",
-    "DESCRIPTION": "エセリアル NL 毎ターン、最初に起動した awakened:詠唱 の効果が2回発動する。",
-    "UPGRADE_DESCRIPTION": "毎ターン、最初に起動した awakened:詠唱 の効果が2回発動する。"
+    "NAME": "高まる祈り",
+    "DESCRIPTION": "エセリアル NL 各ターン、最初に起動した awakened:詠唱 の効果は2回発動する。",
+    "UPGRADE_DESCRIPTION": "各ターン、最初に起動した awakened:詠唱 の効果は2回発動する。"
   },
   "awakened:FeatherWhirl": {
     "NAME": "フェザーホイール",
@@ -190,8 +190,8 @@
   },
   "awakened:Murder": {
     "NAME": "殺戮",
-    "DESCRIPTION": " !M! 回 ランダムな敵に !D! ダメージを与える。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "保留 NL !M! 回 ランダムな敵に !D! ダメージを与える。"
+    "DESCRIPTION": "ランダムな敵に !D! ダメージを M! 回 与える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "保留 NL ランダムな敵に !D! ダメージを !M! 回 与える。"
   },
   "awakened:Nihil": {
     "NAME": "無",
@@ -219,8 +219,9 @@
     "DESCRIPTION": "!D! ダメージを与える。 NL このカードに使用された [E] は awakened:枯渇 とみなされる。"
   },
   "awakened:DarknessFalls": {
-    "NAME": "降りる暗闇",
-    "DESCRIPTION": "awakened:枯渇 が発生した時、 !M! ブロックと筋力 !awakened:m2! を得る。"
+    "NAME": "訪れる闇",
+    "DESCRIPTION": "awakened:枯渇 が発生した時、 !M! ブロックと筋力 !awakened:m2! を得る。",
+    "UPGRADE_DESCRIPTION": "保留 NL awakened:枯渇 が発生した時、 !M! ブロックと筋力 !awakened:m2! を得る。"
   },
   "awakened:Eventide": {
     "NAME": "黄昏",
@@ -285,7 +286,7 @@
     "DESCRIPTION": "!B! ブロックを得る。 NL awakened:詠唱 : 捨て札のカードを1枚手札に加える。"
   },
   "awakened:TheTower": {
-    "NAME": "The Tower",
+    "NAME": "塔",
     "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL この戦闘中に生成されたカード1枚毎に !M! の追加ダメージを与える。"
   },
   "awakened:ArcaneNesting": {
@@ -393,17 +394,18 @@
   },
   "awakened:TheEncyclopedia": {
     "NAME": "エンサイクロペディア",
-    "DESCRIPTION": "ランダムな !M! 枚のカードから2枚を選択し、手札に加える。それらはコストが2減少する。 NL 廃棄",
+    "DESCRIPTION": "!M! 枚のランダムな カードから 2枚 を選択し、手札に加える。それらはコストが2減少する。 NL 廃棄",
     "EXTENDED_DESCRIPTION": [
       "2枚を選択し、手札に加える"
     ]
   },
   "awakened:RealityRift": {
     "NAME": "次元の裂け目",
-    "DESCRIPTION": "!M! 枚の *別次元 の 強力なカードから !awakened:m2! 枚を選択する。 NL 捨て札に2枚の *空虚 を加える。 NL 廃棄"
+    "DESCRIPTION": "!M! 枚の *別次元 の 強力なカードから !awakened:m2! 枚を選択し、手札に加える。 NL 捨て札に2枚の *空虚 を加える。 NL 廃棄"
   },
   "awakened:Inscribe": {
     "NAME": "インスクライブ",
-    "DESCRIPTION": "スペルを1枚選ぶ。この戦闘中、魔導書にそのコピーを1枚追加し、手札にもコピーを1枚加える"
+    "DESCRIPTION": "*スペル を1枚選択しこの戦闘の間、魔導書にそのコピーを !M! 枚追加し、手札にもコピーを1枚加える。",
+    "UPGRADE_DESCRIPTION": "awakened:召喚 NL *スペル を1枚選択しこの戦闘の間、魔導書にそのコピーを !M! 枚追加し、手札にもコピーを1枚加える。"
   }
 }
