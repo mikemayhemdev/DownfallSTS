@@ -43,7 +43,7 @@
   },
   "awakened:DarkEcho": {
     "NAME": "黑暗回音",
-    "DESCRIPTION": "在你的回合结束时 , 对所有敌人造成 !D! 点伤害 ｡ 伤害受力量加成 ｡"
+    "DESCRIPTION": "在你的回合结束时 , 对所有敌人造成 !M! 点伤害 ｡ 伤害受力量加成 ｡"
   },
   "awakened:AwakenedForm": {
     "NAME": "觉醒形态",
@@ -68,7 +68,7 @@
   },
   "awakened:Psalm": {
     "NAME": "圣咏",
-    "DESCRIPTION": "对所有敌人造成 !D! 点伤害及给予 !M! 层虚弱 ｡"
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害及给予 !M! 层 虚弱 ｡"
   },
   "awakened:DemonGlyph": {
     "NAME": "魔符",
@@ -97,7 +97,7 @@
   },
   "awakened:FlareShot": {
     "NAME": "羽熠",
-    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 在下一回合多抽 !M! 张牌 ｡"
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL awakened:吟唱 : 在下一回合多抽 !M! 张牌 ｡"
   },
   "awakened:ClarionCall": {
     "NAME": "号召",
@@ -156,7 +156,7 @@
   },
   "awakened:Unleash": {
     "NAME": "释放",
-    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 手牌里此卡牌以外每一张牌增加 !D! 点伤害 ｡"
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 手牌里此卡牌以外每一张牌增加 !M! 点伤害 ｡"
   },
   "awakened:DesperatePrayer": {
     "NAME": "绝地求生",
@@ -221,7 +221,8 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "夜幕低垂",
-    "DESCRIPTION": "每当你 awakened:力竭 时 , 获得 !B! 点格挡 及 !awakened:m2! 点力量 ｡"
+    "DESCRIPTION": "每当你 awakened:力竭 时 , 获得 !M! 点格挡 及 !awakened:m2! 点力量 ｡",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你 awakened:力竭 时 , 获得 !M! 点格挡 及 !awakened:m2! 点力量 ｡"
   },
   "awakened:Eventide": {
     "NAME": "薄暮",
@@ -340,7 +341,7 @@
   },
   "awakened:Spellshield": {
     "NAME": "咒盾",
-    "DESCRIPTION": "你每保留一张牌 , 获得 !B! 点格挡 ｡"
+    "DESCRIPTION": "你每保留一张牌 , 获得 !M! 点格挡 ｡"
   },
   "awakened:Siphon": {
     "NAME": "抽离",
