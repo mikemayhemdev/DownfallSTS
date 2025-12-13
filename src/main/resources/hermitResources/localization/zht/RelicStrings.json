@@ -39,7 +39,8 @@
     "NAME": "紅色圍巾",
     "FLAVOR": "溫暖又舒適。",
     "DESCRIPTIONS": [
-      "給予敵人 #r負面狀態 時，獲得 #b2 點 格擋 。"
+      "給予敵人 #r負面狀態 時，獲得 #b",
+      " 點 格擋 。"
     ]
   },
   "hermit:DentedPlate": {
@@ -60,7 +61,8 @@
     "NAME": "燒焦的手套",
     "FLAVOR": "手套上還殘留著部分的塵世灰燼。",
     "DESCRIPTIONS": [
-      "抽到 #y詛咒 時，獲得 #b3 層 #y活力 。"
+      "抽到 #y詛咒 時，獲得 #b",
+      " 層 #y活力 。"
     ]
   },
   "hermit:ClaspedLocket": {
@@ -75,21 +77,24 @@
     "NAME": "刮胡刀",
     "FLAVOR": "幹凈利落。。。",
     "DESCRIPTIONS": [
-      "移除或變化一張牌時，回復 #b15 點生命。"
+      "移除或變化一張牌時，回復 #b",
+      " 點生命。"
     ]
   },
   "hermit:BrassTacks": {
     "NAME": "破舊銅釘",
     "FLAVOR": "盡管年深歲久，你仍然能從它們身上感受到昔日的光芒。",
     "DESCRIPTIONS": [
-      "回合結束時，獲得 #b2 點 #y格擋 。"
+      "回合結束時，獲得 #b",
+      " 點 #y格擋 。"
     ]
   },
   "hermit:BlackPowder": {
     "NAME": "黑火藥",
     "FLAVOR": "謹慎處理。",
     "DESCRIPTIONS": [
-      "回合結束時，本回合每觸發過一次 #yhermit:精準 效果就對所有敵人造成 #b2 點傷害。"
+      "回合結束時，本回合每觸發過一次 #yhermit:精準 效果就對所有敵人造成 #b",
+      " 點傷害。"
     ]
   },
   "hermit:BloodyTooth": {

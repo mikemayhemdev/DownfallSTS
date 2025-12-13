@@ -33,7 +33,7 @@ public class CharBossWatcher extends AbstractCharBoss {
     public AnimationState eyeState;
     protected AnimationStateData eyeStateData;
 
-    public static final String HALFHEALTHSPEECH = LocalizeHelper.downfallCharacterSpeech.TEXT[1];
+    //public static final String HALFHEALTHSPEECH = LocalizeHelper.downfallCharacterSpeech.TEXT[1];
 
 
     public CharBossWatcher() {
@@ -196,11 +196,11 @@ public class CharBossWatcher extends AbstractCharBoss {
 
     }
 
-    public void playCrusaderSpeech(){
-
-            AbstractDungeon.actionManager.addToBottom(new SpeechBubbleAction(HALFHEALTHSPEECH, this, 2F));
-
-    }
+//    public void playCrusaderSpeech(){
+//
+//            AbstractDungeon.actionManager.addToBottom(new SpeechBubbleAction(HALFHEALTHSPEECH, this, 2F));
+//
+//    }
 
 
 }

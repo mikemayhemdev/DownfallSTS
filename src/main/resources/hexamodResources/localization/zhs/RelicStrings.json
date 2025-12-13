@@ -3,14 +3,17 @@
     "NAME": "精神烙印",
     "FLAVOR": "对约束的一道保护。",
     "DESCRIPTIONS": [
-      "每回合首次 #y点燃 时，获得 #b4 点 #y格挡 。"
+      "每回合首次 #y点燃 时，获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "hexamod:TheBrokenSeal": {
     "NAME": "挣破的封印",
     "FLAVOR": "未阻，无限，不灭的力量。",
     "DESCRIPTIONS": [
-      "拾起时，获得 #b10 点最大生命并回复所有生命。 NL 战斗开始时，获得 #b2 点 #y力量 、 #y敏捷 与 #yhexamod:热烈 。 NL 无法再获得本遗物与任何封印。"
+      "拾起时，获得 #b",
+      " 点最大生命并回复所有生命。 NL 战斗开始时，获得 #b",
+      " 点 #y力量 、 #y敏捷 与 #yhexamod:热烈 。 NL 无法再获得本遗物与任何封印。"
     ]
   },
   "hexamod:UnbrokenSoul": {
@@ -18,21 +21,24 @@
     "FLAVOR": "看看我们能不能做得... 更好。",
     "DESCRIPTIONS": [
       "替换 ",
-      " 。 NL #y点燃 一枚鬼火时，获得 #b4 点 #y格挡 。"
+      " 。 NL #y点燃 一枚鬼火时，获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "hexamod:IceCube": {
     "NAME": "幽灵雪花",
     "FLAVOR": "我感觉……好冷。",
     "DESCRIPTIONS": [
-      "回合开始时获得 [E] 。战斗开始时失去 #b1 点 #yhexamod:热烈 ，且无法再从 #y狱焱鬼火 获得 #y热烈 。"
+      "回合开始时获得 [E] 。战斗开始时失去 #b",
+      " 点 #yhexamod:热烈 ，且无法再从 #y狱焱鬼火 获得 #y热烈 。"
     ]
   },
   "hexamod:SoulStone": {
     "NAME": "魂石",
     "FLAVOR": "只需一点灵魂就能使这玩意生效！",
     "DESCRIPTIONS": [
-      "每当你 #y消耗 #b3 张牌， #yhexamod:点燃 当前鬼火。"
+      "每当你 #y消耗 #b",
+      " 张牌， #yhexamod:点燃 当前鬼火。"
     ]
   },
   "hexamod:RecyclingMachine": {
@@ -53,14 +59,15 @@
     "NAME": "火种",
     "FLAVOR": "火使一切更美好。",
     "DESCRIPTIONS": [
-      "战斗开始时，获得 #b1 点 #yhexamod:热烈 。"
+      "战斗开始时，获得 #b",
+      " 点 #yhexamod:热烈 。"
     ]
   },
   "hexamod:SoulOfChaos": {
     "NAME": "混沌灵魂",
     "FLAVOR": "混乱，现出真身。",
     "DESCRIPTIONS": [
-      "第 #b2 枚 #y灼热鬼火 变为 #y紊乱鬼火 。 NL 若停留在 #y紊乱鬼火 ，回合结束时其自动 #y点燃 。 NL #y点燃 ：预见 #bn 后打出抽牌堆顶部的牌， #bn 受 #y热烈 加成。"
+      "回合开始时，随机切换至一枚鬼火并将其随机替换。回合结束时，打出抽牌堆顶部的牌。 "
     ]
   },
   "hexamod:JarOfFuel": {
@@ -74,21 +81,25 @@
     "NAME": "高热之杖",
     "FLAVOR": "火焰护身！火焰助力。",
     "DESCRIPTIONS": [
-      "每场战斗首次打出 #y能力 时，获得 #b6 点 #y格挡 与 #b1 点 #y力量 。"
+      "每场战斗首次打出 #y能力 时，获得 #b",
+      " 点 #y格挡 与 #b",
+      " 点 #y力量 。"
     ]
   },
   "hexamod:CandleOfCauterizing": {
     "NAME": "红蜡烛",
     "FLAVOR": "烈焰炙烤...",
     "DESCRIPTIONS": [
-      "每当你给予 #y灼魂 时，额外给予 #b3 层。"
+      "每当你给予 #y灼魂 时，额外给予 #b",
+      " 层。"
     ]
   },
   "hexamod:Sixitude": {
     "NAME": "六点烙印",
     "FLAVOR": "点火，点火，点火，点火，点火，点 火！",
     "DESCRIPTIONS": [
-      "每打出 #b6 张牌，获得 1 张耗能为0的基础 #y打击 的 #ygremlin:回响 。"
+      "每打出 #b",
+      " 张牌，获得 1 张耗能为0的基础 #y打击 的 #ygremlin:回响 。"
     ]
   },
   "hexamod:Libra": {

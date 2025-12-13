@@ -1,46 +1,49 @@
 {
   "awakened:IntensifyPower": {
-    "NAME": "Intensify",
+    "NAME": "激化",
     "DESCRIPTIONS": [
-      "This turn, all Spell cards cost #b0 [REMOVE_SPACE].",
-      "For the next #b",
-      " turns, all Spell cards cards cost #b0 [REMOVE_SPACE]."
+      "本回合内 , 咒文牌耗能变为 #b0 [REMOVE_SPACE] ｡",
+      "下 #b",
+      " 回合内 , 咒文牌耗能变为 #b0 [REMOVE_SPACE] ｡"
     ]
   },
   "awakened:IntensifyDebuffPower": {
-    "NAME": "Burnout",
+    "NAME": "倦怠",
     "DESCRIPTIONS": [
-      "You cannot #yConjure for the rest of the turn.",
-      "You cannot #yConjure for the next #b",
-      " turns."
+      "本回合内 , 你不能再次 #y念咒 ｡",
+      "下 #b",
+      " 回合内 , 你不能再次 #y念咒 ｡"
     ]
   },
   "awakened:RisingChantPower": {
-    "NAME": "Rising Chorus",
+    "NAME": "递进合唱",
     "DESCRIPTIONS": [
-      "Whenever you play an activated #yChant card, gain #b",
-      " #yStrength [REMOVE_SPACE]."
+      "本回合首 #b",
+      " 个 #y吟唱 效果将触发两次 ｡ NL 本回合剩余 #b",
+      " 个效果 ｡"
     ]
   },
   "awakened:CursedStrength": {
-    "NAME": "Darkblessed",
+    "NAME": "暗祷",
     "DESCRIPTIONS": [
-      "Whenever you are #yDrained [REMOVE_SPACE], gain #b",
-      " #yStrength [REMOVE_SPACE]."
+      "每当你 #y力竭 [REMOVE_SPACE] , 获得 #b",
+      "点#y格挡 [REMOVE_SPACE] ｡
+      ."
     ]
   },
   "awakened:ThaumaturgyPower": {
-    "NAME": "Thaumaturgy",
+    "NAME": "神术",
     "DESCRIPTIONS": [
-      "At the start of your next #b",
-      " turns, gain a #yCeremony [REMOVE_SPACE]."
+      "下 #b",
+      " 回合开始时 , 将一张 #y祭典 [REMOVE_SPACE]加入你的手牌 ｡"
     ]
   },
   "awakened:SacramentPower": {
-    "NAME": "Sacraments",
+    "NAME": "圣礼",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower [REMOVE_SPACE], gain #b",
-      " #yBlock [REMOVE_SPACE]."
+      "你每打出一张 #y能力牌 [REMOVE_SPACE] , 获得 #b",
+      "点#y格挡 [REMOVE_SPACE] ｡
+      "
     ]
   },
   "awakened:FlarePower": {
@@ -51,57 +54,58 @@
     ]
   },
   "awakened:PrimacyPower": {
-    "NAME": "Primacy",
+    "NAME": "教主至上",
     "DESCRIPTIONS": [
-      "The first time you gain #yStrength each turn, draw a card.",
-      "The first #b",
-      " times you gain #yStrength each turn, draw a card.",
-      " NL This effect can be triggered #b",
-      " more times this turn.",
-      " more time this turn.",
-      " NL This effect cannot be triggered again this turn."
+      "每回合第一次获得 #y力量 时 , 抽一张牌 ｡",
+      "每回合第 #b",
+      " 次获得 #y力量 时 , 抽一张牌 ｡",
+      " NL 本回合内此效果触发次数剩余 #b",
+      " 次 ｡",
+      " 次 ｡",
+      " NL 此效果无法再触发 ｡"
     ]
   },
   "awakened:SpellbinderPower": {
-    "NAME": "Spellbinder",
+    "NAME": "咒束",
     "DESCRIPTIONS": [
-      "At the start of your turn, #yConjure [REMOVE_SPACE].",
-      "At the start of your turn, #yConjure #b",
-      " times."
+      "在每回合开始时 , #y念咒 [REMOVE_SPACE] ｡",
+      "在每回合开始时 , #y念咒 [REMOVE_SPACE] #b",
+      "次 ｡"
     ]
   },
   "awakened:DarkEchoPower": {
-    "NAME": "Dark Echo",
+    "NAME": "黑暗回音",
     "DESCRIPTIONS": [
-      "At the end of your turn, deal #b",
-      " damage to ALL enemies #b",
-      " times.",
-      " damage to ALL enemies."
+      "在你的回合结束时 , 对所有敌人造成 #b",
+      "点伤害 #b",
+      " 次 ｡",
+      "点伤害 ｡"
     ]
   },
   "awakened:MoonlitVisionPower": {
-    "NAME": "Moonlit Vision",
+    "NAME": "月映法眼",
     "DESCRIPTIONS": [
-      "The first time you play a Spell each turn, gain [E] . #b",
-      "The first #b",
-      " times you play a Spell each turn, gain [E] . #b",
-      " remaining this turn."
+      "你在每回合第一次打出咒文牌時 , NL 獲得 [E] ｡",
+      "你在每回合首 #b",
+      " 次打出咒文牌時 , NL 獲得 [E] ｡",
+      " NL 此回合剩余#b",
+      " 次 ｡"
     ]
   },
   "awakened:EclipseEmbracePower": {
-    "NAME": "Eclipse Embrace",
+    "NAME": "日蚀入怀",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain [E] and draw a card next turn.",
-      "Whenever you #yExhaust a #yVoid [REMOVE_SPACE], gain #b",
-      " [E] and draw #b",
-      " cards next turn."
+      "每当你 #y消耗 一张 #y虚空 [REMOVE_SPACE] , 获得 [E] 并于下回合多抽一张卡牌 ｡",
+      "每当你 #y消耗 一张 #y虚空 [REMOVE_SPACE] , 下回合获得 #b",
+      " [E] 并多抽 #b",
+      " 张卡牌 ｡"
     ]
   },
   "awakened:SongOfSorrowPower": {
-    "NAME": "Song of Sorrow",
+    "NAME": "哀歌",
     "DESCRIPTIONS": [
-      "Whenever you create a #yVoid [REMOVE_SPACE], ALL enemies lose #b",
-      " HP."
+      "每当你生成一张 #y虚空 [REMOVE_SPACE] , 所有敌人失去 #b",
+      "生命 ｡"
     ]
   },
   "awakened:ShroudOfMiasmaPower": {
@@ -112,27 +116,27 @@
     ]
   },
   "awakened:StrengthReturnPower": {
-    "NAME": "Split Wide",
+    "NAME": "劈破",
     "DESCRIPTIONS": [
-      "Whenever you attack this enemy, gain #b",
-      " temporary #yStrength [REMOVE_SPACE]."
+      "每当目标敌人受到攻击时 , 获得 #b",
+      "点临时 #y力量 [REMOVE_SPACE] ｡"
     ]
   },
   "awakened:ManaburnPower": {
-    "NAME": "Manaburn",
+    "NAME": "灼气",
     "DESCRIPTIONS": [
-      "Whenever you are #yDrained [REMOVE_SPACE], loses #b",
-      " HP."
+      "每当你 #y力竭 [REMOVE_SPACE] , 此敌人失去 #b",
+      "点生命 ｡"
     ]
   },
   "awakened:ArchmagusPower": {
-    "NAME": "Archmagus",
+    "NAME": "大法师",
     "DESCRIPTIONS": [
-      "The first Spell you play each turn is played twice.",
-      "The first #b",
-      " Spells you play each turn are played twice.",
-      " NL (",
-      " Spell Repetitions remaining)"
+      "你每回合第一次打出的咒文牌会打出两次 ｡",
+      "你每回合首 #b",
+      "次打出的咒文牌会打出两次 ｡",
+      " NL (剩余 [REMOVE_SPACE]#b",
+      " 次)"
     ]
   },
   "awakened:DoubleSpellPower": {
@@ -144,40 +148,40 @@
     ]
   },
   "awakened:DarknessFallsPower": {
-    "NAME": "Darkness Falls",
+    "NAME": "夜幕低垂",
     "DESCRIPTIONS": [
-      "Whenever you are #yDrained [REMOVE_SPACE], gain #b",
-      " #yBlock [REMOVE_SPACE]."
+      "每当你 #y力竭 [REMOVE_SPACE]时 , 获得 #b",
+      "点 #y格挡 [REMOVE_SPACE] ｡"
     ]
   },
   "awakened:VoidRefundPower": {
-    "NAME": "Clarion Call",
+    "NAME": "号召",
     "DESCRIPTIONS": [
-      "The next time you are #yDrained [REMOVE_SPACE], gain [E] .",
-      "The next time you are #yDrained [REMOVE_SPACE], gain #b",
-      " [E] ."
+      "下一次 #y力竭 [REMOVE_SPACE]时 , 获得 [E] ｡",
+      "下一次 y#力竭 [REMOVE_SPACE]时 , 获得 #b",
+      " [E] ｡"
     ]
   },
   "awakened:DemonGlyphPower": {
-    "NAME": "Demon Glyph",
+    "NAME": "魔符",
     "DESCRIPTIONS": [
-      "Gain #b",
-      " #yStrength and #yDexterity when you #yAwaken [REMOVE_SPACE]."
+      "当你 #y觉醒 时 , 获得额外 #b",
+      "点 #y力量 和 #y敏捷 [REMOVE_SPACE] ｡"
     ]
   },
   "awakened:ReverseRitualPower": {
-    "NAME": "Awakened Form",
+    "NAME": "觉醒形态",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain #b",
-      " #yRitual [REMOVE_SPACE]."
+      "回合开始时 , 获得 #b",
+      "层 #y仪式 [REMOVE_SPACE] ｡"
     ]
   },
   "awakened:EnsorcelatePower": {
-    "NAME": "Ensorcelate",
+    "NAME": "妖惑",
     "DESCRIPTIONS": [
-      "The next #yPower you play costs #b0 [REMOVE_SPACE].",
-      "The next #b",
-      " #yPowers you play cost #b0 [REMOVE_SPACE]."
+      "你打出的下一张 #y能力牌 耗能变为 #b0 [REMOVE_SPACE] ｡",
+      "你打出的下 #b",
+      "张 #y能力牌 耗能变为 #b0 [REMOVE_SPACE] ｡"
     ]
   },
   "awakened:ConjureNextPower": {
@@ -189,49 +193,49 @@
     ]
   },
   "awakened:ChosensVersePower": {
-    "NAME": "Chosen Verse",
+    "NAME": "被拣选的诗句",
     "DESCRIPTIONS": [
-      "The next time you play a non-Attack card this turn, draw a card and gain #b",
-      " #yBlock [REMOVE_SPACE].",
-      "The next #b",
-      " times you play a non-Attack card this turn, draw a card and gain #b",
-      " #yBlock [REMOVE_SPACE]."
+      "本回合内下一次打出非攻击牌时 , 抽一张卡并获得 #b",
+      "点#y格挡 [REMOVE_SPACE] ｡",
+      "本回合内下 #b",
+      "次打出非攻击牌时 , 抽一张卡并获得 #b",
+      "点 #y格挡 [REMOVE_SPACE] ｡"
     ]
   },
   "awakened:AphoticFountPower": {
-    "NAME": "Aphotic Fount",
+    "NAME": "无光涌泉",
     "DESCRIPTIONS": [
-      "Whenever you play #yCryostasis [REMOVE_SPACE], gain #b",
-      " #yPlated #yArmor [REMOVE_SPACE]."
+      "每当你打出 #y凝冻 [REMOVE_SPACE] , 获得 #b",
+      "点 #y多层护甲 [REMOVE_SPACE] ｡"
     ]
   },
   "awakened:GrimoirePower": {
-    "NAME": "Storm Ruler",
+    "NAME": "雷震子",
     "DESCRIPTIONS": [
-      "Your #yThunderbolts deal #b",
-      " more damage."
+      "#y落雷 [REMOVE_SPACE]增加 #b",
+      "点伤害 ｡ "
     ]
   },
   "awakened:SpellshieldPower": {
-    "NAME": "Spellshield",
+    "NAME": "咒盾",
     "DESCRIPTIONS": [
-      "Whenever you #yRetain a card, gain #b",
-      " #yBlock."
+      "你每 #y保留 一张牌 , 获得 #b",
+      "点 #y格挡 ｡"
     ]
   },
   "awakened:DaggerstormPower": {
-    "NAME": "Daggerstorm",
+    "NAME": "匕首风暴",
     "DESCRIPTIONS": [
-      "Whenever you create a card, deal #b",
-      " damage to a random enemy."
+      "每当你生成一张卡牌 , 随机对敌人做造成 #b",
+      "点伤害 ｡"
     ]
   },
   "awakened:SchemePower": {
-    "NAME": "Scheme",
+    "NAME": "谋划",
     "DESCRIPTIONS": [
-      "The next #b",
-      " cards played this turn that cost #b1 or less will be played twice.",
-      "The next card played this turn that costs #b1 or less will be played twice."
+      "本回合打出的下 #b",
+      " 张耗能为 #b1 或以下的卡牌会被打出两次 ｡",
+      "本回合打出的下一张耗能为 #b1 或以下的卡牌会被打出两次 ｡"
     ]
   },
   "awakened:FourthDimensionPower": {

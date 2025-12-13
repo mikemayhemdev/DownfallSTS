@@ -64,8 +64,8 @@
   },
   "hexamod:DevilsDance": {
     "NAME": "魔鬼之舞",
-    "DESCRIPTION": "hexamod:回退 時， NL 抽一張牌。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 每回合首次 hexamod:回退 時， NL 獲得 [E] 並抽一張牌。 NL hexamod:回退 。"
+    "DESCRIPTION": "每回合第一次 hexamod:步进 或 hexamod:回退 时，抽一张牌。",
+    "UPGRADE_DESCRIPTION": "每回合首 !M! 次 hexamod:步进 或 hexamod:回退 时，抽一张牌。"
   },
   "hexamod:IntoShadow": {
     "NAME": "遁入暗影",

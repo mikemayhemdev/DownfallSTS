@@ -42,9 +42,8 @@
   "sneckomod:OverwhelmingPresencePower": {
     "NAME": "威压",
     "DESCRIPTIONS": [
-      "每回合你第 1 次洗牌，获得 [E] 并抽 #b1 张牌。",
-      "每回合你第 1 次洗牌，获得 ",
-      " 点 [E] 并抽 #b",
+      "每回合第一次打出 #y异色 牌时，抽 #b1 张牌。",
+      "每回合第一次打出 #y异色 牌时，抽 #b",
       " 张牌。"
     ]
   },
@@ -178,12 +177,11 @@
   },
   "sneckomod:TrashCanPower": {
     "NAME": "垃圾桶",
-    "DESCRIPTIONS": ["回合开始时，你可以 #y消耗 1张牌。",
-      "回合开始时，你可以至多 #y消耗 #b",
+    "DESCRIPTIONS": ["回合结束时，你可以 #y消耗 1张牌。",
+      "回合结束时，你可以至多 #y消耗 #b",
       " 张牌。"
-  ]
-      },
-
+    ]
+  },
         "sneckomod:VenomDebuff": {
           "NAME": "剧毒",
           "DESCRIPTIONS": [

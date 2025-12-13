@@ -40,12 +40,11 @@
     ]
   },
   "sneckomod:OverwhelmingPresencePower": {
-    "NAME": "威壓",
+    "NAME": "威压",
     "DESCRIPTIONS": [
-      "每回合你第一次洗牌，獲得 [E] 並抽 #b1 張牌。",
-      "每回合你第一次洗牌，獲得 ",
-      " 點 [E] 並抽 #b",
-      " 張牌。"
+      "每回合第一次打出 #y异色 牌时，抽 #b1 张牌。",
+      "每回合第一次打出 #y异色 牌时，抽 #b",
+      " 张牌。"
     ]
   },
   "sneckomod:SerpentsNestPower": {
@@ -178,11 +177,11 @@
   },
   "sneckomod:TrashCanPower": {
     "NAME": "垃圾桶",
-    "DESCRIPTIONS": ["回合開始時，你可以 #y消耗 1張牌。",
-      "回合開始時，你可以至多 #y消耗 #b",
-      " 張牌。"
-  ]
-      },
+    "DESCRIPTIONS": ["回合结束时，你可以 #y消耗 1张牌。",
+      "回合结束时，你可以至多 #y消耗 #b",
+      " 张牌。"
+    ]
+  },
 
         "sneckomod:VenomDebuff": {
           "NAME": "劇毒",

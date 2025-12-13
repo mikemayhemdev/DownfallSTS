@@ -3,7 +3,9 @@
     "NAME": "黏液之心",
     "FLAVOR": "我可真时髦。",
     "DESCRIPTIONS": [
-      " #yslimeboundmod:吞食黏液 时，回复 #b2 点生命。 NL （每场战斗最多 #b8 点）"
+      " #yslimeboundmod:吞食黏液 时，回复 #b",
+      " 点生命。 NL （每场战斗最多 #b",
+      " 点）"
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
@@ -11,7 +13,9 @@
     "FLAVOR": "黏浆中的秘密。",
     "DESCRIPTIONS": [
 	"替换 ",
-     " 。 NL #yslimeboundmod:吞食黏液 时，回复 #b3 点生命。 NL （每场战斗最多 #b15 点）"
+     " 。 NL #yslimeboundmod:吞食黏液 时，回复 #b",
+      " 点生命。 NL （每场战斗最多 #b",
+      " 点）"
     ]
   },
   "Slimebound:SlimedTailRelic": {
@@ -86,7 +90,8 @@
     "NAME": "碰撞护具",
     "FLAVOR": "进攻是最好的防守！",
     "DESCRIPTIONS": [
-      " #yslimeboundmod:冲撞 牌造成的自我伤害减少 #b3 点。"
+      " #yslimeboundmod:冲撞 牌造成的自我伤害减少 #b",
+      " 点。"
     ]
   },
     "Slimebound:TarBlob": {
@@ -100,7 +105,8 @@
     "NAME": "粘胶立方体",
     "FLAVOR": "嘿，它粘到你身上了。",
     "DESCRIPTIONS": [
-      "每回合前 #b2 次抽到 #y状态 或 #y诅咒 牌时再抽 #b1 张牌。若是 #y虚空 触发抽牌，再获得 [E] 。"
+      "每当你抽到一张 #y状态 或 #r诅咒 [REMOVE_SPACE]时，获得 #b",
+      "点 #y格挡 [REMOVE_SPACE]。"
     ]
   }
 }

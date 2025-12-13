@@ -8,6 +8,20 @@
   },
   {
     "NAMES": [
+      "抛光油",
+      "抛光油",
+      "抛光油",
+      "抛光油",
+      "Polishing Oil",
+      "Polishing_Oil",
+      "polishing_oil",
+      "polishingoil"
+    ],
+    "PROPER_NAME": "抛光油",
+    "DESCRIPTION": "#y药水 [REMOVE_SPACE]: 获得 #b16 点 #y格挡 [REMOVE_SPACE]。 进入 #y防御模式 [REMOVE_SPACE]。"
+  },
+  {
+    "NAMES": [
       "凝滞"
     ],
     "PROPER_NAME": "凝滞",

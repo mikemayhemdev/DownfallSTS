@@ -27,15 +27,16 @@ public class TheBrokenSeal extends CustomRelic {
 
     public static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(downfallMod.makeID("Unfettered"));
 
+    //do not change relic tier even if doing config stuff please
     public TheBrokenSeal() {
         super(ID, IMG, OUTLINE, RelicTier.DEPRECATED, LandingSound.MAGICAL);
     }
 
     //variables
-    public static final int MAX_HP = 6;
-    public static final int STR = 1;
-    public static final int DEX = 1;
-    public static final int INTENSITY = 1;
+    public static final int MAX_HP = 10;
+    public static final int STR = 2;
+    public static final int DEX = 2;
+    public static final int INTENSITY = 2;
 
     @Override
     public void onEquip() {
