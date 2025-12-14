@@ -299,8 +299,8 @@
   },
   "awakened:MiddenHeap": {
     "NAME": "废弃堆",
-    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 将 !M! 张状态 或 诅咒 牌从你 的抽牌 堆 或弃牌堆放到你的手中 ｡",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡 ｡ NL 将 !M! 状态牌 或 诅咒 牌从你 的抽牌堆或弃牌堆放到你的手中 ｡",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 将 !M! 张 状态 或 诅咒 牌从你的抽牌堆或弃牌堆放到你的手中 ｡",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡 ｡ NL 将 !M! 张 状态 或 诅咒 牌从你的抽牌堆或弃牌堆放到你的手中 ｡",
     "EXTENDED_DESCRIPTION": [
       "选择放入手中的卡牌 ｡",
       "选择放入手中的卡牌 ｡"
