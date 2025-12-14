@@ -42,7 +42,7 @@
       "final",
       "finales"
     ],
-    "DESCRIPTION": "Requiere estar en una Postura. NL Después de jugar un Final, sales de tu Postura y activas su bono de Final. NL #rBerserker #yBono de #yFinal: Gana #b1 de #yFuerza [REMOVE_SPACE]. NL #bDefensivo #yBono de #yFinal: Gana #b8 de #yBloqueo [REMOVE_SPACE]."
+    "DESCRIPTION": "Requiere estar en una Postura. NL Después de jugar un Final, sales de tu Postura y activas su bono de Final. NL #rBerserker #yBono de #yFinal: Gana #b1 de #yFuerza [REMOVE_SPACE]. NL #bDefensivo #yBono de #yFinal: Gana #b6 de #yBloqueo [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Contraataque",
