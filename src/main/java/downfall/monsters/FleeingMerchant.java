@@ -123,6 +123,7 @@ public class FleeingMerchant extends AbstractMonster {
             setHp(400);
         } else {
             setHp(360);
+            if (CURRENT_HP == 400) CURRENT_HP = 360;
         }
 
         if (AbstractDungeon.ascensionLevel >= 3) {
