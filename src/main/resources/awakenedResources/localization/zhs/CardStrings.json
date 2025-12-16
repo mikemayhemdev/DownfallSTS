@@ -5,7 +5,7 @@
   },
   "awakened:BurningStudy": {
     "NAME": "炽肄",
-    "DESCRIPTION": "保留 ｡ NL 获得 !M! 点力量 ｡ NL 给予所有敌人 !awakened:m2! 层虚弱 ｡ NL 消耗 ｡"
+    "DESCRIPTION": "保留 ｡ NL 获得 !M! 点力量 ｡ NL 给予所有敌人 !awakened:m2! 层 虚弱 ｡ NL 消耗 ｡"
   },
   "awakened:Cryostasis": {
     "NAME": "凝冻",
@@ -13,7 +13,7 @@
   },
   "awakened:Darkleech": {
     "NAME": "暗噬",
-    "DESCRIPTION": "保留 ｡ NL 给予 !M! 层易伤 ｡ NL 给予 !awakened:m2! 层 awakened:灼气 ｡ NL 消耗 ｡"
+    "DESCRIPTION": "保留 ｡ NL 给予 !M! 层 易伤 ｡ NL 给予 !awakened:m2! 层 awakened:灼气 ｡ NL 消耗 ｡"
   },
   "awakened:DeathCoil": {
     "NAME": "死缠",
@@ -299,8 +299,8 @@
   },
   "awakened:MiddenHeap": {
     "NAME": "废弃堆",
-    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 将 !M! 张状态或诅咒牌从你的抽牌堆或弃牌堆放到你的手中 ｡",
-    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡 ｡ NL 将 !M! 张状态或诅咒牌从你的抽牌堆或弃牌堆放到你的手中 ｡",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 将 !M! 张 状态 或 诅咒 牌从你的抽牌堆或弃牌堆放到你的手中 ｡",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡 ｡ NL 将 !M! 张 状态 或 诅咒 牌从你的抽牌堆或弃牌堆放到你的手中 ｡",
     "EXTENDED_DESCRIPTION": [
       "选择放入手中的卡牌 ｡",
       "选择放入手中的卡牌 ｡"
@@ -397,7 +397,7 @@
     "NAME": "百科全书",
     "DESCRIPTION": "从 !M! 张随机牌中选择2张加入你的手牌 ｡ 本场战斗其耗能减2 ｡ NL 消耗 ｡",
     "EXTENDED_DESCRIPTION": [
-      "选择2张卡放入抽牌堆 ｡"
+      "选择2张卡牌加入你的手中 ｡"
     ]
   },
   "awakened:RealityRift": {

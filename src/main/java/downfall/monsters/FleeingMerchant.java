@@ -70,7 +70,7 @@ public class FleeingMerchant extends AbstractMonster {
     public static final String SOULSTEALNAME = CardCrawlGame.languagePack.getMonsterStrings(ID).MOVES[0];
     public static final float DRAW_X = Settings.WIDTH * 0.5F + 34.0F * Settings.scale;
     public static final float DRAW_Y = AbstractDungeon.floorY - 109.0F * Settings.scale;
-    public static int START_HP = 360;
+    public static int START_HP = 400;
 
     public static int CURRENT_HP = 400;
     public static int CURRENT_STRENGTH = 0;

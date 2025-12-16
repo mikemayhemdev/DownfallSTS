@@ -6,6 +6,7 @@ import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.cards.colorless.EnGoodInstincts;
+import charbosses.cards.colorless.EnPanacea;
 import charbosses.cards.colorless.EnSwiftStrike;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnNormality;
@@ -74,7 +75,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
                 case 2:
                     //turn 3
                     //off turn
-                    addToList(cardsList, new EnDevotion(), extraUpgrades);
+                    addToList(cardsList, new EnPanacea());
                     addToList(cardsList, new EnSwiftStrike());
                     addToList(cardsList, new EnConjurBlade(), true);
                     turn++;
@@ -83,7 +84,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
                     //turn 4
                     //off turn / mercy
                     addToList(cardsList, new EnProtect(), true);
-                    addToList(cardsList, new EnEmptyFist(), true);
+                    addToList(cardsList, new EnEmptyFist(), extraUpgrades);
                     addToList(cardsList, new EnSanctity());    //Not played
                     turn++;
                     break;
@@ -108,7 +109,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
                     addToList(cardsList, c);
                     c = new EnEmptyFist();                      //Exit Divinity
                     c.freeToPlayOnce = true;
-                    addToList(cardsList, c, true);
+                    addToList(cardsList, c, extraUpgrades);
                     turn++;
                     break;
                 case 1:
