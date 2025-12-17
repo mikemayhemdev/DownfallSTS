@@ -20,7 +20,7 @@ public class EnConjurBlade extends AbstractBossCard {
     }
 
     public EnConjurBlade() {
-        super(ID, cardStrings.NAME, "purple/skill/conjure_blade", 3, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.MAGIC);
+        super(ID, cardStrings.NAME, "purple/skill/conjure_blade", 2, cardStrings.DESCRIPTION, CardType.SKILL, CardColor.PURPLE, CardRarity.RARE, CardTarget.SELF, AbstractMonster.Intent.MAGIC);
         this.cardsToPreview = new Expunger();
         this.exhaust = true;
     }

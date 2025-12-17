@@ -75,9 +75,9 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
                 case 2:
                     //turn 3
                     //off turn
-                    addToList(cardsList, new EnPanacea());
+                    addToList(cardsList, new EnDevotion());
                     addToList(cardsList, new EnSwiftStrike());
-                    addToList(cardsList, new EnConjurBlade());
+                    addToList(cardsList, new EnConjurBlade(), true);
                     turn++;
                     break;
                 case 3:
