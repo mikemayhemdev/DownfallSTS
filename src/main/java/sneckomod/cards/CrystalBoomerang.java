@@ -1,11 +1,13 @@
 package sneckomod.cards;
 
+import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.util.SelectCardsCenteredAction;
+import hermit.util.Wiz;
 import sneckomod.SneckoMod;
 
 public class CrystalBoomerang extends AbstractSneckoCard {
@@ -35,12 +37,13 @@ public class CrystalBoomerang extends AbstractSneckoCard {
                     (selectedCards) -> {
 
                         AbstractCard selecteda = selectedCards.get(0);
-                        p.discardPile.removeCard(selecteda);
-                        p.hand.addToHand(selecteda);
-                        selecteda.lighten(false);
-                        selecteda.unhover();
-                        selecteda.applyPowers();
-
+                        if (Wiz.hand().size() < BaseMod.MAX_HAND_SIZE) {
+                            p.discardPile.removeCard(selecteda);
+                            p.hand.addToHand(selecteda);
+                            selecteda.lighten(false);
+                            selecteda.unhover();
+                            selecteda.applyPowers();
+                        }
                         if (selecteda.color != p.getCardColor()) {
                             blck();
                         }
