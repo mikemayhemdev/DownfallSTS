@@ -69,10 +69,10 @@ public class DarkEchoPower extends TwoAmountPower implements OnPowersModifiedSub
     @Override
     public void updateDescription() {
         if (this.amount != 1) {
-            this.description = DESCRIPTIONS[0] + amount2 + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+            this.description = DESCRIPTIONS[0] + Math.min(0, amount2) + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
         }
         if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + amount2 + DESCRIPTIONS[3];
+            this.description = DESCRIPTIONS[0] + Math.min(0, amount2) + DESCRIPTIONS[3];
         }
 
     }

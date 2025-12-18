@@ -159,7 +159,7 @@ public class CollectorMod implements
         BaseMod.addRelicToCustomPool(new TheContract(), CollectorChar.Enums.COLLECTOR);
         //Shared relics
         BaseMod.addRelic(new AutoCurser(), RelicType.SHARED);
-        BaseMod.addRelic(new Incense(), RelicType.SHARED);
+//        BaseMod.addRelic(new Incense(), RelicType.SHARED);
         BaseMod.addRelic(new Bagpipes(), RelicType.SHARED);
         BaseMod.addRelic(new FuelCanister(), RelicType.SHARED);
         BaseMod.addRelic(new ForbiddenFruit(), RelicType.SHARED);
