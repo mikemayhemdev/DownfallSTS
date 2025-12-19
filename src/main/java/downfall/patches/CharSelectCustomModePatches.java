@@ -134,6 +134,9 @@ public class CharSelectCustomModePatches {
                     if (challengeDownHitbox.hovered) {
                         if (challengeTips.isEmpty()) {
                             challengeTips.add(new PowerTip(uiStringsHexaghostSealMode.TEXT[0], uiStringsHexaghostSealMode.TEXT[1]));
+                        } else {
+                            challengeTips.get(0).header = uiStringsHexaghostSealMode.TEXT[0];
+                            challengeTips.get(0).body = uiStringsHexaghostSealMode.TEXT[1];
                         }
                         if (InputHelper.mX < 1400.0f * Settings.scale) {
                             TipHelper.queuePowerTips(InputHelper.mX + 60.0f * Settings.scale, InputHelper.mY - 50.0f * Settings.scale, challengeTips);
@@ -157,6 +160,9 @@ public class CharSelectCustomModePatches {
                     if (challengeDownHitbox.hovered) {
                         if (challengeTips.isEmpty()) {
                             challengeTips.add(new PowerTip(uiStringsSneckoMode.TEXT[0], uiStringsSneckoMode.TEXT[1]));
+                        }else {
+                            challengeTips.get(0).header = uiStringsSneckoMode.TEXT[0];
+                            challengeTips.get(0).body = uiStringsSneckoMode.TEXT[1];
                         }
                         if (InputHelper.mX < 1400.0f * Settings.scale) {
                             TipHelper.queuePowerTips(InputHelper.mX + 60.0f * Settings.scale, InputHelper.mY - 50.0f * Settings.scale, challengeTips);
@@ -179,6 +185,9 @@ public class CharSelectCustomModePatches {
                     if (challengeDownHitbox.hovered) {
                         if (challengeTips.isEmpty()) {
                             challengeTips.add(new PowerTip(uiStringsGrems.TEXT[0], uiStringsGrems.TEXT[1]));
+                        }else {
+                            challengeTips.get(0).header = uiStringsGrems.TEXT[0];
+                            challengeTips.get(0).body = uiStringsGrems.TEXT[1];
                         }
                         if (InputHelper.mX < 1400.0f * Settings.scale) {
                             TipHelper.queuePowerTips(InputHelper.mX + 60.0f * Settings.scale, InputHelper.mY - 50.0f * Settings.scale, challengeTips);
