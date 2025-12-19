@@ -15,5 +15,11 @@
       "Sello",
       "hexamod:Sello. NL "
     ]
+  },
+  "hexamod:SealMode": {
+    "TEXT": [
+      "Legacy Mode - Six Seals",
+      "Adds Seal rewards periodically in combat. Assemble the Seals to earn a special relic. Playing with this option enabled will make the game easier."
+    ]
   }
 }

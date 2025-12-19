@@ -58,6 +58,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import static downfall.downfallMod.ShowCharModes;
+import static downfall.downfallMod.SixSealsQuest;
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static theHexaghost.GhostflameHelper.*;
 import static theHexaghost.TheHexaghost.oscillarator;
@@ -187,6 +189,10 @@ public class HexaMod implements
         return getModID() + ":" + idText;
     }
 
+
+    public static boolean isHexaghostSealsEnabled(){
+        return SixSealsQuest && ShowCharModes;
+    }
 
     private static void autoAddCards()
             throws URISyntaxException, IllegalAccessException, InstantiationException, NotFoundException, ClassNotFoundException {

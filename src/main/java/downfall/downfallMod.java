@@ -198,6 +198,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static boolean useLegacyBosses = true;
     public static boolean DeterministicConjure = true;
     public static boolean SixSealsQuest = false;
+    public static boolean ShowCharModes = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
@@ -214,6 +215,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static final String PROP_ICONS_FOR_APPLIED_PROPERTIES = "useIconsForAppliedProperties";
     public static final String NO_RNG_CONJURE = "RNGlessConjure";
     public static final String SIX_SEALS_QUEST = "SixSealsQuest";
+    public static final String SHOW_CHAR_MODES = "ShowCarModes";
     public static final String NO_BASE_ADJUSTMENTS = "disableBaseGameAdjustments";
     public static final String LEGACY_BOSSES = "legacyBosses";
 
@@ -293,6 +295,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         configDefault.setProperty(NO_RNG_CONJURE, "TRUE");
         configDefault.setProperty(LEGACY_BOSSES, "TRUE");
         configDefault.setProperty(SIX_SEALS_QUEST, "FALSE");
+        configDefault.setProperty(SHOW_CHAR_MODES, "FALSE");
 
 
         loadConfigData();
@@ -381,6 +384,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             config.setBool(PROP_ICONS_FOR_APPLIED_PROPERTIES, useIconsForAppliedProperties);
             config.setBool(NO_RNG_CONJURE, DeterministicConjure);
             config.setBool(SIX_SEALS_QUEST, SixSealsQuest);
+            config.setBool(SHOW_CHAR_MODES, ShowCharModes);
             config.setBool(NO_BASE_ADJUSTMENTS, disableBaseGameAdjustments);
             //config.setBool(LEGACY_BOSSES, useLegacyBosses);
             config.save();
@@ -789,13 +793,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             });
 
             configPos -= configStep;
-            ModLabeledToggleButton sixSealsButton = new ModLabeledToggleButton(configStrings.TEXT[17], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, useLegacyBosses, settingsPanel, (label) -> {
-            }, (button) -> {
-                SixSealsQuest = button.enabled;
-                saveData();
-            });
-
-            configPos -= configStep;
             ModLabeledToggleButton legacyBossesButton = new ModLabeledToggleButton(configStrings.TEXT[16], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, useLegacyBosses, settingsPanel, (label) -> {
             }, (button) -> {
                 useLegacyBosses = button.enabled;
@@ -816,7 +813,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             settingsPanel.addUIElement(characterModCrossoverBtn);
             settingsPanel.addUIElement(noBaseAdjustmentsBtn);
             settingsPanel.addUIElement(NoRNGConjureButton);
-            settingsPanel.addUIElement(sixSealsButton);
            // settingsPanel.addUIElement(legacyBossesButton);
         }
 
@@ -841,6 +837,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 useIconsForAppliedProperties = config.getBool(PROP_ICONS_FOR_APPLIED_PROPERTIES);
                 DeterministicConjure = config.getBool(NO_RNG_CONJURE);
                 SixSealsQuest = config.getBool(SIX_SEALS_QUEST);
+                ShowCharModes = config.getBool(SHOW_CHAR_MODES);
               //  useLegacyBosses = config.getBool(LEGACY_BOSSES);
             }
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);

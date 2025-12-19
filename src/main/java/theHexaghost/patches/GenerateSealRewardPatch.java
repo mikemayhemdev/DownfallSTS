@@ -19,7 +19,7 @@ public class GenerateSealRewardPatch {
 )
 public static class DropSeals {
     public static void Postfix(AbstractRoom __instance) {
-        if(AbstractDungeon.player instanceof TheHexaghost && (!AbstractDungeon.player.hasRelic(TheBrokenSeal.ID) && downfallMod.SixSealsQuest) ) {
+        if(AbstractDungeon.player instanceof TheHexaghost && (!AbstractDungeon.player.hasRelic(TheBrokenSeal.ID) && HexaMod.isHexaghostSealsEnabled()) ) {
 
             int chance = 15;
             if (__instance instanceof MonsterRoomElite) {

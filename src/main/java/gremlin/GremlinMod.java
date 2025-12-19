@@ -52,6 +52,8 @@ import java.util.Map;
 
 import static basemod.BaseMod.addRelic;
 import static basemod.BaseMod.addRelicToCustomPool;
+import static downfall.downfallMod.ShowCharModes;
+import static downfall.downfallMod.SixSealsQuest;
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static gremlin.patches.GremlinEnum.GREMLIN;
 
@@ -300,6 +302,11 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 //        BaseMod.addCard(new SkullBash());
         BaseMod.addCard(new Ward());
 
+    }
+
+
+    public static boolean isGremArtModeEnabled(){
+        return gremlinArtMode && ShowCharModes;
     }
 
     @Override

@@ -116,7 +116,7 @@ public abstract class AbstractGremlinCard extends CustomCard {
     }
 
     public ART_GREMLIN getGremlinEnumFromCard(AbstractCard card) {
-        if (!GremlinMod.gremlinArtMode && !(card instanceof GremlinDance)) {
+        if (!GremlinMod.isGremArtModeEnabled() && !(card instanceof GremlinDance)) {
             return ART_GREMLIN.NONE;
         }
 

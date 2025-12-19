@@ -89,7 +89,7 @@ import java.util.*;
 import java.util.function.Predicate;
 
 import static com.megacrit.cardcrawl.cards.AbstractCard.CardType.*;
-import static downfall.downfallMod.sneckoNoModCharacters;
+import static downfall.downfallMod.*;
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static sneckomod.util.ColorfulCardReward.TEXT;
 import static theHexaghost.HexaMod.GHOSTWHEELCARD;
@@ -351,7 +351,7 @@ public class SneckoMod implements
             possList.removeIf(c -> c instanceof Discovery);
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
         }
-        if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
+        if (isPureSneckoModeEnabled() && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko);
             possList.removeIf(c -> !validColors.contains(c.color));
 
         possList.removeIf(c -> c.color == AbstractDungeon.player.getCardColor());
@@ -375,7 +375,7 @@ public class SneckoMod implements
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
         }
-        if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
+        if ((!isPureSneckoModeEnabled() && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
         possList.removeIf(c -> !validColors.contains(c.color));
 
         possList.removeIf(c -> c.color == AbstractDungeon.player.getCardColor());
@@ -400,7 +400,7 @@ public class SneckoMod implements
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
         }
-        if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
+        if ((!isPureSneckoModeEnabled() && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
         possList.removeIf(c -> !validColors.contains(c.color));
 
         possList.removeIf(c -> c.color == AbstractDungeon.player.getCardColor());
@@ -577,7 +577,7 @@ public class SneckoMod implements
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
         }
-        if ((!pureSneckoMode && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
+        if ((!isPureSneckoModeEnabled() && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
         possList.removeIf(c -> !validColors.contains(c.color));
 
         possList.removeIf(c -> (
@@ -631,6 +631,9 @@ public class SneckoMod implements
         return possList.get(AbstractDungeon.miscRng.random(possList.size() - 1)).makeCopy();
     }
 
+    public static boolean isPureSneckoModeEnabled(){
+        return pureSneckoMode && ShowCharModes;
+    }
 
 
     public static AbstractCard getSpecificClassCard(AbstractCard.CardColor color) {
@@ -872,7 +875,7 @@ public class SneckoMod implements
 
     @Override
     public void receiveStartGame() {
-        if (!CardCrawlGame.loadingSave || (validColors.isEmpty() && !pureSneckoMode)) {
+        if (!CardCrawlGame.loadingSave || (validColors.isEmpty() && !isPureSneckoModeEnabled())) {
             openedStarterScreen = false;
             validColors = new ArrayList<>();
         }
@@ -909,7 +912,7 @@ public class SneckoMod implements
     }
 
     public static void findAWayToTriggerThisAtGameStart() {
-        if (AbstractDungeon.player instanceof TheSnecko && !pureSneckoMode) {
+        if (AbstractDungeon.player instanceof TheSnecko && !isPureSneckoModeEnabled()) {
             validColors.clear();
             choosingCharacters = 0;
             colorChoices = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
@@ -952,7 +955,7 @@ public class SneckoMod implements
                 SneckoMod.openedStarterScreen = true;
             }
         }
-        if (SneckoMod.choosingCharacters > -1 && SneckoMod.choosingCharacters <= 2 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && !pureSneckoMode) {
+        if (SneckoMod.choosingCharacters > -1 && SneckoMod.choosingCharacters <= 2 && !AbstractDungeon.gridSelectScreen.selectedCards.isEmpty() && !isPureSneckoModeEnabled()) {
             AbstractCard c = AbstractDungeon.gridSelectScreen.selectedCards.get(0);
             SneckoMod.colorChoices.removeCard(c);
             SneckoMod.validColors.add(c.color);
