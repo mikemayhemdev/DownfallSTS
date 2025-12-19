@@ -16,6 +16,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
     public ArchetypeAct3MerchantBoss() {
         super("ME_ARCHETYPE_MERCHANT", "Merchant");
+
     }
 
     public void initialize() {

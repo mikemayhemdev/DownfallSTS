@@ -168,8 +168,9 @@ public class SlimeAutoAttack extends AbstractGameAction {
                 AbstractDungeon.actionManager.addToTop(new SlimeAutoCultistBuff(1, this.slime));
             }
 
-            if (slime instanceof ShieldSlime)
+            if (slime instanceof ShieldSlime) {
                 AbstractDungeon.actionManager.addToTop(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.debuffamount));
+            }
 
             if (this.hitsAll) {
                 AbstractDungeon.actionManager.addToTop(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(this.damage, true, true), DamageInfo.DamageType.THORNS, AttackEffect.POISON));
@@ -179,19 +180,38 @@ public class SlimeAutoAttack extends AbstractGameAction {
                         AE));
             }
 
-            if (this.appliesPoison)
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new PoisonPower(mo, AbstractDungeon.player, this.debuffamount), this.debuffamount, true, AbstractGameAction.AttackEffect.POISON));
-            if (this.appliesSlimed)
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new SlimedPower(mo, AbstractDungeon.player, this.debuffamount), this.debuffamount, true, AttackEffect.NONE));
-            if (this.appliesWeak)
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, this.debuffamount, false), this.debuffamount, true, AbstractGameAction.AttackEffect.NONE));
-            if (this.appliesVulnerable)
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new VulnerablePower(mo, this.debuffamount, false), this.debuffamount, true, AbstractGameAction.AttackEffect.NONE));
-            if (this.appliesBurn)
-                AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new BurnPower(mo, this.debuffamount), this.debuffamount, true, AbstractGameAction.AttackEffect.NONE));
-            if (this.selfThorns) {
+            if (this.appliesPoison) {
+                if (this.debuffamount > 0) {
+                    AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new PoisonPower(mo, AbstractDungeon.player, this.debuffamount), this.debuffamount, true, AttackEffect.POISON));
+                }
+            }
+            if (this.appliesSlimed) {
+                if (this.debuffamount > 0) {
+                    AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new SlimedPower(mo, AbstractDungeon.player, this.debuffamount), this.debuffamount, true, AttackEffect.NONE));
+                }
+            }
+            if (this.appliesWeak) {
+                if (this.debuffamount > 0) {
+                    AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new WeakPower(mo, this.debuffamount, false), this.debuffamount, true, AbstractGameAction.AttackEffect.NONE));
+                }
+            }
+                if (this.appliesVulnerable) {
+                    if (this.debuffamount > 0) {
+                        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new VulnerablePower(mo, this.debuffamount, false), this.debuffamount, true, AbstractGameAction.AttackEffect.NONE));
+                    }
+                }
+
+                if (this.appliesBurn) {
+                    if (this.debuffamount > 0) {
+                        AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(mo, AbstractDungeon.player, new BurnPower(mo, this.debuffamount), this.debuffamount, true, AbstractGameAction.AttackEffect.NONE));
+                    }
+                }
+
+                if (this.selfThorns) {
+                    if (this.debuffamount > 0) {
                 AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ThornsPower(AbstractDungeon.player, this.debuffamount), this.debuffamount, true, AbstractGameAction.AttackEffect.NONE));
                 AbstractDungeon.actionManager.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoseThornsPower(AbstractDungeon.player, this.debuffamount), this.debuffamount, true, AbstractGameAction.AttackEffect.NONE));
+                }
             }
             AbstractDungeon.actionManager.addToTop(new VFXAction(new SlimeIntentEffect(slime.intentImage, slime, speedTime), speedTime));
             if (slime.movesToAttack) {

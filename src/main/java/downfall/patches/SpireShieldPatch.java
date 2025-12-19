@@ -21,18 +21,22 @@ import theHexaghost.powers.EnhancePower;
 public class SpireShieldPatch {
     @SpireInsertPatch(rloc=8)
     public static SpireReturn<Void> Insert(SpireShield __instance) {
-        if ((AbstractDungeon.player instanceof SlimeboundCharacter || AbstractDungeon.player instanceof TheHexaghost || AbstractDungeon.player instanceof TheSnecko) && AbstractDungeon.aiRng.randomBoolean()) {
+        if ((AbstractDungeon.player instanceof SlimeboundCharacter || AbstractDungeon.player instanceof TheHexaghost || AbstractDungeon.player instanceof TheSnecko || AbstractDungeon.player instanceof GuardianCharacter)) {
 
             if (AbstractDungeon.player instanceof SlimeboundCharacter && !AbstractDungeon.player.orbs.isEmpty()) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, __instance, new PotencyPower(AbstractDungeon.player, __instance, -1)));
-            }
-
-            if (AbstractDungeon.player instanceof SlimeboundCharacter && (AbstractDungeon.player.orbs.isEmpty())) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, __instance, new StrengthPower(AbstractDungeon.player, -1)));
+                if (AbstractDungeon.aiRng.randomBoolean()) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, __instance, new PotencyPower(AbstractDungeon.player, __instance, -1), -1));
+                } else {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, __instance, new StrengthPower(AbstractDungeon.player, -1), -1));
+                }
             }
 
             if (AbstractDungeon.player instanceof TheHexaghost) {
-                AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, __instance, new EnhancePower(-1), -1));
+                if (AbstractDungeon.aiRng.randomBoolean()) {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, __instance, new EnhancePower(-1)));
+                } else {
+                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, __instance, new StrengthPower(AbstractDungeon.player, -1), -1));
+                }
             }
 
             if (AbstractDungeon.player instanceof TheSnecko || AbstractDungeon.player instanceof GuardianCharacter) {

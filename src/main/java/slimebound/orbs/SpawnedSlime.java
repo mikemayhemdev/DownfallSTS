@@ -465,21 +465,35 @@ public abstract class SpawnedSlime
 
 
     public void renderText(SpriteBatch sb) {
+        int cool = 0;
+        int cool2 = 0;
+
+        cool = this.passiveAmount;
+        cool2 = this.debuffAmount;
+
+        if (cool < 0) {
+            cool = 0;
+        }
+
+        if (cool2 < 0) {
+            cool2 = 0;
+        }
+
         if (this.extraFontColor != null){
 
 
             float fontOffset = 26 * Settings.scale;
-            if (this.passiveAmount > 9) fontOffset = fontOffset + (6 * Settings.scale);
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, this.passiveAmount + "/", this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
+            if (cool > 9) fontOffset = fontOffset + (6 * Settings.scale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, cool + "/", this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
 
 
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.debuffAmount + this.slimeBonus), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET + 1F, this.extraFontColor, this.fontScale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(cool2 + this.slimeBonus), this.cX + this.NUM_X_OFFSET + fontOffset, this.cY + this.NUM_Y_OFFSET + 1F, this.extraFontColor, this.fontScale);
 
         } else if (this instanceof PoisonSlime) {
 
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, this.passiveAmount + " All", this.cX + this.NUM_X_OFFSET - (Settings.scale * 0.01F), this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, cool + " All", this.cX + this.NUM_X_OFFSET - (Settings.scale * 0.01F), this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
         } else {
-            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(this.passiveAmount), this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
+            FontHelper.renderFontCentered(sb, FontHelper.cardEnergyFont_L, Integer.toString(cool), this.cX + this.NUM_X_OFFSET, this.cY + this.NUM_Y_OFFSET, this.c, this.fontScale);
 
         }
     }
