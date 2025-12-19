@@ -3,7 +3,7 @@
     "NAME": "Tiny Bowler Hat",
     "FLAVOR": "Whosoever controls the hat, controls the Spire.",
     "DESCRIPTIONS": [
-      "At the start of your 2nd turn, choose #b1 of #b3 random Boss cards and add the chosen card into your hand."
+      "At the start of each combat, choose #b1 of #b3 random Boss cards and add the chosen card into your hand."
     ]
   }
 }

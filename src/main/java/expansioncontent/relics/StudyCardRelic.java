@@ -19,7 +19,7 @@ public class StudyCardRelic extends CustomRelic {
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("tinybowlerhatOutline.png"));
 
     public StudyCardRelic() {
-        super(ID, IMG, OUTLINE, RelicTier.DEPRECATED, LandingSound.FLAT);
+        super(ID, IMG, OUTLINE, RelicTier.SHOP, LandingSound.FLAT);
     }
 
     @Override
@@ -27,30 +27,9 @@ public class StudyCardRelic extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
-    public void onEquip() {
-        this.counter = -1;
-    }
-
-    public void onVictory() {
-        this.counter = -1;
-    }
-
-    @Override
-    public void atBattleStart() {
-        this.counter = 0;
-    }
-
-    @Override
-    public void atTurnStart() {
-        if (this.counter < 2 && this.counter != -1) {
-            this.counter++;
-            flash();
-            if (this.counter == 2) {
-                this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                addToBot(new BossToolboxAction(1));
-                this.counter = -1;
-            }
-        }
+    public void atBattleStartPreDraw() {
+        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+        addToBot(new BossToolboxAction(1));
     }
 
     @Override
