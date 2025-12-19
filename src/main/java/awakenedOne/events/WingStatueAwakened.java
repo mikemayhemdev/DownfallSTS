@@ -40,8 +40,8 @@ public class WingStatueAwakened extends AbstractImageEvent {
         }
 
         this.imageEventText.setDialogOption(OPTIONS[0], new ShatteredFragment());
-        this.imageEventText.setDialogOption(OPTIONS[2] + this.damage + OPTIONS[4], new BrokenWingStatue());
-        this.imageEventText.setDialogOption(OPTIONS[3]);
+        this.imageEventText.setDialogOption(OPTIONS[1] + this.damage + OPTIONS[3], new BrokenWingStatue());
+        this.imageEventText.setDialogOption(OPTIONS[2]);
     }
 
     protected void buttonEffect(int buttonPressed) {
@@ -50,15 +50,15 @@ public class WingStatueAwakened extends AbstractImageEvent {
                 switch (buttonPressed) {
                     case 0:
                         AbstractCard curse = new CurseOfBlood();
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, Settings.WIDTH * .35F, (float) (Settings.HEIGHT / 2)));
-                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, Settings.WIDTH * .65F, (float) (Settings.HEIGHT / 2)));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse.makeCopy(), Settings.WIDTH * .35F, (float) (Settings.HEIGHT / 2)));
+                        AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse.makeCopy(), Settings.WIDTH * .65F, (float) (Settings.HEIGHT / 2)));
 
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.imageEventText.clearAllDialogs();
                         this.imageEventText.setDialogOption(OPTIONS[3]);
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new ShatteredFragment());
                         this.screen = CurScreen.RESULT;
-                        logMetricObtainCardAndRelic(ID, "Destroyed Statue", curse, new ShatteredFragment());
+                        logMetricObtainCardAndRelic(ID, "Destroyed Statue", curse.makeCopy(), new ShatteredFragment());
                         return;
                     case 1:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
