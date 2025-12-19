@@ -57,7 +57,7 @@ public class CharBossMerchant extends AbstractCharBoss {
     public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[5];
 
     public CharBossMerchant() {
-        super(NAME, ID, 300, 0f, -40f, 200.0f, 190.0f, null, 0.0f, 0.0f, PlayerClass.IRONCLAD);
+        super(NAME, ID, 333, 0f, -40f, 200.0f, 190.0f, null, 0.0f, 0.0f, PlayerClass.IRONCLAD);
 
 //        if (downfallMod.tempAscensionHack) {
 //            downfallMod.tempAscensionHack = false;
@@ -98,11 +98,9 @@ public class CharBossMerchant extends AbstractCharBoss {
 
         if (FleeingMerchant.CURRENT_STRENGTH > 0) {
 
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, FleeingMerchant.CURRENT_STRENGTH), FleeingMerchant.CURRENT_STRENGTH));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new DexterityPower(this, FleeingMerchant.CURRENT_STRENGTH), FleeingMerchant.CURRENT_STRENGTH));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, FleeingMerchant.CURRENT_STRENGTH), FleeingMerchant.CURRENT_STRENGTH));
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new DexterityPower(this, FleeingMerchant.CURRENT_STRENGTH), FleeingMerchant.CURRENT_STRENGTH));
-        }
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, FleeingMerchant.CURRENT_STRENGTH*2), FleeingMerchant.CURRENT_STRENGTH*2));
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new DexterityPower(this, FleeingMerchant.CURRENT_STRENGTH*2), FleeingMerchant.CURRENT_STRENGTH*2));
+            }
 
         super.usePreBattleAction();
         this.tint.color = new Color(.5F, .5F, 1F, 0F);

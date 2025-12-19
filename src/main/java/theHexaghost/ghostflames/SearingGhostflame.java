@@ -66,7 +66,9 @@ public class SearingGhostflame extends AbstractGhostflame {
                     for(int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++){
                         for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
                             if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                                att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
+                                if (x > 0) {
+                                    att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
+                                }
                             }
                         }
 //                                att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.2F));
@@ -98,7 +100,9 @@ public class SearingGhostflame extends AbstractGhostflame {
                 else {
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
                     if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                        att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
+                        if (x>0) {
+                            att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
+                        }
                         att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
                         if (AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)) {
                             AbstractRelic r = AbstractDungeon.player.getRelic(CandleOfCauterizing.ID);
@@ -156,7 +160,12 @@ public class SearingGhostflame extends AbstractGhostflame {
         if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
             x += CandleOfCauterizing.SOULBURN_BONUS_AMOUNT;
         }
-        return x;
+
+        if (x > 0) {
+            return x;
+        } else {
+            return 0;
+        }
     }
 
     @Override

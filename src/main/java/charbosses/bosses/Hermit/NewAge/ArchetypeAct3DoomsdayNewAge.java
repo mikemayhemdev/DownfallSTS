@@ -62,8 +62,12 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
 
         AbstractDungeon.actionManager.addToBottom(new TalkAction(p, Byrd.DIALOG[0], 1.2F, 1.2F));
 
-        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RitualPower(p, 1, false), 1));
 
+        if (!(AbstractDungeon.ascensionLevel >= 19)) {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RitualPower(p, 2, false), 1));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new RitualPower(p, 1, false), 1));
+        }
     }
 
     public void initialize() {
@@ -85,12 +89,7 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
         if (!looped) {
             switch (turn) {
                 case 0:
-                    if (AbstractDungeon.ascensionLevel >= 19) {
-                        addToList(cardsList, new EnShadowCloak(), extraUpgrades);
-                    }
-                    if (!(AbstractDungeon.ascensionLevel >= 19)) {
-                        addToList(cardsList, new EnShadowCloak());
-                    }
+                    addToList(cardsList, new EnShadowCloak());
                     addToList(cardsList, new EnGrudge(15));
                     addToList(cardsList, new EnGlare());
                     turn++;
@@ -139,6 +138,6 @@ public class ArchetypeAct3DoomsdayNewAge extends ArchetypeBaseIronclad {
 
     @Override
     public void initializeBonusRelic() {
-        addRelic(new CBR_FrozenEgg());
+        addRelic(new CBR_SacredBark());
     }
 }

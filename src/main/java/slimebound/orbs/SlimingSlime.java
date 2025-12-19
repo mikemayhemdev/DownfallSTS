@@ -33,7 +33,21 @@ public class SlimingSlime
     }
 
     public void updateDescription() {
-        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1] + (this.debuffAmount) + this.descriptions[2];
+        int cool = 0;
+        int cool2 = 0;
+
+        cool = this.passiveAmount;
+        cool2 = this.debuffAmount;
+
+        if (cool < 0) {
+            cool = 0;
+        }
+
+        if (cool2 < 0) {
+            cool2 = 0;
+        }
+
+        this.description = this.descriptions[0] + cool + this.descriptions[1] + cool2 + this.descriptions[2];
     }
 
     public void updateSlimedNumber() {
