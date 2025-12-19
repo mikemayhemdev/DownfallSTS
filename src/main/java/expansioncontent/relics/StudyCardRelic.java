@@ -1,15 +1,9 @@
 package expansioncontent.relics;
 
 import basemod.abstracts.CustomRelic;
-import basemod.helpers.CardPowerTip;
 import com.badlogic.gdx.graphics.Texture;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
-import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.helpers.CardLibrary;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
-import expansioncontent.cards.StudyTheSpire;
+import expansioncontent.actions.BossToolboxAction;
 import expansioncontent.expansionContentMod;
 import downfall.util.TextureLoader;
 
@@ -24,7 +18,6 @@ public class StudyCardRelic extends CustomRelic {
 
     public StudyCardRelic() {
         super(ID, IMG, OUTLINE, RelicTier.DEPRECATED, LandingSound.FLAT);
-        this.tips.add(new CardPowerTip(new StudyTheSpire()));
     }
 
     @Override
@@ -32,21 +25,30 @@ public class StudyCardRelic extends CustomRelic {
         return this.DESCRIPTIONS[0];
     }
 
-    @Override
-    public void atBattleStartPreDraw() {
-//        if (AbstractDungeon.player instanceof SlimeboundCharacter)
-//            AbstractDungeon.actionManager.addToBottom(new VFXAction(new TinyHatParticle(AbstractDungeon.player)));
-        this.flash();
-
-        AbstractDungeon.actionManager.addToBottom(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-
-        AbstractCard c;
-        c = CardLibrary.getCard(StudyTheSpire.ID).makeCopy();
-
-        c.modifyCostForCombat(-9);
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(c));
+    public void onEquip() {
+        this.counter = -1;
     }
 
+    public void onVictory() {
+        this.counter = -1;
+    }
+
+    @Override
+    public void atBattleStart() {
+        this.counter = 0;
+    }
+
+    @Override
+    public void atTurnStart() {
+        if (this.counter < 2 && this.counter != -1) {
+            this.counter++;
+            flash();
+            if (this.counter == 2) {
+                addToBot(new BossToolboxAction(1));
+                this.counter = -1;
+            }
+        }
+    }
 
     @Override
     public AbstractRelic makeCopy() {
