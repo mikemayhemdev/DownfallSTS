@@ -21,23 +21,6 @@ public static class DropSeals {
     public static void Postfix(AbstractRoom __instance) {
         if(AbstractDungeon.player instanceof TheHexaghost && (!AbstractDungeon.player.hasRelic(TheBrokenSeal.ID) && HexaMod.isHexaghostSealsEnabled()) ) {
 
-            int chance = 15;
-            if (__instance instanceof MonsterRoomElite) {
-                chance = 35;
-            } else if (__instance instanceof MonsterRoomBoss) {
-                chance = 55;
-            }
-
-            chance = chance + (int)(HexaMod.bonus_seal_drop_chance * 0.8);
-
-            if (__instance.rewards.size() >= 5) {
-                chance = 0;
-            }
-//            System.out.println("Seal Dropchance: " + chance);
-            if (AbstractDungeon.potionRng.random(0, 99) <= chance) {
-                __instance.rewards.add(new SealSealReward());
-            }
-
             if (__instance instanceof MonsterRoomElite) {
                 __instance.rewards.add(new SealSealReward());
             }
