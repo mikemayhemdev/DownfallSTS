@@ -2,6 +2,8 @@ package expansioncontent.relics;
 
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
+import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import expansioncontent.actions.BossToolboxAction;
 import expansioncontent.expansionContentMod;
@@ -44,6 +46,7 @@ public class StudyCardRelic extends CustomRelic {
             this.counter++;
             flash();
             if (this.counter == 2) {
+                this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 addToBot(new BossToolboxAction(1));
                 this.counter = -1;
             }
