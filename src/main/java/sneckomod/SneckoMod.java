@@ -839,12 +839,15 @@ public class SneckoMod implements
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
+        /*
         BaseMod.addEvent(new AddEventParams.Builder(SuspiciousHouse.ID, SuspiciousHouse.class) //Event ID//
                 .dungeonID(TheCity.ID)
                 .eventType(EventUtils.EventType.NORMAL)
                 //Only in Evil if content sharing is disabled
                 .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
+
+         */
 
         ArrayList<AbstractCard> tmp = CardLibrary.getAllCards();
         for (AbstractCard c : tmp) {
