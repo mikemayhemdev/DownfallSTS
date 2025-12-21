@@ -2,7 +2,7 @@
   "awakened:PhaseSkip": {
     "NAME": "Bebida del Ascendido",
     "DESCRIPTIONS": [
-      "#yDespierta inmediatamente."
+      "#yDespierta inmediatamente y #yMejora todas tus cartas por el resto del combate."
     ]
   },
   "awakened:CultistsDelight": {
