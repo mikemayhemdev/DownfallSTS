@@ -192,7 +192,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static boolean crossoverModCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
-    public static boolean normalMapLayout = false;
+    public static boolean normalMapLayout = true;
     public static boolean sneckoNoModCharacters = false;
     public static boolean useIconsForAppliedProperties = false;
     public static boolean useLegacyBosses = true;
@@ -209,7 +209,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
     public static final String PROP_MOD_CHAR_CROSSOVER = "crossover_mod_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
-    public static final String PROP_NORMAL_MAP = "normalMapLayout";
+    public static final String PROP_NORMAL_MAP = "normalMapLayout_2";
     public static final String PROP_SNECKO_MODLESS = "sneckoNoModCharacters";
     public static final String PROP_NO_MUSIC = "disableMusicOverride";
     public static final String PROP_ICONS_FOR_APPLIED_PROPERTIES = "useIconsForAppliedProperties";
