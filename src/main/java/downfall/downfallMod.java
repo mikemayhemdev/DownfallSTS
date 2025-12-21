@@ -209,7 +209,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
     public static final String PROP_MOD_CHAR_CROSSOVER = "crossover_mod_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
-    public static final String PROP_NORMAL_MAP = "normalMapLayout";
+    public static final String PROP_NORMAL_MAP = "normalMapLayout_2";
     public static final String PROP_SNECKO_MODLESS = "sneckoNoModCharacters";
     public static final String PROP_NO_MUSIC = "disableMusicOverride";
     public static final String PROP_ICONS_FOR_APPLIED_PROPERTIES = "useIconsForAppliedProperties";
@@ -812,7 +812,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             settingsPanel.addUIElement(unlockAllSkinBtn);
             settingsPanel.addUIElement(characterModCrossoverBtn);
             settingsPanel.addUIElement(noBaseAdjustmentsBtn);
-            settingsPanel.addUIElement(NoRNGConjureButton);
+            //settingsPanel.addUIElement(NoRNGConjureButton);
            // settingsPanel.addUIElement(legacyBossesButton);
         }
 
