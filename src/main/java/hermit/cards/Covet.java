@@ -84,8 +84,8 @@ public class Covet extends AbstractDynamicCard {
     //add curse keyword
     @Override
     public void initializeDescription() {
+        super.initializeDescription();
         if (Settings.language == Settings.GameLanguage.ENG) {
-            super.initializeDescription();
             this.keywords.add(GameDictionary.CURSE.NAMES[0].toLowerCase());
         }
     }
