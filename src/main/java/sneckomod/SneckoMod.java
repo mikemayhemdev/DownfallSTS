@@ -686,7 +686,7 @@ public class SneckoMod implements
         BaseMod.addRelic(new BlankCard(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new sneckomod.relics.D8(), TheSnecko.Enums.SNECKO_CYAN);
         BaseMod.registerBottleRelic(BottledD8Patch.inD8, new sneckomod.relics.D8());
-//        BaseMod.addRelic(new BabySnecko(), RelicType.SHARED);
+        BaseMod.addRelic(new BabySnecko(), RelicType.SHARED);
         BaseMod.addRelicToCustomPool(new SneckoCommon(), TheSnecko.Enums.SNECKO_CYAN);
         BaseMod.addRelicToCustomPool(new SneckoBoss(), TheSnecko.Enums.SNECKO_CYAN);
     }
@@ -839,7 +839,6 @@ public class SneckoMod implements
                 .eventType(EventUtils.EventType.FULL_REPLACE)
                 .create());
 
-        /*
         BaseMod.addEvent(new AddEventParams.Builder(SuspiciousHouse.ID, SuspiciousHouse.class) //Event ID//
                 .dungeonID(TheCity.ID)
                 .eventType(EventUtils.EventType.NORMAL)
@@ -847,7 +846,6 @@ public class SneckoMod implements
                 .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
                 .create());
 
-         */
 
         ArrayList<AbstractCard> tmp = CardLibrary.getAllCards();
         for (AbstractCard c : tmp) {
