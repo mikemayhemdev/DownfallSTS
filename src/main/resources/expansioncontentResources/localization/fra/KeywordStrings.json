@@ -36,7 +36,7 @@
       "Plaquée",
       "plated"
     ],
-    "DESCRIPTION": "À la fin de votre tour, gagnez de l'Armure égale à votre #yArmure #yPlaquée [REMOVE_SPACE]. Prendre des dégâts d'attaque non-bloqués réduit #yl'Armure #yPlaquée de #b1 [REMOVE_SPACE]."
+    "DESCRIPTION": "À la fin de votre tour, gagnez de l'Armure égale à votre #yArmure #yPlaquée [REMOVE_SPACE]. Prendre des dégâts d'attaque non-bloqués réduit #yl'Armure #yPlaquée de #b1."
   },
   {
     "PROPER_NAME": "Boss",

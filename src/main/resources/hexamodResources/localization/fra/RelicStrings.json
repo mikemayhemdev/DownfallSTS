@@ -3,7 +3,7 @@
     "NAME": "Marque d'esprit",
     "FLAVOR": "Un protecteur enchaîné.",
     "DESCRIPTIONS": [
-      "La première fois que vous #yEnflammez un Feu Follet chaque tour, gagnez #b",
+      "La première fois que vous #yhexamod:Enflammez un Feu Follet chaque tour, gagnez #b",
       " #yd'Armure [REMOVE_SPACE]."
     ]
   },
@@ -21,7 +21,7 @@
     "FLAVOR": "Voyons voir si je peux faire... mieux.",
     "DESCRIPTIONS": [
       "Remplace ",
-      " [REMOVE_SPACE].[] NL Lorsque vous #yEnflammez un Feu Follet, gagnez #b",
+      " [REMOVE_SPACE].[] NL Lorsque vous #yhexamod:Enflammez un Feu Follet, gagnez #b",
       " #yd'Armure [REMOVE_SPACE]."
     ]
   },
@@ -60,7 +60,7 @@
     "FLAVOR": "Un peu de piquant en plus, ça rend tout meilleur.",
     "DESCRIPTIONS": [
       "Commencez chaque combat avec #b",
-      " #yhexamod:d'Intensité [REMOVE_SPACE]."
+      " #yhexamod:d'Intensité."
     ]
   },
   "hexamod:SoulOfChaos": {
@@ -99,7 +99,7 @@
     "FLAVOR": "Feu, feu, feu, feu, feu, FEU!",
     "DESCRIPTIONS": [
       "Lorsque vous jouez #b",
-      " cartes qui ne coûtent pas #b0, obtenez un #gremlin:Écho d'une #yFrappe basique. Elle coûte #b0 [REMOVE_SPACE]."
+      " cartes qui ne coûtent pas #b0, obtenez un #gremlin:Écho d'une #yFrappe basique. Elle coûte #b0."
     ]
   },
   "hexamod:Libra": {
