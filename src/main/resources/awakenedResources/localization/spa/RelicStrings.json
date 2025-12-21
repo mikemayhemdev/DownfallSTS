@@ -149,5 +149,12 @@
       "Las primeras #b4 veces que juegues una carta de #yPoder en cada combate, cura #b",
       " PV."
     ]
-  }
+  },
+  "awakened:NerfedMummifiedHand": {
+  "NAME": "Mano Deshidratada",
+  "FLAVOR": "Exige poder verdadero, resistiéndose a tus magias ocultistas.",
+  "DESCRIPTIONS": [
+    "Cada vez que juegues una carta de #yPoder que #rNO sea #yCeremonia [REMOVE_SPACE], una carta aleatoria en tu mano cuesta #b0 este turno."
+  ]
+}
 }
