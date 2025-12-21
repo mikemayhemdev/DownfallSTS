@@ -177,7 +177,7 @@
   },
   "awakened:Skyward": {
     "NAME": "御天",
-    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 抽 !M! 张牌 ｡ NL 你在这个回合内每打出一张能力牌 , 耗能就减少 [E] ｡"
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 抽 !M! 张牌 ｡ NL 你在这场战斗内每打出一张能力牌 , 耗能就减少 [E] ｡"
   },
   "awakened:RisingChant": {
     "NAME": "递进合唱",
