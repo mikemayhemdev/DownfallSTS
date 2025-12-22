@@ -21,20 +21,20 @@
   },
   "downfall:BustKeyButton": {
     "TEXT": [
-      "Break Ruby",
-      "Break Sapphire",
-      "Break Emerald",
-      "(Free Action) Spend ",
-      " Common cards to gain.",
-      " Uncommon cards to gain.",
-      " Rare cards to gain.",
-      "Key shattered!",
-      "Requires ",
-      " Souls.",
-      "(Free Action) Destroy key to ",
-      " Souls: Choose up to ",
-      " of ",
-      " Enhance future key breaks."
+      "Rubí rota",
+      "Zafiro rota",
+      "Esmeralda rota",
+      "(Acción gratuita) Gasta ",
+      " cartas Comunes para obtenerla.",
+      " cartas PocoComunes para obtenerla.",
+      " cartas Raras para obtenerla.",
+      "¡Llave destruida!",
+      "Se requieren ",
+      " Almas.",
+      "(Acción gratuita) Destruye la llave para ",
+      " Almas: Elige ",
+      " de ",
+      " Mejora las futuras llaves destruidas."
     ]
   },
   "downfall:BustKeyButtonBackupForTranslators": {
