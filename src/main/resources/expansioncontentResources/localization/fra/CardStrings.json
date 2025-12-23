@@ -56,8 +56,11 @@
   },
   "expansioncontent:PrepareCrush": {
     "NAME": "Prépration du Crush",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Au prochain tour, obtenez [E] [E] [E] et *SLIME *CRUSH. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Gagnez !B! d'Armure. NL Au prochain tour, obtenez [E] [E] [E] et *SLIME *CRUSH+. NL Épuisement."
+    "DESCRIPTION": "Au prochain tour, obtenez *SLIME *CRUSH, [E] [E] [E] et !M! de Force. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Au prochain tour, obtenez *SLIME *CRUSH+, [E] [E] [E] [E] et !M! de Force. NL Épuisement.",
+    "EXTENDED_DESCRIPTION": [
+      "~Slime...~ NL #r~CRUSH!!!~"
+    ]
   },
   "expansioncontent:SuperLivingWall": {
     "NAME": "Mur gélatineux",
