@@ -1390,7 +1390,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 BaseMod.addPotion(BlockOnCardUsePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, BlockOnCardUsePotion.POTION_ID);
 
                 //COLLECTOR
-                BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, TempHPPotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
+                //BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, TempHPPotion.POTION_ID);
 
                 //CHAMP
                 BaseMod.addPotion(CounterstrikePotion.class, Color.GRAY, Color.GRAY, Color.BLACK, CounterstrikePotion.POTION_ID);
@@ -1405,7 +1405,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 BaseMod.addPotion(CultistsDelight.class, Color.BLUE, Color.NAVY, Color.YELLOW, CultistsDelight.POTION_ID);
 
                 if (Loader.isModLoaded("widepotions")) {
-                    WidePotionsMod.whitelistSimplePotion(TempHPPotion.POTION_ID);
+                   // WidePotionsMod.whitelistSimplePotion(TempHPPotion.POTION_ID);
                     WidePotionsMod.whitelistSimplePotion(CounterstrikePotion.POTION_ID);
                     WidePotionsMod.whitelistSimplePotion(SoulburnPotion.POTION_ID);
                     WidePotionsMod.whitelistSimplePotion(BurnAndBuffPotion.POTION_ID);
