@@ -40,7 +40,7 @@
       "hexxed",
       "hexx"
     ],
-    "DESCRIPTION": "Las criaturas con #yHex reciben #b20% más daño del próximo Ataque por cada acumulación. #yHex se elimina de una vez después de ser atacado."
+    "DESCRIPTION": "Las criaturas con #yHex reciben #b20% más daño del próximo Ataque por cada acumulación. #yHex se elimina una vez después de ser atacado."
   },
   {
     "PROPER_NAME": "Drenado",
@@ -56,7 +56,9 @@
     "NAMES": [
       "manaburn",
       "Quemadura de Maná",
-      "quemadura_de_maná"
+      "quemadura_de_maná",
+	  "Quema de Maná",
+      "quema_de_maná"
     ],
     "DESCRIPTION": "Cuando pierdes [E] , incluso si no tienes para perder, pierde PV igual a #yQuemadura #yde #yManá [REMOVE_SPACE]. (No incluye [E] gastado al jugar cartas.)"
   },

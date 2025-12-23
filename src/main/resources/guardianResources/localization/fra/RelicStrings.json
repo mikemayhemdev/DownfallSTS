@@ -3,14 +3,15 @@
     "NAME": "Engrenage de bronze",
     "FLAVOR": "De la protection lorsque vous en avez le plus besoin.",
     "DESCRIPTIONS": [
-      "Au début de chaque combat, obtenez #yEngrenage [REMOVE_SPACE]. NL Le Gardien commence l'aventure avec une #yGemme commune aléatoire."    ]
+      "Au début de chaque combat, obtenez #yEngrenage. NL Le Gardien commence l'aventure avec une #yGemme commune aléatoire."    
+    ]
   },
   "Guardian:ModeShifterPlus": {
     "NAME": "Engrenage de gardien",
     "FLAVOR": "Remplacez ceci tous les 3,000 étages.",
     "DESCRIPTIONS": [
       "Remplace",
-      "[REMOVE_SPACE]. Au début de chaque combat, obtenez #yEngrenage [REMOVE_SPACE]. Lorsque vous entrez en #yMode #yDéfensif [REMOVE_SPACE], gagnez [E] et piochez #b2 cartes."
+      "[REMOVE_SPACE]. Au début de chaque combat, obtenez #yEngrenage. Lorsque vous entrez en #yMode #yDéfensif [REMOVE_SPACE], gagnez [E] et piochez #b2 cartes."
     ]
   },
   "Guardian:ObsidianScales": {
@@ -26,7 +27,7 @@
     "NAME": "Plaque royale de Baalor",
     "FLAVOR": "On n'a jamais assez d'Armure.",
     "DESCRIPTIONS": [
-      "Lorsque vous #yguardianmod:Renforcez, #yRenforcez 1 fois de plus."
+      "Lorsque vous #yguardianmod:Renforcez, #yRenforcez #b1 fois de plus."
     ]
   },
   "Guardian:guardianmod:GemCopier": {
@@ -54,7 +55,7 @@
     "NAME": "Codex de Pilote",
     "FLAVOR": "Des designs et des diagrammes des premiers prototypes à commande manuelle de la Tour, par le maître pilote David.",
     "DESCRIPTIONS": [
-      "À la fin de vos 3 premiers tours, si vous n'avez pas de carte en #yguardianmod:Stase à la fin de votre tour, choisissez-en #b1 parmi #b3 cards à placer en #yguardianmod:Stase."
+      "À la fin de vos #b3 premiers tours, si vous n'avez pas de carte en #yguardianmod:Stase à la fin de votre tour, choisissez-en #b1 parmi #b3 cards à placer en #yguardianmod:Stase."
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {

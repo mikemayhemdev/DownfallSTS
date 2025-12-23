@@ -8,7 +8,7 @@
     ]
   },
   "awakened:IntensifyDebuffPower": {
-    "NAME": "Agotar",
+    "NAME": "Fatiga",
     "DESCRIPTIONS": [
       "No puedes #yConjurar por el resto del turno.",
       "No puedes #yConjurar por los próximos #b",
@@ -18,8 +18,9 @@
   "awakened:RisingChantPower": {
     "NAME": "Coro Ascendente",
     "DESCRIPTIONS": [
-      "Cada vez que juegues una carta de #yCántico activada, gana #b",
-      " #yFuerza [REMOVE_SPACE]."
+	  "Los primeros #b",
+      "Efecto(s) de #yCanto este turno se activa(n) 2 veces. NL #b",
+      "Efecto(s) faltantes este turno."
     ]
   },
   "awakened:CursedStrength": {
@@ -46,7 +47,7 @@
   "awakened:FlarePower": {
     "NAME": "Destello de Plumas",
     "DESCRIPTIONS": [
-      "Cada vez que juegues una carta #yno de Ataque en este turno, TODOS los enemigos pierden #b",
+      "Cada vez que juegues una carta que #yno sea de #yataque este turno, TODOS los enemigos pierden #b",
       " PV."
     ]
   },
@@ -82,8 +83,10 @@
   "awakened:MoonlitVisionPower": {
     "NAME": "Visión de Luna",
     "DESCRIPTIONS": [
+	  "La primera vez que juegues un hechizo cada turno, gana [E] .",
       "Las primeras #b",
-      " veces que juegues un Hechizo cada turno, gana [E] . #b",
+      " veces que juegues un Hechizo cada turno, gana [E] .",
+	  " NL #b",
       " restante este turno."
     ]
   },
@@ -130,8 +133,16 @@
       "El primer Hechizo que juegues cada turno se juega dos veces.",
       "Los primeros #b",
       " Hechizos que juegues cada turno se juegan dos veces.",
-      " NL (",
-      " Replicaciones de Hechizo restantes)"
+      " NL ( [REMOVE_SPACE]#b",
+      " Repeticiones de Hechizo restantes)"
+    ]
+  },
+  "awakened:DoubleSpellPower": {
+    "NAME": "Hechizo repetido",
+    "DESCRIPTIONS": [
+      "El siguiente Hechizo jugado este turno, se activa 2 veces.",
+      "Los siguientes #b",
+      " Hechizos jugados este turno, se activa 2 veces."
     ]
   },
   "awakened:DarknessFallsPower": {
@@ -174,18 +185,18 @@
   "awakened:ConjureNextPower": {
     "NAME": "Arrancar",
     "DESCRIPTIONS": [
-      "Al comienzo de tu próximo turno, #yConjura [REMOVE_SPACE].",
-      "Al comienzo de tu próximo turno, #yConjura #b",
-      " veces."
+      "La proxima vez que seas #yDrenado [REMOVE_SPACE], agrega un #yGolpe #yde #yPluma a tu mano.",
+      "La proxima vez que seas #yDrenado [REMOVE_SPACE], agrega #b",
+      " copias de #yGolpe #yde #yPluma [REMOVE_SPACE]."
     ]
   },
   "awakened:ChosensVersePower": {
     "NAME": "Verso Elegido",
     "DESCRIPTIONS": [
-      "La próxima vez que juegues una carta no de ataque este turno, roba una carta y gana #b",
+      "La próxima vez que juegues una carta que no sea de ataque este turno, roba una carta y gana #b",
       " #yBloqueo [REMOVE_SPACE].",
       "Las próximas #b",
-      " veces que juegues una carta no de ataque este turno, roba una carta y gana #b",
+      " veces que juegues una carta que no sea de ataque este turno, roba una carta y gana #b",
       " #yBloqueo [REMOVE_SPACE]."
     ]
   },
@@ -193,13 +204,13 @@
     "NAME": "Fuente Apótica",
     "DESCRIPTIONS": [
       "Cada vez que juegues #yCriostasis [REMOVE_SPACE], gana #b",
-      " #yArmadura Platinada [REMOVE_SPACE]."
+      " #yArmadura #yde #yPlacas [REMOVE_SPACE]."
     ]
   },
   "awakened:GrimoirePower": {
-    "NAME": "Gobernante de Tormentas",
+    "NAME": "Amo de Tormentas",
     "DESCRIPTIONS": [
-      "Tus #yRelámpagos infligen #b",
+      "Tus #yRayo infligen #b",
       " de daño adicional."
     ]
   },

@@ -49,8 +49,8 @@ public class Joust_Evil extends AbstractImageEvent {
 
     public Joust_Evil() {
         super(NAME, DESCRIPTIONSALT[0], "images/events/joust.jpg");
-        int x = (int) (AbstractDungeon.player.maxHealth * 0.3);
-        int u = (int) (AbstractDungeon.player.maxHealth * 0.15);
+        int x = (int) (AbstractDungeon.player.maxHealth * 0.15);
+        int u = (int) (AbstractDungeon.player.maxHealth * 0.075);
         this.imageEventText.setDialogOption(OPTIONSALT[0] + x + OPTIONSALT[1] + OPTIONSALT[2]);
         this.imageEventText.setDialogOption(OPTIONSALT[3] + u + OPTIONSALT[1] + OPTIONSALT[4]);
         this.imageEventText.setDialogOption(OPTIONS[7]);
