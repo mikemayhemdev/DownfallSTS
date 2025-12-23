@@ -180,8 +180,8 @@
   },
   "awakened:RisingChant": {
     "NAME": "Refrain ascendant",
-    "DESCRIPTION": "Éthérée. NL Le premier effet awakened:Chant que vous jouez chaque tour est activé deux fois.",
-    "UPGRADE_DESCRIPTION": "Le premier effet awakened:Chant que vous jouez chaque tour est activé deux fois."
+    "DESCRIPTION": "Éthérée. NL Le premier effet awakened:Chant que vous activez chaque tour est déclenché deux fois.",
+    "UPGRADE_DESCRIPTION": "Le premier effet awakened:Chant que vous activez chaque tour est déclenché deux fois."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Ouragan de plumes",
@@ -220,7 +220,7 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "Nuit tombante",
-    "DESCRIPTION": "Lorsque vous êtes awakened:Drainé, gagnez !M! d'Armure et !awakened:m2! de Force."
+    "DESCRIPTION": "Lorsque vous êtes awakened:Drainé, gagnez !M! d'Armure et !awakened:m2! de Force.",
     "UPGRADE_DESCRIPTION": "Inné. NL Lorsque vous êtes awakened:Drainé, gagnez !M! d'Armure et !awakened:m2! de Force."
   },
   "awakened:Eventide": {
@@ -396,7 +396,7 @@
     "NAME": "L'Encyclopédie",
     "DESCRIPTION": "Choisissez 2 cartes parmi !M! aléatoires à ajouter dans votre main. Elles coûtent 2 [E] de moins. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
-      "Choose 2 cards to add to your draw pile."
+      "Choisissez 2 cartes à ajouter dans votre main."
     ]
   },
   "awakened:RealityRift": {
@@ -405,7 +405,7 @@
   },
   "awakened:Inscribe": {
     "NAME": "Gravure",
-    "DESCRIPTION": "Choisissez un Sort. Ajoutez-en !M! copies dans le Livre de Sorts pour le reste du combat."
+    "DESCRIPTION": "Choisissez un Sort. Ajoutez-en !M! copies dans le Livre de Sorts pour le reste du combat.",
     "UPGRADE_DESCRIPTION": "awakened:Conjurez. NL Choisissez un Sort. Ajoutez-en !M! copies dans le Livre de Sorts pour le reste du combat."
   }
 }

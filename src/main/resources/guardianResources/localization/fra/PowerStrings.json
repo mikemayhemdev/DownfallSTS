@@ -156,7 +156,7 @@
       " [E] et piochez #b",
       " carte",
       " cartes",
-      " la première fois que vous jouez 3 cartes qui coûtent 0 en un seul tour."
+      " la première fois que vous jouez #b3 cartes qui coûtent 0 en un seul tour."
     ]
   },
   "Guardian:EnergizedGuardianPower": {
