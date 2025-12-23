@@ -746,18 +746,7 @@ public class SneckoMod implements
     }
 
     public void addPotions() {
-        BaseMod.addPotion(CheatPotion.class, Color.GRAY, Color.WHITE, Color.BLACK, CheatPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
-        BaseMod.addPotion(DiceRollPotion.class, Color.CYAN, Color.WHITE, Color.BLACK, DiceRollPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
-        BaseMod.addPotion(OffclassReductionPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
-       // BaseMod.addPotion(MuddlingPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
-//        BanSharedContentPatch.registerRunLockedPotion(TheSnecko.Enums.THE_SNECKO, MuddlingPotion.POTION_ID);
 
-        if (Loader.isModLoaded("widepotions")) {
-            WidePotionsMod.whitelistSimplePotion(MuddlingPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(CheatPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(DiceRollPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(OffclassReductionPotion.POTION_ID);
-        }
     }
 
     public void receivePostInitialize() {

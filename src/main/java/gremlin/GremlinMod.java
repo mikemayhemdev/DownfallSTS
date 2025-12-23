@@ -452,15 +452,6 @@ public class GremlinMod implements EditCharactersSubscriber, EditStringsSubscrib
 
     @Override
     public void receivePostInitialize() {
-        BaseMod.addPotion(SwapPotion.class, Color.BLACK, Color.GRAY, Color.SLATE, SwapPotion.POTION_ID, GREMLIN);
-        BaseMod.addPotion(GremlinPotion.class, Color.RED, Color.YELLOW, Color.BLUE, GremlinPotion.POTION_ID, GREMLIN);
-        BaseMod.addPotion(NecromancyPotion.class, Color.RED, Color.YELLOW, Color.BLUE, NecromancyPotion.POTION_ID, GREMLIN);
-
-        //        BanSharedContentPatch.registerRunLockedPotion(GREMLIN, WizPotion.POTION_ID);
-
-        if (Loader.isModLoaded("widepotions")) {
-            WidePotionsMod.whitelistSimplePotion(GremlinPotion.POTION_ID);
-        }
 
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsGremlin.ID, BackToBasicsGremlin.class) //Event ID//
                 //Event Character//
