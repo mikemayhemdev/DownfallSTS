@@ -830,6 +830,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 saveData();
             });
 
+            /*
             configPos -= configStep;
             ModLabeledToggleButton legacyBossesButton = new ModLabeledToggleButton(configStrings.TEXT[16], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, useLegacyBosses, settingsPanel, (label) -> {
             }, (button) -> {
@@ -837,6 +838,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 saveData();
             });
 
+             */
+            useLegacyBosses = true;
 
             settingsPanel.addUIElement(contentSharingBtnCurses);
             settingsPanel.addUIElement(contentSharingBtnEvents);
