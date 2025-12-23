@@ -1419,7 +1419,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         if(EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_events){
             BaseMod.addPotion(CursedFountainPotion.class, Color.PURPLE, Color.MAROON, Color.BLACK, CursedFountainPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(CultistsDelight.POTION_ID);
 
         }
 
