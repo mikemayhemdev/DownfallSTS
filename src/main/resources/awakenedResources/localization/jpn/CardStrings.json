@@ -221,7 +221,7 @@
   "awakened:DarknessFalls": {
     "NAME": "訪れる闇",
     "DESCRIPTION": "awakened:枯渇 が発生した時、 !M! ブロックと筋力 !awakened:m2! を得る。",
-    "UPGRADE_DESCRIPTION": "保留 NL awakened:枯渇 が発生した時、 !M! ブロックと筋力 !awakened:m2! を得る。"
+    "UPGRADE_DESCRIPTION": "天賦 NL awakened:枯渇 が発生した時、 !M! ブロックと筋力 !awakened:m2! を得る。"
   },
   "awakened:Eventide": {
     "NAME": "黄昏",
