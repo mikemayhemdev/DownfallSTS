@@ -203,14 +203,14 @@
   "awakened:AphoticFountPower": {
     "NAME": "暗黒の泉",
     "DESCRIPTIONS": [
-      " #yクリオスタシス をプレイした時、 #yプレートアーマー #b",
+      " #y氷結 をプレイした時、 #yプレートアーマー #b",
       " を得る。 "
     ]
   },
   "awakened:GrimoirePower": {
     "NAME": "ストームルーラー",
     "DESCRIPTIONS": [
-      "#yサンダーボルト が追加で #b",
+      "#y雷撃 が追加で #b",
       " ダメージを与える。"
     ]
   },

@@ -319,11 +319,11 @@
   },
   "awakened:StormRuler": {
     "NAME": "ストームルーラー",
-    "DESCRIPTION": "awakened:召喚 NL *サンダーボルト が !M! の追加 ダメージを与える。"
+    "DESCRIPTION": "awakened:召喚 NL *雷撃 が !M! の追加 ダメージを与える。"
   },
   "awakened:AphoticFount": {
     "NAME": "暗黒の泉",
-    "DESCRIPTION": "awakened:召喚 NL *クリオスタシス をプレイした時、 *プレートアーマー !M! を得る。"
+    "DESCRIPTION": "awakened:召喚 NL *氷結 をプレイした時、 *プレートアーマー !M! を得る。"
   },
   "awakened:Bloodthirst": {
     "NAME": "血の渇き",
@@ -405,7 +405,7 @@
   },
   "awakened:Inscribe": {
     "NAME": "インスクライブ",
-    "DESCRIPTION": "*スペル を1枚選択しこの戦闘の間、魔導書にそのコピーを !M! 枚追加し、手札にもコピーを1枚加える。",
-    "UPGRADE_DESCRIPTION": "awakened:召喚 NL *スペル を1枚選択しこの戦闘の間、魔導書にそのコピーを !M! 枚追加し、手札にもコピーを1枚加える。"
+    "DESCRIPTION": "*スペル を1枚選択し、この戦闘の間魔導書に !M! 枚追加する。",
+    "UPGRADE_DESCRIPTION": "awakened:召喚 NL *スペル を1枚選択し、この戦闘の間魔導書に !M! 枚追加する。"
   }
 }
