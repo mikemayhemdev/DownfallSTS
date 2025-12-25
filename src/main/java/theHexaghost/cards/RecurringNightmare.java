@@ -31,10 +31,10 @@ public class RecurringNightmare extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBaseCost(0);
-            //upgradeMagicNumber(1);
-            //rawDescription = UPGRADE_DESCRIPTION;
-            //initializeDescription();
+            //upgradeBaseCost(0);
+            upgradeMagicNumber(1);
+            rawDescription = UPGRADE_DESCRIPTION;
+            initializeDescription();
         }
     }
 

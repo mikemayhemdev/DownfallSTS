@@ -3,6 +3,7 @@ package awakenedOne.ui;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.actions.SetUpNextSpellAction;
+import awakenedOne.actions.SpellApotheosisAction;
 import awakenedOne.cards.Caw;
 import awakenedOne.cards.tokens.spells.*;
 import awakenedOne.relics.ZenerDeck;
