@@ -1,5 +1,6 @@
 package awakenedOne.actions;
 
+import awakenedOne.cards.Caw;
 import awakenedOne.cards.tokens.spells.AbstractSpellCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -7,6 +8,8 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.orbs.AbstractOrb;
+import guardian.orbs.StasisOrb;
 
 import java.util.Iterator;
 
@@ -24,6 +27,15 @@ public class SpellApotheosisAction extends AbstractGameAction {
             this.upgradeAllCardsInGroup(p.drawPile);
             this.upgradeAllCardsInGroup(p.discardPile);
             this.upgradeAllCardsInGroup(p.exhaustPile);
+
+            for (AbstractOrb o : AbstractDungeon.player.orbs) {
+                if (o instanceof StasisOrb) {
+                    if (((StasisOrb) o).stasisCard instanceof AbstractSpellCard) {
+                        ((StasisOrb) o).stasisCard.upgrade();
+                    }
+                }
+            }
+
             this.isDone = true;
         }
 
