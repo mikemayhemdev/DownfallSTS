@@ -53,7 +53,7 @@ public class RadiantFlame extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeDamage(6);
+            upgradeDamage(4);
             upgradeMagicNumber(1);
         }
     }
