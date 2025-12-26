@@ -13,7 +13,7 @@
   },
   "downfall:Haunted": {
     "NAME": "Haunted",
-    "DESCRIPTION": "Ethereal. NL When this is *Exhausted, take !M! damage."
+    "DESCRIPTION": "Ethereal. NL At the end of your turn, take !M! damage."
   },
   "downfall:Malfunctioning": {
     "NAME": "Flawed",

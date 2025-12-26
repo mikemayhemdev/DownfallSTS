@@ -17,7 +17,7 @@ public class Scheme extends AbstractAwakenedCard {
 
     public Scheme() {
 
-        super(ID, 1, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
+        super(ID, 1, CardRarity.SPECIAL, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 1;
         tags.add(CardTags.HEALING);
 

@@ -13,7 +13,7 @@
   },
   "downfall:Haunted": {
     "NAME": "闹鬼",
-    "DESCRIPTION": "本牌被 消耗 时， NL 受到 !M! 点伤害。"
+    "DESCRIPTION": "本牌被 消耗 时， NL 在你的回合结束时，你受到 !M! 点伤害。"
   },
   "downfall:Malfunctioning": {
     "NAME": "纰漏",

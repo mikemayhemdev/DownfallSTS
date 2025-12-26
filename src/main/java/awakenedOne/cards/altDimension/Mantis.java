@@ -18,7 +18,7 @@ public class Mantis extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Mantis.class.getSimpleName());
 
     public Mantis() {
-        super(ID, 1, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
+        super(ID, 1, CardRarity.SPECIAL, CardType.SKILL, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         frameString = "inscryp";
         tags.add(CardTags.HEALING);

@@ -22,7 +22,7 @@ public class SignInBlood extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(SignInBlood.class.getSimpleName());
 
     public SignInBlood() {
-        super(ID, 0, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
+        super(ID, 0, CardRarity.SPECIAL, CardType.SKILL, CardTarget.SELF);
         baseSecondMagic = secondMagic = 2;
         baseMagicNumber = magicNumber = 3;
         tags.add(CardTags.HEALING);
