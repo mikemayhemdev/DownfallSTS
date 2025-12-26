@@ -58,7 +58,7 @@ public class HermitWheelOfFortune extends AbstractBossMechanicPower {
     public void onSpecificTrigger() {
         flash();
 
-        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
+        addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, 2), 2));
     }
 
     static {
