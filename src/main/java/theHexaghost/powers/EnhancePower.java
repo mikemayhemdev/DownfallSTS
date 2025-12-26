@@ -58,11 +58,19 @@ public class EnhancePower extends AbstractPower implements CloneablePowerInterfa
 
         if(this.amount<0){
             this.type = PowerType.DEBUFF;
-            description = DESCRIPTIONS[2] + amount*(-1) + DESCRIPTIONS[1] + " NL " + DESCRIPTIONS[3];
+            description = DESCRIPTIONS[2] + amount*(-1) + DESCRIPTIONS[1];
         }else{
             this.type = PowerType.BUFF;
-            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + " NL " + DESCRIPTIONS[3];
+            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
         }
+
+        //        if(this.amount<0){
+        //            this.type = PowerType.DEBUFF;
+        //            description = DESCRIPTIONS[2] + amount*(-1) + DESCRIPTIONS[1] + " NL " + DESCRIPTIONS[3];
+        //        }else{
+        //            this.type = PowerType.BUFF;
+        //            description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1] + " NL " + DESCRIPTIONS[3];
+        //        }
     }
 
     @Override
