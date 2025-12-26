@@ -134,7 +134,12 @@ public class CrushingGhostflame extends AbstractGhostflame {
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        return x;
+
+        if (x > 0) {
+            return x;
+        } else {
+            return 0;
+        }
     }
 
     @Override
