@@ -94,54 +94,54 @@ public class PropertiesMod extends AbstractCardModifier {
     }
 
     //I have no idea how LibGDX sb.draw works, so if there is a better way to write this code feel free to do update this method.
-    private float renderIcon(AbstractCard card, SpriteBatch sb, TextureAtlas.AtlasRegion icon, float offset) {
-        float cardScale = Settings.scale * card.drawScale * 0.45f; //0.45 because I want some space from the size, but technically 0.5 could also work.
-        float iconScale = Settings.scale * card.drawScale * 0.35f; //0.35 is to get the icon to reasonable size. Note: changing the dimensions of files affects how big they are.
+//    private float renderIcon(AbstractCard card, SpriteBatch sb, TextureAtlas.AtlasRegion icon, float offset) {
+//        float cardScale = Settings.scale * card.drawScale * 0.45f; //0.45 because I want some space from the size, but technically 0.5 could also work.
+//        float iconScale = Settings.scale * card.drawScale * 0.35f; //0.35 is to get the icon to reasonable size. Note: changing the dimensions of files affects how big they are.
+//
+//        sb.draw( icon,
+//                card.current_x + AbstractCard.RAW_W * cardScale + (icon.offsetX - (float) icon.originalWidth) * iconScale,
+//                card.current_y + AbstractCard.RAW_H * cardScale + (icon.offsetY - (float) icon.originalHeight) * iconScale + offset,
+//                (icon.originalWidth - icon.offsetX) * iconScale - AbstractCard.RAW_W * cardScale, //Center of a card, to rotate around with the card.
+//                (icon.originalHeight - icon.offsetY) * iconScale - AbstractCard.RAW_H * cardScale - offset,
+//                (float) icon.packedWidth * iconScale, //Render scale
+//                (float) icon.packedHeight * iconScale,
+//                1, //Don't touch this scale, as it also to distance from origin.
+//                1,
+//                card.angle);
+//
+//        return icon.originalHeight * iconScale; //Returns height offset for the next icon;
+//    }
 
-        sb.draw( icon,
-                card.current_x + AbstractCard.RAW_W * cardScale + (icon.offsetX - (float) icon.originalWidth) * iconScale,
-                card.current_y + AbstractCard.RAW_H * cardScale + (icon.offsetY - (float) icon.originalHeight) * iconScale + offset,
-                (icon.originalWidth - icon.offsetX) * iconScale - AbstractCard.RAW_W * cardScale, //Center of a card, to rotate around with the card.
-                (icon.originalHeight - icon.offsetY) * iconScale - AbstractCard.RAW_H * cardScale - offset,
-                (float) icon.packedWidth * iconScale, //Render scale
-                (float) icon.packedHeight * iconScale,
-                1, //Don't touch this scale, as it also to distance from origin.
-                1,
-                card.angle);
-
-        return icon.originalHeight * iconScale; //Returns height offset for the next icon;
-    }
-
-    @Override
-    public void onRender(AbstractCard card, SpriteBatch sb) {
-        if (!downfallMod.useIconsForAppliedProperties)
-            return;
-
-        Color color = Color.WHITE.cpy();
-        color.a = card.transparency;
-        sb.setColor(color);
-
-        //TODO: Add overlay(?)/mask(?) for Echo cards.
-
-        float offset = 0;
-
-        //Rendering Icons in order of importance
-        if (bonusProperties.contains(supportedProperties.UNPLAYABLE) || bonusPropertiesForThisTurn.contains(supportedProperties.UNPLAYABLE)) {
-            offset -= renderIcon(card, sb, unplayableIcon, offset);
-        }
-
-        if (bonusProperties.contains(supportedProperties.ETHEREAL) || bonusPropertiesForThisTurn.contains(supportedProperties.ETHEREAL)) {
-            offset -= renderIcon(card, sb, etherealIcon, offset);
-        }
-
-        if (bonusProperties.contains(supportedProperties.RETAIN) || bonusPropertiesForThisTurn.contains(supportedProperties.RETAIN)) {
-            offset -= renderIcon(card, sb, retainIcon, offset);
-        }
-
-        if (bonusProperties.contains(supportedProperties.EXHAUST) || bonusPropertiesForThisTurn.contains(supportedProperties.EXHAUST)) {
-            renderIcon(card, sb, exhaustIcon, offset);
-        }
-    }
+//    @Override
+//    public void onRender(AbstractCard card, SpriteBatch sb) {
+//        if (!downfallMod.useIconsForAppliedProperties)
+//            return;
+//
+//        Color color = Color.WHITE.cpy();
+//        color.a = card.transparency;
+//        sb.setColor(color);
+//
+//        //TODO: Add overlay(?)/mask(?) for Echo cards.
+//
+//        float offset = 0;
+//
+//        //Rendering Icons in order of importance
+//        if (bonusProperties.contains(supportedProperties.UNPLAYABLE) || bonusPropertiesForThisTurn.contains(supportedProperties.UNPLAYABLE)) {
+//            offset -= renderIcon(card, sb, unplayableIcon, offset);
+//        }
+//
+//        if (bonusProperties.contains(supportedProperties.ETHEREAL) || bonusPropertiesForThisTurn.contains(supportedProperties.ETHEREAL)) {
+//            offset -= renderIcon(card, sb, etherealIcon, offset);
+//        }
+//
+//        if (bonusProperties.contains(supportedProperties.RETAIN) || bonusPropertiesForThisTurn.contains(supportedProperties.RETAIN)) {
+//            offset -= renderIcon(card, sb, retainIcon, offset);
+//        }
+//
+//        if (bonusProperties.contains(supportedProperties.EXHAUST) || bonusPropertiesForThisTurn.contains(supportedProperties.EXHAUST)) {
+//            renderIcon(card, sb, exhaustIcon, offset);
+//        }
+//    }
 
     @Override
     public List<TooltipInfo> additionalTooltips(AbstractCard card) {
@@ -239,8 +239,8 @@ public class PropertiesMod extends AbstractCardModifier {
 
     @Override
     public String modifyDescription(String rawDescription, AbstractCard card) {
-        if (downfallMod.useIconsForAppliedProperties)
-            return rawDescription;
+//        if (downfallMod.useIconsForAppliedProperties)
+//            return rawDescription;
 
         StringBuilder thingsToAdd = new StringBuilder();
 

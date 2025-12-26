@@ -2,29 +2,19 @@ package theHexaghost.ghostflames;
 
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.relics.AbstractRelic;
-import com.megacrit.cardcrawl.vfx.AbstractGameEffect;
-import com.megacrit.cardcrawl.vfx.combat.AnimatedSlashEffect;
 import com.megacrit.cardcrawl.vfx.combat.GoldenSlashEffect;
-import downfall.util.TextureLoader;
-import gremlin.actions.PseudoDamageRandomEnemyAction;
 import theHexaghost.GhostflameHelper;
 import theHexaghost.HexaMod;
 import theHexaghost.powers.EnhancePower;
-import theHexaghost.powers.FlameAffectAllEnemiesPower;
-import theHexaghost.relics.JarOfFuel;
+import downfall.util.TextureLoader;
 
 public class CrushingGhostflame extends AbstractGhostflame {
 
@@ -42,7 +32,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
 
     public CrushingGhostflame(float x, float y) {
         super(x, y);
-        damage = 6;
+        damage = 3;
         //this.textColor = new Color(1F,.75F,.75F,1F);
         this.triggersRequired = 2;
 
@@ -53,12 +43,8 @@ public class CrushingGhostflame extends AbstractGhostflame {
 
     @Override
     public void advanceTrigger(AbstractCard c) {
-        if (!charged && ( c.type == AbstractCard.CardType.SKILL || (AbstractDungeon.player.hasRelic(JarOfFuel.ID) && c.type == AbstractCard.CardType.POWER ) ) ){
+        if (!charged && c.type == AbstractCard.CardType.SKILL){
             if (skillsPlayedThisTurn < 2) {
-                if(AbstractDungeon.player.hasRelic(JarOfFuel.ID) && c.type == AbstractCard.CardType.POWER){
-                    AbstractRelic r =  AbstractDungeon.player.getRelic(JarOfFuel.ID);
-                    if(r != null){ r.flash(); }
-                }
                 advanceTriggerAnim();
                 skillsPlayedThisTurn++;
                 if (skillsPlayedThisTurn == 2){
@@ -73,57 +59,31 @@ public class CrushingGhostflame extends AbstractGhostflame {
         return skillsPlayedThisTurn;
     }
 
-        @Override
+    @Override
     public void onCharge() {
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                int x = getEffectCount();
-                isDone = true;
-
-                if(AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)){
-                    for(int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++){
-
-                            addToTop(new VFXAction(
-                                    new AbstractGameEffect() {
-
-                                        public void update() {
-                                            CardCrawlGame.sound.playA("ATTACK_IRON_2", -0.4F);
-                                            CardCrawlGame.sound.playA("ATTACK_HEAVY", -0.4F);
-                                            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                                                if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                                                    AbstractDungeon.effectsQueue.add(new AnimatedSlashEffect(m.hb.cX, m.hb.cY - 30.0F * Settings.scale, 0.0F, -500.0F, 180.0F, 5.0F, Color.GOLD, Color.GOLD));
-                                                }
-                                            }
-                                            this.isDone = true;
-                                        }
-
-                                        @Override
-                                        public void render(SpriteBatch spriteBatch) {}
-
-                                        @Override
-                                        public void dispose() {}
-                                    }
-                            ));
-
-                        att(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(x, true), DamageInfo.DamageType.THORNS, AttackEffect.NONE));
-//                        att(new DamageAllEnemiesAction(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS, AttackEffect.NONE));
+        for (int i = 0; i < 2; i++) {
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    int x = damage;
+                    if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
+                        x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
                     }
-                } else {
+                    isDone = true;
                     AbstractMonster m = AbstractDungeon.getRandomMonster();
                     if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                        AbstractDungeon.actionManager.addToTop(new PseudoDamageRandomEnemyAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+                        addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
                         addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
                     }
                 }
-            }
-        });
+            });
+        }
     }
 
     @Override
     public String returnHoverHelperText() {
         int x = getEffectCount();
-        return x+"";
+        return x + "x2";
     }
 
     public int getEffectCount(){
@@ -131,11 +91,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
             x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
-        if (x > 0) {
-            return x;
-        } else {
-            return 0;
-        }
+        return x;
     }
 
     @Override
@@ -153,10 +109,6 @@ public class CrushingGhostflame extends AbstractGhostflame {
         return bruh2;
     }
 
-    @Override
-    public void resetVariable() {
-        skillsPlayedThisTurn = 0;
-    }
 
     @Override
     public String getName(){ return NAME;}

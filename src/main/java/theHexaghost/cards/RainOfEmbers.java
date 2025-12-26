@@ -16,7 +16,7 @@ public class RainOfEmbers extends AbstractHexaCard {
 
     public RainOfEmbers() {
         super(ID, -1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
-        baseDamage = 5;
+        baseDamage = 6;
 //        baseBurn = burn = 6;
         baseMagicNumber = magicNumber = 1;
         HexaMod.loadJokeCardImage(this, "RainOfEmbers.png");
