@@ -80,42 +80,43 @@ public class CrushingGhostflame extends AbstractGhostflame {
                 public void update() {
                     int x = getEffectCount();
                     isDone = true;
+                    if (x > 0) {
+                        if (AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)) {
+                            for (int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++) {
 
-                    if (AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)) {
-                        for (int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++) {
+                                addToTop(new VFXAction(
+                                        new AbstractGameEffect() {
 
-                            addToTop(new VFXAction(
-                                    new AbstractGameEffect() {
-
-                                        public void update() {
-                                            CardCrawlGame.sound.playA("ATTACK_IRON_2", -0.4F);
-                                            CardCrawlGame.sound.playA("ATTACK_HEAVY", -0.4F);
-                                            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                                                if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                                                    AbstractDungeon.effectsQueue.add(new AnimatedSlashEffect(m.hb.cX, m.hb.cY - 30.0F * Settings.scale, 0.0F, -500.0F, 180.0F, 5.0F, Color.GOLD, Color.GOLD));
+                                            public void update() {
+                                                CardCrawlGame.sound.playA("ATTACK_IRON_2", -0.4F);
+                                                CardCrawlGame.sound.playA("ATTACK_HEAVY", -0.4F);
+                                                for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                                                    if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                                                        AbstractDungeon.effectsQueue.add(new AnimatedSlashEffect(m.hb.cX, m.hb.cY - 30.0F * Settings.scale, 0.0F, -500.0F, 180.0F, 5.0F, Color.GOLD, Color.GOLD));
+                                                    }
                                                 }
+                                                this.isDone = true;
                                             }
-                                            this.isDone = true;
-                                        }
 
-                                        @Override
-                                        public void render(SpriteBatch spriteBatch) {
-                                        }
+                                            @Override
+                                            public void render(SpriteBatch spriteBatch) {
+                                            }
 
-                                        @Override
-                                        public void dispose() {
+                                            @Override
+                                            public void dispose() {
+                                            }
                                         }
-                                    }
-                            ));
+                                ));
 
-                            att(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(x, true), DamageInfo.DamageType.THORNS, AttackEffect.NONE));
+                                att(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(x, true), DamageInfo.DamageType.THORNS, AttackEffect.NONE));
 //                        att(new DamageAllEnemiesAction(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS, AttackEffect.NONE));
-                        }
-                    } else {
-                        AbstractMonster m = AbstractDungeon.getRandomMonster();
-                        if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                            addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
-                            addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
+                            }
+                        } else {
+                            AbstractMonster m = AbstractDungeon.getRandomMonster();
+                            if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                                addToTop(new DamageAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+                                addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
+                            }
                         }
                     }
                 }
