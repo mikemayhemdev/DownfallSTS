@@ -126,7 +126,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
     @Override
     public String returnHoverHelperText() {
         int x = getEffectCount();
-        return x+"";
+        return x+"x2";
     }
 
     public int getEffectCount(){
