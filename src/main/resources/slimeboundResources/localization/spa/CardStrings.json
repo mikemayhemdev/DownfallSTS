@@ -328,7 +328,7 @@
   },
   "Slimebound:SplitGreed": {
     "NAME": "Revivir: Codicia",
-    "DESCRIPTION": "Retener. NL Invoca una Baba Codiciosa. NL Agota."
+    "DESCRIPTION": "Retiene. NL Invoca una Baba Codiciosa. NL Agota."
   },
   "Slimebound:SplitLeeching": {
     "NAME": "Dividir: Absorbente",
@@ -342,7 +342,7 @@
   },
   "Slimebound:SplitScrap": {
     "NAME": "Revivir Chatarra",
-    "DESCRIPTION": "Retener. NL Invoca una Baba de Chatarra. NL Agota."
+    "DESCRIPTION": "Retiene. NL Invoca una Baba de Chatarra. NL Agota."
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "Dividir: Especialista",

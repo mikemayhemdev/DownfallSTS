@@ -8,14 +8,14 @@
       "Vous prenez l'étrange boîte #ydorée, et ressentez une #pnoirceur vous traverser en l'ouvrant. A l'intérieur, vous trouvez une arme utile!",
       "Vous prenez la boîte pulsante, @BATTANT@ régulièrement, et vous la sentez @COULER@ dans votre bras. Une #pnausée répugnante vous envahit, mais vous vous sentez plus fort malgré tout...",
       "Dès que vous saisissez l'artefact de la silhouette, les #pténèbres enveloppent la salle. Le spectre vous parle une fois de plus, ses mots apparaissent dans votre tête sans même que vous ne les entendiez. NL NL #p'Un #pchoix #pjudicieux. #pQue #pdites-vous #pd'un #pautre #pmarché, #pmon #pami #p?'",
-      "Vous savez que les offres de cette #papparition ont un prix trop élevé. Vous devez y faire face, et quel heureux hasard ! Près du mur! Une #bBougie #bBleue! NL NL Vous arrachez la bougie du mur, #rvous #rbrûlant un peu, et la lancez vers le spectre, qui se dissipe dans une #bteinte #bsinistre. NL NL Il ne proposera plus d'offres à présent.",
-      "Vous savez que les offres de cette #papparition ont un prix trop élevé. Vous devez y faire face, et quel heureux hasard! Vous avez amené une #bBougie #bBleue! NL NL Vous jetez la bougie vers le spectre, qui se dissipe dans une #blueur #bsinistre. Il ne proposera plus d'offres à présent."
+      "Vous savez que les offres de cette #papparition ont un prix trop élevé. Vous devez y faire face, et quel heureux hasard ! Près du mur! Une #bBougie #bAnti-Malédiction! NL NL Vous arrachez la bougie du mur, #rvous #rbrûlant un peu, et la lancez vers le spectre, qui se dissipe dans une #bteinte #bsinistre. NL NL Il ne proposera plus d'offres à présent.",
+      "Vous savez que les offres de cette #papparition ont un prix trop élevé. Vous devez y faire face, et quel heureux hasard! Vous avez amené une #bBougie #bAnti-Malédiction! NL NL Vous jetez la bougie vers le spectre, qui se dissipe dans une #blueur #bsinistre. Il ne proposera plus d'offres à présent."
     ],
     "OPTIONS": [
       "[Boîte de gauche] #gObtenez #gPoupée #gDau-vou #gou #gAmulette #gde #gpierre #gnoire. #rSoyez #rMaudit #rdeux #rfois #r- #rHantise.",
       "[Marchander pour plus]",
       "[Boîte de droite] #gObtenez #gune #gClé #gMaudite #gou #gune #gCloche #gd'appel #rCorrompue.",
-      "[Chasser] #gObtenez #gune #gBougie #gBleue. #rPerdez #r5 #rPV.",
+      "[Chasser] #gObtenez #gune #gBougie #gAnti-Malédiction. #rPerdez #r5 #rPV.",
       "[Chasser] Quittez.",
       "[Échange pour du Pouvoir] #gObtenez une #gcarte #galéatoire #yRare. #rMaudit #r- #rAléatoire.",
       "[Échange pour de la Vie] #gGagnez #g12 #gPV #gMax. #rMaudit #r- #rAléatoire.",

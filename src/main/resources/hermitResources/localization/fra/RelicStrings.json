@@ -27,7 +27,7 @@
     "NAME": "Fer à cheval",
     "FLAVOR": "Porte-bonheur. Ça va manquer à quelqu'un.",
     "DESCRIPTIONS": [
-      "Lorsque vous gagnez de la #yFaiblesse [REMOVE_SPACE], de la #yFragilité ou de la #yVulnérabilité [REMOVE_SPACE], gagnez-en #b1 de moins."
+      "Lorsque vous gagnez de la #yFaiblesse, de la #yFragilité ou de la #yVulnérabilité [REMOVE_SPACE], gagnez-en #b1 de moins."
     ]
   },
   "hermit:Spyglass": {

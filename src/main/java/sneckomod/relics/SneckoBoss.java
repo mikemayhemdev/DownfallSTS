@@ -48,7 +48,7 @@ public class SneckoBoss extends CustomRelic implements CustomSavable<AbstractCar
 
         CardGroup selectionGroup = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
         for (AbstractCard card : CardLibrary.getAllCards()) {
-            if (card instanceof UnknownClass && (SneckoMod.validColors.contains(((UnknownClass) card).myColor) || SneckoMod.pureSneckoMode || AbstractDungeon.player.hasRelic(PrismaticShard.ID))) {
+            if (card instanceof UnknownClass && (SneckoMod.validColors.contains(((UnknownClass) card).myColor) || SneckoMod.isPureSneckoModeEnabled() || AbstractDungeon.player.hasRelic(PrismaticShard.ID))) {
                 selectionGroup.addToTop(card.makeCopy());
             }
         }

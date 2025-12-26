@@ -308,17 +308,7 @@ public class AwakenedOneMod implements
     }
 
     public void addPotions() {
-        BaseMod.addPotion(SacramentalWine.class, Color.NAVY, Color.VIOLET, Color.MAROON, SacramentalWine.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
-        BaseMod.addPotion(SneckoPowersPotion.class, Color.CYAN, Color.TAN, Color.BLUE, SneckoPowersPotion.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
-        BaseMod.addPotion(PhaseSkip.class, Color.CYAN, Color.PURPLE, Color.BLUE, PhaseSkip.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
-
-        BaseMod.addPotion(CultistsDelight.class, Color.BLUE, Color.NAVY, Color.YELLOW, CultistsDelight.POTION_ID);
-
-        if (Loader.isModLoaded("widepotions")) {
-            WidePotionsMod.whitelistSimplePotion(CultistsDelight.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(SacramentalWine.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(SneckoPowersPotion.POTION_ID);
-        }
+        //potions handled in downfallMod
     }
 
 

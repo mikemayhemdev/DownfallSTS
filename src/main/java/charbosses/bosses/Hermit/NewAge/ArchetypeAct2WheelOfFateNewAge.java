@@ -18,6 +18,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.StrengthPower;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -47,6 +48,7 @@ public class ArchetypeAct2WheelOfFateNewAge extends ArchetypeBaseIronclad {
         AbstractCreature p = AbstractCharBoss.boss;
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(p, p, new HermitWheelOfFortune(p), 2));
     }
+
 
     private void reshuffle() {
         boolean extraUpgrades = AbstractDungeon.ascensionLevel >= 4;

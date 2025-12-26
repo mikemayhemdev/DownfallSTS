@@ -220,9 +220,15 @@ public class OrbitingSpells {
     public static void update() {
         hoveredCard = -1;
         for (int i = 0; i < boxes.size(); i++) {
+            ArrayList<String> uniqueCards = new ArrayList<>();
+            for (AbstractCard c : spellCards) {
+                if (!uniqueCards.contains(c.cardID)) {
+                    uniqueCards.add(c.cardID);
+                }
+            }
             boxes.get(i).update();
             if (boxes.get(i).hovered) {
-                if (i < spellCards.size()) {
+                if (i < uniqueCards.size()) {
                     hoveredCard = i;
                 }
             }

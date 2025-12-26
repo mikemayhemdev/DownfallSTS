@@ -27,7 +27,7 @@ public class HermitWheelOfFortune extends AbstractBossMechanicPower {
         this.name = NAME;
         this.ID = POWER_ID;
         this.owner = owner;
-        if (!downfallMod.useLegacyBosses){
+        if (downfallMod.useLegacyBosses){
             this.amount = 2;
         } else {
             this.amount = 0;
@@ -57,6 +57,7 @@ public class HermitWheelOfFortune extends AbstractBossMechanicPower {
     @Override
     public void onSpecificTrigger() {
         flash();
+
         addToBot(new ApplyPowerAction(owner, owner, new StrengthPower(owner, amount), amount));
     }
 
