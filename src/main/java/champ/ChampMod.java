@@ -298,18 +298,6 @@ public class ChampMod implements
     public void addPotions() {
 
 
-        BaseMod.addPotion(OpenerPotion.class, Color.TEAL, Color.GREEN, Color.FOREST, OpenerPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
-        BaseMod.addPotion(TechPotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, TechPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
-        BaseMod.addPotion(UltimateStancePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, UltimateStancePotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
-
-        BanSharedContentPatch.registerRunLockedPotion(ChampChar.Enums.THE_CHAMP, CounterstrikePotion.POTION_ID);
-
-        if (Loader.isModLoaded("widepotions")) {
-            WidePotionsMod.whitelistSimplePotion(CounterstrikePotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(OpenerPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(TechPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(UltimateStancePotion.POTION_ID);
-        }
     }
 
     @Override

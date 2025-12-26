@@ -15,5 +15,11 @@
       "Sceau",
       "hexamod:Sceau. NL "
     ]
+  },
+  "hexamod:SealMode": {
+    "TEXT": [
+      "Legacy Mode - Six Sceaux",
+      "Ajoute régulièrement des récompenses de Sceau pendant les combats. Rassemblez les Sceaux pour obtenir une relique spéciale. Jouer avec cette option activée rendra le jeu plus facile."
+    ]
   }
 }

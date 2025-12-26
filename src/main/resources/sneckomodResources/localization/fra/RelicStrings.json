@@ -100,7 +100,7 @@
     "NAME": "Jeune Geckobra",
     "FLAVOR": "Confusément adorable.",
     "DESCRIPTIONS": [
-      "Inflige #b9 dégâts à un ennemi aléatoire et #ysneckomod:Confond #b2 cartes aléatoires (qui coûte au moins #b1 [E]) dans votre main au début de votre tour."
+      "Inflige #b9 dégâts à un ennemi aléatoire et #ysneckomod:Confondez #b2 cartes aléatoires (qui coûte au moins #b1 [E]) dans votre main au début de votre tour."
     ]
   },
   "sneckomod:SneckoCommon": {

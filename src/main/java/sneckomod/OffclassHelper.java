@@ -72,7 +72,7 @@ public class OffclassHelper {
         for (AbstractCard c : CardLibrary.getAllCards()) {
             if (c.type != AbstractCard.CardType.STATUS && c.color != AbstractCard.CardColor.CURSE && c.type != AbstractCard.CardType.CURSE && c.rarity != AbstractCard.CardRarity.SPECIAL &&
                     !c.hasTag(AbstractCard.CardTags.STARTER_STRIKE) && !c.hasTag(AbstractCard.CardTags.STARTER_DEFEND) && !c.hasTag(AbstractCard.CardTags.HEALING) && !c.hasTag(SneckoMod.BANNEDFORSNECKO)) {
-                if (SneckoMod.pureSneckoMode || SneckoMod.validColors.contains(c.color) || !(AbstractDungeon.player instanceof TheSnecko)) {
+                if (SneckoMod.isPureSneckoModeEnabled() || SneckoMod.validColors.contains(c.color) || !(AbstractDungeon.player instanceof TheSnecko)) {
                     if (!(AbstractDungeon.player != null && AbstractDungeon.player.getCardColor() == c.color)) {
                         addOffclassToList(c);
                     }

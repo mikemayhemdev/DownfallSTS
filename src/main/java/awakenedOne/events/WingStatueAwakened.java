@@ -55,7 +55,7 @@ public class WingStatueAwakened extends AbstractImageEvent {
 
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
                         this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
+                        this.imageEventText.setDialogOption(OPTIONS[2]);
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new ShatteredFragment());
                         this.screen = CurScreen.RESULT;
                         logMetricObtainCardAndRelic(ID, "Destroyed Statue", curse.makeCopy(), new ShatteredFragment());
@@ -63,7 +63,7 @@ public class WingStatueAwakened extends AbstractImageEvent {
                     case 1:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[1]);
                         this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
+                        this.imageEventText.setDialogOption(OPTIONS[2]);
                         AbstractDungeon.player.damage(new DamageInfo(null, (this.damage)));
                         this.screen = CurScreen.RESULT;
                         AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) Settings.WIDTH / 2.0F, (float) Settings.HEIGHT / 2.0F, new BrokenWingStatue());
@@ -72,7 +72,7 @@ public class WingStatueAwakened extends AbstractImageEvent {
                     case 2:
                         this.imageEventText.updateBodyText(DESCRIPTIONS[3]);
                         this.imageEventText.clearAllDialogs();
-                        this.imageEventText.setDialogOption(OPTIONS[3]);
+                        this.imageEventText.setDialogOption(OPTIONS[2]);
                         this.screen = CurScreen.RESULT;
                         logMetricIgnored(ID);
                         return;

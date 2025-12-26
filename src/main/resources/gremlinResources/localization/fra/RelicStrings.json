@@ -3,7 +3,7 @@
     "NAME": "Pectos impeccables",
     "FLAVOR": "Glorieux.",
     "DESCRIPTIONS": [
-      "Lorsque vous gagnez de la #yForce [REMOVE_SPACE], gagnez un nombre équivalent de #yPV #yTemporaires [REMOVE_SPACE]. NL Commencez chaque combat avec #b1 de #yForce [REMOVE_SPACE]."
+      "Lorsque vous gagnez de la #yForce [REMOVE_SPACE], gagnez un nombre équivalent de #yPV #yTemporaires [REMOVE_SPACE]. NL Commencez chaque combat avec #b1 de #yForce."
     ]
   },
   "Gremlin:FragmentationGrenade": {

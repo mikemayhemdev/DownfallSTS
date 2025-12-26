@@ -64,7 +64,7 @@ public class BartenderGlass extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        if ((Settings.language != Settings.GameLanguage.ZHS)) {
+        if ((Settings.language != Settings.GameLanguage.ZHS && Settings.language != Settings.GameLanguage.ZHT)) {
             return DESCRIPTIONS[0] + POTION_LIMIT + DESCRIPTIONS[2] + POTION_LIMIT + DESCRIPTIONS[3];
         } else {
             return DESCRIPTIONS[0] + POTION_LIMIT + DESCRIPTIONS[1];
