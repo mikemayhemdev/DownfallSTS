@@ -127,15 +127,6 @@
     "PROPER_NAME": "Constricted",
     "DESCRIPTION": "Creatures with Constricted take damage at the end of their turn."
   },
-
-  {
-    "PROPER_NAME": "Chant",
-    "NAMES": [
-      "chant",
-      "Chant",
-      "Chants"
-    ],
-    "DESCRIPTION": "Chant effects on a card activate during play if you played a Power while it was in hand."},
   {
     "PROPER_NAME": "Transform",
     "ID": "transform",
