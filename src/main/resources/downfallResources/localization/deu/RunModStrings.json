@@ -1,0 +1,58 @@
+{
+  "downfall:WorldOfGoo": {
+    "NAME": "Welt aus Glibber",
+    "DESCRIPTION": "Nimm einen Verschleimt Status in deinen Abwurfstapel immer wenn du ungeblockten Sachaden eleidest."
+  },
+  "downfall:Hexed": {
+    "NAME": "Verhext",
+    "DESCRIPTION": "Beginne den Run mit einem Samthalsband. Jede karte die zu ziehst wird Flüchtig."
+  },
+  "downfall:Improvised": {
+    "NAME": "Improvisiert",
+    "DESCRIPTION": "Beginne den Run mit 10 zufälligen Karten."
+  },
+  "downfall:Jewelcrafting": {
+    "NAME": "Juwelen",
+    "DESCRIPTION": "Beginne den Run mit zwei Edelsteinketten und der Singenden Spitzhacke."
+  },
+  "downfall:EvilRun": {
+    "NAME": "Böser Run",
+    "DESCRIPTION": "Aktiviert die Besonderheiten eines Boss Runs."
+  },
+  "downfall:ExchangeController": {
+    "NAME": "Gesegnet",
+    "DESCRIPTION": "Beginne den Run mit Niaus Segnung."
+  },
+  "downfall:Lament": {
+    "NAME": "Klage",
+    "DESCRIPTION": "Beginne den Run mit Niaus Klage."
+  },
+  "downfall:ChampStances": {
+    "NAME": "Neuer Herausforderer",
+    "DESCRIPTION": "Beginne jeden Kampf mit einer zufälligen Champ Haltung. Du erhältst einen Abschlusschlag. Alle Starter Karten erhalten Technique."
+  },
+  "downfall:Enraging": {
+    "NAME": "Letztes Aufgebot",
+    "DESCRIPTION": "Alle gegner erhalten Stärke und verlieren ihre Debuffs sobald sie weniger als 50% ihrer Max TP übrig haben."
+  },
+  "downfall:Analytical": {
+    "NAME": "Analytisch",
+    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges eine zufällige Karte mit Kodieren. Sie erhält Flüchtig. Alle Basis Schlag und Verteidigen Karten erhalten Kodieren."
+  },
+  "downfall:StatusAbuse": {
+    "NAME": "Auferlegt",
+    "DESCRIPTION": "Beginne den Run mit einer Improvisierten Batterie, Donus Dichtungen, Dekas Dichtungen, Verbandskasten, und einem Bronzenen Götzen. All anderen Relikte werden durch Reife ersetzt."
+  },
+  "downfall:TooManyShivs": {
+    "NAME": "Zu viele Messer",
+    "DESCRIPTION": "Beginne den Run mit einem Samthalsband, Essenz der Leere, und 10 Messer."
+  },
+  "downfall:Wizzardry": {
+    "NAME": "Zauberei",
+    "DESCRIPTION": "Beginne den Run mit einem Magierhut, einem Zauberstab, und einer verbesserten Zauberei Karte."
+  },
+  "downfall:TransformRewards": {
+    "NAME": "Transformiert",
+    "DESCRIPTION": "Alle Kartenbelohnungen werden zu „Transformiere eine Karte“."
+  }
+}

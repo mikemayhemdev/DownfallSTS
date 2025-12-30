@@ -1,0 +1,257 @@
+{
+  "downfall:Heart Event": {
+    "NAMES": [
+      "Das Herz"
+    ],
+    "TEXT": [
+      "~Diene...~ NL ~mir..~ ~jetzt...~",
+      "~Steh auf...~ NL ~treuer Diener..~",
+      "~Erhebe dich...~",
+      "~Vernichte~ NL ~Eindringlinge...~",
+      "~Erreiche~ ~den~ ~Eindringling...~ NL ~um~ ~mehr..~ ~Segen~ ~zu~ ~erhalten...~",
+      "~Stelle~ ~dich~ ~zumindest~ ~...~ NL ~dem~ ~ersten~ ~Eindringling~ ~...~",
+      "~Ich~ ~habe~ ~dich~ ~zurückgeholt~ ~...~",
+      "~Wähle...~",
+      "~Gewährt...~",
+      "~Bringe~ ~Opfer...~ NL ~...für~ ~mehr~ ~MACHT....~",
+      "~Stelle~ ~deinen~ ~Wert~ NL ~unter~ ~Beweis...~",
+      "Belohnungen",
+      "~Mach~ ~weiter...~ ~für~ ~mich...~",
+      "~Steige~ ~ab...~ NL ~..in~ ~den~ ~Wahnsinn...~",
+      "~Beeindruckend...~ ~weiter...~",
+      "Verflucht!",
+      "Wirrkopf!",
+      "Transformation!"
+    ],
+    "OPTIONS": [
+      "[Fortsetzen]",
+      "[Reden]",
+      "[Überspringen]",
+      "[Verlassen]",
+      "Wähle 10 Karten und füge sie deinem Deck hinzu.",
+      "[ #gDie #gGegner #gdeiner #gnächsten #gdrei #gKämpfe #gfliehen #gin #gFurcht ]",
+      "[ Gesperrt - Kann nicht im ertsen Run ausgewählt werden ]",
+      "[ #gAlle #gGremlins #gerhalten #gMax #gTP #g+",
+      "#gAlle #gGremlins #gerhalten #gMax #gTP #g+",
+      "[ #rAlle #rGremlins #rverlieren #r",
+      "[ #rAlle #rGremlins #rerleiden #r"
+    ]
+  },
+  "downfall:Unlock": {
+    "TEXT": [
+      " (Akt 4 Siege zählen nicht)",
+      "Dieser Character wird durch das Beenden eines Runs mit dem Schleimboss freigeschaltet.",
+      "Dieser Character wird durch das Beenden eines Runs mit dem 2. Boss freigeschaltet.",
+      "Dieser Character wird durch das Beenden eines Runs mit dem Wächter freigeschaltet.",
+      "Dieser Character wird durch das Beenden eines Runs mit dem 3. Boss freigeschaltet .",
+      "Dieser Character wird durch das Beenden eines Runs mit dem Hexageist freigeschaltet.",
+      "Dieser Character wird durch das Beenden eines Runs mit dem 4. Boss freigeschaltet 4th Villain character.",
+      "Dieser Character wird durch das Beenden eines Runs mit dem Champ freigeschaltet.",
+      "Dieser Character wird durch das Beenden eines Runs mit dem 5. Boss freigeschaltet 5th Villain character.",
+      "Dieser Character wird durch das Beenden eines Runs mit dem Automaton freigeschaltet.",
+      "Dieser Character wird durch das Beenden eines Runs mit dem 6. Boss freigeschaltet 6th Villain character.",
+      "Dieser Character wird durch das Beenden eines Runs mit der Sammlerin freigeschaltet.",
+      "Dieser Character wird durch das Beenden eines Runs mit dem 7. Boss freigeschaltet 7th Villain character.",
+      "Dieser Character wird durch das Beenden eines Runs mit dem Erweckten freigeschaltet.",
+      "Dieser Character wird durch das Beenden eines Runs mit dem 8. Boss freigeschaltet 8th Villain character.",
+      "Dieser Character wird durch das Beenden eines Runs mit den Gremlins freigeschaltet."
+    ]
+  },
+  "downfall:HeartMerchant": {
+  "NAMES": [
+    "Fahre fort",
+    "~Bring mir Opfer...~"
+  ],
+  "TEXT": [
+    "~Du~ ~wirst...~ ~stärker...~",
+    "~Wir~ ~wachsen...~ ~sowie~ ~du~ ~wächst...~",
+    "~Vernichte...~ ~und~ ~du~ ~wirst~ ~belohnt...~",
+    "~Mehr...~ ~Seelen...~",
+    "~Nähre~ ~uns......~ NL ~NÄHRE~ ~UNS......~",
+    "~Verstärke~ ~das~ ~Verderben...~",
+    "~Segnungen...~ ~müssen~ ~verdient~ ~werden...~",
+    "~Keine...~ ~Gnade...~",
+    "~Noch...~ ~Stärker...~",
+    "~Unsere~ ~Macht...~ ~wird~ ~geteilt...~",
+    "~Töte~ ~alles...~ ~was~ ~dir~ ~im~ ~Weg~ ~ist...~",
+    "~Kämpfe...~ ~schlage...~ ~und~ ~nähre...~",
+    "~Wir~ ~sind...~ ~viele...~",
+    "~Geh~ ~weiter...~ ~und~ ~ernte~ ~Seelen...~",
+    "~Vorzüglich...~ ~Seelen...~",
+    "~Fleddere...~ ~die~ ~Gefallenen...~"
+  ],
+  "OPTIONS": [
+    "~Niau...~ ~darf~ ~nicht~ ~gewinnen...~",
+    "~Kenne...~ ~Keine...~ ~Furcht...~",
+    "..... NL .... NL .........",
+    "~Mach...~ ~sie...~ ~fertig...~",
+    "~Viel...~ ~Erfolg...~",
+    "~Sterben...~ ~verboten...~",
+    "~Wir zählen auf dich...~",
+    "~Zerstöre...~ ~sie~ ~alle...~"
+  ]
+},
+  "downfall:HeartProceed": {
+    "TEXT": [
+      "~Eindringlinge...~ NL ",
+      "~Du~ ~wirst~ ~gebraucht...~ NL ",
+      "~Sie ~sind~ ~schon~ ~angekommen...~ NL ",
+      "~Kehre um...~ NL ~Feinde~ ~sind~ ",
+      "~Vernichte~ ~sie~ ~alle...~ NL "
+    ],
+    "OPTIONS": [
+      "~...in~ ~der~ ~Stadt...~",
+      "~...im~ ~Jenseits...~"
+    ]
+  },
+  "downfall:NeowEnding": {
+    "TEXT": [
+      "Du... hast... alle... vernichtet...",
+      "...der Zyklus... ist gestorben.....",
+      "..und so...... auch... NL ....ich......"
+    ],
+    "OPTIONS": [
+      "~Ich~ ~habe...~ NL ~IHN...~ ~zurückgebracht...~",
+      "~Beschütze~ ~mich...~ NL ~Und~ ~erhalte...~ ~deine~ ~Belohnung...~"
+    ]
+  },
+  "downfall:HeartMerchantScreen": {
+    "NAMES": [
+      "~Willkommen~ NL ~treuer Knecht...~",
+      "~Bring~ ~mir~ ~mehr~ ~Seelen...~",
+      "~Ich~ ~brauche~ @mehr...@",
+      "~Du~ ~bist~ ~es~ NL @nicht wert...@",
+      "~Nein.~",
+      "~Ernte~ ~mehr~ NL ~dafür...~",
+      "~Unzureichendes~ ~Opfer...~",
+      "~Ja...~",
+      "~Mehr...~ @Mehr...!@",
+      "~Werde~ ~stärker...~",
+      "~Ich~ ~bin~ ~gestärkt...~",
+      "~Schreite~ ~vorwärts...~",
+      "Verlassen",
+      "Wähle eine Karte, die du aus deinem Deck entfernen möchtest"
+    ],
+    "TEXT": [
+      "~Du~ ~wirst...~ ~stärker...~",
+      "~Wir~ ~wachsen...~ ~sowie~ ~du~ ~wächst...~",
+      "~Vernichte...~ ~und~ ~du~ ~wirst~ ~belohnt...~",
+      "~Mehr...~ ~Seelen...~",
+      "~Nähre~ ~uns......~ NL ~NÄHRE~ ~UNS......~",
+      "~Verstärke~ ~das~ ~Verderben...~",
+      "~Segnungen...~ ~müssen~ ~verdient~ ~werden...~",
+      "~Keine...~ ~Gnade...~",
+      "~Noch...~ ~Stärker...~",
+      "~Unsere~ ~Macht...~ ~wird~ ~geteilt...~",
+      "~Töte~ ~alles...~ ~was~ ~dir~ ~im~ ~Weg~ ~ist...~",
+      "~Kämpfe...~ ~schlage...~ ~und~ ~nähre...~",
+      "~Wir~ ~sind...~ ~viele...~",
+      "~Geh~ ~weiter...~ ~und~ ~ernte~ ~Seelen...~",
+      "~Vorzüglich...~ ~Seelen...~",
+      "~Fleddere...~ ~die~ ~Gefallenen...~"
+    ]
+  },
+  "downfall:OctoChoiceCards": {
+    "NAMES": [
+      "Seelen",
+      "Erfolg",
+      "A Pick Me Up",
+      "Wächter",
+      "Hexageist",
+      "Schleimboss",
+      "Automaton",
+      "Champ",
+      "Sammlerin",
+      "Zeitfresser",
+      "Erweckter",
+      "Antike",
+      "Abspalten: Bronze",
+      "Abspalten: Geisterflamme",
+      "Abspalten: Fackelkopf",
+      "Abspalten: Kultist",
+      "Abspalten: Beschützer",
+      "Abspalten: Spötter",
+      "Abspalten: Antike",
+      "Abspalten: Zeit"
+    ],
+    "TEXT": [
+      "Verliere 3 TP. NL Erhalte 15 Seelen.",
+      "Verliere 3 TP. NL Nimm eine zufällige farblose Karte auf die Hand.",
+      "Verliere 7 TP. NL Erhalte einen zufälligen Trank.",
+      "Erhalte Wächter *Boss cards.",
+      "Erhalte Hexageist *Boss-Karten.",
+      "Erhalte Schleimboss *Boss-Karten.",
+      "Erhalte Automaton *Boss-Karten.",
+      "Erhalte Champ *Boss-Karten.",
+      "Erhalte Sammlerin *Boss-Karten.",
+      "Erhalte Zeitfresser *Boss-Karten.",
+      "Erhalte Erweckter *Boss-Karten.",
+      "Erhalte Antike *Boss-Karten.",
+      "Spalte einen slimeboundmod:Bronze_Slime ab.",
+      "Spalte einen slimeboundmod:Ghostflame_Slime ab.",
+      "Spalte einen slimeboundmod:Torchhead_Slime ab.",
+      "Spalte einen slimeboundmod:Cultist_Slime ab.",
+      "Spalte einen slimeboundmod:Protector_Slime ab.",
+      "Spalte einen slimeboundmod:Insulting_Slime ab.",
+      "Spalte einen slimeboundmod:Ancient_Slime ab.",
+      "Spalte einen slimeboundmod:Time_Slime ab.",
+      "Spalte einen slimeboundmod:Bruiser_Slime ab.",
+      "Spalte einen slimeboundmod:Guerilla_Slime ab.",
+      "Spalte einen slimeboundmod:Mire_Slime ab.",
+      "Spalte einen slimeboundmod:Leeching_Slime ab.",
+      "Verliere 3 TP. NL Erhalte 20 Seelen.",
+      "Verliere 3 TP. NL Nimm eine zufällige verbesserte farblose Karte auf die Hand.",
+      "Verliere 5 TP. NL Erhalte einen zufälligen Trank."
+    ]
+  },
+  "downfall:lazyStorage": {
+    "NAMES": [
+
+    ],
+    "TEXT": [
+      "Wähle einen Boss von dem du lernst.",
+      "Wähle Vorwärts, Rückwärts oder nichts tun"
+    ]
+  },
+  "downfall:CharBossMerchant": {
+    "NAMES": [
+      "Händler"
+    ],
+    "TEXT": [
+    ]
+  },
+  "downfall:NeowBoss": {
+    "NAMES": [
+      "Niau"
+    ],
+    "TEXT": [
+      "~Erhebet~ ~euch...~",
+      "~Kämpft~ ~noch~ ~ein~ ~Mal...~",
+      "~Der~ ~Zyklus~ ~muss~ ~enden...~"
+    ]
+  },
+  "downfall:NeowBossFinal": {
+    "NAMES": [
+      "Niau"
+    ],
+    "TEXT": [
+    ]
+  },
+  "downfall:OldNeow": {
+    "NAMES": [
+      "Alte Niau"
+    ],
+    "TEXT": [
+    ]
+  },
+  "downfall:CharBossSpeech": {
+    "NAMES": [
+      ""
+    ],
+    "TEXT": [
+      "Nein, das kann nicht sein! Wir brauchen mehr Gifte...",
+      "Stirb, Monster! Du gehörst nicht hierher!"
+    ]
+  }
+
+}

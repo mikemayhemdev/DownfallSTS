@@ -1,0 +1,128 @@
+{
+  "Guardian:GemMine": {
+    "NAME": "Edelsteinmine",
+    "DESCRIPTIONS": [
+      "Du betrittst einen alten Minenschacht. Dir fallen die glänzenden Juwelen in den Felsspalten auf. #gSmaragde , #rRubine , #pAmethyste und weitere. Du siehst einige Gremlin-Schürfer die mit adäquatem Werkzeug ausgestattet sind - doch die Juwelen sind so nah an der Oberfläche, dass du sie womöglich mit bloßen Händen ausgraben kannst.",
+      "Du gräbst deine Krallen in die Felswand und hast ein Juwel aus seiner Einbettung befreit. Es tut etwas weh, doch das war es wert.",
+      "Auch wenn das Ausgraben der Schätze reizvoll ist, beschließt du, deine Rüstung für wichtigere Aufgaben zu schonen.",
+      "Du hast die alte Mine ausgeschöpft und verlässt sie mit einem Gefühl von Stolz und Zufriedenheit. Und mit leicht beschädigten bronzenen Gliedmaßen.",
+      "Du hast eine Spitzhacke von den Gremlins erbeutet. Sie ist in einem miserablen Zustand. Du kannst sie jetzt für deine Ausgrabungen nutzen, oder für später aufheben.",
+      "Mit der Spitzhacke konntest du einige Juwelen ausgraben. Sie ist kaputtgegangen - doch deine Krallen sind heil geblieben."
+    ],
+    "OPTIONS": [
+      "[Schürfe mit den Klauen] #gErhalte #gein #gzufälliges #gJuwel. #rVerliere #r",
+      " #rTP.",
+      "[Verlassen]",
+      "[Rauben] #rKämpfe #rgegen #rGremlins. #gErhalte #gdie #gSingende #gSpitzhacke.",
+      "[Schürfe mit den Spitzhacke] #gErhalte #g3 #gzufällige #gJuwelen. #rVerliere #rdie #rSingende #rSpitzhacke.",
+      "[Gesperrt] Die Spitzhacke ist Kaputt."
+    ]
+  },
+  "Guardian:StasisEgg": {
+    "NAME": "Quantumkammer",
+    "DESCRIPTIONS": [
+      "Du erblickst eine Kiste, die außen mit Runen verziert ist. Du wirfst einen Blick hinein und siehst ein eigenartiges eiförmiges Gerät, das leise vor sich hin summt. Du hast keine Ahnung was es ist, oder wofür es gut sein soll. Aber die Energie die von dem Gerät ausgeht lässt dich spüren, dass es sehr mächtig ist.",
+      "Etwas so mächtiges muss benutzt werden. Du steckst das Ei ein. Die Runen beginnen zu leuchten, und du spürst wie dir die Zeit entrinnt. Du wirst immer ~langsamer~ ~und~ ~langsamer~ ~.~ ~.~ ~.~",
+      "Etwas so mächtiges darf nicht in die falschen Hände geraten, also zerstörst du es. NL Das Ei sondert ein warmes Licht ab, das dich stärkt. Daraufhin #rexplodiert es #rwuchtig. Die Scherben haben sich auf #rschmerzhafte Weise in dich eingebettet.",
+      "Etwas so mächtiges ist aus gutem Grund hier verstaut worden. Obwohl deine Instinkte dir sagen, dass du etwas mit dem Gerät anfangen kannst, lässt du es in Ruhe. Du verschließt die Kiste wieder und gehst weiter deiner Wege."
+    ],
+    "OPTIONS": [
+      "[Benutzen] #gErhalte #gdie #gQuantumkammer. #rWerde #rverflucht #r- #rAltern.",
+      "[Zerstören] #gErhalte #g",
+      " #gMax #gTP. #rWerde #rverflucht #r- #rSchmerz.",
+      "[Verlassen]",
+      "[Gesperrt] Erfordert eine nicht eingelegte Karte."
+    ]
+  },
+  "Guardian:AccursedBlacksmith": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Du entschließt dich, die Schmiede zu benutzen und... NL #y@KLONK@ #y@KLOOONK@ #y@KLONK!@ NL ...mehr Platz für deine Juwelen zu schaffen."
+    ],
+    "OPTIONS": [
+      "[Basteln] #gFüge #geiner #gKarte #gmit #gFassungen #geine #gweitere #gFassung #ghinzu.",
+      "Füge einer Karte eine Fassung hinzu.",
+      "[Gesperrt] Erfordert eine Karte mit Fassungen."
+    ]
+  },
+  "Guardian:GuardianTalk": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "ERSATZBLECHBÜCHSE - ZURÜCK AUFS FLIESSBAND.",
+      "ANOMALIE FESTGESTELLT.",
+      "WÄCHTER MODELL FEHLERHAFT.",
+      "ALPHA PROTOKOLL AUFGEHOBEN.",
+      "WÄCHTER: ZURÜCK AUF DEN POSTEN.",
+      "FEHLER IM PROTOKOLL FESTGESTELLT.",
+      "WÄCHTER UMGEHEND TERMINIEREN.",
+      "NEUES PROTOKOLL: ZERSTÖREN.",
+      "ZURÜCK ZUM EXORDIUM."
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "Guardian:CrystalForge": {
+    "NAME": "Düstere Schmiede",
+    "DESCRIPTIONS": [
+      "Durch Geheimgänge, die nur ein Konstrukt des Spire kennt, betrittst du eine Kammer die der Wartung und Reparatur von Automatonen gewidmet ist. Auch wenn die Werkzeuge nicht auf Wächter zugeschnitten sind, sind sie dennoch sehr nützlich.",
+      "Mit Hilfe des magischen Ambosses zerstörst du ein obsolet gewordenes Stück deiner Rüstung, um die wertvollen Juwelen zu gewinnen die unüberlegter Weise zuvor eingesetzt hast.",
+      "Mit der magischen Zange schaffst du es, Juwelen aus Fassungen zu entfernen. Die Juwelen sind dabei allerdings in die Brüche gegangen",
+      "Du wirfst einen entbehrlichen Teil deiner Rüstung in das magische Schmiedefeuer, das Materie umwandeln kann. Nach einiger Zeit hat sich das Teil in ein wunderschönes Juwel verwandelt.",
+      "Du verlässt die Schmiede auf den selben Weg, wie du sie betreten hast. Deine Reise geht weiter zur Dämmerung, die dich auf der Spitze des Spire erwartet.",
+      "Wähle eine Karte zum Abtragen aus.",
+      "Wähle eine Karte zum Aufstemmen aus.",
+      "Wähle eine Karte zum Umwandeln aus.",
+      "Wähle ein Juwel aus.",
+      "Wähle die Karte aus, in der du das Juwel einsetzt.",
+      "Du nutzt die Pause um ein Juwel in deine Ausrüstung einzubetten. Du spürst sofort, wie deine Kräfte wachsen."
+    ],
+    "OPTIONS": [
+      "[Abtragen] #rEntferne eine Karte mit Fassungen. Erhalte die eingebetteten #gJuwelen.",
+      "[Gesperrt] Erfordert eine Karte mit eingebetteten Juwelen.",
+      "[Aufstemmen] #rZerstöre alle #gJuwelen die in einer Karte eingebettet sind.",
+      "[Umwandeln] #rEntferne eine Karte. Erhalte ein zufälliges #gJuwel.",
+      "[Gesperrt] Bereits benutzt.",
+      "[Verlassen]",
+      "[Einsetzen] Setze ein #gJuwel in eine offene #gFassung ein.",
+      "[Gesperrt] Erfordert ein Juwel und eine offene Fassung."
+    ]
+  },
+  "Guardian:Purifier": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Du zerbrichst den Schrein mit einem schnellen, starken Hieb. Im Geröll findest du zwei Juwelen im perfekten Zustand, die du für deine Kämpfe nutzen kannst. NL NL Du verlässt das, was vom Schrein übrig ist, und begibst dich weiter Richtung Feind."
+    ],
+    "OPTIONS": [
+      "[Zerstören] #gErhalte #g2 #gzufällige #gJuwelen."
+    ]
+  },
+  "Guardian:Transmorgrifier": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      ""
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "Guardian:UpgradeShrine": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      ""
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "Guardian:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Als Stift musst du die Schläge aushalten; Als Hammer musst du zuschlagen."
+    ],
+    "OPTIONS": [
+      "[Ausdauer] Alle #gSchlag und #gVerteidigen Karten erhalten #gAbhärten #g2.",
+      "[Gesperrt] Erfordert einen Schlag oder ein Verteidigen."
+    ]
+  }
+}

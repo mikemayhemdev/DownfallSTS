@@ -1,0 +1,105 @@
+{
+  "reskinContent:ReSkin": {
+    "TEXT": [
+      "Skin",
+      "Original"
+    ]
+  },
+  "reskinContent:PortraitAnimation": {
+    "TEXT": [
+      "Avatar Typ"
+    ]
+  },
+  "reskinContent:PortraitAnimationType": {
+    "TEXT": [
+      "Statisch",
+      "Animiert",
+      "Alle Effekte"
+    ]
+  },
+  "reskinContent:BetaArtUnlockEffect": {
+    "TEXT": [
+      "Wächter alternative Kartenbilder freigeschaltet!",
+      "Schleimboss alternative Kartenbilder freigeschaltet!",
+      "Hexageist alternative Kartenbilder freigeschaltet!",
+      "Snecko alternative Kartenbilder freigeschaltet!",
+      "Champ alternative Kartenbilder freigeschaltet!",
+      "Automaton alternative Kartenbilder freigeschaltet!",
+      "Gremlins alternative Kartenbilder freigeschaltet!",
+      "Sammlerin alternative Kartenbilder freigeschaltet!"
+    ]
+  },
+
+  "reskinContent:ReSkinGuardian": {
+    "TEXT": [
+      "Guardian Chan",
+      "Concept Art"
+    ],
+    "EXTRA_TEXT": [
+      "Ein Konstrukt des Spire, dazu programmiert es zu verteidigen. NL Kann sich selbst auf Kommando vor Gefahr schützen.",
+      "Einer der frühen Entwürfe des Wächters. NL Hat auf dem Papier besser funktioniert."
+    ]
+  },
+  "reskinContent:ReSkinSlime": {
+    "TEXT": [
+      "Schlaifu",
+      "Schleimboss?"
+    ],
+    "EXTRA_TEXT": [
+      "Dieser ungewöhnliche Schleim ernährt sich von leckeren Relitken. NL Er dient dem Herz nur durch bloßem Zufall.",
+      "Ist das... der Schleimboss? Er sieht erschreckend zutraulich aus. NL Nun, da er den größten Hut von allen hat, muss er das Sagen haben..."
+    ]
+  },
+  "reskinContent:ReSkinHexaghost": {
+    "TEXT": [
+      "Hexago",
+      "Geistagon",
+      "Lampengeist"
+    ],
+    "EXTRA_TEXT": [
+      "Ein verfluchter Geist des Spire. NL Fristet ein ewiges Dasein als Beschützer des Spire.",
+      "Macht sich an freien Tagen gerne auf die Jagd nach gelben Kreisen. NL Hat eine lähmende Angst vor Power Pellets.",
+      "Der alte Partner des Hexageistes. NL Gab das Vernichten von Abenteurern für eine lukrativere Tätigkeit auf: dem Verkauf von Wünschen."
+    ]
+  },
+  "reskinContent:ReSkinSnecko": {
+    "TEXT": [
+      "SSSSnecko",
+      "Sneckdor"
+    ],
+    "EXTRA_TEXT": [
+      "Nutzt die Augen um mittels kognitiver Verzerrung die eigene schreckliche Form zu verschleiern. NL Studien kamen zum Ergebnis, dass verwirrte Wesen die Welt ganz anders wahrnehmen.",
+      "Dieser ambitionierte Snecko trat in die Fußstapfen seines Helden, suchend nach größerer Macht. NL Es nennt sich selbst \"Sneckdor\": vollkommen, und mit einem kräftigen Arm."
+    ]
+  },
+  "reskinContent:ReSkinChamp": {
+    "TEXT": [
+      "Chan-p",
+      "Champ am Waschtag"
+    ],
+    "EXTRA_TEXT": [
+      "Das Schwert sieht zu schwer für sie aus, NL allerdings ist sie die Einzige die stark genug ist, es zu führen.",
+      "Es ist Waschtag. Nichts Sauberes mehr übrig..."
+    ]
+  },
+  "reskinContent:ReSkinGremlin": {
+    "TEXT": [
+      "Katzen"
+    ],
+    "EXTRA_TEXT": [
+      "Ähmmmm.... Miau?"
+    ]
+  },
+  "reskinContent:ReSkinBronze": {
+    "TEXT": [
+      "Automaton",
+      "\"Automaton\"",
+      "Das Perfekte"
+    ],
+    "EXTRA_TEXT": [
+      "",
+      "Jau! Das ist das Automaton, von Kopf bis Fuß! NL Noch nie etwas Anderes gesehen, das mehr nach Automaton aussieht!",
+      "[BOOT] Initialisierung... Hauptsystem Online - Keine Fehler gefunden NL [ZIEL] BALANCE wird ERZWUNGEN"
+    ]
+  }
+}

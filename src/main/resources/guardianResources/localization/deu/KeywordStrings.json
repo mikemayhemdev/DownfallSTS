@@ -1,0 +1,91 @@
+[
+  {
+    "NAMES": [
+      "fassung",
+      "einbetten",
+      "eingebettet"
+    ],
+    "PROPER_NAME": "Fassung",
+    "DESCRIPTION": "#yJuwelen können am Lagerfeuer in Karten mit Fassungen eingebettet werden."
+  },
+  {
+    "NAMES": [
+      "stasis"
+    ],
+    "PROPER_NAME": "Stasis",
+    "DESCRIPTION": "Eine Karte liegt für die Anzahl der Züge in Statis, die den Kosten der Karte plus #b1 entspricht. NL Wenn eine Karte die STasis verlässt, nimm sie auf die Hand. Sie kostet #b0 bis du sie spielst."
+  },
+  {
+    "NAMES": [
+      "juwel",
+      "juwelen",
+      "juwele"
+    ],
+    "PROPER_NAME": "Juwels",
+    "DESCRIPTION": "Juwelen können am Lagerfeuer in Karten mit Fassungen eingebettet werden. Sie können nicht #yverbessert werden."
+  },
+  {
+    "PROPER_NAME": "Defensivmodus",
+    "NAMES": [
+      "defensivmodus",
+      "defensiv"
+    ],
+    "DESCRIPTION": "#yHaltung. NL Im Defensivmodus hast du #b3 #yStacheln und dein #yBlock verfällt nicht zu Beginn deines Zuges."
+  },
+  {
+    "NAMES": [
+      "beschleunigen",
+      "beschleunige",
+      "beschleunigung"
+    ],
+    "PROPER_NAME": "Beschleunigung",
+    "DESCRIPTION": "Reduziere die Anzahl der Züge, die die vorderste Karte noch in #yStasis verweilt um #b1 [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": [
+      "paket",
+      "pakete"
+    ],
+    "PROPER_NAME": "Paket",
+    "DESCRIPTION": "#yFertigkeit die drei Karten erschafft, welche einem Konstrukt des Spire nachempfunden sind."
+  },
+  {
+    "NAMES": [
+      "volatil"
+    ],
+    "PROPER_NAME": "Volatil",
+    "DESCRIPTION": "Wenn diese Karte die #yStasis verlässt, wird sie #yerschöpft [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": [
+      "Politur"
+    ],
+    "PROPER_NAME": "Politur",
+    "DESCRIPTION": "#yTrank [REMOVE_SPACE]: Erhalte #b16 #yBlock [REMOVE_SPACE]. Wechsle in den #yDefensivmodus [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": [
+      "ticken",
+      "tick"
+    ],
+    "PROPER_NAME": "Ticken",
+    "DESCRIPTION": "Wenn diese Karte in #yStasis ist und sich die Verweildauer reduziert..."
+  },
+  {
+    "NAMES": [
+      "puffer"
+    ],
+    "PROPER_NAME": "Puffer",
+    "DESCRIPTION": "Verhindere den nächsten TP-Verlust."
+  },
+  {
+    "NAMES": [
+      "abhärten",
+      "abhärtest",
+      "abgehärtet",
+      "härte"
+    ],
+    "PROPER_NAME": "Abhärten X",
+    "DESCRIPTION": "Reduziere den erforderlichen TP-Verlust für den #yModuswechsel um X."
+  }
+]
