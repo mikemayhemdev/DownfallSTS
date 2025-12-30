@@ -50,7 +50,7 @@
   "expansioncontent:PolyBeamAgainPower": {
     "NAME": "Potenz",
     "DESCRIPTIONS": [
-      "Zu Beginn deines nächsten Zuges wird #yPoly-Strahl gespielt. ",
+      "Zu Beginn deines nächsten Zuges wird #yPoly-Strahl gespielt.",
       "Zu Beginn deiner nächsten #b",
       " Züge wird #yPoly-Strahl gespielt."
     ]
@@ -58,7 +58,7 @@
   "expansioncontent:PolyBeamAgainPowerUpgraded": {
     "NAME": "Potenz+",
     "DESCRIPTIONS": [
-      "Zu Beginn deines nächsten Zuges wird #yPoly-Strahl+ gespielt. ",
+      "Zu Beginn deines nächsten Zuges wird #yPoly-Strahl+ gespielt.",
       "Zu Beginn deiner nächsten #b",
       " Züge wird #yPoly-Strahl+ gespielt."
     ]

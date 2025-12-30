@@ -119,7 +119,7 @@
   },
   "expansioncontent:Torchfire": {
     "NAME": "Buschbrand",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole des für jeden eigenständigen Debuff des Gegners."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jeden verschiedenen Debuff des Gegners."
   },
 
   "expansioncontent:TakeFlight": {

@@ -14,7 +14,7 @@
   },
   "HermitMod:GuardianTutorials": {
     "TEXT": [
-      "Der Wächter kann sich einrollen nachdem er sich genug abgehärtet hat.",
+      "Der Wächter kann sich in den Defensivmodus einrollen nachdem er sich genug abgehärtet, oder TP verloren hat.",
       "Er kann auch Juwelen in bestimmte Karten einsetzen, um sie zu verstärken."
     ],
     "LABEL": [
@@ -27,8 +27,8 @@
   },
   "HermitMod:HexaghostTutorials": {
     "TEXT": [
-      "Der Hexageist kann kräfte durch das entzünden der Flammen freisetzen.",
-      "Die einzelnen Flammen werden durch bestimmte Aktionen entzündet."
+      "Der Hexageist kann kräfte durch das Entzünden der Geisterflammen freisetzen.",
+      "Die aktuelle Geisterflamme wird durch bestimmte Aktionen entzündet."
     ],
     "LABEL": [
       "Weiter",
@@ -53,8 +53,8 @@
   },
   "HermitMod:ChampTutorials": {
     "TEXT": [
-      "Der Champ kann zwei Haltungen im Kampf annehmen: Berserker und Verteidiger. Das Ausspielen einer Fertigkeit während einer Haltung aktiviert den jeweiligen Bonus der Haltung was bis zu drei Mal möglich ist.",
-      "Während einer Haltung können Abschlusskarten gespielt werden, welche den Abschlussbonus der Haltung aktivieren, jedoch zum Verladden der Haltung führen."
+      "Der Champ kann zwei Haltungen im Kampf annehmen: Berserker und Verteidiger. Das Ausspielen einer Fertigkeit während einer Haltung aktiviert den jeweiligen Bonus der Haltung, was bis zu drei Mal möglich ist.",
+      "Während einer Haltung können Abschlusskarten gespielt werden, welche den Abschlussbonus der Haltung aktivieren, jedoch zum Verlassen der Haltung führen."
     ],
     "LABEL": [
       "Weiter",
@@ -67,7 +67,7 @@
   "HermitMod:AutomatonTutorials": {
     "TEXT": [
       "Das Automaton kann Karten Kodieren. Drei Kodierte Karten werden dabei zu einer Funktions-Karte kombiniert",
-      "Manche Karten haben einen Effekt beim Kompilieren. Diese Effekte werden aktiviert, wenn diese Karte Teil einer gerade entstandenen Funktion sind. Negative Effekte werden als Kompilierungsfehler bezeichnet."
+      "Manche Karten haben einen Effekt beim Kompilieren. Diese Effekte werden aktiviert, wenn diese Karte Teil einer gerade entstandenen Funktion ist. Negative Effekte werden als Kompilierungsfehler bezeichnet."
     ],
     "LABEL": [
       "Weiter",
@@ -79,7 +79,7 @@
   },
   "HermitMod:SneckoTutorials": {
     "TEXT": [
-      "Snecko kann Karten irren um ihre Kosten für den Zug auf einen Zufallswert zwischen 0 and 3 zu verändern. Durch das Irren werden die Kosten immer verändert - die Kosten welche die Karte vor dem Verirren hat ist vom Ergebnis ausgeschlossen.",
+      "Snecko kann Karten irren um ihre Kosten für den Zug auf einen Zufallswert zwischen 0 and 3 zu verändern. Durch das Irren werden die Kosten immer verändert - die Kosten welche die Karte vor dem Irren hat ist vom Ergebnis ausgeschlossen.",
       "Snecko kann auch Geschenkkarten finden. Diese Karten geben Snecko eine weitere Karte eines anderen Charakters."
     ],
     "LABEL": [
@@ -93,7 +93,7 @@
   "HermitMod:GremlinsTutorials": {
     "TEXT": [
       "Die Gremlins sind zu fünft - alle haben ihre eigenen TP und Besonderheiten.",
-      "Der aktive Gremlin kann durch einen Wechsel verändert werden. Ein Wechsel kann zum Beispiel durch das Ausspielen bestimmter Karten erfolgen."
+      "Der aktive Gremlin kann ausgewechselt werden. Ein Wechsel kann zum Beispiel durch das Ausspielen bestimmter Karten erfolgen."
     ],
     "LABEL": [
       "Weiter",
@@ -105,7 +105,7 @@
   },
   "HermitMod:SlimeBossTutorials": {
     "TEXT": [
-      "Der Schleimboss kann Gegner mit Glibber besprühen. Dadurch erleiden sie durch die nächste Attacke mehr Schaden. Der Glibber wird durch die Attacke entfernt, und etwaige Konsum-Effekte aktiviert.",
+      "Der Schleimboss kann Gegner mit Glibber besprühen. Dadurch erleiden sie durch den nächsten Angriff mehr Schaden. Der Glibber wird durch den Angriff entfernt, und etwaige Konsum-Effekte aktiviert.",
       "Er kann auch kleinere Schleimwesen von sich abspalten, die am Anfang des Zuges und auf Kommando angreifen."
     ],
     "LABEL": [

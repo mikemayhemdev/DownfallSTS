@@ -353,7 +353,7 @@
   },
   "hexamod:StrikeFromBeyond": {
     "NAME": "Schlag des Jenseits",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine flüchtige Karte von deinem Nachziehstapel.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine flüchtige Karte vom Nachziehstapel.",
     "EXTENDED_DESCRIPTION": ["Flüchtig","Flüchtig. NL "]
   },
   "hexamod:SuperheatedStrike": {
@@ -375,7 +375,7 @@
   },
   "hexamod:TimeWarp": {
     "NAME": "Zeitsprung",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm diese Karte von deinem Abwurfstapel auf die Hand, immer wenn du dich bewegst (*vorwärts oder *rückwärts)."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm diese Karte vom Abwurfstapel auf die Hand, immer wenn du dich bewegst (*vorwärts oder *rückwärts)."
   },
   "hexamod:FlareFlick": {
     "NAME": "Flackernde Flamme",
@@ -519,7 +519,7 @@
   },
   "hexamod:InspiringFlames": {
     "NAME": "Anheizen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Verbessere für jede *entzündete Geisterflamme eine zufällige Karte in deiner Hand in diesem Kampf."
+    "DESCRIPTION": "Erhalte !B! Block. NL Verbessere für jede *entzündete Geisterflamme eine zufällige Karte auf der Hand in diesem Kampf."
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Leuchtendes Ritual",
@@ -536,8 +536,8 @@
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Im Schatten",
-    "DESCRIPTION": "Flüchtig. NL Immer wenn du dich hexamod:rückwärts bewegst, spiele eine Karte in deiner Hand und erschöpfe sie.",
-    "UPGRADE_DESCRIPTION": "Immer wenn du dich hexamod:rückwärts bewegst, spiele eine Karte in deiner Hand und erschöpfe sie.",
+    "DESCRIPTION": "Flüchtig. NL Immer wenn du dich hexamod:rückwärts bewegst, spiele eine Karte aus der Hand und erschöpfe sie.",
+    "UPGRADE_DESCRIPTION": "Immer wenn du dich hexamod:rückwärts bewegst, spiele eine Karte aus der Hand und erschöpfe sie.",
     "EXTENDED_DESCRIPTION": [
       "zum Ausspielen und Erschöpfen."
     ]

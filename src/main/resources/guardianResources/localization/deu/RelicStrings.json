@@ -80,7 +80,7 @@
     ]
   },
   "Guardian:BottledStasis": {
-    "NAME": "Flaschen-Schwarzes-Loch",
+    "NAME": "Flaschen-Wurmloch",
     "FLAVOR": "Irgendwo wartet immer etwas Unglaubliches auf seine Entdeckung.",
     "DESCRIPTIONS": [
       "Wähle beim Aufheben eine Karte. Beginne jeden Kampf mit der gewählten Karte in #yguardianmod:Stasis [REMOVE_SPACE].",
