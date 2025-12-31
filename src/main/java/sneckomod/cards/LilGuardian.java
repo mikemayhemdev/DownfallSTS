@@ -29,7 +29,7 @@ public class LilGuardian extends AbstractSneckoCard {
 
     @Override
     public void triggerOnCardPlayed(AbstractCard card) {
-        if (card.costForTurn >= 2 && AbstractDungeon.player.hand.contains(this)) {
+        if (AbstractDungeon.player.hand.contains(this) && card.energyOnUse >= 2) {
             AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true, EnergyPanel.getCurrentEnergy(), true, true));
         }
     }
