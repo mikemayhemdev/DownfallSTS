@@ -1,0 +1,202 @@
+{
+  "Gremlin:Agony": {
+    "NAME": "Agonie",
+    "DESCRIPTIONS": [
+      "#yAngriffe fügen #b",
+      "% weniger Schaden für #b",
+      " Zug zu.",
+      " Züge zu."
+    ]
+  },
+  "Gremlin:Bang": {
+    "NAME": "Voller Esprit",
+    "DESCRIPTIONS": [
+      "Der nächste Angriff verbraucht dein gesamtes #yEsprit und fügt dabei #b", " Schaden mehr zu."
+    ]
+  },
+  "Gremlin:Bashed": {
+    "NAME": "Niedergeschmettert",
+    "DESCRIPTIONS": [
+      "Verliert in diesem Zug jedes Mal, wenn du #yBlock erhältst, #b", " TP."
+    ]
+  },
+  "Gremlin:BubbleBarrier": {
+    "NAME": "Schildblase",
+    "DESCRIPTIONS": [
+      "Immer wenn du in diesem Zug eine Karte ausspielst, erhalte #b", " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:CongaLine": {
+    "NAME": "Polonaise",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn deines Zuges ",
+      " und #ywechsle zum nächsten Gremlin."
+    ]
+  },
+  "Gremlin:Crippled": {
+    "NAME": "Verkrüppelt",
+    "DESCRIPTIONS": [
+      "Wenn dieser Gegner #ySchwach erleidet, verliert er #b",
+      " TP."
+    ]
+  },
+  "Gremlin:Encore": {
+    "NAME": "Zugabe",
+    "DESCRIPTIONS": [
+      "Der Verbauch von #yEsprit fügt noch zusätzlich #b", " Schaden zu."
+    ]
+  },
+  "Gremlin:Enthusiasm": {
+    "NAME": "Enthusiasmus",
+    "DESCRIPTIONS": [
+      "Ziehe immer wenn du #ywechselst #b",
+      " Karte.",
+      " Karten."
+    ]
+  },
+  "Gremlin:FatGremlin": {
+    "NAME": "Fetter Gremlin",
+    "DESCRIPTIONS": [
+      "Wende nach dem Ausspielen eines Angriffs #b",
+      " #ySchwach pro Treffer an."
+    ]
+  },
+  "Gremlin:Flex": {
+    "NAME": "Temporäre Stärke",
+    "DESCRIPTIONS": [
+      "Am Ende deines Zuges verlierst du #b",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:Furious": {
+    "NAME": "Ausgeflippt",
+    "DESCRIPTIONS": [
+      "Immer wenn du in diesem Zug #yBlock erhalten würdest, füge stattdessen ALLEN Gegnern Schaden in derselben Höhe zu."
+    ]
+  },
+  "Gremlin:GremlinNob": {
+    "NAME": "Gremlin-Aristo",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn jedes Zuges #b3 Gremlin-Aristo Karten. Du kannst nicht mehr #ywechseln [REMOVE_SPACE]. Wenn deine #ytemporären #yTP verbraucht sind, verhindere Schaden der darüber hinausgeht und verwandle dich zurück."
+    ]
+  },
+  "Gremlin:GremlinWizard": {
+    "NAME": "Gremlinzauberer",
+    "DESCRIPTION": [
+      "Erhalte nach dem Ausspielen einer Fertigkeit #b",
+      " #yEsprit [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:Heckle": {
+    "NAME": "Zwischenrufe",
+    "DESCRIPTIONS": [
+      "Erhalte jedes Mal wenn du einen Gegner debuffst #b",
+      " #ytemporäre #yTP [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:InfiniteBlocks": {
+    "NAME": "Unbegrenzter Schutz",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges erhältst du #b",
+      " #ySchutz.",
+      " #ySchutz Karten."
+    ]
+  },
+  "Gremlin:MadGremlin": {
+    "NAME": "Wütender Gremlin",
+    "DESCRIPTION": [
+      "Erhalte jdes Mal wenn du angegriffen wirst #b",
+      " #ytemporäre #yStärke pro Treffer."
+    ]
+  },
+  "Gremlin:MakeshiftArmor": {
+    "NAME": "Improvisierte Rüstung",
+    "DESCRIPTIONS": [
+      "Spiele noch #b",
+      " Angriff um #b",
+      " Angriffe um #b",
+      " #yArtefakt zu erhalten."
+    ]
+  },
+  "Gremlin:MakingMagic": {
+    "NAME": "Jetzt wird es magisch",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn deines nächsten Zuges #b",
+      " #yUltimativen #yStoß [REMOVE_SPACE].",
+      " #yUltimative #yStöße [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:MakingMoreMagic": {
+    "NAME": "Jetzt wird es magisch+",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn deines nächsten Zuges #b",
+      " #yUltimativer #yStoß+ Karte.",
+      " #yUltimativer #yStoß+ Karten."
+    ]
+  },
+  "Gremlin:Polish": {
+    "NAME": "Aufpoliert",
+    "DESCRIPTIONS": [
+      "#ySchutz verleiht #b",
+      " zusätzlichen #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:Scatter": {
+    "NAME": "Verteilen",
+    "DESCRIPTIONS": [
+      "Noch #b",
+      " ein Mal wenn du TP verlieren würdest, #ywechsle stattdessen zu einem zufälligen Gremlin.",
+      " Mal wenn du TP verlieren würdest, #ywechsle stattdessen zu einem zufälligen Gremlin."
+    ]
+  },
+  "Gremlin:ShadowShiv": {
+    "NAME": "Versteckte Messer",
+    "DESCRIPTIONS": [
+      "Immer wenn du einen Angriff spielst der nicht #yErschöpft, erhalte #b",
+      " #yMesser [REMOVE_SPACE].",
+      " #yMesser [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:ShieldGremlin": {
+    "NAME": "Schildgremlin",
+    "DESCRIPTION": [
+      "Erhalte nach dem Ausspielen einer Fertigkeit #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:SneakyGremlin": {
+    "NAME": "Schleichender Gremlin",
+    "DESCRIPTION": [
+      "Angriffe, die 0 kosten, fügen #b",
+      " zusätzlichen Schaden zu. Füge nach dem Ausspielen eines Angriffs einem zufälligen Gegner #b",
+      " Schaden zu."
+    ]
+  },
+  "Gremlin:TargetWeakness": {
+    "NAME": "Wunden Treffen",
+    "DESCRIPTIONS": [
+      "Füge Gegnern mit #ySchwach #b",
+      " zusätzlichen Schaden zu."
+    ]
+  },
+  "Gremlin:Unforgiving": {
+    "NAME": "Nachtragend",
+    "DESCRIPTIONS": [
+      "Du kannst keine #yStärke verlieren."
+    ]
+  },
+  "Gremlin:Wiz": {
+    "NAME": "Esprit",
+    "DESCRIPTIONS": [
+      "Energie sammeln... NL Noch #b", " Esprit benötigt.", " Esprit benötigt.",
+      "Bereit zum Zaubern."
+    ]
+  },
+  "Gremlin:Wizardry": {
+    "NAME": "Zauberei",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn deines Zuges #b",
+      " #yEsprit [REMOVE_SPACE]."
+    ]
+  }
+}

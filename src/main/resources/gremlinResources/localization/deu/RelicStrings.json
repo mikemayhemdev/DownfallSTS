@@ -1,0 +1,143 @@
+{
+  "Gremlin:ImpeccablePecs": {
+    "NAME": "Einwandfreie Muskeln",
+    "FLAVOR": "Glorreich.",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du #yStärke erhältst die gleiche Anzahl an #ytemporären_TP [REMOVE_SPACE]. NL Beginne jeden Kampf mit #b1 #yStärke."
+    ]
+  },
+  "Gremlin:FragmentationGrenade": {
+    "NAME": "Splittegranate",
+    "FLAVOR": "Niemand wagt es den Gremlin zu fragen, wo er das her hat.",
+    "DESCRIPTIONS": [
+      "Schaden, der zufälligen Gegnern zugefügt wird, wird um #b", " erhöht."
+    ]
+  },
+  "Gremlin:GremlinBomb": {
+    "NAME": "Gremlinbombe",
+    "FLAVOR": "Gremlins haben das zweifelhafte Talent, gefährliche Gegenstände zu finden. Manchmal überleben sie sogar die Plünderung besagter Gegenstände.",
+    "DESCRIPTIONS": [
+      "Immer wenn ein Gremlin stirbt, füge ALLEN Gegnern #b", " Schaden zu."
+    ]
+  },
+  "Gremlin:GremlinGravestone": {
+    "NAME": "Gremlin-Grabstein",
+    "FLAVOR": "Wohin gehen Gremlins nach den Tod? Jedenfalls verdammt noch mal nicht weit genug.",
+    "DESCRIPTIONS": [
+      "Tote Gremlins können als kleine Aktion am Lagerfeuer wiederbelebt werden."
+    ]
+  },
+  "Gremlin:GremlinKnob": {
+    "NAME": "Horn des Gruppenführers",
+    "FLAVOR": "Der Gremlin mit dem besten Horn ist so lange der Anführer seine Gruppe, bis ein anderer es ihm gestohlen hat.",
+    "DESCRIPTIONS": [
+      "Zu Beginn jedes Kampfes, ziehe #b1 Karte, erhalte [E] , und #ywechsle zum nächsten Gremlin."
+    ]
+  },
+  "Gremlin:GremlinKnobUpgrade": {
+    "NAME": "Krone des Gruppenführers",
+    "FLAVOR": "Je schöner das Symbol der Macht, desto häufiger wird es gestohlen.",
+    "DESCRIPTIONS": [
+      "Ersetzt ",
+      ". NL Das erste Mal wenn du im Zug den Nachziehstapel mischst, ziehe #b1 Karte, erhalte [E] , und #ywechsle zum nächsten Gremlin."
+    ]
+  },
+  "Gremlin:GremlinMask": {
+    "NAME": "Gremlin-Visage",
+    "FLAVOR": "Für Gremlingruppen ist sie ein Statussymbol.",
+    "DESCRIPTIONS": [
+      "Beginne jeden Kampf mit #b1 #ytemporärer #yStärke."
+    ]
+  },
+  "Gremlin:LeaderVoucher": {
+    "NAME": "Coupon des Gremlinanführers",
+    "FLAVOR": "IOU 1 Gremlin",
+    "DESCRIPTIONS": [
+      "Erhalte in deinem Zug [E] . NL Verliere beim Aufheben einen Gremlin #rfür #rden #rrest #rdes #rRuns.",
+      " NL #r( #rFetter #rGremlin #r)",
+      " NL #r( #rGremlinzauberer #r)",
+      " NL #r( #rWütender #rGremlin #r)",
+      " NL #r( #rSchildgremlin #r)",
+      " NL #r( #rSchleichender #rGremlin #r)"
+    ]
+  },
+  "Gremlin:MagicalMallet": {
+    "NAME": "Zauberhammer",
+    "FLAVOR": "Stößt Zehen doppelt so hart.",
+    "DESCRIPTIONS": [
+      "Bis zu #b3 Mal im Zug erhältst du beim Anwenden von #yWeak zusätzlich #b1 #yEsprit [REMOVE_SPACE]."
+    ]
+  },
+  "Gremlin:PricklyShields": {
+    "NAME": "Stechender Schild",
+    "FLAVOR": "Gremlins nutzen fast jeden Unrat den sie finden als Waffe oder Rrüstung. Manchmal sogar als Beides",
+    "DESCRIPTIONS": [
+      "Füge immer wenn du #yBlock erhältst einem zufälligen Gegner #b"," Schaden zu."
+    ]
+  },
+  "Gremlin:ShortStature": {
+    "NAME": "Kleine Statue",
+    "FLAVOR": "Es ist überraschend, wie gut sie funktioniert.",
+    "DESCRIPTIONS": [
+      "Das erste Mal im Kampf, wenn ein Gremlin sterben würde, werden seine TP stattdessen um #b75% der Max TP geheilt.",
+      "Bereits in diesem Kampf aktiviert."
+    ]
+  },
+  "Gremlin:StolenMerchandise": {
+    "NAME": "Diebesgut",
+    "FLAVOR": "„Vermaledeite, diebische Gremlins!“.",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du #ywechselst ein #yEcho einer zufälligen farblosen Karte. NL Der Händler erhält zu Beginn jedes Kampfes #b",
+      " #yStärke [REMOVE_SPACE].",
+      "Ihr diebischen, verdammten Tunichtgute!",
+      "Feiges Ungezifer!",
+      "Gierige grabschende Gremlins!"
+    ]
+  },
+  "Gremlin:SupplyScroll": {
+    "NAME": "Versorgungsschrift",
+    "FLAVOR": "Eine erstaunlich detaillierte Inventurliste der von der Gruppe angehäuften gegenstände.",
+    "DESCRIPTIONS": [
+      "Ziehe zu Beginn deiner dritten Zuges #b2 Karten und erhalte [E] [E] ."
+    ]
+  },
+  "Gremlin:TagTeamwork": {
+    "NAME": "Tag-Teamarbeit",
+    "FLAVOR": "TEAM - Toll, ein anderer macht's.",
+    "DESCRIPTIONS": [
+      "Immer wenn du #yTag-Team ziehst, ziehe eine Karte. NL Nimm beim Aufheben zwei #yTag-Team Karten in dein Deck auf."
+    ]
+  },
+  "Gremlin:WizardHat": {
+    "NAME": "Magierhut",
+    "FLAVOR": "Die dazu passende Robe wurde schon längst gestohlen.",
+    "DESCRIPTIONS": [
+      "Immer wenn du #yEsprit verbrauchst, entferne einen zufälligen Debuff."
+    ]
+  },
+  "Gremlin:WizardStaff": {
+    "NAME": "Zauberstab",
+    "FLAVOR": "Der Stolz und Ruhm eines jeden Gremlinzauberers. Diese Stäbe werden oft von feindlichen Gruppen gestohlen.",
+    "DESCRIPTIONS": [
+      "Der Verbauch von #yEsprit fügt noch zusätzlich #b7 Schaden zu."
+    ]
+  },
+  "Gremlin:WoundPoker": {
+    "NAME": "Wundenpiekser",
+    "FLAVOR": "Tut es weh, wenn ich das mache?",
+    "DESCRIPTIONS": [
+      "Füge am Ende jedes Zuges jedem Gegner mit #ySchwach #b", " Schaden zu."
+    ]
+  },
+  "Gremlin:PatchFixes": {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "Erhöhe beim Aufheben die Max TP jedes Gremlins um #b",
+      "Anstatt eine Karte deinem Deck hinzuzufügen, können alle Gremlins #b+1 Max TP erhalten.",
+      " #yGold. NL Erhöhe die Max TP jedes Gremlins um #b",
+      "Erhöhe die Max TP aller Gremlins nach jedem fünften Kampf um #b1.",
+      "+1 Max TP"
+    ]
+  }
+}

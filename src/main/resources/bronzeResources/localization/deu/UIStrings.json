@@ -1,0 +1,56 @@
+{
+  "bronze:SpecificCardReward": {
+    "TEXT": [
+      "Nimm ",
+      " in dein Deck auf",
+      "Wähle eine Karte."
+    ]
+  },
+  "bronze:UnplayableMod": {
+    "TEXT": [
+      "Unspielbar. NL ",
+      "FEHLER: NULL_POINTER",
+      "This is kept solely for the Null Pointer."
+    ]
+  },
+  "bronze:EncodeAndShuffleMod": {
+    "TEXT": [
+      " NL bronze:Kodiere, und lege dann eine Kopie dieser Karte auf den Abwurfstapel."
+    ]
+  },
+  "bronze:DoublePlayModifier": {
+    "TEXT": [
+      " NL Spiele diese Karte nochmal."
+    ]
+  },
+  "bronze:MiscStrings": {
+    "TEXT": [
+      "Wähle eine Karte um sie zurück auf die Hand zu nehmen. Sie erhält Behalten.",
+      " - Erhöhe den Schaden des #yKultistenschlags permanent um #b",
+      " [REMOVE_SPACE].",
+      "FEHLER: LEERE_SEQUENZ",
+      " - Erhalte eine Kopie der #yEndlosschleife mit zusätzlichen #b",
+      " Schaden.",
+      "Mutieren.",
+      "Kodieren.",
+      ""
+    ]
+  },
+  "bronze:AutoTextHelper": {
+    "TEXT": [
+      " NL bronze:Kompilierung",
+      "bronze:Kompilierung",
+      " NL bronze:Kompilierung.",
+      "bronze:Kompilierung. NL ",
+      "\u202F Wenn bronze:Kodiert:",
+      "LOCALIZATION NOTE: The text above must be equal to the start of Replicate's extra description line.",
+      "ERROR - KEINE_DOPPELTEN_RELEASES"
+    ]
+  },
+  "bronze:CompileDisplayPanel": {
+    "TEXT": [
+      "bronze:Kompilierung:",
+      "bronze:Kompilierung"
+    ]
+  }
+}

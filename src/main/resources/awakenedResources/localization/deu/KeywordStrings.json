@@ -1,0 +1,65 @@
+[
+  {
+    "PROPER_NAME": "Machttrank",
+    "NAMES": [
+      "Machttrank"
+    ],
+    "DESCRIPTION": "#yTrank [REMOVE_SPACE]: Wähle #b1 von #b3 zufälligen #yMachtkarten. Nimm sie auf die Hand, sie kostet diesen Zug #b0."
+  },
+  {
+    "PROPER_NAME": "Aufrufen",
+    "NAMES": [
+      "aufrufen",
+      "aufgerufen",
+      "aufgerufene",
+      "aufruft",
+      "gerufen",
+      "gerufen",
+      "gerufene",
+      "rufen",
+      "rufe"
+    ],
+    "DESCRIPTION": "Ein Aufruf erschafft den nächsten Zauberspruch des Zauberbuches (Nimm den nächsten Zauber auf die Hand)."
+  },
+  {
+    "PROPER_NAME": "Chor",
+    "NAMES": [
+      "chor"
+    ],
+    "DESCRIPTION": "Chor Effekte werden für den Rest des Kampfes aktiviert, wenn beim Ausspielen die letzte gespielte Karte eine #yMacht war."
+  },
+  {
+    "PROPER_NAME": "Verhext",
+    "NAMES": [
+      "verhext",
+      "verhexte",
+      "verhexter"
+    ],
+    "DESCRIPTION": "#yVerhexte Wesen erleiden vom nächsten Angriff #b20% mehr Schaden für jede Stufe. Jegliches #yverhext wird nach dem Angriff entfernt."
+  },
+  {
+    "PROPER_NAME": "Ausgelaugt",
+    "NAMES": [
+      "ausgelaugt",
+      "auslaugen",
+      "lauge",
+      "laugen"
+    ],
+    "DESCRIPTION": "Alle Effekte die dich [E] verlieren lassen, selbst wenn du bei #b0 bist. (Ausgegebene [E] für die Kosten einer Karte zählen NICHT.)"
+  },
+  {
+    "PROPER_NAME": "Manabrand",
+    "NAMES": [
+      "manabrand",
+      "manabrandes"
+    ],
+    "DESCRIPTION": "Verliert TP in Höhe des #yManabrandes immer dann, wenn du [E] verlierst, selbst wenn du bei #b0 bist. (Ausgegebene [E] für die Kosten einer Karte zählen NICHT.)"
+  },
+  {
+    "PROPER_NAME": "Neugier",
+    "NAMES": [
+      "neugier"
+    ],
+    "DESCRIPTION": "Erhalte immer wenn du eine #yMacht spielst #b1 #yStärke [REMOVE_SPACE]."
+  }
+]

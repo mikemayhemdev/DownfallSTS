@@ -10,7 +10,7 @@
     "NAME": "False Worship",
     "DESCRIPTIONS": [
       "Anstatt zu sterben, wird dieser Effekt aufgehoben und die TP auf #b50% der Max TP geheilt.",
-      "CAAAAWWWW!"
+      "KRÄÄÄÄCHZ!"
     ]
   },
   "downfall:SoulSteal": {
@@ -401,8 +401,8 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "Schicksalsrad",
     "DESCRIPTIONS": [
-      "Wenn du einen #yAngriff spielst, #yTauscht der Einsiedler seine erste Karte um. Die Kosten seiner Karten können sich nicht verändern. Immer wenn er den #rNecronomischen #rFluch zieht, erhält er #b2 #yStärke.",
-      "Wenn du einen #yAngriff spielst, #yTauscht der Einsiedler seine erste Karte um."
+      "Wenn du einen #yAngriff spielst, #yTauscht der Einsiedler seine erste Karte #yum. Die Kosten seiner Karten können sich nicht verändern. Immer wenn er den #rNecronomischen #rFluch zieht, erhält er #b2 #yStärke.",
+      "Wenn du einen #yAngriff spielst, #yTauscht der Einsiedler seine erste Karte #yum."
     ]
   },
   "downfall:HermitDoomsday": {

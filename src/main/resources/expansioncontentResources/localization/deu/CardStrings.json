@@ -24,7 +24,7 @@
     "DESCRIPTION": "Entferne alle Debuffs. NL Erhalte !M! Stärke."
   },
   "expansioncontent:YouAreMine": {
-    "NAME": "DU GEHÖRST MIR!!!",
+    "NAME": "DU BIST MEIN!!!",
     "DESCRIPTION": "Wende !M! Schwach, !M! Verwundbar, und !DM! expansioncontent:Verdammnis auf ALLE Gegner an. NL Erschöpft."
   },
   "expansioncontent:AwakenDeath": {
@@ -44,7 +44,7 @@
     "DESCRIPTION": "Erhalte !B! Panzerrüstung."
   },
   "expansioncontent:ShapePower": {
-    "NAME": "Shaper's Blessing",
+    "NAME": "Antiker Segen",
     "DESCRIPTION": "Erhalte !M! Stärke und !DM! expansioncontent:Panzerrüstung.",
     "EXTENDED_DESCRIPTION": [
       "Donus Macht",
@@ -113,7 +113,7 @@
     "UPGRADE_DESCRIPTION": "Reduziere deine Debuffs um !M!."
   },
   "expansioncontent:SuperTaunt": {
-    "NAME": "Verspotten",
+    "NAME": "Spott",
     "DESCRIPTION": "Wende !M! Schwach und Verwundbar an.",
     "UPGRADE_DESCRIPTION": "Wende !M! Schwach und Verwundbar auf ALLE Gegner an."
   },
@@ -131,11 +131,11 @@
     "DESCRIPTION": "Immer wenn du eine Karte ausspielst, NL füge ALLEN Gegnern !M! Schaden zu."
   },
   "expansioncontent:SuperViciousMockery": {
-    "NAME": "Verhöhnen",
+    "NAME": "Bösartiger Hohn",
     "DESCRIPTION": "Erhalte !M! Elan. NL Wende !DM! Schwach an."
   },
   "expansioncontent:SuperClobber": {
-    "NAME": "Verhauender Schlag",
+    "NAME": "Prügelschlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte soviel Block, wie du ungeblockten Schaden zugefügt hast."
   },
 

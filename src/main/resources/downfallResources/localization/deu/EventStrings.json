@@ -56,7 +56,7 @@
       "Das Glücksrad hat einen Preis bestimmt. NL NL Du musst ihn dir nur noch nehmen.",
       "Ausgezeichnet! Du hast bekommen was du wolltest! NL NL #r@CRACK!@ NL NL Leider warst du beim Drehen etwas zu ungestüm... das Glücksrad ist zerbrochen.",
       "Du wirst dein Glück später nochmal versuchen. NL NL Jetzt gilt es erstmal auszuruhen und dein Gemüt zu beruhigen.",
-      "Er hechtet nach dir, doch genau das hast du erwartet. NL Du entzweist ihn bevor er die Gelegenheit bekommt sein Messer zu benutzen. NL Während du die Beute an dich nimmst, verschwindet das Glücksrad bevor du es noch plündern kannst vor deinen Augen."
+      "Er hechtet nach dir, doch genau das hast du erwartet. NL Du entzweist ihn bevor er die Gelegenheit bekommt sein Messer zu benutzen. NL Während du die Beute an dich nimmst, verschwindet das Glücksrad vor deinen Augen, bevor du es an dich nehmen kannst."
     ],
     "OPTIONS": [
       "[Spielen]",
@@ -109,7 +109,7 @@
       "[Opfern] #rVerliere #r150 #rSeelen. #gGErhalte #g10 #gMax #gTP #gund #gHeile #gdeine #gTP #gkomplett.",
       "[Gesperrt] Erfordert 150 Seelen.",
       "[Opfern] #rVerliere #r150 #rSeelen. #gGErhalte #g2 #gMax #gTP #gund #gHeile #gdie #gTP #galler #gGremlins #gkomplett.",
-      "[Nehmen]"
+      "[Einsammeln]"
     ]
   },
   "downfall:FaceTrader": {
@@ -258,19 +258,19 @@
     "DESCRIPTIONS": [
       "Zwischen den Steinen und Brocken fällt dir eine aufwändige große blaue Statue auf, die einen Flügel darstellt. NL Du siehst #yglitzernde #yMünzen aus einigen Rissen quillen, doch die sind für dich wertlos. Die Statue selbst, allerdings...",
       "Du wirst wahrscheinlich Kultisten des Erwachten begegnen, also nimmst du die Statue mit. Sie könnte nützlich dabei sein, die Kultisten auf deine Seite zu ziehen.",
-      "Du schägst mit all deiner Kraft auf die Statue. NL Schon bald @zerfällt@ sie in ihre Einzelteile. Einer der Splitter ist auffalend scharf, und trägt etwas Magie in sich. Du nimmst den Splitter mit und machst dich wieder auf den Weg",
+      "Du schägst mit all deiner Kraft auf die Statue. NL Schon bald @zerfällt@ sie in ihre Einzelteile. Einer der Splitter ist auffallend scharf, und trägt etwas Magie in sich. Du nimmst den Splitter mit und machst dich wieder auf den Weg",
       "Du gehst daran vorbei und setzt deine Reise fort.",
-      "CA...Caw?! Geschenk für VOGEL GOTT?",
-      "CA-CAAAW!!",
+      "Krä...Krächz?! Geschenk für VOGEL GOTT?",
+      "KÄ-KRÄCHZ!!",
       "Ein Geschäft? Das Angebot ist angemessen...",
       "Der Kult wird zufrieden sein."
     ],
     "OPTIONS": [
       "[Zerstören] #rVerliere #r",
-      " #rTP. #gErhalte #gScharfer #gSplitter.",
-      "[Nehmen] #rVerliere #r",
+      " #rTP. #gErhalte #gden #gScharfen #gSplitter.",
+      "[Mitnehmen] #rVerliere #r",
       "[Verlassen]",
-      " #rTP. #gErhalte #gZerbrochene #gFlügelstatue."
+      " #rTP. #gErhalte #gdie #gZerbrochene #gFlügelstatue."
     ]
   },
   "downfall:GoldenIdol": {
@@ -426,15 +426,15 @@
       "Eine lange Reihe #b~maskierter~ #b~Gestalten~ ist zu sehen, die NL eine #pbescheidene #pKathedrale betreten. NL Als du sie betrittst nehmen die die Kultisten sofort wahr! NL NL Du kannst nichts mehr als eine Kakophonie aus Atemzügen, Jubel, and Krächzen hören. Einer der Kultisten bietet die eine Opfergabe an.",
       "Du stoßt dich durch die Masse an Kultisten um an die mächtige Waffe zu kommen, die du auf dem Altar erblickst. Der Diebstahl des Dolches wird prompt bemerkt! NL NL #r@„MORD!!@ #r@MORD@ #r@MORD!!“@ NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Die #rKultisten ziehen ihre eigenen Dolche. Sie #rstechen und #rschlityen auf die ein während du das Gebäude verlässt.",
       "Du nimmst die Gabe in Form des seltsamen Elixiers an. NL NL Die Kultisten @singen@ und @brüllen@ für dich! NL NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Du singst auch. Wieso nicht? Diese Kultisten sind schon ein eigenartiger Schwarm, aber immerhin dienen sie einem deiner Herrscher-Kollegen.",
-      "#r@VOGELGOTT!!@ #r@HEIMGEKEHRT!!“@ NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Du badest in der Menge, doch schon bald stehst du dem Anführer direkt gegenüber. Ein gut gekleideter Kultist reicht dir einen #yverzierten #yDolch.",
+      "#r@VOGELGOTT!!@ #r@HEIMGEKEHRT!!“@ NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Du badest in der Menge, und schon bald stehst du dem Anführer direkt gegenüber. Ein gut gekleideter Kultist reicht dir einen #yverzierten #yDolch.",
       "You take the dagger, unsure of exactly what is about to transpire. The cultist leader reaches into his robe and offers you a #bblue #boily #bmixture.",
       "Die Kultisten rundherum stellen dem Anführer Ersatz zur Verfügung. Mit seinem eigenen Dolch und Elixier in der Hand demonstriert er dir, was du ihm nachmachen sollst.",
       "Du führst das Ritual aus wie es der Anführer tut: du beträufelst die Klinge des Dolches mit ein paar Tropfen des Tranks. Im Licht der Kathedrale glänzt der Stahl in einer #b~unheimlichen~ #b~Farbe~. NL NL Unaufgefordert treten zwei Kultisten hervor - einer vor dir, einer vor dem Anführer. NL NL Es ist dir gleich klar, was zu tun ist.",
       "#rDu #rstichst #rden #rDolch #rmitten #rin #rdes #rKultisten #rHerzen! NL NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Das Ritual ist vollendet, und die überlebenden Kultisten sind glücklicher als zuvor. Du verlässt die Kathedrale, und sie verabschieden sich gebührend mit jubelndem Gekrächze und wilden Gesten ihrer Stöcke."
     ],
     "OPTIONS": [
-      "[Statue zurückgeben] #rVerliere #rZerbrochene #rFlügelstatue. #gErhalte #gviele #gBelohnungen.",
-      "[Gesperrt] Erfordert Zerbrochene Flügelstatue.",
+      "[Statue zurückgeben] #rVerliere #rdie #rZerbrochene #rFlügelstatue. #gErhalte #gviele #gBelohnungen.",
+      "[Gesperrt] Erfordert die Zerbrochene Flügelstatue.",
       "[Annehmen] #gErhalte #einen #gKultistentrank.",
       "[Stehlen] #gErhalte #geinen #gRitualdolch. #rVerliere #r",
       " #rTP.",
@@ -443,7 +443,7 @@
       "[Dolch nehmen] #gErhalte #geinen #gRitualdolch.",
       "[Salben] #gVerbessere #gden #gRitualdolch.",
       "[Opfern] #rTöte #reinen #rKultisten #rmit #rdem #rRitualdolch+.",
-      "[Rühmen lassen] #gErhalte #gBelohnungen für die Rückgabe der #gZerbrochene #gFlügelstatue."
+      "[Rühmen lassen] #gErhalte #gBelohnungen für die Rückgabe der #gZerbrochenen #gFlügelstatue."
     ]
   },
   "downfall:Colosseum": {
@@ -502,7 +502,7 @@
     "NAME": "Sinnesstein",
     "DESCRIPTIONS": [
       "#g~EITELKEIT.~ NL NL Das Leben ist schön und wertvoll... sogar für einen #gSchleim. NL NL Du wusstest schon immer, dass du für Großes bestimmt bist. Andere geben sich mit Gold und Schrott zufrieden, doch du bist anders. Du bist wie ein Jäger auf der Lauer nach etwas Besonderem. Etwas Einzigartigem. Etwas ~Fabelhaftem.~ NL NL Tage... Wochen... Vielleicht sogar Jahre vergehen... im Spire ist das schwer zu sagen. Irgendwann, endlich, hast du es entdeckt. Nie mehr wirst du einfach in der Masse untergehen! Die anderen haben ihre #yMünzen und #yNippes, doch du hast etwas viel besseres... NL NL @EINE@ @WINZIGE@ @MELONE!@ Fesch!",
-      "#y~ZERBRECHLICHKEIT.~ NL NL Die #rKlinge dringt durch deine Brust, und du hörst den #bJubel der Publikums... Das letzte was du fühlst ist eine Hand, die dein Gesicht streichelt - danach schließen deine Augen. NL NL Du wachst in einen dir unbekannten Raum auf und @kannst@ @dich@ @nicht@ @bewegen.@ Du versuchst etwas zu sagen, doch kein Wort kommt heraus, und deine Sicht ist von #ggrünem #gRauch vernebelt. Ist da ein Traum? Ist das das Leben nach dem Tod? Du versuchst dich zu erinnern, doch deine Erinnerungen sind abgetrennt, sowie es deine Gliedmaßen sind. NL NL Du hörst eine Stimme in deinem Kopf - ein simpler Befehl. #g\"BALANCE #gmuss #gVERSTÄRKT #gwerden. #gBESCHÜTZE #gExordium.\"",
+      "#y~ZERBRECHLICHKEIT.~ NL NL Die #rKlinge dringt durch deine Brust, und du hörst den #bJubel der Publikums... Das letzte was du fühlst ist eine Faust, die mit voller Wucht in dein Gesicht einschlägt - dann gehen deine Augen zu. NL NL Du wachst in einen dir unbekannten Raum auf und @kannst@ @dich@ @nicht@ @bewegen.@ Du versuchst etwas zu sagen, doch kein Wort kommt heraus, und deine Sicht ist von #ggrünem #gRauch vernebelt. Ist da ein Traum? Ist das das Leben nach dem Tod? Du versuchst dich zu erinnern, doch deine Erinnerungen sind abgetrennt, sowie es deine Gliedmaßen sind. NL NL Du hörst eine Stimme in deinem Kopf - ein simpler Befehl. #g\"BALANCE #gmuss #gVERSTÄRKT #gwerden. #gBESCHÜTZE #gExordium.\"",
       "#p~HOFFNUNGSLOSIGKEIT.~ NL NL #ySehen. #yErinnern. #yLeben. Das ist die Mission des Sehers. Dein Auftrag ist die Untersuchung eines Spire von unbekanntem Ursprung. Du betrittst einen sechseckigen Raum. Bevor du noch irgendetwas tun kannst @fällt@ @die@ @Tür@ @hinter@ @dir@ @zu!@ NL NL Es gibt keinen Ausweg. Die letzte Strohhalm wäre die magische Steintafel, die sich auf einem Podest in der Mitte befindet. Sowie du dieses Artefakt berührst, ~löst~ ~sich~ dein Körper in ~nichts~ ~auf,~ und deine #pSeele wird in die #pSteintafel gezogen. NL NL Dein Schicksal ist nun auf Ewig mit der #pSteintafel verbunden, dazu #rverdammt für alle Zeiten duch den Spire zu wandern.",
       "#y~FREISETZUNG.~ NL NL Du bist der erste. Du dienst dem ~Former.~ Du wurdest nicht geboren, yerbrechlich und mit Schwachstellen, sondern kreiert. In Perfektion. Und du sollst mehr Konstrukte nach deinem Vorbild erschaffen. Das Vermächtnis des Schöpfers: die #yAutomatone. NL NL Jedes ist makellos, um einen bestimmten Zweck zu erfüllen. Jeder... außer einem. Dieser sollte das Gleichgewicht in der Stadt sicherstellen. NL NL Du schmeißt dieses #ydefekte #yKonstrukt aus dem größten Fenster, auf dass es am Bodensatz des Spire sein Dasein fristet. Du nimmst seinen Platz als Beschützer der Stadt ein. NL NL Balance muss verstärkt werden.",
       "#b~STOLZ.~ NL NL Du stehst in der Mitte einer großen Arena. Alles worauf du hingearbeitet hast wird nun in diesem Kampf ausgedrückt. Du nimmst die #bDefensivhaltung an, um den Gegner ermüden zu lassen, bis er eine Schwachstelle offenbart. Mit deiner letzten Kraft #rstichst #rdu #deine #rKlinge in die Brust des Gegners. Das Publikum reagiert mit @frenetischem@ @Applaus!@ NL NL Der Sieg alleine ist dir nicht genug - du hebst deine leere Hand und schägst dem Gegner ~mitten~ ~ins~ ~Gesicht,~ um ihm einen letzten demütigenden Schlag zu verpassen. NL NL Niemand stellt sich mehr dir in den Weg. Du bist der neue #b@Champion!@",

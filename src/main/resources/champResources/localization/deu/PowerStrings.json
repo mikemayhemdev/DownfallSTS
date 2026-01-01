@@ -1,0 +1,251 @@
+{
+  "champ:CounterPower": {
+    "NAME": "Konter",
+    "DESCRIPTIONS": [
+      "Wenn du das nächste Mal angegriffen wirst, verliere dein Konter und erhalte einen #yGegenschlag der #b",
+      " Schaden zufügt."
+    ]
+  },
+  "champ:FocusedDefPower": {
+    "NAME": "Defensiver Fokus",
+    "DESCRIPTIONS": [
+      "Wenn du einen #yAbschluss spielst erhältst du #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "champ:FocusedBerPower": {
+    "NAME": "Fabelhafter Fußmarsch",
+    "DESCRIPTIONS": [
+      "Wenn du in diesem Zug einen #yAbschluss spielst, verlieren ALLE Gegener #b",
+      " TP."
+    ]
+  },
+  "champ:ShieldWallPower": {
+    "NAME": "Schildmauer",
+    "DESCRIPTIONS": [
+      "Erhalte am Ende deines Zuges #b",
+      " #yKonter [REMOVE_SPACE]."
+    ]
+  },
+  "champ:EntangleNextTurnPower": {
+    "NAME": "Schwert verloren",
+    "DESCRIPTIONS": [
+      "Du kannst im nächsten Zug keine #yAngriffe ausspielen.",
+      "Du kannst in den nächsten #b",
+      " Zügen keine #yAngriffe ausspielen."
+    ]
+  },
+  "champ:DrawLessNextTurnPower": {
+    "NAME": "Draw Reduction",
+    "DESCRIPTIONS": [
+      "Ziehe im nächsten Zug #b",
+      " Karte weniger.",
+      " Karten weniger."
+    ]
+  },
+  "champ:PushThroughPower": {
+    "NAME": "Schmerzen Ignorieren",
+    "DESCRIPTIONS": [
+      "Du kannst in diesem Zug keine TP verlieren.",
+      "Du kannst in dein nächsten #b",
+      " Zügen keine TP verlieren."
+    ]
+  },
+  "champ:WorseRupturePower": {
+    "NAME": "Endlose Wut",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du während deines Zuges TP verlierst #b",
+      " temporäre #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "champ:ImprovisingPower": {
+    "NAME": "Improvisieren",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #yHaltung annimst, aktiviere ihren #yFertigkeitsbonus #b",
+      " Mal."
+    ]
+  },
+  "champ:CalledShotPower": {
+    "NAME": "Den Ton angeben",
+    "DESCRIPTIONS": [
+      "Bleibe das nächste Mal wenn du #yabschließt in deiner #yHaltung.",
+      "Bleibe die nächsten #b",
+      " Male die du #yabschließt in deiner #yHaltung."
+    ]
+  },
+  "champ:DancingMasterPower": {
+    "NAME": "Tazmeister",
+    "DESCRIPTIONS": [
+      "Wenn du im Zug das erste Mal einen #yAbschluss spielst, erhalte #b",
+      " [E] und ziehe #b",
+      " Karten. ",
+      "",
+      "Bereits in diesem Zug aktiviert.",
+	  ""
+    ]
+  },
+  "champ:StrikeOfGeniusPower": {
+    "NAME": "Genieschlag",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen \"Schlag\" Karte. Es kostet #b0 bis du es spielst.",
+      "Erhalte zu Beginn jedes Zuges #b",
+      " gremlin:Echos von zufälligen \"Schlag\" Karten. Sie kosten #b0 bis du sie spielst."
+    ]
+  },
+  "champ:StrikeOfGeniusUpgradedPower": {
+    "NAME": "Genieschlag+",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen verbesserten \"Schlag\" Karte. Es kostet #b0 bis du es spielst.",
+      "Erhalte zu Beginn jedes Zuges #b",
+      " gremlin:Echos von zufälligen verbesserten \"Schlag\" Karten. Sie kosten #b0 bis du sie spielst."
+    ]
+  },
+  "champ:DefensiveStylePower": {
+    "NAME": "Defensivstil",
+    "DESCRIPTIONS": [
+      "Erhöhe den #yKonter des #bdefensiven #yFertigkeitsbonuses um #b",
+      " [REMOVE_SPACE]."
+    ]
+  },
+  "champ:GladiatorStylePower": {
+    "NAME": "Fairer Sauberer Kampf",
+    "DESCRIPTIONS": [
+      "Erhalte wenn du deinen Zug ohne #yHaltung beginnst #b",
+      " temporäre #yStärke und #yGeschicklichkeit."
+    ]
+  },
+  "champ:BerserkerStylePower": {
+    "NAME": "Offensivstil",
+    "DESCRIPTIONS": [
+      "Erhöhe den #yElan des #roffensiven #yFertigkeitsbonuses um #b",
+      " [REMOVE_SPACE]."
+    ]
+  },
+  "champ:FalseCounterPower": {
+    "NAME": "Falscher Konter",
+    "DESCRIPTIONS": [
+      "Wenn du das nächste Mal #yKonter aktivierst, verliere nur die Hälfte.",
+      "Die nächsten #b",
+      " Male in denen du #yKonter aktivierst, verliere nur die Hälfte."
+    ]
+  },
+  "champ:EnergizedDurationPower": {
+    "NAME": "Energiegeladen",
+    "DESCRIPTIONS": [
+      "Du erhältst #b",
+      " [E] zusätzlich im nächsten Zug.",
+      " zusätzliche [E] im nächsten Zug.",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+    ]
+  },
+  "champ:IronFortressPower": {
+    "NAME": "Technisches Tänzeln",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du eine #yHaltung annimmst #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "champ:IronFortressVigorPower": {
+    "NAME": "Technisches Tänzeln: Offensiv",
+    "DESCRIPTIONS": [
+      "Aktiviere immer wenn du eine #yHaltung annimmst den #roffensiven #yFertigkeitsbonus Bonus",
+      " #b",
+      " Mal."
+    ]
+  },
+  "champ:LastStandMod": {
+    "NAME": "Letztes Aufgebot",
+    "DESCRIPTIONS": [
+      "Wenn deine TP zu Beginn deines Zuges bei 50% oder darunter liegen, entferne alle Debuffs und erhalte ",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "champ:GladiatorFormPower": {
+    "NAME": "Gladiatorenform",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn jedes Zuges #b",
+      " #yElan für alle 3 verbrauchten #yElan im vorherigen Zug. Wiederhole dann diesen Vorgang für #yKonter."
+    ]
+  },
+  "champ:NoBlockNextTurnPower": {
+    "NAME": "Schild verloren",
+    "DESCRIPTIONS": [
+      "Karten geben im nächsten Zug kein #yBlock [REMOVE_SPACE].",
+      "Karten geben in deinen nächsten #b",
+      " Zügen kein #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "champ:UltimateStancePower": {
+    "NAME": "Ultimativer Schwund",
+    "DESCRIPTIONS": [
+      "Die #yUltimative #yHaltung wird nach diesem Zug verlassen.",
+      "Die #yUltimative #yHaltung wird nach #b",
+      " Zügen verlassen."
+    ]
+  },
+  "champ:UltimateFormNextTurnPower": {
+    "NAME": "Ultimate Vorbereitung",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges die #yUltimative #yHaltung an.",
+      " NL Sie hält für #b",
+      " Züge."
+    ]
+  },
+  "champ:EnGardePower": {
+    "NAME": "En Garde",
+    "DESCRIPTIONS": [
+      "Wenn dein #yBlock in diesem Zug vollständig verbraucht wird, erhalte im nächsten Zug #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "champ:ParryPower": {
+    "NAME": "Parierend",
+    "DESCRIPTIONS": [
+      "Wenn #yKonter in diesem Zug verbraucht wird, erhalte einen zusätzlichen #yGegenschlag."
+    ]
+  },
+  "champ:BoomerangPower": {
+    "NAME": "Boomerang",
+    "DESCRIPTIONS": [
+      "Bring zu Beginn deines nächsten Zuges ",
+      " zurück auf die Hand. Es kostet #b0 und kommt nicht mehr zurück."
+    ]
+  },
+  "champ:ResolvePower": {
+    "NAME": "Ermüdung",
+    "DESCRIPTIONS": [
+      "Heile am Ende des Kampfes deine ermüdeten TP."
+    ]
+  },
+  "champ:DualPlaySrikePower": {
+    "NAME": "Serienschlag",
+    "DESCRIPTIONS": [
+      "Deine nächste #y\"Schlag\" Karte wird in diesem Zug zweimal gespielt.",
+      "Dine nächsten ",
+      " #y\"Schlag\" Karten werden in diesem Zug zweimal gespielt."
+    ]
+  },
+  "champ:LastStandPower": {
+    "NAME": "Letztes AUfgebot",
+    "DESCRIPTIONS": [
+      "Entferne alle Debuffs und erhalte #b",
+      " #yStärke sobald deine TP unter #b50% fallen.",
+      "~Jetzt~ ~hast~ ~du~ ~es~ ~geschafft~ ~...~",
+      "@EINE@ @NIEDERLAGE??@ NL @UNMÖGLICH!!@"
+    ]
+  },
+  "champ:HonePower": {
+    "NAME": "Geschliffene Klinge",
+    "DESCRIPTIONS": [
+      "Deine #y\"Schlag\" Karten fügen #b",
+      " mehr Schaden zu."
+    ]
+  },
+  "champ:DoubleStyleThisTurnPower": {
+    "NAME": "Kettenpeitsche",
+    "DESCRIPTIONS": [
+      "In diesem Zug sind die #yFertigkeitsboni um #b",
+      " effektiver."
+    ]
+  }
+}

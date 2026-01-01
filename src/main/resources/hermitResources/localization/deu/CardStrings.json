@@ -98,7 +98,7 @@
     "DESCRIPTION": "Zu Beginn deines Zuges kannst du eine Karte erschöpfen um 8 Block zu erhalten."
   },
   "hermit:Dive": {
-    "NAME": "Hechten",
+    "NAME": "In Deckung gehen",
     "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Erhalte !M! expansioncontent:Panzerrüstung."
   },
   "hermit:FlashPowder": {

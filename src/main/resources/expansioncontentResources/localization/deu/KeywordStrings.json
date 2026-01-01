@@ -47,9 +47,10 @@
     "PROPER_NAME": "Echo",
     "ID": "echo",
     "NAMES": [
-      "echo"
+      "echo",
+      "echos"
     ],
-    "DESCRIPTION": "Nimm eine Kopie einer Karte auf die Hand. Sie ist #yFlüchtig und #yErschöpft [REMOVE_SPACE]. NL Aus Echo-Karten könen keine Echos generiert werden."
+    "DESCRIPTION": "Echos sind Kopien von Karten die zusätzlich #yflüchtig sind und #yerschöpfen. Von einem Echo kann kein Echo erstellt werden."
   },
   {
     "PROPER_NAME": "Exhumieren",
@@ -152,7 +153,8 @@
     "NAMES": [
       "chor"
     ],
-    "DESCRIPTION": "Chor Effekte werden für den Rest des Kampfes aktiviert, wenn beim Ausspielen die letzte gespielte Karte eine #yMacht war."},
+    "DESCRIPTION": "Chor Effekte werden für den Rest des Kampfes aktiviert, wenn beim Ausspielen die letzte gespielte Karte eine #yMacht war."
+  },
   {
     "PROPER_NAME": "Transformieren",
     "ID": "transform",

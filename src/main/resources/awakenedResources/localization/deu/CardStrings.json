@@ -1,0 +1,411 @@
+{
+  "awakened:Thunderbolt": {
+    "NAME": "Blitzstrahl",
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Erschöpft."
+  },
+  "awakened:BurningStudy": {
+    "NAME": "Brennende Lehre",
+    "DESCRIPTION": "Behalten. NL Erhalte !M! Stärke. NL Wende !awakened:m2! Schwach auf ALLE Gegner an. NL Erschöpft."
+  },
+  "awakened:Cryostasis": {
+    "NAME": "Kryostase",
+    "DESCRIPTION": "Behalten. NL Erhalte !B! Block. NL Erschöpft."
+  },
+  "awakened:Darkleech": {
+    "NAME": "Verderben",
+    "DESCRIPTION": "Behalten. NL Wende !M! Verwundbar an. NL Wende !awakened:m2! awakened:Manabrand an. NL Erschöpft."
+  },
+  "awakened:DeathCoil": {
+    "NAME": "Todesschlinge",
+    "DESCRIPTION": "Wende !M! awakened:Manabrand an. NL Verliere im nächsten Zug [E] ."
+  },
+  "awakened:ESPSpell": {
+    "NAME": "ESP",
+    "DESCRIPTION": "Behalten. NL Ziehe !M! Karte. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Ziehe !M! Karten. NL Erschöpft."
+  },
+  "awakened:Strike": {
+    "NAME": "Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu."
+  },
+  "awakened:Defend": {
+    "NAME": "Verteidigen",
+    "DESCRIPTION": "Erhalte !B! Block."
+  },
+  "awakened:Brainshock": {
+    "NAME": "Hirnschock",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege eine *Leere in den Abwurfstapel."
+  },
+  "awakened:Intensify": {
+    "NAME": "Intensivieren",
+    "DESCRIPTION": "awakened:Aufrufen. NL In diesem Zug kosten Zauber 0 und du kannst nicht erneut awakened:aufrufen.",
+    "UPGRADE_DESCRIPTION": "Behalten. awakened:Aufrufen. NL In diesem Zug kosten Zauber 0 und du kannst nicht erneut awakened:aufrufen."
+  },
+  "awakened:DarkEcho": {
+    "NAME": "Dunkles Echo",
+    "DESCRIPTION": "Füge am Ende des Zuges ALLEN Gegnern !M! Schaden zu - erhöht durch Stärke."
+  },
+  "awakened:AwakenedForm": {
+    "NAME": "Erwachte Form",
+    "DESCRIPTION": "Erhalte !M! awakened:Neugier. NL Erhalte !awakened:m2! Ritual.",
+    "UPGRADE_DESCRIPTION": "*Erwache sofort. NL Erhalte !M! awakened:Neugier. NL Erhalte !awakened:m2! Ritual."
+  },
+  "awakened:Spellbinder": {
+    "NAME": "Bezaubern",
+    "DESCRIPTION": "awakened:Rufe zu Beginn jedes Zuges einen Zauberspruch auf"
+  },
+  "awakened:Ceremony": {
+    "NAME": "Zeremonie",
+    "DESCRIPTION": "Behalten. NL Erhalte !M! Stärke."
+  },
+  "awakened:TalonRake": {
+    "NAME": "Krallenkratzen",
+    "DESCRIPTION": "Füge zweimal !D! Schaden zu. NL awakened:Aufrufen."
+  },
+  "awakened:Hymn": {
+    "NAME": "Hymne",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte eine *Zeremonie. NL Verliere im nächsten Zug [E] ."
+  },
+  "awakened:Psalm": {
+    "NAME": "Psalm",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu und Wende !M! Schwach auf sie an."
+  },
+  "awakened:DemonGlyph": {
+    "NAME": "Dämonenglyphen",
+    "DESCRIPTION": "Erhalte !M! Stärke und Geschicklichkeit. NL Wenn du *erwachst, erhalte weitere !awakened:m2! von Beiden."
+  },
+  "awakened:TakeFlight": {
+    "NAME": "Abheben",
+    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Chor: Dein Block wird zu Beginn deines nächsten Zuges nicht entfernt."
+  },
+  "awakened:FeatherVeil": {
+    "NAME": "Federkleid",
+    "DESCRIPTION": "Erhalte !B! Block. NL Verliere !M! Stärke."
+  },
+  "awakened:Peck": {
+    "NAME": "Picken",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Ziehe !M! Karte.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Ziehe !M! Karten."
+  },
+  "awakened:Extension": {
+    "NAME": "Extension",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm diese Karte vom Abwurfstapel auf die Hand, immer wenn du eine Macht spielst."
+  },
+  "awakened:Pluck": {
+    "NAME": "Rupfen",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte einen *Federstich."
+  },
+  "awakened:FlareShot": {
+    "NAME": "Federflackern",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: Ziehe im nächsten Zug !M! zusätzliche Karte."
+  },
+  "awakened:ClarionCall": {
+    "NAME": "Kriegsfanfare",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte das nächste Mal wenn du awakened:ausgelaugt wirst [E] ."
+  },
+  "awakened:Recitation": {
+    "NAME": "Rezitieren",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: Füge erneut !D! Schaden zu."
+  },
+  "awakened:ChosenVerse": {
+    "NAME": "Auserwählter Vers",
+    "DESCRIPTION": "Die nächsten !M! Male an denen du in diesem Zug einen nicht-Angriff spielst, ziehe eine Karte und Erhalte !B! Block."
+  },
+  "awakened:SoulStrike": {
+    "NAME": "Seelenschlag",
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Kostet für jede in diesem Zug gespielte Macht [E] weniger."
+  },
+  "awakened:Altar": {
+    "NAME": "Altar",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschöpfe eine Karte. NL awakened:Aufrufen."
+  },
+  "awakened:Envision": {
+    "NAME": "Manifestieren",
+    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Rufe einen Zauberspruch *auf und lege ihn auf den Nachziehstapel."
+  },
+  "awakened:Thaumaturgy": {
+    "NAME": "Quacksalbereien",
+    "DESCRIPTION": "Erhalte !awakened:m2! Geschicklichkeit. NL Nimm zu Beginn deiner nächsten !M! Züge eine *Zeremonie auf die Hand."
+  },
+  "awakened:WaveOfMiasma": {
+    "NAME": "Miasma-Schleier",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wende !awakened:m2! awakened:Manabrand auf ALLE Gegner an. NL Erschöpft."
+  },
+  "awakened:SludgeBomb": {
+    "NAME": "Schlammbombe",
+    "DESCRIPTION": "Erfordert eine *Leere im Erschöpfungsstapel. Entferne sie und füge zweimal !D! Schaden zu.",
+    "EXTENDED_DESCRIPTION": [
+      "Ich habe keine erschöpfte Leere."
+    ]
+  },
+  "awakened:KnifesEdge": {
+    "NAME": "Auf Messers Schneide",
+    "DESCRIPTION": "Erhalte !awakened:m2! Stärke. NL Lege !M! *Leeren in den Abwurfstapel."
+  },
+  "awakened:FourthDimension": {
+    "NAME": "Vierte Dimension",
+    "DESCRIPTION": "Erschöpfe eine Karte. NL Mische !M! Kopien in den Nachziehstapel. NL Erschöpft.",
+    "EXTENDED_DESCRIPTION": [
+      "Erschöpfe eine Karte in die Vierte Dimension."
+    ]
+  },
+  "awakened:RavenStrike": {
+    "NAME": "Rabenschlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: Spiele die oberste Karte des Nachziehstapels."
+  },
+  "awakened:Unleash": {
+    "NAME": "Freisetzen",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Der Schaden wird für jede andere Karte auf der Hand um !M! erhöht."
+  },
+  "awakened:DesperatePrayer": {
+    "NAME": "Stoßgebet",
+    "DESCRIPTION": "Erhalte !M! *Zeremonie Karten. NL Erschöpft."
+  },
+  "awakened:BirdsEye": {
+    "NAME": "Adlerauge",
+    "DESCRIPTION": "awakened:Rufe einen Zauberspruch deiner Wahl *auf.",
+    "UPGRADE_DESCRIPTION": "Fülle dein Zauberbuch neu auf und wakened:Rufe danach einen Zauberspruch deiner Wahl *auf."
+  },
+  "awakened:Initiation": {
+    "NAME": "Initiierung",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte a *Zeremonie."
+  },
+  "awakened:Ensorcelate": {
+    "NAME": "Zauberformel",
+    "DESCRIPTION": "Erhalte !B! Block. NL Die nächste Macht die du ausspielst kostet 0."
+  },
+  "awakened:Skyward": {
+    "NAME": "Himmelswache",
+    "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karte. NL Kostet für jede in diesem Kampf gespielte Macht [E] weniger."
+  },
+  "awakened:RisingChant": {
+    "NAME": "Aufsteigender Chor",
+    "DESCRIPTION": "Flüchtig. NL Der erste awakened:Chor Effekt jedes Zuges wird doppelt aktiviert.",
+    "UPGRADE_DESCRIPTION": "Der erste awakened:Chor Effekt jedes Zuges wird doppelt aktiviert."
+  },
+  "awakened:FeatherWhirl": {
+    "NAME": "Federwirbel",
+    "DESCRIPTION": "Erhalte X *Federstiche.",
+    "UPGRADE_DESCRIPTION": "Erhalte X+1 *Federstiche."
+  },
+  "awakened:Murder": {
+    "NAME": "Mord",
+    "DESCRIPTION": "Füge !M! Mal einem zufälligen Gegner !D! Schaden zu.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Füge !M! Mal einem zufälligen Gegner !D! Schaden zu."
+  },
+  "awakened:Nihil": {
+    "NAME": "Nihil",
+    "DESCRIPTION": "Wende !M! awakened:Manabrand an. NL awakened:Chor: ALL Gegner verlieren HP in Höhe ihres awakened:Manabrandes."
+  },
+  "awakened:MoonlitVision": {
+    "NAME": "Mondlichtvision",
+    "DESCRIPTION": "Erhalte [E] das erste Mal, an dem du im Zug einen Zauber spielst."
+  },
+  "awakened:Rebirth": {
+    "NAME": "Wiedergeburt",
+    "DESCRIPTION": "Wenn du das nächste Mal sterben würdest, oder am Ende des Kampfes, entferne alle Debuffs, *erwache, und heile !M! TP."
+  },
+  "awakened:Archmagus": {
+    "NAME": "Erzmagier",
+    "DESCRIPTION": "Der erste in deinem Zug gespielte Zauber wird zweimal gespielt."
+  },
+  "awakened:Planeswalk": {
+    "NAME": "Dimensionswanderung",
+    "DESCRIPTION": "Erhalte [E] [E] . NL Mische eine *Leere in den Nachziehstapel.",
+    "UPGRADE_DESCRIPTION": "Erhalte [E] [E] [E] . NL Mische eine *Leere in den Nachziehstapel."
+  },
+  "awakened:Spew": {
+    "NAME": "Ausspeien",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL [E] die für diese Karte ausgegeben wird wie awakened:auslaugen behandelt."
+  },
+  "awakened:DarknessFalls": {
+    "NAME": "Einfallende Finsternis",
+    "DESCRIPTION": "Erhalte immer wenn awakened:ausgelaugt wirst !M! Block und !awakened:m2! Stärke.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer wenn awakened:ausgelaugt wirst !M! Block und !awakened:m2! Stärke."
+  },
+  "awakened:Eventide": {
+    "NAME": "Abendzeit",
+    "DESCRIPTION": "Füge einem zufälligen Gegner !D! Schaden zu. NL Lege eine *Leere auf den Nachziehstapel."
+  },
+  "awakened:EclipseEmbrace": {
+    "NAME": "Sonnenfinsternis",
+    "DESCRIPTION": "Immer wenn du eine *Leere erschöpfst, ziehe im nächsten Zug eine Karte und erhalte [E] ."
+  },
+  "awakened:Clutch": {
+    "NAME": "Umklammern",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte die 0 kostet."
+  },
+  "awakened:Gloomguard": {
+    "NAME": "Düsterer Schutz",
+    "DESCRIPTION": "Erhalte !B! Block. NL Kostet 0 wenn sich eine *Leere auf der Hand befindet."
+  },
+  "awakened:Carrionmaker": {
+    "NAME": "Aasproduktion",
+    "DESCRIPTION": "Füge einem zufälligen Gegner !D! Schaden zu. NL Wiederhole das für jeden in diesem Zug gespielten Zauber.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " Zauber gespielt.)",
+      " Zauber gespielt.)"
+    ]
+  },
+  "awakened:MirePit": {
+    "NAME": "Schlammgrube",
+    "DESCRIPTION": "ALL Gegner verlieren in diesem Zug !M! Stärke. NL Verliere im nächsten Zug [E] . NL Erschöpft."
+  },
+  "awakened:SingularityShield": {
+    "NAME": "Singularity Shield",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte im nächsten Zug !B! Block und verliere [E] ."
+  },
+  "awakened:Dejection": {
+    "NAME": "Schwermut",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe eine Karte. Wurde ein Zauber erschöpft, dann erhalte eine *Zeremonie."
+  },
+  "awakened:BloodRite": {
+    "NAME": "Blutiges Ritual",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte eine *Zeremonie."
+  },
+  "awakened:SongOfSorrow": {
+    "NAME": "Leidenslieder",
+    "DESCRIPTION": "Immer wenn du eine *Leere erhältst verlieren ALLE Gegner !M! TP."
+  },
+  "awakened:MysticOrder": {
+    "NAME": "Mystische Ordnung",
+    "DESCRIPTION": "Ziehe !M! Karten. NL awakened:Aufrufen."
+  },
+  "awakened:ProfaneStrike": {
+    "NAME": "Profaner Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege eine Handkarte auf den Nachziehstapel."
+  },
+  "awakened:Victuals": {
+    "NAME": "Verpflegung",
+    "DESCRIPTION": "awakened:Chor: Erhalte [E] [E] . NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "awakened:Chor: Erhalte [E] [E] [E] . NL Erschöpft."
+  },
+  "awakened:Gather": {
+    "NAME": "Versammeln",
+    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Chor: Nimm eine Karte aus dem Abwurfstapel zurück auf die Hand."
+  },
+  "awakened:TheTower": {
+    "NAME": "Der Turm",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Der Schaden wird durch jede in diesem Kampf generierte Karte um !M! erhöht."
+  },
+  "awakened:ArcaneNesting": {
+    "NAME": "Arkane Ausbrütung",
+    "DESCRIPTION": "Unspielbar. NL Erhalte !B! Block wenn du mit dieser Karte auf der Hand eine Macht spielst.",
+    "EXTENDED_DESCRIPTION": [
+      "Ich muss Mächte ausspielen um Block zu erhalten."
+    ]
+  },
+  "awakened:MiddenHeap": {
+    "NAME": "Misthaufen",
+    "DESCRIPTION": "Erhalte !B! Block. NL Nimm !M! Status oder Fluch vom Nachzieh- oder Abwurfstapel auf die Hand.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Nimm !M! Status- oder Fluchkarten vom Nachzieh- oder Abwurfstapel auf die Hand.",
+    "EXTENDED_DESCRIPTION": [
+      "Nimm eine Karte auf die Hand.",
+      "Nimm Karten auf die Hand."
+    ]
+  },
+  "awakened:Caw": {
+    "NAME": "Krächz",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: Alle *Krächz Karten fügen diesen Kampf !M! Schaden mehr zu."
+  },
+  "awakened:Scour": {
+    "NAME": "Scheuern",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! awakened:Manabrand an."
+  },
+  "awakened:Manastorm": {
+    "NAME": "Manasturm",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL awakened:Rufe zweimal *auf."
+  },
+  "awakened:StormRuler": {
+    "NAME": "Donnergott",
+    "DESCRIPTION": "awakened:Aufrufen. NL *Blitzstrahlen fügen !M! mehr Schaden zu."
+  },
+  "awakened:AphoticFount": {
+    "NAME": "Aphotische Quellen",
+    "DESCRIPTION": "awakened:Aufrufen. NL Erhalte immer wenn du *Kryostase spielst !M! expansioncontent:Panzerrüstung."
+  },
+  "awakened:Bloodthirst": {
+    "NAME": "Blutdurst",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Falls tödlich, erhalte einen awakened:Machttrank und erschöpfe diese Karte."
+  },
+  "awakened:Procession": {
+    "NAME": "Prozession",
+    "DESCRIPTION": "Spiele eine Karte aus dem Nachziehstapel und mische *Leeren in Höhe ihrer Kosten hinein. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Spiele eine Karte aus dem Nachziehstapel und mische *Leeren in Höhe ihrer Kosten hinein."
+  },
+  "awakened:SplitWide": {
+    "NAME": "Aufreißen",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte immer wenn du diesen Gegner angreifst !M! temporäre Stärke. NL Erschöpft."
+  },
+  "awakened:Spellshield": {
+    "NAME": "Zauberschild",
+    "DESCRIPTION": "Erhalte am Ende des Zuges !M! Block für jede Karte die du behältst."
+  },
+  "awakened:Siphon": {
+    "NAME": "Siphon",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: gremlin:Stiehl für diesen Zug !M! Stärke."
+  },
+  "awakened:PlumeJab": {
+    "NAME": "Federstich",
+    "DESCRIPTION": "Behalten. NL Füge zweimal einem zufälligen Gegner !D! Schaden zu. NL Erschöpft."
+  },
+  "awakened:Primacy": {
+    "NAME": "Vorrang",
+    "DESCRIPTION": "Ziehe das erste Mal an dem du im Zug Stärke erhältst eine Karte.",
+    "UPGRADE_DESCRIPTION": "Ziehe die ersten !M! Male an dem du im Zug Stärke erhältst eine Karte."
+  },
+  "awakened:Daggerstorm": {
+    "NAME": "Dolchsturm",
+    "DESCRIPTION": "Immer wenn du eine Karte generierst, füge einem zufälligen Gegner !M! Schaden zu."
+  },
+  "awakened:PackRat": {
+    "NAME": "Rudelratte",
+    "DESCRIPTION": "Füge zweimal !D! Schaden zu und Erhalte zweimal !B! Block. NL Erhalte einen zufälligen Trank. NL Erschöpft."
+  },
+  "awakened:Mantis": {
+    "NAME": "Mantis",
+    "DESCRIPTION": "Erhalte !M! Stärke. NL Nimm einen *Federstich in die Hand."
+  },
+  "awakened:ManaShield": {
+    "NAME": "Manaschild",
+    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Aufrufen. NL Ein zufälliger Zauber in der Hand kostet 1 weniger."
+  },
+  "awakened:Crusher": {
+    "NAME": "Brecher",
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Wenn eine Karte generiert wird, kostet Brecher um 1 weniger bis du ihn ausspielst."
+  },
+  "awakened:Minniegun": {
+    "NAME": "Minniegun",
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Mische eine *Leere in den Nachziehstapel."
+  },
+  "awakened:SignInBlood": {
+    "NAME": "Mit Blut unterschreiben",
+    "DESCRIPTION": "Erleide !awakened:m2! Schaden. NL Ziehe !M! Karten. NL Erhalte !awakened:m2! Stärke. NL Erschöpft."
+  },
+  "awakened:SpreadingSpores": {
+    "NAME": "Sporen ausbreiten",
+    "DESCRIPTION": "Flüchtig. NL Erhalte !M! Stacheln. NL Mische eine Kopie in den Nachziehstapel."
+  },
+  "awakened:Scheme": {
+    "NAME": "Böser Plan",
+    "DESCRIPTION": "Die nächste Karte mit den Kosten von höchstens 1 wird in diesem Zug zweimal gespielt.",
+    "UPGRADE_DESCRIPTION": "Die nächsten !M! Karten mit den Kosten von höchstens 1 werden in diesem Zug zweimal gespielt."
+  },
+  "awakened:TheEncyclopedia": {
+    "NAME": "Enzyklopädie",
+    "DESCRIPTION": "Nimm 2 von !M! zufälligen Karten auf die Hand. Sie kosten um 2 weniger. NL Erschöpft.",
+    "EXTENDED_DESCRIPTION": [
+      "Nimm 2 Karten auf die Hand."
+    ]
+  },
+  "awakened:RealityRift": {
+    "NAME": "Dimensionsspalte",
+    "DESCRIPTION": "Nimm !awakened:m2! von !M! mächtigen Karten einer *ANDEREN *DIMENSION auf die Hand. NL Lege 2 *Leeren in den Abwurfstapel. Erschöpft."
+  },
+  "awakened:Inscribe": {
+    "NAME": "Einschreiben",
+    "DESCRIPTION": "Wähle einen Zauberspruch. Lege für den Rest des Kampfes !M! Kopien davon in das Zauberbuch.",
+    "UPGRADE_DESCRIPTION": "awakened:Aufrufen. NL Wähle einen Zauberspruch. Lege für den Rest des Kampfes !M! Kopien davon in das Zauberbuch."
+  }
+}

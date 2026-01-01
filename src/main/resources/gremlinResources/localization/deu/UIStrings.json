@@ -1,0 +1,74 @@
+{
+  "Gremlin:NobFight": {
+    "TEXT": [
+      "HER MIT DEN SEELEN, WINZLINGE!",
+      "Hey, Hitzkopf. Du kommst jetzt mit mir.",
+      "Hey, Fettklops. Du kommst jetzt mit mir.",
+      "Hey, Kleine. Du kommst jetzt mit mir.",
+      "Hey, Zappelphilipp. Du kommst jetzt mit mir.",
+      "Hey. Hohlkopf. Du kommst jetzt mit mir.",
+      "Hey. Du kommst jetzt mit mir.",
+      "Ich muss wählen."
+    ]
+  },
+  "Gremlin:GremFight": {
+    "TEXT": [
+      "Schlagt ihre Schädel ein!",
+      "Macht sie fertig!",
+      "Plündert ihr Zeug!"
+    ]
+  },
+  "Gremlin:ResurrectOption": {
+    "TEXT": [
+      "Wiederbeleben",
+      "(Kleine Aktion) Bring einen Gremlin von den Toten zurück.",
+      "Erfordert einen toten Gremlin.",
+      "Das Grab wurde bereits geschändet.",
+      "ICH BIN WIEDER DA!",
+      "ICH BIN ZURÜCK!",
+      "BEREIT FÜR MEHR MISSETATEN!"
+    ]
+  },
+  "Gremlin:RestOption": {
+    "TEXT": [
+      "Ausruhen",
+      "Heile jeden Gremlin um 100% der Max TP (",
+      " TP von ",
+      "Heile jeden Gremlin um 100% der Max TP (",
+      "Sind Gremlins tot wird ein zufälliger wiederbelebt."
+    ]
+  },
+  "Gremlin:Swap": {
+    "TEXT": [
+      "KEIN WECHSEL!",
+      "ARISTO IST DER BOSS!",
+      "ARISTO HAT FÜR IMMER DAS SAGEN!"
+    ]
+  },
+  "Gremlin:ArtMode": {
+    "TEXT": [
+      "Gremlinbild-Modus",
+      "Gremlins machen sich auf dem Kartentext breit. Ändert nur das Visuelle. Erleichtert das Finden von Synergien."
+    ]
+  },
+  "Gremlin:BonusGold": {
+    "TEXT": [
+       " Gold (Bonus)"
+    ]
+  },
+  "Gremlin:MakeEchoAction": {
+    "TEXT": [
+      "Echo: "
+    ]
+  },
+  "Gremlin:EventReplacementStrings": {
+    "TEXT": [
+      "#rVerliere #r",
+      " #rTP",
+      "#rAlle #rGremlins #rverlieren #r",
+      "#gErhalte #g",
+      " #gTP",
+      "#gAlle #gGremlins #gerhalten #g"
+    ]
+  }
+}

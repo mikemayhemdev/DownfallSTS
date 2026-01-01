@@ -1,0 +1,108 @@
+{
+  "bronze:BronzeCore": {
+    "NAME": "Bronzekern",
+    "FLAVOR": "Hält 50.000 Jahre.",
+    "DESCRIPTIONS": [
+      "Erhalte [E] wenn du das Erste Mal im Kampf eine Funktion kompilierst."
+    ]
+  },
+  "bronze:ProtectiveGoggles": {
+    "NAME": "Schutzbrille",
+    "FLAVOR": "Sieh es dir genau an.",
+    "DESCRIPTIONS": [
+      "Wenn am Ende deines Zuges keine Karte #ykodiert ist, dann erhalte #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "bronze:DecasWashers": {
+    "NAME": "Dekas Dichtungen",
+    "FLAVOR": "Es ist nicht ganz klar warum Deka sie sammelt.",
+    "DESCRIPTIONS": [
+      "Ziehe zu Beginn deiner ersten #b",
+      " Züge jeweils eine zusätzliche Karte."
+    ]
+  },
+  "bronze:Timepiece": {
+    "NAME": "Frostige Grundierung",
+    "FLAVOR": "22 Miligramm des Isotops Ne22 - Lebensdauer: 22 Jahre. Zu lagern in einem Mahagonikühlschrank.",
+    "DESCRIPTIONS": [
+      "Alle Funktionen die du kompilierst erhalten #yBehalten [REMOVE_SPACE]."
+    ]
+  },
+  "bronze:Mallet": {
+    "NAME": "Hammer",
+    "FLAVOR": "Jetzt reicht's! Ich hole meinen Hammer!",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn jedes Kampfes #b2 #yFeinjustierung+ Karten auf die Hand."
+    ]
+  },
+  "bronze:SilverBullet": {
+    "NAME": "Silberkugel",
+    "FLAVOR": "Spirewölfe sind schon ausgestorben.",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn jedes Kampfes einen #yDurchschuss auf die Hand. Er kostet #b0 ."
+    ]
+  },
+  "bronze:MakeshiftBattery": {
+    "NAME": "Improvisierte Batterie",
+    "FLAVOR": "Sie hat 8,9 Volt.",
+    "DESCRIPTIONS": [
+      "Erhalte in deinem Zug [E] . Lege zu Beginn jedes Zuges eine #yVerschleimt Karte in den Abwurfstapel."
+    ]
+  },
+  "bronze:CableSpool": {
+    "NAME": "Kabeltrommel",
+    "FLAVOR": "Verstrickt...",
+    "DESCRIPTIONS": [
+      "Die erste Karte die im Kampf #ykodiert wird, #ykodiert ein zweites Mal."
+    ]
+  },
+  "bronze:ElectromagneticCoil": {
+    "NAME": "Elektromagnetische Spule",
+    "FLAVOR": "Eine ineffiziente, aber unterhaltsame Energiequelle.",
+    "DESCRIPTIONS": [
+      "Funktionen bestehen nun aus #b4 Karten."
+    ]
+  },
+  "bronze:PlatinumCore": {
+    "NAME": "Platinkern",
+    "FLAVOR": "Changelog: UX verbessert.",
+    "DESCRIPTIONS": [
+      "Ersetzt ",
+      " [REMOVE_SPACE].[] NL Die ersten #b",
+      " kompilierten Funktionen des Kampfes kosten #b0 bis du sie spielst."
+    ]
+  },
+  "bronze:BottledCode": {
+    "NAME": "Flaschencode",
+    "FLAVOR": "Moment, ich habe Code für genau diese Situation dabei...",
+    "DESCRIPTIONS": [
+      "Wähle beim Aufheben eine Karte mit #yKodieren [REMOVE_SPACE]. Beginn jeden Kampf mit dieser Karte #ykodiert [REMOVE_SPACE].",
+      "Wähle eine Karte für ",
+      "Beginne jeden Kampf mit ",
+      " #ykodiert [REMOVE_SPACE].",
+      "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
+    ]
+  },
+  "bronze:DonusWashers": {
+    "NAME": "Donus Dichtungen",
+    "FLAVOR": "Es ist offensichtlich warum Donu sie sammelt.",
+    "DESCRIPTIONS": [
+      "Erhalte im ersten Zug jedes Kampfes [E] [E] und mische #b1 #yLeere in den Nachziehstapel."
+    ]
+  },
+  "bronze:BronzeIdol": {
+    "NAME": "Bronzener Götze",
+    "FLAVOR": "Ein antiker, zur Waffe umfunktionierter Antivirus - wer hat ihn gebaut, und warum?",
+    "DESCRIPTIONS": [
+      "#yStatus Karten sind nun spielbar und haben einen positivn Effekt."
+    ]
+  },
+  "bronze:AnalyticalCore": {
+    "NAME": "Paradoxes Artefakt",
+    "FLAVOR": "Du warst beim Coden noch nie so sehr in Ekstase.",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn jedes Zuges eine zufällige Karte mit #yKodieren auf die Hand. Sie ist #yflüchtig [REMOVE_SPACE]."
+    ]
+  }
+}

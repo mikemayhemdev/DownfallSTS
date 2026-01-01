@@ -103,7 +103,7 @@
   },
   "Slimebound:GrowthPunch": {
     "NAME": "Wachstumshieb",
-    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL slimeboundmod:Konsum - Erhöhe die Wirkung dieser Karte für den Kampf um !M!."
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL slimeboundmod:Konsum - Erhöhe die Wirkung dieser Karte für diesen Kampf um !M!."
   },
   "Slimebound:HauntingLick": {
     "NAME": "Schauriger Wabbel",
@@ -292,7 +292,7 @@
     "UPGRADE_DESCRIPTION": "Flüchtig. NL Füge ALLEN Gegnern !D! Schaden zu. NL Erschöpft."
   },
   "Slimebound:SlimeSlap": {
-    "NAME": "Schleimwatsche",
+    "NAME": "Schleimschelle",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Dieser Angriff entfernt den slimeboundmod:Glibber nicht."
   },
   "Slimebound:SlimeSpikes": {
@@ -330,9 +330,9 @@
     "DESCRIPTION": "Behalten. NL Beschwöre den Gierschleim. Zählt als slimeboundmod:Abspaltung. NL Erschöpft."
   },
   "Slimebound:SplitLeeching": {
-    "NAME": "Blutsauger Abspalten",
-    "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Blutsaugerschleim ab. NL slimeboundmod:Kommando !M! Mal.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Blutsaugerschleim ab. NL slimeboundmod:Kommando drei Mal."
+    "NAME": "Beschützer Abspalten",
+    "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Beschützerschleim ab. NL slimeboundmod:Kommando !M! Mal.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Beschützerschleim ab. NL slimeboundmod:Kommando drei Mal."
   },
   "Slimebound:SplitMire": {
     "NAME": "Schlamm Abspalten",

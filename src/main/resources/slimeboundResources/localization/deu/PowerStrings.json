@@ -56,9 +56,9 @@
     ]
   },
   "Slimebound:BuffShieldSlimesPower": {
-    "NAME": "Upgrade: Blutsauger",
+    "NAME": "Upgrade: Beschützer",
     "DESCRIPTIONS": [
-      "#yBlutsaugerschleime fügen um #b",
+      "#yBeschützerschleime fügen um #b",
       " mehr Schaden zu."
     ]
   },

@@ -27,7 +27,7 @@
   },
   "HermitMod:HexaghostTutorials": {
     "TEXT": [
-      "Der Hexageist kann kräfte durch das Entzünden der Geisterflammen freisetzen.",
+      "Der Hexageist durch das Entzünden seiner Geisterflammen Kräfte freisetzen.",
       "Die aktuelle Geisterflamme wird durch bestimmte Aktionen entzündet."
     ],
     "LABEL": [
@@ -53,7 +53,7 @@
   },
   "HermitMod:ChampTutorials": {
     "TEXT": [
-      "Der Champ kann zwei Haltungen im Kampf annehmen: Berserker und Verteidiger. Das Ausspielen einer Fertigkeit während einer Haltung aktiviert den jeweiligen Bonus der Haltung, was bis zu drei Mal möglich ist.",
+      "Der Champ kann zwei Haltungen im Kampf annehmen: Offensiv und Defensiv. Das Ausspielen einer Fertigkeit während einer Haltung aktiviert den jeweiligen Bonus der Haltung, was bis zu drei Mal möglich ist.",
       "Während einer Haltung können Abschlusskarten gespielt werden, welche den Abschlussbonus der Haltung aktivieren, jedoch zum Verlassen der Haltung führen."
     ],
     "LABEL": [
@@ -79,7 +79,7 @@
   },
   "HermitMod:SneckoTutorials": {
     "TEXT": [
-      "Snecko kann Karten irren um ihre Kosten für den Zug auf einen Zufallswert zwischen 0 and 3 zu verändern. Durch das Irren werden die Kosten immer verändert - die Kosten welche die Karte vor dem Irren hat ist vom Ergebnis ausgeschlossen.",
+      "Snecko kann Karten irren um ihre Kosten für den Zug auf einen Zufallswert zwischen 0 and 3 zu verändern. Durch das Irren werden die Kosten immer verändert - die Kosten welche die Karte vor dem Irren hatte ist vom Ergebnis ausgeschlossen.",
       "Snecko kann auch Geschenkkarten finden. Diese Karten geben Snecko eine weitere Karte eines anderen Charakters."
     ],
     "LABEL": [

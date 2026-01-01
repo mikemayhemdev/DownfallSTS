@@ -93,7 +93,7 @@
   },
   "collector:BonusEventOption": {
     "TEXT": [
-      "[Sammeln]"
+      "[Einsammeln]"
     ]
   },
   "collector:EssenceReward": {
