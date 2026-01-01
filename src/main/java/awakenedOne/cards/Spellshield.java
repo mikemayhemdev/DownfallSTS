@@ -13,7 +13,7 @@ public class Spellshield extends AbstractAwakenedCard {
 
     public Spellshield() {
         super(ID, 2, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
         loadJokeCardImage(this, makeBetaCardPath(Spellshield.class.getSimpleName() + ".png"));
     }
 
