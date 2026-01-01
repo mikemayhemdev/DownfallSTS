@@ -280,7 +280,7 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "劫火の雨",
-    "DESCRIPTION": "!D! ダメージを与え、 !M! を X 回与える。",
+    "DESCRIPTION": "!D! ダメージと 脱力 !M! を X 回与える。",
     "UPGRADE_DESCRIPTION": "!D! ダメージと 脱力 !M! を X+1 回与える。"
   },
   "hexamod:NightmareVision": {

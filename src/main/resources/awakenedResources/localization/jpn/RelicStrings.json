@@ -42,15 +42,15 @@
     "NAME": "神秘の眼",
     "FLAVOR": "この恐ろしい彫刻は持つ者に魔術の知識を与える。",
     "DESCRIPTIONS": [
-      "#yサンダーボルト と #yダークリーチ が敵全体をターゲットにする。"
+      "#y雷撃 と #y暗吸精 が敵全体をターゲットにする。"
     ]
   },
   "awakened:DeadBird": {
     "NAME": "烏の魂",
     "FLAVOR": "この亡霊は呪われし者共のすぐ後ろに付き纏う。",
     "DESCRIPTIONS": [
-      "At the end of your turn, deal #b",
-      " damage to the lowest HP enemy, increased by #y筋力 "
+      "ターン終了時、最もHPの少ない敵に #b",
+      " ダメージを与える。この効果は #y筋力 の影響を受ける。"
     ]
   },
   "awakened:AbyssBlade": {
@@ -103,7 +103,7 @@
     "FLAVOR": "疑念と呪詛を千度折り畳んだ裁定者",
     "DESCRIPTIONS": [
       "敵が #yawakened:マナバーン で追加で #b",
-      "% ダメージを受ける。"
+      "% のダメージを受ける。"
     ]
   },
   "awakened:CursedBlessing": {
