@@ -49,8 +49,8 @@
     "NAME": "烏の魂",
     "FLAVOR": "この亡霊は呪われし者共のすぐ後ろに付き纏う。",
     "DESCRIPTIONS": [
-      "At the end of your turn, deal #b",
-      " damage to the lowest HP enemy, increased by #y筋力 "
+      "ターン終了時、最もHPの少ない敵に #b",
+      " ダメージを与える。この効果は #y筋力 の影響を受ける。"
     ]
   },
   "awakened:AbyssBlade": {
