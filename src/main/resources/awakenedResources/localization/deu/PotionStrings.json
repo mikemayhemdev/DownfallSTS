@@ -1,0 +1,30 @@
+{
+  "awakened:PhaseSkip": {
+    "NAME": "Trank des Aufstiegs",
+    "DESCRIPTIONS": [
+      "#yErwache sofort und #yverbessere alle Karten für den Kampf."
+    ]
+  },
+  "awakened:CultistsDelight": {
+    "NAME": "Gebräu der Neugier",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du in diesem Kampf eine #yMacht ausspielst #b",
+      " #yStärke [REMOVE_SPACE]. Nimm eine zufällige #yMachtkarte auf die Hand. Sie kostet in diesem Zug #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:SacramentalWine": {
+    "NAME": "Messwein",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du in diesem Kampf eine #yMacht ausspielst #b",
+      " #yBlock [REMOVE_SPACE]. Nimm eine zufällige #yMachtkarte auf die Hand. Sie kostet in diesem Zug #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:SneckoPowersPotion": {
+    "NAME": "Snecko-Essenz",
+    "DESCRIPTIONS": [
+      "Wähle #b1 von #b3 zufälligen #yMachtkarten einer #Fremdklasse. Nimm sie auf die Hand, sie kostet diesen Zug #b0.",
+      "Wähle #b1 von #b3 zufälligen #yMachtkarten einer #Fremdklasse. Nimm #b",
+      " Kopien auf die Hand, sie kosten diesen Zug #b0 [REMOVE_SPACE]."
+    ]
+  }
+}

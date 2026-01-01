@@ -1,0 +1,42 @@
+{
+  "Gremlin:FatGremlin": {
+    "NAME": "Fetter Gremlin",
+    "DESCRIPTION": [
+      "Wende nach dem Ausspielen eines Angriffs #b",
+      " #ySchwach pro Treffer an."
+    ]
+  },
+
+  "Gremlin:GremlinWizard": {
+    "NAME": "Gremlinzauberer",
+    "DESCRIPTION": [
+      "Erhalte nach dem Ausspielen einer Fertigkeit #b",
+      " #yEsprit [REMOVE_SPACE]."
+    ]
+  },
+
+  "Gremlin:MadGremlin": {
+    "NAME": "Wütender Gremlin",
+    "DESCRIPTION": [
+      "Erhalte jdes Mal wenn du angegriffen wirst #b",
+      " #ytemporäre #yStärke pro Treffer."
+    ]
+  },
+
+  "Gremlin:ShieldGremlin": {
+    "NAME": "Schildgremlin",
+    "DESCRIPTION": [
+      "Erhalte nach dem Ausspielen einer Fertigkeit #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+
+  "Gremlin:SneakyGremlin": {
+    "NAME": "Schleichender Gremlin",
+    "DESCRIPTION": [
+      "Angriffe, die 0 kosten, fügen #b",
+      " zusätzlichen Schaden zu. Füge nach dem Ausspielen eines Angriffs einem zufälligen Gegner #b",
+      " Schaden zu."
+    ]
+  }
+}

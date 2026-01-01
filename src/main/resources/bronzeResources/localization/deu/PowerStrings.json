@@ -1,0 +1,145 @@
+{
+  "bronze:Cloning": {
+    "NAME": "Mergen",
+    "DESCRIPTIONS": [
+      "Die nächste Karte die #ykodiert wird, #ykodiert ein weiteres Mal.",
+      "Die nächste Karte die #ykodiert wird, #ykodiert #b",
+      " weitere Male."
+    ]
+  },
+  "bronze:Default": {
+    "NAME": "Standardklasse",
+    "DESCRIPTIONS": [
+      "Wird das nächste Mal eine Funktion kompiliert, dann #ykodiere eine Kopie der Karte im ersten Slot.",
+      "Die nächsten #b",
+      " Male an denen eine Funktion kompiliert, #ykodiere eine Kopie der Karte im ersten Slot."
+    ]
+  },
+  "bronze:Feature": {
+    "NAME": "Es ist ein Feature",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du einen #rStatus ziehst oder #yerschöpfst #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "bronze:InfiniteBeams": {
+    "NAME": "Zahllose Strahlen",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges erhältst du #b1 #yKleiner #yStrahl Karte.",
+      "Zu Beginn deines Zuges erhältst du #b1 #yKleiner #yStrahl+ Karte.",
+      "Zu Beginn deines Zuges erhältst du #b",
+      " #yKleiner #yStrahl Karten.",
+      "Zu Beginn deines Zuges erhältst du #b",
+      " #yKleiner #yStrahl+ Karten."
+    ]
+  },
+  "bronze:Optimize": {
+    "NAME": "Optimiert",
+    "DESCRIPTIONS": [
+      "Die nächste nicht verbesserte Karte die #ykodiert wird, #ykodiert #yverbessert.",
+      "Die nächste #b",
+      " nicht verbesserten Karten die #ykodiert werden, #ykodieren #yverbessert."
+    ]
+  },
+  "bronze:MaxOutput": {
+    "NAME": "Maximaler Output",
+    "DESCRIPTIONS": [
+      "Ziehe zu Beginn des Zuges zusätzlich #b1 Karte und mische #b1 #yBenommen in den Nachziehstapel.",
+      "Ziehe zu Beginn des Zuges #b",
+      " zusätzliche Karten und mische #b",
+      " #yBenommen in den Nachziehstapel."
+    ]
+  },
+  "bronze:Return": {
+    "NAME": "Retour",
+    "DESCRIPTIONS": [
+      "Ziehe zu Beginn deines nächsten Zuges #b1 Karte und erhalte [E] .",
+      "Zu Beginn deiner nächsten #b",
+      " Züge, ziehe #b1 Karte und erhalte [E]."
+    ]
+  },
+  "bronze:Library": {
+    "NAME": "Bibliothek",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn jedes Zuges eine zufällige Karte mit #yKodieren auf die Hand. Sie kostet #b0 bis du sie spielst.",
+      "Nimm zu Beginn jedes Zuges #b",
+      " zufällige Karten mit #yKodieren auf die Hand. Sie kosten #b0 bis du sie spielst."
+    ]
+  },
+  "bronze:LibraryMod": {
+    "NAME": "Externe Bibliothek",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn jedes Zuges eine zufällige Karte mit #yKodieren auf die Hand. Sie ist #yflüchtig [REMOVE_SPACE]."
+    ]
+  },
+  "bronze:BronzeHeatsink": {
+    "NAME": "Bronzener Wärmetauscher",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #yFunktion spielst, ziehe #b1 Karte.",
+      "Immer wenn du eine #yFunktion spielst, ziehe #b",
+      " Karten."
+    ]
+  },
+  "bronze:HardenedForm": {
+    "NAME": "Orb Beschwören",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine Funktion spielst oder kompilierst, erhalte #b",
+      " #yBlock und füge einem zufälligen Gegner #b",
+      " Schaden zu."
+    ]
+  },
+  "bronze:Hardcode": {
+    "NAME": "Hardcoden",
+    "DESCRIPTIONS": [
+      "Die nächste Funktion die du kompilierst wird deinem Deck hinzugefügt. Die #ykodierten Karten werden aus dem Deck entfernt",
+      "Die nächsten #b",
+      " Funktionen die du kompilierst werden deinem Deck hinzugefügt. Die #ykodierten Karten werden aus dem Deck entfernt."
+    ]
+  },
+  "bronze:Verify": {
+    "NAME": "Bewusste Form",
+    "DESCRIPTIONS": [
+      "Wenn du eine Funktion ziehst, erhöhe alle Zahlen auf ihr um #b1 (Kosten ausgenommen).",
+      "Wenn du eine Funktion ziehst, erhöhe alle Zahlen auf ihr um #b",
+      " (Kosten ausgenommen)."
+    ]
+  },
+  "bronze:FreeFunction": {
+    "NAME": "Freie Funktion",
+    "DESCRIPTIONS": [
+      "Die nächste Funktion die kompiliert kostet #b0 [REMOVE_SPACE].",
+      "Die nächsten #b",
+      " Funktionen die kompilieren kosten #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "bronze:CleanCode": {
+    "NAME": "Sauberer Code",
+    "DESCRIPTIONS": [
+      "Verhindert beim nächsten Kompilieren alle #yKompilierungsfehler. Hält für #b1 weitere Funktion.",
+      "Verhindert beim nächsten Kompilieren alle #yKompilierungsfehler. Hält für #b",
+      " weitere Funktionen."
+    ]
+  },
+  "bronze:CopyPaste": {
+    "NAME": "Kopieren & Einfügen",
+    "DESCRIPTIONS": [
+      "In diesem Zug spielst du deine nächste #yFunktion zweimal aus.",
+      "In diesem Zug spielst du deine nächsten #b",
+      " #yFunktionen zweimal aus."
+    ]
+  },
+  "bronze:FullRelease": {
+    "NAME": "Release",
+    "DESCRIPTIONS": [
+      "Zu Beginn jedes Zuges, NL "
+    ]
+  },
+  "bronze:RemoveNextError": {
+    "NAME": "Fehler beheben",
+    "DESCRIPTIONS": [
+      "Verhindere den nächsten #yKompilierungsfehler der #ykodiert wird.",
+      "Verhindere die nächsten #b",
+      " #yKompilierungsfehler die #ykodiert werden."
+    ]
+  }
+}

@@ -1,0 +1,397 @@
+{
+  "champ:Strike": {
+    "NAME": "Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu."
+  },
+  "champ:Defend": {
+    "NAME": "Verteidigen",
+    "DESCRIPTION": "Erhalte !B! Block."
+  },
+  "champ:Taunt": {
+    "NAME": "Verspotten",
+    "DESCRIPTION": "Wende !M! Schwach und Verwundbar an.",
+    "UPGRADE_DESCRIPTION": "Wende !M! Schwach und Verwundbar auf ALLE Gegner an."
+  },
+  "champ:Execute": {
+    "NAME": "Hinrichten",
+    "DESCRIPTION": "Füge !cool! Mal !D! Schaden zu.",
+    "UPGRADE_DESCRIPTION": "Füge !cool! Mal !D! Schaden zu."
+  },
+  "champ:StanceDance": {
+    "NAME": "Haltungstanz",
+    "DESCRIPTION": "Nimm eine *Haltung deiner Wahl an. NL Aktiviere ihren champ:Fertigkeitsbonus.",
+    "UPGRADE_DESCRIPTION": "Nimm eine *Haltung deiner Wahl an. NL Aktiviere ihren champ:Fertigkeitsbonus zweimal.",
+    "EXTENDED_DESCRIPTION": [
+      "Nimm die champ:Offensivhaltung an.",
+      "Nimm die champ:Defensivhaltung an."
+    ]
+  },
+  "champ:StanceDanceCrown": {
+    "NAME": "Inspiration",
+    "DESCRIPTION": "Behalten. NL Nimm eine zufällige *Haltung an, in der du dich nicht befindest. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Nimm eine zufällige *Haltung an, in der du dich nicht befindest."
+  },
+  "champ:SwordSigil": {
+    "NAME": "Siegesbanner",
+    "DESCRIPTION": "Aktiviere den champ:Fertigkeitsbonus deiner *Haltung !M! Mal."
+  },
+  "champ:FaceSlap": {
+    "NAME": "Schelle ins Gesicht",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Offensivcombo: Wende !M! Verwundbar an."
+  },
+  "champ:FlashCut": {
+    "NAME": "Blendender Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Defensivcombo: Erhalte !M! champ:Konter und !B! Block."
+  },
+  "champ:DefensiveShout": {
+    "NAME": "Defensivschrei",
+    "DESCRIPTION": "Erhalte !M! champ:Konter. NL Nimm die champ:Defensivhaltung an."
+  },
+  "champ:ShieldSigil": {
+    "NAME": "Kettenpeitsche",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Die Effekte der champ:Fertigkeitsboni werden in diesem Zug um !M! erhöht."
+  },
+  "champ:FocusedDefense": {
+    "NAME": "Tänzeln und Ausweichen",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! Elan. NL Nimm die champ:Offensivhaltung an."
+  },
+  "champ:FocusedBerserking": {
+    "NAME": "Alles Rauslassen",
+    "DESCRIPTION": "Erschöpft. NL Führe, ohne die Haltung zu verlassen, !M! Mal aus: "
+  },
+  "champ:SetATrap": {
+    "NAME": "Falle Aufstellen",
+    "DESCRIPTION": "Erhalte !B! Block. NL champ:Defensivcombo: Wende !M! Schwach auf ALLE Gegner an."
+  },
+  "champ:Backstep": {
+    "NAME": "Rückschritt",
+    "DESCRIPTION": "Erhalte !B! Block. Das Block dieser Karte erhöht sich auch mit *Elan."
+  },
+  "champ:BerserkersShout": {
+    "NAME": "Offensivschrei",
+    "DESCRIPTION": "Erhalte !M! Elan. NL Nimm die champ:Offensivhaltung an."
+  },
+  "champ:RageSigil": {
+    "NAME": "Schlachtplan",
+    "DESCRIPTION": "Nimm die champ:Defensivhaltung an. NL Erhalte !B! Block. NL Spähe !M!."
+  },
+  "champ:GutPunch": {
+    "NAME": "Magenhieb",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Combo (jede *Haltung): Nimm die champ:Ultimative *Haltung für 1 Zug an. NL Erschöpft."
+  },
+  "champ:FanOfKnives": {
+    "NAME": "Messersturm",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL champ:Offensivcombo: Trifft zweimal.",
+    "UPGRADE_DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL champ:Offensivcombo: Trifft drei Mal."
+  },
+  "champ:Devastate": {
+    "NAME": "Verwüsten",
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Costs 1 [E] weniger für jeden *Abschluss der in diesem Kampf gespielt wurde."
+  },
+  "champ:Circumvent": {
+    "NAME": "Überlisten",
+    "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karten. NL Wirf !M! Karten ab. NL champ:Defensivcombo: Wirf keine Karten ab."
+  },
+  "champ:SkillfulDodge": {
+    "NAME": "Kunstvolles Ausweichen",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL champ:Defensivcombo: Erhöhe die Wirkung dieser Karte für diesen Kampf um !cool!."
+  },
+  "champ:TornadoPunch": {
+    "NAME": "Tornadohieb",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL champ:Defensivcombo: Erhalte !B! Block für jeden getroffenen Gegner.",
+    "UPGRADE_DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL champ:Defensivcombo: Erhalte !B! Block für jeden getroffenen Gegner."
+  },
+  "champ:EnGarde": {
+    "NAME": "En Garde",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wenn dein ganzes Block in diesem Zug verbraucht wird, dann erhalte im nächsten Zug !B! Block."
+  },
+  "champ:ShieldSlam": {
+    "NAME": "Augenblick der Wahrheit",
+    "DESCRIPTION": "Behalten. NL Ziehe !M! Karte.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Ziehe !M! Karten."
+  },
+  "champ:EnchantShield": {
+    "NAME": "Shieldverzauberung",
+    "DESCRIPTION": "Wähle eine Karte. NL Erhöhe den Block dieser Karte für diesen Kampf um !M!. NL Erschöpft.",
+    "EXTENDED_DESCRIPTION": [
+      "Ein miserabler Zeitpunkt dafür."
+    ]
+  },
+  "champ:BringItOn": {
+    "NAME": "Greif schon an!",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter.",
+    "EXTENDED_DESCRIPTION": [
+      "Ich bin gerade in keiner Haltung."
+    ]
+  },
+  "champ:ShieldThrow": {
+    "NAME": "Schildwurf",
+    "DESCRIPTION": "Füge Schaden in Höhe deines aktuellen Blocks zu - zweimal. NL Bist du nicht in champ:Defensivhaltung, geben Karten im nächsten Zug keinen Block.",
+    "EXTENDED_DESCRIPTION": [
+      "Füge Schaden in Höhe deines aktuellen Blocks ( !D! ) zweimal zu. NL Bist du nicht in champ:Defensivhaltung, geben Karten im nächsten Zug keinen Block."
+    ]
+  },
+  "champ:FalseCounter": {
+    "NAME": "Gegner Ermüden",
+    "DESCRIPTION": "Erhalte !B! Block. NL Im nächsten Zug, ziehe 2 Karten und erhalte [E] .",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Im nächsten Zug, ziehe 2 Karten und erhalte [E] [E] ."
+  },
+  "champ:IronFortress": {
+    "NAME": "Technisches Tänzeln",
+    "DESCRIPTION": "Erhalte immer wenn du eine *Haltung annimmst !M! Block."
+  },
+  "champ:Lariat": {
+    "NAME": "Lariat",
+    "DESCRIPTION": "Erhalte X Mal !B! Block. NL Aktiviere X Mal den champ:Fertigkeitsbonus deiner *Haltung."
+  },
+  "champ:HoldFirm": {
+    "NAME": "Standhalten",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL Erhalte 1 bronze:Verschwimmen."
+  },
+  "champ:ShieldWall": {
+    "NAME": "Eiserne Festung",
+    "DESCRIPTION": "Erhalte 2 Geschicklichkeit. NL Erhalte am Ende jedes Zuges !M! Block."
+  },
+  "champ:Haymaker": {
+    "NAME": "Piledriver",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende 2 Verwundbar an. NL Wende 2 Schwach an."
+  },
+  "champ:ViciousMockery": {
+    "NAME": "Verhöhnen",
+    "DESCRIPTION": "Erhalte !M! Elan. NL Wende !DM! Schwach an. NL Aktiviere den champ:Fertigkeitsbonus deiner *Haltung.",
+    "EXTENDED_DESCRIPTION": [
+      "champ:Offensivcombo: Erhalte !M! temporäre Stärke. NL ",
+      "champ:Defensivcombo: Erhalte !M! temporäre Geschicklichkeit."
+    ]
+  },
+  "champ:PreciseThrust": {
+    "NAME": "Präziser Stoß",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Offensivcombo: Füge !D! Schaden zu. NL champ:Defensivcombo: Erhalte !B! Block."
+  },
+  "champ:CrookedStrike": {
+    "NAME": "Gebeugter Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Verbraucht keinen Elan."
+  },
+  "champ:RapidStrikes": {
+    "NAME": "Rapide Schläge",
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Einr zufällige \"Schlag\" Karte auf deiner Hand kostet in diesem Zug 0."
+  },
+  "champ:EnchantSword": {
+    "NAME": "Schwertverzauberung",
+    "DESCRIPTION": "Wähle eine Karte. NL Erhöhe den Schaden dieser Karte für diesen Kampf um !M!. Erschöpft.",
+    "EXTENDED_DESCRIPTION": [
+      "Ein miserabler Zeitpunkt dafür."
+    ]
+  },
+  "champ:BladeFlurry": {
+    "NAME": "Schlagserie",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste \"Schlag\" Karte die du in diesem Zug spielst wird zweimal gespielt."
+  },
+  "champ:SwordThrow": {
+    "NAME": "Schwertwurf",
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Wenn du nicht in der champ:Offensivhaltung bistm kannst du im nächsten Zug keine *Angriffe spielen."
+  },
+  "champ:MurderStrike": {
+    "NAME": "Mörderischer Schlag",
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Erhöhe den Schaden dieser Karte um !M! wenn sie sich in der Hand befindet während du eine Fertigkeit spielst."
+  },
+  "champ:HeavySlash": {
+    "NAME": "Meisterhafter Hieb",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte im nächsten Zug Elan in Höhe des ungeblockten Schadens."
+  },
+  "champ:CheapShot": {
+    "NAME": "Fieser Trick",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft bei Bossen zwei weitere Male. Ansonsten wird das Ziel hermit:betäubt . NL Erschöpft."
+  },
+  "champ:RisingSlash": {
+    "NAME": "Steiler Schlag",
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Wenn die letzte gespielte Karte ein champ:Abschluss war, dann füge erneut !D! Schaden zu."
+  },
+  "champ:Shatter": {
+    "NAME": "Zerschellen",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Combo (jede *Haltung): Wende !M! Schwach und Verwundbar an."
+  },
+  "champ:EnragedBash": {
+    "NAME": "Erzürntes Niederknüppeln",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Offensivcombo: Diese Karte trifft in diesem Kamp ein weiteres Mal.",
+    "EXTENDED_DESCRIPTION": [
+      "Füge !M! Mal !D! Schaden zu. NL champ:Offensivcombo: Diese Karte trifft in diesem Kamp ein weiteres Mal."
+    ]
+  },
+  "champ:VampiricStrike": {
+    "NAME": "Schmetterschlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte Block in Höhe des ungeblockten Schadens."
+  },
+  "champ:AdrenalArmor": {
+    "NAME": "Adrenal-Rüstung",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! temporäre Strength."
+  },
+  "champ:HeartStrike": {
+    "NAME": "Finish Him",
+    "DESCRIPTION": "Füge !D! Schaden zu - Zweimal wenn seine TP unter !M! % liegen.",
+    "EXTENDED_DESCRIPTION": [
+      "Ein miserabler Zeitpunkt dafür.",
+      "Dieser Gegner kann noch nicht beendet werden."
+    ]
+  },
+  "champ:CrownThrow": {
+    "NAME": "Kronerang",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Offensivcombo: Ziehe !M! Karten."
+  },
+  "champ:Encircle": {
+    "NAME": "Umkreisen",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Ziehe für jeden getroffenen Gegner !M! Karte."
+  },
+  "champ:LastStand": {
+    "NAME": "Letztes Aufgebot",
+    "DESCRIPTION": "Entferne alle Debuffs und erhalte !M! Stärke sobald deine TP unter 50% fallen.",
+    "EXTENDED_DESCRIPTION": [
+      "~Jetzt~ ~hast~ ~du~ ~es~ ~geschafft~ ~...~",
+      "@EINE@ @NIEDERLAGE??@ NL @UNMÖGLICH!!@"
+    ]
+  },
+  "champ:RecklessLeap": {
+    "NAME": "Rücksichtsloser Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! Stärke. NL Nimm die champ:Offensivhaltung an. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! Stärke. NL Nimm die champ:Offensivhaltung an.",
+    "EXTENDED_DESCRIPTION": [
+      "Ein miserabler Zeitpunkt dafür."
+    ]
+  },
+  "champ:IgnorePain": {
+    "NAME": "Schmerzen Ignorieren",
+    "DESCRIPTION": "Deine TP können bis zum Beginn des nächsten Zuges nicht fallen. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Deine TP können bis zum Beginn des nächsten Zuges nicht fallen. NL Erschöpft."
+  },
+  "champ:DeathBlow": {
+    "NAME": "Todesstoß",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte !M! Elan. NL Erschöpft."
+  },
+  "champ:ArenaPreparation": {
+    "NAME": "Schlachtvorbereitung",
+    "DESCRIPTION": "Erhalte !M! zufällige Fertigkeiten. NL Sie erhalten Behalten. NL Erschöpft."
+  },
+  "champ:SteelEdge": {
+    "NAME": "Stählerne Klinge",
+    "DESCRIPTION": "Füge X Mal !D! Schaden zu. NL Führe X Mal (mindestens 1 Mal) aus:",
+    "EXTENDED_DESCRIPTION": [
+      "champ:Offensivcombo: Füge X Mal !D! Schaden zu. NL ",
+      "champ:Defensivcombo: Erhalte X Mal !B! Block.",
+      "Gladiator: Ziehe eine Karte und erhalte [E] .",
+      "Gladiator: Ziehe 2 Karte und erhalte [E] .",
+      "champ:Combo NL "
+    ]
+  },
+  "champ:Improvising": {
+    "NAME": "Improvisation",
+      "DESCRIPTION": "Immer wenn du eine *Haltung annimst, aktiviere ihren champ:Fertigkeitsbonus !M! Mal."
+  },
+  "champ:CalledShot": {
+    "NAME": "Erfrischungen",
+    "DESCRIPTION": "champ:Offensivcombo: Erhalte [E] [E] , und Erschöpfe diese Karte. NL champ:Defensivcombo: Ziehe !M! Karten.",
+    "UPGRADE_DESCRIPTION": "champ:Offensivcombo: Erhalte [E] [E] [E] , und Erschöpfe diese Karte. NL champ:Defensivcombo: Ziehe !M! Karten.",
+    "EXTENDED_DESCRIPTION": [
+      "champ:Offensivcombo: Erhalte [E] [E] , und Erschöpfe diese Karte. NL ",
+      "champ:Offensivcombo: Erhalte [E] [E] [E] , und Erschöpfe diese Karte. NL ",
+      "champ:Defensivcombo: Ziehe !M! Karten.",
+      "Ein miserabler Zeitpunkt dafür."
+    ]
+  },
+  "champ:PerfectedStrike": {
+    "NAME": "Perfekterer Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Fügt für JEDE deiner \"Schlag\" beinhaltenden Karten !M! zusätzlichen Schaden zu."
+  },
+  "champ:GladiatorForm": {
+    "NAME": "Gladiatorenform",
+    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges !M! Elan für alle 3 verbrauchten Elan im vorherigen Zug. Wiederhole dann diesen Vorgang für champ:Konter."
+  },
+  "champ:Duel": {
+    "NAME": "Herausfordern",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Wiederhole die Effekte wenn das Ziel Stärke hat.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Wiederhole die Effekte wenn das Ziel Stärke hat.."
+  },
+  "champ:DancingMaster": {
+    "NAME": "Tanzmeister",
+    "DESCRIPTION": "Das erste Mal wenn du im Zug einen champ:Abschluss spielst, ziehe 1 Karte und erhalte [E] ."
+  },
+  "champ:StrikeOfGenius": {
+    "NAME": "Genieschlag",
+    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen \"Schlag\" Karte. NL Es kostet 0 bis du es spielst.",
+    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen verbesserten \"Schlag\" Karte. NL Es kostet 0 bis du es spielst."
+  },
+  "champ:DefensiveStyle": {
+    "NAME": "Doppelter Stil",
+    "DESCRIPTION": "champ:Fertigkeitsboni geben !M! mehr Elan und champ:Konter."
+  },
+  "champ:GladiatorStyle": {
+    "NAME": "Fairer Sauberer Kampf",
+    "DESCRIPTION": "champ:Offensivcombo: NL Erhalte !M! Stärke. NL champ:Defensivcombo: NL Erhalte !M! Geschicklichkeit."
+  },
+  "champ:BerserkerStyle": {
+    "NAME": "Klinge Schleifen",
+    "DESCRIPTION": "Erhöhe den Schaden deiner \"Schlag\" Karten um !M!."
+  },
+  "champ:Riposte": {
+    "NAME": "Gegenschlag",
+    "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. NL Erschöpft."
+  },
+  "champ:Endure": {
+    "NAME": "Erdulden",
+    "DESCRIPTION": "Nimm die champ:Defensivhaltung an. NL Erhalte !B! Block. Das Block dieser Karte wächst mit Stärke anstelle von Geschicklichkeit.",
+    "UPGRADE_DESCRIPTION": "Nimm die champ:Defensivhaltung an. NL Erhalte !B! Block. Das Block dieser Karte wächst mit Stärke UND Geschicklichkeit."
+  },
+  "champ:PreemptiveStrike": {
+    "NAME": "Präventivschlag",
+    "DESCRIPTION": "Füge ALLEN Gegnern Schaden in Höhe deines champ:Konters zu. Verliere die Hälfte des champ:Konters. NL champ:Defensivcombo: Verliere kein champ:Konter.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Fügt !D! Schaden zu)",
+      "Ein miserabler Zeitpunkt dafür."
+    ]
+  },
+  "champ:Parry": {
+    "NAME": "Parieren",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL Wenn champ:Konter in diesem Zug verbraucht wird, erhalte einen zweiten *Gegenschlag.",
+    "UPGRADE_DESCRIPTION": "Flüchtig. NL Füge Schaden in Höhe des verbrauchten champ:Konters zu. NL Erschöpft."
+  },
+  "champ:EnchantCrown": {
+    "NAME": "Kronenverzauberung",
+    "DESCRIPTION": "Wähle eine Karte. NL Sie kostet in diesem Kampf 0. NL Erschöpft.",
+    "EXTENDED_DESCRIPTION": [
+      "Ein miserabler Zeitpunkt dafür."
+    ]
+  },
+  "champ:ModFinisherStrike": {
+    "NAME": "Abschließender Schlag",
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu."
+  },
+  "champ:UltimateHaltung": {
+    "NAME": "Ultimate Haltung",
+    "DESCRIPTION": "Während deines nächsten Zuges bist du in der champ:Ultimativen *Haltung. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erfordert eine *Haltung. NL Nimm die champ:Ultimative *Haltung für !M! Züge an.",
+    "EXTENDED_DESCRIPTION": [
+      "Ich bin gerade in keiner Haltung."
+    ]
+  },
+  "champ:FancyFootwork": {
+    "NAME": "Fabelhafter Fußmarsch",
+    "DESCRIPTION": "Nimm eine zufällige *Haltung an, in der du dich nicht befindest. NL Der nächste champ:Abschluss fügt in diesem Zug ALLEN gegenern !M! Schaden zu."
+  },
+  "champ:TripleStrike": {
+    "NAME": "Dreifachschlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 *Schlag gremlin:Echos. Sie kosten 0 und aktivieren den champ:Fertigkeitsbonus.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 *Schlag+ gremlin:Echos. Sie kosten 0 und aktivieren den champ:Fertigkeitsbonus."
+  },
+  "champ:WindUp": {
+    "NAME": "Aufziehen",
+    "DESCRIPTION": "Nimm eine *Haltung deiner Wahl an. NL Schnapp dir einen champ:Abschluss aus dem Nachziehstapel. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Nimm eine *Haltung deiner Wahl an. NL Schnapp dir einen champ:Abschluss aus dem Nachziehstapel.",
+    "EXTENDED_DESCRIPTION": [
+      "Nimm die champ:Offensivhaltung an.",
+      "Nimm die champ:Defensivhaltung an."
+    ]
+  },
+  "champ:Headbutt": {
+    "NAME": "Kopfnuss",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege eine Karte aus dem Abwurfstapel auf den Nachziehstapel."
+  }
+}

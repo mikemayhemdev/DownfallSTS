@@ -1,0 +1,30 @@
+{
+  "Slimebound:SlimedPotion": {
+    "NAME": "Glibberkrug",
+    "DESCRIPTIONS": [
+      "Wende #b",
+      " #yGlibber an."
+    ]
+  },
+  "Slimebound:SlimyTonguePotion": {
+    "NAME": "Schleimelixier",
+    "DESCRIPTIONS": [
+      "Wenn in diesem Kampf #yGlibber angewendet wird, wird die Anzahl um #b",
+      " erhöht."
+    ]
+  },
+  "Slimebound:SpawnSlimePotion": {
+    "NAME": "Armee in der Flasche",
+    "DESCRIPTIONS": [
+      "#ySpalte #b",
+      " zufällige Schleime ab (Normale und #ySpezialisten [REMOVE_SPACE])."
+    ]
+  },
+  "Slimebound:ThreeZeroPotion": {
+    "NAME": "Labbriges Getränk",
+    "DESCRIPTIONS": [
+      "Nimm #b",
+      " zufällige Karten die 0 kosten auf die Hand."
+    ]
+  }
+}

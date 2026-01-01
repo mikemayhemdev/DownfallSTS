@@ -1,0 +1,73 @@
+{
+  "bronze:ShapeFactory": {
+    "NAME": "Drohnenfabrik",
+    "DESCRIPTIONS": [
+      "Du hast die stillgelegte Drohnenfabrik des Exordium gefunden. Überraschenderweise funktionieren die Produktionsanlagen noch halbwegs. Du könntest einige dieser Maschinen ausschlachten und ihre Teile als Waffe nutzen.",
+      "None of these drones have what you require."
+    ],
+    "OPTIONS": [
+      "[Kämpfe gegen 1 Stachler] #gErhalte zur Belohnung #gSpikes.",
+      "[Kämpfe gegen 1 Repulsor] #gErhalte zur Belohnung #gBetäubender #gPuls.",
+      "[Kämpfe gegen 1 Explodierer] #gErhalte zur Belohnung #gExplodieren.",
+      "[Verlassen]",
+      "[Kämpfen]",
+      "[Kämpfe auch gegen 1 Stachler] #gErhalte zur Belohnung #gSpikes.",
+      "[Kämpfe auch gegen 1 Repulsor] #gErhalte zur Belohnung #gBetäubender #gPuls.",
+      "[Kämpfe auch gegen 1 Explodierer] #gErhalte zur Belohnung #gExplodieren."
+    ]
+  },
+  "bronze:AncientFactory": {
+    "NAME": "Antike Fabrik",
+    "DESCRIPTIONS": [
+      "Bei deinem unermüdlichen Weg abwärts stößt du auf die ~ursprüngliche~ Fabrik. Hier wurdest du gebaut - vom ~Schöpfer~ höchstpersönlich. NL Jedes von ihm erschaffene Konstrukt ist so #yperfekt wie du es bist. Du könntest die Teile einiger alter Prototypen für dich nutzen, doch dazu müsstest du sie aktivieren.",
+      "Auch wenn es Prototypen sind, hast du einen gesunden Respekt vor ihnen. Die Aktivierung stellt ein unnötiges Risiko dar."
+    ],
+    "OPTIONS": [
+      "[Kämpfe gegen den Donu Prototypen] #gErhalte #gProto-Strahl.",
+      "[Kämpfe gegen den Deka Prototypen] #gErhalte #gProto-Schild.",
+      "[Kämpfe gegen Beide] #gErhalte #gBeide #gKarten.",
+      "[Verlassen]"
+    ]
+  },
+  "bronze:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Ohne Einheit kann es keine Stärke geben."
+    ],
+    "OPTIONS": [
+      "[Vereinigen] Alle #gSchlag und #gVerteidigen Karten erhalten #gKodieren [REMOVE_SPACE].",
+      "[Gesperrt] Erfordert einen Schlag oder ein Verteidigen."
+    ]
+  },
+  "bronze:AccursedBlacksmith": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Du entschließt dich, die Schmiede zu benutzen und... NL #y@KLONK@ #y@KLOOONK@ #y@KLONK!@ NL ... verbesserst dein Arsenal mit neuen Antrieben und Systemen."
+    ],
+    "OPTIONS": [
+      "[Basteln] #gVerbessere #g3 #gzufällige #gKarten #gmit #gKodieren [REMOVE_SPACE].",
+      "[Gesperrt] Erfordert eine Karte mit Kodieren."
+    ]
+  },
+  "bronze:CrystalForge": {
+    "NAME": "Düstere Schmiede",
+    "DESCRIPTIONS": [
+      "Durch Geheimgänge, die nur ein Konstrukt des Spire kennt, betrittst du eine Kammer die der Wartung und Reparatur von Automatonen gewidmet ist. Die Werkzeuge hier sind dir von großem Nutzen.",
+      "Mit der magischen Zange bettest du eine Waffe direkt in deinen Kern ein. #y@Bzzzt!@ Dich selbst zu kodieren ist nicht so einfach wie du dachtest.",
+      "Mit Hilfe des magischen Ambosses zerschlägst du ein Stück deiner Rüstung, um ihn dann in der Schmiede zu Energie zu konvertieren. Sie ~verschmilzt~ ~mit~ ~dir,~ und du spürst mit der Wärme neue Kräfte in dir.",
+      "Du wirfst einen entbehrlichen Teil deiner Rüstung in das magische Schmiedefeuer, das Materie umwandeln kann. Nach einiger Zeit hat sich das Material aufgelöst und in eine Verbesserung für deinen Panzer umgewandelt.",
+      "Du verlässt die Schmiede auf den selben Weg, wie du sie betreten hast. Deine Reise geht weiter zur Dämmerung, die dich auf der Spitze des Spire erwartet.",
+      "Wähle eine Karte zum Entfernen aus."
+    ],
+    "OPTIONS": [
+      "[Kreieren] #gErhalte #gFlaschencode. #rVerliere #r10 #rMax #rTP.",
+      "[Umwandeln] #gRemove #ga #gCard. #gErhalte #geine #gzufällige #gKarte #gmit #gKodieren.",
+      "[Wiederverwerten] #rEntferne eine #yseltene Karte. #gErhalte #g10 #gMax #gTP #gund #gheile #gdeine #gTP #gkomplett.",
+      "[Gesperrt] Bereits benutzt.",
+      "[Verlassen]",
+      "[Gesperrt] Erfordert eine Karte mit Kodieren.",
+      "[Gesperrt] Erfordert eine seltene Karte.",
+      "Wähle eine Karte zum Entfernen aus."
+    ]
+  }
+}

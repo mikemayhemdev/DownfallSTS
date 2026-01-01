@@ -1,0 +1,327 @@
+{
+  "collector:AddCopyNextTurn": {
+    "NAME": "Bonuskarte",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges ",
+      " auf die Hand."
+    ]
+  },
+  "collector:BindingCall": {
+    "NAME": "Bindender Ruf",
+    "DESCRIPTIONS": [
+      "Wende immer wenn du deine gesamten #ytemporären #yTP verlierst #b",
+      " #yVerdammnis auf ALLE Gegner an.",
+      "Translator Note: NOT USED"
+    ]
+  },
+  "collector:CantTouchThis": {
+    "NAME": "Unberührbar",
+    "DESCRIPTIONS": [
+      "Wende immer #b",
+      " #yVerdammnis auf Angreifer, deren Angriffe du vollständig geblockt hast, an."
+    ]
+  },
+  "collector:Crackle": {
+    "NAME": "Knistern",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn deines Zuges #b1 #yReserve.",
+      "Erhalte zu Beginn deines Zuges #b",
+      " #yReserve."
+    ]
+  },
+  "collector:DarkLordForm": {
+    "NAME": "Schattenlord Form",
+    "DESCRIPTIONS": [
+      "Spiele zu Beginn deines Zuges #yDu #yGehörst #yMir auf einen zufälligen Gegner.",
+      "Spiele zu Beginn deines Zuges #yDu #yGehörst #yMir auf #b",
+      " zufällige Gegner."
+    ]
+  },
+  "collector:DarkLordFormPlus": {
+    "NAME": "Schattenlord Form+",
+    "DESCRIPTIONS": [
+      "Spiele zu Beginn deines Zuges #yDu #yGehörst #yMir+ auf einen zufälligen Gegner..",
+      "Spiele zu Beginn deines Zuges #yDu #yGehörst #yMir+ auf #b",
+      " zufällige Gegner."
+    ]
+  },
+  "collector:DoMayhem": {
+    "NAME": "Wahnsinnstat",
+    "DESCRIPTIONS": [
+      "Wenn ein Gegner zu Beginn deines Zuges mindestens #b",
+      " #yVerdammnis hat, dann spiele die oberste Karte des Nachziehstapels.",
+      " #yVerdammnis, dann spiele die obersten #b",
+      " Karten des Nachziehstapels."
+    ]
+  },
+  "collector:Doom": {
+    "NAME": "Verdammnis",
+    "DESCRIPTIONS": [
+      "Verliert zu Beginn seines Zuges #b",
+      " TP. Sämtliche #yVerdammnis wird danach entfernt, es sei denn, der Gegner ist #ygeplagt."
+    ]
+  },
+  "collector:DoublePlayCollectibles": {
+    "NAME": "Sammlerstücke vermehren",
+    "DESCRIPTIONS": [
+      "Sammlerstücke werden zweimal gespielt.",
+      "Sammlerstücke werden #b",
+      " zusätzliche Male gespielt."
+    ]
+  },
+  "collector:DemisePower": {
+    "NAME": "Unvermeidbares Verhängnis",
+    "DESCRIPTIONS": [
+      "Verhindere die nächste Entfernung der #yVerdammnis dieses Gegners.",
+      "Verhindere die nächsten #b",
+      " Entfernungen der #yVerdammnis dieses Gegners."
+    ]
+  },
+  "collector:FeelMyPain": {
+    "NAME": "Fühle meinen Schmerz",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine Karte #yerschöpfst verliert ein zufälliger Gegner #b",
+      " TP."
+    ]
+  },
+  "collector:HealIfDieThisTurn": {
+    "NAME": "Vollendet",
+    "DESCRIPTIONS": [
+      "Wen ",
+      " stirbt, heile #b",
+      " TP."
+    ]
+  },
+  "collector:Karma": {
+    "NAME": "Karma",
+    "DESCRIPTIONS": [
+      "Erhalte am Ende des Zuges #b",
+      " #yBlock, wenn ein Gegner #ygeplagt ist."
+    ]
+  },
+  "collector:NextAttackAppliesDoom": {
+    "NAME": "Verdammter Angriff",
+    "DESCRIPTIONS": [
+      "Der nächste Angriff in diesem Zug wendet zusätzlich #b",
+      " #yVerdammnis an."
+    ]
+  },
+  "collector:AttacksApplyDoomPower": {
+    "NAME": "Verdammte Angriffe",
+    "DESCRIPTIONS": [
+      "Angriffe wenden in diesem Zug zusätzlich #b",
+      " #yVerdammnis an."
+    ]
+  },
+  "collector:NextCollectedTwice": {
+    "NAME": "Doppelt Gemoppelt",
+    "DESCRIPTIONS": [
+      "In diesem Zug spielst du deine nächstes #ySammlerstück zweimal aus.",
+      "In diesem Zug spielst du deine nächsten #b",
+      " #ySammlerstücke zweimal aus."
+    ]
+  },
+  "collector:NextTurnReserve": {
+    "NAME": "Reservevorrat",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn deines nächsten Zuges #b1 #yReserve.",
+      "Erhalte zu Beginn deines nächsten Zuges #b",
+      " #yReserve."
+    ]
+  },
+  "collector:Omen": {
+    "NAME": "Omen",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du ein #ySammlerstück spielst #b",
+      " #yStärke."
+    ]
+  },
+  "collector:ProtectingCall": {
+    "NAME": "Schützender Ruf",
+    "DESCRIPTIONS": [
+      "Wenn du zu Beginn deines Zuges #ytemporäre #yTP hast, erhalte #b",
+      " #yBlock.",
+      "Translator Note: NOT USED"
+    ]
+  },
+  "collector:RagingCall": {
+    "NAME": "Raging Call",
+    "DESCRIPTIONS": [
+      "Wenn du am Ende deines Zuges #ytemporäre #yTP hast, füge ALLEN Gegnern #b",
+      " Schaden zu.",
+      "Translator Note: NOT USED"
+    ]
+  },
+  "collector:Reserve": {
+    "NAME": "Reserve",
+    "DESCRIPTIONS": [
+      "You have #b1 #yReserve.",
+      "You have #b",
+      " #yReserve."
+    ]
+  },
+  "collector:Soulforge": {
+    "NAME": "Seelenschmiede",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines Zuges #b1 #yGlut in die Hand.",
+      "Nimm zu Beginn deines Zuges #b",
+      " Stück #yGlut in die Hand."
+    ]
+  },
+  "collector:StrengthOverTurns": {
+    "NAME": "Ermächtigung",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn deines nächsten Zuges #b",
+      " #yStärke.",
+      "Erhalte zu Beginn deiner nächsten #b",
+      " Züge #b"
+    ]
+  },
+  "collector:Suffering": {
+    "NAME": "Leiden",
+    "DESCRIPTIONS": [
+      "Wende immer wenn du #ySchwach oder #yVerwundbar anwendest zusätzlich #b",
+      " #yVerdammnis an."
+    ]
+  },
+  "collector:TorchHead": {
+    "NAME": "Fackelkopf",
+    "DESCRIPTIONS": [
+      "Immer wenn du einen #yAngriff spielst während du #ytemporäre #yTP hast, Fackelkopf: NL ",
+      "Wendet #b",
+      " #yVerdammnis auf einen zufälligen Gegner an.",
+      "Fügt ALLEN Gegnern #b",
+      " Schaden zu.",
+      "Gibt dir #b",
+      " #yBlock.",
+      " #yGift auf einen zufälligen Gegner an.",
+      "Zieht #b",
+      " Karte für dich.",
+      " Karten für dich."
+    ]
+  },
+  "collector:IncreasedCollectionDraw": {
+    "NAME": "Sammlerstücke Ziehen",
+    "DESCRIPTIONS": [
+      "Ziehe zu Beginn deines Zuges #b1 zusätzliches Sammlerstück.",
+      "Ziehe zu Beginn deines Zuges #b",
+      " zusätzliche Sammlerstücke."
+    ]
+  },
+  "collector:MastersCall": {
+    "NAME": "Meisterruf",
+    "DESCRIPTIONS": [
+      "Füge immer wenn du einen #yAngriff spielst während du #ytemporäre #yTP hast einem zufälligen Gegner #b",
+      " Schaden zu.",
+      "Translator Note: NOT USED"
+    ]
+  },
+  "collector:LouseCard": {
+    "NAME": "Zusammenrollen",
+    "DESCRIPTIONS": [
+      "Erhalte #b",
+      " #yBlock wenn du das nächste Mal ungeblockten Angriffsschaden erleidest."
+    ]
+  },
+  "collector:MadGremlinCard": {
+    "NAME": "Wütend",
+    "DESCRIPTIONS": [
+      "Nimm das Nächste Mal wenn du in diesem Zug ungeblockten Angriffsschaden erleidest einen #yWütenden #yGremlin in die Hand.",
+      "Nimm das Nächste Mal wenn du in diesem Zug ungeblockten Angriffsschaden erleidest #b",
+      " #yWütende #yGremlins in die Hand."
+    ]
+  },
+  "collector:GremlinWizardCard": {
+    "NAME": "Aufladen",
+    "DESCRIPTIONS": [
+      "Erhalte im nächsten Zug #b",
+      " #yElan."
+    ]
+  },
+  "collector:ThievesCard": {
+    "NAME": "Gerissen",
+    "DESCRIPTIONS": [
+      "Nimm #b",
+      " weniger Angriffsschaden in diesem Zug."
+    ]
+  },
+  "collector:BookOfStabbingCard": {
+    "NAME": "Bestechend",
+    "DESCRIPTIONS": [
+      "Wende immer, wenn du ungeblockten Angriffsschaden zufügst #b",
+      " #yVerdammnis an."
+    ]
+  },
+  "collector:TransientCard": {
+    "NAME": "Auflösen",
+    "DESCRIPTIONS": [
+      "#rStirb am Ende des Zuges.",
+      "#rStirb in #b",
+      " Zügen."
+    ]
+  },
+  "collector:ReptomancerCard": {
+    "NAME": "Giftiger Ruf",
+    "DESCRIPTIONS": [
+      "Wenn du am Ende des Zuges #ytemporäre #yTP hast, wende #b",
+      " #yGift auf einen zufälligen Gegner an."
+    ]
+  },
+  "collector:MoreBlockWithTempHP": {
+    "NAME": "Fingerhut",
+    "DESCRIPTIONS": [
+      "Erhalte während du #ytemporäre #yTP hast zusätzlich #b",
+      " #yBlock durch Karten."
+    ]
+  },
+  "collector:NextTurnVigor": {
+    "NAME": "Elan in Reserve",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn deines nächsten Zuges #b",
+      " #yElan."
+    ]
+  },
+  "collector:AcidSlimeCard": {
+    "NAME": "Schleimiges Duplizieren",
+    "DESCRIPTIONS": [
+      "In diesem Zug spielst du deinen nächsten #yAngriff ODER deine nächste #yFertigkeit zweimal aus.",
+      "In diesem Zug spielst du deine nächsten #b",
+      " #yAngriffe ODER #yFertigkeiten zweimal aus."
+    ]
+  },
+  "collector:GremlinNobCard": {
+    "NAME": "Erzürnen",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du eine #yFertigkeit spielst #b",
+      " #yElan."
+    ]
+  },
+  "collector:LanternFlare": {
+    "NAME": "Verschmort",
+    "DESCRIPTIONS": [
+      "Erhält am Ende seines Zuges #b",
+      " #yVerdammnis."
+    ]
+  },
+  "collector:WomanInBlueCard": {
+    "NAME": "Frau in Blau",
+    "DESCRIPTIONS": [
+      "Verliere am Ende des Kampfes alle Tränke."
+    ]
+  },
+  "collector:ShootingStar": {
+    "NAME": "Sternschnuppe",
+    "DESCRIPTIONS": [
+      "Das erste Mal im Zug wenn du einen #yAngriff als #yOpfergabe anbietest, nimm eine Kopie des Angriffs auf die Hand. Sie kostet #b0 bis du sie spielst.",
+      "Die ersten #b",
+      " Male im Zug, an denen du einen #yAngriff als #yOpfergabe anbietest, nimm jeweils eine Kopie des Angriffs auf die Hand. Sie kosten #b0 bis du sie spielst."
+    ]
+  },
+  "collector:LoseHpNextTurn": {
+    "NAME": "Todesmal",
+    "DESCRIPTIONS": [
+      "Verliert am Ende seines Zuges #b",
+      " TP."
+    ]
+  }
+}

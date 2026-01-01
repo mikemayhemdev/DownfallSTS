@@ -1,0 +1,105 @@
+{
+  "Slimebound:Hunted": {
+    "NAME": "Auftritt des Bosses",
+    "DESCRIPTIONS": [
+      "Eine drohende Stimme hallt im Spire... NL NL #r~SCHLEIM ZERSCHMETTERN!!!~ NL NL Der massive Schleim holt dich schnell ein und stellt sich dir in den Weg. Es sieht so aus als ob er seit dem Exordium noch weiter gewachsen ist. Auf dem Weg hierher hat er vieles absorbiert",
+      "Kann es wirklich so einfach sein?",
+      "Du besiegst den Schleimboss mit Leichtigkeit und nimmst all seine Habseligkeiten an dich, auch den Hut. Er hat ha auch Stil."
+    ],
+    "OPTIONS": [
+      "[Kämpfen] #rKämpfe #rgegen #rden #rSchleimboss. Belohnung: #gWinzige #gMelone.",
+      "[FEIGHEIT] #rWerde #rverflucht #r- #rScham."
+    ]
+  },
+  "Slimebound:WorldofGoop": {
+    "NAME": "Welt aus Schleim",
+    "DESCRIPTIONS": [
+      "Du fällst in eine Pfütze. NL @SIE@ @IST@ @AUS@ #g@KLEBRIGEM@ #g@SCHLEIM!!@ NL Beruhigt nimmst du darin ein Bad - wann hast du sonst Zeit zum Entspannen? NL NL Beim Herausklettern merkst du, dass die #ySeelen einiger unglücklicher Abenteurer in der Pfütze langsam von einem gefräßigen Schleim verschlungen werden.",
+      "Bevor du gehst konsumierst du selbst die verbliebenen #ySeelen, und die Kreatur bleibt mit einem enttäuschten Blick zurück.",
+      "Du konntest dich mit der Kreatur einigen: Du versogst sie mit #ySeelen und sie hilft dir im Kampf. NL Du verlässt das Schleimbad zusammen mit deinem neuen #gFreund."
+    ],
+    "OPTIONS": [
+      "[Seelen sammeln] #gErhalte #g75 #gSeelen.",
+      "[Rekrutieren] #rVerliere #r75 #rSeelen. #gErhalte #gden #yGierschleim.",
+      "[Verlassen]",
+      "[Gesperrt] Erfordert 75 Seelen."
+    ]
+  },
+  "Slimebound:SlimeTalk": {
+    "NAME": "TalkStrings",
+    "DESCRIPTIONS": [
+      "~Nicht~ ~absorbieren!~",
+      "~Du~ ~willst~ ~unsere~ ~Seelen?~",
+      "~Es~ ~wird~ ~uns~ ~verschlingen...~",
+      "~Der~ ~Boss!~",
+      "Dieser Hut... NL #r~Ich~ #r~muss~ #r~ihn~ #r~haben!~",
+      "~Warum~",
+      "~lässt~ ~es~",
+      "~uns~ ~nicht~ ~spielen?~",
+      "~Es~ ~wird~ ~uns~ ~absorbieren...~",
+      "~Es~ ~ist~ ~zu~ ~srark...~",
+      "~Einer~ ~von~ ~uns...~",
+      "~COOLER~ #r~HUT!!!~"
+    ]
+  },
+  "Slimebound:ScrapOoze": {
+    "NAME": "Schrottschlamm",
+    "DESCRIPTIONS": [
+      "Jeder Schleim ist ein Verbündeter. Der Schrottschleim schließt sich dir an, da du ihm mehr Schrott und Schätze versprichst."
+    ],
+    "OPTIONS": [
+      "[Rekrutieren] #rVerliere ",
+      ". #gErhalte #gden #gSchrottschleim [REMOVE_SPACE]. #rGesperrt wenn du hineingreifst.",
+      "[Rekrutieren] Gesperrt (Du hast den Schrottschleim verärgert)",
+      "[Verlassen]",
+      "[Rekrutieren] Gesperrt (Erfordert ein Gewöhnliches oder Ungewöhnliches Relikt)"
+    ]
+  },
+  "Slimebound:ArtOfSlimeWar": {
+    "NAME": "Die Kunst des Schleim-Krieges",
+    "DESCRIPTIONS": [
+      "Du erblickst ein widerliches Podest mit einem #gglühenden #gBuch darauf. Es sieht so aus als würde das Buch von den komplizierten Kampftechniken des #gSchleimbosses und seiner Untertanen handeln.",
+      "Als du nach dem Buch greifst, hörst du, wie einige Fallen ausgelöst werden. Du wirst nicht allen ausweichen können.",
+      "Du stiehlst das Buch und schaffst es den Fallen auszuweichen, doch dabei fällst du in eine tiefe, widerliche Schleimpfütze.",
+      "Als du das Buch nimmst, steigen Stacheln von unten empor. Du vermeidest zwar aufgespießt zu werden, doch erleidest einige Kratzer",
+      "Du spürst etwas deiner Lebenskraft schwinden als du das Buch berührst. Hoffentlich war es das wert",
+      "Du lässt das Buch liegen und kümmerst dich weiter um deine Mission.",
+      "Du verstehst nicht wie die Schleim-Untergebenen eine Bedrohung für jemanden darstellen. Anscheinend besteht ihre Taktik daraus, ihre Körper gewaltvoll auf die Gegner zu stoßen. Vielleicht kannst du das ja nachmachen..."
+    ],
+    "OPTIONS": [
+      "[Lesen] #gEntferne #galle #gSchläge. #gErhalte #g3 #gverbesserte #gTackles.",
+      "[Nehmen] #gErhalte #gBuch #gBefragen. #rLöse #reine #rFalle #raus.",
+      "[Verlassen]",
+      "[Ducken] #rWerde #rverflucht #r- #rEkel.",
+      "[Geduld] #rErleide #r",
+      " #rSchaden.",
+      "[Hast] #rVerliere #r",
+      " #rMax #rTP."
+    ]
+  },
+  "Slimebound:Darklings": {
+    "NAME": "Dunkelinge",
+    "DESCRIPTIONS": [
+      "Drei unbekannte Schleimartige stellen(?) sich dir in den Weg. Sie sehen feindlich gesinnt aus, doch dann bemerken sie, dass du eine ähnliche Komnsistenz zu ihnen aufweist und werden neugierig.",
+      "Als du dich für die ~Konfrontation~ ~bereit~ ~machst,~ tun die schwarzen Schleime es dir gleich!",
+      "Nach einer kurzen Unterredung schließen sich die Schleime dir an. Sie verlassen ihren Posten nur kurz um dir zu helfen."
+    ],
+    "OPTIONS": [
+      "[Rekrutieren] #gErhalte #gDunkelling-Duo. #rVerliere ",
+      "[Kämpfen]",
+      "[Verlassen]",
+      ".",
+      "[Gesperrt] Erfordert eine seltene Karte."
+    ]
+  },
+  "Slimebound:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Wenn ein Schaf voranschreitet, folgen ihm alle."
+    ],
+    "OPTIONS": [
+      "[Inspiration] Alle #gSchlag und #gVerteidigen Karten erhalten #gKommando.",
+      "[Gesperrt] Erfordert einen Schlag oder ein Verteidigen."
+    ]
+  }
+}

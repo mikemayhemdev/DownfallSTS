@@ -1,0 +1,139 @@
+{
+  "expansioncontent:StudyTheSpirePower": {
+    "NAME": "Spire-Studien",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn deines nächsten Zuges eine zufällige #yBoss-Karte. NL Sie kostet #b0 bis sie gespielt wurde.",
+      "Erhalte zu Beginn deiner nächsten #b",
+      " Züge eine zufällige #yBoss-Karte. NL Sie kosten #b0 bis sie gespielt wurden.",
+      "Erhalte zu Beginn deines nächsten Zuges eine zufällige #yverbesserte #yBoss-Karte. NL Sie kostet #b0 bis sie gespielt wurde.",
+      "Erhalte zu Beginn deiner nächsten #b",
+      " Züge eine zufällige #yverbesserte #yBoss-Karte. NL Sie kosten #b0 bis sie gespielt wurden."
+    ]
+  },
+  "expansioncontent:AwakenedOnePower": {
+    "NAME": "Finsteres Ritual",
+    "DESCRIPTIONS": [
+      "Erhalte #b",
+      " #yStärke wenn der Gegner in seinem Zug nicht angreift."
+    ]
+  },
+  "expansioncontent:AwakenDeathPower": {
+    "NAME": "Erwachen",
+    "DESCRIPTIONS": [
+      "Anstatt zu sterben, heile #b",
+      " TP und entferne diese Kraft."
+    ]
+  },
+  "expansioncontent:ChronoBoostPower": {
+    "NAME": "Chrono-Boost",
+    "DESCRIPTIONS": [
+      "Nach dem Ausspielen von #b",
+      " Karten erhältst du #b",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "expansioncontent:ChronoBoostPlusPower": {
+    "NAME": "Chrono-Boost+",
+    "DESCRIPTIONS": [
+      "Nach dem Ausspielen von #b",
+      " Karten erhältst du #b",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "expansioncontent:DeEnergizedPower": {
+    "NAME": "De-Energized",
+    "DESCRIPTIONS": [
+      "Du verlierst #b",
+      " [E] im nächsten Zug."
+    ]
+  },
+  "expansioncontent:PolyBeamAgainPower": {
+    "NAME": "Potenz",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines nächsten Zuges wird #yPoly-Strahl gespielt.",
+      "Zu Beginn deiner nächsten #b",
+      " Züge wird #yPoly-Strahl gespielt."
+    ]
+  },
+  "expansioncontent:PolyBeamAgainPowerUpgraded": {
+    "NAME": "Potenz+",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines nächsten Zuges wird #yPoly-Strahl+ gespielt.",
+      "Zu Beginn deiner nächsten #b",
+      " Züge wird #yPoly-Strahl+ gespielt."
+    ]
+  },
+  "expansioncontent:AddCopyPower": {
+    "NAME": "Verspätete Karte",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges ",
+      " auf die Hand."
+    ]
+  },
+  "expansioncontent:AddSameInstancePower": {
+    "NAME": "Verspätete Karte",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges ",
+      " auf die Hand."
+    ]
+  },
+  "expansioncontent:NextTurnExhumePower": {
+    "NAME": "Verspätetes Exhumieren",
+    "DESCRIPTIONS": [
+      "Exhumiere ",
+      " zu Beginn deines nächsten Zuges."
+    ]
+  },
+  "expansioncontent:PretendHexWheelPower": {
+    "NAME": "Hexafeuer",
+    "DESCRIPTIONS": [
+      "Füge nach #b",
+      " Zügen #b6 Mal einem Zufälligen Gegner #b",
+      "Füge am Ende des Zuges #b6 Mal einem Zufälligen Gegner #b",
+      " Schaden zu."
+    ]
+  },
+  "expansioncontent:BeatOfDeathP": {
+    "NAME": "Pochen des Todes",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine Karte ausspielst, verursachst du #b",
+      " Schaden an ALLEN Gegnern."
+    ]
+  },
+  "expansioncontent:PandemoniumPower":{
+    "NAME": "Pandämonium",
+    "DESCRIPTIONS": [
+      "Spiele zu Beginn deines Zuges eine zufällige Karte deines Abwurfstapels.",
+      "Spiele zu Beginn deines Zuges #b",
+      " zufällige Karten deines Abwurfstapels."
+    ]
+  },
+  "expansioncontent:EvilWithinPower":{
+    "NAME": "Das Böse in Sich",
+    "DESCRIPTIONS": [
+      "Füge ALLEN Gegnern #b",
+      " Schaden zu nachdem du #b",
+      " weitere Debuffs anwendest.",
+      " weiteren Debuff anwendest."
+    ]
+  },
+  "expansioncontent:ReveriePower":{
+  "NAME": "Reverie",
+  "DESCRIPTIONS": [
+    "Sieh dir zu Beginn deines Zuges die oberste Karte deines Abwurfstapels an und nimm sie auf die Hand.",
+    "Sieh dir zu Beginn deines Zuges die obersten #b",
+    " Karten deines Abwurfstapels an und nimm eine auf die Hand.",
+    "Wähle eine Karte, die du auf die Hand nimmst."
+  ]
+},
+  "expansioncontent:VexVinciblePower": {
+    "NAME": "Unverwundbar",
+    "DESCRIPTIONS": [
+      "Verhindert jeglichen TP-Verlust, der innerhalb eines Zuges über #b",
+      " hinausgeht. Entferne diese Kraft, nachdem sie aktiviert wurde.",
+      "Verhindert jeglichen TP-Verlust, der innerhalb eines Zuges über #b",
+      " hinausgeht. Entferne diese Kraft, nachdem sie #b",
+      " Mal aktiviert wurde."
+    ]
+  }
+}

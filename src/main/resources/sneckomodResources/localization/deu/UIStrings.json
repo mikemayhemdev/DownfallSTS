@@ -1,0 +1,86 @@
+{
+  "sneckomod:Unknown": {
+    "TEXT": [
+      "Unidentifiziert",
+      " verbesserte ",
+      "Zu Beginn des Kampfes nehmen unidentifizierte Karten die Gestalt einer zufälligen Karte an, die ins Schema passt.",
+      " NL Gewählte Klassen:",
+      "Zu Beginn des Kampfes nehmen unidentifizierte Karten die Gestalt einer zufälligen Karte einer zufälligen fremden Klasse an, die ins Schema passt.",
+      "Zu Beginn des Kampfes nehmen unidentifizierte Karten die Gestalt einer zufälligen Karte einer fremden Klasse an, die ins Schema passt."
+    ]
+  },
+  "sneckomod:UnknownNames": {
+    "TEXT": [
+      "Unidentifizierte"
+    ]
+  },
+  "sneckomod:UnknownClass": {
+    "TEXT": [
+      "???",
+      "*Unidentifiziert ",
+      " Karte.",
+      "Character",
+      " ",
+      "You should never see this. Report to Vex",
+      "Verbesserte "
+    ]
+  },
+  "sneckomod:UpgradedUnknownReward": {
+    "TEXT": [
+      "Nimm eine verbesserte unidentifizierte Karte in dein Deck auf",
+      "Wähle eine Karte."
+    ]
+  },
+  "sneckomod:FreeRetainMod": {
+    "TEXT": [
+      "Behalten. NL "
+    ]
+  },
+  "sneckomod:ExhaustMod": {
+    "TEXT": [
+      " NL Erschöpft."
+    ]
+  },
+  "sneckomod:ChallengeMode": {
+    "TEXT": [
+      "Alternativmodus - Reiner Snecko",
+      "Geschenke können von allen Klassen stammen. Für Spieler empfohlen, die mehr Zufall und einen Sieg durch Chaos bevorzugen."
+    ]
+  },
+  "sneckomod:LockInBonfireOptions": {
+    "TEXT": [
+      "Identifizieren",
+      "Wandle eine unidentifizierte Karte permenant in ihre aktuelle Gestalt um.",
+      "Erfordert eine unidentifizierte Karte.",
+      "Wähle eine Karte für dein Deck, und entferne die unidentifizierte Karte.",
+      "[Kleine Aktion] Wandle eine unidentifizierte Karte permenant in ihre aktuelle Gestalt um."
+    ]
+  },
+  "sneckomod:CommonAttackReward": {
+    "TEXT": [
+      "Nimm eine Karte einer Fremdklasse in dein Deck auf",
+      "Wähle eine Karte."
+    ]
+  },
+  "sneckomod:DiceRollPotionReward": {
+    "TEXT": [
+      "Nimm eine verbesserte Karte in dein Deck auf",
+      "Wähle eine Karte."
+    ]
+  },
+  "sneckomod:ColorfulPowersCardReward": {
+    "TEXT": [
+      "Nimm eine verbesserte Machtkarte in dein Deck auf",
+      "Wähle eine Karte."
+    ]
+  },
+  "sneckomod:AtGameStart": {
+    "TEXT": [
+      "",
+      " Karten",
+      "Geschenke enthalten in diesem Run Karten von: ",
+      " .",
+      "Wähle."
+    ]
+  }
+}

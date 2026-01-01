@@ -1,0 +1,18 @@
+{
+  "Guardian": {
+    "NAMES": [
+      "Der Wächter"
+    ],
+    "TEXT": [
+      "Ein Konstrukt des Spire, dazu programmiert es zu verteidigen. NL Kann sich selbst auf Kommando vor Gefahr schützen.",
+      "PRIMÄRDIREKTIVE - #r~ZERSTÖRE~ #r~HERZ.~",
+      "[ guardianmod:Fassung ]",
+      "Auf einer unbeleuchteten Straße triffst du auf ein paar vermummte Gestalten, die gerade mitten in irgendeinem dunklen Ritual sind. Als du näher kommst, wenden sie sich dir in gespenstischem Gleichklang zu. Der Größte von ihnen entblößt Fangzähne und streckt eine lange, blasse Hand nach dir aus. NL~„Schließ~ ~dich~ ~uns~ ~an,~ ~antiker~ ~Beschützer,~ ~und~ ~spüre~ ~die~ ~Wärme~ ~des~ ~Spire.“~",
+      "Defensivmodus",
+      "Du hast #b3 #yStacheln und dein Block verfällt nicht zu Beginn deines Zuges.",
+      "~FEHLER:~ #rStasis im Vorgang."
+    ],
+    "KEYWORDS": [
+    ]
+  }
+}

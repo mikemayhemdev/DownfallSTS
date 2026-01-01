@@ -1,0 +1,69 @@
+{
+  "hexamod:SearingGhostflame": {
+    "NAME": "Sengende Geisterflamme",
+    "DESCRIPTION": [
+      "#yEntzündet [REMOVE_SPACE]. ",
+	  "#yEntzündet wenn #b" ,
+	  " #yAngriff gespielt wird.",
+	  " #yAngriffe gespielt werden.",
+	  "#yEntzündet wenn #b2 #yAngriffe gespielt werden, während man sich auf ihr befindet.",
+	  " NL NL #yEntzündung [REMOVE_SPACE]: Wende zweimal #b",
+	  " #ySeelenfeuer auf einen zufälligen Gegner an.",
+	  " NL NL Wenn diese Geisterflamme am Ende des Zuges #yentzündet ist während du dich auf ihr befindest, bewege dich #yvorwärts zur Nächsten."
+    ]
+  },
+  "hexamod:CrushingGhostflame": {
+    "NAME": "Schlagende Geisterflamme",
+    "DESCRIPTION": [
+      "#yEntzündet [REMOVE_SPACE]. ",
+	  "#yEntzündet wenn #b" ,
+	  " #yFertigkeit gespielt wird.",
+	  " #yFertigkeiten gespielt werden.",
+	  "#yEntzündet wenn #b2 #yFertigkeiten gespielt werden, während man sich auf ihr befindet.",
+	  " NL NL #yEntzündung [REMOVE_SPACE]: Füge zweimal einem zufälligen Gegner #b",
+	  " Schaden zu.",
+	  " NL NL Wenn diese Geisterflamme am Ende des Zuges #yentzündet ist während du dich auf ihr befindest, bewege dich #yvorwärts zur Nächsten."
+    ]
+  },
+  "hexamod:BolsteringGhostflame": {
+    "NAME": "Stärkende Geisterflamme",
+    "DESCRIPTION": [
+      "#yEntzündet [REMOVE_SPACE]. ",
+	  "#yEntzündet wenn eine #yMacht gespielt wird." ,
+	  "#yEntzündet wenn eine #yMacht gespielt wird, während man sich auf ihr befindet.",
+	  " NL NL #yEntzündung [REMOVE_SPACE]: Erhalte #b",
+	  " #yBlock und #b1 #yStärke [REMOVE_SPACE].",
+	  " NL NL Wenn diese Geisterflamme am Ende des Zuges #yentzündet ist während du dich auf ihr befindest, bewege dich #yvorwärts zur Nächsten."
+    ]
+  },
+    "hexamod:InfernoGhostflame": {
+    "NAME": "Inferno-Geisterflamme",
+    "DESCRIPTION": [
+      "#yEntzündet [REMOVE_SPACE]. #yLöscht sich am Ende jedes Zuges.",
+	  "#yEntzündet wenn [E] [E] [E] ausgegeben wird.",
+	  "#yEntzündet wenn [E] [E] ausgegeben wird.",
+	  "#yEntzündet wenn [E] ausgegeben wird.",
+	  "Error. Please report to mod dev: ",
+	  "#yEntzündet wenn [E] [E] [E] ausgegeben wird, während man sich auf ihr befindet. #yLöscht sich am Ende jedes Zuges.",
+	  " NL NL #yEntzündung [REMOVE_SPACE]: Füge für jede #yentzündete Geisterflamme einem zufälligen Gegner #b",
+	  " Schaden zu. #yLösche danach alle Geisterflammen. Du erhältst #b2 #yIntensität wenn alle Geisterflammen #yentzündet sind.",
+	  " NL NL Wenn diese Geisterflamme am Ende des Zuges #yentzündet ist während du dich auf ihr befindest, bewege dich #yvorwärts zur Nächsten."
+    ]
+  },
+  "hexamod:MayhemGhostflame": {
+    "NAME": "Wahnsinnige Geisterflamme",
+    "DESCRIPTION": [
+      "#yEntzündet [REMOVE_SPACE]. ",
+	  "#yEntzündet am Ende deines Zuges.",
+	  "#yEntzündet wenn du deinen Zug auf ihr beendest.",
+	  " NL NL #yEntzündung [REMOVE_SPACE]: #ySpähe #b",
+	  " , verstärkt durch #yIntensität, und spiele dann die oberste Karte des Nachziehstapels. ",
+	  " NL NL Wenn diese Geisterflamme am Ende des Zuges #yentzündet ist während du dich auf ihr befindest, bewege dich #yvorwärts zur Nächsten."
+    ]
+  }
+}
+
+
+
+
+

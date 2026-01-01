@@ -1,0 +1,103 @@
+{
+  "champ:ChampTalk": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "DU WILLST DEINEN GÜRTEL ZURÜCK?",
+      "DANN KOMM UND HOL IHN DIR!"
+    ],
+    "OPTIONS": [
+      ""
+    ]
+  },
+  "champ:Colosseum": {
+    "NAME": "Das Kolosseum",
+    "DESCRIPTIONS": [
+      "Auf deinem Weg bemerkst du eine große Gruppe Humanoider, die auf den Einlass in ein großes Auditorium warten. Die Sklavenhändler erschrecken kurz als du auftauchst, doch erklären gleich darauf was los ist. NL NL „CHAMPION! Euer Erscheinen ehrt uns! Seid ihr hier, um gegen den neuen Herausforderer zu kämpfen?“",
+      "Ein neuer Herausforderer? Wie reizvoll! NL NL Doch womöglich muss der Herausforderer noch warten. Das Publikum liebt es zu sehen, wie der Champion den neuesten Fang filetiert...",
+      "Du betrittst ein riesiges Kolosseum und stehst in der Mitte. Die überbordenden Zuschauerreihen sind voller #bSlavernhändler, #pKultisten und anderer Stadtbewohner. NL NL ",
+      "@„WER@ @WAGT@ @ES@ @MICH@ @HERAUSZUFORDERN?!“@ rufst du in die Menge, während du diesen 'Herausforderer' heranwinkst. NL Ein Ritter nähert sich - seine Rüstung gleicht fast deiner eigenen. Nur, dass seine pechschwarz ist. Das Publikum jubelt dem Hochstapler mehr zu, als er es verdient hätte. NL NL Es kann nur einen Champion geben!",
+      "@„DER@ @NÄCHSTE@ @GEHÖRT@ @MIR!“@ rufst du in die Menge, die mit einem ohrenbetäubenden Applaus antwortet. NL NL Die Sklavenhändler bringen ihren neuesten Fang hinein. Der unfreiwillige Herausforderer erwacht, etwas ~angeschlagen~ vom Überfall, doch ist sofort kampfbereit. NL NL Das sieht nach Spaß aus.",
+      "Auch wenn die Verlockung groß ist, findest du, dass ein Kampf hier nur Zeitverschwendung wäre. Deine Reise geht weiter, so auch die Überfälle der Sklavenhändler.",
+      "Schwarzer Ritter"
+    ],
+    "OPTIONS": [
+      "[Titel verteidigen] #rKämpfe #rgegen #den #rSchwarzen #rRitter. #gErhalte #gviele #gBelohnungen.",
+      "[Teilnehmen] #rKämpge #rgegen #rden #rgefangenen #rHelden. #gErhalte #gviele #gBelohnungen.",
+      "[Verlassen]",
+      "[KÄMPFEN!]",
+      "[Weiter]"
+    ]
+  },
+  "champ:Library": {
+    "NAME": "Die Bibliothek",
+    "DESCRIPTIONS": [
+      "Du erblickst das Quell des Wissens in der Stadt: - die Alte Bibliothek. NL Drinnen findest du zahllose Schriftrollen, Manuskripte und Bücher. NL Du könntest dir eines nehmen und etwas stille Zeit auf einem gemütlichen Stuhl genießen, oder die Zeit nutzen um nach ein Buch zu suchen, das von Kampfkunst handelt.",
+      "Du verbringst viel Zeit damit, die großen Hallen nach Wälzern und Handbüchern abzusuchen, bis du endlich etwas findest, wonach du gesucht hast. NL NL Du machst es dir auf einen Stuhl gemütlich und liest von Techniken, die du schon fast vergessen hättest. Selbst ein perfekter Gladiator wie du weiß, dass man nicht nur den Körper, sondern auch den Geist trainieren und stimulieren muss."
+    ],
+    "OPTIONS": [
+      "[Suchen] #gSuche #gnach #geinem #gKampfbuch.",
+      "[Gesperrt] Du besitzt alle Kampfbücher."
+    ]
+  },
+  "champ:TechniqueTome": {
+    "NAME": "Enzyklopädie der Techniken",
+    "DESCRIPTIONS": [
+      "Während du etwas abseits des Weges wanderst, spürst du eine immense Kraft, die dich anzieht. Fast schon wie von selbst machst du Schritt für Schritt in Richtung eines Podestes, auf dem ein massiver Wälzer liegt - umhüllt von einer scheurigen Art Energie. NL NL Du näherst dich dem Buch uns siehst plötzlich Skizzen und Zeichnungen von Attacken, Techniken und Kampfhaltungen auf Seiten, die eben noch ganz leer waren. NL NL Es ist fast zu schön um wahr zu sein - alles was du jemals über das Kämpfen wissen willst und kannst steht dort geschrieben und gezeichnet. Diese Gelegenheit muss genutzt werden!",
+      "Unglaublich! Die Techniken des Buches sind atemberaubend. Jedes Wort und jede Skizze springt förmlich direkt in deinen Kopf und eröffnet die neue Möglichkeiten, wie du deine Gegner abschlachten kannst. NL NL Doch dieses Wissen kommt nicht ohne Kehrseite - du spürst, wie es deine Psyche belastet. Doch es gibt noch viel zu lernen...",
+      "Jawohl. Noch mehr Techniken. Du kannst jetzt nicht aufhören. Fast ohne Zurückhaltung saugst du das Wissen auf, das der Wälzer dir zur Verfügung stellt. NL NL Du bist bereit noch mehr deiner Lebenskraft zu opfern um von der Weisheit des Buches zu profitieren. Es gibt weiterhin viel zu lernen...",
+      "Es kostet dich viel deiner Willenskraft, dem Verlangen nachzugeben vom Buch zu lesen. Womöglich kehrst du hierhin zurück, doch jetzt gibt es Wichtigeres zu tun.",
+      "Das Wissen in diesem Buch ist fast jeden Preis wert. Es kostet viel Kraft sich vom sprichwörtlichen Griff des Buches zu lösen, doch du schaffst es. NL NL Du kannst es kaum erwarten dein neues Wissen auf das nächste Opfer anzuwenden."
+    ],
+    "OPTIONS": [
+      "[Lesen] Wähle einen Angriff um #y'aktiviere #yFertigkeitsbonus' hinzuzufügen. #rVerliere #r",
+      " #rTP.",
+      "[Verlassen]",
+      "[Gesperrt] Erfordert einen Angriff.",
+      "Wähle eine Karte um 'aktiviere Fertigkeitsbonus' hinzuzufügen.",
+      "[Lesen] Wähle einen Angriff um #y'aktiviere #yFertigkeitsbonus' hinzuzufügen. #rVerflucht #r- #rStolz."
+    ]
+  },
+  "champ:Gym": {
+    "NAME": "Trainingshalle",
+    "DESCRIPTIONS": [
+      "Entlang des Weges kommst du an der Trainingshalle des Exordium vorbei - ein Ort, den du regelmäßig besuchst um deinen Körper in Form zu halten. NL NL Jetzt wo du schon hier bist wäre es eine verschwendete Gelegenheit, keine Zeit darin zu verbringen. Um der Beste zu bleiben musst du dich auch ranhalten.",
+      "Heute ist Ausdauertraining dran. Mit der vollen Rüstung absolvierst du einige Runden auf der Laufstrecke. NL NL Voller Adrenalin und Energie verlässt du die Trainingshalle, bereit die Bedrohung des Spire zu zerschlagen.",
+      "Heute ist Kampftraining an der Reihe. Du siehst dich nach jemanden um, der so aussieht als könnte er ein paar Schläge einstecken. Du packst ihn an den Schultern und wirfst ihn in den Ring. Nach einigen Runden ist er schon KO. NL NL Der Kampf war keine Herausforderung, doch du hast eine neue Technik entwickelt, wie man einen Kampf beginnen kann.",
+      "Das heutige Training steht ganz im Zeichen des Oberkörpers. Du nimmst dir die schwersten Geichte und Widerstände und absolvierst einige Sätze. Nach dem Training spürst du, dass dir das Gewichtheben ein wenig leichter fällt. NL NL Als du die Trainingshalle verlässt, machst du dir im Kopf die Notiz, dass beim nächsten Mal Beintraining an der Reihe ist. Das Beintraining darfst du nicht schwänzen!"
+    ],
+    "OPTIONS": [
+      "[Cardio] #gErhalte #g",
+      " #gMax #gTP.",
+      "[Sparring] Wähle eine nicht-Abschluss Karte um 'Nimm (Haltung deiner Wahl) an' hinzuzufügen.",
+      "[Gewichtheben] #gBeginne #gjeden #gKampf #gmit #g1 #gStärke.",
+      "[Verlassen]",
+      "Wähle eine nicht-Abschluss Karte um 'Nimm Defensiv an' hinzuzufügen.",
+      "Wähle eine nicht-Abschluss Karte um 'Nimm Gladiator an' hinzuzufügen.",
+      "Wähle eine nicht-Abschluss Karte um 'Nimm Offensiv an' hinzuzufügen.",
+      "[Gesperrt] Benötigt eine nicht-Abschluss Karte die keine Haltung annimmt."
+    ]
+  },
+  "champ:MinorLeagueArena": {
+    "NAME": "Unterliga-Arena",
+    "DESCRIPTIONS": [
+      "Auf deinem Weg entdeckst du eine bekanntes Wahrzeichen des Exordium - Eine Arena in der früher die blutigen Spiele stattfanden, die mittlerweile im großen Kolosseum der Stadt über die Bühne gehen. Diese kleinere Arena bietet nun etwas schwächeren Kriegern die Möglichkeit zu trainiren und zu kämpfen. NL NL Diese albernen Kämpfe sind zwar nicht ganz deine Liga, doch können sie für Ablenkung und Unterhaltung sorgen.",
+      "Du verlässt die Arena - das ist nur Zeitverschwendung. Du hörst wie die Kämpfer erleichtern aufatmen. Keiner von ihnen war wohl dazu bereit, heute durch deine Hand zu sterben."
+   ],
+    "OPTIONS": [
+      "[Kämpfe gegen Zenturio & Mystikerin] #gErhalte #gden #gManschettenknopf.",
+      "[Kämpfe gegen Gremlin-Aristo] #gErhalte #gden #gChampiongürtel.",
+      "[Kämpfe gegen 2 Sklavenhändler] #gErhalte #gdas #gHufeisen.",
+      "[Verlassen]"
+    ]
+  },
+  "champ:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Fähigkeiten und das Vertrauen in ihnen sind eine unschlagbare Kombination."
+    ],
+    "OPTIONS": [
+      "[Intuition] Alle #gSchlag und #gVerteidigen Karten erhalten #y'aktiviere #yFertigkeitsbonus'.",
+      "[Gesperrt] Erfordert einen Schlag oder ein Verteidigen."
+    ]
+  }
+}

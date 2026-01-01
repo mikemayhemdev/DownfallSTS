@@ -1,0 +1,25 @@
+{
+  "hexamod:SealCommonReward": {
+    "TEXT": [
+      "Nimm eine gewöhnliche Karte in dein Deck auf."
+    ]
+  },
+  "hexamod:SealSealReward": {
+    "TEXT": [
+      "Nimm ein Siegel in dein Deck auf",
+      "Wähle eine Karte."
+    ]
+  },
+  "hexamod:SealDescriptor": {
+    "TEXT": [
+      "Siegel",
+      "hexamod:Siegel. NL "
+    ]
+  },
+  "hexamod:SealMode": {
+    "TEXT": [
+      "Legacy Modus - Sechs Siegel",
+      "Siegel Karten tauchen nach manchen Kämpfen als Belohnung auf. Sammle alle Siegel um eine besondere Belohnung zu erhalten. Runs in diesem Modus sind einfacher."
+    ]
+  }
+}

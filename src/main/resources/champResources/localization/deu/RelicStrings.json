@@ -1,0 +1,132 @@
+{
+  "champ:ChampionCrown": {
+    "NAME": "Championkrone",
+    "FLAVOR": "A WINNER IS YOU!",
+    "DESCRIPTIONS": [
+      "Du kannst ein Mal in jedem Kampf eine zufällige #yHaltung annehmen, in der du dich nicht befindest."
+    ]
+  },
+  "champ:BlackKnightHelmet": {
+    "NAME": "Helm des Schwarzen Ritters",
+    "FLAVOR": "Nur eine Fleischwunde.",
+    "DESCRIPTIONS": [
+      "Das erste Mal wenn du im Kampf die entsprechende #yHaltung annimst: NL #bchamp:Defensiv : Erhalte #b2 #yGeschicklichkeit und verliere #b1 #yStärke [REMOVE_SPACE]. NL #rchamp:Offensiv : Erhalte #b2 #yStärke und verliere #b1 #yGeschicklichkeit [REMOVE_SPACE]."
+    ]
+  },
+  "champ:Barbells": {
+    "NAME": "Hantel",
+    "FLAVOR": "1000 Wiederholungen? Pah. Ich schaffe 1001.",
+    "DESCRIPTIONS": [
+      "Wenn du ein Lagerfeuer mit mindestens #b",
+      " #yverbesserbaren Karten im Deck betrittst, dann #yverbessere eine zufällige Karte in deinem Deck."
+    ]
+  },
+  "champ:BerserkersGuideToSlaughter": {
+    "NAME": "Berserker-Handbuch",
+    "FLAVOR": "Der Text ist unleserlich.",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn deines Zuges #b",
+      " #yElan [REMOVE_SPACE]."
+    ]
+  },
+  "champ:ChampionCrownUpgraded": {
+    "NAME": "Krone des Sieges",
+    "FLAVOR": "Conglaturation!! You are the greatest winner.",
+    "DESCRIPTIONS": [
+      "Ersetzt ",
+      " [REMOVE_SPACE].[] NL Das erste Mal wenn du im Zug einen #ychamp:Abschluss spielst, ziehe #b",
+      " Karten und nimm eine zufällige #yHaltung an."
+    ]
+  },
+  "champ:DefensiveTrainingManual": {
+    "NAME": "Verteidigende Abhandlung",
+    "FLAVOR": "Sollten nicht eigentlich Abhandlungen verteidigt werden?",
+    "DESCRIPTIONS": [
+      "Erhöhe den #ychamp:Abschlussbonus der #bchamp:Defensivhaltung um weitere #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "champ:DeflectingBracers": {
+    "NAME": "Ablenkende Armschienen",
+    "FLAVOR": "Wenn du schon dachtest dass Abblocken gut wäre...",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn deines Zuges #ychamp:Konter in Höhe der Hälfte es ungerbrauchten #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "champ:DuelingGlove": {
+    "NAME": "Fehdehandschuh",
+    "FLAVOR": "Zähle von zehn abwärts...",
+    "DESCRIPTIONS": [
+      "Wenn du einen #yAngriff mit einem einzelnen Ziel auf einen Gegner spielst, der nicht #yVerwundbar ist, dann wende #b1 #yVerwundbar an."
+    ]
+  },
+  "champ:FightingForDummies": {
+    "NAME": "Dolphins Stil-Leitfaden",
+    "FLAVOR": "Geschrieben vom renommierten Boxer und Entdecker Dolphin K. Mist.",
+    "DESCRIPTIONS": [
+      "Wenn du deinen Zug ohne #yHaltung beendest, dann ziehe im nächsten Zug #b1 zusätzliche Karte."
+    ]
+  },
+  "champ:GladiatorsBookOfMartialProwess": {
+    "NAME": "Lehren der Gladiatoren",
+    "FLAVOR": "Probiere alles aus - etwas wird schon hängenbleiben.",
+    "DESCRIPTIONS": [
+      "Immer wenn du im selben Zug jeweils mindetens einen #ychamp:Combo [REMOVE_SPACE] aktivierst, einen #ychamp:Abschluss ausspielst, und eine #yHaltung annimmst, dann erhalte #b1 #yStärke und #yGeschicklichkeit [REMOVE_SPACE]."
+    ]
+  },
+  "champ:PowerArmor": {
+    "NAME": "Mächtige Rüstung",
+    "FLAVOR": "Wurde gebraucht gekauft.",
+    "DESCRIPTIONS": [
+      "Erhalte in deinem Zug [E] . NL Dein #yElan und dein #ychamp:Konter können #b",
+      " nicht übersteigen."
+    ]
+  },
+  "champ:RageAmulet": {
+    "NAME": "Amulett der Unnachgiebigkeit",
+    "FLAVOR": "Verloren geglaubte Stärke fließt wieder durch dich, als ob sie nie weg gewesen wäre.",
+    "DESCRIPTIONS": [
+      "Immer wenn du #yElan verbrauchst, erhalte für alle #b",
+      " ausgegebenen #yElan #b1 #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "champ:SignatureFinisher": {
+    "NAME": "Charakteristischer Abschluss",
+    "FLAVOR": "Und jetzt kommt mein ULTIMATER MOVE!",
+    "DESCRIPTIONS": [
+      "Wähle beim Aufheben eine #ychamp:Abschlusskarte [REMOVE_SPACE]. Diese #Abschlusskarte kostet #b0 [REMOVE_SPACE], kann ohne #yHaltung ausgespielt werden, und bricht deine #yHaltung nicht ab.",
+      "Wähle eine Karte für ",
+      " kostet #b0 [REMOVE_SPACE], kann ohne #yHaltung gespielt werden, und bricht deine #yHaltung nicht ab.",
+      "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
+    ]
+  },
+  "champ:SpectersHand": {
+    "NAME": "Geisterhand",
+    "FLAVOR": "Manche Siege bleiben bei dir.",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du eine #yHaltung annimmst ein #ygremlin:Echo einer Basis #ySchlag oder #yVerteidigen Karte. Es kostet #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "champ:LiftRelic": {
+    "NAME": "Innere STärke",
+    "FLAVOR": "Es geht mehr um das riesige Schwert in deinem Herzen.",
+    "DESCRIPTIONS": [
+      "Beginne jeden Kampf mit #b",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "champ:ChampStancesModRelic": {
+    "NAME": "Neuer Herausforderer",
+    "FLAVOR": "Hältst du der Krone stand?",
+    "DESCRIPTIONS": [
+      "Beginne jeden Kamp in einer zufälligen Champ #yHaltung [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:BustedCrownGagText": {
+    "NAME": "Zerbrochene Krone",
+    "FLAVOR": "Nachahmung ist die aufrichtigste Form der Schmeichelei... oder doch nicht? Diese Krone sieht deiner nichtmal besonders ähnlich. Eigentlich ist sie eine Beleidigung.",
+    "DESCRIPTIONS": [
+      "Bei Kartenbelohnungen hast du #b2 Karten weniger zur Auswahl. Erhalte in deinem Zug [E] ."
+    ]
+  }
+}
