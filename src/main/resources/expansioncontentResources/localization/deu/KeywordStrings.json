@@ -4,7 +4,8 @@
     "ID": "blur",
     "NAMES": [
       "verschwimmen",
-      "verschwimme"
+      "verschwimme",
+      "blur"
     ],
     "DESCRIPTION": "#yBlock wird zu Beginn deines Zuges nicht entfernt."
   },
@@ -25,14 +26,16 @@
   {
     "PROPER_NAME": "Erholen",
     "NAMES": [
-      "erholen"
+      "erholen",
+      "regen"
     ],
     "DESCRIPTION": "Heile TP in Höhe von #yErholen am Ende deines Zuges, und reduziere dann #yErholen um #b1 [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Panzerrüstung",
     "NAMES": [
-      "panzerrüstung"
+      "panzerrüstung",
+      "plated"
     ],
     "DESCRIPTION": "Du erhältst #yBlock in Höhe deiner #yPanzerrüstung am Ende des Zuges. Ungeblockter Angriffsschaden reduziert #yPanzerrüstung um #b1"
   },
@@ -47,8 +50,8 @@
     "PROPER_NAME": "Echo",
     "ID": "echo",
     "NAMES": [
-      "echo",
-      "echos"
+      "echos",
+      "echo"
     ],
     "DESCRIPTION": "Echos sind Kopien von Karten die zusätzlich #yflüchtig sind und #yerschöpfen. Von einem Echo kann kein Echo erstellt werden."
   },
@@ -58,16 +61,17 @@
     "NAMES": [
       "exhumieren",
       "exhumiere",
-      "exhumiert"
+      "exhumiert",
+      "exhume"
     ],
     "DESCRIPTION": "Nimm eine erschöpfte Karte auf die Hand."
   },
   {
-    "PROPER_NAME": "Invincible",
+    "PROPER_NAME": "Unverwundbar",
     "NAMES": [
-      "invincible"
+      "unverwundbar"
     ],
-    "DESCRIPTION": "You cannot lose more than a given amount of HP in a single turn. NL At the end of any round in which Invincible prevented HP loss, remove it."
+    "DESCRIPTION": "Du kannst innerhalb eines Zuges nicht mehr als eine bestimmte Anzahl an TP verlieren. NL Wenn Unverwundbar TP-Verlust verhindert hat, wird es im nächsten Zug erntfernt."
   },
   {
     "PROPER_NAME": "Fleddern",
@@ -75,7 +79,8 @@
       "fleddern",
       "fleddere",
       "gefleddert",
-      "gefledderte"
+      "gefledderte",
+      "reclaim"
     ],
     "DESCRIPTION": "Nimm eine erschöpfte Karte in deinen Abwurfstapel."
   },
@@ -85,7 +90,8 @@
       "glibber",
       "glibbers",
       "geglibbert",
-      "angeglibbert"
+      "angeglibbert",
+      "goop"
     ],
     "DESCRIPTION": "Der Schaden des nächsten Angriffs wird in Höhe des #yGlibbers erhöht. Der Angriff entfernt den #yGlibber und aktiviert #yKonsum Effekte."
   },
@@ -94,7 +100,8 @@
     "NAMES": [
       "gefesselt",
       "fesseln",
-      "fessle"
+      "fessle",
+      "shackled"
     ],
     "DESCRIPTION": "Gefesselte Wesen verlieren #yStärke für einen Zug."
   },
@@ -107,14 +114,17 @@
       "temporären tp",
       "temporären_tp",
       "temp tp",
-      "temp_tp"
+      "temp_tp",
+      "temp hp",
+      "temp_hp"
     ],
     "DESCRIPTION": "Verhindert TP-Verlust bis zum Ende des Kampfes."
   },
   {
     "PROPER_NAME": "Opfergabe",
     "NAMES": [
-      "opfergabe"
+      "opfergabe",
+      "pyre"
     ],
     "DESCRIPTION": "Erfordert als zusätzliche Kosten das #yErschöpfen einer Handkarte."
   },
@@ -125,7 +135,9 @@
       "verdammen",
       "verdamme",
       "verdammt",
-      "verdammte"
+      "verdammte",
+      "doom",
+      "doomed"
     ],
     "DESCRIPTION": "Verdammte Wesen verlieren zu Beginn ihrer Züge TP in Höhe der Verdammnis. Sämtliche Verdammnis wird danach entfernt, es sei denn, das Wesen ist #ygeplagt (ist gleichzeitig #ySchwach und #yVerwundbar [REMOVE_SPACE])."
   },
@@ -133,7 +145,9 @@
   {
     "NAMES": [
       "glibber",
-      "glibbers"
+      "glibbers",
+      "goop",
+      "gooped"
     ],
     "PROPER_NAME": "Glibber",
     "DESCRIPTION": "Der Schaden des nächsten #yAngriffs wird um die Anzahl des #yGlibbers erhöht. Ein #yAngriff entfernt sämtlichen #yGlibber und aktiviert #yKonsum Effekte."
@@ -142,7 +156,8 @@
   {
     "NAMES": [
       "umwickelt",
-      "umwickeln"
+      "umwickeln",
+      "constricted"
     ],
     "PROPER_NAME": "Umwickelt",
     "DESCRIPTION": "Umwickelte Wesen erleiden am Ende des Zuges Schaden in Höhe der Umwickelung."
@@ -151,7 +166,10 @@
   {
     "PROPER_NAME": "Chor",
     "NAMES": [
-      "chor"
+      "chor",
+      "chant",
+      "Chant",
+      "Chants"
     ],
     "DESCRIPTION": "Chor Effekte werden für den Rest des Kampfes aktiviert, wenn beim Ausspielen die letzte gespielte Karte eine #yMacht war."
   },
@@ -161,7 +179,8 @@
     "NAMES": [
       "transformieren",
       "transformiere",
-      "transformiert"
+      "transformiert",
+      "transform"
     ],
     "DESCRIPTION": "#yErschöpfe eine Karte und ersetze sie durch eine zufällige Karte."
   }
