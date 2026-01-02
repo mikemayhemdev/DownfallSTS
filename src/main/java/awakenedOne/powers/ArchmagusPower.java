@@ -23,7 +23,6 @@ public class ArchmagusPower extends AbstractTwoAmountAwakenedPower {
         amount2 = 1 - AwakenedOneMod.spellsThisTurn;
         if (amount2 < 0) amount2 = 0;
         updateDescription();
-
     }
 
     @Override
@@ -80,9 +79,9 @@ public class ArchmagusPower extends AbstractTwoAmountAwakenedPower {
 
     public void updateDescription() {
         if (amount == 1) {
-            description = DESCRIPTIONS[0] + DESCRIPTIONS[3] + " [REMOVE_SPACE]" + Math.min(amount2, AwakenedOneMod.spellsThisTurn - this.cardsDoubledThisTurn) + DESCRIPTIONS[4];
+            description = DESCRIPTIONS[0] + DESCRIPTIONS[3] + Math.min(amount2, AwakenedOneMod.spellsThisTurn - this.cardsDoubledThisTurn) + DESCRIPTIONS[4];
         } else {
-            description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] + " [REMOVE_SPACE]" + Math.min(amount2, AwakenedOneMod.spellsThisTurn - this.cardsDoubledThisTurn) + DESCRIPTIONS[4];
+            description = DESCRIPTIONS[1] + this.amount + DESCRIPTIONS[2] + DESCRIPTIONS[3] + Math.min(amount2, AwakenedOneMod.spellsThisTurn - this.cardsDoubledThisTurn) + DESCRIPTIONS[4];
         }
     }
 }
