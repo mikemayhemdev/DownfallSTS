@@ -3,7 +3,10 @@
     "NAMES": [
       "fassung",
       "einbetten",
-      "eingebettet"
+      "eingebettet",
+      "socket",
+      "sockets",
+      "socketed"
     ],
     "PROPER_NAME": "Fassung",
     "DESCRIPTION": "#yJuwelen können am Lagerfeuer in Karten mit Fassungen eingebettet werden."
@@ -19,7 +22,9 @@
     "NAMES": [
       "juwel",
       "juwelen",
-      "juwele"
+      "juwele",
+      "gem",
+      "gems"
     ],
     "PROPER_NAME": "Juwels",
     "DESCRIPTION": "Juwelen können am Lagerfeuer in Karten mit Fassungen eingebettet werden. Sie können nicht #yverbessert werden."
@@ -28,7 +33,10 @@
     "PROPER_NAME": "Defensivmodus",
     "NAMES": [
       "defensivmodus",
-      "defensiv"
+      "defensiv",
+      "defensive mode",
+      "defensive_mode",
+      "defensive"
     ],
     "DESCRIPTION": "#yHaltung. NL Im Defensivmodus hast du #b3 #yStacheln und dein #yBlock verfällt nicht zu Beginn deines Zuges."
   },
@@ -36,7 +44,8 @@
     "NAMES": [
       "beschleunigen",
       "beschleunige",
-      "beschleunigung"
+      "beschleunigung",
+      "accelerate"
     ],
     "PROPER_NAME": "Beschleunigung",
     "DESCRIPTION": "Reduziere die Anzahl der Züge, die die vorderste Karte noch in #yStasis verweilt um #b1 [REMOVE_SPACE]."
@@ -44,21 +53,28 @@
   {
     "NAMES": [
       "paket",
-      "pakete"
+      "pakete",
+      "package",
+      "packages"
     ],
     "PROPER_NAME": "Paket",
     "DESCRIPTION": "#yFertigkeit die drei Karten erschafft, welche einem Konstrukt des Spire nachempfunden sind."
   },
   {
     "NAMES": [
-      "volatil"
+      "volatil",
+      "volatile"
     ],
     "PROPER_NAME": "Volatil",
     "DESCRIPTION": "Wenn diese Karte die #yStasis verlässt, wird sie #yerschöpft [REMOVE_SPACE]."
   },
   {
     "NAMES": [
-      "Politur"
+      "Politur",
+      "Polishing Oil",
+      "Polishing_Oil",
+      "polishing_oil",
+      "polishingoil"
     ],
     "PROPER_NAME": "Politur",
     "DESCRIPTION": "#yTrank [REMOVE_SPACE]: Erhalte #b16 #yBlock [REMOVE_SPACE]. Wechsle in den #yDefensivmodus [REMOVE_SPACE]."
@@ -73,7 +89,8 @@
   },
   {
     "NAMES": [
-      "puffer"
+      "puffer",
+      "buffer"
     ],
     "PROPER_NAME": "Puffer",
     "DESCRIPTION": "Verhindere den nächsten TP-Verlust."
@@ -83,7 +100,8 @@
       "abhärten",
       "abhärtest",
       "abgehärtet",
-      "härte"
+      "härte",
+      "brace"
     ],
     "PROPER_NAME": "Abhärten X",
     "DESCRIPTION": "Reduziere den erforderlichen TP-Verlust für den #yModuswechsel um X."

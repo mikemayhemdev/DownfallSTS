@@ -4,7 +4,8 @@
     "NAMES": [
       "irrsicher",
       "irrsicherer",
-      "irrsichere"
+      "irrsichere",
+      "snekproof"
     ],
     "DESCRIPTION": "Die Kosten irrsicherer Karten können durch #yIrren und #yVerwirrung nicht verändert werden."
   },
@@ -19,7 +20,9 @@
   {
     "PROPER_NAME": "Überschuss",
     "NAMES": [
-      "überschuss"
+      "überschuss",
+      "Overflow",
+      "overflow"
     ],
     "DESCRIPTION": "Überschuss-Effekte werden aktiviert wenn beim Ausspielen mindestens #b5 ANDERE Karten auf der Hand sind."
   },
@@ -28,7 +31,10 @@
     "NAMES": [
       "irren",
       "geirrt",
-      "geirrte"
+      "geirrte",
+      "muddle",
+      "muddled",
+      "muddles"
     ],
     "DESCRIPTION": "Das Irren einer Karte verändert ihre Kosten für diesen Zug auf einen Zufallswert zwischen #b0 und #b3 [REMOVE_SPACE]. Durch das Irren werden die Kosten immer verändert - die Kosten welche die Karte vor dem Irren hatte ist vom Ergebnis ausgeschlossen"
   },
@@ -38,28 +44,32 @@
       "fremdklasse",
       "fremdklassen",
       "fremde",
-      "fremden"
+      "fremden",
+      "offclass"
     ],
     "DESCRIPTION": "Alle Karten die nicht dem eigenen Charakter zugehörig sind zählen als fremd (darunter auch farblose Karten, Flüche, und Statuskarten)."
   },
   {
     "PROPER_NAME": "Geschenk",
     "NAMES": [
-      "geschenk"
+      "geschenk",
+      "gift"
     ],
     "DESCRIPTION": "Wenn du diese Karte in dein Deck aufnimmst, erhältst du eine zusätzliche spezifische Karte oder Kartenbelohnung."
   },
   {
     "PROPER_NAME": "Identifizieren",
     "NAMES": [
-      "identifiziert"
+      "identifiziert",
+      "identify"
     ],
     "DESCRIPTION": "Ersetze eine #yunindentifizierte Karte durch die Karte, die sie aktuell verkörpert."
   },
   {
     "PROPER_NAME": "Toxin",
     "NAMES": [
-      "toxin"
+      "toxin",
+      "venom"
     ],
     "DESCRIPTION": "Wesen mit #yToxin verlieren TP in dessen Höhe wenn sie einen Debuff, abgesehen von #yToxin [REMOVE_SPACE], erleiden."
   },
@@ -67,7 +77,8 @@
     "PROPER_NAME": "Glück",
     "NAMES": [
       "glück",
-      "glücklich"
+      "glücklich",
+      "lucky"
     ],
     "DESCRIPTION": "#yÜberschuss Effekte werden in diesem Zug immer aktiviert - unabhängig von der Handgröße."
   }

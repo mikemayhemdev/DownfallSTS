@@ -8,6 +8,10 @@
       "fertigkeitsboni",
       "technik",
       "techniken",
+      "bonus",
+      "bonuses",
+      "technique",
+      "techniques",
       "champ:[crown_icon]",
       "[crown_icon]"
     ],
@@ -21,7 +25,8 @@
       "offensivcombo",
       "defensivcombo",
       "offensivcombo:",
-      "defensivcombo:"
+      "defensivcombo:",
+      "combo"
     ],
     "DESCRIPTION": "Zusätzlicher Effekt einer Karte der aktiviert wird, wenn man sich in der passenden #yHaltung befindet."
   },
@@ -29,7 +34,9 @@
     "PROPER_NAME": "Schlag",
     "NAMES": [
       "schlag",
-      "schläge"
+      "schläge",
+      "strike",
+      "strikes"
     ],
     "DESCRIPTION": "Jede Karte mit \"Schlag\" im Namen. Nicht zu verwechseln mit #ySchlägen - damit sind nur Basis Schlag Karten gemeint."
   },
@@ -44,6 +51,8 @@
       "abschlussbonus",
       "abschließen",
       "abschließt",
+      "finisher",
+      "finishers",
       "[fist_icon]",
       "champ:[fist_icon]"
     ],
@@ -53,7 +62,8 @@
     "PROPER_NAME": "Konter",
     "NAMES": [
       "konter",
-      "konters"
+      "konters",
+      "counter"
     ],
     "DESCRIPTION": "Wenn du das nächste Mal angegriffen wirst, verliere dein Konter und erhalte einen #yGegenschlag der Schaden in Höhe des verbrauchten Konters zufügt."
   },
@@ -61,7 +71,9 @@
     "PROPER_NAME": "Defensivhaltung",
     "NAMES": [
       "defensiv",
-      "defensivhaltung"
+      "defensivhaltung",
+      "defensive",
+      "defensive."
     ],
     "DESCRIPTION": "#yHaltung. NL #yFertigkeitsbonus: Erhalte #b3 #yKonter [REMOVE_SPACE]. NL #yAbschlussbonus: Erhalte #b6 #yBlock [REMOVE_SPACE]."
   },
@@ -69,7 +81,9 @@
     "PROPER_NAME": "Offensivhaltung",
     "NAMES": [
       "offensiv",
-      "offensivhaltung"
+      "offensivhaltung",
+      "berserker",
+      "berserker."
     ],
     "DESCRIPTION": "#yHaltung. NL #yFertigkeitsbonus: Erhalte #b2 #yElan [REMOVE_SPACE]. NL #yAbschlussbonus: Erhalte #b1 #yStärke [REMOVE_SPACE]."
   },
@@ -77,7 +91,9 @@
     "PROPER_NAME": "Gladiatorenhaltung",
     "NAMES": [
       "gladiator",
-      "gladiatorenhaltung"
+      "gladiatorenhaltung",
+      "gladiator",
+      "gladiator."
     ],
     "DESCRIPTION": "#yHaltung. NL #yFertigkeitsbonus: Ziehe eine Karte. NL #yAbschlussbonus: Im nächsten Zug, ziehe #b1 Karte und erhalte [E] . Beende deinen Zug."
   },
@@ -86,7 +102,9 @@
     "NAMES": [
       "ultimativ",
       "ultimative",
-      "ultimativen"
+      "ultimativen",
+      "ultimate",
+      "ultimate."
     ],
     "DESCRIPTION": "#yHaltung [REMOVE_SPACE]. Zählt gleichzeitig als #bDefensivhaltung und #rOffensivhaltung [REMOVE_SPACE]. NL Wenn du diese #yHaltung in deinem Zug verlässt, nimm sie sofort wieder an."
   },
@@ -94,7 +112,10 @@
     "PROPER_NAME": "Ermüdung",
     "NAMES": [
       "ermüdung",
-      "ermüdet"
+      "ermüdet",
+      "fatigue",
+      "fatigued",
+      "fatigue."
     ],
     "DESCRIPTION": "Verliere TP. Heile TP die durch #yErmüdung verloren wurden am Ende des Kampfes. Du kannst nicht vor #yErmüdung sterben."
   }
