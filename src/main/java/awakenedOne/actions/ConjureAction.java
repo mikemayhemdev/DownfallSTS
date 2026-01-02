@@ -75,11 +75,11 @@ public class ConjureAction extends AbstractGameAction {
             this.isDone = true;
             return;
         }
-        if (AbstractDungeon.player.hasPower("No Draw")) {
-            AbstractDungeon.player.getPower("No Draw").flash();
-            this.isDone = true;
-            return;
-        }
+//        if (AbstractDungeon.player.hasPower("No Draw")) {
+//            AbstractDungeon.player.getPower("No Draw").flash();
+//            this.isDone = true;
+//            return;
+//        }
         conjuresThisCombat += 1;
         isDone = true;
         conjuredCards.clear();
