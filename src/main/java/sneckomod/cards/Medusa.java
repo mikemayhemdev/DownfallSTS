@@ -28,6 +28,7 @@ public class Medusa extends AbstractSneckoCard {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        this.tags.add(SneckoMod.GIFT);
         SneckoMod.loadJokeCardImage(this, "Medusa.png");
     }
 

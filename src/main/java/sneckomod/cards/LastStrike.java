@@ -38,7 +38,7 @@ public class LastStrike extends AbstractSneckoCard {
         baseDamage = BASE_DAMAGE;
         tags.add(CardTags.STRIKE);
         SneckoMod.loadJokeCardImage(this, "LastStrike.png");
-
+        this.tags.add(SneckoMod.GIFT);
         resetMultiplierTracking();
     }
 

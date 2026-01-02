@@ -35,6 +35,7 @@ public class BeyondArmor extends AbstractSneckoCard {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
         baseBlock = BLOCK;
         magicNumber = baseMagicNumber = MAGIC;
+        this.tags.add(SneckoMod.GIFT);
         SneckoMod.loadJokeCardImage(this, "BeyondArmor.png");
     }
 

@@ -30,6 +30,7 @@ public class SerpentMind extends AbstractSneckoCard implements OnObtainCard {
         baseMagicNumber = magicNumber = MAGIC;
         tags.add(BaseModCardTags.FORM);
         isEthereal = true;
+        this.tags.add(SneckoMod.GIFT);
         SneckoMod.loadJokeCardImage(this, "SerpentMind.png");
     }
 
