@@ -31,7 +31,7 @@ public class PickAxe extends CustomRelic {
 
 
     public void onEquip() {
-        if (Wiz.isInCombat() && (AbstractDungeon.getCurrRoom()).eliteTrigger) {
+        if (AbstractDungeon.floorNum > 2 && (AbstractDungeon.getCurrRoom()).eliteTrigger) {
             AbstractDungeon.getCurrRoom().rewards.add(new GemRewardButRelicRng());
             //            AbstractDungeon.combatRewardScreen.open();
             //            AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
