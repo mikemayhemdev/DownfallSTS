@@ -203,7 +203,7 @@
   },
   "awakened:Rebirth": {
     "NAME": "転生",
-    "DESCRIPTION": "死亡時または戦闘終了時に、 全てのデバフと *覚醒 状態を解除し、 HPを !M! 回復する。"
+    "DESCRIPTION": "死亡時または戦闘終了時に、 全てのデバフを解除し、 *覚醒 状態になり HPを !M! 回復する。"
   },
   "awakened:Archmagus": {
     "NAME": "アークメイジ",
