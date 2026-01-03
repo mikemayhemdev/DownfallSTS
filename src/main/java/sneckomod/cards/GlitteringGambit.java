@@ -27,6 +27,7 @@ public class GlitteringGambit extends AbstractSneckoCard {
         isEthereal = false;
         tags.add(CardTags.HEALING);
         tags.add(expansionContentMod.UNPLAYABLE);
+        this.tags.add(SneckoMod.GIFT);
         SneckoMod.loadJokeCardImage(this, "GlitteringGambit.png");
         SoulboundField.soulbound.set(this, true);
     }

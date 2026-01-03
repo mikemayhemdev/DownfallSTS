@@ -134,6 +134,8 @@ public class SneckoMod implements
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags MUDDLED;
     @SpireEnum
     public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags NO_TYPHOON;
+    @SpireEnum
+    public static com.megacrit.cardcrawl.cards.AbstractCard.CardTags GIFT;
 
     public static Random identifyRng;
 
@@ -351,8 +353,13 @@ public class SneckoMod implements
             possList.removeIf(c -> c instanceof Discovery);
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
         }
-        if (isPureSneckoModeEnabled() && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko);
+        if (isPureSneckoModeEnabled() && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko) {
             possList.removeIf(c -> !validColors.contains(c.color));
+        }
+
+        if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT) {
+            possList.removeIf(c -> c.hasTag(SneckoMod.GIFT));
+        }
 
         possList.removeIf(c -> c.color == AbstractDungeon.player.getCardColor());
 
@@ -386,6 +393,10 @@ public class SneckoMod implements
 
         possList.removeIf(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE);
 
+        if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT) {
+            possList.removeIf(c -> c.hasTag(SneckoMod.GIFT));
+        }
+
         if (possList.isEmpty()) {
             return new Madness();
         }
@@ -410,6 +421,10 @@ public class SneckoMod implements
         possList.removeIf(c -> c.color == AbstractCard.CardColor.COLORLESS);
 
         possList.removeIf(c -> c.color == CollectibleCardColorEnumPatch.CardColorPatch.COLLECTIBLE);
+
+        if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT) {
+            possList.removeIf(c -> c.hasTag(SneckoMod.GIFT));
+        }
 
         if (possList.isEmpty()) {
             return new Madness();
@@ -526,10 +541,11 @@ public class SneckoMod implements
                  c.cardID.equals(Undervolt.ID) ||
                 //Snecko Cards
                 c.cardID.equals(Deception.ID) ||
-                c.cardID.equals(MakeshiftBlade.ID) ||
-                c.cardID.equals(Belittle.ID) ||
+                //c.cardID.equals(Medusa.ID) ||
+                //c.cardID.equals(MakeshiftBlade.ID) ||
+                //c.cardID.equals(Belittle.ID) ||
                 c.cardID.equals(PoisonParadise.ID) ||
-                c.cardID.equals(AceOfWands.ID) ||
+                //c.cardID.equals(AceOfWands.ID) ||
                 //Awakened One Cards
                 c.cardID.equals(Scour.ID) ||
                 c.cardID.equals(Psalm.ID) ||
@@ -577,6 +593,11 @@ public class SneckoMod implements
         if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
         }
+
+        if (AbstractDungeon.getCurrRoom().phase != AbstractRoom.RoomPhase.COMBAT) {
+            possList.removeIf(c -> c.hasTag(SneckoMod.GIFT));
+        }
+
         if ((!isPureSneckoModeEnabled() && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko));
         possList.removeIf(c -> !validColors.contains(c.color));
 

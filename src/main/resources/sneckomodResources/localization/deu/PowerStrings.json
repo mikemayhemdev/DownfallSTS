@@ -72,7 +72,7 @@
     ]
   },
   "sneckomod:UnendingSupplyPower": {
-    "NAME": "Unendlicher Nachschub",
+    "NAME": "Unbegrenzter Vorrat",
     "DESCRIPTIONS": [
       "Nimm zu Beginn jedes Zuges #b",
       "Nimm zu Beginn jedes Zuges ein #yEcho einer zufälligen Karte einer #yFremdklasse auf die Hand.",
@@ -128,7 +128,7 @@
     ]
   },
   "sneckomod:SerpentineSleuthPower": {
-    "NAME": "Serpentiner Detektiv",
+    "NAME": "Schlangendetektiv",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du eine #yMacht spielst #b",
       " [E] .",

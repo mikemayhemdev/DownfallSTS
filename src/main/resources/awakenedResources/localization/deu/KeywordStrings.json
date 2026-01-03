@@ -2,7 +2,7 @@
   {
     "PROPER_NAME": "Machttrank",
     "NAMES": [
-      "Machttrank",
+      "machttrank",
       "Power Potion",
       "Power_Potion",
       "power_potion",
@@ -67,7 +67,7 @@
       "manabrandes",
       "manaburn"
     ],
-    "DESCRIPTION": "Verliert TP in Höhe des #yManabrandes immer dann, wenn du [E] verlierst, selbst wenn du bei #b0 bist. (Ausgegebene [E] für die Kosten einer Karte zählen NICHT.)"
+    "DESCRIPTION": "Der Gegner verliert TP in Höhe des #yManabrandes immer dann, wenn du [E] verlierst, selbst wenn du bei #b0 bist. (Ausgegebene [E] für die Kosten einer Karte zählen NICHT.)"
   },
   {
     "PROPER_NAME": "Neugier",

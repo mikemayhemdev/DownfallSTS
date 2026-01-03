@@ -10,7 +10,7 @@
     "NAME": "Roggenhalm",
     "FLAVOR": "Immer noch in tadellosem Zustand, obwohl so lang daran gekaut wurde.",
     "DESCRIPTIONS": [
-      "Jedes Mal wenn du TP während der gegnerischen Züge verlierst, ziehe #1 Karte."
+      "Jedes Mal wenn du TP während der gegnerischen Züge verlierst, ziehe #b1 Karte."
     ]
   },
   "hermit:BartenderGlass": {
@@ -27,7 +27,7 @@
     "NAME": "Hufeisen",
     "FLAVOR": "Ein Glücksbringer. Jemand wird es sicherlich vermissen.",
     "DESCRIPTIONS": [
-      "Immer wenn du #ySchwach, #yGebrechlich oder #yVerwundbar erhälst, erhalte #b1 weniger."
+      "Immer wenn du #ySchwach, #yGebrechlich oder #yVerwundbar erhälst [REMOVE_SPACE], erhalte stattdessen #b1 weniger."
     ]
   },
   "hermit:Spyglass": {
@@ -41,11 +41,12 @@
     "NAME": "Roter Schal",
     "FLAVOR": "Er ist kuschelig und warm.",
     "DESCRIPTIONS": [
-      "Immer wenn du einen Debuff auf einen Gegner anwendest, erhalte #b", " #yBlock."
+      "Immer wenn du einen NEUEN Debuff auf einen Gegner anwendest, erhalte #b",
+      " #yBlock [REMOVE_SPACE]."
     ]
   },
   "hermit:DentedPlate": {
-    "NAME": "Verbeulte Platte",
+    "NAME": "Verbeulter Brustpanzer",
     "FLAVOR": "Es stecken immer noch ein paar Kugeln darin.",
     "DESCRIPTIONS": [
       "Wenn deine TP unter oder genau #b50% sind, erhalte [E] und ziehe #b1 Karte zu Beginn deines Zuges."
@@ -62,7 +63,8 @@
     "NAME": "Verkohlter Handschuh",
     "FLAVOR": "In Teilen des Handschus glüht immer noch unheimliche Asche.",
     "DESCRIPTIONS": [
-      "Immer wenn du ein #yFluch ziehst, fügt dein nächster Angriff #b", " mehr Schaden zu."
+      "Immer wenn du ein #yFluch ziehst, fügt dein nächster Angriff #b",
+      " mehr Schaden zu."
     ]
   },
   "hermit:ClaspedLocket": {
@@ -73,6 +75,39 @@
       "Nie wieder...",
       " Karten. Nimm beim Aufheben #b",
       " #rVerletzungen in dein Deck auf."
+    ]
+  },
+  "hermit:StraightRazor": {
+    "NAME": "Rasiermesser",
+    "FLAVOR": "Für eine wirklich glatte Rasur...",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine Karte aus deinem Deck entfernst oder #ytransformierst, heile #b",
+      " TP."
+    ]
+  },
+  "hermit:BrassTacks": {
+    "NAME": "Messingzwecken",
+    "FLAVOR": "Der Glanz dieser Zwecken scheint niemals zu verblassen.",
+    "DESCRIPTIONS": [
+      "Erhalte am Ende jedes Zuges #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "hermit:BlackPowder": {
+    "NAME": "Schwarzpulver",
+    "FLAVOR": "Mit Vorsicht zu handhaben.",
+    "DESCRIPTIONS": [
+      "Immer wenn du einen #yhermit:Volltreffer Effekt aktivierst, füge ALLEN Gegnern #b",
+      " Schaden zu."
+    ]
+  },
+  "hermit:BloodyTooth": {
+    "NAME": "Abgebrochener Zahn",
+    "FLAVOR": "Sieht zu groß aus, um menschlichen Ursprungs zu sein...",
+    "DESCRIPTIONS": [
+      "Immer wenn du einen Elitekampf gewinnst, heile #b",
+      " TP und erhalte #b",
+      " Gold."
     ]
   }
 }

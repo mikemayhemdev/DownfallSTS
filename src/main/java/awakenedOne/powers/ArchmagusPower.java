@@ -23,7 +23,6 @@ public class ArchmagusPower extends AbstractTwoAmountAwakenedPower {
         amount2 = 1 - AwakenedOneMod.spellsThisTurn;
         if (amount2 < 0) amount2 = 0;
         updateDescription();
-
     }
 
     @Override

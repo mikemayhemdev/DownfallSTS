@@ -48,7 +48,7 @@
   },
   "Guardian:DecasProtection": {
     "NAME": "Antike Macht",
-    "DESCRIPTION": "Erhalte !M! temporäre Stärke und temporäre Geschicklichkeit."
+    "DESCRIPTION": "Erhalte !M! temporäre Stärke und !M! temporäre Geschicklichkeit."
   },
   "Guardian:FierceBash": {
     "NAME": "Erbitterter Hieb",
@@ -86,16 +86,16 @@
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "Gigastrahl",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Stärke beeinflusst Gigastrahl NL !M! mal. NL Übergehe deinen nächsten Zug."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. Stärke beeinflusst Gigastrahl NL !M! mal. NL Übergehe deinen nächsten Zug."
   },
   "Guardian:BronzeArmor": {
-    "NAME": "Belastbare Platte",
+    "NAME": "Belastbarer Panzer",
     "DESCRIPTION": "Verringere deine Debuffs um !M!. NL guardianmod:Abhärten 8. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Verringere deine Debuffs um !M!. NL guardianmod:Abhärten 8."
   },
   "Guardian:FloatingOrbs": {
-    "NAME": "Schwebende Kugeln",
-    "DESCRIPTION": "Immer wenn du eine Karte ausspielst die #y0 kostet, füge einem zufälligen Gegner !M! Schaden zu."
+    "NAME": "Schwebekugeln",
+    "DESCRIPTION": "Immer wenn du eine Karte ausspielst die 0 kostet, füge einem zufälligen Gegner !M! Schaden zu."
   },
   "Guardian:OrbSlam": {
     "NAME": "Kugelknaller",
@@ -158,8 +158,8 @@
   },
   "Guardian:PackageSphere": {
     "NAME": "Paket: Sphärisch",
-    "DESCRIPTION": "Erhalte *Sphärischer *Schild, *Schwebende *Kugeln, und *Erhärten. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte *Sphärischer *Schild+, *Schwebende *Kugeln+, und *Erhärten+. NL Erschöpft."
+    "DESCRIPTION": "Erhalte *Sphärischer *Schild, *Schwebekugeln, und *Erhärten. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte *Sphärischer *Schild+, *Schwebekugeln+, und *Erhärten+. NL Erschöpft."
   },
   "Guardian:PackageSentry": {
     "NAME": "Paket: Wache",
@@ -173,13 +173,13 @@
   },
   "Guardian:PackageAutomaton": {
     "NAME": "Paket: Bronze",
-    "DESCRIPTION": "Erhalte *Gigastrahl, *Orb-Support, und *Belastbare *Platte. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte *Gigastrahl+, *Orb-Support+, und *Belastbare *Platte+. NL Erschöpft."
+    "DESCRIPTION": "Erhalte *Gigastrahl, *Orb-Support, und *Belastbarer *Panzer. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte *Gigastrahl+, *Orb-Support+, und *Belastbarer *Panzer+. NL Erschöpft."
   },
   "Guardian:PackageDefect": {
     "NAME": "Paket: Defekt",
-    "DESCRIPTION": "Erhalte *Umsteuern, *Vorprogrammieren, und *Zeit-Kapazität. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte *Umsteuern+, *Vorprogrammieren+, und *Zeit-Kapazität+. NL Erschöpft."
+    "DESCRIPTION": "Erhalte *Umsteuern, *Vorprogrammieren, und *Zeitkapazität. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte *Umsteuern+, *Vorprogrammieren+, und *Zeitkapazität+. NL Erschöpft."
   },
   "Guardian:Planning": {
     "NAME": "Vorratsschild",
@@ -205,7 +205,7 @@
   },
   "Guardian:GemFinder": {
     "NAME": "Juwelendetektor",
-    "DESCRIPTION": "Flüchtig. NL Erhalte am Ende des Kampfes ein zusätzliches zufälliges #yguardianmod:Juwel zur Belohnung."
+    "DESCRIPTION": "Flüchtig. NL Erhalte am Ende des Kampfes ein zusätzliches zufälliges guardianmod:Juwel zur Belohnung."
   },
   "Guardian:StasisField": {
     "NAME": "Stasisfeld",
@@ -216,7 +216,7 @@
     "DESCRIPTION": "Erhalte !M! expansioncontent:Panzerrüstung."
   },
   "Guardian:StasisStrike": {
-    "NAME": "Stasis-Schlag",
+    "NAME": "Stasisschlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 Stasis-Slot."
   },
   "Guardian:FuturePlans": {
@@ -230,7 +230,7 @@
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Lege eine Karte aus der Hand in guardianmod:Stasis."
   },
   "Guardian:FastForward": {
-    "NAME": "Geschwindigkeitsschub",
+    "NAME": "Volldampf",
     "DESCRIPTION": "guardianmod:Beschleunige !M! Mal.",
     "UPGRADE_DESCRIPTION": "Behalten. NL guardianmod:Beschleunige !M! Mal."
   },
@@ -253,7 +253,7 @@
     "UPGRADE_DESCRIPTION": " NL (Du hast !M! Juwel(en).)"
   },
   "Guardian:ChargeCore": {
-    "NAME": "Kern Laden",
+    "NAME": "Kernladung",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Lege diese Karte in guardianmod:Stasis. NL guardianmod:Ticken - Ziehe eine Karte. NL guardianmod:Volatil."
   },
   "Guardian:Reroute": {
@@ -261,7 +261,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Lege die nächste Karte die du in diesem Zug spielst in guardianmod:Stasis."
   },
   "Guardian:PiercingHide": {
-    "NAME": "Durchbohrende Haut",
+    "NAME": "Stechende Haut",
     "DESCRIPTION": "Erhalte !B! Block und !M! temporäre Stacheln. NL guardianmod:Abhärten 3.",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block und !M! temporäre Stacheln. NL guardianmod:Abhärten 4."
   },
@@ -291,7 +291,7 @@
     "DESCRIPTION": "Ziehe eine Karte."
   },
   "Guardian:RefractedBeam": {
-    "NAME": "Gebrochender Strahl",
+    "NAME": "Prismenstrahl",
     "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Kann beliebig oft verbessert werden. NL Für jede Verbesserung +1 Mal:"
   },
   "Guardian:MultiBeam": {
@@ -312,7 +312,7 @@
     "UPGRADE_DESCRIPTION": "Reduziere jedes Mal wenn du in den *Defensivmodus wechselst deine Debuffs um !M!. NL guardianmod:Abhärten !GuardianSecondM!."
   },
   "Guardian:SpikerProtocol": {
-    "NAME": "Spiker Protocol",
+    "NAME": "Stachelprotokoll",
     "DESCRIPTION": "Erhalte jedes Mal wenn du in den *Defensivmodus wechselst !M! Stacheln. NL guardianmod:Abhärten !GuardianSecondM!.",
     "UPGRADE_DESCRIPTION": "Erhalte jedes Mal wenn du in den *Defensivmodus wechselst !M! Stacheln. NL guardianmod:Abhärten !GuardianSecondM!."
   },
@@ -360,7 +360,7 @@
     "UPGRADE_DESCRIPTION": "guardianmod:Abhärten 4."
   },
   "Guardian:Gem_Fragmented": {
-    "NAME": "Edelsteinbruchstück",
+    "NAME": "Edelsteinsplitter",
     "DESCRIPTION": "guardianmod:Juwel. NL Erhalte ein *Kristallmesser.",
     "UPGRADE_DESCRIPTION": "Erhalte ein *Kristallmesser."
   },
@@ -387,7 +387,7 @@
   },
   "Guardian:GatlingBeam": {
     "NAME": "Laserkanone",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege diese Karte in guardianmod:Stasis. Die NL guardianmod:Stasis hält !M! Züge. NL guardianmod:Ticken - Füge einem zufälligen Gegner !D! Schaden zu."
+    "DESCRIPTION": "Füge !D! Schaden zu. Lege diese Karte in guardianmod:Stasis. Die NL guardianmod:Stasis hält !M! Züge. NL guardianmod:Ticken - Füge einem zufälligen Gegner !D! Schaden zu."
   },
   "Guardian:ShieldCharger": {
     "NAME": "Schild aufladen",

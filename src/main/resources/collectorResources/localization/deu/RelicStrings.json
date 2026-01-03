@@ -49,7 +49,7 @@
     "FLAVOR": "Ein Helm für die kleinsten Helden des Spire.",
     "DESCRIPTIONS": [
       "Beginne jeden Kampf mit #b",
-      " #ytemporären_TP [REMOVE_SPACE]. Während du #ytemporäre_TP hast, geben Karten #b1 #yBlock zusätzlich."
+      " #ytemporären #yTP [REMOVE_SPACE]. Während du #ytemporäre #yTP hast, geben Karten #b1 #yBlock zusätzlich."
     ]
   },
   "collector:Incense": {

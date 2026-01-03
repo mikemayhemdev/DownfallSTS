@@ -3,7 +3,7 @@
     "NAME": "Einwandfreie Muskeln",
     "FLAVOR": "Glorreich.",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du #yStärke erhältst die gleiche Anzahl an #ytemporären_TP [REMOVE_SPACE]. NL Beginne jeden Kampf mit #b1 #yStärke."
+      "Erhalte immer wenn du #yStärke erhältst die gleiche Anzahl an #ytemporären #yTP [REMOVE_SPACE]. NL Beginne jeden Kampf mit #b1 #yStärke."
     ]
   },
   "Gremlin:FragmentationGrenade": {
@@ -65,7 +65,7 @@
     "NAME": "Zauberhammer",
     "FLAVOR": "Stößt Zehen doppelt so hart.",
     "DESCRIPTIONS": [
-      "Bis zu #b3 Mal im Zug erhältst du beim Anwenden von #yWeak zusätzlich #b1 #yEsprit [REMOVE_SPACE]."
+      "Bis zu #b3 Mal im Zug erhältst du beim Anwenden von #ySchwach zusätzlich #b1 #yEsprit [REMOVE_SPACE]."
     ]
   },
   "Gremlin:PricklyShields": {

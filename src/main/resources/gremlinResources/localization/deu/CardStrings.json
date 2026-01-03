@@ -1,6 +1,6 @@
 {
   "Gremlin:AggressiveDefense": {
-    "NAME": "Aggressive Verteidigung",
+    "NAME": "Aggressive Abwehr",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn du in diesem Zug Block erhältst, verliert dieser Gegner !M! TP."
   },
 
@@ -28,7 +28,7 @@
 
   "Gremlin:BrokenShin": {
     "NAME": "Schienbeinbruch",
-    "DESCRIPTION": "Wende gremlin:Agony für alle !M! Schwach des Gegners an. NL Erschöpft."
+    "DESCRIPTION": "Wende gremlin:Agonie für alle !M! Schwach des Gegners an. NL Erschöpft."
   },
 
   "Gremlin:BubbleBarrier": {
@@ -142,7 +142,7 @@
   },
 
   "Gremlin:FeelTheAudience": {
-    "NAME": "Das Publikum spüren",
+    "NAME": "Publikumsmagnet",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte !M! gremlin:Esprit für jeden, der angreifen will."
   },
 
@@ -168,7 +168,7 @@
   },
 
   "Gremlin:FollowThrough": {
-    "NAME": "Folgt dem Anführer!",
+    "NAME": "Für den Anführer!",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! temporäre Stärke."
   },
 
@@ -204,7 +204,7 @@
     "NAME": "Gremlintanz",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Hat verschiedene Zusatzeffekte, abhängig vom aktuellen Gremlin.",
     "EXTENDED_DESCRIPTION": ["Füge !D! Schaden zu",
-    ".NL Trifft ALLE Gegner.", ". NL Der Gegner verliert in diesem Zug !M! Stärke.",
+    ". NL Trifft ALLE Gegner.", ". NL Der Gegner verliert in diesem Zug !M! Stärke.",
     ". NL Erhalte !B! Block.", ". NL Ziehe !M! Karten.", ". NL Erhalte !M! gremlin:Esprit.", ". NL Erhalte !M! Stärke."]
   },
 
@@ -268,7 +268,7 @@
   },
 
   "Gremlin:MakeshiftArmor": {
-    "NAME": "Improvisierte Rüstung",
+    "NAME": "Schrottrüstung",
     "DESCRIPTION": "Erhalte jedes Mal wenn du 7 Angriffe spielst 1 Artefakt.",
     "UPGRADE_DESCRIPTION": "Erhalte !M! Artefakt. NL Erhalte jedes Mal wenn du 7 Angriffe spielst 1 Artefakt."
   },
@@ -297,7 +297,7 @@
   "Gremlin:PartyStick": {
     "NAME": "Leuchtstab",
     "DESCRIPTION": "Flüchtig. Unspielbar. NL Erhalte [E] wenn du mit dieser Karte auf der Hand gremlin:wechselst.",
-    "UPGRADE_DESCRIPTION": "Unspielbar. NL Erhalte [E] wenn du mit dieser Karte auf der Hand gremlin:wechselst",
+    "UPGRADE_DESCRIPTION": "Unspielbar. NL Erhalte [E] wenn du mit dieser Karte auf der Hand gremlin:wechselst.",
     "EXTENDED_DESCRIPTION": ["Niemand darf mit dem Leuchtstab spielen."]
   },
 
@@ -312,7 +312,7 @@
   },
 
   "Gremlin:PinNeedle": {
-    "NAME": "Stichnadel",
+    "NAME": "Stecknadel",
     "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze !M! *Nadelstiche *ein. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze !M! *Nadelstiche+ *ein. NL Erschöpft."
   },
@@ -344,7 +344,7 @@
   },
 
   "Gremlin:ProperTools": {
-    "NAME": "Angemessenes Werkzeug",
+    "NAME": "Adäquates Werkzeug",
     "DESCRIPTION": "Füge !D! Schaden zu. Erhalte !M! *Schutz wenn der Gegner angreifen will. Erhalte anderenfalls !M! Messer."
   },
 
@@ -420,7 +420,7 @@
   },
 
   "Gremlin:ShowStopper": {
-    "NAME": "Publikumshit",
+    "NAME": "Höhepunkt",
     "DESCRIPTION": "Kann nur gespielt werden wenn du genau 7 gremlin:Esprit hast. NL Füge ALLEN Gegnern !M! Mal !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": ["Es Fehlt noch an Spannung.", "Das Timing wurde verpasst."]
   },
@@ -468,7 +468,7 @@
   },
 
   "Gremlin:Tricksy": {
-    "NAME": "Tricksy",
+    "NAME": "Trickkiste",
     "DESCRIPTION": "Ziehe !M! Karten und wirf alle gezogenen nicht-Angriffe ab. NL gremlin:Wechsle zum gremlin:Schleichenden_Gremlin."
   },
 
@@ -499,7 +499,7 @@
     "UPGRADE_DESCRIPTION": "Erhalte !M! gremlin:Esprit. Nimm im nächsten Zug einen *Ultimativen *Stoß+ auf die Hand."
   },
 
-  "gremlin:Espritardry": {
+  "gremlin:Wizardry": {
     "NAME": "Zauberei",
     "DESCRIPTION": "Erhalte zu Beginn jedes Zuges !M! gremlin:Esprit.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte zu Beginn jedes Zuges !M! gremlin:Esprit."

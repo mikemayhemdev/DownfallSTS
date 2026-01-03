@@ -22,13 +22,13 @@
     "NAME": "Schleimschwanz",
     "FLAVOR": "Ein falscher, komplett in Schleim umhüllter Schwanz, um Gegner während des Kampfes hereinzulegen.",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du #yabspaltest #b",
+      "Erhalte immer wenn du einen Schleimuntergebenen #yslimeboundmod:abspaltest #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
   "Slimebound:PotencyRelic": {
     "NAME": "Stein von Nomakk",
-    "FLAVOR": "When presented to one of your Goop Gang, it seems to make the blob dance.",
+    "FLAVOR": "Wenn du es einem Schleim zeigst, beginnt er immer freudig zu wabbeln.",
     "DESCRIPTIONS": [
       "Beginne jeden Kampf mit #b1 #yslimeboundmod:Potenz [REMOVE_SPACE]."
     ]
@@ -75,7 +75,7 @@
     "NAME": "Schleimiger Schädel",
     "FLAVOR": "Ein Snecko-Schädel in miserablem Zustand. Schmutzig und schleimig haftet der Dreck daran wie Klebstoff.",
     "DESCRIPTIONS": [
-      "Immer wenn yslimeboundmod:Glibber angewendet wird, wird die Anzahl um #b",
+      "Immer wenn #yslimeboundmod:Glibber angewendet wird, wird die Anzahl um #b",
       " erhöht."
     ]
   },

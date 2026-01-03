@@ -7,7 +7,7 @@
       "geplagte",
       "afflicted"
     ],
-    "DESCRIPTION": "Wesen sind geplagt wenn sie gleichzeitig #Verwundbar und #ySchwach sind."
+    "DESCRIPTION": "Wesen sind geplagt wenn sie gleichzeitig #yVerwundbar und #ySchwach sind."
   },
   {
     "PROPER_NAME": "Verdammnis",
