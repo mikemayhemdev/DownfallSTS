@@ -1,0 +1,63 @@
+[
+  {
+    "PROPER_NAME": "Plage",
+    "NAMES": [
+      "plage",
+      "geplagt",
+      "geplagte",
+      "afflicted"
+    ],
+    "DESCRIPTION": "Wesen sind geplagt wenn sie gleichzeitig #yVerwundbar und #ySchwach sind."
+  },
+  {
+    "PROPER_NAME": "Verdammnis",
+    "NAMES": [
+      "verdammnis",
+      "verdammen",
+      "verdamme",
+      "verdammt",
+      "verdammte",
+      "doom",
+      "doomed"
+    ],
+    "DESCRIPTION": "Verdammte Wesen verlieren zu Beginn ihrer Züge TP in Höhe der Verdammnis. Sämtliche Verdammnis wird danach entfernt, es sei denn, das Wesen ist #ygeplagt (ist gleichzeitig #ySchwach und #yVerwundbar [REMOVE_SPACE])."
+  },
+  {
+    "PROPER_NAME": "Opfergabe",
+    "NAMES": [
+      "opfergabe",
+      "geopfert",
+      "geopferte",
+      "geopferten",
+      "pyre"
+    ],
+    "DESCRIPTION": "Erfordert als zusätzliche Kosten das #yErschöpfen einer Handkarte."
+  },
+  {
+    "PROPER_NAME": "Reserve",
+    "NAMES": [
+      "reserve",
+      "reserven",
+      "reserviert",
+      "reserve",
+      "reserves"
+    ],
+    "DESCRIPTION": "Eine zweite Energiequelle, die angezapft wird wenn die reguläre Energie erschöpft ist. Reserve verfällt nicht am Ende des Zuges"
+  },
+  {
+    "PROPER_NAME": "Superflüchtig",
+    "NAMES": [
+      "superflüchtig",
+      "megathereal"
+    ],
+    "DESCRIPTION": "Superflüchtige Karten landen am Ende des Zuges in den Erschöpfungsstapel - unabhängig davon, wo sie sich gerade befinden."
+  },
+  {
+    "PROPER_NAME": "Fackelkopf",
+    "NAMES": [
+      "fackelkopf",
+      "torchhead"
+    ],
+    "DESCRIPTION": "Solange du üner #ytemporäre #yTP verfügst, aktiviert jeder Angriff die Fackelkopf-Effekte."
+  }
+]

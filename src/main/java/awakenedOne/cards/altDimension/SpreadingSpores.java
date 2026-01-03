@@ -17,7 +17,7 @@ public class SpreadingSpores extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(SpreadingSpores.class.getSimpleName());
 
     public SpreadingSpores() {
-        super(ID, 0, CardRarity.RARE, CardType.POWER, CardTarget.SELF);
+        super(ID, 0, CardRarity.SPECIAL, CardType.POWER, CardTarget.SELF);
         baseMagicNumber = magicNumber = 2;
         tags.add(CardTags.HEALING);
         isEthereal = true;

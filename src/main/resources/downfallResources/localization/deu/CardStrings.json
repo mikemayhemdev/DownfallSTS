@@ -1,0 +1,115 @@
+{
+  "downfall:Aged": {
+    "NAME": "Altern",
+    "DESCRIPTION": "Unspielbar. Flüchtig. NL Nimm am Ende des Zuges eine *Leere auf den Abwurfstapel."
+  },
+  "downfall:Bewildered": {
+    "NAME": "Irritation",
+    "DESCRIPTION": "sneckomod:Irre diese Karte wenn sie gezogen wird. NL Erschöpft."
+  },
+  "downfall:Icky": {
+    "NAME": "Ekel",
+    "DESCRIPTION": "Ziehe im nächsten Zug 1 Karte weniger. NL Erschöpft."
+  },
+  "downfall:Haunted": {
+    "NAME": "Spuk",
+    "DESCRIPTION": "Flüchtig. NL Erleide am Ende deines Zuges !M! Schaden."
+  },
+  "downfall:Malfunctioning": {
+    "NAME": "Unreinheit",
+    "DESCRIPTION": "Nimm am Ende des Zuges eine *Wunde auf den Abwurfstapel. NL Erschöpft."
+  },
+  "downfall:Scatterbrained": {
+    "NAME": "Zerstreutheit",
+    "DESCRIPTION": "Nimm am Ende des Zuges eine Kopie dieser Karte auf den Abwurfstapel. NL Erschöpft."
+  },
+  "downfall:CurseOfBlood": {
+    "NAME": "Hämophilie",
+    "DESCRIPTION": "Verliere [E] zu Beginn deines nächsten Zuges. NL Erschöpft.",
+    "EXTENDED_DESCRIPTION": ["Note for LOC: Hemophilia is a name for a disorder for when your blood doesn’t clot properly. I added the a in the middle for coolness factor."]
+  },
+  "downfall:SummonMushrooms": {
+    "NAME": "Fungus unter uns",
+    "DESCRIPTION": "Töte alle Pilze. Heile TP in Höhe ihrer verbleibenden TP. NL Beschwöre zwei zufällige Pilze."
+  },
+  "downfall:BossMaintenance": {
+    "NAME": "Wartung",
+    "DESCRIPTION": "*Schläge fügen in diesem Kampf !M! mehr Schaden zu. Erhalte !B! Geschicklichkeit."
+  },
+  "downfall:CuriousRobot": {
+    "NAME": "Neugieriger Roboter",
+    "DESCRIPTION": "Immer wenn dein Gegner eine Macht ausspielt, erhalte 1 Fokus. Dein Fokus wird von deiner Stärke beeinflusst."
+  },
+  "downfall:Murderbot": {
+    "NAME": "Energiedieb",
+    "DESCRIPTION": "Immer wenn du ungeblockten Angriffsschaden zufügst, lege eine *Leere in den Abwurfstapel deines Gegners."
+  },
+  "downfall:Temptation": {
+    "NAME": "Versuchung",
+    "DESCRIPTION": "Mische !M! zufällige Machtkarten in den Nachziehstapel deines Gegners."
+  },
+  "downfall:BagOfKnives": {
+    "NAME": "Sack voller Messer",
+    "DESCRIPTION": "Wenn du in einem Zug das erste Mal eine Karte ausspielst die 2 oder mehr kostet, erhalte 2 *Messer."
+  },
+  "downfall:Hallunication": {
+    "NAME": "Halluzination",
+    "DESCRIPTION": "Verschleiere in jedem Zug deine Position. Das Trugbild verschwindet wenn du oder das Trugbild angegriffen wird."
+  },
+  "downfall:NewToxins": {
+    "NAME": "Experimentelle Gifte",
+    "DESCRIPTION": "Gift verliert seine Wirkung über die Zeit nicht. Der Giftschaden ist blockbar und wird am Ende des Zuges erlitten."
+  },
+  "downfall:FeedingFrenzy": {
+    "NAME": "Fressanfall",
+    "DESCRIPTION": "*Schnitter trifft zusätzlich ALLE *Pilze. Erhalte 1 Stärke für jeden selbst getöteten *Pilz."
+  },
+  "downfall:StatusMirror": {
+    "NAME": "Zauberspiegel",
+    "DESCRIPTION": "Status Karten die dieser Character generieren würde werden stattdessen bei dir generiert."
+  },
+  "downfall:EyeForAnEye": {
+    "NAME": "Auge um Auge",
+    "DESCRIPTION": "Wenn dein Gegner mehr Angriffe als nicht-Agriffe ausgespielt hat, nimmst du Zorn an. Ansonsten nimmst du Ruhe an."
+  },
+  "downfall:TruePeace": {
+    "NAME": "Wahrhaftiger Frieden",
+    "DESCRIPTION": "Tu nichts. Warte auf das unvermeidbare Ende von Allem."
+  },
+  "downfall:EndIsNigh": {
+    "NAME": "Das Ende naht",
+    "DESCRIPTION": "ALLE erhalten !M! Ritual."
+  },
+  "downfall:FalseWorship": {
+    "NAME": "Falsche Anbetung",
+    "DESCRIPTION": "Belebe deinen Kultisten wieder wenn er tot ist. Ansonsten wird er beim nächsten Tod mit 50% seiner TP wiederbelebt."
+  },
+  "downfall:FleetingFaith": {
+    "NAME": "Geistesgegenwart",
+    "DESCRIPTION": "Lege !M! *Spuk Karten in den Abwurfstapel deines Gegners."
+  },
+  "downfall:FaithRewarded": {
+    "NAME": "Lohnender Glaube",
+    "DESCRIPTION": "Wenn du Göttlichkeit annimmst, kannst du sie nicht mehr verlassen. In Göttlichkeit nur 100% zusätzlicher Schaden zugefügt."
+  },
+  "downfall:Crusade": {
+    "NAME": "Kreuzzug",
+    "DESCRIPTION": "Entferne alle Debuffs. NL Verliere dein ganzes Mantra. Heile !M! TP and erhalte 1 Stärke pro verlorenes Mantra."
+  },
+  "downfall:Hyperfocused": {
+    "NAME": "Tödliche Konzentration",
+    "DESCRIPTION": "Aktiviere die *Volltreffer Effekte unabhängig von der Position. Alle *Volltreffer Effekte werden für diesen Zug entfernt, wenn 10 Schaden erlitten wurden."
+  },
+  "downfall:Arsenal": {
+    "NAME": "Lebendes Arsenal",
+    "DESCRIPTION": "Beschwöre einen *Dämmerungsdolch."
+  },
+  "downfall:Steady": {
+    "NAME": "Zurückhaltend",
+    "DESCRIPTION": "Durch *Zorn wird nur 50% zusätzlicher Schaden hinzugefügt und erlitten, anstelle von 100%."
+  },
+  "downfall:Revolver": {
+    "NAME": "Revolver",
+    "DESCRIPTION": "Die Züge werden vom *Schicksalsrad bestimmt. Das *Schicksalsrad bewegt sich einen Schritt vorwärts für jeden erlittenen Angriff."
+  }
+}

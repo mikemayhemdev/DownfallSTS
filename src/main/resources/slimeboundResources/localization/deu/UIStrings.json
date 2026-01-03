@@ -1,0 +1,27 @@
+{
+  "slimeboundConfigMenuText": {
+    "TEXT": [
+      "Aktiviere Schleimboss Relikte für andere Charaktere.",
+      "Aktiviere Schleimboss Tränke für andere Charaktere.",
+      "Aktiviere Schleimboss Ereignisse für andere Charaktere.",
+      "Schalte alles frei (nicht empfohlen)"
+    ]
+  },
+  "slimeboundmod:CommandMod": {
+    "TEXT": [
+      " NL slimeboundmod:Kommando."
+    ]
+  },
+  "slimeboundmod:lickDescriptor": {
+    "TEXT": [
+      "Wabbeln",
+      "slimeboundmod:Wabbeln. NL "
+    ]
+  },
+  "slimeboundmod:tackleDescriptor": {
+    "TEXT": [
+      "Tackle",
+      "slimeboundmod:Tackle. NL "
+    ]
+  }
+}

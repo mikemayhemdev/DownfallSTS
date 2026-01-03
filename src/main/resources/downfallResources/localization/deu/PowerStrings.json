@@ -1,0 +1,502 @@
+{
+  "downfall:FairyPotion": {
+    "NAME": "Feenflasche",
+    "DESCRIPTIONS": [
+      "Anstatt zu sterben, wird dieser Trank abgeworfen und die TP auf #b30% der Max TP geheilt.",
+      "Ha! Feenflasche, du Depp!"
+    ]
+  },
+  "downfall:CultistRevivePower": {
+    "NAME": "False Worship",
+    "DESCRIPTIONS": [
+      "Anstatt zu sterben, wird dieser Effekt aufgehoben und die TP auf #b50% der Max TP geheilt.",
+      "KRÄÄÄÄCHZ!"
+    ]
+  },
+  "downfall:SoulSteal": {
+    "NAME": "Seelendieb",
+    "DESCRIPTIONS": [
+      "Hat #b",
+      " deiner Seelen gestohlen."
+    ]
+  },
+  "downfall:NeowInvulnerable": {
+    "NAME": "Göttin des Lebens",
+    "DESCRIPTIONS": [
+      "Heilt #b",
+      " TP für jede Karte die du spielst."
+    ]
+  },
+  "downfall:TransformDrawnCardsPower": {
+    "NAME": "Transformationszug",
+    "DESCRIPTIONS": [
+      "#yTransformiere die ersten #b",
+      " in diesem Zug gezogenen Karten. (noch ",
+      " übrig)"
+    ]
+  },
+  "downfall:TotemInvulnerable": {
+    "NAME": "Lebendige Wand",
+    "DESCRIPTIONS": [
+      "Kann erst sterben wenn die anderen Köpfe #b1 TP haben. Stirbt wenn ein anderer Kopf stirbt."
+    ]
+  },
+  "downfall:ExhaustCardsPower": {
+    "NAME": "Vergesslich",
+    "DESCRIPTIONS": [
+      "Wähle am Ende des Zuges eine Karte zum #yerschöpfen aus."
+    ]
+  },
+  "downfall:SpotWeakness": {
+    "NAME": "Schwäche erkennen",
+    "DESCRIPTIONS": [
+      "Wenn du in diesem Zug einen #yAngriff spielst, erhält der Gegner #b",
+      " #yStärke.",
+      "Du hast in diesem Zug einen #yAngriff gespielt. Der Gegner erhält #b",
+      " #yStärke."
+    ]
+  },
+  "downfall:FearNoEvil": {
+    "NAME": "Fürchte kein Böses",
+    "DESCRIPTIONS": [
+      "Wenn du in diesem Zug einen #yAngriff spielst, wird die Sehende #yRuhe annehmen sobald sie #yFürchte #ykein #yBöses ausspielt.",
+      "Die Sehende wird #yRuhe annehmen sobald sie #yFürchte #ykein #yBöses ausspielt."
+    ]
+  },
+  "downfall:PoisonResist": {
+    "NAME": "Keine Zurückhaltung",
+    "DESCRIPTIONS": [
+      "Immer wenn du ungeblockten Schaden durch einen #yAnngriff zufügst, entferne #b",
+      " #yGift."
+    ]
+  },
+  "downfall:OnPlayerPoison": {
+    "NAME": "Gift",
+    "DESCRIPTIONS": [
+      "Erleide am Ende des Zuges #b",
+      " Schaden."
+    ]
+  },
+  "downfall:NeowBuff": {
+    "NAME": "Niaus Elan",
+    "DESCRIPTIONS": [
+      "Erhält #b2 #yStärke am Ende des Zuges."
+    ]
+  },
+  "downfall:WatcherAngryPower": {
+    "NAME": "Zurückhaltend",
+    "DESCRIPTIONS": [
+      "Wenn die Seherin am Ende deines Zuges #b50% oder weniger ihrer Max TP hat, nimmt sie #yZorn an. NL Durch #yZorn wird nur 50% zusätzlicher Schaden hinzugefügt und erlitten, anstelle von 100%. [REMOVE_SPACE].",
+      "Durch #yZorn wird nur 50% zusätzlicher Schaden hinzugefügt und erlitten, anstelle von 100% [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowUnbridledRage": {
+    "NAME": "Ungezügelte Rage",
+    "DESCRIPTIONS": [
+      "Wenn Niau am Ende deines Zuges #b50% oder weniger ihrer Max TP hat, erhält sie #b6 #yStärke. NL Dieser Effekt wird nur ein Mal pro Kampf aktiviert."
+    ]
+  },
+  "downfall:WatcherCripplePower": {
+    "NAME": "Göttliche Vergeltung",
+    "DESCRIPTIONS": [
+      "Wenn die Seherin #b",
+      " TP verliert, verliert sie #b1 #yStärke [REMOVE_SPACE]. Dieser Effekt kann bis zu #b3 Mal pro Zug aktiviert werden. NL Du kannst den Schaden von #ySchwachpunkte #yBlocken [REMOVE_SPACE].",
+      "Die Seherin hat in diesem Zug bereits #b3 #yStärke verloren."
+    ]
+  },
+  "downfall:WatcherSkillPower": {
+    "NAME": "Zwiespalt ausnutzen",
+    "DESCRIPTIONS": [
+      "Wenn du einen #yAngriff spielst, erhält die Seherin für diesen Zug temporär #b",
+      " #yGeschicklichkeit, und temporär #b",
+      " #yStärke für das Ausspielen einer #yFertigkeit, und #b",
+      " von Beiden wenn du eine #yMacht spielst.",
+      "Wenn du in einem Zug mehr als #b",
+      " Karten spielst entfernt die Seherin ALLE ihre Debuffs.",
+      "Du hast in diesem Zug bereits #b",
+      " Karten gespielt."
+    ]
+  },
+  "downfall:WrathNextTurnPower": {
+    "NAME": "Kochende Wut",
+    "DESCRIPTIONS": [
+      "Zu Beginn des nächsten Zuges nimmt die Seherin #yZorn an."
+    ]
+  },
+  "downfall:NeowBlasphemersDemise": {
+    "NAME": "Verderben der Gotteslästerer",
+    "DESCRIPTIONS": [
+      "Beim nächsten Buff erhält Niau zusätzlich #b10 #yStärke, es sei denn, die verliert noch #b",
+      " TP.",
+      "Niau ist angeschlagen und erhält keine zusätzliche #yStärke beim nächsten Buff."
+    ]
+  },
+  "downfall:WatcherDivinityPower": {
+    "NAME": "Flüchtiger Glaube",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine Karte spielst erhält die Seherin #b1 #yMantra. NL Wenn die Seherin #yGöttlichkeit annimmt, erhält sie #b3 #yStärke. NL Zu Beginn ihres Zuges verliert die Seherin #b5 #yMantra. NL Die Seherin verlässt #yGöttlichkeit nicht am Ende ihres Zuges."
+    ]
+  },
+  "downfall:SimpleWatcherDivinityPower": {
+    "NAME": "Flüchtiger Glaube",
+    "DESCRIPTIONS": [
+      "Wenn du innerhalb eines Zuges mindestens #b6 Karten spielst, erhält die Seherin #b1 #yMantra und #b1 #yImmateriell [REMOVE_SPACE].",
+      " NL Du hast in diesem Zug bereits #b",
+      " Karten gespielt.",
+      " NL (Wurde in diesem Zug bereits aktiviert)",
+      " NL NL Die Seherin verlässt #yGöttlichkeit nicht sobald sie sie angenommen hat. In #yGöttlichkeit wird nur 100% zusätzlicher Schaden zugefügt."
+    ]
+  },
+  "downfall:NeowFleetingFaith": {
+    "NAME": "Flüchtiger Glaube",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine Karte spielst erhält Niau #b1 #yMantra [REMOVE_SPACE]. Niau verliert #b5 #yMantra zu Beginn ihres Zuges."
+    ]
+  },
+  "downfall:SilentShivTimeEaterPower": {
+    "NAME": "Sack voller Messer",
+    "DESCRIPTIONS": [
+      "Wenn du in einem Zug das erste Mal eine Karte ausspielst die #2 oder mehr kostet, erhält die Stille 2 #yMesser [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:SilentDelayedWraithPower": {
+    "NAME": "Fatale Bessesenheit",
+    "DESCRIPTIONS": [
+      "Wenn die Stille das erste Mal 0 HP erreicht, aktiviert sie #yGeistform",
+      " und heilt #b",
+      " TP."
+    ]
+  },
+  "downfall:NeowBagOfKnives": {
+    "NAME": "Sack voller Messer",
+    "DESCRIPTIONS": [
+      "Wenn du in einem Zug das erste Mal eine Karte ausspielst die #2 oder mehr kostet, erleide zweimal #b4 Schaden."
+    ]
+  },
+  "downfall:SilentMirrorImagePower": {
+    "NAME": "Doppelt Sehen",
+    "DESCRIPTIONS": [
+      "Zu Beginn jedes Zuges verschleiert ein Trugbild die wahre Position des Stillen. Das Trugbild verschwindet sobald die Stille oder das Trugbild angegriffen wird."
+    ]
+  },
+  "downfall:NeowSeeingDouble": {
+    "NAME": "Doppelt Sehen",
+    "DESCRIPTIONS": [
+      "In jedem Zug erteilt der erste #yAngriff auf Niau #b0 Sachaden."
+    ]
+  },
+  "downfall:SilentPoisonPower": {
+    "NAME": "Experimentelle Gifte",
+    "DESCRIPTIONS": [
+      "#yGift ist blockbar, und der Schaden wird am Ende des Zuges erlitten.",
+      "#yGift ist blockbar, verliert seine Wirkung über die Zeit nicht, und der Schaden wird am Ende des Zuges erlitten."
+    ]
+  },
+  "downfall:NeowHighlyToxic": {
+    "NAME": "Achtung: Äußerst Toxisch",
+    "DESCRIPTIONS": [
+      "Niau wendet in jedem Zug #b5 #yGift auf dich an. #yGift ist blockbar, und der Schaden wird am Ende des Zuges erlitten. NL Mische zu Beginn des Kampfes 2 #yGegengift in deinen Nachziehstapel."
+    ]
+  },
+  "downfall:DefectVoidPower": {
+    "NAME": "Energiedieb",
+    "DESCRIPTIONS": [
+      "Immer wenn das Defekte eine #yLeere erschafft, landet sie stattdessen in DEINEN Abwurfstapel."
+    ]
+  },
+  "downfall:NeowEnergyThief": {
+    "NAME": "Energiedieb",
+    "DESCRIPTIONS": [
+      "Wenn Niau #rFlüche in deinen Nachziestapel legt, wird zusätzlich eine #yLeere hinzugefügt."
+    ]
+  },
+  "downfall:DefectAncientConstructPower": {
+    "NAME": "Antikes Konstrukt",
+    "DESCRIPTIONS": [
+      "Das Defekte beginnt den Kampf mit 2 #yBronzeorb Untertanen. NL Seine #yKraft #ydes #yKerns Karten #yerschöpfen nicht."
+    ]
+  },
+  "downfall:NeowAncientConstruct": {
+    "NAME": "Antikes Konstrukt",
+    "DESCRIPTIONS": [
+      "Wenn Niau am ende ihres Zuges kein #yArtefakt hat, erhält sie #b2 #yArtefakt [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:DefectCuriosity": {
+    "NAME": "Unverzerrter Fokus",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #yMacht spielst, erhält das Defekte #b",
+      " #yFokus [REMOVE_SPACE].",
+      " Die #yStärke des Defekten beeinflusst auch sein #yFocus [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:DefectBiasCuriosity": {
+    "NAME": "Bias",
+    "DESCRIPTIONS": [
+      "Das Defekte beginnt den Kampf mit #b4 #yFokus und erhält #b1 #yFokus immer wenn du eine #yMacht spielst. Zu Beginn seines Zuges verliert es #b1 #yFokus.",
+      "Das Defekte verliert #b",
+      " #yFokus",
+      " zu Beginn seines Zuges."
+    ]
+  },
+  "downfall:DefectCuriosityLighning": {
+    "NAME": "Unverzerrter Fokus",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #yMacht spielst, erschafft das Defekte #b",
+      " #yBlitz #yOrb [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowUnbiasedCognition": {
+    "NAME": "Unverzerrter Fokus",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #yMacht spielst, erhält Niau #b2 #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:IroncladStatusPower": {
+    "NAME": "Synchronisieren",
+    "DESCRIPTIONS": [
+      "Immer wenn der Eiserne eine #yStatus Karte erhält, wird eine Kopie in deinen Abwurfstapel gelegt.",
+      "Immer wenn der Eiserne eine #yStatus Karte erhält, wird eine Kopie in deinen Abwurfstapel gelegt. NL Wenn du noch #b",
+      " TP verlierst, erhältst du eine #yReinheit mit #yBehalten.",
+      "Immer wenn der Eiserne eine #yStatus Karte erhält, wird eine Kopie in deinen Nachziehstapel gemischt. NL Wenn du noch #b"
+    ]
+  },
+  "downfall:NeowSyncronize": {
+    "NAME": "Synchronisieren",
+    "DESCRIPTIONS": [
+      "Am Ende des Zuges legt Niau eine zufällige #yStatus Karte auf deinen Nachziehstapel."
+    ]
+  },
+  "downfall:IroncladMushroomPower": {
+    "NAME": "Fressanfall",
+    "DESCRIPTIONS": [
+      "#ySchnitter #yErschöpft nicht und trifft zusätzlich ALLE Pilze. NL Wenn der Eiserne einen Pilz tötet, erhält er #b1 #yStärke [REMOVE_SPACE].",
+      "#ySchnitter #yErschöpft nicht und trifft zusätzlich ALLE Pilze. NL Wenn der Eiserne einen Pilz tötet, erhält er #b",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowFeedingFrenzy": {
+    "NAME": "Fressanfall",
+    "DESCRIPTIONS": [
+      "Niau heilt ihre TP jedes Mal wenn sie ungeblockten Angriffsschaden zufügt."
+    ]
+  },
+  "downfall:IroncladFortificationPower": {
+    "NAME": "Bastion",
+    "DESCRIPTIONS": [
+      "Der Eiserne beginnt den Kampf mit einem #yBefestigung Untertanen, der ihm in jedem Zug #b",
+      " #yBlock gibt. NL Wenn die #yFortification zerstört ist, verliert der Eiserne #yBarrikade, aber erhält #b5 #yStärke zu Beginn jedes Zuges.",
+      "Nach Zerstörung verliert der Eiserne #yBarrikade, aber erhält #b5 #yStärke zu Beginn jedes Zuges."
+    ]
+  },
+  "downfall:NeowBastion": {
+    "NAME": "Bastion",
+    "DESCRIPTIONS": [
+      "Niau beginnt den Kampf mit #yBarricade und erhält #b10 #yBlock zu Beginn jedes Zuges."
+    ]
+  },
+  "downfall:MerchantStrengthPower": {
+    "NAME": "Seelendieb",
+    "DESCRIPTIONS": [
+      "Der Händler beginnt den Kampf mit dem Doppelten an #yStärke den er in diesen Run durch Seelenstehlen erhalten hat. Zusätzlich erhält er genausoviel #yGeschicklichkeit [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowMantra": {
+    "NAME": "Mantra",
+    "DESCRIPTIONS": [
+      "Wenn Niau #b10 #yMantra hat, nimmt sie #yGöttlichkeit an. Sie verursacht dann im folgenden Zug den dreifachen Schaden."
+    ]
+  },
+  "downfall:NeowSeeingDoubleProduct": {
+    "NAME": "???",
+    "DESCRIPTIONS": [
+      "Der nächste #yAngriff auf Niau verursacht #b0 Sachaden."
+    ]
+  },
+  "downfall:CrowbotRitualPower": {
+    "NAME": "Umprogrammieren:Ritual",
+    "DESCRIPTIONS": [
+      "Wenn #yCrowBot #b50% oder weniger seiner Max TP hat, verliert es #b3 TP und erhält #b",
+      " #yStärke am Ende seines Zuges."
+    ]
+  },
+  "downfall:DamageMultiplier": {
+    "NAME": "Schadensmultiplikator",
+    "DESCRIPTIONS": [
+      "#yAngriffe erteilen #b",
+      " Mal so viel Schaden."
+    ]
+  },
+  "downfall:CompressionMold": {
+    "NAME": "Kompressionsform",
+    "DESCRIPTIONS": [
+      "#yAbgefeuerte Munition wird im Anschluss verbessert."
+    ]
+  },
+  "downfall:OnDeathEveryoneStr": {
+    "NAME": "Letzter Atemzug: Entflammen+",
+    "DESCRIPTIONS": [
+      "Wenn dieser Charakter stirbt, erhalten ALLE (inklusive dir) #b",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:OnDeathEveryoneThorns": {
+    "NAME": "Letzter Atemzug: Krähenfüße+",
+    "DESCRIPTIONS": [
+      "Wenn dieser Charakter stirbt, erhalten ALLE (inklusive dir) #b",
+      " #yStacheln [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:OnDeathEveryoneBuffer": {
+    "NAME": "Letzter Atemzug: Puffer+",
+    "DESCRIPTIONS": [
+      "Wenn dieser Charakter stirbt, erhalten ALLE (inklusive dir) #b",
+      " #yPuffer. (Puffer: Verhindert den nächsten TP-Verlust)"
+    ]
+  },
+  "downfall:OnDeathEveryoneVigor": {
+    "NAME": "Letzter Atemzug: Flammenkranz+",
+    "DESCRIPTIONS": [
+      "Wenn dieser Charakter stirbt, erhalten ALLE (inklusive dir) #b",
+      " #yElan. (Elan: Erhöht den Schaden des nächsten Angriffs)"
+    ]
+  },
+  "downfall:OnDeathEveryoneRuggedVuln": {
+    "NAME": "Letzter Atemzug: Gestalt",
+    "DESCRIPTIONS": [
+      "Wenn dieser Charakter stirbt, erhalten ALLE (inklusive dir) #b",
+      " #yRobust und #b",
+      " #yVerwundbar. (Robust: Reduziert den nächsten erhaltenen, ungeblockten Schaden zu #b2 )"
+    ]
+  },
+  "downfall:MonsterVigor": {
+    "NAME": "Vigor",
+    "DESCRIPTIONS": [
+      "Die nächste Attacke dieses Charakters verursacht #b",
+      " zusätzlichen Schaden."
+    ]
+  },
+  "downfall:HermitConcentrateAdder": {
+    "NAME": "Tödlicher Fokus",
+    "DESCRIPTIONS": [
+      "Der Einsiedler aktiviert seine #yVolltreffer Effekte nur solange er #yKonzentriert ist. Die #yKonzentration ist für diesen Zug verloren wenn er #b10 TP verliert."
+    ]
+  },
+  "downfall:HermitConcentrationPower": {
+    "NAME": "Konzentriert",
+    "DESCRIPTIONS": [
+      "Der Einsiedler aktiviert seine #yVolltreffer Effekte nur solange er #yKonzentriert ist. Wenn er noch #b",
+      " TP verliert, verliert er seine #yKonzentration in diesem Zug.",
+      "Der Einsiedler ist nicht #yConcentration und kann seine #yVolltreffer Effekte in diesem Zug nicht aktivieren."
+    ]
+  },
+  "downfall:TangerinePower": {
+    "NAME": "Hilfssherrif",
+    "DESCRIPTIONS": [
+      "When Tangerine stirbt, verliert der Einsiedler seine #yKonzentration in diesem Zug und er erhält #b",
+      " #yStärke.",
+      "When Tangerine stirbt, verliert der Einsiedler seine #yKonzentration in diesem Zug."
+    ]
+  },
+  "downfall:HermitWheelOfFortune": {
+    "NAME": "Schicksalsrad",
+    "DESCRIPTIONS": [
+      "Wenn du einen #yAngriff spielst, #yTauscht der Einsiedler seine erste Karte #yum. Die Kosten seiner Karten können sich nicht verändern. Immer wenn er den #rNecronomischen #rFluch zieht, erhält er #b2 #yStärke.",
+      "Wenn du einen #yAngriff spielst, #yTauscht der Einsiedler seine erste Karte #yum."
+    ]
+  },
+  "downfall:HermitDoomsday": {
+    "NAME": "Tag des jüngsten Gerichts",
+    "DESCRIPTIONS": [
+      "Der Einsideler beginnt den Kampf mit #b1 #yRitual [REMOVE_SPACE]. Immer wenn der Einsiedler #yFegefeuer spielt, wird ein #rDämmerungsdolch beschworen."
+    ]
+  },
+  "downfall:NeowEclipse": {
+    "NAME": "Sonnenfinsternis",
+    "DESCRIPTIONS": [
+      "In jedem Zug gibt dir Niau ein #yflüchtiges #yDrohendes #yVerhängnis auf die Hand."
+    ]
+  },
+  "downfall:NeowWheelOfDeath": {
+    "NAME": "Unglücksrad",
+    "DESCRIPTIONS": [
+      "Jedes Mal wenn du #b",
+      " Karten spielst, erhält Niau #b",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowDistracting": {
+    "NAME": "Ablenkend",
+    "DESCRIPTIONS": [
+      "Wenn du in einem Zug das erste Mal Niau Schaden durch einen #yAngriff zufügst, erhältst du #b1 [E] weniger im nächsten Zug."
+    ]
+  },
+  "downfall:NextTurnPowerPower": {
+    "NAME": "Nächster Zug: ",
+    "DESCRIPTIONS": [
+      "BUG! You should not see this",
+      "Erhalte #b",
+      " #y",
+      " im nächsten Zug.",
+      "LOCALIZATION NOTE: Please keep the space after 'Next Turn' in the NAME field.",
+      "finalized text should look like this: Next turn, gain #b7 #yVigor [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:NeowStayAt1Hp": {
+    "NAME": "Unsterblich",
+    "DESCRIPTIONS": [
+      "Niau kann Niaus TP nicht unetr #b1 bringen. Statt zu sterben heilt sie sich voll und beginnt eine neue Phase."
+    ]
+  },
+  "downfall:NeowDivinity": {
+    "NAME": "Göttlichkeit",
+    "DESCRIPTIONS": [
+      "Niau erteilt in diesem Zug den dreifachen Sachaden."
+    ]
+  },
+  "downfall:NeowSpirit": {
+    "NAME": "Geist der Helden",
+    "DESCRIPTIONS": [
+      "Wenn Niau sich Bufft erhält sie #b6 #yStärke und... ",
+      " NL #b1 Dämonenform. #r(Der Eiserne)",
+      " NL #b2 Stacheln. #g(Die Stille)",
+      " NL #b2 Puffer. #b(Das Defekte)",
+      " NL #b5 Mantra. #p(Die Seherin)",
+      " NL legt einen #yVerfall in deinen Nachziehstapel. #y(Der Einsiedler)"
+    ]
+  },
+  "downfall:HeartsFavorPower": {
+    "NAME": "Hilfe von Herzen",
+    "DESCRIPTIONS": [
+      "Immer wenn Niaus #yUnverwundbar #b0 erreicht, reduziere ihre #yLebensgöttin Kraft um #b",
+      " [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:DefectAttackVoidPower":{
+    "NAME": "Energiedieb",
+    "DESCRIPTIONS": [
+      "Immer wenn du ungeblockten Angriffsschaden zufügst, lege eine *Leere in den Abwurfstapel deines Gegners."
+    ]
+  },
+  "downfall:WatcherTrackerAttacksPower":{
+    "NAME": "Auge um Angriff",
+    "DESCRIPTIONS": [
+      "Du hast bereits #b",
+      " Angriffe gespielt. Solange diese Zahl über die der nicht-Angriffe liegt, nimmt die Seherin #yZorn an."
+    ]
+  },
+  "downfall:WatcherTrackerSkillsPower":{
+    "NAME": "Freude an Fertigkeiten",
+    "DESCRIPTIONS": [
+      "Du hast bereits #b",
+      " Angriffe gespielt. Solange diese Zahl mindestens so groß wie die der Angriffe ist, nimmt die Seherin #yRuhe an."
+    ]
+  },
+  "downfall:VoidOrbPower":{
+    "NAME": "Leere Hülle",
+    "DESCRIPTIONS": [
+      "Wenn die leere Hülle stirbt, heilt sie alle TP des Defekten und entfernt einen seiner #ySachatten Orbs.",
+      " Erhält 5 Max TP für jedes Mal wenn dieser Effekt zum Einsatz kommt."
+    ]
+  }
+}

@@ -24,7 +24,7 @@ public class Crusher extends AbstractAwakenedCard implements onGenerateCardMidco
     public boolean enabled = false;
 
     public Crusher() {
-        super(ID, COST, CardRarity.RARE, CardType.ATTACK, CardTarget.ENEMY);
+        super(ID, COST, CardRarity.SPECIAL, CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 25;
         selfRetain = true;
         frameString = "grift";

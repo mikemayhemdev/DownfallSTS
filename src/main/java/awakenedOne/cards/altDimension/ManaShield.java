@@ -24,7 +24,7 @@ public class ManaShield extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(ManaShield.class.getSimpleName());
 
     public ManaShield() {
-        super(ID, 2, CardRarity.RARE, CardType.SKILL, CardTarget.SELF);
+        super(ID, 2, CardRarity.SPECIAL, CardType.SKILL, CardTarget.SELF);
         baseBlock = 14;
         tags.add(CardTags.HEALING);
 

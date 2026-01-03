@@ -1,0 +1,146 @@
+[
+  {
+    "PROPER_NAME": "Aktiv",
+    "NAMES": [
+      "aktiv",
+      "aktive",
+      "active"
+    ],
+    "DESCRIPTION": "Die #yaktive Geisterflamme kann #yentzündet werden, indem man ihre spezifischen Anforderungen für das #yEntzünden erfüllt."
+  },
+  {
+    "PROPER_NAME": "Vorwärts",
+    "NAMES": [
+      "vorwärts",
+      "advance",
+      "advanced",
+      "advancing"
+    ],
+    "DESCRIPTION": "Bewege dich im Uhrzeigersinn auf die nächste Geisterflamme. Das bewegen AUF eine #yentzündete Geisterflamme #ylöscht sie."
+  },
+  {
+    "PROPER_NAME": "Rückwärts",
+    "NAMES": [
+      "rückwärts",
+      "retract",
+      "retracted",
+      "retracting"
+    ],
+    "DESCRIPTION": "Bewege dich im Gegenuhrzeigersinn auf die vorherige Geisterflamme. Das bewegen AUF eine #yentzündete Geisterflamme #ylöscht sie."
+  },
+  {
+    "PROPER_NAME": "Intensität",
+    "NAMES": [
+      "intensität",
+      "intensity"
+    ],
+    "DESCRIPTION": "Intensität erhöht Schaden, #ySeelenfeuer [REMOVE_SPACE], und #yBlock der durch das #yEntzünden von Geisterflammen entsteht."
+  },
+  {
+    "ID": "soulburn",
+    "PROPER_NAME": "Seelenfeuer",
+    "NAMES": [
+      "seelenfeuer",
+      "seelenfeuers",
+      "soulburn",
+      "soulburned"
+    ],
+    "DESCRIPTION": "Nach #b3 Zügen detoniert das Seelenfeuer und der Gegner verliert TP in seiner Höhe. Das Seelenfeuer wird daraufhin entfernt."
+  },
+  {
+    "PROPER_NAME": "Löschen",
+    "NAMES": [
+      "löschen",
+      "lösche",
+      "löscht",
+      "gelöscht",
+      "gelöschte",
+      "extinguish",
+      "extinguished"
+    ],
+    "DESCRIPTION": "Erlaubt es, eine Geisterflamme erneut durch die spezifischen Anforderungen zu #yentzünden."
+  },
+  {
+    "PROPER_NAME": "Entzünden",
+    "NAMES": [
+      "entzünden",
+      "entzündung",
+      "entzünde",
+      "entzündest",
+      "entzündet",
+      "entzündete",
+      "entzündungs",
+      "ignite",
+      "ignited",
+      "force-ignite"
+    ],
+    "DESCRIPTION": "Aktiviet den Entzündungs Effekt der Geisterflamme."
+  },
+  {
+    "PROPER_NAME": "Siegel",
+    "NAMES": [
+      "siegel",
+      "seal"
+    ],
+    "DESCRIPTION": "Siegel Karten können nach einem Kampf gefunden werden. Je mehr Siegel man ausspielt, desto öfter findet man weitere Siegel. Werden alle #b6 Siegel in eiem Kampf ausgespielt, erhalte das #pGebrochene #pSiegel und entferne die #b6 Siegel aus deinem Deck."
+  },
+  {
+    "ID": "afterlife",
+    "PROPER_NAME": "Reinkarnation",
+    "NAMES": [
+      "reinkarnation",
+      "afterlife"
+    ],
+    "DESCRIPTION": "Der violett hervorgehobene Effekt wird auch beim #yErschöpfen der Karte aktiviert."
+  },
+  {
+    "PROPER_NAME": "Schlagend",
+    "NAMES": [
+      "schlagend",
+      "schlagende",
+      "schlagenden",
+      "crushing"
+    ],
+    "DESCRIPTION": "#yGeisterflamme. #yEntzündet sich wenn #b2 #yFertigkeiten gespielt werden, während man sich auf ihr befindet. #yEntzündung [REMOVE_SPACE]: Füge zweimal einem zufälligen Gegner #b3 Schaden zu.",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
+  },
+  {
+    "PROPER_NAME": "Stärkend",
+    "NAMES": [
+      "stärkend",
+      "stärkende",
+      "stärkenden",
+      "bolstering"
+    ],
+    "DESCRIPTION": "#yGeisterflamme. #yEntzündet sich wenn eine #yMacht gespielt wird, während man sich auf ihr befindet. #yEntzündung [REMOVE_SPACE]: Erhalte #b4 #yBlock und #b1 #yStärke [REMOVE_SPACE].",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
+  },
+  {
+    "ID": "plated",
+    "PROPER_NAME": "Panzerrüstung",
+    "NAMES": [
+      "panzerrüstung",
+      "plated"
+    ],
+    "DESCRIPTION": "Du erhältst #yBlock in Höhe deiner #yPanzerrüstung am Ende des Zuges. Ungeblockter Angriffsschaden reduziert #yPanzerrüstung um #b1"
+  },
+  {
+    "PROPER_NAME": "Sengend",
+    "NAMES": [
+      "sengend",
+      "sengende",
+      "sengenden",
+      "searing"
+    ],
+    "DESCRIPTION": "#yGeisterflamme. #yEntzündet sich wenn #b2 #yAngriffe gespielt werden, während man sich auf ihr befindet. #yEntzündung [REMOVE_SPACE]: Wende zweimal #b3 #ySeelenfeuer auf einen zufälligen Gegner an.",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
+  },
+  {
+    "PROPER_NAME": "Inferno",
+    "NAMES": [
+      "inferno"
+    ],
+    "DESCRIPTION": "#yGeisterflamme. #yEntzündet sich wenn [E] [E] [E] ausgegeben wird, während man sich auf ihr befindet. #yEntzündung [REMOVE_SPACE]: Füge für jede #yentzündete Geisterflamme einem zufälligen Gegner #b4 Schaden zu. #yLösche danach alle Geisterflammen. Du erhältst #b2 #yIntensität wenn alle Geisterflammen #yentzündet sind. [REMOVE_SPACE].",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
+  }
+]

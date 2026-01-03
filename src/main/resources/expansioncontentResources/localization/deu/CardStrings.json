@@ -1,0 +1,221 @@
+{
+  "expansioncontent:GuardianWhirl": {
+    "NAME": "Wächter-Wirbel",
+    "DESCRIPTION": "Füge !M! Mal ALLEN Gegnern !D! Schaden zu. NL Wenn du mindestens !DM! Block hast, füge den Schaden !M! weitere Male zu.",
+    "EXTENDED_DESCRIPTION": [
+      "Benötigt mehr Block."
+    ]
+  },
+  "expansioncontent:Hexaburn": {
+    "NAME": "Hexafeuer",
+    "DESCRIPTION": "Füge !M! Mal einem zufälligen Gegner !D! Schaden zu. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Füge !M! Mal einem zufälligen Gegner !D! Schaden zu."
+  },
+  "expansioncontent:InvincibleStrength": {
+    "NAME": "Unverwundbar",
+    "DESCRIPTION": "Gain !M! expansioncontent:Unverwundbar. NL Hattest du bereits expansioncontent:Unverwundbar, dann hält es für ein weiteres Mal."
+  },
+  "expansioncontent:HyperBeam": {
+    "NAME": "Automa-Strahl",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine *Leere auf deinen Nachziehstapel. NL Erschöpft."
+  },
+  "expansioncontent:LastStand": {
+    "NAME": "Finales Aufgebot",
+    "DESCRIPTION": "Entferne alle Debuffs. NL Erhalte !M! Stärke."
+  },
+  "expansioncontent:YouAreMine": {
+    "NAME": "DU BIST MEIN!!!",
+    "DESCRIPTION": "Wende !M! Schwach, !M! Verwundbar, und !DM! expansioncontent:Verdammnis auf ALLE Gegner an. NL Erschöpft."
+  },
+  "expansioncontent:AwakenDeath": {
+    "NAME": "Neugier",
+    "DESCRIPTION": "Immer wenn du eine Macht spielst, erhältst du !M! Stärke."
+  },
+  "expansioncontent:Chronoboost": {
+    "NAME": "Chrono-Boost",
+    "DESCRIPTION": "Erhalte !M! Stärke für alle 12 gespielten Karten."
+  },
+  "expansioncontent:PolyBeam": {
+    "NAME": "Donu-Ring",
+    "DESCRIPTION": "Erhalte !M! Stärke."
+  },
+  "expansioncontent:DecaShield": {
+    "NAME": "Deka-Schild",
+    "DESCRIPTION": "Erhalte !B! Panzerrüstung."
+  },
+  "expansioncontent:ShapePower": {
+    "NAME": "Antiker Segen",
+    "DESCRIPTION": "Erhalte !M! Stärke und !DM! expansioncontent:Panzerrüstung.",
+    "EXTENDED_DESCRIPTION": [
+      "Donus Macht",
+      "Erhalte !M! Stärke.",
+      "Dekas Schild",
+      "Erhalte !M! Panzerrüstung."
+    ]
+  },
+  "expansioncontent:SuperPrepareCrush": {
+    "NAME": "Vor-Schmettern",
+    "DESCRIPTION": "Erhalte im nächsten Zug *ZERSCHMETTERN!!!, [E] [E] [E] und !M! Stärke. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte im nächsten Zug *ZERSCHMETTERN!!!+, [E] [E] [E] [E] und !M! Stärke. NL Erschöpft.",
+    "EXTENDED_DESCRIPTION": [
+      "~Schleim~ ~...~ NL #r~ZERSCHMETTERN!!!~"
+    ]
+  },
+  "expansioncontent:SuperLivingWall": {
+    "NAME": "Gallert-Mauer",
+    "DESCRIPTION": "Erhalte !B! Block. NL Immer wenn dich in diesem Zug ein Gegner angreift, wende !M! expansioncontent:Glibber auf ihn an."
+  },
+
+  "expansioncontent:StudyTheSpire": {
+    "NAME": "Spire-Studien",
+    "DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge jeweils eine zufällige *Boss-Karte. Sie kosten 0.",
+    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge jeweils eine zufällige verbesserte *Boss-Karte. Sie kosten 0."
+  },
+  "expansioncontent:QuickStudy": {
+    "NAME": "Schnellstudien",
+    "DESCRIPTION": "Wähle 1 aus 3 zufälligen *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wähle 1 aus 3 zufälligen verbesserten *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. NL Erschöpft.",
+    "EXTENDED_DESCRIPTION": [
+      "Wähle eine Boss-Karte."
+    ]
+  },
+  "expansioncontent:DashGenerateEvil": {
+    "NAME": "Das Böse in Sich",
+    "DESCRIPTION": "Füge ALLEN Gegnern !M! Schaden zu, immer wenn du !DM! Debuffs anwendest."
+  },
+  "expansioncontent:KnowingSkullWish": {
+    "NAME": "Wissender Schädel",
+    "DESCRIPTION": "Flüchtig. NL Opfere TP um dir *Seelen, einen *Trank, oder eine *farblose Karte zu *wünschen. NL Erschöpft."
+  },
+  "expansioncontent:Antidote": {
+    "NAME": "Gegengift",
+    "DESCRIPTION": "Behalten. NL Entferne !M! Gift."
+  },
+  "expansioncontent:AntidoteAsPower": {
+    "NAME": "Keine Zurückhaltung",
+    "DESCRIPTION": "Behalten. NL Immer wenn du ungeblockten ANgriffsschaden zufügst, entferne !M! von deinem Gift."
+  },
+  "expansioncontent:SuperGhostShield": {
+    "NAME": "Phantomschild",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Erhalte[] [#e087a4]!B![] [#e087a4]Block.[] NL [#e087a4]Erhalte[] [#e087a4]!M![] [#e087a4]Verschwimmen.[]",
+    "EXTENDED_DESCRIPTION": [
+      "Erhalte !B! Block."
+    ]
+  },
+  "expansioncontent:SuperGoopSpray": {
+    "NAME": "Glibbernebel",
+    "DESCRIPTION": "Wende !M! expansioncontent:Glibber und !DM! Schwach an.",
+    "UPGRADE_DESCRIPTION": "Wende !M! expansioncontent:Glibber und !DM! Schwach auf ALLE Gegner an."
+  },
+  "expansioncontent:ChargeUp": {
+    "NAME": "Panzerreinigung",
+    "DESCRIPTION": "Reduziere deine Debuffs um !M!. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Reduziere deine Debuffs um !M!."
+  },
+  "expansioncontent:SuperTaunt": {
+    "NAME": "Spott",
+    "DESCRIPTION": "Wende !M! Schwach und Verwundbar an.",
+    "UPGRADE_DESCRIPTION": "Wende !M! Schwach und Verwundbar auf ALLE Gegner an."
+  },
+  "expansioncontent:Torchfire": {
+    "NAME": "Buschbrand",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jeden verschiedenen Debuff des Gegners."
+  },
+
+  "expansioncontent:TakeFlight": {
+    "NAME": "Auffrischen",
+    "DESCRIPTION": "Heile !M! TP. NL awakened:Chor: Heile stattdessen !DM! TP."
+  },
+  "expansioncontent:BeatOfDeath": {
+    "NAME": "Pochen des Todes",
+    "DESCRIPTION": "Immer wenn du eine Karte ausspielst, NL füge ALLEN Gegnern !M! Schaden zu."
+  },
+  "expansioncontent:SuperViciousMockery": {
+    "NAME": "Bösartiger Hohn",
+    "DESCRIPTION": "Erhalte !M! Elan. NL Wende !DM! Schwach an."
+  },
+  "expansioncontent:SuperClobber": {
+    "NAME": "Prügelschlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte soviel Block, wie du ungeblockten Schaden zugefügt hast."
+  },
+
+  "expansioncontent:SuperSomberShield": {
+    "NAME": "Scheiterhaufen",
+    "DESCRIPTION": "expansioncontent:Opfergabe. NL Erhalte !B! Block. NL Erhalte im nächsten Zug eine Kopie der *geopferten Karte."
+  },
+
+  "expansioncontent:SuperWhirlingFlame": {
+    "NAME": "Wirbelndes Lodern",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine Karte aus dem Abwurfstapel auf den Nachziehstapel."
+  },
+  "expansioncontent:Flail": {
+    "NAME": "Dreschender Schlag",
+    "DESCRIPTION": "Füge ALLEN Gegnern !DM! Mal !D! Schaden zu. NL Erhalte !M! Artefakt. NL Erschöpft.",
+    "EXTENDED_DESCRIPTION": [
+      "dreschend",
+      "Flegel"
+    ]
+  },
+  "expansioncontent:SuperBloodthirst": {
+    "NAME": "Blutlust",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Falls tödlich, erhalte einen zufälligen Trank und erschöpfe diese Karte."
+  },
+  "expansioncontent:SuperBodyCrash": {
+    "NAME": "Bodycheck",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge Schaden in Höhe deines aktuellen Blocks zu.",
+    "UPGRADE_DESCRIPTION": " NL (Fügt !D! Schaden zu.)"
+  },
+  "expansioncontent:SuperEtherStep": {
+    "NAME": "Phantomschritt",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe eine Karte. NL Ziehe !M! Karte.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe eine Karte. NL Ziehe !M! Karten."
+  },
+
+  "expansioncontent:Virus": {
+    "NAME": "404 Virus",
+    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. Mische einen *Starken *Strahl für jede auf diese Weise erschöpfte Karte in den Nachziehstapel. NL Erschöpft."
+  },
+
+  "expansioncontent:MajorBeam": {
+    "NAME": "Starker Strahl",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karte.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten."
+  },
+
+  "expansioncontent:ManipulateTime": {
+    "NAME": "Nachplanen",
+    "DESCRIPTION": "Lege eine Karte aus dem Abwurfstapel unter den Nachziehstapel. Sie kostet 0 bis du sie spielst.",
+    "UPGRADE_DESCRIPTION": "Lege eine Karte aus dem Abwurfstapel unter den Nachziehstapel. Sie kostet in diesem Kampf 0."
+  },
+  "expansioncontent:Pandemonium": {
+    "NAME": "Pandämonium",
+    "DESCRIPTION": "Spiele zu Beginn deines Zuges eine zufällige Karte deines Abwurfstapels."
+  },
+  "expansioncontent:Reverie": {
+    "NAME": "Reverie",
+    "DESCRIPTION": "Nimm zu Beginn deines Zuges eine der obersten !M! Karten deines Abwurfstapels auf die Hand."
+  },
+  "expansioncontent:ExploitVulnerability": {
+    "NAME": "Donu-Strahl",
+    "DESCRIPTION": "Entferne allen Block des Gegners, und erhalte genausoviel Block. Füge zweimal !D! Schaden zu."
+  },
+  "expansioncontent:PeekPages": {
+    "NAME": "Seiten spicken",
+    "DESCRIPTION": "Lege !M! *Einsicht Karten auf deinen Nachziehstapel. NL Erschöpft."
+  },
+  "expansioncontent:BloodBarrage": {
+    "NAME": "Blutiges Sperrfeuer",
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Erschöpft."
+  },
+  "expansioncontent:DoubleAct": {
+    "NAME": "Doppeltes Spiel",
+    "DESCRIPTION": "Erhalte zu Beginn deines nächsten Zuges die doppelte Menge [E] und ziehe doppelt so viele Karten. NL Erschöpft."
+  },
+  "expansioncontent:BloodySacrifice": {
+    "NAME": "Blutiges Opfer",
+    "DESCRIPTION": "Flüchtig. NL Verliere !M! % deiner Max TP. NL Erhalte 1 Ritual. Erschöpft.",
+    "EXTENDED_DESCRIPTION":[
+      " NL (Verliere {amount} Max TP. )"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "sneckomod:D8": {
+    "NAME": "Mystisches Oktaeder",
+    "DESCRIPTIONS": [
+      "Im Auge des Nebelfeldes erreichst du einen Ort der Ruhe. In der Mitte steht eine Ruine, über der ein #gmysteriöses #gOktaeder schwebt. Es rotiert ganz gemächlich und seine Oberfläche #b~glüht~ #b~schwach,~ als wäre es eine Art #y~urzeitliches~ #y~Artefakt.~ NL Als du danach greifst und die Oberfläche fast berührst, #b~leuchtet~ #b~es~ #b~stark~ #b~auf,~ und komplizierte Runensymbole werden daraus projiziert. Du fühlst ein #r@sanftes@ #r@Beben@ aus dem Untergrund. Die Luft in der Umgebung wird #pschwerer. Und die ganze Umgebubg hält sprichwörtlich die Luft an. Du musst dich entscheiden...",
+      "Das Relikt zersplittert in tausend Scherben, und du spürst wie sich die freigewordene #ymystische #yEnergie in deinen Körper einverleibt. Mit der Energie haben sich aber auch einige Splitter deinen Körper getroffen. Der Nebel hat sich plötzlich gelichtet. Gestärkt, aber auch verletzt verlässt du den Ort.",
+      "Ab dem Moment an dem du mit der Oberfläche in Kontakt kommst, spürst du einen grässlichen #rSchmerz in dir. Du bleibst tapfer und steckst das Oktaeder ein. Dich überkommt ein unbekanntes Gefühl - altes, vergessenes Wissen wird dir plötzlich klar. Aufgaben, die bisher deine vollste Konzentration und Aufmerksamkeit gefordert haben erscheinen dir nun wie ein Kinderspiel. Nachdem du wieder zu dir gekommen bist, bemerkst du, dass der Nebel verschwunden ist. Gestärkt, aber auch verletzt verlässt du den Ort ",
+      "Das nimmt bestimmt kein gutes Ende - vorsichtig machst du einige Schritte zurück und kämpfst dich weiter durch den Nebel."
+    ],
+    "OPTIONS": [
+      "[Zerstören] #rVerliere #r",
+      " #r TP. #gNimm #b1 von #b3 seltenen Karten einer #yFremdklasse in dein Deck auf.",
+      "[Nehmen] #gErhalte das #gMystische #gOktaeder. #rWerde #rverflucht #r- #rSchmerz.",
+      "[Verlassen]",
+      "[Gesperrt] Erfordert eine Karte mit Überschuss."
+    ]
+  },
+  "sneckomod:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Creativity triumphs over planning every time."
+    ],
+    "OPTIONS": [
+      "[Improvisation] Ersetze alle #gSchlag und #gVerteidigen Karten durch Pendants aus #yFremdklassen.",
+      "[Gesperrt] Erfordert einen Schlag oder ein Verteidigen."
+    ]
+  },
+  "sneckomod:Serpent": {
+    "NAME": "Die Ssssslange",
+    "DESCRIPTIONS": [
+      "Du kommst in einen Raum, wo du ein ein großes Loch im Boden findest. Als du dem Loch näherkommst, erscheint daraus eine enorme Schlangenkreatur, die dir nicht unähnlich ist. NL NL ~„Ho~ ~hooo!~ ~Hallo,~ ~Schlangenfreund!~ Ich stelle dir eine einfache Frage... NL NL Du hörst diese Kreatur sprechen, doch bist absolut perplex und kannst nichts verstehen. NL NL „Stimmst du zu?“",
+      "~„Exzellent!“~ NL NL Du hast noch immer keine Ahnung, was die Schlange von sich gegeben hat, aber du bemerkst, dass du sie glücklich gemacht hast. NL Die Kreatur bietet dir ein Souvenir an und schlängelt sich zurück in das Loch.",
+      "Die Schlange glotzt dich mit dem Anblick extremer Enttäuschung an - doch zur Verabschiedung lächelt sie wieder, und wünscht dir eine gute Reise."
+    ],
+    "OPTIONS": [
+      "[Zustimmen] #gErhalte #gein #gSnecko #gRelikt. #rWerde #rverflucht #r- #rIrritation.",
+      "[Widersprechen]",
+      "[Verlassen]"
+    ]
+  },
+  "sneckomod:SuspiciousHouse": {
+    "NAME": "Unheimliches Heim",
+    "DESCRIPTIONS": [
+      "Deine Reise durch die Stadt wird durch ein lautes, gellendes Geschrei gestört, das unmöglich von einem Menschen kommen kann. Du gehst auf das Haus zu, von dem das Geschrei kam und siehst durch das Fenster, wie ein Stadtbewohner versucht eine schlangenartige Kreatur, die in einem Käfig sitzt, zum Schweigen zu bringen. NL NL Du betrittst das Haus - ~„HEY!~ Was hast du hier zu suchen?! @RAUS@ @HIER!“@ NL NL Das gefangene Tier ist verängstigt und verkriecht sich in eine Ecke des Käfigs. Es ist offensichtlich unglücklich hier.",
+      "„Du willst es? @Schön!@ Es ist den Ärger nicht wert.“ NL NL Der Bewohner öffnet mit einem frustrierten ~Säufzen~ den Käfig und greift hinein. Blitzschnell beißt die Kreatur mit der ganzen Stärke seines kleinen Kiefers in den Finger des Mannes. NL NL Bevor er noch das Tier zurückschlagen kann, intervenierst du und #rschlägst ihn zu Boden. Die Schlange kriecht voller Freude auf deinen ausgestreckten Arm, und ihr reist von nun an gemeinsam durch den Spire. Du nennst es... #y'Clementine'.",
+      "Die Schlange glotzt dich mit dem Anblick extremer Enttäuschung an - doch zur Verabschiedung lächelt sie wieder, und wünscht dir eine gute Reise."
+    ],
+    "OPTIONS": [
+      "[Retten] #gErhalte #gein #gSnecko-Küken. #rKämpfe #rgegen #einen #rverärgerten #rZenturio.",
+      "[Verlassen]"
+    ]
+  }
+}

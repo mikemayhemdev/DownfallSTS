@@ -1,0 +1,32 @@
+{
+  "sneckomod:DiceRollPotion": {
+    "NAME": "Kartenflasche",
+    "DESCRIPTIONS": [
+      "Erhalte am Ende des Kampfes #b",
+      " zusätzliche Kartenbelohnung mit #b3 #yverbesserten ungewöhnlichen Karten aus #yFremdklassen.",
+      " zusätzliche Kartenbelohnungen mit jeweils #b3 #yverbesserten ungewöhnlichen Karten aus #yFremdklassen."
+    ]
+  },
+  "sneckomod:CheatPotion": {
+    "NAME": "Felix Felicis",
+    "DESCRIPTIONS": [
+      "#yÜberschuss Effekte werden in diesem Zug immer aktiviert - unabhängig von der Handgröße.",
+      "#yÜberschuss Effekte werden in den nächsten #b",
+      " Zügen immer aktiviert - unabhängig von der Handgröße."
+    ]
+  },
+  "sneckomod:MuddlingPotion": {
+    "NAME": "Irrer Energietrank",
+    "DESCRIPTIONS": [
+      "#Irre die #b",
+      " teuersten Karten auf der Hand. Karten die durch diesen Trank #ygerirrt werden können dadurch nicht #b3 kosten."
+    ]
+  },
+  "sneckomod:OffclassReductionPotion": {
+    "NAME": "Exotischer Saft",
+    "DESCRIPTIONS": [
+      "Karten aus #yfremden #yKlassen auf der Hand kosten #b",
+      " weniger."
+    ]
+  }
+}

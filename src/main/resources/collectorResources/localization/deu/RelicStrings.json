@@ -1,0 +1,126 @@
+{
+  "collector:EmeraldTorch": {
+    "NAME": "Smaragdfackel",
+    "FLAVOR": "Die Flamme der Gier brennt nie aus.",
+    "DESCRIPTIONS": [
+      "Beginne jeden Kampf mit #b1 #ycollector:Reserve."
+    ]
+  },
+  "collector:PrismaticTorch": {
+    "NAME": "Regenbogenfackel",
+    "FLAVOR": "Die stets wechselnde Flamme ist ein Zeichen des Glücks.",
+    "DESCRIPTIONS": [
+      "Ersetzt ",
+      "[] [REMOVE_SPACE]. Beginne jeden Kampf mit #b1 #ycollector:Reserve und nimm eine #yGlut auf die Hand. Erhalte wenn du das erste Mal im Zug eine #yGlut #yerschöpfst #b1 #ycollector:Reserve [REMOVE_SPACE]."
+    ]
+  },
+  "collector:HolidayCoal": {
+    "NAME": "Krampus-Kohle",
+    "FLAVOR": "„Faszinierend! Aber warum nur in bestimmten Kaminen?“ - Ranwid",
+    "DESCRIPTIONS": [
+      "Nimm immer wenn du von einem leeren Sammlungsstapel ziehen würdest einen #yGlücksdocht auf die Hand."
+    ]
+  },
+  "collector:BagOfTricks": {
+    "NAME": "Sack voller Tricks",
+    "FLAVOR": "Tricky.",
+    "DESCRIPTIONS": [
+      "Ziehe zu Beginn jedes Kampfes #b",
+      " Karten mehr vom Sammlungsstapel."
+    ]
+  },
+  "collector:JadeRing": {
+    "NAME": "Jadering",
+    "FLAVOR": "Jade ist das Symbol der Ehrlichkeit.",
+    "DESCRIPTIONS": [
+      "Gegner erleiden #b",
+      " mehr Schaden durch #ycollector:Verdammnis [REMOVE_SPACE]."
+    ]
+  },
+  "collector:SoullitLamp": {
+    "NAME": "Seelenlampe",
+    "FLAVOR": "Ein makaberes Leuchtmittel. Summendes Geheul ersetzt das Knistern eines Feuers.",
+    "DESCRIPTIONS": [
+      "Erhalte beim Aufheben #b3 #yEssenzen [REMOVE_SPACE]. Nimm zu Beginn des Kampfes eine #yGlut auf die Hand."
+    ]
+  },
+  "collector:ThimbleHelm": {
+    "NAME": "Fingerhelm",
+    "FLAVOR": "Ein Helm für die kleinsten Helden des Spire.",
+    "DESCRIPTIONS": [
+      "Beginne jeden Kampf mit #b",
+      " #ytemporären #yTP [REMOVE_SPACE]. Während du #ytemporäre #yTP hast, geben Karten #b1 #yBlock zusätzlich."
+    ]
+  },
+  "collector:Incense": {
+    "NAME": "Weihrauch",
+    "FLAVOR": "Eine altmodische Art der mentalen Reinigung.",
+    "DESCRIPTIONS": [
+      "Während du #ySchwach [REMOVE_SPACE], #yVerwundbar oder #yGebrechlich bist, kannst du weder #ySchwach [REMOVE_SPACE], #yVerwundbar noch #yGebrechlich erhalten."
+    ]
+  },
+  "collector:FuelCanister": {
+    "NAME": "Treibstoffkanister",
+    "FLAVOR": "Ekelhaft.",
+    "DESCRIPTIONS": [
+      "#yBehalte am Ende des Zuges eine zufällige Karte mit den niedrigsten Kosten."
+    ]
+  },
+  "collector:AutoCurser": {
+    "NAME": "Verhexter Talisman",
+    "FLAVOR": "„Ich stoße mir viel öfter den Zeh an, während ich das Ding trage. Ich glaube es funktioniert!“ - Ranwid",
+    "DESCRIPTIONS": [
+      "Wende zu Beginn des Kampfes #b1 #ySchwach und #yVerwundbar auf einen zufälligen Gegner an."
+    ]
+  },
+  "collector:Bagpipes": {
+    "NAME": "Dudelsack",
+    "FLAVOR": "Man erzählt sich, dass dieses Instrument Kublai den Großen in den Wahnsinn getrieben hat.",
+    "DESCRIPTIONS": [
+      "Immer wenn du NEUES #ySchwach oder #yVerwundbar anwendest, erhöhe die angewendete Anzahl um #b1 [REMOVE_SPACE]."
+    ]
+  },
+  "collector:BottledCollectible": {
+    "NAME": "Flaschenhirn",
+    "FLAVOR": "Gefunden im Labor eines Zauberers.",
+    "DESCRIPTIONS": [
+      "#yVerbessere beim Aufheben eine Karte in deiner Sammlung. Beginne jeden Kampf mit der gewählten Karte auf deinem Sammlungsstapel.",
+      "Beginne jeden Kampf mit ",
+      " auf deinem Sammlungsstapel.",
+      "Wähle eine Karte für ",
+      "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
+    ]
+  },
+  "collector:TheContract": {
+    "NAME": "Der Vertrag",
+    "FLAVOR": "Mit Blut unterschrieben.",
+    "DESCRIPTIONS": [
+      "Erhalte beim Aufheben #b",
+      " #yEssenzen [REMOVE_SPACE]."
+    ]
+  },
+  "collector:ForbiddenFruit": {
+    "NAME": "Verbotene Frucht",
+    "FLAVOR": "Die Art dieser Frucht sieht äußerst fremdartig aus.",
+    "DESCRIPTIONS": [
+      "Füge beim Aufheben einen #rParasiten in dein Deck hinzu und erhöhe deine Max TP um #b",
+      " . Beginne jeden Kampf mit #b",
+      " #yGeschicklichkeit."
+    ]
+  },
+  "collector:RoughDiamond": {
+    "NAME": "Rohdiamant",
+    "FLAVOR": "Wegen der Zerstörung der Minen sind selbst unreine, ungeschliffene Diamanten äußerst kostbar.",
+    "DESCRIPTIONS": [
+      "Erhalte beim Aufheben eine #yseltene Kartenbelohnung. Erhalte das erste Mal wenn du eine #yseltene Karte im Zug spielst [E] .",
+      "Wissen!"
+    ]
+  },
+  "collector:BlockedChakra": {
+    "NAME": "Blockiertes Chakra",
+    "FLAVOR": "Es reicht bloß ein gezerrter Muskel.",
+    "DESCRIPTIONS": [
+      "Erhalte in deinem Zug [E] . Du kannst erst ab deinem vierten Zug vom Sammlungsstapel ziehen."
+    ]
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "hexamod:AgainPower": {
+    "NAME": "Nochmal!",
+    "DESCRIPTIONS": [
+      "Gehe am Ende des nächsten Zuges nicht #yvorwärts [REMOVE_SPACE].",
+      "Gehe am Ende der nächsten #b",
+      " Züge nicht #yvorwärts [REMOVE_SPACE]."
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+  },
+  "hexamod:ApocalypticArmorPower": {
+    "NAME": "Jüngstes Gericht",
+    "DESCRIPTIONS": [
+      "Das nächste Mal, wenn #b",
+      " Geisterflammen #yentzündet sind, hast du einen weiteren Zug nach diesem.",
+      "Das nächste Mal, wenn mindestens #b"
+    ]
+  },
+  "hexamod:ApplyBurnAtTurnStartOncePower": {
+    "NAME": "Verspätete Flamme",
+    "DESCRIPTIONS": [
+      "Wende zu Beginn des nächsten Zuges #b",
+      " #ySeelenfeuer auf ALLE Gegner an."
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+  },
+  "hexamod:BurnPerTurnPower": {
+    "NAME": "Schmelzendes Metall",
+    "DESCRIPTIONS": [
+      "Wendet das nächste Mal, an dem das #ySeelenfeuer dieses Feindes detoniert #b",
+      " #ySeelenfeuer an."
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+  },
+  "hexamod:BurnPower": {
+    "NAME": "Seelenfeuer",
+    "DESCRIPTIONS": [
+      "Verliert in #b",
+      " Zügen #b",
+      " Zug #b",
+      " TP. Das #ySeelenfeuer wird dann entfernt."
+    ]
+  },
+  "hexamod:BurnvenomPower": {
+    "NAME": "Waldbrand-Waffe",
+    "DESCRIPTIONS": [
+      "Immer wenn du ungeblockten Angriffsschaden zufügst, wende #b",
+      " #ySeelenfeuer an."
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+  },
+  "hexamod:CommonPostCombatPower": {
+    "NAME": "Versiegelte Belohnung: Karte",
+    "DESCRIPTIONS": [
+      "Erhalte am Ende des Kampfes #b",
+      " zusätzliche Kartenbelohnungen.",
+      " zusätzliche Kartenbelohnung."
+    ]
+  },
+  "hexamod:CrispyPower_new": {
+    "NAME": "Extra knusprig",
+    "DESCRIPTIONS": [
+      "Wenn #ySeelenfeuer an Gegnern detoniert, wende nach der Detonation #b",
+      " #ySeelenfeuer auf sie an."
+    ]
+  },
+  "hexamod:EnhancePower": {
+    "NAME": "Intensität",
+    "DESCRIPTIONS": [
+      "Erhöhe Schaden, #ySeelenfeuer [REMOVE_SPACE], und #yBlock der durch das #yEntzünden von Geisterflammen entsteht um #b",
+      " [REMOVE_SPACE].",
+      "Verringere Schaden, #ySeelenfeuer [REMOVE_SPACE], und #yBlock der durch das #yEntzünden von Geisterflammen entsteht um #b",
+      "Hat bei #ySengenden #yGeisterflammen die doppelte Wirkung."
+    ]
+  },
+  "hexamod:EtherealRefundPower": {
+    "NAME": "Flüchtige Rückerstattung",
+    "DESCRIPTIONS": [
+      "Immer wenn du in diesem Zug eine #yflüchtige Karte spielst, erhalte ",
+      " ."
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+  },
+  "hexamod:FuturePower": {
+    "NAME": "Im Schatten",
+    "DESCRIPTIONS": [
+      "Die #b",
+      " nächste gespielte Karte wird jedes Mal, wenn du dich #yrückwärts bewegst, #b0 kosten und #yerschöpfen [REMOVE_SPACE].",
+      " nächsten gespielten Karten werden jedes Mal, wenn du dich #yrückwärts bewegst, #b0 kosten und #yerschöpfen [REMOVE_SPACE]."
+    ]
+  },
+  "hexamod:FutureUpgradePower": {
+    "NAME": "Versiegelte Belohnung: Verbessern",
+    "DESCRIPTIONS": [
+      "#yVerbessere am Ende des Kampfes #b",
+      " zufällige Karte in deinem Deck.",
+      " zufällige Karten in deinem Deck."
+    ]
+  },
+  "hexamod:StopFromAdvancingPower": {
+    "NAME": "Hier und Jetzt",
+    "DESCRIPTIONS": [
+      "#yLösche am Ende des Zuges die aktuelle Geisterflamme."
+    ]
+  },
+  "hexamod:GhostFlameBarrierPower": {
+    "NAME": "Geisterflammen-Barriere",
+    "DESCRIPTIONS": [
+      "Wenn du #yAngriffsschaden erleidest, wird beim Angreifer #b",
+      " #ySeelenfeuer angewendet."
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+  },
+  "hexamod:GiftsFromBeyondPower": {
+    "NAME": "Geschenkte Karten",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn des Zuges #b",
+      " zufällige #yReinkarnation Karte auf die Hand.",
+      " zufällige #yReinkarnation Karten auf die Hand."
+    ]
+  },
+  "hexamod:GoldPostCombatPower": {
+    "NAME": "Versiegelte Belohnung: Gold",
+    "DESCRIPTIONS": [
+      "Die Gold Belohnung des Kampfes wird um #b",
+      " erhöht."
+    ]
+  },
+  "hexamod:HexalevelPower": {
+    "NAME": "Infernale Form",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges erhältst du #b",
+      " #yIntensität [REMOVE_SPACE]."
+    ]
+  },
+  "hexamod:LoseEnhanceInTurnsPower": {
+    "NAME": "Überhitzt",
+    "DESCRIPTIONS": [
+      "Verliere am Ende deines Zuges #b",
+      "Verliere nach #b",
+      " Zügen #b",
+      " #yIntensität [REMOVE_SPACE]."
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+  },
+  "hexamod:ParanormalFormPower": {
+    "NAME": "Poltergeist",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #yflüchtige Karte spielst, verliert ein zufälliger Gegner #b",
+      " TP."
+    ]
+  },
+  "hexamod:PastPower": {
+    "NAME": "Totentanz",
+    "DESCRIPTIONS": [
+      "Ziehe eine Karte wenn du dich das erste Mal im Zug #yvorwärts oder #yrückwärts bewegst.",
+      "Ziehe eine Karte für die ersten #b",
+      " Male, an denen du dich im Zug #yvorwärts oder #yrückwärts bewegst.",
+      " NL Dieser Effekt kann in diesem Zug noch #b",
+      " Mal aktiviert werden.",
+      " Mal aktiviert werden.",
+      " NL Dieser Effekt kann in diesem Zug nicht mehr aktiviert werden."
+    ]
+  },
+  "hexamod:PotionPostCombatPower": {
+    "NAME": "Versiegelte Belohnung: Trank",
+    "DESCRIPTIONS": [
+      "Erhalte am Ende des Kampfes #b",
+      " zusätzliche Tränke.",
+      " zusätzlichen Trank."
+    ]
+  },
+  "hexamod:RadiantPower": {
+    "NAME": "Strahlende Flamme",
+    "DESCRIPTIONS": [
+      "Erhalte #b ",
+      "Block immer wenn eine Geisterflamme #yentzündet wird."
+    ]
+  },
+  "hexamod:SealPostCombatPower": {
+    "NAME": "Versiegelte Belohnung: Siegel",
+    "DESCRIPTIONS": [
+      "Erhalte am Ende des Kampfes #b",
+      " zusätzliche #ySiegel Karten.",
+      " zusätzliche #ySiegel Karte."
+    ],
+    "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
+  },
+  "hexamod:TimeStopPower": {
+    "NAME": "Ankunft der Hölle",
+    "DESCRIPTIONS": [
+      "Du hast einen weiteren Zug nach diesem.",
+      "Du hast #b",
+      " weitere Züge nach diesem."
+    ]
+  },
+  "hexamod:VolcanoVisagePower": {
+    "NAME": "Vulkan-Visage",
+    "DESCRIPTIONS": [
+      "Wende immer, wenn du eine Geisterflamme #yentzündest, #b",
+      " #ySeelenfeuer auf ALLE Gegner an."
+    ]
+  },
+  "hexamod:LivingBombPower": {
+    "NAME": "Lebendige Bombe",
+    "DESCRIPTIONS": [
+      "Wenn das #ySeelenfeuer dieses Wesens detoneirt, nehmen ALLE Gegner Schaden."
+    ]
+  },
+  "hexamod:GainEnergyAtStartOfTurnPower": {
+    "NAME": "Mehr Energie",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn deines Zuges "
+    ]
+  },
+  "hexamod:SoulburnOnExhaustPower": {
+    "NAME": "Seelenfeuer-Befall",
+    "DESCRIPTIONS": [
+      "Immer wenn in diesem Zug eine Karte #yErschöpft wende #b",
+      " #ySeelenfeuer auf diesen Gegner an."
+    ]
+  },
+  "hexamod:LoseIntensityPower": {
+    "NAME": "Temporäre Intensität",
+    "DESCRIPTIONS": [
+      "Am Ende deines Zuges verlierst du #b",
+      " #yIntensität [REMOVE_SPACE]."
+    ]
+  },
+  "hexamod:MaxHPPostCombatPower": {
+    "NAME": "Versiegelte Belohnung: Max TP",
+    "DESCRIPTIONS": [
+      "Erhalte am Ende des Kampfes #b",
+      " Max TP."
+    ]
+  },
+  "hexamod:InfernoPotionPower": {
+    "NAME": "Hexafeuer",
+    "DESCRIPTIONS": [
+      "Die Geisterflammen-Effekte werden in diesem Kampf auf ALLE Gegner angewendet.",
+      "Die Geisterflammen-Effekte werden in diesem Kampf auf ALLE Gegner #b",
+      " Mal angewendet."
+    ]
+  },
+  "hexamod:PlayCardAndExhaustPower": {
+    "NAME": "In den Schatten schieben",
+    "DESCRIPTIONS": [
+      "Die nächste Karte die du spielst kostet #b0 und #yerschöpft [REMOVE_SPACE].",
+      "Die nächsten #b",
+      " Karten die du spielst kosten #b0 und #yerschöpfen [REMOVE_SPACE]."
+    ]
+  }
+}

@@ -1,0 +1,514 @@
+{
+  "Gremlin:AggressiveDefense": {
+    "NAME": "Aggressive Abwehr",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn du in diesem Zug Block erhältst, verliert dieser Gegner !M! TP."
+  },
+
+  "Gremlin:ArmsTheft": {
+    "NAME": "Waffendiebstahl",
+    "DESCRIPTION": "Wende !M! Schwach an. NL gremlin:Stiehl !M! Stärke. NL Erschöpft."
+  },
+
+  "Gremlin:Astound": {
+    "NAME": "Erstaunen",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Schutz wenn du mindestens 3 gremlin:Esprit hast.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Schutz+ wenn du mindestens 3 gremlin:Esprit hast."
+  },
+
+  "Gremlin:Bang": {
+    "NAME": "Ultimativer Stoß",
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. Lege *Energie *sammeln in den Abwurfstapel. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Füge !M! Mal !D! Schaden zu. Lege *Energie *sammeln+ in den Abwurfstapel. NL Erschöpft."
+  },
+
+  "Gremlin:Bellow": {
+    "NAME": "Gebrüll",
+    "DESCRIPTION": "Flüchtig. NL Erhalte für jeden Gegner der nicht angreifen will !M! Stärke. NL Erschöpft."
+  },
+
+  "Gremlin:BrokenShin": {
+    "NAME": "Schienbeinbruch",
+    "DESCRIPTION": "Wende gremlin:Agonie für alle !M! Schwach des Gegners an. NL Erschöpft."
+  },
+
+  "Gremlin:BubbleBarrier": {
+    "NAME": "Schildblase",
+    "DESCRIPTION": "Immer wenn du in diesem Zug eine Karte ausspielst, erhalte !M! Block."
+  },
+
+  "Gremlin:BulkUp": {
+    "NAME": "Massephase",
+    "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL gremlin:Wechsle zum gremlin:Fetten_Gremlin."
+  },
+
+  "Gremlin:BurlyBlow": {
+    "NAME": "Strammer Hieb",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das in Höhe des Schwach des Gegners."
+  },
+
+  "Gremlin:CatScratch": {
+    "NAME": "Katzenkralle",
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu."
+  },
+
+  "Gremlin:Changeo": {
+    "NAME": "Abrakadabra!",
+    "DESCRIPTION": "Erhalte !B! Block und !M! gremlin:Esprit."
+  },
+
+  "Gremlin:CongaLine": {
+    "NAME": "Polonaise",
+    "DESCRIPTION": "Erhalte zu Beginn deines Zuges [E] und gremlin:wechsle zum nächsten Gremlin.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte zu Beginn deines Zuges [E] und gremlin:wechsle zum nächsten Gremlin."
+  },
+
+  "Gremlin:CounterStrike": {
+    "NAME": "Konterschlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn der Gegner angreifen will, aktiviere den Bonus des aktuellen Gremlins !M! Mal."
+  },
+
+  "Gremlin:CowerChoice": {
+    "NAME": "Feigheit",
+    "DESCRIPTION": "Verliere deine ganzen Reserven an Gold.",
+    "EXTENDED_DESCRIPTION": ["SCHWÄCHLINGE NICHT DUMM."]
+  },
+
+  "Gremlin:CowerChoiceB": {
+    "NAME": "Feigheit",
+    "DESCRIPTION": "Verliere den Gremlin der am weitesten hinten steht permanent.",
+    "EXTENDED_DESCRIPTION": ["Gut. Und ihr anderen - verschwindet!", "Ja! Zischt ab!"]
+  },
+
+  "Gremlin:DaggerDance": {
+    "NAME": "Dolchtanz",
+    "DESCRIPTION": "Füge ALLEN Gegnern !M! Mal !D! Schaden zu."
+  },
+
+  "Gremlin:Dazzle": {
+    "NAME": "Schillern",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL gremlin:Stiehl 2 Stärke wenn du mindestens 3 gremlin:Esprit hast. NL Erschöpft."
+  },
+
+  "Gremlin:Defend": {
+    "NAME": "Verteidigen",
+    "DESCRIPTION": "Erhalte !B! Block."
+  },
+
+  "Gremlin:Duplicate": {
+    "NAME": "Duplizieren",
+    "DESCRIPTION": "Wähle einen Angriff. NL Erhalte !M! expansioncontent:Echos. NL Sie kosten 1 weniger. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wähle einen Angriff. NL Erhalte !M! expansioncontent:Echos. NL Sie kosten 1 weniger."
+  },
+
+  "Gremlin:EdibleArmor": {
+    "NAME": "Essbare Rüstung",
+    "DESCRIPTION": "Wandle dein aktuelles Block in expansioncontent:temporäre_TP um. NL Erschöpft."
+  },
+
+  "Gremlin:Encore": {
+    "NAME": "Zugabe",
+    "DESCRIPTION": "Erhalte 3 gremlin:Esprit. NL Der Verbauch von gremlin:Esprit fügt noch zusätzlich !M! Schaden zu."
+  },
+
+  "Gremlin:Enthusiasm": {
+    "NAME": "Enthusiasmus",
+    "DESCRIPTION": "Ziehe immer wenn du gremlin:wechselst eine Karte."
+  },
+
+  "Gremlin:Erupt": {
+    "NAME": "Kragen platzen",
+    "DESCRIPTION": "Erhalte !M! temporäre Stärke. NL Erschöpft."
+  },
+
+  "Gremlin:Exacerbate": {
+    "NAME": "Verschlimmern",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Der Gegner verliert jedes Mal wenn er Schwach erleidet !M! TP. NL Erschöpft."
+  },
+
+  "Gremlin:FairyDust": {
+    "NAME": "Feenstaub",
+    "DESCRIPTION": "Erhalte !M! *Schutz und ziehe !M! Karten. NL Erschöpft."
+  },
+
+  "Gremlin:SleeveOfAces": {
+    "NAME": "Asse im Ärmel",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte Messer in Höhe deines gremlin:Esprits.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte Messer+ in Höhe deines gremlin:Esprits."
+  },
+
+  "Gremlin:FatGremlin": {
+    "NAME": "Fetter Gremlin",
+    "DESCRIPTION": "gremlin:Wechsle zum gremlin:Fetten_Gremlin."
+  },
+
+  "Gremlin:FeelTheAudience": {
+    "NAME": "Publikumsmagnet",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte !M! gremlin:Esprit für jeden, der angreifen will."
+  },
+
+  "Gremlin:FightChoice": {
+    "NAME": "Kämpfen",
+    "DESCRIPTION": "Beginne den Kampf. NL Die Gegner erhalten !M! Stärke.",
+    "EXTENDED_DESCRIPTION": ["KNIRPSE JETZT STERBEN!", "Da bettelt jemand um eine Lektion!"]
+  },
+
+  "Gremlin:FlipOut": {
+    "NAME": "Ausflippen",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn du in diesem Zug Block erhalten würdest, füge stattdessen ALLEN Gegnern Schaden in derselben Höhe zu."
+  },
+
+  "Gremlin:Flurry": {
+    "NAME": "Wirbel",
+    "DESCRIPTION": "Füge für jede in diesem Zug gespielte Karte !D! Schaden zu. NL Erschöpft.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " Karte gespielt.)",
+      " Karten gespielt.)"
+    ]
+  },
+
+  "Gremlin:FollowThrough": {
+    "NAME": "Für den Anführer!",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! temporäre Stärke."
+  },
+
+  "Gremlin:Fury": {
+    "NAME": "Raserei",
+    "DESCRIPTION": "Kostet 1 [E] weniger für jede 2 deiner Stärke. NL Füge 3 Mal !D! Schaden zu."
+  },
+
+  "Gremlin:Glimmer": {
+    "NAME": "Glimmer",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 *Schutz.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 *Schutz+."
+  },
+
+  "Gremlin:GlitterGuard": {
+    "NAME": "Glitterschutz",
+    "DESCRIPTION": "Erhalte !M! *Schutz. NL gremlin:Wechsle zum gremlin:Schildgremlin.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! *Schutz+. NL gremlin:Wechsle zum gremlin:Schildgremlin."
+  },
+
+  "Gremlin:GremlinArms": {
+    "NAME": "Gremlinarsenal",
+    "DESCRIPTION": "Aktiviere den Bonus des aktuellen Gremlins und gremlin:wechsle zu einem Gremlin deiner Wahl.",
+    "UPGRADE_DESCRIPTION": "Aktiviere den Bonus des aktuellen Gremlins zweimal und gremlin:wechsle zu einem Gremlin deiner Wahl."
+  },
+
+  "Gremlin:GremlinMeal": {
+    "NAME": "Muskelspiel",
+    "DESCRIPTION": "Erhalte !M! temporäre Stärke."
+  },
+
+  "Gremlin:GremlinDance": {
+    "NAME": "Gremlintanz",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Hat verschiedene Zusatzeffekte, abhängig vom aktuellen Gremlin.",
+    "EXTENDED_DESCRIPTION": ["Füge !D! Schaden zu",
+    ". NL Trifft ALLE Gegner.", ". NL Der Gegner verliert in diesem Zug !M! Stärke.",
+    ". NL Erhalte !B! Block.", ". NL Ziehe !M! Karten.", ". NL Erhalte !M! gremlin:Esprit.", ". NL Erhalte !M! Stärke."]
+  },
+
+  "Gremlin:GremlinOffensive": {
+    "NAME": "Gremlinoffensive",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte eine *Gremlinoffensive. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte eine *Gremlinoffensive+. NL Erschöpft."
+  },
+
+  "Gremlin:GremlinToss": {
+    "NAME": "Gremlinweitwurf",
+    "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL Füge Schaden in Höhe der Summe des aktuellen Blocks und *temporären *TP zu.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL Füge Schaden in Höhe der Summe des aktuellen Blocks und *temporären *TP zu.",
+    "EXTENDED_DESCRIPTION": [" NL (Fügt !D! Schaden zu.)"]
+  },
+
+  "Gremlin:GremlinWizard": {
+    "NAME": "Gremlinzeuberer",
+    "DESCRIPTION": "gremlin:Wechsle zum gremlin:Gremlinzauberer."
+  },
+
+  "Gremlin:Heckle": {
+    "NAME": "Zwischenrufen",
+    "DESCRIPTION": "Erhalte jedes Mal wenn du einen Gegner debuffst !M! expansioncontent:temporäre_TP."
+  },
+
+  "Gremlin:InfiniteBlocks": {
+    "NAME": "Unbegrenzter Schutz",
+    "DESCRIPTION": "Nimm immer zu Beginn deines Zuges einen *Schutz in die Hand.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Nimm immer zu Beginn deines Zuges einen *Schutz in die Hand."
+  },
+
+  "Gremlin:IrksomeBlow": {
+    "NAME": "Lästiger Hieb",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Stärke beeinflusst den Lästigen Hieb !M! Mal."
+  },
+
+  "Gremlin:Irritability": {
+    "NAME": "Reizbarkeit",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! temporäre Stacheln. NL gremlin:Wechsle zum gremlin:Wütenden_Gremlin."
+  },
+
+  "Gremlin:Jeer": {
+    "NAME": "Sticheln",
+    "DESCRIPTION": "Füge !D! Schaden zu. Erhalte !M! expansioncontent:temporäre_TP wenn der Gegner einen Debuff hat."
+  },
+
+  "Gremlin:Kablamo": {
+    "NAME": "Simsalabim!",
+    "DESCRIPTION": "Füge ALLEN Gegnern zweimal !D! Schaden zu. NL Dieser Angriff verbraucht keinen gremlin:Esprit."
+  },
+
+  "Gremlin:LeaderChoice": {
+    "NAME": "Triff eine Entscheidung",
+    "DESCRIPTION": "Deinen Kamereden opfern?"
+  },
+
+  "Gremlin:MadGremlin": {
+    "NAME": "Wütender Gremlin",
+    "DESCRIPTION": "gremlin:Wechsle zum gremlin:Wütenden_Gremlin."
+  },
+
+  "Gremlin:MakeshiftArmor": {
+    "NAME": "Schrottrüstung",
+    "DESCRIPTION": "Erhalte jedes Mal wenn du 7 Angriffe spielst 1 Artefakt.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! Artefakt. NL Erhalte jedes Mal wenn du 7 Angriffe spielst 1 Artefakt."
+  },
+
+  "Gremlin:Mockery": {
+    "NAME": "Posse",
+    "DESCRIPTION": "Wende !M! Schwach an. NL Erhalte !B! Block wenn der Gegner mindestens 3 Schwach hat."
+  },
+
+  "Gremlin:Necromancy": {
+    "NAME": "Nekromantie",
+    "DESCRIPTION": "Erfordert 3 gremlin:Esprit. NL Verbrauche deinen gremlin:Esprit um einen zufälligen Gremlin mit !M! TP wiederzubeleben. Erschöpft.",
+    "EXTENDED_DESCRIPTION": ["Nicht genug Esprit.", "Niemand ist tot.", "Kein Platz mehr."]
+  },
+
+  "Gremlin:Nob": {
+    "NAME": "Aristo-Form",
+    "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL Mutiere in den gremlin:Gremlin-Aristo bis deine *temporären *TP verbraucht sind."
+  },
+
+  "Gremlin:NobChoice": {
+    "NAME": "Triff eine Entscheidung",
+    "DESCRIPTION": "Gold aufgeben?"
+  },
+
+  "Gremlin:PartyStick": {
+    "NAME": "Leuchtstab",
+    "DESCRIPTION": "Flüchtig. Unspielbar. NL Erhalte [E] wenn du mit dieser Karte auf der Hand gremlin:wechselst.",
+    "UPGRADE_DESCRIPTION": "Unspielbar. NL Erhalte [E] wenn du mit dieser Karte auf der Hand gremlin:wechselst.",
+    "EXTENDED_DESCRIPTION": ["Niemand darf mit dem Leuchtstab spielen."]
+  },
+
+  "Gremlin:Patsy": {
+    "NAME": "Sündenbock",
+    "DESCRIPTION": "Erhalte !B! Block. NL gremlin:Wechsle zum nächsten Gremlin."
+  },
+
+  "Gremlin:Pickpocket": {
+    "NAME": "Taschendiebstahl",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! Gold. NL Erschöpft."
+  },
+
+  "Gremlin:PinNeedle": {
+    "NAME": "Stecknadel",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze !M! *Nadelstiche *ein. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze !M! *Nadelstiche+ *ein. NL Erschöpft."
+  },
+
+  "Gremlin:Pinprick": {
+    "NAME": "Nadelstich",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte ein expansioncontent:Echo dieser Karte wenn du sie ziehst. NL Füge !D! Schaden zu. NL Ziehe eine Karte. NL Erschöpft."
+  },
+
+  "Gremlin:Polish": {
+    "NAME": "Polieren",
+    "DESCRIPTION": "Messer fügen !M! mehr Schaden zu. NL *Schutz verleiht !M! Block zusätzlich."
+  },
+
+  "Gremlin:PourSalt": {
+    "NAME": "Salz in die Wunde",
+    "DESCRIPTION": "Füge !D! Schaden zu. Wenn der Gegner Schwach ist, reduziere es um 1 um !M! Messer zu erhalten."
+  },
+
+  "Gremlin:Presto": {
+    "NAME": "Presto!",
+    "DESCRIPTION": "Füge !D! Schaden zu. Erhalte !M! gremlin:Esprit."
+  },
+
+  "Gremlin:Pretaliation": {
+    "NAME": "Pretaliation",
+    "DESCRIPTION": "Füge zweimal !D! Schaden zu. NL Der Gegner greift dich mit !M! Schaden an."
+  },
+
+  "Gremlin:ProperTools": {
+    "NAME": "Adäquates Werkzeug",
+    "DESCRIPTION": "Füge !D! Schaden zu. Erhalte !M! *Schutz wenn der Gegner angreifen will. Erhalte anderenfalls !M! Messer."
+  },
+
+  "Gremlin:RageBreak": {
+    "NAME": "Aus der Haut fahren",
+    "DESCRIPTION": "Verdopple deine Stärke. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Verdopple deine Stärke. NL Erschöpft."
+  },
+
+  "Gremlin:Raid": {
+    "NAME": "Raubzug",
+    "DESCRIPTION": "Ziehe eine Karte für jeden lebenden Gremlin. NL Wirf !M! Karten ab.",
+    "UPGRADE_DESCRIPTION": "Ziehe eine Karte für jeden lebenden Gremlin. NL Wirf !M! Karten ab."
+  },
+
+  "Gremlin:Revel": {
+    "NAME": "Gelage",
+    "DESCRIPTION": "Erhalte [E] für jeden lebenden Gremlin."
+  },
+
+  "Gremlin:Rhythm": {
+    "NAME": "Rhythmus",
+    "DESCRIPTION": "gremlin:Wechsle zum nächsten Gremlin. NL Schnapp dir eine Basis-Karte vom Nachziehstapel. Sie kostet in diesem Zug 0."
+  },
+
+  "Gremlin:Rush": {
+    "NAME": "Bullenangriff",
+    "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. NL Erschöpft."
+  },
+
+  "Gremlin:Scatter": {
+    "NAME": "Zerstreuen",
+    "DESCRIPTION": "Wenn du das nächste Mal TP verlieren würdest, gremlin:wechsle stattdessen zu einem zufälligen Gremlin. NL Erschöpft."
+  },
+
+  "Gremlin:SecondVolley": {
+    "NAME": "Zweite Salve",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte ein Messer für jede Karte die du in diesem Zug gespielt hast. (Maximal bis deine Hand voll ist)",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte ein Messer+ für jede Karte die du in diesem Zug gespielt hast. (Maximal bis deine Hand voll ist).",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " Karte gespielt.)",
+      " Karten gespielt.)"
+    ]
+  },
+
+  "Gremlin:ShadowShiv": {
+    "NAME": "Verstecktes Messer",
+    "DESCRIPTION": "Erhalte ein Messer jedes Mal, wenn du einen Angriff spielst, der nicht erschöpft."
+  },
+
+  "Gremlin:ShankStone": {
+    "NAME": "Schaftstein",
+    "DESCRIPTION": "Unspielbar. NL Erhalte immer wenn du diese Karte ziehst !M! Messer.",
+    "EXTENDED_DESCRIPTION": ["Ich kann diese Karte nicht ausspielen."]
+  },
+
+  "Gremlin:SharpenBlades": {
+    "NAME": "Klingen schärfen",
+    "DESCRIPTION": "Alle Angriffe auf der Hand kosten in diesem Zug 0.",
+    "UPGRADE_DESCRIPTION": "Ziehe eine Karte. NL Alle Angriffe auf der Hand kosten in diesem Zug 0."
+  },
+
+  "Gremlin:ShieldGremlin": {
+    "NAME": "Schildgremlin",
+    "DESCRIPTION": "gremlin:Wechsle zum gremlin:Schildgremlin."
+  },
+
+  "Gremlin:ShowOfHands": {
+    "NAME": "Handzeichen",
+    "DESCRIPTION": "Erhalte !M! Block für jede Karte auf der Hand.",
+    "UPGRADE_DESCRIPTION": "Ziehe eine Karte. NL Erhalte !M! Block für jede Karte auf der Hand."
+  },
+
+  "Gremlin:ShowStopper": {
+    "NAME": "Höhepunkt",
+    "DESCRIPTION": "Kann nur gespielt werden wenn du genau 7 gremlin:Esprit hast. NL Füge ALLEN Gegnern !M! Mal !D! Schaden zu.",
+    "EXTENDED_DESCRIPTION": ["Es Fehlt noch an Spannung.", "Das Timing wurde verpasst."]
+  },
+
+  "Gremlin:SkullBash": {
+    "NAME": "Schädelstoß",
+    "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. NL Wende !M! Verwundbar an. NL Erschöpft."
+  },
+
+  "Gremlin:SneakyGremlin": {
+    "NAME": "Schleichender Gremlin",
+    "DESCRIPTION": "gremlin:Wechsle zum gremlin:Schleichenden_Gremlin."
+  },
+
+  "Gremlin:Strike": {
+    "NAME": "Schlag",
+    "DESCRIPTION": "Füge !D! Schaden zu."
+  },
+
+  "Gremlin:Stupend": {
+    "NAME": "Beeindrucken",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Das Block wird durch gremlin:Esprit zusätzlich erhöht."
+  },
+
+  "Gremlin:SupplyScrollCard": {
+    "NAME": "Versorgungsschrift",
+    "DESCRIPTION": "Erhalte per Zufall Messer und *Schutz (insgesamt !M!). NL Erschöpft."
+  },
+
+  "Gremlin:Tadah": {
+    "NAME": "Ta-Da!",
+    "DESCRIPTION": "Erhalte einen *Schutz. NL gremlin:Wechsle zum gremlin:Gremlinzauberer.",
+    "UPGRADE_DESCRIPTION": "Erhalte einen *Schutz+. NL gremlin:Wechsle zum gremlin:Gremlinzauberer."
+  },
+
+  "Gremlin:TagTeam": {
+    "NAME": "Tag-Team",
+    "DESCRIPTION": "gremlin:Wechsle zu einem Gremlin deiner Wahl.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL gremlin:Wechsle zu einem Gremlin deiner Wahl."
+  },
+
+  "Gremlin:TargetWeakness": {
+    "NAME": "Wunden Treffen",
+    "DESCRIPTION": "Gegner mit Schwach erleiden !M! zusätzlichen Schaden."
+  },
+
+  "Gremlin:Tricksy": {
+    "NAME": "Trickkiste",
+    "DESCRIPTION": "Ziehe !M! Karten und wirf alle gezogenen nicht-Angriffe ab. NL gremlin:Wechsle zum gremlin:Schleichenden_Gremlin."
+  },
+
+  "Gremlin:TwistTheKnife": {
+    "NAME": "Das Messer drehen",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 Messer.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 Messer+."
+  },
+
+  "Gremlin:ToeStub": {
+    "NAME": "Zehenstoßen",
+    "DESCRIPTION": "Füge !D! Schaden zu. Wende !M! Verwundbar an wenn der Gegner Schwach ist."
+  },
+
+  "Gremlin:Unforgiving": {
+    "NAME": "Nachtragen",
+    "DESCRIPTION": "Du kannst keine Stärke verlieren."
+  },
+
+  "Gremlin:Ward": {
+    "NAME": "Schutz",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erschöpft."
+  },
+
+  "Gremlin:Whiz": {
+    "NAME": "Energie sammeln",
+    "DESCRIPTION": "Erhalte !M! gremlin:Esprit. Nimm im nächsten Zug einen *Ultimativen *Stoß auf die Hand. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! gremlin:Esprit. Nimm im nächsten Zug einen *Ultimativen *Stoß+ auf die Hand."
+  },
+
+  "gremlin:Wizardry": {
+    "NAME": "Zauberei",
+    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges !M! gremlin:Esprit.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte zu Beginn jedes Zuges !M! gremlin:Esprit."
+  },
+
+  "Gremlin:Placeholder": {
+    "NAME": "",
+    "DESCRIPTION": "",
+    "UPGRADE_DESCRIPTION": "",
+    "EXTENDED_DESCRIPTION": [""]
+  }
+}

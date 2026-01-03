@@ -1,0 +1,41 @@
+{
+  "Guardian:EnhanceBonfireOptions": {
+    "TEXT": [
+      "Einsetzen",
+      "(Kleine Aktion) Setze ein Juwel in eine offene Fassung ein.",
+      "Erfordert ein Juwel und eine offene Fassung.",
+      "Wähle ein Juewel aus.",
+      "Wähle die Karte aus, in der du das Juwel einsetzt."
+    ]
+  },
+  "Guardian:UIOptions": {
+    "TEXT": [
+      "Wähle eine Karte, um sie in Stasis zu legen.",
+      "Wähle ein Juewel aus.",
+      "Nimm ein Juwel in dein Deck auf",
+      "in Stasis legen.",
+      "~FEHLER:~ Kann im Konstruktor-Modus nicht #rAngreifen.",
+      "~FEHLER:~ #rStasis im Vorgang.",
+      "Nimm ein Juwel in dein Deck auf",
+      ""
+    ]
+  },
+  "Guardian:FindGemsOption": {
+    "TEXT": [
+      "Schürfen.",
+      "Erhalte 2 zufällige Juwelen.",
+      "Spitzhacke ist kaputt."
+    ]
+  },
+  "Guardian:BraceMod": {
+    "TEXT": [
+      " NL guardianmod:Abhärten 2."
+    ]
+  },
+  "Guardian:gemDescriptor": {
+    "TEXT": [
+      "Juwel",
+      "guardianmod:Juwel. NL "
+    ]
+  }
+}

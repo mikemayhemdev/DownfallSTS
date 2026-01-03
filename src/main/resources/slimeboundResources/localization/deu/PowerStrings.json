@@ -1,0 +1,521 @@
+{
+  "Slimebound:PotencyPower": {
+    "NAME": "Potenz",
+    "DESCRIPTIONS": [
+      "Erhöhe den Schaden deiner slimeboundmod:abgespaltenen Schleime um #b",
+      " und ihre Sekundäreffekte um #b",
+      "."
+    ]
+  },
+  "Slimebound:SlimedPower": {
+    "NAME": "Glibber",
+    "DESCRIPTIONS": [
+      "Der Schaden des nächsten #yAngriffs wird um #b",
+      " erhöht, wobeider ganze #yGlibber #ykonsumiert wird."
+    ]
+  },
+  "Slimebound:PreventTackleDamagePower": {
+    "NAME": "Beschützt",
+    "DESCRIPTIONS": [
+      "Du erleidest keinen Schaden von den #b",
+      " nächsten #yTackles die du spielst."
+    ]
+  },
+  "Slimebound:SplitDailyTriggerPower": {
+    "NAME": "Teilung",
+    "DESCRIPTIONS": [
+      "Wenn die TP bei oder unter #b50% sind, teilt sich ",
+      " in #b2 Schleime mit entsprechend vielen TP."
+    ]
+  },
+  "Slimebound:SplitDailyPower": {
+    "NAME": "Spalten",
+    "DESCRIPTIONS": [
+      "Der Gegner spaltet sich in diesem Zug."
+    ]
+  },
+  "Slimebound:BuffAttackSlimesPower": {
+    "NAME": "Upgrade: Raufbold",
+    "DESCRIPTIONS": [
+      "#yRaufboldschleime fügen um #b",
+      " mehr Schaden zu."
+    ]
+  },
+  "Slimebound:BuffPoisonSlimesPower": {
+    "NAME": "Upgrade: Gift",
+    "DESCRIPTIONS": [
+      "#yGiftschleime wenden #b",
+      " mehr #yGift an."
+    ]
+  },
+  "Slimebound:BuffSlimingSlimesPower": {
+    "NAME": "Upgrade: Schlamm",
+    "DESCRIPTIONS": [
+      "#ySchlammschleime wenden #b",
+      " mehr #yGlibber an."
+    ]
+  },
+  "Slimebound:BuffShieldSlimesPower": {
+    "NAME": "Upgrade: Beschützer",
+    "DESCRIPTIONS": [
+      "#yBeschützerschleime fügen um #b",
+      " mehr Schaden zu."
+    ]
+  },
+  "Slimebound:HexSlimePerTurnPower": {
+    "NAME": "Hexerkraft",
+    "DESCRIPTIONS": [
+      "#ySpalte zu Beginn deines nächsten Zuges einen #yGeisterflammenschleim #yab [REMOVE_SPACE].",
+      "Spalte zu Beginn deiner nächsten #b",
+      " Züge einen #yGeisterflammenschleim #yab [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:ProtectTheBoss": {
+    "NAME": "Beschütze den Boss",
+    "DESCRIPTIONS": [
+      "Verhindere deinen nächsten TP-Verlust durch Angriffsschaden indem du deinen führenden Schleim #yabsorbierst.",
+      "Verhindere deinen nächsten #b",
+      " TP-Verluste durch Angriffsschaden indem du jeweils deinen führenden Schleim #yabsorbierst."
+    ]
+  },
+  "Slimebound:SplitForLessPower": {
+    "NAME": "Schleimeffizienz",
+    "DESCRIPTIONS": [
+      "#yAbspalten kostet #b",
+      " TP weniger.  Nimm zu Beginn jedes Zuges #b",
+      " zufällige #yAbspalten Karte in die Hand.",
+      " zufällige #yAbspalten Karten in die Hand."
+    ]
+  },
+  "Slimebound:ComboAttackPower": {
+    "NAME": "Mit Beispiel Vorangehen",
+    "DESCRIPTIONS": [
+      "Die erste in deinem Zug gespielte Karte, die auf Gegener abzielt, kommandiert deinen führenden Schleim.",
+      "Die ersten #b",
+      " gespielten Karten des Zuges, die auf Gegener abzielen, kommandieren deinen führenden Schleim.",
+      " NL Dieser Effekt kann in diesem Zug noch #b",
+      " Mal aktiviert werden.",
+      " Mal aktiviert werden.",
+      " NL Dieser Effekt kann in diesem Zug nicht mehr aktiviert werden."
+    ]
+  },
+  "Slimebound:RetainCardsOneTurnPower": {
+    "NAME": "Karten vorbereiten",
+    "DESCRIPTIONS": [
+      "Behalte in diesem Zug #b",
+      " Karte.",
+      " Karten."
+    ]
+  },
+  "Slimebound:EnergizedSlimeboundPower": {
+    "NAME": "Energiegeladen",
+    "DESCRIPTIONS": [
+      "Du erhältst #b",
+      " [E] zusätzlich im nächsten Zug.",
+      " zusätzliche [E] im nächsten Zug.",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+    ]
+  },
+  "Slimebound:SelfFormingGooPower": {
+    "NAME": "Reformation",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du einen Schleim absorbierst #b",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:SelfFormingGooPowerPlus": {
+    "NAME": "Reformation+",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du einen Schleim absorbierst #b",
+      " #yGeschicklichkeit [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:LoseSlimesPower": {
+    "NAME": "Überanstrengung",
+    "DESCRIPTIONS": [
+      "#yAbsorbiere im nächsten Zug alle Schleim-Untergebenen.",
+      " Züge später #yAbsorbierst du alle Schleim-Untergebenen."
+    ]
+  },
+  "Slimebound:TackleModifyDamagePower": {
+    "NAME": "Ramponiert",
+    "DESCRIPTIONS": [
+      "Erleidet #b",
+      " mehr Schaden durch #yTackle Karten."
+    ]
+  },
+  "Slimebound:LoseThornsPower": {
+    "NAME": "Temporäre Stacheln",
+    "DESCRIPTIONS": [
+      "Verliere zu Beginn deines nächsten Zuges #b",
+      " #yStacheln [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:SlimedThornsPower": {
+    "NAME": "Lebendige Mauer",
+    "DESCRIPTIONS": [
+      "Wenn du #yAngriffsschaden erleidest, werden beim Angreifer #b",
+      " #yGlibber angewendet."
+    ]
+  },
+  "Slimebound:PreventSlimeDecayPower": {
+    "NAME": "Übergossen mit Schleim",
+    "DESCRIPTIONS": [
+      "Der nächste #yAngriff auf diesen Gegner entfernt keinen #yGlibber (der Schaden wird erhöht und die Boni durch den #yKonsum aktiviert).",
+      "Der nächsten #b",
+      " #yAngriffe auf diesen Gegner entfernen keinen #yGlibber (der Schaden wird erhöht und die Boni durch den #yKonsum aktiviert)."
+    ]
+  },
+  "Slimebound:DuplicatedFormPower": {
+    "NAME": "Duplizierte Form",
+    "DESCRIPTIONS": [
+      "Die erste in deinem Zug gespielte Karte, die auf Gegener abzielt, wird zweimal gespielt.",
+      "Die ersten #b",
+      " in deinem Zug gespielten Karten, die auf Gegener abzielen, werden zweimal gespielt."
+    ]
+  },
+  "Slimebound:DuplicatedFormNoHealPower": {
+    "NAME": "Gespalten",
+    "DESCRIPTIONS": [
+      "Max TP ist vorläufig um #b",
+      " reduziert."
+    ]
+  },
+  "Slimebound:DuplicatedFormEnergyPower": {
+    "NAME": "Tag-Team",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn deines Zuges #b",
+      " [E] ."
+    ]
+  },
+  "Slimebound:GluttonyPower": {
+    "NAME": "Völlerei",
+    "DESCRIPTIONS": [
+      "Nimm das erste Mal wenn du im Zug #yKonsumierst einen #yWabbel auf die Hand.",
+      "Nimm das ersten ",
+      " Male wenn du im Zug #yKonsumierst einen #yWabbel auf die Hand.",
+      " NL Dieser Effekt kann in diesem Zug noch #b",
+      " Mal aktiviert werden.",
+      " Mal aktiviert werden.",
+      " NL Dieser Effekt kann in diesem Zug nicht mehr aktiviert werden."
+    ]
+  },
+  "Slimebound:GluttonyPowerUpgraded": {
+    "NAME": "Völlerei+",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn jedes Zuges #b",
+      " zufällige #yverbesserte #yWabbel Karte auf die Hand.",
+      " zufällige #yverbesserte #yWabbel Karten auf die Hand."
+    ]
+  },
+  "Slimebound:PoisonThornsPower": {
+    "NAME": "Säureglibber",
+    "DESCRIPTIONS": [
+      "Wende jedes Mal, wenn du #ykonsumierst #b",
+      " #yGift an."
+    ]
+  },
+  "Slimebound:SlimeRitualPower": {
+    "NAME": "Ritual",
+    "DESCRIPTIONS": [
+      "Erhalte am Ende deines Zuges #b",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "Slimebound:RecyclingPower": {
+    "NAME": "Recycling",
+    "DESCRIPTIONS": [
+      "#yExhumiere am Anfang jedes Zuges #b",
+      " zufällige #yWabbel Karte.",
+      " zufällige #yWabbel Karten."
+    ]
+  },
+  "Slimebound:RecyclingPowerUpgraded": {
+    "NAME": "Recycling+",
+    "DESCRIPTIONS": [
+      "Heile immer wenn eine Karte die 0 kostet #yerschöpft #b",
+      " TP."
+    ]
+  },
+  "Slimebound:AcidTonguePower": {
+    "NAME": "Säurezunge",
+    "DESCRIPTIONS": [
+      "Wende immer wenn du #yGlibber anwendest #b",
+      " #yGift an."
+    ]
+  },
+  "Slimebound:AcidTonguePowerUpgraded": {
+    "NAME": "Schleimzunge",
+    "DESCRIPTIONS": [
+      "Immer wenn #yGlibber angewendet wird, wird die Anzahl um #b",
+      " erhöht."
+    ]
+  },
+  "Slimebound:SelfDamageSlimedPower": {
+    "NAME": "Loser Glibber",
+    "DESCRIPTIONS": [
+      "Wende immer wenn du TP verlierst #b",
+      " #yGlibber auf einen zufälligen Gegner an."
+    ]
+  },
+  "Slimebound:TackleBuffPower": {
+    "NAME": "Offensives Tackling",
+    "DESCRIPTIONS": [
+      "#yTackle Karten fügen bei Gegnern #b",
+      " mehr Schaden zu."
+    ]
+  },
+  "Slimebound:PolyBeamAgainPower": {
+    "NAME": "Abwechselnder Strahl",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines nächsten Zuges wird #yPoly-Strahl gespielt.",
+      "Zu Beginn deiner nächsten #b",
+      " Züge wird #yPoly-Strahl gespielt."
+    ]
+  },
+  "Slimebound:PolyBeamAgainPowerUpgraded": {
+    "NAME": "Abwechselnder Strahl+",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines nächsten Zuges wird #yPoly-Strahl+ gespielt.",
+      "Zu Beginn deiner nächsten #b",
+      " Züge wird #yPoly-Strahl+ gespielt."
+    ]
+  },
+  "Slimebound:FirmFortitudePower": {
+    "NAME": "Fühle unseren Schmerz",
+    "DESCRIPTIONS": [
+      "Das nächste Mal wenn du in deinem Zug Schaden erleiden oder TP verlieren würdest, nimmt stattdessen ein zufälliger Gegner den Schaden",
+      "Das nächsten #b",
+      " Male an denen du in deinem Zug Schaden erleiden oder TP verlieren würdest, nimmt stattdessen ein zufälliger Gegner den Schaden.",
+      " NL Dieser Effekt kann in diesem Zug noch #b",
+      " Mal aktiviert werden.",
+      " Mal aktiviert werden.",
+      " NL Dieser Effekt kann in diesem Zug nicht mehr aktiviert werden."
+    ]
+  },
+  "Slimebound:NextTurnGainStrengthPower": {
+    "NAME": "Aufladen",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn des nächsten Zuges #b",
+      " #yStärke."
+    ]
+  },
+  "Slimebound:NextTurnGainSlimeCrush": {
+    "NAME": "Das Zerschmettern vorbereiten",
+    "DESCRIPTIONS": [
+      "Nimm im nächsten Zug ein #gSCHLEIM #gZERSCHMETTERN auf die Hand.",
+      "Nimm im nächsten Zug ein #gSCHLEIM #gZERSCHMETTERN+ auf die Hand.",
+      "Nimm im nächsten Zug #b",
+      " #gSCHLEIM #gZERSCHMETTERN auf die Hand.",
+      " #gSCHLEIM #gZERSCHMETTERN+ auf die Hand."
+    ]
+  },
+  "Slimebound:StunnedPower": {
+    "NAME": "Total erschöpft",
+    "DESCRIPTIONS": [
+      "Überspringe deinen nächsten Zug.",
+      "Überspringe deine nächsten #b",
+      " Züge."
+    ]
+  },
+  "Slimebound:NextTurnGainHyperBeam": {
+    "NAME": "Strahl vorbereiten",
+    "DESCRIPTIONS": [
+      "Nimm im nächsten Zug einen #gHyperstrahl auf die Hand.",
+      "Nimm im nächsten Zug #b",
+      " #gHyperstrahlen auf die Hand."
+    ]
+  },
+  "Slimebound:NextTurnGainDivider": {
+    "NAME": "Spalten vorbereiten",
+    "DESCRIPTIONS": [
+      "Nimm im nächsten Zug #yTeilen auf die Hand.",
+      "Nimm im nächsten Zug #b",
+      " #yTeilen auf die Hand."
+    ]
+  },
+  "Slimebound:StudyAutomatonPower": {
+    "NAME": "Automaton studieren",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige Automaton Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige Automaton Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyAutomatonPowerUpgraded": {
+    "NAME": "Automaton studieren+",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige verbesserte Automaton Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige verbesserte Automaton Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyAwakenedPower": {
+    "NAME": "Den Erwachten studieren",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige Der Erwachte Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige Der Erwachte Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyAwakenedPowerUpgraded": {
+    "NAME": "Den Erwachten studieren+",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige verbesserte Der Erwachte Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige verbesserte Der Erwachte Karte auf die Hand."
+    ]
+  },
+  "Slimebound:AwakenedOnePower": {
+    "NAME": "Finsteres Ritual",
+    "DESCRIPTIONS": [
+      "Erhalte wenn der Gegner nicht angreift ",
+      " Stärke."
+    ]
+  },
+  "Slimebound:StudyChampPower": {
+    "NAME": "Champ studieren",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige Champ Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige Champ Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyChampPowerUpgraded": {
+    "NAME": "Champ studieren+",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige verbesserte Champ Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige verbesserte Champ Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyCollectorPower": {
+    "NAME": "Sammlerin studieren",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige Sammlerin Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige Sammlerin Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyCollectorPowerUpgraded": {
+    "NAME": "Sammlerin studieren+",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige verbesserte Sammlerin Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige verbesserte Sammlerin Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyGuardianPower": {
+    "NAME": "Wächter studieren",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige Wächter Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige Wächter Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyGuardianPowerUpgraded": {
+    "NAME": "Wächter studieren+",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige verbesserte Wächter Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige verbesserte Wächter Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyHexaghostPower": {
+    "NAME": "Hexageist studieren",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige Hexageist Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige Hexageist Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyHexaghostPowerUpgraded": {
+    "NAME": "Hexageist studieren+",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige verbesserte Hexageist Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige verbesserte Hexageist Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyShapesPower": {
+    "NAME": "Antike studieren",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige Antike Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige Antike Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyShapesPowerUpgraded": {
+    "NAME": "Antike studieren+",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige verbesserte Antike Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige verbesserte Antike Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyTimeEaterPower": {
+    "NAME": "Zeitfresser studieren",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige Zeitfresser Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige Zeitfresser Karte auf die Hand."
+    ]
+  },
+  "Slimebound:StudyTimeEaterPowerUpgraded": {
+    "NAME": "Zeitfresser studieren+",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige verbesserte Zeitfresser Karte auf die Hand.",
+      "Nimm zu Beginn deiner nächsten ",
+      " Züge eine zufällige verbesserte Zeitfresser Karte auf die Hand."
+    ]
+  },
+  "Slimebound:GreedRespawnPower": {
+    "NAME": "Greed Recovering",
+    "DESCRIPTIONS": [
+      "Am Ende deines Zuges wird der #yGierschleim wiederbelebt."
+    ]
+  },
+  "Slimebound:ScrapRespawnPower": {
+    "NAME": "Scrap Recovering",
+    "DESCRIPTIONS": [
+      "Am Ende deines Zuges wird der #Schrottschleim wiederbelebt."
+    ]
+  },
+  "Slimebound:BuffSecondarySlimeEffectsPower": {
+    "NAME": "Meister der Untertanen",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine Karte mit slimeboundmod:Kommando spielst, #yKommandiere ein weiteres Mal.",
+      "Immer wenn du eine Karte mit slimeboundmod:Kommando spielst, #yKommandiere #b",
+      " weitere Male."
+    ]
+  },
+  "Slimebound:TackleSelfDamagePreventPower": {
+    "NAME": "Rücksichtslos",
+    "DESCRIPTIONS": [
+      "#yTackle Karten fügen bei dir #b",
+      " mehr Schaden zu."
+    ]
+  },
+  "Slimebound:GoopArmorPower": {
+    "NAME": "Glibberrüstung",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du #ykonsumierst #b",
+      " #yBlock."
+    ]
+  },
+  "Slimebound:CommandOnPlayPower": {
+    "NAME": "Mobilisieren",
+    "DESCRIPTIONS": [
+      "#yKommandiere das nächste Mal wenn du eine Karte ausspielst.",
+      "#yKommandiere das nächsten ",
+      " Male an denen du eine Karte ausspielst."
+    ]
+  },
+  "Slimebound:GoopPerTurnPower": {
+    "NAME": "Schlammbad",
+    "DESCRIPTIONS": [
+      "Wende zu Beginn des gegnerischen Zuges ",
+      " #yGlibber an."
+    ]
+  }
+}

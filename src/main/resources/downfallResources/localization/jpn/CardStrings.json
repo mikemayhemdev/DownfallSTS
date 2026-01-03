@@ -13,7 +13,7 @@
   },
   "downfall:Haunted": {
     "NAME": "幽霊",
-    "DESCRIPTION": "使用不可 NL エセリアル NL このカードが *廃棄 された時、 !M! ダメージを受ける。"
+    "DESCRIPTION": "使用不可 NL エセリアル NL ターン終了時に NL !M!ダメージを受ける。"
   },
   "downfall:Malfunctioning": {
     "NAME": "不調",

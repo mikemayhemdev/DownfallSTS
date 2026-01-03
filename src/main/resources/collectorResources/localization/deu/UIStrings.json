@@ -1,0 +1,110 @@
+{
+  "collector:CollectionReward": {
+    "TEXT": [
+      "Wähle eine Karte für deine Sammlung aus."
+    ]
+  },
+  "collector:CollectibleCardTab": {
+    "TEXT": [
+      "Sammlerstück"
+    ]
+  },
+  "collector:CollectionScreen": {
+    "TEXT": [
+      "Ausblenden",
+      "Der Kampf beginnt mit all diesen Karten in der Sammlung."
+    ]
+  },
+  "collector:CollectionUITopPanel": {
+    "TEXT": [
+      "Sammlung",
+      "Sieh alle Karten deiner Sammlung an.",
+      "Diese Karten landen zu Beginn jedes Kampfes in den Sammlungsstapel."
+    ]
+  },
+  "collector:CombatCollectionPileButton": {
+    "TEXT": [
+      "Sammlungsstapel",
+      "Der Stapel beinhaltet die noch nicht in diesem Kampf gezogenen Sammlerstücke. Von hier wird zu Beginn jedes Zuges eine Karte gezogen.",
+      "Ich habe keine Sammlerstücke!"
+    ]
+  },
+  "collector:EssenceCount": {
+    "TEXT": [
+      "Essenzen",
+      "Wandle Essenzen in Karten für deine Sammlung (Sammlerstücke) um. Normale Kämpfe erzeugen #b1 #yEssenz. Elitekämpfe #b2 #yEssence, und Bosskämpfe #b3! NL You hast #b",
+      " Essenzen."
+    ]
+  },
+  "collector:CombatCollectionViewScreen": {
+    "TEXT": [
+      "Übersicht der Sammlung"
+    ]
+  },
+  "collector:PyreInfo": {
+    "TEXT": [
+      "Opfergabe",
+      "Erfordert als zusätzliche Kosten das #yErschöpfen einer Handkarte."
+    ]
+  },
+  "collector:CollectedCardMod": {
+    "TEXT": [
+      "collector:Superflüchtig. NL ",
+      "Sammlerstück"
+    ]
+  },
+  "collector:CollectibleCardReward": {
+    "TEXT": [
+      "Sammlerstück: ",
+      "Du kannst diese Karte aufsammeln"
+    ]
+  },
+  "collector:HoardedMod": {
+    "TEXT": [
+      "Unspielbar. Behalten. NL ",
+      "Unspielbar. NL ",
+      "Behalten. NL "
+    ]
+  },
+  "collector:SecondEnergyOrb": {
+    "TEXT": [
+      "Reserve",
+      "Eine zweite Energiequelle, die angezapft wird wenn die reguläre Energie erschöpft ist. Reserve verfällt nicht am Ende des Zuges."
+    ]
+  },
+  "collector:PyreCostSpendScreen": {
+    "TEXT": [
+      "Erschöpfe eine Karte als Opfer."
+    ]
+  },
+  "collector:PyreModText": {
+    "TEXT": [
+      "Ich kann gerade kein Opfer geben!"
+    ]
+  },
+  "collector:StashAwayCampfireOption": {
+    "TEXT": [
+      "Freilassen",
+      "Entferne ein Sammlerstück. Erhalte ",
+      " Seelen.",
+      "Erfordert ein Sammlerstück.",
+      "Wähle ein Sammlerstück zum Entfernen."
+    ]
+  },
+  "collector:BonusEventOption": {
+    "TEXT": [
+      "[Einsammeln]"
+    ]
+  },
+  "collector:EssenceReward": {
+    "TEXT": [
+      "Erhalte ",
+      " Essenz."
+    ]
+  },
+  "collector:CharacterOption": {
+    "TEXT": [
+      "Essenzen: "
+    ]
+  }
+}

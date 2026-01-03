@@ -1,0 +1,14 @@
+[
+  {
+    "KEYS": [
+      "Gold"
+    ],
+    "VALUE": "Seelen"
+  },
+  {
+    "KEYS": [
+      "gold"
+    ],
+    "VALUE": "seelen"
+  }
+]

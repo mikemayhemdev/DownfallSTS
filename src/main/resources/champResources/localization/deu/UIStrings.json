@@ -1,0 +1,44 @@
+{
+  "champ:SealCommonReward": {
+    "TEXT": [
+      "Nimm eine gewöhnliche Karte in dein Deck auf"
+    ]
+  },
+  "champ:SealSealReward": {
+    "TEXT": [
+      "Nimm einen Siegel in dein Deck auf"
+    ]
+  },
+  "champ:TechniqueMod": {
+    "TEXT": [
+      " NL Aktiviere den champ:Fertigkeitsbonus."
+    ]
+  },
+  "champ:OpenerMod": {
+    "TEXT": [
+      " NL Nimm die champ:Offensivhaltung an.",
+      " NL Nimm die champ:Defensivhaltung an.",
+      "Nimm die champ:Gladiatorenhaltung NL "
+    ]
+  },
+  "champ:RetainCardMod": {
+    "TEXT": [
+      "Behalten. NL "
+    ]
+  },
+  "champ:EnchantUI": {
+    "TEXT": [
+      "kostet 0.",
+      "erhöhe den Schaden.",
+      "erhöhe Block."
+    ]
+  },
+  "champ:highlightCombos": {
+    "TEXT": [
+      "champ:Offensivcombo:",
+      "[#5ebf2a] champ:Offensivcombo:",
+      "champ:Defensivcombo:",
+      "[#5ebf2a] champ:Defensivcombo:"
+    ]
+  }
+}

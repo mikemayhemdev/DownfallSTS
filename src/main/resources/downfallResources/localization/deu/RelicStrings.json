@@ -1,0 +1,564 @@
+{
+  "downfall:NeowBlessing": {
+    "NAME": "Niaus Segnung",
+    "FLAVOR": "Kühle deinen Zorn ab. Sei so taff und unnachgiebig wie es der Spire selbst ist.",
+    "DESCRIPTIONS": [
+      "Der Boss hat mehr max TP und kein Starter Relikt, zieht #b2 Karten weniger, und erhält #b1 ",
+      " weniger. NL Zu Beginn des Kampfes erhält der Boss einen einzigartigen Buff. Der Boss kann nicht #yBetäubt werden."
+    ]
+  },
+  "downfall:NeowBlessing_Player": {
+    "NAME": "Niaus Segnung",
+    "FLAVOR": "Kühle deinen Zorn ab. Sei so taff und unnachgiebig wie es der Spire selbst ist.",
+    "DESCRIPTIONS": [
+      "Erhöhe beim Aufheben deine max. TP um #b100. NL Erhöhe deine max. TP um #b100 wenn du einen neuen Akt erreichst. NL Verliere alle Trankslots. NL Ziehe #b1 Karte weniger und verliere [E] zu Beginn deines Zuges."
+    ]
+  },
+  "downfall:CoffeeDripper": {
+    "DESCRIPTIONS": [
+      " NL Der Boss beginnt mit weniger TP, da er nicht rasten konnte."
+    ]
+  },
+  "downfall:BustedCrown": {
+    "DESCRIPTIONS": [
+      " NL Der Boss hatte weniger Auswahl beim Zusammenstellen des Decks, was zu suboptimalen Synergien geführt hat."
+    ]
+  },
+  "downfall:Girya": {
+    "DESCRIPTIONS": [
+      " NL Der Boss beginnt mit weniger TP, da er mehr trainiert hat anstatt zu rasten."
+    ]
+  },
+  "downfall:Matroyshka": {
+    "DESCRIPTIONS": [
+      " NL Der Boss hat ",
+      " zusätzliche Relikte gefunden."
+    ]
+  },
+  "downfall:Ectoplasm": {
+    "DESCRIPTIONS": [
+      " NL Da der Boss kein Gold sammeln konnte hat er ",
+      " Karten weniger als gewöhnlich entfernt."
+    ]
+  },
+  "downfall:BlackStar": {
+    "DESCRIPTIONS": [
+      " NL Der Boss hat ",
+      " zusätzliche Relikte gefunden, aber beginnt mit weniger TP."
+    ]
+  },
+  "downfall:MoltenEgg": {
+    "DESCRIPTIONS": [
+      " NL Der Boss hat ",
+      " Angriffe durch dieses Relikt verbessert."
+    ]
+  },
+  "downfall:ToxicEgg": {
+    "DESCRIPTIONS": [
+      " NL Der Boss hat ",
+      " Fertigkeiten durch dieses Relikt verbessert."
+    ]
+  },
+  "downfall:FrozenEgg": {
+    "DESCRIPTIONS": [
+      "Der Boss hat viele verbesserte Mächte."
+    ]
+  },
+  "downfall:Shovel": {
+    "DESCRIPTIONS": [
+      " NL Der Boss hat ",
+      " zusätzliche Relikte gefunden, aber beginnt mit weniger TP, da er mehr gegraben hat anstatt zu rasten."
+    ]
+  },
+  "downfall:CBRSerpentHead": {
+    "DESCRIPTIONS": [
+      " NL Der Boss nutzte das zusätzliche Gold um 2 Karten aus dem Deck zu entfernen."
+    ]
+  },
+  "downfall:CursedKey": {
+    "DESCRIPTIONS": [
+      " NL Der Boss hat ",
+      " Flüche durch dieses Relikt erhalten."
+    ]
+  },
+  "downfall:DreamCatcher": {
+    "DESCRIPTIONS": [
+      " NL Der Boss hat zusätzliche Karten beim Rasten erhalten."
+    ]
+  },
+  "downfall:PrayerWheel": {
+    "DESCRIPTIONS": [
+      " NL Der Boss hat ",
+      " zusätzliche Karten durch dieses Relikt erhalten."
+    ]
+  },
+  "downfall:PeacePipe": {
+    "DESCRIPTIONS": [
+      " NL Der Boss hat ",
+      " zusätzliche Karten entfernt, aber beginnt mit weniger TP, da er mehr geraucht hat anstatt zu rasten."
+    ]
+  },
+  "downfall:RunicDome": {
+    "DESCRIPTIONS": [
+      " NL Der Boss spielt seine Karten nicht unbedingt in der idealen Reihenfolge."
+    ]
+  },
+  "downfall:CentennialPuzzle": {
+    "DESCRIPTIONS": [
+      " NL Kann nicht während des Zuges des Bosses aktiviert werden."
+    ]
+  },
+  "downfall:CBRFaceOfCleric": {
+    "DESCRIPTIONS": [
+      " Max TP wurden durch dieses Relikt erlangt."
+    ]
+  },
+  "downfall:Omamori": {
+    "DESCRIPTIONS": [
+      " NL Hat verhindert, dass der Boss diese Flüche erhält: "
+    ]
+  },
+  "downfall:DollysMirror": {
+    "DESCRIPTIONS": [
+      " NL Der Spiegel duplizierte "
+    ]
+  },
+  "downfall:Vampires": {
+    "NAME": "Ereignis: Vampire (?)",
+    "FLAVOR": "Das Blut des Meisters... Das Blut des Meisters! DAS BLUT DES MEISTERS!",
+    "DESCRIPTIONS": [
+      "Schläge wurden durch Bisse ersetzt. NL -",
+      " Max TP."
+    ]
+  },
+  "downfall:BonfireSpirits": {
+    "NAME": "Ereignis: Geister des Lagerfeuers",
+    "FLAVOR": "Die Geister werfen kleine Knochen und Stückchen ins Feuer, das mit jedem Mal hell auflodert...",
+    "DESCRIPTIONS": [
+      "Der Boss entfernte eine Karte um 10 Max TP zu erhalten."
+    ]
+  },
+  "downfall:DesignerInSpire": {
+    "NAME": "Ereignis: Designer In-Spire",
+    "FLAVOR": "Das reicht nicht aus, nein nein. Was ist das für ein Stil? Scheußlich! Bluuuutest du etwa? Eeeklig.",
+    "DESCRIPTIONS": [
+      "Eine Karte wurde entfernt, eine andere verbessert."
+    ]
+  },
+  "downfall:DivineFountain": {
+    "NAME": "Ereignis: Der Göttliche Brunnen",
+    "FLAVOR": "Du kommst an einem glitzerndem Wasser vorbei, das endlos aus einem Brunnen auf einer nahen Mauer sprudelt.",
+    "DESCRIPTIONS": [
+      " Flüche wurden vom Deck entfernt."
+    ]
+  },
+  "downfall:Duplicator": {
+    "NAME": "Ereignis: Duplikator",
+    "FLAVOR": "Vor dir befindet sich ein dekorierter Altar, der einem uralten Wesen gewidmet ist.",
+    "DESCRIPTIONS": [
+      "Eine starke Karte wurde dupliziert."
+    ]
+  },
+  "downfall:BigFish": {
+    "NAME": "Ereignis: Großer Fang",
+    "FLAVOR": "Dein Weg führt dich durch einen langen Korridor, wo du eine Banane, einen Donut und eine Kiste herumschweben siehst.",
+    "DESCRIPTIONS": [
+      "Der Donut wurde gewählt. NL +5 Max TP.",
+      "Die Kiste wurde gewählt. NL Ein Reue Fluch und ein Relikt wurden hinzugefügt."
+    ]
+  },
+  "downfall:LivingWall": {
+    "NAME": "Ereignis: Lebendige Wand",
+    "FLAVOR": "Vergiss, was du weißt, und ich lasse dich gehen.",
+    "DESCRIPTIONS": [
+      "Der Boss entfernte ",
+      "Der Boss verbesserte ",
+      "Der Boss transformierte ",
+      " zu "
+    ]
+  },
+  "downfall:WheelOfChange": {
+    "NAME": "Ereignis: Glücksrad",
+    "FLAVOR": "Jetzt ist es Zeit, das Rad zu drehen! Bist du BEREIT? Natürlich bist du das!",
+    "DESCRIPTIONS": [
+      "Das Glücksrad gab dem Boss ",
+      "Die TP des Bosses wurden komplett geheilt.",
+      "Das Glücksrad entfernte ",
+      " vom Deck des Bossed.",
+      "Das Glücksrad verursachte dem Boss Schaden."
+    ]
+  },
+  "downfall:Falling": {
+    "NAME": "Ereignis: Freier Fall",
+    "FLAVOR": "Im freien Fall wägst du deine Optionen ab...",
+    "DESCRIPTIONS": [
+      "Schlag wurde vom Deck entfernt."
+    ]
+  },
+  "downfall:Augmenter": {
+    "NAME": "Ereignis: Erweiterer",
+    "FLAVOR": "Heda, Fremdling. Bist du interessiert, die Wissenschaft voranzubringen?",
+    "DESCRIPTIONS": [
+      "Der Boss transformuerte 2 Karten",
+      "Der Boss erhielt J.A.X.",
+      "Der Boss erhielt die Mutagen-Kraft."
+    ]
+  },
+  "downfall:AncientWriting": {
+    "NAME": "Ereignis: Uralte Inschrift",
+    "FLAVOR": "Auf einmal wird dir die Bedeutung klar...",
+    "DESCRIPTIONS": [
+      "Der Boss hatte alle Schläge & Verteidigen verbessert."
+    ]
+  },
+  "downfall:Bandits": {
+    "NAME": "Ereignis: Maskierte Banditen",
+    "FLAVOR": "Leg los, Bär!!",
+    "DESCRIPTIONS": [
+      "Der Boss hat die Banditen besiegt und die Rote Maske erbeutet, beginnt aber mit weniger TP."
+    ]
+  },
+  "downfall:WingStatue": {
+    "NAME": "Ereignis: Flügelstatue",
+    "FLAVOR": "Zwischen den Steinen und Brocken fällt dir eine aufwändige große blaue Statue auf, die einen Flügel darstellt.",
+    "DESCRIPTIONS": [
+      " wurde vom Deck entfernt."
+    ]
+  },
+  "downfall:Serpent": {
+    "NAME": "Ereignis: Die Ssssslange",
+    "FLAVOR": "Am erfülltesten ist das Leben, in dem du alles kaufen kannst! Stimmst du zu?",
+    "DESCRIPTIONS": [
+      "Der Boss erhielt den Fluch Zweifel und nutzte das Gold um ein Relikt zu kaufen."
+    ]
+  },
+  "downfall:Cleric": {
+    "NAME": "Ereignis: Der Priester",
+    "FLAVOR": "Hallo, mein Freund! Ich bin Priester! Bist du an meinen Diensten interessiert?!",
+    "DESCRIPTIONS": [
+      "Eine Karte wurde vom Deck entfernt."
+    ]
+  },
+  "downfall:OldBeggar": {
+    "NAME": "Ereignis: Alter Bettler",
+    "FLAVOR": "Hast du ein paar Münzen, mein Kind?",
+    "DESCRIPTIONS": [
+      "Eine Karte wurde vom Deck entfernt."
+    ]
+  },
+  "downfall:Library": {
+    "NAME": "Ereignis: Die Bibliothek",
+    "FLAVOR": "Du kommst an einem verzierten, anscheinend verlassenen Gebäude vorbei.",
+    "DESCRIPTIONS": [
+      "Der Boss erhielt eine weitere Karte mit guter Synergie zum Deck."
+    ]
+  },
+  "downfall:Mausoleum": {
+    "NAME": "Ereignis: Das Mausoleum",
+    "FLAVOR": "Du kannst die Inschrift auf dem Sarg nicht entziffern, bemerkst jedoch, wie schwarzer Nebel aus den Seiten strömt.",
+    "DESCRIPTIONS": [
+      "Der Boss erhielt den Fluch Leid und ein zusätzliches Relikt."
+    ]
+  },
+  "downfall:Nest": {
+    "NAME": "Ereignis: Das Nest",
+    "FLAVOR": "KRÄCHZ KRÄCHZ KRÄÄÄÄCHZZZ!!",
+    "DESCRIPTIONS": [
+      "Der Boss erhielt einen Ritualdolch."
+    ]
+  },
+  "downfall:Colosseum": {
+    "NAME": "Ereignis: Das Kolosseum",
+    "FLAVOR": "WIR BEGINNEN NUN DEN KAMPF!!!!",
+    "DESCRIPTIONS": [
+      "Der Boss besiegte die Champions und erhielt zwei zusätzliche Relikte."
+    ]
+  },
+  "downfall:PleadingVagrant": {
+    "NAME": "Ereignis: Flehender Landstreicher",
+    "FLAVOR": "Hast du was für mich, mein Freund? Bitte... ein paar Münzen vielleicht?",
+    "DESCRIPTIONS": [
+      "Der Boss hat den Landstreicher ausgeraubt, und erhielt den Fluch Scham und "
+    ]
+  },
+  "downfall:Mushroom": {
+    "NAME": "Ereignis: Pilze",
+    "FLAVOR": "Du betrittst einen Korridor voller Pilzen in hypnotisierenden Farben.",
+    "DESCRIPTIONS": [
+      "Der Boss heilte seine TP komplett und erhielt einen Parasiten.",
+      "Der Boss erhielt den Seltsamen Pilz, aber beginnt mit weniger TP."
+    ]
+  },
+  "downfall:ShiningLight": {
+    "NAME": "Ereignis: Lichtschein",
+    "FLAVOR": "Du findest eine schimmernde Bündelung von Licht im Zentrum des Raumes.",
+    "DESCRIPTIONS": [
+      "Der Boss verbesserte ",
+      " und ",
+      ", aber beginnt mit weniger TP."
+    ]
+  },
+  "downfall:ScrapOoze": {
+    "NAME": "Ereignis: Schrottschlamm",
+    "FLAVOR": "Vor dir liegt eine schleimartige Kreatur, die mehr als genug Schrott gegessen hat.",
+    "DESCRIPTIONS": [
+      "Der Boss erhielt ein zusätzliches Relikt."
+    ]
+  },
+  "downfall:GoldenIdolEvent": {
+    "NAME": "Ereignis: Goldener Götze",
+    "FLAVOR": "Du findest ein unscheinbares Podest, auf dem friedlich ein glänzender goldener Götze ruht.",
+    "DESCRIPTIONS": [
+      "Der Boss nahm den goldenen Götzen und erhielt den Fluch Verletzung. Für das zusätzliche Gold kaufte er "
+    ]
+  },
+  "downfall:FaceTrader": {
+    "NAME": "Ereignis: Gesichtshändler",
+    "FLAVOR": "Gesicht. Darf ich anfassen? Vielleicht tauschen?",
+    "DESCRIPTIONS": [
+      "Der Boss erhielt ein zufälliges Gesicht Relikt."
+    ]
+  },
+  "downfall:OminousForge": {
+    "NAME": "Ereignis: Verwunschene Schmiede",
+    "FLAVOR": "KLONK KLOOONK KLONK!",
+    "DESCRIPTIONS": [
+      "Der Boss erhielt die Verformte Zange und den Fluch Schmerz."
+    ]
+  },
+  "downfall:Purifier": {
+    "NAME": "Ereignis: Schrein der Reinigung",
+    "FLAVOR": "Vor dir befindet sich ein kunstvoller Schrein, der einem vergessenen Geist gewidmet ist.",
+    "DESCRIPTIONS": [
+      " wurde vom Deck entfernt."
+    ]
+  },
+  "downfall:MatchAndKeep": {
+    "NAME": "Ereignis: Finde die Paare!",
+    "FLAVOR": "Hier sind zwölf Karten! Finde Paare, um sie zu behalten! Fünf Versuche, aufgedeckt ist aufgedeckt. Bist du bereit? Los geht's!",
+    "DESCRIPTIONS": [
+      "Der Boss erhielt eine mächtige Karte."
+    ]
+  },
+  "downfall:Transmogrifier": {
+    "NAME": "Ereignis: Schrein der Verwandlung",
+    "FLAVOR": "Vor dir befindet sich ein kunstvoller Schrein, der einem vergessenen Geist gewidmet ist.",
+    "DESCRIPTIONS": [
+      "Der Boss transformierte eine Starter Karte."
+    ]
+  },
+  "downfall:TombRedMask": {
+    "NAME": "Ereignis: Grab des Herren der Roten Maske",
+    "FLAVOR": "Ein reichlich verziertes Grab ist auf der anderen Seite eines schwebenden Pfades zu sehen.",
+    "DESCRIPTIONS": [
+      "Der Boss erhielt die Rote Maske."
+    ]
+  },
+  "downfall:UpgradeShrine": {
+    "NAME": "Ereignis: Schrein der Verbesserung",
+    "FLAVOR": "Vor dir befindet sich ein kunstvoller Schrein, der einem vergessenen Geist gewidmet ist.",
+    "DESCRIPTIONS": [
+      "Der Boss #yverbesserte eine Karte."
+    ]
+  },
+  "downfall:WeMeetAgain": {
+    "NAME": "Ereignis: So sieht man sich wieder!",
+    "FLAVOR": "Ich bin's, Ranwid! Haste heute Sachen für mich dabei? Das übliche? So 'n Typ wie ich schafft's nicht alleine, weißte?",
+    "DESCRIPTIONS": [
+      "Ranwid erhielt Gold für ein zusätzliches Relikt."
+    ]
+  },
+  "downfall:GoldenShrine": {
+    "NAME": "Ereignis: Goldener Schrein",
+    "FLAVOR": "Vor dir befindet sich ein kunstvoller Schrein, der einem uralten Geist gewidmet ist.",
+    "DESCRIPTIONS": [
+      "Der Boss erhielt den Fluch Reue und kaufte sich für das Gold "
+    ]
+  },
+  "downfall:GremlinSack": {
+    "NAME": "Gremlin-Sack",
+    "FLAVOR": "Der kleine Gremlin und sein Bodyguard waren keine Gegner für dich.",
+    "DESCRIPTIONS": [
+      "Erhalte beim Aufheben folgende Karten für dein Deck: NL ",
+      "Erhalte beim Aufheben #b6 Karten vom Gremlin-Memory für dein Deck.",
+      "#g(Starter) ",
+      "#g(Gewöhnlich) ",
+      "#b(Ungewöhnlich) ",
+      "#y(Selten) ",
+      "#b(Farblos) ",
+      "#r(Fluch) "
+    ]
+  },
+  "downfall:GremlinWheel": {
+    "NAME": "Gremlin-Glücksrad",
+    "FLAVOR": "Niemand bekommt einen zweiten Versuch sagte er...",
+    "DESCRIPTIONS": [
+      "Du kannst jetzt an Lagerfeuern das Glücksrad drehen. Das Einsammeln des Preises nutzt das Relikt ab.",
+      "Die Kraft dieses Reliktes ist schon aufgebraucht."
+    ]
+  },
+  "downfall:CloakOfManyFaces": {
+    "NAME": "Umhang der Gesichter",
+    "FLAVOR": "Es waren Steve, und Bill, und Ian, und Fred, und John...",
+    "DESCRIPTIONS": [
+      "Erhalte beim Aufheben #yKultisten-Kopfstück, #yPriesters #yGesicht, #yN'loths #yhungriges #yGesicht, #yGremlin-Visage, und #ySsslangenkopf."
+    ]
+  },
+  "downfall:BrokenWingStatue": {
+    "NAME": "Zerbrochene Flügelstatue",
+    "FLAVOR": "Ein abgebrochener Brocken einer einst beeindruckenden Statue.",
+    "DESCRIPTIONS": [
+      "Die Kultisten, die den Erweckten anbeten, sind bestimmt daran interessiert...",
+      "Beim nächsten Kampf gegen Wesen der Kultisten-Gruppe, werden sie dieses Relikt an sich nehmen und vom Kampf fliehen."
+    ]
+  },
+  "downfall:ShatteredFragment": {
+    "NAME": "Scharfer Splitter",
+    "FLAVOR": "Einst eine zerbrochene Statue - nun eine improvisierte Waffe.",
+    "DESCRIPTIONS": [
+      "Wenn du in Elite- und Bosskämpfen eine #yMacht ausspielst, erhalte #b",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:RedIOU": {
+    "NAME": "Banditenvertrag",
+    "FLAVOR": "Das rote Banditentrio willigte ein, im Austausch für ein Souvenier zu helfen... aber eigentlich taten sie es im Austausch für ihr Leben.",
+    "DESCRIPTIONS": [
+      "Die Rot Maskierten Banditen helfen dir zu Beginn des #bdritten Bosskampfes.",
+      "Es gibt Arbeit, Jungs!",
+      "~Leg~ ~los,~ ~Bär!!~",
+      "Unsere Schuld ist beglichen. NL Wir sind hier fertig.",
+      "Ein Hoch auf den neuen NL ~Herren~ ~der~ ~Roten~ ~Maske!~",
+      "Viel Erfolg, Boss!"
+    ]
+  },
+  "downfall:RedIOUUpgrade": {
+    "NAME": "Banditenvertrag+",
+    "FLAVOR": "Das rote Banditentrio willigte ein, im Austausch für ein Souvenier zu helfen... aber eigentlich taten sie es im Austausch für ihr Leben.",
+    "DESCRIPTIONS": [
+      "Die Rot Maskierten Banditen helfen dir zu Beginn des #bdritten Bosskampfes."
+    ]
+  },
+  "downfall:KnowingSkull": {
+    "NAME": "Wissender Schädel",
+    "FLAVOR": "Leg mich wieder hin!",
+    "DESCRIPTIONS": [
+      "Zu Beginn des Kampfes kannst du dir im Austausch gegen TP Seelen, einen Trank, oder eine farblose Karte wünschen."
+    ]
+  },
+  "downfall:HeartBlessingRed": {
+    "NAME": "Herz-Segnung Rubin",
+    "FLAVOR": "Das Herz ist stark.",
+    "DESCRIPTIONS": [
+      "Beginne jeden Bosskampf mit #b1 #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:HeartBlessingBlue": {
+    "NAME": "Herz-Segnung Saphir",
+    "FLAVOR": "Das Herz ist zufrieden.",
+    "DESCRIPTIONS": [
+      "Heile zu Beginn von Bosskämpfen #b10 TP."
+    ]
+  },
+  "downfall:HeartBlessingGreen": {
+    "NAME": "Herz-Segnung Smaragd",
+    "FLAVOR": "Das Herz ist alles.",
+    "DESCRIPTIONS": [
+      "Beginne jeden Bosskampf mit #b1 #yGeschicklichkeit [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:BurdenOfKnowledge": {
+    "NAME": "Bürde des Wissens",
+    "FLAVOR": "The Wahrheit tut weh.",
+    "DESCRIPTIONS": [
+      "#rVerliere beim Aufheben #rALLE #rSegnungen #rdes #rHerzen und #b20 Max TP. #yVerbessere #rALLE Karten #rIMMER und #rÜBERALL [REMOVE_SPACE]. Beginne jeden Kampf mit #b2 weniger #yStärke und #yGeschicklichkeit [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:TeleportStone": {
+    "NAME": "Teleportstein",
+    "FLAVOR": "Niemals das Haus ohne Teleportstein verlassen.",
+    "DESCRIPTIONS": [
+      "Anstelle des nächsten Raumes kannst du dich in einen beliebigen nicht-Boss Raum auf deinem Weg teleportieren.",
+      "",
+      "Die Kraft dieses Reliktes ist schon aufgebraucht."
+    ]
+  },
+  "downfall:HeartsMalice": {
+    "NAME": "Des Herzen Bosheit",
+    "FLAVOR": "Das Herz schenkte dir die Bosheit der Verdorbenheit.",
+    "DESCRIPTIONS": [
+      "Die Gegner deiner #b3 nächsten Kämpfe fliehen vor Furcht.",
+      "Die Kraft dieses Reliktes ist schon aufgebraucht."
+    ]
+  },
+  "downfall:Hecktoplasm": {
+    "NAME": "Hecktoplasma",
+    "FLAVOR": "Dieser Klumpen aus Schleim scheint mit der Kraft hunderter lebendiger Seelen zu pulsieren. Kein Wunder, dass den niemand wollte.",
+    "DESCRIPTIONS": [
+      " NL Du kannst keine #ySeelen mehr erhalten. Erhalte in deinem Zug [E]. Das Zerbrechen der Schlüssel erfordert keine #ySeelen [REMOVE_SPACE].",
+      "Hecktoplasma"
+    ]
+  },
+  "downfall:BlackCandle": {
+    "NAME": "Schwarze Kerze",
+    "FLAVOR": "Die Flamme scheint in der Dunkelheit sogar noch intensiver.",
+    "DESCRIPTIONS": [
+      "#yUnspielbare #rFluchkarten können jetzt ausgespielt werden, und spielbare #rFlüche kosten #b0 [REMOVE_SPACE]. Spielst du einen #yUnspielbaren oder kostenreduzierten #rFluch aus, verliere #b1 TP und #yerschöpfe ihn.",
+      "Schwarze Kerze"
+    ]
+  },
+  "downfall:replacements": {
+    "NAME": "",
+    "FLAVOR": "",
+    "DESCRIPTIONS": [
+      "In Händler-, Elite- und Bosskämpfen erhalte in deinem Zug [E] .",
+      "Verfluchte Münze",
+      "Nur noch wenige wissen um den Wert dieser alten Münze bescheid...",
+      "MVB-Karte",
+      "Du bist wahrlich des Herzens MVB: Meist Versorgender Boss.",
+      "Das Herz kennt keine Gnade und verdirbt sogar die Liebsten... unsere Haustiere.",
+      "Verdorbene Kurierin",
+      "Dem Herz gehen nie mehr Karten, Relikte oder Tränke aus und seine Preise sind um #b20% gesenkt.",
+      "Kampf-Kartenbelohnungen enthalten jetzt auch farblose und andersfarbige Karten, inklusive Helden-Karten.",
+      "Du kannst keine #ySeelen mehr erhalten. Erhalte in deinem Zug [E]. Das Zerbrechen der Schlüssel erfordert keine #ySeelen."
+    ]
+  },
+  "downfall:LizardTail": {
+    "NAME": "Super-Echsenschwanz",
+    "FLAVOR": "Ein falscher Schwanz, um Gegner während des Kampfes hereinzulegen.",
+    "DESCRIPTIONS": [
+      "Anstatt zu sterben, heile #b100% deiner max. TP (funktioniert einmal)."
+    ]
+  },
+  "downfall:TestRelic": {
+    "NAME": "VFX Tester",
+    "FLAVOR": "When it index oobs, you did it.",
+    "DESCRIPTIONS": [
+      "#pRight #pClick: Play the next card."
+    ]
+  },
+  "downfall:ExtraCursedKey": {
+    "NAME": "Besonders verfluchter Schlüssel",
+    "FLAVOR": "Wurde aus gutem Grund weggesperrt.",
+    "DESCRIPTIONS": [
+      "Erhalte [E] wenn du in diesem Zug das erste Mal einen #rFluch ziehst. NL Immer wenn du eine Truhe (außer Bosstruhen) öffnest, nimm eine #rVerletzung [REMOVE_SPACE]."
+    ]
+  },
+  "downfall:ExtraCursedBell": {
+    "NAME": "Besonders verfluchte Rufglocke",
+    "FLAVOR": "Du bildest dir ein sie zu hören, bist dir aber nicht sicher.",
+    "DESCRIPTIONS": [
+      "Erhalte beim Aufheben einen besonderen #rFluch und #b3 gewöhnliche #yRelikte.",
+      "Die Glocke schlägt...",
+      "Belohnungen überspringen",
+      "Schließen"
+    ]
+  },
+  "downfall:BustedCrownGagText": {
+    "NAME": "Zerbrochene Krone",
+    "FLAVOR": "Nachahmung ist die aufrichtigste Form der Schmeichelei... oder doch nicht? Diese Krone sieht deiner nichtmal besonders ähnlich. Eigentlich ist sie eine Beleidigung.",
+    "DESCRIPTIONS": [
+      "Bei Kartenbelohnungen hast du #b2 Karten weniger zur Auswahl. Erhalte in deinem Zug [E] ."
+    ]
+  }
+}

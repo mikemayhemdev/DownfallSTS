@@ -20,7 +20,7 @@ public class Minniegun extends AbstractAwakenedCard {
     // intellij stuff attack, enemy, basic, 6, 3, , , ,
 
     public Minniegun() {
-        super(ID, 2, CardRarity.RARE, AbstractCard.CardType.ATTACK, CardTarget.ENEMY);
+        super(ID, 2, CardRarity.SPECIAL, AbstractCard.CardType.ATTACK, CardTarget.ENEMY);
         baseDamage = 2;
         baseMagicNumber = magicNumber = 5;
         tags.add(CardTags.HEALING);

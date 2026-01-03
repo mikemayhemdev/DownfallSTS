@@ -1,0 +1,32 @@
+{
+  "champ:OpenerPotion": {
+    "NAME": "Strategietrank",
+    "DESCRIPTIONS": [
+      "Wähle #b1 von #b2 zufälligen Karten die eine #yHaltung annehmen (eine pro #yHaltung [REMOVE_SPACE]).",
+      " Nimm #b",
+      " Kopie auf die Hand. Sie kostet in diesem Zug #b0 [REMOVE_SPACE].",
+      " Kopien auf die Hand. Sie kosten in diesem Zug #b0 [REMOVE_SPACE]."
+    ]
+  },
+  "champ:TechniquePotion": {
+    "NAME": "Technikflasche",
+    "DESCRIPTIONS": [
+      "Aktiviere den #yFertigkeitsbonus deiner #yHaltung #b",
+      " Mal."
+    ]
+  },
+  "champ:UltimateStancePotion": {
+    "NAME": "Stimpack",
+    "DESCRIPTIONS": [
+      "Nimm die #yUltimative #yHaltung für #b",
+      " Zug an."
+    ]
+  },
+  "champ:CounterPotion": {
+    "NAME": "Gebräu der Schärfe",
+    "DESCRIPTIONS": [
+      "Erhalte #b",
+      " #yKonter [REMOVE_SPACE]."
+    ]
+  }
+}

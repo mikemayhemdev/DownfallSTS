@@ -1,0 +1,11 @@
+{
+  "downfall:CursedFountainPotion": {
+    "NAME": "Verfluchte Flüssigkeit",
+    "DESCRIPTIONS": [
+      "Wende #b",
+      " #ySchwach, #b",
+      " #yVerwundbar an, und reduziere die #yStärke um #b",
+      "."
+    ]
+  }
+}

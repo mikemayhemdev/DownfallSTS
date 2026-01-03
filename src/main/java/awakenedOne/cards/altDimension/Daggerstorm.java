@@ -18,7 +18,7 @@ public class Daggerstorm extends AbstractAwakenedCard {
     public final static String ID = AwakenedOneMod.makeID(Daggerstorm.class.getSimpleName());
 
     public Daggerstorm() {
-        super(ID, 2, CardRarity.RARE, CardType.POWER, CardTarget.SELF);
+        super(ID, 2, CardRarity.SPECIAL, CardType.POWER, CardTarget.SELF);
         baseMagicNumber = magicNumber = 4;
         tags.add(CardTags.HEALING);
 

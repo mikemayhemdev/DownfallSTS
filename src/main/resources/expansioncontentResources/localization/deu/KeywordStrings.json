@@ -1,0 +1,188 @@
+[
+  {
+    "PROPER_NAME": "Verschwimmen",
+    "ID": "blur",
+    "NAMES": [
+      "verschwimmen",
+      "verschwimme",
+      "verschwommen",
+      "blur"
+    ],
+    "DESCRIPTION": "#yBlock wird zu Beginn deines Zuges nicht entfernt."
+  },
+  {
+    "PROPER_NAME": "Vibrancy",
+    "NAMES": [
+      "vibrancy"
+    ],
+    "DESCRIPTION": "NOT USED DO NOT TL"
+  },
+  {
+    "PROPER_NAME": "Opulence",
+    "NAMES": [
+      "opulence"
+    ],
+    "DESCRIPTION": "NOT USED DO NOT TL"
+  },
+  {
+    "PROPER_NAME": "Erholen",
+    "NAMES": [
+      "erholen",
+      "regen"
+    ],
+    "DESCRIPTION": "Heile TP in Höhe von #yErholen am Ende deines Zuges, und reduziere dann #yErholen um #b1 [REMOVE_SPACE]."
+  },
+  {
+    "PROPER_NAME": "Panzerrüstung",
+    "NAMES": [
+      "panzerrüstung",
+      "plated"
+    ],
+    "DESCRIPTION": "Du erhältst #yBlock in Höhe deiner #yPanzerrüstung am Ende des Zuges. Ungeblockter Angriffsschaden reduziert #yPanzerrüstung um #b1"
+  },
+  {
+    "PROPER_NAME": "Boss",
+    "NAMES": [
+      "boss"
+    ],
+    "DESCRIPTION": "Du kannst nur #b1 #yBoss-Karte pro Zug spielen."
+  },
+  {
+    "PROPER_NAME": "Echo",
+    "ID": "echo",
+    "NAMES": [
+      "echos",
+      "echo"
+    ],
+    "DESCRIPTION": "Echos sind Kopien von Karten die zusätzlich #yflüchtig sind und #yerschöpfen. Von einem Echo kann kein Echo erstellt werden."
+  },
+  {
+    "PROPER_NAME": "Exhumieren",
+    "ID": "exhume",
+    "NAMES": [
+      "exhumieren",
+      "exhumiere",
+      "exhumiert",
+      "exhume"
+    ],
+    "DESCRIPTION": "Nimm eine erschöpfte Karte auf die Hand."
+  },
+  {
+    "PROPER_NAME": "Unverwundbar",
+    "NAMES": [
+      "unverwundbar"
+    ],
+    "DESCRIPTION": "Du kannst innerhalb eines Zuges nicht mehr als eine bestimmte Anzahl an TP verlieren. NL Wenn Unverwundbar TP-Verlust verhindert hat, wird es im nächsten Zug erntfernt."
+  },
+  {
+    "PROPER_NAME": "Fleddern",
+    "NAMES": [
+      "fleddern",
+      "fleddere",
+      "gefleddert",
+      "gefledderte",
+      "reclaim"
+    ],
+    "DESCRIPTION": "Nimm eine erschöpfte Karte in deinen Abwurfstapel."
+  },
+  {
+    "PROPER_NAME": "Glibber",
+    "NAMES": [
+      "glibber",
+      "glibbers",
+      "geglibbert",
+      "angeglibbert",
+      "goop"
+    ],
+    "DESCRIPTION": "Der Schaden des nächsten Angriffs wird in Höhe des #yGlibbers erhöht. Der Angriff entfernt den #yGlibber und aktiviert #yKonsum Effekte."
+  },
+  {
+    "PROPER_NAME": "Gefesselt",
+    "NAMES": [
+      "gefesselt",
+      "fesseln",
+      "fessle",
+      "shackled"
+    ],
+    "DESCRIPTION": "Gefesselte Wesen verlieren #yStärke für einen Zug."
+  },
+  {
+    "PROPER_NAME": "Temporäre TP",
+    "ID": "temp_hp",
+    "NAMES": [
+      "temporäre tp",
+      "temporäre_tp",
+      "temporären tp",
+      "temporären_tp",
+      "temp tp",
+      "temp_tp",
+      "temp hp",
+      "temp_hp"
+    ],
+    "DESCRIPTION": "Verhindert TP-Verlust bis zum Ende des Kampfes."
+  },
+  {
+    "PROPER_NAME": "Opfergabe",
+    "NAMES": [
+      "opfergabe",
+      "pyre"
+    ],
+    "DESCRIPTION": "Erfordert als zusätzliche Kosten das #yErschöpfen einer Handkarte."
+  },
+  {
+    "PROPER_NAME": "Verdammnis",
+    "NAMES": [
+      "verdammnis",
+      "verdammen",
+      "verdamme",
+      "verdammt",
+      "verdammte",
+      "doom",
+      "doomed"
+    ],
+    "DESCRIPTION": "Verdammte Wesen verlieren zu Beginn ihrer Züge TP in Höhe der Verdammnis. Sämtliche Verdammnis wird danach entfernt, es sei denn, das Wesen ist #ygeplagt (ist gleichzeitig #ySchwach und #yVerwundbar [REMOVE_SPACE])."
+  },
+
+  {
+    "NAMES": [
+      "glibber",
+      "glibbers",
+      "goop",
+      "gooped"
+    ],
+    "PROPER_NAME": "Glibber",
+    "DESCRIPTION": "Der Schaden des nächsten #yAngriffs wird um die Anzahl des #yGlibbers erhöht. Ein #yAngriff entfernt sämtlichen #yGlibber und aktiviert #yKonsum Effekte."
+  },
+
+  {
+    "NAMES": [
+      "umwickelt",
+      "umwickeln",
+      "constricted"
+    ],
+    "PROPER_NAME": "Umwickelt",
+    "DESCRIPTION": "Umwickelte Wesen erleiden am Ende des Zuges Schaden in Höhe der Umwickelung."
+  },
+
+  {
+    "PROPER_NAME": "Chor",
+    "NAMES": [
+      "chor",
+      "chant",
+      "Chant",
+      "Chants"
+    ],
+    "DESCRIPTION": "Chor Effekte werden für den Rest des Kampfes aktiviert, wenn beim Ausspielen die letzte gespielte Karte eine #yMacht war."
+  },
+  {
+    "PROPER_NAME": "Transformieren",
+    "ID": "transform",
+    "NAMES": [
+      "transformieren",
+      "transformiere",
+      "transformiert",
+      "transform"
+    ],
+    "DESCRIPTION": "#yErschöpfe eine Karte und ersetze sie durch eine zufällige Karte."
+  }
+]

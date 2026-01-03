@@ -13,7 +13,7 @@
   },
   "downfall:Haunted": {
     "NAME": "귀신들림",
-    "DESCRIPTION": "휘발성. NL 이 카드가 소멸되면 피해를 !M! 받습니다."
+    "DESCRIPTION": "휘발성. NL 내 턴 종료 시 피해를 !M! 받습니다."
   },
   "downfall:Malfunctioning": {
     "NAME": "결함",

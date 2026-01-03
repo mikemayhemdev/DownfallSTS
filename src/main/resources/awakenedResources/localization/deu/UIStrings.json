@@ -1,0 +1,46 @@
+{
+  "awakened:SpellDescriptor": {
+    "TEXT": [
+      "Zauber"
+    ]
+  },
+  "awakened:ConjureMod": {
+    "TEXT": [
+      " NL awakened:Aufrufen."
+    ]
+  },
+  "awakened:SpellMod": {
+    "TEXT": [
+      "[#12FAF0]Zauber. NL"
+    ]
+  },
+  "awakened:DrainingMod": {
+    "TEXT": [
+      " NL Verliere im nächsten Zug [E]."
+    ]
+  },
+  "awakened:highlightChant": {
+    "TEXT": [
+      "awakened:Chor: ",
+      "[awakenedIcon] [#12FAF0]Chor: "
+    ]
+  },
+  "awakened:Spellbook": {
+    "TEXT": [
+      "Zauberbuch",
+      "Erwachen",
+      "#yErwache nach dem Ausspielen von #b7 Mächten! NL NL Im #yErwachten Zustand #ygerufene Zaubersprüche werden #yverbessert [REMOVE_SPACE].",
+      "#yErwache nach dem Ausspielen von #b7 Mächten! NL NL Im #yErwachten Zustand #ygerufene Zaubersprüche werden #yverbessert [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:FullSpellbook": {
+    "TEXT": [
+      "Mein Zauberbuch ist voll!"
+    ]
+  },
+  "awakened:FourthDimensionDupeAttempt": {
+    "TEXT": [
+      "@Das@ @zu@ @tun@ @würde@ @das@ @Raum-Zeit-Kontinuum@ @zerstören!!!@"
+    ]
+  }
+}
