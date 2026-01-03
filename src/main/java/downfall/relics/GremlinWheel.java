@@ -20,11 +20,6 @@ public class GremlinWheel extends CustomRelic {
         this.counter = 1;
     }
 
-    public void onEquip() {
-        AbstractDungeon.eventList.remove(GremlinWheelGame.ID);
-        AbstractDungeon.eventList.remove(GremlinWheelGame_Evil.ID);
-    }
-
     @Override
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];

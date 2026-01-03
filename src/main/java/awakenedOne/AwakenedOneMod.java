@@ -413,12 +413,10 @@ public class AwakenedOneMod implements
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
         if (abstractCard.type == AbstractCard.CardType.POWER) {
-
             powersThisCombat++;
             awaken();
         }
         if (abstractCard instanceof AbstractSpellCard && !abstractCard.purgeOnUse) {
-
             SlimeboundMod.logger.info("incrementing Spells this turn from " + spellsThisTurn + " to " + (spellsThisTurn + 1) + ". card: " + abstractCard.name);
             spellsThisTurn++;
         }
