@@ -45,6 +45,7 @@ public class MakeshiftBlade extends AbstractSneckoCard {
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         baseSilly = silly = 3;
+        this.tags.add(SneckoMod.GIFT);
         SneckoMod.loadJokeCardImage(this, "MakeshiftBlade.png");
     }
 
