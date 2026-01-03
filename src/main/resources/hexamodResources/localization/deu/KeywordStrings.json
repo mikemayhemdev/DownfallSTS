@@ -16,7 +16,7 @@
       "advanced",
       "advancing"
     ],
-    "DESCRIPTION": "Bewege dich im Uhrzeigersinn auf die nächste Geisterflamme. Das bewegen AUF eine y#entzündete Geisterflamme #ylöscht sie."
+    "DESCRIPTION": "Bewege dich im Uhrzeigersinn auf die nächste Geisterflamme. Das bewegen AUF eine #yentzündete Geisterflamme #ylöscht sie."
   },
   {
     "PROPER_NAME": "Rückwärts",
@@ -26,7 +26,7 @@
       "retracted",
       "retracting"
     ],
-    "DESCRIPTION": "Bewege dich im Gegenuhrzeigersinn auf die vorherige Geisterflamme. Das bewegen AUF eine y#entzündete Geisterflamme #ylöscht sie."
+    "DESCRIPTION": "Bewege dich im Gegenuhrzeigersinn auf die vorherige Geisterflamme. Das bewegen AUF eine #yentzündete Geisterflamme #ylöscht sie."
   },
   {
     "PROPER_NAME": "Intensität",
@@ -66,6 +66,7 @@
       "entzünden",
       "entzündung",
       "entzünde",
+      "entzündest",
       "entzündet",
       "entzündete",
       "entzündungs",

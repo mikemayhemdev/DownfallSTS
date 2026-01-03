@@ -94,7 +94,7 @@
     "NAME": "Charakteristischer Abschluss",
     "FLAVOR": "Und jetzt kommt mein ULTIMATER MOVE!",
     "DESCRIPTIONS": [
-      "Wähle beim Aufheben eine #ychamp:Abschlusskarte [REMOVE_SPACE]. Diese #Abschlusskarte kostet #b0 [REMOVE_SPACE], kann ohne #yHaltung ausgespielt werden, und bricht deine #yHaltung nicht ab.",
+      "Wähle beim Aufheben eine #ychamp:Abschlusskarte [REMOVE_SPACE]. Diese #yAbschlusskarte kostet #b0 [REMOVE_SPACE], kann ohne #yHaltung ausgespielt werden, und bricht deine #yHaltung nicht ab.",
       "Wähle eine Karte für ",
       " kostet #b0 [REMOVE_SPACE], kann ohne #yHaltung gespielt werden, und bricht deine #yHaltung nicht ab.",
       "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
