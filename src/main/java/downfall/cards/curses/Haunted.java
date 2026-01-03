@@ -90,7 +90,7 @@ public class Haunted extends CustomCard {
 
     public void triggerOnEndOfTurnForPlayingCard() {
         flash(Color.PURPLE.cpy());
-        this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
+        this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
     }
 
 
