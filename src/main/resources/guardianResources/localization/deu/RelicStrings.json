@@ -112,7 +112,7 @@
     "NAME": "Singende Spitzhacke",
     "FLAVOR": "Kaum zu glauben, dass jemand mit der Spitzhacke nach Juwelen suchen muss, wo doch im Spire so viele herumliegen.",
     "DESCRIPTIONS": [
-      "Jeden Mal wenn du einen Elite-Gegner besiehst erhältst du einen zusätzliches zufälliges #yguardianmod:Juwel zur Belohnung."
+      "Jeden Mal wenn du einen Elitekampf gewinnst erhältst du einen zusätzliches zufälliges #yguardianmod:Juwel zur Belohnung."
     ]
   },
   "Guardian:GemstoneGun": {

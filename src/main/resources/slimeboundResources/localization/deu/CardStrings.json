@@ -1,6 +1,6 @@
 {
   "Slimebound:AcidTongue": {
-    "NAME": "Ausbreitender Glibber",
+    "NAME": "Haftender Glibber",
     "DESCRIPTION": "Effekte die slimeboundmod:Glibber anwenden wenden zusätzlich !M! an."
   },
   "Slimebound:BestDefense": {
@@ -47,7 +47,7 @@
     "DESCRIPTION": "Füge einem zufälligen gegner für jeden Schleim !D! Schaden zu. NL slimeboundmod:Absorbiere alle Schleime. NL Erschöpft."
   },
   "Slimebound:DouseInSlime": {
-    "NAME": "Mit Schleim übergießen",
+    "NAME": "Schleim-Überguss",
     "DESCRIPTION": "Wende !slime! slimeboundmod:Glibber an. NL Der Nächste Angriff auf diesen Gegner entfernt sein slimeboundmod:Glibber nicht."
   },
   "Slimebound:DuplicatedForm": {
@@ -67,7 +67,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. slimeboundmod:Konsum - Wende !M! Verwundbar an."
   },
   "Slimebound:FirmFortitude": {
-    "NAME": "Liquidieren",
+    "NAME": "Verflüssigen",
     "DESCRIPTION": "Verliere 2 Stärke. NL Gain !M! slimeboundmod:Potenz."
   },
   "Slimebound:FlameTackle": {
@@ -88,11 +88,11 @@
     "DESCRIPTION": "Nimm das erste Mal wenn du im Zug slimeboundmod:Konsumierst einen *Wabbel auf die Hand.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Nimm das erste Mal wenn du im Zug slimeboundmod:Konsumierst einen *Wabbel auf die Hand."
   },
-  "Slimebound:GlibberSpray": {
+  "Slimebound:GoopSpray": {
     "NAME": "Klebriger Nebel",
     "DESCRIPTION": "Wende !slime! slimeboundmod:Glibber und !M! Schwach auf ALLE Gegner an."
   },
-  "Slimebound:GlibberTackle": {
+  "Slimebound:GoopTackle": {
     "NAME": "Combo-Tackle",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Erhalte eine zufällige *Tackle Karte. Sie kostet in diesem Zug 0.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Erhalte eine zufällige verbesserte *Tackle Karte. Sie kostet in diesem Zug 0."
@@ -121,12 +121,12 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte einen *Wabbel+."
   },
   "Slimebound:LeadByExample": {
-    "NAME": "Mit Beispiel Vorangehen",
+    "NAME": "Ton angeben",
     "DESCRIPTION": "Die erste in deinem Zug gespielte Karte, die auf Gegener abzielt, löst slimeboundmod:Kommando aus.",
     "UPGRADE_DESCRIPTION": "Die ersten !M! gespielten Karten des Zuges, die auf Gegener abzielen, lösen slimeboundmod:Kommando aus."
   },
   "Slimebound:LeechEnergy": {
-    "NAME": "Energy Absaugen",
+    "NAME": "Energie Absaugen",
     "DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte [E] und Ziehe !M! Karte.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte [E] und Ziehe !M! Karten."
   },
@@ -135,7 +135,7 @@
     "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. Heile TP in Höhe des ungeblockten Schadens. NL Erschöpft."
   },
   "Slimebound:LeechingTouch": {
-    "NAME": "Aussaugender Schlag",
+    "NAME": "Saugender Schlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL slimeboundmod:Konsum - Erhalte Block in Höhe des slimeboundmod:Glibbers."
   },
   "Slimebound:LevelUp": {
@@ -149,7 +149,7 @@
     "UPGRADE_DESCRIPTION": "Wende !M! Schwach und !slime! slimeboundmod:Glibber an. NL Ziehe eine Karte. NL Erschöpft - slimeboundmod:Begraben."
   },
   "Slimebound:LivingWall": {
-    "NAME": "Lbendige Mauer",
+    "NAME": "Lebendige Mauer",
     "DESCRIPTION": "Erhalte !B! Block. NL Immer wenn dich in diesem Zug ein Gegner angreift, wende !slime! slimeboundmod:Glibber auf ihn an."
   },
   "Slimebound:MassFeed": {
@@ -157,7 +157,7 @@
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Wenn tödlich, wehöhe deine Max TP um !M!. NL Erschöpft."
   },
   "Slimebound:MassRepurpose": {
-    "NAME": "Massenumfunktionierung",
+    "NAME": "Massenumwandlung",
     "DESCRIPTION": "slimeboundmod:Absorbiere alle Schleime. Spalte für jeden auf diese Weise *absorbierten Schleim einen slimeboundmod:Spezialisten ab. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Absorbiere alle Schleime. Spalte für jeden auf diese Weise *absorbierten Schleim einen slimeboundmod:Spezialisten ab. slimeboundmod:Kommandiere sie. NL Erschöpft."
   },
@@ -167,12 +167,12 @@
     "UPGRADE_DESCRIPTION": "Wende !M! Schwach und !slime! slimeboundmod:Glibber auf ALLE Gegner an. NL Ziehe eine Karte. NL Erschöpft."
   },
   "Slimebound:MinionMaster": {
-    "NAME": "Meister der Untertanen",
+    "NAME": "Untertanenmeister",
     "DESCRIPTION": "Immer wenn du eine Karte mit slimeboundmod:Kommando spielst, slimeboundmod:Kommandiere ein weiteres Mal.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Immer wenn du eine Karte mit slimeboundmod:Kommando spielst, slimeboundmod:Kommandiere ein weiteres Mal."
   },
   "Slimebound:Nibble": {
-    "NAME": "Knabbern und Wabbeln",
+    "NAME": "Knabber-Wabbel",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte einen *Wabbel. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte einen *Wabbel. NL Ziehe eine Karte. NL Erschöpft."
   },
@@ -188,8 +188,8 @@
   },
   "Slimebound:Overexert": {
     "NAME": "Überanstrengen",
-    "DESCRIPTION": "Erhalte 5 slimeboundmod:Potenz. NL slimeboundmod:Absorbiere alle Slime in !M! Zügen.",
-    "UPGRADE_DESCRIPTION": "Erhalte 5 slimeboundmod:Potenz. NL slimeboundmod:Kommando zweimal. NL slimeboundmod:Absorbiere alle Slime in !M! Zügen."
+    "DESCRIPTION": "Erhalte 5 slimeboundmod:Potenz. NL slimeboundmod:Absorbiere nach !M! Zügen alle Schleime.",
+    "UPGRADE_DESCRIPTION": "Erhalte 5 slimeboundmod:Potenz. NL slimeboundmod:Kommando zweimal. NL slimeboundmod:Absorbiere nach !M! Zügen alle Schleime."
   },
   "Slimebound:Prepare": {
     "NAME": "Vorbereiten",
@@ -197,30 +197,30 @@
     "UPGRADE_DESCRIPTION": "Im nächsten Zug, ziehe !M! Karten und erhalte [E] . NL Behalte in diesem Zug bis zu !M! Karten. Erschöpft."
   },
   "Slimebound:PrepareCrush": {
-    "NAME": "Bereit zum Zerschmettern",
-    "DESCRIPTION": "Im nächsten Zug, erhalte *SCHLEIM *ZERQUETSCHEN, [E] [E] [E] und !M! Stärke. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Im nächsten Zug, erhalte *SCHLEIM *ZERQUETSCHEN+, [E] [E] [E] [E] und !M! Stärke. NL Erschöpft.",
+    "NAME": "SCHLEIM...",
+    "DESCRIPTION": "Erhalte im nächsten Zug *ZERSCHMETTERN!!!, [E] [E] [E] und !M! Stärke. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte im nächsten Zug *ZERSCHMETTERN!!!+, [E] [E] [E] [E] und !M! Stärke. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
-      "~Schleim...~ NL #r~ZERQUETSCHEN!!!~"
+      "~Schleim...~ NL #r~ZERSCHMETTERN!!!~"
     ]
   },
   "Slimebound:PressTheAttack": {
-    "NAME": "Angriff Vorantreiben",
+    "NAME": "Vorantreiben",
     "DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Kommando.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Kommando zweimal."
   },
   "Slimebound:ProtectTheBoss": {
-    "NAME": "Beschütze den Boss",
+    "NAME": "Beschützt den Boss",
     "DESCRIPTION": "Verhindere deinen nächsten TP-Verlust durch Angriffsschaden indem du deinen führenden Schleim slimeboundmod:absorbierst.",
     "UPGRADE_DESCRIPTION": "Verhindere deine nächsten 2 TP-Verluste durch Angriffsschaden indem du jeweils deinen führenden Schleim slimeboundmod:absorbierst."
   },
   "Slimebound:RainOfGoop": {
-    "NAME": "Glibberegen",
+    "NAME": "Glibberregen",
     "DESCRIPTION": "Wende !M! Mal auf einen zufälligen Gegner !slime! slimeboundmod:Glibber an.",
     "UPGRADE_DESCRIPTION": "Wende !M! Mal auf einen zufälligen Gegner !slime! slimeboundmod:Glibber an."
   },
   "Slimebound:RallyTheTroops": {
-    "NAME": "Truppen Mobilisieren",
+    "NAME": "Truppe mobilisieren",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächsten !M! gespielten Karten in diesem Zug slimeboundmod:Kommandieren."
   },
   "Slimebound:Recollect": {
@@ -251,7 +251,7 @@
     ]
   },
   "Slimebound:Repurpose": {
-    "NAME": "Umfunktionierung",
+    "NAME": "Umwandlung",
     "DESCRIPTION": "slimeboundmod:Absorbiere deinen führenden Schleim um einen slimeboundmod:Spezialisten slimeboundmod:abzuspalten. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Absorbiere deinen führenden Schleim um einen slimeboundmod:Spezialisten slimeboundmod:abzuspalten. NL slimeboundmod:Kommando. NL Erschöpft."
   },
@@ -287,7 +287,7 @@
     "DESCRIPTION": "Spiele die oberste Karte des Nachziehstapels. Wiederhole das für jeden Schleim. NL Erschöpft."
   },
   "Slimebound:SlimeCrush": {
-    "NAME": "SCHLEIM ZERSCHMETTERN!!!",
+    "NAME": "ZERSCHMETTERN!!!",
     "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Flüchtig. NL Füge ALLEN Gegnern !D! Schaden zu. NL Erschöpft."
   },
@@ -330,7 +330,7 @@
     "DESCRIPTION": "Behalten. NL Beschwöre den Gierschleim. Zählt als slimeboundmod:Abspaltung. NL Erschöpft."
   },
   "Slimebound:SplitLeeching": {
-    "NAME": "Beschützer Abspalten",
+    "NAME": "Schützer Abspalten",
     "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Beschützerschleim ab. NL slimeboundmod:Kommando !M! Mal.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Beschützerschleim ab. NL slimeboundmod:Kommando drei Mal."
   },
@@ -344,7 +344,7 @@
     "DESCRIPTION": "Behalten. NL Beschwöre den Schrottschleim. Zählt als slimeboundmod:Abspaltung. NL Erschöpft."
   },
   "Slimebound:SplitSpecialist": {
-    "NAME": "Spezialisten Abspalten",
+    "NAME": "Spezialist Abspalten",
     "DESCRIPTION": "Wähle 1 von 3 slimeboundmod:Spezialisten den du slimeboundmod:abspaltest. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Wähle 1 von 3 slimeboundmod:Spezialisten den du slimeboundmod:abspaltest. NL slimeboundmod:Kommando. NL Erschöpft."
   },
@@ -376,7 +376,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. slimeboundmod:Glibber ist für diesen Angriff doppelt so effektiv."
   },
   "Slimebound:WasteNot": {
-    "NAME": "Nichts Verschwenden",
+    "NAME": "Sparsamkeit",
     "DESCRIPTION": "expansioncontent:Exhumiere alle *Wabbel Karten. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "expansioncontent:Exhumiere alle *Wabbel Karten.",
     "EXTENDED_DESCRIPTION": [

@@ -13,7 +13,7 @@
   },
   "awakened:Darkleech": {
     "NAME": "Verderben",
-    "DESCRIPTION": "Behalten. NL Wende !M! Verwundbar an. NL Wende !awakened:m2! awakened:Manabrand an. NL Erschöpft."
+    "DESCRIPTION": "Behalten. NL Wende !M! Verwundbar an. Wende !awakened:m2! awakened:Manabrand an. NL Erschöpft."
   },
   "awakened:DeathCoil": {
     "NAME": "Todesschlinge",
@@ -48,11 +48,11 @@
   "awakened:AwakenedForm": {
     "NAME": "Erwachte Form",
     "DESCRIPTION": "Erhalte !M! awakened:Neugier. NL Erhalte !awakened:m2! Ritual.",
-    "UPGRADE_DESCRIPTION": "*Erwache sofort. NL Erhalte !M! awakened:Neugier. NL Erhalte !awakened:m2! Ritual."
+    "UPGRADE_DESCRIPTION": "*Erwache umgehend. NL Erhalte !M! awakened:Neugier. NL Erhalte !awakened:m2! Ritual."
   },
   "awakened:Spellbinder": {
     "NAME": "Bezaubern",
-    "DESCRIPTION": "awakened:Rufe zu Beginn jedes Zuges einen Zauberspruch auf"
+    "DESCRIPTION": "awakened:Rufe zu Beginn jedes Zuges einen *Zauberspruch *auf"
   },
   "awakened:Ceremony": {
     "NAME": "Zeremonie",
@@ -93,7 +93,7 @@
   },
   "awakened:Pluck": {
     "NAME": "Rupfen",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte einen *Federstich."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte *Federstiche."
   },
   "awakened:FlareShot": {
     "NAME": "Federflackern",
@@ -139,7 +139,7 @@
     ]
   },
   "awakened:KnifesEdge": {
-    "NAME": "Auf Messers Schneide",
+    "NAME": "Messers Schneide",
     "DESCRIPTION": "Erhalte !awakened:m2! Stärke. NL Lege !M! *Leeren in den Abwurfstapel."
   },
   "awakened:FourthDimension": {
@@ -163,12 +163,12 @@
   },
   "awakened:BirdsEye": {
     "NAME": "Adlerauge",
-    "DESCRIPTION": "awakened:Rufe einen Zauberspruch deiner Wahl *auf.",
-    "UPGRADE_DESCRIPTION": "Fülle dein Zauberbuch neu auf und wakened:Rufe danach einen Zauberspruch deiner Wahl *auf."
+    "DESCRIPTION": "awakened:Rufe einen *Zauberspruch deiner Wahl *auf.",
+    "UPGRADE_DESCRIPTION": "Fülle dein Zauberbuch neu auf und awakened:Rufe danach einen *Zauberspruch deiner Wahl *auf."
   },
   "awakened:Initiation": {
     "NAME": "Initiierung",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte a *Zeremonie."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte eine *Zeremonie."
   },
   "awakened:Ensorcelate": {
     "NAME": "Zauberformel",
@@ -198,7 +198,7 @@
     "DESCRIPTION": "Wende !M! awakened:Manabrand an. NL awakened:Chor: ALL Gegner verlieren HP in Höhe ihres awakened:Manabrandes."
   },
   "awakened:MoonlitVision": {
-    "NAME": "Mondlichtvision",
+    "NAME": "Mondfinsternis",
     "DESCRIPTION": "Erhalte [E] das erste Mal, an dem du im Zug einen Zauber spielst."
   },
   "awakened:Rebirth": {
@@ -207,10 +207,10 @@
   },
   "awakened:Archmagus": {
     "NAME": "Erzmagier",
-    "DESCRIPTION": "Der erste in deinem Zug gespielte Zauber wird zweimal gespielt."
+    "DESCRIPTION": "Der erste in deinem Zug gespielte *Zauber wird zweimal gespielt."
   },
   "awakened:Planeswalk": {
-    "NAME": "Dimensionswanderung",
+    "NAME": "Grenzgänger",
     "DESCRIPTION": "Erhalte [E] [E] . NL Mische eine *Leere in den Nachziehstapel.",
     "UPGRADE_DESCRIPTION": "Erhalte [E] [E] [E] . NL Mische eine *Leere in den Nachziehstapel."
   },
@@ -219,7 +219,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL [E] die für diese Karte ausgegeben wird wie awakened:auslaugen behandelt."
   },
   "awakened:DarknessFalls": {
-    "NAME": "Einfallende Finsternis",
+    "NAME": "Ringfinsternis",
     "DESCRIPTION": "Erhalte immer wenn awakened:ausgelaugt wirst !M! Block und !awakened:m2! Stärke.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer wenn awakened:ausgelaugt wirst !M! Block und !awakened:m2! Stärke."
   },
@@ -250,7 +250,7 @@
   },
   "awakened:MirePit": {
     "NAME": "Schlammgrube",
-    "DESCRIPTION": "ALL Gegner verlieren in diesem Zug !M! Stärke. NL Verliere im nächsten Zug [E] . NL Erschöpft."
+    "DESCRIPTION": "ALL Gegner verlieren in diesem Zug !M! Stärke. Verliere im nächsten Zug [E] . NL Erschöpft."
   },
   "awakened:SingularityShield": {
     "NAME": "Singularity Shield",
@@ -347,7 +347,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: gremlin:Stiehl für diesen Zug !M! Stärke."
   },
   "awakened:PlumeJab": {
-    "NAME": "Federstich",
+    "NAME": "Federstiche",
     "DESCRIPTION": "Behalten. NL Füge zweimal einem zufälligen Gegner !D! Schaden zu. NL Erschöpft."
   },
   "awakened:Primacy": {
@@ -365,7 +365,7 @@
   },
   "awakened:Mantis": {
     "NAME": "Mantis",
-    "DESCRIPTION": "Erhalte !M! Stärke. NL Nimm einen *Federstich in die Hand."
+    "DESCRIPTION": "Erhalte !M! Stärke. NL Nimm *Federstiche in die Hand."
   },
   "awakened:ManaShield": {
     "NAME": "Manaschild",
@@ -401,11 +401,11 @@
   },
   "awakened:RealityRift": {
     "NAME": "Dimensionsspalte",
-    "DESCRIPTION": "Nimm !awakened:m2! von !M! mächtigen Karten einer *ANDEREN *DIMENSION auf die Hand. NL Lege 2 *Leeren in den Abwurfstapel. Erschöpft."
+    "DESCRIPTION": "Nimm !awakened:m2! von !M! mächtigen Karten einer *ANDEREN *DIMENSION auf die Hand. Lege 2 *Leeren in den Abwurfstapel. Erschöpft."
   },
   "awakened:Inscribe": {
     "NAME": "Einschreiben",
-    "DESCRIPTION": "Wähle einen Zauberspruch. Lege für den Rest des Kampfes !M! Kopien davon in das Zauberbuch.",
-    "UPGRADE_DESCRIPTION": "awakened:Aufrufen. NL Wähle einen Zauberspruch. Lege für den Rest des Kampfes !M! Kopien davon in das Zauberbuch."
+    "DESCRIPTION": "Wähle einen *Zauberspruch. Lege für den Rest des Kampfes !M! Kopien davon in das Zauberbuch.",
+    "UPGRADE_DESCRIPTION": "awakened:Aufrufen. NL Wähle einen *Zauberspruch. Lege für den Rest des Kampfes !M! Kopien davon in das Zauberbuch."
   }
 }

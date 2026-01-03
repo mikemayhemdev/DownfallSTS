@@ -30,7 +30,7 @@
     "FLAVOR": "So kalt...",
     "DESCRIPTIONS": [
       "Erhalte in deinem Zug [E] . Beginne jeden Kampf mit #b",
-      " weniger #yhexamod:Intensität [REMOVE_SPACE]. Die #yInferno #Geisterflamme kann deine #yhexamod:Intensität nicht erhöhen."
+      " weniger #yhexamod:Intensität [REMOVE_SPACE]. Die #yInferno #yGeisterflamme kann deine #yhexamod:Intensität nicht erhöhen."
     ]
   },
   "hexamod:SoulStone": {

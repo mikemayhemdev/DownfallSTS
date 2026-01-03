@@ -401,7 +401,7 @@
     "NAME": "Umhang der Gesichter",
     "FLAVOR": "Es waren Steve, und Bill, und Ian, und Fred, und John...",
     "DESCRIPTIONS": [
-      "Erhalte beim Aufheben Kultisten-Kopfstück, Priesters Gesicht, N'loths hungriges Gesicht, Gremlin-Visage, und Ssslangenkopf."
+      "Erhalte beim Aufheben #yKultisten-Kopfstück, #yPriesters #yGesicht, #yN'loths #yhungriges #yGesicht, #yGremlin-Visage, und #ySsslangenkopf."
     ]
   },
   "downfall:BrokenWingStatue": {
@@ -541,7 +541,7 @@
     "NAME": "Besonders verfluchter Schlüssel",
     "FLAVOR": "Wurde aus gutem Grund weggesperrt.",
     "DESCRIPTIONS": [
-      "Erhalte [E] wenn du in diesem Zug das erste Mal einen #rFLuch ziehst. NL Immer wenn du eine Truhe (außer Bosstruhen) öffnest, nimm eine #rVerletzung [REMOVE_SPACE]."
+      "Erhalte [E] wenn du in diesem Zug das erste Mal einen #rFluch ziehst. NL Immer wenn du eine Truhe (außer Bosstruhen) öffnest, nimm eine #rVerletzung [REMOVE_SPACE]."
     ]
   },
   "downfall:ExtraCursedBell": {

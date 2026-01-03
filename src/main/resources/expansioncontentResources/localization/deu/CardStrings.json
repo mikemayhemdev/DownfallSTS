@@ -54,15 +54,15 @@
     ]
   },
   "expansioncontent:SuperPrepareCrush": {
-    "NAME": "Zerschmettern vorbereiten",
-    "DESCRIPTION": "Erhalte im nächsten Zug *SCHLEIM *ZERSCHMETTERN, [E] [E] [E] und !M! Stärke. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte im nächsten Zug *SCHLEIM *ZERSCHMETTERN+, [E] [E] [E] [E] und !M! Stärke. NL Erschöpft.",
+    "NAME": "Vor-Schmettern",
+    "DESCRIPTION": "Erhalte im nächsten Zug *ZERSCHMETTERN!!!, [E] [E] [E] und !M! Stärke. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte im nächsten Zug *ZERSCHMETTERN!!!+, [E] [E] [E] [E] und !M! Stärke. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "~Schleim~ ~...~ NL #r~ZERSCHMETTERN!!!~"
     ]
   },
   "expansioncontent:SuperLivingWall": {
-    "NAME": "Gallertartige Mauer",
+    "NAME": "Gallert-Mauer",
     "DESCRIPTION": "Erhalte !B! Block. NL Immer wenn dich in diesem Zug ein Gegner angreift, wende !M! expansioncontent:Glibber auf ihn an."
   },
 
@@ -108,7 +108,7 @@
     "UPGRADE_DESCRIPTION": "Wende !M! expansioncontent:Glibber und !DM! Schwach auf ALLE Gegner an."
   },
   "expansioncontent:ChargeUp": {
-    "NAME": "Reinigungsplatte",
+    "NAME": "Panzerreinigung",
     "DESCRIPTION": "Reduziere deine Debuffs um !M!. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Reduziere deine Debuffs um !M!."
   },
@@ -140,8 +140,8 @@
   },
 
   "expansioncontent:SuperSomberShield": {
-    "NAME": "Scheiterhaufen-Schild",
-    "DESCRIPTION": "expansioncontent:Opfergabe. NL Erhalte !B! Block. NL Erhalte im nächsten Zug eine Kopie der *erschöpften Karte."
+    "NAME": "Scheiterhaufen",
+    "DESCRIPTION": "expansioncontent:Opfergabe. NL Erhalte !B! Block. NL Erhalte im nächsten Zug eine Kopie der *geopferten Karte."
   },
 
   "expansioncontent:SuperWhirlingFlame": {
@@ -173,7 +173,7 @@
 
   "expansioncontent:Virus": {
     "NAME": "404 Virus",
-    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. Mische einen *Starken *Strahl für jede auf diese Weise erschöpfte Karte in deinen Nachziehstapel. NL Erschöpft."
+    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. Mische einen *Starken *Strahl für jede auf diese Weise erschöpfte Karte in den Nachziehstapel. NL Erschöpft."
   },
 
   "expansioncontent:MajorBeam": {
@@ -197,14 +197,14 @@
   },
   "expansioncontent:ExploitVulnerability": {
     "NAME": "Donu-Strahl",
-    "DESCRIPTION": "Entferne allen Block des Gegners, und erhalte genausoviel Block. NL Füge zweimal !D! Schaden zu."
+    "DESCRIPTION": "Entferne allen Block des Gegners, und erhalte genausoviel Block. Füge zweimal !D! Schaden zu."
   },
   "expansioncontent:PeekPages": {
     "NAME": "Seiten spicken",
     "DESCRIPTION": "Lege !M! *Einsicht Karten auf deinen Nachziehstapel. NL Erschöpft."
   },
   "expansioncontent:BloodBarrage": {
-    "NAME": "Blut-Sperrfeuer",
+    "NAME": "Blutiges Sperrfeuer",
     "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Erschöpft."
   },
   "expansioncontent:DoubleAct": {

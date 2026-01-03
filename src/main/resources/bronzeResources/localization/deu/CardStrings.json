@@ -1,7 +1,7 @@
 {
   "bronze:Allocate": {
     "NAME": "Allokieren",
-    "DESCRIPTION": "Erhalte [E] für jeden #yStatus im Nachziehstapel.",
+    "DESCRIPTION": "Erhalte [E] für jeden *Status im Nachziehstapel.",
     "EXTENDED_DESCRIPTION": [
       " NL (Erhalte ",
       " [E] .)"
@@ -38,8 +38,8 @@
   },
   "bronze:BitShift": {
     "NAME": "Bitshift",
-    "DESCRIPTION": "Nimm eine #ykodierte Karte zurück auf die Hand. NL Sie erhält Behalten. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Nimm eine #ykodierte Karte zurück auf die Hand. NL Sie erhält Behalten. NL Erschöpft."
+    "DESCRIPTION": "Nimm eine *kodierte Karte zurück auf die Hand. NL Sie erhält Behalten. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Nimm eine *kodierte Karte zurück auf die Hand. NL Sie erhält Behalten. NL Erschöpft."
   },
   "bronze:Boost": {
     "NAME": "Booster",
@@ -55,7 +55,7 @@
     "EXTENDED_DESCRIPTION": [
       "Verzweigung: Angriff",
       "Füge !D! Schaden zu.",
-      "Verzweigung: Verteidigung",
+      "Verzweigung: Abwehr",
       "Erhalte !B! Block."
     ]
   },
@@ -81,15 +81,15 @@
   },
   "bronze:BugBarrage": {
     "NAME": "Bug Befall",
-    "DESCRIPTION": "Erhalte !M! *Wunden. NL bronze:Tausche jeden Status *aus und füge für jeden davon !D! Schaden zu.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! *Wunden. NL bronze:Tausche jeden Status *aus und füge für jeden davon !D! Schaden zu.",
+    "DESCRIPTION": "Erhalte !M! *Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! *Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       " NL (Trifft ",
       " Mal.)"
     ]
   },
   "bronze:BuggyMess": {
-    "NAME": "Verbuggtes Durcheinander",
+    "NAME": "Verbuggter Code",
     "DESCRIPTION": "bronze:Setze ein *Benommen *ein. NL Erhalte !M! [E] .",
     "EXTENDED_DESCRIPTION": [
       "verbuggtes",
@@ -98,15 +98,15 @@
   },
   "bronze:BurnOut": {
     "NAME": "Burnout",
-    "DESCRIPTION": "Füge einem zufälligen Gegner für JEDEN #yStatus !D! Schaden zu. Erschöpfe dann die Statuskarten. NL Erschöpft.",
+    "DESCRIPTION": "Füge einem zufälligen Gegner für JEDEN *Status !D! Schaden zu. Erschöpfe dann die Statuskarten. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
-      "Fügt einem zufälligen Gegner !D! Schaden für JEDEN #yStatus zu (",
+      "Fügt einem zufälligen Gegner !D! Schaden für JEDEN *Status zu (",
       "), und erschöpft sie dann. NL Erschöpft."
     ]
   },
   "bronze:ChildClass": {
     "NAME": "Aufrufen",
-    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Erhalte [E] in Höhe der Gesamtkosten deiner #ykodierten Karten.",
+    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Erhalte [E] in Höhe der Gesamtkosten deiner *kodierten Karten.",
     "EXTENDED_DESCRIPTION": [
       "gerufenes",
       "Aufladen"
@@ -292,7 +292,7 @@
   },
   "bronze:Hardcode": {
     "NAME": "Hardcoden",
-    "DESCRIPTION": "Die nächste Funktion die du kompilierst wird deinem Deck hinzugefügt. Die #ykodierten Karten werden aus dem Deck entfernt."
+    "DESCRIPTION": "Die nächste Funktion die du kompilierst wird deinem Deck hinzugefügt. Die *kodierten Karten werden aus dem Deck entfernt."
   },
   "bronze:HardenedForm": {
     "NAME": "Orb Beschwören",
@@ -300,7 +300,7 @@
   },
   "bronze:HyperBeam": {
     "NAME": "HYPERSTRAHL",
-    "DESCRIPTION": "Behalten. NL Füge ALLEN Gegnern !D! Schaden zu. NL Lege !M! *Leeren auf deinen Nachziehstapel."
+    "DESCRIPTION": "Behalten. NL Füge ALLEN Gegnern !D! Schaden zu. NL Lege !M! *Leeren auf den Nachziehstapel."
   },
   "bronze:InfiniteBeams": {
     "NAME": "Zahllose Strahlen",
@@ -550,7 +550,7 @@
     "UPGRADE_DESCRIPTION": "Kompiliere die derzeit kodierten Karten zu einer Funktion."
   },
   "bronze:BranchBlock": {
-    "NAME": "Verzweigung: Verteidigung",
+    "NAME": "Verzweigung: Abwehr",
     "DESCRIPTION": "Erhalte !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "verzweigtes",

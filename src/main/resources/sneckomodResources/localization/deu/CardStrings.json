@@ -295,7 +295,7 @@
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erschöpfe eine Karte. NL Erhalte [E] in Höhe ihrer Kosten."
   },
   "sneckomod:UnendingSupply": {
-    "NAME": "Unbegrenzter Nachschub",
+    "NAME": "Unbegrenzter Vorrat",
     "DESCRIPTION": "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen Klasse einer sneckomod:Fremdklasse.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen Klasse einer sneckomod:Fremdklasse."
 },
@@ -443,8 +443,8 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL sneckomod:Überschuss: Erhalte !M! Messer."
   },
   "sneckomod:SaveForLater": {
-    "NAME": "Für später aufheben",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Behalte am Ende des Zuges !M! Karten.",
+    "NAME": "Übriglassen",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Behalte am Ende des Zuges !M! Karte.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Behalte am Ende des Zuges !M! Karten."
   },
   "sneckomod:PowerShot": {
@@ -496,12 +496,12 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 expansioncontent:Panzerrüstung. NL sneckomod:Überschuss: Erhalte stattdessen !M! expansioncontent:Panzerrüstung."
   },
   "sneckomod:OtherworldlySlash": {
-    "NAME": "Außerweltlicher Hieb",
+    "NAME": "Entrückter Hieb",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn du in diesem Zug eine Karte einer sneckomod:Fremdklasse gespielt hast, füge erneut !D! Schaden zu. NL sneckomod:Geschenk: Gewöhnlich.",
     "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wenn du in diesem Zug eine Karte einer sneckomod:Fremdklasse gespielt hast, füge erneut !D! Schaden zu."
   },
   "sneckomod:BeyondArmor": {
-    "NAME": "Jenseits von Rüstung",
+    "NAME": "Jenseitige Rüstung",
     "DESCRIPTION": "Erhalte !B! Block. NL Nimm !M! zufällige Karten aus sneckomod:Fremdklassen vom Nachziehstapel auf die Hand. NL sneckomod:Geschenk: Gewöhnlich.",
     "DESCRIPTION_BATTLE": "Erhalte !B! Block. NL Nimm !M! zufällige Karten aus sneckomod:Fremdklassen vom Nachziehstapel auf die Hand."
   },
@@ -591,12 +591,12 @@
     ]
   },
   "sneckomod:AceOfWands": {
-    "NAME": "Königin der Pentagramme",
+    "NAME": "Pentagramm-Königin",
     "DESCRIPTION": "Flüchtig. NL Erhalte immer wenn du einen Debuff anwendest !M! Block. NL sneckomod:Geschenk: Debuff.",
     "UPGRADE_DESCRIPTION": "Erhalte immer wenn du einen Debuff anwendest !M! Block. NL sneckomod:Geschenk: Debuff."
   },
   "sneckomod:FlashInThePan": {
-    "NAME": "Blitz auf der Pfanne",
+    "NAME": "Instant-Blitz",
     "DESCRIPTION": "Erhalte !B! Block. NL Wirf deine Hand ab. NL Ziehe im nächsten Zug zusätzliche Karten in Höhe der abgeworfenen Karten."
   },
   "sneckomod:TrashCan": {
@@ -609,7 +609,7 @@
     "UPGRADE_DESCRIPTION": "Wende !M! sneckomod:Toxin auf ALLE Gegner an. NL Erhalte eine *Lähmende *Wolke+. NL Erschöpft."
   },
   "sneckomod:SerpentineSleuth": {
-    "NAME": "Serpentiner Detektiv",
+    "NAME": "Schlangendetektiv",
     "DESCRIPTION": "Flüchtig. NL Erhalte immer wenn du eine Macht ausspielst [E] . NL sneckomod:Geschenk: Seltene Macht.",
     "DESCRIPTION_BATTLE": "Flüchtig. NL Erhalte immer wenn du eine Macht ausspielst [E]."
   }

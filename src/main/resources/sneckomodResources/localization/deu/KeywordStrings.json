@@ -29,6 +29,7 @@
   {
     "PROPER_NAME": "Irren",
     "NAMES": [
+      "irre",
       "irren",
       "geirrt",
       "geirrte",
@@ -55,7 +56,7 @@
       "geschenk",
       "gift"
     ],
-    "DESCRIPTION": "Wenn du diese Karte in dein Deck aufnimmst, erhältst du eine zusätzliche spezifische Karte oder Kartenbelohnung."
+    "DESCRIPTION": "Wenn du diese Karte in dein Deck aufnimmst, erhältst du eine zusätzliche spezifische Kartenbelohnung."
   },
   {
     "PROPER_NAME": "Identifizieren",

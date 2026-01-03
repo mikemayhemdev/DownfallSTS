@@ -40,7 +40,7 @@
   },
   "collector:Blightning": {
     "NAME": "Fäulnisblitz",
-    "DESCRIPTION": "Wende !M! collector:Verdammnis an. NL Füge !D! Schaden zu. NL Ziehe eine Karte vom Sammlungsstapel. NL Erschöpft."
+    "DESCRIPTION": "Wende !M! collector:Verdammnis an. Füge !D! Schaden zu. NL Ziehe eine Karte vom Sammlungsstapel. NL Erschöpft."
   },
   "collector:Bonfire": {
     "NAME": "Freudenfeuer",
@@ -48,11 +48,11 @@
   },
   "collector:BrainDrain": {
     "NAME": "Braindrain",
-    "DESCRIPTION": "Der Gegner verliert !M! HP. NL Nimm sein Sammlerstück auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Der Gegner verliert !M! HP. NL Nimm sein verbessertes Sammlerstück auf die Hand. NL Erschöpft."
+    "DESCRIPTION": "Der Gegner verliert !M! HP. Nimm sein *Sammlerstück auf die Hand. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Der Gegner verliert !M! HP. NL Nimm sein verbessertes *Sammlerstück auf die Hand. NL Erschöpft."
   },
   "collector:BramblesparKindling": {
-    "NAME": "Brombeerstachel-Anzünder",
+    "NAME": "Dorniger Anzünder",
     "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, nimm einen *Brennenden *Schlag auf die Hand.",
     "UPGRADE_DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, nimm einen *Brennenden *Schlag+ auf die Hand.",
     "EXTENDED_DESCRIPTION": [
@@ -86,15 +86,15 @@
   },
   "collector:DarkLordForm": {
     "NAME": "Schattenlord Form",
-    "DESCRIPTION": "Spiele zu Beginn deines Zuges #yDu #yGehörst #yMir auf einen zufälligen Gegner.",
-    "UPGRADE_DESCRIPTION": "Spiele zu Beginn deines Zuges #yDu #yGehörst #yMir+ auf einen zufälligen Gegner."
+    "DESCRIPTION": "Spiele zu Beginn deines Zuges *Du *Gehörst *Mir auf einen zufälligen Gegner.",
+    "UPGRADE_DESCRIPTION": "Spiele zu Beginn deines Zuges *Du *Gehörst *Mir+ auf einen zufälligen Gegner."
   },
   "collector:Darkstorm": {
     "NAME": "Finsterer Sturm",
     "DESCRIPTION": "Erhalte einen *Fäulnisblitz. NL Mische !M! zusätzliche *Fäulnisblitze in den Nachziehstapel. NL Erschöpft."
   },
   "collector:DarkwoodKindling": {
-    "NAME": "Dunkelweide-Anzünder",
+    "NAME": "Finsterer Anzünder",
     "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte im nächsten Zug !M! collector:Reserve.",
     "UPGRADE_DESCRIPTION": "Unspielbar. NL Behalten. NL Wenn diese Karte *erschöpft, erhalte im nächsten Zug !M! collector:Reserve.",
     "EXTENDED_DESCRIPTION": [
@@ -106,7 +106,7 @@
     "DESCRIPTION": "Erhalte !B! Block."
   },
   "collector:DoubleTrouble": {
-    "NAME": "Doppelt Gemoppelt",
+    "NAME": "Doppelt gemoppelt",
     "DESCRIPTION": "Erhalte !B! Block. NL In diesem Zug spielst du deine nächstes *Sammlerstück zweimal aus."
   },
   "collector:DoMayhem": {
@@ -133,8 +133,8 @@
     "DESCRIPTION": "Erschöpfe alle Handkarten außer Angriffe. NL Füge !D! Schaden zu."
   },
   "collector:FeelMyPain": {
-    "NAME": "Fühle meinen Schmerz",
-    "DESCRIPTION": "Immer wenn du eine Karte #yerschöpfst verliert ein zufälliger Gegner !M! TP."
+    "NAME": "Fühl meinen Schmerz",
+    "DESCRIPTION": "Immer wenn du eine Karte *erschöpfst verliert ein zufälliger Gegner !M! TP."
   },
   "collector:FiendFire": {
     "NAME": "Teufelsfeuer",
@@ -159,7 +159,7 @@
     "DESCRIPTION": "collector:Opfergabe. NL Erhalte !B! Block. NL Nimm !M! Stück *Glut auf die Hand."
   },
   "collector:Forgery": {
-    "NAME": "Fälschungsschmiede",
+    "NAME": "Fälschen",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wähle 1 von !M! zufälligen Karten aus deinem Sammlungsstapel. Nimm eine Kopie der Karte auf die Hand.",
     "EXTENDED_DESCRIPTION": [
       "und nimm eine Kopie auf die Hand."
@@ -171,13 +171,13 @@
     "UPGRADE_DESCRIPTION": "collector:Opfergabe. NL Im nächsten Zug, erhalte !M! collector:Reserve und ziehe eine Karte."
   },
   "collector:Goodbye": {
-    "NAME": "Lebwohl",
+    "NAME": "Lebewohl",
     "DESCRIPTION": "Verdopple die collector:Verdammnis des Gegners. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Verdreifache die collector:Verdammnis des Gegners. NL Erschöpft."
   },
   "collector:GourmandsGaze": {
     "NAME": "Des Vielfraß Blick",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !B! Block wenn du in diesem Zug ein #ySammlerstück gespielt hast."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !B! Block wenn du in diesem Zug ein *Sammlerstück gespielt hast."
   },
   "collector:GreaterHurting": {
     "NAME": "Starke Kränkung",
@@ -217,7 +217,7 @@
     "DESCRIPTION": "Stiehl bis zu !M! Block des Gegners. NL Füge danach !D! Schaden zu."
   },
   "collector:InevitableDemise": {
-    "NAME": "Unvermeidbares Verhängnis",
+    "NAME": "Unvermeidbare Plage",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Verhindere die nächste Entfernung der collector:Verdammnis dieses Gegners."
   },
   "collector:InflictAgony": {
@@ -233,7 +233,7 @@
     ]
   },
   "collector:IronbarkKindling": {
-    "NAME": "Eisenrinde-Anzünder",
+    "NAME": "Eiserner Anzünder",
     "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, Erhalte !B! Block.",
     "UPGRADE_DESCRIPTION": "Unspielbar. Behalten. NL Wenn diese Karte *erschöpft, Erhalte !B! Block.",
     "EXTENDED_DESCRIPTION": [
@@ -255,7 +255,7 @@
   },
   "collector:LanternFlare": {
     "NAME": "Laternenflackern",
-    "DESCRIPTION": "collector:Opfergabe. NL Wende !M! collector:Verdammnis an. NL Der Gegner erhält immer am Ende seines Zuges !clm2! collector:Verdammnis."
+    "DESCRIPTION": "collector:Opfergabe. NL Wende !M! collector:Verdammnis an. Der Gegner erhält immer am Ende seines Zuges !clm2! collector:Verdammnis."
   },
   "collector:LuckyWick": {
     "NAME": "Glücksdocht",
@@ -275,11 +275,11 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte im nächsten Zug 1 collector:Reserve."
   },
   "collector:MysteryWeaving": {
-    "NAME": "Mystische Weberei",
+    "NAME": "Magisches Geflecht",
     "DESCRIPTION": "Erhalte !B! Block. NL Gibt für jede andere Karte auf der Hand 2 Block weniger."
   },
   "collector:OakbrimKindling": {
-    "NAME": "Eichenrand-Anzünder",
+    "NAME": "Flackernder Anzünder",
     "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, ziehe !M! Karten.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss das zum Gebrauch anzünden."
@@ -287,8 +287,8 @@
   },
   "collector:Omen": {
     "NAME": "Omen",
-    "DESCRIPTION": "Erhalte immer wenn du ein #ySammlerstück spielst 1 Stärke.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer wenn du ein #ySammlerstück spielst 1 Stärke."
+    "DESCRIPTION": "Erhalte immer wenn du ein *Sammlerstück spielst 1 Stärke.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer wenn du ein *Sammlerstück spielst 1 Stärke."
   },
   "collector:ProtectingCall": {
     "NAME": "Schützender Ruf",
@@ -304,7 +304,7 @@
     "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL Der collector:Fackelkopf erhält \"Füge ALLEN Gegnern !clm2! Schaden zu.\"."
   },
   "collector:ReceiveTribute": {
-    "NAME": "Receive Tribute",
+    "NAME": "Tribut Empfangen",
     "DESCRIPTION": "collector:Opfergabe. NL Nimm 1 von !M! Boss-Karten auf die Hand. Sie erhält Behalten. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle eine Karte, die du auf die Hand nimmst."
@@ -321,7 +321,7 @@
       "Ich muss das zum Gebrauch anzünden."
     ]
   },
-  "collector:SapStärke": {
+  "collector:SapStrength": {
     "NAME": "Todesmal",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Im nächsten Zug verliert der Gegner TP in Höhe des doppelten ungeblockten Schadens."
   },
@@ -331,11 +331,11 @@
   },
   "collector:SeedOfDoubt": {
     "NAME": "Samen des Zweifels",
-    "DESCRIPTION": "Wende !M! collector:Verdammnis an. NL Wenn diese Karte auf der Hand ist während eine Karte *erschöpft, erhöhe ihre *Verdammnis um !clm2!."
+    "DESCRIPTION": "Wende !M! collector:Verdammnis an. Wenn diese Karte auf der Hand ist während eine Karte *erschöpft, erhöhe ihre *Verdammnis um !clm2!."
   },
   "collector:ShadowDaggers": {
     "NAME": "Schattendolche",
-    "DESCRIPTION": "Füge für jedes Sammlerstück das in diesem Kampf gespielt wurde !D! Schaden zu. NL Erschöpft.",
+    "DESCRIPTION": "Füge für jedes *Sammlerstück das in diesem Kampf gespielt wurde !D! Schaden zu. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       " NL (Trifft ",
       " mal.)",
@@ -344,7 +344,7 @@
   },
   "collector:SomberShield": {
     "NAME": "Düsterer Schild",
-    "DESCRIPTION": "collector:Opfergabe. NL Erhalte !B! Block. NL Erhalte im nächsten Zug eine Kopie der *erschöpften Karte."
+    "DESCRIPTION": "collector:Opfergabe. NL Erhalte !B! Block. NL Erhalte im nächsten Zug eine Kopie der *geopferten Karte."
   },
   "collector:SoulSnare": {
     "NAME": "Seelenschlinge",
@@ -378,10 +378,10 @@
   },
   "collector:Suffering": {
     "NAME": "Leiden",
-    "DESCRIPTION": "Wende immer wenn du #ySchwach oder #yVerwundbar anwendest zusätzlich !M! collector:Verdammnis an."
+    "DESCRIPTION": "Wende immer wenn du *Schwach oder *Verwundbar anwendest zusätzlich !M! collector:Verdammnis an."
   },
   "collector:SunbloomKindling": {
-    "NAME": "Sonnenblüten-Anzünder",
+    "NAME": "Knisternder Anzünder",
     "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte !M! Stärke und nimm 2 Stück *Glut auf die Hand.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss das zum Gebrauch anzünden."
@@ -389,7 +389,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "Dornenpeitsche",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu und wende !M! hermit:Prügel auf sie an. NL Erhalte ein *Messer."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu und wende !M! hermit:Prügel auf sie an. Erhalte ein *Messer."
   },
   "collector:Torchbearer": {
     "NAME": "Fackelträger",
@@ -402,7 +402,7 @@
   },
   "collector:VoidArmor": {
     "NAME": "Rüstung der Leere",
-    "DESCRIPTION": "ALLE erhalten !B! Block und 1 bronze:Verschwommen."
+    "DESCRIPTION": "ALLE erhalten !B! Block und 1 bronze:Verschwimmen."
   },
   "collector:Wildfire": {
     "NAME": "Waldbrand",
@@ -430,12 +430,12 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Entferne allen Block des Gegners. NL Füge !D! Schaden zu."
   },
   "collector:BlueSlaverCard": {
-    "NAME": "Blauer Sklavenhändler",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Apply 1 Schwach. NL Double the enemy's Schwach."
+    "NAME": "Sklavenhändler Blau",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende 1 Schwach an. Verdopple dann das Schwach des Gegners."
   },
   "collector:BonfireSpiritsCard": {
-    "NAME": "Geister des Lagerfeuers",
-    "DESCRIPTION": "collector:Opfergabe. NL Heile !M! TP. NL Erhöhe deine Max TP um 1 falls die geopferte Karte selten war."
+    "NAME": "Lagerfeuergeister",
+    "DESCRIPTION": "collector:Opfergabe. NL Heile !M! TP. NL Erhöhe deine Max TP um 1 falls die geopferte Karte *selten war."
   },
   "collector:BookOfStabbingCard": {
     "NAME": "Buch des Stechens",
@@ -471,7 +471,7 @@
   },
   "collector:DarklingsCard": {
     "NAME": "Dunkeling",
-    "DESCRIPTION": "collector:Opfergabe. NL Füge !D! Schaden zu. expansioncontent:Exhumiere ein Sammlerstück.",
+    "DESCRIPTION": "collector:Opfergabe. NL Füge !D! Schaden zu. expansioncontent:Exhumiere ein *Sammlerstück.",
     "EXTENDED_DESCRIPTION": [
       "um2 Kopien zu erstellen."
     ]
@@ -494,7 +494,7 @@
   },
   "collector:FungiBeastCard": {
     "NAME": "Pilzbestie",
-    "DESCRIPTION": "Wende !M! Verwundbar an. NL Wende zusätzlich 1 Verwundbar auf ALLE Gegner an."
+    "DESCRIPTION": "Wende !M! Verwundbar an. Wende zusätzlich 1 Verwundbar auf ALLE Gegner an."
   },
   "collector:GiantHeadCardStageOne": {
     "NAME": "Tick",
@@ -510,15 +510,15 @@
   },
   "collector:GremlinLeaderCard": {
     "NAME": "Gremlinanführer",
-    "DESCRIPTION": "Nimm !M! zufällige Gremlin Sammlerstücke auf die Hand."
+    "DESCRIPTION": "Nimm !M! zufällige Gremlin *Sammlerstücke auf die Hand."
   },
   "collector:GremlinNobCard": {
     "NAME": "Gremlin-Aristo",
-    "DESCRIPTION": "Erhalte immer wenn du eine Fertigkeit spielst !M! Elan."
+    "DESCRIPTION": "Erhalte immer wenn du eine Fertigkeit spielst !M! *Elan."
   },
   "collector:GremlinWizardCard": {
     "NAME": "Gremlinzauberer",
-    "DESCRIPTION": "Erhalte im nächsten Zug !M! Elan und 1 collector:Reserve."
+    "DESCRIPTION": "Erhalte im nächsten Zug !M! *Elan und 1 collector:Reserve."
   },
   "collector:JawWormCard": {
     "NAME": "Kieferwurm",
@@ -538,7 +538,7 @@
   },
   "collector:LouseCard": {
     "NAME": "Laus",
-    "DESCRIPTION": "Erhalte 1 bronze:Verschwommen. NL Erhalte das nächste Mal, wenn du ungeblockten Angriffsschaden erleidest, !B! Block."
+    "DESCRIPTION": "Erhalte 1 bronze:Verschwimmen. NL Erhalte das nächste Mal, wenn du ungeblockten Angriffsschaden erleidest, !B! Block."
   },
   "collector:MadGremlinCard": {
     "NAME": "Wütender Gremlin",
@@ -582,7 +582,7 @@
     "DESCRIPTION": "Erhalte am Ende des Kampfes eine zusätzliche Kartenbelohnung und einen zusätzlichen Trank."
   },
   "collector:RedSlaverCard": {
-    "NAME": "Roter Sklavenhändler",
+    "NAME": "Sklavenhändler Rot",
     "DESCRIPTION": "Der Gegner verliert in diese Zug !M! Stärke."
   },
   "collector:ReptomancerCard": {
@@ -627,7 +627,7 @@
   },
   "collector:SphericGuardianCard": {
     "NAME": "Sphärischer Wächter",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:Verschwommen."
+    "DESCRIPTION": "Erhalte !M! expansioncontent:Verschwimmen."
   },
   "collector:SpikerCard": {
     "NAME": "Stachler",
@@ -661,7 +661,7 @@
     "NAME": "Räuber",
     "DESCRIPTION": "Nimm !M! weniger Angriffsschaden in diesem Zug."
   },
-  "collector:FackelkopfCard": {
+  "collector:TorchHeadCard": {
     "NAME": "Fackelkopf",
     "DESCRIPTION": "Nimm einen zufälligen Fackelkopf-Ruf auf die Hand. NL Er kostet in diesem Zug 0."
   },
@@ -683,7 +683,7 @@
   },
   "collector:DefaultCollectibleCard": {
     "NAME": "Seelenlose Hülle",
-    "DESCRIPTION": "Dieser Gegner hat noch kein eigenes Sammlerstück! NL Erhalte !M! Stärke and Geschicklichkeit."
+    "DESCRIPTION": "Dieser Gegner hat noch kein eigenes *Sammlerstück! NL Erhalte !M! Stärke and Geschicklichkeit."
   },
   "collector:ShootingStar": {
     "NAME": "Sternschnuppe",
