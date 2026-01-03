@@ -70,17 +70,18 @@ public class ConjureAction extends AbstractGameAction {
 
     @Override
     public void update() {
-        if (AbstractDungeon.player.hasPower(IntensifyDebuffPower.POWER_ID)) {
+        if (AbstractDungeon.player.hasPower(IntensifyDebuffPower.POWER_ID) && permaAdd == 0) {
             AbstractDungeon.player.getPower(IntensifyDebuffPower.POWER_ID).flash();
             this.isDone = true;
             return;
         }
-        if (AbstractDungeon.player.hasPower("No Draw")) {
+        if (AbstractDungeon.player.hasPower("No Draw") && permaAdd == 0) {
             AbstractDungeon.player.getPower("No Draw").flash();
             this.isDone = true;
             return;
         }
-        conjuresThisCombat += 1;
+        if (permaAdd == 0)
+            conjuresThisCombat += 1;
         isDone = true;
         conjuredCards.clear();
         addToTop(new AbstractGameAction() {
