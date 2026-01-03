@@ -54,10 +54,6 @@ public class Haunted extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        if (this.dontTriggerOnUseCard) {
-            this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
-        }
-
     }
 
 //    public void triggerOnEndOfTurnForPlayingCard() {
@@ -92,8 +88,6 @@ public class Haunted extends CustomCard {
         flash(Color.PURPLE.cpy());
         this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
     }
-
-
 
 
     public AbstractCard makeCopy() {
