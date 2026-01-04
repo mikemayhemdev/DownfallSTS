@@ -88,7 +88,7 @@
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu und wende !burny! hexamod:Seelenfeuer auf sie an."
   },
   "hexamod:FlamesFromBeyond": {
-    "NAME": "Flamme des Jenseits",
+    "NAME": "Jenseitsflamme",
     "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Wende[] !burny! [#e087a4]Seelenfeuer[] [#e087a4]auf[] [#e087a4]ALLE[] [#e087a4]Gegner[] [#e087a4]an[] - zweimal."
   },
   "hexamod:BadOmen": {
@@ -127,7 +127,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die vorherige, dann die aktuelle, und danach die nächste Geisterflamme."
   },
   "hexamod:WhisperFromBeyond": {
-    "NAME": "Geflüster des Jenseits",
+    "NAME": "Flüstern des Jenseits",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn eine Karte in diesem Zug erschöpft wird, wende !burny! hexamod:Seelenfeuer auf den Gegner an."
   },
   "hexamod:InstantInferno": {
@@ -172,7 +172,7 @@
     ]
   },
   "hexamod:GiftsFromBeyond": {
-    "NAME": "Geschenk der Toten",
+    "NAME": "Gabe der Toten",
     "DESCRIPTION": "Nimm zu Beginn des Zuges !M! zufällige hexamod:Reinkarnation Karte auf die Hand.",
     "EXTENDED_DESCRIPTION": [
       "Diese Geister sind zu mächtig um sie direkt zu rufen."
@@ -389,7 +389,7 @@
     "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte für diesen Zug temporär !M! hexamod:Intensität, Stärke, und Geschicklichkeit."
   },
   "hexamod:UnleashSpirits": {
-    "NAME": "Geister Befreien",
+    "NAME": "Geister befreien",
     "DESCRIPTION": "Füge einem zufälligen Gegner !D! Schaden zu. NL Wiederhole das für jede Karte die im letzten Zug *erschöpft wurde.",
     "UPGRADE_DESCRIPTION": " NL (Trifft !M! Mal.)"
   },
@@ -442,7 +442,7 @@
     ]
   },
   "hexamod:LingeringShades": {
-    "NAME": "Verweilende Schatten",
+    "NAME": "Weilende Schatten",
     "DESCRIPTION": "Bewege dich hexamod:rückwärts. NL Wende !burny! hexamod:Seelenfeuer an. Nimm alle flüchtigen Karten im Abwurfstapel auf die Hand."
   },
   "hexamod:EtherStep": {

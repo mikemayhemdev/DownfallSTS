@@ -59,7 +59,7 @@
     "DESCRIPTION": "Behalten. NL Erhalte !M! Stärke."
   },
   "awakened:TalonRake": {
-    "NAME": "Krallenkratzen",
+    "NAME": "Krallenkratzer",
     "DESCRIPTION": "Füge zweimal !D! Schaden zu. NL awakened:Aufrufen."
   },
   "awakened:Hymn": {
@@ -162,7 +162,7 @@
     "DESCRIPTION": "Erhalte !M! *Zeremonie Karten. NL Erschöpft."
   },
   "awakened:BirdsEye": {
-    "NAME": "Adlerauge",
+    "NAME": "Foglauge",
     "DESCRIPTION": "awakened:Rufe einen *Zauberspruch deiner Wahl *auf.",
     "UPGRADE_DESCRIPTION": "Fülle dein Zauberbuch neu auf und awakened:Rufe danach einen *Zauberspruch deiner Wahl *auf."
   },
@@ -253,7 +253,7 @@
     "DESCRIPTION": "ALL Gegner verlieren in diesem Zug !M! Stärke. Verliere im nächsten Zug [E] . NL Erschöpft."
   },
   "awakened:SingularityShield": {
-    "NAME": "Singularity Shield",
+    "NAME": "Singularitätsschild",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte im nächsten Zug !B! Block und verliere [E] ."
   },
   "awakened:Dejection": {
@@ -273,7 +273,7 @@
     "DESCRIPTION": "Ziehe !M! Karten. NL awakened:Aufrufen."
   },
   "awakened:ProfaneStrike": {
-    "NAME": "Profaner Schlag",
+    "NAME": "Dunkler Schlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Lege eine Handkarte auf den Nachziehstapel."
   },
   "awakened:Victuals": {
@@ -306,7 +306,7 @@
     ]
   },
   "awakened:Caw": {
-    "NAME": "Krächz",
+    "NAME": "Krächz!",
     "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: Alle *Krächz Karten fügen diesen Kampf !M! Schaden mehr zu."
   },
   "awakened:Scour": {

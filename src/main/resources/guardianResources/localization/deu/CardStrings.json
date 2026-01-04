@@ -94,7 +94,7 @@
     "UPGRADE_DESCRIPTION": "Verringere deine Debuffs um !M!. NL guardianmod:Abhärten 8."
   },
   "Guardian:FloatingOrbs": {
-    "NAME": "Schwebekugeln",
+    "NAME": "Schwebende Orbs",
     "DESCRIPTION": "Immer wenn du eine Karte ausspielst die 0 kostet, füge einem zufälligen Gegner !M! Schaden zu."
   },
   "Guardian:OrbSlam": {
@@ -139,7 +139,7 @@
     "UPGRADE_DESCRIPTION": "Wende !M! Schwach an. NL guardianmod:Abhärten 2. NL Lege einen *Wache-Strahl+ in guardianmod:Stasis. NL Erschöpft."
   },
   "Guardian:CompilePackage": {
-    "NAME": "Paket Kompilieren",
+    "NAME": "Paket kompilieren",
     "DESCRIPTION": "Lege ein *Paket in guardianmod:Stasis. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Lege ein verbessertes *Paket in guardianmod:Stasis. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
@@ -158,8 +158,8 @@
   },
   "Guardian:PackageSphere": {
     "NAME": "Paket: Sphärisch",
-    "DESCRIPTION": "Erhalte *Sphärischer *Schild, *Schwebekugeln, und *Erhärten. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte *Sphärischer *Schild+, *Schwebekugeln+, und *Erhärten+. NL Erschöpft."
+    "DESCRIPTION": "Erhalte *Sphärischer *Schild, *Schwebende *Orbs, und *Erhärten. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte *Sphärischer *Schild+, *Schwebende *Orbs+, und *Erhärten+. NL Erschöpft."
   },
   "Guardian:PackageSentry": {
     "NAME": "Paket: Wache",
@@ -178,8 +178,8 @@
   },
   "Guardian:PackageDefect": {
     "NAME": "Paket: Defekt",
-    "DESCRIPTION": "Erhalte *Umsteuern, *Vorprogrammieren, und *Zeitkapazität. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte *Umsteuern+, *Vorprogrammieren+, und *Zeitkapazität+. NL Erschöpft."
+    "DESCRIPTION": "Erhalte *Umsteuern, *Vorprogrammiert, und *Zeitkapazität. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte *Umsteuern+, *Vorprogrammiert+, und *Zeitkapazität+. NL Erschöpft."
   },
   "Guardian:Planning": {
     "NAME": "Vorratsschild",
@@ -200,7 +200,7 @@
     "UPGRADE_DESCRIPTION": "Wähle eine Karte. NL Lege eine Kopie dieser Karte in guardianmod:Stasis. NL guardianmod:Beschleunige. NL Erschöpft."
   },
   "Guardian:Preprogram": {
-    "NAME": "Vorprogrammieren",
+    "NAME": "Vorprogrammiert",
     "DESCRIPTION": "Sieh dir die obersten !M! Karten des Nachziehstapels an. Lege eine davon in guardianmod:Stasis."
   },
   "Guardian:GemFinder": {

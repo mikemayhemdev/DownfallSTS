@@ -42,7 +42,7 @@
     "DESCRIPTION": "Wirf eine Karte ab. NL Erhalte !B! Block. NL Wurde eine Karte abgeworfen die kein Angriff ist, erhalte nochmal !B! Block."
   },
   "hermit:Snipe": {
-    "NAME": "Gezielter Schuss",
+    "NAME": "Zielen",
     "DESCRIPTION": "Dein in diesem Zug nächster ausgelöster hermit:Volltreffer Effekt wird zweimal ausgeführt. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "hermit:Konzentriere dich. NL Dein in diesem Zug nächster ausgelöster hermit:Volltreffer Effekt wird zweimal ausgeführt. NL Erschöpft."
   },
@@ -198,7 +198,7 @@
     "DESCRIPTION": "Immer wenn du ein hermit:Volltreffer erzielst, fügt dein nächster Angriff !M! mehr Schaden zu."
   },
   "hermit:OverwhelmingPower": {
-    "NAME": "Überwältigende Macht",
+    "NAME": "Ausufernde Macht",
     "DESCRIPTION": "Erhalte [E] [E] [E]. NL Ziehe !hermit:SecondMagic! Karten. NL Immer wenn du dein Zug mit 0 Energie beendest, verliere !M! TP."
   },
   "hermit:Maintenance": {
@@ -314,8 +314,8 @@
     "EXTENDED_DESCRIPTION": [" NL (Du hast !M! Flüche.)"]
   },
   "hermit:HeroicBravado": {
-    "NAME": "Heldenhafte Tapferkeit",
-    "DESCRIPTION": "Flüchtig. NL Erhalte 1 hermit:Robust. NL Erhöhe die Kosten dieser Karte um 1."
+    "NAME": "Tollkühner Auftritt",
+    "DESCRIPTION": "Flüchtig. NL Erhalte 1 hermit:Robust. NL Erhöhe die Kosten dieser Karte um !M!."
   },
   "hermit:FromBeyond": {
     "NAME": "Aus dem Jenseits",

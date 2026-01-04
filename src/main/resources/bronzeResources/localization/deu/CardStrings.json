@@ -17,7 +17,7 @@
     ]
   },
   "bronze:Assembly": {
-    "NAME": "Programmumwandlung",
+    "NAME": "Zusammensetzen",
     "DESCRIPTION": "Spähe !M!. NL bronze:Kodiere alle abgeworfenen Karten mit *Kodieren in der gewählten Reihenfolge. NL Erschöpft."
   },
   "bronze:Backtrace": {
@@ -53,9 +53,9 @@
     "NAME": "Verzweigung",
     "DESCRIPTION": "Füge !D! Schaden zu oder erhalte !B! Block. NL Die nicht gewählte Option wird bronze:kodiert. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
-      "Verzweigung: Angriff",
+      "Zweig: Angriff",
       "Füge !D! Schaden zu.",
-      "Verzweigung: Abwehr",
+      "Zweig: Abwehr",
       "Erhalte !B! Block."
     ]
   },
@@ -149,7 +149,7 @@
     "UPGRADE_DESCRIPTION": "Behalten. NL In diesem Zug spielst du deine nächste Funktion zweimal aus."
   },
   "bronze:CutThrough": {
-    "NAME": "Durchschneiten",
+    "NAME": "Durchschneiden",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Spähe !M!. NL bronze:Kompilierung - Ziehe !bauto! Karte.",
     "EXTENDED_DESCRIPTION": [
       "schnittiges",
@@ -295,7 +295,7 @@
     "DESCRIPTION": "Die nächste Funktion die du kompilierst wird deinem Deck hinzugefügt. Die *kodierten Karten werden aus dem Deck entfernt."
   },
   "bronze:HardenedForm": {
-    "NAME": "Orb Beschwören",
+    "NAME": "Orb beschwören",
     "DESCRIPTION": "Immer wenn du eine Funktion spielst oder kompilierst, erhalte !M! Block und füge einem zufälligen Gegner !M! Schaden zu."
   },
   "bronze:HyperBeam": {
@@ -443,8 +443,8 @@
   },
   "bronze:Shell": {
     "NAME": "Blockchain",
-    "DESCRIPTION": "Erhalte !M! bronze:Verschwommen.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! bronze:Verschwommen. NL bronze:Kompilierung - Erhalte !M! bronze:Verschwommen.",
+    "DESCRIPTION": "Erhalte !M! bronze:Verschwimmen.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! bronze:Verschwimmen. NL bronze:Kompilierung - Erhalte !M! bronze:Verschwimmen.",
     "EXTENDED_DESCRIPTION": [
       "reihendes",
       "Muster"
@@ -550,7 +550,7 @@
     "UPGRADE_DESCRIPTION": "Kompiliere die derzeit kodierten Karten zu einer Funktion."
   },
   "bronze:BranchBlock": {
-    "NAME": "Verzweigung: Abwehr",
+    "NAME": "Zweig: Abwehr",
     "DESCRIPTION": "Erhalte !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "verzweigtes",
@@ -558,7 +558,7 @@
     ]
   },
   "bronze:BranchHit": {
-    "NAME": "Verzweigung: Angriff",
+    "NAME": "Zweig: Angriff",
     "DESCRIPTION": "Füge !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "verzweigtes",

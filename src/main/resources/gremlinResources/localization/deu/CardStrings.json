@@ -116,7 +116,7 @@
   },
 
   "Gremlin:Erupt": {
-    "NAME": "Kragen platzen",
+    "NAME": "Wutausbruch",
     "DESCRIPTION": "Erhalte !M! temporäre Stärke. NL Erschöpft."
   },
 
@@ -232,7 +232,7 @@
   },
 
   "Gremlin:InfiniteBlocks": {
-    "NAME": "Unbegrenzter Schutz",
+    "NAME": "Unendlicher Schutz",
     "DESCRIPTION": "Nimm immer zu Beginn deines Zuges einen *Schutz in die Hand.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Nimm immer zu Beginn deines Zuges einen *Schutz in die Hand."
   },
@@ -339,7 +339,7 @@
   },
 
   "Gremlin:Pretaliation": {
-    "NAME": "Pretaliation",
+    "NAME": "Eilangriff",
     "DESCRIPTION": "Füge zweimal !D! Schaden zu. NL Der Gegner greift dich mit !M! Schaden an."
   },
 
@@ -349,7 +349,7 @@
   },
 
   "Gremlin:RageBreak": {
-    "NAME": "Aus der Haut fahren",
+    "NAME": "An die Decke gehen",
     "DESCRIPTION": "Verdopple deine Stärke. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Verdopple deine Stärke. NL Erschöpft."
   },
@@ -463,7 +463,7 @@
   },
 
   "Gremlin:TargetWeakness": {
-    "NAME": "Wunden Treffen",
+    "NAME": "Wunden treffen",
     "DESCRIPTION": "Gegner mit Schwach erleiden !M! zusätzlichen Schaden."
   },
 
@@ -499,7 +499,7 @@
     "UPGRADE_DESCRIPTION": "Erhalte !M! gremlin:Esprit. Nimm im nächsten Zug einen *Ultimativen *Stoß+ auf die Hand."
   },
 
-  "gremlin:Wizardry": {
+  "Gremlin:Wizardry": {
     "NAME": "Zauberei",
     "DESCRIPTION": "Erhalte zu Beginn jedes Zuges !M! gremlin:Esprit.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte zu Beginn jedes Zuges !M! gremlin:Esprit."

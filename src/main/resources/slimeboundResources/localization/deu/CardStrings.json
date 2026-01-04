@@ -8,7 +8,7 @@
     "DESCRIPTION": "Deine *Tackle Karten fügen Gegnern !M! und dir 1 mehr Schaden zu."
   },
   "Slimebound:CheckThePlaybook": {
-    "NAME": "Buch befragen",
+    "NAME": "Tackletaktik",
     "DESCRIPTION": "Erhalte 3 zufällige *Tackle Karten. Sie kosten in diesem Kampf 1 weniger. NL Erschöpft."
   },
   "Slimebound:Chomp": {
@@ -25,12 +25,12 @@
     "DESCRIPTION": "Wende !slime! slimeboundmod:Glibber an."
   },
   "Slimebound:Darklings": {
-    "NAME": "Dunkellingduo",
+    "NAME": "Dunkelingduo",
     "DESCRIPTION": "slimeboundmod:Spalte !M! slimeboundmod:Dunkelschleime ab. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Dunkellingtrio"
+    "UPGRADE_DESCRIPTION": "Dunkelingtrio"
   },
   "Slimebound:Defend_Slimebound": {
-    "NAME": "Defend",
+    "NAME": "Verteidigen",
     "DESCRIPTION": "Erhalte !B! Block."
   },
   "Slimebound:DisruptingSlam": {
@@ -126,12 +126,12 @@
     "UPGRADE_DESCRIPTION": "Die ersten !M! gespielten Karten des Zuges, die auf Gegener abzielen, lösen slimeboundmod:Kommando aus."
   },
   "Slimebound:LeechEnergy": {
-    "NAME": "Energie Absaugen",
+    "NAME": "Energie absaugen",
     "DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte [E] und Ziehe !M! Karte.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte [E] und Ziehe !M! Karten."
   },
   "Slimebound:LeechLife": {
-    "NAME": "Leben Aussaugen",
+    "NAME": "Leben aussaugen",
     "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. Heile TP in Höhe des ungeblockten Schadens. NL Erschöpft."
   },
   "Slimebound:LeechingTouch": {
@@ -153,11 +153,11 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Immer wenn dich in diesem Zug ein Gegner angreift, wende !slime! slimeboundmod:Glibber auf ihn an."
   },
   "Slimebound:MassFeed": {
-    "NAME": "Massenverschlingen",
+    "NAME": "Massenschlingen",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Wenn tödlich, wehöhe deine Max TP um !M!. NL Erschöpft."
   },
   "Slimebound:MassRepurpose": {
-    "NAME": "Massenumwandlung",
+    "NAME": "Massenwandlung",
     "DESCRIPTION": "slimeboundmod:Absorbiere alle Schleime. Spalte für jeden auf diese Weise *absorbierten Schleim einen slimeboundmod:Spezialisten ab. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Absorbiere alle Schleime. Spalte für jeden auf diese Weise *absorbierten Schleim einen slimeboundmod:Spezialisten ab. slimeboundmod:Kommandiere sie. NL Erschöpft."
   },
@@ -220,7 +220,7 @@
     "UPGRADE_DESCRIPTION": "Wende !M! Mal auf einen zufälligen Gegner !slime! slimeboundmod:Glibber an."
   },
   "Slimebound:RallyTheTroops": {
-    "NAME": "Truppe mobilisieren",
+    "NAME": "Truppe motivieren",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächsten !M! gespielten Karten in diesem Zug slimeboundmod:Kommandieren."
   },
   "Slimebound:Recollect": {
@@ -316,35 +316,35 @@
     "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Guerillaschleim ab. NL slimeboundmod:Kommando."
   },
   "Slimebound:SplitAcid": {
-    "NAME": "Guerilla Abspalten",
+    "NAME": "Guerillaschleim",
     "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Guerillaschleim ab. NL slimeboundmod:Kommando !M! Mal.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Guerillaschleim ab. NL slimeboundmod:Kommando drei Mal."
   },
   "Slimebound:SplitBruiser": {
-    "NAME": "Raufbold Abspalten",
+    "NAME": "Raufboldschleim",
     "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Raufboldschleim ab. NL slimeboundmod:Kommando !M! Mal.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Raufboldschleim ab. NL slimeboundmod:Kommando drei Mal."
   },
   "Slimebound:SplitGreed": {
-    "NAME": "Gierschleim Beschwören",
+    "NAME": "Gierschleim",
     "DESCRIPTION": "Behalten. NL Beschwöre den Gierschleim. Zählt als slimeboundmod:Abspaltung. NL Erschöpft."
   },
   "Slimebound:SplitLeeching": {
-    "NAME": "Schützer Abspalten",
+    "NAME": "Beschützerschleim",
     "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Beschützerschleim ab. NL slimeboundmod:Kommando !M! Mal.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Beschützerschleim ab. NL slimeboundmod:Kommando drei Mal."
   },
   "Slimebound:SplitMire": {
-    "NAME": "Schlamm Abspalten",
+    "NAME": "Schlammschleim",
     "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Schlammschleim ab. NL slimeboundmod:Kommando !M! Mal.",
     "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Schlammschleim ab. NL slimeboundmod:Kommando drei Mal."
   },
   "Slimebound:SplitScrap": {
-    "NAME": "Schrottschleim Beschwören",
+    "NAME": "Schrottschleim",
     "DESCRIPTION": "Behalten. NL Beschwöre den Schrottschleim. Zählt als slimeboundmod:Abspaltung. NL Erschöpft."
   },
   "Slimebound:SplitSpecialist": {
-    "NAME": "Spezialist Abspalten",
+    "NAME": "Spezialschleim",
     "DESCRIPTION": "Wähle 1 von 3 slimeboundmod:Spezialisten den du slimeboundmod:abspaltest. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Wähle 1 von 3 slimeboundmod:Spezialisten den du slimeboundmod:abspaltest. NL slimeboundmod:Kommando. NL Erschöpft."
   },
@@ -357,7 +357,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden."
   },
   "Slimebound:TagTeam": {
-    "NAME": "Pampe Hacken",
+    "NAME": "Pampe hacken",
     "DESCRIPTION": "Füge !D! Schaden zu. NL slimeboundmod:Spalte einen zufälligen Schleim ab. NL slimeboundmod:Kommando !M! Mal.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL slimeboundmod:Spalte einen zufälligen slimeboundmod:Spezialisten ab. NL slimeboundmod:Kommando !M! Mal."
   },
