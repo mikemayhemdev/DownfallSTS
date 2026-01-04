@@ -41,7 +41,7 @@ public class FlareShot extends AbstractAwakenedCard {
         int times = checkChantEffectBonus();
 
         for (int i = 0; i < times; i++) {
-            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, magicNumber * times), 1));
+            this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DrawCardNextTurnPower(AbstractDungeon.player, magicNumber), 1));
 
         }
 

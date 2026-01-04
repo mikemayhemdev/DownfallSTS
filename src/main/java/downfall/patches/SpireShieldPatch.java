@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.RollMoveAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.ending.SpireShield;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import gremlin.characters.GremlinCharacter;
 import guardian.characters.GuardianCharacter;
 import slimebound.characters.SlimeboundCharacter;
 import slimebound.powers.PotencyPower;
@@ -21,7 +22,7 @@ import theHexaghost.powers.EnhancePower;
 public class SpireShieldPatch {
     @SpireInsertPatch(rloc=8)
     public static SpireReturn<Void> Insert(SpireShield __instance) {
-        if ((AbstractDungeon.player instanceof SlimeboundCharacter || AbstractDungeon.player instanceof TheHexaghost || AbstractDungeon.player instanceof TheSnecko || AbstractDungeon.player instanceof GuardianCharacter)) {
+        if ((AbstractDungeon.player instanceof SlimeboundCharacter || AbstractDungeon.player instanceof TheHexaghost || AbstractDungeon.player instanceof TheSnecko || AbstractDungeon.player instanceof GuardianCharacter || AbstractDungeon.player instanceof GremlinCharacter)) {
 
             if (AbstractDungeon.player instanceof SlimeboundCharacter && !AbstractDungeon.player.orbs.isEmpty()) {
                 if (AbstractDungeon.aiRng.randomBoolean()) {
@@ -39,7 +40,7 @@ public class SpireShieldPatch {
                 }
             }
 
-            if (AbstractDungeon.player instanceof TheSnecko || AbstractDungeon.player instanceof GuardianCharacter) {
+            if (AbstractDungeon.player instanceof TheSnecko || AbstractDungeon.player instanceof GuardianCharacter || AbstractDungeon.player instanceof GremlinCharacter) {
                 AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, __instance, new StrengthPower(AbstractDungeon.player, -1)));
             }
 

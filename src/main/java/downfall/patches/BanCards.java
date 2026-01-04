@@ -77,7 +77,7 @@ public class BanCards {
                         }
                         AbstractCard r = q.makeCopy();
                         AbstractDungeon.colorlessCardPool.group.add(r);
-                        AbstractDungeon.srcColorlessCardPool.group.add(r);
+                        //AbstractDungeon.srcColorlessCardPool.group.add(r);
                     }
                 }
             }
