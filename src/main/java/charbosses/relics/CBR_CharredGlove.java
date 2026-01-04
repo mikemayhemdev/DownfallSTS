@@ -17,9 +17,8 @@ public class CBR_CharredGlove extends AbstractCharbossRelic {
         setTextureOutline(CharredGlove.IMG, CharredGlove.OUTLINE);
     }
 
-    @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0] + 3 + this.DESCRIPTIONS[1];
     }
 
     @Override

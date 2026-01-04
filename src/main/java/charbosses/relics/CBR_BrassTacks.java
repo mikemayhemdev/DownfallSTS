@@ -16,9 +16,8 @@ public class CBR_BrassTacks extends AbstractCharbossRelic {
     }
 
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0] + 2 + this.DESCRIPTIONS[1];
     }
-
 
     public void atBattleStart() {
         this.flash();
