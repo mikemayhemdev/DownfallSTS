@@ -1,13 +1,143 @@
 {
   "HermitMod:HermitTutorials": {
     "TEXT": [
-      "Der Einsiedler besitzt Karten die einen #yVolltreffer erzielen können. NL NL Ein #Volltreffer wird erzielt, wenn diese Karten aus der Mitte deiner Hand gespielt sind.",
-      "In ebenen Händen zählen #ybeide mittlere Karten, auch wenn es die einzigen Karten in deiner Hand sind."
+      "Der Einsiedler besitzt Karten die einen #yVolltreffer erzielen können. NL NL Ein #Volltreffer wird erzielt, wenn diese Karten aus der Mitte deiner Hand gespielt werden.",
+      "Bei einer geraden Anzahl an Handkarten gibt es #yzwei mittlere Karten, auch wenn es die einzigen Karten in deiner Hand sind."
     ],
     "LABEL": [
-      "Nächstes",
+      "Weiter",
       "Verstanden",
       "Volltreffer",
+      "(Seite: ",
+      ")"
+    ]
+  },
+  "HermitMod:GuardianTutorials": {
+    "TEXT": [
+      "Der Wächter kann sich in den Defensivmodus einrollen nachdem er sich genug abgehärtet, oder TP verloren hat.",
+      "Er kann auch Juwelen in bestimmte Karten einsetzen, um sie zu verstärken."
+    ],
+    "LABEL": [
+      "Weiter",
+      "Verstanden",
+      "Der Wächter",
+      "(Seite: ",
+      ")"
+    ]
+  },
+  "HermitMod:HexaghostTutorials": {
+    "TEXT": [
+      "Der Hexageist durch das Entzünden seiner Geisterflammen Kräfte freisetzen.",
+      "Die aktuelle Geisterflamme wird durch bestimmte Aktionen entzündet."
+    ],
+    "LABEL": [
+      "Weiter",
+      "Verstanden",
+      "Der Hexageist",
+      "(Seite: ",
+      ")"
+    ]
+  },
+  "HermitMod:CharbossTutorials": {
+    "TEXT": [
+      "Die gegnerischen Helden haben besondere Fähigkeiten, die einen Strategiewechsel erforderlich machen können.",
+      "Achte also auf die Buffs der Helden bevor du etwas Unüberlegtes tust."
+    ],
+    "LABEL": [
+      "Weiter",
+      "Verstanden",
+      "Spire Slayer",
+      "(Seite: ",
+      ")"
+    ]
+  },
+  "HermitMod:ChampTutorials": {
+    "TEXT": [
+      "Der Champ kann zwei Haltungen im Kampf annehmen: Offensiv und Defensiv. Das Ausspielen einer Fertigkeit während einer Haltung aktiviert den jeweiligen Bonus der Haltung, was bis zu drei Mal möglich ist.",
+      "Während einer Haltung können Abschlusskarten gespielt werden, welche den Abschlussbonus der Haltung aktivieren, jedoch zum Verlassen der Haltung führen."
+    ],
+    "LABEL": [
+      "Weiter",
+      "Verstanden",
+      "Der Champ",
+      "(Seite: ",
+      ")"
+    ]
+  },
+  "HermitMod:AutomatonTutorials": {
+    "TEXT": [
+      "Das Automaton kann Karten Kodieren. Drei Kodierte Karten werden dabei zu einer Funktions-Karte kombiniert",
+      "Manche Karten haben einen Effekt beim Kompilieren. Diese Effekte werden aktiviert, wenn diese Karte Teil einer gerade entstandenen Funktion ist. Negative Effekte werden als Kompilierungsfehler bezeichnet."
+    ],
+    "LABEL": [
+      "Weiter",
+      "Verstanden",
+      "Das Automaton",
+      "(Seite: ",
+      ")"
+    ]
+  },
+  "HermitMod:SneckoTutorials": {
+    "TEXT": [
+      "Snecko kann Karten irren um ihre Kosten für den Zug auf einen Zufallswert zwischen 0 and 3 zu verändern. Durch das Irren werden die Kosten immer verändert - die Kosten welche die Karte vor dem Irren hatte ist vom Ergebnis ausgeschlossen.",
+      "Snecko kann auch Geschenkkarten finden. Diese Karten geben Snecko eine weitere Karte eines anderen Charakters."
+    ],
+    "LABEL": [
+      "Weiter",
+      "Verstanden",
+      "Snecko",
+      "(Seite: ",
+      ")"
+    ]
+  },
+  "HermitMod:GremlinsTutorials": {
+    "TEXT": [
+      "Die Gremlins sind zu fünft - alle haben ihre eigenen TP und Besonderheiten.",
+      "Der aktive Gremlin kann ausgewechselt werden. Ein Wechsel kann zum Beispiel durch das Ausspielen bestimmter Karten erfolgen."
+    ],
+    "LABEL": [
+      "Weiter",
+      "Verstanden",
+      "Die Gremlins",
+      "(Seite: ",
+      ")"
+    ]
+  },
+  "HermitMod:SlimeBossTutorials": {
+    "TEXT": [
+      "Der Schleimboss kann Gegner mit Glibber besprühen. Dadurch erleiden sie durch den nächsten Angriff mehr Schaden. Der Glibber wird durch den Angriff entfernt, und etwaige Konsum-Effekte aktiviert.",
+      "Er kann auch kleinere Schleimwesen von sich abspalten, die am Anfang des Zuges und auf Kommando angreifen."
+    ],
+    "LABEL": [
+      "Weiter",
+      "Verstanden",
+      "Der Schleimboss",
+      "(Seite: ",
+      ")"
+    ]
+  },
+  "HermitMod:CollectorTutorials": {
+    "TEXT": [
+      "Die Sammlerin erntet die Essenz getöteter Feinde. Mit Essenz können ihre Geister in die Sammlung aufgenommen werden.",
+      "Die Sammlung ist ein eigenständiges Deck. In jedem Zug wird eine Karte von der Sammlung gezogen, sofern noch eine übrig ist."
+    ],
+    "LABEL": [
+      "Weiter",
+      "Verstanden",
+      "Die Sammlerin",
+      "(Seite: ",
+      ")"
+    ]
+  },
+  "HermitMod:AwakenedOneTutorials": {
+    "TEXT": [
+      "Der Erweckte verfügt über eine Sammlung starker Zauberkarten in seinem Zauberbuch.",
+      "Wird eine Karte mit Aufruf gespielt, dann wird die nächste Karte vom Zauberbuch gezogen. Wenn das Zauberbuch leer ist werden die Zauberkarten wieder aufgefüllt."
+    ],
+    "LABEL": [
+      "Weiter",
+      "Verstanden",
+      "Der Erweckte",
       "(Seite: ",
       ")"
     ]

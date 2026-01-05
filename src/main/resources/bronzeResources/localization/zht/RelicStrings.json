@@ -10,14 +10,16 @@
     "NAME": "護目鏡",
     "FLAVOR": "仔細觀察。",
     "DESCRIPTIONS": [
-      "回合結束時若 #ybronze:佇列 為空，獲得 #b4 點 #y格擋 。"
+      "回合結束時若 #ybronze:佇列 為空，獲得 #b",
+      " 點 #y格擋 。"
     ]
   },
   "bronze:DecasWashers": {
     "NAME": "八體墊片",
     "FLAVOR": "真不知道八體為何收藏這些。",
     "DESCRIPTIONS": [
-      "每場戰鬥的前 #b3 個回合，額外抽 #b1 張牌。"
+      "每場戰鬥的前 #b",
+      " 個回合，額外抽 #b1 張牌。"
     ]
   },
   "bronze:Timepiece": {
@@ -67,7 +69,8 @@
     "FLAVOR": "更新日誌: 提升用戶體驗。",
     "DESCRIPTIONS": [
       "替換 ",
-      " 。 NL 每場戰鬥 #ybronze:編譯 的前 #b3 張 #ybronze:方法 首次耗能為 #b0 。"
+      " 。 NL 每場戰鬥 #ybronze:編譯 的前 #b",
+      " 張 #ybronze:方法 首次耗能為 #b0 。"
     ]
   },
   "bronze:BottledCode": {

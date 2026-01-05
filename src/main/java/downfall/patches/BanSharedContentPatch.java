@@ -6,6 +6,7 @@ import automaton.relics.BronzeIdol;
 import automaton.relics.DecasWashers;
 import automaton.relics.DonusWashers;
 import awakenedOne.AwakenedOneChar;
+import awakenedOne.potions.CultistsDelight;
 import awakenedOne.relics.*;
 import champ.ChampChar;
 import champ.potions.CounterstrikePotion;
@@ -57,11 +58,6 @@ import java.util.List;
 import java.util.Map;
 
 public class BanSharedContentPatch {
-    private static Map<AbstractPlayer.PlayerClass, List<String>> runLockedPotions = new HashMap<>();
-
-    public static void registerRunLockedPotion(AbstractPlayer.PlayerClass playerClass, String potionId) {
-        runLockedPotions.computeIfAbsent(playerClass, _ignore -> new ArrayList<>()).add(potionId);
-    }
 
     @SpirePatch(
             clz = AbstractDungeon.class,
@@ -339,38 +335,5 @@ public class BanSharedContentPatch {
         }
     }
 
-    @SpirePatch(
-            clz = PotionHelper.class,
-            method = "initialize"
-    )
-
-    public static class PotionPatch {
-        public static void Postfix(AbstractPlayer.PlayerClass chosenClass) {
-            // edit: this patch doesn't work somehow, the function is moved to downfallMod.receivePostDungeonInitialize()
-            // by checking the condition before adding them all together
-            //todo: I'm thinking of just making all these potions character exclusive which fixes the compendium problem
-            // and people don't like these potions anyways
-            if (!EvilModeCharacterSelect.evilMode && !downfallMod.contentSharing_potions) {
-                //  PotionHelper.potions.remove(SoulburnPotion.POTION_ID);
-                PotionHelper.potions.remove(MuddlingPotion.POTION_ID);
-                PotionHelper.potions.remove(ThreeZeroPotion.POTION_ID);
-                PotionHelper.potions.remove(BlockOnCardUsePotion.POTION_ID);
-                PotionHelper.potions.remove(CounterstrikePotion.POTION_ID);
-                PotionHelper.potions.remove(BurnAndBuffPotion.POTION_ID);
-                PotionHelper.potions.remove(WizPotion.POTION_ID);
-                PotionHelper.potions.remove(BossPotion.POTION_ID);
-                //   PotionHelper.potions.remove(TempHPPotion.POTION_ID);
-            }
-            // edit: below probably not functioning too but lazy to implement
-            // Ban shared potions from other classes if you haven't played as that class before
-            //  runLockedPotions.forEach((playerClass, potionIds) -> {
-            // Shared potions will never be banned from their base class
-            //   if (chosenClass != playerClass) {
-            //   if (!HeartEvent.hasPlayedRun(playerClass)) {
-            //       PotionHelper.potions.removeAll(potionIds);
-            //    }
-            //  });
-            //     }
-        }
-    }
+    //Potions have to be handled in addPotions() of base mod file
 }

@@ -1,0 +1,32 @@
+{
+  "hexamod:SoulburnPotion": {
+    "NAME": "Molotow",
+    "DESCRIPTIONS": [
+      "Wende #b",
+      " #ySeelenfeuer an."
+    ]
+  },
+  "hexamod:DoubleChargePotion": {
+    "NAME": "Brandbeschleuniger",
+    "DESCRIPTIONS": [
+      "#yEntzünde die aktuelle Geisterflamme #b",
+      " Mal."
+    ]
+  },
+  "hexamod:EctoCoolerPotion": {
+    "NAME": "Ecto-Kühler",
+    "DESCRIPTIONS": [
+      "Wähle #b1 von #b3 zufälligen #yflüchtigen Karten. Nimm sie auf die Hand, sie kostet diesen Zug #b0.",
+      "Wähle #b1 von #b3 zufälligen #yflüchtigen Karten. Nimm #b",
+      " Kopien auf die Hand, sie kosten diesen Zug #b0."
+    ]
+  },
+  "hexamod:InfernoChargePotion": {
+    "NAME": "Flüssiges Inferno",
+    "DESCRIPTIONS": [
+      "Die Geisterflammen-Effekte werden in diesem Kampf auf ALLE Gegner angewendet.",
+      "Die Geisterflammen-Effekte werden in diesem Kampf auf ALLE Gegner #b",
+      " Mal angewendet."
+    ]
+  }
+}

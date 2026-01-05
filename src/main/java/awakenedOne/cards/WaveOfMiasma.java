@@ -14,9 +14,9 @@ public class WaveOfMiasma extends AbstractAwakenedCard {
     //Shroud of Miasma
 
     public WaveOfMiasma() {
-        super(ID, 3, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
-        baseSecondMagic = secondMagic = 6;
-        baseBlock = 16;
+        super(ID, 2, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL_ENEMY);
+        baseSecondMagic = secondMagic = 4;
+        baseBlock = 12;
         this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(WaveOfMiasma.class.getSimpleName() + ".png"));
     }
@@ -30,7 +30,7 @@ public class WaveOfMiasma extends AbstractAwakenedCard {
 
     public void upp() {
         //upgradeMagicNumber(2);
-        upgradeBlock(4);
-        upgradeSecondMagic(3);
+        upgradeBlock(3);
+        upgradeSecondMagic(2);
     }
 }

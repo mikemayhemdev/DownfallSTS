@@ -25,14 +25,16 @@
       "Break Sapphire",
       "Break Emerald",
       "(Free Action) Spend ",
-      "Choose up to 2 of 6 Common cards to gain.",
-      "Choose up to 2 of 4 Uncommon cards to gain.",
-      "Choose up to 1 of 3 Rare cards to gain.",
+      " Common cards to gain.",
+      " Uncommon cards to gain.",
+      " Rare cards to gain.",
       "Key shattered!",
       "Requires ",
       " Souls.",
       "(Free Action) Destroy key to ",
-      " Souls: Destroy key to "
+      " Souls: Choose up to ",
+      " of ",
+      " Enhance future key breaks."
     ]
   },
   "downfall:BustKeyButtonBackupForTranslators": {
@@ -80,7 +82,10 @@
       "禁止异蛇使用其他Mod的角色牌池。",
       "禁用主菜单音乐替换（需要重启游戏）。",
       "解锁所有崩坠角色的皮肤。",
-      "为牌附加例如保留、虚无等效果时，使用图标而非文字。"
+      "为牌附加例如保留、虚无等效果时，使用图标而非文字。",
+      "The Spellbook highlights the next card Conjure will draw.",
+      "No Downfall adjustments to original cards & relics (requires game restart)",
+      "Use Legacy Downfall Bosses (pre-6.0)"
     ]
   },
   "downfall:EnergyPanelTip": {

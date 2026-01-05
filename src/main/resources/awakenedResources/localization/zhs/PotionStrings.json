@@ -1,30 +1,30 @@
 {
   "awakened:PhaseSkip": {
-    "NAME": "Ascendant's Drink",
+    "NAME": "超渡者药水",
     "DESCRIPTIONS": [
-      "#yAwaken immediately and #yUpgrade all cards for the rest of combat."
+      "立刻 #y觉醒 并 在本场战斗中 #y升级 你的所有牌 ｡"
     ]
   },
   "awakened:CultistsDelight": {
-    "NAME": "Cultist's Delight",
+    "NAME": "邪教徒特调",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card this combat, gain #b",
-      " #yStrength [REMOVE_SPACE]. Add a random #yPower to your hand that costs #b0 for the turn."
+      "你每打出一张 #y能力牌 [REMOVE_SPACE] , 获得 #b",
+      "点 #y力量 [REMOVE_SPACE] ｡ 增加一张随机 #y能力牌 到你的手牌 , 其耗能本回合变为 #b0 ｡"
     ]
   },
   "awakened:SacramentalWine": {
-    "NAME": "Sacramental Wine",
+    "NAME": "圣餐酒",
     "DESCRIPTIONS": [
-      "Whenever you play a #yPower card this combat, gain #b",
-      " #yBlock [REMOVE_SPACE]. Add a random #yPower to your hand that costs #b0 for the turn."
+      "你每打出一张 #y能力牌 , 获得 #b",
+      "点 #y格挡 [REMOVE_SPACE] ｡ 增加一张随机 #y能力牌 到你的手牌 , 其耗能本回合变为 #b0 ｡"
     ]
   },
   "awakened:SneckoPowersPotion": {
-    "NAME": "Snecko Essence",
+    "NAME": "异蛇精华",
     "DESCRIPTIONS": [
-      "Choose #b1 of #b3 random #yOffclass #yPowers to add to your hand, it costs #b0 this turn.",
-      "Choose #b1 of #b3 random #yOffclass #yPowers and add #b",
-      " copies to your hand, they cost #b0 this turn."
+      "从 #b3 张随机 #y异色 #y能力牌 中选择 #b1 张加入你的手牌 ｡ 这张牌在本回合耗能变为 #b0 ｡",
+      "从 #b3 张随机 #y异色 #y能力牌 中选择 #b1 张 , 将其 #b",
+      " 份复制品加入手牌 , 其本回合首次耗能为 #b0 ｡"
     ]
   }
 }

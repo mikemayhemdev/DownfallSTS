@@ -38,7 +38,7 @@ public class SearingGhostflame extends AbstractGhostflame {
 
     public SearingGhostflame(float x, float y) {
         super(x, y);
-        magic = 6;
+        magic = 3;
 
         //this.textColor = new Color(.75F,1F,.75F,1F);
         this.triggersRequired = 2;
@@ -56,58 +56,65 @@ public class SearingGhostflame extends AbstractGhostflame {
 
     @Override
     public void onCharge() {
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-                int x = getEffectCount();
+        for (int i = 0; i < 2; i++) {
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    isDone = true;
+                    int x = getEffectCount();
 
-                if(AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)){
-                    for(int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++){
-                        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                            if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                                att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
+                    if (AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)) {
+                        for (int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++) {
+                            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                                if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                                    if (x > 0) {
+                                        att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
+                                    }
+                                }
+                            }
+//                                att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.2F));
+                            att(new VFXAction(
+                                    new AbstractGameEffect() {
+
+                                        public void update() {
+                                            for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
+                                                if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                                                    AbstractDungeon.effectsQueue.add(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY));
+                                                }
+                                            }
+                                            this.isDone = true;
+                                        }
+
+                                        @Override
+                                        public void render(SpriteBatch spriteBatch) {
+                                        }
+
+                                        @Override
+                                        public void dispose() {
+                                        }
+                                    }
+                                    , 0.3F));
+                            if (AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)) {
+                                AbstractRelic r = AbstractDungeon.player.getRelic(CandleOfCauterizing.ID);
+                                r.flash();
                             }
                         }
-//                                att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.2F));
-                        att(new VFXAction(
-                                new AbstractGameEffect() {
-
-                                    public void update() {
-                                        for (AbstractMonster m : AbstractDungeon.getCurrRoom().monsters.monsters) {
-                                            if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                                                AbstractDungeon.effectsQueue.add(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY));
-                                            }
-                                        }
-                                        this.isDone = true;
-                                    }
-
-                                    @Override
-                                    public void render(SpriteBatch spriteBatch) {}
-
-                                    @Override
-                                    public void dispose() {}
-                                }
-                        , 0.3F));
-                        if (AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)) {
-                            AbstractRelic r = AbstractDungeon.player.getRelic(CandleOfCauterizing.ID);
-                            r.flash();
+                    } else {
+                        AbstractMonster m = AbstractDungeon.getRandomMonster();
+                        if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                            if (x > 0) {
+                                att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
+                            }
+                            att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
+                            if (AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)) {
+                                AbstractRelic r = AbstractDungeon.player.getRelic(CandleOfCauterizing.ID);
+                                r.flash();
+                            }
                         }
                     }
                 }
-                else {
-                    AbstractMonster m = AbstractDungeon.getRandomMonster();
-                    if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                        att(new ApplyPowerAction(m, AbstractDungeon.player, new BurnPower(m, x), x));
-                        att(new VFXAction(new FireballEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, m.hb.cX, m.hb.cY), 0.4F));
-                        if (AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)) {
-                            AbstractRelic r = AbstractDungeon.player.getRelic(CandleOfCauterizing.ID);
-                            r.flash();
-                        }
-                    }
-                }
-            }
-        });
+            });
+        }
     }
 
     @Override
@@ -145,18 +152,23 @@ public class SearingGhostflame extends AbstractGhostflame {
     @Override
     public String returnHoverHelperText() {
         int x = getEffectCount();
-        return x + "";
+        return x + "x2";
     }
 
     public int getEffectCount() {
         int x = magic;
         if (AbstractDungeon.player.hasPower(EnhancePower.POWER_ID)) {
-            x += 2 * AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
+            x += AbstractDungeon.player.getPower(EnhancePower.POWER_ID).amount;
         }
         if(AbstractDungeon.player.hasRelic(CandleOfCauterizing.ID)){
             x += CandleOfCauterizing.SOULBURN_BONUS_AMOUNT;
         }
-        return x;
+
+        if (x > 0) {
+            return x;
+        } else {
+            return 0;
+        }
     }
 
     @Override

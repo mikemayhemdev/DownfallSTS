@@ -1,27 +1,32 @@
 {
   "downfall:Aged": {
     "NAME": "加齢",
-    "DESCRIPTION": "使用不可 NL エセリアル NL ターン終了時、山札の上に *空虚 を追加する。"
+    "DESCRIPTION": "使用不可 NL エセリアル NL ターン終了時、捨て札に *空虚 を追加する。"
   },
   "downfall:Bewildered": {
     "NAME": "困惑",
-    "DESCRIPTION": "使用不可 NL エセリアル NL このカードを引いた時、手札を sneckomod:泥まみれ にする。"
+    "DESCRIPTION": "このカードは引いた時、 sneckomod:泥まみれ になる。 NL 廃棄"
   },
   "downfall:Icky": {
     "NAME": "粘液塗れ",
-    "DESCRIPTION": " *粘液 を手札に加える。 NL 廃棄"
+    "DESCRIPTION": "次のターン開始時にドローするカードが1枚減少する。 NL 廃棄"
   },
   "downfall:Haunted": {
     "NAME": "幽霊",
-    "DESCRIPTION": "使用不可 NL エセリアル NL このカードが手札にある時、カードを *廃棄 する度に 2 ダメージを受ける。"
+    "DESCRIPTION": "使用不可 NL エセリアル NL ターン終了時に NL !M!ダメージを受ける。"
   },
   "downfall:Malfunctioning": {
     "NAME": "不調",
-    "DESCRIPTION": "ターン終了時、手札を全てランダムな 状態異常 カードに変換する。 NL 廃棄"
+    "DESCRIPTION": "ターン終了時、捨て札に *負傷 を加える。 NL 廃棄"
   },
   "downfall:Scatterbrained": {
     "NAME": "散漫",
     "DESCRIPTION": "ターン終了時にこのカードが手札にあった場合、捨札にこのカードのコピーを加える。 NL 廃棄"
+  },
+  "downfall:CurseOfBlood": {
+    "NAME": "血友病",
+    "DESCRIPTION": "次のターン開始時、 [E] を失う。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": ["Note for LOC: Hemophilia is a name for a disorder for when your blood doesn’t clot properly. I added the a in the middle for coolness factor."]
   },
   "downfall:SummonMushrooms": {
     "NAME": "菌類混入",
@@ -30,5 +35,81 @@
   "downfall:BossMaintenance": {
     "NAME": "メンテナンス",
     "DESCRIPTION": "戦闘中 *ストライク のダメージが !M! 増加する。 NL 敏捷性 !B! を得る。 NL このカードのコストが1増加する。"
+  },
+  "downfall:CuriousRobot": {
+    "NAME": "キュリオスロボット",
+    "DESCRIPTION": "相手がパワーを使用する度、集中 1 を得る。筋力がフォーカスに影響する。"
+  },
+  "downfall:Murderbot": {
+    "NAME": "エナジーシーフ",
+    "DESCRIPTION": "アタックでブロックされなかったダメージを与える度、相手の捨て札に *空虚 を1つ加える。"
+  },
+  "downfall:Temptation": {
+    "NAME": "誘惑",
+    "DESCRIPTION": "相手の山札に !M! 枚のランダムなパワーをシャッフルする。"
+  },
+  "downfall:BagOfKnives": {
+    "NAME": "ナイフ袋",
+    "DESCRIPTION": "ターンごとに初めてコスト2以上のカードをプレイした時、*ナイフ を2枚手札に加える。"
+  },
+  "downfall:Hallunication": {
+    "NAME": "幻覚",
+    "DESCRIPTION": "毎ターン、実際の位置を隠す。あなたか幻が攻撃された時、幻は消える。"
+  },
+  "downfall:NewToxins": {
+    "NAME": "新毒",
+    "DESCRIPTION": "毒はもう減衰しないが、ブロック可能になり、ターン開始時ではなく終了時にダメージを与える。"
+  },
+  "downfall:FeedingFrenzy": {
+    "NAME": "熱狂的な捕食",
+    "DESCRIPTION": "*死神 はすべての *キノコ を対象にする。自分の *キノコ を倒すと筋力1を得る。"
+  },
+  "downfall:StatusMirror": {
+    "NAME": "マジックミラー",
+    "DESCRIPTION": "このキャラクターが生成する状態異常カードは代わりにあなたの山札に加わる。"
+  },
+  "downfall:EyeForAnEye": {
+    "NAME": "目には目を",
+    "DESCRIPTION": "相手がアタックカードを非アタックカードより多くプレイしている場合、怒り状態になる。それ以外は平静状態。"
+  },
+  "downfall:TruePeace": {
+    "NAME": "真の平穏",
+    "DESCRIPTION": "何もしない。全ての終わりを待つ。"
+  },
+  "downfall:EndIsNigh": {
+    "NAME": "終末は近い",
+    "DESCRIPTION": "「全員」が 儀式 !M! を得る。"
+  },
+  "downfall:FalseWorship": {
+    "NAME": "偽りの崇拝",
+    "DESCRIPTION": "狂信者が死亡している場合、復活させる。そうでなければ、死亡時に50%のHPで復活する。"
+  },
+  "downfall:FleetingFaith": {
+    "NAME": "幽霊の存在",
+    "DESCRIPTION": "相手の捨て札に !M! 枚の *幽霊カード を加える。"
+  },
+  "downfall:FaithRewarded": {
+    "NAME": "報われた信仰",
+    "DESCRIPTION": "神性スタンスに入った後、決して解除されない。ただしスタンスのダメージボーナスは200%に減少する。"
+  },
+  "downfall:Crusade": {
+    "NAME": "十字軍",
+    "DESCRIPTION": "全てのデバフを除去する。 NL 全てのマントラを失う。失ったマントラ1つにつき、 HPを !M! 回復し 筋力 1 を得る。"
+  },
+  "downfall:Hyperfocused": {
+    "NAME": "致命的集中",
+    "DESCRIPTION": "常に *デッド・オン の効果を発動する。 ターン中に 10のダメージを受けた場合、そのターンは *デッド・オン を解除する。"
+  },
+  "downfall:Arsenal": {
+    "NAME": "生ける兵器庫",
+    "DESCRIPTION": "*ダガー を召喚する。"
+  },
+  "downfall:Steady": {
+    "NAME": "安定",
+    "DESCRIPTION": "*憤怒 スタンスで与えるダメージと受けるダメージを50%増加に変更される。（以前は100%）"
+  },
+  "downfall:Revolver": {
+    "NAME": "リボルバー",
+    "DESCRIPTION": "今後のターンは *運命の輪 によって決定される。攻撃された時、 *運命の輪 は1ステップ進む。"
   }
 }

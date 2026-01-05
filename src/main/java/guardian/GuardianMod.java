@@ -1077,17 +1077,7 @@ public static void saveData() {
 
 
     public void addPotions() {
-        BaseMod.addPotion(AcceleratePotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, AcceleratePotion.POTION_ID, GuardianEnum.GUARDIAN);
-        BaseMod.addPotion(DefensiveModePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, DefensiveModePotion.POTION_ID, GuardianEnum.GUARDIAN);
-        BaseMod.addPotion(StasisDiscoveryPotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, StasisDiscoveryPotion.POTION_ID, GuardianEnum.GUARDIAN);
-//        BanSharedContentPatch.registerRunLockedPotion(GuardianEnum.GUARDIAN, BlockOnCardUsePotion.POTION_ID);
 
-        if (Loader.isModLoaded("widepotions")) {
-            WidePotionsMod.whitelistSimplePotion(BlockOnCardUsePotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(AcceleratePotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(DefensiveModePotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(StasisDiscoveryPotion.POTION_ID);
-        }
     }
 
     public boolean receivePreMonsterTurn(AbstractMonster abstractMonster) {

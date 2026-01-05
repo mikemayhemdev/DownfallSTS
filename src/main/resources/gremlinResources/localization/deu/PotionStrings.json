@@ -1,0 +1,29 @@
+{
+  "gremlin:GremlinPotion": {
+    "NAME": "Eau de Grem",
+    "DESCRIPTIONS": [
+      "Aktiviere alle #b5 Gremlin Abilities #b",
+      " Mal."
+    ]
+  },
+  "gremlin:NecromancyPotion": {
+    "NAME": "Gremlinflasche",
+    "DESCRIPTIONS": [
+      "Belebe einen zufälligen Gremlin mit #b",
+      "% der Max TP wieder."
+    ]
+  },
+  "gremlin:SwapPotion": {
+    "NAME": "Duplikatenflasche",
+    "DESCRIPTIONS": [
+      "#yWechsle zu einem zufälligen Gremlin."
+    ]
+  },
+  "gremlin:WizPotion": {
+    "NAME": "Flüssiger Elan",
+    "DESCRIPTIONS": [
+      "Erhalte #b",
+      " #yElan [REMOVE_SPACE]."
+    ]
+  }
+}

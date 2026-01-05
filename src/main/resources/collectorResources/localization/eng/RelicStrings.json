@@ -105,7 +105,7 @@
     "DESCRIPTIONS": [
       "Upon pickup, add a #rParasite to your deck and gain #b",
       " Max HP. Start each combat with #b",
-      " #yDexterity [REMOVE_SPACE]."
+      " #yDexterity."
     ]
   },
   "collector:RoughDiamond": {

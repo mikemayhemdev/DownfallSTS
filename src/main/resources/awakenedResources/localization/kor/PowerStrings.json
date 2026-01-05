@@ -18,8 +18,9 @@
   "awakened:RisingChantPower": {
     "NAME": "고조되는 합창",
     "DESCRIPTIONS": [
-      "활성화된 #y암송 카드를 사용할 때마다 #y힘을 #b",
-      " 얻습니다."
+      "다음 #b",
+      " 번 활성화된 #y암송 카드를 사용하면 사용하면 두 번 활성화합니다. NL 이번 턴에 #b",
+      " 번 가능합니다."
     ]
   },
   "awakened:CursedStrength": {
@@ -85,8 +86,8 @@
       "매 턴 처음으로 주문을 사용하면 [E] 를 얻습니다.",
       "매 턴 최대 #b",
       " 번 주문을 사용할 때마다 [E] 를 얻습니다.",
-      " NL (이번 턴 #b",
-      "  번 남았습니다.)"
+      " NL 이번 턴 #b",
+      "  번 남았습니다."
     ]
   },
   "awakened:EclipseEmbracePower": {

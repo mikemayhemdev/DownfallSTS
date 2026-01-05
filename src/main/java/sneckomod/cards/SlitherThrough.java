@@ -30,6 +30,7 @@ public class SlitherThrough extends AbstractSneckoCard {
         super(ID, 2, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        this.tags.add(SneckoMod.GIFT);
         SneckoMod.loadJokeCardImage(this, "SlitherThrough.png");
     }
 

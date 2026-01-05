@@ -12,8 +12,8 @@ public class SetATrap extends AbstractChampCard {
 
     public SetATrap() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ALL);
-        baseBlock = block = 6;
-        baseMagicNumber = magicNumber = 2;
+        baseBlock = block = 8;
+        baseMagicNumber = magicNumber = 1;
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
         postInit();

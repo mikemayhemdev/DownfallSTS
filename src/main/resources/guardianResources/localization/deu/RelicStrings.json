@@ -1,0 +1,137 @@
+{
+  "Guardian:ModeShifter": {
+    "NAME": "Bronzenes Zahnrad",
+    "FLAVOR": "Schutz, wenn du ihn am dringendsten nötig hast.",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn jedes Kampfes #yHochschalten auf die Hand. NL Der Wächter beginnt den Run mit einem zufälligen gewöhnlichen #yJuwel [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:ModeShifterPlus": {
+    "NAME": "Wächter-Zahnrad",
+    "FLAVOR": "Hält 3.000 Stockwerke.",
+    "DESCRIPTIONS": [
+      "Ersetzt ",
+      " [REMOVE_SPACE].[] NL Nimm zu Beginn jedes Kampfes #yHochschalten auf die Hand. NL Immer wenn du in den #yDefensivmodus wechselst, erhalte [E] und ziehe #b2 Karten."
+    ]
+  },
+  "Guardian:ObsidianScales": {
+    "NAME": "Obsidianschuppen",
+    "FLAVOR": "Schwärze den Himmel mit deinem Blut. Räche dich an alle, die dich geschlagen haben.",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn jedes Kampfes #b",
+      " #yStacheln [REMOVE_SPACE]. Erhalte #b",
+      " #yStacheln immer wenn du einen Debuff erhältst oder debuffed wirst"
+    ]
+  },
+  "Guardian:DefensiveModeMoreBlock": {
+    "NAME": "Baalors königliche Platte",
+    "FLAVOR": "Man kann nie ganug Rüstung tragen.",
+    "DESCRIPTIONS": [
+      "Immer wenn du dich #yguardianmod:abhärtest [REMOVE_SPACE], #yhärte dich um #b1 mehr #yab."
+    ]
+  },
+  "Guardian:guardianmod:GemCopier": {
+    "NAME": "Edelsteinglas",
+    "FLAVOR": "Nur die Reinsten sind gut genug.",
+    "DESCRIPTIONS": [
+      "Immer wenn du ein #yguardianmod:Juwel ausspielst, spiel zusätzlich eine Kopie davon aus."
+    ]
+  },
+  "Guardian:PocketSentry": {
+    "NAME": "Arumbas Miniaturwache",
+    "FLAVOR": "Wachmodus aktiviert. Ziel erfasst. Keine bösen Absichten.",
+    "DESCRIPTIONS": [
+      "Wende alle #b3 Züge #b1 #ySchwach auf ALLE Gegner an."
+    ]
+  },
+  "Guardian:SackOfGems": {
+    "NAME": "Edelsteinsack",
+    "FLAVOR": "Ooh... Glitzer!",
+    "DESCRIPTIONS": [
+      "Nimm beim Aufheben bis zu #b5 zufällige #yguardianmod:Juwelen in dein Deck auf."
+    ]
+  },
+  "Guardian:StasisCodex": {
+    "NAME": "Pilotenkodex",
+    "FLAVOR": "Skizzen und Diagramme der ersten handbetriebenen Prototypen des Spire - angefertigt vom Meisterpiloten David.",
+    "DESCRIPTIONS": [
+      "Wähle am Ende deiner ersten #b3 Züge #b1 von #b3 zufälligen Karten aus um sie in #yguardianmod:Stasis zu legen, falls du einen freien #yguardianmod:Stasis-Slot hast."
+    ]
+  },
+  "Guardian:StasisSlotIncreaseRelic": {
+    "NAME": "Miniatur-Polizei-Zelle",
+    "FLAVOR": "Sie ist drinnen größer...",
+    "DESCRIPTIONS": [
+      "Beginne jeden Kampf mit #b2 zusätzlichen Stasis-Slots."
+    ]
+  },
+  "Guardian:StasisSlotReductionRelic": {
+    "NAME": "Wanderbots",
+    "FLAVOR": "Diese Drohnen waren ein äußerst nützlicher Fund, doch sie benötigen viel Energie für den Antrieb.",
+    "DESCRIPTIONS": [
+      "Verliere zu Beginn deines Kampfes #b1 Stasis-Slot. NL Erhalte in deinem Zug [E] ."
+    ]
+  },
+  "Guardian:StasisUpgradeRelic": {
+    "NAME": "Kryokammer",
+    "FLAVOR": "Die Dinge scheinen beim Hinausgehen immer besser als beim Hineingehen.",
+    "DESCRIPTIONS": [
+      "Beginne jeden Kampf mit #b1 zusätzlichen Stasis-Slot. Immer wenn eine Karte in #yguardianmod:Stasis gelegt wird, #yverbessere sie für den Kampf."
+    ]
+  },
+  "Guardian:BottledStasis": {
+    "NAME": "Flaschen-Wurmloch",
+    "FLAVOR": "Irgendwo wartet immer etwas Unglaubliches auf seine Entdeckung.",
+    "DESCRIPTIONS": [
+      "Wähle beim Aufheben eine Karte. Beginne jeden Kampf mit der gewählten Karte in #yguardianmod:Stasis [REMOVE_SPACE].",
+      "Wähle eine Karte für ",
+      "Beginne jeden Kampf mit ",
+      " in #yguardianmod:Stasis [REMOVE_SPACE].",
+      "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
+    ]
+  },
+  "Guardian:StasisEgg": {
+    "NAME": "Quantumkammer",
+    "FLAVOR": "Um das Küken zu bekommen muss man es schlüpfen lassen, und nicht das Ei zerbrechen.",
+    "DESCRIPTIONS": [
+      "Wähle beim Aufheben eine Karte. Beginne jeden Kampf ohne der gewählten Karte. Nimm die gewählte Karte und #b2 Kopien zu Beginn von Zug #b4 auf die Hand.",
+      "Wähle eine Karte für ",
+      "Beginne jeden Kampf ohne ",
+      " . Nimm diese Karte und #b2 Kopien zu Beginn von Zug #b4 auf die Hand.",
+      "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
+    ]
+  },
+  "Guardian:TickHelperRelic": {
+    "NAME": "Kühlflüssigkeit",
+    "FLAVOR": "Gesundheitsschädlich. Nicht konsumieren.",
+    "DESCRIPTIONS": [
+      "Beginne jeden Kampf mit #b2 zusätzlichen Stasis-Slots. NL Wenn eine Karte in #yguardianmod:Stasis gelegt wird, erhöhe ihre Verweildauer um #b2 Züge."
+    ]
+  },
+  "Guardian:PickAxe": {
+    "NAME": "Singende Spitzhacke",
+    "FLAVOR": "Kaum zu glauben, dass jemand mit der Spitzhacke nach Juwelen suchen muss, wo doch im Spire so viele herumliegen.",
+    "DESCRIPTIONS": [
+      "Jeden Mal wenn du einen Elitekampf gewinnst erhältst du einen zusätzliches zufälliges #yguardianmod:Juwel zur Belohnung."
+    ]
+  },
+  "Guardian:GemstoneGun": {
+    "NAME": "Juwelenpistole",
+    "FLAVOR": "Peng! Peng! Peng! Hey, ein Hattrick!",
+    "DESCRIPTIONS": [
+      "Wähle beim Aufheben #b3 #yguardianmod:Juwelen aus. Nimm zu Beginn jedes Kampfes eine #yerschöpfende Karte mit #yBehalten und den gewählten #yJuwelen eingebettet auf die Hand.",
+      "Wähle ein Juwel zum Laden der Juwelenpistole."
+    ]
+  },
+  "Guardian:BottledAnomaly": {
+    "NAME": "Flaschenanomalie",
+    "FLAVOR": "Es wirbelt und wirbelt bis es schließlich kaputtgeht.",
+    "DESCRIPTIONS": [
+      "Wähle beim Aufheben eine Karte. Beginne jeden Kampf ohne der gewählten Karte. Nimm die gewählte Karte zu Beginn von Zug #b3 auf die Hand. Sie kostet in diesem Zug #b0.",
+      "Wähle eine Karte für ",
+      "Beginne jeden Kampf ohne ",
+      " . Nimm diese Karte zu Beginn von Zug #b3 auf die Hand. Sie kostet in diesem Zug #b0.",
+      "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
+    ]
+  }
+}

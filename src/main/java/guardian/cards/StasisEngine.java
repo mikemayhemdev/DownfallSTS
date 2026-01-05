@@ -23,7 +23,7 @@ public class StasisEngine extends AbstractGuardianCard {
     private static final CardType TYPE = CardType.POWER;
     private static final CardRarity RARITY = CardRarity.RARE;
     private static final CardTarget TARGET = CardTarget.SELF;
-    private static final int COST = 2;
+    private static final int COST = 1;
 
     //TUNING CONSTANTS
     private static final int SOCKETS = 0;

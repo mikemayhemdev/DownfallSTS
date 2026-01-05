@@ -46,7 +46,7 @@ import static awakenedOne.util.Wiz.atb;
 public class CharBossSilent extends AbstractCharBoss {
     public static final String ID = downfallMod.makeID("Silent");
     public static final String NAME = LocalizeHelper.DonwfallRunHistoryMonsterNames.TEXT[2];
-    public static final String POISONSPEECH = LocalizeHelper.downfallCharacterSpeech.TEXT[0];
+   //public static final String POISONSPEECH = LocalizeHelper.downfallCharacterSpeech.TEXT[0];
 
     public static boolean posStorage = false;
     public static boolean resetThisTurn = false;

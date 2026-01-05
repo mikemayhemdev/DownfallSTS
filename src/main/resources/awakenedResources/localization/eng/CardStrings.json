@@ -48,7 +48,7 @@
   "awakened:AwakenedForm": {
     "NAME": "Awakened Form",
     "DESCRIPTION": "Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual.",
-    "UPGRADE_DESCRIPTION": "Awaken immediately. NL Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual."
+    "UPGRADE_DESCRIPTION": "*Awaken immediately. NL Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual."
   },
   "awakened:Spellbinder": {
     "NAME": "Spellbinder",
@@ -180,8 +180,8 @@
   },
   "awakened:RisingChant": {
     "NAME": "Rising Chorus",
-    "DESCRIPTION": "Ethereal. NL The first awakened:Chant effect you play each turn is activated twice.",
-    "UPGRADE_DESCRIPTION": "The first awakened:Chant effect you play each turn is activated twice."
+    "DESCRIPTION": "Ethereal. NL The first awakened:Chant effect you activate each turn is triggered twice.",
+    "UPGRADE_DESCRIPTION": "The first awakened:Chant effect you activate each turn is triggered twice."
   },
   "awakened:FeatherWhirl": {
     "NAME": "Feather Whirl",
@@ -396,7 +396,7 @@
     "NAME": "The Encyclopedia",
     "DESCRIPTION": "Choose 2 of !M! random cards to add into your hand. They cost 2 less. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
-      "Choose 2 cards to add to your draw pile."
+      "Choose 2 cards to add to your hand."
     ]
   },
   "awakened:RealityRift": {

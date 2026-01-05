@@ -24,14 +24,13 @@ public class BrokenShin extends AbstractGremlinCard {
     private static final AbstractCard.CardRarity RARITY = CardRarity.RARE;
     private static final AbstractCard.CardTarget TARGET = CardTarget.ENEMY;
 
-    private static final int COST = 2;
+    private static final int COST = 3;
     private static final int MAGIC = 4;
     private static final int UPGRADE_BONUS = -1;
 
     public BrokenShin()
     {
         super(ID, NAME, IMG_PATH, COST, strings.DESCRIPTION, TYPE, RARITY, TARGET);
-
         this.baseMagicNumber = MAGIC;
         this.magicNumber = baseMagicNumber;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);

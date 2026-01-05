@@ -1,0 +1,160 @@
+{
+  "awakened:RippedDoll": {
+    "NAME": "Zerrissene Puppe",
+    "FLAVOR": "Das Einzige, was von deinem alten Leben übrig ist. Von der Puppe geht eine schwache Magie aus.",
+    "DESCRIPTIONS": [
+      "#yawakened:Rufe zu Beginn deiner ersten #b",
+      " Züge einen Zauberspruch #yauf [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:ShreddedDoll": {
+    "NAME": "Zerfetzte Puppe",
+    "FLAVOR": "Ein Beweis deiner Schwäche, und doch kannst du sie nicht loslassen.",
+    "DESCRIPTIONS": [
+      "Ersetzt ",
+      " [REMOVE_SPACE].[] NL #yawakened:Rufe zu Beginn jedes Zuges einen Zauberspruch #yauf [REMOVE_SPACE]. NL Erhalte #b1 #yRitual wenn du das erste Mal im Kampf wenn du dein Zauberbuch neu auffüllst."
+    ]
+  },
+  "awakened:WhiteRibbon": {
+    "NAME": "Weiße Schleife",
+    "FLAVOR": "Verleiht gesprochenen Worten auch außerhalb von Ritualen Macht.",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du eine Karte mit #yawakened:Chor spielst #b",
+      " #yBlock [REMOVE_SPACE], selbst wenn der Effekt nicht aktiviert ist."
+    ]
+  },
+  "awakened:HexxBomb": {
+    "NAME": "Manabombe",
+    "FLAVOR": "3... 2...",
+    "DESCRIPTIONS": [
+     "Immer wenn ein Gegner stirbt, übertrage sein #yawakened:Manabrand auf einen zufälligen Gegner."
+    ]
+  },
+  "awakened:TomeOfPortalmancy": {
+    "NAME": "Zauberbuch der Portale",
+    "FLAVOR": "Eine Betriebsanleitung zur Konstruktion und Wartung interplanterer Portale.",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #yLeere erhältst, wende #b",
+      " #yawakened:Manabrand auf ALLE Gegner an."
+    ]
+  },
+  "awakened:EyeOfTheOccult": {
+    "NAME": "Auge der Macht",
+    "FLAVOR": "Diese okkulte Schnitzerei verleiht seinem Träger magisches Wissen.",
+    "DESCRIPTIONS": [
+      "#yBlitzstrahl und #yVerderben treffen ALLE Gegner."
+    ]
+  },
+  "awakened:DeadBird": {
+    "NAME": "Rabengeist",
+    "FLAVOR": "Dieser Geist fliegt den Vefluchten und Verdammten nach.",
+    "DESCRIPTIONS": [
+      "Am Ende des Zuges, für dem Gegner mit den niedrigsten TP #b",
+      " Schaden zu. Der Schaden wird von deiner #yStärke beeinflusst."
+    ]
+  },
+  "awakened:AbyssBlade": {
+    "NAME": "Klinge der Leere",
+    "FLAVOR": "Ungültige Rückerstattung.",
+    "DESCRIPTIONS": [
+      "Das erste Mal wenn du im Zug #yawakened:ausgelaugt bist, ziehe eine Karte und erhalte [E] ."
+    ]
+  },
+  "awakened:ShardOfNowak": {
+    "NAME": "Vergoldeter Knochensplitter",
+    "FLAVOR": "...nein, nicht diese Art von Fokus.",
+    "DESCRIPTIONS": [
+      "Beginne jeden Kampf mit #b",
+      " #yStärke [REMOVE_SPACE]. Verliere diese #yStärke wieder sobald du das erste Mal im Kampf TP verlierst."
+    ]
+  },
+  "awakened:VioletPlumage": {
+    "NAME": "Violettes Gefieder",
+    "FLAVOR": "Gefärbt von der unendlichen Finsternis der Vergessenheit.",
+    "DESCRIPTIONS": [
+      "Wenn du zum ersten Mal im Kampf einen Zug mit mehr als 0 [E] beendest, ziehe im nächsten Zug #b",
+      " zusätzliche Karten."
+    ]
+  },
+  "awakened:ZenerDeck": {
+    "NAME": "Zener Deck",
+    "FLAVOR": "„Eins, zwei, drei - ihr alle seid dabei.“",
+    "DESCRIPTIONS": [
+      "Lege zu Beginn deines Kampfes #yESP in dein Zauberbuch und #yawakened:rufe es auf."
+    ]
+  },
+  "awakened:CawingCask": {
+    "NAME": "Krächzendes Fass",
+    "FLAVOR": "Ein zeremoniall beschnitztes Fass, das den Krähengott Mazaleth darstellt. Der Inhalt riecht äußerst fragwürdig...",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du einen Trank benutzt #b",
+      " #yRitual [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:MiniBlackHole": {
+    "NAME": "Alethea",
+    "FLAVOR": "Direkt aus dem Abgrund.",
+    "DESCRIPTIONS": [
+      "Wenn du in deinem Zug keine #yMacht ausgespielt hast, dann ziehe eine zusätzliche Karte im nächsten Zug."
+    ]
+  },
+  "awakened:StrengthBooster": {
+    "NAME": "Papierkrähe",
+    "FLAVOR": "Der Gebieter von Flüchen und Zweifel - ein Tausend Mal gefaltet...",
+    "DESCRIPTIONS": [
+      "Gegner verlieden um #b",
+      "% mehr TP durch #yawakened:Manabrand [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:CursedBlessing": {
+    "NAME": "Letzte Riten",
+    "FLAVOR": "Ich vermache meine gesamten Besitztümer meiner Katze Noodles. Ade, du grausame Welt. XOXO Ritter",
+    "DESCRIPTIONS": [
+      "Erhalte des Erste Mal an dem du im Kampf einen #b",
+      " #yawakened:Chor Effekt aktivierst #b",
+      " #yRitual [REMOVE_SPACE]."
+    ]
+  },
+  "awakened:CurvedSwordMeme": {
+    "NAME": "Klinge beschwören",
+    "FLAVOR": "Na komm, mach es schon. Beschwöre eine Klinge, jetzt gleich. Ich warte. :^)",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn deine Kampfes eine #yKlinge #ybeschwören Karte in die Hand?",
+      "NOTE: THE PLAYER CANNOT OBTAIN THIS RELIC OUTSIDE OF CONSOLE, IT'S A JOKE RELIC!"
+    ]
+  },
+  "awakened:CurvedSword": {
+    "NAME": "Zetsumei",
+    "FLAVOR": "Diese Klinge wird von Magiern bevorzugt, da sie einen Teil der gesprochenen Zauber wieder aufnimmt.",
+    "DESCRIPTIONS": [
+      "Erhalte eine #yZeremonie für alle #b",
+      " Zauber die du in einem Zug ausspielst."
+    ]
+  },
+  "awakened:MoonTalisman": {
+    "NAME": "Halmbond-Talisman",
+    "FLAVOR": "„Please, just... don't forget me. Even after I die.“",
+    "DESCRIPTIONS": [
+      "Wähle beim Aufheben eine Karte aus, die #rKEINEN Zauberspruch #yawakened:aufruft [REMOVE_SPACE]. Sie erhält #yawakened:Aufrufen.",
+      "Wähle eine Karte für ",
+      "Das Talisman hat ",
+      " gesegnet und #yawakened:Aufrufen hinzugefügt.",
+      "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
+    ]
+  },
+  "awakened:AwakenedUrn": {
+    "NAME": "Vogelvase",
+    "FLAVOR":  "Auf diesem Gefäß ist der böse aussehende Krähengott Mazaleth zu sehen.",
+    "DESCRIPTIONS": [
+      "Die ersten #b4 Male an denen du im Kampf eine #yMacht ausspielst, heile #b",
+      " TP."
+      ]
+  },
+  "awakened:NerfedMummifiedHand": {
+    "NAME": "Ausgetrocknete Hand",
+    "FLAVOR": "Sie verlangt nach wahrer Macht, und reagiert nicht auf okkulte Rituale.",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #rANDERE #yMacht als #yZeremonie ausspielst, kostet eine zufällige Handkarte in diesem Zug #b0."
+    ]
+  }
+}

@@ -50,7 +50,11 @@ public class CultistSlime
 
 
     public void updateDescription() {
-        this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1];
+        if (this.passiveAmount > 0) {
+            this.description = this.descriptions[0] + this.passiveAmount + this.descriptions[1];
+        } else {
+            this.description = this.descriptions[0] + 0 + this.descriptions[1];
+        }
     }
 
 

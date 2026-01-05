@@ -1,0 +1,58 @@
+{
+  "downfall:PropertiesMod": {
+    "TEXT": [
+      "Angewendete Eigenschaften.",
+      "Zusätzliche Eigenschaften: ",
+      "Weitere Eigenschaften für diesen Zug: ",
+      " NL Zusätzlich in diesem Zug: ",
+      ", ",
+      ".",
+      "#y",
+      "Echo",
+      "Unspielbar",
+      "Flüchtig",
+      "Behalten",
+      "Erschöpft",
+      " ",
+      "NL ",
+      "Echo: "
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "Flüchtig. NL "
+    ]
+  },
+  "downfall:ExhaustMod": {
+    "TEXT": [
+      " NL Erschöpft."
+    ]
+  },
+  "downfall:InnateMod": {
+    "TEXT": [
+      "Angeboren. NL "
+    ]
+  },
+  "downfall:RetainCardMod": {
+    "TEXT": [
+      "Behalten. NL "
+    ]
+  },
+  "downfall:UnplayableMod": {
+    "TEXT": [
+      "Unspielbar. NL ",
+      "Diese Karte kann nicht gespielt werden.",
+      "Diese Karte kann in diesem Zug nicht gespielt werden."
+    ]
+  },
+  "expansioncontent:CannotUseBossCardMessage": {
+    "TEXT": [
+      "Ich habe in diesem Zug bereits eine Boss-Karte gespielt!"
+    ]
+  },
+  "expansioncontent:BossCardTagName": {
+    "TEXT": [
+      "Boss"
+    ]
+  }
+}

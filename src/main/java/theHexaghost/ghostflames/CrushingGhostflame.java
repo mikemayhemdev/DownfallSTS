@@ -42,7 +42,7 @@ public class CrushingGhostflame extends AbstractGhostflame {
 
     public CrushingGhostflame(float x, float y) {
         super(x, y);
-        damage = 6;
+        damage = 3;
         //this.textColor = new Color(1F,.75F,.75F,1F);
         this.triggersRequired = 2;
 
@@ -73,16 +73,17 @@ public class CrushingGhostflame extends AbstractGhostflame {
         return skillsPlayedThisTurn;
     }
 
-        @Override
+    @Override
     public void onCharge() {
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                int x = getEffectCount();
-                isDone = true;
+        for (int i = 0; i < 2; i++) {
+            atb(new AbstractGameAction() {
+                @Override
+                public void update() {
+                    int x = getEffectCount();
+                    isDone = true;
 
-                if(AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)){
-                    for(int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++){
+                    if (AbstractDungeon.player.hasPower(FlameAffectAllEnemiesPower.POWER_ID)) {
+                        for (int i = 0; i < AbstractDungeon.player.getPower(FlameAffectAllEnemiesPower.POWER_ID).amount; i++) {
 
                             addToTop(new VFXAction(
                                     new AbstractGameEffect() {
@@ -99,31 +100,34 @@ public class CrushingGhostflame extends AbstractGhostflame {
                                         }
 
                                         @Override
-                                        public void render(SpriteBatch spriteBatch) {}
+                                        public void render(SpriteBatch spriteBatch) {
+                                        }
 
                                         @Override
-                                        public void dispose() {}
+                                        public void dispose() {
+                                        }
                                     }
                             ));
 
-                        att(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(x, true), DamageInfo.DamageType.THORNS, AttackEffect.NONE));
+                            att(new DamageAllEnemiesAction(AbstractDungeon.player, DamageInfo.createDamageMatrix(x, true), DamageInfo.DamageType.THORNS, AttackEffect.NONE));
 //                        att(new DamageAllEnemiesAction(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS, AttackEffect.NONE));
-                    }
-                } else {
-                    AbstractMonster m = AbstractDungeon.getRandomMonster();
-                    if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
-                        AbstractDungeon.actionManager.addToTop(new PseudoDamageRandomEnemyAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
-                        addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
+                        }
+                    } else {
+                        AbstractMonster m = AbstractDungeon.getRandomMonster();
+                        if (m != null && !m.isDead && !m.isDying && !m.halfDead) {
+                            AbstractDungeon.actionManager.addToTop(new PseudoDamageRandomEnemyAction(m, new DamageInfo(AbstractDungeon.player, x, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.NONE));
+                            addToTop(new VFXAction(new GoldenSlashEffect(m.hb.cX, m.hb.cY, true)));
+                        }
                     }
                 }
-            }
-        });
+            });
+        }
     }
 
     @Override
     public String returnHoverHelperText() {
         int x = getEffectCount();
-        return x+"";
+        return x+"x2";
     }
 
     public int getEffectCount(){

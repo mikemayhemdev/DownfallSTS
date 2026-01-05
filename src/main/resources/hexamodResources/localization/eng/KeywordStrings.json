@@ -29,7 +29,7 @@
     "NAMES": [
       "intensity"
     ],
-    "DESCRIPTION": "Intensity increases the damage, #ySoulburn [REMOVE_SPACE], and #yBlock [REMOVE_SPACE] applied by Ghostflames when #yIgnited [REMOVE_SPACE]."
+    "DESCRIPTION": "Intensity increases the damage, #ySoulburn [REMOVE_SPACE], and #yBlock [REMOVE_SPACE] applied by Ghostflames when #yIgnited."
   },
   {
     "ID": "soulburn",
@@ -62,7 +62,7 @@
     "NAMES": [
       "seal"
     ],
-    "DESCRIPTION": "Seal cards drop from Elite and Boss combats. The more you play a Seal card, the more likely you are to find different kinds. If all #b6 Seals have been played during a combat, obtain #pThe #pBroken #pSeal and remove the #b6 Seals from your deck."
+    "DESCRIPTION": "Seal cards drop from Elite combats. The more you play a Seal card, the more likely you are to find different kinds. If all #b6 Seals have been played during a combat, obtain #pThe #pBroken #pSeal and remove the #b6 Seals from your deck."
   },
   {
     "ID": "afterlife",
@@ -77,7 +77,7 @@
     "NAMES": [
       "crushing"
     ],
-    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #ySkills are played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], deal #b6 damage to a random enemy.",
+    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #ySkills are played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], deal #b3 damage to a random enemy twice.",
     "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   },
   {
@@ -94,14 +94,22 @@
     "NAMES": [
       "plated"
     ],
-    "DESCRIPTION": "At the end of your turn, gain #yBlock equal to your #yPlated #yArmor [REMOVE_SPACE]. Taking unblocked attack damage reduces #yPlated #yArmor by #b1 [REMOVE_SPACE]."
+    "DESCRIPTION": "At the end of your turn, gain #yBlock equal to your #yPlated #yArmor [REMOVE_SPACE]. Taking unblocked attack damage reduces #yPlated #yArmor by #b1."
   },
   {
     "PROPER_NAME": "Searing",
     "NAMES": [
       "searing"
     ],
-    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #yAttacks are played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], apply #b6 #ySoulburn to a random enemy, modified twice by #yIntensity [REMOVE_SPACE].",
+    "DESCRIPTION": "#yGhostflame. #yIgnites when #b2 #yAttacks are played when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], apply #b3 #ySoulburn to a random enemy, twice [REMOVE_SPACE].",
+    "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
+  },
+  {
+    "PROPER_NAME": "Inferno",
+    "NAMES": [
+      "inferno"
+    ],
+    "DESCRIPTION": "#yGhostflame. #yIgnites when #b3 Energy is spent when you are on it. #yIgnition [REMOVE_SPACE]: When #yIgnited [REMOVE_SPACE], deal #b4 damage to a random enemy for each ignited Ghostflame. If all Ghostflames are Ignited, gain #b2 #yIntensity [REMOVE_SPACE].",
     "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   }
 ]

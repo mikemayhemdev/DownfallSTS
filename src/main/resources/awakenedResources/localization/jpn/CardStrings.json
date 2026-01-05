@@ -1,0 +1,411 @@
+{
+  "awakened:Thunderbolt": {
+    "NAME": "雷撃",
+    "DESCRIPTION": "保留 NL !D! ダメージを与える。 NL 廃棄"
+  },
+  "awakened:BurningStudy": {
+    "NAME": "炎の修練",
+    "DESCRIPTION": "保留 NL 筋力 !M! を得る。 NL 敵全体に 脱力 !awakened:m2! を与える。 NL 廃棄"
+  },
+  "awakened:Cryostasis": {
+    "NAME": "氷結",
+    "DESCRIPTION": "保留 NL !B! ブロックを得る。 NL 廃棄"
+  },
+  "awakened:Darkleech": {
+    "NAME": "暗吸精",
+    "DESCRIPTION": "保留 NL 弱体 !M! を与える。 NL awakened:マナバーン !awakened:m2! を与える。 NL 廃棄"
+  },
+  "awakened:DeathCoil": {
+    "NAME": "死の螺旋",
+    "DESCRIPTION": "awakened:マナバーン !M! を与える。 NL 次のターン、 [E] を失う。"
+  },
+  "awakened:ESPSpell": {
+    "NAME": "ESP",
+    "DESCRIPTION": "保留 NL カードを !M! 枚引く。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "保留 NL カードを !M! 枚引く。 NL 廃棄"
+  },
+  "awakened:Strike": {
+    "NAME": "ストライク",
+    "DESCRIPTION": "!D! ダメージを与える。"
+  },
+  "awakened:Defend": {
+    "NAME": "防御",
+    "DESCRIPTION": "!B! ブロックを得る。"
+  },
+  "awakened:Brainshock": {
+    "NAME": "ブレインショック",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 捨て札に *空虚 を加える。"
+  },
+  "awakened:Intensify": {
+    "NAME": "増幅",
+    "DESCRIPTION": "awakened:召喚 NL このターンの間、スペルのコストが0になり awakened:召喚 が発動しなくなる。",
+    "UPGRADE_DESCRIPTION": "保留 NL awakened:召喚 NL このターンの間、スペルのコストが0になり awakened:召喚 が発動しなくなる。"
+  },
+  "awakened:DarkEcho": {
+    "NAME": "ダークエコー",
+    "DESCRIPTION": "あなたのターン終了時、敵全体に !M! ダメージを与える。 このダメージは筋力の影響を受ける。"
+  },
+  "awakened:AwakenedForm": {
+    "NAME": "覚醒化",
+    "DESCRIPTION": "awakened:キュリオシティ !M! を得る。 NL 儀式 !awakened:m2! を得る。",
+    "UPGRADE_DESCRIPTION": "即座に *覚醒 する。 NL awakened:キュリオシティ !M! を得る。 NL 儀式 !awakened:m2! を得る。"
+  },
+  "awakened:Spellbinder": {
+    "NAME": "スペルバインダー",
+    "DESCRIPTION": "ターン開始時、 awakened:召喚 を行う。"
+  },
+  "awakened:Ceremony": {
+    "NAME": "セレモニー",
+    "DESCRIPTION": "保留 NL 筋力 !M! を得る。"
+  },
+  "awakened:TalonRake": {
+    "NAME": "かぎ爪",
+    "DESCRIPTION": "!D! ダメージを2回与える。 NL awakened:召喚"
+  },
+  "awakened:Hymn": {
+    "NAME": "賛歌",
+    "DESCRIPTION": "!B! ブロックを得る。 NL *セレモニー を手札に加える NL 次のターン、 [E] を失う。"
+  },
+  "awakened:Psalm": {
+    "NAME": "詩編",
+    "DESCRIPTION": "敵全体に !D! ダメージと 脱力 !M! を与える。"
+  },
+  "awakened:DemonGlyph": {
+    "NAME": "デーモングリフ",
+    "DESCRIPTION": "筋力 !M! と 敏捷性 !M! を得る。 NL *覚醒 した場合、更に !awakened:m2! 増加する。"
+  },
+  "awakened:TakeFlight": {
+    "NAME": "飛翔",
+    "DESCRIPTION": "!B! ブロックを得る。 NL awakened:詠唱 :次のターン開始時、ブロックが解除されなくなる"
+  },
+  "awakened:FeatherVeil": {
+    "NAME": "フェザーヴェール",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 筋力 !M! を失う。"
+  },
+  "awakened:Peck": {
+    "NAME": "つつく",
+    "DESCRIPTION": "!B! ブロックを得る。 NL !D! ダメージを与える。 NL カードを !M! 枚引く。",
+    "UPGRADE_DESCRIPTION": "!B! ブロックを得る。 NL !D! ダメージを与える。 NL カードを !M! 枚引く。"
+  },
+  "awakened:Extension": {
+    "NAME": "エクステンション",
+    "DESCRIPTION": "!D! ダメージを与える。 NL パワーをプレイした時、これを捨て札から手札に戻す。"
+  },
+  "awakened:Pluck": {
+    "NAME": "掻き毟り",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL *羽根撃ち を手札に加える。"
+  },
+  "awakened:FlareShot": {
+    "NAME": "フェザーフレア",
+    "DESCRIPTION": "!D! ダメージを与える。 NL awakened:詠唱 :次のターン、カードを !M! 枚引く。"
+  },
+  "awakened:ClarionCall": {
+    "NAME": "呼び寄せる声",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 次に awakened:枯渇 が発動した時、 [E] を得る。"
+  },
+  "awakened:Recitation": {
+    "NAME": "朗唱",
+    "DESCRIPTION": "!D! ダメージを与える。 NL awakened:詠唱 : もう一度 !D! ダメージを与える。"
+  },
+  "awakened:ChosenVerse": {
+    "NAME": "選ばれた詩句",
+    "DESCRIPTION": "このターン中、 !M! 回まで、 非アタック カードをプレイした時に カードを 1 枚引き、 !B! ブロックを得る。"
+  },
+  "awakened:SoulStrike": {
+    "NAME": "ソウルストライク",
+    "DESCRIPTION": "!D! ダメージを !M! 回与える。 NL このターンにプレイされたパワー1枚につきコストが [E] 減少する。"
+  },
+  "awakened:Altar": {
+    "NAME": "祭壇",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 手札を1枚廃棄する。 NL awakened:召喚"
+  },
+  "awakened:Envision": {
+    "NAME": "想起",
+    "DESCRIPTION": "!B! ブロックを得る。 NL awakened:召喚 を行い山札の一番上にスペルカードを加える。"
+  },
+  "awakened:Thaumaturgy": {
+    "NAME": "魔導学",
+    "DESCRIPTION": "敏捷性 !awakened:m2! を得る。 NL !M! ターンの間、ターン開始時に手札に *セレモニー を加える。"
+  },
+  "awakened:WaveOfMiasma": {
+    "NAME": "瘴気の波",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 敵全体に awakened:マナバーン !awakened:m2! を与える。 NL 廃棄"
+  },
+  "awakened:SludgeBomb": {
+    "NAME": "スラッジボム",
+    "DESCRIPTION": "廃棄札に存在する *空虚 をコストとして使用する。 NL !D! ダメージを2回与える。",
+    "EXTENDED_DESCRIPTION": [
+      "空虚が廃棄されていない"
+    ]
+  },
+  "awakened:KnifesEdge": {
+    "NAME": "ナイフエッジ",
+    "DESCRIPTION": "筋力 !awakened:m2! を得る。 NL 捨て札に !M! 枚の *空虚 を加える。"
+  },
+  "awakened:FourthDimension": {
+    "NAME": "第四次元",
+    "DESCRIPTION": "手札を1枚廃棄する。 NL 廃棄されたカードのコピーを !M! 枚山札に加えシャッフルする。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      "第四次元による廃棄"
+    ]
+  },
+  "awakened:RavenStrike": {
+    "NAME": "レイブンストライク",
+    "DESCRIPTION": "!D! ダメージを与える。 NL awakened:詠唱 : 山札の一番上のカードをプレイする。"
+  },
+  "awakened:Unleash": {
+    "NAME": "解き放つ",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 手札の他のカード1枚につき !M! の追加ダメージを与える。"
+  },
+  "awakened:DesperatePrayer": {
+    "NAME": "必死の祈り",
+    "DESCRIPTION": "!M! 枚の *セレモニー を手札に加える。 NL 廃棄"
+  },
+  "awakened:BirdsEye": {
+    "NAME": "バードアイ",
+    "DESCRIPTION": "スペルを選択して awakened:召喚 し 手札に加える。",
+    "UPGRADE_DESCRIPTION": "魔導書をリフレッシュし、スペルを選択して awakened:召喚 し 手札に加える。"
+  },
+  "awakened:Initiation": {
+    "NAME": "開幕",
+    "DESCRIPTION": "!B! ブロックを得る。 NL *セレモニー を手札に加える。"
+  },
+  "awakened:Ensorcelate": {
+    "NAME": "魔力付与",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 次にプレイするパワーのコストが 0 になる。"
+  },
+  "awakened:Skyward": {
+    "NAME": "スカイウォード",
+    "DESCRIPTION": "!B! ブロックを得る。 NL カードを !M! 枚引く。 NL この戦闘中にプレイされたパワー1枚につき、コストが [E] 減少する。"
+  },
+  "awakened:RisingChant": {
+    "NAME": "高まる祈り",
+    "DESCRIPTION": "エセリアル NL 各ターン、最初に起動した awakened:詠唱 の効果は2回発動する。",
+    "UPGRADE_DESCRIPTION": "各ターン、最初に起動した awakened:詠唱 の効果は2回発動する。"
+  },
+  "awakened:FeatherWhirl": {
+    "NAME": "フェザーホイール",
+    "DESCRIPTION": " X 枚の *羽根撃ち を手札に加える。",
+    "UPGRADE_DESCRIPTION": "X+1 枚の *羽根撃ち を手札に加える。"
+  },
+  "awakened:Murder": {
+    "NAME": "殺戮",
+    "DESCRIPTION": "ランダムな敵に !D! ダメージを M! 回 与える。",
+    "UPGRADE_DESCRIPTION": "保留 NL ランダムな敵に !D! ダメージを !M! 回 与える。"
+  },
+  "awakened:Nihil": {
+    "NAME": "無",
+    "DESCRIPTION": "awakened:マナバーン !M! を与える。 NL awakened:詠唱 : 全ての敵が自身の awakened:マナバーン に等しいHPを失う。"
+  },
+  "awakened:MoonlitVision": {
+    "NAME": "月明かりの幻影",
+    "DESCRIPTION": "毎ターン最初にスペルをプレイした時、 [E] を得る。"
+  },
+  "awakened:Rebirth": {
+    "NAME": "転生",
+    "DESCRIPTION": "死亡時または戦闘終了時に、 全てのデバフを解除し、 *覚醒 状態になり HPを !M! 回復する。"
+  },
+  "awakened:Archmagus": {
+    "NAME": "アークメイジ",
+    "DESCRIPTION": "毎ターン、最初にプレイするスペルが2回プレイされる。"
+  },
+  "awakened:Planeswalk": {
+    "NAME": "次元渡り",
+    "DESCRIPTION": "[E] [E] を得る。 NL 山札に *空虚 を加えシャッフルする。",
+    "UPGRADE_DESCRIPTION": "[E] [E] [E] を得る。 NL 山札に *空虚 を加えシャッフルする。"
+  },
+  "awakened:Spew": {
+    "NAME": "吐瀉",
+    "DESCRIPTION": "!D! ダメージを与える。 NL このカードに使用された [E] は awakened:枯渇 とみなされる。"
+  },
+  "awakened:DarknessFalls": {
+    "NAME": "訪れる闇",
+    "DESCRIPTION": "awakened:枯渇 が発生した時、 !M! ブロックと筋力 !awakened:m2! を得る。",
+    "UPGRADE_DESCRIPTION": "天賦 NL awakened:枯渇 が発生した時、 !M! ブロックと筋力 !awakened:m2! を得る。"
+  },
+  "awakened:Eventide": {
+    "NAME": "黄昏",
+    "DESCRIPTION": "ランダムな敵に !D! ダメージを2回与える。 NL 山札の一番上に *空虚 を置く。"
+  },
+  "awakened:EclipseEmbrace": {
+    "NAME": "日蝕の抱擁",
+    "DESCRIPTION": "*空虚 を廃棄すると、次のターン [E] を得て カードを 1 枚引く。"
+  },
+  "awakened:Clutch": {
+    "NAME": "クラッチ",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 0コストのカードを1枚引く。"
+  },
+  "awakened:Gloomguard": {
+    "NAME": "暗闇の守護者",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 手札に *空虚 が存在する場合、コストが0になる。"
+  },
+  "awakened:Carrionmaker": {
+    "NAME": "死肉を作る者",
+    "DESCRIPTION": "ランダムな敵に !D! ダメージを与える。 NL このターンにプレイされたスペルの数だけ繰り返す。",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " 回スペルをプレイした。)",
+      " 回スペルをプレイした。)"
+    ]
+  },
+  "awakened:MirePit": {
+    "NAME": "泥沼の穴",
+    "DESCRIPTION": "このターンの間、敵全体が筋力 !M! を失う。 NL 次のターン、 [E] を失う。 NL 廃棄"
+  },
+  "awakened:SingularityShield": {
+    "NAME": "特異点の盾",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 次のターン、 [E] を失い、 !B! ブロックを得る。"
+  },
+  "awakened:Dejection": {
+    "NAME": "陰鬱",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 手札を1枚廃棄する。 スペルが廃棄された場合 *セレモニー を手札に加える。"
+  },
+  "awakened:BloodRite": {
+    "NAME": "血の儀式",
+    "DESCRIPTION": "!D! ダメージを与える。 NL *セレモニー を手札に加える。"
+  },
+  "awakened:SongOfSorrow": {
+    "NAME": "哀歌",
+    "DESCRIPTION": "あなたが *空虚 を生成する度に敵全体が HPを !M! 失う。"
+  },
+  "awakened:MysticOrder": {
+    "NAME": "秘術教団",
+    "DESCRIPTION": "カードを !M! 枚引く。 NL awakened:召喚"
+  },
+  "awakened:ProfaneStrike": {
+    "NAME": "プロフェインストライク",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 手札を1枚山札の一番上に置く。"
+  },
+  "awakened:Victuals": {
+    "NAME": "食糧",
+    "DESCRIPTION": "awakened:詠唱 : [E] [E] を得る。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "awakened:詠唱 : [E] [E] [E] を得る。 NL 廃棄"
+  },
+  "awakened:Gather": {
+    "NAME": "集合",
+    "DESCRIPTION": "!B! ブロックを得る。 NL awakened:詠唱 : 捨て札のカードを1枚手札に加える。"
+  },
+  "awakened:TheTower": {
+    "NAME": "塔",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL この戦闘中に生成されたカード1枚毎に !M! の追加ダメージを与える。"
+  },
+  "awakened:ArcaneNesting": {
+    "NAME": "アルケインネスト",
+    "DESCRIPTION": "使用不可 NL このカードが手札にある場合、パワーをプレイする度に !B! ブロックを得る。",
+    "EXTENDED_DESCRIPTION": [
+      "このカードの効果はパワーをプレイした時に得られる。"
+    ]
+  },
+  "awakened:MiddenHeap": {
+    "NAME": "埋葬された山",
+    "DESCRIPTION": "!B! ブロックを得る。 NL 山札または捨て札から !M! 枚の *状態異常 か *呪い カードを手札に加える。",
+    "UPGRADE_DESCRIPTION": "!B! ブロックを得る。 NL 山札または捨て札から !M! 枚の *状態異常 か *呪い カードを手札に加える。",
+    "EXTENDED_DESCRIPTION": [
+      "選択したカードを手札に移す",
+      "選択したカードを手札に移す"
+    ]
+  },
+  "awakened:Caw": {
+    "NAME": "カァ!",
+    "DESCRIPTION": "!D! ダメージを与える。 NL awakened:詠唱 : この戦闘中全ての *カァ! のダメージを !M! 増加させる。"
+  },
+  "awakened:Scour": {
+    "NAME": "スカー",
+    "DESCRIPTION": "!D! ダメージを与える。 NL awakened:マナバーン !M! を与える。"
+  },
+  "awakened:Manastorm": {
+    "NAME": "マナストーム",
+    "DESCRIPTION": "敵全体に !D! ダメージを与える。 NL awakened:召喚 を2回行う。"
+  },
+  "awakened:StormRuler": {
+    "NAME": "ストームルーラー",
+    "DESCRIPTION": "awakened:召喚 NL *雷撃 が !M! の追加 ダメージを与える。"
+  },
+  "awakened:AphoticFount": {
+    "NAME": "暗黒の泉",
+    "DESCRIPTION": "awakened:召喚 NL *氷結 をプレイした時、 *プレートアーマー !M! を得る。"
+  },
+  "awakened:Bloodthirst": {
+    "NAME": "血の渇き",
+    "DESCRIPTION": "!D! ダメージを与える。 NL 致命 時、 awakened:パワーポーション を入手し、このカードを廃棄する。"
+  },
+  "awakened:Procession": {
+    "NAME": "行進",
+    "DESCRIPTION": "山札のカードをプレイし、そのコストに等しい *空虚 を山札に加えシャッフルする。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "山札のカードをプレイし、そのコストに等しい *空虚 を山札に加えシャッフルする。"
+  },
+  "awakened:SplitWide": {
+    "NAME": "引き裂く",
+    "DESCRIPTION": "!D! ダメージを与える。 NL この敵を攻撃する度、一時的な 筋力 !M! を得る。 NL 廃棄"
+  },
+  "awakened:Spellshield": {
+    "NAME": "スペルシールド",
+    "DESCRIPTION": "カードを 保留 した時、 !M! ブロックを得る。"
+  },
+  "awakened:Siphon": {
+    "NAME": "サイフォン",
+    "DESCRIPTION": "!D! ダメージを与える。 NL awakened:詠唱 : このターンの間、 筋力 !M! を gremlin:スティール する。"
+  },
+  "awakened:PlumeJab": {
+    "NAME": "羽根撃ち",
+    "DESCRIPTION": "保留 NL ランダムな敵に !D! ダメージを2回与える。 NL 廃棄"
+  },
+  "awakened:Primacy": {
+    "NAME": "プライマシー",
+    "DESCRIPTION": "各ターンで初めて 筋力 を得た時、 カードを 1 枚引く。",
+    "UPGRADE_DESCRIPTION": "各ターン !M! 回まで、 筋力 を得た時、 カードを 1 枚引く。"
+  },
+  "awakened:Daggerstorm": {
+    "NAME": "ダガーストーム",
+    "DESCRIPTION": "カードを生成した時、ランダムな敵に !M! ダメージを与える。"
+  },
+  "awakened:PackRat": {
+    "NAME": "群れネズミ",
+    "DESCRIPTION": "2回 !D! ダメージを与え、2回 !B! ブロックを得る。 NL ランダムなポーションを入手する。 NL 廃棄"
+  },
+  "awakened:Mantis": {
+    "NAME": "マンティス",
+    "DESCRIPTION": "筋力 !M! を得る。 NL 手札に *羽根撃ち を加える。"
+  },
+  "awakened:ManaShield": {
+    "NAME": "マナシールド",
+    "DESCRIPTION": "!B! ブロックを得る。 NL awakened:召喚 NL 手札のランダムなスペルのコストを1減少させる。"
+  },
+  "awakened:Crusher": {
+    "NAME": "クラッシャー",
+    "DESCRIPTION": "保留 NL !D! ダメージを与える。 NL カードが生成された時、このカードのコストを1減少させる。"
+  },
+  "awakened:Minniegun": {
+    "NAME": "ミニガン",
+    "DESCRIPTION": "!D! ダメージを !M! 回与える。 NL 山札に *空虚 を加える。"
+  },
+  "awakened:SignInBlood": {
+    "NAME": "血の署名",
+    "DESCRIPTION": " !awakened:m2! ダメージを受ける。 NL カードを !M! 枚引く。 NL 筋力 !awakened:m2! を得る。 NL 廃棄"
+  },
+  "awakened:SpreadingSpores": {
+    "NAME": "胞子拡散",
+    "DESCRIPTION": "エセリアル NL トゲ !M! を得る。 NL このカードのコピーを山札に加えシャッフルする。"
+  },
+  "awakened:Scheme": {
+    "NAME": "スキーム",
+    "DESCRIPTION": "このターンに次にプレイするコスト1以下のカードは2回プレイされる。",
+    "UPGRADE_DESCRIPTION": "このターンに次にプレイする !M! 枚のコスト1以下のカードは2回プレイされる。"
+  },
+  "awakened:TheEncyclopedia": {
+    "NAME": "エンサイクロペディア",
+    "DESCRIPTION": "!M! 枚のランダムな カードから 2枚 を選択し、手札に加える。それらはコストが2減少する。 NL 廃棄",
+    "EXTENDED_DESCRIPTION": [
+      "2枚を選択し、手札に加える"
+    ]
+  },
+  "awakened:RealityRift": {
+    "NAME": "次元の裂け目",
+    "DESCRIPTION": "!M! 枚の *別次元 の 強力なカードから !awakened:m2! 枚を選択し、手札に加える。 NL 捨て札に2枚の *空虚 を加える。 NL 廃棄"
+  },
+  "awakened:Inscribe": {
+    "NAME": "インスクライブ",
+    "DESCRIPTION": "*スペル を1枚選択し、この戦闘の間魔導書に !M! 枚追加する。",
+    "UPGRADE_DESCRIPTION": "awakened:召喚 NL *スペル を1枚選択し、この戦闘の間魔導書に !M! 枚追加する。"
+  }
+}

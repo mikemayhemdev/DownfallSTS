@@ -34,7 +34,7 @@
       "[fist_icon]",
       "champ:[fist_icon]"
     ],
-    "DESCRIPTION": "Requires being in a Stance. NL After playing a Finisher, exit your Stance and trigger its Finisher bonus. NL #rBerserker #yFinisher #yBonus: Gain #b1 #yStrength [REMOVE_SPACE]. NL #bDefensive #yFinisher #yBonus: Gain #b8 #yBlock [REMOVE_SPACE]."
+    "DESCRIPTION": "Requires being in a Stance. NL After playing a Finisher, exit your Stance and trigger its Finisher bonus. NL #rBerserker #yFinisher #yBonus: Gain #b1 #yStrength [REMOVE_SPACE]. NL #bDefensive #yFinisher #yBonus: Gain #b6 #yBlock [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Counter",
@@ -49,7 +49,7 @@
       "defensive",
       "defensive."
     ],
-    "DESCRIPTION": "#yStance. NL #ySkill Bonus: Gain #b3 #yCounter [REMOVE_SPACE]. NL #yFinisher Effect: Gain #b8 #yBlock [REMOVE_SPACE]."
+    "DESCRIPTION": "#yStance. NL #ySkill Bonus: Gain #b3 #yCounter [REMOVE_SPACE]. NL #yFinisher Effect: Gain #b6 #yBlock [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Berserker",

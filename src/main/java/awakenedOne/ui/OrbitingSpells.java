@@ -3,6 +3,7 @@ package awakenedOne.ui;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.actions.ConjureAction;
 import awakenedOne.actions.SetUpNextSpellAction;
+import awakenedOne.actions.SpellApotheosisAction;
 import awakenedOne.cards.Caw;
 import awakenedOne.cards.tokens.spells.*;
 import awakenedOne.relics.ZenerDeck;
@@ -39,7 +40,7 @@ public class OrbitingSpells {
     public static final float POSITION_X = 95F * Settings.scale;
     public static final float POSITION_Y = 300F * Settings.scale;
     public static final float PANEL_BG_X = POSITION_X - (66F * Settings.scale);
-    public static final float PANEL_BG_Y = POSITION_Y + (110F * Settings.scale);
+    public static final float PANEL_BG_Y = Settings.HEIGHT - POSITION_Y - 370F * Settings.scale;//POSITION_Y;//Settings.HEIGHT - (POSITION_Y);// (-110F * Settings.scale));
     public static final ArrayList<String> spells = new ArrayList<>();
     private static final UIStrings uiStrings = CardCrawlGame.languagePack.getUIString(makeID("Spellbook"));
     private static final HashMap<String, Texture> cardIcons = new HashMap<>();
@@ -219,9 +220,15 @@ public class OrbitingSpells {
     public static void update() {
         hoveredCard = -1;
         for (int i = 0; i < boxes.size(); i++) {
+            ArrayList<String> uniqueCards = new ArrayList<>();
+            for (AbstractCard c : spellCards) {
+                if (!uniqueCards.contains(c.cardID)) {
+                    uniqueCards.add(c.cardID);
+                }
+            }
             boxes.get(i).update();
             if (boxes.get(i).hovered) {
-                if (i < spellCards.size()) {
+                if (i < uniqueCards.size()) {
                     hoveredCard = i;
                 }
             }
@@ -260,10 +267,12 @@ public class OrbitingSpells {
 
         String idNext = "";
         HashMap<String, Integer> spellsFound = new HashMap<>();
+        ArrayList<AbstractCard> orderedSpells = new ArrayList<>();
         for (AbstractCard s : spellCards) {
             if (spellsFound.containsKey(s.cardID)) {
                 spellsFound.put(s.cardID, spellsFound.get(s.cardID) + 1);
             } else {
+                orderedSpells.add(s);
                 spellsFound.put(s.cardID, 1);
             }
             if (s.hasTag(UP_NEXT)) idNext = s.cardID;
@@ -297,9 +306,9 @@ public class OrbitingSpells {
 
 
         if (hoveredCard != -1) {
-            AbstractCard tar = spellCards.get(hoveredCard);
-            tar.target_x = tar.current_x = (barBox.x + 500) * Settings.scale;
-            tar.target_y = tar.current_y = Settings.HEIGHT - ((POSITION_Y + 100) * Settings.scale);
+            AbstractCard tar = orderedSpells.get(hoveredCard);
+            tar.target_x = tar.current_x = (barBox.x + (500 * Settings.scale));
+            tar.target_y = tar.current_y = Settings.HEIGHT - ((POSITION_Y + 100 * Settings.scale));
             spellCards.get(hoveredCard).render(sb);
         }
         if (barBox != null) {

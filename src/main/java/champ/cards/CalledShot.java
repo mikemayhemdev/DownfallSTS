@@ -21,7 +21,7 @@ public class CalledShot extends AbstractChampCard {
         tags.add(ChampMod.COMBO);
         tags.add(ChampMod.COMBODEFENSIVE);
         tags.add(ChampMod.COMBOBERSERKER);
-        tags.add(CardTags.HEALING);
+        //tags.add(CardTags.HEALING);
         postInit();
         loadJokeCardImage(this, "CalledShot.png");
     }
@@ -50,7 +50,6 @@ public class CalledShot extends AbstractChampCard {
         rawDescription = UPGRADE_DESCRIPTION;
         upgradeMagicNumber(1);
         initializeDescription();
-        tags.add(SneckoMod.BANNEDFORSNECKO);
-
+        //tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 }

@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -53,35 +54,21 @@ public class Haunted extends CustomCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
     }
 
-    @Override
-    public void triggerWhenDrawn() {
-//        super.triggerWhenDrawn();
-//        AbstractDungeon.actionManager.addToTop(new AbstractGameAction() {
-//            @Override
-//            public void update() {
-//                isDone = true;
-//                for (AbstractCard c : AbstractDungeon.player.hand.group) {
-//                    if (!c.isEthereal) {
-//                        CardModifierManager.addModifier(c, new PropertiesMod(PropertiesMod.supportedProperties.ETHEREAL, false));
-//                        c.superFlash(Color.PURPLE.cpy());
-//                    }
-//                }
-//            }
-//        });
-    }
+//    public void triggerOnEndOfTurnForPlayingCard() {
+//        this.dontTriggerOnUseCard = true;
+//        AbstractDungeon.actionManager.cardQueue.add(new CardQueueItem(this, true));
+//    }
 
-    @Override
-    public void triggerOnExhaust() {
-        this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+//    public void triggerOnExhaust() {
+//        this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SMASH));
+//
+//    }
 
-    }
-
-    @Override
-    public void atTurnStart() {
-    }
+//    @Override
+//    public void atTurnStart() {
+//    }
 
     /*
     @Override
@@ -96,19 +83,11 @@ public class Haunted extends CustomCard {
 
      */
 
-    /*
-    public void triggerOnEndOfTurnForPlayingCard() {
-            for (AbstractCard c : AbstractDungeon.player.hand.group) {
-                if (c.isEthereal) {
-                    if (c != this) {
-                        flash(Color.PURPLE.cpy());
-                        this.addToTop(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-                    }
-                }
-        }
-    }
 
-     */
+    public void triggerOnEndOfTurnForPlayingCard() {
+        flash(Color.PURPLE.cpy());
+        this.addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, this.magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
+    }
 
 
     public AbstractCard makeCopy() {

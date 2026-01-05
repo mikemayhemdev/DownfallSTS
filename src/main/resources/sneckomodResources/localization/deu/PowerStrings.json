@@ -1,0 +1,193 @@
+{
+  "sneckomod:BlunderGuardPower": {
+    "NAME": "Tsunami",
+    "DESCRIPTIONS": [
+      "#yÜberschuss Effekte verleihen zusätzlich #b",
+      " #yBlock [REMOVE_SPACE].",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:CheapStockPower": {
+    "NAME": "Ladenhüter",
+    "DESCRIPTIONS": [
+      "#yIrre zu Beginn deines Zuges die teuerste Karte auf der Hand.",
+      "#yIrre zu Beginn deines Zuges die teuersten #b",
+      " Karten auf der Hand."
+    ]
+  },
+  "sneckomod:CheatPower": {
+    "NAME": "Schummeln",
+    "DESCRIPTIONS": [
+      "#yÜberschuss Effekte werden in diesem Zug immer aktiviert - unabhängig von der Handgröße.",
+      "#yÜberschuss Effekte werden in den nächsten #b",
+      " Zügen immer aktiviert - unabhängig von der Handgröße."
+    ]
+  },
+  "sneckomod:MuddleDrawnCardsPower": {
+    "NAME": "Irrzug",
+    "DESCRIPTIONS": [
+      "#yIrre die erste in diesem Zug gezogene Karte.",
+      "#yIrre die ersten #b",
+      " in diesem Zug gezogenen Karten. (noch ",
+      " übrig)"
+    ]
+  },
+  "sneckomod:MudshieldPower": {
+    "NAME": "Irrschild",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du eine Karte #yirrst #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:OverwhelmingPresencePower": {
+    "NAME": "Überwältigende Präsenz",
+    "DESCRIPTIONS": [
+      "Das erste Mal wenn du im Zug eine Karte einer #yFremdklasse spielst, ziehe #b1 Karte.",
+      "Das erste Mal wenn du im Zug eine Karte einer #yFremdklasse spielst, ziehe #b ",
+      " Karten."
+    ]
+  },
+  "sneckomod:SerpentsNestPower": {
+    "NAME": "Schlangennest",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine #yMacht spielst, füge ALLEN Gegnern #b1 Schaden zu.",
+      "Immer wenn du eine #yMacht spielst, füge ALLEN Gegnern #b",
+      " Schaden zu."
+    ]
+  },
+  "sneckomod:SerpentMindPower": {
+    "NAME": "Exotische Form",
+    "DESCRIPTIONS": [
+      "Erhalte am Ende deines Zuges für jede #yKlasse, aus der du zumindest eine Karte gespielt hast, #b",
+      " #yStärke.",
+      " #yStärke."
+    ]
+  },
+  "sneckomod:SnakeEyesPower": {
+    "NAME": "Schlangenaugen",
+    "DESCRIPTIONS": [
+      "In diesem Zug spielst du deine nächste Karte einer #yFremdklasse zweimal aus.",
+      "In diesem Zug spielst du deine nächsten #b",
+      " Karten einer #yFremdklasse zweimal aus."
+    ]
+  },
+  "sneckomod:UnendingSupplyPower": {
+    "NAME": "Unbegrenzter Vorrat",
+    "DESCRIPTIONS": [
+      "Nimm zu Beginn jedes Zuges #b",
+      "Nimm zu Beginn jedes Zuges ein #yEcho einer zufälligen Karte einer #yFremdklasse auf die Hand.",
+      " #yEchos von zufälligen Karten aus #yFremdklassen auf die Hand."
+    ]
+  },
+  "sneckomod:UnknownUpgradedPostCombatPower": {
+    "NAME": "Verbesserte unidentifizierte Belohnung",
+    "DESCRIPTIONS": [
+      "Erhalte nach dem Kampf #b",
+      " zusätzliche #yverbesserte #yunidentifizierte Kartenbelohnungen.",
+      " zusätzliche #yverbesserte #yunidentifizierte Kartenbelohnung.",
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+
+    ]
+  },
+  "sneckomod:UnlimitedRollsPower": {
+    "NAME": "Unbegrenzte Würfe",
+    "DESCRIPTIONS": [
+      "Nimm am Anfang jedes Zuges einen #ySeelenwürfel+ der #yerschöpft auf die Hand."
+    ]
+  },
+  "sneckomod:Transmogrifying": {
+    "NAME": "Materienumwandlung",
+    "DESCRIPTIONS": [
+      " wird transformiert zu einem anderen ",
+      " Relikt.",
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+    ]
+  },
+  "sneckomod:ToxicPersonalityPower": {
+    "NAME": "Toxische Persönlichkeit",
+    "DESCRIPTIONS": [
+      "Immer wenn du einen Debuff anwendest, wende zusätzlich #b",
+      " #yToxin an.",
+      "NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+    ]
+  },
+  "sneckomod:TyphoonPower": {
+    "NAME": "Taifun",
+    "DESCRIPTIONS": [
+      "Wenn du in diesem Zug einen #bÜberschuss Effekt aktivierst, spiele eine Kopie von #yTaifunbiss [REMOVE_SPACE].",
+      "Wenn du in diesem Zug einen #bÜberschuss Effekt aktivierst, spiele #b",
+      " Kopie von #yTaifunbiss [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:TyphoonPlusPower": {
+    "NAME": "Taifun+",
+    "DESCRIPTIONS": [
+      "Wenn du in diesem Zug einen #bÜberschuss Effekt aktivierst, spiele eine Kopie von #yTaifunbiss+ [REMOVE_SPACE].",
+      "Wenn du in diesem Zug einen #bÜberschuss Effekt aktivierst, spiele #b",
+      " Kopie von #yTaifunbiss+ [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:SerpentineSleuthPower": {
+    "NAME": "Schlangendetektiv",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du eine #yMacht spielst #b",
+      " [E] .",
+      " [E] ."
+    ]
+  },
+  "sneckomod:BigGunsStrengthPower": {
+    "NAME": "Schwere Geschütze",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du eine Karte spielst, die mindestens #b3 kostet, #b",
+      " #yStärke [REMOVE_SPACE].",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:BigGunsBlockPower": {
+    "NAME": "Schwere Panzerung",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du eine Karte spielst, die mindestens #b3 kostet, #b",
+      " #yBlock [REMOVE_SPACE].",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:AceOfWandsPower": {
+    "NAME": "Königin der Pentagramme",
+    "DESCRIPTIONS": [
+      "Erhalte immer wenn du einen Debuff anwendest #b",
+      " #yBlock [REMOVE_SPACE].",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "sneckomod:LacerateDebuff": {
+    "NAME": "Aufschlitzen",
+    "DESCRIPTIONS": [
+      "Immer wenn du in diesem Zug einen Debuff auf diesen Gegner anwendest, wende zusätzlich #b",
+      " #yToxin an.",
+      " #yToxin an."
+    ]
+  },
+  "sneckomod:FountainPower": {
+    "NAME": "Fontäne",
+    "DESCRIPTIONS": [
+      "#yÜberschuss Effekte wenden zusätzlich #b",
+      " #yToxin auf einen zufälligen Gegner an.",
+      " #yToxin auf einen zufälligen Gegner an."
+    ]
+  },
+  "sneckomod:TrashCanPower": {
+    "NAME": "Mülleimer",
+    "DESCRIPTIONS": [
+      "Du kannst am Ende jedes Zuges eine Karte auf der Hand #yerschöpfen [REMOVE_SPACE].",
+      "Du kannst am Ende jedes Zuges bis zu #b",
+      " Karten auf der Hand #yerschöpfen [REMOVE_SPACE]."
+  ]
+  },
+  "sneckomod:VenomDebuff": {
+    "NAME": "Toxin",
+    "DESCRIPTIONS": [
+      "Immer wenn auf diesen Gegner ein Debuff, abgesehen von #yToxin, angewendet wird, verliert er #b",
+      " TP."
+    ]
+  }
+}

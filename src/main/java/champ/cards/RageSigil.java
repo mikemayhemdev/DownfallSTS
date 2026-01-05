@@ -14,7 +14,7 @@ public class RageSigil extends AbstractChampCard {
     public RageSigil() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         baseBlock = 2;
-        baseMagicNumber = magicNumber = 3;
+        baseMagicNumber = magicNumber = 2;
         tags.add(ChampMod.OPENER);
         this.tags.add(ChampMod.OPENERDEFENSIVE);
         postInit();

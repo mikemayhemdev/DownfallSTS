@@ -1,0 +1,216 @@
+{
+  "downfall:EvilMenuPanel": {
+    "TEXT": [
+      "Downfall",
+      "Verteidige das Herz vor Eindringlingen, die „Slay the Spire“ im Sinn haben.",
+      "Wähle deinen Boss",
+      "Kampagne"
+    ]
+  },
+  "downfall:SoulToGoldChanges": {
+    "TEXT": [
+      "Seelen",
+      "Zeigt, wie viele Seelen du dir einverleibt hast. Seelen können beim Herz gegen Belohnungen eingetauscht werden.",
+      "Händler Status",
+      "TP",
+      "Tot!",
+      "Stärke",
+      "Gestohlene Seelen",
+      "Verderben"
+    ]
+  },
+  "downfall:BustKeyButton": {
+    "TEXT": [
+      "Rubin zerbrechen",
+      "Saphir zerbrechen",
+      "Smaragd zerbrechen",
+      "(Kleine Aktion) Ausgeben ",
+      " gewöhnlichen Karten zu erhalten.",
+      " ungewöhnlichen Karten zu erhalten.",
+      " seltenen Karten zu erhalten.",
+      "Schlüssel zerbrochen!",
+      "Erfordert ",
+      " Seelen.",
+      "(Kleine Aktion) Zerbreche den Schlüssel um ",
+      " Seelen: Wähle bis zu ",
+      " von ",
+      " Verbessere Belohnungen für weiteres Zerbrechen."
+    ]
+  },
+  "downfall:WheelSpinButton": {
+    "TEXT": [
+      "Glücksrad drehen",
+      "(Kleine Aktion) Glücksrad drehen.",
+      "Kann nicht erneut gedreht werden."
+    ]
+  },
+  "downfall:AscensionText": {
+    "TEXT": [
+      "19. Bosse erhalten ein zusätzliches Relikt.",
+      "20. Der Boss in Akt 3 hat einen Echsenschwanz der die TP komplett heilt.",
+      "Erhalte den Rubinschlüssel. Du kannst ihn später zerbrechen.",
+      "4. Bosse haben eine zusätzliche verbesserte Karte."
+    ]
+  },
+  "downfall:ConfigMenuText": {
+    "TEXT": [
+      "Aktiviere globale Downfall Relikte in Standard Runs.",
+      "Aktiviere globale Downfall Tränke in Standard Runs.",
+      "Aktiviere globale Downfall Ereignisse in Standard Runs.",
+      "Aktiviere Downfall Boss-Karten in Standard Runs.",
+      "Erlaube Standard Charactere in Downfall Runs, und Bosse in Standard Runs.",
+      "Erlaube gemoddete Charactere in Downfall Runs.",
+      "Aktiviere Downfall Flüche in Standard Runs.",
+      "Standard Kartenlayout für Downfall Runs - Lagerfeuer vor dem Boss, nicht zu Beginn.",
+      "Schalte alle gesperrten Karten und Relikte für Downfall Charactere frei (erfordert Neustart)",
+      "Deaktiviere Champs Haltungs-Hilfe - für erfahrene Champions",
+      "Deaktiviere Karten anderer Mods für Snecko.",
+      "Deaktiviere Musik Überschreibungen (erfordert Neustart)",
+      "Schalte alle gesperrten Skins für Downfall Charactere frei",
+      "Ersetze Text für Eigenschaften in Karten durch ihre Symbole.",
+      "Das Zauberbuch hebt die nächste gerufene Karte hervor.",
+      "Deaktiviere Änderungen bei original Karten und Relikte durch Downfall (erfordert Neustart)",
+      "Aktiviere Legacy Downfall Bosse (pre-6.0)"
+    ]
+  },
+  "downfall:EnergyPanelTip": {
+    "TEXT": [
+      "Des Gegners aktuelle Menge an Energie. Man braucht Energie, um Karten auszuspielen."
+    ],
+    "EXTRA_TEXT": [
+      "Energie"
+    ]
+  },
+  "downfall:RemoveCardReward": {
+  "TEXT": [
+      "Entferne eine Karte aus deinem Deck",
+      "Wähle eine Karte zum Entfernen"
+    ]
+  },
+  "downfall:TransformCardReward": {
+    "TEXT": [
+      "Transformiere eine Karte aus deinem Deck",
+      "Wähle eine Karte zum Transformieren"
+    ]
+  },
+  "downfall:UpgradeCardReward": {
+    "TEXT": [
+      "Verbessere eine Karte aus deinem Deck",
+      "Wähle eine Karte zum Verbessern"
+    ]
+  },
+  "downfall:BossRelicReward": {
+    "TEXT": [
+      "Wähle 1 vom 3 Boss Relikten.",
+      "Erhalte ein ",
+      ".",
+      "Wähle a Relikt.. irgendwie"
+    ]
+  },
+  "downfall:EtherealMod": {
+    "TEXT": [
+      "Flüchtig. NL "
+    ]
+  },
+  "downfall:JaxReward": {
+    "TEXT": [
+      "Etwas JAX gefunden!"
+    ]
+  },
+  "downfall:RareCardReward": {
+    "TEXT": [
+      "Erhalte eine seltene Karte."
+    ]
+  },
+  "downfall:OctoChoiceAction": {
+    "TEXT": [
+      "Wähle eine Möglichkeit aus.",
+      "Das solltest du nicht sehen. Ups"
+    ]
+  },
+  "downfall:BossCardReward": {
+    "TEXT": [
+      "Erhalte eine Boss-Karte",
+      "Wähle eine Karte."
+    ]
+  },
+  "downfall:ColorfulCardReward": {
+    "TEXT": [
+      "Nimm eine ",
+      " Karte in dein Deck auf",
+      "Wähle eine Karte."
+    ]
+  },
+  "downfall:ColorfulUncommonCardReward": {
+    "TEXT": [
+      "Nimm eine ",
+      " Karte in dein Deck auf",
+      "Wähle eine Karte."
+    ]
+  },
+  "downfall:ColorfulRareCardReward": {
+    "TEXT": [
+      "Nimm eine ",
+      " Karte in dein Deck auf",
+      "Wähle eine Karte."
+    ]
+  },
+  "downfall:DiceRollPotionReward": {
+    "TEXT": [
+      "Nimm eine verbesserte ",
+      " Karte in dein Deck auf",
+      "Wähle eine Karte."
+    ]
+  },
+  "downfall:ColorfulPowersCardReward": {
+    "TEXT": [
+      "Nimm eine verbesserte Macht ",
+      " in dein Deck auf",
+      "Wähle eine Karte."
+    ]
+  },
+  "downfall:RunHistoryMonsterNames": {
+    "TEXT": [
+      "Living Wall Heads",
+      "Der Eiserne",
+      "Die Stille",
+      "Das Defekte",
+      "Die Seherin",
+      "Händler",
+      "Der Einsiedler"
+    ]
+  },
+  "downfall:WhaleHunter": {
+    "TEXT": [
+      "Walfänger",
+      "Beende den Zyklus."
+    ]
+  },
+  "downfall:Unfettered": {
+    "TEXT": [
+      "Befreit",
+      "Gebrochenes Siegel erhalten."
+    ]
+  },
+  "downfall:SingleCardViewPopup": {
+    "TEXT": [
+      "Munition"
+    ]
+  },
+  "downfall:MainMenuAd": {
+    "TEXT": [
+      "Willst du mehr?",
+      "Weitere Mods, darunter",
+      "Downfall, sind verfügbar für ",
+      "original Slay the Spire auf",
+      "Steam Workshop.",
+      "Klick hier um mehr zu erfahren!"
+    ]
+  },
+  "downfall:CantEscapeGauntlet": {
+    "TEXT": [
+      "Es sind zu viele...."
+    ],
+    "Translator note": "This pops up when you try to escape the gauntlet fight, where there are more than 1 hero alive yet, so you are overwhelmed by number thus cant escape."
+  }
+}

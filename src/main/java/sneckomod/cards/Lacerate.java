@@ -23,6 +23,7 @@ public class Lacerate extends AbstractSneckoCard {
         //baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
         this.cardsToPreview = new CripplingPoison();
+        this.exhaust = true;
         SneckoMod.loadJokeCardImage(this, "Lacerate.png");
     }
 
@@ -50,7 +51,6 @@ public class Lacerate extends AbstractSneckoCard {
             AbstractCard q = new CripplingPoison();
             q.upgrade();
             cardsToPreview = q;
-            upgradeName();
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

@@ -34,12 +34,26 @@ public class SneckoCommon extends CustomRelic {
     }
 
     public void onEquip() {
-        AbstractDungeon.getCurrRoom().rewards.add(new ColorfulPowersReward());
-        AbstractDungeon.combatRewardScreen.open();
-        AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
-        AbstractDungeon.combatRewardScreen.rewards.remove(AbstractDungeon.combatRewardScreen.rewards.size()-1);
+        ArrayList<AbstractCard> cardsToReward = new ArrayList<>();
+        while (cardsToReward.size() < 5) {
+            AbstractCard newCard = SneckoMod.getOffClassCardMatchingPredicateRelicRng(c -> c.type == AbstractCard.CardType.POWER && c.rarity == AbstractCard.CardRarity.UNCOMMON);
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                r.onPreviewObtainCard(newCard);
+            }
+            //AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.INCOMPLETE;
+            CardGroup c = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
+            if (!isDuplicate(cardsToReward, newCard)) {
+                cardsToReward.add(newCard.makeCopy());
+            }
+        }
+        AbstractDungeon.cardRewardScreen.open(cardsToReward, null, "");
+        //AbstractDungeon.getCurrRoom().phase = AbstractRoom.RoomPhase.COMPLETE;
     }
 
+
+    private boolean isDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
+        return cardsList.stream().anyMatch(c -> c.cardID.equals(card.cardID));
+    }
 
     public String getUpdatedDescription() {
         return this.DESCRIPTIONS[0];

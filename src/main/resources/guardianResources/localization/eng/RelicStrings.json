@@ -3,7 +3,7 @@
     "NAME": "Bronze Gear",
     "FLAVOR": "Protection where you need it most.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain #yGear #yUp [REMOVE_SPACE]. NL Guardian starts the run with a random common #yGem [REMOVE_SPACE]."
+      "At the start of each combat, gain #yGear #yUp. NL Guardian starts the run with a random common #yGem [REMOVE_SPACE]."
     ]
   },
   "Guardian:ModeShifterPlus": {
@@ -11,7 +11,7 @@
     "FLAVOR": "Replace every 3,000 floors.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL At the start of combat, gain #yGear #yUp [REMOVE_SPACE]. NL Whenever you enter #yDefensive #yMode [REMOVE_SPACE], gain [E] and draw #b2 cards."
+      " [REMOVE_SPACE].[] NL At the start of combat, gain #yGear #yUp. NL Whenever you enter #yDefensive #yMode [REMOVE_SPACE], gain [E] and draw #b2 cards."
     ]
   },
   "Guardian:ObsidianScales": {
@@ -27,7 +27,7 @@
     "NAME": "Baalor's Lordly Plate",
     "FLAVOR": "One can never have enough armor.",
     "DESCRIPTIONS": [
-      "Whenever you #yguardianmod:Brace [REMOVE_SPACE], #yBrace 1 more."
+      "Whenever you #yguardianmod:Brace [REMOVE_SPACE], #yBrace #b1 more."
     ]
   },
   "Guardian:guardianmod:GemCopier": {
@@ -55,7 +55,7 @@
     "NAME": "Pilot's Codex",
     "FLAVOR": "Designs and diagrams of the Spire's earliest manually-driven prototypes, by Master Pilot David.",
     "DESCRIPTIONS": [
-      "At the end of your first 3 turns, if your #yguardianmod:Stasis slots aren't full, choose #b1 of #b3 cards to place into #yguardianmod:Stasis [REMOVE_SPACE]."
+      "At the end of your first #b3 turns, if your #yguardianmod:Stasis slots aren't full, choose #b1 of #b3 cards to place into #yguardianmod:Stasis [REMOVE_SPACE]."
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {

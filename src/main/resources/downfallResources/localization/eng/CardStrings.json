@@ -13,11 +13,11 @@
   },
   "downfall:Haunted": {
     "NAME": "Haunted",
-    "DESCRIPTION": "Ethereal. NL When this is *Exhausted, take !M! damage."
+    "DESCRIPTION": "Ethereal. NL At the end of your turn, take !M! damage."
   },
   "downfall:Malfunctioning": {
     "NAME": "Flawed",
-    "DESCRIPTION": "At the end of your turn, transform all cards in hand into random Status cards. NL Exhaust."
+    "DESCRIPTION": "At the end of your turn, add a *Wound to your discard pile. NL Exhaust."
   },
   "downfall:Scatterbrained": {
     "NAME": "Scatterbrained",

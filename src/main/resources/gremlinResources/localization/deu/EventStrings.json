@@ -1,0 +1,111 @@
+{
+  "Gremlin:CursedTome": {
+    "OPTIONS": [
+      "[Nehmen] #gErhalte #gdas #gBuch. #rAlle #rGremlins #rverlieren #r"
+    ]
+  },
+  "Gremlin:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Ein flexibler Geist ist nicht von Zweifeln geplagt."
+    ],
+    "OPTIONS": [
+      "[Willkür] #gErsetze alle #gSchlag und #gVerteidigen Karten durch #gMesser und #gSchutz.",
+      "[Gesperrt] Erfordert einen Schlag oder ein Verteidigen."
+    ]
+  },
+  "Gremlin:KnowingSkull": {
+    "OPTIONS": [
+      "[Information?] #gEnthülle #gden #gBoss. #rAlle #rGremlins #rverlieren #r",
+      "[Success?] #gErhalte #geine #gfarblose #gKarte. #rAlle #rGremlins #rverlieren #r",
+      "[A Pick Me Up?] #gErhalte #geinen #gTrank. #rAlle #rGremlins #rverlieren #r",
+      " #gGold. #rAlle #rGremlins #rverlieren #r",
+      "[Wie komme ich hier raus?] #rAlle #rGremlins #rverlieren #r"
+
+    ]
+  },
+  "Gremlin:MatchingGame": {
+    "DESCRIPTIONS": [
+      "„Hier sind #bzwölf Karten! Finde Paare, um sie zu behalten! #bFünf Versuche-“ NL NL „ #bZehn Versuche!“ wirfst du ein. NL NL The Gremlin wirft dir einen bösen Blick zu. „ #bFÜNF Versuche!“ NL NL „ #bAcht.“ NL NL „ #bSechs,“ entgegnet er. „Hoffentlich werdet ihr #pverflucht.“ NL NL Du hoffst, dass er #pverflucht wird.",
+      "Du beendest das Spiel des Gremlins und siehst auf. NL Er hat sih aus dem STaub gemacht bevor du noch mehre #y~kostenlosen~ #y~Kram~ erbeuten konntest!",
+      "Ein Gremlin mischt wild Karten auf einem Tisch. Er bietet anscheinend #y~kostenlosen~ #y~Kram~ an. Du willst den #y~kostenlosen~ #y~Kram.~"
+    ]
+  },
+  "Gremlin:Nest": {
+    "OPTIONS": [
+      "[Einreihen] #gErhalte #gRitualdolch. #rAlle #rGremlins #rverlieren #r"
+    ]
+  },
+  "Gremlin:ScrapOoze": {
+    "OPTIONS": [
+      "[Hineingreifen] #rAlle #rGremlins #rverlieren #r",
+      "[Tiefer] #rAlle #rGremlins #rverlieren #r"
+    ]
+  },
+  "Gremlin:ScrapOozeReplacement": {
+    "NAME": "Schrottschlamm",
+    "DESCRIPTIONS": [
+      "Als ihr den Raum betretet, hört ihr ein ~Gurgeln~ und das @Zermahlen@ von Metallen. Es ist ein #ySchrottschleim! Diese lustigen kleinen Wesen finden allen möglichen #yKram. Und sie sind zu schwach und zu lamngsam um euch vom Diebstahl abzuhalten! Ihr wisst, wie man in sie hineingreifen kann, ohne sich an deren Säure zu verätzen. Allerdings ist es zeitintensiv und erfordert #rKonzentration.",
+      "Immer vorsichtig... ihr weicht den schrottigen Dingen und den spitzen Dingen aus. Wenn es doch bloß nicht so #r@langweilig@ wäre. NL Aber wenn ihr dranbleibt, dann wartet ein wertvolles #yRelikt auf euch...",
+      "#gGeschafft! NL Nachdem ihr euch durch das Metall und die brennende Säure gewühlt habt, bekommt ihr endlich das #yRelikt zu fassen und werft es heraus. NL Ihr zeiht euch aus dem Schlamm heraus und macht euch mit eurem neuen Spielzeug davon.",
+      "Das ist viel zu #rlangweilig. Warum tun wir das nochmal?",
+      "Du entschließt dich, die Gegend zu verlassen. NL Der Schleim ist unaufmerksam, da er mit seiner Mahlzeit zufrieden ist."
+    ],
+    "OPTIONS": [
+      "[Vorsichtig Hineingreifen] #r",
+      "%: #rWerde #rverflucht #r- #rZerstreutheit. #g",
+      "%: #gFinde #gein #gRelikt.",
+      "[Verlassen]",
+      "[Bleibe vorsichtig] #r"
+    ]
+  },
+  "Gremlin:SensoryStone": {
+    "OPTIONS": [
+      "[Erinnern] #gWähle #g2 #gfarblose #gKarten #gfür #gdein #gDeck. #rAlle #rGremlins #rverlieren #r",
+      "[Erinnern] #gWähle #g3 #gfarblose #gKarten #gfür #gdein #gDeck. #rAlle #rGremlins #rverlieren #r"
+    ]
+  },
+  "Gremlin:Trenchcoat": {
+    "NAME": "Suspicious Merchant",
+    "DESCRIPTIONS": [
+      "Du begegnest einer Gestalt, die verdächtig nach fünf Gremlins in einem Trenchcoat aussieht. NL „Hello, Reisender,“ erklingt eine quietschende Stimme. NL „Ich bin es, der #yfröhliche #yHändler, und sicher nicht fünf Gremlins in einem Tenchcoat. Hast du Interesse an meinen ~exquisiten~ ~Waren~ die bestimmt nicht gestohlen sind? Nur heute zum Sonderpreis!“",
+      "Du kannst einem Rabatt nicht widerstehen, nicht einmal von einer so verdächtigen Gestalt. NL Der Händler verchwindet augenblicklich nach der Transaktion. NL NL Einen Moment später hörst du eine Stimme aus der Ferne frustriert rufen: #r„Vermaledeite, #rdiebische #rGremlins!“.",
+      "Du hast kein Interesse daran, diesen Händler zu bereichern. Du behältst dein Geld. Der Händler verschwindet sofort nachdem er bemerkt hat, dass bei dir nichts zu holen ist."
+    ],
+    "OPTIONS": [
+      "[Kaufen] #rVerliere #r",
+      " #rGold",
+      ". #gErhalte #g1 #gzufällige #gfarblose #gKarte.",
+      ". #gErhalte #g2 #gzufällige #gfarblose #gKarten.",
+      ". #gErhalte #g3 #gzufällige #gfarblose #gKarten.",
+      "[Verlassen]",
+      "[Gesperrt] Benötigt mindestens ",
+      " Gold.",
+      "[Ablehnen]"
+    ]
+  },
+  "Gremlin:Vampires": {
+    "DESCRIPTIONS": [
+      "Auf einer unbeleuchteten Straße trefft ihr auf ein paar vermummte Gestalten, die gerade mitten in irgendeinem dunklen Ritual sind. Als ihr näher kommt, wenden sie sich euch in gespenstischem Gleichklang zu. Der Größte von ihnen entblößt Fangzähne und streckt eine lange, blasse Hand nach euch aus. NL ~„Schließt~ ~euch~ ~uns~ ~an,~ ~ihr~ ~Gierigen,~ ~und~ ~spürt~ ~die~ ~Wärme~ ~des~ ~Spire.“~"
+    ]
+  },
+  "Gremlin:WheelGame": {
+    "DESCRIPTIONS": [
+      "Er hechtet nach dir, doch genau das hast du erwartet. NL Du entzweist ihn bevor er die Gelegenheit bekommt sein Messer zu benutzen. NL Während du die Beute an dich nimmst, verschwindet das Glücksrad vor deinen Augen, bevor du es an dich nehmen kannst."
+    ],
+    "OPTIONS": [
+      "[Preis!] #gPRÄVENTIVSCHLAG!",
+      "[Plündern]"
+    ]
+  },
+  "Gremlin:WingStatue": {
+    "OPTIONS": [
+      "[Beten] #gEntferne #geine #gKarte #gaus #gdeinem #gDeck. #rAlle #rGremlins #rverlieren #r"
+    ]
+  },
+  "Gremlin:WorldOfGoop": {
+    "OPTIONS": [
+      " #gGold. #rAlle #rGremlins #rverlieren #r"
+    ]
+  }
+}

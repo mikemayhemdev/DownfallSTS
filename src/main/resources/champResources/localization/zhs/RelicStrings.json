@@ -3,7 +3,7 @@
     "NAME": "冠军金冠",
     "FLAVOR": "你是冠军！",
     "DESCRIPTIONS": [
-      "战斗开始时，选择进入 #r战狂 或 #b防守 。"
+      "每场战斗可进入当前另一种 #y姿态 一次。"
     ]
   },
   "champ:BlackKnightHelmet": {
@@ -17,14 +17,16 @@
     "NAME": "杠铃",
     "FLAVOR": "1000 下？切，我还能做 1001 下。",
     "DESCRIPTIONS": [
-      "进入 #y休息处 时，若至少有 #b10 张未 #y升级 的牌，随机 #y升级 其中 #b1 张。"
+      "进入 #y休息处 时，若至少有 #b",
+      " 张未 #y升级 的牌，随机 #y升级 其中 #b1 张。"
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
     "NAME": "战狂指南",
     "FLAVOR": "文字难以辨认。",
     "DESCRIPTIONS": [
-      "回合开始时，获得 #b3 层 #y活力 。"
+      "回合开始时，获得 #b",
+      " 层 #y活力 。"
     ]
   },
   "champ:ChampionCrownUpgraded": {
@@ -32,7 +34,8 @@
     "FLAVOR": "恭喜！！你是最大的赢家。",
     "DESCRIPTIONS": [
       "替换 ",
-      " 。 NL 战斗开始时，进入 #ychamp:终极 并持续 #b3 回合 。"
+      " 。 NL 战斗开始时，进入 #ychamp:终极 并持续 #b",
+      " 回合 。"
     ]
   },
   "champ:RageAmulet": {
@@ -47,7 +50,8 @@
     "NAME": "防御训练手册",
     "FLAVOR": "专业提示：不要被打到。",
     "DESCRIPTIONS": [
-      " #bchamp:防守 的 #ychamp:终结技 奖励额外提供 #b3 点 #y格挡 。"
+      " #bchamp:防守 的 #ychamp:终结技 奖励额外提供 #b",
+      " 点 #y格挡 。"
     ]
   },
   "champ:DeflectingBracers": {
@@ -82,7 +86,8 @@
     "NAME": "力量铠甲",
     "FLAVOR": "买来的。",
     "DESCRIPTIONS": [
-      "回合开始时，获得 [E] 。 NL 最大 #y活力 与 #ychamp:反击 层数被限为 #b10 。"
+      "回合开始时，获得 [E] 。 NL 最大 #y活力 与 #ychamp:反击 层数被限为 #b",
+      " 。"
     ]
   },
   "champ:SignatureFinisher": {
@@ -91,7 +96,8 @@
     "DESCRIPTIONS": [
       "拾起时，选择 #b1 张 #ychamp:终结技 ，其耗能变为 #b0 ，能在未处于 #y姿态 时打出且不会退出 #y姿态 。",
       "选择一张终结技 ",
-      " 的耗能为 #b0 ，能在不处于姿态时打出且不会退出姿态。"
+      " 的耗能为 #b0 ，能在不处于姿态时打出且不会退出姿态。",
+      "相关牌已被 #r移出 牌组，本遗物不再生效。"
     ]
   },
   "champ:SpectersHand": {

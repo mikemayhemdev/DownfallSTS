@@ -2,6 +2,7 @@ package charbosses.bosses.Merchant;
 
 import charbosses.bosses.AbstractCharBoss;
 import charbosses.cards.colorless.*;
+import charbosses.cards.curses.EnClumsy;
 import charbosses.powers.bossmechanicpowers.MerchantStrengthPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -15,6 +16,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
     public ArchetypeAct3MerchantBoss() {
         super("ME_ARCHETYPE_MERCHANT", "Merchant");
+
     }
 
     public void initialize() {
@@ -41,9 +43,7 @@ public class ArchetypeAct3MerchantBoss extends ArchetypeBaseMerchant {
 
         addRelic(new CBR_TungstenRod());
         addRelic(new CBR_IceCream());
-        //addRelic(new CBR_FusionHammer());
-
-
+        addRelic(new CBR_Torii());
     }
 
 

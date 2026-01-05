@@ -9,99 +9,97 @@
   },
   "hermit:Snapshot": {
     "NAME": "Schnappschuss",
-    "DESCRIPTION": "Füge !D! Schaden zu. hermit:Volltreffer: Kostet 0."
+    "DESCRIPTION": "Füge !D! Schaden zu. hermit:Volltreffer: Erhalte soviel Block, wie du ungeblockten Schaden zugefügt hast."
   },
   "hermit:Desperado": {
     "NAME": "Desperado",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! Gebrechlich."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Verdopple den Schaden dieser Karte und erhöhe seine Kosten um 1 für diesen Kampf."
   },
   "hermit:Headshot": {
     "NAME": "Kopfschuss",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL hermit:Dead_On: Fügt doppelten Schaden zu."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL hermit:Volltreffer: Verdopple den zugefügten Schaden."
   },
   "hermit:Quickdraw": {
     "NAME": "Schnellzug",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten. NL Im nächsten Zug, ziehe 1 Karte weniger."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten. NL Ziehe im nächsten Zug 1 Karte weniger."
   },
   "hermit:WideOpen": {
-    "NAME": "Breit Offen",
+    "NAME": "Weit offen",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Verwundbar an."
   },
   "hermit:Covet": {
     "NAME": "Begehrung",
-    "DESCRIPTION": "Erschöpfe eine Karte. Ziehe eine Karte. Wenn du ein Fluch erschöpfst, ziehe !M! mehr.",
-    "UPGRADE_DESCRIPTION": "Erschöpfe eine Karte. Ziehe eine Karte. Wenn du ein Fluch oder Status erschöpfst, ziehe !M! mehr."
+    "DESCRIPTION": "Wirf 1 Karte ab. Ziehe !M! Karte. NL Abgeworfene *Flüche werden erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wirf 1 Karte ab. Ziehe !M! Karten. NL Abgeworfene *Flüche werden erschöpft."
   },
   "hermit:HighCaliber": {
-    "NAME": "Großcaliber",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Mische ein *Schlag in den Abwurfstapel. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Mische ein *Schlag+ in den Abwurfstapel. NL Erschöpft."
+    "NAME": "Hochkarätig",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm einen *Schlag+2 auf die Hand. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Nimm einen *Schlag+3 auf die Hand. NL Erschöpft."
   },
   "hermit:BodyArmor": {
     "NAME": "Schutzweste",
-    "DESCRIPTION": "Erhalte !B! Block.  NL Mische ein *Verteidigen in den Abwurfstapel. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block.  NL Mische ein *Verteidigen+ in den Abwurfstapel. NL Erschöpft."
+    "DESCRIPTION": "Wirf eine Karte ab. NL Erhalte !B! Block. NL Wurde eine Karte abgeworfen die kein Angriff ist, erhalte nochmal !B! Block."
   },
   "hermit:Snipe": {
-    "NAME": "Scharfschützen",
-    "DESCRIPTION": "hermit:Konzentriere dich. NL Erhalte !M! Stärke für diesen Zug."
+    "NAME": "Gezielter Schuss",
+    "DESCRIPTION": "Dein in diesem Zug nächster ausgelöster hermit:Volltreffer Effekt wird zweimal ausgeführt. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "hermit:Konzentriere dich. NL Dein in diesem Zug nächster ausgelöster hermit:Volltreffer Effekt wird zweimal ausgeführt. NL Erschöpft."
   },
   "hermit:CalledShot": {
     "NAME": "Fangschuss",
-    "DESCRIPTION": "Füge Schaden gleich der Anzahl von Karten in der Hand zu. NL hermit:Volltreffer: NL Ziehe !M! Karten.",
-    "UPGRADE_DESCRIPTION": " NL (Fügt !D! Schaden zu.)"
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Kampf gespielte Karte einen hermit:Volltreffer ausgelöst hat.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Kampf gespielte Karte einen hermit:Volltreffer ausgelöst hat."
   },
   "hermit:Dissolve": {
     "NAME": "Auflösen",
-    "DESCRIPTION": "Erhalte !M! Block für jede Karte in den Abwurfstapel. NL Mische 1 *Verfall in den Abwurfstapel.",
-    "UPGRADE_DESCRIPTION": " NL (Erhalte !B! Block.)"
+    "DESCRIPTION": "Erhalte !M! Block. NL Dein Block wird zu Beginn deiner nächsten 2 Züge nicht entfernt. NL Erschöpft."
   },
   "hermit:BlackWind": {
     "NAME": "Schwarzer Wind",
-    "DESCRIPTION": "Flüchtig. NL Füge Schaden gleich deinen fehlenden TP zu. NL Erschöpft.",
+    "DESCRIPTION": "Flüchtig. NL Füge Schaden in Höhe deiner fehlenden TP zu. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": " NL (Fügt !D! Schaden zu.)"
   },
   "hermit:Purgatory": {
     "NAME": "Fegefeuer",
-    "DESCRIPTION": "Flüchtig. NL Füge ALLEN Gegnern !D! Schaden zu.",
-    "UPGRADE_DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu."
+    "DESCRIPTION": "Flüchtig. NL Füge ALLEN Gegnern !D! Schaden zu."
   },
   "hermit:ShadowCloak": {
     "NAME": "Schattenmantel",
-    "DESCRIPTION": "Immer wenn du ein Fluch ziehst, erhalte !M! Block."
+    "DESCRIPTION": "Erhalte immer wenn du einen Fluch ziehst oder erschöpfst !M! Block."
   },
   "hermit:FatalDesire": {
     "NAME": "Todestrieb",
-    "DESCRIPTION": "Zu Beginn deines Zuges, ziehe 2 Karten und nimm eine *Verletzung auf die Hand.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Zu Beginn deines Zuges, ziehe 2 Karten und nimm eine *Verletzung auf die Hand."
+    "DESCRIPTION": "Ziehe zu Beginn deines Zuges 2 Karten und nimm eine *Verletzung auf die Hand.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Ziehe zu Beginn deines Zuges 2 Karten und nimm eine *Verletzung auf die Hand."
   },
   "hermit:Gambit": {
     "NAME": "Gambit",
-    "DESCRIPTION": "Nimm !M! zufällige Angriffe aus dem Abwurfstapel auf die Hand. Erschöpft."
+    "DESCRIPTION": "Nimm !M! zufällige Angriffe aus dem Abwurfstapel auf die Hand. Sie kosten für diesen Zug 1 weniger. NL Erschöpft."
   },
   "hermit:Roughhouse": {
     "NAME": "Rauferei",
-    "DESCRIPTION": "Füge !D! Schaden zu. hermit:Volltreffer\: NL Erhalte !B! Block."
+    "DESCRIPTION": "Füge !D! Schaden zu. hermit:Volltreffer: NL Erhalte !B! Block."
   },
   "hermit:Malice": {
     "NAME": "Bosheit",
-    "DESCRIPTION": "Erschöpfe eine Karte. NL Füge !D! Schaden zu. NL Wenn du ein Fluch erschöpfst, füge es ALLEN Gegnern zu."
+    "DESCRIPTION": "Erschöpfe eine Karte. NL Füge !D! Schaden zu. NL Wenn du ein Fluch erschöpfst, werden ALLE Gegner getroffen."
   },
   "hermit:Deadeye": {
     "NAME": "Adlerauge",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! Stärke. NL Erschöpfe. NL hermit:Volltreffer: NL Erschöpft nicht."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL hermit:Volltreffer: NL Erhalte !M! Stärke."
   },
   "hermit:GhostlyPresence": {
-    "NAME": "Geisterhafte Präsenz",
-    "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer\: NL Wende !M! Schwach auf ALLE Gegner an."
+    "NAME": "Geisterpräsenz",
+    "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Wende !M! Schwach auf ALLE Gegner an."
   },
   "hermit:Adapt": {
-    "NAME": "Anpassung",
-    "DESCRIPTION": "Am Ende deines Zuges kannst du bis zu 2 Karten erschöpfen. NL Erhalte !M! Block für jede."
+    "NAME": "Anpassen",
+    "DESCRIPTION": "Zu Beginn deines Zuges kannst du eine Karte erschöpfen um 8 Block zu erhalten."
   },
   "hermit:Dive": {
-    "NAME": "Tauchen",
-    "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer\: NL Erhalte !M! *Panzerrüstung."
+    "NAME": "Wegducken",
+    "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Erhalte !M! expansioncontent:Panzerrüstung."
   },
   "hermit:FlashPowder": {
     "NAME": "Blitzpulver",
@@ -109,46 +107,45 @@
   },
   "hermit:Roulette": {
     "NAME": "Roulette",
-    "DESCRIPTION": "Füge einem zufälligen Gegner !D! Schaden zu. NL Wirf deine Hand ab und ziehe genauso viele Karten."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und ziehe genauso viele Karten."
   },
   "hermit:Midnight": {
     "NAME": "Mitternacht",
-    "DESCRIPTION": "Flüchtig. NL Erhalte !B! Block. NL Nimm ein *Drohendes *Verhängnis auf die Hand.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Nimm ein *Drohendes *Verhängnis auf die Hand."
+    "DESCRIPTION": "Erhalte !B! Block. NL Nimm ein *Drohendes *Verhängnis auf die Hand."
   },
   "hermit:Glare": {
-    "NAME": "Starr",
+    "NAME": "Starren",
     "DESCRIPTION": "Wende !M! Schwach und Verwundbar an.",
-    "UPGRADE_DESCRIPTION": "Wende !M! Schwach, Verwundbar und !hermit:SecondMagic! hermit:Prügel an."
+    "UPGRADE_DESCRIPTION": "Behalten. NL Wende !M! Schwach und Verwundbar an."
   },
   "hermit:TakeCover": {
-    "NAME": "In Deckung",
-    "DESCRIPTION": "Nimm X *Verteidigen auf die Hand. NL Sie kosten diesen Kampf 0. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Nimm X *Verteidigen+ auf die Hand. NL Sie kosten diesen Kampf 0. NL Erschöpft."
+    "NAME": "In Deckung gehen",
+    "DESCRIPTION": "Nimm ein *Verteidigen das 0 kostet auf die Hand. NL *Verbessere es danach X Mal. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Nimm ein *Verteidigen+ das 0 kostet auf die Hand. NL *Verbessere es danach X Mal. NL Erschöpft."
   },
   "hermit:Misfire": {
     "NAME": "Fehlzündung",
-    "DESCRIPTION": "Füge einem zufälligen Gegner !D! Schaden zu. NL Mische ein *Ungeschickt in den Nachziehstapel."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Mische ein *Ungeschickt in den Nachziehstapel."
   },
   "hermit:SprayPray": {
     "NAME": "Schusssalve",
-    "DESCRIPTION": "Füge 3 mal einem zufälligen Gegner !D! Schaden zu. NL Mische ein *Zweifel in den Nachziehstapel."
+    "DESCRIPTION": "Füge 3 Mal einem zufälligen Gegner !D! Schaden zu. NL Mische ein *Zweifel in den Nachziehstapel."
   },
   "hermit:Scavenge": {
     "NAME": "Erbeuten",
-    "DESCRIPTION": "Erhalte !M! *Panzerrüstung. NL hermit:Volltreffer: NL Erhalte !hermit:SecondMagic! Gold. NL Erschöpft."
+    "DESCRIPTION": "Erhalte !M! expansioncontent:Panzerrüstung. NL hermit:Volltreffer: NL Erhalte !hermit:SecondMagic! Gold. NL Erschöpft."
   },
   "hermit:ImpendingDoom": {
     "NAME": "Drohendes Verhängnis",
-    "DESCRIPTION": "Unspielbar. NL hermit:Volltreffer: NL Am Ende deines Zuges, füge 13 Schaden an ALLE zu."
+    "DESCRIPTION": "Unspielbar. NL Ist diese Karte am Ende des Zuges in hermit:Volltreffer Position fügt sie ALLEN 13 Schaden zu."
   },
   "hermit:MementoCard": {
     "NAME": "Andenken",
     "DESCRIPTION": "Behalten. NL Wende !M! Verwundbar auf ALLE an."
   },
   "hermit:Shortfuse": {
-    "NAME": "Kurze Zündschnurr",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Kostet 1 [E] weniger für jedes in diesen Zug gespielte *Schlag oder *Verteidigen."
+    "NAME": "Kurze Lunte",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Kostet in diesem Zug 1 [E] weniger pro gespielte *Schlag oder *Verteidigen Karten in diesem Zug."
   },
   "hermit:Grudge": {
     "NAME": "Groll",
@@ -156,18 +153,18 @@
   },
   "hermit:Spite": {
     "NAME": "Hass",
-    "DESCRIPTION": "Ziehe !M! *Flüche. NL Füge 2 mal !D! Schaden zu."
+    "DESCRIPTION": "Erschöpfe alle unspielbaren Karten auf deiner Hand. NL Erhalte !B! Block. NL Ziehe !M! Karten"
   },
   "hermit:Manifest": {
     "NAME": "Manifestation",
-    "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! *Flüche."
+    "DESCRIPTION": "Erhalte !B! Block. NL Nimm einen *Verfall auf die Hand."
   },
   "hermit:Feint": {
     "NAME": "Finte",
     "DESCRIPTION": "Erhalte !B! Block. NL Wende !M! hermit:Prügel auf ALLE Gegner an."
   },
   "hermit:LowProfile": {
-    "NAME": "Flaches Profil",
+    "NAME": "Untertauchen",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! mehr Block für jeden deiner Debuffs."
   },
   "hermit:Horror": {
@@ -176,24 +173,25 @@
   },
   "hermit:NoHoldsBarred": {
     "NAME": "Ohne Regeln",
-    "DESCRIPTION": "Füge !D! Schaden und wende !M! hermit:Prügel auf ALLE Gegner an. NL Erhalte 1 weniger [E] im nächsten Zug."
+    "DESCRIPTION": "Füge !D! Schaden zu und wende !M! hermit:Prügel auf ALLE Gegner an. NL Erhalte 1 weniger [E] im nächsten Zug."
   },
   "hermit:Cheat": {
     "NAME": "Schummeln",
-    "DESCRIPTION": "Spiele eine der obersten !M! Karten deines Nachziehstapels. NL Wenn ein hermit:Volltreffer: So ist auch die gespielte Karte."
+    "DESCRIPTION": "Spiele eine der obersten !M! Karten deines Nachziehstapels. NL hermit:Volltreffer: Aktiviere auch den hermit:Volltreffer Effekt der gespielten Karte."
   },
   "hermit:Vantage": {
-    "NAME": "Aussichtspunkt",
-    "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Verbessere !M! zufällige Karten in deiner Hand bis zum ende des Kampfes."
+    "NAME": "Vorteil ausnutzen",
+    "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Ziehe eine Karte und verbessere sie bis zum Ende des Kampfes.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Ziehe !M! Karten und verbessere sie bis zum Ende des Kampfes."
   },
   "hermit:Brawl": {
     "NAME": "Schlägerei",
-    "DESCRIPTION": "Wende immer zu Beginn deines Zuges auf ALLE Gegner !M! hermit:Prügel an."
+    "DESCRIPTION": "Wende zu Beginn jedes Zuges !M! hermit:Prügel auf ALLE Gegner an."
   },
   "hermit:Combo": {
-    "NAME": "Kombo",
-    "DESCRIPTION": "Immer wenn du ein hermit:Volltreffer erzielst, nimm eine zufällige Karte mit hermit:Volltreffer auf die Hand.",
-    "UPGRADE_DESCRIPTION": "Put the first !M! hermit:Dead_On cards triggered each turn back into your hand."
+    "NAME": "Combo",
+    "DESCRIPTION": "Nimm in jedem Zug die erste Karte, die einen hermit:Volltreffer ausgelöst hat, wieder auf die Hand.",
+    "UPGRADE_DESCRIPTION": "Nimm in jedem Zug die ersten !M! Karten, die einen hermit:Volltreffer ausgelöst haben, wieder auf die Hand."
   },
   "hermit:BigShot": {
     "NAME": "Rauchendes Rohr",
@@ -205,15 +203,17 @@
   },
   "hermit:Maintenance": {
     "NAME": "Wartung",
-    "DESCRIPTION": "Verbessere alle *Schläge und *Verteidigungen für diesen Kampf. NL Dies kann sie beliebig oft verbessern."
+    "DESCRIPTION": "*Schläge fügen in diesem Kampf !M! mehr Schaden zu. Erhalte !hermit:SecondMagic! *Geschicklichkeit. NL Erhöhe die Kosten dieser Karte um 1."
   },
   "hermit:EternalForm": {
     "NAME": "Ewige Form",
-    "DESCRIPTION": "Die ersten !M! Karten jeden Zug kosten 0. NL Erhalte keine [E] am Beginn deiner Züge."
+    "DESCRIPTION": "Flüchtig. NL Die ersten 4 in einem Zug gezogenen, spielbaren Karten kosten in dem Zug 1 weniger.",
+    "UPGRADE_DESCRIPTION": "Die ersten 4 in einem Zug gezogenen, spielbaren Karten kosten in dem Zug 1 weniger."
   },
   "hermit:FullyLoaded": {
     "NAME": "Vollgeladen",
-    "DESCRIPTION": "Ziehe ALLE deine *Schläge and *Verteidigunen. NL Erschöpft."
+    "DESCRIPTION": "Nimm ALLE deine *Schlag und *Verteidigen Karten vom Nachziehstapel auf die Hand. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Nimm ALLE deine *Schlag und *Verteidigen Karten vom Nachziehstapel auf die Hand. NL Erschöpft."
   },
   "hermit:Gestalt": {
     "NAME": "Gestalt",
@@ -221,68 +221,65 @@
   },
   "hermit:RoundhouseKick": {
     "NAME": "Roundhouse Kick",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL *Betäube jeden der angreifen will. NL Erschöpft."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL hermit:Betäube jeden der nicht angreifen will. NL Erschöpft."
   },
   "hermit:CursedWeapon": {
     "NAME": "Verfluchte Waffe",
-    "DESCRIPTION": "Verliere !M! TP. NL Füge !D! Schaden zu. NL Erhöhe den Schaden dieser Karte permanent um 3. NL Erschöpft."
+    "DESCRIPTION": "Verliere !M! TP. NL Füge !D! Schaden zu. NL Erhöhe den Schaden aller *Verfluchten *Waffen in deinem Deck permanent um !hermit:SecondMagic!. NL Erschöpft."
   },
   "hermit:Enervate": {
     "NAME": "Entziehen",
     "DESCRIPTION": "Füge !D! Schaden zu. NL hermit:Volltreffer: NL Erhalte [E] und ziehe eine Karte."
   },
   "hermit:Ricochet": {
-    "NAME": "Ricochet",
-    "DESCRIPTION": "Füge !D! Schaden zu. Wiederhole auf einem zufälligen Gegner für jedes hermit:Volltreffer in diesem Zug.",
-    "EXTENDED_DESCRIPTION": [" NL (Wiederholt !M! ", "mal.)","male.)"]
+    "NAME": "Querschläger",
+    "DESCRIPTION": "Füge !D! Schaden zu. Wiederhole dies auf einen zufälligen Gegner für jeden aktivierten hermit:Volltreffer in diesem Zug.",
+    "EXTENDED_DESCRIPTION": [" NL (Wiederholt !M! ", "Mal.)","Mal.)"]
   },
   "hermit:TrackingShot": {
-    "NAME": "Spurschuss",
-    "DESCRIPTION": "hermit:Konzentriere dich. NL Füge !D! Schaden zu."
+    "NAME": "Folgeschuss",
+    "DESCRIPTION": "hermit:Konzentriere dich. NL Füge zweimal !D! Schaden zu."
   },
   "hermit:LoneWolf": {
     "NAME": "Einsamer Wolf",
-    "DESCRIPTION": "Wähle eine Karte. NL Es kostet 0 in diesem Kampf. NL Wirf den rest deiner Hand ab. NL Erschöpft."
+    "DESCRIPTION": "Wähle eine Karte. NL Sie kostet 0 in diesem Zug. NL Wirf den Rest deiner Hand ab."
   },
   "hermit:HighNoon": {
     "NAME": "High Noon",
-    "DESCRIPTION": "Immer wenn du ein *Schlag oder *Verteidigen spielst, ziehe eine Karte."
+    "DESCRIPTION": "Ziehe immer wenn du einen *Schlag oder ein *Verteidigen spielst eine Karte."
   },
   "hermit:Reprieve": {
-    "NAME": "Auszeit",
-    "DESCRIPTION": "Erschöpfe eine beliebige Zahl *Flüche aus dem Nachziehstapel. NL Heile 4 TP für jeden. NL Erschöpft.",
-    "EXTENDED_DESCRIPTION": [
-      "Es gibt keine Flüche in meinem Nachziehstapel."
-    ]
+    "NAME": "Gnadenfrist",
+    "DESCRIPTION": "Flüchtig. NL Heile !M! TP. NL Erschöpft."
   },
   "hermit:TakeAim": {
-    "NAME": "Ins Visier",
+    "NAME": "Ins Visier nehmen",
     "DESCRIPTION": "hermit:Konzentriere dich immer zu Beginn deines Zuges.",
 	"UPGRADE_DESCRIPTION": "hermit:Konzentriere dich. NL hermit:Konzentriere dich immer zu Beginn deines Zuges."
   },
   "hermit:Magnum": {
     "NAME": "Magnum",
-    "DESCRIPTION": "Wirf 6 Karten ab. NL Für jede, füge !D! Schaden zu."
+    "DESCRIPTION": "Wirf 6 Karten ab. NL Füge für jede abgeworfene Karte !D! Schaden zu."
   },
   "hermit:Determination": {
     "NAME": "Entschlossenheit",
-    "DESCRIPTION": "Immer wenn ein Debuff auf dich angewandt ist, erhalte 1 Stärke.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Immer wenn ein Debuff auf dich angewandt ist, erhalte 1 Stärke."
+    "DESCRIPTION": "Erhalte immer wenn ein Debuff auf dich angewendet wird 1 Stärke.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer wenn ein Debuff auf dich angewendet wird 1 Stärke."
   },
   "hermit:Showdown": {
     "NAME": "Showdown",
-    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Spiele alle *Schläge in deiner Hand auf zufälligen Gegnern."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Spiele alle *Schläge in deiner Hand aus."
   },
   "hermit:LuckOfTheDraw": {
     "NAME": "Glückszug",
-    "DESCRIPTION": "Ziehe Karten bis du ein Wert von !M! [E] in Karten erreicht hast."
+    "DESCRIPTION": "Ziehe Karten, bis die Summe der Kosten der gezogenen Karten !M! erreicht hat."
   },
   "hermit:Coalescence": {
     "NAME": "Koaleszenz",
-    "DESCRIPTION": "Erhalte !M! Geschicklichkeit für diesen Zug."
+    "DESCRIPTION": "Erhalte !B! Block. NL Behalte in diesem Zug bis zu !M! Karten."
   },
   "hermit:PistolWhip": {
-    "NAME": "Pistolenpeitsche",
+    "NAME": "Pistolenprügel",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! hermit:Prügel an."
   },
   "hermit:DeadMansHand": {
@@ -291,10 +288,10 @@
   },
   "hermit:DeadOrAlive": {
     "NAME": "Tot oder Lebendig",
-    "DESCRIPTION": "Füge X mal !D! Schaden zu. NL Falls tödlich, erhälst du hermit:Kopfgeld. NL Erschöpft."
+    "DESCRIPTION": "Füge X Mal !D! Schaden zu. NL Falls tödlich, erhälst du hermit:Kopfgeld. NL Erschöpft."
   },
   "hermit:GoldenBullet": {
-    "NAME": "Goldene Kugel",
+    "NAME": "Goldener Schuss",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Falls tödlich, kostet diese Karte permanent 1 weniger. NL Erschöpft."
   },
   "hermit:HoleUp": {
@@ -303,29 +300,29 @@
   },
   "hermit:ItchyTrigger": {
     "NAME": "Schussreiz",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL hermit:Volltreffer: Eine zufällige Karte in deiner Hand kostet 0 für diesen Zug."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL hermit:Volltreffer: Eine zufällige Karte in deiner Hand kostet in diesem Zug 0."
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "Auge des Sturms",
-    "DESCRIPTION": "Erhalte Energie bis zu deinen Maximum. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Ziehe eine Karte. NL hermit:Volltreffer: NL Erhalte Energie bis zu deinen Maximum. NL Erschöpft."
+    "DESCRIPTION": "hermit:Konzentriere dich. NL Erhalte Energie bis zu deinem Maximum. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "hermit:Konzentriere dich. NL Erhalte Energie bis zu deinem Maximum. NL Erschöpft."
   },
   "hermit:FinalCanter": {
-    "NAME": "Letzter Kanter",
-    "DESCRIPTION": "Behalten. NL Füge für jedes Fluch in der Hand !D! Schaden zu. NL Erschöpft.",
+    "NAME": "Letzter Ritt",
+    "DESCRIPTION": "Behalten. NL Füge für jeden *Fluch in der Hand !D! Schaden zu. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": " NL (Du hast !M! Fluch.)",
     "EXTENDED_DESCRIPTION": [" NL (Du hast !M! Flüche.)"]
   },
   "hermit:HeroicBravado": {
     "NAME": "Heldenhafte Tapferkeit",
-    "DESCRIPTION": "Flüchtig. NL Erhalte 1 hermit:Robust. NL Diese Karte kostet für den Rest des Kampfes 1 mehr."
+    "DESCRIPTION": "Flüchtig. NL Erhalte 1 hermit:Robust. NL Erhöhe die Kosten dieser Karte um 1."
   },
   "hermit:FromBeyond": {
     "NAME": "Aus dem Jenseits",
-    "DESCRIPTION": "Für jede erschöpfte Karte, verliert ein zufälliger gegner !M! TP."
+    "DESCRIPTION": "Für jede Karte im Erschöpfungsstapel verliert ein zufälliger gegner !M! TP."
   },
   "hermit:Virtue": {
     "NAME": "Tugend",
-    "DESCRIPTION": "Verringere alle deine Debuffs um !M!."
+    "DESCRIPTION": "Reduziere deine Debuffs um !M!."
   }
 }

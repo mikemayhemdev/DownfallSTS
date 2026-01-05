@@ -1,7 +1,7 @@
 ﻿{
   "downfall:Aged": {
     "NAME": "노쇠",
-    "DESCRIPTION": "사용불가. NL 휘발성. NL 내 턴 종료 시 뽑을 더미 맨 위에 *공허를 놓습니다."
+    "DESCRIPTION": "사용불가. NL 휘발성. NL 내 턴 종료 시 버린 더미 맨 위에 *공허를 놓습니다."
   },
   "downfall:Bewildered": {
     "NAME": "당혹",
@@ -9,15 +9,15 @@
   },
   "downfall:Icky": {
     "NAME": "질척임",
-    "DESCRIPTION": "소멸."
+    "DESCRIPTION": "다음 턴에 카드를 1장 덜 뽑습니다. NL 소멸."
   },
   "downfall:Haunted": {
     "NAME": "귀신들림",
-    "DESCRIPTION": "사용불가. NL 휘발성. NL 이 카드가 손에 있다면 이 카드 이외의 카드가 소멸될 때마다 피해를 !M! 받습니다."
+    "DESCRIPTION": "휘발성. NL 내 턴 종료 시 피해를 !M! 받습니다."
   },
   "downfall:Malfunctioning": {
     "NAME": "결함",
-    "DESCRIPTION": "내 턴 종료 시 손에 있는 모든 카드를 무작위 상태이상 카드로 sneckomod:변화시킵니다. NL 소멸."
+    "DESCRIPTION": "내 턴 종료 시 버린 카드 더미에 *부상을 1장 섞어 넣습니다. NL 소멸."
   },
   "downfall:Scatterbrained": {
     "NAME": "주의산만",

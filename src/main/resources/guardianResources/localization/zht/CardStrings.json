@@ -176,8 +176,8 @@
     "UPGRADE_DESCRIPTION": "獲得 *重分配+ ， *預編程+ 與 *時間容器+ 各1張。 NL 消耗 。"
   },
   "Guardian:Planning": {
-    "NAME": "規劃",
-    "DESCRIPTION": "guardianmod:凝滯 抽牌堆頂部 !M! 張牌。"
+    "NAME": "储量护盾",
+    "DESCRIPTION": "获得 !B! 点格挡。 NL 失去所有负面效果 !M! 层。"
   },
   "Guardian:Recover": {
     "NAME": "恢復",
@@ -372,8 +372,9 @@
     "DESCRIPTION": "造成 !D! 點傷害。 NL guardianmod:提防 等同於造成的未被格擋的傷害。 NL 消耗 。"
   },
   "Guardian:SphericShield": {
-    "NAME": "球形護盾",
-    "DESCRIPTION": "獲得 !B! 點 格擋 。 NL 進入 guardianmod:防禦模式 。 NL 消耗 。"
+    "NAME": "球形护盾",
+    "DESCRIPTION": "虚无。 NL 获得一瓶 guardianmod:抛光油 。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "获得一瓶 guardianmod:抛光油 。 NL 消耗。"
   },
   "Guardian:RevengeProtocol": {
     "NAME": "復仇協議",

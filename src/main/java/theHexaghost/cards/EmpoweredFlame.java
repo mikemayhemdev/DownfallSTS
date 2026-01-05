@@ -1,6 +1,7 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import sneckomod.SneckoMod;
 import theHexaghost.HexaMod;
@@ -10,7 +11,7 @@ public class EmpoweredFlame extends AbstractHexaCard {
 
     public final static String ID = makeID("EmpoweredFlame");
 
-    private static final int MAGIC = 2;
+    private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
 
     public EmpoweredFlame() {
@@ -29,6 +30,15 @@ public class EmpoweredFlame extends AbstractHexaCard {
         if (!upgraded) {
             upgradeName();
             upgradeMagicNumber(UPG_MAGIC);
+        }
+    }
+
+    @Override
+    public float getTitleFontSize() {
+        if(Settings.language != Settings.GameLanguage.ENG) {
+            return 25.0F;
+        } else {
+            return 22.0F;
         }
     }
 }

@@ -9,15 +9,16 @@
   {
   "PROPER_NAME": "Suit",
   "NAMES": [
-  "suit",
-  "suits"
-],
-  "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
+      "suit",
+      "suits"
+    ],
+    "DESCRIPTION": "Suits refer to card's color. Token cards do not count as Suits. NOTE FOR LOC: NOT USED DO NOT TRANSLATE."
   },
   {
     "PROPER_NAME": "Overflow",
     "NAMES": [
-      "Overflow", "overflow"
+      "Overflow",
+      "overflow"
     ],
     "DESCRIPTION": "Overflow effects activate if you have more than #b5 cards in hand."
   },

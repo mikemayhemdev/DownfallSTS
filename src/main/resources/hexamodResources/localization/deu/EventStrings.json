@@ -1,0 +1,96 @@
+{
+  "hexamod:WanderingSpecter": {
+    "NAME": "Wanderndes Gespenst",
+    "DESCRIPTIONS": [
+      "Dieser Bereich sieht sehr nach einem #pFriedhof aus. Du gehst vorsichtig weiter, bis du plötzlich von einer eigenartigen, matten ~Geistererscheinung~ aufgehalten wirst. Sie streckt beide Arme aus - offensichtlich bietet sie dir ein #rGeschäft an. NL NL Du erkennst, dass sich in jeder Hand ein wertvolles #bRelikt befindet, doch du kannst nicht genau erkennen, welche es sind. Bestimmt müssen diese Gaben hoch #rbezahlt werden.",
+      "Du dankst der Erscheinung für das Geschäft. Das #bGespenst sieht dich ein letztes Mal angestrengt an und setzt dann seinen ~endlosen~ ~Marsch~ fort. Auch du setzt deine Reise fort. ",
+      "Die schillernde weiße Schachtel @zerbricht@ sofort nachdem du sie in die Hand nimmst! Während du die Seelen aufsammelst, die aus der zerbrochenen Schatel empor steigen, bewegt sich ein #pschwarzer #pSpliitter und ~bohrt~ sich direkt in deinen Körper.",
+      "Du spürst die #pDunkelheit durch dich strömen, gleich nachdem du die eigenartige #ygoldene Schachtel geöffnet hast. Darin befindet sich eine nützliche Waffe!",
+      "Du nimmst die pulsierende Schachtel, die wie ein Hetz @SCHLÄGT@, und fühlst den @PULS@ in deinem Arm. #pÜbelkeit macht sich in dir breit, doch du fühlst dich stärker mit ihr...",
+      "Nachdem du das Artefakt de Gestalt gegriffen hast, wird der Raum von #pDunkelheit erfüllt. Das Gespenst spricht erneut zu dir, doch hörst du seine Worte nur in deinem Kopf. NL NL #p„Deine #pWahl #pwar #pweise. #pWie #pwäre #pes #pmit #peinem #pweiteren #pGeschäft, #pmein #pFreund?“",
+      "Du weißt, dass die Geschäfte des #pGespenstes einen zu hohen Tribut abverlangen. Du musst ihn verjagen - was für ein glücklicher Zufall! Drüben an der Wand! Eine #bKerze die #bFlüche #bbannt! NL NL Du #rversengst #rdich ein wenig als du nach der Kerze schnappst, und wirfst sie in Richtung des Gespenstes, der sich in einen #bschaurigen #bNebel auflöst. NL NL Er kann keine Geschäfte mehr machen.",
+      "Du weißt, dass die Geschäfte des #pGespenstes einen zu hohen Tribut abverlangen. Du musst ihn verjagen - was für ein glücklicher Zufall! Du hast eine #bKerze die #bFlüche #bbannt dabei! NL NL Du wirfst sie in Richtung des Gespenstes, der sich in einen #bschaurigen #bNebel auflöst. NL NL Er kann keine Geschäfte mehr machen."
+    ],
+    "OPTIONS": [
+      "[Linke Schachtel] #gErhalte #geine #gDu-Vu-Puppe #goder #eine #gDunkelstein-Amulett und #r2x #rSpuk.",
+      "[Weitere Geschäfte]",
+      "[Rechte Schachtel] #gErhalte #geinen #rentweihten #gverfluchten #gSchlüssel #goder #geine #grentweihte #gRufglocke.",
+      "[Verjagen] #gErhalte #geine #bfluchbannende #bKerze. #rVerliere #r5 #rTP.",
+      "[Verjagen] Verlassen.",
+      "[Verlange Macht] #gErhalte eine #gzufällige #yseltene #gKarte. #rVerflucht #r- #rzufällig.",
+      "[Verlange Leben] #gErhalte #g12 #gMax #gTP. #rVerflucht #r- #rzufällig.",
+      "[Verlange Seelen] #gErhalte #g180 #gSeelen. #rVerflucht #r- #rzufällig.",
+      "[Gesperrt] Geschäft abgeschlossen.",
+      "[Verlassen]"
+    ]
+  },
+  "hexamod:SealChamber": {
+    "NAME": "Siegelkammer",
+    "DESCRIPTIONS": [
+      "Vor dir steht ein bedrohlich wirkendes Bauwerk. Die meisten würden es nicht wagen, sich ihm zu nähern, doch du weißt um den Zweck des Bauwerks bescheid. NL Du betrittst die Kammer und machst dich bereit, ein #rOpfer zu geben...",
+      "Du erhältst ein Siegel im Austausch deiner gesammelten Seelen - ein weiterer Schritt zur ultimativen Macht. ",
+      "Du überlegst es dir anders und entscheidest dich dagegen, ein Opfer zu bringen. Du brauchst alles was du gerade hast für deine weitere Reise.",
+      "Dieses Siegel wird für die bevorstehenden Kämpfe den meisten Nutzen erbringen."
+    ],
+    "OPTIONS": [
+      "[Opfern] #rVerliere ",
+      " TP. #gErhalte #gdas #gErste #gSiegel.",
+      " #ySeelen. #gErhalte #gdas #gZweite #gSiegel.",
+      ". #gErhalte #gdas #gDritte #gSiegel.",
+      ". #gErhalte #gdas #gVierte #gSiegel.",
+      "[Gesperrt] Erfordert mehr Gold.",
+      "[Gesperrt] Erfordert eine gewöhnliche Karte.",
+      "[Gesperrt] Erfordert einen Trank.",
+      "[Verlassen]",
+      "[Gesperrt] Opfer gebracht.",
+      ". #gErhalte #gdas #gFünfte #gSiegel.",
+      "[Gesperrt] Erfordert eine verbesserte Karte.",
+      " Max TP. #gErhalte #gdas #gSechste #gSiegel.",
+      "[Gesperrt] Erfordert 2 Max TP."
+    ]
+  },
+  "hexamod:HexaFalling": {
+    "NAME": "Freier Fall",
+    "DESCRIPTIONS": [
+      "Unbeeindruckt von den Gesetzen der Schwerkraft ~schwebst~ du einfach weiter.",
+      " NL ,... oder schwebst einfach drüber."
+    ],
+    "Translator Note": "the second sentence above is added after the vanilla one, which offers 3 choices [land](skill), [channel](power) and [strike](attack), you can preview below",
+    "preview": "Im freien Fall wägst du deine Optionen ab: Mit deiner besten Technik sicher landen. Eine Macht kanalisieren, um den Sturz zu überleben. In die Wand schlagen, um daran hängenzubleiben.",
+    "OPTIONS": [
+      "[Float] #gVerliere #gnichts...",
+      "[Leave]"
+    ]
+  },
+  "hexamod:CouncilOfGhosts": {
+    "NAME": "Rat der Geister",
+    "DESCRIPTIONS": [
+      "Beim weiteren Aufstieg beginnt #p~dicker~ #p~schwarzer~ #pRauch aus dem Boden und Wänden um dich herum zu quillen, welcher sich zu drei maskierten Gestalten formt, die zu sprechen beginnen. NL NL ~„Dieses~ ~Wesen~ ~ist~ #r~verdammt...“~ NL „Wir verstehen deine Misere, #pVerfluchter... möchstest du unsere #y~Geheimnisse~ erfahren“",
+      "#y„Exzellent!“ NL Du bemerkst, wie sich bei den Worten der Geisterfigur ihr riesiger Mund weiter und weiter öffnet. #p~Dicker~ #p~schwarzer~ #p~Rauch~ quillt hervor und verhüllt den Raum. Du kannst weder sehen noch atmen...",
+      "Während du noch immer vom #p~schwarzen~ #p~Rauch~ umgeben bist, verfault dein Körper mehr, doch dein Geist #pbrennt #pheller als jemals zuvor. NL Du verstehst jetzt wie das Körperliche und Unkörperliche auf solche weisen verbunden sind, die deine kühnsten Vorstellungen übersteigen.",
+      "Inmitten der Dunkelheit siehst du mit ungetrübtem Auge. Die Geister haben dir gezeigt, wie du deine Form meisterst - wie du mit Leichtigkeit in diese und die andere Welt übergehen kannst.",
+      "„Viel Erfolg, #pVerfluchter...“ NL ~„Wir~ ~bleiben~ ~hier~ ~um~ ~anderen~ ~zu~ ~helfen...“~ NL #r@„HA@ #r@HA@ #r@HA@ #r@HAHAHA!“@ NL NL Du bist dir nicht sicher warum der letzte Geist, der den Rat verlassen hat, lachte. Doch du bist in erster Linie dankbar dafür, dass sie dich in ihre Geheimnisse eingeweiht haben.",
+      "„Wie enttäuschend...“ NL ~„Du~ ~wirst~ ~diesm~ ~Ort~ ~niemals~ ~entkommen...“~ NL #r@„HA@ #r@HA@ #r@HA@ #r@HAHAHA!“@ NL NL Die Formen verblassen, nur das nervtötende Lachen klingt in deinen Ohren nach."
+      ],
+    "OPTIONS": [
+      "[Annehmen] #rVerliere #r",
+      " #rMax #rTP. Schalte Studieren und Lernen frei.",
+      "[Studieren] #rVerliere #ralle #rSchläge. #gErhalte #g3 #gGeisterstrafe.",
+      "[Lernen] #rVerliere #ralle #rVerteidigen. #gErhalte #g",
+      "[Abschließen]",
+      "[Verlassen]",
+      "[Gesperrt] Verlassen noch nicht möglich.",
+      " #gApparieren."
+    ]
+  },
+  "hexamod:BackToBasics": {
+    "NAME": "",
+    "DESCRIPTIONS": [
+      "Der Geist ist das Schwert - und die Erfahrung ist der Schleifstein."
+    ],
+    "OPTIONS": [
+      "[Wehmut] Alle #gSchlag und #gVerteidigen Karten erhalten #gflüchtig.",
+      "[Gesperrt] Erfordert einen Schlag oder ein Verteidigen."
+    ]
+  }
+}

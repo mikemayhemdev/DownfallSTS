@@ -36,7 +36,7 @@
       "[fist_icon]",
       "champ:[fist_icon]"
     ],
-    "DESCRIPTION": "Ceci requiert d'être dans une Pose. NL Après avoir joué un Finisher, quittez votre #yPose et déclenchez son bonus de Finisher. #yBonus #yde #yFinisher du #rDestructeur : gagnez #b1 de #yForce[REMOVE_SPACE]. #yBonus #yde #yFinisher #bDéfensive : Gagnez #b8 #bd'Armure [REMOVE_SPACE]."
+    "DESCRIPTION": "Ceci requiert d'être dans une Pose. NL Après avoir joué un Finisher, quittez votre #yPose et déclenchez son bonus de Finisher. #yBonus #yde #yFinisher du #rDestructeur : gagnez #b1 de #yForce[REMOVE_SPACE]. #yBonus #yde #yFinisher #bDéfensive : Gagnez #b6 #bd'Armure [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Contre",
@@ -47,14 +47,14 @@
     "DESCRIPTION": "La prochaine fois que vous prenez des dégâts #yd'Attaque, obtenez une #yFrappe #yRiposte qui inflige autant de dégâts que de Contre."
   },
   {
-    "PROPER_NAME": "Defensive",
+    "PROPER_NAME": "Défensive",
     "NAMES": [
       "défensive",
       "défensive.",
       "defensive",
       "defensive."
     ],
-    "DESCRIPTION": "#yPose. NL Bonus de #yCompétence: Gagnez #b3 de #yContre [REMOVE_SPACE]. NL Bonus de #yFinisher: Gagnez #b8 #yd'Armure [REMOVE_SPACE]."
+    "DESCRIPTION": "#yPose. NL Bonus de #yCompétence: Gagnez #b3 de #yContre [REMOVE_SPACE]. NL Bonus de #yFinisher: Gagnez #b6 #yd'Armure [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Destructeur",

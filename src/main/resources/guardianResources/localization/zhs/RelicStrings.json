@@ -18,7 +18,9 @@
     "NAME": "黑曜鳞",
     "FLAVOR": "用鲜血将天空染成漆黑，向所有出手者展开反击。",
     "DESCRIPTIONS": [
-      "战斗开始时，获得 #b3 点 #y荆棘 。每当你获得负面效果，获得 #b1 层 #y荆棘 。"
+      "战斗开始时，获得 #b",
+      " 点 #y荆棘 。每当你获得负面效果，获得 #b",
+      " 层 #y荆棘 。"
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
@@ -109,7 +111,7 @@
     "NAME": "星光采矿镐",
     "FLAVOR": "有那么多宝石散落在尖塔中，很难想象有这么不幸的人需要这把镐来帮助他们。",
     "DESCRIPTIONS": [
-	"你能在休息处 #y挖掘 #b2 颗 #yguardianmod:宝石 ，你可以选择将它们加入牌组中。（至多使用 #b3 次）"
+      "击败精英敌人后， NL 你可以将1  张随机 guardianmod:宝石 加入牌组。"
     ]
   },
     "Guardian:GemstoneGun": {

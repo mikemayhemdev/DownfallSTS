@@ -1,6 +1,7 @@
 package slimebound.powers;
 
 
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -27,7 +28,7 @@ public class PotencyPower extends AbstractPower {
         this.name = NAME;
 
         this.ID = POWER_ID;
-
+        this.canGoNegative = true;
 
         this.owner = owner;
 
@@ -46,6 +47,14 @@ public class PotencyPower extends AbstractPower {
         updateDescription();
 
     }
+
+    public void stackPower(int stackAmount) {
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;// 39
+        if (this.amount == 0) {// 41
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this.ID));// 42
+        }
+    }// 52
 
 
     public void updateDescription() {

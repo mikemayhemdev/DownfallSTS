@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.cards.curses.AscendersBane;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.controller.CInputActionSet;
 import com.megacrit.cardcrawl.helpers.input.InputHelper;
 import com.megacrit.cardcrawl.relics.AbstractRelic;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
@@ -62,25 +63,25 @@ public class Libra extends CustomRelic {
         if (starters.group.isEmpty()) {
             this.no_cards_to_select = true;
         } else {
-
-            if (AbstractDungeon.isScreenUp) {
-                AbstractDungeon.dynamicBanner.hide();
-                AbstractDungeon.previousScreen = AbstractDungeon.screen;
-            }
-            AbstractDungeon.gridSelectScreen.open(starters, starters.group.size(), true, this.DESCRIPTIONS[2]);
+            giveCards(starters.group);
+            //if (AbstractDungeon.isScreenUp) {
+             //   AbstractDungeon.dynamicBanner.hide();
+             //   AbstractDungeon.previousScreen = AbstractDungeon.screen;
+          //  }
+          //  AbstractDungeon.gridSelectScreen.open(starters, starters.group.size(), true, this.DESCRIPTIONS[2]);
         }
 
     }
 
-    public void update() {
-        //it wasn't
-        super.update(); // Todo, verify the trigger condition is fine for controller input too
-        if (!this.calledTransform && (no_cards_to_select)) {
-            this.calledTransform = true;
-            AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
-            this.giveCards(AbstractDungeon.gridSelectScreen.selectedCards);
-        }
-    }
+//    public void update() {
+//        super.update(); // Todo, verify the trigger condition is fine for controller input too
+//        if (!this.calledTransform && (no_cards_to_select || (AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered && InputHelper.justClickedLeft) || CInputActionSet.proceed.isJustPressed())) {
+//            AbstractDungeon.gridSelectScreen.confirmButton.hb.hovered = false;
+//            this.calledTransform = true;
+//            AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.25F;
+//            this.giveCards(AbstractDungeon.gridSelectScreen.selectedCards);
+//        }
+//    }
 
     public void giveCards(ArrayList<AbstractCard> group) {
 
@@ -117,12 +118,14 @@ public class Libra extends CustomRelic {
             new_cards.addToBottom(c);
             AbstractDungeon.player.masterDeck.removeCard(card);
         }
+
         AbstractDungeon.gridSelectScreen.openConfirmationGrid(new_cards, this.DESCRIPTIONS[1]);
+        AbstractDungeon.gridSelectScreen.selectedCards.clear();
+
     }
 
 
     public boolean canSpawn() {
-    //requires at least 1 strike or defend to spawn
         hasbasics = false;
         for (AbstractCard c : AbstractDungeon.player.masterDeck.group) {
             if (c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)) {

@@ -401,7 +401,7 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "Wheel of Fate",
     "DESCRIPTIONS": [
-      "After you play an #yAttack, Hermit #yCycles his first card. Hermit's card cost can't change. Whenever Hermit draws #rNecronomicurse, he gains #b2 Strength.",
+      "After you play an #yAttack, Hermit #yCycles his first card. Hermit's card cost can't change. Whenever Hermit draws #rNecronomicurse, he gains #b2 #yStrength.",
       "After you play an #yAttack, Hermit #yCycles his first card."
     ]
   },

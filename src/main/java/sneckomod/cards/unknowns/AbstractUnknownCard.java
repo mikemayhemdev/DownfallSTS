@@ -111,7 +111,7 @@ public abstract class AbstractUnknownCard extends AbstractSneckoCard implements 
 
             for (int i = 0; i < funkyPredicates.size(); i++) {
                 Predicate<AbstractCard> funkyPredicate = funkyPredicates.get(i);
-                if (funkyPredicate.test(c) && (SneckoMod.pureSneckoMode || (SneckoMod.validColors.contains(c.color) || (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass != TheSnecko.Enums.THE_SNECKO)) || i >= 22)) {
+                if (funkyPredicate.test(c) && (SneckoMod.isPureSneckoModeEnabled() || (SneckoMod.validColors.contains(c.color) || (AbstractDungeon.player != null && AbstractDungeon.player.chosenClass != TheSnecko.Enums.THE_SNECKO)) || i >= 22)) {
                     if (validCard) {
                         ArrayList<String> s = funkyLists.get(funkyPredicates.indexOf(funkyPredicate));
                         if (s == null) {

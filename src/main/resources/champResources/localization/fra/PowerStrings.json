@@ -104,7 +104,7 @@
     "NAME": "Style défensif",
     "DESCRIPTIONS": [
       "Les #yTechniques de la pose #yDéfensive donnent #b",
-      " de #yContre supplémentaires [REMOVE_SPACE]."
+      " de #yContre supplémentaire."
     ]
   },
   "champ:GladiatorStylePower": {
@@ -229,7 +229,7 @@
     "NAME": "Last Stand",
     "DESCRIPTIONS": [
       "Une fois que vous êtes en dessous de 50% de vos PV, retirez tous vos Débuffs et gagnez #b",
-      " de Force.",
+      " de #yForce.",
       "~Vous~ ~allez~ ~le~ ~regretter...~",
       "@UNE@ @DÉFAITE??@ NL @IMPOSSIBLE!!@"
     ]

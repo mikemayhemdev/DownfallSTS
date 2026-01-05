@@ -6,6 +6,7 @@ import charbosses.bosses.Watcher.ArchetypeBaseWatcher;
 import charbosses.cards.AbstractBossCard;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.cards.colorless.EnGoodInstincts;
+import charbosses.cards.colorless.EnPanacea;
 import charbosses.cards.colorless.EnSwiftStrike;
 import charbosses.cards.curses.EnInjury;
 import charbosses.cards.curses.EnNormality;
@@ -27,7 +28,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
     public ArchetypeAct3DivinityNewAge() {
         super("WA_ARCHETYPE_DIVINITY", "Divinity");
 
-        maxHPModifier += 348;
+        maxHPModifier += 300;
         actNum = 3;
         bossMechanicName = WatcherDivinityPower.NAME;
         bossMechanicDesc = WatcherDivinityPower.DESC[0];
@@ -45,7 +46,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_ThreadAndNeedle());
         addRelic(new CBR_Torii());
-        addRelic(new CBR_TungstenRod());
+        addRelic(new CBR_Vajra());
         addRelic(new CBR_VelvetChoker());
     }
 
@@ -67,24 +68,24 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
                     //turn 2
                     //25~ damage
                     addToList(cardsList, new EnWaveOfTheHand());
-                    addToList(cardsList, new EnBrilliance(), extraUpgrades);  // This is probably a terrible idea. This is where the Blind was, which was moved to where the Strike was.
+                    addToList(cardsList, new EnBrilliance(), true);  // This is probably a terrible idea. This is where the Blind was, which was moved to where the Strike was.
                     addToList(cardsList, new EnSwivel());
                     turn++;
                     break;
                 case 2:
                     //turn 3
                     //off turn
+                    addToList(cardsList, new EnDevotion());
                     addToList(cardsList, new EnSwiftStrike());
-                    addToList(cardsList, new EnConjurBlade(), false);
-                    addToList(cardsList, new EnSanctity());    //Not played
+                    addToList(cardsList, new EnConjurBlade(), true);
                     turn++;
                     break;
                 case 3:
                     //turn 4
                     //off turn / mercy
                     addToList(cardsList, new EnProtect(), true);
-                    addToList(cardsList, new EnEmptyFist(), true);    //Exit Divinity
-                    addToList(cardsList, new EnNormality());
+                    addToList(cardsList, new EnEmptyFist(), extraUpgrades);
+                    addToList(cardsList, new EnSanctity());    //Not played
                     turn++;
                     break;
                 case 4:
@@ -92,7 +93,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
                     //big attack
                     addToList(cardsList, new EnExpunger());     //Big Attack // I mean, not really that big compared to what time eater hits for.
                     addToList(cardsList, new EnBlind()); // blind moved here to replace the strike
-                    addToList(cardsList, new EnDevotion());
+                    addToList(cardsList, new EnNormality());
                     turn = 0;
                     looped = true;
                     break;
@@ -108,7 +109,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
                     addToList(cardsList, c);
                     c = new EnEmptyFist();                      //Exit Divinity
                     c.freeToPlayOnce = true;
-                    addToList(cardsList, c, true);
+                    addToList(cardsList, c, extraUpgrades);
                     turn++;
                     break;
                 case 1:

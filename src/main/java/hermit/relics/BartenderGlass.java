@@ -3,6 +3,7 @@ package hermit.relics;
 import basemod.abstracts.CustomRelic;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import hermit.HermitMod;
@@ -63,7 +64,11 @@ public class BartenderGlass extends CustomRelic {
 
     @Override
     public String getUpdatedDescription() {
-        return DESCRIPTIONS[0] + POTION_LIMIT + DESCRIPTIONS[2] + POTION_LIMIT + DESCRIPTIONS[3];
+        if ((Settings.language != Settings.GameLanguage.ZHS && Settings.language != Settings.GameLanguage.ZHT)) {
+            return DESCRIPTIONS[0] + POTION_LIMIT + DESCRIPTIONS[2] + POTION_LIMIT + DESCRIPTIONS[3];
+        } else {
+            return DESCRIPTIONS[0] + POTION_LIMIT + DESCRIPTIONS[1];
+        }
     }
 
 }

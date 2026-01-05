@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
@@ -17,7 +18,7 @@ public class NightmareStrike extends AbstractHexaCard implements HexaPurpleTextI
 
     public NightmareStrike() {
         super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 3;
+        baseDamage = 4;
         isEthereal = true;
         cardsToPreview = new ShadowStrike();
         tags.add(CardTags.STRIKE);
@@ -44,8 +45,18 @@ public class NightmareStrike extends AbstractHexaCard implements HexaPurpleTextI
         if (!upgraded) {
             upgradeName();
             this.cardsToPreview.upgrade();
+            upgradeDamage(1);
             rawDescription = cardStrings.UPGRADE_DESCRIPTION;
             initializeDescription();
+        }
+    }
+
+    @Override
+    public float getTitleFontSize() {
+        if(Settings.language != Settings.GameLanguage.ENG) {
+            return 25.0F;
+        } else {
+            return 23.0F;
         }
     }
 

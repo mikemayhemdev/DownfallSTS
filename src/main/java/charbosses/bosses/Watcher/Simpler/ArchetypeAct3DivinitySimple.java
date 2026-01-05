@@ -73,7 +73,7 @@ public class ArchetypeAct3DivinitySimple extends ArchetypeBaseWatcher {
             //Lose all Mantra. Restore 10 HP and gain 1 Strength per Mantra lost.
             addToList(cardsList, new EnCrusade(), extraUpgrades);
             addToList(cardsList, new EnApparition(), false);
-            ((CharBossWatcher)AbstractCharBoss.boss).playCrusaderSpeech();
+            //((CharBossWatcher)AbstractCharBoss.boss).playCrusaderSpeech();
             turn++;
             if (turn >= 4){
                 turn = 0;

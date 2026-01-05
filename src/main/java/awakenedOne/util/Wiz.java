@@ -2,6 +2,7 @@ package awakenedOne.util;
 
 import automaton.cards.goodstatus.IntoTheVoid;
 import awakenedOne.AwakenedOneChar;
+import awakenedOne.actions.SpellApotheosisAction;
 import awakenedOne.cards.DemonGlyph;
 import awakenedOne.powers.DemonGlyphPower;
 import awakenedOne.ui.AwakenButton;
@@ -162,8 +163,7 @@ public class Wiz {
                     //Wiz.applyToSelf(new CuriosityPower(AbstractDungeon.player, 1));
                     //No effect at this time, if a new one is added later, place it here
                 }
-
-
+                atb(new SpellApotheosisAction());
                 OrbitingSpells.upgradeall();
             }
         }

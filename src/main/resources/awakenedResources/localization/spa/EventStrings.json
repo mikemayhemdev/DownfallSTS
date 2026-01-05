@@ -20,14 +20,14 @@
       "[Invocar Armamento] #gObtienes #guna #gReliquia #gespecial. #rPierdes #r",
       " #rVida #rMáxima.",
       "[Caja de Donaciones] #gObtienes #g",
-      " #gOro #gy #guna #gReliquia #gComún. #rTe #rMaldeces #r- #rDuda.",
+      " #gOro #gy #guna #gReliquia #gComún. #rTe #rMaldices #r- #rDuda.",
       "[Salir]",
       "[Continuar]",
       "[Ser Alabado!] #gObtienes #grecompensas por devolver la #gEstatua #gAla #gRota.",
       "[Continuar] - #rTe #rMaldeces #r- #rDuda."
     ]
   },
-  "awakened:WingStatue": {
+  "awakened:WingStatueAwakened": {
     "NAME": "Estatua de Ala",
     "DESCRIPTIONS": [
       "Entre las piedras y rocas, notas una gran estatua azul que representa a Mazaleth, Dios de los Cuervos. NL NL Sientes una intensa ira y deseo de destruirla. NL NL Sin embargo, sabes que hacerlo provocará la ira de tu benefactor.",
@@ -64,7 +64,7 @@
       "Este es un texto de cierre - no tomaste el objeto."
     ],
     "OPTIONS": [
-      "[Alcanzar] Obtén #gFisura #gde #gRealidad. #rTe #rMaldeces - #rEnvejecido.",
+      "[Alcanzar] Obtén #gFisura #gde #gRealidad. #rTe #rMaldices - #rEnvejecido.",
       "[Salir] Segunda opción que actualmente solo es salir.",
       "[Salir]"
     ]

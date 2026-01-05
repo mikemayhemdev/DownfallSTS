@@ -23,7 +23,7 @@ public class SoulburnPotion extends CustomPotion {
 
 
     public SoulburnPotion() {
-        super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.SPHERE, PotionColor.WHITE);
+        super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.SPHERE, PotionColor.SMOKE);
         this.isThrown = true;
         this.targetRequired = true;
         this.labOutlineColor = HexaMod.placeholderColor;
@@ -53,7 +53,7 @@ public class SoulburnPotion extends CustomPotion {
     }
 
     public int getPotency(int ascensionLevel) {
-        return 30;
+        return 40;
     }
 }
 

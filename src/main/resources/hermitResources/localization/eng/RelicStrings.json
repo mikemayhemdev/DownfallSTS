@@ -27,7 +27,7 @@
     "NAME": "Horseshoe",
     "FLAVOR": "Lucky charm. Somebody is gonna be missing this.",
     "DESCRIPTIONS": [
-      "Whenever you gain #yWeak [REMOVE_SPACE], #yFrail or #yVulnerable [REMOVE_SPACE], gain #b1 less."
+      "Whenever you gain #yWeak, #yFrail or #yVulnerable [REMOVE_SPACE], gain #b1 less."
     ]
   },
   "hermit:Spyglass": {

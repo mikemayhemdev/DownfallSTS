@@ -17,28 +17,32 @@
     "NAME": "杠鈴",
     "FLAVOR": "1000 下？切，我還能做 1001 下。",
     "DESCRIPTIONS": [
-      "進入 #y休息處 時，若至少有 #b10 張未 #y升級 的牌，隨機 #y升級 其中 #b1 張。"
+      "進入 #y休息處 時，若至少有 #b",
+      " 張未 #y升級 的牌，隨機 #y升級 其中 #b1 張。"
     ]
   },
   "champ:BerserkersGuideToSlaughter": {
     "NAME": "戰狂指南",
     "FLAVOR": "文字難以辨認。",
     "DESCRIPTIONS": [
-      "每回合開始時獲得 #b3 點 #y活力 。"
+      "每回合開始時獲得 #b",
+      " 點 #y活力 。"
     ]
   },
   "champ:ChampionCrownUpgraded": {
     "NAME": "終極王冠",
     "FLAVOR": "恭喜！！你是最大的贏家。",
     "DESCRIPTIONS": [
-      "替換 #r冠軍金冠 。 NL 每場戰鬥開始時，進入 #ychamp:終極 並持續 #b1 回合 。"
+      "替換 #r冠軍金冠 。 NL 每場戰鬥開始時，進入 #ychamp:終極 並持續 #b",
+      " 回合 。"
     ]
   },
   "champ:DefensiveTrainingManual": {
     "NAME": "防禦訓練手冊",
     "FLAVOR": "專業提示：不要被打到。",
     "DESCRIPTIONS": [
-      " #ychamp:防守 的 #ychamp:終結技 獎勵額外獲得 #b5 點 #y格擋 。"
+      " #ychamp:防守 的 #ychamp:終結技 獎勵額外獲得 #b",
+      " 點 #y格擋 。"
     ]
   },
   "champ:DeflectingBracers": {

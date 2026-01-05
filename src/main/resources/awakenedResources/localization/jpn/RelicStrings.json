@@ -1,0 +1,160 @@
+{
+  "awakened:RippedDoll": {
+    "NAME": "裂けた人形",
+    "FLAVOR": "かつての自分が遺した痕。未だ秘めた魔力を宿している。",
+    "DESCRIPTIONS": [
+      "戦闘開始から #b",
+      " ターンの間、ターン開始時に #yawakened:召喚 を行う。 "
+    ]
+  },
+  "awakened:ShreddedDoll": {
+    "NAME": "引き裂かれた人形",
+    "FLAVOR": "あなたの無力感を思い出させるのに未だ手放せない",
+    "DESCRIPTIONS": [
+      " ",
+      " 裂けた人形 [] と置き換える。 NL ターン開始時、 #yawakened:召喚 を行う。 NL 初めて魔導書がリフレッシュされた時 #y儀式 #b1 を得る。"
+    ]
+  },
+  "awakened:WhiteRibbon": {
+    "NAME": "白いリボン",
+    "FLAVOR": "儀式を行わずともその言葉に力を与える",
+    "DESCRIPTIONS": [
+      " #yawakened:詠唱 効果を持つカードをプレイする度に #b",
+      " #yブロック を得る。詠唱が発動する必要は無い。"
+    ]
+  },
+  "awakened:HexxBomb": {
+    "NAME": "マナボム",
+    "FLAVOR": "3 2",
+    "DESCRIPTIONS": [
+     "敵が死亡した時、持っていた #yawakened:マナバーン が他のランダムな敵に移る。"
+    ]
+  },
+  "awakened:TomeOfPortalmancy": {
+    "NAME": "ポータルの書",
+    "FLAVOR": "異次元間のゲート構築と維持を詳述した魔術書",
+    "DESCRIPTIONS": [
+      "#y空虚 が生成される度、敵全体に #b",
+      " #yawakened:マナバーン を与える。"
+    ]
+  },
+  "awakened:EyeOfTheOccult": {
+    "NAME": "神秘の眼",
+    "FLAVOR": "この恐ろしい彫刻は持つ者に魔術の知識を与える。",
+    "DESCRIPTIONS": [
+      "#y雷撃 と #y暗吸精 が敵全体をターゲットにする。"
+    ]
+  },
+  "awakened:DeadBird": {
+    "NAME": "烏の魂",
+    "FLAVOR": "この亡霊は呪われし者共のすぐ後ろに付き纏う。",
+    "DESCRIPTIONS": [
+      "ターン終了時、最もHPの少ない敵に #b",
+      " ダメージを与える。この効果は #y筋力 の影響を受ける。"
+    ]
+  },
+  "awakened:AbyssBlade": {
+    "NAME": "アビスブレード",
+    "FLAVOR": "虚無の返還",
+    "DESCRIPTIONS": [
+      "各ターン毎に初めて #yawakened:枯渇 が発生した時 [E] を得て カードを 1 枚引く。"
+    ]
+  },
+  "awakened:ShardOfNowak": {
+    "NAME": "金彩の骨片",
+    "FLAVOR": "違う、そういう意味の集中じゃない。",
+    "DESCRIPTIONS": [
+      "戦闘開始時、 #y筋力 #b",
+      " を得るが、HPを1でも失った時その #y筋力 を失う。"
+    ]
+  },
+  "awakened:VioletPlumage": {
+    "NAME": "紫の羽毛",
+    "FLAVOR": "忘却の果て無き闇に染まった",
+    "DESCRIPTIONS": [
+      "各戦闘で初めて [E] が余った状態でターンを終了した時、次のターン開始時に追加でカードを #b",
+      " 枚引く。"
+    ]
+  },
+  "awakened:ZenerDeck": {
+    "NAME": "ゼナーデッキ",
+    "FLAVOR": "“1，2，3, 私には皆の視線が注がれるべきだ",
+    "DESCRIPTIONS": [
+      "戦闘開始時、魔導書に #yESP を追加し #yawakened:召喚 する。"
+    ]
+  },
+  "awakened:CawingCask": {
+    "NAME": "カウイングキャスク",
+    "FLAVOR": "儀式用に彫られた樽。鴉の神マザレスが描かれているが、中からは怪しい匂いがする",
+    "DESCRIPTIONS": [
+      "ポーションを使用した時、 #y儀式 #b",
+      " を得る。"
+    ]
+  },
+  "awakened:MiniBlackHole": {
+    "NAME": "アレシア",
+    "FLAVOR": "深淵より来たりて",
+    "DESCRIPTIONS": [
+      "自分のターン中に #yパワー をプレイしなかった場合、次のターンに追加でカードを1枚引く"
+    ]
+  },
+  "awakened:StrengthBooster": {
+    "NAME": "紙のカラス",
+    "FLAVOR": "疑念と呪詛を千度折り畳んだ裁定者",
+    "DESCRIPTIONS": [
+      "敵が #yawakened:マナバーン で追加で #b",
+      "% のダメージを受ける。"
+    ]
+  },
+  "awakened:CursedBlessing": {
+    "NAME": "最後の儀式",
+    "FLAVOR": "私の全財産を愛猫ヌードルズに託す。さらばだ、残酷な世界よ。XOXO ジョースター",
+    "DESCRIPTIONS": [
+      "各戦闘で初めて #yawakened:詠唱 を #b",
+      " 回行うと #y儀式 #b",
+      " を得る。"
+    ]
+  },
+  "awakened:CurvedSwordMeme": {
+    "NAME": "Conjure Blade",
+    "FLAVOR": "Go on, do it Conjure a blade, right now I'm watching :^)",
+    "DESCRIPTIONS": [
+      "At the start of combat, add #yConjure #yBlade into your hand?",
+      "NOTE: THE PLAYER CANNOT OBTAIN THIS RELIC OUTSIDE OF CONSOLE, IT'S A JOKE RELIC!"
+    ]
+  },
+  "awakened:CurvedSword": {
+    "NAME": "ゼツメイ",
+    "FLAVOR": "魔術師に好まれる剣。その理由は放たれた魔法を自らに取り込む能力にある。",
+    "DESCRIPTIONS": [
+      "戦闘中に #b",
+      " 回スペルをプレイする度、 #yセレモニー を手札に加える。"
+    ]
+  },
+  "awakened:MoonTalisman": {
+    "NAME": "クレセントタリスマン",
+    "FLAVOR": "“お願い、私を忘れないで。私が死んでも。忘れないで。”",
+    "DESCRIPTIONS": [
+      "入手時、 #yawakened:召喚 を持たないカードを1枚選び、 #yawakened:召喚 を追加する",
+      "カードを選択：",
+      "このタリスマンは ",
+      " に祝福を与え、 #yawakened:召喚 を追加した",
+      "このレリックの効果を受けたカードはデッキから #r削除 された。"
+    ]
+  },
+  "awakened:AwakenedUrn": {
+    "NAME": "鳥頭壺",
+    "FLAVOR": "鳥の神マザレスを、お茶目にかたどっている。",
+    "DESCRIPTIONS": [
+      "各戦闘で最初の #b4 枚の #yパワー カードをプレイした時、HPを #b",
+      " 回復する"
+      ]
+  },
+  "awakened:NerfedMummifiedHand": {
+    "NAME": "干乾びた手",
+    "FLAVOR": "それは真の力を求め、あなたのオカルト的魔術に抗う",
+    "DESCRIPTIONS": [
+      "#yセレモニー #r以外の パワーカードをプレイした時、ランダムな手札のコストがこのターンの間 #b0 になる。"
+    ]
+  }
+}

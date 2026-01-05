@@ -10,6 +10,7 @@ import downfall.util.TextureLoader;
 import guardian.GuardianMod;
 import guardian.rewards.GemReward;
 import guardian.rewards.GemRewardButRelicRng;
+import utilityClasses.Wiz;
 
 public class PickAxe extends CustomRelic {
     public static final String ID = "Guardian:PickAxe";
@@ -30,7 +31,7 @@ public class PickAxe extends CustomRelic {
 
 
     public void onEquip() {
-        if ((AbstractDungeon.getCurrRoom()).eliteTrigger) {
+        if (AbstractDungeon.floorNum > 2 && (AbstractDungeon.getCurrRoom()).eliteTrigger) {
             AbstractDungeon.getCurrRoom().rewards.add(new GemRewardButRelicRng());
             //            AbstractDungeon.combatRewardScreen.open();
             //            AbstractDungeon.getCurrRoom().rewardPopOutTimer = 0.0F;
@@ -39,9 +40,10 @@ public class PickAxe extends CustomRelic {
 
     @Override
     public void onTrigger() {
-        //super.onTrigger();
-      //  this.counter = -2;
-      //  setCounter(this.counter);
+        super.onTrigger();
+        this.counter = -2;
+        this.grayscale = true;
+        setCounter(this.counter);
     }
 
     public void setCounter(int counter) {

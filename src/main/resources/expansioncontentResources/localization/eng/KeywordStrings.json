@@ -33,7 +33,7 @@
     "NAMES": [
       "plated"
     ],
-    "DESCRIPTION": "At the end of your turn, gain Block equal to your #yPlated #yArmor [REMOVE_SPACE]. Taking unblocked attack damage reduces #yPlated #yArmor by #b1 [REMOVE_SPACE]."
+    "DESCRIPTION": "At the end of your turn, gain #yBlock equal to your #yPlated #yArmor [REMOVE_SPACE]. Taking unblocked attack damage reduces #yPlated #yArmor by #b1."
   },
   {
     "PROPER_NAME": "Boss",
@@ -127,15 +127,6 @@
     "PROPER_NAME": "Constricted",
     "DESCRIPTION": "Creatures with Constricted take damage at the end of their turn."
   },
-
-  {
-    "PROPER_NAME": "Chant",
-    "NAMES": [
-      "chant",
-      "Chant",
-      "Chants"
-    ],
-    "DESCRIPTION": "Chant effects on a card activate during play if you played a Power while it was in hand."},
   {
     "PROPER_NAME": "Transform",
     "ID": "transform",

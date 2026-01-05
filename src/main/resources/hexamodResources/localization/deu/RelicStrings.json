@@ -1,0 +1,114 @@
+{
+  "hexamod:SpiritBrand": {
+    "NAME": "Mal des Geistes",
+    "FLAVOR": "Ein an mich gebundener Beschützer.",
+    "DESCRIPTIONS": [
+      "Erhalte #b",
+      "#yBlock wenn du das erste Mal im Zug eine Geisterflamme #yhexamod:entzündet hast"
+    ]
+  },
+  "hexamod:TheBrokenSeal": {
+    "NAME": "Das gebrochene Siegel",
+    "FLAVOR": "Unbegrenzte, ungebändigte, unstillbare Macht.",
+    "DESCRIPTIONS": [
+      "Erhöhe beim Aufheben deine Max TP um #b",
+      " und heile deine TP komplett. Beginne jeden Kampf mit #b",
+      " #yStärke [REMOVE_SPACE], #yGeschicklichkeit [REMOVE_SPACE], und #yhexamod:Intensität [REMOVE_SPACE]. Du kannst keine weiteren Siegel oder #pGebrochene #pSiegel erhalten."
+    ]
+  },
+  "hexamod:UnbrokenSoul": {
+    "NAME": "Mal des Äthers",
+    "FLAVOR": "Mal sehen ob wir es... besser machen können.",
+    "DESCRIPTIONS": [
+      "Ersetzt ",
+      " [REMOVE_SPACE].[] NL Erhalte #b ",
+      "Block immer wenn eine Geisterflamme #yhexamod:entzündet wird."
+    ]
+  },
+  "hexamod:IceCube": {
+    "NAME": "Xanatos' eiskaltes Amulett",
+    "FLAVOR": "So kalt...",
+    "DESCRIPTIONS": [
+      "Erhalte in deinem Zug [E] . Beginne jeden Kampf mit #b",
+      " weniger #yhexamod:Intensität [REMOVE_SPACE]. Die #yInferno #yGeisterflamme kann deine #yhexamod:Intensität nicht erhöhen."
+    ]
+  },
+  "hexamod:SoulStone": {
+    "NAME": "Seelenstein",
+    "FLAVOR": "Eine Seele würde diesem Stein Leben einhauchen!",
+    "DESCRIPTIONS": [
+      "#yhexamod:Entzünde die aktuelle Geisterflamme immer, wenn du #b",
+      " Karten #yerschöpfst."
+    ]
+  },
+  "hexamod:RecyclingMachine": {
+    "NAME": "Recycler",
+    "FLAVOR": "Eines Tages werde ich auch recycelt.",
+    "DESCRIPTIONS": [
+      "Wenn das erste Mal im Kampf eine #yflüchtige Karte #yerschöpft, die weder ein #yStatus noch ein #rFluch ist, nimm eine Kopie dieser Karte auf die Hand, die #b0 kostet bis du sie spielst."
+    ]
+  },
+  "hexamod:MatchstickCase": {
+    "NAME": "Raffiniertes Teak-Streichholz",
+    "FLAVOR": "Funktioniert auf allen Oberflächen!",
+    "DESCRIPTIONS": [
+      "Wenn du das erste Mal im Zug eine Geisterflamme #yhexamod:entzündest, kannst du dich #yhexamod:vorwärts or #yhexamod:rückwärts bewegen."
+    ]
+  },
+  "hexamod:InflammatoryLetter": {
+    "NAME": "TOBSCo Sauce",
+    "FLAVOR": "Etwas extra-Schärfe macht alles besser.",
+    "DESCRIPTIONS": [
+      "Beginne jeden Kampf mit #b",
+      " #yhexamod:Intensität."
+    ]
+  },
+  "hexamod:SoulOfChaos": {
+    "NAME": "Chaos-Seele",
+    "FLAVOR": "Manifestierter Wahnsinn.",
+    "DESCRIPTIONS": [
+      "Bewege dich zu Beginn deines Zuges auf eine zufällige Geisterflamme und ersetze ihren Typ durch einen zufälligen Geisterflammentyp. Spiele immer am Ende deines Zuges die oberste Karte des Nachziehstapels."
+    ]
+  },
+  "hexamod:JarOfFuel": {
+    "NAME": "Olexas Schild",
+    "FLAVOR": "Schutz auf Nachfrage.",
+    "DESCRIPTIONS": [
+      "#yMachtkarten bringen auch #ySengende und #ySchlagende #yGeisterflammen voran."
+    ]
+  },
+  "hexamod:BolsterEngine": {
+    "NAME": "Trickys Stärkungs-Stab",
+    "FLAVOR": "Unterstützt durch die Recherche tausender Bücher. Wissen ist Macht!",
+    "DESCRIPTIONS": [
+      "Erhalte für die erste #yMachtkarte die du im Kampf spielst #b",
+      " #yBlock und #b",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "hexamod:CandleOfCauterizing": {
+    "NAME": "Rote Kerze",
+    "FLAVOR": "Feuer BRENNT...",
+    "DESCRIPTIONS": [
+      "Immer wenn du #yhexamod:Seelenfeuer anwendest, wende zusätzlich #b",
+      " #yhexamod:Seelenfeuer an."
+    ]
+  },
+  "hexamod:Sixitude": {
+    "NAME": "Sechseckiges Mal",
+    "FLAVOR": "Feuer, feuer, feuer, feuer, feuer, FEUER!",
+    "DESCRIPTIONS": [
+      "Immer wenn du #b",
+      " Karten spielst, die mehr als #b0 kosten, nimm ein #ygremlin:Echo eines Basis #ySchlags auf die Hand. Es kostet #b0."
+    ]
+  },
+  "hexamod:Libra": {
+    "NAME": "Libra",
+    "FLAVOR": "Balance ist überall.",
+    "DESCRIPTIONS": [
+      "#yTransformiere deine Schläge in zufällige Fertigkeiten und deine Verteidigen in zufällige Angriffe.",
+      "Die Waage der Gerechtigkeit neigt sich.",
+      "Wähle eine beliebige Anzahl an Karten um sie zu ihren gegenteiligen Typen zu transformieren."
+    ]
+  }
+}

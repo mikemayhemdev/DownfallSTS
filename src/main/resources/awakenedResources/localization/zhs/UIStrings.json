@@ -1,46 +1,46 @@
 {
   "awakened:SpellDescriptor": {
     "TEXT": [
-      "Spell"
+      "咒文"
     ]
   },
   "awakened:ConjureMod": {
     "TEXT": [
-      " NL awakened:Conjure."
+      " NL awakened:念咒 ｡"
     ]
   },
   "awakened:SpellMod": {
     "TEXT": [
-      "[#12FAF0]Spell. NL"
+      "[#12FAF0]咒文 ｡ NL "
     ]
   },
   "awakened:DrainingMod": {
     "TEXT": [
-      " NL Next turn, lose [E]."
+      " NL 下一回合 , 失去 [E] ｡"
     ]
   },
   "awakened:highlightChant": {
     "TEXT": [
-      "awakened:Chant: ",
-      "[awakenedIcon] [#12FAF0]Chant: "
+      "awakened:吟唱 : ",
+      "[awakenedIcon] [#12FAF0]吟唱 : "
     ]
   },
   "awakened:Spellbook": {
     "TEXT": [
-      "Spellbook",
-      "Awakening",
-      "After playing #b7 Powers, become #yAwakened [REMOVE_SPACE]! NL NL While #yAwakened [REMOVE_SPACE], #yConjured Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy.",
-      "After playing #b7 Powers, become #yAwakened [REMOVE_SPACE]! NL NL While #yAwakened [REMOVE_SPACE], #yConjured Spell cards are #yUpgraded [REMOVE_SPACE], drastically increasing their efficacy."
+      "咒典",
+      "觉醒",
+      "打出 #b7 张能力牌后 , 就会 #y觉醒 !! NL NL #y觉醒 状态下 , #y念咒 产生的咒文牌会 #y升级 , 大幅提升它們的威力 ｡",
+      "打出 #b7 张能力牌后 , 就会 #y觉醒 !! NL NL #y觉醒 状态下 , #y念咒 产生的咒文牌会 #y升级 , 大幅提升它們的威力 ｡"
     ]
   },
   "awakened:FullSpellbook": {
     "TEXT": [
-      "My Spellbook is full!"
+      "咒典已经满了 !"
     ]
   },
   "awakened:FourthDimensionDupeAttempt": {
     "TEXT": [
-      "@Doing@ @that@ @would@ @break@ @the@ @space-time@ @continuum!!!@"
+      "@次元的狭缝被打开了@ @!@"
     ]
   }
 }

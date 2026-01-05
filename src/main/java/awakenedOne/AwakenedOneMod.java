@@ -44,6 +44,8 @@ import com.megacrit.cardcrawl.events.city.Nest;
 import com.megacrit.cardcrawl.events.exordium.GoldenWing;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import downfall.downfallMod;
+import downfall.events.TheNest_Evil;
+import downfall.events.WingStatue_Evil;
 import downfall.util.CardIgnore;
 import javassist.CtClass;
 import javassist.Modifier;
@@ -230,10 +232,10 @@ public class AwakenedOneMod implements
      */
 
     public void receivePostInitialize() {
-
         BaseMod.addEvent(new AddEventParams.Builder(TheNestAwakened.ID, TheNestAwakened.class) //Event ID//
                 //Event Spawn Condition//
                 .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
+                //.playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
                 //Event ID to Override//
                 .overrideEvent(Nest.ID)
                 //Event Type//
@@ -246,12 +248,12 @@ public class AwakenedOneMod implements
                 //Event ID to Override//
                 .overrideEvent(GoldenWing.ID)
                 //Event Type//
-                .eventType(EventUtils.EventType.FULL_REPLACE)
-                .create());
+                .eventType(EventUtils.EventType.FULL_REPLACE).create());
 
         BaseMod.addEvent(new AddEventParams.Builder(BackToBasicsAwakened.ID, BackToBasicsAwakened.class) //Event ID//
                 //Event Character//
-                .playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
+                .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
+                //.playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
                 //Existing Event to Override//
                 .overrideEvent(BackToBasics.ID)
                 //Event Type//
@@ -261,8 +263,8 @@ public class AwakenedOneMod implements
 
         BaseMod.addEvent(new AddEventParams.Builder(AbyssEvent.ID, AbyssEvent.class) //Event ID//
                 //Event Spawn Condition//
+                //.playerClass(AwakenedOneChar.Enums.AWAKENED_ONE)
                 .spawnCondition(() -> AbstractDungeon.player instanceof AwakenedOneChar)
-
                 //Event Type//
                 .eventType(EventUtils.EventType.SHRINE)
                 .create());
@@ -306,17 +308,7 @@ public class AwakenedOneMod implements
     }
 
     public void addPotions() {
-        BaseMod.addPotion(SacramentalWine.class, Color.NAVY, Color.VIOLET, Color.MAROON, SacramentalWine.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
-        BaseMod.addPotion(SneckoPowersPotion.class, Color.CYAN, Color.TAN, Color.BLUE, SneckoPowersPotion.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
-        BaseMod.addPotion(PhaseSkip.class, Color.CYAN, Color.PURPLE, Color.BLUE, PhaseSkip.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
-
-        BaseMod.addPotion(CultistsDelight.class, Color.BLUE, Color.NAVY, Color.YELLOW, CultistsDelight.POTION_ID);
-
-        if (Loader.isModLoaded("widepotions")) {
-            WidePotionsMod.whitelistSimplePotion(CultistsDelight.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(SacramentalWine.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(SneckoPowersPotion.POTION_ID);
-        }
+        //potions handled in downfallMod
     }
 
 
@@ -421,12 +413,10 @@ public class AwakenedOneMod implements
     @Override
     public void receiveCardUsed(AbstractCard abstractCard) {
         if (abstractCard.type == AbstractCard.CardType.POWER) {
-
             powersThisCombat++;
             awaken();
         }
         if (abstractCard instanceof AbstractSpellCard && !abstractCard.purgeOnUse) {
-
             SlimeboundMod.logger.info("incrementing Spells this turn from " + spellsThisTurn + " to " + (spellsThisTurn + 1) + ". card: " + abstractCard.name);
             spellsThisTurn++;
         }

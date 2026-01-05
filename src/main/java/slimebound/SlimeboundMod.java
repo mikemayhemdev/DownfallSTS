@@ -535,12 +535,12 @@ public class SlimeboundMod implements OnCardUseSubscriber,
                 .create());
                 */
 
-        BaseMod.addEvent(new AddEventParams.Builder(ArtOfSlimeWar.ID, ArtOfSlimeWar.class) //Event ID//
-                //Act//
-                .dungeonIDs(TheCity.ID, "TheJungle")
-                //Only in Evil if content sharing is disabled
-                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
-                .create());
+//        BaseMod.addEvent(new AddEventParams.Builder(ArtOfSlimeWar.ID, ArtOfSlimeWar.class) //Event ID//
+//                //Act//
+//                .dungeonIDs(TheCity.ID, "TheJungle")
+//                //Only in Evil if content sharing is disabled
+//                .spawnCondition(() -> (evilMode || downfallMod.contentSharing_events))
+//                .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(WorldOfGoopSlimebound.ID, WorldOfGoopSlimebound.class) //Event ID//
                 //Event Character//
@@ -598,17 +598,7 @@ public class SlimeboundMod implements OnCardUseSubscriber,
 
     public void addPotions() {
 
-        BaseMod.addPotion(SlimedPotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimedPotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
-        BaseMod.addPotion(SpawnSlimePotion.class, Color.GREEN, Color.FOREST, Color.BLACK, SpawnSlimePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
-        BaseMod.addPotion(SlimyTonguePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimyTonguePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
-        //        BanSharedContentPatch.registerRunLockedPotion(SlimeboundEnum.SLIMEBOUND, ThreeZeroPotion.POTION_ID);
 
-        if (Loader.isModLoaded("widepotions")) {
-            WidePotionsMod.whitelistSimplePotion(ThreeZeroPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(SlimedPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(SpawnSlimePotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(SlimyTonguePotion.POTION_ID);
-        }
     }
 
 

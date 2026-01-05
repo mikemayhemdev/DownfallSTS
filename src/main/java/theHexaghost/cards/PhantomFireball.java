@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
@@ -66,6 +67,15 @@ public class PhantomFireball extends AbstractHexaCard {
                     }
                 }
             }
+    }
+
+    @Override
+    public float getTitleFontSize() {
+        if(Settings.language != Settings.GameLanguage.ENG) {
+            return 19.0F;
+        } else {
+            return 23.0F;
+        }
     }
 
     public void upgrade() {

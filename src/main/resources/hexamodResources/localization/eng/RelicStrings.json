@@ -3,7 +3,7 @@
     "NAME": "Spirit Brand",
     "FLAVOR": "A bound protector.",
     "DESCRIPTIONS": [
-      "The first time you #yIgnite a Ghostflame each turn, gain #b",
+      "The first time you #yhexamod:Ignite a Ghostflame each turn, gain #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -21,7 +21,7 @@
     "FLAVOR": "Let's see if we can do... better.",
     "DESCRIPTIONS": [
       "Replaces ",
-      " [REMOVE_SPACE].[] NL Whenever you #yIgnite a Ghostflame, gain #b",
+      " [REMOVE_SPACE].[] NL Whenever you #yhexamod:Ignite a Ghostflame, gain #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -60,7 +60,7 @@
     "FLAVOR": "A little extra heat makes everything better.",
     "DESCRIPTIONS": [
       "Start each combat with #b",
-      " #yhexamod:Intensity [REMOVE_SPACE]."
+      " #yhexamod:Intensity."
     ]
   },
   "hexamod:SoulOfChaos": {
@@ -99,14 +99,14 @@
     "FLAVOR": "Fire, fire, fire, fire, fire, FIRE!",
     "DESCRIPTIONS": [
       "Whenever you play #b",
-      " #bnon-0 cost cards, gain an #ygremlin:Echo of a basic #yStrike [REMOVE_SPACE]. It costs #b0 [REMOVE_SPACE]."
+      " #bnon-0 cost cards, gain an #ygremlin:Echo of a basic #yStrike. It costs #b0."
     ]
   },
   "hexamod:Libra": {
     "NAME": "Libra",
     "FLAVOR": "Balance in all things.",
     "DESCRIPTIONS": [
-      "Choose any number of your Strikes and Defends to #yTransform into their opposite type.",
+      "#yTransform your Strikes into random Skills, and your Defends into random Attacks.",
       "The scales of justice tip.",
       "Choose any number of cards to Transform into the opposite type."
     ]

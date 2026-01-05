@@ -1,0 +1,36 @@
+{
+  "collector:MiniCursePotion": {
+    "NAME": "Seelenextrakt",
+    "DESCRIPTIONS": [
+      "Wende #b1 #ySchwach, #b1 #yVerwundbar, und #b6 #yVerdammnis an.",
+      "Wende #b",
+      " #ySchwach, #b",
+      " #yVerwundbar, und #b",
+      " #yVerdammnis an."
+    ]
+  },
+  "collector:ReservePotion": {
+    "NAME": "Reservetrank",
+    "DESCRIPTIONS": [
+      "Erhalte #b2 #yReserve.",
+      "Erhalte #b",
+      " #yReserve [REMOVE_SPACE]."
+    ]
+  },
+  "collector:DebuffDoublePotion": {
+    "NAME": "Balsamierflüssigkeit",
+    "DESCRIPTIONS": [
+      "Verdopple die Debuffs des Gegners.",
+      "Multipliziere die Debuffs des Gegners mit #b",
+      "."
+    ]
+  },
+  "collector:TempHPPotion": {
+    "NAME": "Höllenwasser",
+    "DESCRIPTIONS": [
+      "Erhalte #b8 #ytemporäre #yTP.",
+      "Erhalte #b",
+      " #ytemporäre #yTP [REMOVE_SPACE]."
+    ]
+  }
+}

@@ -1,414 +1,412 @@
 {
   "awakened:Thunderbolt": {
-    "NAME": "Thunderbolt",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL Exhaust."
+    "NAME": "落雷",
+    "DESCRIPTION": "保留 ｡ NL 造成 !D! 点伤害 ｡ NL 消耗 ｡"
   },
   "awakened:BurningStudy": {
-    "NAME": "Burning Study",
-    "DESCRIPTION": "Retain. NL Gain !M! Strength. NL Apply !awakened:m2! Weak to ALL enemies. NL Exhaust."
+    "NAME": "炽肄",
+    "DESCRIPTION": "保留 ｡ NL 获得 !M! 点力量 ｡ NL 给予所有敌人 !awakened:m2! 层 虚弱 ｡ NL 消耗 ｡"
   },
   "awakened:Cryostasis": {
-    "NAME": "Cryostasis",
-    "DESCRIPTION": "Retain. NL Gain !B! Block. NL Exhaust."
+    "NAME": "凝冻",
+    "DESCRIPTION": "保留 ｡ NL 获得 !B! 点格挡 ｡ NL 消耗 ｡"
   },
   "awakened:Darkleech": {
-    "NAME": "Darkleech",
-    "DESCRIPTION": "Retain. NL Apply !M! Vulnerable. NL Apply !awakened:m2! awakened:Manaburn. NL Exhaust."
+    "NAME": "暗噬",
+    "DESCRIPTION": "保留 ｡ NL 给予 !M! 层 易伤 ｡ NL 给予 !awakened:m2! 层 awakened:灼气 ｡ NL 消耗 ｡"
   },
   "awakened:DeathCoil": {
-    "NAME": "Deathcoil",
-    "DESCRIPTION": "Apply !M! awakened:Manaburn. NL Next turn, lose [E]."
+    "NAME": "死缠",
+    "DESCRIPTION": "给予 !M! 层 awakened:灼气 ｡ NL 下回合失去 [E] ｡"
   },
   "awakened:ESPSpell": {
-    "NAME": "ESP",
-    "DESCRIPTION": "Retain. NL Draw !M! card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Draw !M! cards. NL Exhaust."
+    "NAME": "第六感",
+    "DESCRIPTION": "保留 ｡ NL 抽 !M! 张牌 ｡ NL 消耗 ｡",
+    "UPGRADE_DESCRIPTION": "保留 ｡ NL 抽 !M! 张牌 ｡ NL 消耗 ｡"
   },
   "awakened:Strike": {
-    "NAME": "Strike",
-    "DESCRIPTION": "Deal !D! damage."
+    "NAME": "打击",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡"
   },
   "awakened:Defend": {
-    "NAME": "Defend",
-    "DESCRIPTION": "Gain !B! Block."
+    "NAME": "防御",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡"
   },
   "awakened:Brainshock": {
-    "NAME": "Brainshock",
-    "DESCRIPTION": "Deal !D! damage. NL Add a *Void into your discard pile."
+    "NAME": "脑震荡",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 将一张 *虚空 放入你的弃牌堆中 ｡"
   },
   "awakened:Intensify": {
-    "NAME": "Intensify",
-    "DESCRIPTION": "awakened:Conjure. NL This turn, Spells cost 0 and you cannot awakened:Conjure again.",
-    "UPGRADE_DESCRIPTION": "Retain. awakened:Conjure. NL This turn, Spells cost 0 and you cannot awakened:Conjure again."
+    "NAME": "激化",
+    "DESCRIPTION": "awakened:念咒 ｡ NL 本回合内 , 咒文牌耗能变为0 , 但你不能再次 awakened:念咒 ｡",
+    "UPGRADE_DESCRIPTION": "保留 ｡ awakened:念咒 ｡ NL 本回合内 , 咒文牌耗能变为0 , 但你不能再次awakened:念咒 ｡"
   },
   "awakened:DarkEcho": {
-    "NAME": "Dark Echo",
-    "DESCRIPTION": "At the end of your turn, deal !M! damage to ALL enemies, increased by Strength."
+    "NAME": "黑暗回音",
+    "DESCRIPTION": "在你的回合结束时 , 对所有敌人造成 !M! 点伤害 ｡ 伤害受力量加成 ｡"
   },
   "awakened:AwakenedForm": {
-    "NAME": "Awakened Form",
-    "DESCRIPTION": "Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual.",
-    "UPGRADE_DESCRIPTION": "Awaken immediately. NL Gain !M! awakened:Curiosity. NL Gain !awakened:m2! Ritual."
+    "NAME": "觉醒形态",
+    "DESCRIPTION": "获得 !M! 层 awakened:好奇 ｡ NL 获得 !awakened:m2! 层仪式 ｡",
+    "UPGRADE_DESCRIPTION": "立刻 *觉醒 ｡ NL 获得 !M! 层 awakened:好奇 ｡ NL 获得 !awakened:m2! 层仪式 ｡"
   },
   "awakened:Spellbinder": {
-    "NAME": "Spellbinder",
-    "DESCRIPTION": "At the start of your turn, awakened:Conjure."
+    "NAME": "咒束",
+    "DESCRIPTION": "在每回合开始时 , awakened:念咒 ｡"
   },
   "awakened:Ceremony": {
-    "NAME": "Ceremony",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Gain !M! Strength."
+    "NAME": "祭典",
+    "DESCRIPTION": "保留 ｡ NL 获得 !M! 点力量 ｡"
   },
   "awakened:TalonRake": {
-    "NAME": "Talon Rake",
-    "DESCRIPTION": "Deal !D! damage twice. NL awakened:Conjure."
+    "NAME": "爪耙",
+    "DESCRIPTION": "造成 !D! 点伤害两次 ｡ NL awakened:念咒 ｡"
   },
   "awakened:Hymn": {
-    "NAME": "Hymn",
-    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony. NL Next turn, lose [E].",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+. NL Next turn, lose [E]."
+    "NAME": "圣诗",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 获得一张 *祭典 ｡ NL 下回合失去 [E] ｡"
   },
   "awakened:Psalm": {
-    "NAME": "Psalm",
-    "DESCRIPTION": "Deal !D! damage and apply !M! Weak to ALL enemies."
+    "NAME": "圣咏",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害及给予 !M! 层 虚弱 ｡"
   },
   "awakened:DemonGlyph": {
-    "NAME": "Demon Glyph",
-    "DESCRIPTION": "Gain !M! Strength and Dexterity. NL When you *Awaken, gain !awakened:m2! more."
+    "NAME": "魔符",
+    "DESCRIPTION": "获得 !M! 点力量及敏捷 ｡ NL 当你 *觉醒 时 , 获得额外 !awakened:m2! 点 ｡"
   },
   "awakened:TakeFlight": {
-    "NAME": "Take Flight",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Block is not removed at the start of your next turn."
+    "NAME": "起飞",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL awakened:吟唱 : 你的下一回合开始时格挡不会消失 ｡"
   },
   "awakened:FeatherVeil": {
-    "NAME": "Feather Veil",
-    "DESCRIPTION": "Gain !B! Block. NL Lose !M! Strength."
+    "NAME": "羽幕",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 失去 !M! 点力量 ｡"
   },
   "awakened:Peck": {
-    "NAME": "Peck",
-    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! cards."
+    "NAME": "啄击",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 造成 !D! 点伤害 ｡ NL 抽 !M! 张牌 ｡",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡 ｡ NL 造成 !D! 点伤害 ｡ NL 抽 !M! 张牌 ｡"
   },
   "awakened:Extension": {
-    "NAME": "Extension",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you play a Power, return this card from the discard pile to your hand."
+    "NAME": "延伸",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 每当你打出一张能力牌 , 将这张牌从弃牌堆放回你的手牌 ｡"
   },
   "awakened:Pluck": {
-    "NAME": "Pluck",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Gain a *Plume *Jab."
+    "NAME": "拔羽",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 ｡ NL 获得一张 *羽刺 ｡"
   },
   "awakened:FlareShot": {
-    "NAME": "Feather Flare",
-    "DESCRIPTION": "Deal !D! damage. NL Next turn, draw !M! additional card."
+    "NAME": "羽熠",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL awakened:吟唱 : 在下一回合多抽 !M! 张牌 ｡"
   },
   "awakened:ClarionCall": {
-    "NAME": "Clarion Call",
-    "DESCRIPTION": "Deal !D! damage. NL The next time you are awakened:Drained, gain [E]."
+    "NAME": "号召",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 你下次 awakened:力竭 时 , 获得 [E] ｡"
   },
   "awakened:Recitation": {
-    "NAME": "Recitation",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Deal !D! damage again."
+    "NAME": "朗誦",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL awakened:吟唱 : 再次造成 !D! 点伤害 ｡"
   },
   "awakened:ChosenVerse": {
-    "NAME": "Chosen Verse",
-    "DESCRIPTION": "The next !M! times you play a non-Attack card this turn, draw a card and gain !B! Block."
+    "NAME": "被拣选的诗句",
+    "DESCRIPTION": "本回合内下 !M! 次打出非攻击牌时 , 抽一张卡并获得 !B! 点格挡 ｡"
   },
   "awakened:SoulStrike": {
-    "NAME": "Soul Strike",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Costs 1 less [E] for each Power played this turn."
+    "NAME": "灵魂打击",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次 ｡ NL 你在这个回合内每打出一张能力牌 , 耗能就减少1 [E] ｡"
   },
   "awakened:Altar": {
-    "NAME": "Altar",
-    "DESCRIPTION": "Gain !B! Block. NL Exhaust a card. NL awakened:Conjure."
+    "NAME": "祭坛",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 消耗一张手牌 ｡ NL awakened:念咒 ｡"
   },
   "awakened:Envision": {
-    "NAME": "Envision",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure and put the Spell on top of your draw pile."
+    "NAME": "设想",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL awakened:念咒 并将该咒文牌放到抽牌堆的顶部 ｡"
   },
   "awakened:Thaumaturgy": {
-    "NAME": "Thaumaturgy",
-    "DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !awakened:m2! Dexterity. NL At the start of your next !M! turns, add a *Ceremony into your hand."
+    "NAME": "神术",
+    "DESCRIPTION": "获得 !awakened:m2! 点敏捷 ｡ NL 下 !M! 回合开始时 , 将一张 *祭典 加入你的手牌 ｡",
+    "UPGRADE_DESCRIPTION": "获得 !awakened:m2! 点敏捷 ｡ NL 下 !M! 回合开始时 , 将一张 *祭典 加入你的手牌 ｡"
   },
   "awakened:WaveOfMiasma": {
-    "NAME": "Wave of Miasma",
-    "DESCRIPTION": "Gain !B! Block. NL Apply !awakened:m2! awakened:Manaburn to ALL enemies. NL Exhaust."
+    "NAME": "瘴气冲天",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 给予所有敌人 !awakened:m2! 层 awakened:灼气 ｡ NL 消耗 ｡"
   },
   "awakened:SludgeBomb": {
-    "NAME": "Sludge Bomb",
-    "DESCRIPTION": "Can only be played if a *Void is Exhausted. NL Deal !D! damage twice. NL Erase a *Void from your Exhaust Pile.",
+    "NAME": "污泥弹",
+    "DESCRIPTION": "此牌需要一张被消耗的 *虚空 才能被打出 ｡ NL 造成 !D! 点伤害两次 ｡ NL 从消耗堆中消除一张 *虚空 ｡ ",
     "EXTENDED_DESCRIPTION": [
-      "I do not have an Exhausted Void."
+      "我没有已消耗的虚空牌 ｡"
     ]
   },
   "awakened:KnifesEdge": {
-    "NAME": "Knife's Edge",
-    "DESCRIPTION": "Gain !awakened:m2! Strength. NL Add !M! *Voids into your discard pile."
+    "NAME": "刀锋之下",
+    "DESCRIPTION": "获得 !awakened:m2! 点力量 ｡ NL 将 !M! 张 *虚空 加入弃牌堆 ｡"
   },
   "awakened:FourthDimension": {
-    "NAME": "4th Dimension",
-    "DESCRIPTION": "Exhaust a card. NL Shuffle !M! copies of it into your draw pile. NL Exhaust.",
+    "NAME": "四维空间",
+    "DESCRIPTION": "消耗1张牌 ｡ NL 将 !M! 张其复制品放入你的抽牌堆 ｡ NL 消耗 ｡",
     "EXTENDED_DESCRIPTION": [
-      "Exhaust for 4th Dimension."
+      "请选择要复制的卡牌 ｡"
     ]
   },
   "awakened:RavenStrike": {
-    "NAME": "Raven Strike",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Play the top card of your draw pile."
+    "NAME": "渡鸦打击",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL awakened:吟唱 : 打出抽牌堆顶部的牌 ｡"
   },
   "awakened:Unleash": {
-    "NAME": "Unleash",
-    "DESCRIPTION": "Deal !D! damage. NL Deals !M! additional damage for each other card in your hand."
+    "NAME": "释放",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 手牌里此卡牌以外每一张牌增加 !M! 点伤害 ｡"
   },
   "awakened:DesperatePrayer": {
-    "NAME": "Desperate Prayer",
-    "DESCRIPTION": "Gain !M! *Ceremony+ cards. NL Exhaust."
+    "NAME": "绝地求生",
+    "DESCRIPTION": "获得 !M! 张 *祭典 ｡ NL 消耗 ｡"
   },
   "awakened:BirdsEye": {
-    "NAME": "Byrd's Eye",
-    "DESCRIPTION": "Choose a Spell to awakened:Conjure.",
-    "UPGRADE_DESCRIPTION": "Refresh your Spells. Choose a Spell to awakened:Conjure."
+    "NAME": "异鳥瞰",
+    "DESCRIPTION": "从咒典中选择一张咒文牌来 awakened:念咒 ｡",
+    "UPGRADE_DESCRIPTION": "刷新咒典 ｡ 从咒典中选择一张咒文牌来 awakened:念咒 ｡"
   },
   "awakened:Initiation": {
-    "NAME": "Initiation",
-    "DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Gain a *Ceremony+."
+    "NAME": "入教",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 获得一张 *祭典 ｡"
   },
   "awakened:Ensorcelate": {
-    "NAME": "Ensorcelate",
-    "DESCRIPTION": "Gain !B! Block. NL The next Power you play costs 0."
+    "NAME": "妖惑",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 你打出的下一张能力牌耗能变为0 ｡"
   },
   "awakened:Skyward": {
-    "NAME": "Skyward",
-    "DESCRIPTION": "Gain !B! Block. NL Draw !M! card. NL Costs 1 less [E] for each Power played this combat."
+    "NAME": "御天",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 抽 !M! 张牌 ｡ NL 你在这场战斗内每打出一张能力牌 , 耗能就减少 [E] ｡"
   },
   "awakened:RisingChant": {
-    "NAME": "Rising Chorus",
-    "DESCRIPTION": "Gain !M! Strength. NL Whenever you play an activated awakened:Chant card, gain !M! Strength."
+    "NAME": "递进合唱",
+    "DESCRIPTION": "虚无 ｡ NL 每回合第1个激活的 awakened:吟唱 效果将触发2次 ｡",
+    "UPGRADE_DESCRIPTION": "每回合第1个激活的 awakened:吟唱 效果将触发2次 ｡"
   },
   "awakened:FeatherWhirl": {
-    "NAME": "Feather Whirl",
-    "DESCRIPTION": "Gain X copies of *Plume *Jab.",
-    "UPGRADE_DESCRIPTION": "Gain X+1 copies of *Plume *Jab."
+    "NAME": "羽猋",
+    "DESCRIPTION": "获得X张 *羽刺 ｡",
+    "UPGRADE_DESCRIPTION": "获得X+1张 *羽刺 ｡"
   },
   "awakened:Murder": {
-    "NAME": "Murder",
-    "DESCRIPTION": "Deal !D! damage to a random enemy !M! times. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage to a random enemy !M! times."
+    "NAME": "谋杀",
+    "DESCRIPTION": "随机对敌人造成 !D! 点伤害 !M! 次 ｡",
+    "UPGRADE_DESCRIPTION": "保留 ｡ NL 随机对敌人造成 !D! 点伤害 !M! 次 ｡"
   },
   "awakened:Nihil": {
-    "NAME": "Nihil",
-    "DESCRIPTION": "Apply !M! awakened:Manaburn. NL awakened:Chant: ALL enemies lose HP equal to their awakened:Manaburn."
+    "NAME": "无中生有",
+    "DESCRIPTION": "给予 !M! 层 awakened:灼气 ｡ NL awakened:吟唱 : 所有敌人失去等同所持 awakened:灼气 层数的生命 ｡"
   },
   "awakened:MoonlitVision": {
-    "NAME": "Moonlit Vision",
-    "DESCRIPTION": "The first time you play a Spell each turn, NL gain [E]."
+    "NAME": "月映法眼",
+    "DESCRIPTION": "你在每回合第一次打出咒文牌時 , NL 獲得 [E] ｡"
   },
   "awakened:Rebirth": {
-    "NAME": "Rebirth",
-    "DESCRIPTION": "When you would die or at the end of combat, remove all debuffs, *Awaken, and heal !M! HP instead."
+    "NAME": "重生",
+    "DESCRIPTION": "当你将死亡或在战斗结束时 , 清除你身上的所有负面效果 , *觉醒 , 并回复 !M! 点生命 ｡"
   },
   "awakened:Archmagus": {
-    "NAME": "Archmagus",
-    "DESCRIPTION": "The first Spell you play each turn is played twice."
+    "NAME": "大法师",
+    "DESCRIPTION": "你每回合打出的第一张咒文牌会打出两次 ｡"
   },
   "awakened:Planeswalk": {
-    "NAME": "Planeswalk",
-    "DESCRIPTION": "Gain [E] [E] . NL Shuffle a *Void into your draw pile.",
-    "UPGRADE_DESCRIPTION": "Gain [E] [E] [E] . NL Shuffle a *Void into your draw pile."
+    "NAME": "次元游走",
+    "DESCRIPTION": "获得 [E] [E] ｡ NL 将一张 *虚空 放入你的抽牌堆中 ｡",
+    "UPGRADE_DESCRIPTION": "获得 [E] [E] [E] ｡ NL 将一张 *虚空 放入你的抽牌堆中 ｡"
   },
   "awakened:Spew": {
-    "NAME": "Spew",
-    "DESCRIPTION": "Deal !D! damage. NL [E] spent on this card counts as being awakened:Drained."
+    "NAME": "喷涌",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 耗能在此卡上的 [E] 会触发 awakened:力竭 ｡"
   },
   "awakened:DarknessFalls": {
-    "NAME": "Darkness Falls",
-    "DESCRIPTION": "Whenever you are awakened:Drained, gain !M! Block and !awakened:m2! Strength."
+    "NAME": "夜幕低垂",
+    "DESCRIPTION": "每当你 awakened:力竭 时 , 获得 !M! 点格挡 及 !awakened:m2! 点力量 ｡",
+    "UPGRADE_DESCRIPTION": "固有 。 NL 每当你 awakened:力竭 时 , 获得 !M! 点格挡 及 !awakened:m2! 点力量 ｡"
   },
   "awakened:Eventide": {
-    "NAME": "Eventide",
-    "DESCRIPTION": "Deal !D! damage to a random enemy twice. NL Add a *Void to the top of your draw pile."
+    "NAME": "薄暮",
+    "DESCRIPTION": "随机对敌人造成 !D! 点伤害两次 ｡ NL 将一张 *虚空 放到抽牌堆顶部 ｡"
   },
   "awakened:EclipseEmbrace": {
-    "NAME": "Eclipse Embrace",
-    "DESCRIPTION": "Whenever you Exhaust a *Void, gain [E] and draw a card next turn."
+    "NAME": "日蚀入怀",
+    "DESCRIPTION": "每当你消耗一张 *虚空 , 下回合获得 [E] 并多抽一张牌 ｡"
   },
   "awakened:Clutch": {
-    "NAME": "Clutch",
-    "DESCRIPTION": "Deal !D! damage. NL Draw a 0-cost card."
+    "NAME": "紧抓",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 抽一张耗能为0的卡牌 ｡"
   },
   "awakened:Gloomguard": {
-    "NAME": "Gloomguard",
-    "DESCRIPTION": "Gain !B! Block. NL Costs 0 if a *Void is in hand."
+    "NAME": "忧郁拱卫",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 如果你手牌中有一张 *虚空 , 这张牌耗能为0 ｡"
   },
   "awakened:Carrionmaker": {
-    "NAME": "Carrionmaker",
-    "DESCRIPTION": "Deal !D! damage to a random enemy. NL Repeat for each Spell played this turn.",
+    "NAME": "腐屍创客",
+    "DESCRIPTION": "随机对敌人造成 !D! 点伤害 ｡ NL 你在这个回合内每打出一张咒文牌 , 就造成多一次伤害 ｡",
     "EXTENDED_DESCRIPTION": [
       " NL (",
-      " Spell played.)",
-      " Spells played.)"
+      " 张法术牌已被打出 ｡ )",
+      " 张法术牌已被打出 ｡ )"
     ]
   },
   "awakened:MirePit": {
-    "NAME": "Mire Pit",
-    "DESCRIPTION": "ALL enemies lose !M! Strength this turn. NL Next turn, lose [E]. NL Exhaust."
+    "NAME": "泥沼",
+    "DESCRIPTION": "所有敌人失去 !M! 点力量 1回合 ｡ NL 下回合失去 [E] ｡ NL 消耗 ｡"
   },
   "awakened:SingularityShield": {
-    "NAME": "Singularity Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain !B! Block and lose [E]."
+    "NAME": "奇点盾",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 下回合获得 !B! 点格挡并失去 [E] ｡"
   },
   "awakened:Dejection": {
-    "NAME": "Dejection",
-    "DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain a *Ceremony.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust a card. If it was a Spell, gain a *Ceremony+."
+    "NAME": "懊丧",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 消耗一张手牌 ｡ 如果消耗的是咒文牌 , 获得一张 *祭典 ｡"
   },
   "awakened:BloodRite": {
-    "NAME": "Blood Rite",
-    "DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Gain a *Ceremony+."
+    "NAME": "血祭",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 获得一张 *祭典 ｡"
   },
   "awakened:SongOfSorrow": {
-    "NAME": "Song of Sorrow",
-    "DESCRIPTION": "Whenever you create a *Void, ALL enemies lose !M! HP."
+    "NAME": "哀歌",
+    "DESCRIPTION": "每当你生成一张 *虚空 , 所有敌人失去 !M! 点生命 ｡"
   },
   "awakened:MysticOrder": {
-    "NAME": "Mystic Order",
-    "DESCRIPTION": "Draw !M! cards. NL awakened:Conjure."
+    "NAME": "秘术修会",
+    "DESCRIPTION": "抽 !M! 张牌 ｡ NL awakened:念咒 ｡"
   },
   "awakened:ProfaneStrike": {
-    "NAME": "Profane Strike",
-    "DESCRIPTION": "Deal !D! damage. NL Put a card in your hand on top of your draw pile."
+    "NAME": "亵渎打击",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 将一张手牌放到抽牌堆的顶部 ｡"
   },
   "awakened:Victuals": {
-    "NAME": "Victuals",
-    "DESCRIPTION": "awakened:Chant: Gain [E] [E] . NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "awakened:Chant: Gain [E] [E] [E] . NL Exhaust."
+    "NAME": "圣馔",
+    "DESCRIPTION": "awakened:吟唱 : 获得 [E] [E] ｡ NL 消耗 ｡",
+    "UPGRADE_DESCRIPTION": "awakened:吟唱 : 获得 [E] [E] [E] ｡ NL 消耗 ｡"
   },
   "awakened:Gather": {
-    "NAME": "Gather",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Chant: Put a card from your discard pile into your hand."
+    "NAME": "汇集",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL awakened:吟唱 : 将弃牌堆中的一张牌放入你的手牌 ｡"
   },
   "awakened:TheTower": {
-    "NAME": "The Tower",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL Deals !M! additional damage for each card created this combat."
+    "NAME": "塔",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 ｡ NL 你每在这场战斗中生成一张卡牌 , 这张牌增加 !D! 点伤害 ｡"
   },
   "awakened:ArcaneNesting": {
-    "NAME": "Arcane Nesting",
-    "DESCRIPTION": "Unplayable. NL Whenever you play a Power while this is in hand, gain !B! Block.",
+    "NAME": "奥术筑巢",
+    "DESCRIPTION": "不能被打出 ｡ NL 当这张牌在你手中 , 每打出一张能力牌时 , 获得 !B! 点格挡 ｡",
     "EXTENDED_DESCRIPTION": [
-      "I must play Powers to gain Block from this."
+      "要打出能力牌才能获得格挡 ｡"
     ]
   },
   "awakened:MiddenHeap": {
-    "NAME": "Midden Heap",
-    "DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse card from your draw or discard pile into your hand.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Put !M! Status or Curse cards from your draw or discard pile into your hand.",
+    "NAME": "废弃堆",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 将 !M! 张 状态 或 诅咒 牌从你的抽牌堆或弃牌堆放到你的手中 ｡",
+    "UPGRADE_DESCRIPTION": "获得 !B! 点格挡 ｡ NL 将 !M! 张 状态 或 诅咒 牌从你的抽牌堆或弃牌堆放到你的手中 ｡",
     "EXTENDED_DESCRIPTION": [
-      "Select a card to move to your hand.",
-      "Select cards to move to your hand."
+      "选择放入手中的卡牌 ｡",
+      "选择放入手中的卡牌 ｡"
     ]
   },
   "awakened:Caw": {
-    "NAME": "Caw",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: Increase the damage of all *Caw cards by !M! this combat."
+    "NAME": "咔",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL awakened:吟唱 : 在本场战斗中所有 *咔 牌的伤害增加 !M! ｡"
   },
   "awakened:Scour": {
-    "NAME": "Scour",
-    "DESCRIPTION": "Deal !D! damage. NL Apply !M! awakened:Manaburn."
+    "NAME": "追寻",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 给予 !M! 层 awakened:灼气 ｡"
   },
   "awakened:Manastorm": {
-    "NAME": "Manastorm",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies. NL awakened:Conjure twice."
+    "NAME": "气轰",
+    "DESCRIPTION": "对所有敌人造成 !D! 点伤害 ｡ NL awakened:念咒 两次 ｡"
   },
   "awakened:StormRuler": {
-    "NAME": "Storm Ruler",
-    "DESCRIPTION": "awakened:Conjure. NL *Thunderbolts deal !M! additional damage."
+    "NAME": "雷震子",
+    "DESCRIPTION": "awakened:念咒 ｡ NL *落雷 增加 !M! 点伤害 ｡"
   },
   "awakened:AphoticFount": {
-    "NAME": "Aphotic Fount",
-    "DESCRIPTION": "awakened:Conjure. NL Whenever you play *Cryostasis, gain !M! expansioncontent:Plated *Armor."
+    "NAME": "无光涌泉",
+    "DESCRIPTION": "awakened:念咒 ｡ NL 每当你打出 *冰凝 , 获得 !M! 点 expansioncontent:多层护甲 ｡"
   },
   "awakened:Bloodthirst": {
-    "NAME": "Bloodthirst",
-    "DESCRIPTION": "Deal !D! damage. NL If Fatal, gain a awakened:Power_Potion and Exhaust this card."
+    "NAME": "嗜血",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 斩杀 时 , 获得一瓶 awakened:能力药水 并 消耗 此卡 ｡"
   },
   "awakened:Procession": {
-    "NAME": "Procession",
-    "DESCRIPTION": "Play a card in your draw pile and shuffle in *Voids equal to its cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Play a card in your draw pile and shuffle in *Voids equal to its cost."
+    "NAME": "行进",
+    "DESCRIPTION": "打出抽牌堆中的一张牌 , 放入等同耗能数目的 *虚空 ｡ NL 消耗 ｡",
+    "UPGRADE_DESCRIPTION": "从抽牌堆打出一张牌 , 放入等同耗能数目的 *虚空 ｡"
   },
   "awakened:SplitWide": {
-    "NAME": "Split Wide",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy, gain !M! temporary Strength. NL Exhaust."
+    "NAME": "劈破",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 每当目标敌人受到攻击时 , 获得 !M! 点临时力量 ｡ NL 消耗 ｡"
   },
   "awakened:Spellshield": {
-    "NAME": "Spellshield",
-    "DESCRIPTION": "Whenever you Retain a card, gain !M! Block."
+    "NAME": "咒盾",
+    "DESCRIPTION": "你每保留一张牌 , 获得 !M! 点格挡 ｡"
   },
   "awakened:Siphon": {
-    "NAME": "Siphon",
-    "DESCRIPTION": "Deal !D! damage. NL awakened:Chant: gremlin:Steal !M! Strength this turn."
+    "NAME": "抽离",
+    "DESCRIPTION": "造成 !D! 点伤害 ｡ NL awakened:吟唱 : 这个回合 gremlin:窃取 !M! 点力量 ｡"
   },
   "awakened:PlumeJab": {
-    "NAME": "Plume Jab",
-    "DESCRIPTION": "Retain. NL Deal !D! damage to a random enemy twice. NL Exhaust."
+    "NAME": "羽刺",
+    "DESCRIPTION": "保留 ｡ NL 随机对敌人造成 !D! 点伤害两次 ｡ NL 消耗 ｡"
   },
   "awakened:Primacy": {
-    "NAME": "Primacy",
-    "DESCRIPTION": "The first time you gain Strength each turn, draw a card.",
-    "UPGRADE_DESCRIPTION": "The first !M! times you gain Strength each turn, draw a card."
+    "NAME": "教主至上",
+    "DESCRIPTION": "每回合第一次获得力量时 , 抽一张牌 ｡",
+    "UPGRADE_DESCRIPTION": "每回合首 !M! 次获得力量时 , 抽一张牌 ｡"
   },
   "awakened:Daggerstorm": {
-    "NAME": "Daggerstorm",
-    "DESCRIPTION": "Whenever you create a card, deal !M! damage to a random enemy."
+    "NAME": "匕首风暴",
+    "DESCRIPTION": "每当你生成一张卡牌 , 随机对敌人做造成 !D! 点伤害 ｡"
   },
   "awakened:PackRat": {
-    "NAME": "Pack Rat",
-    "DESCRIPTION": "Deal !D! damage and gain !B! Block twice. NL Obtain a random potion. NL Exhaust."
+    "NAME": "林鼠",
+    "DESCRIPTION": "造成 !D! 点伤害及获得 !B! 点格挡两次 ｡ NL 随机获得一瓶药水 ｡ NL 消耗 ｡"
   },
   "awakened:Mantis": {
-    "NAME": "Mantis",
-    "DESCRIPTION": "Gain !M! Strength. NL Add a *Plume *Jab into your hand."
+    "NAME": "螳螂",
+    "DESCRIPTION": "获得 !M! 点力量 ｡ NL 获得一张 *羽刺 ｡"
   },
   "awakened:ManaShield": {
-    "NAME": "Mana Shield",
-    "DESCRIPTION": "Gain !B! Block. NL awakened:Conjure. NL Reduce the cost of a random Spell in hand by 1."
+    "NAME": "气盾",
+    "DESCRIPTION": "获得 !B! 点格挡 ｡ NL awakened:念咒 ｡ NL 手牌中的一张随机咒文牌耗能减少1 ｡"
   },
   "awakened:Crusher": {
-    "NAME": "Crusher",
-    "DESCRIPTION": "Retain. NL Deal !D! damage. NL When a card is created, reduce this card's cost by 1 until played."
+    "NAME": "粉碎者",
+    "DESCRIPTION": "保留 ｡ NL 造成 !D! 点伤害 ｡ NL 每当有一张卡牌被生成 , 此卡牌打出前耗能减少1 ｡"
   },
   "awakened:Minniegun": {
-    "NAME": "Minniegun",
-    "DESCRIPTION": "Deal !D! damage !M! times. NL Shuffle a *Void into your draw pile."
+    "NAME": "迷你枪",
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次 ｡ NL 将一张 *虚空 放入抽牌堆 ｡"
   },
   "awakened:SignInBlood": {
-    "NAME": "Sign in Blood",
-    "DESCRIPTION": "Take !awakened:m2! damage. NL Draw !M! cards. NL Gain !awakened:m2! Strength. NL Exhaust."
+    "NAME": "以血立契",
+    "DESCRIPTION": "失去 !awakened:m2! 点生命 ｡ NL 抽 !M! 张牌 ｡ NL 获得 !awakened:m2! 点力量 ｡ NL 消耗 ｡"
   },
   "awakened:SpreadingSpores": {
-    "NAME": "Spreading Spores",
-    "DESCRIPTION": "Ethereal. NL Gain !M! Thorns.  NL Shuffle a copy of this into your draw pile."
+    "NAME": "扩散孢子",
+    "DESCRIPTION": "虚无 ｡ NL 获得 !M! 层荆棘 ｡ NL 将此卡复制并放入你的抽牌堆 ｡"
   },
   "awakened:Scheme": {
-    "NAME": "Scheme",
-    "DESCRIPTION": "The next card you play this turn that cost 1 or less is played twice.",
-    "UPGRADE_DESCRIPTION": "The next !M! cards you play this turn that cost 1 or less are played twice."
+    "NAME": "谋划",
+    "DESCRIPTION": "本回合打出的下一张耗能为1或以下的卡牌将被打出两次 ｡",
+    "UPGRADE_DESCRIPTION": "本回合打出的下 !M! 张耗能为1或以下的卡牌会打出两次 ｡"
   },
   "awakened:TheEncyclopedia": {
-    "NAME": "The Encyclopedia",
-    "DESCRIPTION": "Choose 2 of !M! random cards to add into your hand. They cost 2 less. NL Exhaust.",
+    "NAME": "百科全书",
+    "DESCRIPTION": "从 !M! 张随机牌中选择2张加入你的手牌 ｡ 本场战斗其耗能减2 ｡ NL 消耗 ｡",
     "EXTENDED_DESCRIPTION": [
-      "Choose 2 cards to add to your draw pile."
+      "选择2张卡牌加入你的手中 ｡"
     ]
   },
   "awakened:RealityRift": {
-    "NAME": "Reality Rift",
-    "DESCRIPTION": "Choose !awakened:m2! of !M! powerful cards from *ANOTHER *DIMENSION to gain. NL Add 2 *Voids to your discard pile. Exhaust."
+    "NAME": "次元狭缝",
+    "DESCRIPTION": "从 !M! 张来自 *另一次元 的随机牌中选择 !awakened:m2! 张加入你的手牌 ｡ NL 将 2张 *虚空 加入弃牌堆 ｡ 消耗 ｡"
   },
   "awakened:Inscribe": {
-    "NAME": "Inscribe",
-    "DESCRIPTION": "Choose a Spell. Add a copy to the Spellbook for the rest of combat, and a copy into your hand."
+    "NAME": "銘刻",
+    "DESCRIPTION": "选择一张咒文牌 , 在本场战斗中增加 !M! 张其复制品到咒典内 ｡",
+    "UPGRADE_DESCRIPTION": "awakened:念咒 ｡ 选择一张咒文牌 , 在本场战斗中增加 !M! 张其复制品至咒典内 ｡"
   }
 }

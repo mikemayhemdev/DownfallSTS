@@ -24,7 +24,8 @@
     "NAME": "异蛇戒指",
     "FLAVOR": "无法辨认，难以阅读，周四到期。",
     "DESCRIPTIONS": [
-      "触发 #b3 次 #ysneckomod:溢出 时，给予随机敌人 #b1 层 #y虚弱 与 #y易伤 。"
+      "触发 #b",
+      " 次 #ysneckomod:溢出 时，给予随机敌人 #b1 层 #y虚弱 与 #y易伤 。"
     ]
   },
   "sneckomod:CrystallizedMud": {
@@ -38,7 +39,8 @@
     "NAME": "注料骰子",
     "FLAVOR": "灌了奶酪。",
     "DESCRIPTIONS": [
-      "当1张牌被 #ysneckomod:混淆 时，获得 #b1 点 #y格挡 。"
+      "当1张牌被 #ysneckomod:混淆 时，获得 #b",
+      " 点 #y格挡 。"
     ]
   },
   "sneckomod:RareBoosterPack": {

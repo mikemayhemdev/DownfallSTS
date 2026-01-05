@@ -27,7 +27,7 @@
       "[Continuer] - #rDevenez #rMaudit #r- #rDoute."
     ]
   },
-  "awakened:WingStatue": {
+  "awakened:WingStatueAwakened": {
     "NAME": "Statue ailée",
     "DESCRIPTIONS": [
       "Parmi les pierres et les rochers, vous remarquez une grande statue bleue complexe représentant Mazaleth, le dieu des corbeaux. NL NL Vous ressentez soudainement une colère intense et l'envie de la détruire. NL NL Cependant, vous savez que cela attirerait la colère de votre bienfaiteur.",
@@ -59,14 +59,30 @@
   "awakened:AbyssEvent": {
     "NAME": "Depuis les Abysses",
     "DESCRIPTIONS": [
-      "Alors que vous vous promenez dans la ville, vous êtes soudainement envahi par un sentiment inexplicable...comme si la réalité elle-même commençait à se défaire sous vos yeux. NL Vos sens vous faisant défaut, vous pouvez voir un #pgrimoire devant vous, et une voix d'un autre monde vous parlant... NL \n\n\"ENFANT ÉVEILLÉ. VOYAGEUR DES PLANS INFINIS. NOUS AVONS BEAUCOUP À DISCUTER. PRENDS MA MAIN, ET JE TE GUIDERAI VERS LA CONNAISSANCE QUE TU RECHERCHES... VERS DES MONDES INCONNUS DE MONSTRES, DE MACHINES ET DE MAGIE AU-DELÀ DE LA COMPRÉHENSION DE CE ROYAUME.",
+      "Alors que vous vous promenez dans la ville, vous êtes soudainement envahi par un sentiment inexplicable...comme si la #préalité elle-même commençait à se @défaire@ sous vos yeux. NL Vos sens vous faisant défaut, vous pouvez voir un #pgrimoire devant vous, et une ~voix~ ~d'un~ ~autre~ ~monde~ vous parlant... NL \n\n\"ENFANT ÉVEILLÉ. VOYAGEUR DES PLANS INFINIS. NOUS AVONS BEAUCOUP À DISCUTER. PRENDS MA MAIN, ET JE TE GUIDERAI VERS LA CONNAISSANCE QUE TU RECHERCHES... VERS DES MONDES INCONNUS DE MONSTRES, DE MACHINES ET DE MAGIE AU-DELÀ DE LA COMPRÉHENSION DE CE ROYAUME.",
       "\"BIEN. NOTRE ALLIANCE SERA PUISSANTE.\"\n\n NL Alors que ce sentiment de #pmalaise #psurnaturel persiste, avec ce livre entre les mains, vous avez l'impression qu'un monde infini de possibilités s'ouvre à vous...",
-      "Vous parvenez à sortir de votre transe, déployer vos ailes et laisser derrière vous l'étrange grimoire."
+      "Vous parvenez à sortir de votre transe, déployer vos ailes et laisser derrière vous l'étrange #pgrimoire."
     ],
     "OPTIONS": [
       "[Accéder] Obtenez #gFracture #gde #gla #gréalité. #rDevenez #rMaudit - #rAgé.",
       "[Quitter].",
       "[Quitter]"
+    ]
+  },
+  "awakened:CultTalk": {
+    "NAME": "TalkStrings",
+    "DESCRIPTIONS": [
+    "@MAÎTRE!@ @PARDONNEZ-MOI!@",
+    "@MON@ @TEMPS@ @EST@ @VENU!@",
+    "@CAWWWWWW!@ @CAW@ @CAW@ @CAW@ @CAWWWWWW!!!!@",
+
+    "@MON@ @SANG@ @POUR@ @LE@ @DIEU@ @OISEAU!@",
+    "@JE@ @NE@ @SUIS@ @PAS@ @DIGNE!@",
+    "@JE@ @MEURS@ @POUR@ @QUE@ @LE@ @CLAN@ @PROSPÈRE!!!@",
+
+     "~Que~ ~ceci~ ~serve~ ~à~ ~ma~ ~rédemption…~",
+      "~...~",
+      "~Vous~ ~ne~ ~me~ ~laissez~ ~pas~ ~le~ ~choix…~"
     ]
   }
 }

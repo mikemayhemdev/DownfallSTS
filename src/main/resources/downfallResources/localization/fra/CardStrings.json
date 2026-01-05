@@ -1,7 +1,7 @@
 {
   "downfall:Aged": {
     "NAME": "Vieillesse",
-    "DESCRIPTION": "Injouable. Éthérée. NL À la fin de votre tour, ajoutez un Néant sur le haut de votre pioche."
+    "DESCRIPTION": "Injouable. Éthérée. NL À la fin de votre tour, ajoutez un *Néant dans votre défausse."
   },
   "downfall:Bewildered": {
     "NAME": "Perplexité",
@@ -9,15 +9,15 @@
   },
   "downfall:Icky": {
     "NAME": "Dégoût",
-    "DESCRIPTION": "Épuisement."
+    "DESCRIPTION": "Piochez 1 carte de moins au prochain tour. NL Épuisement."
   },
   "downfall:Haunted": {
     "NAME": "Hantise",
-    "DESCRIPTION": "Injouable. Éthérée. NL Quand une carte est *Épuisée avec ceci en main, prenez !M! dégâts."
+    "DESCRIPTION": "Éthérée. NL À la fin du tour, subissez !M! dégâts."
   },
   "downfall:Malfunctioning": {
     "NAME": "Vicié",
-    "DESCRIPTION": "À la fin de votre tour, transformez toutes les cartes de votre main en carte Statut aléatoires. NL Épuisement."
+    "DESCRIPTION": "À la fin de votre tour, ajoutez une *Blessure dans votre défausse. NL Épuisement."
   },
   "downfall:Scatterbrained": {
     "NAME": "Écervellé",

@@ -58,6 +58,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import static downfall.downfallMod.ShowCharModes;
+import static downfall.downfallMod.SixSealsQuest;
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
 import static theHexaghost.GhostflameHelper.*;
 import static theHexaghost.TheHexaghost.oscillarator;
@@ -188,6 +190,10 @@ public class HexaMod implements
     }
 
 
+    public static boolean isHexaghostSealsEnabled(){
+        return SixSealsQuest && ShowCharModes;
+    }
+
     private static void autoAddCards()
             throws URISyntaxException, IllegalAccessException, InstantiationException, NotFoundException, ClassNotFoundException {
         ClassFinder finder = new ClassFinder();
@@ -276,18 +282,7 @@ public class HexaMod implements
 
 
     public void addPotions() {
-        BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
-        BaseMod.addPotion(EctoCoolerPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, EctoCoolerPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
-        BaseMod.addPotion(DoubleChargePotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, DoubleChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
-        BaseMod.addPotion(InfernoChargePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, InfernoChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
-//        BanSharedContentPatch.registerRunLockedPotion(TheHexaghost.Enums.THE_SPIRIT, SoulburnPotion.POTION_ID);
 
-        if (Loader.isModLoaded("widepotions")) {
-            WidePotionsMod.whitelistSimplePotion(EctoCoolerPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(SoulburnPotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(DoubleChargePotion.POTION_ID);
-            WidePotionsMod.whitelistSimplePotion(InfernoChargePotion.POTION_ID);
-        }
     }
 
     @Override
@@ -471,11 +466,11 @@ public class HexaMod implements
                 .bonusCondition(() -> (AbstractDungeon.cardRandomRng.random(0, 2) == 2))
                 .create());
 
-        BaseMod.addEvent(new AddEventParams.Builder(SealChamber.ID, SealChamber.class) //Event ID//
-                .spawnCondition(() -> !AbstractDungeon.player.hasRelic(TheBrokenSeal.ID) && !hasAllSeals())
-                //Event Character//
-                .playerClass(TheHexaghost.Enums.THE_SPIRIT)
-                .create());
+//        BaseMod.addEvent(new AddEventParams.Builder(SealChamber.ID, SealChamber.class) //Event ID//
+//                 .spawnCondition(() -> !AbstractDungeon.player.hasRelic(TheBrokenSeal.ID) && !hasAllSeals())
+//                 //Event Character//
+//                 .playerClass(TheHexaghost.Enums.THE_SPIRIT)
+//                 .create());
 
         BaseMod.addEvent(new AddEventParams.Builder(HexaFalling.ID, HexaFalling.class) //Event ID//
                 //Event Character//

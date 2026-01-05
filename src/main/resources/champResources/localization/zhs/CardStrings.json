@@ -27,13 +27,9 @@
     ]
   },
   "champ:StanceDanceCrown": {
-    "NAME": "冠军金冠",
-    "DESCRIPTION": "选择进入一种 姿态 。 NL 获得其 champ:技术 奖励一次 。",
-    "UPGRADE_DESCRIPTION": "选择进入一种 姿态 。 NL 获得其 champ:技术 奖励两次 。",
-    "EXTENDED_DESCRIPTION": [
-      " 进入 champ:战狂 。",
-      " 进入 champ:防守 。"
-    ]
+    "NAME": "临场反应",
+    "DESCRIPTION": "保留 。 NL 进入另一种 姿态 。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL 进入另一种 姿态 。"
   },
   "champ:SwordSigil": {
     "NAME": "胜利旌旗",
@@ -133,9 +129,9 @@
   },
   "champ:ShieldThrow": {
     "NAME": "护盾猛掷",
-    "DESCRIPTION": "造成你当前 格挡 值点伤害两次。",
+    "DESCRIPTION": "造成你当前 格挡 值点伤害两次。 NL 若未处于 champ:防守 ，下回合无法从牌获得 格挡 。",
     "EXTENDED_DESCRIPTION": [
-      "造成你当前 格挡 值(!D!)点伤害两次。"
+      "造成你当前 格挡 值(!D!)点伤害两次。 NL 若未处于 champ:防守 ，下回合无法从牌获得 格挡 。"
     ]
   },
   "champ:FalseCounter": {
@@ -196,7 +192,7 @@
   },
   "champ:SwordThrow": {
     "NAME": "剑刃猛掷",
-    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 获得2层 虚弱 。 NL champ:战狂 champ:连段 ： NL 不获得 虚弱 。" 
+    "DESCRIPTION": "造成 !D! 点伤害 !M! 次。 NL 若未处于 champ:战狂 ，下回合无法打出攻击。" 
   },
   "champ:MurderStrike": {
     "NAME": "刽子打击",
@@ -212,7 +208,7 @@
   },
   "champ:RisingSlash": {
     "NAME": "狂烈打击",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 若打出的上张牌为 champ:终结技 ，再造成一次。"
+    "DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 若打出的上张牌为 champ:终结技 ，再造成一次。"
   },
   "champ:Shatter": {
     "NAME": "粉碎",
@@ -291,7 +287,7 @@
   },
   "champ:Improvising": {
     "NAME": "触类旁通",
-    "DESCRIPTION": "回合开始时若未处于 姿态 ，随机进入 champ:战狂 或 champ:防守 。 NL 每次进入 姿态 时，获得其 champ:技术 奖励 !M! 次 。"
+    "DESCRIPTION": "进入 姿态 时，获得其 champ:技术 奖励 !M! 次 。"
   },
   "champ:CalledShot": {
     "NAME": "畅饮",
@@ -344,7 +340,7 @@
   },
   "champ:Endure": {
     "NAME": "忍耐",
-    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL 格挡 值受 力量 加成而非 敏捷 。",
+    "DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL 格挡 值仅受 力量 加成。",
     "UPGRADE_DESCRIPTION": "进入 champ:防守 。 NL 获得 !B! 点 格挡 。 NL 格挡 值还受 力量 加成。"
   },
   "champ:PreemptiveStrike": {

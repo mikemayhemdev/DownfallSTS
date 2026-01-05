@@ -3,7 +3,7 @@
     "NAME": "Petit chapeau melon",
     "FLAVOR": "Celui qui contrôle ce chapeau, contrôle la tour.",
     "DESCRIPTIONS": [
-      "Au début du combat, ajoutez une carte Étude de la Tour dans votre main. Elle coûte 0."
+      "Au début de votre 2ème tour, choisissez #b1 carte Boss aléatoire parmi #b3 cartes et ajoutez-la à votre main."
     ]
   }
 }

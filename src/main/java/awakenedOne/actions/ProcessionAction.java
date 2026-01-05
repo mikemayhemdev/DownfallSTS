@@ -64,12 +64,10 @@ public class ProcessionAction extends AbstractGameAction {
                         shuffleIn(new VoidCard(), c.costForTurn);
                     }
                     if (c.cost == -1) {
-                        if (!AbstractDungeon.player.hasRelic(ChemicalX.ID)) {
                             shuffleIn(new VoidCard(), EnergyPanel.totalCount);
-                        }
-                        if (AbstractDungeon.player.hasRelic(ChemicalX.ID)) {
-                            shuffleIn(new VoidCard(), EnergyPanel.totalCount + 2);
-                        }
+//                        if (AbstractDungeon.player.hasRelic(ChemicalX.ID)) {
+//                            shuffleIn(new VoidCard(), 2);
+//                        }
                     }
                 }
 

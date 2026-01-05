@@ -32,6 +32,7 @@ public class CobraCoil extends AbstractSneckoCard {
         super(ID, COST, AbstractCard.CardType.ATTACK, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
         baseDamage = DAMAGE;
         baseMagicNumber = magicNumber = MAGIC;
+        this.tags.add(SneckoMod.GIFT);
         SneckoMod.loadJokeCardImage(this, "CobraCoil.png");
     }
 

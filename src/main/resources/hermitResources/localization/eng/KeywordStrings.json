@@ -27,7 +27,7 @@
       "bruised"
     ],
   "DESCRIPTION": "Bruised targets take more attack damage. Wears off on turn end."
-},
+  },
   {
     "ID": "rugged",
     "PROPER_NAME": "Rugged",
@@ -35,14 +35,14 @@
       "rugged"
     ],
   "DESCRIPTION": "Reduces next instance of attack damage taken to #b2 [REMOVE_SPACE]."
-},
+  },
   {
     "PROPER_NAME": "Bounty",
     "NAMES": [
       "bounty"
     ],
-  "DESCRIPTION": "Normal Enemy: #b15 gold.      Elite Enemy: #b40 gold.            Boss: #b100 gold."
-},
+    "DESCRIPTION": "Normal Enemy: #b15 gold.      Elite Enemy: #b40 gold.            Boss: #b100 gold."
+  },
   {
     "PROPER_NAME": "Stun",
     "NAMES": [
@@ -53,5 +53,4 @@
     ],
     "DESCRIPTION": "Stunned enemies skip their turn."
   }
-
 ]

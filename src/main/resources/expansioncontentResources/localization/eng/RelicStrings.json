@@ -3,7 +3,7 @@
     "NAME": "Tiny Bowler Hat",
     "FLAVOR": "Whosoever controls the hat, controls the Spire.",
     "DESCRIPTIONS": [
-      "At the start of combat, add a #yStudy #ythe #ySpire card to your hand. It costs #b0 [REMOVE_SPACE]."
+      "At the start of each combat, choose #b1 of #b3 random Boss cards and add the chosen card into your hand."
     ]
   }
 }

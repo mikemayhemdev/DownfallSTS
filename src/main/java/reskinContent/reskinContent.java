@@ -94,6 +94,9 @@ public class reskinContent implements
             case JPN:
                 language = "jpn";
                 break;
+            case DEU:
+                language = "deu";
+                break;
             default:
                 language = "eng";
         }

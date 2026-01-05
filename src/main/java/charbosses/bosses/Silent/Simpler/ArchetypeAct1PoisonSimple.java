@@ -28,7 +28,7 @@ import java.lang.reflect.Method;
 import java.util.ArrayList;
 
 import static awakenedOne.util.Wiz.atb;
-import static charbosses.bosses.Silent.CharBossSilent.POISONSPEECH;
+//import static charbosses.bosses.Silent.CharBossSilent.POISONSPEECH;
 
 public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
 
@@ -83,8 +83,8 @@ public class ArchetypeAct1PoisonSimple extends ArchetypeBaseSilent {
 
             if (turn != 0) {
                 SlimeboundMod.logger.info("Successful poison reset");
-                AbstractDungeon.actionManager.addToBottom(new TextAboveCreatureAction(AbstractCharBoss.boss, TextAboveCreatureAction.TextType.INTERRUPTED));
-                AbstractDungeon.actionManager.addToBottom(new SpeechBubbleAction(POISONSPEECH, AbstractCharBoss.boss, 2F));
+                //AbstractDungeon.actionManager.addToBottom(new TextAboveCreatureAction(AbstractCharBoss.boss, TextAboveCreatureAction.TextType.INTERRUPTED));
+                //AbstractDungeon.actionManager.addToBottom(new SpeechBubbleAction(POISONSPEECH, AbstractCharBoss.boss, 2F));
                 turn = 0;
             }
 

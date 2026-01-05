@@ -1,5 +1,6 @@
 package automaton.powers;
 
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -12,12 +13,12 @@ public class MaxOutputPower extends AbstractAutomatonPower {
 
     public MaxOutputPower(int amount) {
         super(NAME, TYPE, TURN_BASED, AbstractDungeon.player, null, amount);
-        AbstractDungeon.player.gameHandSize += amount;
     }
 
     @Override
     public void atStartOfTurn() {
         flash();
+        this.addToBot(new DrawCardAction(amount));
         addToBot(new MakeTempCardInDrawPileAction(new Dazed(), amount, true, true));
     }
 

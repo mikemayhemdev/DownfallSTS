@@ -13,11 +13,18 @@ import automaton.SuperTip;
 import automaton.cardmods.EncodeMod;
 import automaton.cards.Defend;
 import automaton.cards.Strike;
+import automaton.potions.BuildAFunctionPotion;
 import automaton.potions.BurnAndBuffPotion;
+import automaton.potions.CleanCodePotion;
+import automaton.potions.FreeFunctionsPotion;
 import automaton.relics.*;
 import automaton.util.*;
 import awakenedOne.AwakenedOneChar;
 import awakenedOne.AwakenedOneMod;
+import awakenedOne.potions.CultistsDelight;
+import awakenedOne.potions.PhaseSkip;
+import awakenedOne.potions.SacramentalWine;
+import awakenedOne.potions.SneckoPowersPotion;
 import awakenedOne.relics.AwakenedUrn;
 import awakenedOne.relics.NerfedMummifiedHand;
 import basemod.BaseMod;
@@ -34,6 +41,9 @@ import champ.ChampChar;
 import champ.ChampMod;
 import champ.cards.ModFinisher;
 import champ.potions.CounterstrikePotion;
+import champ.potions.OpenerPotion;
+import champ.potions.TechPotion;
+import champ.potions.UltimateStancePotion;
 import champ.powers.LastStandModPower;
 import champ.relics.ChampStancesModRelic;
 import champ.util.TechniqueMod;
@@ -43,11 +53,13 @@ import charbosses.bosses.Defect.CharBossDefect;
 import charbosses.bosses.Hermit.CharBossHermit;
 import charbosses.bosses.Ironclad.CharBossIronclad;
 import charbosses.bosses.Merchant.CharBossMerchant;
-import charbosses.bosses.Merchant.CharBossMerchant;
 import charbosses.bosses.Silent.CharBossSilent;
 import charbosses.bosses.Watcher.CharBossWatcher;
 import collector.CollectorChar;
 import collector.CollectorMod;
+import collector.potions.DebuffDoublePotion;
+import collector.potions.MiniCursePotion;
+import collector.potions.ReservePotion;
 import collector.potions.TempHPPotion;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import downfall.cards.MajorBeam;
@@ -110,6 +122,7 @@ import downfall.events.shrines_evil.TransmogrifierEvil;
 import downfall.events.shrines_evil.UpgradeShrineEvil;
 import downfall.monsters.*;
 import downfall.monsters.gauntletbosses.*;
+import downfall.patches.BanSharedContentPatch;
 import downfall.patches.DailyModeEvilPatch;
 import downfall.patches.EvilModeCharacterSelect;
 import downfall.patches.RewardItemTypeEnumPatch;
@@ -126,29 +139,49 @@ import expansioncontent.potions.BossPotion;
 import gremlin.GremlinMod;
 import gremlin.cards.Wizardry;
 import gremlin.characters.GremlinCharacter;
+import gremlin.potions.GremlinPotion;
+import gremlin.potions.NecromancyPotion;
+import gremlin.potions.SwapPotion;
 import gremlin.potions.WizPotion;
 import gremlin.relics.WizardHat;
 import gremlin.relics.WizardStaff;
 import guardian.GuardianMod;
 import guardian.cards.ExploitGems;
 import guardian.characters.GuardianCharacter;
+import guardian.patches.GuardianEnum;
+import guardian.potions.AcceleratePotion;
 import guardian.potions.BlockOnCardUsePotion;
+import guardian.potions.DefensiveModePotion;
+import guardian.potions.StasisDiscoveryPotion;
 import guardian.relics.PickAxe;
 import guardian.rewards.GemReward;
 import guardian.rewards.GemRewardAllRarities;
 import hermit.HermitMod;
+import hermit.characters.hermit;
+import hermit.potions.BlackBile;
+import hermit.potions.Eclipse;
+import hermit.potions.Tonic;
 import slimebound.SlimeboundMod;
 import slimebound.characters.SlimeboundCharacter;
+import slimebound.patches.SlimeboundEnum;
+import slimebound.potions.SlimedPotion;
+import slimebound.potions.SlimyTonguePotion;
+import slimebound.potions.SpawnSlimePotion;
 import slimebound.potions.ThreeZeroPotion;
 import sneckomod.SneckoMod;
 import sneckomod.TheSnecko;
-import sneckomod.cards.unknowns.*;
+import sneckomod.potions.CheatPotion;
+import sneckomod.potions.DiceRollPotion;
 import sneckomod.potions.MuddlingPotion;
+import sneckomod.potions.OffclassReductionPotion;
 import sneckomod.util.ColorfulCardReward;
 
 import sneckomod.util.UpgradedUnknownReward;
 import theHexaghost.HexaMod;
 import theHexaghost.TheHexaghost;
+import theHexaghost.potions.DoubleChargePotion;
+import theHexaghost.potions.EctoCoolerPotion;
+import theHexaghost.potions.InfernoChargePotion;
 import theHexaghost.potions.SoulburnPotion;
 import theHexaghost.util.SealSealReward;
 
@@ -159,6 +192,7 @@ import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 import static downfall.patches.EvilModeCharacterSelect.evilMode;
+import static gremlin.patches.GremlinEnum.GREMLIN;
 import static reskinContent.reskinContent.unlockAllReskin;
 import static sneckomod.OffclassHelper.getARandomOffclass;
 
@@ -196,11 +230,13 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static boolean crossoverModCharacters = true;
     public static boolean unlockEverything = false;
     public static boolean noMusic = false;
-    public static boolean normalMapLayout = false;
+    public static boolean normalMapLayout = true;
     public static boolean sneckoNoModCharacters = false;
     public static boolean useIconsForAppliedProperties = false;
     public static boolean useLegacyBosses = true;
     public static boolean DeterministicConjure = true;
+    public static boolean SixSealsQuest = false;
+    public static boolean ShowCharModes = false;
 
     public static ArrayList<AbstractRelic> shareableRelics = new ArrayList<>();
     public static final String PROP_RELIC_SHARING = "contentSharing_relics";
@@ -211,11 +247,13 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     public static final String PROP_CHAR_CROSSOVER = "crossover_characters";
     public static final String PROP_MOD_CHAR_CROSSOVER = "crossover_mod_characters";
     public static final String PROP_UNLOCK_ALL = "unlockEverything";
-    public static final String PROP_NORMAL_MAP = "normalMapLayout";
+    public static final String PROP_NORMAL_MAP = "normalMapLayout_2";
     public static final String PROP_SNECKO_MODLESS = "sneckoNoModCharacters";
     public static final String PROP_NO_MUSIC = "disableMusicOverride";
     public static final String PROP_ICONS_FOR_APPLIED_PROPERTIES = "useIconsForAppliedProperties";
     public static final String NO_RNG_CONJURE = "RNGlessConjure";
+    public static final String SIX_SEALS_QUEST = "SixSealsQuest";
+    public static final String SHOW_CHAR_MODES = "ShowCarModes";
     public static final String NO_BASE_ADJUSTMENTS = "disableBaseGameAdjustments";
     public static final String LEGACY_BOSSES = "legacyBosses";
 
@@ -261,8 +299,9 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             Settings.GameLanguage.ZHS,
             Settings.GameLanguage.JPN,
             Settings.GameLanguage.KOR,
-            Settings.GameLanguage.SPA,
-            // Settings.GameLanguage.FRA,
+             Settings.GameLanguage.SPA,
+             Settings.GameLanguage.FRA,
+            Settings.GameLanguage.DEU,
             // Settings.GameLanguage.ZHT,
             // Settings.GameLanguage.RUS,
             // Settings.GameLanguage.PTB
@@ -294,6 +333,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         configDefault.setProperty(PROP_ICONS_FOR_APPLIED_PROPERTIES, "FALSE");
         configDefault.setProperty(NO_RNG_CONJURE, "TRUE");
         configDefault.setProperty(LEGACY_BOSSES, "TRUE");
+        configDefault.setProperty(SIX_SEALS_QUEST, "FALSE");
+        configDefault.setProperty(SHOW_CHAR_MODES, "FALSE");
 
 
         loadConfigData();
@@ -381,6 +422,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             config.setBool(PROP_NO_MUSIC, noMusic);
             config.setBool(PROP_ICONS_FOR_APPLIED_PROPERTIES, useIconsForAppliedProperties);
             config.setBool(NO_RNG_CONJURE, DeterministicConjure);
+            config.setBool(SIX_SEALS_QUEST, SixSealsQuest);
+            config.setBool(SHOW_CHAR_MODES, ShowCharModes);
             config.setBool(NO_BASE_ADJUSTMENTS, disableBaseGameAdjustments);
             //config.setBool(LEGACY_BOSSES, useLegacyBosses);
             config.save();
@@ -592,7 +635,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         loadOtherData();
 
         this.initializeMonsters();
-        this.addPotions(); // sorry
+        this.addPotions();
         this.initializeEvents();
         this.initializeConfig();
 
@@ -788,6 +831,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 saveData();
             });
 
+            /*
             configPos -= configStep;
             ModLabeledToggleButton legacyBossesButton = new ModLabeledToggleButton(configStrings.TEXT[16], 350.0f, configPos, Settings.CREAM_COLOR, FontHelper.charDescFont, useLegacyBosses, settingsPanel, (label) -> {
             }, (button) -> {
@@ -795,6 +839,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 saveData();
             });
 
+             */
+            useLegacyBosses = true;
 
             settingsPanel.addUIElement(contentSharingBtnCurses);
             settingsPanel.addUIElement(contentSharingBtnEvents);
@@ -808,7 +854,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             settingsPanel.addUIElement(unlockAllSkinBtn);
             settingsPanel.addUIElement(characterModCrossoverBtn);
             settingsPanel.addUIElement(noBaseAdjustmentsBtn);
-            settingsPanel.addUIElement(NoRNGConjureButton);
+            //settingsPanel.addUIElement(NoRNGConjureButton);
            // settingsPanel.addUIElement(legacyBossesButton);
         }
 
@@ -832,6 +878,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                 noMusic = config.getBool(PROP_NO_MUSIC);
                 useIconsForAppliedProperties = config.getBool(PROP_ICONS_FOR_APPLIED_PROPERTIES);
                 DeterministicConjure = config.getBool(NO_RNG_CONJURE);
+                SixSealsQuest = config.getBool(SIX_SEALS_QUEST);
+                ShowCharModes = config.getBool(SHOW_CHAR_MODES);
               //  useLegacyBosses = config.getBool(LEGACY_BOSSES);
             }
             crossoverCharacters = config.getBool(PROP_CHAR_CROSSOVER);
@@ -998,7 +1046,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         BaseMod.addEvent(new AddEventParams.Builder(WingStatue_Evil.ID, WingStatue_Evil.class) //Event ID//
                 //Event Spawn Condition//
-                .spawnCondition(() -> evilMode && !(AbstractDungeon.player instanceof AwakenedOneChar))
+                .spawnCondition(() -> evilMode)
                 //Event ID to Override//
                 .overrideEvent(GoldenWing.ID)
                 //Event Type//
@@ -1322,23 +1370,158 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     }
 
     public void addPotions() {
-            BaseMod.addPotion(BossPotion.class, Color.MAROON, Color.MAROON, new Color(0x470000ff), BossPotion.POTION_ID);
-            BaseMod.addPotion(BlockOnCardUsePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, BlockOnCardUsePotion.POTION_ID);
-            BaseMod.addPotion(MuddlingPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, MuddlingPotion.POTION_ID);
-            BaseMod.addPotion(ThreeZeroPotion.class, Color.FOREST, Color.BLACK, Color.BLACK, ThreeZeroPotion.POTION_ID);
-           // BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, TempHPPotion.POTION_ID);
-            BaseMod.addPotion(CounterstrikePotion.class, Color.GRAY, Color.GRAY, Color.BLACK, CounterstrikePotion.POTION_ID);
-            BaseMod.addPotion(BurnAndBuffPotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID);
-            BaseMod.addPotion(WizPotion.class, Color.PURPLE, Color.PINK, Color.PURPLE, WizPotion.POTION_ID);
-        // BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
 
+        if (!EvilModeCharacterSelect.evilMode) {
+
+            //PUT SHARED POTIONS HERE
+            if (!downfallMod.contentSharing_potions){
+                //SHARED POTIONS
+                BaseMod.addPotion(BossPotion.class, Color.MAROON, Color.MAROON, new Color(0x470000ff), BossPotion.POTION_ID);
+
+                //HEXAGHOST
+                BaseMod.addPotion(SoulburnPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, SoulburnPotion.POTION_ID);
+
+                //SLIME BOSS
+                BaseMod.addPotion(ThreeZeroPotion.class, Color.FOREST, Color.BLACK, Color.BLACK, ThreeZeroPotion.POTION_ID);
+
+                //SNECKO
+                BaseMod.addPotion(MuddlingPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, MuddlingPotion.POTION_ID);
+
+                //GUARDIAN
+                BaseMod.addPotion(BlockOnCardUsePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, BlockOnCardUsePotion.POTION_ID);
+
+                //COLLECTOR
+                //BaseMod.addPotion(TempHPPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, TempHPPotion.POTION_ID);
+
+                //CHAMP
+                BaseMod.addPotion(CounterstrikePotion.class, Color.GRAY, Color.GRAY, Color.BLACK, CounterstrikePotion.POTION_ID);
+
+                //GREMLINS
+                BaseMod.addPotion(WizPotion.class, Color.PURPLE, Color.PINK, Color.PURPLE, WizPotion.POTION_ID);
+
+                //AUTO
+                BaseMod.addPotion(BurnAndBuffPotion.class, Color.RED, Color.GREEN, Color.CLEAR, BurnAndBuffPotion.POTION_ID);
+
+                //AWAKENED
+                BaseMod.addPotion(CultistsDelight.class, Color.BLUE, Color.NAVY, Color.YELLOW, CultistsDelight.POTION_ID);
+
+                if (Loader.isModLoaded("widepotions")) {
+                   // WidePotionsMod.whitelistSimplePotion(TempHPPotion.POTION_ID);
+                    WidePotionsMod.whitelistSimplePotion(CounterstrikePotion.POTION_ID);
+                    WidePotionsMod.whitelistSimplePotion(SoulburnPotion.POTION_ID);
+                    WidePotionsMod.whitelistSimplePotion(BurnAndBuffPotion.POTION_ID);
+                    WidePotionsMod.whitelistSimplePotion(BlockOnCardUsePotion.POTION_ID);
+                    WidePotionsMod.whitelistSimplePotion(ThreeZeroPotion.POTION_ID);
+                    WidePotionsMod.whitelistSimplePotion(MuddlingPotion.POTION_ID);
+                    WidePotionsMod.whitelistSimplePotion(CultistsDelight.POTION_ID);
+                }
+            }
+        }
 
         if(EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_events){
             BaseMod.addPotion(CursedFountainPotion.class, Color.PURPLE, Color.MAROON, Color.BLACK, CursedFountainPotion.POTION_ID);
+
         }
 
+        //COLLECTOR POTIONS
+        BaseMod.addPotion(MiniCursePotion.class, Color.FIREBRICK, Color.GRAY, Color.TAN, MiniCursePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
+        BaseMod.addPotion(ReservePotion.class, Color.RED, Color.GREEN, Color.CLEAR, ReservePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
+        BaseMod.addPotion(DebuffDoublePotion.class, Color.CORAL, Color.PURPLE, Color.MAROON, DebuffDoublePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
+
         if (Loader.isModLoaded("widepotions")) {
-            WidePotionsMod.whitelistSimplePotion(CursedFountainPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(MiniCursePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(ReservePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(DebuffDoublePotion.POTION_ID);
+        }
+
+        //CHAMP POTIONS
+        BaseMod.addPotion(OpenerPotion.class, Color.TEAL, Color.GREEN, Color.FOREST, OpenerPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
+        BaseMod.addPotion(TechPotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, TechPotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
+        BaseMod.addPotion(UltimateStancePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, UltimateStancePotion.POTION_ID, ChampChar.Enums.THE_CHAMP);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(OpenerPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(TechPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(UltimateStancePotion.POTION_ID);
+        }
+
+        //AWAKENED POTIONS
+        BaseMod.addPotion(SacramentalWine.class, Color.NAVY, Color.VIOLET, Color.MAROON, SacramentalWine.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
+        BaseMod.addPotion(SneckoPowersPotion.class, Color.CYAN, Color.TAN, Color.BLUE, SneckoPowersPotion.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
+        BaseMod.addPotion(PhaseSkip.class, Color.CYAN, Color.PURPLE, Color.BLUE, PhaseSkip.POTION_ID, AwakenedOneChar.Enums.AWAKENED_ONE);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(SacramentalWine.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(SneckoPowersPotion.POTION_ID);
+        }
+
+        //AUTOMATON POTIONS
+        BaseMod.addPotion(BuildAFunctionPotion.class, Color.FIREBRICK, Color.GRAY, Color.TAN, BuildAFunctionPotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
+        BaseMod.addPotion(CleanCodePotion.class, Color.CORAL, Color.PURPLE, Color.MAROON, CleanCodePotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
+        BaseMod.addPotion(FreeFunctionsPotion.class, Color.BLACK, Color.PURPLE, Color.GRAY, FreeFunctionsPotion.POTION_ID, AutomatonChar.Enums.THE_AUTOMATON);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(BuildAFunctionPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(CleanCodePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(FreeFunctionsPotion.POTION_ID);
+        }
+
+        //GREMLIN POTIONS
+        BaseMod.addPotion(SwapPotion.class, Color.BLACK, Color.GRAY, Color.SLATE, SwapPotion.POTION_ID, GREMLIN);
+        BaseMod.addPotion(GremlinPotion.class, Color.RED, Color.YELLOW, Color.BLUE, GremlinPotion.POTION_ID, GREMLIN);
+        BaseMod.addPotion(NecromancyPotion.class, Color.RED, Color.YELLOW, Color.BLUE, NecromancyPotion.POTION_ID, GREMLIN);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(GremlinPotion.POTION_ID);
+        }
+
+        //GUARDIAN POTIONS
+        BaseMod.addPotion(AcceleratePotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, AcceleratePotion.POTION_ID, GuardianEnum.GUARDIAN);
+        BaseMod.addPotion(DefensiveModePotion.class, Color.ROYAL, Color.TEAL, Color.BLUE, DefensiveModePotion.POTION_ID, GuardianEnum.GUARDIAN);
+        BaseMod.addPotion(StasisDiscoveryPotion.class, Color.GOLDENROD, Color.GOLD, Color.YELLOW, StasisDiscoveryPotion.POTION_ID, GuardianEnum.GUARDIAN);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(AcceleratePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(DefensiveModePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(StasisDiscoveryPotion.POTION_ID);
+        }
+
+        //HERMIT POTIONS
+        BaseMod.addPotion(Tonic.class, null, null, null, Tonic.POTION_ID, hermit.Enums.HERMIT);
+        BaseMod.addPotion(BlackBile.class, null, null, null, BlackBile.POTION_ID, hermit.Enums.HERMIT);
+        BaseMod.addPotion(Eclipse.class, Color.SCARLET.cpy(), Color.BLACK.cpy(), null, Eclipse.POTION_ID, hermit.Enums.HERMIT);
+
+        //SLIME BOSS POTIONS
+        BaseMod.addPotion(SlimedPotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimedPotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
+        BaseMod.addPotion(SpawnSlimePotion.class, Color.GREEN, Color.FOREST, Color.BLACK, SpawnSlimePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
+        BaseMod.addPotion(SlimyTonguePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, SlimyTonguePotion.POTION_ID, SlimeboundEnum.SLIMEBOUND);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(SlimedPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(SpawnSlimePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(SlimyTonguePotion.POTION_ID);
+        }
+
+        //SNECKO POTIONS
+        BaseMod.addPotion(CheatPotion.class, Color.GRAY, Color.WHITE, Color.BLACK, CheatPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
+        BaseMod.addPotion(DiceRollPotion.class, Color.CYAN, Color.WHITE, Color.BLACK, DiceRollPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
+        BaseMod.addPotion(OffclassReductionPotion.class, Color.CYAN, Color.CORAL, Color.MAROON, OffclassReductionPotion.POTION_ID, TheSnecko.Enums.THE_SNECKO);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(CheatPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(DiceRollPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(OffclassReductionPotion.POTION_ID);
+        }
+
+        //HEXAGHOST POTIONS
+        BaseMod.addPotion(EctoCoolerPotion.class, Color.GRAY, Color.GRAY, Color.BLACK, EctoCoolerPotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
+        BaseMod.addPotion(DoubleChargePotion.class, Color.BLUE, Color.PURPLE, Color.MAROON, DoubleChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
+        BaseMod.addPotion(InfernoChargePotion.class, Color.PURPLE, Color.PURPLE, Color.MAROON, InfernoChargePotion.POTION_ID, TheHexaghost.Enums.THE_SPIRIT);
+
+        if (Loader.isModLoaded("widepotions")) {
+            WidePotionsMod.whitelistSimplePotion(EctoCoolerPotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(DoubleChargePotion.POTION_ID);
+            WidePotionsMod.whitelistSimplePotion(InfernoChargePotion.POTION_ID);
         }
 
     }
@@ -1492,7 +1675,16 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
 
     public static boolean isDownfallCharacter(AbstractPlayer p) {
-        if (p instanceof SlimeboundCharacter || p instanceof TheHexaghost || p instanceof GuardianCharacter || p instanceof TheSnecko || p instanceof ChampChar || p instanceof AutomatonChar || p instanceof GremlinCharacter || p instanceof hermit.characters.hermit || p instanceof CollectorChar || p instanceof AwakenedOneChar) {
+        if (p instanceof SlimeboundCharacter ||
+                p instanceof TheHexaghost ||
+                p instanceof GuardianCharacter ||
+                p instanceof TheSnecko ||
+                p instanceof ChampChar ||
+                p instanceof AutomatonChar ||
+                p instanceof GremlinCharacter ||
+                p instanceof hermit ||
+                p instanceof CollectorChar ||
+                p instanceof AwakenedOneChar) {
             return true;
         }
         return false;
@@ -1660,6 +1852,8 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
         playedBossCardThisTurn = false;
 
         evilWithinSingleton.selected = false;
+
+
     }
 
     public static void saveBossFight(String ID) {

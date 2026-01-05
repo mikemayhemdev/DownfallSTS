@@ -1,0 +1,214 @@
+{
+  "Guardian:NextTurnGainTemporaryStrengthPower": {
+    "NAME": "Aufladen",
+    "DESCRIPTIONS": [
+      "Erhalte zu Beginn des nächsten Zuges #b",
+      " temporäre #yStärke."
+    ]
+  },
+  "Guardian:StunnedPower": {
+    "NAME": "Betäubt",
+    "DESCRIPTIONS": [
+      "Überspringe deinen nächsten Zug.",
+      "Überspringe deine nächsten #b",
+      " Züge."
+    ]
+  },
+  "Guardian:FloatingOrbsPower": {
+    "NAME": "Schwebende Kugeln",
+    "DESCRIPTIONS": [
+      "Immer wenn du eine Karte ausspielst die #y0 kostet, füge einem zufälligen Gegner #b",
+      " Schaden zu."
+    ]
+  },
+  "Guardian:OrbwalkPower": {
+    "NAME": "Kugelwandlung",
+    "DESCRIPTIONS": [
+      "Zu Beginn deines Zuges erhältst du #b",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:ClonePower": {
+    "NAME": "Umsteuern",
+    "DESCRIPTIONS": [
+      "Lege die nächste Karte die du in diesem Zug spielst in #yStasis.",
+      "Lege die nächsten #b",
+      " Karten die du in diesem Zug spielst in #yStasis."
+    ]
+  },
+  "Guardian:GemFinderPower": {
+    "NAME": "Juwelendetektor",
+    "DESCRIPTIONS": [
+      "Erhalte am Ende des Kampfes ein zusätzliches zufälliges #yguardianmod:Juwel zur Belohnung.",
+      "Erhalte am Ende des Kampfes #b",
+      " zusätzliche zufällige #yguardianmod:Juwelen zur Belohnung."
+    ]
+  },
+  "Guardian:FuturePlansPower": {
+    "NAME": "Zukunftspläne",
+    "DESCRIPTIONS": [
+      "Du kannst am Ende jedes Zuges bis zu #b",
+      " Karte in #yStasis legen.",
+      " Karten in #yStasis legen."
+    ]
+  },
+  "Guardian:DefenseModePower": {
+    "NAME": "Defensivmodus",
+    "DESCRIPTIONS": [
+      "#yDefensivmodus bleibt für #b",
+      " Züge aktiv. Der #yDefensivmodus erteilt #b",
+      " #yStacheln, und zusätzlich für das Spielen jeder Karte #b2 #yBlock [REMOVE_SPACE]. Schaden den du selbst zufügst wird um #b25% reduziert."
+    ]
+  },
+  "Guardian:ConstructModePower": {
+    "NAME": "Konstruktionsform",
+    "DESCRIPTIONS": [
+      "Wenn du zu Beginn deines Zuges mindestens #b",
+      " #yPuffer hast, erhalte #b",
+      " #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:MultiBoostPower": {
+    "NAME": "Multi-Boost",
+    "DESCRIPTIONS": [
+      "#yAngriffe die mehr als ein Mal Schaden zufügen, fügen ein weiteres Mal Schaden zu.",
+      "#yAngriffe die mehr als ein Mal Schaden zufügen, fügen #b",
+      " weitere Male Schaden zu."
+    ]
+  },
+  "Guardian:TargetedPower": {
+    "NAME": "Anvisiert",
+    "DESCRIPTIONS": [
+      "Immer wenn diese Gegner Schaden erleidert erhältst du für diesen Zug #b",
+      " temporäre #yStärke [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:LoseThornsPower": {
+    "NAME": "Temporäre Stacheln",
+    "DESCRIPTIONS": [
+      "Verliere zu Beginn deines nächsten Zuges #b",
+      " #yStacheln [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:BeamBuffPower": {
+    "NAME": "Geladen",
+    "DESCRIPTIONS": [
+      "Strahl-Karten fügen #b",
+      " mehr Schaden zu."
+    ]
+  },
+  "Guardian:DefensiveModeBuffsPower": {
+    "NAME": "Defensivmodus+",
+    "DESCRIPTIONS": [
+      "#yDefensivmodus erteilt ZUSÄTZLICH: NL #b",
+      " #yStacheln.",
+      " #yGeschicklichkeit.",
+      " #yBlock am Ende des Zuges.",
+      "#yErschöpfe den ersten in jedem Zug gezogenen #yStatus oder #yFluch [REMOVE_SPACE].",
+      "#yErschöpfe die ersten #b",
+      " in jedem Zug gezogenen #yStatus oder #yFluch Karten.",
+      "Erhalte am Ende des yDefensivmodus #b",
+      " #yStärke für jeden Zug, in dem der Modus aktiv war."
+    ]
+  },
+  "Guardian:AutomayhemPower": {
+    "NAME": "Zeitsieb",
+    "DESCRIPTIONS": [
+      "#yBeschleunige zu Beginn deines Zuges.",
+      "yBeschleunige ",
+      " Mal zu Beginn deines Zuges."
+    ]
+  },
+  "Guardian:ConstructPower": {
+    "NAME": "Antikes Konstrukt",
+    "DESCRIPTIONS": [
+      "Wenn du zu Beginn deines Zuges kein #yArtefakt hast, dann erhalte #b",
+      " #yArtefakt",
+      " [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:ModeShiftPower": {
+    "NAME": "Moduswechsel",
+    "DESCRIPTIONS": [
+      "Wenn du #b",
+      " TP verlierst, erhalte #b16 #yBlock, wechsle in den #yDefensivmodus bis zum nächsten Zug, und erhöhe die erforderliche Anzahl um den Effekt erneut zu aktivieren um #b10 (kann #b50 nicht übersteigen)."
+    ]
+  },
+  "Guardian:ExhaustStatusesPower": {
+    "NAME": "Zurückstoßen",
+    "DESCRIPTIONS": [
+      "Wenn du im Zug das erste Mal einen #yStatus oder #yFluch ziehst, #yerschöpfe ihn und ziehe eine Karte.",
+      "Die ersten #b",
+      " Male die du im Zug einen #yStatus oder #yFluch ziehst, #yerschöpfe ihn und ziehe eine Karte."
+    ]
+  },
+  "Guardian:RevengePower": {
+    "NAME": "Rache",
+    "DESCRIPTIONS": [
+      "Erhalte jedes Mal wenn du in den #yDefensivmodus wechselst #b",
+      " #yStrength [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:StasisEnginePower": {
+    "NAME": "Stasismotor",
+    "DESCRIPTIONS": [
+      "Immer wenn du in einem Zug #b3 Karten spielst die #b0 kosten, erhalte #b",
+      " [E] und ziehe #b",
+      " Karte",
+      " Karten",
+      " [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:EnergizedGuardianPower": {
+    "NAME": "Energiegeladen",
+    "DESCRIPTIONS": [
+      "Du erhältst #b",
+      " [E] zusätzlich im nächsten Zug.",
+      " zusätzliche [E] im nächsten Zug.",
+      " - TRANSLATOR NOTE: - The above line is for plural if needed to distinguish from singular."
+    ]
+  },
+  "Guardian:BlockOnCardUsePower": {
+    "NAME": "Rüstungstinktur",
+    "DESCRIPTIONS": [
+      "Erhalte jedes Mal wenn du in diesem Zug eine Karte spielst #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:EvasiveProtocolPower": {
+    "NAME": "Ausweichprotokoll",
+    "DESCRIPTIONS": [
+      "Reduziere jedes Mal wenn du in den #yDefensivmodus wechselst deine Debuffs um #b",
+      " [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:SpikerProtocolPower": {
+    "NAME": "Stachelprotokoll",
+    "DESCRIPTIONS": [
+      "Erhalte jedes Mal wenn du in den #yDefensivmodus wechselst #b",
+      " #yStacheln [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:ArmoredProtocolPower": {
+    "NAME": "Rüstungsprotokoll",
+    "DESCRIPTIONS": [
+      "Erhalte jedes Mal wenn du deinen Zug im #yDefensivmodus beendest #b",
+      " #yBlock [REMOVE_SPACE]."
+    ]
+  },
+  "Guardian:DontLeaveDefensiveModePower": {
+    "NAME": "Defensivmodus",
+    "DESCRIPTIONS": [
+      "Du verlässt den #yDefensivmodus zu Beginn deines nächsten Zuges.",
+      "Der #yDefensivmodus ist noch für #b",
+      " Züge aktiv."
+    ]
+  },
+  "Guardian:BracePerTurnPower": {
+    "NAME": "Abhärtung",
+    "DESCRIPTIONS": [
+      "#yHärte zu Beginn deines Zuges um #b",
+      " #yab [REMOVE_SPACE]."
+    ]
+  }
+}

@@ -19,7 +19,7 @@
       "splitting"
     ],
     "PROPER_NAME": "Division",
-    "DESCRIPTION": "Faites apparaître un sbire Slime, qui attaque au début de chaque tour. NL NL Si vous n'avez pas d'emplacement de Slime libre, votre Slime le plus ancien est automatiquement #yAbsorbé pour faire de la place, vous donnant 1 de #yForce [REMOVE_SPACE]."
+    "DESCRIPTION": "Faites apparaître un sbire Slime, qui attaque au début de chaque tour. NL NL Si vous n'avez pas d'emplacement de Slime libre, votre Slime le plus ancien est automatiquement #yAbsorbé pour faire de la place, vous donnant 1 de #yForce."
   },
   {
     "NAMES": [

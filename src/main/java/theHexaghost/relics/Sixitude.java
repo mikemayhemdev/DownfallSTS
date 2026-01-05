@@ -11,11 +11,14 @@ import com.megacrit.cardcrawl.actions.utility.UseCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.CardLibrary;
 import expansioncontent.actions.EchoACardAction;
 import expansioncontent.expansionContentMod;
 import hermit.cards.Strike_Hermit;
 import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
+
+import java.util.ArrayList;
 
 import static theHexaghost.HexaMod.makeRelicOutlinePath;
 import static theHexaghost.HexaMod.makeRelicPath;
@@ -43,8 +46,14 @@ public class Sixitude extends CustomRelic {
                 this.counter = 0;
                 this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
                 // this.addToBot(new DamageRandomEnemyAction(new DamageInfo(null, 6, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-                AbstractCard c2 = new Strike_Hermit();
-                addToBot(new EchoACardAction(c2, true));
+                AbstractCard tmp = new Strike_Hermit();
+                ArrayList<AbstractCard> possList = new ArrayList<>(CardLibrary.getAllCards());
+                possList.removeIf(c -> (c.color != AbstractDungeon.player.getCardColor() || !c.hasTag(AbstractCard.CardTags.STARTER_STRIKE)));
+                if (!(possList.isEmpty())) {
+                    tmp = possList.get(0);
+                }
+                tmp.updateCost(-1);
+                addToBot(new EchoACardAction(tmp, true));
             }
         }
     }

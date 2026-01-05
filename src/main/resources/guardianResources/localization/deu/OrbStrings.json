@@ -1,0 +1,25 @@
+{
+  "Guardian:EmptyStasisSlot": {
+    "NAME": "Stasis-Slot",
+    "DESCRIPTION": [
+      "Karten können durch #yStasis in diese Slots gelegt werden."
+    ]
+  },
+  "Guardian:StasisOrb": {
+    "NAME": "Stasis: ",
+    "DESCRIPTION": [
+      " wird zu Beginn des nächsten Zuges mit Kosten 0 auf die Hand genommen.",
+      " wird in #b",
+      " Zügen mit Kosten 0 auf die Hand genommen.",
+      " #yerschöpft zu Beginn des nächsten Zuges.",
+      " #yerschöpft in #b",
+      " Zügen."
+    ]
+  }
+}
+
+
+
+
+
+

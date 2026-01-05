@@ -53,10 +53,10 @@
     "DESCRIPTION": "N'importe quel effet vous faisant perdre des [E] , même si vous n'en aviez pas à perdre. (N'inclut pas les [E] dépensées en jouant des cartes.)"
   },
   {
-    "PROPER_NAME": "Manabrûle",
+    "PROPER_NAME": "Manabrûlure",
     "NAMES": [
       "manaburn",
-      "manabrûle"
+      "manabrûlure"
     ],
     "DESCRIPTION": "Lorsque vous perdez des [E] , même si vous n'en aviez pas à perdre, perd des PV égaux à son #yManabrûle [REMOVE_SPACE]. (N'inclut pas les [E] dépensées en jouant des cartes.)"
   },

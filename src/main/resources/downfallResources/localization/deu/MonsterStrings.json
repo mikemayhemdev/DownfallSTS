@@ -1,0 +1,99 @@
+{
+  "downfall:ChangingTotem": {
+    "MOVES": [
+      "Transformierender Blick"
+    ],
+    "NAME": "Kopf der Veränderung",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:ForgetfulTotem": {
+    "MOVES": [
+      "Starren der Vergessenheit"
+    ],
+    "NAME": "Kopf des Vergessens",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:GrowingTotem": {
+    "MOVES": [
+      "Wachstumsstrahl"
+    ],
+    "NAME": "Kopf des Wachstums",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:FleeingMerchant": {
+    "MOVES": [
+      "Seelenstehlen"
+    ],
+    "NAME": "Händler",
+    "DIALOG": [
+      ""
+    ]
+  },
+  "downfall:LooterAlt": {
+    "MOVES": [
+    ],
+    "NAME": "Plünderer",
+    "DIALOG": [
+      "~Hey,~ du hast gar kein Gold!",
+      "@NEIIiiiin!@",
+      "Jetzt bist du fällig, Trottel."
+    ]
+  },
+  "downfall:MuggerAlt": {
+    "MOVES": [
+    ],
+    "NAME": "Straßenräuber",
+    "DIALOG": [
+      "Erteilen wir ihm eine Lektion.",
+      "Dem zeigen wir wo es lang geht!"
+    ]
+  },
+  "downfall:Fortification": {
+    "MOVES": [
+    ],
+    "NAME": "Befestigung",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomRed": {
+    "MOVES": [
+    ],
+    "NAME": "Porcini",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomPurple": {
+    "MOVES": [
+    ],
+    "NAME": "Actarius",
+    "DIALOG": [
+    ]
+  },
+  "downfall:MushroomWhite": {
+    "MOVES": [
+    ],
+    "NAME": "Puffball",
+    "DIALOG": [
+    ]
+  },
+  "downfall:DoomedDagger": {
+    "MOVES": [
+    ],
+    "NAME": "Dämmerungsdolch",
+    "DIALOG": [
+    ]
+  },
+  "downfall:VoidCore": {
+    "MOVES": [
+    ],
+    "NAME": "Leere Hülle",
+    "DIALOG": [
+    ]
+  }
+}

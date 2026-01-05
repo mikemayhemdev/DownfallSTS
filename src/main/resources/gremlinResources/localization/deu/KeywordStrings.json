@@ -1,0 +1,104 @@
+[
+  {
+    "NAMES": [
+      "agonie",
+      "agony"
+    ],
+    "PROPER_NAME": "Agonie",
+    "DESCRIPTION": "Wesen in Agonie fügen mit Angriffen #b80% weniger Schaden zu."
+  },
+  {
+    "NAMES": [
+      "verkrüppelt",
+      "verkrüppeln",
+      "verkrüpple",
+      "cripple"
+    ],
+    "PROPER_NAME": "Verkrüppelt",
+      "DESCRIPTION": "Verkrüppelte Gegner können kein #ySchwach verlieren. Sie verlieren am Ende ihrer Züge TP in Höhe ihres #ySchwach [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": [
+      "echos",
+      "echo",
+      "echoes"
+    ],
+    "PROPER_NAME": "Echo",
+    "DESCRIPTION": "Echos sind Kopien von Karten die zusätzlich #yflüchtig sind und #yerschöpfen. Von einem Echo kann kein Echo erstellt werden."
+  },
+  {
+    "NAMES": [
+      "fetter gremlin", "fetter_gremlin", "fetten gremlin", "fetten_gremlin", "fat gremlin", "fat_gremlin"
+    ],
+    "PROPER_NAME": "Fetter Gremlin",
+    "DESCRIPTION": "Wende nach dem Ausspielen eines Angriffs #b1 #ySchwach pro Treffer an."
+  },
+  {
+    "NAMES": [
+      "gremlinzauberer", "gremlin wizard", "gremlin_wizard"
+    ],
+    "PROPER_NAME": "Gremlinzauberer",
+    "DESCRIPTION": "Erhalte nach dem Ausspielen einer Fertigkeit #b1 #yEsprit [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": [
+      "wütender gremlin", "wütender_gremlin", "wütenden gremlin", "wütenden_gremlin", "mad gremlin", "mad_gremlin"
+    ],
+    "PROPER_NAME": "Wütender Gremlin",
+    "DESCRIPTION": "Erhalte jdes Mal wenn du angegriffen wirst #b2 #ytemporäre #yStärke pro Treffer."
+  },
+  {
+    "NAMES": [
+      "schildgremlin", "shield gremlin", "shield_gremlin"
+    ],
+    "PROPER_NAME": "Schildgremlin",
+    "DESCRIPTION": "Erhalte nach dem Ausspielen einer Fertigkeit #b2 #yBlock [REMOVE_SPACE]."
+  },
+  {
+    "NAMES": [
+      "schleichender gremlin", "schleichender_gremlin", "schleichenden gremlin", "schleichenden_gremlin", "sneaky gremlin", "sneaky_gremlin"
+    ],
+    "PROPER_NAME": "Schleichender Gremlin",
+    "DESCRIPTION": "Angriffe, die 0 kosten, fügen #b2 zusätzlichen Schaden zu. Füge nach dem Ausspielen eines Angriffs einem zufälligen Gegner #b2 Schaden zu."
+  },
+  {
+    "NAMES": [
+      "wechseln",
+      "wechsel",
+      "wechselst",
+      "gewechselt",
+      "wechsle",
+      "swap"
+    ],
+    "PROPER_NAME": "Auswechseln",
+    "DESCRIPTION": "Tausche die Position mit einem anderen Gremlin. Wenn es kein legales Ziel gibt passiert nichts"
+  },
+  {
+    "NAMES": [
+      "esprit",
+      "esprits",
+      "wiz"
+    ],
+    "PROPER_NAME": "Esprit",
+    "DESCRIPTION": "Bei mindestens 3 Esprit verbraucht der nächste Angriff den geamten Vorrat und fügt dabei #b7 Schaden mehr zu."
+  },
+  {
+    "NAMES": [
+      "stehlen",
+      "stiehl",
+      "gestohlen",
+      "steal"
+    ],
+    "PROPER_NAME": "Stehlen",
+    "DESCRIPTION": "Der Gegner verliert eine bestimmte Menge eines Buffs. Du erhältsts diese Menge des selben Buffs."
+  },
+  {
+    "NAMES": [
+      "aristo",
+      "gremlin-aristo",
+      "nob"
+    ],
+    "PROPER_NAME": "Gremlin-Aristo",
+    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges je #b1 #yGebrüll, #ySchädelstoß und #Bullenangriff."
+  }
+]

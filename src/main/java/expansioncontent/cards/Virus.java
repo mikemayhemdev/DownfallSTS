@@ -24,7 +24,7 @@ public class Virus extends AbstractExpansionCard {
     public final static String ID = makeID("Virus");
 
 
-    private static final int MAGIC = 5;
+    private static final int MAGIC = 3;
 
     public Virus() {
         super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);

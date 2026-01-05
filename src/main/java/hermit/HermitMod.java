@@ -369,16 +369,7 @@ public class HermitMod implements
     // ================ ADD POTIONS ===================
 
     public void receiveEditPotions() {
-        System.out.println("Beginning to edit potions");
 
-        // Class Specific Potion. If you want your potion to not be class-specific,
-        // just remove the player class at the end (in this case the "TheDefaultEnum.THE_DEFAULT".
-        // Remember, you can press ctrl+P inside parentheses like addPotions)
-        BaseMod.addPotion(Tonic.class, null, null, null, Tonic.POTION_ID, hermit.Enums.HERMIT);
-        BaseMod.addPotion(BlackBile.class, null, null, null, BlackBile.POTION_ID, hermit.Enums.HERMIT);
-        BaseMod.addPotion(Eclipse.class, Color.SCARLET.cpy(), Color.BLACK.cpy(), null, Eclipse.POTION_ID, hermit.Enums.HERMIT);
-
-        System.out.println("Done editing potions");
     }
 
     // ================ /ADD POTIONS/ ===================

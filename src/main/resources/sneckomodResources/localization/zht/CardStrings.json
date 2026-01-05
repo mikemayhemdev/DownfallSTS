@@ -146,8 +146,9 @@
     "DESCRIPTION": "每當你 sneckomod:混淆 1 張牌，獲得 !M! 點 格擋 。"
   },
   "sneckomod:OverwhelmingPresence": {
-    "NAME": "威壓",
-    "DESCRIPTION": "回合的第 1 次洗牌時，獲得 [E] 並抽 !M! 張牌。"
+    "NAME": "威压",
+    "DESCRIPTION": "虚无。 NL 每回合第一次打出 sneckomod:异色 牌时，抽一张牌。",
+    "UPGRADE_DESCRIPTION": "每回合第一次打出 sneckomod:异色 牌时，抽一张牌。"
   },
   "sneckomod:RiskySword": {
     "NAME": "險刃",
@@ -565,9 +566,9 @@
     "DESCRIPTION": "造成 !D! 點傷害。 NL 將 1 張手牌放到抽牌堆頂部。 NL 下回合額外抽 !M! 張牌。"
   },
   "sneckomod:MarkedCard": {
-    "NAME": "記號牌",
-    "DESCRIPTION": "保留 。 NL sneckomod:混淆 1 張牌。 NL 不增加其耗能。 NL 消耗 。",
-    "UPGRADE_DESCRIPTION": "保留 。 NL sneckomod:混淆 !M! 張牌。 NL 不增加其耗能。 NL 消耗 。"
+    "NAME": "记号牌",
+    "DESCRIPTION": "sneckomod:混淆 1 张牌。 NL 不增加其耗能。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "保留 。 NL sneckomod:混淆 1 张牌。 NL 不增加其耗能。 NL 消耗 。"
   },
   "sneckomod:InertBlade": {
     "NAME": "鈍藏刀刃",
@@ -600,19 +601,16 @@
   },
   "sneckomod:TrashCan": {
     "NAME": "垃圾桶",
-    "DESCRIPTION": "回合開始時，你可以 消耗 1 張牌。",
-    "UPGRADE_DESCRIPTION": "固有 。 NL 回合開始時，你可以 消耗 1 張牌。"
+    "DESCRIPTION": "回合结束时，你可以 消耗 1 张牌。"
   },
   "sneckomod:Lacerate": {
     "NAME": "割裂",
-    "DESCRIPTION": "造成 !D! 點傷害。 NL 本回合當你給予目標敵人負面效果時，額外給予 !M! 層 sneckomod:劇毒 。 NL sneckomod:贈禮 ： *致殘毒雲 。",
-    "DESCRIPTION_BATTLE": "造成 !D! 點傷害。 NL 本回合當你給予目標敵人負面效果時，額外給予 !M! sneckomod:劇毒 。"
+    "DESCRIPTION": "给予所有敌人 !M! 点 sneckomod:剧毒 。 NL 获得一张 *致残毒云 。 NL 消耗。",
+    "UPGRADE_DESCRIPTION": "给予所有敌人 !M! 点 sneckomod:剧毒 。 NL 获得一张 *致残毒云+ 。 NL 消耗。"
   },
   "sneckomod:SerpentineSleuth": {
-    "NAME": "蛇偵探",
-    "DESCRIPTION": "虛無 。 NL 每當你打出 1 張能力牌，獲得 [E] 。 NL sneckomod:贈禮 ：稀有能力牌。",
-    "UPGRADE_DESCRIPTION": "虛無 。 NL 每當你打出 1 張能力牌，獲得 [E] [E] 。 NL sneckomod:贈禮 ：稀有能力牌。",
-    "DESCRIPTION_BATTLE": "虛無 。 NL 每當你打出 1 張能力牌，獲得 [E] 。",
-    "UPGRADE_DESCRIPTION_BATTLE": "虛無 。 NL 每當你打出 1 張能力牌，獲得 [E] [E] 。"
+    "NAME": "蛇侦探",
+    "DESCRIPTION": "虚无 。 NL 打出 1 张能力牌时 NL 获得 [E] 。 NL sneckomod:赠礼 ：稀有能力牌。",
+    "DESCRIPTION_BATTLE": "虚无 。 NL 打出 1 张能力牌时 NL 获得 [E] 。"
   }
 }

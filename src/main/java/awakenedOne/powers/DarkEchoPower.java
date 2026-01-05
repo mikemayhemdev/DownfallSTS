@@ -28,8 +28,8 @@ public class DarkEchoPower extends TwoAmountPower implements OnPowersModifiedSub
     public static final String NAME = powerStrings.NAME;
     public static final String[] DESCRIPTIONS = powerStrings.DESCRIPTIONS;
 
-    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyHexaghost84.png");
-    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/StudyHexaghost32.png");
+    private static final Texture tex84 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/Echo84.png");
+    private static final Texture tex32 = TextureLoader.getTexture(expansionContentMod.getModID() + "Resources/images/powers/Echo32.png");
 
     public DarkEchoPower(int amount) {
         this.name = NAME;
@@ -48,11 +48,13 @@ public class DarkEchoPower extends TwoAmountPower implements OnPowersModifiedSub
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
-        AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_AWAKENEDONE_3"));
-        for (int i = 0; i < amount; i++) {
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(0.1F, 0.0F, 0.2F, 1.0F), ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F));
-            AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(0.3F, 0.2F, 0.4F, 1.0F), ShockWaveEffect.ShockWaveType.CHAOTIC), 1.0F));
-            this.addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(amount2, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
+        if (amount2 > 0 && amount > 0) {
+            AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_AWAKENEDONE_3"));
+            for (int i = 0; i < amount; i++) {
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(0.1F, 0.0F, 0.2F, 1.0F), ShockWaveEffect.ShockWaveType.CHAOTIC), 0.3F));
+                AbstractDungeon.actionManager.addToBottom(new VFXAction(AbstractDungeon.player, new ShockWaveEffect(AbstractDungeon.player.hb.cX, AbstractDungeon.player.hb.cY, new Color(0.3F, 0.2F, 0.4F, 1.0F), ShockWaveEffect.ShockWaveType.CHAOTIC), 1.0F));
+                this.addToBot(new DamageAllEnemiesAction(null, DamageInfo.createDamageMatrix(amount2, true), DamageInfo.DamageType.THORNS, AbstractGameAction.AttackEffect.FIRE, true));
+            }
         }
     }
 
@@ -67,10 +69,10 @@ public class DarkEchoPower extends TwoAmountPower implements OnPowersModifiedSub
     @Override
     public void updateDescription() {
         if (this.amount != 1) {
-            this.description = DESCRIPTIONS[0] + amount2 + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
+            this.description = DESCRIPTIONS[0] + Math.max(0, amount2) + DESCRIPTIONS[1] + amount + DESCRIPTIONS[2];
         }
         if (this.amount == 1) {
-            this.description = DESCRIPTIONS[0] + amount2 + DESCRIPTIONS[3];
+            this.description = DESCRIPTIONS[0] + Math.max(0, amount2) + DESCRIPTIONS[3];
         }
 
     }

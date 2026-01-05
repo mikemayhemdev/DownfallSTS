@@ -70,7 +70,7 @@ public class FleeingMerchant extends AbstractMonster {
     public static final String SOULSTEALNAME = CardCrawlGame.languagePack.getMonsterStrings(ID).MOVES[0];
     public static final float DRAW_X = Settings.WIDTH * 0.5F + 34.0F * Settings.scale;
     public static final float DRAW_Y = AbstractDungeon.floorY - 109.0F * Settings.scale;
-    public static final int START_HP = 400;
+    public static int START_HP = 400;
 
     public static int CURRENT_HP = 400;
     public static int CURRENT_STRENGTH = 0;
@@ -86,12 +86,13 @@ public class FleeingMerchant extends AbstractMonster {
     private static byte ESCAPE = 2;
     private static byte SOULSTEAL = 3;
 
+    private int multi;
+
     private int turn = 0;
     private boolean boss = false;
 
     public FleeingMerchant() {
         super(NAME, ID, START_HP, -10.0F, -30.0F, 180.0F, 150.0F, null, 0.0F, 0.0F);
-
 
         drawX = 1260.0F * Settings.scale;
         drawY = AbstractDungeon.floorY + 30.0F * Settings.scale;
@@ -106,7 +107,7 @@ public class FleeingMerchant extends AbstractMonster {
      //   }
 
   //      if (!(AbstractDungeon.floorNum < 50)) {
-                    type = EnemyType.NORMAL;
+                    type = EnemyType.ELITE;
         //        }
 
 
@@ -117,7 +118,23 @@ public class FleeingMerchant extends AbstractMonster {
         halfDead = false;
 
         damage.add(new DamageInfo(this, 2));
-        setHp(400);
+
+        if (AbstractDungeon.ascensionLevel >= 8) {
+            setHp(400);
+        } else {
+            setHp(360);
+            if (CURRENT_HP == 400) CURRENT_HP = 360;
+        }
+
+        if (AbstractDungeon.ascensionLevel >= 3) {
+            this.multi = 5;
+            if (AbstractDungeon.ascensionLevel >= 18) {
+                this.multi++;
+            }
+        } else {
+            this.multi = 4;
+        }
+
         this.currentHealth = CURRENT_HP;
     }
 
@@ -139,6 +156,8 @@ public class FleeingMerchant extends AbstractMonster {
         AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new BarricadePower(this)));
 
         //AbstractDungeon.actionManager.addToTop(new TalkAction(this, (abuse >= 3 ? DIALOG[2] : DIALOG[0]), 0.5F, 3.0F));
+
+
 
         if (CURRENT_STRENGTH > 0) {
             AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(this, this, new StrengthPower(this, CURRENT_STRENGTH), CURRENT_STRENGTH));
@@ -184,7 +203,7 @@ public class FleeingMerchant extends AbstractMonster {
         } else if (nextMove == ATTACK) {
             this.addToBot(new MerchantThrowGoldAction(AbstractDungeon.player, this, 5, false));
             this.addToBot(new ForceWaitAction(1.6f));
-            for (int i = 0; i < 5; ++i) {
+            for (int i = 0; i < multi; ++i) {
                 this.addToBot(new DamageAction(AbstractDungeon.player, damage.get(0), true));
             }
 
@@ -246,7 +265,7 @@ public class FleeingMerchant extends AbstractMonster {
             return;
         }
         if (turn == 1) {
-            setMove(ATTACK, Intent.ATTACK, ((DamageInfo) this.damage.get(0)).base, 5, true);
+            setMove(ATTACK, Intent.ATTACK, ((DamageInfo) this.damage.get(0)).base, multi, true);
             return;
         }
         if (turn == 2) {
@@ -265,7 +284,7 @@ public class FleeingMerchant extends AbstractMonster {
         AbstractDungeon.getCurrRoom().rewardAllowed = false;
         AbstractDungeon.getCurrRoom().rewards.clear();
         */
-        int increaseGold = 150;
+        int increaseGold = 100;
         if (FleeingMerchant.CURRENT_SOULS > 0)
             increaseGold += FleeingMerchant.CURRENT_SOULS;
 

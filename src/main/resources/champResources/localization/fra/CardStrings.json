@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Provoc",
-    "DESCRIPTION": "Appliquez !M! de Faiblesse et 1 de Vulnérabilité.",
-    "UPGRADE_DESCRIPTION": "Appliquez 1 de Faiblesse et 1 de Vulnérabilité à TOUS les ennemis."
+    "DESCRIPTION": "Appliquez !M! de Faiblesse et de Vulnérabilité.",
+    "UPGRADE_DESCRIPTION": "Appliquez !M! de Faiblesse et de Vulnérabilité à TOUS les ennemis."
   },
   "champ:Execute": {
     "NAME": "Exécution",
@@ -111,7 +111,7 @@
     "UPGRADE_DESCRIPTION": "Retenue. NL Piochez !M! cartes."
   },
   "champ:EnchantShield": {
-    "NAME": "Enchantement de Bouclier",
+    "NAME": "Bouclier enchanté",
     "DESCRIPTION": "Choisissez une carte en main. Augmentez son Armure de !M! pour ce combat. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "Un mauvais moment pour cette carte."
@@ -177,7 +177,7 @@
     "DESCRIPTION": "Infligez !D! dégâts !M! fois. NL Une carte \"Frappe\" aléatoire dans votre main coûte 0 ce tour."
   },
   "champ:EnchantSword": {
-    "NAME": "Enchantement d'épée",
+    "NAME": "Épée enchantée",
     "DESCRIPTION": "Choisissez une carte en main. Augmentez ses dégâts de !M! pour ce combat.  Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "Un mauvais moment pour cette carte."
@@ -354,7 +354,7 @@
     "UPGRADE_DESCRIPTION": "Éthérée. NL Infligez des dégâts égaux à votre champ:Contre utilisé. NL Épuisement."
   },
   "champ:EnchantCrown": {
-    "NAME": "Enchantement de la couronne",
+    "NAME": "Couronne enchantée",
     "DESCRIPTION": "Choisissez une carte en main. Elle coûte 0 ce combat. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "Un mauvais moment pour cette carte."

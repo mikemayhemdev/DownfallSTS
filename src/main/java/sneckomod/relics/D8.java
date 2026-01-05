@@ -156,7 +156,7 @@ public class D8 extends CustomRelic implements CustomBottleRelic, CustomSavable<
         }
 
         if (cardExists) {
-            this.description = FontHelper.colorString(this.card.name, "y") + this.DESCRIPTIONS[2];
+            this.description = this.DESCRIPTIONS[2] + FontHelper.colorString(this.card.name, "y") + DESCRIPTIONS[3];
             tips.clear();
             tips.add(new PowerTip(name, description));
             initializeTips();
