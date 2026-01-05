@@ -79,12 +79,12 @@ public class ForgottenAltar_Evil extends AbstractImageEvent {
                     case 0:
                         this.imageEventText.clearAllDialogs();
                         AbstractDungeon.player.loseGold(this.goldCost);
-                        AbstractDungeon.player.heal(this.hpLoss + 10, true);
+                        AbstractDungeon.player.heal(this.hpLoss, true);
                         this.imageEventText.updateBodyText(DESCRIPTIONSALT[0]);
                         this.imageEventText.setDialogOption(OPTIONSALT[5]);
                         CardCrawlGame.sound.play("HEAL_1");
                         this.screenNum = 1;
-                        logMetricHealAtCost(ID, "Offer Souls", goldCost, hpLoss + 10);
+                        logMetricHealAtCost(ID, "Offer Souls", goldCost, hpLoss);
                         return;
                     case 1:
 
