@@ -30,6 +30,7 @@
     "PROPER_NAME": "Verschwimmen",
     "NAMES": [
       "verschwimmen",
+      "verschwommen",
       "blur"
     ],
     "DESCRIPTION": "Block wird zu Beginn des Zuges nicht entfernt."

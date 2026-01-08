@@ -52,15 +52,15 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Die Effekte der champ:Fertigkeitsboni werden in diesem Zug um !M! erhöht."
   },
   "champ:FocusedDefense": {
-    "NAME": "Tänzeln und Ducken",
+    "NAME": "Tänzeln & Ducken",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Elan. NL Nimm die champ:Offensivhaltung an."
   },
   "champ:FocusedBerserking": {
-    "NAME": "Alles Rauslassen",
+    "NAME": "Alles rauslassen",
     "DESCRIPTION": "Erschöpft. NL Führe, ohne die Haltung zu verlassen, !M! Mal aus: "
   },
   "champ:SetATrap": {
-    "NAME": "Falle Aufstellen",
+    "NAME": "Falle aufstellen",
     "DESCRIPTION": "Erhalte !B! Block. NL champ:Defensivcombo: Wende !M! Schwach auf ALLE Gegner an."
   },
   "champ:Backstep": {
@@ -93,7 +93,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karten. NL Wirf !M! Karten ab. NL champ:Defensivcombo: Wirf keine Karten ab."
   },
   "champ:SkillfulDodge": {
-    "NAME": "Graziöses Verbeugen",
+    "NAME": "Stilvolles Ducken",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL champ:Defensivcombo: Erhöhe die Wirkung dieser Karte für diesen Kampf um !cool!."
   },
   "champ:TornadoPunch": {
@@ -102,7 +102,7 @@
     "UPGRADE_DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL champ:Defensivcombo: Erhalte !B! Block für jeden getroffenen Gegner."
   },
   "champ:EnGarde": {
-    "NAME": "En Garde",
+    "NAME": "En Garde!",
     "DESCRIPTION": "Erhalte !B! Block. NL Wenn dein ganzes Block in diesem Zug verbraucht wird, dann erhalte im nächsten Zug !B! Block."
   },
   "champ:ShieldSlam": {
@@ -212,7 +212,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Combo ( jede *Haltung ): Wende !M! Schwach und Verwundbar an."
   },
   "champ:EnragedBash": {
-    "NAME": "Brutales Schmettern",
+    "NAME": "Brutales Knüppeln",
     "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Offensivcombo: Diese Karte trifft in diesem Kamp ein weiteres Mal.",
     "EXTENDED_DESCRIPTION": [
       "Füge !M! Mal !D! Schaden zu. NL champ:Offensivcombo: Diese Karte trifft in diesem Kamp ein weiteres Mal."
@@ -259,7 +259,7 @@
     ]
   },
   "champ:IgnorePain": {
-    "NAME": "Schmerz Ignorieren",
+    "NAME": "Schmerzbetäubung",
     "DESCRIPTION": "Deine TP können bis zum Beginn des nächsten Zuges nicht fallen. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Deine TP können bis zum Beginn des nächsten Zuges nicht fallen. NL Erschöpft."
   },
@@ -328,7 +328,7 @@
     "DESCRIPTION": "champ:Offensivcombo: NL Erhalte !M! Stärke. NL champ:Defensivcombo: NL Erhalte !M! Geschicklichkeit."
   },
   "champ:BerserkerStyle": {
-    "NAME": "Klinge Schleifen",
+    "NAME": "Klinge schleifen",
     "DESCRIPTION": "Erhöhe den Schaden deiner \"Schlag\" Karten um !M!."
   },
   "champ:Riposte": {
