@@ -5,10 +5,9 @@ import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.util.Wiz;
 import sneckomod.SneckoMod;
 import sneckomod.actions.MuddleAction;
-
-import java.util.ArrayList;
 
 public class PureSnecko extends AbstractSneckoCard {
 
@@ -29,19 +28,11 @@ public class PureSnecko extends AbstractSneckoCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        ArrayList<AbstractCard> preHand = new ArrayList<>(p.hand.group);
-        addToBot(new DrawCardAction(magicNumber, new AbstractGameAction() {
+        Wiz.atb(new DrawCardAction(magicNumber, new AbstractGameAction() {
             @Override
             public void update() {
-                ArrayList<AbstractCard> drawnCards = new ArrayList<>();
-                for (AbstractCard card : p.hand.group) {
-                    if (!preHand.contains(card)) {
-                        drawnCards.add(card);
-                    }
-                }
-                for (AbstractCard card : drawnCards) {
-                    addToBot(new MuddleAction(card));
-                }
+                for (AbstractCard c: DrawCardAction.drawnCards)
+                    Wiz.att(new MuddleAction(c));
                 isDone = true;
             }
         }));
