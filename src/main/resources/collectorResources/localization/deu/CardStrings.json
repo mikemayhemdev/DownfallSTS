@@ -430,7 +430,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Entferne allen Block des Gegners. NL Füge !D! Schaden zu."
   },
   "collector:BlueSlaverCard": {
-    "NAME": "Sklavenhändler Blau",
+    "NAME": "Sklavenhändler B",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende 1 Schwach an. Verdopple dann das Schwach des Gegners."
   },
   "collector:BonfireSpiritsCard": {
@@ -582,7 +582,7 @@
     "DESCRIPTION": "Erhalte am Ende des Kampfes eine zusätzliche Kartenbelohnung und einen zusätzlichen Trank."
   },
   "collector:RedSlaverCard": {
-    "NAME": "Sklavenhändler Rot",
+    "NAME": "Sklavenhändler R",
     "DESCRIPTION": "Der Gegner verliert in diese Zug !M! Stärke."
   },
   "collector:ReptomancerCard": {
@@ -618,7 +618,7 @@
     "DESCRIPTION": "Füge 3 Mal !D! Schaden zu."
   },
   "collector:SneakyGremlinCard": {
-    "NAME": "Schleichender Gremlin",
+    "NAME": "Schleichender Grem",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte."
   },
   "collector:SneckoCard": {
@@ -626,7 +626,7 @@
     "DESCRIPTION": "Ziehe !M! Karten. NL sneckomod:Irre deine Hand."
   },
   "collector:SphericGuardianCard": {
-    "NAME": "Sphärischer Wächter",
+    "NAME": "Sphären-Wächter",
     "DESCRIPTION": "Erhalte !M! expansioncontent:Verschwimmen."
   },
   "collector:SpikerCard": {

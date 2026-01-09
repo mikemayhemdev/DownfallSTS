@@ -80,7 +80,7 @@
     "DESCRIPTION": "Angeboren. NL Füge !D! Schaden zu. NL bronze:Kodiere eine zufällige Karte im Nachziehstapel. Erschöpft."
   },
   "bronze:BugBarrage": {
-    "NAME": "Bug Befall",
+    "NAME": "Bugbefall",
     "DESCRIPTION": "Erhalte !M! *Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
     "UPGRADE_DESCRIPTION": "Erhalte !M! *Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
@@ -144,7 +144,7 @@
     ]
   },
   "bronze:CopyPaste": {
-    "NAME": "Kopieren & Einfügen",
+    "NAME": "Kopieren-Einfügen",
     "DESCRIPTION": "In diesem Zug spielst du deine nächste Funktion zweimal aus.",
     "UPGRADE_DESCRIPTION": "Behalten. NL In diesem Zug spielst du deine nächste Funktion zweimal aus."
   },
@@ -206,7 +206,7 @@
     ]
   },
   "bronze:FindAndReplace": {
-    "NAME": "Suchen & Ersetzen",
+    "NAME": "Suchen-Ersetzen",
     "DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel und lege ein *Benommen an der Stelle von der du die Karte genommen hast. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [

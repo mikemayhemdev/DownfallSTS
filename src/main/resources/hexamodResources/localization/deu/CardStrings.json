@@ -1,6 +1,6 @@
 {
   "hexamod:AdvancingGuard": {
-    "NAME": "Weitreichender Schutz",
+    "NAME": "Vorlaufschutz",
     "DESCRIPTION": "Erhalte !B! Block. NL Bewege dich hexamod:vorwärts."
   },
   "hexamod:FleetingFlash": {
@@ -127,7 +127,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die vorherige, dann die aktuelle, und danach die nächste Geisterflamme."
   },
   "hexamod:WhisperFromBeyond": {
-    "NAME": "Flüstern des Jenseits",
+    "NAME": "Jenseitsgeflüster",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn eine Karte in diesem Zug erschöpft wird, wende !burny! hexamod:Seelenfeuer auf den Gegner an."
   },
   "hexamod:InstantInferno": {

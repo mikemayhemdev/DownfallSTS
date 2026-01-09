@@ -539,7 +539,7 @@
     "UPGRADE_DESCRIPTION": "Behalten. NL h [E] [E] [E]. NL Erschöpft."
   },
   "sneckomod:MakeshiftBlade": {
-    "NAME": "Improvisieren",
+    "NAME": "Nachtreten",
     "DESCRIPTION": "Füge !D! Schaden zu. Wenn der Gegner mindestens !M! Debuffs hat, ziehe !qqq! Karten. NL sneckomod:Geschenk: Debuff.",
     "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. Wenn der Gegner mindestens !M! Debuffs hat, ziehe !qqq! Karten."
   },
