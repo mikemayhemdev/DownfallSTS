@@ -42,6 +42,7 @@ public class Belittle extends AbstractSneckoCard implements OnObtainCard {
     public Belittle() {
         super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseMagicNumber = magicNumber = MAGIC;
+        this.tags.add(SneckoMod.GIFT);
         SneckoMod.loadJokeCardImage(this, "Belittle.png");
     }
 

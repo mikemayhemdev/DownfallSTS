@@ -17,9 +17,8 @@ public class CBR_CharredGlove extends AbstractCharbossRelic {
         setTextureOutline(CharredGlove.IMG, CharredGlove.OUTLINE);
     }
 
-    @Override
     public String getUpdatedDescription() {
-        return this.DESCRIPTIONS[0];
+        return this.DESCRIPTIONS[0] + 3 + this.DESCRIPTIONS[1];
     }
 
     @Override
@@ -32,7 +31,11 @@ public class CBR_CharredGlove extends AbstractCharbossRelic {
                     @Override
                     public void update() {
                         isDone = true;
-                        AbstractCharBoss.boss.hand.applyPowers();
+                        if (AbstractCharBoss.boss != null) {
+                            if (!AbstractCharBoss.boss.isDead && !AbstractCharBoss.boss.isDying) {
+                                AbstractCharBoss.boss.hand.applyPowers();
+                            }
+                        }
                     }
                 });
                 if (AbstractCharBoss.boss != null && !AbstractCharBoss.boss.isDead && !AbstractCharBoss.boss.isDying) {

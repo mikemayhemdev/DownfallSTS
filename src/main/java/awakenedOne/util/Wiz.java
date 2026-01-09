@@ -163,7 +163,7 @@ public class Wiz {
                     //Wiz.applyToSelf(new CuriosityPower(AbstractDungeon.player, 1));
                     //No effect at this time, if a new one is added later, place it here
                 }
-                new SpellApotheosisAction();
+                atb(new SpellApotheosisAction());
                 OrbitingSpells.upgradeall();
             }
         }

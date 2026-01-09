@@ -30,6 +30,7 @@ public class ComboString extends AbstractSneckoCard {
     public ComboString() {
         super(ID, COST, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        this.tags.add(SneckoMod.GIFT);
         SneckoMod.loadJokeCardImage(this, "ComboString.png");
     }
 

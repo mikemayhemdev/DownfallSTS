@@ -28,7 +28,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
     public ArchetypeAct3DivinityNewAge() {
         super("WA_ARCHETYPE_DIVINITY", "Divinity");
 
-        maxHPModifier += 348;
+        maxHPModifier += 300;
         actNum = 3;
         bossMechanicName = WatcherDivinityPower.NAME;
         bossMechanicDesc = WatcherDivinityPower.DESC[0];
@@ -46,7 +46,7 @@ public class ArchetypeAct3DivinityNewAge extends ArchetypeBaseWatcher {
         addRelic(new CBR_NeowsBlessing());
         addRelic(new CBR_ThreadAndNeedle());
         addRelic(new CBR_Torii());
-        addRelic(new CBR_Girya(3));
+        addRelic(new CBR_Vajra());
         addRelic(new CBR_VelvetChoker());
     }
 

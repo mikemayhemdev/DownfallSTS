@@ -30,6 +30,7 @@ public class ToothAndClaw extends AbstractSneckoCard {
         baseDamage = 4;
         SneckoMod.loadJokeCardImage(this, "ToothAndClaw.png");
         this.cardsToPreview = new Shiv();
+        this.tags.add(SneckoMod.GIFT);
     }
 
     public static boolean cardListDuplicate(ArrayList<AbstractCard> cardsList, AbstractCard card) {
