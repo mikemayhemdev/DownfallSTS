@@ -68,7 +68,7 @@
   },
   "Slimebound:FirmFortitude": {
     "NAME": "Verflüssigen",
-    "DESCRIPTION": "Verliere 2 Stärke. NL Gain !M! slimeboundmod:Potenz."
+    "DESCRIPTION": "Verliere 2 Stärke. NL Erhalte !M! slimeboundmod:Potenz."
   },
   "Slimebound:FlameTackle": {
     "NAME": "Flammen-Tackle",
@@ -275,7 +275,7 @@
   },
   "Slimebound:ServeAndProtect": {
     "NAME": "Freund und Helfer",
-    "DESCRIPTION": "Erhalte für jeden Schleim !B! Block and 1 bronze:Verschwimmen. NL slimeboundmod:Absorbiere alle Schleime. NL Erschöpft."
+    "DESCRIPTION": "Erhalte für jeden Schleim !B! Block und 1 bronze:Verschwimmen. NL slimeboundmod:Absorbiere alle Schleime. NL Erschöpft."
   },
   "Slimebound:SlimeBarrage": {
     "NAME": "Immer Weiter!",

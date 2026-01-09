@@ -301,7 +301,7 @@
     ]
   },
   "Slimebound:NextTurnGainSlimeCrush": {
-    "NAME": "Das Zerschmettern vorbereiten",
+    "NAME": "Zerschmettern vorbereiten",
     "DESCRIPTIONS": [
       "Nimm im nächsten Zug ein #gSCHLEIM #gZERSCHMETTERN auf die Hand.",
       "Nimm im nächsten Zug ein #gSCHLEIM #gZERSCHMETTERN+ auf die Hand.",
@@ -470,13 +470,13 @@
     ]
   },
   "Slimebound:GreedRespawnPower": {
-    "NAME": "Greed Recovering",
+    "NAME": "Gierschleim regenerieren",
     "DESCRIPTIONS": [
       "Am Ende deines Zuges wird der #yGierschleim wiederbelebt."
     ]
   },
   "Slimebound:ScrapRespawnPower": {
-    "NAME": "Scrap Recovering",
+    "NAME": "Schrottschleim regenerieren",
     "DESCRIPTIONS": [
       "Am Ende deines Zuges wird der #Schrottschleim wiederbelebt."
     ]

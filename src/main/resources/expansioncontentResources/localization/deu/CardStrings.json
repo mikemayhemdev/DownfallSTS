@@ -62,7 +62,7 @@
     ]
   },
   "expansioncontent:SuperLivingWall": {
-    "NAME": "Gallert-Mauer",
+    "NAME": "Gallertmauer",
     "DESCRIPTION": "Erhalte !B! Block. NL Immer wenn dich in diesem Zug ein Gegner angreift, wende !M! expansioncontent:Glibber auf ihn an."
   },
 
@@ -204,7 +204,7 @@
     "DESCRIPTION": "Lege !M! *Einsicht Karten auf deinen Nachziehstapel. NL Erschöpft."
   },
   "expansioncontent:BloodBarrage": {
-    "NAME": "Blutiges Sperrfeuer",
+    "NAME": "Blut-Sperrfeuer",
     "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Erschöpft."
   },
   "expansioncontent:DoubleAct": {

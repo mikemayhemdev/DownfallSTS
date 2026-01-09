@@ -63,7 +63,7 @@
   },
 
   "Gremlin:CounterStrike": {
-    "NAME": "Konterschlag",
+    "NAME": "Gegenschlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn der Gegner angreifen will, aktiviere den Bonus des aktuellen Gremlins !M! Mal."
   },
 
@@ -344,7 +344,7 @@
   },
 
   "Gremlin:ProperTools": {
-    "NAME": "Adäquates Werkzeug",
+    "NAME": "Adäquate Waffe",
     "DESCRIPTION": "Füge !D! Schaden zu. Erhalte !M! *Schutz wenn der Gegner angreifen will. Erhalte anderenfalls !M! Messer."
   },
 
@@ -367,7 +367,7 @@
 
   "Gremlin:Rhythm": {
     "NAME": "Rhythmus",
-    "DESCRIPTION": "gremlin:Wechsle zum nächsten Gremlin. NL Schnapp dir eine Basis-Karte vom Nachziehstapel. Sie kostet in diesem Zug 0."
+    "DESCRIPTION": "gremlin:Wechsle zum nächsten Gremlin. Schnapp dir eine Basis-Karte vom Nachziehstapel. Sie kostet in diesem Zug 0."
   },
 
   "Gremlin:Rush": {

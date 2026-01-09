@@ -201,7 +201,7 @@
   "champ:ParryPower": {
     "NAME": "Parierend",
     "DESCRIPTIONS": [
-      "Wenn #yKonter in diesem Zug verbraucht wird, erhalte einen zusätzlichen #yGegenschlag."
+      "Wenn #yKonter in diesem Zug verbraucht wird, erhalte einen zusätzlichen #yKonterschlag."
     ]
   },
   "champ:BoomerangPower": {

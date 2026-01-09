@@ -106,7 +106,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Wenn dein ganzes Block in diesem Zug verbraucht wird, dann erhalte im nächsten Zug !B! Block."
   },
   "champ:ShieldSlam": {
-    "NAME": "Moment der Wahrheit",
+    "NAME": "Alles oder Nichts",
     "DESCRIPTION": "Behalten. NL Ziehe !M! Karte.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Ziehe !M! Karten."
   },
@@ -174,7 +174,7 @@
   },
   "champ:RapidStrikes": {
     "NAME": "Rapide Schläge",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Einr zufällige \"Schlag\" Karte auf deiner Hand kostet in diesem Zug 0."
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Eine zufällige \"Schlag\" Karte auf deiner Hand kostet in diesem Zug 0."
   },
   "champ:EnchantSword": {
     "NAME": "Schwertzauber",
@@ -332,7 +332,7 @@
     "DESCRIPTION": "Erhöhe den Schaden deiner \"Schlag\" Karten um !M!."
   },
   "champ:Riposte": {
-    "NAME": "Gegenschlag",
+    "NAME": "Konterschlag",
     "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. NL Erschöpft."
   },
   "champ:Endure": {
@@ -350,7 +350,7 @@
   },
   "champ:Parry": {
     "NAME": "Parieren",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL Wenn champ:Konter in diesem Zug verbraucht wird, erhalte einen zweiten *Gegenschlag.",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL Wenn champ:Konter in diesem Zug verbraucht wird, erhalte einen zweiten *Konterschlag.",
     "UPGRADE_DESCRIPTION": "Flüchtig. NL Füge Schaden in Höhe des verbrauchten champ:Konters zu. NL Erschöpft."
   },
   "champ:EnchantCrown": {
