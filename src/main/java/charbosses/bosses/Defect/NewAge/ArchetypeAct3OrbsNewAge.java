@@ -7,10 +7,7 @@ import charbosses.cards.AbstractBossCard;
 import charbosses.cards.blue.*;
 import charbosses.cards.colorless.EnBlind;
 import charbosses.cards.colorless.EnGoodInstincts;
-import charbosses.cards.curses.EnInjury;
-import charbosses.cards.curses.EnNormality;
-import charbosses.cards.curses.EnPain;
-import charbosses.cards.curses.EnShame;
+import charbosses.cards.curses.*;
 import charbosses.cards.purple.EnLikeWater;
 import charbosses.orbs.AbstractEnemyOrb;
 import charbosses.powers.bossmechanicpowers.DefectBiasCuriosityPower;
@@ -143,7 +140,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
                     addToList(cardsList, new EnColdSnap(),extraUpgrades);
                     //Lightning Frost 0e
 
-                    addToList(cardsList, new EnPain());
+                    addToList(cardsList, new EnClumsy());
                     turn++;
                     break;
                 case 3:

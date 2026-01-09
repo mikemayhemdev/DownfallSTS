@@ -353,7 +353,7 @@ public class SneckoMod implements
             possList.removeIf(c -> c instanceof Discovery);
             possList.removeIf(c -> c.hasTag(AbstractCard.CardTags.HEALING));
         }
-        if (isPureSneckoModeEnabled() && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko) {
+        if (!isPureSneckoModeEnabled() && !AbstractDungeon.player.hasRelic(PrismaticShard.ID) && AbstractDungeon.player instanceof TheSnecko) {
             possList.removeIf(c -> !validColors.contains(c.color));
         }
 
