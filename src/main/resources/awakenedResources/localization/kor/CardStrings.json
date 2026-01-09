@@ -258,7 +258,7 @@
   },
   "awakened:Dejection": {
     "NAME": "낙담",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 소멸시킵니다. 소멸시킨 카드가 주문이라면 *제식 을 얻습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 1장 소멸시킵니다. 소멸시킨 카드가 주문이면 *제식 을 얻습니다."
   },
   "awakened:BloodRite": {
     "NAME": "피의 제전",
@@ -274,7 +274,7 @@
   },
   "awakened:ProfaneStrike": {
     "NAME": "불경한 타격",
-    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드를 뽑을 카드 더미 맨 위에 놓습니다."
+    "DESCRIPTION": "피해를 !D! 줍니다. NL 카드 1장을 뽑을 카드 더미 맨 위에 놓습니다."
   },
   "awakened:Victuals": {
     "NAME": "양식",
@@ -298,8 +298,8 @@
   },
   "awakened:MiddenHeap": {
     "NAME": "쓰레기 더미",
-    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 뽑을 카드 더미와 버린 카드 더미에서 상태이상이나 저주카드를 !M! 장 손으로 가져옵니다.",
-    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 뽑을 카드 더미와 버린 카드 더미에서 상태이상이나 저주카드를 !M! 장 손으로 가져옵니다.",
+    "DESCRIPTION": "방어도를 !B! 얻습니다. NL 뽑을 카드 더미와 버린 카드 더미에서 상태이상이나 저주를 !M! 장 손으로 가져옵니다.",
+    "UPGRADE_DESCRIPTION": "방어도를 !B! 얻습니다. NL 뽑을 카드 더미와 버린 카드 더미에서 상태이상이나 저주를 !M! 장 손으로 가져옵니다.",
     "EXTENDED_DESCRIPTION": [
       "가져올 카드를 선택하세요.",
       "가져올 카드를 선택하세요."
@@ -396,7 +396,7 @@
     "NAME": "백과사전",
     "DESCRIPTION": "무작위 카드 !M! 장 중 2장을 선택해 손으로 가져옵니다. 그 카드의 비용을 2 낮춥니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
-      "가져올 카드를 2장 선택하십시오."
+      "뽑을 카드 더미에서 가져올 카드 2장을 선택하십시오."
     ]
   },
   "awakened:RealityRift": {
