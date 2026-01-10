@@ -54,6 +54,8 @@ public class HandSelectAction extends AbstractGameAction {
         {
             first = false;
 
+            if (AbstractDungeon.getCurrRoom().monsters.areMonstersBasicallyDead()) isDone = true;
+
             ArrayList<AbstractCard> validCards = new ArrayList<>();
 
             if (p.hand.isEmpty())

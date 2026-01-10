@@ -23,7 +23,7 @@ public class Mantis extends AbstractAwakenedCard {
         frameString = "inscryp";
         tags.add(CardTags.HEALING);
         this.setBackgroundTexture("awakenedResources/images/512/dimension/" + frameString + "/" + getTypeName() + ".png", "awakenedResources/images/1024/dimension/" + frameString + "/" + getTypeName() + ".png");
-
+        cardsToPreview = new PlumeJab();
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
     }
 

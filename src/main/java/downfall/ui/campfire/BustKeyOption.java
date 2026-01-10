@@ -219,7 +219,6 @@ public class BustKeyOption extends AbstractCampfireOption {
 
     @Override
     public void useOption() {
-
         if (this.usable) {
             AbstractPlayer p = AbstractDungeon.player;
             p.loseGold(soulToCost);

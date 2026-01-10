@@ -30,6 +30,7 @@ public class DangerNoodle extends AbstractSneckoCard implements OnObtainCard {
     public DangerNoodle() {
         super(ID, 1, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
         baseDamage = DAMAGE;
+        this.tags.add(SneckoMod.GIFT);
         SneckoMod.loadJokeCardImage(this, "DangerNoodle.png");
     }
 

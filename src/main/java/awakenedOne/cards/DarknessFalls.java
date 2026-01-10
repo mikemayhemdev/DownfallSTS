@@ -16,7 +16,7 @@ public class DarknessFalls extends AbstractAwakenedCard {
 
     public DarknessFalls() {
         super(ID, 1, CardType.POWER, CardRarity.UNCOMMON, CardTarget.SELF);
-        this.baseMagicNumber = 3;
+        this.baseMagicNumber = 4;
         this.magicNumber = this.baseMagicNumber;
         baseSecondMagic = secondMagic = 1;
         loadJokeCardImage(this, makeBetaCardPath(DarknessFalls.class.getSimpleName() + ".png"));
