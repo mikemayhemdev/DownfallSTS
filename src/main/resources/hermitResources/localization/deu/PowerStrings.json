@@ -36,11 +36,11 @@
         "DESCRIPTIONS": ["Nimm die #b", " nächste Karte, die einen #yVolltreffer auslöst, wieder auf die Hand.", " nächsten Karten, die einen #yVolltreffer auslösen, wieder auf die Hand."]
 },
 "hermit:BigShotPower": {
-        "NAME": "Rauchendes Rohr",
+        "NAME": "Rauchendet Colt",
         "DESCRIPTIONS": ["Immer wenn du ein #yVolltreffer erzielst, fügt dein nächster Angriff #b", " mehr Schaden zu."]
 },
 "hermit:BrawlPower": {
-        "NAME": "Schlägerei",
+        "NAME": "Gewaltbereit",
         "DESCRIPTIONS": ["Wende zu Beginn jedes Zuges #b", " #yPrügel auf ALLE Gegner an."]
 },
 "hermit:Rugged": {

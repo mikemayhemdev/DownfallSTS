@@ -195,7 +195,7 @@
   },
   "awakened:Nihil": {
     "NAME": "Nihil",
-    "DESCRIPTION": "Wende !M! awakened:Manabrand an. NL awakened:Chor: ALL Gegner verlieren HP in Höhe ihres awakened:Manabrandes."
+    "DESCRIPTION": "Wende !M! awakened:Manabrand an. NL awakened:Chor: ALLE Gegner verlieren HP in Höhe ihres awakened:Manabrandes."
   },
   "awakened:MoonlitVision": {
     "NAME": "Mondfinsternis",
@@ -225,7 +225,7 @@
   },
   "awakened:Eventide": {
     "NAME": "Abendzeit",
-    "DESCRIPTION": "Füge einem zufälligen Gegner !D! Schaden zu. NL Lege eine *Leere auf den Nachziehstapel."
+    "DESCRIPTION": "Füge zweimal einem zufälligen Gegner !D! Schaden zu. NL Lege eine *Leere auf den Nachziehstapel."
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Sonnenfinsternis",
@@ -250,7 +250,7 @@
   },
   "awakened:MirePit": {
     "NAME": "Schlammgrube",
-    "DESCRIPTION": "ALL Gegner verlieren in diesem Zug !M! Stärke. Verliere im nächsten Zug [E] . NL Erschöpft."
+    "DESCRIPTION": "ALLE Gegner verlieren in diesem Zug !M! Stärke. Verliere im nächsten Zug [E] . NL Erschöpft."
   },
   "awakened:SingularityShield": {
     "NAME": "Singularitätsschild",

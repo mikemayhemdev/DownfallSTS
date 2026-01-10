@@ -78,7 +78,7 @@
     ]
   },
   "sneckomod:IronFang": {
-    "NAME": "Eisenzahn",
+    "NAME": "Eisenmaul",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu wende !M! Schwach auf sie an enemies."
   },
   "sneckomod:ImprovisedAttack": {
@@ -525,7 +525,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Nimm ein *Verhauen+ auf die Hand. NL Erschöpft."
   },
   "sneckomod:CobraCoil": {
-    "NAME": "Cobraspirale",
+    "NAME": "Pythonschlinge",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Der Gegner erleidet am Ende seiner Züge !M! Schaden. NL sneckomod:Geschenk: Seltener Angriff."
   },
   "sneckomod:Belittle": {
@@ -591,7 +591,7 @@
     ]
   },
   "sneckomod:AceOfWands": {
-    "NAME": "Pentagramm-König",
+    "NAME": "Pentagrammkönig",
     "DESCRIPTION": "Flüchtig. NL Erhalte immer wenn du einen Debuff anwendest !M! Block. NL sneckomod:Geschenk: Debuff.",
     "UPGRADE_DESCRIPTION": "Erhalte immer wenn du einen Debuff anwendest !M! Block. NL sneckomod:Geschenk: Debuff."
   },

@@ -16,7 +16,7 @@
     "OPTIONS": [
       "[Statue zurückgeben] #rVerliere #rdie #rZerbrochene #rFlügelstatue. #gErhalte #gviele #gBelohnungen.",
       "[Gesperrt] Erfordert die Zerbrochene Flügelstatue.",
-      "[Opfer annehmen] #gErhalte #ein #gGebräu #gder #Neugier.",
+      "[Opfer annehmen] #gErhalte #gein #gGebräu #gder #gNeugier.",
       "[Waffe beschwören] #gErhalte #gein #gbesonderes #gRelikt. #rVerliere #r",
       " #rMax #rTP.",
       "[Spendenbox] #gErhalte #g",
@@ -40,7 +40,7 @@
       "Der Kult wird zufrieden sein."
     ],
     "OPTIONS": [
-      "[Destroy] #gErhalte #gden #gScharfen #gSplitter. #rWerde #rzweimal #rverflucht #r- #rHämophilie.",
+      "[Zerstören] #gErhalte #gden #gScharfen #gSplitter. #rWerde #rzweimal #rverflucht #r- #rBlutleer.",
       "[Mitnehmen] #rVerliere #r",
       "[Verlassen]",
       " #rTP. #gErhalte #gdie #gZerbrochene #gFlügelstatue."
@@ -49,7 +49,7 @@
   "awakened:BackToBasics": {
     "NAME": "",
     "DESCRIPTIONS": [
-      "Nothing matters except the struggle for life. The here and now."
+      "Nichts hat eine Bedeutung - außer der Kampf ums Dasein. Im Hier und Jetzt."
     ],
     "OPTIONS": [
       "[Verzweiflung] Alle #gSchlag und #gVerteidigen Karten #glaugen #gdich #gaus.",

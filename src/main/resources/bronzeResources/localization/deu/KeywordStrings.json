@@ -11,7 +11,7 @@
       "encode",
       "encoded"
     ],
-    "DESCRIPTION": "Eine Karte die beim Spielen kodiert wird landet nicht auf den Abwurfstabel. NL Sind 3 Karten kodiert, kompilieren sie zu einer Funktion die #b1 kostet und die Effekte der kodierten Karten kombiniert."
+    "DESCRIPTION": "Eine Karte, die beim Spielen kodiert wird, landet nicht auf den Abwurfstapel. NL Sind 3 Karten kodiert, #ykompilieren sie zu einer #yFunktion, die #b1 kostet und die Effekte der kodierten Karten kombiniert."
   },
   {
     "PROPER_NAME": "Kompilieren",
@@ -24,7 +24,7 @@
       "compile",
       "compiled"
     ],
-    "DESCRIPTION": "Kompilierungseffekte werden aktiviert, wenn entsprechende Karten zu einer Funktion kompilieren. NL Ist der Effekt negativ wird er als Kompilierungsfehler bezeichnet."
+    "DESCRIPTION": "Kompilierungseffekte werden aktiviert, wenn entsprechende Karten zu einer #yFunktion kompilieren. NL Ist der Effekt negativ, wird er als #yKompilierungsfehler bezeichnet."
   },
   {
     "PROPER_NAME": "Verschwimmen",
@@ -44,7 +44,7 @@
       "setzt",
       "insert"
     ],
-    "DESCRIPTION": "Mische eine Karte in den Nachziehstapel."
+    "DESCRIPTION": "Mische bestimmte Karten in den Nachziehstapel."
   },
   {
     "PROPER_NAME": "Umtauschen",
@@ -54,6 +54,6 @@
       "tausche",
       "cycle"
     ],
-    "DESCRIPTION": "Wirf Karten ab und ziehe genausoviele aus dem Nachziestapel."
+    "DESCRIPTION": "Wirf Handkarten ab und ziehe genausoviele aus dem Nachziestapel."
   }
 ]

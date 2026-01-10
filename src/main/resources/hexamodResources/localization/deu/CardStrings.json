@@ -84,7 +84,7 @@
     "UPGRADE_DESCRIPTION": "hexamod:Entzünde die aktuelle Geisterflamme. NL Bewege dich hexamod:vorwärts."
   },
   "hexamod:Firestarter": {
-    "NAME": "Firestarter",
+    "NAME": "Brandstiftung",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu und wende !burny! hexamod:Seelenfeuer auf sie an."
   },
   "hexamod:FlamesFromBeyond": {
@@ -157,8 +157,8 @@
   },
   "hexamod:DevilsDance": {
     "NAME": "Totentanz",
-    "DESCRIPTION": "Ziehe wenn du dich das erste Mal im Zug bewegst ( hexamod:vorwärts oder hexamod:rückwärts ) eine Karte.",
-    "UPGRADE_DESCRIPTION": "Ziehe die ersten !M! Male an denen du dich im Zug bewegst ( hexamod:vorwärts oder hexamod:rückwärts ) eine Karte."
+    "DESCRIPTION": "Ziehe wenn du dich das erste Mal im Zug hexamod:vorwärts oder hexamod:rückwärts bewegst eine Karte.",
+    "UPGRADE_DESCRIPTION": "Ziehe die ersten !M! Male an denen du dich im Zug hexamod:vorwärts oder hexamod:rückwärts bewegst eine Karte."
   },
   "hexamod:HereAndNow": {
     "NAME": "Hier und Jetzt",
@@ -195,7 +195,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhöhe den Schaden um die Höhe des gegnerischen *Seelenfeuers."
   },
   "hexamod:HeatMetal": {
-    "NAME": "Glühendes Eisen",
+    "NAME": "Heißes Eisen",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !burny! hexamod:Seelenfeuer an. NL Wende !M! Verwundbar an."
   },
   "hexamod:HeatShield": {
@@ -224,7 +224,7 @@
   },
   "hexamod:StokeTheFire": {
     "NAME": "Anheizen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Verbessere für jede *entzündete Geisterflamme eine zufällige Karte in deiner Hand in diesem Kampf."
+    "DESCRIPTION": "Erhalte !B! Block. NL Verbessere für jede *entzündete Geisterflamme eine zufällige Handkarte in diesem Kampf."
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Würdiges Opfer",
@@ -336,7 +336,7 @@
     "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Füge[] [#e087a4]ALLEN[] [#e087a4]Gegnern[] !D! [#e087a4]Schaden[] [#e087a4]zu[] - zweimal."
   },
   "hexamod:BrightRitual": {
-    "NAME": "Leuchtendes Ritual",
+    "NAME": "Grelles Ritual",
     "DESCRIPTION": "Setze das Geisterrad zurück. NL Erhalte [E] und ziehe 1 Karte für jede Geisterflamme, die hexamod:gelöscht wurde. NL Erschöpft."
   },
   "hexamod:NaughtySpirit": {
@@ -375,7 +375,7 @@
   },
   "hexamod:TimeWarp": {
     "NAME": "Zeitsprung",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm diese Karte vom Abwurfstapel auf die Hand, immer wenn du dich bewegst ( hexamod:vorwärts oder hexamod:rückwärts )."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm diese Karte vom Abwurfstapel auf die Hand, immer wenn du dich hexamod:vorwärts oder hexamod:rückwärts bewegst."
   },
   "hexamod:FlareFlick": {
     "NAME": "Flackernde Flamme",
@@ -384,7 +384,7 @@
     "EXTENDED_DESCRIPTION": ["hexamod:vorwärts.","hexamod:rückwärts.", "Tu nichts."]
   },
   "hexamod:TurnItUp": {
-    "NAME": "Voll Aufdrehen",
+    "NAME": "Aufgedreht",
     "DESCRIPTION": "Erhalte für diesen Zug temporär !M! hexamod:Intensität, Stärke, und Geschicklichkeit.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte für diesen Zug temporär !M! hexamod:Intensität, Stärke, und Geschicklichkeit."
   },
@@ -398,7 +398,7 @@
     "DESCRIPTION": "hexamod:Entzünde alle Geisterflammen im Uhrzeigersinn. NL Erschöpft."
   },
   "hexamod:VolcanoVisage": {
-    "NAME": "Vulkan-Visage",
+    "NAME": "Vulkanvisage",
     "DESCRIPTION": "Wende immer, wenn du eine Geisterflamme hexamod:entzündest, !M! hexamod:Seelenfeuer auf ALLE Gegner an."
   },
   "hexamod:WildfireWeapon": {
@@ -451,7 +451,7 @@
     "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Füge[] !D! [#e087a4]Schaden[] [#e087a4]zu.[] NL Erschöpfe eine Karte. NL Ziehe !M! Karten."
   },
   "hexamod:OpposingAction": {
-    "NAME": "Ablehnende Aktion",
+    "NAME": "Entgegensetzen",
     "DESCRIPTION": "Bewege dich hexamod:rückwärts. NL Erhalte [E] [E]. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Bewege dich hexamod:rückwärts. NL Erhalte [E] [E] [E]. NL Erschöpft."
   },
@@ -519,10 +519,10 @@
   },
   "hexamod:InspiringFlames": {
     "NAME": "Anheizen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Verbessere für jede *entzündete Geisterflamme eine zufällige Karte auf der Hand in diesem Kampf."
+    "DESCRIPTION": "Erhalte !B! Block. NL Verbessere für jede *entzündete Geisterflamme eine zufällige Handkarte in diesem Kampf."
   },
   "hexamod:SpectralAdrenaline": {
-    "NAME": "Leuchtendes Ritual",
+    "NAME": "Grelles Ritual",
     "DESCRIPTION": "Erhalte [E] und ziehe 1 Karte für jede *entzündete Geisterflamme. hexamod:Lösche alle Geisterflammen. NL Erschöpft."
   },
   "hexamod:GhostOfSpirePresent": {
@@ -531,8 +531,8 @@
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Totentanz",
-    "DESCRIPTION": "Ziehe wenn du dich das erste Mal im Zug bewegst ( hexamod:vorwärts oder hexamod:rückwärts ) eine Karte.",
-    "UPGRADE_DESCRIPTION": "Ziehe die ersten !M! Male an denen du dich im Zug bewegst ( hexamod:vorwärts oder hexamod:rückwärts ) eine Karte."
+    "DESCRIPTION": "Ziehe wenn du dich das erste Mal im Zug hexamod:vorwärts oder hexamod:rückwärts bewegst eine Karte.",
+    "UPGRADE_DESCRIPTION": "Ziehe die ersten !M! Male an denen du dich im Zug hexamod:vorwärts oder hexamod:rückwärts bewegst eine Karte."
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Im Schatten",

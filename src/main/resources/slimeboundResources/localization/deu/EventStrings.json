@@ -19,10 +19,10 @@
       "Du konntest dich mit der Kreatur einigen: Du versogst sie mit #ySeelen und sie hilft dir im Kampf. NL Du verlässt das Schleimbad zusammen mit deinem neuen #gFreund."
     ],
     "OPTIONS": [
-      "[Seelen sammeln] #gErhalte #g75 #gSeelen.",
-      "[Rekrutieren] #rVerliere #r75 #rSeelen. #gErhalte #gden #yGierschleim.",
+      "[Sammeln] #gErhalte #g75 #gGold.",
+      "[Rekrutieren] #rVerliere #r75 #rGold. #gErhalte #gden #yGierschleim.",
       "[Verlassen]",
-      "[Gesperrt] Erfordert 75 Seelen."
+      "[Gesperrt] Erfordert 75 Gold."
     ]
   },
   "Slimebound:SlimeTalk": {

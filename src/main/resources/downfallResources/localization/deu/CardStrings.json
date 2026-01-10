@@ -24,7 +24,7 @@
     "DESCRIPTION": "Nimm am Ende des Zuges eine Kopie dieser Karte auf den Abwurfstapel. NL Erschöpft."
   },
   "downfall:CurseOfBlood": {
-    "NAME": "Hämophilie",
+    "NAME": "Blutleer",
     "DESCRIPTION": "Verliere [E] zu Beginn deines nächsten Zuges. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": ["Note for LOC: Hemophilia is a name for a disorder for when your blood doesn’t clot properly. I added the a in the middle for coolness factor."]
   },

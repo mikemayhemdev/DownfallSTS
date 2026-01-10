@@ -383,7 +383,7 @@
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Racheprotokoll",
-    "DESCRIPTION": "Whenever you enter *Defensive *Mode, Erhalte !M! Stärke. NL At the start of your turn, guardianmod:Abhärten !GuardianSecondM!."
+    "DESCRIPTION": "Erhalte jedes Mal wenn du in den *Defensivmodus wechselst !M! Stärke. NL Zu Beginn jedes Zuges: guardianmod:Abhärten !GuardianSecondM!."
   },
   "Guardian:GatlingBeam": {
     "NAME": "Laserkanone",
@@ -432,7 +432,7 @@
   },
   "Guardian:MassSlam": {
     "NAME": "Gruppenknaller",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Erschöpft mindestens 3 Stärke hast."
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Erschöpft wenn du mindestens 3 Stärke hast."
   },
   "Guardian:GemstoneGunCard": {
     "NAME": "Juwelenpistole",

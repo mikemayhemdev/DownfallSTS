@@ -12,7 +12,7 @@
     "FLAVOR": "Ein Beweis deiner Schwäche, und doch kannst du sie nicht loslassen.",
     "DESCRIPTIONS": [
       "Ersetzt ",
-      " [REMOVE_SPACE].[] NL #yawakened:Rufe zu Beginn jedes Zuges einen Zauberspruch #yauf [REMOVE_SPACE]. NL Erhalte #b1 #yRitual wenn du das erste Mal im Kampf wenn du dein Zauberbuch neu auffüllst."
+      " [REMOVE_SPACE].[] NL #yawakened:Rufe zu Beginn jedes Zuges einen Zauberspruch #yauf [REMOVE_SPACE]. NL Erhalte #b1 #yRitual wenn du das erste Mal im Kampf dein Zauberbuch neu auffüllst."
     ]
   },
   "awakened:WhiteRibbon": {
@@ -32,7 +32,7 @@
   },
   "awakened:TomeOfPortalmancy": {
     "NAME": "Zauberbuch der Portale",
-    "FLAVOR": "Eine Betriebsanleitung zur Konstruktion und Wartung interplanterer Portale.",
+    "FLAVOR": "Eine Betriebsanleitung zur Konstruktion und Wartung interdimensionaler Portale.",
     "DESCRIPTIONS": [
       "Immer wenn du eine #yLeere erhältst, wende #b",
       " #yawakened:Manabrand auf ALLE Gegner an."
@@ -49,7 +49,7 @@
     "NAME": "Rabengeist",
     "FLAVOR": "Dieser Geist fliegt den Vefluchten und Verdammten nach.",
     "DESCRIPTIONS": [
-      "Am Ende des Zuges, für dem Gegner mit den niedrigsten TP #b",
+      "Füge am Ende des Zuges dem Gegner mit den niedrigsten TP #b",
       " Schaden zu. Der Schaden wird von deiner #yStärke beeinflusst."
     ]
   },
@@ -80,12 +80,12 @@
     "NAME": "Zener Deck",
     "FLAVOR": "„Eins, zwei, drei - ihr alle seid dabei.“",
     "DESCRIPTIONS": [
-      "Lege zu Beginn deines Kampfes #yESP in dein Zauberbuch und #yawakened:rufe es auf."
+      "Lege zu Beginn deines Kampfes #yESP in dein Zauberbuch und #yawakened:rufe es #yauf."
     ]
   },
   "awakened:CawingCask": {
     "NAME": "Krächzendes Fass",
-    "FLAVOR": "Ein zeremoniall beschnitztes Fass, das den Krähengott Mazaleth darstellt. Der Inhalt riecht äußerst fragwürdig...",
+    "FLAVOR": "Ein zeremoniell beschnitztes Fass, das den Krähengott Mazaleth darstellt. Der Inhalt riecht äußerst fragwürdig...",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du einen Trank benutzt #b",
       " #yRitual [REMOVE_SPACE]."
@@ -95,7 +95,7 @@
     "NAME": "Alethea",
     "FLAVOR": "Direkt aus dem Abgrund.",
     "DESCRIPTIONS": [
-      "Wenn du in deinem Zug keine #yMacht ausgespielt hast, dann ziehe eine zusätzliche Karte im nächsten Zug."
+      "Wenn du in einem Zug keine #yMacht ausgespielt hast, dann ziehe eine zusätzliche Karte im nächsten Zug."
     ]
   },
   "awakened:StrengthBooster": {
@@ -110,8 +110,8 @@
     "NAME": "Letzte Riten",
     "FLAVOR": "Ich vermache meine gesamten Besitztümer meiner Katze Noodles. Ade, du grausame Welt. XOXO Ritter",
     "DESCRIPTIONS": [
-      "Erhalte des Erste Mal an dem du im Kampf einen #b",
-      " #yawakened:Chor Effekt aktivierst #b",
+      "Wenn du das erste Mal im Kampf #b",
+      " #yawakened:Chor Effekte aktivierst, erhalte #b",
       " #yRitual [REMOVE_SPACE]."
     ]
   },
@@ -132,8 +132,8 @@
     ]
   },
   "awakened:MoonTalisman": {
-    "NAME": "Halmbond-Talisman",
-    "FLAVOR": "„Please, just... don't forget me. Even after I die.“",
+    "NAME": "Halbmond-Talisman",
+    "FLAVOR": "„Bitte... vergiss mich nicht... auch nach meinem Tod.“",
     "DESCRIPTIONS": [
       "Wähle beim Aufheben eine Karte aus, die #rKEINEN Zauberspruch #yawakened:aufruft [REMOVE_SPACE]. Sie erhält #yawakened:Aufrufen.",
       "Wähle eine Karte für ",

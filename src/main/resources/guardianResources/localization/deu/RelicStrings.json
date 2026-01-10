@@ -55,7 +55,7 @@
     "NAME": "Pilotenkodex",
     "FLAVOR": "Skizzen und Diagramme der ersten handbetriebenen Prototypen des Spire - angefertigt vom Meisterpiloten David.",
     "DESCRIPTIONS": [
-      "Wähle am Ende deiner ersten #b3 Züge #b1 von #b3 zufälligen Karten aus um sie in #yguardianmod:Stasis zu legen, falls du einen freien #yguardianmod:Stasis-Slot hast."
+      "Wähle am Ende deiner ersten #b3 Züge #b1 von #b3 zufälligen Karten aus um sie in #yguardianmod:Stasis zu legen, falls du einen freien Stasis-Slot hast."
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
@@ -112,7 +112,7 @@
     "NAME": "Singende Spitzhacke",
     "FLAVOR": "Kaum zu glauben, dass jemand mit der Spitzhacke nach Juwelen suchen muss, wo doch im Spire so viele herumliegen.",
     "DESCRIPTIONS": [
-      "Jeden Mal wenn du einen Elitekampf gewinnst erhältst du einen zusätzliches zufälliges #yguardianmod:Juwel zur Belohnung."
+      "Jedes Mal wenn du einen Elitekampf gewinnst, erhältst du zusätzlich ein zufälliges #yguardianmod:Juwel zur Belohnung."
     ]
   },
   "Guardian:GemstoneGun": {

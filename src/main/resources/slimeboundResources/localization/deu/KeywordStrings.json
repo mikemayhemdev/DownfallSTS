@@ -33,7 +33,7 @@
       "splitting"
     ],
     "PROPER_NAME": "Abspalten",
-    "DESCRIPTION": "Spalte ein Schleimwesen von dir ab. Es greift am Anfang jedes Zuges an. NL Wenn du keine Schleim-Slots übrig hast, wird dein ältester Schleimuntertan #yabsorbiert, und du erhältst #b1 #yStärke [REMOVE_SPACE]."
+    "DESCRIPTION": "Spalte einen Schleimuntertanen von dir ab. Er greift am Anfang jedes Zuges an. NL Wenn du keine Schleim-Slots übrig hast, wird dein ältester Schleimuntertan #yabsorbiert, und du erhältst #b1 #yStärke [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -53,7 +53,7 @@
       "potency"
     ],
     "PROPER_NAME": "Potenz",
-    "DESCRIPTION": "Erhöht den Schaden deiner abgespalteten Schleimwesen. Sekundäreffekte erhöhen sich um pro #b2 Potenzpunkten um #b1 (aufgerundet)."
+    "DESCRIPTION": "Erhöht den Schaden deiner abgespalteten Schleimuntertanen. Sekundäreffekte erhöhen sich um pro #b2 Potenzpunkten um #b1 (aufgerundet)."
   },
   {
     "NAMES": [

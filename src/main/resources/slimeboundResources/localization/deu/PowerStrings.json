@@ -88,11 +88,11 @@
     ]
   },
   "Slimebound:ComboAttackPower": {
-    "NAME": "Mit Beispiel Vorangehen",
+    "NAME": "Den Ton angeben",
     "DESCRIPTIONS": [
-      "Die erste in deinem Zug gespielte Karte, die auf Gegener abzielt, kommandiert deinen führenden Schleim.",
+      "Die erste in deinem Zug gespielte Karte, die auf Gegener abzielt, #ykommandiert deinen führenden Schleim.",
       "Die ersten #b",
-      " gespielten Karten des Zuges, die auf Gegener abzielen, kommandieren deinen führenden Schleim.",
+      " gespielten Karten des Zuges, die auf Gegener abzielen, #ykommandieren deinen führenden Schleim.",
       " NL Dieser Effekt kann in diesem Zug noch #b",
       " Mal aktiviert werden.",
       " Mal aktiviert werden.",
@@ -102,7 +102,7 @@
   "Slimebound:RetainCardsOneTurnPower": {
     "NAME": "Karten vorbereiten",
     "DESCRIPTIONS": [
-      "Behalte in diesem Zug #b",
+      "Behalte am Ende des Zuges #b",
       " Karte.",
       " Karten."
     ]
@@ -133,8 +133,8 @@
   "Slimebound:LoseSlimesPower": {
     "NAME": "Überanstrengung",
     "DESCRIPTIONS": [
-      "#yAbsorbiere im nächsten Zug alle Schleim-Untergebenen.",
-      " Züge später #yAbsorbierst du alle Schleim-Untergebenen."
+      "#yAbsorbiere im nächsten Zug alle Schleim-Untertanen.",
+      " Züge später #yAbsorbierst du alle Schleim-Untertanen."
     ]
   },
   "Slimebound:TackleModifyDamagePower": {
@@ -478,7 +478,7 @@
   "Slimebound:ScrapRespawnPower": {
     "NAME": "Schrottschleim regenerieren",
     "DESCRIPTIONS": [
-      "Am Ende deines Zuges wird der #Schrottschleim wiederbelebt."
+      "Am Ende deines Zuges wird der #ySchrottschleim wiederbelebt."
     ]
   },
   "Slimebound:BuffSecondarySlimeEffectsPower": {

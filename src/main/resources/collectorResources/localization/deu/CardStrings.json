@@ -598,7 +598,7 @@
     "DESCRIPTION": "Dein nächster Angriff kostet 0 und fügt !M! zusätzlichen Schaden zu."
   },
   "collector:ScrapOozeCard": {
-    "NAME": "Schrottschleim",
+    "NAME": "Schrottschlamm",
     "DESCRIPTION": "collector:Opfergabe. NL Verliere 3 TP. NL Nimm !M! zufällige Angriffe auf die Hand. NL Sie kosten in diesem Zug 0."
   },
   "collector:SentryCard": {
@@ -618,7 +618,7 @@
     "DESCRIPTION": "Füge 3 Mal !D! Schaden zu."
   },
   "collector:SneakyGremlinCard": {
-    "NAME": "Schleichender Grem",
+    "NAME": "Schleich-Gremlin",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte."
   },
   "collector:SneckoCard": {

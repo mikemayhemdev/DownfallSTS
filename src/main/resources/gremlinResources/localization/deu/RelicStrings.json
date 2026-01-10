@@ -29,7 +29,7 @@
   },
   "Gremlin:GremlinKnob": {
     "NAME": "Horn des Gruppenführers",
-    "FLAVOR": "Der Gremlin mit dem besten Horn ist so lange der Anführer seine Gruppe, bis ein anderer es ihm gestohlen hat.",
+    "FLAVOR": "Der Gremlin mit dem besten Horn ist so lange der Anführer seiner Gruppe, bis ein anderer es ihm gestohlen hat.",
     "DESCRIPTIONS": [
       "Zu Beginn jedes Kampfes, ziehe #b1 Karte, erhalte [E] , und #ywechsle zum nächsten Gremlin."
     ]
@@ -96,9 +96,9 @@
   },
   "Gremlin:SupplyScroll": {
     "NAME": "Versorgungsschrift",
-    "FLAVOR": "Eine erstaunlich detaillierte Inventurliste der von der Gruppe angehäuften gegenstände.",
+    "FLAVOR": "Eine erstaunlich detaillierte Inventurliste der von der Gruppe angehäuften Gegenstände.",
     "DESCRIPTIONS": [
-      "Ziehe zu Beginn deiner dritten Zuges #b2 Karten und erhalte [E] [E] ."
+      "Ziehe zu Beginn deines dritten Zuges #b2 Karten und erhalte [E] [E] ."
     ]
   },
   "Gremlin:TagTeamwork": {
@@ -119,7 +119,7 @@
     "NAME": "Zauberstab",
     "FLAVOR": "Der Stolz und Ruhm eines jeden Gremlinzauberers. Diese Stäbe werden oft von feindlichen Gruppen gestohlen.",
     "DESCRIPTIONS": [
-      "Der Verbauch von #yEsprit fügt noch zusätzlich #b7 Schaden zu."
+      "Der Verbauch von #yEsprit fügt zusätzlich #b7 Schaden zu."
     ]
   },
   "Gremlin:WoundPoker": {

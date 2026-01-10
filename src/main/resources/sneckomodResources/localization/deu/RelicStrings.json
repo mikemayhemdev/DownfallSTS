@@ -24,8 +24,8 @@
     "NAME": "Ring des Snek",
     "FLAVOR": "Unleserlich - Dienstag ist Deadline.",
     "DESCRIPTIONS": [
-      "Wende immer wenn du einen #b",
-      " #ysneckomod:Überschuss Effekt aktivierst #b1 #ySchwach und #yVerwundbar auf einen zufälligen Gegner an."
+      "Wende immer wenn du #b",
+      " #ysneckomod:Überschuss Effekte aktivierst #b1 #ySchwach und #yVerwundbar auf einen zufälligen Gegner an."
     ]
   },
   "sneckomod:CrystallizedMud": {
@@ -59,9 +59,9 @@
   },
   "sneckomod:UnknownEgg": {
     "NAME": "Unidentifiziertes Ei",
-    "FLAVOR": "Was wird darauf schlüpfen? Zahle $1000 um zuzusehen.",
+    "FLAVOR": "Was wird daraus schlüpfen? Zahle $1000 um zuzusehen.",
     "DESCRIPTIONS": [
-      "Jede Karte einer #ysneckomod:Fremdklasse, die du erhältst, ist #yverbessert. #yVerbessere beim Aufheben #b2 zufällige Karten auf #ysneckomod:Fremdklassen [REMOVE_SPACE]."
+      "Jede Karte einer #ysneckomod:Fremdklasse, die du erhältst, ist #yverbessert. #yVerbessere beim Aufheben #b2 zufällige Karten aus #ysneckomod:Fremdklassen [REMOVE_SPACE]."
     ]
   },
   "sneckomod:SuperSneckoEye": {
@@ -75,7 +75,7 @@
     "NAME": "Abbild der Retromation",
     "FLAVOR": "Oft als Retroabbild abgekürzt.",
     "DESCRIPTIONS": [
-      "Zu Beginn jedes Zuges kostet eine zufällige Karte auf der Hand #b1 weniger bis du sie spielst."
+      "Zu Beginn jedes Zuges kostet eine zufällige Handkarte #b1 weniger bis du sie spielst."
     ]
   },
   "sneckomod:BlankCard": {
@@ -89,7 +89,7 @@
     "NAME": "Mystisches Oktaeder",
     "FLAVOR": "Es scheint auf einer Seite schwerer zu sein.",
     "DESCRIPTIONS": [
-      "Wähle beim Aufheben eine Karte mit #ysneckomod:Überschuss Efekt. Wenn du sie spielst, erhalte #b4 #yBlock und aktiviere den #yÜberschuss Effekt, unabhängig von der Handgröße.",
+      "Wähle beim Aufheben eine Karte mit #ysneckomod:Überschuss Effekt. Wenn du sie spielst, erhalte #b4 #yBlock und aktiviere den #yÜberschuss Effekt, unabhängig von der Handgröße.",
       "Wähle eine Karte für ",
       "Immer wenn du ",
       " spielst, erhalte #b4 #yBlock und aktiviere den #yÜberschuss Effekt, unabhängig von der Handgröße.",
@@ -100,7 +100,7 @@
     "NAME": "Snecko-Küken",
     "FLAVOR": "Verwirrend bezaubernd - bezaubernd verwirrt.",
     "DESCRIPTIONS": [
-      "Fügt zu Beginn deines Zuges einem zufälligen Gegner #b9 Schaden zu und #ysneckomod:irrt #b2 zufällige Karten, die mindestens #b1 kosten."
+      "Füge zu Beginn deines Zuges einem zufälligen Gegner #b9 Schaden zu und #ysneckomod:irre #b2 zufällige Karten, die mindestens #b1 kosten."
     ]
   },
   "sneckomod:SneckoCommon": {
@@ -114,7 +114,7 @@
     "NAME": "Glücksbringer-Hufeisen",
     "FLAVOR": "Sei deines Glückes Schmied.",
     "DESCRIPTIONS": [
-      "Wähle beim Aufheben #b1 von #b3 #yCharakteren [REMOVE_SPACE]. Wähle #b3 #yverbesserte ungewöhnliche Karten und #b2 seltene Karten des Charakters in dein Deck auf. Erhalte nach jedem Kampf eine zusätzliche Kartenbelohnung des gewählten Charakters.",
+      "Wähle beim Aufheben #b1 von #b3 #yCharakteren [REMOVE_SPACE]. Für diese Klasse: Wähle #b3 #yverbesserte ungewöhnliche Karten und #b2 seltene Karten. Erhalte nach jedem Kampf eine zusätzliche Kartenbelohnung.",
       "Nimm beim Aufheben #b3 verbesserte ungewöhnliche und #b2 seltene ",
       " Karten in dein Deck auf. Erhalte nach jedem Kampf eine zusätzliche ",
       " Kartenbelohnung."

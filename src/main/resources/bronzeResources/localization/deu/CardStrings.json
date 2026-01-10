@@ -149,7 +149,7 @@
     "UPGRADE_DESCRIPTION": "Behalten. NL In diesem Zug spielst du deine nächste Funktion zweimal aus."
   },
   "bronze:CutThrough": {
-    "NAME": "Durchschneiden",
+    "NAME": "Einschneidend",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Spähe !M!. NL bronze:Kompilierung - Ziehe !bauto! Karte.",
     "EXTENDED_DESCRIPTION": [
       "schnittiges",
@@ -190,7 +190,7 @@
     ]
   },
   "bronze:Deprecate": {
-    "NAME": "Veraltet",
+    "NAME": "Obsolet",
     "DESCRIPTION": "Wende !M! Schwach an.",
     "EXTENDED_DESCRIPTION": [
       "altes",
@@ -416,12 +416,12 @@
     ]
   },
   "bronze:Repulsor": {
-    "NAME": "Abstoßen",
+    "NAME": "Validieren",
     "DESCRIPTION": "Wenn du im Zug das erste Mal einen Status oder Fluch ziehst, erschöpfe ihn und ziehe eine Karte.",
     "UPGRADE_DESCRIPTION": "Wenn du im Zug das erste Mal einen Status oder Fluch ziehst, erschöpfe ihn und ziehe eine Karte."
   },
   "bronze:Return": {
-    "NAME": "Retournieren",
+    "NAME": "Rückgabe",
     "DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E] .",
     "UPGRADE_DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E] [E] ."
   },
@@ -611,7 +611,7 @@
       "Detonieren"
     ]
   },
-  "bronze:FunktionCard": {
+  "bronze:FunctionCard": {
     "NAME": "()",
     "DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": [

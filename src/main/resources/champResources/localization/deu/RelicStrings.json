@@ -48,7 +48,7 @@
   },
   "champ:DeflectingBracers": {
     "NAME": "Ablenkende Armschienen",
-    "FLAVOR": "Wenn du schon dachtest dass Abblocken gut wäre...",
+    "FLAVOR": "Wenn du schon dachtest, dass Abblocken gut wäre...",
     "DESCRIPTIONS": [
       "Erhalte zu Beginn deines Zuges #ychamp:Konter in Höhe der Hälfte es ungerbrauchten #yBlock [REMOVE_SPACE]."
     ]
@@ -108,7 +108,7 @@
     ]
   },
   "champ:LiftRelic": {
-    "NAME": "Innere STärke",
+    "NAME": "Innere Stärke",
     "FLAVOR": "Es geht mehr um das riesige Schwert in deinem Herzen.",
     "DESCRIPTIONS": [
       "Beginne jeden Kampf mit #b",

@@ -20,7 +20,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL hermit:Volltreffer: Verdopple den zugefügten Schaden."
   },
   "hermit:Quickdraw": {
-    "NAME": "Schnellzug",
+    "NAME": "Ladehemmung",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten. NL Ziehe im nächsten Zug 1 Karte weniger."
   },
   "hermit:WideOpen": {
@@ -47,7 +47,7 @@
     "UPGRADE_DESCRIPTION": "hermit:Konzentriere dich. NL Dein in diesem Zug nächster ausgelöster hermit:Volltreffer Effekt wird zweimal ausgeführt. NL Erschöpft."
   },
   "hermit:CalledShot": {
-    "NAME": "Fangschuss",
+    "NAME": "Schießwütig",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Kampf gespielte Karte einen hermit:Volltreffer ausgelöst hat.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Kampf gespielte Karte einen hermit:Volltreffer ausgelöst hat."
   },
@@ -78,7 +78,7 @@
     "DESCRIPTION": "Nimm !M! zufällige Angriffe aus dem Abwurfstapel auf die Hand. Sie kosten für diesen Zug 1 weniger. NL Erschöpft."
   },
   "hermit:Roughhouse": {
-    "NAME": "Rauferei",
+    "NAME": "Misshandeln",
     "DESCRIPTION": "Füge !D! Schaden zu. hermit:Volltreffer: NL Erhalte !B! Block."
   },
   "hermit:Malice": {
@@ -124,12 +124,12 @@
     "UPGRADE_DESCRIPTION": "Nimm ein *Verteidigen+ das 0 kostet auf die Hand. NL *Verbessere es danach X Mal. NL Erschöpft."
   },
   "hermit:Misfire": {
-    "NAME": "Fehlzündung",
+    "NAME": "Rohrkrepierer",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Mische ein *Ungeschickt in den Nachziehstapel."
   },
   "hermit:SprayPray": {
-    "NAME": "Schusssalve",
-    "DESCRIPTION": "Füge 3 Mal einem zufälligen Gegner !D! Schaden zu. NL Mische ein *Zweifel in den Nachziehstapel."
+    "NAME": "Dauerfeuer",
+    "DESCRIPTION": "Füge 3 Mal einem zufälligen Gegner !D! Schaden zu. NL Mische einen *Zweifel in den Nachziehstapel."
   },
   "hermit:Scavenge": {
     "NAME": "Erbeuten",
@@ -172,7 +172,7 @@
     "DESCRIPTION": "Wende !M! hermit:Prügel auf ALLE Gegner an. NL hermit:Prügel läuft in diesen Zug nicht ab."
   },
   "hermit:NoHoldsBarred": {
-    "NAME": "Ohne Regeln",
+    "NAME": "Ungezügelt",
     "DESCRIPTION": "Füge !D! Schaden zu und wende !M! hermit:Prügel auf ALLE Gegner an. NL Erhalte 1 weniger [E] im nächsten Zug."
   },
   "hermit:Cheat": {
@@ -185,7 +185,7 @@
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Ziehe !M! Karten und verbessere sie bis zum Ende des Kampfes."
   },
   "hermit:Brawl": {
-    "NAME": "Schlägerei",
+    "NAME": "Gewaltbereit",
     "DESCRIPTION": "Wende zu Beginn jedes Zuges !M! hermit:Prügel auf ALLE Gegner an."
   },
   "hermit:Combo": {
@@ -194,7 +194,7 @@
     "UPGRADE_DESCRIPTION": "Nimm in jedem Zug die ersten !M! Karten, die einen hermit:Volltreffer ausgelöst haben, wieder auf die Hand."
   },
   "hermit:BigShot": {
-    "NAME": "Rauchendes Rohr",
+    "NAME": "Rauchender Colt",
     "DESCRIPTION": "Immer wenn du ein hermit:Volltreffer erzielst, fügt dein nächster Angriff !M! mehr Schaden zu."
   },
   "hermit:OverwhelmingPower": {
@@ -237,7 +237,7 @@
     "EXTENDED_DESCRIPTION": [" NL (Wiederholt !M! ", "Mal.)","Mal.)"]
   },
   "hermit:TrackingShot": {
-    "NAME": "Folgeschuss",
+    "NAME": "Doppelschuss",
     "DESCRIPTION": "hermit:Konzentriere dich. NL Füge zweimal !D! Schaden zu."
   },
   "hermit:LoneWolf": {
@@ -314,7 +314,7 @@
     "EXTENDED_DESCRIPTION": [" NL (Du hast !M! Flüche.)"]
   },
   "hermit:HeroicBravado": {
-    "NAME": "Tollkühner Auftritt",
+    "NAME": "Revolverheld",
     "DESCRIPTION": "Flüchtig. NL Erhalte 1 hermit:Robust. NL Erhöhe die Kosten dieser Karte um !M!."
   },
   "hermit:FromBeyond": {
@@ -323,6 +323,6 @@
   },
   "hermit:Virtue": {
     "NAME": "Tugend",
-    "DESCRIPTION": "Reduziere deine Debuffs um !M!."
+    "DESCRIPTION": "Behalten. NL Reduziere deine Debuffs um !M!."
   }
 }
