@@ -195,7 +195,7 @@
   },
   "awakened:Nihil": {
     "NAME": "Nihil",
-    "DESCRIPTION": "Wende !M! awakened:Manabrand an. NL awakened:Chor: ALLE Gegner verlieren HP in Höhe ihres awakened:Manabrandes."
+    "DESCRIPTION": "Wende !M! awakened:Manabrand an. NL awakened:Chor: ALLE Gegner verlieren TP in Höhe ihres awakened:Manabrandes."
   },
   "awakened:MoonlitVision": {
     "NAME": "Mondfinsternis",

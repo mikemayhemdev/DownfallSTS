@@ -162,7 +162,7 @@
   "downfall:SilentDelayedWraithPower": {
     "NAME": "Fatale Bessesenheit",
     "DESCRIPTIONS": [
-      "Wenn die Stille das erste Mal 0 HP erreicht, aktiviert sie #yGeistform",
+      "Wenn die Stille das erste Mal 0 TP erreicht, aktiviert sie #yGeistform",
       " und heilt #b",
       " TP."
     ]
