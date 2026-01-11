@@ -335,14 +335,14 @@
       "Mit einem Gefühl der #pScham gehst du vorbei ohne ein Opfer anzubieten."
     ],
     "OPTIONS": [
-      "[Offer Souls] #rLose #r",
-      " #rSouls. #gHeal #g",
-      " #gHP.",
-      "[Locked] Requires ",
-      " Souls.",
-      "[Leave]",
-      "[Leave] #rLose #r",
-      " #rHP."
+      "[Seelen opfern] #rLose #r",
+      " #rGold. #gHeile #g",
+      " #gTP.",
+      "[Gesperrt] Benötigt ",
+      " Gold.",
+      "[Verlassen]",
+      "[Verlassen] #rVerliere #r",
+      " #rTP."
     ]
   },
   "downfall:Bandits": {

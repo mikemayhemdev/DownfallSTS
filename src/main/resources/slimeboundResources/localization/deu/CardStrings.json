@@ -13,8 +13,8 @@
   },
   "Slimebound:Chomp": {
     "NAME": "Hineinbeißen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Ein zufälliger *Tackle auf deiner Hand kostet in diesem Zug 0.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ein zufälliger *Tackle auf deiner Hand kostet in diesem Kampf 0."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ein zufälliger *Tackle auf deiner Hand kostet diesen Zug 0.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ein zufälliger *Tackle auf deiner Hand kostet diesen Kampf 0."
   },
   "Slimebound:ComboTackle": {
     "NAME": "Speer-Tackle",
@@ -94,8 +94,8 @@
   },
   "Slimebound:GoopTackle": {
     "NAME": "Combo-Tackle",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Erhalte eine zufällige *Tackle Karte. Sie kostet in diesem Zug 0.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Erhalte eine zufällige verbesserte *Tackle Karte. Sie kostet in diesem Zug 0."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Erhalte eine zufällige *Tackle Karte. Sie kostet diesen Zug 0.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Erhalte eine zufällige verbesserte *Tackle Karte. Sie kostet diesen Zug 0."
   },
   "Slimebound:Grow": {
     "NAME": "Wachsen",

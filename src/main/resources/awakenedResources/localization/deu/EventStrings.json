@@ -4,13 +4,13 @@
     "DESCRIPTIONS": [
       "Du bist endlich wieder zu Hause. NL #pIm #pNest, wo du zum #b~leibhaftigen~ #b~Avatar~ #b~eines~ #b~Gottes~ aufgestiegen bist. Im Augenblick deines Erscheinens versammelt sich eine Schar @singender@ und @brüllender@ Kultisten um sich! NL Sie wissen ganz genaz, dass deine Ankunft etwas von ihnen Einfordert - eine #r@Zehnte....@",
       "Die bevorstehenden Kämpfe werden schwierig - ein idealer Zeitpunkt das eigene Arsenal aufzubessern. NL NL #r@...Aber@ #r@nicht@ #r@mit@ #r@Dolchen.@ NL NL Du vollziehst ein mächtiges Ritual, das ein besonderes #yRelikt beschwört. Doch das Ritual verlangt dir einen hohen Blutzoll ab. NL NL Geschwächt verlässt du dein Zuhause, in der Hoffnung mit dem Relikt mehr Unheil zu bringen.",
-      "Die Kultisten reihen sich an und bringen ihre Opfergaben. NL NL Die meisten sind @wertloser@ @Müll,@ doch einer von ihnen bringt etwas sehr Interessantes: ein #bmächtiges #bElixier das dir eine Schlacht vereinfacht. NL NL Bald darauf verlässt du dein Zuhause und setzt deinen Weg abwärts fort.",
+      "Die Kultisten reihen sich an und bringen ihre Opfergaben. NL NL Die meisten sind @wertloser@ @Müll,@ doch einer von ihnen bringt etwas sehr Interessantes: ein #bmächtiges #bElixier das sich bei deinen Schlachten als hilfreich erweisen kann. NL NL Bald darauf verlässt du dein Zuhause und setzt deinen Weg abwärts fort.",
       "Die Kultisten sind frenetischer als je zuvor, da du ihnen die Statue zurückgebracht hast. NL Zur Feier des Tages wirst du mit Seelen und Geschenken überhäuft! NL Als du nach den Feierlichkeiten das Nest verlassen hast fällt dir ein, dass du deine Zeit drinnen nicht genutzt hast, um nach besserer Ausrüstung zu suchen... NL NL Doch es ist schon zu spät.",
       "#r@VOGELGOTT!!@ #r@HEIMGEKEHRT!!“@ NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL Gut, dass du die Statue vorhin nicht zerstört hast.",
       "",
       "",
       "Die Kultisten sind frenetischer als je zuvor, da du ihnen die Statue zurückgebracht hast. NL Zur Feier des Tages wirst du mit Seelen und Geschenken überhäuft! NL Als du nach den Feierlichkeiten das Nest verlassen hast fällt dir ein, dass du deine Zeit drinnen nicht genutzt hast, um nach besserer Ausrüstung zu suchen... NL NL Doch es ist schon zu spät.",
-      "Du bewegst dich schnurstracks zur #ySpendenkiste um das #yGold und ein #yRelikt zu entnehmen. NL NL Diese Münzen, die durch Blutvergießen erlangt wurden, enthalten die #bSeelen der Opfer. NL NL Das #yRelikt wird dir ebenfalls in deiner Reise noch von Nutzen sein. NL NL Als du die #rblutbefleckten Münzen einsammelst fällt dir auf, dass üblicherweise viel mehr gespendet wird... NL NL NL ~...~",
+      "Du bewegst dich schnurstracks zur #ySpendenkiste um die #yMünzen und ein #yRelikt zu entnehmen. NL NL Diese Münzen, die durch Blutvergießen erlangt wurden, enthalten die #bSeelen der Opfer. NL NL Das #yRelikt wird dir ebenfalls in deiner Reise noch von Nutzen sein. NL NL Als du die #rblutbefleckten Münzen einsammelst fällt dir auf, dass üblicherweise viel mehr gespendet wird... NL NL NL ~...~",
       "Wurdest du... #r@bestohlen?@ Das Nest, #pausgeraubt? NL NL Natürlich nicht, ~völlig~ ~ausgeschlossen.~ NL NL NL Überhaupt daran zu denken wäre töricht. NL NL NL ~...oder?~ NL NL NL Du versuchst den #y~schleichenden~ #y~Zweifel~ abzuschütteln und verlässt das Nest wieder."
     ],
     "OPTIONS": [
@@ -20,8 +20,8 @@
       "[Waffe beschwören] #gErhalte #gein #gbesonderes #gRelikt. #rVerliere #r",
       " #rMax #rTP.",
       "[Spendenbox] #gErhalte #g",
-      " #gGold #gund #gein #ggewöhnliches #gRelikt. #rWerde #rverflucht #r- #rZweifel.",
-      "[Leave]",
+      " #gGold, #gein #ggewöhnliches #gRelikt, #rund #rZweifel.",
+      "[Verlassen]",
       "[Continue]",
       "[Rühmen lassen] #gErhalte #gBelohnungen für die Rückgabe der #gZerbrochenen #gFlügelstatue.",
       "[Weiter] - #rWerde #rverflucht #r- #rZweifel."

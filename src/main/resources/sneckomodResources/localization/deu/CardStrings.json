@@ -195,7 +195,7 @@
   },
   "sneckomod:SerpentIdol": {
     "NAME": "Viperngötze",
-    "DESCRIPTION": "Nimm 1 von !M! zufälligen Karten aus sneckomod:Fremdklassen auf die Hand. Sie kostet in diesem Zug 0. NL Erschöpft."
+    "DESCRIPTION": "Nimm 1 von !M! zufälligen Karten aus sneckomod:Fremdklassen auf die Hand. Sie kostet diesen Zug 0. NL Erschöpft."
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotische Form",
@@ -205,8 +205,8 @@
   },
   "sneckomod:SlitherThrough": {
     "NAME": "Durchschlittern",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten in diesem Zug !M! weniger. NL sneckomod:Geschenk: Ungewöhnlich.",
-    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten in diesem Zug !M! weniger."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten diesen Zug !M! weniger. NL sneckomod:Geschenk: Ungewöhnlich.",
+    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten diesen Zug !M! weniger."
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
