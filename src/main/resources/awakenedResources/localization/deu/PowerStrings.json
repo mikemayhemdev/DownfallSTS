@@ -231,9 +231,9 @@
   "awakened:SchemePower": {
     "NAME": "Böser Plan",
     "DESCRIPTIONS": [
-      "Die nächsten #b",
-      " Karten mit den Kosten von höchstens #b1 werden in diesem Zug zweimal gespielt.",
-      "Die nächste Karte mit den Kosten von höchstens #b1 wird in diesem Zug zweimal gespielt."
+      "In diesem Zug spielst du die nächsten #b",
+      " Karten mit Kosten von höchstens #b1 doppelt.",
+      "In diesem Zug spielst du die nächste Karte mit Kosten von höchstens #b1 doppelt."
     ]
   },
   "awakened:FourthDimensionPower": {

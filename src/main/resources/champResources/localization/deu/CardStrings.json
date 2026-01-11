@@ -185,7 +185,7 @@
   },
   "champ:BladeFlurry": {
     "NAME": "Schlagserie",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste \"Schlag\" Karte die du in diesem Zug spielst wird zweimal gespielt."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste \"Schlag\" Karte in diesem Zug wird doppelt gespielt."
   },
   "champ:SwordThrow": {
     "NAME": "Schwertwurf",
@@ -193,7 +193,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Mordsschlag",
-    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Erhöhe den Schaden dieser Karte um !M! wenn sie sich in der Hand befindet während du eine Fertigkeit spielst."
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. Erhöhe den Schaden dieser Karte um !M! wenn sie sich auf der Hand befindet während du eine Fertigkeit spielst."
   },
   "champ:HeavySlash": {
     "NAME": "Meisterhafter Hieb",

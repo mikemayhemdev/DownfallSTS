@@ -25,7 +25,7 @@
 },
 "hermit:Bruise": {
         "NAME": "Prügel",
-        "DESCRIPTIONS": ["Nimmt in diesen Zug #b", " mehr Angriffschaden"]
+        "DESCRIPTIONS": ["Nimmt in diesem Zug #b", " mehr Angriffschaden"]
 },
 "hermit:HorrorPower": {
         "NAME": "Horror",
@@ -49,7 +49,7 @@
 },
 "hermit:EternalPower": {
         "NAME": "Ewige Form",
-        "DESCRIPTIONS": ["Die Kosten der ersten #b4 zu Beginn des Zuges gezogenen, spielbaren Karten werden für diesen Zug um #b", " reduziert."]
+        "DESCRIPTIONS": ["Die Kosten der ersten #b4 zu Beginn des Zuges gezogenen, spielbaren Karten werden diesen Zug um #b", " reduziert."]
 },
 "hermit:OverwhelmingPowerPower": {
         "NAME": "Ausgeuferte Macht",

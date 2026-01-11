@@ -75,7 +75,7 @@
   },
   "hermit:Gambit": {
     "NAME": "Gambit",
-    "DESCRIPTION": "Nimm !M! zufällige Angriffe aus dem Abwurfstapel auf die Hand. Sie kosten für diesen Zug 1 weniger. NL Erschöpft."
+    "DESCRIPTION": "Nimm !M! zufällige Angriffe aus dem Abwurfstapel auf die Hand. Sie kosten diesen Zug 1 weniger. NL Erschöpft."
   },
   "hermit:Roughhouse": {
     "NAME": "Misshandeln",
@@ -145,7 +145,7 @@
   },
   "hermit:Shortfuse": {
     "NAME": "Kurze Lunte",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Kostet in diesem Zug 1 [E] weniger pro gespielte *Schlag oder *Verteidigen Karten in diesem Zug."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Kostet diesen Zug 1 [E] weniger pro gespielte *Schlag oder *Verteidigen Karte in diesem Zug."
   },
   "hermit:Grudge": {
     "NAME": "Groll",
@@ -169,7 +169,7 @@
   },
   "hermit:Horror": {
     "NAME": "Horror",
-    "DESCRIPTION": "Wende !M! hermit:Prügel auf ALLE Gegner an. NL hermit:Prügel läuft in diesen Zug nicht ab."
+    "DESCRIPTION": "Wende !M! hermit:Prügel auf ALLE Gegner an. NL hermit:Prügel läuft in diesem Zug nicht ab."
   },
   "hermit:NoHoldsBarred": {
     "NAME": "Ungezügelt",
@@ -242,7 +242,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "Einsamer Wolf",
-    "DESCRIPTION": "Wähle eine Karte. NL Sie kostet 0 in diesem Zug. NL Wirf den Rest deiner Hand ab."
+    "DESCRIPTION": "Wähle eine Karte. NL Sie kostet diesen Zug 0. NL Wirf den Rest deiner Hand ab."
   },
   "hermit:HighNoon": {
     "NAME": "High Noon",
@@ -300,7 +300,7 @@
   },
   "hermit:ItchyTrigger": {
     "NAME": "Schussreiz",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL hermit:Volltreffer: Eine zufällige Karte in deiner Hand kostet in diesem Zug 0."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL hermit:Volltreffer: Eine zufällige Karte in deiner Hand kostet diesen Zug 0."
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "Auge des Sturms",
@@ -309,7 +309,7 @@
   },
   "hermit:FinalCanter": {
     "NAME": "Letzter Ritt",
-    "DESCRIPTION": "Behalten. NL Füge für jeden *Fluch in der Hand !D! Schaden zu. NL Erschöpft.",
+    "DESCRIPTION": "Behalten. NL Füge für jeden *Fluch auf der Hand !D! Schaden zu. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": " NL (Du hast !M! Fluch.)",
     "EXTENDED_DESCRIPTION": [" NL (Du hast !M! Flüche.)"]
   },

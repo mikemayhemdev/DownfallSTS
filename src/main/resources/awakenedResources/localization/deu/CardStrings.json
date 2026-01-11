@@ -250,7 +250,7 @@
   },
   "awakened:MirePit": {
     "NAME": "Schlammgrube",
-    "DESCRIPTION": "ALLE Gegner verlieren in diesem Zug !M! Stärke. Verliere im nächsten Zug [E] . NL Erschöpft."
+    "DESCRIPTION": "ALLE Gegner verlieren für diesen Zug !M! Stärke. Verliere im nächsten Zug [E] . NL Erschöpft."
   },
   "awakened:SingularityShield": {
     "NAME": "Singularitätsschild",
@@ -369,7 +369,7 @@
   },
   "awakened:ManaShield": {
     "NAME": "Manaschild",
-    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Aufrufen. NL Ein zufälliger Zauber in der Hand kostet 1 weniger."
+    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Aufrufen. NL Ein zufälliger Zauber auf der Hand kostet 1 weniger."
   },
   "awakened:Crusher": {
     "NAME": "Brecher",
@@ -389,8 +389,8 @@
   },
   "awakened:Scheme": {
     "NAME": "Böser Plan",
-    "DESCRIPTION": "Die nächste Karte mit den Kosten von höchstens 1 wird in diesem Zug zweimal gespielt.",
-    "UPGRADE_DESCRIPTION": "Die nächsten !M! Karten mit den Kosten von höchstens 1 werden in diesem Zug zweimal gespielt."
+    "DESCRIPTION": "In diesem Zug spielst du die nächste Karte mit Kosten von höchstens 1 doppelt.",
+    "UPGRADE_DESCRIPTION": "In diesem Zug spielst du den nächsten !M! Karten mit Kosten von höchstens 1 doppelt."
   },
   "awakened:TheEncyclopedia": {
     "NAME": "Enzyklopädie",

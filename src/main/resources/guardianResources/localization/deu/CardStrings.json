@@ -346,8 +346,8 @@
   },
   "Guardian:Gem_Purple": {
     "NAME": "Amethyst",
-    "DESCRIPTION": "guardianmod:Juwel. NL ALLE Gegner verlieren in diesem Zug 2 Stärke.",
-    "UPGRADE_DESCRIPTION": "ALLE Gegner verlieren in diesem Zug 2 Stärke."
+    "DESCRIPTION": "guardianmod:Juwel. NL ALLE Gegner verlieren für diesen Zug 2 Stärke.",
+    "UPGRADE_DESCRIPTION": "ALLE Gegner verlieren für diesen Zug 2 Stärke."
   },
   "Guardian:Gem_Crimson": {
     "NAME": "Granat",

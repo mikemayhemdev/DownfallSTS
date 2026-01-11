@@ -137,7 +137,7 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Geisterpeitsche",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Füge[] !D! [#e087a4]Schaden[] [#e087a4]zu.[] NL Erhöhe den Schaden um !M! für jede flüchtige Karte in der Hand.",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Füge[] !D! [#e087a4]Schaden[] [#e087a4]zu.[] NL Erhöhe den Schaden um !M! für jede andere flüchtige Karte auf der Hand.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]

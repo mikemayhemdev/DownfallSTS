@@ -127,10 +127,10 @@
     "NAME": "Flaschenanomalie",
     "FLAVOR": "Es wirbelt und wirbelt bis es schließlich kaputtgeht.",
     "DESCRIPTIONS": [
-      "Wähle beim Aufheben eine Karte. Beginne jeden Kampf ohne der gewählten Karte. Nimm die gewählte Karte zu Beginn von Zug #b3 auf die Hand. Sie kostet in diesem Zug #b0.",
+      "Wähle beim Aufheben eine Karte. Beginne jeden Kampf ohne der gewählten Karte. Nimm die gewählte Karte zu Beginn von Zug #b3 auf die Hand. Sie kostet diesen Zug #b0.",
       "Wähle eine Karte für ",
       "Beginne jeden Kampf ohne ",
-      " . Nimm diese Karte zu Beginn von Zug #b3 auf die Hand. Sie kostet in diesem Zug #b0.",
+      " . Nimm diese Karte zu Beginn von Zug #b3 auf die Hand. Sie kostet diesen Zug #b0.",
       "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
     ]
   }

@@ -194,7 +194,7 @@
     "DESCRIPTION": "Wende !M! Schwach an.",
     "EXTENDED_DESCRIPTION": [
       "altes",
-      "Altern"
+      "Auslaufen"
     ]
   },
   "bronze:DigitalCarnage": {
@@ -261,11 +261,11 @@
     ]
   },
   "bronze:Frontload": {
-    "NAME": "Verankern",
+    "NAME": "Konstante",
     "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Die Funktion erhält Behalten.",
     "EXTENDED_DESCRIPTION": [
-      "hartes",
-      "Verankern"
+      "fixes",
+      "Fixieren"
     ]
   },
   "bronze:FullRelease": {
@@ -345,7 +345,7 @@
     "DESCRIPTION": "Ziehe !M! Karten. NL Ziehe zu Beginn des Zuges 1 zusätzliche Karte und bronze:Setze 1 *Benommen *ein."
   },
   "bronze:Mutator": {
-    "NAME": "Mutierer",
+    "NAME": "Variable",
     "DESCRIPTION": "Erhalte !M! Stärke. NL *Transformiere einen Status auf der Hand in eine Kopie dieser Karte.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte !M! Stärke. NL *Transformiere einen Status auf der Hand in eine Kopie dieser Karte."
   },
