@@ -468,7 +468,7 @@
   "downfall:HeartsFavorPower": {
     "NAME": "Hilfe von Herzen",
     "DESCRIPTIONS": [
-      "Immer wenn Niaus #yUnverwundbar #b0 erreicht, reduziere ihre #yLebensgöttin Kraft um #b",
+      "Immer wenn Niaus #yUnverwundbar #b0 erreicht, reduziere ihren #yLebensgöttin Effekt um #b",
       " [REMOVE_SPACE]."
     ]
   },
