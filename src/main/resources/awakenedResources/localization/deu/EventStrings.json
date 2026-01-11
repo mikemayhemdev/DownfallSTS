@@ -6,7 +6,7 @@
       "Die bevorstehenden Kämpfe werden schwierig - ein idealer Zeitpunkt das eigene Arsenal aufzubessern. NL NL #r@...Aber@ #r@nicht@ #r@mit@ #r@Dolchen.@ NL NL Du vollziehst ein mächtiges Ritual, das ein besonderes #yRelikt beschwört. Doch das Ritual verlangt dir einen hohen Blutzoll ab. NL NL Geschwächt verlässt du dein Zuhause, in der Hoffnung mit dem Relikt mehr Unheil zu bringen.",
       "Die Kultisten reihen sich an und bringen ihre Opfergaben. NL NL Die meisten sind @wertloser@ @Müll,@ doch einer von ihnen bringt etwas sehr Interessantes: ein #bmächtiges #bElixier das sich bei deinen Schlachten als hilfreich erweisen kann. NL NL Bald darauf verlässt du dein Zuhause und setzt deinen Weg abwärts fort.",
       "Die Kultisten sind frenetischer als je zuvor, da du ihnen die Statue zurückgebracht hast. NL Zur Feier des Tages wirst du mit Seelen und Geschenken überhäuft! NL Als du nach den Feierlichkeiten das Nest verlassen hast fällt dir ein, dass du deine Zeit drinnen nicht genutzt hast, um nach besserer Ausrüstung zu suchen... NL NL Doch es ist schon zu spät.",
-      "#r@VOGELGOTT!!@ #r@HEIMGEKEHRT!!“@ NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL Gut, dass du die Statue vorhin nicht zerstört hast.",
+      "#r@KRÄHENGOTT!!@ #r@HEIMGEKEHRT!!“@ NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL Gut, dass du die Statue vorhin nicht zerstört hast.",
       "",
       "",
       "Die Kultisten sind frenetischer als je zuvor, da du ihnen die Statue zurückgebracht hast. NL Zur Feier des Tages wirst du mit Seelen und Geschenken überhäuft! NL Als du nach den Feierlichkeiten das Nest verlassen hast fällt dir ein, dass du deine Zeit drinnen nicht genutzt hast, um nach besserer Ausrüstung zu suchen... NL NL Doch es ist schon zu spät.",
@@ -34,7 +34,7 @@
       "Die Statue zu zerstören wäre zu gefährlich - deswegen nimmst du sie einfach mit. NL Das Gewicht erdrückt dich für eine Weile, doch du gewöhnst dich schnell daran.",
       "Du schägst mit all deiner Kraft auf die Statue. NL Schon bald @zerfällt@ sie in ihre Einzelteile. Einer der Splitter ist auffallend scharf, und trägt etwas Magie in sich. NL Du verlässt den Ort und spürst #pdunkle #pEnergien in dein Blut sickern.",
       "Du gehst daran vorbei und setzt deine Reise fort.",
-      "Krä...Krächz?! Geschenk für VOGEL GOTT?",
+      "Krä...Krächz?! Geschenk für KRÄHENGOTT?",
       "KÄ-KRÄCHZ!!",
       "Ein Geschäft? Das Angebot ist angemessen...",
       "Der Kult wird zufrieden sein."
@@ -74,11 +74,11 @@
     "DESCRIPTIONS": [
     "@VERGIB@ @MIR@ @MEISTER!@",
     "@MEINE@ @ZEIT@ @IST@ @GEKOMMEN!@",
-    "@KRÄÄÄÄCHZ!@ @KRÄCHZ@ @KRÄCHZ@ @KRÄCHZ@ @KRÄÄÄÄCHZ!!!!@",
+    "@KRÄÄÄÄCHZ!@ @KRÄCHZ@ @KRÄÄÄÄCHZ!!!!@",
 
-    "@MEIN@ @BLUT@ @FÜR@ @DEN@ @VOGELGOTT!@",
+    "@MEIN@ @BLUT@ @FÜR@ @DEN@ @KRÄHENGOTT!@",
     "@ICH@ @BIN@ @UNWÜRDIG!@",
-    "@ICH@ @STERBE@ @DAMIT@ @DER@ @SCHWARM@ @FLORIERT!!!@",
+    "@ICH@ @STERBE@ @-@ @DER@ @SCHWARM@ @FLORIERT!!!@",
 
     "~Soll~ ~dies~ ~meine~ ~Erlösung~ ~sein…~",
     "~...~",
