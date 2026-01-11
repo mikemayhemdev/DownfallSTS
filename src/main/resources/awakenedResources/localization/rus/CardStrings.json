@@ -1,0 +1,416 @@
+{
+  "awakened:Thunderbolt": {
+    "NAME": "Удар Молнии",
+    "DESCRIPTION": "Оставляется. NL Наносит !D! Урона. NL Сжигается."
+  },
+  "awakened:BurningStudy": {
+    "NAME": "Пылающее изучение",
+    "DESCRIPTION": "Оставляется. NL Даёт !M! Силу. NL Накладывает !awakened:m2! Слабости на ВСЕХ врагов. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Оставляется. NL Даёт !M! Силы. NL Накладывает !awakened:m2! Слабости на ВСЕХ врагов. NL Сжигается."
+  },
+  "awakened:Cryostasis": {
+    "NAME": "Криостазис",
+    "DESCRIPTION": "Оставляется. NL Даёт !B! Защиты. NL Сжигается."
+  },
+  "awakened:Darkleech": {
+    "NAME": "Тёмный паразит",
+    "DESCRIPTION": "Оставляется. NL Накладывает !M! Уязвимости. NL Накладывает !awakened:m2! awakened:Ожога Маной. NL Сжигается."
+  },
+  "awakened:DeathCoil": {
+    "NAME": "Спираль смерти",
+    "DESCRIPTION": "Накладывает !M! awakened:Ожога   Маной. NL В следующем ходы вы теряете [E]."
+  },
+  "awakened:ESPSpell": {
+    "NAME": "ЭСВ",
+    "DESCRIPTION": "Оставляется. NL Вы берёте !M! Карту. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Оставляется. NL Вы берёте !M! Карты. NL Сжигается."
+  },
+  "awakened:Strike": {
+    "NAME": "Удар",
+    "DESCRIPTION": "Наносит !D! урона."
+  },
+  "awakened:Defend": {
+    "NAME": "Оборона",
+    "DESCRIPTION": "Даёт !B! Защиты."
+  },
+  "awakened:Brainshock": {
+    "NAME": "Шок Мозга",
+    "DESCRIPTION": "Наносит !D! урона. NL Добовляет *Бездну в стопку сброса."
+  },
+  "awakened:Intensify": {
+    "NAME": "Усиление",
+    "DESCRIPTION": "awakened:Призыв. NL В этом ходу Заклинания стоят 0, вы не можете использовать awakened:Призыв снова.",
+    "UPGRADE_DESCRIPTION": "Оставляется. awakened:Призыв. NL В этом ходу Заклинания стоят 0, вы не можете использовать awakened:Призыв снова."
+  },
+  "awakened:DarkEcho": {
+    "NAME": "Тёмное эхо",
+    "DESCRIPTION": "В конце вашего хода Наносит !M! Урона ВСЕМ Врагам, С учётом Силы."
+  },
+  "awakened:AwakenedForm": {
+    "NAME": "Пробуждённая форма",
+    "DESCRIPTION": "Даёт !M! awakened:Любознательности. NL Даёт !awakened:m2! Ритуал.",
+    "UPGRADE_DESCRIPTION": "*Пробудиться немедленно. NL Даёт !M! awakened:Любознательности. NL Даёт !awakened:m2! Ритуала."
+  },
+  "awakened:Spellbinder": {
+    "NAME": "Заклинатель",
+    "DESCRIPTION": "В начале вашего хода делает awakened:Призыв."
+  },
+  "awakened:Ceremony": {
+    "NAME": "Церимония",
+    "DESCRIPTION": "Оставляется. NL Даёт !M! Силу.",
+    "UPGRADE_DESCRIPTION": "Оставляется. NL Даёт !M! Силы."
+  },
+  "awakened:TalonRake": {
+    "NAME": "Порвать Когтями",
+    "DESCRIPTION": "Наносит !D! Урона дважды. NL awakened:Призыв."
+  },
+  "awakened:Hymn": {
+    "NAME": "Гимн",
+    "DESCRIPTION": "Дайт !B! Защиты. NL Даёт a *Церимонию. NL В следующем ходы вы теряете [E]."
+  },
+  "awakened:Psalm": {
+    "NAME": "Псалом",
+    "DESCRIPTION": "Наносит !D! Урона и Накладывает !M! Слабости на ВСЕХ Врагов."
+  },
+  "awakened:DemonGlyph": {
+    "NAME": "Демонический Глиф",
+    "DESCRIPTION": "Даёт !M! Силу и Ловкость. NL Когда ты *Пробуждён, получи ещё !awakened:m2!."
+  },
+  "awakened:TakeFlight": {
+    "NAME": "Взмыть ввысь",
+    "DESCRIPTION": "Даёт !B! Защиты. NL awakened:Напев: Защита не снимается в начале следующего хода."
+  },
+  "awakened:FeatherVeil": {
+    "NAME": "Перьевая Вуаль",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Вы теряете !M! Силу."
+  },
+  "awakened:Peck": {
+    "NAME": "Клевок",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Наносит !D! Урона. NL Вы берёте !M! карту.",
+    "UPGRADE_DESCRIPTION": "Даёт !B! Защиты. NL Наносит !D! Урона. NL Вы берёте !M! карты."
+  },
+  "awakened:Extension": {
+    "NAME": "Вытягивание",
+    "DESCRIPTION": "Наносит !D! Урона. NL Каждый раз когда вы разыгрываете Талант, возращаеться из стопки сброса в руку."
+  },
+  "awakened:Pluck": {
+    "NAME": "Выщипываение",
+    "DESCRIPTION": "Наносит !D! Урона ВСЕМ Врагам. NL Добовляет в вашу руку *Укол_Пером."
+  },
+  "awakened:FlareShot": {
+    "NAME": "Пылающее Перо",
+    "DESCRIPTION": "Наносит !D! Урона. NL awakened:Напев: В следующем ходу возьмите !M! Дополнительную карту."
+  },
+  "awakened:ClarionCall": {
+    "NAME": "Звонкий Призыв",
+    "DESCRIPTION": "Наносит !D! Урона. NL В следующий раз когда вы будите awakened:Истощены, получите [E]."
+  },
+  "awakened:Recitation": {
+    "NAME": "Декоамация",
+    "DESCRIPTION": "Наносит !D! Урона. NL awakened:Напев: Наносит !D! Урона ещё раз."
+  },
+  "awakened:ChosenVerse": {
+    "NAME": "Избранный стих",
+    "DESCRIPTION": "Если следующие !M! карты, сыграными в этом ходу будут не-Атаками вы возьмёте карту и получите !B! Защиты."
+  },
+  "awakened:SoulStrike": {
+    "NAME": "Удар Души",
+    "DESCRIPTION": "Наносит !D! Урона !M! раза. NL Стоит на 1 [E] меньше за каждый Талант разыграный в этом ходу."
+  },
+  "awakened:Altar": {
+    "NAME": "Алтфрь",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Сжигает карту. NL awakened:Призыв."
+  },
+  "awakened:Envision": {
+    "NAME": "Предвиденье",
+    "DESCRIPTION": "Даёт !B! Защиты. NL awakened:Призыв и кладёте Заклинание на верх стопки добора."
+  },
+  "awakened:Thaumaturgy": {
+    "NAME": "Тауматургия",
+    "DESCRIPTION": "Даёт !awakened:m2! Ловкость. NL В начале следующих !M! ходов добавляет *Церемонию в руку.",
+    "UPGRADE_DESCRIPTION":"Даёт !awakened:m2! Ловкости. NL В начале следующих !M! ходов добавляет *Церемонию в руку."
+  },
+  "awakened:WaveOfMiasma": {
+    "NAME": "Волна Миазмов",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Накладывает !awakened:m2! awakened:Ожога Маны ВСЕМ Врагам. NL Сжигается."
+  },
+  "awakened:SludgeBomb": {
+    "NAME": "Грязная Бомба",
+    "DESCRIPTION": "Требует и стирает Сожжённую карту *Бездны. NL Нанести !D! урона дважды.",
+    "EXTENDED_DESCRIPTION": [
+      "У меня нет Сожжённой карты Бездны"
+    ]
+  },
+  "awakened:KnifesEdge": {
+    "NAME": "На острие ножа",
+    "DESCRIPTION": "Даёт !awakened:m2! Силы. NL Добовляет !M! *Бездны в стопку сброса."
+  },
+  "awakened:FourthDimension": {
+    "NAME": "4-ое измерение",
+    "DESCRIPTION": "Сжигает карту. NL Замещивает !M! копии в стопку добора. NL Сжигается.",
+    "EXTENDED_DESCRIPTION": [
+      "Сожжён для 4-го измерения."
+    ]
+  },
+  "awakened:RavenStrike": {
+    "NAME": "Удар Ворона",
+    "DESCRIPTION": "Наносит !D! Урона. NL awakened:Напев: Вы разыгрываете карту с верха стопки добора"
+  },
+  "awakened:Unleash": {
+    "NAME": "Высвобождение",
+    "DESCRIPTION": "Наносит !D! Урона. NL Наносит на !M! больше Урона за каждую карту в вашей руке."
+  },
+  "awakened:DesperatePrayer": {
+    "NAME": "Отчаянная молитва",
+    "DESCRIPTION": "Добовляет !M! карты *Церемония в руку. NL Сжигается."
+  },
+  "awakened:BirdsEye": {
+    "NAME": "Взор Птицы",
+    "DESCRIPTION": "Выберите Заклинание для awakened:Призыв.",
+    "UPGRADE_DESCRIPTION": "Обновляет Заклинания. Выберите Заклинание для awakened:Призыв."
+  },
+  "awakened:Initiation": {
+    "NAME": "Посвящение",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Добовляет *Церемонию."
+  },
+  "awakened:Ensorcelate": {
+    "NAME": "Очарование",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Следующий разыграный Талант стоит 0."
+  },
+  "awakened:Skyward": {
+    "NAME": "Ввысь",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Вы берёте !M! карту. NL Стоит на 1 [E] меньше за каждый Талант, сыгранный в этом бою."
+  },
+  "awakened:RisingChant": {
+    "NAME": "Восходящий хор",
+    "DESCRIPTION": "Эфирная. NL Первый в ходу awakened:Напев активируеться дважды.",
+    "UPGRADE_DESCRIPTION": "Первый в ходу awakened:Напев активируеться дважды."
+  },
+  "awakened:FeatherWhirl": {
+    "NAME": "Перьевой вихрь",
+    "DESCRIPTION": "Добовляет X Копий *Укол_Пером.",
+    "UPGRADE_DESCRIPTION": "Добовляет X+1 Копий *Укол_Пером."
+  },
+  "awakened:Murder": {
+    "NAME": "Убиение",
+    "DESCRIPTION": "Наносит !D! Урона случайному противнику !M! раз.",
+    "UPGRADE_DESCRIPTION": "Оставляется. NL Наносит !D! Урона случайному противнику !M! раз."
+  },
+  "awakened:Nihil": {
+    "NAME": "Ничто",
+    "DESCRIPTION": "Накладывает !M! awakened:Ожога Маной. NL awakened:Напев: ВСЕ враги теряют ОЗ равное awakened:Ожогу Маной."
+  },
+  "awakened:MoonlitVision": {
+    "NAME": "Лунное Видение",
+    "DESCRIPTION": "Когда вы разыгрываете первое за ход Заклинание NL Даёт [E]."
+  },
+  "awakened:Rebirth": {
+    "NAME": "Перерождение",
+    "DESCRIPTION": "В конце боя или Когда вы должны умереть, снимает все дебаффы, *Пробуждаетесь и восстановите !M! ОЗ."
+  },
+  "awakened:Archmagus": {
+    "NAME": "Архимаг",
+    "DESCRIPTION": "Первое в ходу Заклинание разыгрывается дважды."
+  },
+  "awakened:Planeswalk": {
+    "NAME": "Переход между мирами",
+    "DESCRIPTION": "Даёт [E] [E] . NL Добавить *Бездну в стопку добора.",
+    "UPGRADE_DESCRIPTION": "Даёт [E] [E] [E] . NL Добавить *Бездну в стопку добора."
+  },
+  "awakened:Spew": {
+    "NAME": "Изрыгание",
+    "DESCRIPTION": "Наносит !D! Урона. NL [E] потраченная на эту карту, считается awakened:Истощёной."
+  },
+  "awakened:DarknessFalls": {
+    "NAME": "Наступление Тьмы",
+    "DESCRIPTION": "Каждый раз когда вы получаете awakened:Истощение, даёт !M! Защиты и !awakened:m2! Силу.",
+    "UPGRADE_DESCRIPTION": "Начальная. NL Каждый раз когда вы получаете awakened:Истощение, даёт !M! Защиты и !awakened:m2! Силу."
+  },
+  "awakened:Eventide": {
+    "NAME": "Сумерки",
+    "DESCRIPTION": "Наносит !D! Урона случайному противнику дважды. NL Добавить *Бездна на верх стопки добора."
+  },
+  "awakened:EclipseEmbrace": {
+    "NAME": "Объятие затмения",
+    "DESCRIPTION": "Каждый раз когда вы Сжигаете *Бездну, даёт [E] и доберите карту в следующий ход."
+  },
+  "awakened:Clutch": {
+    "NAME": "Хватка",
+    "DESCRIPTION": "Наносит !D! Урона. NL Доберите карту со стоимостью 0."
+  },
+  "awakened:Gloomguard": {
+    "NAME": "Мрачный страж",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Стоит 0, если *Бездна находится в руке."
+  },
+  "awakened:Carrionmaker": {
+    "NAME": "Падальщик",
+    "DESCRIPTION": "Наносит !D! Урона случайному противнику. NL Повторите за каждое Заклинание, сыгранное в этот ход.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (",
+      " Заклинание сыграно.)",
+      " Заклинаний сыграно.)"
+    ]
+  },
+  "awakened:MirePit": {
+    "NAME": "Mire Pit",
+    "DESCRIPTION": "ВСЕ враги теряют !M! Силы в этот ход. NL В следующем ходы вы теряете [E]. NL Сжигается."
+  },
+  "awakened:SingularityShield": {
+    "NAME": "Щит Сингулярности",
+    "DESCRIPTION": "Даёт !B! Защиты. В следующем ходы даёт !B! Защиты и вы потеряете [E]."
+  },
+  "awakened:Dejection": {
+    "NAME": "Уныние",
+    "DESCRIPTION": "Наносит !D! Урона. NL Сжигает карту. Если это было Заклинание, даёт *Церемонию."
+  },
+  "awakened:BloodRite": {
+    "NAME": "Кровавый обряд",
+    "DESCRIPTION": "Наносит !D! Урона. NL Даёт *Церемонию."
+  },
+  "awakened:SongOfSorrow": {
+    "NAME": "Песнь Скорби",
+    "DESCRIPTION": "Каждый раз, когда вы создаёте *Бездну, ВСЕ враги теряют !M! ОЗ."
+  },
+  "awakened:MysticOrder": {
+    "NAME": "Мистический Орден",
+    "DESCRIPTION": "Вы берёте !M! карт. NL awakened:Призыв."
+  },
+  "awakened:ProfaneStrike": {
+    "NAME": "Осквернённый удар",
+    "DESCRIPTION": "Наносит !D! Урона. NL Вы кладёте карту из руки на верх стопки добора."
+  },
+  "awakened:Victuals": {
+    "NAME": "Провиант",
+    "DESCRIPTION": "awakened:Напев: Даёт [E] [E] . NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "awakened:Напев: Даёт [E] [E] [E] . NL Сжигается."
+  },
+  "awakened:Gather": {
+    "NAME": "Сбор",
+    "DESCRIPTION": "Даёт !B! Защиты. NL awakened:Напев: Положите карту из стопки сброса в руку."
+  },
+  "awakened:TheTower": {
+    "NAME": "Башня",
+    "DESCRIPTION": "Наносит !D! Урона ВСЕМ Врагам. NL Наносит на !M! больше урона за каждую карту, созданную в этом бою."
+  },
+  "awakened:ArcaneNesting": {
+    "NAME": "Арканическое гнездование",
+    "DESCRIPTION": "Неиграбельная. NL Каждый раз, когда вы разыгрываете Талант, пока эта карта в руке, даёт !B! Защиты.",
+    "EXTENDED_DESCRIPTION": [
+      "Мне нужно разыгрывать Талант, чтобы получать Защиту."
+    ]
+  },
+  "awakened:MiddenHeap": {
+    "NAME": "Куча отбросов",
+    "DESCRIPTION": "Даёт !B! Защиты. NL Вы берёте !M! карту Статуса или Проклятия из стопки добора или стопки сброса в руку.",
+    "UPGRADE_DESCRIPTION": "Даёт !B! Защиты. NL Положить !M! карты Статуса или Проклятия из стопки добора или стопки сброса в руку.",
+    "EXTENDED_DESCRIPTION": [
+      "Выберите карту, которую хотеите взять в руку.",
+      "Выберите карты, которые хотеите взять в руку."
+    ]
+  },
+  "awakened:Caw": {
+    "NAME": "Кар",
+    "DESCRIPTION": "Наносит !D! Урона. NL awakened:Напев: Увеличить урон всех карт *Кар на !M! в этом бою."
+  },
+  "awakened:Scour": {
+    "NAME": "Истязание",
+    "DESCRIPTION": "Наносит !D! Урона. NL Накладывает !M! awakened:Ожога Маны."
+  },
+  "awakened:Manastorm": {
+    "NAME": "Магическая Буря",
+    "DESCRIPTION": "Наносит !D! Урона ВСЕМ Врагам. NL awakened:Призыв дважды."
+  },
+  "awakened:StormRuler": {
+    "NAME": "Владыка бури ",
+    "DESCRIPTION": "awakened:Призыв. NL *Удар_Молнии Наносит на !M! больше Урона."
+  },
+  "awakened:AphoticFount": {
+    "NAME": "Афотический источник",
+    "DESCRIPTION": "awakened:Призыв. NL Каждый раз, когда вы разыгрываете *Криостазис, даёт !M! expansioncontent:*Панцырь.",
+    "UPGRADE_DESCRIPTION": "awakened:Призыв. NL Каждый раз, когда вы разыгрываете *Криостазис, даёт !M! expansioncontent:*Панцыря."
+  },
+  "awakened:Bloodthirst": {
+    "NAME": "Кровожадность",
+    "DESCRIPTION": "Наносит !D! Урона. Даёт awakened:Зелье_Таланта и Сжигается если Казнит врага."
+  },
+  "awakened:Procession": {
+    "NAME": "Шествие",
+    "DESCRIPTION": "Разыграть карту из стопки добора и замешайте *Бездны равные её стоймости. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Разыграть карту из стопки добора и замешайте *Бездны равные её стоймости."
+  },
+  "awakened:SplitWide": {
+    "NAME": "Широкий размах",
+    "DESCRIPTION": "Наносит !D! Урона. NL Каждый раз, когда вы атакуете этого врага, получите !M! временную Силу. NL Сжигается.",
+    "UPGRADE_DESCRIPTION": "Наносит !D! Урона. NL Каждый раз, когда вы атакуете этого врага, получите !M! временной Силы. NL Сжигается."
+  },
+  "awakened:Spellshield": {
+    "NAME": "Щит чар",
+    "DESCRIPTION": "Каждый раз когда Оставляется карта, даёт !M! Защиты."
+  },
+  "awakened:Siphon": {
+    "NAME": "Сифон",
+    "DESCRIPTION": "Наносит !D! Урона. NL awakened:Напев: gremlin:Ворует !M! Силы."
+  },
+  "awakened:PlumeJab": {
+    "NAME": "Укол Пером",
+    "DESCRIPTION": "Оставляется. NL Наносит !D! Урона случайным противникам дважды. NL Сжигается."
+  },
+  "awakened:Primacy": {
+    "NAME": "Первенство",
+    "DESCRIPTION": "Вы берёте карту, когда в первый раз за ход получаете Силу.",
+    "UPGRADE_DESCRIPTION": "Вы берёте карту, когда первые !M! раз за ход получаете Силу."
+  },
+  "awakened:Daggerstorm": {
+    "NAME": "Буря Кинжалов",
+    "DESCRIPTION": "Наносит !M! Урона случайным Противникам, Каждый раз, когда вы создаёте карту."
+  },
+  "awakened:PackRat": {
+    "NAME": "Крыса-собиратель",
+    "DESCRIPTION": "Наносит !D! Урона и даёт !B! Защиты дважды. NL Вы получаете случайно зелье. NL Сжигается."
+  },
+  "awakened:Mantis": {
+    "NAME": "Богомол",
+    "DESCRIPTION": "Даёт !M! Силы. NL Добовляет в вашу руку *Укол_Пером."
+  },
+  "awakened:ManaShield": {
+    "NAME": "Щит маны",
+    "DESCRIPTION": "Даёт !B! Защиты. NL awakened:Призыв. NL Уменьшает стоимость случайного Заклинания в руке на 1."
+  },
+  "awakened:Crusher": {
+    "NAME": "Сокрушитель",
+    "DESCRIPTION": "Оставляется. NL Наносит !D! Урона. NL Каждый раз, когда вы создаёте карту, уменьшает её стоимость на 1 до её розыгрыша."
+  },
+  "awakened:Minniegun": {
+    "NAME": "Миниган",
+    "DESCRIPTION": "Наносит !D! Урона !M! раз. NL Добавляет *Бездну в стопку добора."
+  },
+  "awakened:SignInBlood": {
+    "NAME": "Подписать кровью",
+    "DESCRIPTION": "Вы получаете !awakened:m2! Урона. NL Вы берёте !M! карт. NL Даёт !awakened:m2! Силы. NL Сжигается."
+  },
+  "awakened:SpreadingSpores": {
+    "NAME": "Распространяющиеся споры",
+    "DESCRIPTION": "Эфирная. NL Даёт !M! Шипов.  NL Замешайте копию этой карты в стопку добора."
+  },
+  "awakened:Scheme": {
+    "NAME": "План",
+    "DESCRIPTION": "Следующая карта стоймостью 1 или меньше разыгрываться дважды.",
+    "UPGRADE_DESCRIPTION": "Следующие !M! карт, стоймостью 1 или меньше разыгрываться дважды."
+  },
+  "awakened:TheEncyclopedia": {
+    "NAME": "Энциклопедия",
+    "DESCRIPTION": "Выберите 2 из !M! случайных карт и добавьте их в руку. Они стоят на 2 меньше. NL Сжигается.",
+    "EXTENDED_DESCRIPTION": [
+      "Выберите 2 карты для добавления в руку."
+    ]
+  },
+  "awakened:RealityRift": {
+    "NAME": "Разлом реальности",
+    "DESCRIPTION": "Выберите !awakened:m2! из !M! мощных карт из *ДРУГОГО *ИЗМЕРЕНИЯ, чтобы получить. NL Добавте 2 *Бездны в стопку сброса. Сжигается."
+  },
+  "awakened:Inscribe": {
+    "NAME": "Вписать",
+    "DESCRIPTION": "Выберите Заклинание. Добавите !M! копий в Книгу заклинаний до конца боя.",
+    "UPGRADE_DESCRIPTION": "awakened:Призыв. NL Выберите Заклинание. Добавите !M! копий в Книгу заклинаний до конца боя."
+  }
+}
