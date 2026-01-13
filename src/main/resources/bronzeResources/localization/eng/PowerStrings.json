@@ -19,26 +19,26 @@
     "NAME": "It's A Feature",
     "DESCRIPTIONS": [
       "Whenever you draw or #yExhaust a #yStatus card, gain #b",
-      " #yBlock [REMOVE_SPACE]."
+      " #yBlock."
     ]
   },
   "bronze:InfiniteBeams": {
     "NAME": "Infinite Beams",
     "DESCRIPTIONS": [
-      "At the start of your turn, Gain #b1 #yMinor #yBeam [REMOVE_SPACE].",
-      "At the start of your turn, Gain #b1 #yMinor #yBeam+ [REMOVE_SPACE].",
+      "At the start of your turn, Gain #b1 #yMinor #yBeam.",
+      "At the start of your turn, Gain #b1 #yMinor #yBeam+.",
       "At the start of your turn, gain #b",
-      " #yMinor #yBeams [REMOVE_SPACE].",
+      " #yMinor #yBeams.",
       "At the start of your turn, gain #b",
-      " #yMinor #yBeam+s [REMOVE_SPACE]."
+      " #yMinor #yBeam+s."
     ]
   },
   "bronze:Optimize": {
     "NAME": "Optimized",
     "DESCRIPTIONS": [
-      "#yUpgrade the next #yUpgradable card you #yEncode [REMOVE_SPACE].",
+      "#yUpgrade the next #yUpgradable card you #yEncode.",
       "#yUpgrade the next #b",
-      " #yUpgradable cards you #yEncode [REMOVE_SPACE]."
+      " #yUpgradable cards you #yEncode."
     ]
   },
   "bronze:MaxOutput": {
@@ -69,7 +69,7 @@
   "bronze:LibraryMod": {
     "NAME": "External Library",
     "DESCRIPTIONS": [
-      "At the start of your turn, gain a random card with #yEncode and give it #yEthereal [REMOVE_SPACE]."
+      "At the start of your turn, gain a random card with #yEncode and give it #yEthereal."
     ]
   },
   "bronze:BronzeHeatsink": {
@@ -99,7 +99,7 @@
   "bronze:Verify": {
     "NAME": "Sentient Form",
     "DESCRIPTIONS": [
-      "Whenever you draw a Function, increase all numbers on it by #b1 [REMOVE_SPACE].",
+      "Whenever you draw a Function, increase all numbers on it by #b1.",
       "Whenever you draw a Function, increase all numbers on it by #b",
       " except for cost."
     ]
@@ -107,9 +107,9 @@
   "bronze:FreeFunction": {
     "NAME": "Free Function",
     "DESCRIPTIONS": [
-      "The next Function you create costs #b0 [REMOVE_SPACE].",
+      "The next Function you create costs #b0.",
       "The next #b",
-      " Functions you create cost #b0 [REMOVE_SPACE]."
+      " Functions you create cost #b0."
     ]
   },
   "bronze:CleanCode": {
@@ -137,9 +137,9 @@
   "bronze:RemoveNextError": {
     "NAME": "Remove Errors",
     "DESCRIPTIONS": [
-      "Remove the next #yCompile #yError #yEncoded [REMOVE_SPACE].",
+      "Remove the next #yCompile #yError #yEncoded.",
       "Remove the next #b",
-      " #yCompile #yErrors #yEncoded [REMOVE_SPACE]."
+      " #yCompile #yErrors #yEncoded."
     ]
   }
 }
