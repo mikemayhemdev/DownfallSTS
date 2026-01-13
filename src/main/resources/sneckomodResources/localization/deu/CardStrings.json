@@ -65,8 +65,8 @@
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Glitzergambit",
-    "DESCRIPTION": "Unspielbar. NL Kann nicht aus dem Deck entfernt werden. NL sneckomod:Geschenk: Verbesserte seltene und !M! Gold.",
-    "UPGRADE_DESCRIPTION": "Unspielbar. Flüchtig. NL Kann nicht aus dem Deck entfernt werden. NL sneckomod:Geschenk: Verbesserte seltene und !M! Gold.",
+    "DESCRIPTION": "Unspielbar. NL Kann nicht aus dem Deck entfernt werden. NL sneckomod:Geschenk: Verbesserte Seltene und !M! Gold.",
+    "UPGRADE_DESCRIPTION": "Unspielbar. Flüchtig. NL Kann nicht aus dem Deck entfernt werden. NL sneckomod:Geschenk: Verbesserte Seltene und !M! Gold.",
     "DESCRIPTION_BATTLE": "Unspielbar.",
     "UPGRADE_DESCRIPTION_BATTLE": "Unspielbar. NL Flüchtig."
   },
@@ -109,8 +109,8 @@
   },
   "sneckomod:SnakeEyes": {
     "NAME": "Schlangenaugen",
-    "DESCRIPTION": "Deine nächste Karte einer sneckomod:Fremdklasse in diesem Zug wird zweimal ausgespielt. NL sneckomod:Geschenk: seltene Fertigkeit.",
-    "UPGRADE_DESCRIPTION": "Deine nächsten 2 Karten aus sneckomod:Fremdklassen in diesem Zug werden zweimal ausgespielt. NL sneckomod:Geschenk: seltene Fertigkeit.",
+    "DESCRIPTION": "Deine nächste Karte einer sneckomod:Fremdklasse in diesem Zug wird zweimal ausgespielt. NL sneckomod:Geschenk: Seltene Fertigkeit.",
+    "UPGRADE_DESCRIPTION": "Deine nächsten 2 Karten aus sneckomod:Fremdklassen in diesem Zug werden zweimal ausgespielt. NL sneckomod:Geschenk: Seltene Fertigkeit.",
     "DESCRIPTION_BATTLE": "Deine nächste Karte einer sneckomod:Fremdklasse in diesem Zug wird zweimal ausgespielt.",
     "UPGRADE_DESCRIPTION_BATTLE": "Deine nächsten 2 Karten aus sneckomod:Fremdklassen in diesem Zug werden zweimal ausgespielt."
   },
