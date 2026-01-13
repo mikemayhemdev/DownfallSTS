@@ -298,7 +298,7 @@
   "downfall:MerchantStrengthPower": {
     "NAME": "Soul Stealer",
     "DESCRIPTIONS": [
-      "Merchant has double the #yStrength it earned from Soul Steal this run, and gains an equal amount of #yDexterity [REMOVE_SPACE]."
+      "Merchant has double the #yStrength it earned from Soul Steal this run, and gains an equal amount of #yDexterity."
     ]
   },
   "downfall:NeowMantra": {
