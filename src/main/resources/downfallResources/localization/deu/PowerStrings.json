@@ -393,9 +393,9 @@
   "downfall:TangerinePower": {
     "NAME": "Hilfssherrif",
     "DESCRIPTIONS": [
-      "When Tangerine stirbt, verliert der Einsiedler seine #yKonzentration in diesem Zug und er erhält #b",
+      "When die Wachlaus stirbt, verliert der Einsiedler seine #yKonzentration in diesem Zug und er erhält permanent #b",
       " #yStärke.",
-      "When Tangerine stirbt, verliert der Einsiedler seine #yKonzentration in diesem Zug."
+      "When die Wachlaus stirbt, verliert der Einsiedler seine #yKonzentration in diesem Zug."
     ]
   },
   "downfall:HermitWheelOfFortune": {
