@@ -77,10 +77,10 @@
     ]
   },
   "awakened:ZenerDeck": {
-    "NAME": "Zener Deck",
+    "NAME": "Zener Karten",
     "FLAVOR": "„Eins, zwei, drei - ihr alle seid dabei.“",
     "DESCRIPTIONS": [
-      "Lege zu Beginn deines Kampfes #yESP in dein Zauberbuch und #yawakened:rufe es #yauf."
+      "Lege zu Beginn jedes Kampfes den #ySechsten #ySinn in dein Zauberbuch und #yawakened:rufe ihn #yauf."
     ]
   },
   "awakened:CawingCask": {
