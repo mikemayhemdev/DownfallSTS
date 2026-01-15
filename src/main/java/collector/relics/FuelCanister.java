@@ -19,7 +19,7 @@ public class FuelCanister extends CustomRelic {
     private static final String OUTLINE_IMG_PATH = FuelCanister.class.getSimpleName() + ".png";
 
     public FuelCanister() {
-        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.RARE, LandingSound.MAGICAL);
+        super(ID, TextureLoader.getTexture(CollectorMod.makeRelicPath(IMG_PATH)), TextureLoader.getTexture(CollectorMod.makeRelicOutlinePath(OUTLINE_IMG_PATH)), RelicTier.SHOP, LandingSound.MAGICAL);
     }
 
     @Override
