@@ -186,7 +186,7 @@ public class WanderingSpecter extends AbstractImageEvent {
                     case 1:
                         curse = CardLibrary.getCurse().makeStatEquivalentCopy();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
-                        AbstractDungeon.player.increaseMaxHp(5, true);
+                        AbstractDungeon.player.increaseMaxHp(12, true);
                         this.imageEventText.updateDialogOption(1, OPTIONS[8], true);
 
                         this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
@@ -200,8 +200,8 @@ public class WanderingSpecter extends AbstractImageEvent {
                     case 2:
                         curse = CardLibrary.getCurse().makeStatEquivalentCopy();
                         AbstractDungeon.effectList.add(new ShowCardAndObtainEffect(curse, (float) (Settings.WIDTH * .5F), (float) (Settings.HEIGHT / 2)));// 66
-                        AbstractDungeon.effectList.add(new RainingGoldEffect(100));
-                        AbstractDungeon.player.gainGold(100);
+                        AbstractDungeon.effectList.add(new RainingGoldEffect(180));
+                        AbstractDungeon.player.gainGold(180);
                         this.imageEventText.updateDialogOption(2, OPTIONS[8], true);
                         this.imageEventText.updateBodyText(DESCRIPTIONS[2]);
 
