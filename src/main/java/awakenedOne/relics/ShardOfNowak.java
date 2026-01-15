@@ -46,19 +46,20 @@ public class ShardOfNowak extends CustomRelic implements OnLoseTempHpRelic {
 
     @Override
     public void onLoseHp(int damageAmount) {
-        if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
-            if (!this.grayscale) {
-                this.grayscale = true;
-                AbstractPlayer p = AbstractDungeon.player;
-                this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-                this.addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, -FOCUS), -FOCUS));
+        if (damageAmount > 0) {
+            if (AbstractDungeon.getCurrRoom().phase == AbstractRoom.RoomPhase.COMBAT) {
+                if (!this.grayscale) {
+                    this.grayscale = true;
+                    AbstractPlayer p = AbstractDungeon.player;
+                    this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+                    this.addToTop(new ApplyPowerAction(p, p, new StrengthPower(p, -FOCUS), -FOCUS));
+                }
             }
+            this.stopPulse();
+            isActive = false;
+            AbstractDungeon.player.hand.applyPowers();
         }
-        this.stopPulse();
-        isActive = false;
-        AbstractDungeon.player.hand.applyPowers();
     }
-
 
 //    public void onMonsterDeath(AbstractMonster m) {
 //        if (m.currentHealth == 0 && !AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
