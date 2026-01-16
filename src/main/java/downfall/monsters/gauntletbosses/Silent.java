@@ -10,10 +10,7 @@ import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.blue.Defend_Blue;
 import com.megacrit.cardcrawl.cards.curses.Doubt;
-import com.megacrit.cardcrawl.cards.green.Defend_Green;
-import com.megacrit.cardcrawl.cards.green.LegSweep;
-import com.megacrit.cardcrawl.cards.green.Strike_Green;
-import com.megacrit.cardcrawl.cards.green.WraithForm;
+import com.megacrit.cardcrawl.cards.green.*;
 import com.megacrit.cardcrawl.cards.red.DemonForm;
 import com.megacrit.cardcrawl.cards.red.Strike_Red;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -95,14 +92,14 @@ public class Silent extends GauntletBoss {
             case 5:
 
                 if (AbstractDungeon.ascensionLevel >= 18) {
-                    addToBot(new ApplyPowerAction(this, this, new IntangiblePower(this, 3), 3));
+                    addToBot(new ApplyPowerAction(this, this, new ThornsPower(this, 3)));
                 }
 
                 if (AbstractDungeon.ascensionLevel < 18) {
-                    addToBot(new ApplyPowerAction(this, this, new IntangiblePower(this, 2), 2));
+                    addToBot(new ApplyPowerAction(this, this, new ThornsPower(this, 5)));
                 }
 
-                addToBot(new ApplyPowerAction(this, this, new EnemyWraithFormPower(this, -1), -1));
+                //addToBot(new ApplyPowerAction(this, this, new EnemyWraithFormPower(this, -1), -1));
                 break;
         }
 
@@ -141,11 +138,11 @@ public class Silent extends GauntletBoss {
             isAttacking = false;
 
             if (AbstractDungeon.ascensionLevel < 18) {
-                setMove(moveName(WraithForm.ID), (byte) 5, Intent.BUFF);
+                setMove(moveName(Caltrops.ID), (byte) 5, Intent.BUFF);
             }
 
             if (AbstractDungeon.ascensionLevel >= 18) {
-                setMove(moveName(WraithForm.ID) + "+", (byte) 5, Intent.BUFF);
+                setMove(moveName(Caltrops.ID) + "+", (byte) 5, Intent.BUFF);
             }
 
 

@@ -68,14 +68,15 @@ public class EtherStep extends AbstractHexaCard implements HexaPurpleTextInterfa
                 revengePower.onSpecificTriggerBranch();
             }
         }
-
-        for (AbstractRelic r : AbstractDungeon.player.relics) {
-            if (r instanceof RageAmulet) {
-                ((RageAmulet) r).onSpecificTrigger();
+        if (AbstractDungeon.player.hasPower(VigorPower.POWER_ID)) {
+            for (AbstractRelic r : AbstractDungeon.player.relics) {
+                if (r instanceof RageAmulet) {
+                    ((RageAmulet) r).onSpecificTrigger();
+                }
             }
-        }
 
-        atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VigorPower.POWER_ID));
+            atb(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, VigorPower.POWER_ID));
+        }
     }
 
     public void upgrade() {
