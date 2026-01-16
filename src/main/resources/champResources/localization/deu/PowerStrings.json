@@ -201,7 +201,7 @@
   "champ:ParryPower": {
     "NAME": "Parierend",
     "DESCRIPTIONS": [
-      "Wenn #yKonter in diesem Zug verbraucht wird, erhalte einen zusätzlichen #yGegenschlag."
+      "Wenn #yKonter in diesem Zug verbraucht wird, erhalte einen zusätzlichen #yKonterschlag."
     ]
   },
   "champ:BoomerangPower": {
@@ -220,9 +220,9 @@
   "champ:DualPlaySrikePower": {
     "NAME": "Serienschlag",
     "DESCRIPTIONS": [
-      "Deine nächste #y\"Schlag\" Karte wird in diesem Zug zweimal gespielt.",
-      "Dine nächsten ",
-      " #y\"Schlag\" Karten werden in diesem Zug zweimal gespielt."
+      "In diesem Zug spielst du deine nächste #y\"Schlag\" Karte doppelt.",
+      "In diesem Zug spielst du deine nächsten ",
+      " #y\"Schlag\" Karten doppelt."
     ]
   },
   "champ:LastStandPower": {

@@ -20,7 +20,7 @@
     "DESCRIPTION": "Wende !M! awakened:Manabrand an. NL Verliere im nächsten Zug [E] ."
   },
   "awakened:ESPSpell": {
-    "NAME": "ESP",
+    "NAME": "Sechster Sinn",
     "DESCRIPTION": "Behalten. NL Ziehe !M! Karte. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Ziehe !M! Karten. NL Erschöpft."
   },
@@ -59,7 +59,7 @@
     "DESCRIPTION": "Behalten. NL Erhalte !M! Stärke."
   },
   "awakened:TalonRake": {
-    "NAME": "Krallenkratzen",
+    "NAME": "Krallenkratzer",
     "DESCRIPTION": "Füge zweimal !D! Schaden zu. NL awakened:Aufrufen."
   },
   "awakened:Hymn": {
@@ -162,7 +162,7 @@
     "DESCRIPTION": "Erhalte !M! *Zeremonie Karten. NL Erschöpft."
   },
   "awakened:BirdsEye": {
-    "NAME": "Adlerauge",
+    "NAME": "Foglauge",
     "DESCRIPTION": "awakened:Rufe einen *Zauberspruch deiner Wahl *auf.",
     "UPGRADE_DESCRIPTION": "Fülle dein Zauberbuch neu auf und awakened:Rufe danach einen *Zauberspruch deiner Wahl *auf."
   },
@@ -195,7 +195,7 @@
   },
   "awakened:Nihil": {
     "NAME": "Nihil",
-    "DESCRIPTION": "Wende !M! awakened:Manabrand an. NL awakened:Chor: ALL Gegner verlieren HP in Höhe ihres awakened:Manabrandes."
+    "DESCRIPTION": "Wende !M! awakened:Manabrand an. NL awakened:Chor: ALLE Gegner verlieren TP in Höhe ihres awakened:Manabrandes."
   },
   "awakened:MoonlitVision": {
     "NAME": "Mondfinsternis",
@@ -225,7 +225,7 @@
   },
   "awakened:Eventide": {
     "NAME": "Abendzeit",
-    "DESCRIPTION": "Füge einem zufälligen Gegner !D! Schaden zu. NL Lege eine *Leere auf den Nachziehstapel."
+    "DESCRIPTION": "Füge zweimal einem zufälligen Gegner !D! Schaden zu. NL Lege eine *Leere auf den Nachziehstapel."
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Sonnenfinsternis",
@@ -250,10 +250,10 @@
   },
   "awakened:MirePit": {
     "NAME": "Schlammgrube",
-    "DESCRIPTION": "ALL Gegner verlieren in diesem Zug !M! Stärke. Verliere im nächsten Zug [E] . NL Erschöpft."
+    "DESCRIPTION": "ALLE Gegner verlieren für diesen Zug !M! Stärke. Verliere im nächsten Zug [E] . NL Erschöpft."
   },
   "awakened:SingularityShield": {
-    "NAME": "Singularity Shield",
+    "NAME": "Singularitätsschild",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte im nächsten Zug !B! Block und verliere [E] ."
   },
   "awakened:Dejection": {
@@ -273,7 +273,7 @@
     "DESCRIPTION": "Ziehe !M! Karten. NL awakened:Aufrufen."
   },
   "awakened:ProfaneStrike": {
-    "NAME": "Profaner Schlag",
+    "NAME": "Dunkler Schlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Lege eine Handkarte auf den Nachziehstapel."
   },
   "awakened:Victuals": {
@@ -306,7 +306,7 @@
     ]
   },
   "awakened:Caw": {
-    "NAME": "Krächz",
+    "NAME": "Krächz!",
     "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: Alle *Krächz Karten fügen diesen Kampf !M! Schaden mehr zu."
   },
   "awakened:Scour": {
@@ -369,7 +369,7 @@
   },
   "awakened:ManaShield": {
     "NAME": "Manaschild",
-    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Aufrufen. NL Ein zufälliger Zauber in der Hand kostet 1 weniger."
+    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Aufrufen. NL Ein zufälliger Zauber auf der Hand kostet 1 weniger."
   },
   "awakened:Crusher": {
     "NAME": "Brecher",
@@ -389,8 +389,8 @@
   },
   "awakened:Scheme": {
     "NAME": "Böser Plan",
-    "DESCRIPTION": "Die nächste Karte mit den Kosten von höchstens 1 wird in diesem Zug zweimal gespielt.",
-    "UPGRADE_DESCRIPTION": "Die nächsten !M! Karten mit den Kosten von höchstens 1 werden in diesem Zug zweimal gespielt."
+    "DESCRIPTION": "In diesem Zug spielst du die nächste Karte mit Kosten von höchstens 1 doppelt.",
+    "UPGRADE_DESCRIPTION": "In diesem Zug spielst du den nächsten !M! Karten mit Kosten von höchstens 1 doppelt."
   },
   "awakened:TheEncyclopedia": {
     "NAME": "Enzyklopädie",

@@ -55,7 +55,7 @@
     "NAME": "Pilotenkodex",
     "FLAVOR": "Skizzen und Diagramme der ersten handbetriebenen Prototypen des Spire - angefertigt vom Meisterpiloten David.",
     "DESCRIPTIONS": [
-      "Wähle am Ende deiner ersten #b3 Züge #b1 von #b3 zufälligen Karten aus um sie in #yguardianmod:Stasis zu legen, falls du einen freien #yguardianmod:Stasis-Slot hast."
+      "Wähle am Ende deiner ersten #b3 Züge #b1 von #b3 zufälligen Karten aus um sie in #yguardianmod:Stasis zu legen, falls du einen freien Stasis-Slot hast."
     ]
   },
   "Guardian:StasisSlotIncreaseRelic": {
@@ -112,7 +112,7 @@
     "NAME": "Singende Spitzhacke",
     "FLAVOR": "Kaum zu glauben, dass jemand mit der Spitzhacke nach Juwelen suchen muss, wo doch im Spire so viele herumliegen.",
     "DESCRIPTIONS": [
-      "Jeden Mal wenn du einen Elitekampf gewinnst erhältst du einen zusätzliches zufälliges #yguardianmod:Juwel zur Belohnung."
+      "Jedes Mal wenn du einen Elitekampf gewinnst, erhältst du zusätzlich ein zufälliges #yguardianmod:Juwel zur Belohnung."
     ]
   },
   "Guardian:GemstoneGun": {
@@ -127,10 +127,10 @@
     "NAME": "Flaschenanomalie",
     "FLAVOR": "Es wirbelt und wirbelt bis es schließlich kaputtgeht.",
     "DESCRIPTIONS": [
-      "Wähle beim Aufheben eine Karte. Beginne jeden Kampf ohne der gewählten Karte. Nimm die gewählte Karte zu Beginn von Zug #b3 auf die Hand. Sie kostet in diesem Zug #b0.",
+      "Wähle beim Aufheben eine Karte. Beginne jeden Kampf ohne der gewählten Karte. Nimm die gewählte Karte zu Beginn von Zug #b3 auf die Hand. Sie kostet diesen Zug #b0.",
       "Wähle eine Karte für ",
       "Beginne jeden Kampf ohne ",
-      " . Nimm diese Karte zu Beginn von Zug #b3 auf die Hand. Sie kostet in diesem Zug #b0.",
+      " . Nimm diese Karte zu Beginn von Zug #b3 auf die Hand. Sie kostet diesen Zug #b0.",
       "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
     ]
   }

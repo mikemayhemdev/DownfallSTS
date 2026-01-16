@@ -1,7 +1,7 @@
 {
   "HermitMod:HermitTutorials": {
     "TEXT": [
-      "Der Einsiedler besitzt Karten die einen #yVolltreffer erzielen können. NL NL Ein #Volltreffer wird erzielt, wenn diese Karten aus der Mitte deiner Hand gespielt werden.",
+      "Der Einsiedler besitzt Karten die einen #yVolltreffer erzielen können. NL NL Ein Volltreffer wird erzielt, wenn diese Karten aus der Mitte deiner Hand gespielt werden.",
       "Bei einer geraden Anzahl an Handkarten gibt es #yzwei mittlere Karten, auch wenn es die einzigen Karten in deiner Hand sind."
     ],
     "LABEL": [
@@ -106,7 +106,7 @@
   "HermitMod:SlimeBossTutorials": {
     "TEXT": [
       "Der Schleimboss kann Gegner mit Glibber besprühen. Dadurch erleiden sie durch den nächsten Angriff mehr Schaden. Der Glibber wird durch den Angriff entfernt, und etwaige Konsum-Effekte aktiviert.",
-      "Er kann auch kleinere Schleimwesen von sich abspalten, die am Anfang des Zuges und auf Kommando angreifen."
+      "Er kann auch kleinere Schleimuntertanen von sich abspalten, die am Anfang des Zuges und auf Kommando angreifen."
     ],
     "LABEL": [
       "Weiter",

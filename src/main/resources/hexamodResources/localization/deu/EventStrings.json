@@ -58,8 +58,8 @@
     "Translator Note": "the second sentence above is added after the vanilla one, which offers 3 choices [land](skill), [channel](power) and [strike](attack), you can preview below",
     "preview": "Im freien Fall wägst du deine Optionen ab: Mit deiner besten Technik sicher landen. Eine Macht kanalisieren, um den Sturz zu überleben. In die Wand schlagen, um daran hängenzubleiben.",
     "OPTIONS": [
-      "[Float] #gVerliere #gnichts...",
-      "[Leave]"
+      "[Schweben] #gVerliere #gnichts...",
+      "[Verlassen]"
     ]
   },
   "hexamod:CouncilOfGhosts": {

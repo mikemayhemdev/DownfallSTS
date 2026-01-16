@@ -72,7 +72,7 @@
       "[Wiederholung!]",
       "[WIEDERHOLUNG!!]",
       "[Schlagen] #rKämpfe. #gErhalte #gGremlin #gGlücksrad.",
-      "[Passen] Try again later.",
+      "[Passen] Später nochmal versuchen.",
       "[Preis!] #gPRÄVENTIVSCHLAG!",
       "[Plündern]"
     ]
@@ -93,7 +93,7 @@
   "downfall:Augmenter": {
     "NAME": "Erweiterer",
     "DESCRIPTIONS": [
-      "Ein Mann mit einer Augenklappe und einem teuflischem Grinsen schlendert lässig zu dir herüber. NL „Oh, ein wahrlich furchterregendes Subjekt! Du hast vielleicht kein Interesse daran die Wissenschaft voranzutreiben, aber ich verspreche dir - Ich kann dich stärker machen als es das Ernten von Seelen jemals könnte. Du wirst es brauchen wenn du hinter diesen „Helden“ her bist.“ NL NL ~„Na~ ~wie~ ~wär's?“~"
+      "Ein Mann mit einer Augenklappe und einem teuflischem Grinsen schlendert lässig zu dir herüber. NL „Oh, ein wahrlich furchterregendes Subjekt! Du hast vielleicht kein Interesse daran die Wissenschaft voranzutreiben, aber ich verspreche dir - Ich kann dich stärker machen als es das Ernten von Seelen jemals könnte. Du wirst es brauchen wenn du hinter diesen \"Helden\" her bist.“ NL ~„Na~ ~wie~ ~wär's?“~"
     ],
     "OPTIONS": [
       "[Schlagen] #rKämpfe. #gNimm #gAlles."
@@ -131,7 +131,7 @@
       "Du setzt deinen Weg fort und lässt den Brunnen hinter dir."
     ],
     "OPTIONS": [
-      "[Abfüllen] #Erhalte #gden #gTrank #gVerfluchte #gFlüssigkeit.",
+      "[Abfüllen] #gErhalte #gden #gTrank #gVerfluchte #gFlüssigkeit.",
       "[Konsumieren] #gErhalte #g75 #ySeelen.",
       "[Trinken] #gHeile #gdeine #gTP #gkomplett.",
       "[Gesperrt] Erfordert einen Fluch.",
@@ -156,7 +156,7 @@
       "#gErhalte #g3 #gTränke.",
       "#gErhalte ",
       " #ySeelen.",
-      "#Erhalte #geine #gzufällige #ySeltene #gKarte.",
+      "#gErhalte #geine #gzufällige #ySeltene #gKarte.",
       "[Verlassen]",
       "[Gesperrt] Kein Relikt zur Verfügung.",
       "#gErhalte #g2 #gTränke."
@@ -180,7 +180,7 @@
       "[Ignorieren] Weitergehen.",
       "[Schlagen] Weitergehen.",
       "[Betreten]",
-      " #Erhalte #geine #gBelohnung."
+      " #gErhalte #geine #gBelohnung."
     ]
   },
   "downfall:DeadGuy": {
@@ -231,8 +231,8 @@
       "[Zerschlagen] #gErhalte #g",
       "[Aufsaugen] #gErhalte #g",
       "[Abschöpfen] #gErhalte #g",
-      " #gSeelen. #rWerde #dreimal #rverflucht #r- #rEkel.",
-      " #gSeelen. #rWerde #zweimal #rverflucht #r- #rEkel.",
+      " #gSeelen. #rWerde #rdreimal #rverflucht #r- #rEkel.",
+      " #gSeelen. #rWerde #rzweimal #rverflucht #r- #rEkel.",
       " #gSeelen. #rWerde #rverflucht #r- #rEkel.",
       "[Verlassen]"
     ]
@@ -260,7 +260,7 @@
       "Du wirst wahrscheinlich Kultisten des Erwachten begegnen, also nimmst du die Statue mit. Sie könnte nützlich dabei sein, die Kultisten auf deine Seite zu ziehen.",
       "Du schägst mit all deiner Kraft auf die Statue. NL Schon bald @zerfällt@ sie in ihre Einzelteile. Einer der Splitter ist auffallend scharf, und trägt etwas Magie in sich. Du nimmst den Splitter mit und machst dich wieder auf den Weg",
       "Du gehst daran vorbei und setzt deine Reise fort.",
-      "Krä...Krächz?! Geschenk für VOGEL GOTT?",
+      "Krä...Krächz?! Geschenk für KRÄHENGOTT?",
       "KÄ-KRÄCHZ!!",
       "Ein Geschäft? Das Angebot ist angemessen...",
       "Der Kult wird zufrieden sein."
@@ -335,14 +335,14 @@
       "Mit einem Gefühl der #pScham gehst du vorbei ohne ein Opfer anzubieten."
     ],
     "OPTIONS": [
-      "[Offer Souls] #rLose #r",
-      " #rSouls. #gHeal #g",
-      " #gHP.",
-      "[Locked] Requires ",
-      " Souls.",
-      "[Leave]",
-      "[Leave] #rLose #r",
-      " #rHP."
+      "[Seelen opfern] #rLose #r",
+      " #rGold. #gHeile #g",
+      " #gTP.",
+      "[Gesperrt] Benötigt ",
+      " Gold.",
+      "[Verlassen]",
+      "[Verlassen] #rVerliere #r",
+      " #rTP."
     ]
   },
   "downfall:Bandits": {
@@ -426,8 +426,8 @@
       "Eine lange Reihe #b~maskierter~ #b~Gestalten~ ist zu sehen, die NL eine #pbescheidene #pKathedrale betreten. NL Als du sie betrittst nehmen die die Kultisten sofort wahr! NL NL Du kannst nichts mehr als eine Kakophonie aus Atemzügen, Jubel, and Krächzen hören. Einer der Kultisten bietet die eine Opfergabe an.",
       "Du stoßt dich durch die Masse an Kultisten um an die mächtige Waffe zu kommen, die du auf dem Altar erblickst. Der Diebstahl des Dolches wird prompt bemerkt! NL NL #r@„MORD!!@ #r@MORD@ #r@MORD!!“@ NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Die #rKultisten ziehen ihre eigenen Dolche. Sie #rstechen und #rschlityen auf die ein während du das Gebäude verlässt.",
       "Du nimmst die Gabe in Form des seltsamen Elixiers an. NL NL Die Kultisten @singen@ und @brüllen@ für dich! NL NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Du singst auch. Wieso nicht? Diese Kultisten sind schon ein eigenartiger Schwarm, aber immerhin dienen sie einem deiner Herrscher-Kollegen.",
-      "#r@VOGELGOTT!!@ #r@HEIMGEKEHRT!!“@ NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Du badest in der Menge, und schon bald stehst du dem Anführer direkt gegenüber. Ein gut gekleideter Kultist reicht dir einen #yverzierten #yDolch.",
-      "You take the dagger, unsure of exactly what is about to transpire. The cultist leader reaches into his robe and offers you a #bblue #boily #bmixture.",
+      "#r@KRÄHENGOTT!!@ #r@HEIMGEKEHRT!!“@ NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Du badest in der Menge, und schon bald stehst du dem Anführer direkt gegenüber. Ein gut gekleideter Kultist reicht dir einen #yverzierten #yDolch.",
+      "Du nimmst den Dolch - nicht wissend, worauf das hinausläuft. Der Anführer greit in eine Tasche seiner Robe und reicht dir ein #bblaues, #böliges #bGebräu.",
       "Die Kultisten rundherum stellen dem Anführer Ersatz zur Verfügung. Mit seinem eigenen Dolch und Elixier in der Hand demonstriert er dir, was du ihm nachmachen sollst.",
       "Du führst das Ritual aus wie es der Anführer tut: du beträufelst die Klinge des Dolches mit ein paar Tropfen des Tranks. Im Licht der Kathedrale glänzt der Stahl in einer #b~unheimlichen~ #b~Farbe~. NL NL Unaufgefordert treten zwei Kultisten hervor - einer vor dir, einer vor dem Anführer. NL NL Es ist dir gleich klar, was zu tun ist.",
       "#rDu #rstichst #rden #rDolch #rmitten #rin #rdes #rKultisten #rHerzen! NL NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Das Ritual ist vollendet, und die überlebenden Kultisten sind glücklicher als zuvor. Du verlässt die Kathedrale, und sie verabschieden sich gebührend mit jubelndem Gekrächze und wilden Gesten ihrer Stöcke."
@@ -435,7 +435,7 @@
     "OPTIONS": [
       "[Statue zurückgeben] #rVerliere #rdie #rZerbrochene #rFlügelstatue. #gErhalte #gviele #gBelohnungen.",
       "[Gesperrt] Erfordert die Zerbrochene Flügelstatue.",
-      "[Annehmen] #gErhalte #einen #gKultistentrank.",
+      "[Annehmen] #gErhalte #geinen #gKultistentrank.",
       "[Stehlen] #gErhalte #geinen #gRitualdolch. #rVerliere #r",
       " #rTP.",
       "[Verlassen]",
@@ -468,12 +468,12 @@
     "NAME": "Gedankenblüte",
     "DESCRIPTIONS": [
       "Wie du so läufst und die Schönheit des Jenseits bewunderst, fühlen sich deine Gedanken plötzlich sehr... #p~echt~ #p~an...~ NL NL Allmählich manifestieren sich Vorstellungen der #rgeschlachteten #rAbenteurer und #bgeernteten #bSeelen in der Realität. NL Die Erfahrung eilt flüchtig davon. Was tust du?",
-      "You know you have been here before. NL NL Hunting the same adventurer. NL NL Is any of this real? NL NL How many times have you been slain?",
+      "Du weißt, dass du schon einmal hier warst. NL NL Hinter dem selben Abenteurer her. NL NL Ist irgendetwas davon real? NL NL Wie oft wurdest du schon erlegt?",
       "Alles ergibt jetzt Sinn. NL Die einzige Bestimmung, der Abstieg, das #pHerz. NL NL Genau so ist es immer gewesen. NL Genau so wird es immer sein. NL Und alles wird bald wieder vergessen sein..."
     ],
     "OPTIONS": [
       "[Ich bin Echo] #rKämpge #rgegen #rdich #rselbst. #gErhalte #gein #gseltenes #gRelikt.",
-      "[Ich bin voll] #gErhalte #g999 #gSeelen. #rWerde #rverflucht #r- #r2 #Normalität.",
+      "[Ich bin voll] #gErhalte #g999 #gSeelen. #rWerde #rverflucht #r- #r2 #rNormalität.",
       "[Ich bin komplett] #gVerbessere #galle #gKarten. #rDu #rkannst #rdich #rnicht #rmehr #rheilen.",
       "[Gesperrt] Erfordert alle 3 Segnungen des Herzen.",
       "[Verlassen]",
@@ -505,7 +505,7 @@
       "#y~ZERBRECHLICHKEIT.~ NL NL Die #rKlinge dringt durch deine Brust, und du hörst den #bJubel der Publikums... Das letzte was du fühlst ist eine Faust, die mit voller Wucht in dein Gesicht einschlägt - dann gehen deine Augen zu. NL NL Du wachst in einen dir unbekannten Raum auf und @kannst@ @dich@ @nicht@ @bewegen.@ Du versuchst etwas zu sagen, doch kein Wort kommt heraus, und deine Sicht ist von #ggrünem #gRauch vernebelt. Ist da ein Traum? Ist das das Leben nach dem Tod? Du versuchst dich zu erinnern, doch deine Erinnerungen sind abgetrennt, sowie es deine Gliedmaßen sind. NL NL Du hörst eine Stimme in deinem Kopf - ein simpler Befehl. #g\"BALANCE #gmuss #gVERSTÄRKT #gwerden. #gBESCHÜTZE #gExordium.\"",
       "#p~HOFFNUNGSLOSIGKEIT.~ NL NL #ySehen. #yErinnern. #yLeben. Das ist die Mission des Sehers. Dein Auftrag ist die Untersuchung eines Spire von unbekanntem Ursprung. Du betrittst einen sechseckigen Raum. Bevor du noch irgendetwas tun kannst @fällt@ @die@ @Tür@ @hinter@ @dir@ @zu!@ NL NL Es gibt keinen Ausweg. Die letzte Strohhalm wäre die magische Steintafel, die sich auf einem Podest in der Mitte befindet. Sowie du dieses Artefakt berührst, ~löst~ ~sich~ dein Körper in ~nichts~ ~auf,~ und deine #pSeele wird in die #pSteintafel gezogen. NL NL Dein Schicksal ist nun auf Ewig mit der #pSteintafel verbunden, dazu #rverdammt für alle Zeiten duch den Spire zu wandern.",
       "#y~FREISETZUNG.~ NL NL Du bist der erste. Du dienst dem ~Former.~ Du wurdest nicht geboren, yerbrechlich und mit Schwachstellen, sondern kreiert. In Perfektion. Und du sollst mehr Konstrukte nach deinem Vorbild erschaffen. Das Vermächtnis des Schöpfers: die #yAutomatone. NL NL Jedes ist makellos, um einen bestimmten Zweck zu erfüllen. Jeder... außer einem. Dieser sollte das Gleichgewicht in der Stadt sicherstellen. NL NL Du schmeißt dieses #ydefekte #yKonstrukt aus dem größten Fenster, auf dass es am Bodensatz des Spire sein Dasein fristet. Du nimmst seinen Platz als Beschützer der Stadt ein. NL NL Balance muss verstärkt werden.",
-      "#b~STOLZ.~ NL NL Du stehst in der Mitte einer großen Arena. Alles worauf du hingearbeitet hast wird nun in diesem Kampf ausgedrückt. Du nimmst die #bDefensivhaltung an, um den Gegner ermüden zu lassen, bis er eine Schwachstelle offenbart. Mit deiner letzten Kraft #rstichst #rdu #deine #rKlinge in die Brust des Gegners. Das Publikum reagiert mit @frenetischem@ @Applaus!@ NL NL Der Sieg alleine ist dir nicht genug - du hebst deine leere Hand und schägst dem Gegner ~mitten~ ~ins~ ~Gesicht,~ um ihm einen letzten demütigenden Schlag zu verpassen. NL NL Niemand stellt sich mehr dir in den Weg. Du bist der neue #b@Champion!@",
+      "#b~STOLZ.~ NL NL Du stehst in der Mitte einer großen Arena. Alles worauf du hingearbeitet hast wird nun in diesem Kampf ausgedrückt. Du nimmst die #bDefensivhaltung an, um den Gegner ermüden zu lassen, bis er eine Schwachstelle offenbart. Mit deiner letzten Kraft #rstichst #rdu #rdeine #rKlinge in die Brust des Gegners. Das Publikum reagiert mit @frenetischem@ @Applaus!@ NL NL Der Sieg alleine ist dir nicht genug - du hebst deine leere Hand und schägst dem Gegner ~mitten~ ~ins~ ~Gesicht,~ um ihm einen letzten demütigenden Schlag zu verpassen. NL NL Niemand stellt sich mehr dir in den Weg. Du bist der neue #b@Champion!@",
       "#p~GIER.~ NL NL Nur wenige können der #bVersuchung #bder #bMacht widerstehen. Doch Macht hat seinen Preis, und große Macht einen hohen Preis. NL NL Du thronst über dem Kolosseum, und siehst wie Gladiatoren um den Titel des #bChampion und zu deinem Vergnügen um #rLeben #run #rTod #rkämpfen. Die Teilnahmegebühr - die #g~Flamme~ #g~ihrer~ #g~ewigen~ #g~Seele~ die dir von nun an dient. Die Namen eingemeißelt in Steintafeln - sie werden dir nach ihrem Ableben ewig dienen. NL NL Die Menge Jubelt nachdem ein Gladiator den letzten Schlag mitten ins Gesicht einsteckte. Du begibst dich in deine Schatzkammer und bemerkst, dass jemand anders hier war. Die Fallen wuden ausgelöst, aber es gibt keine Leiche... und die #p@Steintafel@ @fehlt!@",
       "#g~TRAUER.~ NL NL Endlich stehst du auf der Spitze des Spire. Du hast dein Leben dazu gewidmet, unermüdlich an diesem kolossalen Monument für das Große zu arbeiten und es zum Leben zu bringen. Jeder #gWinkel, jede #Rundung - geschliffen in Perfektion. Jede #yKante akribisch genau gelegt. NL NL „Es ist fertig, Liebste.“ Du nimmst ihre leblose Hand und schaltest die Maschine ein. Ein sanftes Summen ergeht über den Raum, und schon Bald spürst du, wie dein #b~Wesen~ in deine eigene Schöpfung gezogen wird - bald darauf wird das nächste reingezogen. Ihr beide lebt auf Ewig an diesem Ort, ganz nach Plan. NL NL Der erste ~Schlag~ des #pHerzen... Ein überwältigendes Echo...",
       "#b~RAGE.~ NL NL Du kannst den #yverzierten #yDolch der durch deine Brust dringt nicht aufhalten. Mit deiner letzen Kraft betest du zur #pGottheit die über den Spire wacht, um dich am Leben zu erhalten, ~koste~ ~es~ ~was~ ~es~ ~wolle.~ NL NL Dein letzter #pHerzschlag ist sehr stark, danach wird es ruhig... für einen Augenblick. Deine Augen glühen mit #b@blauem@ #b@Feuer@ und du kehrst zum Leben zurück - die der Kraft von zehn Mannen. Mit Leichtigkeit sprengst du deine Fesseln und brüllst in eine Menge von #bGestalten #bin #bRoben um dich! NL NL Du spürst, dass sich dein Körper in eine #bmonströse #bGestalt verwandelt. Die Gestalten verbeugen sich vor dir.",

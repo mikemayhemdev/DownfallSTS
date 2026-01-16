@@ -65,7 +65,7 @@
       "konters",
       "counter"
     ],
-    "DESCRIPTION": "Wenn du das nächste Mal angegriffen wirst, verliere dein Konter und erhalte einen #yGegenschlag der Schaden in Höhe des verbrauchten Konters zufügt."
+    "DESCRIPTION": "Wenn du das nächste Mal angegriffen wirst, verliere dein Konter und erhalte einen #yKonterschlag der Schaden in Höhe des verbrauchten Konters zufügt."
   },
   {
     "PROPER_NAME": "Defensivhaltung",

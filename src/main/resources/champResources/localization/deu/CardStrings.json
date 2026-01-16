@@ -52,15 +52,15 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Die Effekte der champ:Fertigkeitsboni werden in diesem Zug um !M! erhöht."
   },
   "champ:FocusedDefense": {
-    "NAME": "Tänzeln und Ducken",
+    "NAME": "Tänzeln & Ducken",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Elan. NL Nimm die champ:Offensivhaltung an."
   },
   "champ:FocusedBerserking": {
-    "NAME": "Alles Rauslassen",
+    "NAME": "Alles rauslassen",
     "DESCRIPTION": "Erschöpft. NL Führe, ohne die Haltung zu verlassen, !M! Mal aus: "
   },
   "champ:SetATrap": {
-    "NAME": "Falle Aufstellen",
+    "NAME": "Falle aufstellen",
     "DESCRIPTION": "Erhalte !B! Block. NL champ:Defensivcombo: Wende !M! Schwach auf ALLE Gegner an."
   },
   "champ:Backstep": {
@@ -77,7 +77,7 @@
   },
   "champ:GutPunch": {
     "NAME": "Magenhieb",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Combo ( jede *Haltung ): Nimm die champ:Ultimative *Haltung für 1 Zug an. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Combo (jede Haltung): Nimm die champ:Ultimative *Haltung für 1 Zug an. NL Erschöpft."
   },
   "champ:FanOfKnives": {
     "NAME": "Messersturm",
@@ -86,14 +86,14 @@
   },
   "champ:Devastate": {
     "NAME": "Verwüsten",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Costs 1 [E] weniger für jeden *Abschluss der in diesem Kampf gespielt wurde."
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. Kostet 1 [E] weniger für jeden *Abschluss der in diesem Kampf gespielt wurde."
   },
   "champ:Circumvent": {
     "NAME": "Überlisten",
     "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karten. NL Wirf !M! Karten ab. NL champ:Defensivcombo: Wirf keine Karten ab."
   },
   "champ:SkillfulDodge": {
-    "NAME": "Graziöses Verbeugen",
+    "NAME": "Stilvolles Ducken",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL champ:Defensivcombo: Erhöhe die Wirkung dieser Karte für diesen Kampf um !cool!."
   },
   "champ:TornadoPunch": {
@@ -102,11 +102,11 @@
     "UPGRADE_DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL champ:Defensivcombo: Erhalte !B! Block für jeden getroffenen Gegner."
   },
   "champ:EnGarde": {
-    "NAME": "En Garde",
+    "NAME": "En Garde!",
     "DESCRIPTION": "Erhalte !B! Block. NL Wenn dein ganzes Block in diesem Zug verbraucht wird, dann erhalte im nächsten Zug !B! Block."
   },
   "champ:ShieldSlam": {
-    "NAME": "Moment der Wahrheit",
+    "NAME": "Alles oder Nichts",
     "DESCRIPTION": "Behalten. NL Ziehe !M! Karte.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Ziehe !M! Karten."
   },
@@ -174,7 +174,7 @@
   },
   "champ:RapidStrikes": {
     "NAME": "Rapide Schläge",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Einr zufällige \"Schlag\" Karte auf deiner Hand kostet in diesem Zug 0."
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Eine zufällige \"Schlag\" Karte auf deiner Hand kostet in diesem Zug 0."
   },
   "champ:EnchantSword": {
     "NAME": "Schwertzauber",
@@ -185,7 +185,7 @@
   },
   "champ:BladeFlurry": {
     "NAME": "Schlagserie",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste \"Schlag\" Karte die du in diesem Zug spielst wird zweimal gespielt."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste \"Schlag\" Karte in diesem Zug wird doppelt gespielt."
   },
   "champ:SwordThrow": {
     "NAME": "Schwertwurf",
@@ -193,7 +193,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Mordsschlag",
-    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Erhöhe den Schaden dieser Karte um !M! wenn sie sich in der Hand befindet während du eine Fertigkeit spielst."
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. Erhöhe den Schaden dieser Karte um !M! wenn sie sich auf der Hand befindet während du eine Fertigkeit spielst."
   },
   "champ:HeavySlash": {
     "NAME": "Meisterhafter Hieb",
@@ -209,10 +209,10 @@
   },
   "champ:Shatter": {
     "NAME": "Zerschellen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Combo ( jede *Haltung ): Wende !M! Schwach und Verwundbar an."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Combo (jede Haltung): Wende !M! Schwach und Verwundbar an."
   },
   "champ:EnragedBash": {
-    "NAME": "Brutales Schmettern",
+    "NAME": "Brutales Knüppeln",
     "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Offensivcombo: Diese Karte trifft in diesem Kamp ein weiteres Mal.",
     "EXTENDED_DESCRIPTION": [
       "Füge !M! Mal !D! Schaden zu. NL champ:Offensivcombo: Diese Karte trifft in diesem Kamp ein weiteres Mal."
@@ -259,7 +259,7 @@
     ]
   },
   "champ:IgnorePain": {
-    "NAME": "Schmerz Ignorieren",
+    "NAME": "Schmerzbetäubung",
     "DESCRIPTION": "Deine TP können bis zum Beginn des nächsten Zuges nicht fallen. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Deine TP können bis zum Beginn des nächsten Zuges nicht fallen. NL Erschöpft."
   },
@@ -268,7 +268,7 @@
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte !M! *Elan. NL Erschöpft."
   },
   "champ:ArenaPreparation": {
-    "NAME": "Schlachtutensilien",
+    "NAME": "Kriegsmaterial",
     "DESCRIPTION": "Erhalte !M! zufällige Fertigkeiten. NL Sie erhalten Behalten. NL Erschöpft."
   },
   "champ:SteelEdge": {
@@ -328,11 +328,11 @@
     "DESCRIPTION": "champ:Offensivcombo: NL Erhalte !M! Stärke. NL champ:Defensivcombo: NL Erhalte !M! Geschicklichkeit."
   },
   "champ:BerserkerStyle": {
-    "NAME": "Klinge Schleifen",
+    "NAME": "Klinge schleifen",
     "DESCRIPTION": "Erhöhe den Schaden deiner \"Schlag\" Karten um !M!."
   },
   "champ:Riposte": {
-    "NAME": "Gegenschlag",
+    "NAME": "Konterschlag",
     "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. NL Erschöpft."
   },
   "champ:Endure": {
@@ -350,7 +350,7 @@
   },
   "champ:Parry": {
     "NAME": "Parieren",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL Wenn champ:Konter in diesem Zug verbraucht wird, erhalte einen zweiten *Gegenschlag.",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL Wenn champ:Konter in diesem Zug verbraucht wird, erhalte einen zweiten *Konterschlag.",
     "UPGRADE_DESCRIPTION": "Flüchtig. NL Füge Schaden in Höhe des verbrauchten champ:Konters zu. NL Erschöpft."
   },
   "champ:EnchantCrown": {

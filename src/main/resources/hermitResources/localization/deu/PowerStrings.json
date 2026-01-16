@@ -25,7 +25,7 @@
 },
 "hermit:Bruise": {
         "NAME": "Prügel",
-        "DESCRIPTIONS": ["Nimmt in diesen Zug #b", " mehr Angriffschaden"]
+        "DESCRIPTIONS": ["Nimmt in diesem Zug #b", " mehr Angriffschaden"]
 },
 "hermit:HorrorPower": {
         "NAME": "Horror",
@@ -36,11 +36,11 @@
         "DESCRIPTIONS": ["Nimm die #b", " nächste Karte, die einen #yVolltreffer auslöst, wieder auf die Hand.", " nächsten Karten, die einen #yVolltreffer auslösen, wieder auf die Hand."]
 },
 "hermit:BigShotPower": {
-        "NAME": "Rauchendes Rohr",
+        "NAME": "Rauchendet Colt",
         "DESCRIPTIONS": ["Immer wenn du ein #yVolltreffer erzielst, fügt dein nächster Angriff #b", " mehr Schaden zu."]
 },
 "hermit:BrawlPower": {
-        "NAME": "Schlägerei",
+        "NAME": "Gewaltbereit",
         "DESCRIPTIONS": ["Wende zu Beginn jedes Zuges #b", " #yPrügel auf ALLE Gegner an."]
 },
 "hermit:Rugged": {
@@ -49,10 +49,10 @@
 },
 "hermit:EternalPower": {
         "NAME": "Ewige Form",
-        "DESCRIPTIONS": ["Die Kosten der ersten #b4 zu Beginn des Zuges gezogenen, spielbaren Karten werden für diesen Zug um #b", " reduziert."]
+        "DESCRIPTIONS": ["Die Kosten der ersten #b4 zu Beginn des Zuges gezogenen, spielbaren Karten werden diesen Zug um #b", " reduziert."]
 },
 "hermit:OverwhelmingPowerPower": {
-        "NAME": "Überwältigende Macht",
+        "NAME": "Ausgeuferte Macht",
         "DESCRIPTIONS": ["Verliere #b"," TP wenn du deinen Zug mit #b0 Energie beendest."]
 },
 "hermit:Bounty": {
@@ -68,7 +68,7 @@
         "DESCRIPTIONS": ["Erhalte immer wenn ein Debuff auf dich angewendet wird #b", " #yStärke."]
 },
 "hermit:RyeStalkPower": {
-        "NAME": "Rye Stalk",
+        "NAME": "Roggenhalm",
         "DESCRIPTIONS": ["#yBehalte am Ende des Zuges eine beliebige Anzahl an Karten."]
 },
 "hermit:PetGhostPower": {
@@ -80,11 +80,11 @@
         "DESCRIPTIONS": ["Der #yVolltreffer Effekt wird für die #b", " nächste Karte zweimal ausgelöst.", " nächsten Karten zweimal ausgelöst."]
 },
 "hermit:CoalescencePower": {
-        "NAME": "Coalescence",
+        "NAME": "Koaleszenz",
         "DESCRIPTIONS": ["#Behalte am ende des Zuges bis zu #b", " Karte.", " Karten."]
 },
 "hermit:ReprievePower": {
-        "NAME": "Reprieve",
+        "NAME": "Gnadenfrist",
         "DESCRIPTIONS": ["Erhalte #b", " zusätzlichen Zug nach diesem Zug.", " zusätzliche Züge nach diesem Zug."]
 },
 "hermit:MaintenanceStrikePower": {

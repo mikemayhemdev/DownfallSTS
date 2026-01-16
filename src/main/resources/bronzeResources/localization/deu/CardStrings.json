@@ -17,7 +17,7 @@
     ]
   },
   "bronze:Assembly": {
-    "NAME": "Programmumwandlung",
+    "NAME": "Zusammensetzen",
     "DESCRIPTION": "Spähe !M!. NL bronze:Kodiere alle abgeworfenen Karten mit *Kodieren in der gewählten Reihenfolge. NL Erschöpft."
   },
   "bronze:Backtrace": {
@@ -53,9 +53,9 @@
     "NAME": "Verzweigung",
     "DESCRIPTION": "Füge !D! Schaden zu oder erhalte !B! Block. NL Die nicht gewählte Option wird bronze:kodiert. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
-      "Verzweigung: Angriff",
+      "Zweig: Angriff",
       "Füge !D! Schaden zu.",
-      "Verzweigung: Abwehr",
+      "Zweig: Abwehr",
       "Erhalte !B! Block."
     ]
   },
@@ -80,7 +80,7 @@
     "DESCRIPTION": "Angeboren. NL Füge !D! Schaden zu. NL bronze:Kodiere eine zufällige Karte im Nachziehstapel. Erschöpft."
   },
   "bronze:BugBarrage": {
-    "NAME": "Bug Befall",
+    "NAME": "Bugbefall",
     "DESCRIPTION": "Erhalte !M! *Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
     "UPGRADE_DESCRIPTION": "Erhalte !M! *Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
@@ -144,12 +144,12 @@
     ]
   },
   "bronze:CopyPaste": {
-    "NAME": "Kopieren & Einfügen",
+    "NAME": "Kopieren-Einfügen",
     "DESCRIPTION": "In diesem Zug spielst du deine nächste Funktion zweimal aus.",
     "UPGRADE_DESCRIPTION": "Behalten. NL In diesem Zug spielst du deine nächste Funktion zweimal aus."
   },
   "bronze:CutThrough": {
-    "NAME": "Durchschneiten",
+    "NAME": "Einschneidend",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Spähe !M!. NL bronze:Kompilierung - Ziehe !bauto! Karte.",
     "EXTENDED_DESCRIPTION": [
       "schnittiges",
@@ -190,11 +190,11 @@
     ]
   },
   "bronze:Deprecate": {
-    "NAME": "Veraltet",
+    "NAME": "Obsolet",
     "DESCRIPTION": "Wende !M! Schwach an.",
     "EXTENDED_DESCRIPTION": [
       "altes",
-      "Altern"
+      "Auslaufen"
     ]
   },
   "bronze:DigitalCarnage": {
@@ -206,7 +206,7 @@
     ]
   },
   "bronze:FindAndReplace": {
-    "NAME": "Suchen & Ersetzen",
+    "NAME": "Suchen-Ersetzen",
     "DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel und lege ein *Benommen an der Stelle von der du die Karte genommen hast. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
@@ -261,11 +261,11 @@
     ]
   },
   "bronze:Frontload": {
-    "NAME": "Verankern",
+    "NAME": "Konstante",
     "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Die Funktion erhält Behalten.",
     "EXTENDED_DESCRIPTION": [
-      "hartes",
-      "Verankern"
+      "fixes",
+      "Fixieren"
     ]
   },
   "bronze:FullRelease": {
@@ -295,7 +295,7 @@
     "DESCRIPTION": "Die nächste Funktion die du kompilierst wird deinem Deck hinzugefügt. Die *kodierten Karten werden aus dem Deck entfernt."
   },
   "bronze:HardenedForm": {
-    "NAME": "Orb Beschwören",
+    "NAME": "Orb beschwören",
     "DESCRIPTION": "Immer wenn du eine Funktion spielst oder kompilierst, erhalte !M! Block und füge einem zufälligen Gegner !M! Schaden zu."
   },
   "bronze:HyperBeam": {
@@ -345,7 +345,7 @@
     "DESCRIPTION": "Ziehe !M! Karten. NL Ziehe zu Beginn des Zuges 1 zusätzliche Karte und bronze:Setze 1 *Benommen *ein."
   },
   "bronze:Mutator": {
-    "NAME": "Mutierer",
+    "NAME": "Variable",
     "DESCRIPTION": "Erhalte !M! Stärke. NL *Transformiere einen Status auf der Hand in eine Kopie dieser Karte.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte !M! Stärke. NL *Transformiere einen Status auf der Hand in eine Kopie dieser Karte."
   },
@@ -416,12 +416,12 @@
     ]
   },
   "bronze:Repulsor": {
-    "NAME": "Abstoßen",
+    "NAME": "Validieren",
     "DESCRIPTION": "Wenn du im Zug das erste Mal einen Status oder Fluch ziehst, erschöpfe ihn und ziehe eine Karte.",
     "UPGRADE_DESCRIPTION": "Wenn du im Zug das erste Mal einen Status oder Fluch ziehst, erschöpfe ihn und ziehe eine Karte."
   },
   "bronze:Return": {
-    "NAME": "Retournieren",
+    "NAME": "Rückgabe",
     "DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E] .",
     "UPGRADE_DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E] [E] ."
   },
@@ -443,8 +443,8 @@
   },
   "bronze:Shell": {
     "NAME": "Blockchain",
-    "DESCRIPTION": "Erhalte !M! bronze:Verschwommen.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! bronze:Verschwommen. NL bronze:Kompilierung - Erhalte !M! bronze:Verschwommen.",
+    "DESCRIPTION": "Erhalte !M! bronze:Verschwimmen.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! bronze:Verschwimmen. NL bronze:Kompilierung - Erhalte !M! bronze:Verschwimmen.",
     "EXTENDED_DESCRIPTION": [
       "reihendes",
       "Muster"
@@ -550,7 +550,7 @@
     "UPGRADE_DESCRIPTION": "Kompiliere die derzeit kodierten Karten zu einer Funktion."
   },
   "bronze:BranchBlock": {
-    "NAME": "Verzweigung: Abwehr",
+    "NAME": "Zweig: Abwehr",
     "DESCRIPTION": "Erhalte !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "verzweigtes",
@@ -558,7 +558,7 @@
     ]
   },
   "bronze:BranchHit": {
-    "NAME": "Verzweigung: Angriff",
+    "NAME": "Zweig: Angriff",
     "DESCRIPTION": "Füge !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "verzweigtes",
@@ -611,7 +611,7 @@
       "Detonieren"
     ]
   },
-  "bronze:FunktionCard": {
+  "bronze:FunctionCard": {
     "NAME": "()",
     "DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": [

@@ -17,8 +17,8 @@
   "Gremlin:KnowingSkull": {
     "OPTIONS": [
       "[Information?] #gEnthülle #gden #gBoss. #rAlle #rGremlins #rverlieren #r",
-      "[Success?] #gErhalte #geine #gfarblose #gKarte. #rAlle #rGremlins #rverlieren #r",
-      "[A Pick Me Up?] #gErhalte #geinen #gTrank. #rAlle #rGremlins #rverlieren #r",
+      "[Erfolg] #gErhalte #geine #gfarblose #gKarte. #rAlle #rGremlins #rverlieren #r",
+      "[Stärkung?] #gErhalte #geinen #gTrank. #rAlle #rGremlins #rverlieren #r",
       " #gGold. #rAlle #rGremlins #rverlieren #r",
       "[Wie komme ich hier raus?] #rAlle #rGremlins #rverlieren #r"
 
@@ -26,7 +26,7 @@
   },
   "Gremlin:MatchingGame": {
     "DESCRIPTIONS": [
-      "„Hier sind #bzwölf Karten! Finde Paare, um sie zu behalten! #bFünf Versuche-“ NL NL „ #bZehn Versuche!“ wirfst du ein. NL NL The Gremlin wirft dir einen bösen Blick zu. „ #bFÜNF Versuche!“ NL NL „ #bAcht.“ NL NL „ #bSechs,“ entgegnet er. „Hoffentlich werdet ihr #pverflucht.“ NL NL Du hoffst, dass er #pverflucht wird.",
+      "„Hier sind #bzwölf Karten! Finde Paare, um sie zu behalten! #bFünf Versuche-“ NL NL „ #bZehn Versuche!“ wirfst du ein. NL NL Der Gremlin wirft dir einen bösen Blick zu. „ #bFÜNF Versuche!“ NL NL „ #bAcht.“ NL NL „ #bSechs,“ entgegnet er. „Hoffentlich werdet ihr #pverflucht.“ NL NL Du hoffst, dass er #pverflucht wird.",
       "Du beendest das Spiel des Gremlins und siehst auf. NL Er hat sih aus dem STaub gemacht bevor du noch mehre #y~kostenlosen~ #y~Kram~ erbeuten konntest!",
       "Ein Gremlin mischt wild Karten auf einem Tisch. Er bietet anscheinend #y~kostenlosen~ #y~Kram~ an. Du willst den #y~kostenlosen~ #y~Kram.~"
     ]

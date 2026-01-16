@@ -18,15 +18,15 @@
     "NAME": "Krampus-Kohle",
     "FLAVOR": "„Faszinierend! Aber warum nur in bestimmten Kaminen?“ - Ranwid",
     "DESCRIPTIONS": [
-      "Nimm immer wenn du von einem leeren Sammlungsstapel ziehen würdest einen #yGlücksdocht auf die Hand."
+      "Nimm immer wenn du von einem leeren #ySammlungsstapel ziehen würdest einen #yGlücksdocht auf die Hand."
     ]
   },
   "collector:BagOfTricks": {
     "NAME": "Sack voller Tricks",
-    "FLAVOR": "Tricky.",
+    "FLAVOR": "Trickreich.",
     "DESCRIPTIONS": [
       "Ziehe zu Beginn jedes Kampfes #b",
-      " Karten mehr vom Sammlungsstapel."
+      " zusätzliche Karten vom #ySammlungsstapel."
     ]
   },
   "collector:JadeRing": {
@@ -75,7 +75,7 @@
   },
   "collector:Bagpipes": {
     "NAME": "Dudelsack",
-    "FLAVOR": "Man erzählt sich, dass dieses Instrument Kublai den Großen in den Wahnsinn getrieben hat.",
+    "FLAVOR": "Man erzählt sich, dass der Klang dieses Instruments Kublai den Großen in den Wahnsinn getrieben hat.",
     "DESCRIPTIONS": [
       "Immer wenn du NEUES #ySchwach oder #yVerwundbar anwendest, erhöhe die angewendete Anzahl um #b1 [REMOVE_SPACE]."
     ]
@@ -84,9 +84,9 @@
     "NAME": "Flaschenhirn",
     "FLAVOR": "Gefunden im Labor eines Zauberers.",
     "DESCRIPTIONS": [
-      "#yVerbessere beim Aufheben eine Karte in deiner Sammlung. Beginne jeden Kampf mit der gewählten Karte auf deinem Sammlungsstapel.",
+      "#yVerbessere beim Aufheben eine Karte in deiner #ySammlung. Beginne jeden Kampf mit der gewählten Karte auf deinem #ySammlungsstapel.",
       "Beginne jeden Kampf mit ",
-      " auf deinem Sammlungsstapel.",
+      " auf deinem #ySammlungsstapel.",
       "Wähle eine Karte für ",
       "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
     ]
@@ -120,7 +120,7 @@
     "NAME": "Blockiertes Chakra",
     "FLAVOR": "Es reicht bloß ein gezerrter Muskel.",
     "DESCRIPTIONS": [
-      "Erhalte in deinem Zug [E] . Du kannst erst ab deinem vierten Zug vom Sammlungsstapel ziehen."
+      "Erhalte in deinem Zug [E] . Du kannst erst ab deinem vierten Zug vom #ySammlungsstapel ziehen."
     ]
   }
 }
