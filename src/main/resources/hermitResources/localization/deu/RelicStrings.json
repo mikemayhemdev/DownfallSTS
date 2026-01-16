@@ -49,7 +49,7 @@
     "NAME": "Verbeulter Brustpanzer",
     "FLAVOR": "Es stecken immer noch ein paar Kugeln darin.",
     "DESCRIPTIONS": [
-      "Wenn deine TP unter oder genau #b50% sind, erhalte [E] und ziehe #b1 Karte zu Beginn deines Zuges."
+      "Wenn deine TP zu Beginn des Zuges bei #b50% der Max TP under darunter sind, ziehe #b1 Karte erhalte [E] ."
     ]
   },
   "hermit:PetGhost": {
@@ -63,15 +63,15 @@
     "NAME": "Verkohlter Handschuh",
     "FLAVOR": "In Teilen des Handschus glüht immer noch unheimliche Asche.",
     "DESCRIPTIONS": [
-      "Immer wenn du ein #yFluch ziehst, fügt dein nächster Angriff #b",
+      "Immer wenn du einen #rFluch ziehst, fügt dein nächster Angriff #b",
       " mehr Schaden zu."
     ]
   },
   "hermit:ClaspedLocket": {
-    "NAME": "Zuklapptes Medaillon",
+    "NAME": "Zugeklapptes Medaillon",
     "FLAVOR": "Es kann nicht mehr geöffnet werden.",
     "DESCRIPTIONS": [
-      "Ersetzt #yAltes #yMedaillon. Wenn zum ersten Mal im Zug ein #yFluch gezogen wird, #yerschöpfe ihn un ziehe #b.",
+      "Ersetzt #yAltes #yMedaillon. Wenn zum ersten Mal im Zug ein #rFluch gezogen wird, #yerschöpfe ihn un ziehe #b",
       "Nie wieder...",
       " Karten. Nimm beim Aufheben #b",
       " #rVerletzungen in dein Deck auf."
@@ -107,7 +107,7 @@
     "DESCRIPTIONS": [
       "Immer wenn du einen Elitekampf gewinnst, heile #b",
       " TP und erhalte #b",
-      " Gold."
+      " #yGold."
     ]
   }
 }

@@ -156,13 +156,13 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "Sack voller Messer",
     "DESCRIPTIONS": [
-      "Wenn du in einem Zug das erste Mal eine Karte ausspielst die #2 oder mehr kostet, erhält die Stille 2 #yMesser [REMOVE_SPACE]."
+      "Wenn du in einem Zug das erste Mal eine Karte ausspielst die #b2 oder mehr kostet, erhält die Stille 2 #yMesser [REMOVE_SPACE]."
     ]
   },
   "downfall:SilentDelayedWraithPower": {
     "NAME": "Fatale Bessesenheit",
     "DESCRIPTIONS": [
-      "Wenn die Stille das erste Mal 0 HP erreicht, aktiviert sie #yGeistform",
+      "Wenn die Stille das erste Mal 0 TP erreicht, aktiviert sie #yGeistform",
       " und heilt #b",
       " TP."
     ]
@@ -170,7 +170,7 @@
   "downfall:NeowBagOfKnives": {
     "NAME": "Sack voller Messer",
     "DESCRIPTIONS": [
-      "Wenn du in einem Zug das erste Mal eine Karte ausspielst die #2 oder mehr kostet, erleide zweimal #b4 Schaden."
+      "Wenn du in einem Zug das erste Mal eine Karte ausspielst die #b2 oder mehr kostet, erleide zweimal #b4 Schaden."
     ]
   },
   "downfall:SilentMirrorImagePower": {
@@ -393,9 +393,9 @@
   "downfall:TangerinePower": {
     "NAME": "Hilfssherrif",
     "DESCRIPTIONS": [
-      "When Tangerine stirbt, verliert der Einsiedler seine #yKonzentration in diesem Zug und er erhält #b",
+      "When die Wachlaus stirbt, verliert der Einsiedler seine #yKonzentration in diesem Zug und er erhält permanent #b",
       " #yStärke.",
-      "When Tangerine stirbt, verliert der Einsiedler seine #yKonzentration in diesem Zug."
+      "When die Wachlaus stirbt, verliert der Einsiedler seine #yKonzentration in diesem Zug."
     ]
   },
   "downfall:HermitWheelOfFortune": {
@@ -468,7 +468,7 @@
   "downfall:HeartsFavorPower": {
     "NAME": "Hilfe von Herzen",
     "DESCRIPTIONS": [
-      "Immer wenn Niaus #yUnverwundbar #b0 erreicht, reduziere ihre #yLebensgöttin Kraft um #b",
+      "Immer wenn Niaus #yUnverwundbar #b0 erreicht, reduziere ihren #yLebensgöttin Effekt um #b",
       " [REMOVE_SPACE]."
     ]
   },

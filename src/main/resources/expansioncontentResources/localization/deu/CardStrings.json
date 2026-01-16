@@ -13,7 +13,7 @@
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Unverwundbar",
-    "DESCRIPTION": "Gain !M! expansioncontent:Unverwundbar. NL Hattest du bereits expansioncontent:Unverwundbar, dann hält es für ein weiteres Mal."
+    "DESCRIPTION": "Erhalte !M! expansioncontent:Unverwundbar. NL Hattest du bereits expansioncontent:Unverwundbar, dann hält es für ein weiteres Mal."
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Strahl",
@@ -32,7 +32,7 @@
     "DESCRIPTION": "Immer wenn du eine Macht spielst, erhältst du !M! Stärke."
   },
   "expansioncontent:Chronoboost": {
-    "NAME": "Chrono-Boost",
+    "NAME": "Zeitbooster",
     "DESCRIPTION": "Erhalte !M! Stärke für alle 12 gespielten Karten."
   },
   "expansioncontent:PolyBeam": {
@@ -69,12 +69,12 @@
   "expansioncontent:StudyTheSpire": {
     "NAME": "Spire-Studien",
     "DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge jeweils eine zufällige *Boss-Karte. Sie kosten 0.",
-    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge jeweils eine zufällige verbesserte *Boss-Karte. Sie kosten 0."
+    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge jeweils eine zufällige *verbesserte *Boss-Karte. Sie kosten 0."
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Schnellstudien",
     "DESCRIPTION": "Wähle 1 aus 3 zufälligen *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wähle 1 aus 3 zufälligen verbesserten *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wähle 1 aus 3 zufälligen *verbesserten *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle eine Boss-Karte."
     ]
@@ -85,7 +85,7 @@
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Wissender Schädel",
-    "DESCRIPTION": "Flüchtig. NL Opfere TP um dir *Seelen, einen *Trank, oder eine *farblose Karte zu *wünschen. NL Erschöpft."
+    "DESCRIPTION": "Flüchtig. NL Opfere TP um dir *Gold, einen *Trank, oder eine *farblose *Karte zu *wünschen. NL Erschöpft."
   },
   "expansioncontent:Antidote": {
     "NAME": "Gegengift",
@@ -93,7 +93,7 @@
   },
   "expansioncontent:AntidoteAsPower": {
     "NAME": "Keine Zurückhaltung",
-    "DESCRIPTION": "Behalten. NL Immer wenn du ungeblockten ANgriffsschaden zufügst, entferne !M! von deinem Gift."
+    "DESCRIPTION": "Behalten. NL Immer wenn du ungeblockten Angriffsschaden zufügst, entferne !M! von deinem Gift."
   },
   "expansioncontent:SuperGhostShield": {
     "NAME": "Phantomschild",
@@ -132,7 +132,7 @@
   },
   "expansioncontent:SuperViciousMockery": {
     "NAME": "Bösartiger Hohn",
-    "DESCRIPTION": "Erhalte !M! Elan. NL Wende !DM! Schwach an."
+    "DESCRIPTION": "Erhalte !M! *Elan. NL Wende !DM! Schwach an."
   },
   "expansioncontent:SuperClobber": {
     "NAME": "Prügelschlag",
@@ -173,11 +173,11 @@
 
   "expansioncontent:Virus": {
     "NAME": "404 Virus",
-    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. Mische einen *Starken *Strahl für jede auf diese Weise erschöpfte Karte in den Nachziehstapel. NL Erschöpft."
+    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. Mische einen *Großen *Strahl für jede auf diese Weise erschöpfte Karte in den Nachziehstapel. NL Erschöpft."
   },
 
   "expansioncontent:MajorBeam": {
-    "NAME": "Starker Strahl",
+    "NAME": "Großer Strahl",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karte.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten."
   },

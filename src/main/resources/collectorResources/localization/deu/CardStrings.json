@@ -598,8 +598,8 @@
     "DESCRIPTION": "Dein nächster Angriff kostet 0 und fügt !M! zusätzlichen Schaden zu."
   },
   "collector:ScrapOozeCard": {
-    "NAME": "Schrottschleim",
-    "DESCRIPTION": "collector:Opfergabe. NL Verliere 3 TP. NL Nimm !M! zufällige Angriffe auf die Hand. NL Sie kosten in diesem Zug 0."
+    "NAME": "Schrottschlamm",
+    "DESCRIPTION": "collector:Opfergabe. NL Verliere 3 TP. NL Nimm !M! zufällige Angriffe auf die Hand. NL Sie kosten diesen Zug 0."
   },
   "collector:SentryCard": {
     "NAME": "Wache",
@@ -618,7 +618,7 @@
     "DESCRIPTION": "Füge 3 Mal !D! Schaden zu."
   },
   "collector:SneakyGremlinCard": {
-    "NAME": "Schleichender Grem",
+    "NAME": "Schleich-Gremlin",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte."
   },
   "collector:SneckoCard": {
@@ -663,7 +663,7 @@
   },
   "collector:TorchHeadCard": {
     "NAME": "Fackelkopf",
-    "DESCRIPTION": "Nimm einen zufälligen Fackelkopf-Ruf auf die Hand. NL Er kostet in diesem Zug 0."
+    "DESCRIPTION": "Nimm einen zufälligen Fackelkopf-Ruf auf die Hand. NL Er kostet diesen Zug 0."
   },
   "collector:TransientCard": {
     "NAME": "Schwundling",

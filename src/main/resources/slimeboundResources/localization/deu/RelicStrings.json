@@ -4,8 +4,8 @@
     "FLAVOR": "Ich fühle mich funky.",
     "DESCRIPTIONS": [
       "Heile immer wenn du #yslimeboundmod:konsumierst #b",
-      " TP - bis zu #b",
-      " Mal pro Kampf."
+      " TP - heilt bis zu #b",
+      " TP pro Kampf."
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
@@ -14,15 +14,15 @@
     "DESCRIPTIONS": [
       "Ersetzt ",
       " [REMOVE_SPACE].[] NL Heile immer wenn du #yslimeboundmod:konsumierst #b",
-      " TP - bis zu #b",
-      " Mal pro Kampf."
+      " TP - heilt zu #b",
+      " TP pro Kampf."
     ]
   },
   "Slimebound:SlimedTailRelic": {
     "NAME": "Schleimschwanz",
     "FLAVOR": "Ein falscher, komplett in Schleim umhüllter Schwanz, um Gegner während des Kampfes hereinzulegen.",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du einen Schleimuntergebenen #yslimeboundmod:abspaltest #b",
+      "Erhalte immer wenn du einen Schleimuntertanen #yslimeboundmod:abspaltest #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -44,7 +44,7 @@
     "NAME": "Schrottschleim",
     "FLAVOR": "Er trägt ein Relikt in sich - wie komme ich bloß da ran?",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #ySchrottschleim ab - er kann wiederbelebt werden, nachdem er #yabsorbiert wurde. NL Du kann den #ySchrottschleim am Lagerfeuer mit einer Karte füttern. Sein Schaden wird durch die Karten folgenderweise verändert: NL #b+1 Schaden for #gUngewöhnliche NL #b+2 Schaden for #ySeltene NL #b-1 Schaden for Gewöhnliche NL #b-2 Schaden for #rFlüche",
+      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #ySchrottschleim ab - er kann wiederbelebt werden, nachdem er #yabsorbiert wurde. Du kann den #ySchrottschleim am Lagerfeuer mit einer Karte füttern: NL #b+1 Schaden for #gUngewöhnliche NL #b+2 Schaden for #ySeltene NL #b-1 Schaden for Gewöhnliche NL #b-2 Schaden for #rFlüche",
       "Entferne eine Karte aus deinem Deck und ändere den Schaden des Schrottschleims.",
       "Keine Karte für den Schrottschleim.",
       "Schrott"
@@ -54,7 +54,7 @@
     "NAME": "Gierschleim",
     "FLAVOR": "Ein besonderer Schleim, der sich von Seelen ernährt.",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #yGierschleim ab - er kann wiederbelebt werden, nachdem er #yabsorbiert wurde. NL Der #yGierschleim frisst am Lagerfeuer #b50 deiner Seelen und erhöht dadurch seinen Schaden um #b1."
+      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #yGierschleim ab - er kann wiederbelebt werden, nachdem er #yabsorbiert wurde. NL Der #yGierschleim frisst am Lagerfeuer #b50 #yGold und erhöht dadurch seinen Schaden um #b1."
     ]
   },
   "Slimebound:PreparedRelic": {
@@ -75,8 +75,8 @@
     "NAME": "Schleimiger Schädel",
     "FLAVOR": "Ein Snecko-Schädel in miserablem Zustand. Schmutzig und schleimig haftet der Dreck daran wie Klebstoff.",
     "DESCRIPTIONS": [
-      "Immer wenn #yslimeboundmod:Glibber angewendet wird, wird die Anzahl um #b",
-      " erhöht."
+      "Immer wenn #yslimeboundmod:Glibber angewendet wird, wird #b",
+      " #yslimeboundmod:Glibber mehr angewendet."
     ]
   },
   "Slimebound:MaxSlimesRelic": {

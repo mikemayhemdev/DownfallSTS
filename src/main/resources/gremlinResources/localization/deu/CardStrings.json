@@ -33,7 +33,7 @@
 
   "Gremlin:BubbleBarrier": {
     "NAME": "Schildblase",
-    "DESCRIPTION": "Immer wenn du in diesem Zug eine Karte ausspielst, erhalte !M! Block."
+    "DESCRIPTION": "Erhalte !M! Block für jede weitere Karte, die du in diesem Zug ausspielst."
   },
 
   "Gremlin:BulkUp": {
@@ -96,8 +96,8 @@
 
   "Gremlin:Duplicate": {
     "NAME": "Duplizieren",
-    "DESCRIPTION": "Wähle einen Angriff. NL Erhalte !M! expansioncontent:Echos. NL Sie kosten 1 weniger. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wähle einen Angriff. NL Erhalte !M! expansioncontent:Echos. NL Sie kosten 1 weniger."
+    "DESCRIPTION": "Wähle einen Angriff auf der Hand. NL Erhalte !M! expansioncontent:Echos. NL Sie kosten 1 weniger. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wähle einen Angriff auf der Hand. NL Erhalte !M! expansioncontent:Echos. NL Sie kosten 1 weniger."
   },
 
   "Gremlin:EdibleArmor": {
@@ -107,7 +107,7 @@
 
   "Gremlin:Encore": {
     "NAME": "Zugabe",
-    "DESCRIPTION": "Erhalte 3 gremlin:Esprit. NL Der Verbauch von gremlin:Esprit fügt noch zusätzlich !M! Schaden zu."
+    "DESCRIPTION": "Erhalte 3 gremlin:Esprit. NL Der Verbauch von gremlin:Esprit fügt zusätzlich !M! Schaden zu."
   },
 
   "Gremlin:Enthusiasm": {
@@ -204,7 +204,7 @@
     "NAME": "Gremlintanz",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Hat verschiedene Zusatzeffekte, abhängig vom aktuellen Gremlin.",
     "EXTENDED_DESCRIPTION": ["Füge !D! Schaden zu",
-    ". NL Trifft ALLE Gegner.", ". NL Der Gegner verliert in diesem Zug !M! Stärke.",
+    ". NL Trifft ALLE Gegner.", ". NL Der Gegner verliert für diesen Zug !M! Stärke.",
     ". NL Erhalte !B! Block.", ". NL Ziehe !M! Karten.", ". NL Erhalte !M! gremlin:Esprit.", ". NL Erhalte !M! Stärke."]
   },
 
@@ -286,7 +286,7 @@
 
   "Gremlin:Nob": {
     "NAME": "Aristo-Form",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL Mutiere in den gremlin:Gremlin-Aristo bis deine *temporären *TP verbraucht sind."
+    "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL Mutiere zum gremlin:Gremlin-Aristo bis deine *temporären *TP verbraucht sind."
   },
 
   "Gremlin:NobChoice": {
@@ -314,7 +314,7 @@
   "Gremlin:PinNeedle": {
     "NAME": "Stecknadel",
     "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze !M! *Nadelstiche *ein. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze !M! *Nadelstiche+ *ein. NL Erschöpft."
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze !M! *Nadelstich+ Karten *ein. NL Erschöpft."
   },
 
   "Gremlin:Pinprick": {
@@ -329,7 +329,7 @@
   },
 
   "Gremlin:PourSalt": {
-    "NAME": "Salz in die Wunde",
+    "NAME": "Wunde salzen",
     "DESCRIPTION": "Füge !D! Schaden zu. Wenn der Gegner Schwach ist, reduziere es um 1 um !M! Messer zu erhalten."
   },
 
@@ -367,7 +367,7 @@
 
   "Gremlin:Rhythm": {
     "NAME": "Rhythmus",
-    "DESCRIPTION": "gremlin:Wechsle zum nächsten Gremlin. Schnapp dir eine Basis-Karte vom Nachziehstapel. Sie kostet in diesem Zug 0."
+    "DESCRIPTION": "gremlin:Wechsle zum nächsten Gremlin. Schnapp dir eine Basis-Karte vom Nachziehstapel. Sie kostet diesen Zug 0."
   },
 
   "Gremlin:Rush": {
@@ -404,8 +404,8 @@
 
   "Gremlin:SharpenBlades": {
     "NAME": "Klingen schärfen",
-    "DESCRIPTION": "Alle Angriffe auf der Hand kosten in diesem Zug 0.",
-    "UPGRADE_DESCRIPTION": "Ziehe eine Karte. NL Alle Angriffe auf der Hand kosten in diesem Zug 0."
+    "DESCRIPTION": "Alle Angriffe auf der Hand kosten diesen Zug 0.",
+    "UPGRADE_DESCRIPTION": "Ziehe eine Karte. NL Alle Angriffe auf der Hand kosten diesen Zug 0."
   },
 
   "Gremlin:ShieldGremlin": {
@@ -421,7 +421,7 @@
 
   "Gremlin:ShowStopper": {
     "NAME": "Höhepunkt",
-    "DESCRIPTION": "Kann nur gespielt werden wenn du genau 7 gremlin:Esprit hast. NL Füge ALLEN Gegnern !M! Mal !D! Schaden zu.",
+    "DESCRIPTION": "Kann nur gespielt werden wenn du GENAU 7 gremlin:Esprit hast. NL Füge ALLEN Gegnern !M! Mal !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": ["Es Fehlt noch an Spannung.", "Das Timing wurde verpasst."]
   },
 

@@ -77,7 +77,7 @@
   },
   "champ:GutPunch": {
     "NAME": "Magenhieb",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Combo ( jede *Haltung ): Nimm die champ:Ultimative *Haltung für 1 Zug an. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Combo (jede Haltung): Nimm die champ:Ultimative *Haltung für 1 Zug an. NL Erschöpft."
   },
   "champ:FanOfKnives": {
     "NAME": "Messersturm",
@@ -86,7 +86,7 @@
   },
   "champ:Devastate": {
     "NAME": "Verwüsten",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Costs 1 [E] weniger für jeden *Abschluss der in diesem Kampf gespielt wurde."
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. Kostet 1 [E] weniger für jeden *Abschluss der in diesem Kampf gespielt wurde."
   },
   "champ:Circumvent": {
     "NAME": "Überlisten",
@@ -185,7 +185,7 @@
   },
   "champ:BladeFlurry": {
     "NAME": "Schlagserie",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste \"Schlag\" Karte die du in diesem Zug spielst wird zweimal gespielt."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste \"Schlag\" Karte in diesem Zug wird doppelt gespielt."
   },
   "champ:SwordThrow": {
     "NAME": "Schwertwurf",
@@ -193,7 +193,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Mordsschlag",
-    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Erhöhe den Schaden dieser Karte um !M! wenn sie sich in der Hand befindet während du eine Fertigkeit spielst."
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. Erhöhe den Schaden dieser Karte um !M! wenn sie sich auf der Hand befindet während du eine Fertigkeit spielst."
   },
   "champ:HeavySlash": {
     "NAME": "Meisterhafter Hieb",
@@ -209,7 +209,7 @@
   },
   "champ:Shatter": {
     "NAME": "Zerschellen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Combo ( jede *Haltung ): Wende !M! Schwach und Verwundbar an."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Combo (jede Haltung): Wende !M! Schwach und Verwundbar an."
   },
   "champ:EnragedBash": {
     "NAME": "Brutales Knüppeln",
@@ -268,7 +268,7 @@
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte !M! *Elan. NL Erschöpft."
   },
   "champ:ArenaPreparation": {
-    "NAME": "Schlachtutensilien",
+    "NAME": "Kriegsmaterial",
     "DESCRIPTION": "Erhalte !M! zufällige Fertigkeiten. NL Sie erhalten Behalten. NL Erschöpft."
   },
   "champ:SteelEdge": {

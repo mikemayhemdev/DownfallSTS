@@ -9,7 +9,7 @@
   "hexamod:DoubleChargePotion": {
     "NAME": "Brandbeschleuniger",
     "DESCRIPTIONS": [
-      "#yEntzünde die aktuelle Geisterflamme #b",
+      "#yEntzünde die aktuelle #yGeisterflamme #b",
       " Mal."
     ]
   },
@@ -24,8 +24,8 @@
   "hexamod:InfernoChargePotion": {
     "NAME": "Flüssiges Inferno",
     "DESCRIPTIONS": [
-      "Die Geisterflammen-Effekte werden in diesem Kampf auf ALLE Gegner angewendet.",
-      "Die Geisterflammen-Effekte werden in diesem Kampf auf ALLE Gegner #b",
+      "Die #yGeisterflammen-Effekte werden in diesem Kampf auf ALLE Gegner angewendet.",
+      "Die #yGeisterflammen-Effekte werden in diesem Kampf auf ALLE Gegner #b",
       " Mal angewendet."
     ]
   }

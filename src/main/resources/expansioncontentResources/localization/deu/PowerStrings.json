@@ -21,11 +21,11 @@
     "NAME": "Erwachen",
     "DESCRIPTIONS": [
       "Anstatt zu sterben, heile #b",
-      " TP und entferne diese Kraft."
+      " TP und entferne diesen Effekt."
     ]
   },
   "expansioncontent:ChronoBoostPower": {
-    "NAME": "Chrono-Boost",
+    "NAME": "Zeitbooster",
     "DESCRIPTIONS": [
       "Nach dem Ausspielen von #b",
       " Karten erhältst du #b",
@@ -33,7 +33,7 @@
     ]
   },
   "expansioncontent:ChronoBoostPlusPower": {
-    "NAME": "Chrono-Boost+",
+    "NAME": "Zeitbooster+",
     "DESCRIPTIONS": [
       "Nach dem Ausspielen von #b",
       " Karten erhältst du #b",
@@ -41,7 +41,7 @@
     ]
   },
   "expansioncontent:DeEnergizedPower": {
-    "NAME": "De-Energized",
+    "NAME": "Energieentladen",
     "DESCRIPTIONS": [
       "Du verlierst #b",
       " [E] im nächsten Zug."
@@ -130,9 +130,9 @@
     "NAME": "Unverwundbar",
     "DESCRIPTIONS": [
       "Verhindert jeglichen TP-Verlust, der innerhalb eines Zuges über #b",
-      " hinausgeht. Entferne diese Kraft, nachdem sie aktiviert wurde.",
+      " hinausgeht. Entferne diesen Effekt, nachdem er aktiviert wurde.",
       "Verhindert jeglichen TP-Verlust, der innerhalb eines Zuges über #b",
-      " hinausgeht. Entferne diese Kraft, nachdem sie #b",
+      " hinausgeht. Entferne diesen Effekt, nachdem er #b",
       " Mal aktiviert wurde."
     ]
   }

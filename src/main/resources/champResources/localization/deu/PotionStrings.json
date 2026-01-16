@@ -4,8 +4,8 @@
     "DESCRIPTIONS": [
       "Wähle #b1 von #b2 zufälligen Karten die eine #yHaltung annehmen (eine pro #yHaltung [REMOVE_SPACE]).",
       " Nimm #b",
-      " Kopie auf die Hand. Sie kostet in diesem Zug #b0 [REMOVE_SPACE].",
-      " Kopien auf die Hand. Sie kosten in diesem Zug #b0 [REMOVE_SPACE]."
+      " Kopie auf die Hand. Sie kostet diesen Zug #b0 [REMOVE_SPACE].",
+      " Kopien auf die Hand. Sie kosten diesen Zug #b0 [REMOVE_SPACE]."
     ]
   },
   "champ:TechniquePotion": {

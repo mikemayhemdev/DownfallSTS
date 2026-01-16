@@ -149,7 +149,7 @@
     "UPGRADE_DESCRIPTION": "Behalten. NL In diesem Zug spielst du deine nächste Funktion zweimal aus."
   },
   "bronze:CutThrough": {
-    "NAME": "Durchschneiden",
+    "NAME": "Einschneidend",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Spähe !M!. NL bronze:Kompilierung - Ziehe !bauto! Karte.",
     "EXTENDED_DESCRIPTION": [
       "schnittiges",
@@ -190,11 +190,11 @@
     ]
   },
   "bronze:Deprecate": {
-    "NAME": "Veraltet",
+    "NAME": "Obsolet",
     "DESCRIPTION": "Wende !M! Schwach an.",
     "EXTENDED_DESCRIPTION": [
       "altes",
-      "Altern"
+      "Auslaufen"
     ]
   },
   "bronze:DigitalCarnage": {
@@ -261,11 +261,11 @@
     ]
   },
   "bronze:Frontload": {
-    "NAME": "Verankern",
+    "NAME": "Konstante",
     "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Die Funktion erhält Behalten.",
     "EXTENDED_DESCRIPTION": [
-      "hartes",
-      "Verankern"
+      "fixes",
+      "Fixieren"
     ]
   },
   "bronze:FullRelease": {
@@ -345,7 +345,7 @@
     "DESCRIPTION": "Ziehe !M! Karten. NL Ziehe zu Beginn des Zuges 1 zusätzliche Karte und bronze:Setze 1 *Benommen *ein."
   },
   "bronze:Mutator": {
-    "NAME": "Mutierer",
+    "NAME": "Variable",
     "DESCRIPTION": "Erhalte !M! Stärke. NL *Transformiere einen Status auf der Hand in eine Kopie dieser Karte.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte !M! Stärke. NL *Transformiere einen Status auf der Hand in eine Kopie dieser Karte."
   },
@@ -416,12 +416,12 @@
     ]
   },
   "bronze:Repulsor": {
-    "NAME": "Abstoßen",
+    "NAME": "Validieren",
     "DESCRIPTION": "Wenn du im Zug das erste Mal einen Status oder Fluch ziehst, erschöpfe ihn und ziehe eine Karte.",
     "UPGRADE_DESCRIPTION": "Wenn du im Zug das erste Mal einen Status oder Fluch ziehst, erschöpfe ihn und ziehe eine Karte."
   },
   "bronze:Return": {
-    "NAME": "Retournieren",
+    "NAME": "Rückgabe",
     "DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E] .",
     "UPGRADE_DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E] [E] ."
   },
@@ -611,7 +611,7 @@
       "Detonieren"
     ]
   },
-  "bronze:FunktionCard": {
+  "bronze:FunctionCard": {
     "NAME": "()",
     "DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": [

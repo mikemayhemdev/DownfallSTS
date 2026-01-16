@@ -1,7 +1,7 @@
 {
   "Slimebound:AcidTongue": {
     "NAME": "Haftender Glibber",
-    "DESCRIPTION": "Effekte die slimeboundmod:Glibber anwenden wenden zusätzlich !M! an."
+    "DESCRIPTION": "Immer wenn slimeboundmod:Glibber angewendet wird, wird !M! slimeboundmod:Glibber mehr angewendet."
   },
   "Slimebound:BestDefense": {
     "NAME": "Rücksichtslosigkeit",
@@ -13,8 +13,8 @@
   },
   "Slimebound:Chomp": {
     "NAME": "Hineinbeißen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Ein zufälliger *Tackle auf deiner Hand kostet in diesem Zug 0.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ein zufälliger *Tackle auf deiner Hand kostet in diesem Kampf 0."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ein zufälliger *Tackle auf deiner Hand kostet diesen Zug 0.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ein zufälliger *Tackle auf deiner Hand kostet diesen Kampf 0."
   },
   "Slimebound:ComboTackle": {
     "NAME": "Speer-Tackle",
@@ -43,11 +43,11 @@
     "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Erschöpfe eine Karte. Erhalte *Wabbel in Höhe ihrer Kosten. NL Erschöpft."
   },
   "Slimebound:DivideAndConquer": {
-    "NAME": "Teilen & Herrschen",
-    "DESCRIPTION": "Füge einem zufälligen gegner für jeden Schleim !D! Schaden zu. NL slimeboundmod:Absorbiere alle Schleime. NL Erschöpft."
+    "NAME": "Divide et impera",
+    "DESCRIPTION": "Füge für jeden Schleim einem zufälligen gegner !D! Schaden zu. NL slimeboundmod:Absorbiere alle Schleime. NL Erschöpft."
   },
   "Slimebound:DouseInSlime": {
-    "NAME": "Schleim-Überguss",
+    "NAME": "Schleimüberguss",
     "DESCRIPTION": "Wende !slime! slimeboundmod:Glibber an. NL Der Nächste Angriff auf diesen Gegner entfernt sein slimeboundmod:Glibber nicht."
   },
   "Slimebound:DuplicatedForm": {
@@ -94,8 +94,8 @@
   },
   "Slimebound:GoopTackle": {
     "NAME": "Combo-Tackle",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Erhalte eine zufällige *Tackle Karte. Sie kostet in diesem Zug 0.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Erhalte eine zufällige verbesserte *Tackle Karte. Sie kostet in diesem Zug 0."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Erhalte eine zufällige *Tackle Karte. Sie kostet diesen Zug 0.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Erhalte eine zufällige verbesserte *Tackle Karte. Sie kostet diesen Zug 0."
   },
   "Slimebound:Grow": {
     "NAME": "Wachsen",
@@ -121,7 +121,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte einen *Wabbel+."
   },
   "Slimebound:LeadByExample": {
-    "NAME": "Ton angeben",
+    "NAME": "Den Ton angeben",
     "DESCRIPTION": "Die erste in deinem Zug gespielte Karte, die auf Gegener abzielt, löst slimeboundmod:Kommando aus.",
     "UPGRADE_DESCRIPTION": "Die ersten !M! gespielten Karten des Zuges, die auf Gegener abzielen, lösen slimeboundmod:Kommando aus."
   },

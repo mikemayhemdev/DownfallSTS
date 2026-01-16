@@ -3,7 +3,7 @@
     "NAME": "Niaus Segnung",
     "FLAVOR": "Kühle deinen Zorn ab. Sei so taff und unnachgiebig wie es der Spire selbst ist.",
     "DESCRIPTIONS": [
-      "Der Boss hat mehr max TP und kein Starter Relikt, zieht #b2 Karten weniger, und erhält #b1 ",
+      "Der Boss hat mehr Max TP und kein Starter Relikt, zieht #b2 Karten weniger, und erhält #b1 ",
       " weniger. NL Zu Beginn des Kampfes erhält der Boss einen einzigartigen Buff. Der Boss kann nicht #yBetäubt werden."
     ]
   },
@@ -11,7 +11,7 @@
     "NAME": "Niaus Segnung",
     "FLAVOR": "Kühle deinen Zorn ab. Sei so taff und unnachgiebig wie es der Spire selbst ist.",
     "DESCRIPTIONS": [
-      "Erhöhe beim Aufheben deine max. TP um #b100. NL Erhöhe deine max. TP um #b100 wenn du einen neuen Akt erreichst. NL Verliere alle Trankslots. NL Ziehe #b1 Karte weniger und verliere [E] zu Beginn deines Zuges."
+      "Erhöhe beim Aufheben deine Max TP um #b100. Erhöhe deine Max TP um #b100 wenn du einen neuen Akt erreichst. NL Verliere alle Trankslots. NL Ziehe #b1 Karte weniger und verliere [E] zu Beginn deines Zuges."
     ]
   },
   "downfall:CoffeeDripper": {
@@ -393,7 +393,7 @@
     "NAME": "Gremlin-Glücksrad",
     "FLAVOR": "Niemand bekommt einen zweiten Versuch sagte er...",
     "DESCRIPTIONS": [
-      "Du kannst jetzt an Lagerfeuern das Glücksrad drehen. Das Einsammeln des Preises nutzt das Relikt ab.",
+      "Du kannst jetzt am Lagerfeuer das Glücksrad drehen. Das Einsammeln des Preises nutzt das Relikt ab.",
       "Die Kraft dieses Reliktes ist schon aufgebraucht."
     ]
   },
@@ -401,14 +401,14 @@
     "NAME": "Umhang der Gesichter",
     "FLAVOR": "Es waren Steve, und Bill, und Ian, und Fred, und John...",
     "DESCRIPTIONS": [
-      "Erhalte beim Aufheben #yKultisten-Kopfstück, #yPriesters #yGesicht, #yN'loths #yhungriges #yGesicht, #yGremlin-Visage, und #ySsslangenkopf."
+      "Erhalte beim Aufheben #yKultisten-Kopfstück [REMOVE_SPACE], #yPriesters #yGesicht [REMOVE_SPACE], #yN'loths #yhungriges #yGesicht [REMOVE_SPACE], #yGremlin-Visage [REMOVE_SPACE], und #ySsslangenkopf [REMOVE_SPACE]."
     ]
   },
   "downfall:BrokenWingStatue": {
     "NAME": "Zerbrochene Flügelstatue",
     "FLAVOR": "Ein abgebrochener Brocken einer einst beeindruckenden Statue.",
     "DESCRIPTIONS": [
-      "Die Kultisten, die den Erweckten anbeten, sind bestimmt daran interessiert...",
+      "Die Kultisten, die #yden #yErweckten anbeten, sind bestimmt daran interessiert...",
       "Beim nächsten Kampf gegen Wesen der Kultisten-Gruppe, werden sie dieses Relikt an sich nehmen und vom Kampf fliehen."
     ]
   },
@@ -416,7 +416,7 @@
     "NAME": "Scharfer Splitter",
     "FLAVOR": "Einst eine zerbrochene Statue - nun eine improvisierte Waffe.",
     "DESCRIPTIONS": [
-      "Wenn du in Elite- und Bosskämpfen eine #yMacht ausspielst, erhalte #b",
+      "Erhalte jedes Mal wenn du in Elite- und Bosskämpfen eine #yMacht ausspielst #b",
       " #yStärke [REMOVE_SPACE]."
     ]
   },
@@ -443,7 +443,7 @@
     "NAME": "Wissender Schädel",
     "FLAVOR": "Leg mich wieder hin!",
     "DESCRIPTIONS": [
-      "Zu Beginn des Kampfes kannst du dir im Austausch gegen TP Seelen, einen Trank, oder eine farblose Karte wünschen."
+      "Zu Beginn des Kampfes kannst du dir im Austausch gegen TP #yGold, einen #yTrank, oder eine #yfarblose #yKarte wünschen."
     ]
   },
   "downfall:HeartBlessingRed": {
@@ -469,7 +469,7 @@
   },
   "downfall:BurdenOfKnowledge": {
     "NAME": "Bürde des Wissens",
-    "FLAVOR": "The Wahrheit tut weh.",
+    "FLAVOR": "Die Wahrheit tut weh.",
     "DESCRIPTIONS": [
       "#rVerliere beim Aufheben #rALLE #rSegnungen #rdes #rHerzen und #b20 Max TP. #yVerbessere #rALLE Karten #rIMMER und #rÜBERALL [REMOVE_SPACE]. Beginne jeden Kampf mit #b2 weniger #yStärke und #yGeschicklichkeit [REMOVE_SPACE]."
     ]
@@ -527,7 +527,7 @@
     "NAME": "Super-Echsenschwanz",
     "FLAVOR": "Ein falscher Schwanz, um Gegner während des Kampfes hereinzulegen.",
     "DESCRIPTIONS": [
-      "Anstatt zu sterben, heile #b100% deiner max. TP (funktioniert einmal)."
+      "Anstatt zu sterben, heile #b100% deiner Max TP (funktioniert einmal)."
     ]
   },
   "downfall:TestRelic": {
@@ -541,7 +541,7 @@
     "NAME": "Besonders verfluchter Schlüssel",
     "FLAVOR": "Wurde aus gutem Grund weggesperrt.",
     "DESCRIPTIONS": [
-      "Erhalte [E] wenn du in diesem Zug das erste Mal einen #rFluch ziehst. NL Immer wenn du eine Truhe (außer Bosstruhen) öffnest, nimm eine #rVerletzung [REMOVE_SPACE]."
+      "Erhalte [E] wenn du das erste Mal im Zug einen #rFluch ziehst. NL Immer wenn du eine Truhe (außer Bosstruhen) öffnest, nimm eine #rVerletzung [REMOVE_SPACE]."
     ]
   },
   "downfall:ExtraCursedBell": {

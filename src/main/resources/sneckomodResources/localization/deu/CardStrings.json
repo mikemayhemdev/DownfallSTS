@@ -65,8 +65,8 @@
   },
   "sneckomod:GlitteringGambit": {
     "NAME": "Glitzergambit",
-    "DESCRIPTION": "Unspielbar. NL Kann nicht aus dem Deck entfernt werden. NL sneckomod:Geschenk: Verbesserte seltene und !M! Gold.",
-    "UPGRADE_DESCRIPTION": "Unspielbar. Flüchtig. NL Kann nicht aus dem Deck entfernt werden. NL sneckomod:Geschenk: Verbesserte seltene und !M! Gold.",
+    "DESCRIPTION": "Unspielbar. NL Kann nicht aus dem Deck entfernt werden. NL sneckomod:Geschenk: Verbesserte Seltene und !M! Gold.",
+    "UPGRADE_DESCRIPTION": "Unspielbar. Flüchtig. NL Kann nicht aus dem Deck entfernt werden. NL sneckomod:Geschenk: Verbesserte Seltene und !M! Gold.",
     "DESCRIPTION_BATTLE": "Unspielbar.",
     "UPGRADE_DESCRIPTION_BATTLE": "Unspielbar. NL Flüchtig."
   },
@@ -78,7 +78,7 @@
     ]
   },
   "sneckomod:IronFang": {
-    "NAME": "Eisenzahn",
+    "NAME": "Eisenmaul",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu wende !M! Schwach auf sie an enemies."
   },
   "sneckomod:ImprovisedAttack": {
@@ -109,8 +109,8 @@
   },
   "sneckomod:SnakeEyes": {
     "NAME": "Schlangenaugen",
-    "DESCRIPTION": "Deine nächste Karte einer sneckomod:Fremdklasse in diesem Zug wird zweimal ausgespielt. NL sneckomod:Geschenk: seltene Fertigkeit.",
-    "UPGRADE_DESCRIPTION": "Deine nächsten 2 Karten aus sneckomod:Fremdklassen in diesem Zug werden zweimal ausgespielt. NL sneckomod:Geschenk: seltene Fertigkeit.",
+    "DESCRIPTION": "Deine nächste Karte einer sneckomod:Fremdklasse in diesem Zug wird zweimal ausgespielt. NL sneckomod:Geschenk: Seltene Fertigkeit.",
+    "UPGRADE_DESCRIPTION": "Deine nächsten 2 Karten aus sneckomod:Fremdklassen in diesem Zug werden zweimal ausgespielt. NL sneckomod:Geschenk: Seltene Fertigkeit.",
     "DESCRIPTION_BATTLE": "Deine nächste Karte einer sneckomod:Fremdklasse in diesem Zug wird zweimal ausgespielt.",
     "UPGRADE_DESCRIPTION_BATTLE": "Deine nächsten 2 Karten aus sneckomod:Fremdklassen in diesem Zug werden zweimal ausgespielt."
   },
@@ -195,7 +195,7 @@
   },
   "sneckomod:SerpentIdol": {
     "NAME": "Viperngötze",
-    "DESCRIPTION": "Nimm 1 von !M! zufälligen Karten aus sneckomod:Fremdklassen auf die Hand. Sie kostet in diesem Zug 0. NL Erschöpft."
+    "DESCRIPTION": "Nimm 1 von !M! zufälligen Karten aus sneckomod:Fremdklassen auf die Hand. Sie kostet diesen Zug 0. NL Erschöpft."
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotische Form",
@@ -205,8 +205,8 @@
   },
   "sneckomod:SlitherThrough": {
     "NAME": "Durchschlittern",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten in diesem Zug !M! weniger. NL sneckomod:Geschenk: Ungewöhnlich.",
-    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten in diesem Zug !M! weniger."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten diesen Zug !M! weniger. NL sneckomod:Geschenk: Ungewöhnlich.",
+    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten diesen Zug !M! weniger."
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
@@ -525,7 +525,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Nimm ein *Verhauen+ auf die Hand. NL Erschöpft."
   },
   "sneckomod:CobraCoil": {
-    "NAME": "Cobraspirale",
+    "NAME": "Pythonschlinge",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Der Gegner erleidet am Ende seiner Züge !M! Schaden. NL sneckomod:Geschenk: Seltener Angriff."
   },
   "sneckomod:Belittle": {
@@ -591,7 +591,7 @@
     ]
   },
   "sneckomod:AceOfWands": {
-    "NAME": "Pentagramm-König",
+    "NAME": "Pentagrammkönig",
     "DESCRIPTION": "Flüchtig. NL Erhalte immer wenn du einen Debuff anwendest !M! Block. NL sneckomod:Geschenk: Debuff.",
     "UPGRADE_DESCRIPTION": "Erhalte immer wenn du einen Debuff anwendest !M! Block. NL sneckomod:Geschenk: Debuff."
   },

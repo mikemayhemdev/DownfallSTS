@@ -23,7 +23,7 @@
   "Gremlin:BubbleBarrier": {
     "NAME": "Schildblase",
     "DESCRIPTIONS": [
-      "Immer wenn du in diesem Zug eine Karte ausspielst, erhalte #b", " #yBlock [REMOVE_SPACE]."
+      "Erhalte #b", " #yBlock für jede Karte, die du in diesem Zug ausspielst."
     ]
   },
   "Gremlin:CongaLine": {
@@ -43,7 +43,7 @@
   "Gremlin:Encore": {
     "NAME": "Zugabe",
     "DESCRIPTIONS": [
-      "Der Verbauch von #yEsprit fügt noch zusätzlich #b", " Schaden zu."
+      "Der Verbauch von #yEsprit fügt zusätzlich #b", " Schaden zu."
     ]
   },
   "Gremlin:Enthusiasm": {
