@@ -1,0 +1,46 @@
+{
+  "awakened:SpellDescriptor": {
+    "TEXT": [
+      "Заклинание"
+    ]
+  },
+  "awakened:ConjureMod": {
+    "TEXT": [
+      " NL awakened:Призыв."
+    ]
+  },
+  "awakened:SpellMod": {
+    "TEXT": [
+      "[#12FAF0]Заклинание. NL"
+    ]
+  },
+  "awakened:DrainingMod": {
+    "TEXT": [
+      " NL В следующим ходу потеряйте [E]."
+    ]
+  },
+  "awakened:highlightChant": {
+    "TEXT": [
+      "awakened:Напев: ",
+      "[awakenedIcon] [#12FAF0]Напев: "
+    ]
+  },
+  "awakened:Spellbook": {
+    "TEXT": [
+      "Книга заклинаний",
+      "Пробуждение",
+      "После розыгрыша #b7 Таланта станьте #yПробуждённым [REMOVE_SPACE]! NL NL Пока вы #yПробуждённый [REMOVE_SPACE], все #yПризванные заклинания #yУлучшаются [REMOVE_SPACE], значительно повышая их эффективность.",
+      "После розыгрыша #b7 Таланта станьте #yПробуждённым [REMOVE_SPACE]! NL NL Пока вы #yПробуждённый [REMOVE_SPACE], все #yПризванные заклинания #yУлучшаются [REMOVE_SPACE], значительно повышая их эффективность."
+    ]
+  },
+  "awakened:FullSpellbook": {
+    "TEXT": [
+      "Моя Книга заклинаний переполнена!"
+    ]
+  },
+  "awakened:FourthDimensionDupeAttempt": {
+    "TEXT": [
+      "@СДЕЛАВ@ @ЭТО@ @ТЫ@ @РАЗОРВЁШЬ@ @ПРОСТРАНСТВЕННО-ВРЕМЕННОЙ@ @КОНТИНУУМ!!!@"
+    ]
+  }
+}
