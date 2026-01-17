@@ -4,7 +4,7 @@
     "DESCRIPTIONS": [
       "Erhöhe den Schaden deiner slimeboundmod:abgespaltenen Schleime um #b",
       " und ihre Sekundäreffekte um #b",
-      "."
+      " [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SlimedPower": {
