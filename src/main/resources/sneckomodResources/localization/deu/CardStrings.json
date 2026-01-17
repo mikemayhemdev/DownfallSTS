@@ -566,7 +566,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Lege eine Handkarte auf den Nachziehstapel. NL Ziehe im nächsten Zug !M! zusätzliche Karten."
   },
   "sneckomod:MarkedCard": {
-    "NAME": "Gezinkte Karte",
+    "NAME": "Falschspielen",
     "DESCRIPTION": "sneckomod:Irre eine Karte. NL Sie wird weniger kosten. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Behalten. NL sneckomod:Irre eine Karte. NL Sie wird weniger kosten. NL Erschöpft."
   },
