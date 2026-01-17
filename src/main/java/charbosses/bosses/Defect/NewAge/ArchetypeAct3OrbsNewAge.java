@@ -15,7 +15,10 @@ import charbosses.powers.bossmechanicpowers.DefectCuriosityPower;
 import charbosses.relics.*;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.red.Disarm;
+import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.orbs.AbstractOrb;
@@ -33,7 +36,7 @@ public class ArchetypeAct3OrbsNewAge extends ArchetypeBaseDefect {
     public ArchetypeAct3OrbsNewAge() {
         super("DF_ARCHETYPE_ORBS", "Orbs");
 
-        maxHPModifier += 300;
+        maxHPModifier += 280;
         actNum = 3;
         bossMechanicName = DefectCuriosityPower.NAME;
         bossMechanicDesc = DefectCuriosityPower.DESCRIPTIONS[0] + 1 + DefectCuriosityPower.DESCRIPTIONS[1] + DefectCuriosityPower.DESCRIPTIONS[2];

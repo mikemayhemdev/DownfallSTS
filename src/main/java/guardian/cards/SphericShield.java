@@ -1,6 +1,7 @@
 package guardian.cards;
 
 
+import com.megacrit.cardcrawl.actions.common.ObtainPotionAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
@@ -15,6 +16,7 @@ import guardian.potions.DefensiveModePotion;
 import guardian.patches.AbstractCardEnum;
 
 import static guardian.GuardianMod.makeBetaCardPath;
+import static hermit.util.Wiz.atb;
 
 public class SphericShield extends AbstractGuardianCard {
     public static final String ID = GuardianMod.makeID("SphericShield");
@@ -53,7 +55,7 @@ public class SphericShield extends AbstractGuardianCard {
             sozu.flash();
         } else {
                 AbstractPotion potion = new DefensiveModePotion();
-                AbstractDungeon.player.obtainPotion(potion.makeCopy());
+                atb(new ObtainPotionAction(potion));
             }
     }
 
