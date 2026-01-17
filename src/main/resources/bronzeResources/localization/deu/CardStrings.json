@@ -313,7 +313,7 @@
     "UPGRADE_DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL bronze:Kompilierung - Erhalte eine Kopie dieser Karte mit !M! mehr Schaden.",
     "EXTENDED_DESCRIPTION": [
       "endloses",
-      "Wiederholen"
+      "Unendliche"
     ]
   },
   "bronze:Invalidate": {
@@ -328,8 +328,8 @@
     "NAME": "Iterieren",
     "DESCRIPTION": "Füge !M! Mal !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
-      "wiederholendes",
-      "Durchgehen"
+      "iteratives",
+      "Iterieren"
     ]
   },
   "bronze:ItsAFeature": {
@@ -408,11 +408,11 @@
     ]
   },
   "bronze:Replicate": {
-    "NAME": "Replizieren",
+    "NAME": "Wiederholen",
     "DESCRIPTION": "Füge !D! Schaden zu. \u202F NL Wenn *Kodiert: Lege eine Kopie in den Abwurfstapel.",
     "EXTENDED_DESCRIPTION": [
-      "kopierendes",
-      "Kopieren"
+      "wiederholendes",
+      "Wiederholen"
     ]
   },
   "bronze:Repulsor": {
