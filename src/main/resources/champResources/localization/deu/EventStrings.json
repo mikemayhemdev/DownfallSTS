@@ -21,8 +21,8 @@
       "Schwarzer Ritter"
     ],
     "OPTIONS": [
-      "[Titel verteidigen] #rKämpfe #rgegen #rden #rSchwarzen #rRitter. #gErhalte #gviele #gBelohnungen.",
-      "[Teilnehmen] #rKämpge #rgegen #rden #rgefangenen #rHelden. #gErhalte #gviele #gBelohnungen.",
+      "[Titel verteidigen] #rGegner: #rSchwarzer #rRitter. #gErhalte #gviele #gBelohnungen.",
+      "[Teilnehmen] #rGegner: #rGefangener #rHeld. #gErhalte #gviele #gBelohnungen.",
       "[Verlassen]",
       "[KÄMPFEN!]",
       "[Weiter]"

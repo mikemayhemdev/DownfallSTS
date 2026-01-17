@@ -457,8 +457,8 @@
       "Auch wenn die Verlockung groß ist, findest du, dass ein Kampf hier nur Zeitverschwendung wäre. Deine Reise geht weiter, so auch die Überfälle der Sklavenhändler."
     ],
     "OPTIONS": [
-      "[Herausfordern] #rKämpge #rgegen #rdie #rArena #rChampions. #gErhalte #gviele #gBelohnungen.",
-      "[Teilnehmen] #rKämpge #rgegen #rden #rgefangenen #rHelden. #gErhalte #gviele #gBelohnungen.",
+      "[Herausfordern] #rGegner: #rArena #rChampions. #gErhalte #gviele #gBelohnungen.",
+      "[Teilnehmen] #rGegner: #rGefangener #rHeld. #gErhalte #gviele #gBelohnungen.",
       "[Verlassen]",
       "[KÄMPFEN!]",
       "[Weiter]"
@@ -472,7 +472,7 @@
       "Alles ergibt jetzt Sinn. NL Die einzige Bestimmung, der Abstieg, das #pHerz. NL NL Genau so ist es immer gewesen. NL Genau so wird es immer sein. NL Und alles wird bald wieder vergessen sein..."
     ],
     "OPTIONS": [
-      "[Ich bin Echo] #rKämpge #rgegen #rdich #rselbst. #gErhalte #gein #gseltenes #gRelikt.",
+      "[Ich bin Echo] #rKämpfe #rgegen #rdich #rselbst. #gErhalte #gein #gseltenes #gRelikt.",
       "[Ich bin voll] #gErhalte #g999 #gSeelen. #rWerde #rverflucht #r- #r2 #rNormalität.",
       "[Ich bin komplett] #gVerbessere #galle #gKarten. #rDu #rkannst #rdich #rnicht #rmehr #rheilen.",
       "[Gesperrt] Erfordert alle 3 Segnungen des Herzen.",
