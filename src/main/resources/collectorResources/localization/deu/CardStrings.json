@@ -35,7 +35,7 @@
     ]
   },
   "collector:BlackBindings": {
-    "NAME": "Schwarze Bandagen",
+    "NAME": "Dunkle Bandagen",
     "DESCRIPTION": "Wende !M! Schwach an. Wende danach für jeden verschiedenen Debuff !clm2! collector:Verdammnis an."
   },
   "collector:Blightning": {
@@ -86,8 +86,8 @@
   },
   "collector:DarkLordForm": {
     "NAME": "Schattenlord Form",
-    "DESCRIPTION": "Spiele zu Beginn deines Zuges *Du *Gehörst *Mir auf einen zufälligen Gegner.",
-    "UPGRADE_DESCRIPTION": "Spiele zu Beginn deines Zuges *Du *Gehörst *Mir+ auf einen zufälligen Gegner."
+    "DESCRIPTION": "Spiele zu Beginn deines Zuges *Du *gehörst *mir auf einen zufälligen Gegner.",
+    "UPGRADE_DESCRIPTION": "Spiele zu Beginn deines Zuges *Du *gehörst *mir+ auf einen zufälligen Gegner."
   },
   "collector:Darkstorm": {
     "NAME": "Finsterer Sturm",
@@ -133,7 +133,7 @@
     "DESCRIPTION": "Erschöpfe alle Handkarten außer Angriffe. NL Füge !D! Schaden zu."
   },
   "collector:FeelMyPain": {
-    "NAME": "Fühl meinen Schmerz",
+    "NAME": "Fühle den Schmerz",
     "DESCRIPTION": "Immer wenn du eine Karte *erschöpfst verliert ein zufälliger Gegner !M! TP."
   },
   "collector:FiendFire": {
@@ -189,7 +189,7 @@
     "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. NL Wenn diese Karte *erschöpft, erhalte eine *Glut."
   },
   "collector:GreenpyreLocus": {
-    "NAME": "Hort des Grünfeuers",
+    "NAME": "Grünfeuerhort",
     "DESCRIPTION": "Wähle 1 von 3 Sammlerstücken und nimm es auf die Hand. Mische !M! weitere Kopien in den Sammlungsstapel.",
     "EXTENDED_DESCRIPTION": [
       "Wähle eine Karte, die du auf die Hand nimmst."
@@ -217,7 +217,7 @@
     "DESCRIPTION": "Stiehl bis zu !M! Block des Gegners. NL Füge danach !D! Schaden zu."
   },
   "collector:InevitableDemise": {
-    "NAME": "Unvermeidbare Plage",
+    "NAME": "Unvermeidbare Pein",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Verhindere die nächste Entfernung der collector:Verdammnis dieses Gegners."
   },
   "collector:InflictAgony": {
@@ -304,7 +304,7 @@
     "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL Der collector:Fackelkopf erhält \"Füge ALLEN Gegnern !clm2! Schaden zu.\"."
   },
   "collector:ReceiveTribute": {
-    "NAME": "Tribut Empfangen",
+    "NAME": "Tribut empfangen",
     "DESCRIPTION": "collector:Opfergabe. NL Nimm 1 von !M! Boss-Karten auf die Hand. Sie erhält Behalten. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle eine Karte, die du auf die Hand nimmst."
@@ -377,7 +377,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Schwach an."
   },
   "collector:Suffering": {
-    "NAME": "Leiden",
+    "NAME": "Leiden lassen",
     "DESCRIPTION": "Wende immer wenn du *Schwach oder *Verwundbar anwendest zusätzlich !M! collector:Verdammnis an."
   },
   "collector:SunbloomKindling": {
@@ -409,7 +409,7 @@
     "DESCRIPTION": "Füge für jeden verschiedenen Debuff des Gegners !D! Schaden zu."
   },
   "collector:YouAreMine": {
-    "NAME": "Du Gehörst Mir!",
+    "NAME": "Du gehörst mir!",
     "DESCRIPTION": "Wende !M! Schwach an. NL Wende !M! Verwundbar an. Wende !clm2! collector:Verdammnis an."
   },
   "collector:Whomp": {
@@ -430,7 +430,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Entferne allen Block des Gegners. NL Füge !D! Schaden zu."
   },
   "collector:BlueSlaverCard": {
-    "NAME": "Sklavenhändler Blau",
+    "NAME": "Sklavenhändler B",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende 1 Schwach an. Verdopple dann das Schwach des Gegners."
   },
   "collector:BonfireSpiritsCard": {
@@ -553,7 +553,7 @@
     "DESCRIPTION": "Nimm !M! zufällige farblose Karten auf die Hand. NL Sie kosten in diesem Zug 0."
   },
   "collector:MushroomCard": {
-    "NAME": "Pilz",
+    "NAME": "Pilze",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende per Zufall entweder !M! Schwach oder !M! Verwundbar an."
   },
   "collector:MysticCard": {
@@ -582,7 +582,7 @@
     "DESCRIPTION": "Erhalte am Ende des Kampfes eine zusätzliche Kartenbelohnung und einen zusätzlichen Trank."
   },
   "collector:RedSlaverCard": {
-    "NAME": "Sklavenhändler Rot",
+    "NAME": "Sklavenhändler R",
     "DESCRIPTION": "Der Gegner verliert in diese Zug !M! Stärke."
   },
   "collector:ReptomancerCard": {
@@ -598,8 +598,8 @@
     "DESCRIPTION": "Dein nächster Angriff kostet 0 und fügt !M! zusätzlichen Schaden zu."
   },
   "collector:ScrapOozeCard": {
-    "NAME": "Schrottschleim",
-    "DESCRIPTION": "collector:Opfergabe. NL Verliere 3 TP. NL Nimm !M! zufällige Angriffe auf die Hand. NL Sie kosten in diesem Zug 0."
+    "NAME": "Schrottschlamm",
+    "DESCRIPTION": "collector:Opfergabe. NL Verliere 3 TP. NL Nimm !M! zufällige Angriffe auf die Hand. NL Sie kosten diesen Zug 0."
   },
   "collector:SentryCard": {
     "NAME": "Wache",
@@ -618,7 +618,7 @@
     "DESCRIPTION": "Füge 3 Mal !D! Schaden zu."
   },
   "collector:SneakyGremlinCard": {
-    "NAME": "Schleichender Gremlin",
+    "NAME": "Schleich-Gremlin",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte."
   },
   "collector:SneckoCard": {
@@ -626,7 +626,7 @@
     "DESCRIPTION": "Ziehe !M! Karten. NL sneckomod:Irre deine Hand."
   },
   "collector:SphericGuardianCard": {
-    "NAME": "Sphärischer Wächter",
+    "NAME": "Sphären-Wächter",
     "DESCRIPTION": "Erhalte !M! expansioncontent:Verschwimmen."
   },
   "collector:SpikerCard": {
@@ -663,7 +663,7 @@
   },
   "collector:TorchHeadCard": {
     "NAME": "Fackelkopf",
-    "DESCRIPTION": "Nimm einen zufälligen Fackelkopf-Ruf auf die Hand. NL Er kostet in diesem Zug 0."
+    "DESCRIPTION": "Nimm einen zufälligen Fackelkopf-Ruf auf die Hand. NL Er kostet diesen Zug 0."
   },
   "collector:TransientCard": {
     "NAME": "Schwundling",

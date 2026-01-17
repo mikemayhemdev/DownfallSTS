@@ -123,9 +123,9 @@
   "bronze:CopyPaste": {
     "NAME": "Kopieren & Einfügen",
     "DESCRIPTIONS": [
-      "In diesem Zug spielst du deine nächste #yFunktion zweimal aus.",
+      "In diesem Zug spielst du deine nächste #yFunktion doppelt.",
       "In diesem Zug spielst du deine nächsten #b",
-      " #yFunktionen zweimal aus."
+      " #yFunktionen doppelt."
     ]
   },
   "bronze:FullRelease": {

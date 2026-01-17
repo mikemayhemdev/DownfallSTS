@@ -116,9 +116,9 @@
   "collector:NextCollectedTwice": {
     "NAME": "Doppelt Gemoppelt",
     "DESCRIPTIONS": [
-      "In diesem Zug spielst du deine nächstes #ySammlerstück zweimal aus.",
+      "In diesem Zug spielst du dein nächstes #ySammlerstück doppelt.",
       "In diesem Zug spielst du deine nächsten #b",
-      " #ySammlerstücke zweimal aus."
+      " #ySammlerstücke doppelt."
     ]
   },
   "collector:NextTurnReserve": {
@@ -284,9 +284,9 @@
   "collector:AcidSlimeCard": {
     "NAME": "Schleimiges Duplizieren",
     "DESCRIPTIONS": [
-      "In diesem Zug spielst du deinen nächsten #yAngriff ODER deine nächste #yFertigkeit zweimal aus.",
+      "In diesem Zug spielst du deinen nächsten #yAngriff ODER deine nächste #yFertigkeit doppelt.",
       "In diesem Zug spielst du deine nächsten #b",
-      " #yAngriffe ODER #yFertigkeiten zweimal aus."
+      " #yAngriffe ODER #yFertigkeiten doppelt."
     ]
   },
   "collector:GremlinNobCard": {

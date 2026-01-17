@@ -33,7 +33,7 @@
     ]
   },
   "sneckomod:MudshieldPower": {
-    "NAME": "Irrschild",
+    "NAME": "Irrlichtschild",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du eine Karte #yirrst #b",
       " #yBlock [REMOVE_SPACE]."
@@ -66,13 +66,13 @@
   "sneckomod:SnakeEyesPower": {
     "NAME": "Schlangenaugen",
     "DESCRIPTIONS": [
-      "In diesem Zug spielst du deine nächste Karte einer #yFremdklasse zweimal aus.",
+      "In diesem Zug spielst du deine nächste Karte einer #yFremdklasse doppelt.",
       "In diesem Zug spielst du deine nächsten #b",
-      " Karten einer #yFremdklasse zweimal aus."
+      " Karten einer #yFremdklasse doppelt."
     ]
   },
   "sneckomod:UnendingSupplyPower": {
-    "NAME": "Unbegrenzter Vorrat",
+    "NAME": "Unendlicher Vorrat",
     "DESCRIPTIONS": [
       "Nimm zu Beginn jedes Zuges #b",
       "Nimm zu Beginn jedes Zuges ein #yEcho einer zufälligen Karte einer #yFremdklasse auf die Hand.",
@@ -152,7 +152,7 @@
     ]
   },
   "sneckomod:AceOfWandsPower": {
-    "NAME": "Königin der Pentagramme",
+    "NAME": "König der Pentagramme",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du einen Debuff anwendest #b",
       " #yBlock [REMOVE_SPACE].",

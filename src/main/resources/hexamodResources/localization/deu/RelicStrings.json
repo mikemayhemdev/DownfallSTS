@@ -4,7 +4,7 @@
     "FLAVOR": "Ein an mich gebundener Beschützer.",
     "DESCRIPTIONS": [
       "Erhalte #b",
-      "#yBlock wenn du das erste Mal im Zug eine Geisterflamme #yhexamod:entzündet hast"
+      " #yBlock wenn das erste Mal im Zug eine #yGeisterflamme #yhexamod:entzündet wird."
     ]
   },
   "hexamod:TheBrokenSeal": {
@@ -21,8 +21,8 @@
     "FLAVOR": "Mal sehen ob wir es... besser machen können.",
     "DESCRIPTIONS": [
       "Ersetzt ",
-      " [REMOVE_SPACE].[] NL Erhalte #b ",
-      "Block immer wenn eine Geisterflamme #yhexamod:entzündet wird."
+      " [REMOVE_SPACE].[] NL Erhalte #b",
+      " #yBlock immer wenn eine #yGeisterflamme #yhexamod:entzündet wird."
     ]
   },
   "hexamod:IceCube": {
@@ -37,7 +37,7 @@
     "NAME": "Seelenstein",
     "FLAVOR": "Eine Seele würde diesem Stein Leben einhauchen!",
     "DESCRIPTIONS": [
-      "#yhexamod:Entzünde die aktuelle Geisterflamme immer, wenn du #b",
+      "#yhexamod:Entzünde die aktuelle #yGeisterflamme immer, wenn du #b",
       " Karten #yerschöpfst."
     ]
   },
@@ -52,7 +52,7 @@
     "NAME": "Raffiniertes Teak-Streichholz",
     "FLAVOR": "Funktioniert auf allen Oberflächen!",
     "DESCRIPTIONS": [
-      "Wenn du das erste Mal im Zug eine Geisterflamme #yhexamod:entzündest, kannst du dich #yhexamod:vorwärts or #yhexamod:rückwärts bewegen."
+      "Wenn du das erste Mal im Zug eine #yGeisterflamme #yhexamod:entzündest, kannst du dich #yhexamod:vorwärts or #yhexamod:rückwärts bewegen."
     ]
   },
   "hexamod:InflammatoryLetter": {
@@ -67,7 +67,7 @@
     "NAME": "Chaos-Seele",
     "FLAVOR": "Manifestierter Wahnsinn.",
     "DESCRIPTIONS": [
-      "Bewege dich zu Beginn deines Zuges auf eine zufällige Geisterflamme und ersetze ihren Typ durch einen zufälligen Geisterflammentyp. Spiele immer am Ende deines Zuges die oberste Karte des Nachziehstapels."
+      "Bewege dich zu Beginn jedes Zuges auf eine zufällige #yGeisterflamme und ersetze ihren Geisterflammentyp. Spiele am Ende jedes Zuges die oberste Karte des Nachziehstapels."
     ]
   },
   "hexamod:JarOfFuel": {
@@ -78,7 +78,7 @@
     ]
   },
   "hexamod:BolsterEngine": {
-    "NAME": "Trickys Stärkungs-Stab",
+    "NAME": "Trickys Stärkungsstab",
     "FLAVOR": "Unterstützt durch die Recherche tausender Bücher. Wissen ist Macht!",
     "DESCRIPTIONS": [
       "Erhalte für die erste #yMachtkarte die du im Kampf spielst #b",
@@ -106,7 +106,7 @@
     "NAME": "Libra",
     "FLAVOR": "Balance ist überall.",
     "DESCRIPTIONS": [
-      "#yTransformiere deine Schläge in zufällige Fertigkeiten und deine Verteidigen in zufällige Angriffe.",
+      "#yTransformiere jeweils eine beliebige Anzahl deiner #ySchläge in zufällige Fertigkeiten und #yVerteidigen in zufällige Angriffe.",
       "Die Waage der Gerechtigkeit neigt sich.",
       "Wähle eine beliebige Anzahl an Karten um sie zu ihren gegenteiligen Typen zu transformieren."
     ]

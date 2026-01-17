@@ -49,7 +49,7 @@
   },
   "bronze:CompileDisplayPanel": {
     "TEXT": [
-      "bronze:Kompilierung:",
+      "Bei Kompilierung:",
       "bronze:Kompilierung"
     ]
   }
