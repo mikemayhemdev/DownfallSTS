@@ -65,9 +65,9 @@
   "Slimebound:HexSlimePerTurnPower": {
     "NAME": "Hexerkraft",
     "DESCRIPTIONS": [
-      "#ySpalte zu Beginn deines nächsten Zuges einen #yGeisterflammenschleim #yab [REMOVE_SPACE].",
+      "#ySpalte zu Beginn deines nächsten Zuges einen #Geisterschleim #yab [REMOVE_SPACE].",
       "Spalte zu Beginn deiner nächsten #b",
-      " Züge einen #yGeisterflammenschleim #yab [REMOVE_SPACE]."
+      " Züge einen #Geisterschleim #yab [REMOVE_SPACE]."
     ]
   },
   "Slimebound:ProtectTheBoss": {

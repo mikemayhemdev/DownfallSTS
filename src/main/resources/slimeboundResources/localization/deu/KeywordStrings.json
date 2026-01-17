@@ -70,11 +70,11 @@
   },
   {
     "NAMES": [
-      "fackelkopfschleim",
+      "fackelschleim",
       "torchhead slime",
       "torchhead_slime"
     ],
-    "PROPER_NAME": "Fackelkopfschleim",
+    "PROPER_NAME": "Fackelschleim",
     "DESCRIPTION": "Fügt mit seinem Angriff #b6 Schaden zu. Der Schaden erhöht sich zusätzlich durch #yStärke."
   },
   {
@@ -92,11 +92,11 @@
   },
   {
     "NAMES": [
-      "kultistenschleim",
+      "krähenschleim",
       "cultist slime",
       "cultist_slime"
     ],
-    "PROPER_NAME": "Kultistenschleim",
+    "PROPER_NAME": "Krähenschleim",
     "DESCRIPTION": "Fügt mit seinem Angriff #b6 Schaden zu, und erhöht danach seinen Schaden um #b1."
   },
   {
@@ -137,11 +137,11 @@
   },
   {
     "NAMES": [
-      "bronzeschleim",
+      "strahlschleim",
       "bronze slime",
       "bronze_slime"
     ],
-    "PROPER_NAME": "Bronzeschleim",
+    "PROPER_NAME": "Strahlschleim",
     "DESCRIPTION": "Fügt mit seinem Angriff ALLEN Gegnern #b10 Schaden zu, und setzt dann seinen nächsten Angriff aus."
   },
   {
@@ -156,11 +156,11 @@
   },
   {
     "NAMES": [
-      "geisterflammenschleim",
+      "geisterschleim",
       "ghostflame slime",
       "ghostflame_slime"
     ],
-    "PROPER_NAME": "Geisterflammenschleim",
+    "PROPER_NAME": "Geisterschleim",
     "DESCRIPTION": "Fügt mit seinem Angriff #b2 Schaden zu, und wendet danach #b6 #ySeelenfeuer an."
   },
   {
