@@ -154,7 +154,7 @@
   },
   "champ:Haymaker": {
     "NAME": "Piledriver",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende 2 Verwundbar an. NL Wende 2 Schwach an."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende 2 Verwundbar und 2 Schwach an."
   },
   "champ:ViciousMockery": {
     "NAME": "Verhöhnen",
