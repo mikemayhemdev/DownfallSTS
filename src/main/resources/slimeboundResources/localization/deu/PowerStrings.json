@@ -133,8 +133,8 @@
   "Slimebound:LoseSlimesPower": {
     "NAME": "Überanstrengung",
     "DESCRIPTIONS": [
-      "#yAbsorbiere im nächsten Zug alle Schleim-Untertanen.",
-      " Züge später #yAbsorbierst du alle Schleim-Untertanen."
+      "#yAbsorbiere im nächsten Zug alle Schleimuntertanen.",
+      " Züge später #yAbsorbierst du alle Schleimuntertanen."
     ]
   },
   "Slimebound:TackleModifyDamagePower": {
