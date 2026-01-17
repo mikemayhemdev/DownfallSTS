@@ -303,11 +303,11 @@
   "Slimebound:NextTurnGainSlimeCrush": {
     "NAME": "Zerschmettern vorbereiten",
     "DESCRIPTIONS": [
-      "Nimm im nächsten Zug ein #gSCHLEIM #gZERSCHMETTERN auf die Hand.",
-      "Nimm im nächsten Zug ein #gSCHLEIM #gZERSCHMETTERN+ auf die Hand.",
+      "Nimm im nächsten Zug ein #gZERSCHMETTERN!!! auf die Hand.",
+      "Nimm im nächsten Zug ein #gZERSCHMETTERN!!!+ auf die Hand.",
       "Nimm im nächsten Zug #b",
-      " #gSCHLEIM #gZERSCHMETTERN auf die Hand.",
-      " #gSCHLEIM #gZERSCHMETTERN+ auf die Hand."
+      " #gZERSCHMETTERN!!! auf die Hand.",
+      " #gZERSCHMETTERN!!!+ auf die Hand."
     ]
   },
   "Slimebound:StunnedPower": {
