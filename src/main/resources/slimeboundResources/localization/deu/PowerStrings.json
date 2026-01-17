@@ -514,8 +514,8 @@
   "Slimebound:GoopPerTurnPower": {
     "NAME": "Schlammbad",
     "DESCRIPTIONS": [
-      "Wende zu Beginn des gegnerischen Zuges ",
-      " #yGlibber an."
+      "Erhält immer zu Beginn seines Zuges #b",
+      " #yGlibber [REMOVE_SPACE]."
     ]
   }
 }
