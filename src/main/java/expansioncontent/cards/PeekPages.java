@@ -29,7 +29,7 @@ public class PeekPages extends AbstractExpansionCard {
     public final static String ID = makeID("PeekPages");
 
     public PeekPages() {
-        super(ID, 1, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
+        super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
         this.setBackgroundTexture("expansioncontentResources/images/512/bg_boss_skill.png", "expansioncontentResources/images/1024/bg_boss_skill.png");
         this.baseMagicNumber = 3;
         this.magicNumber = this.baseMagicNumber;
