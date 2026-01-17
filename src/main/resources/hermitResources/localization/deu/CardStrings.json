@@ -115,8 +115,8 @@
   },
   "hermit:Glare": {
     "NAME": "Starren",
-    "DESCRIPTION": "Wende !M! Schwach und Verwundbar an.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Wende !M! Schwach und Verwundbar an."
+    "DESCRIPTION": "Wende !M! Schwach und !M! Verwundbar an.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Wende !M! Schwach und !M! Verwundbar an."
   },
   "hermit:TakeCover": {
     "NAME": "In Deckung gehen",
@@ -242,7 +242,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "Einsamer Wolf",
-    "DESCRIPTION": "Wähle eine Karte. NL Sie kostet diesen Zug 0. NL Wirf den Rest deiner Hand ab."
+    "DESCRIPTION": "Wähle eine Handkarte. NL Sie kostet diesen Zug 0. NL Wirf den Rest deiner Hand ab."
   },
   "hermit:HighNoon": {
     "NAME": "High Noon",

@@ -149,7 +149,7 @@
     "UPGRADE_DESCRIPTION": "Behalten. NL In diesem Zug spielst du deine nächste Funktion zweimal aus."
   },
   "bronze:CutThrough": {
-    "NAME": "Einschneidend",
+    "NAME": "Ausschneiden",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Spähe !M!. NL bronze:Kompilierung - Ziehe !bauto! Karte.",
     "EXTENDED_DESCRIPTION": [
       "schnittiges",
@@ -374,7 +374,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Verhindere den nächsten *Kompilierungsfehler den du *kodierst."
   },
   "bronze:Overload": {
-    "NAME": "Kopieren & Einfügen",
+    "NAME": "Kopieren-Einfügen",
     "DESCRIPTION": "Spiele jeweils eine Kopie jeder kodierten Karte. Die Kopien werden nicht kodiert. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Spiele jeweils eine Kopie jeder kodierten Karte. Die Kopien werden nicht kodiert."
   },

@@ -443,7 +443,7 @@
     "NAME": "Wissender Schädel",
     "FLAVOR": "Leg mich wieder hin!",
     "DESCRIPTIONS": [
-      "Zu Beginn des Kampfes kannst du dir im Austausch gegen TP #yGold, einen #yTrank, oder eine #yfarblose #yKarte wünschen."
+      "Zu Beginn des Kampfes kannst du dir im Austausch gegen TP #yGold [REMOVE_SPACE], einen #yTrank [REMOVE_SPACE], oder eine #yfarblose #yKarte wünschen."
     ]
   },
   "downfall:HeartBlessingRed": {
@@ -520,7 +520,7 @@
       "Verdorbene Kurierin",
       "Dem Herz gehen nie mehr Karten, Relikte oder Tränke aus und seine Preise sind um #b20% gesenkt.",
       "Kampf-Kartenbelohnungen enthalten jetzt auch farblose und andersfarbige Karten, inklusive Helden-Karten.",
-      "Du kannst keine #ySeelen mehr erhalten. Erhalte in deinem Zug [E]. Das Zerbrechen der Schlüssel erfordert keine #ySeelen."
+      "Du kannst keine #ySeelen mehr erhalten. Erhalte in deinem Zug [E]. Das Zerbrechen der Schlüssel erfordert keine #ySeelen [REMOVE_SPACE]."
     ]
   },
   "downfall:LizardTail": {
@@ -548,7 +548,7 @@
     "NAME": "Besonders verfluchte Rufglocke",
     "FLAVOR": "Du bildest dir ein sie zu hören, bist dir aber nicht sicher.",
     "DESCRIPTIONS": [
-      "Erhalte beim Aufheben einen besonderen #rFluch und #b3 gewöhnliche #yRelikte.",
+      "Erhalte beim Aufheben einen besonderen #rFluch und #b3 gewöhnliche #yRelikte [REMOVE_SPACE].",
       "Die Glocke schlägt...",
       "Belohnungen überspringen",
       "Schließen"

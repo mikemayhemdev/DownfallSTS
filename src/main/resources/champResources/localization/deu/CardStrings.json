@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Verspotten",
-    "DESCRIPTION": "Wende !M! Schwach und Verwundbar an.",
-    "UPGRADE_DESCRIPTION": "Wende !M! Schwach und Verwundbar auf ALLE Gegner an."
+    "DESCRIPTION": "Wende !M! Schwach und !M! Verwundbar an.",
+    "UPGRADE_DESCRIPTION": "Wende !M! Schwach und !M! Verwundbar auf ALLE Gegner an."
   },
   "champ:Execute": {
     "NAME": "Hinrichten",

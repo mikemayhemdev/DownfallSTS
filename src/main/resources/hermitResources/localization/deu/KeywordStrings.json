@@ -46,7 +46,7 @@
       "robust",
       "rugged"
       ],
-    "DESCRIPTION": "Reduziert den nächsten erlitennen TP-Verlust durch Angriffschaden zu #b2."
+    "DESCRIPTION": "Reduziert den nächsten erlitennen TP-Verlust durch Angriffschaden zu #b2 [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Kopfgeld",

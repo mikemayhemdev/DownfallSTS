@@ -98,7 +98,7 @@
     "NAME": "Versorgungsschrift",
     "FLAVOR": "Eine erstaunlich detaillierte Inventurliste der von der Gruppe angehäuften Gegenstände.",
     "DESCRIPTIONS": [
-      "Ziehe zu Beginn deines dritten Zuges #b2 Karten und erhalte [E] [E] ."
+      "Ziehe zu Beginn deines dritten Zuges #b2 Karten und erhalte NL [E] [E] ."
     ]
   },
   "Gremlin:TagTeamwork": {

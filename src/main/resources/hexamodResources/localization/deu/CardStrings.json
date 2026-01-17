@@ -132,8 +132,8 @@
   },
   "hexamod:InstantInferno": {
     "NAME": "Instant-Inferno",
-    "DESCRIPTION": "Behalten. NL Wende !burny! hexamod:Seelenfeuer an. NL Wechsle zur Inferno Geisterflamme und hexamod:entzünde sie. Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Wende !burny! hexamod:Seelenfeuer an. NL hexamod:Entzünde die Inferno Geisterflamme. Erschöpft."
+    "DESCRIPTION": "Behalten. NL Wende !burny! hexamod:Seelenfeuer an. Wechsle zur Inferno Geisterflamme und hexamod:entzünde sie. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Wende !burny! hexamod:Seelenfeuer an. NL hexamod:Entzünde die Inferno Geisterflamme. NL Erschöpft."
   },
   "hexamod:GhostLash": {
     "NAME": "Geisterpeitsche",
@@ -196,7 +196,7 @@
   },
   "hexamod:HeatMetal": {
     "NAME": "Heißes Eisen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !burny! hexamod:Seelenfeuer an. NL Wende !M! Verwundbar an."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !burny! hexamod:Seelenfeuer und !M! Verwundbar an."
   },
   "hexamod:HeatShield": {
     "NAME": "Hitzeschild",
@@ -283,7 +283,7 @@
     "UPGRADE_DESCRIPTION": "Füge X+1 Mal !D! Schaden zu und wende X+1 Mal !M! Schwach an."
   },
   "hexamod:NightmareVision": {
-    "NAME": "Albraumvisionen",
+    "NAME": "Albtraumvisionen",
     "DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL expansioncontent:Exhumiere eine *flüchtige Karte. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL expansioncontent:Exhumiere !M! *flüchtige Karten. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
@@ -399,7 +399,7 @@
   },
   "hexamod:VolcanoVisage": {
     "NAME": "Vulkanvisage",
-    "DESCRIPTION": "Wende immer, wenn du eine Geisterflamme hexamod:entzündest, !M! hexamod:Seelenfeuer auf ALLE Gegner an."
+    "DESCRIPTION": "Wende immer wenn du eine Geisterflamme hexamod:entzündest !M! hexamod:Seelenfeuer auf ALLE Gegner an."
   },
   "hexamod:WildfireWeapon": {
     "NAME": "Waldbrand-Waffe",

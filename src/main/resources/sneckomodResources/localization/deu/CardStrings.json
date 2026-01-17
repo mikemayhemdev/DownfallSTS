@@ -36,7 +36,7 @@
   "sneckomod:DefensiveFlair": {
     "NAME": "Defensiver Flair",
     "DESCRIPTION": "Erhalte !B! Block. Block wird für jede Karte einer sneckomod:Fremdklasse auf der Hand um !M! erhöht. NL sneckomod:Geschenk: Ungewöhnlich.",
-    "DESCRIPTION_BATTLE": "Erhalte !B! Block. Block wird für jede Karte einer sneckomod:Fremdklasse auf der Hand um !M! erhöht."
+    "DESCRIPTION_BATTLE": "Erhalte !B! Block. NL Das Block dieser Karte wird für jede Karte einer sneckomod:Fremdklasse auf der Hand um !M! erhöht."
   },
   "sneckomod:DiceBlock": {
     "NAME": "Würfelblock",
@@ -168,7 +168,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten und sneckomod:irre sie."
   },
   "sneckomod:QuickMove": {
-    "NAME": "Schnelle Bewegung",
+    "NAME": "Flinke Bewegung",
     "DESCRIPTION": "Erhalte !B! Block. NL sneckomod:Überschuss: Wende !M! Verwundbar auf ALLE Gegner an."
   },
   "sneckomod:RainOfDice": {
@@ -536,7 +536,7 @@
   "sneckomod:Jackpot": {
     "NAME": "Jackpot",
     "DESCRIPTION": "Behalten. NL Erhalte [E] [E]. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL h [E] [E] [E]. NL Erschöpft."
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte [E] [E] [E]. NL Erschöpft."
   },
   "sneckomod:MakeshiftBlade": {
     "NAME": "Nachtreten",
@@ -577,7 +577,7 @@
   },
   "sneckomod:PerpetualSerpent": {
     "NAME": "Ewige Schlange",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL sneckomod:Überschuss: Erhalte [E] [E]."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL sneckomod:Überschuss: Erhalte NL [E] [E]."
   },
   "sneckomod:LastStrike": {
     "NAME": "Ultimativer Schlag",

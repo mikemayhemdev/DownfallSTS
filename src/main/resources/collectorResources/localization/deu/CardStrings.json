@@ -74,7 +74,7 @@
   },
   "collector:Condemn": {
     "NAME": "Verdammen",
-    "DESCRIPTION": "Wende !M! Verwundbar an. NL Wende !clm2! collector:Verdammnis an."
+    "DESCRIPTION": "Wende !M! Verwundbar und !clm2! collector:Verdammnis an."
   },
   "collector:CursedWail": {
     "NAME": "Verfluchtes Heulen",
@@ -267,8 +267,8 @@
   },
   "collector:MiniCurse": {
     "NAME": "Mini-Fluch",
-    "DESCRIPTION": "collector:Opfergabe. NL Wende 1 Schwach und Verwundbar an.",
-    "UPGRADE_DESCRIPTION": "collector:Opfergabe. NL Wende 1 Schwach und Verwundbar auf ALLE Gegner an."
+    "DESCRIPTION": "collector:Opfergabe. NL Wende 1 Schwach und 1 Verwundbar an.",
+    "UPGRADE_DESCRIPTION": "collector:Opfergabe. NL Wende 1 Schwach und 1 Verwundbar auf ALLE Gegner an."
   },
   "collector:Misdirect": {
     "NAME": "In die Irre führen",
@@ -691,7 +691,7 @@
   },
   "collector:CollectorCard": {
     "NAME": "Ouroboros",
-    "DESCRIPTION": "collector:Opfergabe. NL Wende !M! Schwach an. NL Wende !M! Verwundbar an. NL Erhalte !clm2! expansioncontent:temporäre_TP."
+    "DESCRIPTION": "collector:Opfergabe. NL Wende !M! Schwach und !M! Verwundbar an. NL Erhalte !clm2! expansioncontent:temporäre_TP."
   },
   "collector:Sapped": {
     "NAME": "Ausgesaugt",

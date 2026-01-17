@@ -104,7 +104,7 @@
     "FLAVOR": "Die Art dieser Frucht sieht äußerst fremdartig aus.",
     "DESCRIPTIONS": [
       "Füge beim Aufheben einen #rParasiten in dein Deck hinzu und erhöhe deine Max TP um #b",
-      " . Beginne jeden Kampf mit #b",
+      " [REMOVE_SPACE]. Beginne jeden Kampf mit #b",
       " #yGeschicklichkeit."
     ]
   },
