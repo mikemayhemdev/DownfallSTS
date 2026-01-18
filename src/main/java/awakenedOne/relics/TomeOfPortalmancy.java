@@ -23,7 +23,7 @@ import static awakenedOne.util.Wiz.atb;
 public class TomeOfPortalmancy extends CustomRelic {
 
     public static final String ID = AwakenedOneMod.makeID("TomeOfPortalmancy");
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("TomeOfPortalmancy.png")); //TODO: Images
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("TomeOfPortalmancy.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("TomeOfPortalmancy.png"));
 
     private static final int AMOUNT = 2;

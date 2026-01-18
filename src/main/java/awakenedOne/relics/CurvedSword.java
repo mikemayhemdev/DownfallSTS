@@ -23,7 +23,7 @@ public class CurvedSword extends CustomRelic {
     //the joke is that this is literally a "conjure blade"
 
     public static final String ID = AwakenedOneMod.makeID("CurvedSword");
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("CurvedSword.png")); //TODO: Images
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("CurvedSword.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("CurvedSword.png"));
 
     private static final int REQUIREMENT = 4;

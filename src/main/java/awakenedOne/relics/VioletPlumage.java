@@ -15,7 +15,7 @@ import static awakenedOne.AwakenedOneMod.makeRelicPath;
 public class VioletPlumage extends CustomRelic {
 
     public static final String ID = AwakenedOneMod.makeID("VioletPlumage");
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("VioletPlumage.png")); //TODO: Images
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("VioletPlumage.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("VioletPlumage.png"));
 
     //Hey, you! Go to VioletPlumagePatch! This relic also uses code from Aspiration, the GitHub and relevant patch is linked there!

@@ -16,7 +16,7 @@ import static awakenedOne.AwakenedOneMod.makeRelicPath;
 public class MiniBlackHole extends CustomRelic {
 
     public static final String ID = AwakenedOneMod.makeID("MiniBlackHole");
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("MiniBlackHole.png")); //TODO: Images
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("MiniBlackHole.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("MiniBlackHole.png"));
     public boolean firstTurn = false;
 

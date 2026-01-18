@@ -13,7 +13,7 @@ import static awakenedOne.util.Wiz.atb;
 public class RippedDoll extends CustomRelic {
 
     public static final String ID = AwakenedOneMod.makeID("RippedDoll");
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("RippedDoll.png")); //TODO: Images
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("RippedDoll.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("RippedDoll.png"));
 
     //Ripped Doll
