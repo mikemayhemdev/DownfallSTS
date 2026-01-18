@@ -47,7 +47,7 @@ public class CounterStrike extends AbstractGremlinCard {
         AbstractDungeon.actionManager.addToBottom(new DamageAction(m, new DamageInfo(p, this.damage,
                 this.damageTypeForTurn), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         for(int i = 0; i < magicNumber; i++) {
-            AbstractDungeon.actionManager.addToBottom(new CounterStrikeAction(m, 1, upgraded));
+            AbstractDungeon.actionManager.addToBottom(new CounterStrikeAction(m, 1, false));
         }
     }
 
