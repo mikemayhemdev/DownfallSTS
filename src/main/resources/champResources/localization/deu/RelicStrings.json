@@ -71,7 +71,7 @@
     "NAME": "Lehren der Gladiatoren",
     "FLAVOR": "Probiere alles aus - etwas wird schon hängenbleiben.",
     "DESCRIPTIONS": [
-      "Immer wenn du im selben Zug jeweils mindetens einen #ychamp:Combo [REMOVE_SPACE] aktivierst, einen #ychamp:Abschluss ausspielst, und eine #yHaltung annimmst, dann erhalte #b1 #yStärke und #yGeschicklichkeit [REMOVE_SPACE]."
+      "Immer wenn du im selben Zug jeweils mindetens eine Karte mit #ychamp:Combo (egal ob aktiv oder nicht) und einen #ychamp:Abschluss ausspielst, sowie eine #yHaltung annimmst, dann erhalte #b1 #yStärke und #yGeschicklichkeit [REMOVE_SPACE]."
     ]
   },
   "champ:PowerArmor": {

@@ -183,7 +183,7 @@
   },
   "Slimebound:OozeBath": {
     "NAME": "Schlammbad",
-    "DESCRIPTION": "Wende zu Beginn des gegnerischen Zuges !slime! slimeboundmod:Glibber an. NL Erschöpft.",
+    "DESCRIPTION": "Der Gegner erhält immer zu Beginn seines Zuges !slime! slimeboundmod:Glibber. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Verdreifache den slimeboundmod:Glibber des Gegners. NL Erschöpft."
   },
   "Slimebound:Overexert": {

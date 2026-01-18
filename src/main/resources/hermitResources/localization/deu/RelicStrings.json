@@ -27,7 +27,7 @@
     "NAME": "Hufeisen",
     "FLAVOR": "Ein Glücksbringer. Jemand wird es sicherlich vermissen.",
     "DESCRIPTIONS": [
-      "Immer wenn du #ySchwach, #yGebrechlich oder #yVerwundbar erhälst [REMOVE_SPACE], erhalte stattdessen #b1 weniger."
+      "Immer wenn du #ySchwach, #yGebrechlich oder #yVerwundbar erhältst, erhalte stattdessen #b1 weniger davon."
     ]
   },
   "hermit:Spyglass": {
@@ -71,7 +71,7 @@
     "NAME": "Zugeklapptes Medaillon",
     "FLAVOR": "Es kann nicht mehr geöffnet werden.",
     "DESCRIPTIONS": [
-      "Ersetzt #yAltes #yMedaillon. Wenn zum ersten Mal im Zug ein #rFluch gezogen wird, #yerschöpfe ihn un ziehe #b",
+      "Ersetzt #yAltes #yMedaillon [REMOVE_SPACE]. Wenn zum ersten Mal im Zug ein #rFluch gezogen wird, #yerschöpfe ihn un ziehe #b",
       "Nie wieder...",
       " Karten. Nimm beim Aufheben #b",
       " #rVerletzungen in dein Deck auf."
@@ -81,7 +81,7 @@
     "NAME": "Rasiermesser",
     "FLAVOR": "Für eine wirklich glatte Rasur...",
     "DESCRIPTIONS": [
-      "Immer wenn du eine Karte aus deinem Deck entfernst oder #ytransformierst, heile #b",
+      "Immer wenn du eine Karte aus deinem Deck entfernst oder #ytransformierst [REMOVE_SPACE], heile #b",
       " TP."
     ]
   },
@@ -107,7 +107,7 @@
     "DESCRIPTIONS": [
       "Immer wenn du einen Elitekampf gewinnst, heile #b",
       " TP und erhalte #b",
-      " #yGold."
+      " #yGold [REMOVE_SPACE]."
     ]
   }
 }

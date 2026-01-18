@@ -370,7 +370,7 @@
     ]
   },
   "downfall:MonsterVigor": {
-    "NAME": "Vigor",
+    "NAME": "Elan",
     "DESCRIPTIONS": [
       "Die nächste Attacke dieses Charakters verursacht #b",
       " zusätzlichen Schaden."

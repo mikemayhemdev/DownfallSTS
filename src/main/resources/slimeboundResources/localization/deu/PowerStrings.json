@@ -4,7 +4,7 @@
     "DESCRIPTIONS": [
       "Erhöhe den Schaden deiner slimeboundmod:abgespaltenen Schleime um #b",
       " und ihre Sekundäreffekte um #b",
-      "."
+      " [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SlimedPower": {
@@ -65,9 +65,9 @@
   "Slimebound:HexSlimePerTurnPower": {
     "NAME": "Hexerkraft",
     "DESCRIPTIONS": [
-      "#ySpalte zu Beginn deines nächsten Zuges einen #yGeisterflammenschleim #yab [REMOVE_SPACE].",
+      "#ySpalte zu Beginn deines nächsten Zuges einen #Geisterschleim #yab [REMOVE_SPACE].",
       "Spalte zu Beginn deiner nächsten #b",
-      " Züge einen #yGeisterflammenschleim #yab [REMOVE_SPACE]."
+      " Züge einen #Geisterschleim #yab [REMOVE_SPACE]."
     ]
   },
   "Slimebound:ProtectTheBoss": {
@@ -133,8 +133,8 @@
   "Slimebound:LoseSlimesPower": {
     "NAME": "Überanstrengung",
     "DESCRIPTIONS": [
-      "#yAbsorbiere im nächsten Zug alle Schleim-Untertanen.",
-      " Züge später #yAbsorbierst du alle Schleim-Untertanen."
+      "#yAbsorbiere im nächsten Zug alle Schleimuntertanen.",
+      " Züge später #yAbsorbierst du alle Schleimuntertanen."
     ]
   },
   "Slimebound:TackleModifyDamagePower": {
@@ -303,11 +303,11 @@
   "Slimebound:NextTurnGainSlimeCrush": {
     "NAME": "Zerschmettern vorbereiten",
     "DESCRIPTIONS": [
-      "Nimm im nächsten Zug ein #gSCHLEIM #gZERSCHMETTERN auf die Hand.",
-      "Nimm im nächsten Zug ein #gSCHLEIM #gZERSCHMETTERN+ auf die Hand.",
+      "Nimm im nächsten Zug ein #gZERSCHMETTERN!!! auf die Hand.",
+      "Nimm im nächsten Zug ein #gZERSCHMETTERN!!!+ auf die Hand.",
       "Nimm im nächsten Zug #b",
-      " #gSCHLEIM #gZERSCHMETTERN auf die Hand.",
-      " #gSCHLEIM #gZERSCHMETTERN+ auf die Hand."
+      " #gZERSCHMETTERN!!! auf die Hand.",
+      " #gZERSCHMETTERN!!!+ auf die Hand."
     ]
   },
   "Slimebound:StunnedPower": {
@@ -514,8 +514,8 @@
   "Slimebound:GoopPerTurnPower": {
     "NAME": "Schlammbad",
     "DESCRIPTIONS": [
-      "Wende zu Beginn des gegnerischen Zuges ",
-      " #yGlibber an."
+      "Erhält immer zu Beginn seines Zuges #b",
+      " #yGlibber [REMOVE_SPACE]."
     ]
   }
 }

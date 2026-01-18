@@ -9,8 +9,8 @@
   },
   "champ:Taunt": {
     "NAME": "Verspotten",
-    "DESCRIPTION": "Wende !M! Schwach und Verwundbar an.",
-    "UPGRADE_DESCRIPTION": "Wende !M! Schwach und Verwundbar auf ALLE Gegner an."
+    "DESCRIPTION": "Wende !M! Schwach und !M! Verwundbar an.",
+    "UPGRADE_DESCRIPTION": "Wende !M! Schwach und !M! Verwundbar auf ALLE Gegner an."
   },
   "champ:Execute": {
     "NAME": "Hinrichten",
@@ -154,7 +154,7 @@
   },
   "champ:Haymaker": {
     "NAME": "Piledriver",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende 2 Verwundbar an. NL Wende 2 Schwach an."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende 2 Verwundbar und 2 Schwach an."
   },
   "champ:ViciousMockery": {
     "NAME": "Verhöhnen",
@@ -201,7 +201,7 @@
   },
   "champ:CheapShot": {
     "NAME": "Fieser Trick",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft bei Bossen zwei weitere Male. Ansonsten wird das Ziel hermit:betäubt . NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft bei Bossen zwei weitere Male. Ansonsten wird das Ziel hermit:betäubt. NL Erschöpft."
   },
   "champ:RisingSlash": {
     "NAME": "Steiler Schlag",
@@ -287,12 +287,12 @@
       "DESCRIPTION": "Immer wenn du eine *Haltung annimst, aktiviere ihren champ:Fertigkeitsbonus !M! Mal."
   },
   "champ:CalledShot": {
-    "NAME": "Erfrischungen",
-    "DESCRIPTION": "champ:Offensivcombo: Erhalte [E] [E] , und Erschöpfe diese Karte. NL champ:Defensivcombo: Ziehe !M! Karten.",
-    "UPGRADE_DESCRIPTION": "champ:Offensivcombo: Erhalte [E] [E] [E] , und Erschöpfe diese Karte. NL champ:Defensivcombo: Ziehe !M! Karten.",
+    "NAME": "Erfrischung",
+    "DESCRIPTION": "champ:Offensivcombo: Erhalte [E] [E] und Erschöpfe diese Karte. NL champ:Defensivcombo: Ziehe !M! Karten.",
+    "UPGRADE_DESCRIPTION": "champ:Offensivcombo: Erhalte [E] [E] [E] und Erschöpfe diese Karte. NL champ:Defensivcombo: Ziehe !M! Karten.",
     "EXTENDED_DESCRIPTION": [
-      "champ:Offensivcombo: Erhalte [E] [E] , und Erschöpfe diese Karte. NL ",
-      "champ:Offensivcombo: Erhalte [E] [E] [E] , und Erschöpfe diese Karte. NL ",
+      "champ:Offensivcombo: Erhalte [E] [E] und Erschöpfe diese Karte. NL ",
+      "champ:Offensivcombo: Erhalte [E] [E] [E] und Erschöpfe diese Karte. NL ",
       "champ:Defensivcombo: Ziehe !M! Karten.",
       "Ein miserabler Zeitpunkt dafür."
     ]

@@ -2,16 +2,16 @@
   "bronze:FreeFunctionsPotion": {
     "NAME": "Maschinenöl",
     "DESCRIPTIONS": [
-      "Erhöhe die Zahlen der derzeit #yKodierten Karten, abgesehen von den Kosten, um #b",
+      "Erhöhe die Zahlen der derzeit #ykodierten Karten, abgesehen von den Kosten, um #b",
       " [REMOVE_SPACE]."
     ]
   },
   "bronze:CleanCodePotion": {
     "NAME": "Matetee",
     "DESCRIPTIONS": [
-      "Entferne alle #yKompilierungsfehler die gerade #yKodiert sind. Die nächste #yFunktion die #yKompiliert kostet #b0 bis zu sie spielst.",
-      "Entferne alle #yKompilierungsfehler die gerade #yKodiert sind. Die nächsten #b",
-      " #yFunktionen die #yKompilieren kosten #b0 bis zu sie spielst."
+      "Entferne alle #yKompilierungsfehler die gerade #ykodiert sind. Die nächste #yFunktion die #yKompiliert kostet #b0 bis du sie spielst.",
+      "Entferne alle #yKompilierungsfehler die gerade #ykodiert sind. Die nächsten #b",
+      " #yFunktionen die #yKompilieren kosten #b0 bis du sie spielst."
     ]
   },
   "bronze:BurnAndBuffPotion": {

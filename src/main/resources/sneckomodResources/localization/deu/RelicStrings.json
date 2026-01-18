@@ -44,17 +44,17 @@
     ]
   },
   "sneckomod:RareBoosterPack": {
-    "NAME": "Seltenes Boosterpack",
+    "NAME": "Boosterpack",
     "FLAVOR": "Noch im Neuzustand.",
     "DESCRIPTIONS": [
       "Erhalte beim Aufheben eine #yseltene Karte einer #ysneckomod:Fremdklasse [REMOVE_SPACE]."
     ]
   },
   "sneckomod:SleevedAce": {
-    "NAME": "Ass im Ärmel",
+    "NAME": "Gezinkte Karte",
     "FLAVOR": "Wir alle sind Asse.",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn jedes Kampfes eine #yGezinkte #yKarte+ auf die Hand."
+      "Nimm zu Beginn jedes Kampfes ein #yFalschspielen+ auf die Hand."
     ]
   },
   "sneckomod:UnknownEgg": {
@@ -111,7 +111,7 @@
     ]
   },
   "sneckomod:SneckoBoss": {
-    "NAME": "Glücksbringer-Hufeisen",
+    "NAME": "Glücksbringer",
     "FLAVOR": "Sei deines Glückes Schmied.",
     "DESCRIPTIONS": [
       "Wähle beim Aufheben #b1 von #b3 #yCharakteren [REMOVE_SPACE]. Für diese Klasse: Wähle #b3 #yverbesserte ungewöhnliche Karten und #b2 seltene Karten. Erhalte nach jedem Kampf eine zusätzliche Kartenbelohnung.",

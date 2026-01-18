@@ -9,14 +9,14 @@
       "socketed"
     ],
     "PROPER_NAME": "Fassung",
-    "DESCRIPTION": "#yJuwelen können am Lagerfeuer in Karten mit Fassungen eingebettet werden."
+    "DESCRIPTION": "#yJuwelen können am Lagerfeuer permanent in Karten mit offenen Fassungen eingebettet werden. Pro Fassung kann ein Juwel eingebettet werden."
   },
   {
     "NAMES": [
       "stasis"
     ],
     "PROPER_NAME": "Stasis",
-    "DESCRIPTION": "Eine Karte liegt für die Anzahl der Züge in Statis, die den Kosten der Karte plus #b1 entspricht. NL Wenn eine Karte die STasis verlässt, nimm sie auf die Hand. Sie kostet #b0 bis du sie spielst."
+    "DESCRIPTION": "Eine Karte liegt für die Anzahl der Züge in Statis, die den Kosten der Karte plus #b1 entspricht. NL Wenn eine Karte die Stasis verlässt, nimm sie auf die Hand. Sie kostet #b0 bis du sie spielst."
   },
   {
     "NAMES": [
@@ -27,7 +27,7 @@
       "gems"
     ],
     "PROPER_NAME": "Juwel",
-    "DESCRIPTION": "Juwelen können am Lagerfeuer in Karten mit Fassungen eingebettet werden. Juwelen können nicht #yverbessert werden."
+    "DESCRIPTION": "Juwelen können am Lagerfeuer permanent in Karten mit offenen Fassungen eingebettet werden. Juwelen können nicht #yverbessert werden."
   },
   {
     "PROPER_NAME": "Defensivmodus",

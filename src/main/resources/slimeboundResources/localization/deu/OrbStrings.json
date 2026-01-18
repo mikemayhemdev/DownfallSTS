@@ -6,7 +6,7 @@
     ]
   },
   "Slimebound:BronzeSlime": {
-    "NAME": "Bronzeschleim",
+    "NAME": "Strahlschleim",
     "DESCRIPTION": [
       "Fügt mit seinem Angriff ALLEN Gegnern #b",
       " Schaden zu, und setzt dann seinen nächsten Angriff aus.",
@@ -35,14 +35,14 @@
     ]
   },
   "Slimebound:TorchHeadSlime": {
-    "NAME": "Fackelkopfschleim",
+    "NAME": "Fackelschleim",
     "DESCRIPTION": [
       "Fügt mit seinem Angriff #b",
       " Schaden zu. Der Schaden erhöht sich zusätzlich durch #yStärke [REMOVE_SPACE]."
     ]
   },
   "Slimebound:CultistSlime": {
-    "NAME": "Kultistenschleim",
+    "NAME": "Krähenschleim",
     "DESCRIPTION": [
       "Fügt mit seinem Angriff #b",
       " Schaden zu, und erhöht danach seinen Schaden um #b1 [REMOVE_SPACE]."
@@ -72,7 +72,7 @@
     ]
   },
   "Slimebound:HexSlime": {
-    "NAME": "Geisterflammenschleim",
+    "NAME": "Geisterschleim",
     "DESCRIPTION": [
       "Fügt mit seinem Angriff #b",
       " Schaden zu und wendet danach #b",

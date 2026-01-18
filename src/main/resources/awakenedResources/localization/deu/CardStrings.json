@@ -52,7 +52,7 @@
   },
   "awakened:Spellbinder": {
     "NAME": "Bezaubern",
-    "DESCRIPTION": "awakened:Rufe zu Beginn jedes Zuges einen *Zauberspruch *auf"
+    "DESCRIPTION": "awakened:Rufe zu Beginn jedes Zuges einen *Zauberspruch *auf."
   },
   "awakened:Ceremony": {
     "NAME": "Zeremonie",
@@ -144,7 +144,7 @@
   },
   "awakened:FourthDimension": {
     "NAME": "Vierte Dimension",
-    "DESCRIPTION": "Erschöpfe eine Karte. NL Mische !M! Kopien in den Nachziehstapel. NL Erschöpft.",
+    "DESCRIPTION": "Erschöpfe eine Karte. NL Mische !M! Kopien der Karte in den Nachziehstapel. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Erschöpfe eine Karte in die Vierte Dimension."
     ]
@@ -216,7 +216,7 @@
   },
   "awakened:Spew": {
     "NAME": "Ausspeien",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL [E] die für diese Karte ausgegeben wird wie awakened:auslaugen behandelt."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Für diese Karte ausgegebene [E] wird wie awakened:Auslaugen behandelt."
   },
   "awakened:DarknessFalls": {
     "NAME": "Ringfinsternis",
@@ -279,7 +279,7 @@
   "awakened:Victuals": {
     "NAME": "Verpflegung",
     "DESCRIPTION": "awakened:Chor: Erhalte [E] [E] . NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "awakened:Chor: Erhalte [E] [E] [E] . NL Erschöpft."
+    "UPGRADE_DESCRIPTION": "awakened:Chor: NL Erhalte [E] [E] [E] . NL Erschöpft."
   },
   "awakened:Gather": {
     "NAME": "Versammeln",

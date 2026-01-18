@@ -149,7 +149,7 @@
     "UPGRADE_DESCRIPTION": "Behalten. NL In diesem Zug spielst du deine nächste Funktion zweimal aus."
   },
   "bronze:CutThrough": {
-    "NAME": "Einschneidend",
+    "NAME": "Ausschneiden",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Spähe !M!. NL bronze:Kompilierung - Ziehe !bauto! Karte.",
     "EXTENDED_DESCRIPTION": [
       "schnittiges",
@@ -313,7 +313,7 @@
     "UPGRADE_DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL bronze:Kompilierung - Erhalte eine Kopie dieser Karte mit !M! mehr Schaden.",
     "EXTENDED_DESCRIPTION": [
       "endloses",
-      "Wiederholen"
+      "Unendliche"
     ]
   },
   "bronze:Invalidate": {
@@ -328,8 +328,8 @@
     "NAME": "Iterieren",
     "DESCRIPTION": "Füge !M! Mal !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
-      "wiederholendes",
-      "Durchgehen"
+      "iteratives",
+      "Iterieren"
     ]
   },
   "bronze:ItsAFeature": {
@@ -374,7 +374,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Verhindere den nächsten *Kompilierungsfehler den du *kodierst."
   },
   "bronze:Overload": {
-    "NAME": "Kopieren & Einfügen",
+    "NAME": "Kopieren-Einfügen",
     "DESCRIPTION": "Spiele jeweils eine Kopie jeder kodierten Karte. Die Kopien werden nicht kodiert. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Spiele jeweils eine Kopie jeder kodierten Karte. Die Kopien werden nicht kodiert."
   },
@@ -408,11 +408,11 @@
     ]
   },
   "bronze:Replicate": {
-    "NAME": "Replizieren",
+    "NAME": "Wiederholen",
     "DESCRIPTION": "Füge !D! Schaden zu. \u202F NL Wenn *Kodiert: Lege eine Kopie in den Abwurfstapel.",
     "EXTENDED_DESCRIPTION": [
-      "kopierendes",
-      "Kopieren"
+      "wiederholendes",
+      "Wiederholen"
     ]
   },
   "bronze:Repulsor": {

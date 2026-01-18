@@ -66,7 +66,7 @@
     ]
   },
   "champ:CalledShotPower": {
-    "NAME": "Den Ton angeben",
+    "NAME": "Standhaft bleiben",
     "DESCRIPTIONS": [
       "Bleibe das nächste Mal wenn du #yabschließt in deiner #yHaltung.",
       "Bleibe die nächsten #b",
@@ -74,7 +74,7 @@
     ]
   },
   "champ:DancingMasterPower": {
-    "NAME": "Tazmeister",
+    "NAME": "Tanzchampion",
     "DESCRIPTIONS": [
       "Wenn du im Zug das erste Mal einen #yAbschluss spielst, erhalte #b",
       " [E] und ziehe #b",
@@ -139,7 +139,7 @@
     ]
   },
   "champ:IronFortressPower": {
-    "NAME": "Technisches Tänzeln",
+    "NAME": "Launiges Gezappel",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du eine #yHaltung annimmst #b",
       " #yBlock [REMOVE_SPACE]."
@@ -199,7 +199,7 @@
     ]
   },
   "champ:ParryPower": {
-    "NAME": "Parierend",
+    "NAME": "Parieren",
     "DESCRIPTIONS": [
       "Wenn #yKonter in diesem Zug verbraucht wird, erhalte einen zusätzlichen #yKonterschlag."
     ]
