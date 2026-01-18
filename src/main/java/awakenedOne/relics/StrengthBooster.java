@@ -14,7 +14,7 @@ public class StrengthBooster extends CustomRelic {
 
     public static final int AMOUNT = 25;
 
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("StrengthBooster.png")); //TODO: Images
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("StrengthBooster.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("StrengthBooster.png"));
 
     //Paper Crow / Paper Krow

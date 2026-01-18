@@ -19,7 +19,7 @@ import static awakenedOne.AwakenedOneMod.makeRelicPath;
 public class ShardOfNowak extends CustomRelic implements OnLoseTempHpRelic {
 
     public static final String ID = AwakenedOneMod.makeID("ShardOfNowak");
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("ShardOfNowak.png")); //TODO: Images
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("ShardOfNowak.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("ShardOfNowak.png"));
 
     //Gilded Bone Shard

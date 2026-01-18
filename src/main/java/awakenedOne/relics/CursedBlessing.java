@@ -18,7 +18,7 @@ import static awakenedOne.AwakenedOneMod.makeRelicPath;
 public class CursedBlessing extends CustomRelic {
 
     public static final String ID = AwakenedOneMod.makeID("CursedBlessing");
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("CursedBlessing.png")); //TODO: Images
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("CursedBlessing.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("CursedBlessing.png"));
 
 

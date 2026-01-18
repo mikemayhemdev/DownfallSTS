@@ -21,7 +21,7 @@ import static hermit.util.Wiz.getLowestHealthEnemy;
 public class DeadBird extends CustomRelic {
 
     public static final String ID = AwakenedOneMod.makeID("DeadBird");
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("DeadBird.png")); //TODO: Images
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("DeadBird.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("DeadBird.png"));
     //damage
     private static final int AMOUNT = 4;

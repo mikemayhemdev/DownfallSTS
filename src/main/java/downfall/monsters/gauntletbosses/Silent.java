@@ -92,11 +92,11 @@ public class Silent extends GauntletBoss {
             case 5:
 
                 if (AbstractDungeon.ascensionLevel >= 18) {
-                    addToBot(new ApplyPowerAction(this, this, new ThornsPower(this, 3)));
+                    addToBot(new ApplyPowerAction(this, this, new ThornsPower(this, 5)));
                 }
 
                 if (AbstractDungeon.ascensionLevel < 18) {
-                    addToBot(new ApplyPowerAction(this, this, new ThornsPower(this, 5)));
+                    addToBot(new ApplyPowerAction(this, this, new ThornsPower(this, 3)));
                 }
 
                 //addToBot(new ApplyPowerAction(this, this, new EnemyWraithFormPower(this, -1), -1));

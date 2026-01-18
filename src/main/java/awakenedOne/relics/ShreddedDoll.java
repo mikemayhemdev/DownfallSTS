@@ -18,7 +18,7 @@ import static awakenedOne.util.Wiz.atb;
 public class ShreddedDoll extends CustomRelic implements OnAwakenRelic {
 
     public static final String ID = AwakenedOneMod.makeID("ShreddedDoll");
-    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("ShreddedDoll.png")); //TODO: Images
+    private static final Texture IMG = TexLoader.getTexture(makeRelicPath("ShreddedDoll.png"));
     private static final Texture OUTLINE = TexLoader.getTexture(makeRelicOutlinePath("ShreddedDoll.png"));
     private boolean activatedthiscombat = false;
 
