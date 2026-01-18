@@ -9,7 +9,7 @@
     ]
   },
   "Slimebound:AbsorbEndCombatUpgraded": {
-    "NAME": "Schwarzes Herz aus Glibber",
+    "NAME": "Dunkles Glibberherz",
     "FLAVOR": "Das Geheimnis der Schleimwesen.",
     "DESCRIPTIONS": [
       "Ersetzt ",
@@ -44,7 +44,7 @@
     "NAME": "Schrottschleim",
     "FLAVOR": "Er trägt ein Relikt in sich - wie komme ich bloß da ran?",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #ySchrottschleim ab - er kann wiederbelebt werden, nachdem er #yabsorbiert wurde. Du kann den #ySchrottschleim am Lagerfeuer mit einer Karte füttern: NL #b+1 Schaden for #gUngewöhnliche NL #b+2 Schaden for #ySeltene NL #b-1 Schaden for Gewöhnliche NL #b-2 Schaden for #rFlüche",
+      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #ySchrottschleim ab - er kann wiederbelebt werden. Du kannst ihn am Lagerfeuer mit einer Karte füttern und seinen Schaden ändern: #y+2 für #ySeltene [REMOVE_SPACE], #g+1 für #gUngewöhnliche [REMOVE_SPACE], #b-1 für #bGewöhnliche [REMOVE_SPACE], #r-2 für #rFlüche [REMOVE_SPACE].",
       "Entferne eine Karte aus deinem Deck und ändere den Schaden des Schrottschleims.",
       "Keine Karte für den Schrottschleim.",
       "Schrott"
@@ -54,7 +54,7 @@
     "NAME": "Gierschleim",
     "FLAVOR": "Ein besonderer Schleim, der sich von Seelen ernährt.",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #yGierschleim ab - er kann wiederbelebt werden, nachdem er #yabsorbiert wurde. NL Der #yGierschleim frisst am Lagerfeuer #b50 #yGold und erhöht dadurch seinen Schaden um #b1."
+      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #yGierschleim ab - er kann wiederbelebt werden. NL Der #yGierschleim frisst am Lagerfeuer #b50 #yGold und erhöht dadurch seinen Schaden um #b1."
     ]
   },
   "Slimebound:PreparedRelic": {

@@ -538,14 +538,14 @@
     ]
   },
   "downfall:ExtraCursedKey": {
-    "NAME": "Besonders verfluchter Schlüssel",
+    "NAME": "Entweihter Schlüssel",
     "FLAVOR": "Wurde aus gutem Grund weggesperrt.",
     "DESCRIPTIONS": [
       "Erhalte [E] wenn du das erste Mal im Zug einen #rFluch ziehst. NL Immer wenn du eine Truhe (außer Bosstruhen) öffnest, nimm eine #rVerletzung [REMOVE_SPACE]."
     ]
   },
   "downfall:ExtraCursedBell": {
-    "NAME": "Besonders verfluchte Rufglocke",
+    "NAME": "Entweihte Rufglocke",
     "FLAVOR": "Du bildest dir ein sie zu hören, bist dir aber nicht sicher.",
     "DESCRIPTIONS": [
       "Erhalte beim Aufheben einen besonderen #rFluch und #b3 gewöhnliche #yRelikte [REMOVE_SPACE].",

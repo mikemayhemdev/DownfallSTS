@@ -26,7 +26,7 @@
     ]
   },
   "hexamod:IceCube": {
-    "NAME": "Xanatos' eiskaltes Amulett",
+    "NAME": "Xanatos' eisiges Amulett",
     "FLAVOR": "So kalt...",
     "DESCRIPTIONS": [
       "Erhalte in deinem Zug [E] . Beginne jeden Kampf mit #b",
@@ -49,7 +49,7 @@
     ]
   },
   "hexamod:MatchstickCase": {
-    "NAME": "Raffiniertes Teak-Streichholz",
+    "NAME": "Magisches Teak-Zündholz",
     "FLAVOR": "Funktioniert auf allen Oberflächen!",
     "DESCRIPTIONS": [
       "Wenn du das erste Mal im Zug eine #yGeisterflamme #yhexamod:entzündest [REMOVE_SPACE], kannst du dich #yhexamod:vorwärts or #yhexamod:rückwärts bewegen."

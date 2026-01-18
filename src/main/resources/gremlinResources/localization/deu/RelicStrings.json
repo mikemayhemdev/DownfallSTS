@@ -28,14 +28,14 @@
     ]
   },
   "Gremlin:GremlinKnob": {
-    "NAME": "Horn des Gruppenführers",
+    "NAME": "Horn des Anführers",
     "FLAVOR": "Der Gremlin mit dem besten Horn ist so lange der Anführer seiner Gruppe, bis ein anderer es ihm gestohlen hat.",
     "DESCRIPTIONS": [
       "Zu Beginn jedes Kampfes, ziehe #b1 Karte, erhalte [E] , und #ywechsle zum nächsten Gremlin."
     ]
   },
   "Gremlin:GremlinKnobUpgrade": {
-    "NAME": "Krone des Gruppenführers",
+    "NAME": "Krone des Anführers",
     "FLAVOR": "Je schöner das Symbol der Macht, desto häufiger wird es gestohlen.",
     "DESCRIPTIONS": [
       "Ersetzt ",
@@ -50,8 +50,8 @@
     ]
   },
   "Gremlin:LeaderVoucher": {
-    "NAME": "Coupon des Gremlinanführers",
-    "FLAVOR": "IOU 1 Gremlin",
+    "NAME": "Gutschein des Anführers",
+    "FLAVOR": "Ich schulde dir: 1 Gremlin",
     "DESCRIPTIONS": [
       "Erhalte in deinem Zug [E] . NL Verliere beim Aufheben einen Gremlin #rfür #rden #rrest #rdes #rRuns.",
       " NL #r( #rFetter #rGremlin #r)",
