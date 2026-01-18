@@ -1371,10 +1371,10 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
     public void addPotions() {
 
-        if (EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_potions) {
+        if (!EvilModeCharacterSelect.evilMode) {
 
             //PUT SHARED POTIONS HERE
-            //if (!downfallMod.contentSharing_potions){
+            if (!downfallMod.contentSharing_potions){
                 //SHARED POTIONS
                 BaseMod.addPotion(BossPotion.class, Color.MAROON, Color.MAROON, new Color(0x470000ff), BossPotion.POTION_ID);
 
@@ -1415,7 +1415,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                     WidePotionsMod.whitelistSimplePotion(MuddlingPotion.POTION_ID);
                     WidePotionsMod.whitelistSimplePotion(CultistsDelight.POTION_ID);
                 }
-            //}
+            }
         }
 
         if(EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_events){
