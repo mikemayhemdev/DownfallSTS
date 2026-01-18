@@ -4,6 +4,7 @@ import basemod.BaseMod;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
@@ -47,14 +48,15 @@ public class BlackBile extends AbstractPotion {
     }
 
     @Override
-    public void initializeData()
-    {
+    public void initializeData() {
         potency = getPotency();
         description = DESCRIPTIONS[0] + potency + DESCRIPTIONS[1];
 
         tips.clear();
         tips.add(new PowerTip(name, description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("hermit:bruise")), GameDictionary.keywords.get("hermit:bruise")));
+        if (Settings.language == Settings.GameLanguage.ENG) {
+            this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("hermit:bruise")), GameDictionary.keywords.get("hermit:bruise")));
+        }
     }
 
     // See that description? It has DESCRIPTIONS[1] instead of just hard-coding the "text " + potency + " more text" inside.

@@ -6,6 +6,7 @@ import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
@@ -35,10 +36,12 @@ public class SoulburnPotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        this.description = (DESCRIPTIONS[0] + (this.potency + ( hasCandle()?CandleOfCauterizing.SOULBURN_BONUS_AMOUNT:0 ) ) + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + (this.potency + (hasCandle() ? CandleOfCauterizing.SOULBURN_BONUS_AMOUNT : 0)) + DESCRIPTIONS[1]);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle(HexaMod.makeID("soulburn"))), BaseMod.getKeywordDescription(HexaMod.makeID("soulburn"))));
+        if (Settings.language == Settings.GameLanguage.ENG) {
+            this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle(HexaMod.makeID("soulburn"))), BaseMod.getKeywordDescription(HexaMod.makeID("soulburn"))));
+        }
     }
 
 
