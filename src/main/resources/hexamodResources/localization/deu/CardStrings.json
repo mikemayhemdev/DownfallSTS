@@ -96,9 +96,9 @@
     "DESCRIPTION": "Wähle einen Geisterflammen-Typ. Die aktuelle Geisterflamme wird zum gewählten Typ. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Wähle einen Geisterflammen-Typ. Die aktuelle Geisterflamme wird zum gewählten Typ. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
-      "Ersetze die aktuelle Geisterflamme durch eine hexamod:Stärkende Ghostflame",
-      "Ersetze die aktuelle Geisterflamme durch eine hexamod:Schlagende Ghostflame",
-      "Ersetze die aktuelle Geisterflamme durch eine hexamod:Sengende Ghostflame",
+      "Ersetze die aktuelle Geisterflamme durch eine hexamod:Stärkende Geisterflamme",
+      "Ersetze die aktuelle Geisterflamme durch eine hexamod:Schlagende Geisterflamme",
+      "Ersetze die aktuelle Geisterflamme durch eine hexamod:Sengende Geisterflamme",
       "Tu nichts."
     ]
   },
@@ -106,13 +106,13 @@
     "NAME": "Schweben",
     "DESCRIPTION": "Ziehe eine Karte. NL Bewege dich hexamod:vorwärts.",
     "UPGRADE_DESCRIPTION": "Ziehe eine Karte. NL Du kannst dich NL hexamod:vorwärts oder hexamod:rückwärts bewegen.",
-    "EXTENDED_DESCRIPTION": ["hexamod:vorwärts.","hexamod:rückwärts.", "Tu nichts."]
+    "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Tu nichts."]
   },
   "hexamod:MatchstickFloat": {
-    "NAME": "Raffiniertes Teak-Streichholz",
+    "NAME": "Magisches Teak-Zündholz",
     "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
-    "EXTENDED_DESCRIPTION": ["hexamod:vorwärts.","hexamod:rückwärts.", "Tu nichts."]
+    "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Tu nichts."]
   },
   "hexamod:Floatwork": {
     "NAME": "Schwebekraft",
@@ -381,12 +381,12 @@
     "NAME": "Flackernde Flamme",
     "DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme und bewege dich hexamod:vorwärts.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. NL Du kannst dich NL hexamod:vorwärts oder hexamod:rückwärts bewegen.",
-    "EXTENDED_DESCRIPTION": ["hexamod:vorwärts.","hexamod:rückwärts.", "Tu nichts."]
+    "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Tu nichts."]
   },
   "hexamod:TurnItUp": {
     "NAME": "Aufgedreht",
-    "DESCRIPTION": "Erhalte für diesen Zug temporär !M! hexamod:Intensität, Stärke, und Geschicklichkeit.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte für diesen Zug temporär !M! hexamod:Intensität, Stärke, und Geschicklichkeit."
+    "DESCRIPTION": "Erhalte für diesen Zug temporär !M! hexamod:Intensität, !M! Stärke, und !M! Geschicklichkeit.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte für diesen Zug temporär !M! hexamod:Intensität, !M! Stärke, und !M! Geschicklichkeit."
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Geister befreien",
@@ -510,7 +510,7 @@
     ]
     },
   "hexamod:Haunt": {
-    "NAME": "Heimgesuchte Hand",
+    "NAME": "Verfluchte Hand",
     "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karte. NL ",
     "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karten. NL ",
     "EXTENDED_DESCRIPTION": [
@@ -557,9 +557,9 @@
     "DESCRIPTION": "Wähle einen Geisterflammen-Typ. Die aktuelle Geisterflamme wird zum gewählten Typ. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Wähle einen Geisterflammen-Typ. Die aktuelle Geisterflamme wird zum gewählten Typ. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
-      "Ersetze die aktuelle Geisterflamme durch eine hexamod:Stärkende Ghostflame",
-      "Ersetze die aktuelle Geisterflamme durch eine hexamod:Schlagende Ghostflame",
-      "Ersetze die aktuelle Geisterflamme durch eine hexamod:Sengende Ghostflame",
+      "Ersetze die aktuelle Geisterflamme durch eine hexamod:Stärkende Geisterflamme",
+      "Ersetze die aktuelle Geisterflamme durch eine hexamod:Schlagende Geisterflamme",
+      "Ersetze die aktuelle Geisterflamme durch eine hexamod:Sengende Geisterflamme",
       "Tu nichts."
     ]
   }

@@ -66,9 +66,9 @@
     ]
   },
   "Gremlin:Trenchcoat": {
-    "NAME": "Suspicious Merchant",
+    "NAME": "Verdächtiger Händler",
     "DESCRIPTIONS": [
-      "Du begegnest einer Gestalt, die verdächtig nach fünf Gremlins in einem Trenchcoat aussieht. NL „Hello, Reisender,“ erklingt eine quietschende Stimme. NL „Ich bin es, der #yfröhliche #yHändler, und sicher nicht fünf Gremlins in einem Tenchcoat. Hast du Interesse an meinen ~exquisiten~ ~Waren~ die bestimmt nicht gestohlen sind? Nur heute zum Sonderpreis!“",
+      "Du begegnest einer Gestalt, die verdächtig nach fünf Gremlins in einem Trenchcoat aussieht. NL „Hello, Reisender,“ erklingt eine quietschende Stimme. NL „Ich bin es, der #yfröhliche #yHändler, und sicher nicht fünf Gremlins in einem Trenchcoat. Hast du Interesse an meinen ~exquisiten~ ~Waren~ die bestimmt nicht gestohlen sind? Nur heute zum Sonderpreis!“",
       "Du kannst einem Rabatt nicht widerstehen, nicht einmal von einer so verdächtigen Gestalt. NL Der Händler verchwindet augenblicklich nach der Transaktion. NL NL Einen Moment später hörst du eine Stimme aus der Ferne frustriert rufen: #r„Vermaledeite, #rdiebische #rGremlins!“.",
       "Du hast kein Interesse daran, diesen Händler zu bereichern. Du behältst dein Geld. Der Händler verschwindet sofort nachdem er bemerkt hat, dass bei dir nichts zu holen ist."
     ],

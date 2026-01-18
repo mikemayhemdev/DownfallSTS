@@ -659,7 +659,7 @@
   },
   "collector:ThievesCard": {
     "NAME": "Räuber",
-    "DESCRIPTION": "Nimm !M! weniger Angriffsschaden in diesem Zug."
+    "DESCRIPTION": "Erleide !M! weniger Angriffsschaden in diesem Zug."
   },
   "collector:TorchHeadCard": {
     "NAME": "Fackelkopf",

@@ -7,7 +7,7 @@
     ]
   },
   "champ:BlackKnightHelmet": {
-    "NAME": "Helm des Schwarzen Ritters",
+    "NAME": "Helm des Herausforderers",
     "FLAVOR": "Nur eine Fleischwunde.",
     "DESCRIPTIONS": [
       "Das erste Mal wenn du im Kampf die entsprechende #yHaltung annimst: NL #bchamp:Defensiv : Erhalte #b2 #yGeschicklichkeit und verliere #b1 #yStärke [REMOVE_SPACE]. NL #rchamp:Offensiv : Erhalte #b2 #yStärke und verliere #b1 #yGeschicklichkeit [REMOVE_SPACE]."
@@ -39,8 +39,8 @@
     ]
   },
   "champ:DefensiveTrainingManual": {
-    "NAME": "Verteidigende Abhandlung",
-    "FLAVOR": "Sollten nicht eigentlich Abhandlungen verteidigt werden?",
+    "NAME": "Verteidigende Lehre",
+    "FLAVOR": "Sollten nicht eigentlich Dissertationen verteidigt werden?",
     "DESCRIPTIONS": [
       "Erhöhe den #ychamp:Abschlussbonus der #bchamp:Defensivhaltung um weitere #b",
       " #yBlock [REMOVE_SPACE]."
@@ -83,7 +83,7 @@
     ]
   },
   "champ:RageAmulet": {
-    "NAME": "Amulett der Unnachgiebigkeit",
+    "NAME": "Amulett der Stärke",
     "FLAVOR": "Verloren geglaubte Stärke fließt wieder durch dich, als ob sie nie weg gewesen wäre.",
     "DESCRIPTIONS": [
       "Immer wenn du #yElan verbrauchst, erhalte für alle #b",
@@ -91,7 +91,7 @@
     ]
   },
   "champ:SignatureFinisher": {
-    "NAME": "Charakteristischer Abschluss",
+    "NAME": "Markenzeichen-Abschluss",
     "FLAVOR": "Und jetzt kommt mein ULTIMATER MOVE!",
     "DESCRIPTIONS": [
       "Wähle beim Aufheben eine #ychamp:Abschlusskarte [REMOVE_SPACE]. Diese #yAbschlusskarte kostet #b0 [REMOVE_SPACE], kann ohne #yHaltung ausgespielt werden, und bricht deine #yHaltung nicht ab.",
