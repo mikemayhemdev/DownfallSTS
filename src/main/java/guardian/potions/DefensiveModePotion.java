@@ -15,6 +15,7 @@ import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import guardian.GuardianMod;
 import guardian.powers.*;
 import guardian.relics.ModeShifterPlus;
 import guardian.stances.DefensiveMode;
@@ -41,7 +42,7 @@ public class DefensiveModePotion extends CustomPotion {
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
         this.tips.add(new PowerTip(TipHelper.capitalize(GameDictionary.BLOCK.NAMES[0]), GameDictionary.keywords.get(GameDictionary.BLOCK.NAMES[0])));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("guardianmod:defensive mode")), GameDictionary.keywords.get("guardianmod:defensive mode")));
+        //TODO: Fix defensive mode tooltip
 
     }
 
