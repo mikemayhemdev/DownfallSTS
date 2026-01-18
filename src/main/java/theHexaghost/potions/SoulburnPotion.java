@@ -27,7 +27,6 @@ public class SoulburnPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.UNCOMMON, PotionSize.SPHERE, PotionColor.SMOKE);
         this.isThrown = true;
         this.targetRequired = true;
-        this.labOutlineColor = HexaMod.placeholderColor;
     }
 
     public boolean hasCandle(){
@@ -36,13 +35,13 @@ public class SoulburnPotion extends CustomPotion {
 
     public void initializeData() {
         this.potency = getPotency();
-        this.description = (DESCRIPTIONS[0] + (this.potency + (hasCandle() ? CandleOfCauterizing.SOULBURN_BONUS_AMOUNT : 0)) + DESCRIPTIONS[1]);
+        this.description = (DESCRIPTIONS[0] + (this.potency + ( hasCandle()?CandleOfCauterizing.SOULBURN_BONUS_AMOUNT:0 ) ) + DESCRIPTIONS[1]);
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        if (Settings.language == Settings.GameLanguage.ENG) {
-            this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle(HexaMod.makeID("soulburn"))), BaseMod.getKeywordDescription(HexaMod.makeID("soulburn"))));
-        }
+        if(Settings.language== Settings.GameLanguage.ENG){
+        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle(HexaMod.makeID("soulburn"))), BaseMod.getKeywordDescription(HexaMod.makeID("soulburn"))));
     }
+        }
 
 
     public void use(AbstractCreature target) {
