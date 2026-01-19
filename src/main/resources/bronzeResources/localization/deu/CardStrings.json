@@ -396,7 +396,7 @@
     ]
   },
   "bronze:Refactor": {
-    "NAME": "Umschreiben",
+    "NAME": "Überschreiben",
     "DESCRIPTION": "Spähe !M!. NL Erschöpfe alle abgeworfenen Statuskarten. NL Erhalte !B! Block für jeden erschöpften Status."
   },
   "bronze:Repair": {
@@ -438,7 +438,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. \u202F Wird im ersten Slot mit !M! mehr Schaden *kodiert.",
     "EXTENDED_DESCRIPTION": [
       "geteiltes",
-      "Kind"
+      "Areal"
     ]
   },
   "bronze:Shell": {

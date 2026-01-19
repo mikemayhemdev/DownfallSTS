@@ -13,7 +13,7 @@
     ]
   },
   "awakened:SacramentalWine": {
-    "NAME": "Messwein",
+    "NAME": "Sekten-Messwein",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du in diesem Kampf eine #yMacht ausspielst #b",
       " #yBlock [REMOVE_SPACE]. Nimm eine zufällige #yMachtkarte auf die Hand. Sie kostet diesen Zug #b0 [REMOVE_SPACE]."

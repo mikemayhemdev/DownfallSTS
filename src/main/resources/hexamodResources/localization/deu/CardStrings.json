@@ -46,7 +46,7 @@
     "UPGRADE_DESCRIPTION": "hexamod:Entzünde die vorherige Geisterflamme !M! Mal."
   },
   "hexamod:ChargedBarrage": {
-    "NAME": "Grelles Sperrfeuer",
+    "NAME": "Dauerbrenner",
     "DESCRIPTION": "Wende !burny! hexamod:Seelenfeuer an. NL Wiederhole das für jede *entzündete Geisterflamme."
   },
   "hexamod:CouncilsJustice": {
@@ -67,7 +67,7 @@
     "TRANSLATOR_NOTE:": "Not used in game  Not used in game  Not used in game  Not used in game  Not used in game  Not used in game   "
   },
   "hexamod:EmpoweredFlame": {
-    "NAME": "Intensiver Brand",
+    "NAME": "Intensive Flamme",
     "DESCRIPTION": "Erhalte !M! hexamod:Intensität."
   },
   "hexamod:EtherealExpedition": {
