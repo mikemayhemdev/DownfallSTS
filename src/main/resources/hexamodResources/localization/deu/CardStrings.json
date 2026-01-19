@@ -143,7 +143,7 @@
     ]
   },
   "hexamod:IntoShadow": {
-    "NAME": "Im Schatten",
+    "NAME": "Aus dem Schatten",
     "DESCRIPTION": "Flüchtig. NL Immer wenn du dich hexamod:rückwärts bewegst, kostet die nächste gespielte Karte 0 und sie erschöpft.",
     "UPGRADE_DESCRIPTION": "Immer wenn du dich hexamod:rückwärts bewegst, kostet die nächste gespielte Karte 0 und sie erschöpft.",
     "EXTENDED_DESCRIPTION": [
@@ -535,7 +535,7 @@
     "UPGRADE_DESCRIPTION": "Ziehe die ersten !M! Male an denen du dich im Zug hexamod:vorwärts oder hexamod:rückwärts bewegst eine Karte."
   },
   "hexamod:GhostOfSpireFuture": {
-    "NAME": "Im Schatten",
+    "NAME": "Aus dem Schatten",
     "DESCRIPTION": "Flüchtig. NL Immer wenn du dich hexamod:rückwärts bewegst, spiele eine Karte aus der Hand und erschöpfe sie.",
     "UPGRADE_DESCRIPTION": "Immer wenn du dich hexamod:rückwärts bewegst, spiele eine Karte aus der Hand und erschöpfe sie.",
     "EXTENDED_DESCRIPTION": [

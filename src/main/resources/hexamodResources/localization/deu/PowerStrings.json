@@ -27,7 +27,7 @@
   "hexamod:BurnPerTurnPower": {
     "NAME": "Schmelzendes Metall",
     "DESCRIPTIONS": [
-      "Wendet das nächste Mal, an dem das #ySeelenfeuer dieses Feindes detoniert #b",
+      "Wende das nächste Mal, an dem das #ySeelenfeuer dieses Feindes detoniert #b",
       " #ySeelenfeuer an."
     ],
     "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
@@ -82,7 +82,7 @@
     "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:FuturePower": {
-    "NAME": "Im Schatten",
+    "NAME": "Aus dem Schatten",
     "DESCRIPTIONS": [
       "Die #b",
       " nächste gespielte Karte wird jedes Mal, wenn du dich #yrückwärts bewegst, #b0 kosten und #yerschöpfen [REMOVE_SPACE].",
@@ -243,7 +243,7 @@
     ]
   },
   "hexamod:PlayCardAndExhaustPower": {
-    "NAME": "In den Schatten schieben",
+    "NAME": "In den Schatten",
     "DESCRIPTIONS": [
       "Die nächste Karte die du spielst kostet #b0 und #yerschöpft [REMOVE_SPACE].",
       "Die nächsten #b",
