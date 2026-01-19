@@ -10,6 +10,7 @@ import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
@@ -49,7 +50,9 @@ public class BuildAFunctionPotion extends CustomPotion {
         }
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("bronze:encode")), GameDictionary.keywords.get("bronze:encode")));
+        if (Settings.language == Settings.GameLanguage.ENG) {
+            this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordProper("bronze:encode")), GameDictionary.keywords.get("bronze:encode")));
+        }
     }
 
     public void use(AbstractCreature target) {

@@ -37,7 +37,7 @@ public class EnBiasedCognition extends AbstractBossCard {
         });
         this.addToBot(new ApplyPowerAction(m, m, new FocusPower(m, this.magicNumber), this.magicNumber));
         this.addToBot(new ApplyPowerAction(m, m, new BiasPower(m, 1), 1));
-        atb(new MakeTempCardInDiscardAction(new Disarm(), 1));
+        //atb(new MakeTempCardInDiscardAction(new Disarm(), 1));
     }
 
     public void upgrade() {

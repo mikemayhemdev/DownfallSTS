@@ -5,6 +5,7 @@ import basemod.abstracts.CustomPotion;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
@@ -32,12 +33,13 @@ public class WizPotion extends CustomPotion {
         description = DESCRIPTIONS[0] + this.potency + DESCRIPTIONS[1];
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(
+        if (Settings.language == Settings.GameLanguage.ENG) {
+            this.tips.add(new PowerTip(
 
-                com.megacrit.cardcrawl.helpers.TipHelper.capitalize(GameDictionary.VIGOR.NAMES[0]),
-                GameDictionary.keywords.get(GameDictionary.VIGOR.NAMES[0])));
+                    com.megacrit.cardcrawl.helpers.TipHelper.capitalize(GameDictionary.VIGOR.NAMES[0]),
+                    GameDictionary.keywords.get(GameDictionary.VIGOR.NAMES[0])));
+        }
     }
-
 
 
     public void use(AbstractCreature target) {
