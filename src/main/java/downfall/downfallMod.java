@@ -628,7 +628,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     }
 
     public void receivePostInitialize() {
-        addPotions();
+        //addPotions();
         UnlockTracker.betaCardPref = new IndividualBetaArtEnablerPref(UnlockTracker.betaCardPref);
         soulsImage = TextureLoader.getTexture(downfallMod.assetPath("images/ui/Souls.png"));
 
@@ -1552,7 +1552,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             BaseMod.addRelicToCustomPool(new AwakenedUrn(), AwakenedOneChar.Enums.AWAKENED_BLUE);
             BaseMod.addRelicToCustomPool(new NerfedMummifiedHand(), AwakenedOneChar.Enums.AWAKENED_BLUE);
         }
-        addPotions();
+        //addPotions();
     }
 
     public static boolean readyToDoThing = false;
@@ -1723,7 +1723,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
     @Override
     public void receivePostDungeonInitialize() {
-        addPotions();
+        //addPotions();
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID) || ModHelper.isModEnabled(Jewelcrafting.ID)) {
             RelicLibrary.getRelic(PickAxe.ID).makeCopy().instantObtain();
