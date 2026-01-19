@@ -11,10 +11,7 @@ import com.evacipated.cardcrawl.modthespire.lib.SpirePatch;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
-import com.megacrit.cardcrawl.relics.BirdFacedUrn;
-import com.megacrit.cardcrawl.relics.MummifiedHand;
-import com.megacrit.cardcrawl.relics.OrangePellets;
-import com.megacrit.cardcrawl.relics.PrismaticShard;
+import com.megacrit.cardcrawl.relics.*;
 import downfall.downfallMod;
 import downfall.potions.CursedFountainPotion;
 import expansioncontent.potions.BossPotion;
@@ -55,7 +52,7 @@ public class BanStuffPatch {
 
             if (!downfallMod.disableBaseGameAdjustments) {
                 if (EvilModeCharacterSelect.evilMode || chosenClass == HERMIT) {
-                relicsToRemoveOnStart.add("Blue Candle");
+                relicsToRemoveOnStart.add(BlueCandle.ID);
                 }
 
                 if (chosenClass == AwakenedOneChar.Enums.AWAKENED_ONE && !downfallMod.disableBaseGameAdjustments) {
