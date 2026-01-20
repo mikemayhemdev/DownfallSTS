@@ -1,12 +1,12 @@
 {
   "champ:SealCommonReward": {
     "TEXT": [
-      "Nimm eine gewöhnliche Karte in dein Deck auf"
+      "Erhalte eine gewöhnliche Karte"
     ]
   },
   "champ:SealSealReward": {
     "TEXT": [
-      "Nimm einen Siegel in dein Deck auf"
+      "Erhalte ein Siegel"
     ]
   },
   "champ:TechniqueMod": {

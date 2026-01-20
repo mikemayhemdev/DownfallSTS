@@ -2,19 +2,19 @@
   "Guardian:GemMine": {
     "NAME": "Edelsteinmine",
     "DESCRIPTIONS": [
-      "Du betrittst einen alten Minenschacht. Dir fallen die glänzenden Juwelen in den Felsspalten auf. #gSmaragde , #rRubine , #pAmethyste und weitere. Du siehst einige Gremlin-Schürfer die mit adäquatem Werkzeug ausgestattet sind - doch die Juwelen sind so nah an der Oberfläche, dass du sie womöglich mit bloßen Händen ausgraben kannst.",
+      "Du betrittst einen alten Minenschacht. Dir fallen die glänzenden Juwelen in den Felsspalten auf. #gSmaragde, #rRubine, #pAmethyste und dergleichen. Du siehst einige Gremlin-Schürfer, die mit adäquatem Werkzeug ausgestattet sind - doch die Juwelen sind so nah an der Oberfläche, dass du sie womöglich auch mit bloßen Händen ausgraben kannst.",
       "Du gräbst deine Krallen in die Felswand und hast ein Juwel aus seiner Einbettung befreit. Es tut etwas weh, doch das war es wert.",
       "Auch wenn das Ausgraben der Schätze reizvoll ist, beschließt du, deine Rüstung für wichtigere Aufgaben zu schonen.",
       "Du hast die alte Mine ausgeschöpft und verlässt sie mit einem Gefühl von Stolz und Zufriedenheit. Und mit leicht beschädigten bronzenen Gliedmaßen.",
-      "Du hast eine Spitzhacke von den Gremlins erbeutet. Sie ist in einem miserablen Zustand. Du kannst sie jetzt für deine Ausgrabungen nutzen, oder für später aufheben.",
+      "Du hast eine Spitzhacke von den Gremlins erbeutet. Ihr Zustand ist miserabel. Du kannst sie jetzt für deine Ausgrabungen nutzen, oder für später aufheben.",
       "Mit der Spitzhacke konntest du einige Juwelen ausgraben. Sie ist kaputtgegangen - doch deine Krallen sind heil geblieben."
     ],
     "OPTIONS": [
-      "[Schürfe mit den Klauen] #gErhalte #gein #gzufälliges #gJuwel. #rVerliere #r",
+      "[Klauen benutzen] #gErhalte #gein #gzufälliges #gJuwel. #rVerliere #r",
       " #rTP.",
       "[Verlassen]",
       "[Rauben] #rKämpfe #rgegen #rGremlins. #gErhalte #gdie #gSingende #gSpitzhacke.",
-      "[Schürfe mit den Spitzhacke] #gErhalte #g3 #gzufällige #gJuwelen. #rVerliere #rdie #rSingende #rSpitzhacke.",
+      "[Spitzhacke benutzen] #gErhalte #g3 #gzufällige #gJuwelen. #rVerliere #rdie #rSpitzhacke.",
       "[Gesperrt] Die Spitzhacke ist Kaputt."
     ]
   },
@@ -65,8 +65,8 @@
   "Guardian:CrystalForge": {
     "NAME": "Düstere Schmiede",
     "DESCRIPTIONS": [
-      "Durch Geheimgänge, die nur ein Konstrukt des Spire kennt, betrittst du eine Kammer die der Wartung und Reparatur von Automatonen gewidmet ist. Auch wenn die Werkzeuge nicht auf Wächter zugeschnitten sind, sind sie dennoch sehr nützlich.",
-      "Mit Hilfe des magischen Ambosses zerstörst du ein obsolet gewordenes Stück deiner Rüstung, um die wertvollen Juwelen zu gewinnen die unüberlegter Weise zuvor eingesetzt hast.",
+      "Durch Geheimgänge, die nur ein Konstrukt des Spire kennt, betrittst du eine Kammer, die der Wartung und Reparatur von Automatonen gewidmet ist. Auch wenn die Werkzeuge nicht auf Wächter zugeschnitten sind, kannst du sie benutzen.",
+      "Mit Hilfe des magischen Ambosses zerstörst du ein obsolet gewordenes Stück deiner Rüstung, um die wertvollen Juwelen zu gewinnen, die unüberlegter Weise zuvor eingesetzt hast.",
       "Mit der magischen Zange schaffst du es, Juwelen aus Fassungen zu entfernen. Die Juwelen sind dabei allerdings in die Brüche gegangen",
       "Du wirfst einen entbehrlichen Teil deiner Rüstung in das magische Schmiedefeuer, das Materie umwandeln kann. Nach einiger Zeit hat sich das Teil in ein wunderschönes Juwel verwandelt.",
       "Du verlässt die Schmiede auf den selben Weg, wie du sie betreten hast. Deine Reise geht weiter zur Dämmerung, die dich auf der Spitze des Spire erwartet.",
@@ -75,10 +75,10 @@
       "Wähle eine Karte zum Umwandeln aus.",
       "Wähle ein Juwel aus.",
       "Wähle die Karte aus, in der du das Juwel einsetzt.",
-      "Du nutzt die Pause um ein Juwel in deine Ausrüstung einzubetten. Du spürst sofort, wie deine Kräfte wachsen."
+      "Du nutzt die Pause, um ein Juwel in deine Ausrüstung einzubetten. Du spürst sofort, wie deine Kräfte wachsen."
     ],
     "OPTIONS": [
-      "[Abtragen] #rEntferne eine Karte mit Fassungen. Erhalte die eingebetteten #gJuwelen.",
+      "[Abtragen] #rEntferne eine Karte mit Fassungen. Erhalte eingebettete #gJuwelen.",
       "[Gesperrt] Erfordert eine Karte mit eingebetteten Juwelen.",
       "[Aufstemmen] #rZerstöre alle #gJuwelen die in einer Karte eingebettet sind.",
       "[Umwandeln] #rEntferne eine Karte. Erhalte ein zufälliges #gJuwel.",

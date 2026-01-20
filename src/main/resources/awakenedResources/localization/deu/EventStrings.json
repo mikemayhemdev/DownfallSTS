@@ -2,8 +2,8 @@
   "awakened:Nest": {
     "NAME": "Das Nest",
     "DESCRIPTIONS": [
-      "Du bist endlich wieder zu Hause. NL #pIm #pNest, wo du zum #b~leibhaftigen~ #b~Avatar~ #b~eines~ #b~Gottes~ aufgestiegen bist. Im Augenblick deines Erscheinens versammelt sich eine Schar @singender@ und @brüllender@ Kultisten um sich! NL Sie wissen ganz genaz, dass deine Ankunft etwas von ihnen Einfordert - eine #r@Zehnte....@",
-      "Die bevorstehenden Kämpfe werden schwierig - ein idealer Zeitpunkt das eigene Arsenal aufzubessern. NL NL #r@...Aber@ #r@nicht@ #r@mit@ #r@Dolchen.@ NL NL Du vollziehst ein mächtiges Ritual, das ein besonderes #yRelikt beschwört. Doch das Ritual verlangt dir einen hohen Blutzoll ab. NL NL Geschwächt verlässt du dein Zuhause, in der Hoffnung mit dem Relikt mehr Unheil zu bringen.",
+      "Du bist endlich wieder zu Hause. NL #pIm #pNest, wo du zum #b~leibhaftigen~ #b~Avatar~ #b~eines~ #b~Gottes~ aufgestiegen bist. Im Augenblick deines Erscheinens versammelt sich eine Schar @singender@ und @brüllender@ Kultisten um sich! NL Sie wissen ganz genau, dass deine Ankunft etwas von ihnen Einfordert - eine #r@Zehnte....@",
+      "Die bevorstehenden Kämpfe werden schwierig - ein idealer Zeitpunkt das eigene Arsenal aufzubessern. NL NL #r@...Aber@ #r@nicht@ #r@mit@ #r@Dolchen!@ NL NL Du vollziehst ein mächtiges Ritual, das ein besonderes #yRelikt beschwört. Doch das Ritual verlangt dir einen hohen Blutzoll ab. NL NL Geschwächt verlässt du dein Zuhause, in der Hoffnung mit dem Relikt mehr Unheil zu bringen.",
       "Die Kultisten reihen sich an und bringen ihre Opfergaben. NL NL Die meisten sind @wertloser@ @Müll,@ doch einer von ihnen bringt etwas sehr Interessantes: ein #bmächtiges #bElixier das sich bei deinen Schlachten als hilfreich erweisen kann. NL NL Bald darauf verlässt du dein Zuhause und setzt deinen Weg abwärts fort.",
       "Die Kultisten sind frenetischer als je zuvor, da du ihnen die Statue zurückgebracht hast. NL Zur Feier des Tages wirst du mit Seelen und Geschenken überhäuft! NL Als du nach den Feierlichkeiten das Nest verlassen hast fällt dir ein, dass du deine Zeit drinnen nicht genutzt hast, um nach besserer Ausrüstung zu suchen... NL NL Doch es ist schon zu spät.",
       "#r@KRÄHENGOTT!!@ #r@HEIMGEKEHRT!!“@ NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL Gut, dass du die Statue vorhin nicht zerstört hast.",
@@ -14,7 +14,7 @@
       "Wurdest du... #r@bestohlen?@ Das Nest, #pausgeraubt? NL NL Natürlich nicht, ~völlig~ ~ausgeschlossen.~ NL NL NL Überhaupt daran zu denken wäre töricht. NL NL NL ~...oder?~ NL NL NL Du versuchst den #y~schleichenden~ #y~Zweifel~ abzuschütteln und verlässt das Nest wieder."
     ],
     "OPTIONS": [
-      "[Statue zurückgeben] #rVerliere #rdie #rZerbrochene #rFlügelstatue. #gErhalte #gviele #gBelohnungen.",
+      "[Statue zurückgeben] #rVerliere #rdie #rFlügelstatue. #gErhalte #gviele #gBelohnungen.",
       "[Gesperrt] Erfordert die Zerbrochene Flügelstatue.",
       "[Opfer annehmen] #gErhalte #gein #gGebräu #gder #gNeugier.",
       "[Waffe beschwören] #gErhalte #gein #gbesonderes #gRelikt. #rVerliere #r",
@@ -23,7 +23,7 @@
       " #gGold, #gein #ggewöhnliches #gRelikt, #rund #rZweifel.",
       "[Verlassen]",
       "[Continue]",
-      "[Rühmen lassen] #gErhalte #gBelohnungen für die Rückgabe der #gZerbrochenen #gFlügelstatue.",
+      "[Rühmen lassen] #gErhalte #gBelohnungen für die Rückgabe der #gFlügelstatue.",
       "[Weiter] - #rWerde #rverflucht #r- #rZweifel."
     ]
   },
@@ -32,7 +32,7 @@
     "DESCRIPTIONS": [
       "Zwischen den Steinen und Brocken erblickst du eine aufwändige große blaue Statue des Gottes der Krähen: Mazaleth. NL NL Plötzlich spürst du große Wut und du bekommst das Verlangen, die Statue zu zerschmettern. NL NL Doch dir ist klar, dass das den Ärger deiner Gönner auf dich zieht.",
       "Die Statue zu zerstören wäre zu gefährlich - deswegen nimmst du sie einfach mit. NL Das Gewicht erdrückt dich für eine Weile, doch du gewöhnst dich schnell daran.",
-      "Du schägst mit all deiner Kraft auf die Statue. NL Schon bald @zerfällt@ sie in ihre Einzelteile. Einer der Splitter ist auffallend scharf, und trägt etwas Magie in sich. NL Du verlässt den Ort und spürst #pdunkle #pEnergien in dein Blut sickern.",
+      "Du schägst mit all deiner Kraft auf die Statue. NL Schon bald @zerfällt@ sie in ihre Einzelteile. Einer der Splitter ist auffallend scharf, und trägt etwas Magie in sich. NL Du verlässt den Ort mit dem Splitter in deinen Krallen und spürst #pdunkle #pEnergien in dein Blut sickern.",
       "Du gehst daran vorbei und setzt deine Reise fort.",
       "Krä...Krächz?! Geschenk für KRÄHENGOTT?",
       "KÄ-KRÄCHZ!!",
@@ -59,13 +59,13 @@
   "awakened:AbyssEvent": {
     "NAME": "Aus den Tiefen des Abgrundes",
     "DESCRIPTIONS": [
-      "Während du durch die Stadt umherstreifst erlangt dich ein schwer zu beschreibendes, unheimliches Gefühl...also ob sich eine andere #pRealität vor deinen Augen @enthüllt.@ NL Du hörst, spürst und siehst nichts mehr - außer einem #pmagischen #pFolianten direkt vor dir und einer ~außerweltlichen~ ~Stimme~ rufen... NL \n\n„ERWACHTES KIND. WANDERER DER UNENDLICHEN DIMENSIONEN. ES GIBT VIEL ZU BEREDEN. NIMM MEINE HAND UND DU WIRST DAS WISSEN FINDEN NACHDEM DU SUCHST...UNBEKANNT WELTEN VON, MONSTERN, MASCHINEN, UND MAGIE JENSEITS DER VORSTELLUNGSKRAFT DIESER DIMENSION.“",
-      "„SEHR GUT. UNSERE ALLIANZ IST DADURCH BESIEGELT“\n\n NL Mit dem Folianten in der Hand fühlst du, wie sich dir eine Welt von schier unbegrenzten Möglichkeiten eröffnet hat, doch das Gefühl des #paußerweltlichen #pUnwohlseins bleibt...",
-      "Du schaffst es von dieser Trance zu erwachen. DU breitest deine Flügel aus und lässt den #pFolianten liegen."
+      "Während du durch die Stadt umherstreifst erlangt dich ein schwer zu beschreibendes, unheimliches Gefühl...als ob sich eine andere #pRealität vor deinen Augen @enthüllt.@ NL Du hörst, spürst und siehst nichts mehr - außer einem #pmagischen #pFolianten direkt vor dir und einer ~außerweltlichen~ ~Stimme~ rufen... NL \n\n„ERWACHTES KIND. WANDERER DER UNENDLICHEN DIMENSIONEN. ES GIBT VIEL ZU BEREDEN. NIMM MEINE HAND UND DU WIRST DAS WISSEN FINDEN NACHDEM DU SUCHST...UNBEKANNTE WELTEN VON, MONSTERN, MASCHINEN, UND MAGIE JENSEITS DER VORSTELLUNGSKRAFT DIESER DIMENSION.“",
+      "„SEHR GUT. UNSERE ALLIANZ IST DADURCH BESIEGELT!“\n\n NL Mit dem Folianten in der Hand fühlst du, wie sich dir eine Welt von schier unbegrenzten Möglichkeiten eröffnet hat, doch das Gefühl des #paußerweltlichen #pUnwohlseins bleibt...",
+      "Du schaffst es von dieser Trance zu erwachen. Du breitest deine Flügel aus und lässt den #pFolianten liegen."
     ],
     "OPTIONS": [
-      "[Nehmen] Erhalte die #gDimensionsspalte. #rWerde #rverflucht - #rAltern.",
-      "[Verlassen].",
+      "[Nehmen] Erhalte die #gDimensionsspalte. #rWerde #rverflucht #r- #rAltern.",
+      "[Verlassen]",
       "[Verlassen]"
     ]
   },

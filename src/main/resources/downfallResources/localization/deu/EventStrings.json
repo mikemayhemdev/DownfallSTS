@@ -11,7 +11,7 @@
   "downfall:GremlinMatchGame": {
     "NAME": "Finde die Paare!",
     "DESCRIPTIONS": [
-      "„#bHi-hier sind #bzwölf Karten! Finde Paare, um sie zu... behalten! #bF-fünf Versuche, aufgedeckt ist aufgedeckt. NL Bist du bereit? Los geht's!“",
+      "#b„Hi-hier sind #bzwölf Karten! Finde Paare, um sie zu... behalten! #bF-fünf Versuche, aufgedeckt ist aufgedeckt. NL Bist du bereit? Los geht's!“",
       "Du beendest das Spiel des Gremlins und siehst auf. NL Ist er verschwunden?",
       "Ein Gremlin mischt wild Karten auf einem Tisch. Dieses Monster scheint von der harmlosen Sorte zu sein. Als du dich ihm näherst, verliert er kurz die Nerven, doch er nimmt seinen Mut zusammen un spricht dich an.",
       "Sofort schreit der Gremlin: NL NL „ARISTO!!!“ NL NL Ein riesiger Gremlin kommt aus dem Schatten empor, und er überragt den anderen Gremlin, den Tisch... ja sogar dich. NL „Bist du dir sicher, dass du nicht spielen willst?“, fragt der Gremlin."
@@ -52,9 +52,9 @@
       "Du schlägst nach dem verrückten Gremlin, aber er ist einfach zu schnell! NL Er trifft dich ein paar Mal mit einer groben Klinge. NL „Der Preis wurde bezahlt!!“ NL ...damit verschwinden der Gremlin und das Rad in einer Rauchwolke.",
       "Der Gremlin blickt etwas nervös hinter seine Schulter, doch beruhigt sich schnell wieder. Du bemerkst seine Gesten, doch schenkst ihnen keine Beachtung. NL „Nun, mein Freund, das Glücksrad hat fair entschieden - keine Tricks! Niemand darf ein zweites Mal drehen.“",
       "Der Gremlin schreit sofort: NL NL „ARISTO!!!“ NL NL Ein riesiger Gremlin kommt aus dem Schatten empor, und er überragt den anderen Gremlin, den Tisch... ja sogar dich. NL „Mein Freund hier schlägt vor, dass du keine Anstalten machst und einfach deinen Preis annimmst.“.",
-      "In der Ruhe des Feuers entscheidest du, dein Glück erneut auf die Probe zu stellen. Hoffentlich hast du mehr Glück als beim letzten Mal.",
+      "In der Ruhe des Feuers möchtest du dein Glück erneut auf die Probe stellen. Hoffentlich hast du mehr Glück als beim letzten Mal.",
       "Das Glücksrad hat einen Preis bestimmt. NL NL Du musst ihn dir nur noch nehmen.",
-      "Ausgezeichnet! Du hast bekommen was du wolltest! NL NL #r@CRACK!@ NL NL Leider warst du beim Drehen etwas zu ungestüm... das Glücksrad ist zerbrochen.",
+      "Ausgezeichnet! Du hast bekommen was du wolltest! NL NL #r@KRACH!@ NL NL Leider warst du beim Drehen etwas zu ungestüm... das Glücksrad ist zerbrochen.",
       "Du wirst dein Glück später nochmal versuchen. NL NL Jetzt gilt es erstmal auszuruhen und dein Gemüt zu beruhigen.",
       "Er hechtet nach dir, doch genau das hast du erwartet. NL Du entzweist ihn bevor er die Gelegenheit bekommt sein Messer zu benutzen. NL Während du die Beute an dich nimmst, verschwindet das Glücksrad vor deinen Augen, bevor du es an dich nehmen kannst."
     ],
@@ -102,13 +102,13 @@
   "downfall:BonfireSpirits": {
     "NAME": "Geister des Lagerfeuers",
     "DESCRIPTIONS": [
-      "Gierig laben sich die Geister an deinem Opfer! Sie lodern nun heller und das Feuer brennt @doppelt@ so intensiv wie zuvor. NL Die geister Tanzen in Ekstase um dich bevor sie sich ~mit~ ~dir~ ~verschmelzen~. Du fühlst ihre Wärme und Stärke in dir: NL Deine Max TP wurden erhöht und deine TP wurden #gkomplett #ggeheilt.",
-      "Du #pgreifst mit deiner Hand nach ihnen... NL Die Geister @kreischen,@ doch können sie dem ~Strudel~, der such von deiner Handfläche ausbreitet nicht entkommen. NL Nun sind die Geister nichts weiter als ein weiteres Objekt in deiner Sammlung."
+      "Gierig laben sich die Geister an deinem Opfer! Sie lodern nun heller und das Feuer brennt @doppelt@ so intensiv wie zuvor. NL Die geister Tanzen in Ekstase um dich bevor sie sich ~mit~ ~dir~ ~verschmelzen.~ Du fühlst ihre Wärme und Stärke in dir: NL Deine Max TP wurden erhöht und deine TP wurden #gkomplett #ggeheilt.",
+      "Du #pgreifst mit deiner Hand nach ihnen... NL Die Geister @kreischen,@ doch können sie dem ~Strudel,~ der sich von deiner Handfläche ausbreitet nicht entkommen. NL Nun sind die Geister nichts weiter als ein weiteres Objekt in deiner Sammlung."
     ],
     "OPTIONS": [
-      "[Opfern] #rVerliere #r150 #rSeelen. #gGErhalte #g10 #gMax #gTP #gund #gHeile #gdeine #gTP #gkomplett.",
+      "[Opfern] #rVerliere #r150 #rSeelen. #gErhalte #g10 #gMax #gTP #gund #gheile #gdeine #gTP #gkomplett.",
       "[Gesperrt] Erfordert 150 Seelen.",
-      "[Opfern] #rVerliere #r150 #rSeelen. #gGErhalte #g2 #gMax #gTP #gund #gHeile #gdie #gTP #galler #gGremlins #gkomplett.",
+      "[Opfern] #rVerliere #r150 #rSeelen. #gErhalte #g2 #gMax #gTP #gund #gheile #galle #gGremlins.",
       "[Einsammeln]"
     ]
   },
@@ -125,9 +125,9 @@
     "NAME": "Der Verfluchte Brunnen",
     "DESCRIPTIONS": [
       "Du kommst an einem #p~violetten~ #p~Wasser~ vorbei, das endlos aus einem Brunnen auf einer nahen Mauer sprudelt. Du kennst diese Flüssigkeit... sie ist tödlich für die meisten Wesen, aber sehr nützlich für alle #pVerfluchten.",
-      "Die #p~Flüssigkeit~ transportiert die Seelen der Verdammten. Sie nicht zu nutzen wäre eine Verschwendung. You kanalisierst diese Seelen, und entziehst die der Magie des #pverfluchten #pBrunnens.",
-      "Da du begreifst, dass die #p~Flüssigkeit~ auch später nützlich ist, füllst du etwas davon in eine Flasche. Wesen die dem #pdunklen #pWasser abgeneigt sind werden leiden wenn sie damit übergießt.",
-      "Sobald du von der #p~Flüssigkeit~ trinkst fühlst du einen #pdunklen #pGriff in deinen Verstand. Er fühlt sich entspannend und erfrischend an.",
+      "Die #p~Flüssigkeit~ transportiert die Seelen der Verdammten. Sie nicht zu nutzen wäre eine Verschwendung. Du kanalisierst diese Seelen, und entziehst sie der Magie des #pverfluchten #pBrunnens.",
+      "Da du begreifst, dass die #p~Flüssigkeit~ auch später nützlich ist, füllst du etwas davon in eine Flasche. Wesen, die dem #pdunklen #pWasser abgeneigt sind, werden leiden, wenn sie damit übergießt.",
+      "Sowie du von der #p~Flüssigkeit~ trinkst, fühlst du einen #pdunklen #pGriff in deinen Verstand. Er fühlt sich entspannend und erfrischend an.",
       "Du setzt deinen Weg fort und lässt den Brunnen hinter dir."
     ],
     "OPTIONS": [
@@ -144,10 +144,10 @@
   "downfall:WeMeetAgain": {
     "NAME": "So sieht man sich wieder!",
     "DESCRIPTIONS": [
-      "„BOSS!“ Ein vergnügter, zerzauster Kerl kommt mit fröhlichen Schritten auf dich zu. Du kennst diesen Mann nur zu gut. NL „Ich bin's, #yRanwid! Du wirst nicht glauben was ich diesen dummen Helden abgeknöpft habe! Hast du vielleicht mehr Müll den ich ihnen andrehen kann?“ NL Du schätzt sein Zuvorkommen und denkst darüber nach, was Ranwid für sein nächstes „Geschäft“ nutzen kann...",
-      "„Oh, Perfekt! Das ist absolut wertlos! Hier, nimm diese Tränke die ich die letzten Dummköpfe abgeluchst habe!“ NL Ranwid kramt in seine Taschen, und nimmt einige Flaschen heraus, wobei er sie dabei fast fallen lässt.",
-      "„Ausgezeichnet! Das wird für mein nächstes Geschäft ziemlich nützlich. Natürlich habe ich auch die Leichen abgeerntet, wie befohlen!“ NL Ranwid gibt dir einen Seelenstein und verschwindet schnell wieder, um einen Dummen zu finden dem er den Ramsch andrehen kann.",
-      "Super! Mit etwas Arbeit kann daraus etwas sehr Brauchbares werden.“ NL Ranwid untersucht das Relikt sorgfältig und verschwindet wieder. Ohne Zweifel wird er den Nutzen des Reliktes beim nächsten Abenteurer der ihm begegnet übertrieben in den Himmel loben.",
+      "„BOSS!“ Ein vergnügter, zerzauster Kerl kommt mit fröhlichen Schritten auf dich zu. Du kennst diesen Mann nur zu gut. NL „Ich bin's, #yRanwid! Du wirst nicht glauben was ich diesen dummen Helden abgeknöpft habe! Hast du vielleicht mehr Müll den ich ihnen andrehen kann?“ NL Du schätzt sein Zuvorkommen und denkst darüber nach, was Ranwid für sein nächstes \"Geschäft\" nutzen kann...",
+      "„Oh, Perfekt! Das ist absolut wertlos! Hier, nimm diese Tränke die ich den letzten Dummköpfen abgeluchst habe!“ NL Ranwid kramt in seine Taschen, und nimmt hastig einige Flaschen heraus, die er dabei fast fallen lässt.",
+      "„Ausgezeichnet! Das wird für mein nächstes Geschäft ziemlich nützlich. Natürlich habe ich auch die Leichen abgeerntet, wie befohlen!“ NL Ranwid gibt dir einen Seelenstein und verschwindet schnell wieder, um einen Dummen zu finden, dem er den Ramsch andrehen kann.",
+      "„Super! Mit etwas Arbeit kann daraus etwas sehr Brauchbares werden.“ NL Ranwid untersucht das Relikt sorgfältig und verschwindet wieder. Ohne Zweifel wird er den Nutzen des Reliktes beim nächsten Abenteurer der ihm begegnet übertrieben in den Himmel loben.",
       "„Heute nichts dabei, Boss? Nun gut.“ NL Er macht sich aus dem Staub."
     ],
     "OPTIONS": [
@@ -192,7 +192,7 @@
       "scheinen seine Rüstung und sein Gesicht #r@von@ #r@Flammen@ #r@versengt@ zu sein. ",
       "sieht es aus, als wäre er von einer gehörnten Bestie #r@aufgespießt@ #r@und@ #r@zertrampelt@ worden. ",
       "sieht er aus, als wäre er von riesigen Klauen #r@ausgeweidet@ #r@und@ #r@zerstückelt@ worden. ",
-      "NL Ein Ritual zur Seelenernte könnte hier Erfolgg haben, allerdings könnte die Kreatur die das Blutbad verursacht hat bald wieder zurück sein...",
+      "NL Ein Ritual zur Seelenernte könnte hier Erfolg haben - allerdings könnte die Kreatur, die das Blutbad verursacht hat, bald wieder zurück sein...",
       "Das Ritual extrahiert die #pSeele der Leiche! NL Weitermachen?",
       "Das Ritual hatte keine Wirkung... NL Weitermachen?",
       "Die Magie brachte den Körper zum Zucken und Zittern. Ein #yRelikt ist aus den Taschen gefallen! NL Weitermachen?",
@@ -223,8 +223,8 @@
   "downfall:WorldOfGoop": {
     "NAME": "Welt aus Schleim",
     "DESCRIPTIONS": [
-      "Du fällst in eine Pfütze. NL @SIE@ @IST@ @AUS@ #g@KLEBRIGEM@ #g@SCHLEIM!!@ NL Beim Hinaufklettern bemerkst du wie ein #ygelbes Schleimwesen an dir haftet. Es sieht so aus als hat sie die #ySeelen der unglücklichen Abenteurer, die reingefallen sind, aufgesaugt. Wie praktisch.",
-      "Es wäre eine Verschwendung, dieden Vorfall nicht zu deinem Vorteil zu nutzen. Du holst aus und der #ygelbe Schleim NL NL @explodiert@ auf der Stelle! NL NL Unglaublich, aber nun haftet noch mehr Glibber an dir als zuvor.",
+      "Du fällst in eine Pfütze. NL @SIE@ @IST@ @AUS@ #g@KLEBRIGEM@ #g@SCHLEIM!!@ NL Beim Hinaufklettern bemerkst du, dass ein #ygelbes Schleimwesen an dir haftet. Es sieht so aus, als hätte es die #ySeelen der unglücklichen Abenteurer, die reingefallen sind, aufgesaugt. Wie praktisch.",
+      "Es wäre eine Verschwendung, diesen Vorfall nicht zu deinem Vorteil zu nutzen. Du holst aus, und der #ygelbe Schleim... NL NL @explodiert@ auf der Stelle! NL NL Unglaublich, aber nun haftet noch mehr Glibber an dir als zuvor.",
       "Du schüttelst den #ygelben Schleim ab und setzt deine Reise teilweise mit Glibber behaftet fort. Immerhin lässt er dich bedrohlicher wirken."
     ],
     "OPTIONS": [
@@ -244,10 +244,10 @@
       "~„Hssssssssssss..~ ~..ssSSs.....~ ~ss...~ ~sssss....“~",
       "Die Schlange glotzt dich mit dem Anblick extremer Enttäuschung an.",
       " NL NL Die Schlange bäumt sich auf und lässt einen markerschütternden Schrei von sich. Nachdem ihr toter Körper in das Loch gefallen ist, kann ihre Seele geerntet werden. NL NL Beeindruckend - doch bist du dir nicht sicher, ob die Schlange nur bildlich gesprochen hat. Sie wollte vielleicht darauf hinaus, dass du andere Wesen schlagen sollst, nicht sie selbst...",
-      "Als du deine Hand ausstreckst, @bäumt@ sich die Schlange mit einem Todesschrei @auf@. ~„Hssss - die Sammlerin!“~ NL NL ~„Deine Gier übersteigt sogar meine. Bitte, lassssss mich hier bleiben...“~ NL Du schenkst diesem unwürdigen Wurm keine Beachtung. Der Geist ist dein, und du setzt deine Reise fort."
+      "Als du deine Hand ausstreckst, @bäumt@ sich die Schlange mit einem Todesschrei @auf.@ ~„Hssss~ ~-~ ~die~ ~Sammlerin!“~ NL NL ~„Deine~ ~Gier~ ~übersteigt~ ~sogar~ ~meine.~ ~Bitte,~ ~lassssss~ ~mich~ ~hier~ ~bleiben...“~ NL Du schenkst diesem unwürdigen Wurm keine Beachtung. Sein Geist ist dein, und du setzt deine Reise fort."
     ],
     "OPTIONS": [
-      "[Zustimmen] [Scglagen] #gErhalte #g",
+      "[Zustimmen] [Schlagen] #gErhalte #g",
       " #gSeelen. #rWerde #rverflucht #r– #rZweifel.",
       "[Widersprechen]",
       "[Verlassen]"
@@ -257,8 +257,8 @@
     "NAME": "Flügelstatue",
     "DESCRIPTIONS": [
       "Zwischen den Steinen und Brocken fällt dir eine aufwändige große blaue Statue auf, die einen Flügel darstellt. NL Du siehst #yglitzernde #yMünzen aus einigen Rissen quillen, doch die sind für dich wertlos. Die Statue selbst, allerdings...",
-      "Du wirst wahrscheinlich Kultisten des Erwachten begegnen, also nimmst du die Statue mit. Sie könnte nützlich dabei sein, die Kultisten auf deine Seite zu ziehen.",
-      "Du schägst mit all deiner Kraft auf die Statue. NL Schon bald @zerfällt@ sie in ihre Einzelteile. Einer der Splitter ist auffallend scharf, und trägt etwas Magie in sich. Du nimmst den Splitter mit und machst dich wieder auf den Weg",
+      "Du wirst wahrscheinlich Kultisten des Erweckten begegnen, also nimmst du die Statue mit. Sie könnte nützlich dabei sein, die Kultisten auf deine Seite zu ziehen.",
+      "Du schägst mit all deiner Kraft auf die Statue. NL Schon bald @zerfällt@ sie in ihre Einzelteile. Einer der Splitter ist auffallend scharf, und trägt etwas Magie in sich. Du nimmst den Splitter mit und machst dich wieder auf den Weg.",
       "Du gehst daran vorbei und setzt deine Reise fort.",
       "Krä...Krächz?! Geschenk für KRÄHENGOTT?",
       "KÄ-KRÄCHZ!!",
@@ -278,7 +278,7 @@
     "DESCRIPTIONS": [
       "Du findest ein unscheinbares Podest, auf dem friedlich ein #yglänzender #ygoldener #yGötze ruht. Er sieht unglaublich wertvoll aus. NL NL Abenteurer sind bestimmt von diesem Objekt angezogen. Es würde sich lohnen, eine Falle einzubauen.",
       "Du findest ein unscheinbares Podest, auf dem friedlich ein #yglänzender #ygoldener #yGötze ruht. Er sieht unglaublich wertvoll aus. NL NL Die Leiche eines Abenteurers liegt in der Nähe des Podests - zerquetscht von einem schweren Gegenstand. Die Seelen lungern noch in der Gegend herum.",
-      "Du konstruierst eine simple Falle die einen riesigen Felsen in den Raum stürzen lässt. Das Gewicht des Götzen wird als Auslöser verwendet. Sobald der Götzen aufgehoben wird, werden die Leute vom Felsen zerquetscht. NL Solz auf deine konstruierte Falle machst du dich von Dannen.",
+      "Du konstruierst eine simple Falle, die einen riesigen Felsen in den Raum stürzen lässt. Das Gewicht des Götzen wird als Auslöser verwendet. Sobald der Götze aufgehoben wird, werden die Leute vom Felsen zerquetscht. NL Solz auf deine konstruierte Falle machst du dich von dannen.",
       "Du kanalisierst den Geist des Abenteurers in deinen Körper, und absorbierst seine Energie.",
       "Du lässt das Podest in Ruhe. Fallen aufzustellen ist unter deiner Würde.",
       "Du lässt die Seele ruhen und verlässt den Ort."
@@ -296,7 +296,7 @@
     "DESCRIPTIONS": [
       "Ein seltsamer blauer Humanoider mit einem goldenen Helm (?) nähert sich dir grinsend. NL Nachdem ihm klar wird, wer du bist, verwandelt sich sein Grinsen schnell in einen Ausdruck großer Angst. NL ~„M-MONSTER!!“~ schreit er, und versucht zu fliehen.",
       "Die Kreatur bricht nach einem einzigen Schlag zusammen, und übrig bleibt nur ein Haufen blaues Hackfleisch. Du absorbierst seine #ySeele und schreitest weiter voran.",
-      "„Priester hilft! Priester hilft!“ bettelt das Wesen, als es in die Ecke gedrängt wurde. NL Eine kalte blaue Flamme umhüllt deinen Körper und zerstreut sich. NL Dieser „Priester“ flieht daraufhin."
+      "„Priester hilft! Priester hilft!“ bettelt das Wesen, als es in die Ecke gedrängt wurde. NL Eine kalte blaue Flamme umhüllt deinen Körper und zerstreut sich. NL Dieser \"Priester\" flieht daraufhin."
     ],
     "OPTIONS": [
       "[Schlagen] #gErhalte #y",
@@ -309,9 +309,9 @@
   "downfall:Ghosts": {
     "NAME": "Rat der Geister",
     "DESCRIPTIONS": [
-      "Beim weiteren Aufstieg beginnt #p~dicker~ #p~schwarzer~ #pRauch aus dem Boden und Wänden um dich herum zu quillen, welcher sich zu drei maskierten Gestalten formt. NL NL ~„Noch~ ~eine~ ~Marionette~ ~des~ #r~Herzen~, ~ ~glaube~ ~ich.“~ NL#r@„JAWOLL!@ #r@ES@ #r@SCHICKT@ #r@IMMER@ #r@DIE@ #r@SCHWÄCHSTEN@ #r@BAUERNOPFER!“@ NL NL Dir fällt ein riesiges Grinsen auf, als sich die dritte Gestalt an dich wendet. NL „Ignoriere die Anderen... Magst du eine Kostprobe unserer #y~Kraft?“~ ",
-      "„Eine @Opfergabe!@ Sehr ~verlockend...“~ NL NL Während die Geistergestalt spricht, bemerkst du, wie sich ihr großer Mund noch weiter und weiter öffnet. Du spürst, wie die gesammelten #b~Seelen~ deinen Körper in einer gewaltvollen Spirale Richtung dem offenen Schlund des Geisterwesens verlassen. Es erfordert all deine Stärke um auf der Stelle zu bleiben und nicht selbst von der Spirale aufgesogen zu werden. NL NL Der Geisterstrudel kommt zum Stillstand just bevor du schalapp machst. Die Geister haben sich aufgelöst. NL NL Du setzt deine Reise mit einem etwas #bleeren Gefühl fort.",
-      "Die #p~Geister~ kichern als sie dich bemerken. NL NL #r@„AH!@ #r@UNSER@ #r@GUTER@ #r@FREUND!@ NL Ihre #p~nebelige~ #p~Formen~ blähen sich auf und füllen den ganzen Raum... NL NL „Du bist hier für das ~Übliche,~ nicht wahr?“"
+      "Beim weiteren Aufstieg beginnt #p~dicker~ #p~schwarzer~ #pRauch aus dem Boden und Wänden um dich herum zu quillen, welcher sich zu drei maskierten Gestalten formt. NL ~„Noch~ ~eine~ ~Marionette~ ~des~ #r~Herzen,~ ~glaube~ ~ich.“~ NL #r@„JAWOLL!@ #r@ES@ #r@SCHICKT@ #r@IMMER@ #r@DIE@ #r@SCHWÄCHSTEN@ #r@BAUERNOPFER!“@ NL Dir fällt ein riesiges Grinsen auf, als sich die dritte Gestalt an dich wendet. NL „Ignoriere die Anderen... Magst du eine Kostprobe unserer #y~Kraft?“~ ",
+      "„Eine @Opfergabe!@ Sehr ~verlockend...“~ NL NL Während die Geistergestalt spricht, bemerkst du, wie sich ihr großer Mund noch weiter und weiter öffnet. Du spürst, wie die gesammelten #b~Seelen~ deinen Körper in einer gewaltvollen Spirale Richtung dem offenen Schlund des Geisterwesens verlassen. Es erfordert all deine Stärke, um auf der Stelle zu bleiben und nicht selbst von der Spirale aufgesogen zu werden. NL NL Der Geisterstrudel kommt zum Stillstand just bevor du schalapp machst. Die Geister haben sich aufgelöst. NL NL Du setzt deine Reise mit einem etwas #bleeren Gefühl fort.",
+      "Die #p~Geister~ kichern als sie dich bemerken. NL NL #r@„AH!@ #r@UNSER@ #r@GUTER@ #r@FREUND!“@ NL Ihre #p~nebelige~ #p~Formen~ blähen sich auf und füllen den ganzen Raum... NL NL „Du bist hier für das ~Übliche,~ nicht wahr?“"
     ],
     "OPTIONS": [
       "[Opfern] #rVerliere #r",
@@ -335,7 +335,7 @@
       "Mit einem Gefühl der #pScham gehst du vorbei ohne ein Opfer anzubieten."
     ],
     "OPTIONS": [
-      "[Seelen opfern] #rLose #r",
+      "[Seelen opfern] #rVerliere #r",
       " #rGold. #gHeile #g",
       " #gTP.",
       "[Gesperrt] Benötigt ",
@@ -348,7 +348,7 @@
   "downfall:Bandits": {
     "NAME": "Maskierte Banditen",
     "DESCRIPTIONS": [
-      "Du triffst auf eine Gruppe Banditen, die große #rrote #rMasken tragen. NL „Hallo! Bezahl, wenn- Oh Moment, ein ~Monster.~ Vielleicht kommen wir ins Geschäft?“",
+      "Du triffst auf eine Gruppe Banditen, die große #rrote #rMasken tragen. NL „Hallo! Bezahl, wenn- Oh Moment, ein ~Herrscher.~ Vielleicht kommen wir ins Geschäft?“",
       "Danke! Das wirst du nicht bereuen..."
     ],
     "OPTIONS": [
@@ -360,7 +360,7 @@
   "downfall:Nloth": {
     "NAME": "N'loth",
     "DESCRIPTIONS": [
-      "Diese verlauste Kreatur ist des Spire nicht würdig - du holst aus und verpasst N'loths einen kräftigen Schlag mitten in die Brust. NL NL Während sich die Kreatur in Qual windet, @schlägt@ es auf Reflex @um@ @sich@ und hinterlässt einen #rschmerzhaften Stich! NL NL Nachdem die Lebenskraft die Kretur verlassen hat, hörst du das Rascheln und Klimpern des Unrats, den sie bei sich hatte. Du durchsuchst die Leiche, so wie die Kreatur zu Lebzeiten Müllberge durchsucht hat, und findest dabei einen magischen Gegenstand."
+      "Diese verlauste Kreatur ist des Spire nicht würdig - du holst aus und verpasst N'loth einen kräftigen Schlag mitten in die Brust. NL NL Während sich die Kreatur in Qual windet, @schlägt@ sie aus Reflex @um@ @sich@ und hinterlässt dir einen #rschmerzhaften Stich! NL NL Nachdem die Lebenskraft die Kretur verlassen hat, hörst du das Rascheln und Klimpern des Unrats, den sie bei sich hatte. Du durchsuchst die Leiche, so wie die Kreatur zu Lebzeiten Müllberge durchsucht hat, und findest dabei einen magischen Gegenstand."
     ],
     "OPTIONS": [
       "[Schlag] #gErhalte #gein #gzufälliges #gRelikt. #rWerde #rverflucht #r- #rSchmerz."
@@ -383,8 +383,8 @@
     "NAME": "Flehender Landstreicher",
     "DESCRIPTIONS": [
       "Du tötest den Mann und erntest seine Seele. ~Schockierte~ ~Atemzüge~ kommen von einer Ansammlung an Leuten hinter dir. NL Einer von ihnen sagt „Du hast Burgundy umgebracht!“, was mehr Bettler zu dir anlockt. NL NL Du fliehst vom Tatort, aber nicht ohne ein Paar #rKratzer und #rBisse davonzutragen.",
-      "Du schnappst dir das wertvolle #yRelikt aus seiner Jackentasche und läufst fort. NL Hinter dir kannst du hören: NL „Schämst du nicht nicht? ~SCHÄÄÄÄMST~ ~DU~ ~DICH~ ~NICHT?!~“ NL Du hast #pabsolut #pkeine #pScham. Er sollte sich geehrt fühlen, von einem Herrscher des Spire ausgeraubt worden zu sein!",
-      "Du hast kein Interesse an seinem Spielzeug - seine ~Geist~ ist nützlicher. Als du deinen @Arm@ @ausstreckst@ beginnt der arme Mann zu winseln..."
+      "Du schnappst dir das wertvolle #yRelikt aus seiner Jackentasche und läufst fort. NL Hinter dir kannst du hören: NL „Schämst du nicht nicht? ~SCHÄÄÄÄMST~ ~DU~ ~DICH~ ~NICHT?!“~ NL Du hast #pabsolut #pkeine #pScham. Er sollte sich geehrt fühlen, von einem Herrscher des Spire ausgeraubt worden zu sein!",
+      "Du hast kein Interesse an seinem Spielzeug - sein ~Geist~ ist nützlicher. Als du deinen @Arm@ @ausstreckst@ beginnt der arme Mann zu winseln..."
     ],
     "OPTIONS": [
       "[Schlagen] #gErhalte #g85 #gSeelen. #rVerliere #r",
@@ -396,13 +396,13 @@
     "NAME": "Alter Bettler",
     "DESCRIPTIONS": [
       "Der Bettler nimmt seinen Mantel ab, und sichtbar wird ein seltsamer blauer Humanoider mit einem goldenen Helm (?). NL Nachdem ihm klar wird, wer du bist, verwandelt sich sein Grinsen schnell in einen Ausdruck großer Angst. NL ~„M-MONSTER!!“~ schreit er, und versucht zu fliehen.",
-      "Der Bettler sieht sich scheinbar verwirrt um. Zuerst ignoriert er dich, doch dann wendet er sich dir zu. NL „Hast du einen jungen, blauhäutigen Mann in der Nähe gesehen? Trägt einen komischen, goldenen Helm. Normalerweise lungert er in der Stadt herum, und gibt sein letztes Geld für Essen aus, das er uns spendet...“ NL Der Bettler meint bestimmt diesen #bPriester, um den du dch vor kurzem gekümmert hast.",
+      "Der Bettler sieht sich scheinbar verwirrt um. Zuerst ignoriert er dich, doch dann wendet er sich dir zu. NL „Hast du einen jungen, blauhäutigen Mann in der Nähe gesehen? Trägt einen komischen, goldenen Helm. Normalerweise lungert er in der Stadt herum, und gibt sein letztes Geld für Essen aus, das er uns spendet...“ NL Der Bettler meint bestimmt diesen #bPriester, um den du dich vor kurzem gekümmert hast.",
       "@„Hab@ @keine@ @Angst,@ @alter@ @Mann.@ @Du@ @wirst@ @deinen@ @Freund@ @schon@ @bald@ @wiedersehen.“@ NL NL Der Bettler kann keinen ernsthaften Widerstand leisten während du ihn niederstreckst. NL Voller #yStolz auf das, was du heute geleistet hast, verlässt du die Gasse.",
       "Dieser Mann hat bereits genug durch deine Taten gelitten. Du verschonst ihn und verlässt die Gasse.",
-      "Der Bettler nimmt seinen Mantel ab, um zu offenbaren, dass er #bPriester ist! NL @„Du@ @bist@ @eine@ @böse@ @Seele.@ @Priester@ @hat@ @Bodyguards@ @bezahlt!“@ schreit er. NL NL Zwei riesige, vollausgerüstete Gestalten kommen aus der Gasse hervor. Sie ziehen ihre Waffen bevor du dir Möglichkeit hast zu reagieren!",
-      "Nachdem du die Bodyguards dieses #bPriesters besiegt hat, wendest du dich wieder ihm zu. Er sitzt ängstlich und zitternd in einer Ecke",
-      "Die Kreatur bricht nach einem einzigen Schlag zusammen, und übrig bleibt nur ein Haufen blaues Hackfleisch. Du absorbierst seine #ySeele und schreitest weiter voran. NL NL Beim Verlassen fallen die ängstliche Bettler auf, die aus ihren Verstecken alles mit angesehen haben. Du badest fürmlich in ihrer Furcht - das wird ihnen eine Lehre sein, sich mit einem Herrscher des Spire anzulegen.",
-      "„Priester hilft! Priester hilft!“ bettelt das Wesen erneut, fast gelähmt vor Furcht. NL Eine kalte blaue Flamme umhüllt deinen Körper und zerstreut sich. NL NL Seine Kräfte können in der Zukunft nützlich sein, und seine Bodyguards stellen auch kein Problem für dich dar. Daher verschonst du diesen „Priester“."
+      "Der Bettler nimmt seinen Mantel ab, um zu offenbaren, dass er #bPriester ist! NL @„Du@ @bist@ @eine@ @böse@ @Seele.@ @Priester@ @hat@ @Bodyguards@ @angeheuert!“@ schreit er. NL NL Zwei riesige, vollausgerüstete Gestalten kommen aus der Gasse hervor. Sie ziehen ihre Waffen bevor du die Möglichkeit hast zu reagieren!",
+      "Nachdem du die Bodyguards dieses #bPriesters besiegt hat, wendest du dich wieder ihm zu. Er sitzt ängstlich und zitternd in einer Ecke.",
+      "Die Kreatur bricht nach einem einzigen Schlag zusammen, und übrig bleibt nur ein Haufen blaues Hackfleisch. Du absorbierst seine #ySeele und schreitest weiter voran. NL NL Beim Verlassen fallen die ängstliche Bettler auf, die aus ihren Verstecken alles mit angesehen haben. Du badest förmlich in ihrer Furcht - das wird ihnen eine Lehre sein, sich mit einem Herrscher des Spire anzulegen.",
+      "„Priester hilft! Priester hilft!“ bettelt das Wesen erneut, fast gelähmt vor Furcht. NL Eine kalte blaue Flamme umhüllt deinen Körper und zerstreut sich. NL NL Seine Kräfte können in der Zukunft nützlich sein, und seine Bodyguards stellen auch kein Problem für dich dar. Daher verschonst du diesen \"Priester\"."
     ],
     "OPTIONS": [
       " #rWerde #rverflucht #r- #rStolz.",
@@ -414,7 +414,7 @@
     "NAME": "Das Mausoleum",
     "DESCRIPTIONS": [
       "Du wagst dich durch eine Reihe von Gräbern und stehst nun vor einem großen ~edelsteinbesetzten~ Sarkophag in der Mitte eines runden Raums. NL Du kannst die Inschrift auf dem Sarg nicht entziffern, bemerkst jedoch, wie #p~schwarzer~ #p~Nebel~ aus den Seiten strömt. NL Du kennst diesen Nebel - ein klares Zeichen von #y~Geistern.~",
-      "Du absorbierst den #p~spirituellen~ #p~Nebel~, und sammelst dadurch seine Seelen. Beim Verlassen kannst du nicht anders als dich über ein #r@eiskaltes@ #r@Gefühl@ in dir zu sorgen..."
+      "Du absorbierst den #p~spirituellen~ #p~Nebel,~ und sammelst dadurch seine Seelen. Beim Verlassen kannst du nicht anders als dich über ein #r@eiskaltes@ #r@Gefühl@ in dir zu sorgen..."
     ],
     "OPTIONS": [
       "[Aufsaugen] #gErhalte #g200 #gSeelen. #rWerde #rverflucht #r- #rSpuk."
@@ -423,17 +423,17 @@
   "downfall:Nest": {
     "NAME": "Das Nest",
     "DESCRIPTIONS": [
-      "Eine lange Reihe #b~maskierter~ #b~Gestalten~ ist zu sehen, die NL eine #pbescheidene #pKathedrale betreten. NL Als du sie betrittst nehmen die die Kultisten sofort wahr! NL NL Du kannst nichts mehr als eine Kakophonie aus Atemzügen, Jubel, and Krächzen hören. Einer der Kultisten bietet die eine Opfergabe an.",
-      "Du stoßt dich durch die Masse an Kultisten um an die mächtige Waffe zu kommen, die du auf dem Altar erblickst. Der Diebstahl des Dolches wird prompt bemerkt! NL NL #r@„MORD!!@ #r@MORD@ #r@MORD!!“@ NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Die #rKultisten ziehen ihre eigenen Dolche. Sie #rstechen und #rschlityen auf die ein während du das Gebäude verlässt.",
+      "Eine lange Reihe #b~maskierter~ #b~Gestalten~ ist zu sehen, die NL eine #pbescheidene #pKathedrale betreten. NL Als du sie betrittst, nehmen dich die Kultisten sofort wahr! NL NL Du kannst nichts mehr als eine Kakophonie aus Atemzügen, ~Jubel,~ and @Krächzen@ hören. Einer der Kultisten bietet dir eine Opfergabe an.",
+      "Du stoßt dich durch die Masse an Kultisten um an die mächtige Waffe zu kommen, die du auf dem Altar erblickst. Der Diebstahl des Dolches wird prompt bemerkt! NL NL #r@„MORD!!@ #r@MORD@ #r@MORD!!“@ NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Die #rKultisten ziehen ihre eigenen Dolche. Sie #rstechen und #rschlitzen auf dich ein, während du das Gebäude verlässt.",
       "Du nimmst die Gabe in Form des seltsamen Elixiers an. NL NL Die Kultisten @singen@ und @brüllen@ für dich! NL NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Du singst auch. Wieso nicht? Diese Kultisten sind schon ein eigenartiger Schwarm, aber immerhin dienen sie einem deiner Herrscher-Kollegen.",
       "#r@KRÄHENGOTT!!@ #r@HEIMGEKEHRT!!“@ NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Du badest in der Menge, und schon bald stehst du dem Anführer direkt gegenüber. Ein gut gekleideter Kultist reicht dir einen #yverzierten #yDolch.",
-      "Du nimmst den Dolch - nicht wissend, worauf das hinausläuft. Der Anführer greit in eine Tasche seiner Robe und reicht dir ein #bblaues, #böliges #bGebräu.",
+      "Du nimmst den Dolch - nicht wissend, worauf das hinausläuft. Der Anführer greift in eine Tasche seiner Robe und reicht dir ein #bblaues, #böliges #bGebräu.",
       "Die Kultisten rundherum stellen dem Anführer Ersatz zur Verfügung. Mit seinem eigenen Dolch und Elixier in der Hand demonstriert er dir, was du ihm nachmachen sollst.",
-      "Du führst das Ritual aus wie es der Anführer tut: du beträufelst die Klinge des Dolches mit ein paar Tropfen des Tranks. Im Licht der Kathedrale glänzt der Stahl in einer #b~unheimlichen~ #b~Farbe~. NL NL Unaufgefordert treten zwei Kultisten hervor - einer vor dir, einer vor dem Anführer. NL NL Es ist dir gleich klar, was zu tun ist.",
+      "Du führst das Ritual aus, wie es der Anführer tut: du beträufelst die Klinge des Dolches mit ein paar Tropfen des Tranks. Im Licht der Kathedrale glänzt der Stahl in einer #b~unheimlichen~ #b~Farbe.~ NL NL Unaufgefordert treten zwei Kultisten hervor - einer vor dir, einer vor dem Anführer. NL NL Es ist dir sofort klar, was zu tun ist.",
       "#rDu #rstichst #rden #rDolch #rmitten #rin #rdes #rKultisten #rHerzen! NL NL #b~„KRÄCHZ~ #b~KRÄCHZ~ #b~KRÄÄÄÄCHZZZ!“~ NL NL Das Ritual ist vollendet, und die überlebenden Kultisten sind glücklicher als zuvor. Du verlässt die Kathedrale, und sie verabschieden sich gebührend mit jubelndem Gekrächze und wilden Gesten ihrer Stöcke."
     ],
     "OPTIONS": [
-      "[Statue zurückgeben] #rVerliere #rdie #rZerbrochene #rFlügelstatue. #gErhalte #gviele #gBelohnungen.",
+      "[Statue zurückgeben] #rVerliere #rdie #rFlügelstatue. #gErhalte #gviele #gBelohnungen.",
       "[Gesperrt] Erfordert die Zerbrochene Flügelstatue.",
       "[Annehmen] #gErhalte #geinen #gKultistentrank.",
       "[Stehlen] #gErhalte #geinen #gRitualdolch. #rVerliere #r",
@@ -443,16 +443,16 @@
       "[Dolch nehmen] #gErhalte #geinen #gRitualdolch.",
       "[Salben] #gVerbessere #gden #gRitualdolch.",
       "[Opfern] #rTöte #reinen #rKultisten #rmit #rdem #rRitualdolch+.",
-      "[Rühmen lassen] #gErhalte #gBelohnungen für die Rückgabe der #gZerbrochenen #gFlügelstatue."
+      "[Rühmen lassen] #gErhalte #gBelohnungen für die Rückgabe der #gFlügelstatue."
     ]
   },
   "downfall:Colosseum": {
     "NAME": "Das Kolosseum",
     "DESCRIPTIONS": [
-      "Auf deinem Weg bemerkst du eine große Gruppe Humanoider, die auf den Einlass in ein großes Auditorium warten. Die Sklavenhändler erschrecken kurz als du auftauchst, doch erklären gleich darauf was los ist. NL NL „Wir stehen denen entgegen, die in der Stadt Ärger machen - diejenigen, welche ihr vernichten wollt! Das Publikum ist schon auf unseren neuesten Fang gespannt. Sie lieben einen #rKampf auf Leben und #rTod!“",
-      "Die Sklavenhändler sind keine Bedrohung für dich. Sie sind dir sogar nützlich, indem sie deine Opfer aufhalten und verletzen. NL NL Doch dieses barbarische Gemetzel ist zu verlockend, um einfach weiterzugehen...",
+      "Auf deinem Weg bemerkst du eine große Gruppe Humanoider, die auf den Einlass in ein großes Auditorium warten. Die Sklavenhändler erschrecken kurz als du auftauchst, doch erklären gleich darauf was los ist. NL NL „Wir stehen denen entgegen, die in der Stadt Ärger machen - diejenigen, welche ihr vernichten wollt! Das Publikum ist schon auf unseren neuesten Fang gespannt. Sie lieben einen #rKampf auf Leben und #rTod! “",
+      "Die Sklavenhändler sind keine Bedrohung für dich. Sie sind dir sogar nützlich, indem sie deine Opfer aufhalten und verletzen. NL NL Und dieses barbarische Gemetzel ist zu verlockend, um einfach weiterzugehen...",
       "Du betrittst ein riesiges Kolosseum und stehst in der Mitte. Die überbordenden Zuschauerreihen sind voller #bSlavernhändler, #pKultisten und anderer Stadtbewohner. NL NL ",
-      "@„BRINGT@ @MIR@ @DEN@ @STÄRKSTEN!“@ rufst du in die Menge. NL Zwei Gestalten nehmen die Herausforderung an, und stellen noch einmal klar, dass die Regeln keine Zurückhaltung zulassen, selbst gegenüber einem Herrscher. NL NL Nichts anderes hast du erwartet.",
+      "@„BRINGT@ @MIR@ @DEN@ @STÄRKSTEN!“@ rufst du in die Menge. NL Zwei Gestalten nehmen die Herausforderung an, und stellen noch einmal klar, dass die Regeln keine Zurückhaltung zulassen, selbst einem Herrscher gegenüber. NL NL Nichts Anderes hast du erwartet.",
       "@„DER@ @NÄCHSTE@ @GEHÖRT@ @MIR!“@ rufst du in die Menge, die mit einem ohrenbetäubenden Applaus antwortet. NL NL Die Sklavenhändler bringen ihren neuesten Fang hinein. Der unfreiwillige Herausforderer erwacht, etwas ~angeschlagen~ vom Überfall, doch ist sofort kampfbereit. NL NL Das sieht nach Spaß aus.",
       "Auch wenn die Verlockung groß ist, findest du, dass ein Kampf hier nur Zeitverschwendung wäre. Deine Reise geht weiter, so auch die Überfälle der Sklavenhändler."
     ],
@@ -483,15 +483,15 @@
   "downfall:MoaiHead": {
     "NAME": "Der Moai-Kopf",
     "DESCRIPTIONS": [
-      "Du machst einen kleinen Umweg um dir eines der bedeutendsten Denkmäler des Jenseits anzusehen - ein enormer Steinkopf aus einem großen Mauerabschnitt. NL NL Der Mund des Kopfes ist weit geöffnet und zeigt große, einschüchternde Zähne, die von Blut rot befleckt sind. Die Oberfläche der Statue ist überzogen mit Piktogrammen, welche anscheinend Leute darstellen, die sich in den Mund dieses Kopfes werfen und verschlungen werden.",
+      "Du machst einen kleinen Umweg um dir eines der bedeutendsten Denkmäler des Jenseits anzusehen - ein enormer Steinkopf aus einem großen Mauerabschnitt. NL NL Der Mund des Kopfes ist weit geöffnet und zeigt große, einschüchternde Zähne, die von #rBlut #rrot befleckt sind. Die Oberfläche der Statue ist überzogen mit Piktogrammen, welche anscheinend Leute darstellen, die sich in den Mund dieses Kopfes werfen und verschlungen werden.",
       "Du trittst in den Mund der Statue und wartest auf den Effekt. Du weißt, dass des Preis dafür einen Blutzoll darstellt. Nach kurzer Zeit rasen plötzlich die riesigen Backenzähne herunter und zerschmettern dich. NL @Dunkelheit.@ NL Einige Zeit später siehst du einen Lichtschein in der Dunkelheit und hörst etwas, das du schließlich als das Geräusch steinerner Zähne erkennst, die sich langsam erheben. NL NL Du verlässt die Statue mit neuen kräften, und spürst ihr Magie in dir.",
-      "Du trittst in den Mund der Statue und lässt #bspirituelle #bEnergie aus deinem Körper fließen. Die Augen der Statue glühen wie eine #b~aFlamme,~ und die riesigen Backenzähne rasen herunter. NL #b~Blaues~ #b~Licht~ #b~strahlt~ #b~überall.~ NL NL Nachdem die Zähne sich erheben fühlst du dich wie neugeboren, und stärker als je zuvor.",
+      "Du trittst in den Mund der Statue und lässt #bspirituelle #bEnergie aus deinem Körper fließen. Die Augen der Statue glühen wie eine #b~Flamme,~ und die riesigen Backenzähne rasen herunter. NL #b~Blaues~ #b~Licht~ #b~strahlt~ #b~überall.~ NL NL Nachdem die Zähne sich erheben fühlst du dich wie neugeboren, und stärker als je zuvor.",
       "Du ziehst ab und fragst dich, was hätte geschehen können."
     ],
     "OPTIONS": [
       "[Opfern] #rVerliere #r",
       " #rSeelen. #gErhalte #g",
-      " #gMax #gTP und #gHeile #gdeine #gTP #gkomplett.",
+      " #gMax #gTP und #gheile #gdeine #gTP #gkomplett.",
       "[Gesperrt] Efordert ",
       " Seelen.",
       " #rSeelen. #gJeder #gGremlin #gErhält #g",
@@ -501,15 +501,15 @@
   "downfall:SensoryStone": {
     "NAME": "Sinnesstein",
     "DESCRIPTIONS": [
-      "#g~EITELKEIT.~ NL NL Das Leben ist schön und wertvoll... sogar für einen #gSchleim. NL NL Du wusstest schon immer, dass du für Großes bestimmt bist. Andere geben sich mit Gold und Schrott zufrieden, doch du bist anders. Du bist wie ein Jäger auf der Lauer nach etwas Besonderem. Etwas Einzigartigem. Etwas ~Fabelhaftem.~ NL NL Tage... Wochen... Vielleicht sogar Jahre vergehen... im Spire ist das schwer zu sagen. Irgendwann, endlich, hast du es entdeckt. Nie mehr wirst du einfach in der Masse untergehen! Die anderen haben ihre #yMünzen und #yNippes, doch du hast etwas viel besseres... NL NL @EINE@ @WINZIGE@ @MELONE!@ Fesch!",
-      "#y~ZERBRECHLICHKEIT.~ NL NL Die #rKlinge dringt durch deine Brust, und du hörst den #bJubel der Publikums... Das letzte was du fühlst ist eine Faust, die mit voller Wucht in dein Gesicht einschlägt - dann gehen deine Augen zu. NL NL Du wachst in einen dir unbekannten Raum auf und @kannst@ @dich@ @nicht@ @bewegen.@ Du versuchst etwas zu sagen, doch kein Wort kommt heraus, und deine Sicht ist von #ggrünem #gRauch vernebelt. Ist da ein Traum? Ist das das Leben nach dem Tod? Du versuchst dich zu erinnern, doch deine Erinnerungen sind abgetrennt, sowie es deine Gliedmaßen sind. NL NL Du hörst eine Stimme in deinem Kopf - ein simpler Befehl. #g\"BALANCE #gmuss #gVERSTÄRKT #gwerden. #gBESCHÜTZE #gExordium.\"",
-      "#p~HOFFNUNGSLOSIGKEIT.~ NL NL #ySehen. #yErinnern. #yLeben. Das ist die Mission des Sehers. Dein Auftrag ist die Untersuchung eines Spire von unbekanntem Ursprung. Du betrittst einen sechseckigen Raum. Bevor du noch irgendetwas tun kannst @fällt@ @die@ @Tür@ @hinter@ @dir@ @zu!@ NL NL Es gibt keinen Ausweg. Die letzte Strohhalm wäre die magische Steintafel, die sich auf einem Podest in der Mitte befindet. Sowie du dieses Artefakt berührst, ~löst~ ~sich~ dein Körper in ~nichts~ ~auf,~ und deine #pSeele wird in die #pSteintafel gezogen. NL NL Dein Schicksal ist nun auf Ewig mit der #pSteintafel verbunden, dazu #rverdammt für alle Zeiten duch den Spire zu wandern.",
-      "#y~FREISETZUNG.~ NL NL Du bist der erste. Du dienst dem ~Former.~ Du wurdest nicht geboren, yerbrechlich und mit Schwachstellen, sondern kreiert. In Perfektion. Und du sollst mehr Konstrukte nach deinem Vorbild erschaffen. Das Vermächtnis des Schöpfers: die #yAutomatone. NL NL Jedes ist makellos, um einen bestimmten Zweck zu erfüllen. Jeder... außer einem. Dieser sollte das Gleichgewicht in der Stadt sicherstellen. NL NL Du schmeißt dieses #ydefekte #yKonstrukt aus dem größten Fenster, auf dass es am Bodensatz des Spire sein Dasein fristet. Du nimmst seinen Platz als Beschützer der Stadt ein. NL NL Balance muss verstärkt werden.",
-      "#b~STOLZ.~ NL NL Du stehst in der Mitte einer großen Arena. Alles worauf du hingearbeitet hast wird nun in diesem Kampf ausgedrückt. Du nimmst die #bDefensivhaltung an, um den Gegner ermüden zu lassen, bis er eine Schwachstelle offenbart. Mit deiner letzten Kraft #rstichst #rdu #rdeine #rKlinge in die Brust des Gegners. Das Publikum reagiert mit @frenetischem@ @Applaus!@ NL NL Der Sieg alleine ist dir nicht genug - du hebst deine leere Hand und schägst dem Gegner ~mitten~ ~ins~ ~Gesicht,~ um ihm einen letzten demütigenden Schlag zu verpassen. NL NL Niemand stellt sich mehr dir in den Weg. Du bist der neue #b@Champion!@",
-      "#p~GIER.~ NL NL Nur wenige können der #bVersuchung #bder #bMacht widerstehen. Doch Macht hat seinen Preis, und große Macht einen hohen Preis. NL NL Du thronst über dem Kolosseum, und siehst wie Gladiatoren um den Titel des #bChampion und zu deinem Vergnügen um #rLeben #run #rTod #rkämpfen. Die Teilnahmegebühr - die #g~Flamme~ #g~ihrer~ #g~ewigen~ #g~Seele~ die dir von nun an dient. Die Namen eingemeißelt in Steintafeln - sie werden dir nach ihrem Ableben ewig dienen. NL NL Die Menge Jubelt nachdem ein Gladiator den letzten Schlag mitten ins Gesicht einsteckte. Du begibst dich in deine Schatzkammer und bemerkst, dass jemand anders hier war. Die Fallen wuden ausgelöst, aber es gibt keine Leiche... und die #p@Steintafel@ @fehlt!@",
-      "#g~TRAUER.~ NL NL Endlich stehst du auf der Spitze des Spire. Du hast dein Leben dazu gewidmet, unermüdlich an diesem kolossalen Monument für das Große zu arbeiten und es zum Leben zu bringen. Jeder #gWinkel, jede #Rundung - geschliffen in Perfektion. Jede #yKante akribisch genau gelegt. NL NL „Es ist fertig, Liebste.“ Du nimmst ihre leblose Hand und schaltest die Maschine ein. Ein sanftes Summen ergeht über den Raum, und schon Bald spürst du, wie dein #b~Wesen~ in deine eigene Schöpfung gezogen wird - bald darauf wird das nächste reingezogen. Ihr beide lebt auf Ewig an diesem Ort, ganz nach Plan. NL NL Der erste ~Schlag~ des #pHerzen... Ein überwältigendes Echo...",
-      "#b~RAGE.~ NL NL Du kannst den #yverzierten #yDolch der durch deine Brust dringt nicht aufhalten. Mit deiner letzen Kraft betest du zur #pGottheit die über den Spire wacht, um dich am Leben zu erhalten, ~koste~ ~es~ ~was~ ~es~ ~wolle.~ NL NL Dein letzter #pHerzschlag ist sehr stark, danach wird es ruhig... für einen Augenblick. Deine Augen glühen mit #b@blauem@ #b@Feuer@ und du kehrst zum Leben zurück - die der Kraft von zehn Mannen. Mit Leichtigkeit sprengst du deine Fesseln und brüllst in eine Menge von #bGestalten #bin #bRoben um dich! NL NL Du spürst, dass sich dein Körper in eine #bmonströse #bGestalt verwandelt. Die Gestalten verbeugen sich vor dir.",
-      "#p~ARROGANZ.~ NL NL Du verachtest das #pgottgleiche #pHerz das hier herrscht und über dein Schicksal bestimmt. Es wird #yZeit etwa dagegen zu tun. NL NL Das Jenseits ist am wenigsten bewacht, und mit Leichtigkeit schlüpfst du in die #ySchatzkammer. Viele Artefakte der Macht befinden sich hier, doch von einem bist du besonders angetan - eine #y~leuchtende~ #y~Taschenuhr.~ NL NL Voller Selbstbewusstsein greifst du nach der Taschenu... @...unehcsaT@ @red@ @hcan@ @ud@ @tsfierg@ @niestssuwebtsbleS@ @relloV@ NL NL Du verachtest das #pgottgleiche #pHerz das hier... herrscht...?",
+      "#g~EITELKEIT.~ NL NL Das Leben ist schön und wertvoll... sogar für einen #gSchleim. NL Du wusstest schon immer, dass du für Großes bestimmt bist. Andere geben sich mit Gold und Schrott zufrieden, doch du bist anders. Du bist wie ein Jäger auf der Lauer nach etwas Besonderem. Etwas Einzigartigem. Etwas ~Fabelhaftem.~ NL NL Tage... Wochen... Vielleicht sogar Jahre vergehen... im Spire ist das schwer zu sagen. Irgendwann, endlich, hast du es entdeckt. Nie mehr wirst du einfach in der Masse untergehen! Die anderen haben ihre #yMünzen und ihren #yNippes, doch du hast etwas viel besseres... NL @EINE@ @WINZIGE@ @MELONE!@ Fesch!",
+      "#y~ZERBRECHLICHKEIT.~ NL NL Die #rKlinge dringt durch deine Brust, und du hörst den #bJubel des Publikums... Das letzte was du fühlst ist eine Faust, die mit voller Wucht in dein Gesicht einschlägt - dann gehen deine Augen zu. NL NL Du wachst in einem dir unbekannten Raum auf und @kannst@ @dich@ @nicht@ @bewegen.@ Du versuchst etwas zu sagen, doch kein Wort kommt heraus, und deine Sicht ist von #ggrünem #gRauch vernebelt. Ist das ein Traum? Ist das das Leben nach dem Tod? Du versuchst dich zu erinnern, doch deine Erinnerungen sind abgetrennt, sowie es deine Gliedmaßen sind. NL Du hörst eine Stimme in deinem Kopf - ein simpler Befehl. #g\"BALANCE #gmuss #gVERSTÄRKT #gwerden. #gBESCHÜTZE #gExordium.\"",
+      "#p~HOFFNUNGSLOSIGKEIT.~ NL NL #ySehen. #yErinnern. #yLeben. Das ist die Mission des Sehers. Dein Auftrag ist die Untersuchung eines Spire von unbekanntem Ursprung. Du betrittst einen sechseckigen Raum. Bevor du noch irgendetwas tun kannst @fällt@ @die@ @Tür@ @hinter@ @dir@ @zu!@ NL NL Es gibt keinen Ausweg. Die letzte Strohhalm wäre die magische Steintafel, die sich auf einem Podest in der Mitte befindet. Sowie du dieses Artefakt berührst, ~löst~ ~sich~ dein Körper in ~nichts~ ~auf,~ und deine #pSeele wird in die #pSteintafel gezogen. NL Dein Schicksal ist nun auf Ewig mit der #pSteintafel verbunden, dazu #rverdammt für alle Zeiten duch den Spire zu wandern.",
+      "#y~FREISETZUNG.~ NL NL Du bist das Erste. Du dienst dem ~Schöpfer.~ Du wurdest nicht geboren, zerbrechlich und mit Schwachstellen, sondern kreiert. In Perfektion. Und du sollst mehr Konstrukte nach deinem Vorbild erschaffen. Das Vermächtnis des Schöpfers: die #yAutomatone. NL Jedes ist makellos, um einen bestimmten Zweck zu erfüllen. Jeder... außer einem. Dieser sollte das Gleichgewicht in der Stadt sicherstellen. NL NL Du schmeißt dieses #ydefekte #yKonstrukt aus dem größten Fenster, auf dass es am Bodensatz des Spire sein Dasein fristet. Du nimmst seinen Platz als Beschützer der Stadt ein. NL Balance muss verstärkt werden.",
+      "#b~STOLZ.~ NL NL Du stehst in der Mitte einer großen Arena. Der Kampf um den Titel: das war von Anfang an dein Ziel. Du nimmst die #bDefensivhaltung an, um den Gegner ermüden zu lassen, bis er eine Schwachstelle offenbart. Mit deiner letzten Kraft #rstichst #rdu #rdeine #rKlinge in die Brust des Gegners. Das Publikum reagiert mit @frenetischem@ @Applaus!@ NL NL Der Sieg alleine ist dir nicht genug - du hebst deine leere Hand und schägst dem Gegner ~mitten~ ~ins~ ~Gesicht,~ um ihm einen letzten demütigenden Schlag zu verpassen. NL NL Niemand stellt sich mehr dir in den Weg. Du bist der neue #b@Champion!@",
+      "#p~GIER.~ NL NL Nur wenige können der #bVersuchung #bder #bMacht widerstehen. Doch Macht hat seinen Preis, und große Macht einen hohen Preis. NL Du thronst über dem Kolosseum, und siehst wie Gladiatoren um den Titel des #bChampion und zu deinem Vergnügen um #rLeben #rund #rTod #rkämpfen. Die Teilnahmegebühr - die #g~Flamme~ #g~ihrer~ #g~ewigen~ #g~Seele~ die dir von nun an dient. Die Namen eingemeißelt in Steintafeln - sie werden dir nach ihrem Ableben ewig dienen. NL Die Menge Jubelt, nachdem ein Gladiator den letzten Schlag mitten ins Gesicht einsteckte. Du begibst dich in deine Schatzkammer und bemerkst, dass jemand anders hier war. Die Fallen wurden ausgelöst, aber es gibt keine Leiche... und die #p@Steintafel@ @fehlt!@",
+      "#g~TRAUER.~ NL NL Endlich stehst du auf der Spitze des Spire. Du hast dein Leben dazu bestimmt, unermüdlich an diesem kolossalen Monument für das Große zu arbeiten und es zum Leben zu bringen. Jede #yKante, jede #gRundung - geschliffen in Perfektion. NL NL „Es ist fertig, Liebste.“ Du nimmst ihre leblose Hand und schaltest die Maschine ein. Ein sanftes Summen ergeht über den Raum, und schon Bald spürst du, wie dein #b~Wesen~ in deine eigene Schöpfung gezogen wird - bald darauf wird das nächste reingezogen. Ihr beide lebt auf Ewig an diesem Ort, ganz nach Plan. NL Der erste ~Schlag~ des #pHerzen... Ein überwältigendes Echo...",
+      "#b~RAGE.~ NL NL Du kannst den #yverzierten #yDolch, der durch deine Brust dringt, nicht aufhalten. Mit deiner letzen Kraft betest du zur #pGottheit, die über den Spire wacht, um dich am Leben zu erhalten, ~koste~ ~es~ ~was~ ~es~ ~wolle.~ NL Dein letzter #pHerzschlag ist sehr stark, danach wird es ruhig... für einen Augenblick. Deine Augen glühen mit #b@blauem@ #b@Feuer@ und du kehrst zum Leben zurück - mit der Kraft von zehn Mannen. Mit Leichtigkeit sprengst du deine Fesseln und brüllst in eine Menge von #bGestalten #bin #bRoben um dich! NL NL Du spürst, dass sich dein Körper in eine #bmonströse #bGestalt verwandelt. Die Gestalten verbeugen sich vor dir.",
+      "#p~ARROGANZ.~ NL NL Du verachtest das #pgottgleiche #pHerz das hier herrscht und über dein Schicksal bestimmt. Es wird #yZeit etwas dagegen zu unternehmen. NL NL Das Jenseits ist am wenigsten bewacht, und mit Leichtigkeit schlüpfst du in die #ySchatzkammer. Viele Artefakte der Macht befinden sich hier, doch von einem bist du besonders angetan - eine #y~leuchtende~ #y~Taschenuhr.~ NL NL Voller Selbstbewusstsein greifst du nach der Taschenu... @...unehcsaT@ @red@ @hcan@ @ud@ @tsfierg@ @niestssuwebtsbleS@ @relloV@ NL NL Du verachtest das #pgottgleiche #pHerz das hier... herrscht...?",
       "Andererseits sollte man Erinnerungen wohl besser ruhen lassen."
     ],
     "OPTIONS": [
@@ -522,7 +522,7 @@
     "NAME": "Geheimes Portal",
     "DESCRIPTIONS": [
       "Ein willkommender Anblick - in einem der lebendigen Gemäuer des Jenseits befindet sich eine steinerne Pforte mit einem sich #p~drehenden~ #p~magischen~ #p~Portal.~ NL NL Das Portal erlaubt einen Teleport zum Herrscher des Jenseits. Wenn du jedoch den Stein, der das Portal antreibt, an dich nimmst, würde das deine Reise durch den Spire beschleunigen.",
-      "Das Portal kann auch später repariert werden. Du nimmst den mit Runen verzierten Stein der das Portal antreibt an dich und überlegst dir sofort wo du als nächstes hin willst. Denn der Stein ist nur für einen kurzen Augenblick nützlich."
+      "Das Portal kann auch später repariert werden. Du nimmst den mit Runen verzierten Stein, der das Portal antreibt, an dich und überlegst dir sofort, wo du als nächstes hin willst. Denn der Stein ist nur für einen kurzen Augenblick nützlich."
     ],
     "OPTIONS": [
       "[Stein nehmen] Teleportation zu einem beliebigen nicht-Boss-Raum."
@@ -532,7 +532,7 @@
     "NAME": "Grab des Herren der Roten Maske",
     "DESCRIPTIONS": [
       "Ein reichlich verziertes Grab ist auf der anderen Seite eines schwebenden Pfades zu sehen. NL NL Als du das Grab erreichst, bemerkst du ein weiches Wandteil, möglicherweise ein Geheimfach. Ein kräftiger Schlag sollte ausreichen um diesen Teil aufzubrechen.",
-      "Du setzt die #rMaske auf. Die Banditen, die dir ihre Hilfe versprochen haben scheinen eine Verbindung zu diesem Herren zu haben - vermutlich werden sie deinen neuen Gesichtsschmuck bewundern.",
+      "Du setzt die #rMaske auf. Die Banditen, die dir ihre Hilfe versprochen haben, scheinen eine Verbindung zu diesem Herren zu haben - vermutlich werden sie deinen neuen Gesichtsschmuck bewundern.",
       "Eine Öffnung erscheint im Grab, es rutscht eine kleine rote Maske mit einer Notiz heraus. „Nimm von anderen, so wie ich von dir genommen habe!“",
       "Du entscheidest dich gegen Grabschändung und setzt deine Reise fort.",
       "Zufrieden mit der Maske schreitest du voran."
@@ -549,7 +549,7 @@
   "downfall:WindingHalls": {
     "NAME": "Gewundene Hallen",
     "DESCRIPTIONS": [
-      "Nach einem Marsch durch sich windende Gänge gelangst du an die berühmten gewundenen Hallen ders Jenseits. Ein niederes Wesen würde beim Verusch sich zurechtzufinden seinen Verstand verlieren, doch du kennst diese Gänge wie deine Westentasche. NL NL Die ständig in deinem Hinterkopf #p~flüsternden~ #p~Stimmen~ beruhigen deine Gedanken und helfen bei der Entscheidung, welchen Weg du gehen willst."
+      "Nach einem Marsch durch sich windende Gänge gelangst du an die berühmten gewundenen Hallen des Jenseits. Ein niederes Wesen würde beim Verusch sich zurechtzufinden seinen Verstand verlieren, doch du kennst diese Gänge wie deine Westentasche. NL NL Die ständig in deinem Hinterkopf #p~flüsternden~ #p~Stimmen~ beruhigen deine Gedanken und helfen bei der Entscheidung, welchen Weg du gehen willst."
     ],
     "OPTIONS": [
       "[Links] #gErzwinge #gein #gEreignis.",
@@ -568,7 +568,7 @@
     ],
     "OPTIONS": [
       "[Links] #r50%: #rVerliere #r",
-      " HP.",
+      " #rTP.",
       " #g50%: #gErhalte #g200 #gSeelen.",
       "[Rechts] #r25%: #rVerliere #r",
       " #g75%: #gErhalte #g100 #gSeelen."
