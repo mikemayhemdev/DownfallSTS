@@ -74,7 +74,7 @@
     "UPGRADE_DESCRIPTION": "固有 。 NL 回合開始時，抽兩張牌並獲得一張 *受傷 。"
   },
   "hermit:Gambit": {
-    "NAME": "開場白",
+    "NAME": "棄子",
     "DESCRIPTION": "隨機將棄牌堆中 !M! 張攻擊牌返回手牌。 NL 本回合其下次耗能減1。 NL 消耗 。"
   },
   "hermit:Roughhouse": {

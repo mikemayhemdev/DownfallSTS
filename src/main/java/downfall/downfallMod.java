@@ -628,7 +628,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
     }
 
     public void receivePostInitialize() {
-        addPotions();
+        //addPotions();
         UnlockTracker.betaCardPref = new IndividualBetaArtEnablerPref(UnlockTracker.betaCardPref);
         soulsImage = TextureLoader.getTexture(downfallMod.assetPath("images/ui/Souls.png"));
 
@@ -1371,10 +1371,10 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
     public void addPotions() {
 
-        if (!EvilModeCharacterSelect.evilMode) {
+       // if (!EvilModeCharacterSelect.evilMode) {
 
             //PUT SHARED POTIONS HERE
-            if (!downfallMod.contentSharing_potions){
+           // if (!downfallMod.contentSharing_potions){
                 //SHARED POTIONS
                 BaseMod.addPotion(BossPotion.class, Color.MAROON, Color.MAROON, new Color(0x470000ff), BossPotion.POTION_ID);
 
@@ -1415,13 +1415,13 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
                     WidePotionsMod.whitelistSimplePotion(MuddlingPotion.POTION_ID);
                     WidePotionsMod.whitelistSimplePotion(CultistsDelight.POTION_ID);
                 }
-            }
-        }
+         //   }
+      //  }
 
-        if(EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_events){
+       // if(EvilModeCharacterSelect.evilMode || downfallMod.contentSharing_events){
             BaseMod.addPotion(CursedFountainPotion.class, Color.PURPLE, Color.MAROON, Color.BLACK, CursedFountainPotion.POTION_ID);
 
-        }
+      //  }
 
         //COLLECTOR POTIONS
         BaseMod.addPotion(MiniCursePotion.class, Color.FIREBRICK, Color.GRAY, Color.TAN, MiniCursePotion.POTION_ID, CollectorChar.Enums.THE_COLLECTOR);
@@ -1552,7 +1552,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
             BaseMod.addRelicToCustomPool(new AwakenedUrn(), AwakenedOneChar.Enums.AWAKENED_BLUE);
             BaseMod.addRelicToCustomPool(new NerfedMummifiedHand(), AwakenedOneChar.Enums.AWAKENED_BLUE);
         }
-        addPotions();
+        //addPotions();
     }
 
     public static boolean readyToDoThing = false;
@@ -1723,7 +1723,7 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
     @Override
     public void receivePostDungeonInitialize() {
-        addPotions();
+        //addPotions();
 
         if (CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Jewelcrafting.ID) || ModHelper.isModEnabled(Jewelcrafting.ID)) {
             RelicLibrary.getRelic(PickAxe.ID).makeCopy().instantObtain();

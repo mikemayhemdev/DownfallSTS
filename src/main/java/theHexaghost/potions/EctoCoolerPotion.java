@@ -9,6 +9,7 @@ import com.megacrit.cardcrawl.helpers.GameDictionary;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.helpers.TipHelper;
 import com.megacrit.cardcrawl.localization.PotionStrings;
+import theHexaghost.HexaMod;
 import theHexaghost.actions.DiscoverEtherealAction;
 
 
@@ -22,6 +23,7 @@ public class EctoCoolerPotion extends CustomPotion {
         super(NAME, POTION_ID, PotionRarity.COMMON, PotionSize.CARD, PotionColor.SMOKE);
         this.isThrown = false;
         this.targetRequired = false;
+        this.labOutlineColor = HexaMod.placeholderColor;
     }
 
 

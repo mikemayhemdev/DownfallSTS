@@ -82,7 +82,7 @@ public class NeowBoss extends AbstractMonster {
         this.drawX += DRAWX_OFFSET;
         this.drawY += DRAWY_OFFSET;
 
-        type = EnemyType.ELITE;
+        type = EnemyType.NORMAL;
         this.baseDrawX = drawX;
 
         StrGain = 1;

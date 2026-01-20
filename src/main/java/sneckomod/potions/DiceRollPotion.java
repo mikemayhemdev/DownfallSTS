@@ -73,7 +73,7 @@ public class DiceRollPotion extends CustomPotion {
     }
 
     public boolean canSpawn() {
-        return Settings.isEndless || AbstractDungeon.floorNum <= 48; // cannot appear in act 4
+        return Settings.isEndless || AbstractDungeon.actNum != 4; // cannot appear in act 4
     }
 
     @Override

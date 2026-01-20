@@ -42,7 +42,9 @@ public class TempHPPotion extends CustomPotion {
         }
         this.tips.clear();
         this.tips.add(new PowerTip(this.name, this.description));
-        this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("expansioncontent:temp_hp")), BaseMod.getKeywordDescription("expansioncontent:temp_hp")));
+        if (Settings.language == Settings.GameLanguage.ENG) {
+            this.tips.add(new PowerTip(TipHelper.capitalize(BaseMod.getKeywordTitle("expansioncontent:temp_hp")), BaseMod.getKeywordDescription("expansioncontent:temp_hp")));
+        }
     }
 
     public void use(AbstractCreature target) {

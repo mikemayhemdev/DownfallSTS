@@ -1,3 +1,4 @@
+
 {
   "awakened:Thunderbolt": {
     "NAME": "落雷",
@@ -104,7 +105,7 @@
     "DESCRIPTION": "造成 !D! 点伤害 ｡ NL 你下次 awakened:力竭 时 , 获得 [E] ｡"
   },
   "awakened:Recitation": {
-    "NAME": "朗誦",
+    "NAME": "朗诵",
     "DESCRIPTION": "造成 !D! 点伤害 ｡ NL awakened:吟唱 : 再次造成 !D! 点伤害 ｡"
   },
   "awakened:ChosenVerse": {
@@ -163,7 +164,7 @@
     "DESCRIPTION": "获得 !M! 张 *祭典 ｡ NL 消耗 ｡"
   },
   "awakened:BirdsEye": {
-    "NAME": "异鳥瞰",
+    "NAME": "异鸟瞰",
     "DESCRIPTION": "从咒典中选择一张咒文牌来 awakened:念咒 ｡",
     "UPGRADE_DESCRIPTION": "刷新咒典 ｡ 从咒典中选择一张咒文牌来 awakened:念咒 ｡"
   },
@@ -185,7 +186,7 @@
     "UPGRADE_DESCRIPTION": "每回合第1个激活的 awakened:吟唱 效果将触发2次 ｡"
   },
   "awakened:FeatherWhirl": {
-    "NAME": "羽猋",
+    "NAME": "羽飙",
     "DESCRIPTION": "获得X张 *羽刺 ｡",
     "UPGRADE_DESCRIPTION": "获得X+1张 *羽刺 ｡"
   },
@@ -241,7 +242,7 @@
     "DESCRIPTION": "获得 !B! 点格挡 ｡ NL 如果你手牌中有一张 *虚空 , 这张牌耗能为0 ｡"
   },
   "awakened:Carrionmaker": {
-    "NAME": "腐屍创客",
+    "NAME": "碾成肉酱",
     "DESCRIPTION": "随机对敌人造成 !D! 点伤害 ｡ NL 你在这个回合内每打出一张咒文牌 , 就造成多一次伤害 ｡",
     "EXTENDED_DESCRIPTION": [
       " NL (",
@@ -283,7 +284,7 @@
     "UPGRADE_DESCRIPTION": "awakened:吟唱 : 获得 [E] [E] [E] ｡ NL 消耗 ｡"
   },
   "awakened:Gather": {
-    "NAME": "汇集",
+    "NAME": "聚集",
     "DESCRIPTION": "获得 !B! 点格挡 ｡ NL awakened:吟唱 : 将弃牌堆中的一张牌放入你的手牌 ｡"
   },
   "awakened:TheTower": {
@@ -405,7 +406,7 @@
     "DESCRIPTION": "从 !M! 张来自 *另一次元 的随机牌中选择 !awakened:m2! 张加入你的手牌 ｡ NL 将 2张 *虚空 加入弃牌堆 ｡ 消耗 ｡"
   },
   "awakened:Inscribe": {
-    "NAME": "銘刻",
+    "NAME": "铭刻",
     "DESCRIPTION": "选择一张咒文牌 , 在本场战斗中增加 !M! 张其复制品到咒典内 ｡",
     "UPGRADE_DESCRIPTION": "awakened:念咒 ｡ 选择一张咒文牌 , 在本场战斗中增加 !M! 张其复制品至咒典内 ｡"
   }

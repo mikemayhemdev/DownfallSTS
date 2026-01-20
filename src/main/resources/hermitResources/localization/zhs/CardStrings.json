@@ -52,7 +52,7 @@
     "UPGRADE_DESCRIPTION": "保留 。 NL 造成 !D! 点伤害。 NL 若本回合上张牌触发 hermit:精准 ，抽一张牌。"
   },
   "hermit:Dissolve": {
-    "NAME": "渐隐",
+    "NAME": "溶解",
     "DESCRIPTION": "获得 !B! 点 格挡 。 NL 两回合内 格挡 不会消失 。 NL 消耗 。"
   },
   "hermit:BlackWind": {
@@ -74,7 +74,7 @@
     "UPGRADE_DESCRIPTION": "固有 。 NL 回合开始时，额外抽2张牌并获得1张 *受伤 。"
   },
   "hermit:Gambit": {
-    "NAME": "后手策回",
+    "NAME": "棄子",
     "DESCRIPTION": "随机将弃牌堆中 !M! 张攻击牌返回手牌。 NL 本回合其单次耗能减1。 NL 消耗 。"
   },
   "hermit:Roughhouse": {
