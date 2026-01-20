@@ -4,7 +4,7 @@
         "DESCRIPTIONS": ["Deine nächste #yVolltreffer Karte in diesem Zug erzielt ihren Effekt unabhängig von Position."]
 },
 "hermit:HighNoonPower": {
-        "NAME": "High Noon",
+        "NAME": "Duell",
         "DESCRIPTIONS": ["Ziehe immer wenn du einen #ySchlag oder ein #yVerteidigen spielst #b", " Karte.", " Karten."]
 },
 "hermit:FatalDesirePower": {

@@ -186,7 +186,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Reduziere deine Debuffs um !M!."
   },
   "Guardian:Recover": {
-    "NAME": "Zurückgewinnen",
+    "NAME": "Rückgewinnung",
     "DESCRIPTION": "Erhalte !B! Block. NL guardianmod:Abhärten !M!. NL Lege eine Karte vom Abwurfstapel in guardianmod:Stasis."
   },
   "Guardian:Emergency": {
@@ -239,7 +239,7 @@
     "DESCRIPTION": "Erhalte !M! Stasis-Slot."
   },
   "Guardian:ConstructionForm": {
-    "NAME": "Konstruktionsform",
+    "NAME": "Konstruktform",
     "DESCRIPTION": "Flüchtig. NL Erhalte !M! guardianmod:Puffer. NL Wenn du zu Beginn deines Zuges mindestens 1 guardianmod:Puffer hast, erhalte 1 Stärke.",
     "UPGRADE_DESCRIPTION": "Erhalte !M! guardianmod:Puffer. NL Wenn du zu Beginn deines Zuges mindestens 1 guardianmod:Puffer hast, erhalte 1 Stärke."
   },
@@ -440,7 +440,7 @@
     "UPGRADE_DESCRIPTION": " NL Erschöpft."
   },
   "Guardian:BodySlam": {
-    "NAME": "Körperstoß",
+    "NAME": "Körpereinsatz",
     "DESCRIPTION": "Erhalte !B! Block. NL Füge Schaden in Höhe deines aktuellen Blocks zu.",
     "UPGRADE_DESCRIPTION": " NL (Fügt !D! Schaden zu.)"
   },

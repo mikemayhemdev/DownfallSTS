@@ -4,7 +4,7 @@
     "DESCRIPTION": "Immer wenn slimeboundmod:Glibber angewendet wird, wird !M! slimeboundmod:Glibber mehr angewendet."
   },
   "Slimebound:BestDefense": {
-    "NAME": "Rücksichtslosigkeit",
+    "NAME": "Rücksichtslos",
     "DESCRIPTION": "Deine *Tackle Karten fügen Gegnern !M! und dir 1 mehr Schaden zu."
   },
   "Slimebound:CheckThePlaybook": {
@@ -34,7 +34,7 @@
     "DESCRIPTION": "Erhalte !B! Block."
   },
   "Slimebound:DisruptingSlam": {
-    "NAME": "Nur Desserts",
+    "NAME": "Böse Zunge",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL expansioncontent:Exhumiere !M! zufällige *Wabbel Karten."
   },
   "Slimebound:Dissolve": {
@@ -47,7 +47,7 @@
     "DESCRIPTION": "Füge für jeden Schleim einem zufälligen gegner !D! Schaden zu. NL slimeboundmod:Absorbiere alle Schleime. NL Erschöpft."
   },
   "Slimebound:DouseInSlime": {
-    "NAME": "Schleimüberguss",
+    "NAME": "Einschleimen",
     "DESCRIPTION": "Wende !slime! slimeboundmod:Glibber an. NL Der Nächste Angriff auf diesen Gegner entfernt sein slimeboundmod:Glibber nicht."
   },
   "Slimebound:DuplicatedForm": {
@@ -210,7 +210,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Kommando zweimal."
   },
   "Slimebound:ProtectTheBoss": {
-    "NAME": "Beschützt den Boss",
+    "NAME": "Opferschleim",
     "DESCRIPTION": "Verhindere deinen nächsten TP-Verlust durch Angriffsschaden indem du deinen führenden Schleim slimeboundmod:absorbierst.",
     "UPGRADE_DESCRIPTION": "Verhindere deine nächsten 2 TP-Verluste durch Angriffsschaden indem du jeweils deinen führenden Schleim slimeboundmod:absorbierst."
   },
@@ -224,7 +224,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächsten !M! gespielten Karten in diesem Zug slimeboundmod:Kommandieren."
   },
   "Slimebound:Recollect": {
-    "NAME": "Zurückrufen",
+    "NAME": "Anfeuchten",
     "DESCRIPTION": "Erhalte !B! Block. NL expansioncontent:Exhumiere eine zufällige *Wabbel Karte.",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL expansioncontent:Exhumiere 2 zufällige *Wabbel Karten.",
     "EXTENDED_DESCRIPTION": [
@@ -232,7 +232,7 @@
     ]
   },
   "Slimebound:Recycling": {
-    "NAME": "Recycling",
+    "NAME": "Sparsamkeit",
     "DESCRIPTION": "expansioncontent:Exhumiere zu Beginn deines Zuges eine zufällige *Wabbel Karte.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL expansioncontent:Exhumiere zu Beginn deines Zuges eine zufällige *Wabbel Karte."
   },
@@ -278,7 +278,7 @@
     "DESCRIPTION": "Erhalte für jeden Schleim !B! Block und 1 bronze:Verschwimmen. NL slimeboundmod:Absorbiere alle Schleime. NL Erschöpft."
   },
   "Slimebound:SlimeBarrage": {
-    "NAME": "Immer Weiter!",
+    "NAME": "Schleimoffensive",
     "DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Kommando für alle Schleime.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Kommando zweimal für alle Schleime."
   },
@@ -357,7 +357,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden."
   },
   "Slimebound:TagTeam": {
-    "NAME": "Pampe hacken",
+    "NAME": "Spaltangriff",
     "DESCRIPTION": "Füge !D! Schaden zu. NL slimeboundmod:Spalte einen zufälligen Schleim ab. NL slimeboundmod:Kommando !M! Mal.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL slimeboundmod:Spalte einen zufälligen slimeboundmod:Spezialisten ab. NL slimeboundmod:Kommando !M! Mal."
   },
@@ -376,7 +376,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. slimeboundmod:Glibber ist für diesen Angriff doppelt so effektiv."
   },
   "Slimebound:WasteNot": {
-    "NAME": "Sparsamkeit",
+    "NAME": "Götterspeise",
     "DESCRIPTION": "expansioncontent:Exhumiere alle *Wabbel Karten. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "expansioncontent:Exhumiere alle *Wabbel Karten.",
     "EXTENDED_DESCRIPTION": [

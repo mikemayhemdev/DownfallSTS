@@ -101,7 +101,7 @@
     ]
   },
   "champ:SpectersHand": {
-    "NAME": "Geisterhand",
+    "NAME": "Phantomhand",
     "FLAVOR": "Manche Siege bleiben bei dir.",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du eine #yHaltung annimmst ein #ygremlin:Echo einer Basis #ySchlag oder #yVerteidigen Karte. Es kostet #b0 [REMOVE_SPACE]."

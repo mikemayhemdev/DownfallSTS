@@ -71,7 +71,7 @@
     ]
   },
   "Slimebound:ProtectTheBoss": {
-    "NAME": "Beschütze den Boss",
+    "NAME": "Schleimiger Schutzschild",
     "DESCRIPTIONS": [
       "Verhindere deinen nächsten TP-Verlust durch Angriffsschaden indem du deinen führenden Schleim #yabsorbierst.",
       "Verhindere deinen nächsten #b",
@@ -159,7 +159,7 @@
     ]
   },
   "Slimebound:PreventSlimeDecayPower": {
-    "NAME": "Übergossen mit Schleim",
+    "NAME": "Eingeschleimt",
     "DESCRIPTIONS": [
       "Der nächste #yAngriff auf diesen Gegner entfernt keinen #yGlibber (der Schaden wird erhöht und die Boni durch den #yKonsum aktiviert).",
       "Der nächsten #b",
@@ -351,19 +351,19 @@
     ]
   },
   "Slimebound:StudyAwakenedPower": {
-    "NAME": "Den Erwachten studieren",
+    "NAME": "Den Erweckten studieren",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn deines nächsten Zuges eine zufällige Der Erwachte Karte auf die Hand.",
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige Karte des Erweckten auf die Hand.",
       "Nimm zu Beginn deiner nächsten ",
-      " Züge eine zufällige Der Erwachte Karte auf die Hand."
+      " Züge eine zufällige Karte des Erweckten auf die Hand."
     ]
   },
   "Slimebound:StudyAwakenedPowerUpgraded": {
-    "NAME": "Den Erwachten studieren+",
+    "NAME": "Den Erweckten studieren+",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn deines nächsten Zuges eine zufällige verbesserte Der Erwachte Karte auf die Hand.",
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige verbesserte Karte des Erweckten auf die Hand.",
       "Nimm zu Beginn deiner nächsten ",
-      " Züge eine zufällige verbesserte Der Erwachte Karte auf die Hand."
+      " Züge eine zufällige verbesserte Karte des Erweckten auf die Hand."
     ]
   },
   "Slimebound:AwakenedOnePower": {
@@ -440,17 +440,17 @@
   "Slimebound:StudyShapesPower": {
     "NAME": "Antike studieren",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn deines nächsten Zuges eine zufällige Antike Karte auf die Hand.",
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige Karte der Antiken auf die Hand.",
       "Nimm zu Beginn deiner nächsten ",
-      " Züge eine zufällige Antike Karte auf die Hand."
+      " Züge eine zufällige Karte der Antiken auf die Hand."
     ]
   },
   "Slimebound:StudyShapesPowerUpgraded": {
     "NAME": "Antike studieren+",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn deines nächsten Zuges eine zufällige verbesserte Antike Karte auf die Hand.",
+      "Nimm zu Beginn deines nächsten Zuges eine zufällige verbesserte Karte der Antiken auf die Hand.",
       "Nimm zu Beginn deiner nächsten ",
-      " Züge eine zufällige verbesserte Antike Karte auf die Hand."
+      " Züge eine zufällige verbesserte Karte der Antiken auf die Hand."
     ]
   },
   "Slimebound:StudyTimeEaterPower": {

@@ -61,7 +61,7 @@
     ]
   },
   "Guardian:ConstructModePower": {
-    "NAME": "Konstruktionsform",
+    "NAME": "Konstruktform",
     "DESCRIPTIONS": [
       "Wenn du zu Beginn deines Zuges mindestens #b",
       " #yPuffer hast, erhalte #b",

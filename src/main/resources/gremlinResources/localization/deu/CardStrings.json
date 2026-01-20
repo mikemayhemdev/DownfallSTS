@@ -324,7 +324,7 @@
   },
 
   "Gremlin:Polish": {
-    "NAME": "Polieren",
+    "NAME": "Aufpolieren",
     "DESCRIPTION": "Messer fügen !M! mehr Schaden zu. NL *Schutz verleiht !M! Block zusätzlich."
   },
 
@@ -349,7 +349,7 @@
   },
 
   "Gremlin:RageBreak": {
-    "NAME": "An die Decke gehen",
+    "NAME": "Gremlin-Ekstase",
     "DESCRIPTION": "Verdopple deine Stärke. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Verdopple deine Stärke. NL Erschöpft."
   },

@@ -179,7 +179,7 @@
     ]
   },
   "hexamod:HauntedHand": {
-    "NAME": "Verfluchte Hand",
+    "NAME": "Geisterhand",
     "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karte. NL ",
     "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karten. NL ",
     "EXTENDED_DESCRIPTION": [
@@ -352,7 +352,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu."
   },
   "hexamod:StrikeFromBeyond": {
-    "NAME": "Schlag des Jenseits",
+    "NAME": "Jenseitsschlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine *flüchtige Karte vom Nachziehstapel.",
     "EXTENDED_DESCRIPTION": ["Flüchtig","Flüchtig. NL "]
   },
@@ -500,7 +500,7 @@
     "DESCRIPTION": "Immer wenn du eine flüchtige Karte spielst, verliert ein zufälliger Gegner !M! TP."
     },
   "hexamod:RecurringNightmare": {
-    "NAME": "Albraumvisionen",
+    "NAME": "Albtraumvisionen",
     "DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL expansioncontent:Exhumiere eine *flüchtige Karte. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL expansioncontent:Exhumiere !M! *flüchtige Karten. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
@@ -510,7 +510,7 @@
     ]
     },
   "hexamod:Haunt": {
-    "NAME": "Verfluchte Hand",
+    "NAME": "Geisterhand",
     "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karte. NL ",
     "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karten. NL ",
     "EXTENDED_DESCRIPTION": [

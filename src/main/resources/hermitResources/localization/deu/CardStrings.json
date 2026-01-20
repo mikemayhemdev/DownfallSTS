@@ -24,7 +24,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten. NL Ziehe im nächsten Zug 1 Karte weniger."
   },
   "hermit:WideOpen": {
-    "NAME": "Weit offen",
+    "NAME": "Schießwütig",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Verwundbar an."
   },
   "hermit:Covet": {
@@ -47,7 +47,7 @@
     "UPGRADE_DESCRIPTION": "hermit:Konzentriere dich. NL Dein in diesem Zug nächster ausgelöster hermit:Volltreffer Effekt wird zweimal ausgeführt. NL Erschöpft."
   },
   "hermit:CalledShot": {
-    "NAME": "Schießwütig",
+    "NAME": "Nachschuss",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Kampf gespielte Karte einen hermit:Volltreffer ausgelöst hat.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Kampf gespielte Karte einen hermit:Volltreffer ausgelöst hat."
   },
@@ -245,7 +245,7 @@
     "DESCRIPTION": "Wähle eine Handkarte. NL Sie kostet diesen Zug 0. NL Wirf den Rest deiner Hand ab."
   },
   "hermit:HighNoon": {
-    "NAME": "High Noon",
+    "NAME": "Duell",
     "DESCRIPTION": "Ziehe immer wenn du einen *Schlag oder ein *Verteidigen spielst eine Karte."
   },
   "hermit:Reprieve": {

@@ -163,9 +163,9 @@
   "collector:Soulforge": {
     "NAME": "Seelenschmiede",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn deines Zuges #b1 #yGlut in die Hand.",
+      "Nimm zu Beginn deines Zuges eine #yGlut in die Hand.",
       "Nimm zu Beginn deines Zuges #b",
-      " Stück #yGlut in die Hand."
+      " #yGlut Karten in die Hand."
     ]
   },
   "collector:StrengthOverTurns": {
