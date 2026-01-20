@@ -61,7 +61,7 @@
     ]
   },
   "awakened:ShardOfNowak": {
-    "NAME": "Vergoldeter Knochensplitter",
+    "NAME": "Vergoldeter Knochen",
     "FLAVOR": "...nein, nicht diese Art von Fokus.",
     "DESCRIPTIONS": [
       "Beginne jeden Kampf mit #b",
@@ -132,7 +132,7 @@
     ]
   },
   "awakened:MoonTalisman": {
-    "NAME": "Halbmond-Talisman",
+    "NAME": "Schwarze Rosenblüte",
     "FLAVOR": "„Bitte... vergiss mich nicht... auch nach meinem Tod.“",
     "DESCRIPTIONS": [
       "Wähle beim Aufheben eine Karte aus, die #rKEINEN Zauberspruch #yawakened:aufruft [REMOVE_SPACE]. Sie erhält #yawakened:Aufrufen.",

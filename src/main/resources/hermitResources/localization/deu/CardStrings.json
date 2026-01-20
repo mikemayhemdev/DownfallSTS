@@ -24,7 +24,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten. NL Ziehe im nächsten Zug 1 Karte weniger."
   },
   "hermit:WideOpen": {
-    "NAME": "Weit offen",
+    "NAME": "Schießwütig",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Verwundbar an."
   },
   "hermit:Covet": {
@@ -47,7 +47,7 @@
     "UPGRADE_DESCRIPTION": "hermit:Konzentriere dich. NL Dein in diesem Zug nächster ausgelöster hermit:Volltreffer Effekt wird zweimal ausgeführt. NL Erschöpft."
   },
   "hermit:CalledShot": {
-    "NAME": "Schießwütig",
+    "NAME": "Nachschuss",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Kampf gespielte Karte einen hermit:Volltreffer ausgelöst hat.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Kampf gespielte Karte einen hermit:Volltreffer ausgelöst hat."
   },
@@ -120,8 +120,8 @@
   },
   "hermit:TakeCover": {
     "NAME": "In Deckung gehen",
-    "DESCRIPTION": "Nimm ein *Verteidigen das 0 kostet auf die Hand. NL *Verbessere es danach X Mal. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Nimm ein *Verteidigen+ das 0 kostet auf die Hand. NL *Verbessere es danach X Mal. NL Erschöpft."
+    "DESCRIPTION": "Nimm ein NL *Verteidigen das 0 kostet auf die Hand. NL *Verbessere es danach X Mal. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Nimm ein NL *Verteidigen+ das 0 kostet auf die Hand. NL *Verbessere es danach X Mal. NL Erschöpft."
   },
   "hermit:Misfire": {
     "NAME": "Rohrkrepierer",
@@ -173,14 +173,14 @@
   },
   "hermit:NoHoldsBarred": {
     "NAME": "Ungezügelt",
-    "DESCRIPTION": "Füge !D! Schaden zu und wende !M! hermit:Prügel auf ALLE Gegner an. NL Erhalte 1 weniger [E] im nächsten Zug."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu und wende !M! hermit:Prügel auf sie an. NL Erhalte 1 weniger [E] im nächsten Zug."
   },
   "hermit:Cheat": {
     "NAME": "Schummeln",
     "DESCRIPTION": "Spiele eine der obersten !M! Karten deines Nachziehstapels. NL hermit:Volltreffer: Aktiviere auch den hermit:Volltreffer Effekt der gespielten Karte."
   },
   "hermit:Vantage": {
-    "NAME": "Vorteil ausnutzen",
+    "NAME": "Überblick",
     "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Ziehe eine Karte und verbessere sie bis zum Ende des Kampfes.",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Ziehe !M! Karten und verbessere sie bis zum Ende des Kampfes."
   },
@@ -245,7 +245,7 @@
     "DESCRIPTION": "Wähle eine Handkarte. NL Sie kostet diesen Zug 0. NL Wirf den Rest deiner Hand ab."
   },
   "hermit:HighNoon": {
-    "NAME": "High Noon",
+    "NAME": "Duell",
     "DESCRIPTION": "Ziehe immer wenn du einen *Schlag oder ein *Verteidigen spielst eine Karte."
   },
   "hermit:Reprieve": {

@@ -100,11 +100,11 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karten für jede Karte auf der Hand, die mindestens 2 kostet."
   },
   "sneckomod:Nope": {
-    "NAME": "Nein!",
+    "NAME": "Umtausch",
     "DESCRIPTION": "Erhalte !B! Block. NL Erschöpfe eine Karte. Wenn sie eine Farbe hatte, dann erhalte eine zufällige Karte derselben Klasse.",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erschöpfe eine Karte. Wenn sie eine Farbe hatte, dann erhalte eine zufällige Karte derselben Klasse.",
     "EXTENDED_DESCRIPTION": [
-      "Erschöpfe für Nein!."
+      "Erschöpfe für den Umtausch."
     ]
   },
   "sneckomod:SnakeEyes": {
@@ -163,7 +163,7 @@
     "DESCRIPTION": "Ziehe !M! Karten und sneckomod:irre sie."
   },
   "sneckomod:QuickBite": {
-    "NAME": "Snek-Rechen",
+    "NAME": "Snek-Reflex",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karte und sneckomod:irre sie.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten und sneckomod:irre sie."
   },
@@ -204,7 +204,7 @@
     "DESCRIPTION_BATTLE": "Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast."
   },
   "sneckomod:SlitherThrough": {
-    "NAME": "Durchschlittern",
+    "NAME": "Durchschlängeln",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten diesen Zug !M! weniger. NL sneckomod:Geschenk: Ungewöhnlich.",
     "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten diesen Zug !M! weniger."
   },
@@ -355,7 +355,7 @@
     "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownDexterity": {
-    "NAME": "??? Geschicklichkeit",
+    "NAME": "??? Dexterity",
     "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
@@ -390,7 +390,7 @@
     "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownStrength": {
-    "NAME": "??? Stärke",
+    "NAME": "??? Strength",
     "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
@@ -415,12 +415,12 @@
     "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownVulnerable": {
-    "NAME": "??? Verwundbar",
+    "NAME": "??? Vulnerable",
     "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },
   "sneckomod:UnknownWeak": {
-    "NAME": "??? Schwach",
+    "NAME": "??? Weak",
     "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev."
   },

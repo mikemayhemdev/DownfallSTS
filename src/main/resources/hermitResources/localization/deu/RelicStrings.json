@@ -71,7 +71,7 @@
     "NAME": "Zugeklapptes Medaillon",
     "FLAVOR": "Es kann nicht mehr geöffnet werden.",
     "DESCRIPTIONS": [
-      "Ersetzt #yAltes #yMedaillon [REMOVE_SPACE]. Wenn zum ersten Mal im Zug ein #rFluch gezogen wird, #yerschöpfe ihn un ziehe #b",
+      "Ersetzt #yAltes #yMedaillon [REMOVE_SPACE]. Wenn zum ersten Mal im Zug ein #rFluch gezogen wird, #yerschöpfe ihn und ziehe #b",
       "Nie wieder...",
       " Karten. Nimm beim Aufheben #b",
       " #rVerletzungen in dein Deck auf."

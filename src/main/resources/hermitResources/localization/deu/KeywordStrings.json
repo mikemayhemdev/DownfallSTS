@@ -55,7 +55,7 @@
       "kopfgeld",
       "bounty"
     ],
-    "DESCRIPTION": "Normaler Gegner: #b15 Gold.    Elite Gegner: #b35 Gold.             Boss: #b75 Gold."
+    "DESCRIPTION": "Normaler Gegner: #b15 Gold. NL Elite Gegner: #b35 Gold. NL Boss: #b75 Gold."
   },
   {
     "PROPER_NAME": "Betäuben",

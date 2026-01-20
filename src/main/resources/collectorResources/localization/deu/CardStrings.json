@@ -156,7 +156,7 @@
   },
   "collector:FleetingEmbers": {
     "NAME": "Flüchtige Glut",
-    "DESCRIPTION": "collector:Opfergabe. NL Erhalte !B! Block. NL Nimm !M! Stück *Glut auf die Hand."
+    "DESCRIPTION": "collector:Opfergabe. NL Erhalte !B! Block. NL Nimm !M! *Glut Karten auf die Hand."
   },
   "collector:Forgery": {
     "NAME": "Fälschen",
@@ -166,7 +166,7 @@
     ]
   },
   "collector:FuelTheFire": {
-    "NAME": "Öl ins Feuer gießen",
+    "NAME": "Befeuern",
     "DESCRIPTION": "collector:Opfergabe. NL Erhalte im nächsten Zug !M! collector:Reserve.",
     "UPGRADE_DESCRIPTION": "collector:Opfergabe. NL Im nächsten Zug, erhalte !M! collector:Reserve und ziehe eine Karte."
   },
@@ -382,7 +382,7 @@
   },
   "collector:SunbloomKindling": {
     "NAME": "Knisternder Anzünder",
-    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte !M! Stärke und nimm 2 Stück *Glut auf die Hand.",
+    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte !M! Stärke und nimm 2 *Glut Karten auf die Hand.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss das zum Gebrauch anzünden."
     ]
@@ -571,7 +571,7 @@
   },
   "collector:OrbWalkerCard": {
     "NAME": "Kugelwandler",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm !M! Stück *Glut auf die Hand."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm !M! *Glut Karten auf die Hand."
   },
   "collector:PointyCard": {
     "NAME": "Pointy",
@@ -659,7 +659,7 @@
   },
   "collector:ThievesCard": {
     "NAME": "Räuber",
-    "DESCRIPTION": "Nimm !M! weniger Angriffsschaden in diesem Zug."
+    "DESCRIPTION": "Erleide !M! weniger Angriffsschaden in diesem Zug."
   },
   "collector:TorchHeadCard": {
     "NAME": "Fackelkopf",

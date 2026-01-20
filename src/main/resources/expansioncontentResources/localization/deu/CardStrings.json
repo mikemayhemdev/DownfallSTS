@@ -149,7 +149,7 @@
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine Karte aus dem Abwurfstapel auf den Nachziehstapel."
   },
   "expansioncontent:Flail": {
-    "NAME": "Dreschender Schlag",
+    "NAME": "Flegelschlag",
     "DESCRIPTION": "Füge ALLEN Gegnern !DM! Mal !D! Schaden zu. NL Erhalte !M! Artefakt. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "dreschend",
@@ -192,7 +192,7 @@
     "DESCRIPTION": "Spiele zu Beginn deines Zuges eine zufällige Karte deines Abwurfstapels."
   },
   "expansioncontent:Reverie": {
-    "NAME": "Reverie",
+    "NAME": "Nostalgie",
     "DESCRIPTION": "Nimm zu Beginn deines Zuges eine der obersten !M! Karten deines Abwurfstapels auf die Hand."
   },
   "expansioncontent:ExploitVulnerability": {
@@ -204,7 +204,7 @@
     "DESCRIPTION": "Lege !M! *Einsicht Karten auf deinen Nachziehstapel. NL Erschöpft."
   },
   "expansioncontent:BloodBarrage": {
-    "NAME": "Blut-Sperrfeuer",
+    "NAME": "Blutsalve",
     "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Erschöpft."
   },
   "expansioncontent:DoubleAct": {

@@ -12,7 +12,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze einen zufälligen Status *ein. NL bronze:Kompilierung - bronze:Setze *Betaversion *ein.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL \u00A0 Füge !D! Schaden zu. NL bronze:Setze einen zufälligen Status *ein. NL bronze:Kompilierung - bronze:Setze *Betaversion *ein.",
     "EXTENDED_DESCRIPTION": [
-      "rohes",
+      "frühes",
       "Alpha"
     ]
   },
@@ -32,7 +32,7 @@
     "NAME": "Betaversion",
     "DESCRIPTION": "Erhalte !B! Block. NL bronze:Setze einen zufälligen Status *ein. NL bronze:Kompilierung - bronze:Setze *Release *ein.",
     "EXTENDED_DESCRIPTION": [
-      "frühes",
+      "unausgereftes",
       "Beta"
     ]
   },
@@ -45,7 +45,7 @@
     "NAME": "Booster",
     "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Erhalte !M! Stärke.",
     "EXTENDED_DESCRIPTION": [
-      "geboostetes",
+      "stärkendes",
       "Boosten"
     ]
   },
@@ -63,8 +63,8 @@
     "NAME": "Abbruch",
     "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - Erhalte je 1 *Benommen, *Verschleimt, *Wunde, *Brennen, *Leere.",
     "EXTENDED_DESCRIPTION": [
-      "gebrochenes",
-      "Abbruch"
+      "gehemmtes",
+      "Abbrechen"
     ]
   },
   "bronze:BronzeArmor": {
@@ -117,7 +117,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung - Erhöhe den Schaden dieser Karte permanent um !M!.",
     "EXTENDED_DESCRIPTION": [
       "kultiges",
-      "Krächz"
+      "Krächzen"
     ]
   },
   "bronze:ClassDefault": {
@@ -138,8 +138,8 @@
     "NAME": "Konstruktor",
     "DESCRIPTION": "Erhalte !B! Block. \u202F Wird im ersten Slot mit !M! mehr Block *kodiert.",
     "EXTENDED_DESCRIPTION": [
-      "stabile",
-      "Traurigkeit",
+      "stabiles",
+      "Trauern",
       "Großartigkeit"
     ]
   },
@@ -152,7 +152,7 @@
     "NAME": "Ausschneiden",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Spähe !M!. NL bronze:Kompilierung - Ziehe !bauto! Karte.",
     "EXTENDED_DESCRIPTION": [
-      "schnittiges",
+      "fehlendes",
       "Schneiden"
     ]
   },
@@ -176,17 +176,17 @@
     "NAME": "Verspäteter Schutz",
     "DESCRIPTION": "Erhalte im nächsten Zug !B! Block.",
     "EXTENDED_DESCRIPTION": [
-      "verspätetes",
+      "spätes",
       "Schützen"
     ]
   },
   "bronze:DelayedSlice": {
-    "NAME": "Robo-Chop",
+    "NAME": "Hacken",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe im nächsten Zug !M! zusätzliche Karte.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe im nächsten Zug !M! zusätzliche Karten.",
     "EXTENDED_DESCRIPTION": [
-      "verspätetes",
-      "Schneiden"
+      "illegales",
+      "Hacken"
     ]
   },
   "bronze:Deprecate": {
@@ -222,7 +222,7 @@
     "NAME": "Verdreschen",
     "DESCRIPTION": "Füge ALLEN Gegnern !bauto! Mal !D! Schaden zu. NL Erhalte !M! Artefakt. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
-      "dreschendes",
+      "rohes",
       "Dreschen"
     ]
   },
@@ -257,7 +257,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung - Erhalte !M! Geschicklichkeit.",
     "EXTENDED_DESCRIPTION": [
       "festes",
-      "Verankern"
+      "Ankern"
     ]
   },
   "bronze:Frontload": {
@@ -354,7 +354,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - Die Funktion ist unspielbar.",
     "EXTENDED_DESCRIPTION": [
       "null",
-      "Pointer"
+      "Nichts"
     ]
   },
   "bronze:OilSpill": {
@@ -396,7 +396,7 @@
     ]
   },
   "bronze:Refactor": {
-    "NAME": "Umschreiben",
+    "NAME": "Überschreiben",
     "DESCRIPTION": "Spähe !M!. NL Erschöpfe alle abgeworfenen Statuskarten. NL Erhalte !B! Block für jeden erschöpften Status."
   },
   "bronze:Repair": {
@@ -411,8 +411,8 @@
     "NAME": "Wiederholen",
     "DESCRIPTION": "Füge !D! Schaden zu. \u202F NL Wenn *Kodiert: Lege eine Kopie in den Abwurfstapel.",
     "EXTENDED_DESCRIPTION": [
-      "wiederholendes",
-      "Wiederholen"
+      "erneutes",
+      "Tun"
     ]
   },
   "bronze:Repulsor": {
@@ -421,7 +421,7 @@
     "UPGRADE_DESCRIPTION": "Wenn du im Zug das erste Mal einen Status oder Fluch ziehst, erschöpfe ihn und ziehe eine Karte."
   },
   "bronze:Return": {
-    "NAME": "Rückgabe",
+    "NAME": "Rückgängig",
     "DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E] .",
     "UPGRADE_DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E] [E] ."
   },
@@ -437,8 +437,8 @@
     "NAME": "Separator",
     "DESCRIPTION": "Füge !D! Schaden zu. \u202F Wird im ersten Slot mit !M! mehr Schaden *kodiert.",
     "EXTENDED_DESCRIPTION": [
-      "gespaltenes",
-      "Kind"
+      "geteiltes",
+      "Areal"
     ]
   },
   "bronze:Shell": {
@@ -523,7 +523,7 @@
     "NAME": "Durchschuss",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
-      "durchgehendes",
+      "dringendes",
       "Geschoss"
     ]
   },
@@ -539,11 +539,7 @@
     "NAME": "Wilder Schlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze eine *Wunde *ein."
   },
-
-
-
-
-
+  
   "bronze:Batch": {
     "NAME": "Batch",
     "DESCRIPTION": "Kompiliere die derzeit kodierten Karten zu einer Funktion. NL Erschöpft.",
@@ -553,16 +549,16 @@
     "NAME": "Zweig: Abwehr",
     "DESCRIPTION": "Erhalte !B! Block.",
     "EXTENDED_DESCRIPTION": [
-      "verzweigtes",
-      "Blatt"
+      "rechtes",
+      "Rechts"
     ]
   },
   "bronze:BranchHit": {
     "NAME": "Zweig: Angriff",
     "DESCRIPTION": "Füge !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
-      "verzweigtes",
-      "Blatt"
+      "linkes",
+      "Links"
     ]
   },
   "bronze:ByteShift": {
@@ -574,7 +570,7 @@
     "NAME": "Betäubender Puls",
     "DESCRIPTION": "Erhalte !B! Block NL Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - bronze:Setze !M! *Benommen *ein.",
     "EXTENDED_DESCRIPTION": [
-      "lähmendes",
+      "lahmes",
       "Pulsieren"
     ]
   },
@@ -615,7 +611,7 @@
     "NAME": "()",
     "DESCRIPTION": "",
     "EXTENDED_DESCRIPTION": [
-      "f()",
+      "Funktion()",
       "Perfektion()",
       "()"
     ]
@@ -633,7 +629,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung - Erhalte !M! Stacheln.",
     "EXTENDED_DESCRIPTION": [
       "dorniges",
-      "Dorn"
+      "Eck"
     ]
   },
   "bronze:Ignite": {

@@ -58,7 +58,7 @@
     ]
   },
   "bronze:ElectromagneticCoil": {
-    "NAME": "Elektromagnetische Spule",
+    "NAME": "Induktionsspule",
     "FLAVOR": "Eine ineffiziente, aber unterhaltsame Energiequelle.",
     "DESCRIPTIONS": [
       "#yFunktionen bestehen nun aus #b4 Karten."
