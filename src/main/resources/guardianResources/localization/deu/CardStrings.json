@@ -118,8 +118,8 @@
   },
   "Guardian:SphericShield": {
     "NAME": "Sphärischer Schild",
-    "DESCRIPTION": "Flüchtig. NL Erhalte eine guardianmod:Politur. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte eine guardianmod:Politur. NL Erschöpft."
+    "DESCRIPTION": "Flüchtig. NL Erhalte eine guardianmod:Panzerpolitur. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte eine guardianmod:Panzerpolitur. NL Erschöpft."
   },
   "Guardian:Harden": {
     "NAME": "Erhärten",

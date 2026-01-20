@@ -132,7 +132,7 @@
     ]
   },
   "champ:FalseCounter": {
-    "NAME": "Gegner Ermüden",
+    "NAME": "Gegner ermüden",
     "DESCRIPTION": "Erhalte !B! Block. NL Im nächsten Zug, ziehe 2 Karten und erhalte [E] .",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Im nächsten Zug, ziehe 2 Karten und erhalte [E] [E] ."
   },

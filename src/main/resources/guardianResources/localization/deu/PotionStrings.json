@@ -7,7 +7,7 @@
     ]
   },
   "Guardian:DefensiveModePotion": {
-    "NAME": "Politur",
+    "NAME": "Panzerpolitur",
     "DESCRIPTIONS": [
       "Erhalte #b",
       " #yBlock [REMOVE_SPACE]. Wechsle in den #yDefensivmodus [REMOVE_SPACE]."

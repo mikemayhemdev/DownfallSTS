@@ -9,8 +9,8 @@
   "bronze:CleanCodePotion": {
     "NAME": "Matetee",
     "DESCRIPTIONS": [
-      "Entferne alle #yKompilierungsfehler die gerade #ykodiert sind. Die nächste #yFunktion die #yKompiliert kostet #b0 bis du sie spielst.",
-      "Entferne alle #yKompilierungsfehler die gerade #ykodiert sind. Die nächsten #b",
+      "Entferne alle #yKompilierungsfehler, die gerade #ykodiert sind. Die nächste #yFunktion die #yKompiliert kostet #b0 bis du sie spielst.",
+      "Entferne alle #yKompilierungsfehler, die gerade #ykodiert sind. Die nächsten #b",
       " #yFunktionen die #yKompilieren kosten #b0 bis du sie spielst."
     ]
   },

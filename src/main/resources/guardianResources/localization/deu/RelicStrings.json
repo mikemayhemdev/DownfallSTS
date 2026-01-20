@@ -84,7 +84,7 @@
     "FLAVOR": "Irgendwo wartet immer etwas Unglaubliches auf seine Entdeckung.",
     "DESCRIPTIONS": [
       "Wähle beim Aufheben eine Karte. Beginne jeden Kampf mit der gewählten Karte in #yguardianmod:Stasis [REMOVE_SPACE].",
-      "Wähle eine Karte für ",
+      "Wähle eine Karte für das ",
       "Beginne jeden Kampf mit ",
       " in #yguardianmod:Stasis [REMOVE_SPACE].",
       "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
@@ -95,7 +95,7 @@
     "FLAVOR": "Um das Küken zu bekommen muss man es schlüpfen lassen, und nicht das Ei zerbrechen.",
     "DESCRIPTIONS": [
       "Wähle beim Aufheben eine Karte. Beginne jeden Kampf ohne der gewählten Karte. Nimm die gewählte Karte und #b2 Kopien zu Beginn von Zug #b4 auf die Hand.",
-      "Wähle eine Karte für ",
+      "Wähle eine Karte für die ",
       "Beginne jeden Kampf ohne ",
       " . Nimm diese Karte und #b2 Kopien zu Beginn von Zug #b4 auf die Hand.",
       "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
@@ -128,7 +128,7 @@
     "FLAVOR": "Es wirbelt und wirbelt bis es schließlich kaputtgeht.",
     "DESCRIPTIONS": [
       "Wähle beim Aufheben eine Karte. Beginne jeden Kampf ohne der gewählten Karte. Nimm die gewählte Karte zu Beginn von Zug #b3 auf die Hand. Sie kostet diesen Zug #b0.",
-      "Wähle eine Karte für ",
+      "Wähle eine Karte für die ",
       "Beginne jeden Kampf ohne ",
       " . Nimm diese Karte zu Beginn von Zug #b3 auf die Hand. Sie kostet diesen Zug #b0.",
       "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."

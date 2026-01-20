@@ -109,7 +109,7 @@
     "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Tu nichts."]
   },
   "hexamod:MatchstickFloat": {
-    "NAME": "Magisches Teak-Zündholz",
+    "NAME": "Magisches Zündholz",
     "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
     "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Tu nichts."]

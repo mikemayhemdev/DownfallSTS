@@ -50,7 +50,7 @@
       "fremden",
       "offclass"
     ],
-    "DESCRIPTION": "Alle Karten die nicht dem eigenen Charakter zugehörig sind zählen als fremd (darunter auch farblose Karten, #rFlüche, und #yStatuskarten [REMOVE_SPACE])."
+    "DESCRIPTION": "Alle Karten die nicht dem eigenen Charakter zugehörig sind zählen als fremd (darunter auch farblose Karten, #rFlüche [REMOVE_SPACE], und #yStatuskarten [REMOVE_SPACE])."
   },
   {
     "PROPER_NAME": "Geschenk",
