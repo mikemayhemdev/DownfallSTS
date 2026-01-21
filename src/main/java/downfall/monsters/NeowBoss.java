@@ -25,6 +25,7 @@ import com.megacrit.cardcrawl.vfx.combat.HeartMegaDebuffEffect;
 import downfall.actions.NeowRezAction;
 import downfall.downfallMod;
 import guardian.vfx.SmallLaserEffectColored;
+import hermit.cards.ImpendingDoom;
 
 import java.util.ArrayList;
 
@@ -203,6 +204,10 @@ public class NeowBoss extends AbstractMonster {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 1, true), 1));
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 1, true), 1));
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, 1, true), 1));
+                    if (AbstractDungeon.ascensionLevel >= 18) {
+                        AbstractCard q = new ImpendingDoom();
+                        //CardModifierManager.addModifier(q, new RetainCardMod());
+                        addToBot(new MakeTempCardInDrawPileAction((q), 1, false, true));}
                 } else {
                     escape();
                 }
@@ -223,6 +228,9 @@ public class NeowBoss extends AbstractMonster {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new StrengthPower(minion, StrGain), StrGain));
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new DexterityPower(minion, StrGain), StrGain));
                     AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 30));
+                    if (AbstractDungeon.ascensionLevel >= 18) {
+                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new ArtifactPower(minion, 1), 1));
+                    }
                 } else {
                     escape();
                     addToBot(new AbstractGameAction() {
