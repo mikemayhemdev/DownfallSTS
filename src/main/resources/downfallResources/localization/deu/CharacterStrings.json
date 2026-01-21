@@ -5,7 +5,7 @@
     ],
     "TEXT": [
       "~Diene...~ NL ~mir..~ ~jetzt...~",
-      "~Steh auf...~ NL ~treuer Diener..~",
+      "~Steh~ ~auf...~ NL ~treuer~ ~Diener..~",
       "~Erhebe~ ~dich...~",
       "~Vernichte~ NL ~Eindringlinge...~",
       "~Erreiche~ ~den~ ~Eindringling...~ NL ~um~ ~mehr..~ ~Segen~ ~zu~ ~erhalten...~",
@@ -60,7 +60,7 @@
   "downfall:HeartMerchant": {
   "NAMES": [
     "Fahre fort",
-    "~Bring mir Opfer...~"
+    "~Bring~ ~mir~ ~Opfer...~"
   ],
   "TEXT": [
     "~Du~ ~wirst...~ ~stärker...~",
@@ -87,7 +87,7 @@
     "~Mach...~ ~sie...~ ~fertig...~",
     "~Viel...~ ~Erfolg...~",
     "~Sterben...~ ~verboten...~",
-    "~Wir zählen auf dich...~",
+    "~Wir~ ~zählen~ ~auf~ dich...~",
     "~Zerstöre...~ ~sie~ ~alle...~"
   ]
 },
@@ -95,8 +95,8 @@
     "TEXT": [
       "~Eindringlinge...~ NL ",
       "~Du~ ~wirst~ ~gebraucht...~ NL ",
-      "~Sie ~sind~ ~schon~ ~angekommen...~ NL ",
-      "~Kehre um...~ NL ~Feinde~ ~sind~ ",
+      "~Sie~ ~sind~ ~schon~ ~angekommen...~ NL ",
+      "~Kehre~ ~um...~ NL ~Feinde~ ~sind~ ",
       "~Vernichte~ ~sie~ ~alle...~ NL "
     ],
     "OPTIONS": [
@@ -117,10 +117,10 @@
   },
   "downfall:HeartMerchantScreen": {
     "NAMES": [
-      "~Willkommen~ NL ~treuer Knecht...~",
+      "~Willkommen~ NL ~treuer~ ~Knecht...~",
       "~Bring~ ~mir~ ~mehr~ ~Seelen...~",
       "~Ich~ ~brauche~ @mehr...@",
-      "~Du~ ~bist~ ~es~ NL @nicht wert...@",
+      "~Du~ ~bist~ ~es~ NL @nicht@ @wert...@",
       "~Nein.~",
       "~Ernte~ ~mehr~ NL ~dafür...~",
       "~Unzureichendes~ ~Opfer...~",
