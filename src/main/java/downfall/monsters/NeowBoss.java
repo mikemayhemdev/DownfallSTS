@@ -202,11 +202,11 @@ public class NeowBoss extends AbstractMonster {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new VulnerablePower(AbstractDungeon.player, 1, true), 1));
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new WeakPower(AbstractDungeon.player, 1, true), 1));
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, this, new FrailPower(AbstractDungeon.player, 1, true), 1));
-                    if (AbstractDungeon.ascensionLevel >= 18) {
-                        addToBot(new MakeTempCardInDrawPileAction((new ImpendingDoom()), 1, false, true));
-                    } else {
-                        this.addToBot(new MakeTempCardInDiscardAction(new ImpendingDoom(), 1));
-                    }
+//                    if (AbstractDungeon.ascensionLevel >= 18) {
+//                        addToBot(new MakeTempCardInDrawPileAction((new ImpendingDoom()), 1, false, true));
+//                    } else {
+//                        this.addToBot(new MakeTempCardInDiscardAction(new ImpendingDoom(), 1));
+//                    }
                 } else {
                     escape();
                 }
@@ -227,9 +227,9 @@ public class NeowBoss extends AbstractMonster {
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new StrengthPower(minion, StrGain), StrGain));
                     AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new DexterityPower(minion, StrGain), StrGain));
                     AbstractDungeon.actionManager.addToBottom(new HealAction(minion, this, 30));
-                    if (AbstractDungeon.ascensionLevel >= 18) {
-                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new ArtifactPower(minion, 1), 1));
-                    }
+//                    if (AbstractDungeon.ascensionLevel >= 18) {
+//                        AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(minion, this, new ArtifactPower(minion, 1), 1));
+//                    }
                 } else {
                     escape();
                     addToBot(new AbstractGameAction() {
