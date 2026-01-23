@@ -46,7 +46,7 @@
     "DESCRIPTION": "Füge am Ende des Zuges ALLEN Gegnern !M! Schaden zu - erhöht durch Stärke."
   },
   "awakened:AwakenedForm": {
-    "NAME": "Erwachte Form",
+    "NAME": "Erweckte Form",
     "DESCRIPTION": "Erhalte !M! awakened:Neugier. NL Erhalte !awakened:m2! Ritual.",
     "UPGRADE_DESCRIPTION": "*Erwache umgehend. NL Erhalte !M! awakened:Neugier. NL Erhalte !awakened:m2! Ritual."
   },
