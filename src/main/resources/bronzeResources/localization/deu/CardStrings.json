@@ -130,7 +130,7 @@
     "UPGRADE_DESCRIPTION": "Angeboren. NL Verhindere die nächsten !M! *Kompilierungsfehler die du *kodierst."
   },
   "bronze:CloningBeam": {
-    "NAME": "Mergekonflikt",
+    "NAME": "Code-Duplizierung",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste Karte die bronze:kodiert wird, bronze:kodiert ein weiteres Mal. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste Karte die bronze:kodiert wird, bronze:kodiert ein weiteres Mal."
   },

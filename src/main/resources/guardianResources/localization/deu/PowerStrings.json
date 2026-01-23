@@ -15,7 +15,7 @@
     ]
   },
   "Guardian:FloatingOrbsPower": {
-    "NAME": "Schwebende Kugeln",
+    "NAME": "Schwebende Orbd",
     "DESCRIPTIONS": [
       "Immer wenn du eine Karte ausspielst die #y0 kostet, füge einem zufälligen Gegner #b",
       " Schaden zu."
@@ -143,7 +143,7 @@
     ]
   },
   "Guardian:RevengePower": {
-    "NAME": "Rache",
+    "NAME": "Racheprotokoll",
     "DESCRIPTIONS": [
       "Erhalte jedes Mal wenn du in den #yDefensivmodus wechselst #b",
       " #yStrength [REMOVE_SPACE]."

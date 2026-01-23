@@ -121,7 +121,7 @@
   },
 
   "Gremlin:Exacerbate": {
-    "NAME": "Verschlimmern",
+    "NAME": "Tortur",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Der Gegner verliert jedes Mal wenn er Schwach erleidet !M! TP. NL Erschöpft."
   },
 

@@ -173,8 +173,8 @@
   },
   "Guardian:PackageAutomaton": {
     "NAME": "Paket: Bronze",
-    "DESCRIPTION": "Erhalte *Gigastrahl, *Orbgehilfe, und *Belastbarer *Panzer. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte *Gigastrahl+, *Orbgehilfe+, und *Belastbarer *Panzer+. NL Erschöpft."
+    "DESCRIPTION": "Erhalte *Gigastrahl, *Orb-Assistenz, und *Belastbarer *Panzer. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte *Gigastrahl+, *Orb-Assistenz+, und *Belastbarer *Panzer+. NL Erschöpft."
   },
   "Guardian:PackageDefect": {
     "NAME": "Paket: Defekt",
@@ -378,7 +378,7 @@
     "UPGRADE_DESCRIPTION": "Wenn du im Zug das erste Mal einen Status oder Fluch ziehst, erschöpfe ihn und ziehe eine Karte."
   },
   "Guardian:BronzeOrb": {
-    "NAME": "Orbgehilfe",
+    "NAME": "Orb-Assistenz",
     "DESCRIPTION": "Füge !D! Schaden zu. NL guardianmod:Härte in Höhe des ungeblockten Schadens *ab. NL Erschöpft."
   },
   "Guardian:RevengeProtocol": {

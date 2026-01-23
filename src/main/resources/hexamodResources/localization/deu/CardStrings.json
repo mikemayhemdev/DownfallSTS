@@ -274,7 +274,7 @@
     ]
   },
   "hexamod:RadiantFlame": {
-    "NAME": "Greller Widerhall",
+    "NAME": "Spätzündung",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Entferne das *Seelenfeuer des Gegners um !M! hexamod:Intensität zu erhalten."
   },
   "hexamod:RainOfEmbers": {
@@ -389,7 +389,7 @@
     "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte für diesen Zug temporär !M! hexamod:Intensität, !M! Stärke, und !M! Geschicklichkeit."
   },
   "hexamod:UnleashSpirits": {
-    "NAME": "Geister befreien",
+    "NAME": "Geister rufen",
     "DESCRIPTION": "Füge einem zufälligen Gegner !D! Schaden zu. NL Wiederhole das für jede Karte die im letzten Zug *erschöpft wurde.",
     "UPGRADE_DESCRIPTION": " NL (Trifft !M! Mal.)"
   },
@@ -461,7 +461,7 @@
     "UPGRADE_DESCRIPTION": "Schnapp dir eine Karte vom Nachziehstapel. NL Bewege dich auf eine zufällige Geisterflamme. NL Erschöpft."
   },
   "hexamod:FlameDevourer": {
-    "NAME": "Feuer verschlingen",
+    "NAME": "Pyrovor",
     "DESCRIPTION": "Wenn die vorherige Geisterflamme *entzündet ist, bewege dich hexamod:rückwärts und erhalte !B! Block."
   },
   "hexamod:SpectralGrace": {

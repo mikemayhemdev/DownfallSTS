@@ -160,7 +160,7 @@
     ]
   },
   "sneckomod:LacerateDebuff": {
-    "NAME": "Aufschlitzen",
+    "NAME": "Aufgeschlitzt",
     "DESCRIPTIONS": [
       "Immer wenn du in diesem Zug einen Debuff auf diesen Gegner anwendest, wende zusätzlich #b",
       " #yToxin an.",

@@ -7,7 +7,7 @@
     ]
   },
   "downfall:CultistRevivePower": {
-    "NAME": "False Worship",
+    "NAME": "Götzenanbetung",
     "DESCRIPTIONS": [
       "Anstatt zu sterben, wird dieser Effekt aufgehoben und die TP auf #b50% der Max TP geheilt.",
       "KRÄÄÄÄCHZ!"
@@ -174,13 +174,13 @@
     ]
   },
   "downfall:SilentMirrorImagePower": {
-    "NAME": "Doppelt Sehen",
+    "NAME": "Doppelt sehen",
     "DESCRIPTIONS": [
       "Zu Beginn jedes Zuges verschleiert ein Trugbild die wahre Position des Stillen. Das Trugbild verschwindet sobald die Stille oder das Trugbild angegriffen wird."
     ]
   },
   "downfall:NeowSeeingDouble": {
-    "NAME": "Doppelt Sehen",
+    "NAME": "Doppelt sehen",
     "DESCRIPTIONS": [
       "In jedem Zug erteilt der erste #yAngriff auf Niau #b0 Sachaden."
     ]
@@ -193,7 +193,7 @@
     ]
   },
   "downfall:NeowHighlyToxic": {
-    "NAME": "Achtung: Äußerst Toxisch",
+    "NAME": "Achtung: Äußerst toxisch",
     "DESCRIPTIONS": [
       "Niau wendet in jedem Zug #b5 #yGift auf dich an. #yGift ist blockbar, und der Schaden wird am Ende des Zuges erlitten. NL Mische zu Beginn des Kampfes 2 #yGegengift in deinen Nachziehstapel."
     ]
@@ -391,7 +391,7 @@
     ]
   },
   "downfall:TangerinePower": {
-    "NAME": "Hilfssherrif",
+    "NAME": "Hilfssheriff",
     "DESCRIPTIONS": [
       "When die Wachlaus stirbt, verliert der Einsiedler seine #yKonzentration in diesem Zug und er erhält permanent #b",
       " #yStärke.",

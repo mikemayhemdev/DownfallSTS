@@ -224,7 +224,7 @@
     "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer wenn awakened:ausgelaugt wirst !M! Block und !awakened:m2! Stärke."
   },
   "awakened:Eventide": {
-    "NAME": "Abendzeit",
+    "NAME": "Dämmerung",
     "DESCRIPTION": "Füge zweimal einem zufälligen Gegner !D! Schaden zu. NL Lege eine *Leere auf den Nachziehstapel."
   },
   "awakened:EclipseEmbrace": {

@@ -36,7 +36,7 @@
     ]
   },
   "champ:DrawLessNextTurnPower": {
-    "NAME": "Draw Reduction",
+    "NAME": "Weniger Ziehen",
     "DESCRIPTIONS": [
       "Ziehe im nächsten Zug #b",
       " Karte weniger.",
@@ -44,7 +44,7 @@
     ]
   },
   "champ:PushThroughPower": {
-    "NAME": "Schmerzen Ignorieren",
+    "NAME": "Schmerzen ignorieren",
     "DESCRIPTIONS": [
       "Du kannst in diesem Zug keine TP verlieren.",
       "Du kannst in dein nächsten #b",
@@ -108,7 +108,7 @@
     ]
   },
   "champ:GladiatorStylePower": {
-    "NAME": "Fairer Sauberer Kampf",
+    "NAME": "Fairer sauberer Kampf",
     "DESCRIPTIONS": [
       "Erhalte wenn du deinen Zug ohne #yHaltung beginnst #b",
       " temporäre #yStärke und #yGeschicklichkeit."
@@ -205,7 +205,7 @@
     ]
   },
   "champ:BoomerangPower": {
-    "NAME": "Boomerang",
+    "NAME": "Bumerang",
     "DESCRIPTIONS": [
       "Bring zu Beginn deines nächsten Zuges ",
       " zurück auf die Hand. Es kostet #b0 und kommt nicht mehr zurück."
@@ -226,7 +226,7 @@
     ]
   },
   "champ:LastStandPower": {
-    "NAME": "Letztes AUfgebot",
+    "NAME": "Letztes Aufgebot",
     "DESCRIPTIONS": [
       "Entferne alle Debuffs und erhalte #b",
       " #yStärke sobald deine TP unter #b50% fallen.",

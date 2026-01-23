@@ -17,7 +17,7 @@
     ]
   },
   "hexamod:ApplyBurnAtTurnStartOncePower": {
-    "NAME": "Verspätete Flamme",
+    "NAME": "Spätzünder",
     "DESCRIPTIONS": [
       "Wende zu Beginn des nächsten Zuges #b",
       " #ySeelenfeuer auf ALLE Gegner an."
@@ -25,7 +25,7 @@
     "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:BurnPerTurnPower": {
-    "NAME": "Schmelzendes Metall",
+    "NAME": "Heißes Eisen",
     "DESCRIPTIONS": [
       "Wende das nächste Mal, an dem das #ySeelenfeuer dieses Feindes detoniert #b",
       " #ySeelenfeuer an."

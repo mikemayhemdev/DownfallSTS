@@ -18,7 +18,7 @@
     ]
   },
   "expansioncontent:AwakenDeathPower": {
-    "NAME": "Erwachen",
+    "NAME": "Wiedererwachen",
     "DESCRIPTIONS": [
       "Anstatt zu sterben, heile #b",
       " TP und entferne diesen Effekt."
@@ -64,14 +64,14 @@
     ]
   },
   "expansioncontent:AddCopyPower": {
-    "NAME": "Verspätete Karte",
+    "NAME": "Vorrätige Karte",
     "DESCRIPTIONS": [
       "Nimm zu Beginn deines nächsten Zuges ",
       " auf die Hand."
     ]
   },
   "expansioncontent:AddSameInstancePower": {
-    "NAME": "Verspätete Karte",
+    "NAME": "Vorrätige Karte",
     "DESCRIPTIONS": [
       "Nimm zu Beginn deines nächsten Zuges ",
       " auf die Hand."

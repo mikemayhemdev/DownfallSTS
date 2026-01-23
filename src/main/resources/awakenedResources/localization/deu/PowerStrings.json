@@ -1,6 +1,6 @@
 {
   "awakened:IntensifyPower": {
-    "NAME": "Intensivieren",
+    "NAME": "Intensiviert",
     "DESCRIPTIONS": [
       "In diesem Zug kosten Zaubersprücke #b0 [REMOVE_SPACE].",
       "Zaubersprüche kosten in den nächsten #b",
@@ -8,7 +8,7 @@
     ]
   },
   "awakened:IntensifyDebuffPower": {
-    "NAME": "Burnout",
+    "NAME": "Ausgebrannt",
     "DESCRIPTIONS": [
       "Du kannst in diesem Zug nicht mehr #yaufrufen [REMOVE_SPACE].",
       "Du kannst in den nächsten #b",
@@ -24,7 +24,7 @@
     ]
   },
   "awakened:CursedStrength": {
-    "NAME": "Segnung der Finsternis",
+    "NAME": "Neumond",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du #yausgelaugt wirst #b",
       " #yStärke [REMOVE_SPACE]."
@@ -117,7 +117,7 @@
     "NAME": "Aufgerissen",
     "DESCRIPTIONS": [
       "Wenn du diesen Gegner angreifst erhältst du #b",
-      " temporäre #yStärke [REMOVE_SPACE]."
+      " #ytemporäre #yStärke [REMOVE_SPACE]."
     ]
   },
   "awakened:ManaburnPower": {
@@ -146,7 +146,7 @@
     ]
   },
   "awakened:DarknessFallsPower": {
-    "NAME": "Einfallende Finsternis",
+    "NAME": "Ringfinsternis",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du #yausgelaugt wirst #b",
       " #yBlock [REMOVE_SPACE]."
@@ -240,7 +240,7 @@
     "NAME": "Vierte Dimension",
     "DESCRIPTIONS": [
       "Für #b",
-      " den nächsten Zug, ",
+      " folgenden Zug, ",
       " folgende Züge, ",
       "spiele und #yerschöpfe eine Kopie von ",
       " [REMOVE_SPACE]."

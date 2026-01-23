@@ -253,7 +253,7 @@
     "DESCRIPTION": "Flüchtig. NL Heile !M! TP. NL Erschöpft."
   },
   "hermit:TakeAim": {
-    "NAME": "Ins Visier nehmen",
+    "NAME": "Anvisieren",
     "DESCRIPTION": "hermit:Konzentriere dich immer zu Beginn deines Zuges.",
 	"UPGRADE_DESCRIPTION": "hermit:Konzentriere dich. NL hermit:Konzentriere dich immer zu Beginn deines Zuges."
   },
