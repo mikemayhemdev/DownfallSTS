@@ -282,7 +282,7 @@
     "DESCRIPTION": "Erhalte eine zufällige Karte mit bronze:Kodieren. Sie kostet 0 bis du sie spielst. NL Erschöpft."
   },
   "bronze:Goto": {
-    "NAME": "Goto",
+    "NAME": "Subroutine",
     "DESCRIPTION": "Ziehe !M! Karte. NL bronze:Kompilierung - Ziehe im nächsten Zug !M! Karte.",
     "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL bronze:Kompilierung - Ziehe im nächsten Zug !M! Karten.",
     "EXTENDED_DESCRIPTION": [

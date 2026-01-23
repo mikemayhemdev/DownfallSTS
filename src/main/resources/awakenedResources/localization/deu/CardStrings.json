@@ -282,7 +282,7 @@
     "UPGRADE_DESCRIPTION": "awakened:Chor: NL Erhalte [E] [E] [E] . NL Erschöpft."
   },
   "awakened:Gather": {
-    "NAME": "Versammeln",
+    "NAME": "Ansammeln",
     "DESCRIPTION": "Erhalte !B! Block. NL awakened:Chor: Nimm eine Karte aus dem Abwurfstapel zurück auf die Hand."
   },
   "awakened:TheTower": {
