@@ -27,7 +27,7 @@
     "NAME": "Baalors königliche Platte",
     "FLAVOR": "Man kann nie ganug Rüstung tragen.",
     "DESCRIPTIONS": [
-      "Immer wenn du dich #yguardianmod:abhärtest [REMOVE_SPACE], #yhärte dich um #b1 mehr #yab."
+      "Immer wenn du dich NL #yguardianmod:abhärtest [REMOVE_SPACE], #yhärte dich um #b1 mehr #yab."
     ]
   },
   "Guardian:guardianmod:GemCopier": {

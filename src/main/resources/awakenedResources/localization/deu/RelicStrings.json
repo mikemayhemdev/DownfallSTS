@@ -31,7 +31,7 @@
     ]
   },
   "awakened:TomeOfPortalmancy": {
-    "NAME": "Zauberbuch der Portale",
+    "NAME": "Almanach der Portale",
     "FLAVOR": "Eine Betriebsanleitung zur Konstruktion und Wartung interdimensionaler Portale.",
     "DESCRIPTIONS": [
       "Immer wenn du eine #yLeere erhältst, wende #b",

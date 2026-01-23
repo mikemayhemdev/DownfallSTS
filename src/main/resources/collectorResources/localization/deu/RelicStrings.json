@@ -22,8 +22,8 @@
     ]
   },
   "collector:BagOfTricks": {
-    "NAME": "Sack voller Tricks",
-    "FLAVOR": "Trickreich.",
+    "NAME": "Wundertüte",
+    "FLAVOR": "Wundervoll.",
     "DESCRIPTIONS": [
       "Ziehe zu Beginn jedes Kampfes #b",
       " zusätzliche Karten vom #ySammlungsstapel."
@@ -117,7 +117,7 @@
     ]
   },
   "collector:BlockedChakra": {
-    "NAME": "Blockiertes Chakra",
+    "NAME": "Gehemmtes Chakra",
     "FLAVOR": "Es reicht bloß ein gezerrter Muskel.",
     "DESCRIPTIONS": [
       "Erhalte in deinem Zug [E] . Du kannst erst ab deinem vierten Zug vom #ySammlungsstapel ziehen."

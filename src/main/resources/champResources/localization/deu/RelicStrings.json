@@ -39,8 +39,8 @@
     ]
   },
   "champ:DefensiveTrainingManual": {
-    "NAME": "Verteidigende Lehre",
-    "FLAVOR": "Sollten nicht eigentlich Dissertationen verteidigt werden?",
+    "NAME": "Verteidigungstheorie",
+    "FLAVOR": "Sollten nicht eigentlich Theorien verteidigt werden?",
     "DESCRIPTIONS": [
       "Erhöhe den #ychamp:Abschlussbonus der #bchamp:Defensivhaltung um weitere #b",
       " #yBlock [REMOVE_SPACE]."
