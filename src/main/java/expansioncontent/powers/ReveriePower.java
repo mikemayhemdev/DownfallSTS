@@ -62,13 +62,15 @@ public class ReveriePower extends AbstractPower {
                                 1,
                                 DESCRIPTIONS[3],
                                 (selectedCards) -> {
-                                    AbstractCard chosenCard = selectedCards.get(0);
-                                    AbstractDungeon.player.discardPile.removeCard(chosenCard);
-                                    AbstractDungeon.player.hand.addToHand(chosenCard);
+                                    if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
+                                        AbstractCard chosenCard = selectedCards.get(0);
+                                        AbstractDungeon.player.discardPile.removeCard(chosenCard);
+                                        AbstractDungeon.player.hand.addToHand(chosenCard);
 
-                                    chosenCard.lighten(false);
-                                    chosenCard.unhover();
-                                    chosenCard.applyPowers();
+                                        chosenCard.lighten(false);
+                                        chosenCard.unhover();
+                                        chosenCard.applyPowers();
+                                    }
                                 }
                         ));
                     }
