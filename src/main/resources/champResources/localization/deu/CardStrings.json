@@ -56,7 +56,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Elan. NL Nimm die champ:Offensivhaltung an."
   },
   "champ:FocusedBerserking": {
-    "NAME": "Tollkühne Haltung",
+    "NAME": "Stabile Haltung",
     "DESCRIPTION": "Erschöpft. NL Führe, ohne die Haltung zu verlassen, !M! Mal aus: "
   },
   "champ:SetATrap": {
@@ -268,7 +268,7 @@
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte !M! *Elan. NL Erschöpft."
   },
   "champ:ArenaPreparation": {
-    "NAME": "Kriegsmaterial",
+    "NAME": "Ausrüstung",
     "DESCRIPTION": "Erhalte !M! zufällige Fertigkeiten. NL Sie erhalten Behalten. NL Erschöpft."
   },
   "champ:SteelEdge": {

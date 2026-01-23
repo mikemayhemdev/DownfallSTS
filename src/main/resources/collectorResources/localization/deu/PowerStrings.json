@@ -70,7 +70,7 @@
     ]
   },
   "collector:DemisePower": {
-    "NAME": "Unvermeidbares Verhängnis",
+    "NAME": "Untergang",
     "DESCRIPTIONS": [
       "Verhindere die nächste Entfernung der #yVerdammnis dieses Gegners.",
       "Verhindere die nächsten #b",
@@ -318,7 +318,7 @@
     ]
   },
   "collector:LoseHpNextTurn": {
-    "NAME": "Todesmal",
+    "NAME": "Mal des Todes",
     "DESCRIPTIONS": [
       "Verliert am Ende seines Zuges #b",
       " TP."

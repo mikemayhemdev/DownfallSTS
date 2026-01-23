@@ -34,7 +34,7 @@
     "DESCRIPTION": "Erhalte !B! Block."
   },
   "sneckomod:DefensiveFlair": {
-    "NAME": "Defensiver Flair",
+    "NAME": "Defensives Gespür",
     "DESCRIPTION": "Erhalte !B! Block. Block wird für jede Karte einer sneckomod:Fremdklasse auf der Hand um !M! erhöht. NL sneckomod:Geschenk: Ungewöhnlich.",
     "DESCRIPTION_BATTLE": "Erhalte !B! Block. NL Das Block dieser Karte wird für jede Karte einer sneckomod:Fremdklasse auf der Hand um !M! erhöht."
   },
@@ -520,7 +520,7 @@
     "DESCRIPTION_BATTLE": "Immer wenn du eine Macht spielst, füge ALLEN Gegnern !M! Schaden zu."
   },
   "sneckomod:Whack": {
-    "NAME": "Wumms!",
+    "NAME": "Verprügeln",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm ein *Verhauen auf die Hand. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Nimm ein *Verhauen+ auf die Hand. NL Erschöpft."
   },
@@ -596,7 +596,7 @@
     "UPGRADE_DESCRIPTION": "Erhalte immer wenn du einen Debuff anwendest !M! Block. NL sneckomod:Geschenk: Debuff."
   },
   "sneckomod:FlashInThePan": {
-    "NAME": "Instant-Blitz",
+    "NAME": "Blitzschnell",
     "DESCRIPTION": "Erhalte !B! Block. NL Wirf deine Hand ab. NL Ziehe im nächsten Zug zusätzliche Karten in Höhe der abgeworfenen Karten."
   },
   "sneckomod:TrashCan": {
@@ -604,7 +604,7 @@
     "DESCRIPTION": "Du kannst am Ende jedes Zuges eine Karte erschöpfen."
   },
   "sneckomod:Lacerate": {
-    "NAME": "Aufschlitzen",
+    "NAME": "Giftgas",
     "DESCRIPTION": "Wende !M! sneckomod:Toxin auf ALLE Gegner an. NL Erhalte eine *Lähmende *Wolke. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Wende !M! sneckomod:Toxin auf ALLE Gegner an. NL Erhalte eine *Lähmende *Wolke+. NL Erschöpft."
   },

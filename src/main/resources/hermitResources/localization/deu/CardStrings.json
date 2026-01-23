@@ -180,7 +180,7 @@
     "DESCRIPTION": "Spiele eine der obersten !M! Karten deines Nachziehstapels. NL hermit:Volltreffer: Aktiviere auch den hermit:Volltreffer Effekt der gespielten Karte."
   },
   "hermit:Vantage": {
-    "NAME": "Überblick",
+    "NAME": "Ausspähen",
     "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Ziehe eine Karte und verbessere sie bis zum Ende des Kampfes.",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Ziehe !M! Karten und verbessere sie bis zum Ende des Kampfes."
   },
@@ -299,7 +299,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! Schwach."
   },
   "hermit:ItchyTrigger": {
-    "NAME": "Schussreiz",
+    "NAME": "Triggerdisziplin",
     "DESCRIPTION": "Füge !D! Schaden zu. NL hermit:Volltreffer: Eine zufällige Karte in deiner Hand kostet diesen Zug 0."
   },
   "hermit:EyeOfTheStorm": {

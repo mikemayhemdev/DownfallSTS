@@ -217,7 +217,7 @@
     "DESCRIPTION": "Stiehl bis zu !M! Block des Gegners. NL Füge danach !D! Schaden zu."
   },
   "collector:InevitableDemise": {
-    "NAME": "Unvermeidbare Pein",
+    "NAME": "Untergang",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Verhindere die nächste Entfernung der collector:Verdammnis dieses Gegners."
   },
   "collector:InflictAgony": {
@@ -241,7 +241,7 @@
     ]
   },
   "collector:ItMattersNot": {
-    "NAME": "Es ist egal",
+    "NAME": "Irrelevanz",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhöhe bestehendes Schwach und Verwundbar ALLER Gegner um !M!."
   },
   "collector:JadedJabs": {
@@ -322,7 +322,7 @@
     ]
   },
   "collector:SapStrength": {
-    "NAME": "Todesmal",
+    "NAME": "Mal des Todes",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Im nächsten Zug verliert der Gegner TP in Höhe des doppelten ungeblockten Schadens."
   },
   "collector:ScorchingRay": {
