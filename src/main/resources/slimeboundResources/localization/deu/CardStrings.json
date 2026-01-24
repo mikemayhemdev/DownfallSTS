@@ -26,7 +26,7 @@
   },
   "Slimebound:Darklings": {
     "NAME": "Dunkelingduo",
-    "DESCRIPTION": "slimeboundmod:Spalte !M! slimeboundmod:Dunkelschleime ab. NL Erschöpft.",
+    "DESCRIPTION": "Beschwöre !M! slimeboundmod:Dunkelschleime. Zählt als slimeboundmod:Abspaltung. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Dunkelingtrio"
   },
   "Slimebound:Defend_Slimebound": {
@@ -43,7 +43,7 @@
     "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Erschöpfe eine Karte. Erhalte *Wabbel in Höhe ihrer Kosten. NL Erschöpft."
   },
   "Slimebound:DivideAndConquer": {
-    "NAME": "Zusammenwachsen",
+    "NAME": "Schleim-Infanterie",
     "DESCRIPTION": "Füge für jeden Schleim einem zufälligen gegner !D! Schaden zu. NL slimeboundmod:Absorbiere alle Schleime. NL Erschöpft."
   },
   "Slimebound:DouseInSlime": {
@@ -158,8 +158,8 @@
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Massenwandlung",
-    "DESCRIPTION": "slimeboundmod:Absorbiere alle Schleime. Spalte für jeden auf diese Weise *absorbierten Schleim einen slimeboundmod:Spezialisten ab. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorbiere alle Schleime. Spalte für jeden auf diese Weise *absorbierten Schleim einen slimeboundmod:Spezialisten ab. slimeboundmod:Kommandiere sie. NL Erschöpft."
+    "DESCRIPTION": "slimeboundmod:Absorbiere alle Schleime. slimeboundmod:Spalte für jeden auf diese Weise *absorbierten Schleim einen slimeboundmod:Spezialisten *ab. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorbiere alle Schleime. slimeboundmod:Spalte für jeden auf diese Weise *absorbierten Schleim einen slimeboundmod:Spezialisten *ab. slimeboundmod:Kommandiere sie. NL Erschöpft."
   },
   "Slimebound:MegaLick": {
     "NAME": "Mega-Wabbel",
@@ -313,35 +313,35 @@
   },
   "Slimebound:Split": {
     "NAME": "Abspalten",
-    "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Guerillaschleim ab. NL slimeboundmod:Kommando."
+    "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Guerillaschleim *ab. NL slimeboundmod:Kommando."
   },
   "Slimebound:SplitAcid": {
     "NAME": "Guerillaschleim",
-    "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Guerillaschleim ab. NL slimeboundmod:Kommando !M! Mal.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Guerillaschleim ab. NL slimeboundmod:Kommando drei Mal."
+    "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Guerillaschleim *ab. NL slimeboundmod:Kommando !M! Mal.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Guerillaschleim *ab. NL slimeboundmod:Kommando drei Mal."
   },
   "Slimebound:SplitBruiser": {
     "NAME": "Raufboldschleim",
-    "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Raufboldschleim ab. NL slimeboundmod:Kommando !M! Mal.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Raufboldschleim ab. NL slimeboundmod:Kommando drei Mal."
+    "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Raufboldschleim *ab. NL slimeboundmod:Kommando !M! Mal.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Raufboldschleim *ab. NL slimeboundmod:Kommando drei Mal."
   },
   "Slimebound:SplitGreed": {
     "NAME": "Gierschleim",
-    "DESCRIPTION": "Behalten. NL Beschwöre den Gierschleim. Zählt als slimeboundmod:Abspaltung. NL Erschöpft."
+    "DESCRIPTION": "Behalten. NL Beschwöre den *Gierschleim. Zählt als slimeboundmod:Abspaltung. NL Erschöpft."
   },
   "Slimebound:SplitLeeching": {
     "NAME": "Beschützerschleim",
-    "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Beschützerschleim ab. NL slimeboundmod:Kommando !M! Mal.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Beschützerschleim ab. NL slimeboundmod:Kommando drei Mal."
+    "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Beschützerschleim *ab. NL slimeboundmod:Kommando !M! Mal.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Beschützerschleim *ab. NL slimeboundmod:Kommando drei Mal."
   },
   "Slimebound:SplitMire": {
     "NAME": "Schlammschleim",
-    "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Schlammschleim ab. NL slimeboundmod:Kommando !M! Mal.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Schlammschleim ab. NL slimeboundmod:Kommando drei Mal."
+    "DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Schlammschleim *ab. NL slimeboundmod:Kommando !M! Mal.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Spalte einen slimeboundmod:Schlammschleim *ab. NL slimeboundmod:Kommando drei Mal."
   },
   "Slimebound:SplitScrap": {
     "NAME": "Schrottschleim",
-    "DESCRIPTION": "Behalten. NL Beschwöre den Schrottschleim. Zählt als slimeboundmod:Abspaltung. NL Erschöpft."
+    "DESCRIPTION": "Behalten. NL Beschwöre den *Schrottschleim. Zählt als slimeboundmod:Abspaltung. NL Erschöpft."
   },
   "Slimebound:SplitSpecialist": {
     "NAME": "Spezialschleim",
@@ -358,8 +358,8 @@
   },
   "Slimebound:TagTeam": {
     "NAME": "Spaltangriff",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL slimeboundmod:Spalte einen zufälligen Schleim ab. NL slimeboundmod:Kommando !M! Mal.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL slimeboundmod:Spalte einen zufälligen slimeboundmod:Spezialisten ab. NL slimeboundmod:Kommando !M! Mal."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL slimeboundmod:Spalte einen zufälligen Schleim *ab. NL slimeboundmod:Kommando !M! Mal.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL slimeboundmod:Spalte einen zufälligen slimeboundmod:Spezialisten *ab. NL slimeboundmod:Kommando !M! Mal."
   },
   "Slimebound:Teamwork": {
     "NAME": "Teamarbeit",
