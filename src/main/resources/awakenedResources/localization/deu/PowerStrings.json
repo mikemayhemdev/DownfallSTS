@@ -114,7 +114,7 @@
     ]
   },
   "awakened:StrengthReturnPower": {
-    "NAME": "Aufgerissen",
+    "NAME": "Aufgeschlitzt",
     "DESCRIPTIONS": [
       "Wenn du diesen Gegner angreifst erhältst du #b",
       " #ytemporäre #yStärke [REMOVE_SPACE]."
@@ -201,7 +201,7 @@
     ]
   },
   "awakened:AphoticFountPower": {
-    "NAME": "Aphotische Quellen",
+    "NAME": "Gefrorene Quellen",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du #yKryostase spielst #b",
       " #yPanzerrüstung [REMOVE_SPACE]."

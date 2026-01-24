@@ -322,7 +322,7 @@
     "DESCRIPTION": "awakened:Aufrufen. NL *Blitzstrahlen fügen !M! mehr Schaden zu."
   },
   "awakened:AphoticFount": {
-    "NAME": "Aphotische Quellen",
+    "NAME": "Gefrorene Quellen",
     "DESCRIPTION": "awakened:Aufrufen. NL Erhalte immer wenn du *Kryostase spielst !M! expansioncontent:Panzerrüstung."
   },
   "awakened:Bloodthirst": {
@@ -335,7 +335,7 @@
     "UPGRADE_DESCRIPTION": "Spiele eine Karte aus dem Nachziehstapel und mische *Leeren in Höhe ihrer Kosten hinein."
   },
   "awakened:SplitWide": {
-    "NAME": "Aufreißen",
+    "NAME": "Aufschlitzen",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte immer wenn du diesen Gegner angreifst !M! temporäre Stärke. NL Erschöpft."
   },
   "awakened:Spellshield": {
@@ -380,7 +380,7 @@
     "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Mische eine *Leere in den Nachziehstapel."
   },
   "awakened:SignInBlood": {
-    "NAME": "Mit Blut unterschreiben",
+    "NAME": "Blutschwur",
     "DESCRIPTION": "Erleide !awakened:m2! Schaden. NL Ziehe !M! Karten. NL Erhalte !awakened:m2! Stärke. NL Erschöpft."
   },
   "awakened:SpreadingSpores": {

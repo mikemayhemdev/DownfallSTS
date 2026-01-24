@@ -160,7 +160,7 @@
     ]
   },
   "sneckomod:LacerateDebuff": {
-    "NAME": "Aufgeschlitzt",
+    "NAME": "Offene Wunden",
     "DESCRIPTIONS": [
       "Immer wenn du in diesem Zug einen Debuff auf diesen Gegner anwendest, wende zusätzlich #b",
       " #yToxin an.",
