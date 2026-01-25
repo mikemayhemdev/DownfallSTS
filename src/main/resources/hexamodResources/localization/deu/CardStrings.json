@@ -274,7 +274,7 @@
     ]
   },
   "hexamod:RadiantFlame": {
-    "NAME": "Feuerumwandlung",
+    "NAME": "Flammentausch",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Entferne das *Seelenfeuer des Gegners um !M! hexamod:Intensität zu erhalten."
   },
   "hexamod:RainOfEmbers": {
