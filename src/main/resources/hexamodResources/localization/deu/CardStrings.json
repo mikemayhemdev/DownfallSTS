@@ -41,7 +41,7 @@
     "DESCRIPTION": "Wende !burny! hexamod:Seelenfeuer an - zweimal, wenn der Gegner bereits hexamod:Seelenfeuer hat."
   },
   "hexamod:CatchUp": {
-    "NAME": "Aufholen",
+    "NAME": "Spätzünder",
     "DESCRIPTION": "hexamod:Entzünde die vorherige Geisterflamme !M! Mal. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "hexamod:Entzünde die vorherige Geisterflamme !M! Mal."
   },
@@ -84,7 +84,7 @@
     "UPGRADE_DESCRIPTION": "hexamod:Entzünde die aktuelle Geisterflamme. NL Bewege dich hexamod:vorwärts."
   },
   "hexamod:Firestarter": {
-    "NAME": "Brandstiftung",
+    "NAME": "Brandsatz",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu und wende !burny! hexamod:Seelenfeuer auf sie an."
   },
   "hexamod:FlamesFromBeyond": {
@@ -131,7 +131,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn eine Karte in diesem Zug erschöpft wird, wende !burny! hexamod:Seelenfeuer auf den Gegner an."
   },
   "hexamod:InstantInferno": {
-    "NAME": "Instant-Inferno",
+    "NAME": "Instant Inferno",
     "DESCRIPTION": "Behalten. NL Wende !burny! hexamod:Seelenfeuer an. Wechsle zur Inferno Geisterflamme und hexamod:entzünde sie. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Wende !burny! hexamod:Seelenfeuer an. NL hexamod:Entzünde die Inferno Geisterflamme. NL Erschöpft."
   },
@@ -274,7 +274,7 @@
     ]
   },
   "hexamod:RadiantFlame": {
-    "NAME": "Spätzündung",
+    "NAME": "Feuerumwandlung",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Entferne das *Seelenfeuer des Gegners um !M! hexamod:Intensität zu erhalten."
   },
   "hexamod:RainOfEmbers": {
@@ -402,7 +402,7 @@
     "DESCRIPTION": "Wende immer wenn du eine Geisterflamme hexamod:entzündest !M! hexamod:Seelenfeuer auf ALLE Gegner an."
   },
   "hexamod:WildfireWeapon": {
-    "NAME": "Waldbrand-Waffe",
+    "NAME": "Brandstiftung",
     "DESCRIPTION": "Immer wenn du ungeblockten Angriffsschaden zufügst, wende !M! hexamod:Seelenfeuer an.",
     "Translate_note": "not used not used not used not used not used not used not used not used not used not used not used not used "
   },

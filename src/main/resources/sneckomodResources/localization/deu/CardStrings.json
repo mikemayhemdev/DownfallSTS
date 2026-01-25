@@ -496,12 +496,12 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 expansioncontent:Panzerrüstung. NL sneckomod:Überschuss: Erhalte stattdessen !M! expansioncontent:Panzerrüstung."
   },
   "sneckomod:OtherworldlySlash": {
-    "NAME": "Entrückter Hieb",
+    "NAME": "Exotischer Hieb",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn du in diesem Zug eine Karte einer sneckomod:Fremdklasse gespielt hast, füge erneut !D! Schaden zu. NL sneckomod:Geschenk: Gewöhnlich.",
     "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wenn du in diesem Zug eine Karte einer sneckomod:Fremdklasse gespielt hast, füge erneut !D! Schaden zu."
   },
   "sneckomod:BeyondArmor": {
-    "NAME": "Jenseitige Rüstung",
+    "NAME": "Fremde Rüstung",
     "DESCRIPTION": "Erhalte !B! Block. NL Nimm !M! zufällige Karten aus sneckomod:Fremdklassen vom Nachziehstapel auf die Hand. NL sneckomod:Geschenk: Gewöhnlich.",
     "DESCRIPTION_BATTLE": "Erhalte !B! Block. NL Nimm !M! zufällige Karten aus sneckomod:Fremdklassen vom Nachziehstapel auf die Hand."
   },
@@ -609,7 +609,7 @@
     "UPGRADE_DESCRIPTION": "Wende !M! sneckomod:Toxin auf ALLE Gegner an. NL Erhalte eine *Lähmende *Wolke+. NL Erschöpft."
   },
   "sneckomod:SerpentineSleuth": {
-    "NAME": "Schlangendetektiv",
+    "NAME": "Vipernmacht",
     "DESCRIPTION": "Flüchtig. NL Erhalte immer wenn du eine Macht ausspielst [E] . NL sneckomod:Geschenk: Seltene Macht.",
     "DESCRIPTION_BATTLE": "Flüchtig. NL Erhalte immer wenn du eine Macht ausspielst [E]."
   }
