@@ -1,7 +1,7 @@
 {
   "sneckomod:Unknown": {
     "TEXT": [
-      "Unidentifiziert",
+      "Unidentifizierte",
       " verbesserte ",
       "Zu Beginn des Kampfes nehmen unidentifizierte Karten die Gestalt einer zufälligen Karte an, die ins Schema passt.",
       " NL Gewählte Klassen:",
@@ -17,7 +17,7 @@
   "sneckomod:UnknownClass": {
     "TEXT": [
       "???",
-      "*Unidentifiziert ",
+      "*Unidentifizierte ",
       " Karte.",
       "Character",
       " ",
