@@ -227,7 +227,7 @@
     "DESCRIPTIONS": [
       "Immer wenn du eine #yMacht spielst, erhält das Defekte #b",
       " #yFokus [REMOVE_SPACE].",
-      " Die #yStärke des Defekten beeinflusst auch sein #yFocus [REMOVE_SPACE]."
+      " Die #yStärke des Defekten beeinflusst auch sein #yFokus [REMOVE_SPACE]."
     ]
   },
   "downfall:DefectBiasCuriosity": {

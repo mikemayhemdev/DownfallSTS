@@ -201,7 +201,8 @@
     "NAME": "Exotische Form",
     "DESCRIPTION": "Flüchtig. Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast. NL sneckomod:Geschenk: Selten.",
     "UPGRADE_DESCRIPTION": "Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast. NL sneckomod:Geschenk: Selten.",
-    "DESCRIPTION_BATTLE": "Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast."
+    "DESCRIPTION_BATTLE": "Flüchtig. NL Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast."
   },
   "sneckomod:SlitherThrough": {
     "NAME": "Durchschlängeln",
