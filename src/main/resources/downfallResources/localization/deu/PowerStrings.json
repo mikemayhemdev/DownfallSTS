@@ -107,8 +107,8 @@
   "downfall:WatcherSkillPower": {
     "NAME": "Zwiespalt ausnutzen",
     "DESCRIPTIONS": [
-      "Wenn du einen #yAngriff spielst, erhält die Seherin für diesen Zug temporär #b",
-      " #yGeschicklichkeit, und temporär #b",
+      "Wenn du einen #yAngriff spielst, erhält die Seherin für diesen Zug #ytemporär #b",
+      " #yGeschicklichkeit, und #ytemporär #b",
       " #yStärke für das Ausspielen einer #yFertigkeit, und #b",
       " von Beiden wenn du eine #yMacht spielst.",
       "Wenn du in einem Zug mehr als #b",

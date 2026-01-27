@@ -66,7 +66,7 @@
       "commands"
     ],
     "PROPER_NAME": "Kommando",
-    "DESCRIPTION": "Gibt Schleimuntertanen das Angriffskommando. Falls nicht näher spezifiziert, greift nur der führende Schleimuntertan an."
+    "DESCRIPTION": "Gibt Schleimuntertanen das Angriffskommando. Falls nicht näher spezifiziert, greift nur der führende (jüngste) Schleimuntertan an."
   },
   {
     "NAMES": [
@@ -194,7 +194,7 @@
       "protector_slime"
     ],
     "PROPER_NAME": "Dornenschleim",
-    "DESCRIPTION": "Fügt mit seinem Angriff #b4 Schaden zu, und gibt dir danach #b4 temporäre #yStacheln."
+    "DESCRIPTION": "Fügt mit seinem Angriff #b4 Schaden zu, und gibt dir danach #b4 #ytemporäre #yStacheln."
   },
   {
     "NAMES": [

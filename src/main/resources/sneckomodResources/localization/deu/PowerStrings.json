@@ -10,9 +10,9 @@
   "sneckomod:CheapStockPower": {
     "NAME": "Ladenhüter",
     "DESCRIPTIONS": [
-      "#yIrre zu Beginn deines Zuges die teuerste Karte auf der Hand.",
-      "#yIrre zu Beginn deines Zuges die teuersten #b",
-      " Karten auf der Hand."
+      "#yIrre zu Beginn deines Zuges eine zufällige Handkarte mit den höchsten Kosten.",
+      "#yIrre zu Beginn deines Zuges #b",
+      " zufällige Handkarte mit den höchsten Kosten."
     ]
   },
   "sneckomod:CheatPower": {

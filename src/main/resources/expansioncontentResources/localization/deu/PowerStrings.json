@@ -118,11 +118,11 @@
     ]
   },
   "expansioncontent:ReveriePower":{
-  "NAME": "Nostalgie",
+  "NAME": "Déjà-vu",
   "DESCRIPTIONS": [
-    "Sieh dir zu Beginn deines Zuges die oberste Karte deines Abwurfstapels an und nimm sie auf die Hand.",
-    "Sieh dir zu Beginn deines Zuges die obersten #b",
-    " Karten deines Abwurfstapels an und nimm eine auf die Hand.",
+    "Schnapp dir zu Beginn deines Zuges die oberste Karte des Abwurfstapels.",
+    "Schnapp dir zu Beginn deines Zuges eine der obersten #b",
+    " Karten des Abwurfstapels.",
     "Wähle eine Karte, die du auf die Hand nimmst."
   ]
 },

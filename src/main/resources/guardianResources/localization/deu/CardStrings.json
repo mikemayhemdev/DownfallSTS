@@ -9,18 +9,18 @@
   },
   "Guardian:Gem_Red": {
     "NAME": "Rubin",
-    "DESCRIPTION": "guardianmod:Juwel. NL Erhalte 2 temporäre Stärke.",
-    "UPGRADE_DESCRIPTION": "Erhalte 2 temp. Stärke."
+    "DESCRIPTION": "guardianmod:Juwel. NL Erhalte 2 *temporäre Stärke.",
+    "UPGRADE_DESCRIPTION": "Erhalte 2 *temp. Stärke."
   },
   "Guardian:Gem_Green": {
     "NAME": "Smaragd",
-    "DESCRIPTION": "guardianmod:Juwel. NL Erhalte 2 temporäre Geschicklichkeit.",
-    "UPGRADE_DESCRIPTION": "Erhalte 2 temp. Geschicklichkeit."
+    "DESCRIPTION": "guardianmod:Juwel. NL Erhalte 2 *temporäre Geschicklichkeit.",
+    "UPGRADE_DESCRIPTION": "Erhalte 2 *temp. Geschicklichkeit."
   },
   "Guardian:Gem_Lightblue": {
     "NAME": "Turmalin",
-    "DESCRIPTION": "guardianmod:Juwel. NL Erhalte 4 temporäre Stacheln.",
-    "UPGRADE_DESCRIPTION": "Erhalte 4 temp. Stacheln."
+    "DESCRIPTION": "guardianmod:Juwel. NL Erhalte 4 *temporäre Stacheln.",
+    "UPGRADE_DESCRIPTION": "Erhalte 4 *temp. Stacheln."
   },
   "Guardian:Gem_White": {
     "NAME": "Opal",
@@ -39,7 +39,7 @@
   },
   "Guardian:ChargeUp": {
     "NAME": "Aufladen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte im nächsten Zug !M! temporäre Stärke."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte im nächsten Zug !M! *temporäre Stärke."
   },
   "Guardian:DonusPower": {
     "NAME": "Überladen",
@@ -48,7 +48,7 @@
   },
   "Guardian:DecasProtection": {
     "NAME": "Antike Macht",
-    "DESCRIPTION": "Erhalte !M! temporäre Stärke und !M! temporäre Geschicklichkeit."
+    "DESCRIPTION": "Erhalte !M! *temporäre Stärke und !M! *temporäre Geschicklichkeit."
   },
   "Guardian:FierceBash": {
     "NAME": "Erbitterter Hieb",
@@ -86,7 +86,7 @@
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "Gigastrahl",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. Stärke beeinflusst Gigastrahl NL !M! mal. NL Übergehe deinen nächsten Zug."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. Stärke beeinflusst Gigastrahl NL !M! Mal. NL Übergehe deinen nächsten Zug."
   },
   "Guardian:BronzeArmor": {
     "NAME": "Belastbarer Panzer",
@@ -140,8 +140,8 @@
   },
   "Guardian:CompilePackage": {
     "NAME": "Paket kompilieren",
-    "DESCRIPTION": "Lege ein *Paket in guardianmod:Stasis. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Lege ein verbessertes *Paket in guardianmod:Stasis. NL Erschöpft.",
+    "DESCRIPTION": "Lege 1 von 3 *Paketen in guardianmod:Stasis. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Lege 1 von 3 verbesserten *Paketen in guardianmod:Stasis. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle ein Paket."
     ]
@@ -262,8 +262,8 @@
   },
   "Guardian:PiercingHide": {
     "NAME": "Stechende Haut",
-    "DESCRIPTION": "Erhalte !B! Block und !M! temporäre Stacheln. NL guardianmod:Abhärten 3.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block und !M! temporäre Stacheln. NL guardianmod:Abhärten 4."
+    "DESCRIPTION": "Erhalte !B! Block und !M! *temporäre Stacheln. NL guardianmod:Abhärten 3.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block und !M! *temporäre Stacheln. NL guardianmod:Abhärten 4."
   },
   "Guardian:ShieldSpikes": {
     "NAME": "Stachelschild",
@@ -379,7 +379,7 @@
   },
   "Guardian:BronzeOrb": {
     "NAME": "Orb-Assistenz",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL guardianmod:Härte in Höhe des ungeblockten Schadens *ab. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL guardianmod:Härte dich in Höhe des ungeblockten Schadens *ab. NL Erschöpft."
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Racheprotokoll",
@@ -423,7 +423,7 @@
   },
   "Guardian:MassOfStacheln": {
     "NAME": "Stachelmasse",
-    "DESCRIPTION": "Erhalte !M! temporäre Stacheln. NL Erschöpft wenn du mindestens 1 Artefakt hast."
+    "DESCRIPTION": "Erhalte !M! *temporäre Stacheln. NL Erschöpft wenn du mindestens 1 Artefakt hast."
   },
   "Guardian:MassTimeBomb": {
     "NAME": "Bombenmasse",

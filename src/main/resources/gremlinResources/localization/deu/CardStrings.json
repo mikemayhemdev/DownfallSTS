@@ -11,8 +11,8 @@
 
   "Gremlin:Astound": {
     "NAME": "Erstaunen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Schutz wenn du mindestens 3 gremlin:Esprit hast.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Schutz+ wenn du mindestens 3 gremlin:Esprit hast."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Schutz Karten wenn du mindestens 3 gremlin:Esprit hast.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Schutz+ Karten wenn du mindestens 3 gremlin:Esprit hast."
   },
 
   "Gremlin:Bang": {
@@ -117,7 +117,7 @@
 
   "Gremlin:Erupt": {
     "NAME": "Wutausbruch",
-    "DESCRIPTION": "Erhalte !M! temporäre Stärke. NL Erschöpft."
+    "DESCRIPTION": "Erhalte !M! *temporäre Stärke. NL Erschöpft."
   },
 
   "Gremlin:Exacerbate": {
@@ -127,13 +127,13 @@
 
   "Gremlin:FairyDust": {
     "NAME": "Feenstaub",
-    "DESCRIPTION": "Erhalte !M! *Schutz und ziehe !M! Karten. NL Erschöpft."
+    "DESCRIPTION": "Erhalte !M! *Schutz Karten und ziehe !M! Karten. NL Erschöpft."
   },
 
   "Gremlin:SleeveOfAces": {
     "NAME": "Kartentrick",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte Messer in Höhe deines gremlin:Esprits.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte Messer+ in Höhe deines gremlin:Esprits."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte Messer in Anzahl der Höhe deines gremlin:Esprits.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte Messer+ in Anzahl der Höhe deines gremlin:Esprits."
   },
 
   "Gremlin:FatGremlin": {
@@ -169,7 +169,7 @@
 
   "Gremlin:FollowThrough": {
     "NAME": "Für den Anführer!",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! temporäre Stärke."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! *temporäre Stärke."
   },
 
   "Gremlin:Fury": {
@@ -179,14 +179,14 @@
 
   "Gremlin:Glimmer": {
     "NAME": "Glimmer",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 *Schutz.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 *Schutz+."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 *Schutz Karten.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 *Schutz+ Karten."
   },
 
   "Gremlin:GlitterGuard": {
     "NAME": "Glitterschutz",
-    "DESCRIPTION": "Erhalte !M! *Schutz. NL gremlin:Wechsle zum gremlin:Schildgremlin.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! *Schutz+. NL gremlin:Wechsle zum gremlin:Schildgremlin."
+    "DESCRIPTION": "Erhalte !M! *Schutz Karten. NL gremlin:Wechsle zum gremlin:Schildgremlin.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! *Schutz+ Karten. NL gremlin:Wechsle zum gremlin:Schildgremlin."
   },
 
   "Gremlin:GremlinArms": {
@@ -197,7 +197,7 @@
 
   "Gremlin:GremlinMeal": {
     "NAME": "Muskelspiel",
-    "DESCRIPTION": "Erhalte !M! temporäre Stärke."
+    "DESCRIPTION": "Erhalte !M! *temporäre Stärke."
   },
 
   "Gremlin:GremlinDance": {
@@ -216,8 +216,8 @@
 
   "Gremlin:GremlinToss": {
     "NAME": "Gremlinweitwurf",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL Füge Schaden in Höhe der Summe des aktuellen Blocks und *temporären *TP zu.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL Füge Schaden in Höhe der Summe des aktuellen Blocks und *temporären *TP zu.",
+    "DESCRIPTION": "Erhalte !M! *temporäre *TP. Füge Schaden in Höhe der Summe des aktuellen Blocks und der expansioncontent:temporären_TP zu.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! *temporäre *TP. Füge Schaden in Höhe der Summe des aktuellen Blocks und der expansioncontent:temporären_TP zu.",
     "EXTENDED_DESCRIPTION": [" NL (Fügt !D! Schaden zu.)"]
   },
 
@@ -228,7 +228,7 @@
 
   "Gremlin:Heckle": {
     "NAME": "Zwischenrufen",
-    "DESCRIPTION": "Erhalte jedes Mal wenn du einen Gegner debuffst !M! expansioncontent:temporäre_TP."
+    "DESCRIPTION": "Erhalte jedes Mal, wenn du einen Gegner debuffst, !M! expansioncontent:temporäre_TP."
   },
 
   "Gremlin:InfiniteBlocks": {
@@ -239,12 +239,12 @@
 
   "Gremlin:IrksomeBlow": {
     "NAME": "Lästiger Hieb",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Stärke beeinflusst den Lästigen Hieb !M! Mal."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Stärke beeinflusst den *Lästigen *Hieb !M! Mal."
   },
 
   "Gremlin:Irritability": {
     "NAME": "Reizbarkeit",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! temporäre Stacheln. NL gremlin:Wechsle zum gremlin:Wütenden_Gremlin."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *temporäre Stacheln. NL gremlin:Wechsle zum gremlin:Wütenden_Gremlin."
   },
 
   "Gremlin:Jeer": {
@@ -269,8 +269,8 @@
 
   "Gremlin:MakeshiftArmor": {
     "NAME": "Schrottrüstung",
-    "DESCRIPTION": "Erhalte jedes Mal wenn du 7 Angriffe spielst 1 Artefakt.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! Artefakt. NL Erhalte jedes Mal wenn du 7 Angriffe spielst 1 Artefakt."
+    "DESCRIPTION": "Erhalte jedes Mal, wenn du 7 Angriffe spielst, 1 Artefakt.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! Artefakt. NL Erhalte jedes Mal, wenn du 7 Angriffe spielst, 1 Artefakt."
   },
 
   "Gremlin:Mockery": {
@@ -286,7 +286,7 @@
 
   "Gremlin:Nob": {
     "NAME": "Aristo-Form",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL Mutiere zum gremlin:Gremlin-Aristo bis deine *temporären *TP verbraucht sind."
+    "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL Mutiere zum gremlin:Gremlin-Aristo, bis deine *temporären *TP verbraucht sind."
   },
 
   "Gremlin:NobChoice": {
@@ -330,7 +330,7 @@
 
   "Gremlin:PourSalt": {
     "NAME": "Wunde salzen",
-    "DESCRIPTION": "Füge !D! Schaden zu. Wenn der Gegner Schwach ist, reduziere es um 1 um !M! Messer zu erhalten."
+    "DESCRIPTION": "Füge !D! Schaden zu. Wenn der Gegner Schwach ist, reduziere es um 1, um !M! Messer zu erhalten."
   },
 
   "Gremlin:Presto": {
@@ -345,7 +345,7 @@
 
   "Gremlin:ProperTools": {
     "NAME": "Adäquate Waffe",
-    "DESCRIPTION": "Füge !D! Schaden zu. Erhalte !M! *Schutz wenn der Gegner angreifen will. Erhalte anderenfalls !M! Messer."
+    "DESCRIPTION": "Füge !D! Schaden zu. Erhalte !M! *Schutz Karten wenn der Gegner angreifen will. Erhalte anderenfalls !M! Messer."
   },
 
   "Gremlin:RageBreak": {
@@ -415,8 +415,8 @@
 
   "Gremlin:ShowOfHands": {
     "NAME": "Handzeichen",
-    "DESCRIPTION": "Erhalte !M! Block für jede Karte auf der Hand.",
-    "UPGRADE_DESCRIPTION": "Ziehe eine Karte. NL Erhalte !M! Block für jede Karte auf der Hand."
+    "DESCRIPTION": "Erhalte !M! Block pro Handkarte.",
+    "UPGRADE_DESCRIPTION": "Ziehe eine Karte. NL Erhalte !M! Block pro Handkarte."
   },
 
   "Gremlin:ShowStopper": {

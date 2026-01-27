@@ -100,7 +100,7 @@
     "DESCRIPTION": [
       "Fügt mit seinem Angriff #b",
       " Schaden zu, und gibt dir danach #b",
-      " temporäre #yStacheln [REMOVE_SPACE]."
+      " #ytemporäre #yStacheln [REMOVE_SPACE]."
     ]
   },
   "Slimebound:DrawingSlime": {

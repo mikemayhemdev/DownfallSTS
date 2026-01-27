@@ -67,16 +67,16 @@
     "TRANSLATOR_NOTE:": "Not used in game  Not used in game  Not used in game  Not used in game  Not used in game  Not used in game   "
   },
   "hexamod:EmpoweredFlame": {
-    "NAME": "Intensive Flamme",
+    "NAME": "Feuer und Flamme",
     "DESCRIPTION": "Erhalte !M! hexamod:Intensität."
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Reise zum Äther",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Mische[] !M! [#e087a4]zufällige[] [#e087a4]Reinkarnation [#e087a4]Karte[] [#e087a4]in[] [#e087a4]deinen[] [#e087a4]Nachziehstapel[] und nimm eine weitere auf die Hand."
+    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Setze[] !M! [#e087a4]zufällige[] [#e087a4]Reinkarnation [#e087a4]Karte[] [#e087a4]ein[] und nimm eine weitere auf die Hand."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra knusprig",
-    "DESCRIPTION": "Wenn hexamod:Seelenfeuer an Gegnern detoniert, wende nach der Detonation !M! hexamod:Seelenfeuer auf sie an."
+    "DESCRIPTION": "Wenn hexamod:Seelenfeuer detoniert, dann wende umgehend nach der Detonation !M! hexamod:Seelenfeuer an."
   },
   "hexamod:FastForward": {
     "NAME": "Vorspulen",
@@ -137,7 +137,7 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Geisterpeitsche",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Füge[] !D! [#e087a4]Schaden[] [#e087a4]zu.[] NL Erhöhe den Schaden um !M! für jede andere flüchtige Karte auf der Hand.",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Füge[] !D! [#e087a4]Schaden[] [#e087a4]zu.[] NL Der Schaden wird für jede andere flüchtige Handkarte um !M! erhöht.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -183,7 +183,7 @@
     "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karte. NL ",
     "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karten. NL ",
     "EXTENDED_DESCRIPTION": [
-      "Ziehe weiter bis du eine nicht-Flüchtige Karte gezogen hast."
+      "Ziehe weiter, bis du eine nicht-Flüchtige Karte gezogen hast."
     ]
   },
   "hexamod:HauntingEcho": {
@@ -200,8 +200,8 @@
   },
   "hexamod:HeatShield": {
     "NAME": "Hitzeschild",
-    "DESCRIPTION": "Erhalte Block in Höhe des gegnerischen *Seelenfeuers. Verzögere die Detonation seines *Seelenfeuers um 1 Zug. Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte Block in Höhe des gegnerischen *Seelenfeuers. Verzögere die Detonation seines *Seelenfeuers um 1 Zug.",
+    "DESCRIPTION": "Erhalte Block in Höhe des *Seelenfeuers. Verzögere die Detonation des *Seelenfeuers um 1 Zug. Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte Block in Höhe des *Seelenfeuers. Verzögere die Detonation des *Seelenfeuers um 1 Zug.",
     "EXTENDED_DESCRIPTION": [
       " NL (Erhalte !B! Block.)"
     ]
@@ -228,8 +228,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Würdiges Opfer",
-    "DESCRIPTION": "Erschöpfe 2 Karten. NL Auf diese Weise erschöpfte Angriffe und Fertigkeiten werden in den jeweils anderen Typ transformiert.",
-    "UPGRADE_DESCRIPTION": "Erschöpfe 2 Karten. NL Auf diese Weise erschöpfte Angriffe und Fertigkeiten werden in den jeweils anderen Typ transformiert und verbessert.",
+    "DESCRIPTION": "Erschöpfe 2 Karten. NL Erschöpfte Angriffe und Fertigkeiten werden in den jeweils anderen Typ expansioncontent:transformiert.",
+    "UPGRADE_DESCRIPTION": "Erschöpfe 2 Karten. NL Erschöpfte Angriffe und Fertigkeiten werden in den jeweils anderen Typ expansioncontent:transformiert und verbessert.",
     "EXTENDED_DESCRIPTION": [
       "Erschöpfe für ein würdiges Opfer."
     ]
@@ -267,8 +267,8 @@
   },
   "hexamod:Premonition": {
     "NAME": "Vorahnung",
-    "DESCRIPTION": "Wähle einen Kartentyp. Spiele eine zufällige Karte dieses Typen aus deinem Nachziehstapel. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wähle einen Kartentyp. Spiele eine zufällige Karte dieses Typen aus deinem Nachziehstapel.",
+    "DESCRIPTION": "Wähle einen Kartentyp. Spiele eine zufällige Karte dieses Typen aus dem Nachziehstapel. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wähle einen Kartentyp. Spiele eine zufällige Karte dieses Typen aus dem Nachziehstapel.",
     "EXTENDED_DESCRIPTION": [
       "zum Ausspielen und Erschöpfen."
     ]
@@ -337,11 +337,11 @@
   },
   "hexamod:BrightRitual": {
     "NAME": "Grelles Ritual",
-    "DESCRIPTION": "Setze das Geisterrad zurück. NL Erhalte [E] und ziehe 1 Karte für jede Geisterflamme, die hexamod:gelöscht wurde. NL Erschöpft."
+    "DESCRIPTION": "Setze das Geisterrad zurück. NL Erhalte [E] und ziehe 1 Karte für jede hexamod:gelöschte Geisterflamme. Erschöpft."
   },
   "hexamod:NaughtySpirit": {
     "NAME": "Frecher Geist",
-    "DESCRIPTION": "Wende !burny! hexamod:Seelenfeuer an. NL Wenn die aktuelle Geisterflamme hexamod:entzündet ist, nimm diese Karte wieder auf die Hand und bewege dich hexamod:rückwärts."
+    "DESCRIPTION": "Wende !burny! hexamod:Seelenfeuer an. Ist die aktuelle Geisterflamme hexamod:entzündet, nimm diese Karte auf die Hand und bewege dich hexamod:rückwärts."
   },
   "hexamod:StepThrough": {
     "NAME": "Durchschreiten",
@@ -385,12 +385,12 @@
   },
   "hexamod:TurnItUp": {
     "NAME": "Aufgedreht",
-    "DESCRIPTION": "Erhalte für diesen Zug temporär !M! hexamod:Intensität, !M! Stärke, und !M! Geschicklichkeit.",
+    "DESCRIPTION": "Erhalte für diesen Zug *temporär !M! hexamod:Intensität, !M! Stärke, und !M! Geschicklichkeit.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte für diesen Zug temporär !M! hexamod:Intensität, !M! Stärke, und !M! Geschicklichkeit."
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Geister rufen",
-    "DESCRIPTION": "Füge einem zufälligen Gegner !D! Schaden zu. NL Wiederhole das für jede Karte die im letzten Zug *erschöpft wurde.",
+    "DESCRIPTION": "Füge einem zufälligen Gegner !D! Schaden zu. NL Wiederhole das für jede Karte, die im letzten Zug *erschöpft wurde.",
     "UPGRADE_DESCRIPTION": " NL (Trifft !M! Mal.)"
   },
   "hexamod:UnlimitedPower": {
@@ -457,8 +457,8 @@
   },
   "hexamod:SeventhEye": {
     "NAME": "Siebtes Auge",
-    "DESCRIPTION": "Schnapp dir eine Karte vom Nachziehstapel. NL Bewege dich auf eine zufällige Geisterflamme. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Schnapp dir eine Karte vom Nachziehstapel. NL Bewege dich auf eine zufällige Geisterflamme. NL Erschöpft."
+    "DESCRIPTION": "Schnapp dir eine Karte vom Nachziehstapel. NL Spring auf eine zufällige Geisterflamme. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Schnapp dir eine Karte vom Nachziehstapel. NL Spring auf eine zufällige Geisterflamme. NL Erschöpft."
   },
   "hexamod:FlameDevourer": {
     "NAME": "Pyrovor",
@@ -488,7 +488,7 @@
   },
   "hexamod:SpectralSpark": {
     "NAME": "Frecher Geist",
-    "DESCRIPTION": "Wende !burny! hexamod:Seelenfeuer an. NL Wenn die aktuelle Geisterflamme hexamod:entzündet ist, nimm diese Karte wieder auf die Hand und bewege dich hexamod:rückwärts."
+    "DESCRIPTION": "Wende !burny! hexamod:Seelenfeuer an. Ist die aktuelle Geisterflamme hexamod:entzündet, nimm diese Karte auf die Hand und bewege dich hexamod:rückwärts."
   },
   "hexamod:Toasty": {
     "NAME": "Flackernde Flamme",
@@ -514,7 +514,7 @@
     "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karte. NL ",
     "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karten. NL ",
     "EXTENDED_DESCRIPTION": [
-      "Ziehe weiter bis du eine nicht-Flüchtige Karte gezogen hast."
+      "Ziehe weiter, bis du eine nicht-Flüchtige Karte gezogen hast."
     ]
   },
   "hexamod:InspiringFlames": {

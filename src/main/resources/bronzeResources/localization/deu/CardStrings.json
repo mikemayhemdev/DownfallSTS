@@ -207,7 +207,7 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "Suchen-Ersetzen",
-    "DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel und lege ein *Benommen an der Stelle von der du die Karte genommen hast. NL Erschöpft.",
+    "DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel und lege ein *Benommen an ihrer Stelle ein. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle."
@@ -346,8 +346,8 @@
   },
   "bronze:Mutator": {
     "NAME": "Variable",
-    "DESCRIPTION": "Erhalte !M! Stärke. NL *Transformiere einen Status auf der Hand in eine Kopie dieser Karte.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte !M! Stärke. NL *Transformiere einen Status auf der Hand in eine Kopie dieser Karte."
+    "DESCRIPTION": "Erhalte !M! Stärke. NL expansioncontent:Transformiere einen Status auf der Hand in eine Kopie dieser Karte.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte !M! Stärke. NL expansioncontent:Transformiere einen Status auf der Hand in eine Kopie dieser Karte."
   },
   "bronze:NullPointer": {
     "NAME": "Nullpointer",
@@ -397,7 +397,7 @@
   },
   "bronze:Refactor": {
     "NAME": "Überschreiben",
-    "DESCRIPTION": "Spähe !M!. NL Erschöpfe alle abgeworfenen Statuskarten. NL Erhalte !B! Block für jeden erschöpften Status."
+    "DESCRIPTION": "Spähe !M!. NL Erschöpfe abgeworfene Statuskarten. NL Erhalte pro erschöpftem Status !B! Block."
   },
   "bronze:Repair": {
     "NAME": "Reparieren",
@@ -468,8 +468,8 @@
   },
   "bronze:SpaghettiCode": {
     "NAME": "Spaghetticode",
-    "DESCRIPTION": "Wähle 1 von 3 zufälligen Karten zum bronze:kodieren. Wiederhole das bis eine Funktion kompiliert. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wähle 1 von 3 zufälligen Karten zum bronze:kodieren. Wiederhole das bis eine Funktion kompiliert."
+    "DESCRIPTION": "Wähle 1 von 3 zufälligen Karten zum bronze:kodieren. Wiederhole das, bis eine Funktion kompiliert. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wähle 1 von 3 zufälligen Karten zum bronze:kodieren. Wiederhole das, bis eine Funktion kompiliert."
   },
   "bronze:Strike": {
     "NAME": "Schlag",

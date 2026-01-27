@@ -3,7 +3,7 @@
     "NAME": "Aufladen",
     "DESCRIPTIONS": [
       "Erhalte zu Beginn des nächsten Zuges #b",
-      " temporäre #yStärke."
+      " #ytemporäre #yStärke."
     ]
   },
   "Guardian:StunnedPower": {
@@ -80,7 +80,7 @@
     "NAME": "Anvisiert",
     "DESCRIPTIONS": [
       "Immer wenn diese Gegner Schaden erleidert erhältst du für diesen Zug #b",
-      " temporäre #yStärke [REMOVE_SPACE]."
+      " #ytemporäre #yStärke [REMOVE_SPACE]."
     ]
   },
   "Guardian:LoseThornsPower": {

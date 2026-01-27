@@ -90,7 +90,7 @@
   "Gremlin:Heckle": {
     "NAME": "Zwischenrufe",
     "DESCRIPTIONS": [
-      "Erhalte jedes Mal wenn du einen Gegner debuffst #b",
+      "Erhalte jedes Mal, wenn du einen Gegner debuffst, #b",
       " #ytemporäre #yTP [REMOVE_SPACE]."
     ]
   },
@@ -113,8 +113,8 @@
     "NAME": "Schrottrüstung",
     "DESCRIPTIONS": [
       "Spiele noch #b",
-      " Angriff um #b",
-      " Angriffe um #b",
+      " Angriff, um #b",
+      " Angriffe, um #b",
       " #yArtefakt zu erhalten."
     ]
   },

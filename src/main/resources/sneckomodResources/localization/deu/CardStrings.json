@@ -9,8 +9,8 @@
   },
   "sneckomod:CheapStock": {
     "NAME": "Ladenhüter",
-    "DESCRIPTION": "sneckomod:Irre zu Beginn jedes Zuges die teuerste Karte auf der Hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Irre zu Beginn jedes Zuges die !M! teuersten Karten auf der Hand."
+    "DESCRIPTION": "sneckomod:Irre zu Beginn jedes Zuges eine zufällige Handkarte mit den höchsten Kosten.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Irre zu Beginn jedes Zuges !M! zufällige Handkarten mit den höchsten Kosten."
   },
   "sneckomod:Cheat": {
     "NAME": "Pure Luck",
@@ -35,8 +35,8 @@
   },
   "sneckomod:DefensiveFlair": {
     "NAME": "Defensives Gespür",
-    "DESCRIPTION": "Erhalte !B! Block. Block wird für jede Karte einer sneckomod:Fremdklasse auf der Hand um !M! erhöht. NL sneckomod:Geschenk: Ungewöhnlich.",
-    "DESCRIPTION_BATTLE": "Erhalte !B! Block. NL Das Block dieser Karte wird für jede Karte einer sneckomod:Fremdklasse auf der Hand um !M! erhöht."
+    "DESCRIPTION": "Erhalte !B! Block. NL Block wird für jede Handkarte aus sneckomod:Fremdklassen um !M! erhöht. NL sneckomod:Geschenk: Ungewöhnlich.",
+    "DESCRIPTION_BATTLE": "Erhalte !B! Block. NL Block wird für jede Handkarte aus sneckomod:Fremdklassen um !M! erhöht."
   },
   "sneckomod:DiceBlock": {
     "NAME": "Würfelblock",
@@ -79,7 +79,7 @@
   },
   "sneckomod:IronFang": {
     "NAME": "Eisenmaul",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu wende !M! Schwach auf sie an enemies."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu wende !M! Schwach auf sie an."
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Improvised Attack",
@@ -206,8 +206,8 @@
   },
   "sneckomod:SlitherThrough": {
     "NAME": "Durchschlängeln",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten diesen Zug !M! weniger. NL sneckomod:Geschenk: Ungewöhnlich.",
-    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten diesen Zug !M! weniger."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Handkarten aus sneckomod:Fremdklassen kosten diesen Zug !M! weniger. NL sneckomod:Geschenk: Ungewöhnlich.",
+    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Handkarten aus sneckomod:Fremdklassen kosten diesen Zug !M! weniger."
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
@@ -454,11 +454,11 @@
   },
   "sneckomod:LilGuardian": {
     "NAME": "Taschenschutz",
-    "DESCRIPTION": "Erhalte !B! Block. Wenn du eine Karte ausspielst die mindestens 2 kostet, spiele diese Karte aus der Hand."
+    "DESCRIPTION": "Erhalte !B! Block. NL Wenn du eine Karte ausspielst, die mindestens 2 kostet, spiele diese Karte aus der Hand."
   },
   "sneckomod:CrystalBoomerang": {
     "NAME": "Kristallbumerang",
-    "DESCRIPTION": "Nimm eine Karte vom Abwurfstapel auf die. NL Gehört sie zu einer sneckomod:Fremdklasse, dann erhalte !B! Block."
+    "DESCRIPTION": "Schnapp dir eine Karte vom Abwurfstapel. NL Gehört sie zu einer sneckomod:Fremdklasse, dann erhalte !B! Block."
   },
   "sneckomod:ViperEssence": {
     "NAME": "Vipernessenz",
@@ -476,8 +476,8 @@
   },
   "sneckomod:Cower": {
     "NAME": "Niederkauern",
-    "DESCRIPTION": "Erhalte !B! Block. NL Nimm ein *Verschanzen auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Nimm ein *Verschanzen+ auf die Hand. NL Erschöpft."
+    "DESCRIPTION": "Erhalte !B! Block. NL Nimm *Verschanzen auf die Hand. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Nimm *Verschanzen+ auf die Hand. NL Erschöpft."
   },
   "sneckomod:WideSting": {
     "NAME": "Weiter Stich",
@@ -508,8 +508,8 @@
   },
   "sneckomod:BlunderGuard": {
     "NAME": "Schwere Geschütze",
-    "DESCRIPTION": "Wenn du eine Karte spielst die mindestes 3 kostet, erhalte !qqq! Block und !M! Stärke.",
-    "UPGRADE_DESCRIPTION": "Wenn du eine Karte spielst die mindestes 3 kostet, erhalte !qqq! Block und !M! Stärke."
+    "DESCRIPTION": "Wenn du eine Karte spielst, die mindestes 3 kostet, erhalte !qqq! Block und !M! Stärke.",
+    "UPGRADE_DESCRIPTION": "Wenn du eine Karte spielst, die mindestes 3 kostet, erhalte !qqq! Block und !M! Stärke."
   },
   "sneckomod:WideAngle": {
     "NAME": "Weitwinkel",
@@ -598,7 +598,7 @@
   },
   "sneckomod:FlashInThePan": {
     "NAME": "Blitzschnell",
-    "DESCRIPTION": "Erhalte !B! Block. NL Wirf deine Hand ab. NL Ziehe im nächsten Zug zusätzliche Karten in Höhe der abgeworfenen Karten."
+    "DESCRIPTION": "Erhalte !B! Block. NL Wirf deine Hand ab. NL Ziehe im nächsten Zug zusätzliche Karten in Anzahl der abgeworfenen Karten."
   },
   "sneckomod:TrashCan": {
     "NAME": "Mülleimer",

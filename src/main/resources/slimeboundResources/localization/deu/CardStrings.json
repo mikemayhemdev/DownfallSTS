@@ -39,8 +39,8 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "Fast Food",
-    "DESCRIPTION": "Ziehe !M! Karte. NL Erschöpfe eine Karte. Erhalte *Wabbel in Höhe ihrer Kosten. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Erschöpfe eine Karte. Erhalte *Wabbel in Höhe ihrer Kosten. NL Erschöpft."
+    "DESCRIPTION": "Ziehe !M! Karte. NL Erschöpfe eine Karte. Erhalte *Wabbel in Anzahl der Höhe ihrer Kosten. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Erschöpfe eine Karte. Erhalte *Wabbel in Anzahl der Höhe ihrer Kosten. NL Erschöpft."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Schleim-Infanterie",
@@ -127,8 +127,8 @@
   },
   "Slimebound:LeechEnergy": {
     "NAME": "Energie absaugen",
-    "DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte [E] und Ziehe !M! Karte.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte [E] und Ziehe !M! Karten."
+    "DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte [E] und ziehe !M! Karte.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte [E] und ziehe !M! Karten."
   },
   "Slimebound:LeechLife": {
     "NAME": "Leben aussaugen",
@@ -154,7 +154,7 @@
   },
   "Slimebound:MassFeed": {
     "NAME": "Massenschlingen",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Wenn tödlich, wehöhe deine Max TP um !M!. NL Erschöpft."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Wenn tödlich, erhöhe deine Max TP um !M!. NL Erschöpft."
   },
   "Slimebound:MassRepurpose": {
     "NAME": "Massenwandlung",
@@ -257,7 +257,7 @@
   },
   "Slimebound:RollThrough": {
     "NAME": "Durchrollen",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Du erleidest keinen Schaden von den nächsten !M! gespielten *Tackle Karten."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Du erleidest keinen Schaden von den nächsten !M! *Tackle Karten."
   },
   "Slimebound:SamplingLick": {
     "NAME": "Prüfender Wabbel",
@@ -297,7 +297,7 @@
   },
   "Slimebound:SlimeSpikes": {
     "NAME": "Schleimstacheln",
-    "DESCRIPTION": "Erhalte !B! Block und !M! temporäre Stacheln."
+    "DESCRIPTION": "Erhalte !B! Block und !M! *temporäre Stacheln."
   },
   "Slimebound:SlimeTap": {
     "NAME": "Schleimquelle",

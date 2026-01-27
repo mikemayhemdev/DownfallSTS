@@ -55,7 +55,7 @@
     "NAME": "Endlose Wut",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du während deines Zuges TP verlierst #b",
-      " temporäre #yStärke [REMOVE_SPACE]."
+      " #ytemporäre #yStärke [REMOVE_SPACE]."
     ]
   },
   "champ:ImprovisingPower": {
@@ -111,7 +111,7 @@
     "NAME": "Fairer sauberer Kampf",
     "DESCRIPTIONS": [
       "Erhalte wenn du deinen Zug ohne #yHaltung beginnst #b",
-      " temporäre #yStärke und #yGeschicklichkeit."
+      " #ytemporäre #yStärke und #ytemporäre #yGeschicklichkeit."
     ]
   },
   "champ:BerserkerStylePower": {

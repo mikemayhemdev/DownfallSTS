@@ -43,7 +43,7 @@
   },
   "awakened:DarkEcho": {
     "NAME": "Dunkles Echo",
-    "DESCRIPTION": "Füge am Ende des Zuges ALLEN Gegnern !M! Schaden zu - erhöht durch Stärke."
+    "DESCRIPTION": "Füge am Ende des Zuges ALLEN Gegnern !M! Schaden zu. Der Schaden wird durch Stärke erhöht."
   },
   "awakened:AwakenedForm": {
     "NAME": "Erweckte Form",
@@ -76,7 +76,7 @@
   },
   "awakened:TakeFlight": {
     "NAME": "Abheben",
-    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Chor: Dein Block wird zu Beginn deines nächsten Zuges nicht entfernt."
+    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Chor: Erhalte 1 expansioncontent:Verschwimmen."
   },
   "awakened:FeatherVeil": {
     "NAME": "Federkleid",
@@ -88,7 +88,7 @@
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Ziehe !M! Karten."
   },
   "awakened:Extension": {
-    "NAME": "Extension",
+    "NAME": "Extensiv",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm diese Karte vom Abwurfstapel auf die Hand, immer wenn du eine Macht spielst."
   },
   "awakened:Pluck": {
@@ -109,7 +109,7 @@
   },
   "awakened:ChosenVerse": {
     "NAME": "Auserwählter Vers",
-    "DESCRIPTION": "Die nächsten !M! Male an denen du in diesem Zug einen nicht-Angriff spielst, ziehe eine Karte und Erhalte !B! Block."
+    "DESCRIPTION": "Die nächsten !M! Male an denen du in diesem Zug einen nicht-Angriff spielst, ziehe eine Karte und erhalte !B! Block."
   },
   "awakened:SoulStrike": {
     "NAME": "Seelenschlag",
@@ -144,7 +144,7 @@
   },
   "awakened:FourthDimension": {
     "NAME": "Vierte Dimension",
-    "DESCRIPTION": "Erschöpfe eine Karte. NL Mische !M! Kopien der Karte in den Nachziehstapel. NL Erschöpft.",
+    "DESCRIPTION": "Erschöpfe eine Karte. NL bronze:Setze !M! Kopien der Karte *ein. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Erschöpfe eine Karte in die Vierte Dimension."
     ]
@@ -155,7 +155,7 @@
   },
   "awakened:Unleash": {
     "NAME": "Freisetzen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Der Schaden wird für jede andere Karte auf der Hand um !M! erhöht."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Der Schaden wird für jede andere Handkarte um !M! erhöht."
   },
   "awakened:DesperatePrayer": {
     "NAME": "Stoßgebet",
@@ -211,8 +211,8 @@
   },
   "awakened:Planeswalk": {
     "NAME": "Grenzgänger",
-    "DESCRIPTION": "Erhalte [E] [E] . NL Mische eine *Leere in den Nachziehstapel.",
-    "UPGRADE_DESCRIPTION": "Erhalte [E] [E] [E] . NL Mische eine *Leere in den Nachziehstapel."
+    "DESCRIPTION": "Erhalte [E] [E] . NL bronze:Setze eine *Leere *ein.",
+    "UPGRADE_DESCRIPTION": "Erhalte [E] [E] [E] . NL bronze:Setze eine *Leere *ein."
   },
   "awakened:Spew": {
     "NAME": "Ausspeien",
@@ -283,7 +283,7 @@
   },
   "awakened:Gather": {
     "NAME": "Ansammeln",
-    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Chor: Nimm eine Karte aus dem Abwurfstapel zurück auf die Hand."
+    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Chor: Schnapp dir eine Karte aus dem Abwurfstapel."
   },
   "awakened:TheTower": {
     "NAME": "Der Turm",
@@ -298,8 +298,8 @@
   },
   "awakened:MiddenHeap": {
     "NAME": "Misthaufen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Nimm !M! Status oder Fluch vom Nachzieh- oder Abwurfstapel auf die Hand.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Nimm !M! Status- oder Fluchkarten vom Nachzieh- oder Abwurfstapel auf die Hand.",
+    "DESCRIPTION": "Erhalte !B! Block. NL Schnapp dir !M! Status oder Fluch vom Nachzieh- oder Abwurfstapel.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Schnapp dir !M! Status- oder Fluchkarten vom Nachzieh- oder Abwurfstapel.",
     "EXTENDED_DESCRIPTION": [
       "Nimm eine Karte auf die Hand.",
       "Nimm Karten auf die Hand."
@@ -331,12 +331,12 @@
   },
   "awakened:Procession": {
     "NAME": "Prozession",
-    "DESCRIPTION": "Spiele eine Karte aus dem Nachziehstapel und mische *Leeren in Höhe ihrer Kosten hinein. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Spiele eine Karte aus dem Nachziehstapel und mische *Leeren in Höhe ihrer Kosten hinein."
+    "DESCRIPTION": "Spiele eine Karte aus dem Nachziehstapel und bronze:setze *Leeren in Anzahl der Höhe ihrer Kosten *ein. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Spiele eine Karte aus dem Nachziehstapel und bronze:setze *Leeren in Anzahl der Höhe ihrer Kosten *ein."
   },
   "awakened:SplitWide": {
     "NAME": "Aufschlitzen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte immer wenn du diesen Gegner angreifst !M! temporäre Stärke. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte immer wenn du diesen Gegner angreifst !M! *temporäre Stärke. NL Erschöpft."
   },
   "awakened:Spellshield": {
     "NAME": "Zauberschild",
@@ -352,8 +352,8 @@
   },
   "awakened:Primacy": {
     "NAME": "Vorrang",
-    "DESCRIPTION": "Ziehe das erste Mal an dem du im Zug Stärke erhältst eine Karte.",
-    "UPGRADE_DESCRIPTION": "Ziehe die ersten !M! Male an dem du im Zug Stärke erhältst eine Karte."
+    "DESCRIPTION": "Ziehe das erste Mal, an dem du im Zug Stärke erhältst, eine Karte.",
+    "UPGRADE_DESCRIPTION": "Ziehe die ersten !M! Male, an denen du im Zug Stärke erhältst, eine Karte."
   },
   "awakened:Daggerstorm": {
     "NAME": "Dolchsturm",
@@ -361,7 +361,7 @@
   },
   "awakened:PackRat": {
     "NAME": "Rudelratte",
-    "DESCRIPTION": "Füge zweimal !D! Schaden zu und Erhalte zweimal !B! Block. NL Erhalte einen zufälligen Trank. NL Erschöpft."
+    "DESCRIPTION": "Füge zweimal !D! Schaden zu und erhalte zweimal !B! Block. NL Erhalte einen zufälligen Trank. NL Erschöpft."
   },
   "awakened:Mantis": {
     "NAME": "Mantis",

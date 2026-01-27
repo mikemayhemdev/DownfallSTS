@@ -75,7 +75,7 @@
     "NAME": "Abbild der Retromation",
     "FLAVOR": "Oft als Retroabbild abgekürzt.",
     "DESCRIPTIONS": [
-      "Zu Beginn jedes Zuges kostet eine zufällige Handkarte #b1 weniger bis du sie spielst."
+      "Zu Beginn jedes Zuges kostet eine zufällige Handkarte #b1 weniger, bis du sie spielst."
     ]
   },
   "sneckomod:BlankCard": {

@@ -60,8 +60,8 @@
   "hexamod:CrispyPower_new": {
     "NAME": "Extra knusprig",
     "DESCRIPTIONS": [
-      "Wenn #ySeelenfeuer an Gegnern detoniert, wende nach der Detonation #b",
-      " #ySeelenfeuer auf sie an."
+      "Wenn #ySeelenfeuer detoniert, dann wende umgehend nach der Detonation #b",
+      " #ySeelenfeuer an."
     ]
   },
   "hexamod:EnhancePower": {

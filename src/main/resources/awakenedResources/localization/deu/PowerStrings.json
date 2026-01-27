@@ -54,9 +54,9 @@
   "awakened:PrimacyPower": {
     "NAME": "Vorrang",
     "DESCRIPTIONS": [
-      "Ziehe das erste Mal an dem du im Zug #yStärke erhältst eine Karte.",
+      "Ziehe das erste Mal, an dem du im Zug #yStärke erhältst, eine Karte.",
       "Ziehe die ersten #b",
-      " Male an dem du im Zug #yStärke erhältst eine Karte.",
+      " Male, an denen du im Zug #yStärke erhältst, eine Karte.",
       " NL Dieser Effekt kann in diesem Zug noch #b",
       " Mal aktiviert werden.",
       " Mal aktiviert werden.",
@@ -74,7 +74,7 @@
   "awakened:DarkEchoPower": {
     "NAME": "Dunkles Echo",
     "DESCRIPTIONS": [
-      "Füge am ENde des Zuges ALLEN Gegnern #b",
+      "Füge am Ende des Zuges ALLEN Gegnern #b",
       " Schaden #b",
       " Mal zu.",
       " Schaden zu."

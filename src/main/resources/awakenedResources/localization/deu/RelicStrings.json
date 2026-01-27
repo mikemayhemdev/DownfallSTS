@@ -19,7 +19,7 @@
     "NAME": "Weiße Schleife",
     "FLAVOR": "Verleiht gesprochenen Worten auch außerhalb von Ritualen Macht.",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du eine Karte mit #yawakened:Chor spielst #b",
+      "Erhalte immer, wenn du eine Karte mit #yawakened:Chor spielst, #b",
       " #yBlock [REMOVE_SPACE], selbst wenn der Effekt nicht aktiviert ist."
     ]
   },
