@@ -1,7 +1,7 @@
 {
   "sneckomod:Blunderbus": {
     "NAME": "Donnerbüchse",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Wiederhole das für jede Karte auf der Hand, die mindestens 3 kostet."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Wiederhole das für jede Handkarte, die mindestens 3 kostet."
   },
   "sneckomod:Tsunami": {
     "NAME": "Tsunami",
@@ -27,7 +27,7 @@
   },
   "sneckomod:Deception": {
     "NAME": "Täuschung",
-    "DESCRIPTION": "Erhalte !B! Block. NL Nimm eine *Schockwelle auf die Hand. NL Erschöpft."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte eine *Schockwelle. NL Erschöpft."
   },
   "sneckomod:Defend": {
     "NAME": "Verteidigen",
@@ -97,7 +97,7 @@
   },
   "sneckomod:LuckyBreak": {
     "NAME": "Verschnaufpause",
-    "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karten für jede Karte auf der Hand, die mindestens 2 kostet."
+    "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karte für jede Handkarte, die mindestens 2 kostet."
   },
   "sneckomod:Nope": {
     "NAME": "Umtausch",
@@ -151,8 +151,8 @@
     "UPGRADE_DESCRIPTION": "Das erste Mal wenn du im Zug eine Karte einer sneckomod:Fremdklasse spielst, ziehe eine Karte."
   },
   "sneckomod:RiskySword": {
-    "NAME": "Risikoklinge",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Jedes Mal wenn diese Karte sneckomod:geirrt wird, erhöhe ihren Schaden für diesen Kampf um !M!."
+    "NAME": "Zockerklinge",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Der Schaden wird um !M! erhöht, wenn diese Karte sneckomod:geirrt wird."
   },
   "sneckomod:PoisonParadise": {
     "NAME": "Fontäne",
@@ -476,8 +476,8 @@
   },
   "sneckomod:Cower": {
     "NAME": "Niederkauern",
-    "DESCRIPTION": "Erhalte !B! Block. NL Nimm *Verschanzen auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Nimm *Verschanzen+ auf die Hand. NL Erschöpft."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte *Verschanzen. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erhalte *Verschanzen+. NL Erschöpft."
   },
   "sneckomod:WideSting": {
     "NAME": "Weiter Stich",
@@ -498,8 +498,8 @@
   },
   "sneckomod:OtherworldlySlash": {
     "NAME": "Exotischer Hieb",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn du in diesem Zug eine Karte einer sneckomod:Fremdklasse gespielt hast, füge erneut !D! Schaden zu. NL sneckomod:Geschenk: Gewöhnlich.",
-    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wenn du in diesem Zug eine Karte einer sneckomod:Fremdklasse gespielt hast, füge erneut !D! Schaden zu."
+    "DESCRIPTION": "Füge !D! Schaden zu - zweimal, wenn du in diesem Zug eine Karte einer sneckomod:Fremdklasse gespielt hast. NL sneckomod:Geschenk: Gewöhnlich.",
+    "DESCRIPTION_BATTLE": "Füge !D! Schaden - zweimal, wenn du in diesem Zug eine Karte einer sneckomod:Fremdklasse gespielt hast."
   },
   "sneckomod:BeyondArmor": {
     "NAME": "Fremde Rüstung",
@@ -522,8 +522,8 @@
   },
   "sneckomod:Whack": {
     "NAME": "Verprügeln",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm ein *Verhauen auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Nimm ein *Verhauen+ auf die Hand. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte *Verhauen. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte *Verhauen+. NL Erschöpft."
   },
   "sneckomod:CobraCoil": {
     "NAME": "Pythonschlinge",
@@ -546,16 +546,16 @@
   },
   "sneckomod:LatchOn": {
     "NAME": "Festklammern",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Nimm eine *Vipernessenz auf die Hand."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte eine *Vipernessenz."
   },
   "sneckomod:ComboString": {
     "NAME": "Verkettung",
-    "DESCRIPTION": "Füge für jede Karte einer sneckomod:Fremdklasse die in diesem Zug gespielt wurde !D! Schaden zu. NL sneckomod:Geschenk: Ungewöhnlich.",
+    "DESCRIPTION": "Füge für jede Karte einer sneckomod:Fremdklasse, die in diesem Zug gespielt wurde, !D! Schaden zu. NL sneckomod:Geschenk: Ungewöhnlich.",
     "EXTENDED_DESCRIPTION": [
       " NL (trifft ",
       " Mal.)"
     ],
-    "DESCRIPTION_BATTLE": "Füge für jede Karte einer sneckomod:Fremdklasse die in diesem Zug gespielt wurde !D! Schaden zu."
+    "DESCRIPTION_BATTLE": "Füge für jede Karte einer sneckomod:Fremdklasse, die in diesem Zug gespielt wurde, !D! Schaden zu."
   },
   "sneckomod:ThrowingCards": {
     "NAME": "Kartenwurf",
@@ -563,7 +563,7 @@
     "UPGRADE_DESCRIPTION": "Nimm X *FTL+ Karten auf die Hand. NL Erhalte [E]. NL Erschöpft."
   },
   "sneckomod:RoundaboutSwing": {
-    "NAME": "Herumschwingen",
+    "NAME": "Umzingeln",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Lege eine Handkarte auf den Nachziehstapel. NL Ziehe im nächsten Zug !M! zusätzliche Karten."
   },
   "sneckomod:MarkedCard": {
@@ -582,10 +582,10 @@
   },
   "sneckomod:LastStrike": {
     "NAME": "Ultimativer Schlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jeden verschiedene \"Schlag\" Karte der in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jeden verschiedene \"Schlag\" Karte der in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
-    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wiederhole das für jeden verschiedene \"Schlag\" Karte der in diesem Kampf gespielt wurde.",
-    "UPGRADE_DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wiederhole das für jeden verschiedene \"Schlag\" Karte der in diesem Kampf gespielt wurde.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
+    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde.",
     "EXTENDED_DESCRIPTION": [
       " NL (trifft ",
       " Mal zusätzlich.)"
@@ -598,7 +598,7 @@
   },
   "sneckomod:FlashInThePan": {
     "NAME": "Blitzschnell",
-    "DESCRIPTION": "Erhalte !B! Block. NL Wirf deine Hand ab. NL Ziehe im nächsten Zug zusätzliche Karten in Anzahl der abgeworfenen Karten."
+    "DESCRIPTION": "Erhalte !B! Block. NL Wirf deine Hand ab und ziehe im nächsten Zug genauso viele zusätzliche Karten."
   },
   "sneckomod:TrashCan": {
     "NAME": "Mülleimer",
@@ -611,7 +611,7 @@
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Vipernmacht",
-    "DESCRIPTION": "Flüchtig. NL Erhalte immer wenn du eine Macht ausspielst [E] . NL sneckomod:Geschenk: Seltene Macht.",
-    "DESCRIPTION_BATTLE": "Flüchtig. NL Erhalte immer wenn du eine Macht ausspielst [E]."
+    "DESCRIPTION": "Flüchtig. NL Erhalte immer wenn du eine Macht spielst [E] . NL sneckomod:Geschenk: Seltene Macht.",
+    "DESCRIPTION_BATTLE": "Flüchtig. NL Erhalte immer wenn du eine Macht spielst [E]."
   }
 }

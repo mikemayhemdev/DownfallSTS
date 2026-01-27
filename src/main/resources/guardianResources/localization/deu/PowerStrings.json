@@ -145,7 +145,7 @@
   "Guardian:RevengePower": {
     "NAME": "Racheprotokoll",
     "DESCRIPTIONS": [
-      "Erhalte jedes Mal wenn du in den #yDefensivmodus wechselst #b",
+      "Erhalte jedes Mal, wenn du in den #yDefensivmodus wechselst, #b",
       " #yStrength [REMOVE_SPACE]."
     ]
   },
@@ -171,28 +171,28 @@
   "Guardian:BlockOnCardUsePower": {
     "NAME": "Rüstungstinktur",
     "DESCRIPTIONS": [
-      "Erhalte jedes Mal wenn du in diesem Zug eine Karte spielst #b",
+      "Erhalte jedes Mal, wenn du in diesem Zug eine Karte spielst, #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
   "Guardian:EvasiveProtocolPower": {
     "NAME": "Ausweichprotokoll",
     "DESCRIPTIONS": [
-      "Reduziere jedes Mal wenn du in den #yDefensivmodus wechselst deine Debuffs um #b",
+      "Reduziere jedes Mal, wenn du in den #yDefensivmodus wechselst, deine Debuffs um #b",
       " [REMOVE_SPACE]."
     ]
   },
   "Guardian:SpikerProtocolPower": {
     "NAME": "Stachelprotokoll",
     "DESCRIPTIONS": [
-      "Erhalte jedes Mal wenn du in den #yDefensivmodus wechselst #b",
+      "Erhalte jedes Mal, wenn du in den #yDefensivmodus wechselst, #b",
       " #yStacheln [REMOVE_SPACE]."
     ]
   },
   "Guardian:ArmoredProtocolPower": {
     "NAME": "Rüstungsprotokoll",
     "DESCRIPTIONS": [
-      "Erhalte jedes Mal wenn du deinen Zug im #yDefensivmodus beendest #b",
+      "Erhalte jedes Mal, wenn du deinen Zug im #yDefensivmodus beendest, #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },

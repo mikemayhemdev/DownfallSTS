@@ -66,7 +66,7 @@
   },
   "collector:CantTouchThis": {
     "NAME": "Unberührbar",
-    "DESCRIPTION": "Erhalte !M! Geschicklichkeit. NL Wende immer !clm2! collector:Verdammnis auf Angreifer, deren Angriffe du geblockt hast, an."
+    "DESCRIPTION": "Erhalte !M! Geschicklichkeit. NL Wende immer !clm2! collector:Verdammnis auf Angreifer, deren Angriffe du blockst, an."
   },
   "collector:CoffinNail": {
     "NAME": "Sargnagel",
@@ -77,7 +77,7 @@
     "DESCRIPTION": "Wende !M! Verwundbar und !clm2! collector:Verdammnis an."
   },
   "collector:CursedWail": {
-    "NAME": "Verfluchtes Heulen",
+    "NAME": "Verhextes Heulen",
     "DESCRIPTION": "ALLE Gegner verlieren in diesem Zug !M! Stärke. NL collector:Geplagte Gegner verlieren zusätzlich dauerhaft !clm2! Stärke. NL Erschöpft."
   },
   "collector:DarkApotheosis": {
@@ -107,7 +107,7 @@
   },
   "collector:DoubleTrouble": {
     "NAME": "Doppelt gemoppelt",
-    "DESCRIPTION": "Erhalte !B! Block. NL In diesem Zug spielst du deine nächstes *Sammlerstück zweimal aus."
+    "DESCRIPTION": "Erhalte !B! Block. NL In diesem Zug spielst du dein nächstes *Sammlerstück zweimal aus."
   },
   "collector:DoMayhem": {
     "NAME": "Wahnsinnstat",
@@ -160,7 +160,7 @@
   },
   "collector:Forgery": {
     "NAME": "Fälschen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wähle 1 von !M! zufälligen Karten aus deinem Sammlungsstapel. Nimm eine Kopie der Karte auf die Hand.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wähle 1 von !M! zufälligen Karten aus dem Sammlungsstapel. Nimm eine Kopie auf die Hand.",
     "EXTENDED_DESCRIPTION": [
       "und nimm eine Kopie auf die Hand."
     ]
@@ -190,7 +190,7 @@
   },
   "collector:GreenpyreLocus": {
     "NAME": "Grünfeuerhort",
-    "DESCRIPTION": "Wähle 1 von 3 Sammlerstücken und nimm es auf die Hand. Mische !M! weitere Kopien in den Sammlungsstapel.",
+    "DESCRIPTION": "Wähle 1 von 3 *Sammlerstücken und nimm es auf die Hand. Mische !M! weitere Kopien in den Sammlungsstapel.",
     "EXTENDED_DESCRIPTION": [
       "Wähle eine Karte, die du auf die Hand nimmst."
     ]
@@ -213,7 +213,7 @@
     "UPGRADE_DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. NL Wenn diese Karte *erschöpft, erhalte eine *Starke *Kränkung+."
   },
   "collector:IllTakeThat": {
-    "NAME": "Gib Her!",
+    "NAME": "Einsammeln",
     "DESCRIPTION": "Stiehl bis zu !M! Block des Gegners. NL Füge danach !D! Schaden zu."
   },
   "collector:InevitableDemise": {
@@ -234,8 +234,8 @@
   },
   "collector:IronbarkKindling": {
     "NAME": "Eiserner Anzünder",
-    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, Erhalte !B! Block.",
-    "UPGRADE_DESCRIPTION": "Unspielbar. Behalten. NL Wenn diese Karte *erschöpft, Erhalte !B! Block.",
+    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte !B! Block.",
+    "UPGRADE_DESCRIPTION": "Unspielbar. Behalten. NL Wenn diese Karte *erschöpft, erhalte !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss das zum Gebrauch anzünden."
     ]
@@ -304,7 +304,7 @@
     "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL collector:Fackelkopf: \"Füge ALLEN Gegnern !clm2! Schaden zu.\"."
   },
   "collector:ReceiveTribute": {
-    "NAME": "Tribut empfangen",
+    "NAME": "Tribut kassieren",
     "DESCRIPTION": "collector:Opfergabe. NL Nimm 1 von !M! Boss-Karten auf die Hand. Sie erhält Behalten. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle eine Karte, die du auf die Hand nimmst."
@@ -330,7 +330,7 @@
     "DESCRIPTION": "Füge X Mal einem zufälligen Gegner !D! Schaden zu."
   },
   "collector:SeedOfDoubt": {
-    "NAME": "Samen des Zweifels",
+    "NAME": "Saat des Zweifels",
     "DESCRIPTION": "Wende !M! collector:Verdammnis an. Wenn diese Karte auf der Hand ist während eine Karte *erschöpft, erhöhe ihre *Verdammnis um !clm2!."
   },
   "collector:ShadowDaggers": {
@@ -410,7 +410,7 @@
   },
   "collector:YouAreMine": {
     "NAME": "Du gehörst mir!",
-    "DESCRIPTION": "Wende !M! Schwach an. NL Wende !M! Verwundbar an. Wende !clm2! collector:Verdammnis an."
+    "DESCRIPTION": "Wende !M! Schwach, !M! Verwundbar und !clm2! collector:Verdammnis an."
   },
   "collector:Whomp": {
     "NAME": "Schröpfen",
@@ -603,7 +603,7 @@
   },
   "collector:SentryCard": {
     "NAME": "Wache",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Schwach an. NL Wiederhole das, wenn eine *Wache in deinem Erschöpfungsstapel ist."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Schwach an. NL Wiederhole das, wenn eine *Wache im Erschöpfungsstapel ist."
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Gepanzerter Parasit",

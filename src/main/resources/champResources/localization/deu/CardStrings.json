@@ -40,7 +40,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Offensivcombo: Wende !M! Verwundbar an."
   },
   "champ:FlashCut": {
-    "NAME": "Blendender Schlag",
+    "NAME": "Vorschlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Defensivcombo: Erhalte !M! champ:Konter und !B! Block."
   },
   "champ:DefensiveShout": {
@@ -65,7 +65,7 @@
   },
   "champ:Backstep": {
     "NAME": "Rückschritt",
-    "DESCRIPTION": "Erhalte !B! Block. Das Block dieser Karte erhöht sich auch mit *Elan."
+    "DESCRIPTION": "Erhalte !B! Block. NL Block wird durch *Elan zusätzlich erhöht."
   },
   "champ:BerserkersShout": {
     "NAME": "Offensivschrei",
@@ -93,7 +93,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karten. NL Wirf !M! Karten ab. NL champ:Defensivcombo: Wirf keine Karten ab."
   },
   "champ:SkillfulDodge": {
-    "NAME": "Stilvolles Ducken",
+    "NAME": "Elegantes Ducken",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL champ:Defensivcombo: Erhöhe Block und champ:Konter dieser Karte für diesen Kampf um !cool!."
   },
   "champ:TornadoPunch": {
@@ -132,7 +132,7 @@
     ]
   },
   "champ:FalseCounter": {
-    "NAME": "Gegner ermüden",
+    "NAME": "Antäuschen",
     "DESCRIPTION": "Erhalte !B! Block. NL Im nächsten Zug, ziehe 2 Karten und NL erhalte [E] .",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Im nächsten Zug, ziehe 2 Karten und NL erhalte [E] [E] ."
   },
@@ -145,7 +145,7 @@
     "DESCRIPTION": "Erhalte X Mal !B! Block. NL Aktiviere X Mal den champ:Fertigkeitsbonus deiner *Haltung."
   },
   "champ:HoldFirm": {
-    "NAME": "Standhalten",
+    "NAME": "Einstecken",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL Erhalte 1 bronze:Verschwimmen."
   },
   "champ:ShieldWall": {
@@ -196,23 +196,23 @@
     "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. Erhöhe den Schaden um !M! wenn du mit dieser Karte in der Hand eine Fertigkeit spielst."
   },
   "champ:HeavySlash": {
-    "NAME": "Fürstlicher Hieb",
+    "NAME": "Austeilen",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte im nächsten Zug *Elan in Höhe des ungeblockten Schadens."
   },
   "champ:CheapShot": {
     "NAME": "Fieser Trick",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft bei Bossen zwei weitere Male. Ansonsten wird das Ziel hermit:betäubt. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft bei Bossen zwei weitere Male. Anderenfalls wird das Ziel hermit:betäubt. NL Erschöpft."
   },
   "champ:RisingSlash": {
-    "NAME": "Steiler Schlag",
+    "NAME": "Nachschlag",
     "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. War die letzte gespielte Karte ein champ:Abschluss, dann füge erneut !D! Schaden zu."
   },
   "champ:Shatter": {
-    "NAME": "Zerschellen",
+    "NAME": "Zerbersten",
     "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Combo (jede Haltung): Wende !M! Schwach und Verwundbar an."
   },
   "champ:EnragedBash": {
-    "NAME": "Brutales Knüppeln",
+    "NAME": "Brutaler Hieb",
     "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Offensivcombo: Diese Karte trifft in diesem Kampf ein weiteres Mal.",
     "EXTENDED_DESCRIPTION": [
       "Füge !M! Mal !D! Schaden zu. NL champ:Offensivcombo: Diese Karte trifft in diesem Kampf ein weiteres Mal."
@@ -223,7 +223,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte Block in Höhe des ungeblockten Schadens."
   },
   "champ:AdrenalArmor": {
-    "NAME": "Adrenal-Rüstung",
+    "NAME": "Adrenalrüstung",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *temporäre Stärke."
   },
   "champ:HeartStrike": {
@@ -259,7 +259,7 @@
     ]
   },
   "champ:IgnorePain": {
-    "NAME": "Schmerzbetäubung",
+    "NAME": "Analgesie",
     "DESCRIPTION": "Deine TP können bis zum Beginn des nächsten Zuges nicht fallen. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Deine TP können bis zum Beginn des nächsten Zuges nicht fallen. NL Erschöpft."
   },
@@ -350,7 +350,7 @@
   },
   "champ:Parry": {
     "NAME": "Parieren",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL Wenn champ:Konter in diesem Zug verbraucht wird, erhalte einen zweiten *Konterschlag.",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL Wenn champ:Konter in diesem Zug verbraucht wird, erhalte einen weiteren *Konterschlag.",
     "UPGRADE_DESCRIPTION": "Flüchtig. NL Füge Schaden in Höhe des verbrauchten champ:Konters zu. NL Erschöpft."
   },
   "champ:EnchantCrown": {
@@ -365,7 +365,7 @@
     "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu."
   },
   "champ:UltimateStance": {
-    "NAME": "Ultimative Haltung",
+    "NAME": "Ultimativ",
     "DESCRIPTION": "Während deines nächsten Zuges bist du in der champ:Ultimativen *Haltung. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Erfordert eine *Haltung. NL Nimm die champ:Ultimative *Haltung für !M! Züge an.",
     "EXTENDED_DESCRIPTION": [

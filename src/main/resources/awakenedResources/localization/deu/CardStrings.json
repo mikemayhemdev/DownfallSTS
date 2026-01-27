@@ -340,11 +340,11 @@
   },
   "awakened:Spellshield": {
     "NAME": "Zauberschild",
-    "DESCRIPTION": "Erhalte am Ende des Zuges !M! Block für jede Karte die du behältst."
+    "DESCRIPTION": "Erhalte am Ende des Zuges !M! Block für jede Karte, die du behältst."
   },
   "awakened:Siphon": {
     "NAME": "Siphon",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: gremlin:Stiehl für diesen Zug !M! Stärke."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: gremlin:Stiehl !M! *temporäre Stärke."
   },
   "awakened:PlumeJab": {
     "NAME": "Federstiche",
@@ -365,7 +365,7 @@
   },
   "awakened:Mantis": {
     "NAME": "Mantis",
-    "DESCRIPTION": "Erhalte !M! Stärke. NL Nimm *Federstiche in die Hand."
+    "DESCRIPTION": "Erhalte !M! Stärke. NL Erhalte *Federstiche."
   },
   "awakened:ManaShield": {
     "NAME": "Manaschild",
@@ -373,11 +373,11 @@
   },
   "awakened:Crusher": {
     "NAME": "Brecher",
-    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Wenn eine Karte generiert wird, kostet Brecher um 1 weniger bis du ihn ausspielst."
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Wenn eine Karte generiert wird, kostet Brecher um 1 weniger, bis du ihn ausspielst."
   },
   "awakened:Minniegun": {
     "NAME": "Minniegun",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Mische eine *Leere in den Nachziehstapel."
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL bronze:Setze eine *Leere *ein."
   },
   "awakened:SignInBlood": {
     "NAME": "Blutschwur",
@@ -385,7 +385,7 @@
   },
   "awakened:SpreadingSpores": {
     "NAME": "Sporen ausbreiten",
-    "DESCRIPTION": "Flüchtig. NL Erhalte !M! Stacheln. NL Mische eine Kopie in den Nachziehstapel."
+    "DESCRIPTION": "Flüchtig. NL Erhalte !M! Stacheln. NL bronze:Setze eine Kopie *ein."
   },
   "awakened:Scheme": {
     "NAME": "Böser Plan",
@@ -394,7 +394,7 @@
   },
   "awakened:TheEncyclopedia": {
     "NAME": "Enzyklopädie",
-    "DESCRIPTION": "Nimm 2 von !M! zufälligen Karten auf die Hand. Sie kosten um 2 weniger. NL Erschöpft.",
+    "DESCRIPTION": "Nimm 2 von !M! zufälligen Karten auf die Hand. Sie kosten 2 weniger. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Nimm 2 Karten auf die Hand."
     ]

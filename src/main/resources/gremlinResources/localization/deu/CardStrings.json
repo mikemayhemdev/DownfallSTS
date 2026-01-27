@@ -11,8 +11,8 @@
 
   "Gremlin:Astound": {
     "NAME": "Erstaunen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Schutz Karten wenn du mindestens 3 gremlin:Esprit hast.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Schutz+ Karten wenn du mindestens 3 gremlin:Esprit hast."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Schutz Karten, wenn du mindestens 3 gremlin:Esprit hast.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *Schutz+ Karten, wenn du mindestens 3 gremlin:Esprit hast."
   },
 
   "Gremlin:Bang": {
@@ -382,8 +382,8 @@
 
   "Gremlin:SecondVolley": {
     "NAME": "Zweite Salve",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte ein Messer für jede Karte die du in diesem Zug gespielt hast. (Maximal bis deine Hand voll ist)",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte ein Messer+ für jede Karte die du in diesem Zug gespielt hast. (Maximal bis deine Hand voll ist).",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte ein Messer für jede Karte, die du in diesem Zug gespielt hast. (Maximal bis deine Hand voll ist)",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte ein Messer+ für jede Karte, die du in diesem Zug gespielt hast. (Maximal bis deine Hand voll ist).",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " Karte gespielt.)",
@@ -442,7 +442,7 @@
 
   "Gremlin:Stupend": {
     "NAME": "Beeindrucken",
-    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Das Block wird durch gremlin:Esprit zusätzlich erhöht."
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Block wird durch gremlin:Esprit zusätzlich erhöht."
   },
 
   "Gremlin:SupplyScrollCard": {
@@ -451,7 +451,7 @@
   },
 
   "Gremlin:Tadah": {
-    "NAME": "Ta-Da!",
+    "NAME": "Et voilà!",
     "DESCRIPTION": "Erhalte einen *Schutz. NL gremlin:Wechsle zum gremlin:Gremlinzauberer.",
     "UPGRADE_DESCRIPTION": "Erhalte einen *Schutz+. NL gremlin:Wechsle zum gremlin:Gremlinzauberer."
   },
@@ -473,7 +473,7 @@
   },
 
   "Gremlin:TwistTheKnife": {
-    "NAME": "Das Messer drehen",
+    "NAME": "Doppeltes Messer",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 Messer.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 Messer+."
   },

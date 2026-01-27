@@ -19,7 +19,7 @@
     "TEXT": [
       "Sammlung",
       "Sieh alle Karten deiner Sammlung an.",
-      "Diese Karten landen zu Beginn jedes Kampfes in den Sammlungsstapel."
+      "Diese Karten landen zu Beginn jedes Kampfes im Sammlungsstapel."
     ]
   },
   "collector:CombatCollectionPileButton": {

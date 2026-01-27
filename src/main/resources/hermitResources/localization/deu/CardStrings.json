@@ -225,7 +225,7 @@
   },
   "hermit:CursedWeapon": {
     "NAME": "Verfluchte Waffe",
-    "DESCRIPTION": "Verliere !M! TP. NL Füge !D! Schaden zu. NL ALLE *Verfluchten *Waffen fügen permanent !hermit:SecondMagic! mehr Schaden zu. NL Erschöpft."
+    "DESCRIPTION": "Verliere !M! TP. NL Füge !D! Schaden zu. NL Alle *Verfluchten *Waffen fügen permanent !hermit:SecondMagic! mehr Schaden zu. NL Erschöpft."
   },
   "hermit:Enervate": {
     "NAME": "Entziehen",
@@ -242,7 +242,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "Einsamer Wolf",
-    "DESCRIPTION": "Wähle eine Handkarte. Sie kostet diesen Zug 0. NL Wirf den Rest deiner Hand ab."
+    "DESCRIPTION": "Wähle eine Handkarte. Sie kostet diesen Zug 0. NL Wirf alle anderen Handkarten ab."
   },
   "hermit:HighNoon": {
     "NAME": "Duell",
@@ -288,7 +288,7 @@
   },
   "hermit:DeadOrAlive": {
     "NAME": "Tot oder Lebendig",
-    "DESCRIPTION": "Füge X Mal !D! Schaden zu. NL Falls tödlich, erhälst du hermit:Kopfgeld. NL Erschöpft."
+    "DESCRIPTION": "Füge X Mal !D! Schaden zu. NL Falls tödlich, erhältst du hermit:Kopfgeld. NL Erschöpft."
   },
   "hermit:GoldenBullet": {
     "NAME": "Goldener Schuss",

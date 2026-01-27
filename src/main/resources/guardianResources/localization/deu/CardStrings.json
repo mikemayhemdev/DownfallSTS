@@ -86,7 +86,7 @@
   },
   "Guardian:HyperBeam_Guardian": {
     "NAME": "Gigastrahl",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. Stärke beeinflusst Gigastrahl NL !M! Mal. NL Übergehe deinen nächsten Zug."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. Stärke beeinflusst Gigastrahl NL !M! Mal. Im nächsten Zug bist du hermit:betäubt."
   },
   "Guardian:BronzeArmor": {
     "NAME": "Belastbarer Panzer",
@@ -182,7 +182,7 @@
     "UPGRADE_DESCRIPTION": "Erhalte *Umsteuern+, *Vorprogrammiert+, und *Zeitkapazität+. NL Erschöpft."
   },
   "Guardian:Planning": {
-    "NAME": "Vorratsschild",
+    "NAME": "Reinigungsschild",
     "DESCRIPTION": "Erhalte !B! Block. NL Reduziere deine Debuffs um !M!."
   },
   "Guardian:Recover": {
@@ -245,7 +245,7 @@
   },
   "Guardian:RollAttack": {
     "NAME": "Rollender Angriff",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft im *Defensivmodus ALLE Gegner. Erhalte ansonsten guardianmod:Abhärten 8."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft im *Defensivmodus ALLE Gegner. Erhalte anderenfalls guardianmod:Abhärten 8."
   },
   "Guardian:GemFire": {
     "NAME": "Juwelenkanone",
@@ -308,17 +308,17 @@
   },
   "Guardian:EvasiveProtocol": {
     "NAME": "Ausweichprotokoll",
-    "DESCRIPTION": "Reduziere jedes Mal wenn du in den *Defensivmodus wechselst deine Debuffs um !M!. NL guardianmod:Abhärten !GuardianSecondM!.",
-    "UPGRADE_DESCRIPTION": "Reduziere jedes Mal wenn du in den *Defensivmodus wechselst deine Debuffs um !M!. NL guardianmod:Abhärten !GuardianSecondM!."
+    "DESCRIPTION": "Reduziere jedes Mal, wenn du in den *Defensivmodus wechselst, deine Debuffs um !M!. NL guardianmod:Abhärten !GuardianSecondM!.",
+    "UPGRADE_DESCRIPTION": "Reduziere jedes Mal, wenn du in den *Defensivmodus wechselst, deine Debuffs um !M!. NL guardianmod:Abhärten !GuardianSecondM!."
   },
   "Guardian:SpikerProtocol": {
     "NAME": "Stachelprotokoll",
-    "DESCRIPTION": "Erhalte jedes Mal wenn du in den *Defensivmodus wechselst !M! Stacheln. NL guardianmod:Abhärten !GuardianSecondM!.",
-    "UPGRADE_DESCRIPTION": "Erhalte jedes Mal wenn du in den *Defensivmodus wechselst !M! Stacheln. NL guardianmod:Abhärten !GuardianSecondM!."
+    "DESCRIPTION": "Erhalte jedes Mal, wenn du in den *Defensivmodus wechselst, !M! Stacheln. NL guardianmod:Abhärten !GuardianSecondM!.",
+    "UPGRADE_DESCRIPTION": "Erhalte jedes Mal, wenn du in den *Defensivmodus wechselst, !M! Stacheln. NL guardianmod:Abhärten !GuardianSecondM!."
   },
   "Guardian:ArmoredProtocol": {
     "NAME": "Rüstungsprotokoll (Deprecated card do not TL!)",
-    "DESCRIPTION": "Erhalte jedes Mal wenn du deinen Zug im *Defensivmodus beendest !M! Block. NL Zu Beginn deines Zuges: guardianmod:Abhärten 3."
+    "DESCRIPTION": "Erhalte jedes Mal, wenn du deinen Zug im *Defensivmodus beendest, !M! Block. NL Zu Beginn deines Zuges: guardianmod:Abhärten 3."
   },
   "Guardian:TimeSifter": {
     "NAME": "Zeitsieb",
@@ -383,7 +383,7 @@
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Racheprotokoll",
-    "DESCRIPTION": "Erhalte jedes Mal wenn du in den *Defensivmodus wechselst !M! Stärke. NL Zu Beginn jedes Zuges: guardianmod:Abhärten !GuardianSecondM!."
+    "DESCRIPTION": "Erhalte jedes Mal, wenn du in den *Defensivmodus wechselst, !M! Stärke. NL Zu Beginn jedes Zuges: guardianmod:Abhärten !GuardianSecondM!."
   },
   "Guardian:GatlingBeam": {
     "NAME": "Laserkanone",

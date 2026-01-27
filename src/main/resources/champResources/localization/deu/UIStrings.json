@@ -28,9 +28,9 @@
   },
   "champ:EnchantUI": {
     "TEXT": [
-      "kostet 0.",
-      "erhöhe den Schaden.",
-      "erhöhe Block."
+      "auf Kosten 0 setzt.",
+      "verstärkst.",
+      "verstärkst."
     ]
   },
   "champ:highlightCombos": {

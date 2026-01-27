@@ -16,7 +16,7 @@
   "Guardian:BlockOnCardUsePotion": {
     "NAME": "Rüstungstinktur",
     "DESCRIPTIONS": [
-      "Erhalte jedes Mal wenn du in diesem Zug eine Karte spielst #b",
+      "Erhalte jedes Mal, wenn du in diesem Zug eine Karte spielst, #b",
       " #yBlock."
     ]
   },
