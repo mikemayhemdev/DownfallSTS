@@ -146,12 +146,12 @@ public class TheNestAwakened extends AbstractImageEvent {
                 AbstractDungeon.player.gainGold(this.goldAmt);
                 AbstractRelic r = AbstractDungeon.returnRandomScreenlessRelic(AbstractRelic.RelicTier.COMMON);
                 AbstractDungeon.getCurrRoom().spawnRelicAndObtain((float) (Settings.WIDTH / 2), (float) (Settings.HEIGHT / 2), r);
-
                 logMetricGainGold(ID, "Returned Statue", this.goldAmt);
                 logMetricObtainRelic(ID, "Returned Statue", r);
+                AbstractDungeon.combatRewardScreen.open();
                 this.imageEventText.updateBodyText(DESCRIPTIONS[4]);
                 this.imageEventText.clearAllDialogs();
-                this.imageEventText.setDialogOption(OPTIONS[2]);
+                this.imageEventText.updateDialogOption(0, OPTIONS[7]);
                 this.screen = CUR_SCREEN.GIFTSTAGE4;
                 return;
             case GIFTSTAGE4:

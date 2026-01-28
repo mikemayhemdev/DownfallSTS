@@ -40,7 +40,6 @@ public class Ward extends CustomCard {
             this.baseBlock = BLOCK;
         }
         this.exhaust = true;
-        GremlinMod.loadJokeCardImage(this, "Ward.png");
     }
 
     @Override

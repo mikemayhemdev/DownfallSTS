@@ -6,6 +6,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
@@ -32,7 +33,15 @@ public class Mesmerize extends AbstractSneckoCard {
         AbstractDungeon.actionManager.addToBottom(new SFXAction("MONSTER_SNECKO_GLARE"));
         this.addToBot(new VFXAction(p, new IntimidateEffect(p.hb.cX, p.hb.cY), 1.0F));
         forAllMonstersLiving(q -> applyToEnemy(q, new StrengthPower(q, -magicNumber)));
-        addToBot(new SelectCardsInHandAction(1, BaseMod.getKeywordProper("sneckomod:muddle"),
+        //deu fix yay
+        String stuff;
+        if(Settings.language == Settings.GameLanguage.DEU){
+            stuff = "irsst";
+        } else {
+            stuff = BaseMod.getKeywordProper("sneckomod:muddle");
+        }
+        // muddle is no longer random here
+        addToBot(new SelectCardsInHandAction(1, stuff,
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {

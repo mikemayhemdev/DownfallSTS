@@ -27,8 +27,8 @@
     "NAME": "暗祷",
     "DESCRIPTIONS": [
       "每当你 #y力竭 [REMOVE_SPACE] , 获得 #b",
-      "点#y格挡 [REMOVE_SPACE] ｡
-      ."
+      "点#y格挡 [REMOVE_SPACE] ｡",
+      ""
     ]
   },
   "awakened:ThaumaturgyPower": {
@@ -42,8 +42,8 @@
     "NAME": "圣礼",
     "DESCRIPTIONS": [
       "你每打出一张 #y能力牌 [REMOVE_SPACE] , 获得 #b",
-      "点#y格挡 [REMOVE_SPACE] ｡
-      "
+      "点#y格挡 [REMOVE_SPACE] ｡",
+      ""
     ]
   },
   "awakened:FlarePower": {

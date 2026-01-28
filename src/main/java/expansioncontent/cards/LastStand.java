@@ -46,8 +46,8 @@ public class LastStand extends AbstractExpansionCard {
 
         atb(new RemoveDebuffsAction(p));
 
-        atb(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
-        double currentPct = p.currentHealth * 1.001 / p.maxHealth * 1.001;
+        //atb(new ApplyPowerAction(p, p, new StrengthPower(p, 1), 1));
+        //double currentPct = p.currentHealth * 1.001 / p.maxHealth * 1.001;
       //  if (currentPct < 0.5) {
      //       AbstractDungeon.effectList.add(new MegaSpeechBubble(p.hb.cX, p.hb.cY, 1.0F, Champ.DIALOG[6], true));
 

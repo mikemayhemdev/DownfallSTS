@@ -5,6 +5,7 @@ import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandActio
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import downfall.downfallMod;
 import sneckomod.SneckoMod;
@@ -33,7 +34,13 @@ public class SerpentBottle extends AbstractSneckoCard {
 
         addToBot(new DrawCardAction(p, this.silly));
 
-        addToBot(new SelectCardsInHandAction(magicNumber, BaseMod.getKeywordProper("sneckomod:muddle"),
+        String stuff;
+        if(Settings.language == Settings.GameLanguage.DEU){
+            stuff = "irsst";
+        } else {
+            stuff = BaseMod.getKeywordProper("sneckomod:muddle");
+        }
+        addToBot(new SelectCardsInHandAction(magicNumber, stuff,
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {

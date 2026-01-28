@@ -62,7 +62,7 @@ public class Floatwork extends AbstractHexaCard implements HexaPurpleTextInterfa
         String afterlife_name = downfallMod.keywords_and_proper_names.get("afterlife");
         this.keywords.add(afterlife_name);
 
-        if (Settings.language == Settings.GameLanguage.ZHS){
+        if (Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT){
             this.keywords.add("多层护甲");
         }else if (Settings.language == Settings.GameLanguage.RUS){
             this.keywords.add("plated");
