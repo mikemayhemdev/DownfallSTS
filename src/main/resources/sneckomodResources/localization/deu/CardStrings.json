@@ -470,7 +470,7 @@
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Block wird um die DOPPELTE Summe der Kosten aller Handkarten erhöht."
   },
   "sneckomod:Medusa": {
-    "NAME": "Toxisch",
+    "NAME": "Giftschlange",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! sneckomod:Toxin an. NL sneckomod:Geschenk: Gewöhnlicher Debuff.",
     "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wende !M! sneckomod:Toxin an."
   },
@@ -526,7 +526,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte *Verhauen+. NL Erschöpft."
   },
   "sneckomod:CobraCoil": {
-    "NAME": "Pythonschlinge",
+    "NAME": "Würgeschlange",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Der Gegner erleidet am Ende seiner Züge !M! Schaden. NL sneckomod:Geschenk: Seltener Angriff."
   },
   "sneckomod:Belittle": {
