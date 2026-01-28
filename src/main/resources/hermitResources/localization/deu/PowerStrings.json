@@ -16,7 +16,7 @@
         "DESCRIPTIONS": ["Erhalte immer wenn du einen #rFluch ziehst oder #yerschöpfst #b", " Block."]
 },
 "hermit:TakeAimPower": {
-        "NAME": "Im Visier",
+        "NAME": "Anvisieren",
         "DESCRIPTIONS": ["#yKonzentriere dich immer zu Beginn deines Zuges."]
 },
 "hermit:AdaptPower": {
@@ -36,7 +36,7 @@
         "DESCRIPTIONS": ["Nimm die #b", " nächste Karte, die einen #yVolltreffer auslöst, wieder auf die Hand.", " nächsten Karten, die einen #yVolltreffer auslösen, wieder auf die Hand."]
 },
 "hermit:BigShotPower": {
-        "NAME": "Rauchendet Colt",
+        "NAME": "Rauchender Colt",
         "DESCRIPTIONS": ["Immer wenn du ein #yVolltreffer erzielst, fügt dein nächster Angriff #b", " mehr Schaden zu."]
 },
 "hermit:BrawlPower": {

@@ -75,7 +75,7 @@
     "NAME": "Abbild der Retromation",
     "FLAVOR": "Oft als Retroabbild abgekürzt.",
     "DESCRIPTIONS": [
-      "Zu Beginn jedes Zuges kostet eine zufällige Handkarte #b1 weniger bis du sie spielst."
+      "Zu Beginn jedes Zuges kostet eine zufällige Handkarte #b1 weniger, bis du sie spielst."
     ]
   },
   "sneckomod:BlankCard": {
@@ -90,7 +90,7 @@
     "FLAVOR": "Es scheint auf einer Seite schwerer zu sein.",
     "DESCRIPTIONS": [
       "Wähle beim Aufheben eine Karte mit #ysneckomod:Überschuss Effekt. Wenn du sie spielst, erhalte #b4 #yBlock und aktiviere den #yÜberschuss Effekt, unabhängig von der Handgröße.",
-      "Wähle eine Karte für ",
+      "Wähle eine Karte für ein ",
       "Immer wenn du ",
       " spielst, erhalte #b4 #yBlock und aktiviere den #yÜberschuss Effekt, unabhängig von der Handgröße.",
       "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."

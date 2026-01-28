@@ -70,7 +70,7 @@
   },
   "downfall:EyeForAnEye": {
     "NAME": "Auge um Auge",
-    "DESCRIPTION": "Wenn dein Gegner mehr Angriffe als nicht-Agriffe ausgespielt hat, nimmst du Zorn an. Ansonsten nimmst du Ruhe an."
+    "DESCRIPTION": "Wenn dein Gegner mehr Angriffe als nicht-Agriffe ausgespielt hat, nimmst du Zorn an. Anderenfalls nimmst du Ruhe an."
   },
   "downfall:TruePeace": {
     "NAME": "Wahrhaftiger Frieden",
@@ -82,7 +82,7 @@
   },
   "downfall:FalseWorship": {
     "NAME": "Falsche Anbetung",
-    "DESCRIPTION": "Belebe deinen Kultisten wieder wenn er tot ist. Ansonsten wird er beim nächsten Tod mit 50% seiner TP wiederbelebt."
+    "DESCRIPTION": "Belebe deinen Kultisten wieder wenn er tot ist. Anderenfalls wird er beim nächsten Tod mit 50% seiner TP wiederbelebt."
   },
   "downfall:FleetingFaith": {
     "NAME": "Geistesgegenwart",

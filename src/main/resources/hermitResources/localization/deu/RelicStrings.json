@@ -63,8 +63,8 @@
     "NAME": "Verkohlter Handschuh",
     "FLAVOR": "In Teilen des Handschus glüht immer noch unheimliche Asche.",
     "DESCRIPTIONS": [
-      "Immer wenn du einen #rFluch ziehst, fügt dein nächster Angriff #b",
-      " mehr Schaden zu."
+      "Erhalte immer wenn du einen #rFluch ziehst #b",
+      " #yElan."
     ]
   },
   "hermit:ClaspedLocket": {

@@ -9,9 +9,9 @@
   "bronze:CleanCodePotion": {
     "NAME": "Matetee",
     "DESCRIPTIONS": [
-      "Entferne alle #yKompilierungsfehler die gerade #ykodiert sind. Die nächste #yFunktion die #yKompiliert kostet #b0 bis du sie spielst.",
-      "Entferne alle #yKompilierungsfehler die gerade #ykodiert sind. Die nächsten #b",
-      " #yFunktionen die #yKompilieren kosten #b0 bis du sie spielst."
+      "Entferne alle #yKompilierungsfehler, die gerade #ykodiert sind. Die nächste #yFunktion [REMOVE_SPACE], die #yKompiliert [REMOVE_SPACE], kostet #b0 bis du sie spielst.",
+      "Entferne alle #yKompilierungsfehler, die gerade #ykodiert sind. Die nächsten #b",
+      " #yFunktionen [REMOVE_SPACE], die #yKompilieren [REMOVE_SPACE], kosten #b0 bis du sie spielst."
     ]
   },
   "bronze:BurnAndBuffPotion": {
@@ -19,14 +19,14 @@
     "DESCRIPTIONS": [
       "Erhalte #b",
       " #yStärke und #b",
-      " #yGeschicklichkeit [REMOVE_SPACE]. NL Lege 2 #yBrennen+ Karten in den Abwurfstapel."
+      " #yGeschicklichkeit [REMOVE_SPACE]. NL Lege zwei #yBrennen+ Karten in den Abwurfstapel."
     ]
   },
   "bronze:BuildAFunctionPotion": {
     "NAME": "Kios Clevere Mixtur",
     "DESCRIPTIONS": [
-      "Wähle #b1 von #b3 zufälligen Karten zum #yKodieren [REMOVE_SPACE]. Wiederhole das bis eine #yFunktion kompiliert.",
-      "Wähle #b1 von #b3 zufälligen Karten zum #yKodieren [REMOVE_SPACE]. Wiederhole das bis eine #yFunktion kompiliert. Nimm zusätzlich #b",
+      "Wähle #b1 von #b3 zufälligen Karten zum #yKodieren [REMOVE_SPACE]. Wiederhole das, bis eine #yFunktion kompiliert.",
+      "Wähle #b1 von #b3 zufälligen Karten zum #yKodieren [REMOVE_SPACE]. Wiederhole das, bis eine #yFunktion kompiliert. Nimm zusätzlich #b",
       " Kopie der Funktion auf die Hand.",
       " Kopien der Funktion auf die Hand."
     ]

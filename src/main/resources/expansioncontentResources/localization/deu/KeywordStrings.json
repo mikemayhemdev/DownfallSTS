@@ -94,7 +94,7 @@
       "angeglibbert",
       "goop"
     ],
-    "DESCRIPTION": "Der Schaden des nächsten Angriffs wird in Höhe des #yGlibbers erhöht. Der Angriff entfernt den #yGlibber und aktiviert #yKonsum Effekte."
+    "DESCRIPTION": "Der Schaden des nächsten Angriffs wird um die Höhe des #yGlibbers erhöht. Der Angriff entfernt den #yGlibber und aktiviert #yKonsum Effekte."
   },
   {
     "PROPER_NAME": "Gefesselt",

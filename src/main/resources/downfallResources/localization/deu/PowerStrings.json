@@ -7,7 +7,7 @@
     ]
   },
   "downfall:CultistRevivePower": {
-    "NAME": "False Worship",
+    "NAME": "Götzenanbetung",
     "DESCRIPTIONS": [
       "Anstatt zu sterben, wird dieser Effekt aufgehoben und die TP auf #b50% der Max TP geheilt.",
       "KRÄÄÄÄCHZ!"
@@ -107,8 +107,8 @@
   "downfall:WatcherSkillPower": {
     "NAME": "Zwiespalt ausnutzen",
     "DESCRIPTIONS": [
-      "Wenn du einen #yAngriff spielst, erhält die Seherin für diesen Zug temporär #b",
-      " #yGeschicklichkeit, und temporär #b",
+      "Wenn du einen #yAngriff spielst, erhält die Seherin für diesen Zug #ytemporär #b",
+      " #yGeschicklichkeit, und #ytemporär #b",
       " #yStärke für das Ausspielen einer #yFertigkeit, und #b",
       " von Beiden wenn du eine #yMacht spielst.",
       "Wenn du in einem Zug mehr als #b",
@@ -174,13 +174,13 @@
     ]
   },
   "downfall:SilentMirrorImagePower": {
-    "NAME": "Doppelt Sehen",
+    "NAME": "Doppelt sehen",
     "DESCRIPTIONS": [
       "Zu Beginn jedes Zuges verschleiert ein Trugbild die wahre Position des Stillen. Das Trugbild verschwindet sobald die Stille oder das Trugbild angegriffen wird."
     ]
   },
   "downfall:NeowSeeingDouble": {
-    "NAME": "Doppelt Sehen",
+    "NAME": "Doppelt sehen",
     "DESCRIPTIONS": [
       "In jedem Zug erteilt der erste #yAngriff auf Niau #b0 Sachaden."
     ]
@@ -193,7 +193,7 @@
     ]
   },
   "downfall:NeowHighlyToxic": {
-    "NAME": "Achtung: Äußerst Toxisch",
+    "NAME": "Achtung: Äußerst toxisch",
     "DESCRIPTIONS": [
       "Niau wendet in jedem Zug #b5 #yGift auf dich an. #yGift ist blockbar, und der Schaden wird am Ende des Zuges erlitten. NL Mische zu Beginn des Kampfes 2 #yGegengift in deinen Nachziehstapel."
     ]
@@ -227,7 +227,7 @@
     "DESCRIPTIONS": [
       "Immer wenn du eine #yMacht spielst, erhält das Defekte #b",
       " #yFokus [REMOVE_SPACE].",
-      " Die #yStärke des Defekten beeinflusst auch sein #yFocus [REMOVE_SPACE]."
+      " Die #yStärke des Defekten beeinflusst auch sein #yFokus [REMOVE_SPACE]."
     ]
   },
   "downfall:DefectBiasCuriosity": {
@@ -391,7 +391,7 @@
     ]
   },
   "downfall:TangerinePower": {
-    "NAME": "Hilfssherrif",
+    "NAME": "Hilfssheriff",
     "DESCRIPTIONS": [
       "When die Wachlaus stirbt, verliert der Einsiedler seine #yKonzentration in diesem Zug und er erhält permanent #b",
       " #yStärke.",

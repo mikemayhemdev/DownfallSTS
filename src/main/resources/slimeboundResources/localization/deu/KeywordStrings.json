@@ -10,7 +10,7 @@
       "absorbed"
     ],
     "PROPER_NAME": "Absorbieren",
-    "DESCRIPTION": "Vereinige dich mit deinem führenden Schleimuntertanen, und erhalte dabei #b1 #yStärke [REMOVE_SPACE]."
+    "DESCRIPTION": "Vereinige dich einem Schleimuntertanen und erhalte dabei #b1 #yStärke [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -66,7 +66,7 @@
       "commands"
     ],
     "PROPER_NAME": "Kommando",
-    "DESCRIPTION": "Dein führender Schleimuntertan greift an."
+    "DESCRIPTION": "Gibt Schleimuntertanen das Angriffskommando. Falls nicht näher spezifiziert, greift nur der führende (jüngste) Schleimuntertan an."
   },
   {
     "NAMES": [
@@ -194,7 +194,7 @@
       "protector_slime"
     ],
     "PROPER_NAME": "Dornenschleim",
-    "DESCRIPTION": "Fügt mit seinem Angriff #b4 Schaden zu, und gibt dir danach #b4 temporäre #yStacheln."
+    "DESCRIPTION": "Fügt mit seinem Angriff #b4 Schaden zu, und gibt dir danach #b4 #ytemporäre #yStacheln."
   },
   {
     "NAMES": [

@@ -31,8 +31,8 @@
   "champ:Library": {
     "NAME": "Die Bibliothek",
     "DESCRIPTIONS": [
-      "Du erblickst das Quell des Wissens in der Stadt: - die Alte Bibliothek. NL Drinnen findest du zahllose Schriftrollen, Manuskripte und Bücher. NL Du könntest dir eines nehmen und etwas stille Zeit auf einem gemütlichen Stuhl genießen, oder die Zeit nutzen um nach ein Buch zu suchen, das von Kampfkunst handelt.",
-      "Du verbringst viel Zeit damit, die großen Hallen nach Wälzern und Handbüchern abzusuchen, bis du endlich etwas findest, wonach du gesucht hast. NL NL Du machst es dir auf einen Stuhl gemütlich und liest von Techniken, die du schon fast vergessen hättest. Selbst ein perfekter Gladiator wie du weiß, dass man nicht nur den Körper, sondern auch den Geist trainieren und stimulieren muss."
+      "Du erblickst das Quell des Wissens in der Stadt: die Alte Bibliothek. NL Drinnen findest du zahllose Schriftrollen, Manuskripte und Bücher. NL Du könntest dir eines nehmen und etwas stille Zeit auf einem gemütlichen Stuhl genießen, oder die Zeit nutzen um nach ein Buch zu suchen, das von Kampfkunst handelt.",
+      "Du verbringst viel Zeit damit, die großen Hallen nach Wälzern und Handbüchern abzusuchen, bis du endlich etwas findest, wonach du gesucht hast. NL NL Du machst es dir auf einem Stuhl gemütlich und liest von Techniken, die du schon fast vergessen hättest. Selbst ein perfekter Gladiator wie du weiß, dass man nicht nur den Körper, sondern auch den Geist trainieren und stimulieren muss."
     ],
     "OPTIONS": [
       "[Suchen] #gSuche #gnach #geinem #gKampfbuch.",
@@ -42,11 +42,11 @@
   "champ:TechniqueTome": {
     "NAME": "Enzyklopädie der Techniken",
     "DESCRIPTIONS": [
-      "Während du etwas abseits des Weges wanderst, spürst du eine immense Kraft, die dich anzieht. Fast schon wie von selbst machst du Schritt für Schritt in Richtung eines Podestes, auf dem ein massiver Wälzer liegt - umhüllt von einer scheurigen Art Energie. NL NL Du näherst dich dem Buch uns siehst plötzlich Skizzen und Zeichnungen von Attacken, Techniken und Kampfhaltungen auf Seiten, die eben noch ganz leer waren. NL NL Es ist fast zu schön um wahr zu sein - alles was du jemals über das Kämpfen wissen willst und kannst steht dort geschrieben und gezeichnet. Diese Gelegenheit muss genutzt werden!",
-      "Unglaublich! Die Techniken des Buches sind atemberaubend. Jedes Wort und jede Skizze springt förmlich direkt in deinen Kopf und eröffnet die neue Möglichkeiten, wie du deine Gegner abschlachten kannst. NL NL Doch dieses Wissen kommt nicht ohne Kehrseite - du spürst, wie es deine Psyche belastet. Doch es gibt noch viel zu lernen...",
-      "Jawohl. Noch mehr Techniken. Du kannst jetzt nicht aufhören. Fast ohne Zurückhaltung saugst du das Wissen auf, das der Wälzer dir zur Verfügung stellt. NL NL Du bist bereit noch mehr deiner Lebenskraft zu opfern um von der Weisheit des Buches zu profitieren. Es gibt weiterhin viel zu lernen...",
+      "Während du etwas abseits des Weges wanderst, spürst du eine immense Kraft, die dich anzieht. Fast schon wie von selbst machst du Schritt für Schritt in Richtung eines Podestes, auf dem ein massiver Wälzer liegt - umhüllt von einer scheurigen Art Energie. NL Du näherst dich dem Buch uns siehst plötzlich Skizzen und Zeichnungen von Attacken, Techniken und Kampfhaltungen auf Seiten, die eben noch ganz leer waren. NL NL Es ist fast zu schön um wahr zu sein - alles was du jemals über das Kämpfen wissen willst und kannst steht dort geschrieben und gezeichnet. Diese Gelegenheit muss genutzt werden!",
+      "Unglaublich! Die Techniken des Buches sind atemberaubend. Jedes Wort und jede Skizze springt förmlich direkt in deinen Kopf und eröffnet dir neue Möglichkeiten, wie du deine Gegner abschlachten kannst. NL NL Doch dieses Wissen kommt nicht ohne Kehrseite - du spürst, wie es deine Psyche belastet. Doch es gibt noch viel zu lernen...",
+      "Jawohl. Noch mehr Techniken. Du kannst jetzt nicht aufhören. Fast ohne Zurückhaltung saugst du das Wissen auf, das der Wälzer dir zur Verfügung stellt. NL NL Du bist bereit, noch mehr deiner Lebenskraft zu opfern, um von der Weisheit des Buches zu profitieren. Es gibt weiterhin viel zu lernen...",
       "Es kostet dich viel deiner Willenskraft, dem Verlangen nachzugeben vom Buch zu lesen. Womöglich kehrst du hierhin zurück, doch jetzt gibt es Wichtigeres zu tun.",
-      "Das Wissen in diesem Buch ist fast jeden Preis wert. Es kostet viel Kraft sich vom sprichwörtlichen Griff des Buches zu lösen, doch du schaffst es. NL NL Du kannst es kaum erwarten dein neues Wissen auf das nächste Opfer anzuwenden."
+      "Das Wissen in diesem Buch ist fast jeden Preis wert. Es kostet viel Kraft sich vom sprichwörtlichen Griff des Buches zu lösen, doch du schaffst es. NL NL Du kannst es kaum erwarten, dein neues Wissen auf das nächste Opfer anzuwenden."
     ],
     "OPTIONS": [
       "[Lesen] Füge einem Angriff #y'aktiviere #yFertigkeitsbonus' hinzu. #rVerliere #r",
@@ -60,15 +60,15 @@
   "champ:Gym": {
     "NAME": "Trainingshalle",
     "DESCRIPTIONS": [
-      "Entlang des Weges kommst du an der Trainingshalle des Exordium vorbei - ein Ort, den du regelmäßig besuchst um deinen Körper in Form zu halten. NL NL Jetzt wo du schon hier bist wäre es eine verschwendete Gelegenheit, keine Zeit darin zu verbringen. Um der Beste zu bleiben musst du dich auch ranhalten.",
+      "Entlang des Weges kommst du an der Trainingshalle des Exordium vorbei - ein Ort, den du regelmäßig besuchst, um deinen Körper in Form zu halten. NL NL Jetzt wo du schon hier bist, wäre es eine verschwendete Gelegenheit, nicht vorbeizusehen. Um der Beste zu bleiben, darfst du nicht aufhören, an dir zu arbeiten.",
       "Heute ist Ausdauertraining dran. Mit der vollen Rüstung absolvierst du einige Runden auf der Laufstrecke. NL NL Voller Adrenalin und Energie verlässt du die Trainingshalle, bereit die Bedrohung des Spire zu zerschlagen.",
       "Heute ist Kampftraining an der Reihe. Du siehst dich nach jemanden um, der so aussieht als könnte er ein paar Schläge einstecken. Du packst ihn an den Schultern und wirfst ihn in den Ring. Nach einigen Runden ist er schon KO. NL NL Der Kampf war keine Herausforderung, doch du hast eine neue Technik entwickelt, wie man einen Kampf beginnen kann.",
-      "Das heutige Training steht ganz im Zeichen des Oberkörpers. Du nimmst dir die schwersten Geichte und Widerstände und absolvierst einige Sätze. Nach dem Training spürst du, dass dir das Gewichtheben ein wenig leichter fällt. NL NL Als du die Trainingshalle verlässt, machst du dir im Kopf die Notiz, dass beim nächsten Mal Beintraining an der Reihe ist. Das Beintraining darfst du nicht schwänzen!"
+      "Das heutige Training steht ganz im Zeichen des Oberkörpers. Du nimmst dir die schwersten Gewichte und Widerstände und absolvierst einige Sätze. Nach dem Training spürst du, dass dir das Gewichtheben ein wenig leichter fällt. NL NL Als du die Trainingshalle verlässt, machst du dir im Kopf die Notiz, dass beim nächsten Mal Beintraining an der Reihe ist. Das Beintraining darfst du nicht schwänzen!"
     ],
     "OPTIONS": [
       "[Cardio] #gErhalte #g",
       " #gMax #gTP.",
-      "[Sparring] Wähle eine nicht-Abschluss Karte um 'Nimm (Haltung deiner Wahl) an' hinzuzufügen.",
+      "[Sparring] Eine nicht-Abschluss Karte erhält 'Nimm #y(Haltung) an'.",
       "[Gewichtheben] #gBeginne #gjeden #gKampf #gmit #g1 #gStärke.",
       "[Verlassen]",
       "Wähle eine nicht-Abschluss Karte um 'Nimm Defensiv an' hinzuzufügen.",
@@ -80,8 +80,8 @@
   "champ:MinorLeagueArena": {
     "NAME": "Unterliga-Arena",
     "DESCRIPTIONS": [
-      "Auf deinem Weg entdeckst du eine bekanntes Wahrzeichen des Exordium - Eine Arena in der früher die blutigen Spiele stattfanden, die mittlerweile im großen Kolosseum der Stadt über die Bühne gehen. Diese kleinere Arena bietet nun etwas schwächeren Kriegern die Möglichkeit zu trainiren und zu kämpfen. NL NL Diese albernen Kämpfe sind zwar nicht ganz deine Liga, doch können sie für Ablenkung und Unterhaltung sorgen.",
-      "Du verlässt die Arena - das ist nur Zeitverschwendung. Du hörst wie die Kämpfer erleichtern aufatmen. Keiner von ihnen war wohl dazu bereit, heute durch deine Hand zu sterben."
+      "Auf deinem Weg entdeckst du eine bekanntes Wahrzeichen des Exordium - eine Arena in der früher die blutigen Spiele stattfanden, die mittlerweile im großen Kolosseum der Stadt über die Bühne gehen. Diese kleinere Arena bietet nun etwas schwächeren Kriegern die Möglichkeit, sich zu beweisen. Diese albernen Kämpfe sind zwar nicht ganz deine Liga, doch können sie für Ablenkung sorgen.",
+      "Du verlässt die Arena - das ist nur Zeitverschwendung. Du hörst, wie die Kämpfer erleichtert aufatmen. Keiner von ihnen war wohl dazu bereit, heute durch deine Hand zu sterben."
    ],
     "OPTIONS": [
       "[Kämpfe gegen Zenturio & Mystikerin] #gErhalte #gden #gManschettenknopf.",
@@ -96,7 +96,7 @@
       "Fähigkeiten und das Vertrauen in ihnen sind eine unschlagbare Kombination."
     ],
     "OPTIONS": [
-      "[Intuition] Alle #gSchlag und #gVerteidigen Karten erhalten #y'aktiviere #yFertigkeitsbonus'.",
+      "[Intuition] Alle #gSchlag und #gVerteidigen Karten aktivieren den #yFertigkeitsbonus.",
       "[Gesperrt] Erfordert einen Schlag oder ein Verteidigen."
     ]
   }
