@@ -34,12 +34,12 @@
   },
   "hermit:HighCaliber": {
     "NAME": "Hochkarätig",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm einen *Schlag+2 auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Nimm einen *Schlag+3 auf die Hand. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte *Schlag+2. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte *Schlag+3. NL Erschöpft."
   },
   "hermit:BodyArmor": {
     "NAME": "Schutzweste",
-    "DESCRIPTION": "Wirf eine Karte ab. NL Erhalte !B! Block. NL Wurde eine Karte abgeworfen die kein Angriff ist, erhalte nochmal !B! Block."
+    "DESCRIPTION": "Wirf eine Karte ab. NL Erhalte !B! Block. NL Wurde ein nicht-Angriff abgeworfen, dann erhalte nochmal !B! Block."
   },
   "hermit:Snipe": {
     "NAME": "Zielen",
@@ -66,7 +66,7 @@
   },
   "hermit:ShadowCloak": {
     "NAME": "Schattenmantel",
-    "DESCRIPTION": "Erhalte immer wenn du einen Fluch ziehst oder erschöpfst !M! Block."
+    "DESCRIPTION": "Erhalte immer, wenn du einen Fluch ziehst oder erschöpfst, !M! Block."
   },
   "hermit:FatalDesire": {
     "NAME": "Todestrieb",
@@ -246,7 +246,7 @@
   },
   "hermit:HighNoon": {
     "NAME": "Duell",
-    "DESCRIPTION": "Ziehe immer wenn du einen *Schlag oder ein *Verteidigen spielst eine Karte."
+    "DESCRIPTION": "Ziehe immer, wenn du einen *Schlag oder ein *Verteidigen spielst, eine Karte."
   },
   "hermit:Reprieve": {
     "NAME": "Gnadenfrist",
@@ -259,7 +259,7 @@
   },
   "hermit:Magnum": {
     "NAME": "Magnum",
-    "DESCRIPTION": "Wirf 6 Karten ab. NL Füge für jede abgeworfene Karte !D! Schaden zu."
+    "DESCRIPTION": "Wirf 6 Karten ab. NL Füge pro abgeworfener Karte !D! Schaden zu."
   },
   "hermit:Determination": {
     "NAME": "Entschlossenheit",
@@ -284,7 +284,7 @@
   },
   "hermit:DeadMansHand": {
     "NAME": "Totenhand",
-    "DESCRIPTION": "Wirf deine Hand ab. Nimm die !M! seltensten Karten aus dem Nachziehstapel auf die Hand."
+    "DESCRIPTION": "Wirf deine Handkarten ab. Nimm die !M! seltensten Karten aus dem Nachziehstapel auf die Hand."
   },
   "hermit:DeadOrAlive": {
     "NAME": "Tot oder Lebendig",
@@ -300,7 +300,7 @@
   },
   "hermit:ItchyTrigger": {
     "NAME": "Triggerdisziplin",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL hermit:Volltreffer: Eine zufällige Karte in deiner Hand kostet diesen Zug 0."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL hermit:Volltreffer: Eine zufällige Handkarte kostet diesen Zug 0."
   },
   "hermit:EyeOfTheStorm": {
     "NAME": "Auge des Sturms",

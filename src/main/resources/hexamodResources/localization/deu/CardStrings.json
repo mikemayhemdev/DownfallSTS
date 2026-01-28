@@ -258,7 +258,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wenn der Gegner *Seelenfeuer hat, detoniere es bis auf 1."
   },
   "hexamod:PowerFromBeyond": {
-    "NAME": "Macht des Jenseits",
+    "NAME": "Macht der Geister",
     "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Im[] [#e087a4]nächsten[] [#e087a4]Zug,[] [#e087a4]ziehe[] !M! [#e087a4]Karten[] und erhalte [E] . NL ",
     "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Im[] [#e087a4]nächsten[] [#e087a4]Zug,[] [#e087a4]ziehe[] !M! [#e087a4]Karten[] und erhalte [E] [E] . NL ",
     "EXTENDED_DESCRIPTION": [
@@ -536,8 +536,8 @@
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Aus dem Schatten",
-    "DESCRIPTION": "Flüchtig. NL Immer wenn du dich hexamod:rückwärts bewegst, spiele eine Karte aus der Hand und erschöpfe sie.",
-    "UPGRADE_DESCRIPTION": "Immer wenn du dich hexamod:rückwärts bewegst, spiele eine Karte aus der Hand und erschöpfe sie.",
+    "DESCRIPTION": "Flüchtig. NL Immer wenn du dich hexamod:rückwärts bewegst, spiele eine Handkarte und erschöpfe sie.",
+    "UPGRADE_DESCRIPTION": "Immer wenn du dich hexamod:rückwärts bewegst, spiele eine Handkarte und erschöpfe sie.",
     "EXTENDED_DESCRIPTION": [
       "zum Ausspielen und Erschöpfen."
     ]

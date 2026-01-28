@@ -131,7 +131,7 @@
     "NAME": "Moduswechsel",
     "DESCRIPTIONS": [
       "Wenn du #b",
-      " TP verlierst, erhalte #b16 #yBlock, wechsle in den #yDefensivmodus bis zum nächsten Zug, und erhöhe die erforderliche Anzahl um den Effekt erneut zu aktivieren um #b10 (kann #b50 nicht übersteigen)."
+      " TP verlierst oder #yabhärtest [REMOVE_SPACE], erhalte #b16 #yBlock [REMOVE_SPACE], wechsle bis zum nächsten Zug in den #yDefensivmodus [REMOVE_SPACE], und erhöhe die erforderliche Anzahl um den Effekt erneut zu aktivieren um #b10 (kann #b50 nicht übersteigen)."
     ]
   },
   "Guardian:ExhaustStatusesPower": {
@@ -139,7 +139,7 @@
     "DESCRIPTIONS": [
       "Wenn du im Zug das erste Mal einen #yStatus oder #yFluch ziehst, #yerschöpfe ihn und ziehe eine Karte.",
       "Die ersten #b",
-      " Male die du im Zug einen #yStatus oder #yFluch ziehst, #yerschöpfe ihn und ziehe eine Karte."
+      " Male, die du im Zug einen #yStatus oder #yFluch ziehst, #yerschöpfe ihn und ziehe eine Karte."
     ]
   },
   "Guardian:RevengePower": {
@@ -176,7 +176,7 @@
     ]
   },
   "Guardian:EvasiveProtocolPower": {
-    "NAME": "Ausweichprotokoll",
+    "NAME": "Fluchtprotokoll",
     "DESCRIPTIONS": [
       "Reduziere jedes Mal, wenn du in den #yDefensivmodus wechselst, deine Debuffs um #b",
       " [REMOVE_SPACE]."
@@ -207,7 +207,7 @@
   "Guardian:BracePerTurnPower": {
     "NAME": "Abhärtung",
     "DESCRIPTIONS": [
-      "#yHärte zu Beginn deines Zuges um #b",
+      "#yHärte dich zu Beginn deines Zuges um #b",
       " #yab [REMOVE_SPACE]."
     ]
   }

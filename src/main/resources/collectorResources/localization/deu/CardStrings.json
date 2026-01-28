@@ -275,7 +275,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte im nächsten Zug 1 collector:Reserve."
   },
   "collector:MysteryWeaving": {
-    "NAME": "Magisches Geflecht",
+    "NAME": "Magischer Faden",
     "DESCRIPTION": "Erhalte !B! Block. NL Gibt für jede andere Handkarte 2 Block weniger."
   },
   "collector:OakbrimKindling": {
@@ -365,7 +365,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !B! Block wenn der Gegner collector:geplagt ist."
   },
   "collector:StashAway": {
-    "NAME": "Vorrat anlegen",
+    "NAME": "Vorräte anlegen",
     "DESCRIPTION": "Erhalte X Mal !B! Block. NL Erhalte im nächsten Zug X collector:Reserve. NL Erschöpft."
   },
   "collector:Strike": {
@@ -606,7 +606,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! Schwach an. NL Wiederhole das, wenn eine *Wache im Erschöpfungsstapel ist."
   },
   "collector:ShelledParasiteCard": {
-    "NAME": "Gepanzerter Parasit",
+    "NAME": "Panzerparasit",
     "DESCRIPTION": "Erhalte !M! expansioncontent:Panzerrüstung."
   },
   "collector:ShieldGremlinCard": {

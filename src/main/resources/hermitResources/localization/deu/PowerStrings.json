@@ -5,7 +5,7 @@
 },
 "hermit:HighNoonPower": {
         "NAME": "Duell",
-        "DESCRIPTIONS": ["Ziehe immer wenn du einen #ySchlag oder ein #yVerteidigen spielst #b", " Karte.", " Karten."]
+        "DESCRIPTIONS": ["Ziehe immer, wenn du einen #ySchlag oder ein #yVerteidigen spielst, #b", " Karte.", " Karten."]
 },
 "hermit:FatalDesirePower": {
         "NAME": "Todestrieb",
@@ -13,7 +13,7 @@
 },
 "hermit:ShadowCloakPower": {
         "NAME": "Schattenmantel",
-        "DESCRIPTIONS": ["Erhalte immer wenn du einen #rFluch ziehst oder #yerschöpfst #b", " Block."]
+        "DESCRIPTIONS": ["Erhalte immer, wenn du einen #rFluch ziehst oder #yerschöpfst [REMOVE_SPACE], #b", " Block."]
 },
 "hermit:TakeAimPower": {
         "NAME": "Anvisieren",

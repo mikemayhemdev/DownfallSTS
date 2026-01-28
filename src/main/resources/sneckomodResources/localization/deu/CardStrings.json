@@ -26,7 +26,7 @@
     "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL sneckomod:Irre eine Karte."
   },
   "sneckomod:Deception": {
-    "NAME": "Täuschung",
+    "NAME": "Erschrecken",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte eine *Schockwelle. NL Erschöpft."
   },
   "sneckomod:Defend": {
@@ -234,8 +234,8 @@
     ]
   },
   "sneckomod:SoulDraw": {
-    "NAME": "Seelenziehen",
-    "DESCRIPTION": "Erhalte !M! zufällige Karte aus sneckomod:Fremdklassen. NL Sie erhalten Behalten. NL Erschöpft."
+    "NAME": "Seelenextrakt",
+    "DESCRIPTION": "Erhalte !M! zufällige Karten aus sneckomod:Fremdklassen. NL Sie erhalten Behalten. NL Erschöpft."
   },
   "sneckomod:SoulExchange": {
     "NAME": "Seelentausch",
@@ -480,7 +480,7 @@
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erhalte *Verschanzen+. NL Erschöpft."
   },
   "sneckomod:WideSting": {
-    "NAME": "Weiter Stich",
+    "NAME": "Fernkampf",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Verbessere alle Karten aus sneckomod:Fremdklassen in deiner Hand. NL sneckomod:Geschenk: Gewöhnlich.",
     "DESCRIPTION_BATTLE": "Füge ALLEN Gegnern !D! Schaden zu. NL Verbessere alle Karten aus sneckomod:Fremdklassen in deiner Hand."
   },
@@ -512,7 +512,7 @@
     "UPGRADE_DESCRIPTION": "Wenn du eine Karte spielst, die mindestes 3 kostet, erhalte !qqq! Block und !M! Stärke."
   },
   "sneckomod:WideAngle": {
-    "NAME": "Weitwinkel",
+    "NAME": "Weiter Winkel",
     "DESCRIPTION": "Behalten. NL Füge ALLEN Gegnern !D! Schaden zu."
   },
   "sneckomod:SerpentsNest": {
@@ -545,7 +545,7 @@
     "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. Wenn der Gegner mindestens !M! Debuffs hat, ziehe !qqq! Karten."
   },
   "sneckomod:LatchOn": {
-    "NAME": "Festklammern",
+    "NAME": "Vipernklaue",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte eine *Vipernessenz."
   },
   "sneckomod:ComboString": {

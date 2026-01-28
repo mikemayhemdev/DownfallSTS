@@ -228,7 +228,7 @@
   },
   "bronze:FollowUp": {
     "NAME": "Nachlegen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Hast du diesen Kampf zuletzt eine Funktion gespielt, dann spiele diese Karte erneut."
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Hast du diesen Kampf zuletzt eine Funktion gespielt, dann spiele diese Karte nochmal."
   },
   "bronze:ForceShield": {
     "NAME": "Kraftschild",
@@ -481,7 +481,7 @@
   },
   "bronze:Terminator": {
     "NAME": "Terminator",
-    "DESCRIPTION": "bronze:Kompilierung - Wird im letzten Slot mit 'Spiele dieser Karte erneut' *kodiert.",
+    "DESCRIPTION": "bronze:Kompilierung - Wird im letzten Slot mit 'Spiele dieser Karte nochmal' *kodiert.",
     "EXTENDED_DESCRIPTION": [
       "trauriges",
       "Ende"

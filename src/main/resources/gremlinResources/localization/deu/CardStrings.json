@@ -403,7 +403,7 @@
   },
 
   "Gremlin:SharpenBlades": {
-    "NAME": "Klingen schärfen",
+    "NAME": "Waffen schärfen",
     "DESCRIPTION": "Alle Angriffe auf der Hand kosten diesen Zug 0.",
     "UPGRADE_DESCRIPTION": "Ziehe eine Karte. NL Alle Angriffe auf der Hand kosten diesen Zug 0."
   },

@@ -89,7 +89,7 @@
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. Stärke beeinflusst Gigastrahl NL !M! Mal. Im nächsten Zug bist du hermit:betäubt."
   },
   "Guardian:BronzeArmor": {
-    "NAME": "Belastbarer Panzer",
+    "NAME": "Stabiler Panzer",
     "DESCRIPTION": "Verringere deine Debuffs um !M!. NL guardianmod:Abhärten 8. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Verringere deine Debuffs um !M!. NL guardianmod:Abhärten 8."
   },
@@ -173,8 +173,8 @@
   },
   "Guardian:PackageAutomaton": {
     "NAME": "Paket: Bronze",
-    "DESCRIPTION": "Erhalte *Gigastrahl, *Orb-Assistenz, und *Belastbarer *Panzer. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte *Gigastrahl+, *Orb-Assistenz+, und *Belastbarer *Panzer+. NL Erschöpft."
+    "DESCRIPTION": "Erhalte *Gigastrahl, *Orb-Assistenz, und *Stabiler *Panzer. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte *Gigastrahl+, *Orb-Assistenz+, und *Stabiler *Panzer+. NL Erschöpft."
   },
   "Guardian:PackageDefect": {
     "NAME": "Paket: Defekt",
@@ -226,8 +226,8 @@
   },
   "Guardian:Suspension": {
     "NAME": "Aufschub",
-    "DESCRIPTION": "Erhalte !B! Block. NL Lege eine Karte aus der Hand in guardianmod:Stasis.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Lege eine Karte aus der Hand in guardianmod:Stasis."
+    "DESCRIPTION": "Erhalte !B! Block. NL Lege eine Handkarte in guardianmod:Stasis.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Lege eine Handkarte in guardianmod:Stasis."
   },
   "Guardian:FastForward": {
     "NAME": "Volldampf",
@@ -299,7 +299,7 @@
     "DESCRIPTION": "Füge ALLEN Gegnern X mal !D! Schaden zu. NL guardianmod:Ticken - Erhöhe den Schaden dieser Karte um !M!."
   },
   "Guardian:BaubleBeam": {
-    "NAME": "Kugelsprengung",
+    "NAME": "Orb-Fassung",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Führe !M! Mal aus:"
   },
   "Guardian:PrimingBeam": {
@@ -307,7 +307,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL guardianmod:Abhärten !M!."
   },
   "Guardian:EvasiveProtocol": {
-    "NAME": "Ausweichprotokoll",
+    "NAME": "Fluchtprotokoll",
     "DESCRIPTION": "Reduziere jedes Mal, wenn du in den *Defensivmodus wechselst, deine Debuffs um !M!. NL guardianmod:Abhärten !GuardianSecondM!.",
     "UPGRADE_DESCRIPTION": "Reduziere jedes Mal, wenn du in den *Defensivmodus wechselst, deine Debuffs um !M!. NL guardianmod:Abhärten !GuardianSecondM!."
   },

@@ -205,7 +205,7 @@
   },
   "champ:RisingSlash": {
     "NAME": "Nachschlag",
-    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. War die letzte gespielte Karte ein champ:Abschluss, dann füge erneut !D! Schaden zu."
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. War die letzte gespielte Karte ein champ:Abschluss, dann füge nochmal !D! Schaden zu."
   },
   "champ:Shatter": {
     "NAME": "Zerbersten",
@@ -374,7 +374,7 @@
   },
   "champ:FancyFootwork": {
     "NAME": "Graziöser Gang",
-    "DESCRIPTION": "Nimm eine zufällige *Haltung an, in der du dich nicht befindest. NL Der nächste champ:Abschluss fügt in diesem Zug ALLEN gegenern !M! Schaden zu."
+    "DESCRIPTION": "Nimm eine zufällige *Haltung an, in der du dich nicht befindest. Der nächste champ:Abschluss des Zuges fügt ALLEN gegenern !M! Schaden zu."
   },
   "champ:TripleStrike": {
     "NAME": "Dreifachschlag",

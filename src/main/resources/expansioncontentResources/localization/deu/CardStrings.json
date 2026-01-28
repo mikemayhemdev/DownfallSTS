@@ -73,8 +73,8 @@
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Schnellstudien",
-    "DESCRIPTION": "Wähle 1 aus 3 zufälligen *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wähle 1 aus 3 zufälligen *verbesserten *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. NL Erschöpft.",
+    "DESCRIPTION": "Wähle 1 aus 3 zufälligen *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wähle 1 aus 3 zufälligen *verbesserten *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle eine Boss-Karte."
     ]
@@ -173,7 +173,7 @@
 
   "expansioncontent:Virus": {
     "NAME": "404 Virus",
-    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. bronze:Setze für Jede einen *Hypostrahl ein. NL Erschöpft."
+    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. bronze:Setze pro erschöpfter Karte einen *Hypostrahl *ein. NL Erschöpft."
   },
 
   "expansioncontent:MajorBeam": {
@@ -189,18 +189,18 @@
   },
   "expansioncontent:Pandemonium": {
     "NAME": "Pandämonium",
-    "DESCRIPTION": "Spiele zu Beginn deines Zuges eine zufällige Karte deines Abwurfstapels."
+    "DESCRIPTION": "Spiele zu Beginn deines Zuges eine zufällige Karte im Abwurfstapel."
   },
   "expansioncontent:Reverie": {
     "NAME": "Déjà-vu",
-    "DESCRIPTION": "Schnapp dir zu Beginn deines Zuges eine der obersten !M! Karten des Abwurfstapels."
+    "DESCRIPTION": "Schnapp dir zu Beginn deines Zuges eine der !M! obersten Karten des Abwurfstapels."
   },
   "expansioncontent:ExploitVulnerability": {
     "NAME": "Donu-Strahl",
     "DESCRIPTION": "Entferne allen Block des Gegners, und erhalte genauso viel Block. Füge zweimal !D! Schaden zu."
   },
   "expansioncontent:PeekPages": {
-    "NAME": "Seiten spicken",
+    "NAME": "Nachlesen",
     "DESCRIPTION": "Lege !M! *Einsicht Karten auf den Nachziehstapel. NL Erschöpft."
   },
   "expansioncontent:BloodBarrage": {
