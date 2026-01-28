@@ -17,7 +17,7 @@
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Strahl",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine *Leere auf deinen Nachziehstapel. NL Erschöpft."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine *Leere auf den Nachziehstapel. NL Erschöpft."
   },
   "expansioncontent:LastStand": {
     "NAME": "Finales Aufgebot",
@@ -145,7 +145,7 @@
   },
 
   "expansioncontent:SuperWhirlingFlame": {
-    "NAME": "Wirbelndes Lodern",
+    "NAME": "Wirbelnder Funke",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine Karte aus dem Abwurfstapel auf den Nachziehstapel."
   },
   "expansioncontent:Flail": {
@@ -173,11 +173,11 @@
 
   "expansioncontent:Virus": {
     "NAME": "404 Virus",
-    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. Mische für Jede einen *Großen *Strahl in den Nachziehstapel. NL Erschöpft."
+    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. bronze:Setze für Jede einen *Hypostrahl ein. NL Erschöpft."
   },
 
   "expansioncontent:MajorBeam": {
-    "NAME": "Großer Strahl",
+    "NAME": "Hypostrahl",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karte.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten."
   },
@@ -197,7 +197,7 @@
   },
   "expansioncontent:ExploitVulnerability": {
     "NAME": "Donu-Strahl",
-    "DESCRIPTION": "Entferne allen Block des Gegners, und erhalte genausoviel Block. Füge zweimal !D! Schaden zu."
+    "DESCRIPTION": "Entferne allen Block des Gegners, und erhalte genauso viel Block. Füge zweimal !D! Schaden zu."
   },
   "expansioncontent:PeekPages": {
     "NAME": "Seiten spicken",

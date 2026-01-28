@@ -22,7 +22,7 @@
     ]
   },
   "collector:Crackle": {
-    "NAME": "Knistern",
+    "NAME": "Pyromanie",
     "DESCRIPTIONS": [
       "Erhalte zu Beginn deines Zuges #b1 #yReserve.",
       "Erhalte zu Beginn deines Zuges #b",
@@ -297,7 +297,7 @@
     ]
   },
   "collector:LanternFlare": {
-    "NAME": "Verschmort",
+    "NAME": "Todeslaterne",
     "DESCRIPTIONS": [
       "Erhält am Ende seines Zuges #b",
       " #yVerdammnis."

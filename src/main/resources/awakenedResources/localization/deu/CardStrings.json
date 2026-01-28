@@ -132,7 +132,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Wende !awakened:m2! awakened:Manabrand auf ALLE Gegner an. NL Erschöpft."
   },
   "awakened:SludgeBomb": {
-    "NAME": "Schlammbombe",
+    "NAME": "Schmutzige Bombe",
     "DESCRIPTION": "Erfordert eine *Leere im Erschöpfungsstapel. Entferne sie und füge zweimal !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "Ich habe keine erschöpfte Leere."
@@ -172,14 +172,14 @@
   },
   "awakened:Ensorcelate": {
     "NAME": "Zauberformel",
-    "DESCRIPTION": "Erhalte !B! Block. NL Die nächste Macht die du ausspielst kostet 0."
+    "DESCRIPTION": "Erhalte !B! Block. NL Die nächste gespielte Macht kostet 0."
   },
   "awakened:Skyward": {
     "NAME": "Himmelswache",
     "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karte. NL Kostet für jede in diesem Kampf gespielte Macht [E] weniger."
   },
   "awakened:RisingChant": {
-    "NAME": "Aufsteigender Chor",
+    "NAME": "Aufstiegschor",
     "DESCRIPTION": "Flüchtig. NL Der erste awakened:Chor Effekt jedes Zuges wird doppelt aktiviert.",
     "UPGRADE_DESCRIPTION": "Der erste awakened:Chor Effekt jedes Zuges wird doppelt aktiviert."
   },
@@ -269,7 +269,7 @@
     "DESCRIPTION": "Immer wenn du eine *Leere erhältst verlieren ALLE Gegner !M! TP."
   },
   "awakened:MysticOrder": {
-    "NAME": "Mystische Ordnung",
+    "NAME": "Mystische Sitten",
     "DESCRIPTION": "Ziehe !M! Karten. NL awakened:Aufrufen."
   },
   "awakened:ProfaneStrike": {
@@ -401,7 +401,7 @@
   },
   "awakened:RealityRift": {
     "NAME": "Dimensionsspalte",
-    "DESCRIPTION": "Nimm !awakened:m2! von !M! mächtigen Karten einer *ANDEREN *DIMENSION auf die Hand. Lege 2 *Leeren in den Abwurfstapel. Erschöpft."
+    "DESCRIPTION": "Erhalte !awakened:m2! von !M! Karten einer *ANDEREN *DIMENSION. Lege 2 *Leeren in den Abwurfstapel. Erschöpft."
   },
   "awakened:Inscribe": {
     "NAME": "Einschreiben",

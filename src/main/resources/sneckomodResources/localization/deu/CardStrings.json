@@ -1,6 +1,6 @@
 {
   "sneckomod:Blunderbus": {
-    "NAME": "Donnerbüchse",
+    "NAME": "Irre Kanone",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Wiederhole das für jede Handkarte, die mindestens 3 kostet."
   },
   "sneckomod:Tsunami": {
@@ -100,7 +100,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karte für jede Handkarte, die mindestens 2 kostet."
   },
   "sneckomod:Nope": {
-    "NAME": "Umtausch",
+    "NAME": "Transformation",
     "DESCRIPTION": "Erhalte !B! Block. NL Erschöpfe eine Karte. Wenn sie eine Farbe hatte, dann erhalte eine zufällige Karte derselben Klasse.",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erschöpfe eine Karte. Wenn sie eine Farbe hatte, dann erhalte eine zufällige Karte derselben Klasse.",
     "EXTENDED_DESCRIPTION": [
@@ -124,7 +124,7 @@
     ]
   },
   "sneckomod:MintCondition": {
-    "NAME": "Neuzustand",
+    "NAME": "Überproduktion",
     "DESCRIPTION": "sneckomod:Überschuss: Erhalte !M! Stärke."
   },
   "sneckomod:MixItUp": {
@@ -151,7 +151,7 @@
     "UPGRADE_DESCRIPTION": "Das erste Mal wenn du im Zug eine Karte einer sneckomod:Fremdklasse spielst, ziehe eine Karte."
   },
   "sneckomod:RiskySword": {
-    "NAME": "Zockerklinge",
+    "NAME": "Irrläufer",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Der Schaden wird um !M! erhöht, wenn diese Karte sneckomod:geirrt wird."
   },
   "sneckomod:PoisonParadise": {
@@ -257,7 +257,7 @@
     "UPGRADE_DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Erhalte für jede Klasse auf der Hand ein Messer+."
   },
   "sneckomod:TyphoonFang": {
-    "NAME": "Taifunbiss",
+    "NAME": "Überbiss",
     "DESCRIPTION": "Füge !D! Schaden zu. NL sneckomod:Überschuss: Wenn du in diesem Zug einen sneckomod:Überschuss Effekt aktivierst, spiele eine Kopie dieser Karte."
   },
   "sneckomod:Yearn": {
@@ -439,7 +439,7 @@
     ]
   },
   "sneckomod:Behold": {
-    "NAME": "Siede da!",
+    "NAME": "Alle Hände voll",
     "DESCRIPTION": "Füge !D! Schaden zu. NL sneckomod:Überschuss: Erhalte !M! Messer.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL sneckomod:Überschuss: Erhalte !M! Messer."
   },
@@ -470,7 +470,7 @@
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Block wird um die DOPPELTE Summe der Kosten aller Handkarten erhöht."
   },
   "sneckomod:Medusa": {
-    "NAME": "Medusa",
+    "NAME": "Toxisch",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! sneckomod:Toxin an. NL sneckomod:Geschenk: Gewöhnlicher Debuff.",
     "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wende !M! sneckomod:Toxin an."
   },
@@ -581,7 +581,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL sneckomod:Überschuss: Erhalte NL [E] [E]."
   },
   "sneckomod:LastStrike": {
-    "NAME": "Ultimativer Schlag",
+    "NAME": "Meisterschlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
     "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde.",

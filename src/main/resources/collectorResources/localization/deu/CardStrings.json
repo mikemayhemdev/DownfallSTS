@@ -25,11 +25,11 @@
   },
   "collector:Billow": {
     "NAME": "Aufblähen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Nimm im nächsten Zug ein *Aufbrüllen in die Hand."
+    "DESCRIPTION": "Erhalte !B! Block. NL Nimm im nächsten Zug *Aufbrüllen in die Hand."
   },
   "collector:Bellow": {
     "NAME": "Aufbrüllen",
-    "DESCRIPTION": "Flüchtig. NL Wende collector:Verdammnis in Höhe des ungenutzen Block im letzten Zug an. NL Erschöpft.",
+    "DESCRIPTION": "Flüchtig. NL Wende collector:Verdammnis in Höhe des im letzten Zug ungenutzen Block an. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       " NL ( Wendet !M! collector:Verdammnis an )"
     ]
@@ -254,7 +254,7 @@
     "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer am Ende deines Zuges NL !M! Block. NL Erhalte zusätzlich !clm2! Block wenn ein Gegner collector:geplagt ist."
   },
   "collector:LanternFlare": {
-    "NAME": "Laternenflackern",
+    "NAME": "Todeslaterne",
     "DESCRIPTION": "collector:Opfergabe. NL Wende !M! collector:Verdammnis an. Der Gegner erhält immer am Ende seines Zuges !clm2! collector:Verdammnis."
   },
   "collector:LuckyWick": {
@@ -279,7 +279,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Gibt für jede andere Handkarte 2 Block weniger."
   },
   "collector:OakbrimKindling": {
-    "NAME": "Flackernder Anzünder",
+    "NAME": "Greller Anzünder",
     "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, ziehe !M! Karten.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss das zum Gebrauch anzünden."
@@ -365,7 +365,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !B! Block wenn der Gegner collector:geplagt ist."
   },
   "collector:StashAway": {
-    "NAME": "Zur Seite legen",
+    "NAME": "Vorrat anlegen",
     "DESCRIPTION": "Erhalte X Mal !B! Block. NL Erhalte im nächsten Zug X collector:Reserve. NL Erschöpft."
   },
   "collector:Strike": {
@@ -381,7 +381,7 @@
     "DESCRIPTION": "Wende immer wenn du *Schwach oder *Verwundbar anwendest zusätzlich !M! collector:Verdammnis an."
   },
   "collector:SunbloomKindling": {
-    "NAME": "Knisternder Anzünder",
+    "NAME": "Glitzernder Anzünder",
     "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte !M! Stärke und nimm 2 *Glut Karten auf die Hand.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss das zum Gebrauch anzünden."
@@ -397,7 +397,7 @@
     "UPGRADE_DESCRIPTION": "Erschöpft wenn du expansioncontent:temporäre_TP hast. NL Erhalte !M! expansioncontent:temporäre_TP."
   },
   "collector:WhirlingFlame": {
-    "NAME": "Wirbelnde Flamme",
+    "NAME": "Wirbelflamme",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine Karte aus dem Abwurfstapel auf den Nachziehstapel."
   },
   "collector:VoidArmor": {

@@ -51,7 +51,7 @@
   },
   "hexamod:CouncilsJustice": {
     "NAME": "Geisterstrafe",
-    "DESCRIPTION": "Füge !D! Schaden zu. Erhöhe den Schaden für jedes *erschöpfte *Apparieren um !M!. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. Der Schaden wird für jedes *erschöpfte *Apparieren um !M! erhöht. NL Erschöpft."
   },
   "hexamod:Defend": {
     "NAME": "Verteidigen",
@@ -253,7 +253,7 @@
     "DESCRIPTION": "Flüchtig. NL Erhalte !M! Geschicklichkeit und verliere 1 Stärke."
   },
   "hexamod:PhantomFireball": {
-    "NAME": "Phantom-Feuerball",
+    "NAME": "Phantomfeuerball",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn der Gegner *Seelenfeuer hat, detoniere es vollständig.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wenn der Gegner *Seelenfeuer hat, detoniere es bis auf 1."
   },
@@ -278,7 +278,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Entferne das *Seelenfeuer des Gegners um !M! hexamod:Intensität zu erhalten."
   },
   "hexamod:RainOfEmbers": {
-    "NAME": "Aschenregen",
+    "NAME": "Ascheregen",
     "DESCRIPTION": "Füge X Mal !D! Schaden zu und wende X Mal !M! Schwach an.",
     "UPGRADE_DESCRIPTION": "Füge X+1 Mal !D! Schaden zu und wende X+1 Mal !M! Schwach an."
   },
@@ -362,7 +362,7 @@
     "TRANSLATOR_NOTE:": "Not used in game  Not used in game  Not used in game  Not used in game  Not used in game  Not used in game   "
   },
   "hexamod:SwordOfDarkness": {
-    "NAME": "Schwert der Nacht",
+    "NAME": "Klinge der Nacht",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Spähe !M!. NL Erschöpfe abgeworfene *flüchtige Karten."
   },
   "hexamod:ThermalTransfer": {
@@ -378,7 +378,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm diese Karte vom Abwurfstapel auf die Hand, immer wenn du dich hexamod:vorwärts oder hexamod:rückwärts bewegst."
   },
   "hexamod:FlareFlick": {
-    "NAME": "Flackernde Flamme",
+    "NAME": "Flackernder Funke",
     "DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme und bewege dich hexamod:vorwärts.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. NL Du kannst dich NL hexamod:vorwärts oder hexamod:rückwärts bewegen.",
     "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Tu nichts."]
@@ -491,7 +491,7 @@
     "DESCRIPTION": "Wende !burny! hexamod:Seelenfeuer an. Ist die aktuelle Geisterflamme hexamod:entzündet, nimm diese Karte auf die Hand und bewege dich hexamod:rückwärts."
   },
   "hexamod:Toasty": {
-    "NAME": "Flackernde Flamme",
+    "NAME": "Flackernder Funke",
     "DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme und bewege dich hexamod:vorwärts.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. NL Bewege dich hexamod:vorwärts oder hexamod:rückwärts."
     },

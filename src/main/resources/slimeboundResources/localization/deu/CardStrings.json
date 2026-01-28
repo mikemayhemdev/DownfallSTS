@@ -43,7 +43,7 @@
     "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Erschöpfe eine Karte. Erhalte *Wabbel in Anzahl der Höhe ihrer Kosten. NL Erschöpft."
   },
   "Slimebound:DivideAndConquer": {
-    "NAME": "Schleim-Infanterie",
+    "NAME": "Infanterie",
     "DESCRIPTION": "Füge für jeden Schleim einem zufälligen gegner !D! Schaden zu. NL slimeboundmod:Absorbiere alle Schleime. NL Erschöpft."
   },
   "Slimebound:DouseInSlime": {
@@ -106,7 +106,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL slimeboundmod:Konsum - Erhöhe die Wirkung dieser Karte für diesen Kampf um !M!."
   },
   "Slimebound:HauntingLick": {
-    "NAME": "Schauriger Wabbel",
+    "NAME": "Schauerwabbel",
     "DESCRIPTION": "Wende !M! Verwundbar und !slime! slimeboundmod:Glibber an. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Wende !M! Verwundbar und !slime! slimeboundmod:Glibber an. NL Ziehe eine Karte. NL Erschöpft."
   },
@@ -116,17 +116,17 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL expansioncontent:Exhumiere 2 zufällige *Wabbel Karten."
   },
   "Slimebound:ItLooksTasty": {
-    "NAME": "Sieht lecker aus",
+    "NAME": "Schmackofatz",
     "DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte einen *Wabbel.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte einen *Wabbel+."
   },
   "Slimebound:LeadByExample": {
     "NAME": "Den Ton angeben",
-    "DESCRIPTION": "Die erste in deinem Zug gespielte Karte, die auf Gegener abzielt, löst slimeboundmod:Kommando aus.",
-    "UPGRADE_DESCRIPTION": "Die ersten !M! gespielten Karten des Zuges, die auf Gegener abzielen, lösen slimeboundmod:Kommando aus."
+    "DESCRIPTION": "Die erste gespielte Karte des Zuges, die auf Gegener abzielt, erteilt ein slimeboundmod:Kommando.",
+    "UPGRADE_DESCRIPTION": "Die ersten !M! gespielten Karten des Zuges, die auf Gegener abzielen, erteilen ein slimeboundmod:Kommando."
   },
   "Slimebound:LeechEnergy": {
-    "NAME": "Energie absaugen",
+    "NAME": "Laben",
     "DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte [E] und ziehe !M! Karte.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. slimeboundmod:Konsum - Erhalte [E] und ziehe !M! Karten."
   },
@@ -135,7 +135,7 @@
     "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. Heile TP in Höhe des ungeblockten Schadens. NL Erschöpft."
   },
   "Slimebound:LeechingTouch": {
-    "NAME": "Saugender Schlag",
+    "NAME": "Saugschlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL slimeboundmod:Konsum - Erhalte Block in Höhe des slimeboundmod:Glibbers."
   },
   "Slimebound:LevelUp": {
@@ -220,7 +220,7 @@
     "UPGRADE_DESCRIPTION": "Wende !M! Mal auf einen zufälligen Gegner !slime! slimeboundmod:Glibber an."
   },
   "Slimebound:RallyTheTroops": {
-    "NAME": "Truppe motivieren",
+    "NAME": "Schleimgeneral",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächsten !M! gespielten Karten in diesem Zug slimeboundmod:Kommandieren."
   },
   "Slimebound:Recollect": {
@@ -243,8 +243,8 @@
   },
   "Slimebound:Replication": {
     "NAME": "Replizieren",
-    "DESCRIPTION": "Wähle eine Karte. NL Lege eine Kopie der Karte auf den Nachziehstapel. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wähle eine Karte. NL Nimm eine Kopie der Karte auf die Hand. NL Erschöpft.",
+    "DESCRIPTION": "Wähle eine Handkarte. Lege eine Kopie auf den Nachziehstapel. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wähle eine Handkarte. Erhalte eine Kopie. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       " zum Kopieren.",
       " zum Kopieren."
@@ -301,8 +301,8 @@
   },
   "Slimebound:SlimeTap": {
     "NAME": "Schleimquelle",
-    "DESCRIPTION": "slimeboundmod:Absorbiere deinen führenden Schleim um [E] zu erhalten und !M! Karte zu ziehen. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorbiere deinen führenden Schleim um [E] [E] zu erhalten und !M! Karten zu ziehen. NL Erschöpft.",
+    "DESCRIPTION": "slimeboundmod:Absorbiere deinen führenden Schleim um [E] zu erhalten und NL !M! Karte zu ziehen. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "slimeboundmod:Absorbiere deinen führenden Schleim um [E] [E] zu erhalten und NL !M! Karten zu ziehen. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Brauche... Untergebene..."
     ]

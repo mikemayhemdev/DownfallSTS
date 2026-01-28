@@ -77,8 +77,8 @@
   },
   "Guardian:CurlUp": {
     "NAME": "Einrollen",
-    "DESCRIPTION": "Lege eine zufällige Karte aus deiner Hand in guardianmod:Stasis. NL guardianmod:Abhärten !M!.",
-    "UPGRADE_DESCRIPTION": "Wähle eine Karte aus deiner Hand um sie in guardianmod:Stasis zu legen. NL guardianmod:Abhärten !M!."
+    "DESCRIPTION": "Lege eine zufällige Handkarte in guardianmod:Stasis. NL guardianmod:Abhärten !M!.",
+    "UPGRADE_DESCRIPTION": "Lege eine Handkarte deiner Wahl in guardianmod:Stasis. NL guardianmod:Abhärten !M!."
   },
   "Guardian:TimeBomb": {
     "NAME": "Zeitbombe",
@@ -158,18 +158,18 @@
   },
   "Guardian:PackageSphere": {
     "NAME": "Paket: Sphärisch",
-    "DESCRIPTION": "Erhalte *Sphärischer *Schild, *Schwebende *Orbs, und *Erhärten. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte *Sphärischer *Schild+, *Schwebende *Orbs+, und *Erhärten+. NL Erschöpft."
+    "DESCRIPTION": "Erhalte NL *Sphärischer *Schild, *Schwebende *Orbs, und *Erhärten. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte NL *Sphärischer *Schild+, *Schwebende *Orbs+, und *Erhärten+. NL Erschöpft."
   },
   "Guardian:PackageSentry": {
     "NAME": "Paket: Wache",
-    "DESCRIPTION": "Erhalte *Wache-Strahl und zwei *Wache-Wellen. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte *Wache-Strahl+ und zwei *Wache-Welle+. NL Erschöpft."
+    "DESCRIPTION": "Erhalte NL *Wache-Strahl und zwei *Wache-Wellen. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte NL *Wache-Strahl+ und zwei *Wache-Welle+. NL Erschöpft."
   },
   "Guardian:PackageWalker": {
     "NAME": "Paket: Kugelwandler",
-    "DESCRIPTION": "Erhalte *Kugelwandeln, *Wandlerklaue, und *Veraschen. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte *Kugelwandeln+, *Wandlerklaue+, und *Veraschen+. NL Erschöpft."
+    "DESCRIPTION": "Erhalte NL *Kugelwandeln, *Wandlerklaue, und *Veraschen. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte NL *Kugelwandeln+, *Wandlerklaue+, und *Veraschen+. NL Erschöpft."
   },
   "Guardian:PackageAutomaton": {
     "NAME": "Paket: Bronze",
@@ -196,8 +196,8 @@
   },
   "Guardian:Clone": {
     "NAME": "Klonen",
-    "DESCRIPTION": "Wähle eine Karte. NL Lege eine Kopie dieser Karte in guardianmod:Stasis. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wähle eine Karte. NL Lege eine Kopie dieser Karte in guardianmod:Stasis. NL guardianmod:Beschleunige. NL Erschöpft."
+    "DESCRIPTION": "Wähle eine Handkrte. Lege eine Kopie in guardianmod:Stasis. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wähle eine Handkrte. Lege eine Kopie in guardianmod:Stasis. NL guardianmod:Beschleunige. NL Erschöpft."
   },
   "Guardian:Preprogram": {
     "NAME": "Vorprogrammiert",

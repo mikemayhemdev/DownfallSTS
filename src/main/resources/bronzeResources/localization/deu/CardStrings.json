@@ -588,8 +588,8 @@
   },
   "bronze:Decompile": {
     "NAME": "Dekompilieren",
-    "DESCRIPTION": "Erschöpfe alle derzeit kodierten Karten. Ziehe Karten und erhalte [E] in Höhe der erschöpften Karten. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Erschöpfe alle derzeit kodierten Karten. Ziehe Karten und erhalte [E] in Höhe der erschöpften Karten. NL Erschöpft."
+    "DESCRIPTION": "Erschöpfe alle kodierten Karten. Ziehe Karten und erhalte [E] in Höhe ihrer Anzahl. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erschöpfe alle kodierten Karten. Ziehe Karten und erhalte [E] in Höhe ihrer Anzahl. NL Erschöpft."
   },
   "bronze:DonuBeam": {
     "NAME": "Proto-Strahl",

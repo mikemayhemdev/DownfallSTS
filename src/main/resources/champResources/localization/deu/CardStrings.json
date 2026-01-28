@@ -76,11 +76,11 @@
     "DESCRIPTION": "Nimm die champ:Defensivhaltung an. NL Erhalte !B! Block. NL Spähe !M!."
   },
   "champ:GutPunch": {
-    "NAME": "Magenhieb",
+    "NAME": "Ultimativer Hieb",
     "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Combo (jede Haltung): Nimm die champ:Ultimative *Haltung für 1 Zug an. NL Erschöpft."
   },
   "champ:FanOfKnives": {
-    "NAME": "Messersturm",
+    "NAME": "Klingensturm",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL champ:Offensivcombo: Trifft zweimal.",
     "UPGRADE_DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL champ:Offensivcombo: Trifft drei Mal."
   },
@@ -112,7 +112,7 @@
   },
   "champ:EnchantShield": {
     "NAME": "Schildzauber",
-    "DESCRIPTION": "Wähle eine Karte. NL Erhöhe den Block dieser Karte für diesen Kampf um !M!. NL Erschöpft.",
+    "DESCRIPTION": "Wähle eine Handkarte. Erhöhe ihren Block für diesen Kampf um !M!. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Ein miserabler Zeitpunkt dafür."
     ]
@@ -169,7 +169,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Offensivcombo: Füge !D! Schaden zu. NL champ:Defensivcombo: Erhalte !B! Block."
   },
   "champ:CrookedStrike": {
-    "NAME": "Gebeugter Schlag",
+    "NAME": "Dosierter Schlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Verbraucht keinen *Elan."
   },
   "champ:RapidStrikes": {
@@ -178,7 +178,7 @@
   },
   "champ:EnchantSword": {
     "NAME": "Schwertzauber",
-    "DESCRIPTION": "Wähle eine Karte. NL Erhöhe den Schaden dieser Karte für diesen Kampf um !M!. Erschöpft.",
+    "DESCRIPTION": "Wähle eine Handkarte. Erhöhe ihren Schaden für diesen Kampf um !M!. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Ein miserabler Zeitpunkt dafür."
     ]
@@ -192,7 +192,7 @@
     "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Bist du nicht in champ:Offensivhaltung, kannst du im nächsten Zug keine *Angriffe spielen."
   },
   "champ:MurderStrike": {
-    "NAME": "Mordsschlag",
+    "NAME": "Durchschlag",
     "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. Erhöhe den Schaden um !M! wenn du mit dieser Karte in der Hand eine Fertigkeit spielst."
   },
   "champ:HeavySlash": {
@@ -227,7 +227,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! *temporäre Stärke."
   },
   "champ:HeartStrike": {
-    "NAME": "Finish Him",
+    "NAME": "Exekutieren",
     "DESCRIPTION": "Füge !D! Schaden zu - zweimal wenn seine TP unter !M! % liegen.",
     "EXTENDED_DESCRIPTION": [
       "Ein miserabler Zeitpunkt dafür.",
@@ -355,7 +355,7 @@
   },
   "champ:EnchantCrown": {
     "NAME": "Kronenzauber",
-    "DESCRIPTION": "Wähle eine Karte. NL Sie kostet in diesem Kampf 0. NL Erschöpft.",
+    "DESCRIPTION": "Wähle eine Handkarte. Sie kostet in diesem Kampf 0. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Ein miserabler Zeitpunkt dafür."
     ]

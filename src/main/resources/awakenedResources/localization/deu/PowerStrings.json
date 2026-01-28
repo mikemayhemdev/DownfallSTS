@@ -16,7 +16,7 @@
     ]
   },
   "awakened:RisingChantPower": {
-    "NAME": "Aufsteigender Chor",
+    "NAME": "Aufstiegschor",
     "DESCRIPTIONS": [
       " #b",
       " Mal pro Zug werden #yChor Effekte zweimal aktiviert. NL In diesem Zug noch #b",
@@ -177,9 +177,9 @@
   "awakened:EnsorcelatePower": {
     "NAME": "Zauberformel",
     "DESCRIPTIONS": [
-      "Die nächste #yMacht die du ausspielst kostet #b0 [REMOVE_SPACE].",
-      "Die nächsten #b",
-      " #yMächte die du ausspielst kosten #b0 [REMOVE_SPACE]."
+      "Ignoriere die Energiekosten der nächsten gespielten #yMacht [REMOVE_SPACE].",
+      "Ignoriere die Energiekosten der nächsten #b",
+      " gespielten #yMächte [REMOVE_SPACE]."
     ]
   },
   "awakened:ConjureNextPower": {
@@ -191,7 +191,7 @@
     ]
   },
   "awakened:ChosensVersePower": {
-    "NAME": "Erwählter Vers",
+    "NAME": "Auserwählter Vers",
     "DESCRIPTIONS": [
       "Das nächste Mal wenn du in diesem Zug einen #ynicht-Angriff spielst, erhalte #b",
       " #yBlock und ziehe eine Karte.",

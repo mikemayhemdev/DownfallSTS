@@ -298,7 +298,7 @@
   "downfall:MerchantStrengthPower": {
     "NAME": "Seelendieb",
     "DESCRIPTIONS": [
-      "Der Händler beginnt den Kampf mit dem Doppelten an #yStärke den er in diesen Run durch Seelenstehlen erhalten hat. Zusätzlich erhält er genausoviel #yGeschicklichkeit [REMOVE_SPACE]."
+      "Der Händler beginnt den Kampf mit dem Doppelten an #yStärke den er in diesen Run durch Seelenstehlen erhalten hat. Zusätzlich erhält er genauso viel #yGeschicklichkeit [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowMantra": {
