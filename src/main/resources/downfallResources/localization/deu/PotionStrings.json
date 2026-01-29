@@ -3,9 +3,9 @@
     "NAME": "Verfluchte Flüssigkeit",
     "DESCRIPTIONS": [
       "Wende #b",
-      " #ySchwach, #b",
-      " #yVerwundbar an, und reduziere die #yStärke um #b",
-      "."
+      " #ySchwach und #b",
+      " #yVerwundbar an. Reduziere die #yStärke des Gegners um #b",
+      " [REMOVE_SPACE]."
     ]
   }
 }

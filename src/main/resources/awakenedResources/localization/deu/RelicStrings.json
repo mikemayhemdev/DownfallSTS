@@ -19,7 +19,7 @@
     "NAME": "Weiße Schleife",
     "FLAVOR": "Verleiht gesprochenen Worten auch außerhalb von Ritualen Macht.",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du eine Karte mit #yawakened:Chor spielst #b",
+      "Erhalte immer, wenn du eine Karte mit #yawakened:Chor spielst, #b",
       " #yBlock [REMOVE_SPACE], selbst wenn der Effekt nicht aktiviert ist."
     ]
   },
@@ -31,7 +31,7 @@
     ]
   },
   "awakened:TomeOfPortalmancy": {
-    "NAME": "Zauberbuch der Portale",
+    "NAME": "Almanach der Portale",
     "FLAVOR": "Eine Betriebsanleitung zur Konstruktion und Wartung interdimensionaler Portale.",
     "DESCRIPTIONS": [
       "Immer wenn du eine #yLeere erhältst, wende #b",
@@ -136,8 +136,8 @@
     "FLAVOR": "„Bitte... vergiss mich nicht... auch nach meinem Tod.“",
     "DESCRIPTIONS": [
       "Wähle beim Aufheben eine Karte aus, die #rKEINEN Zauberspruch #yawakened:aufruft [REMOVE_SPACE]. Sie erhält #yawakened:Aufrufen.",
-      "Wähle eine Karte für ",
-      "Das Talisman hat ",
+      "Wähle eine Karte für die ",
+      "Das Blüte hat ",
       " gesegnet und #yawakened:Aufrufen hinzugefügt.",
       "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
     ]

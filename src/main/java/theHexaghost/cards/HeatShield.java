@@ -57,7 +57,7 @@ public class HeatShield extends AbstractHexaCard {
         super.calculateCardDamage(mo);
         baseBlock = real_baseBlock;
         this.isBlockModified = block != baseBlock;
-        if(Settings.language == Settings.GameLanguage.ZHS){
+        if(Settings.language == Settings.GameLanguage.ZHS || Settings.language == Settings.GameLanguage.ZHT){
             this.rawDescription = DESCRIPTION + EXTENDED_DESCRIPTION[0];
         }else{
             this.rawDescription = EXTENDED_DESCRIPTION[0] + DESCRIPTION;

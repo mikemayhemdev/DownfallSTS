@@ -44,7 +44,7 @@
     "NAME": "Schrottschleim",
     "FLAVOR": "Er trägt ein Relikt in sich - wie komme ich bloß da ran?",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #ySchrottschleim ab - er kann wiederbelebt werden. Du kannst ihn am Lagerfeuer mit einer Karte füttern und seinen Schaden ändern: #y+2 für #ySeltene [REMOVE_SPACE], #g+1 für #gUngewöhnliche [REMOVE_SPACE], #b-1 für #bGewöhnliche [REMOVE_SPACE], #r-2 für #rFlüche [REMOVE_SPACE].",
+      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #ySchrottschleim #yab - er kann wiederbelebt werden. Füttere ihn am Lagerfeuer um seinen Schaden zu ändern: #y+2 für #ySeltene [REMOVE_SPACE], #g+1 für #gUngewöhnliche [REMOVE_SPACE], #b-1 für #bGewöhnliche [REMOVE_SPACE], #r-2 für #rFlüche [REMOVE_SPACE].",
       "Entferne eine Karte aus deinem Deck und ändere den Schaden des Schrottschleims.",
       "Keine Karte für den Schrottschleim.",
       "Schrott"
@@ -54,7 +54,7 @@
     "NAME": "Gierschleim",
     "FLAVOR": "Ein besonderer Schleim, der sich von Seelen ernährt.",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #yGierschleim ab - er kann wiederbelebt werden. NL Der #yGierschleim frisst am Lagerfeuer #b50 #yGold und erhöht dadurch seinen Schaden um #b1."
+      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #yGierschleim #yab - er kann wiederbelebt werden. Der #yGierschleim frisst am Lagerfeuer #b50 #yGold und erhöht dadurch seinen Schaden um #b1."
     ]
   },
   "Slimebound:PreparedRelic": {
@@ -68,7 +68,7 @@
     "NAME": "Schleimiger Bewohner",
     "FLAVOR": "Es ist mir heimgefolgt. Darf ich es behalten?",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #yslimeboundmod:Raufboldschleim ab [REMOVE_SPACE]."
+      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #yslimeboundmod:Raufboldschleim #yab [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SlimedSkullRelic": {
@@ -83,7 +83,7 @@
     "NAME": "Jeremias' Banner",
     "FLAVOR": "Du und welche Armee?",
     "DESCRIPTIONS": [
-      "Beginne jeden Kampf mit #b1 Schleim-Slot mehr und #yslimeboundmod:spalte einen zufälligen Schleim ab."
+      "Beginne jeden Kampf mit #b1 Schleim-Slot mehr und #yslimeboundmod:spalte einen zufälligen Schleim #yab."
     ]
   },
   "Slimebound:SelfDamagePreventRelic": {
@@ -102,7 +102,7 @@
     ]
   },
   "Slimebound:StickyStick": {
-    "NAME": "Gallertwürfel",
+    "NAME": "Schleimwürfel",
     "FLAVOR": "Hey, er klebt an deinem Körper.",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du einen #yStatus oder #rFluch ziehst #b",

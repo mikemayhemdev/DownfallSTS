@@ -5,8 +5,8 @@
     ],
     "TEXT": [
       "~Diene...~ NL ~mir..~ ~jetzt...~",
-      "~Steh auf...~ NL ~treuer Diener..~",
-      "~Erhebe dich...~",
+      "~Steh~ ~auf...~ NL ~treuer~ ~Diener..~",
+      "~Erhebe~ ~dich...~",
       "~Vernichte~ NL ~Eindringlinge...~",
       "~Erreiche~ ~den~ ~Eindringling...~ NL ~um~ ~mehr..~ ~Segen~ ~zu~ ~erhalten...~",
       "~Stelle~ ~dich~ ~zumindest~ ~...~ NL ~dem~ ~ersten~ ~Eindringling~ ~...~",
@@ -60,7 +60,7 @@
   "downfall:HeartMerchant": {
   "NAMES": [
     "Fahre fort",
-    "~Bring mir Opfer...~"
+    "~Bring~ ~mir~ ~Opfer...~"
   ],
   "TEXT": [
     "~Du~ ~wirst...~ ~stärker...~",
@@ -87,7 +87,7 @@
     "~Mach...~ ~sie...~ ~fertig...~",
     "~Viel...~ ~Erfolg...~",
     "~Sterben...~ ~verboten...~",
-    "~Wir zählen auf dich...~",
+    "~Wir~ ~zählen~ ~auf~ dich...~",
     "~Zerstöre...~ ~sie~ ~alle...~"
   ]
 },
@@ -95,8 +95,8 @@
     "TEXT": [
       "~Eindringlinge...~ NL ",
       "~Du~ ~wirst~ ~gebraucht...~ NL ",
-      "~Sie ~sind~ ~schon~ ~angekommen...~ NL ",
-      "~Kehre um...~ NL ~Feinde~ ~sind~ ",
+      "~Sie~ ~sind~ ~schon~ ~angekommen...~ NL ",
+      "~Kehre~ ~um...~ NL ~Feinde~ ~sind~ ",
       "~Vernichte~ ~sie~ ~alle...~ NL "
     ],
     "OPTIONS": [
@@ -117,10 +117,10 @@
   },
   "downfall:HeartMerchantScreen": {
     "NAMES": [
-      "~Willkommen~ NL ~treuer Knecht...~",
+      "~Willkommen~ NL ~treuer~ ~Knecht...~",
       "~Bring~ ~mir~ ~mehr~ ~Seelen...~",
       "~Ich~ ~brauche~ @mehr...@",
-      "~Du~ ~bist~ ~es~ NL @nicht wert...@",
+      "~Du~ ~bist~ ~es~ NL @nicht@ @wert...@",
       "~Nein.~",
       "~Ernte~ ~mehr~ NL ~dafür...~",
       "~Unzureichendes~ ~Opfer...~",
@@ -175,9 +175,9 @@
       "Zeitschleim"
     ],
     "TEXT": [
-      "Verliere 3 TP. NL Erhalte 15 Seelen.",
+      "Verliere 3 TP. NL Erhalte 15 Gold.",
       "Verliere 3 TP. NL Nimm eine zufällige farblose Karte auf die Hand.",
-      "Verliere 7 TP. NL Erhalte einen zufälligen Trank.",
+      "Verliere 7 TP. NL Erhalte einen zufälligen *Trank.",
       "Erhalte Wächter *Boss-Karten.",
       "Erhalte Hexageist *Boss-Karten.",
       "Erhalte Schleim *Boss-Karten.",
@@ -187,18 +187,18 @@
       "Erhalte Zeitfresser *Boss-Karten.",
       "Erhalte *Boss-Karten des Erweckten.",
       "Erhalte *Boss-Karten der Antiken.",
-      "Spalte einen slimeboundmod:Strahlschleim ab.",
-      "Spalte einen slimeboundmod:Geisterschleim ab.",
-      "Spalte einen slimeboundmod:Fackelschleim ab.",
-      "Spalte einen slimeboundmod:Krähenschleim ab.",
-      "Spalte einen slimeboundmod:Dornenschleim ab.",
-      "Spalte einen slimeboundmod:Spötterschleim ab.",
-      "Spalte einen slimeboundmod:Antiken_Schleim ab.",
-      "Spalte einen slimeboundmod:Zeitschleim ab.",
-      "Spalte einen slimeboundmod:Raufboldschleim ab.",
-      "Spalte einen slimeboundmod:Guerillaschleim ab.",
-      "Spalte einen slimeboundmod:Schlammschleim ab.",
-      "Spalte einen slimeboundmod:Beschützerschleim ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Strahlschleim *ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Geisterschleim *ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Fackelschleim *ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Krähenschleim *ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Dornenschleim *ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Spötterschleim *ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Antiken_Schleim *ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Zeitschleim *ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Raufboldschleim *ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Guerillaschleim *ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Schlammschleim *ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Beschützerschleim *ab.",
       "Verliere 3 TP. NL Erhalte 20 Seelen.",
       "Verliere 3 TP. NL Nimm eine zufällige verbesserte farblose Karte auf die Hand.",
       "Verliere 5 TP. NL Erhalte einen zufälligen Trank."

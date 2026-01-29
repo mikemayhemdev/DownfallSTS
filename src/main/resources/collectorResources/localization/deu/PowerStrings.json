@@ -22,7 +22,7 @@
     ]
   },
   "collector:Crackle": {
-    "NAME": "Knistern",
+    "NAME": "Pyromanie",
     "DESCRIPTIONS": [
       "Erhalte zu Beginn deines Zuges #b1 #yReserve.",
       "Erhalte zu Beginn deines Zuges #b",
@@ -70,7 +70,7 @@
     ]
   },
   "collector:DemisePower": {
-    "NAME": "Unvermeidbares Verhängnis",
+    "NAME": "Untergang",
     "DESCRIPTIONS": [
       "Verhindere die nächste Entfernung der #yVerdammnis dieses Gegners.",
       "Verhindere die nächsten #b",
@@ -87,7 +87,7 @@
   "collector:HealIfDieThisTurn": {
     "NAME": "Vollendet",
     "DESCRIPTIONS": [
-      "Wen ",
+      "Wenn ",
       " stirbt, heile #b",
       " TP."
     ]
@@ -114,7 +114,7 @@
     ]
   },
   "collector:NextCollectedTwice": {
-    "NAME": "Doppelt Gemoppelt",
+    "NAME": "Doppelt gemoppelt",
     "DESCRIPTIONS": [
       "In diesem Zug spielst du dein nächstes #ySammlerstück doppelt.",
       "In diesem Zug spielst du deine nächsten #b",
@@ -145,7 +145,7 @@
     ]
   },
   "collector:RagingCall": {
-    "NAME": "Raging Call",
+    "NAME": "Wütender Ruf",
     "DESCRIPTIONS": [
       "Wenn du am Ende deines Zuges #ytemporäre #yTP hast, füge ALLEN Gegnern #b",
       " Schaden zu.",
@@ -178,7 +178,7 @@
     ]
   },
   "collector:Suffering": {
-    "NAME": "Leiden",
+    "NAME": "Leiden lassen",
     "DESCRIPTIONS": [
       "Wende immer wenn du #ySchwach oder #yVerwundbar anwendest zusätzlich #b",
       " #yVerdammnis an."
@@ -201,7 +201,7 @@
     ]
   },
   "collector:IncreasedCollectionDraw": {
-    "NAME": "Sammlerstücke Ziehen",
+    "NAME": "Sammlerstücke ziehen",
     "DESCRIPTIONS": [
       "Ziehe zu Beginn deines Zuges #b1 zusätzliches Sammlerstück.",
       "Ziehe zu Beginn deines Zuges #b",
@@ -297,7 +297,7 @@
     ]
   },
   "collector:LanternFlare": {
-    "NAME": "Verschmort",
+    "NAME": "Todeslaterne",
     "DESCRIPTIONS": [
       "Erhält am Ende seines Zuges #b",
       " #yVerdammnis."
@@ -318,7 +318,7 @@
     ]
   },
   "collector:LoseHpNextTurn": {
-    "NAME": "Todesmal",
+    "NAME": "Mal des Todes",
     "DESCRIPTIONS": [
       "Verliert am Ende seines Zuges #b",
       " TP."

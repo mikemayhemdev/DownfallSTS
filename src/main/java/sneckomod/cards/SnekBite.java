@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.BiteEffect;
 import downfall.downfallMod;
@@ -35,8 +36,14 @@ public class SnekBite extends AbstractSneckoCard {
         atb(new VFXAction(new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));
         dmg(m, makeInfo(), AbstractGameAction.AttackEffect.NONE);
 
+        String stuff;
+        if(Settings.language == Settings.GameLanguage.DEU){
+            stuff = "irsst";
+        } else {
+            stuff = BaseMod.getKeywordProper("sneckomod:muddle");
+        }
         // muddle is no longer random here
-        addToBot(new SelectCardsInHandAction(magicNumber, BaseMod.getKeywordProper("sneckomod:muddle"),
+        addToBot(new SelectCardsInHandAction(magicNumber, stuff,
                 (AbstractCard c) -> true,
                 (cards) -> {
                     for (AbstractCard card : cards) {

@@ -15,7 +15,7 @@
     "NAME": "Welt aus Schleim",
     "DESCRIPTIONS": [
       "Du fällst in eine Pfütze. NL @SIE@ @IST@ @AUS@ #g@KLEBRIGEM@ #g@SCHLEIM!!@ NL Beruhigt nimmst du darin ein Bad - wann hast du sonst Zeit zum Entspannen? NL NL Beim Herausklettern merkst du, dass die #ySeelen einiger unglücklicher Abenteurer in der Pfütze langsam von einem gefräßigen Schleim verschlungen werden.",
-      "Bevor du gehst konsumierst du selbst die verbliebenen #ySeelen, und die Kreatur bleibt mit einem enttäuschten Blick zurück.",
+      "Bevor du gehst, konsumierst du selbst die verbliebenen #ySeelen, und die Kreatur bleibt mit einem enttäuschten Blick zurück.",
       "Du konntest dich mit der Kreatur einigen: Du versogst sie mit #ySeelen und sie hilft dir im Kampf. NL Du verlässt das Schleimbad zusammen mit deinem neuen #gFreund."
     ],
     "OPTIONS": [
@@ -49,10 +49,10 @@
     ],
     "OPTIONS": [
       "[Rekrutieren] #rVerliere ",
-      ". #gErhalte #gden #gSchrottschleim [REMOVE_SPACE]. #rGesperrt wenn du hineingreifst.",
+      ". #gErhalte #gden #gSchrottschleim [REMOVE_SPACE]. #rNur #rjetzt!",
       "[Rekrutieren] Gesperrt (Du hast den Schrottschleim verärgert)",
       "[Verlassen]",
-      "[Rekrutieren] Gesperrt (Erfordert ein Gewöhnliches oder Ungewöhnliches Relikt)"
+      "[Rekrutieren] Gesperrt (Erfordert Gewöhnliche oder Ungewöhnliche Relikte)"
     ]
   },
   "Slimebound:ArtOfSlimeWar": {
@@ -80,7 +80,7 @@
   "Slimebound:Darklings": {
     "NAME": "Dunkelinge",
     "DESCRIPTIONS": [
-      "Drei unbekannte Schleimartige stellen(?) sich dir in den Weg. Sie sehen feindlich gesinnt aus, doch dann bemerken sie, dass du eine ähnliche Komnsistenz zu ihnen aufweist und werden neugierig.",
+      "Drei unbekannte Schleimartige stellen sich dir in den Weg. Sie sehen feindlich gesinnt aus, doch dann bemerken sie, dass du eine ähnliche Konsistenz zu ihrer aufweist und werden neugierig.",
       "Als du dich für die ~Konfrontation~ ~bereit~ ~machst,~ tun die schwarzen Schleime es dir gleich!",
       "Nach einer kurzen Unterredung schließen sich die Schleime dir an. Sie verlassen ihren Posten nur kurz um dir zu helfen."
     ],

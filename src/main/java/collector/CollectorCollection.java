@@ -149,6 +149,8 @@ public class CollectorCollection {
         collectionPool.put(Champ.ID, LastStand.ID);
         collectionPool.put(Donu.ID, ShapePower.ID);
         collectionPool.put(Deca.ID, ShapePower.ID);
+
+        collectionPool.put(DoomedDagger.ID, DaggerCard.ID);
     }
 
     public static AbstractCard getCollectedCard(AbstractMonster m) {

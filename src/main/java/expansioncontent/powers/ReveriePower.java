@@ -46,30 +46,34 @@ public class ReveriePower extends AbstractPower {
 
     @Override
     public void atStartOfTurn() {
-        if (Wiz.hand().size() < BaseMod.MAX_HAND_SIZE) {
-            this.flash();
-            if (!AbstractDungeon.player.discardPile.isEmpty()) {
-                ArrayList<AbstractCard> cardsToChooseFrom = new ArrayList<>();
+        if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
+            if (Wiz.hand().size() < BaseMod.MAX_HAND_SIZE) {
+                this.flash();
+                if (!AbstractDungeon.player.discardPile.isEmpty()) {
+                    ArrayList<AbstractCard> cardsToChooseFrom = new ArrayList<>();
 
-                for (int i = 0; i < this.amount && i < AbstractDungeon.player.discardPile.size(); ++i) {
-                    cardsToChooseFrom.add(AbstractDungeon.player.discardPile.group.get(i));
-                }
+                    for (int i = 0; i < this.amount && i < AbstractDungeon.player.discardPile.size(); ++i) {
+                        cardsToChooseFrom.add(AbstractDungeon.player.discardPile.group.get(i));
+                    }
 
-                if (!cardsToChooseFrom.isEmpty()) {
-                    this.addToBot(new SelectCardsCenteredAction(
-                            cardsToChooseFrom,
-                            1,
-                            DESCRIPTIONS[3],
-                            (selectedCards) -> {
-                                AbstractCard chosenCard = selectedCards.get(0);
-                                AbstractDungeon.player.discardPile.removeCard(chosenCard);
-                                AbstractDungeon.player.hand.addToHand(chosenCard);
+                    if (!cardsToChooseFrom.isEmpty()) {
+                        this.addToBot(new SelectCardsCenteredAction(
+                                cardsToChooseFrom,
+                                1,
+                                DESCRIPTIONS[3],
+                                (selectedCards) -> {
+                                    if (AbstractDungeon.player.hand.size() < BaseMod.MAX_HAND_SIZE) {
+                                        AbstractCard chosenCard = selectedCards.get(0);
+                                        AbstractDungeon.player.discardPile.removeCard(chosenCard);
+                                        AbstractDungeon.player.hand.addToHand(chosenCard);
 
-                                chosenCard.lighten(false);
-                                chosenCard.unhover();
-                                chosenCard.applyPowers();
-                            }
-                    ));
+                                        chosenCard.lighten(false);
+                                        chosenCard.unhover();
+                                        chosenCard.applyPowers();
+                                    }
+                                }
+                        ));
+                    }
                 }
             }
         }

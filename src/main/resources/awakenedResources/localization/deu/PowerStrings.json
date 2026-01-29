@@ -1,6 +1,6 @@
 {
   "awakened:IntensifyPower": {
-    "NAME": "Intensivieren",
+    "NAME": "Intensiviert",
     "DESCRIPTIONS": [
       "In diesem Zug kosten Zaubersprücke #b0 [REMOVE_SPACE].",
       "Zaubersprüche kosten in den nächsten #b",
@@ -8,7 +8,7 @@
     ]
   },
   "awakened:IntensifyDebuffPower": {
-    "NAME": "Burnout",
+    "NAME": "Ausgebrannt",
     "DESCRIPTIONS": [
       "Du kannst in diesem Zug nicht mehr #yaufrufen [REMOVE_SPACE].",
       "Du kannst in den nächsten #b",
@@ -16,7 +16,7 @@
     ]
   },
   "awakened:RisingChantPower": {
-    "NAME": "Aufsteigender Chor",
+    "NAME": "Aufstiegschor",
     "DESCRIPTIONS": [
       " #b",
       " Mal pro Zug werden #yChor Effekte zweimal aktiviert. NL In diesem Zug noch #b",
@@ -24,7 +24,7 @@
     ]
   },
   "awakened:CursedStrength": {
-    "NAME": "Segnung der Finsternis",
+    "NAME": "Neumond",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du #yausgelaugt wirst #b",
       " #yStärke [REMOVE_SPACE]."
@@ -54,9 +54,9 @@
   "awakened:PrimacyPower": {
     "NAME": "Vorrang",
     "DESCRIPTIONS": [
-      "Ziehe das erste Mal an dem du im Zug #yStärke erhältst eine Karte.",
+      "Ziehe das erste Mal, an dem du im Zug #yStärke erhältst, eine Karte.",
       "Ziehe die ersten #b",
-      " Male an dem du im Zug #yStärke erhältst eine Karte.",
+      " Male, an denen du im Zug #yStärke erhältst, eine Karte.",
       " NL Dieser Effekt kann in diesem Zug noch #b",
       " Mal aktiviert werden.",
       " Mal aktiviert werden.",
@@ -74,7 +74,7 @@
   "awakened:DarkEchoPower": {
     "NAME": "Dunkles Echo",
     "DESCRIPTIONS": [
-      "Füge am ENde des Zuges ALLEN Gegnern #b",
+      "Füge am Ende des Zuges ALLEN Gegnern #b",
       " Schaden #b",
       " Mal zu.",
       " Schaden zu."
@@ -114,10 +114,10 @@
     ]
   },
   "awakened:StrengthReturnPower": {
-    "NAME": "Aufgerissen",
+    "NAME": "Aufgeschlitzt",
     "DESCRIPTIONS": [
       "Wenn du diesen Gegner angreifst erhältst du #b",
-      " temporäre #yStärke [REMOVE_SPACE]."
+      " #ytemporäre #yStärke [REMOVE_SPACE]."
     ]
   },
   "awakened:ManaburnPower": {
@@ -146,7 +146,7 @@
     ]
   },
   "awakened:DarknessFallsPower": {
-    "NAME": "Einfallende Finsternis",
+    "NAME": "Ringfinsternis",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du #yausgelaugt wirst #b",
       " #yBlock [REMOVE_SPACE]."
@@ -168,7 +168,7 @@
     ]
   },
   "awakened:ReverseRitualPower": {
-    "NAME": "Erwachte Form",
+    "NAME": "Erweckte Form",
     "DESCRIPTIONS": [
       "Erhalte zu Beginn deines Zuges #b",
       " #yRitual [REMOVE_SPACE]."
@@ -177,9 +177,9 @@
   "awakened:EnsorcelatePower": {
     "NAME": "Zauberformel",
     "DESCRIPTIONS": [
-      "Die nächste #yMacht die du ausspielst kostet #b0 [REMOVE_SPACE].",
-      "Die nächsten #b",
-      " #yMächte die du ausspielst kosten #b0 [REMOVE_SPACE]."
+      "Ignoriere die Energiekosten der nächsten gespielten #yMacht [REMOVE_SPACE].",
+      "Ignoriere die Energiekosten der nächsten #b",
+      " gespielten #yMächte [REMOVE_SPACE]."
     ]
   },
   "awakened:ConjureNextPower": {
@@ -191,7 +191,7 @@
     ]
   },
   "awakened:ChosensVersePower": {
-    "NAME": "Erwählter Vers",
+    "NAME": "Auserwählter Vers",
     "DESCRIPTIONS": [
       "Das nächste Mal wenn du in diesem Zug einen #ynicht-Angriff spielst, erhalte #b",
       " #yBlock und ziehe eine Karte.",
@@ -201,7 +201,7 @@
     ]
   },
   "awakened:AphoticFountPower": {
-    "NAME": "Aphotische Quellen",
+    "NAME": "Gefrorene Quellen",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du #yKryostase spielst #b",
       " #yPanzerrüstung [REMOVE_SPACE]."
@@ -240,7 +240,7 @@
     "NAME": "Vierte Dimension",
     "DESCRIPTIONS": [
       "Für #b",
-      " den nächsten Zug, ",
+      " folgenden Zug, ",
       " folgende Züge, ",
       "spiele und #yerschöpfe eine Kopie von ",
       " [REMOVE_SPACE]."
