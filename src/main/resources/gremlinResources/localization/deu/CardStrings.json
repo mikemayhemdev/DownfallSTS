@@ -1,6 +1,6 @@
 {
   "Gremlin:AggressiveDefense": {
-    "NAME": "Aggressive Abwehr",
+    "NAME": "Offensive Abwehr",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn du in diesem Zug Block erhältst, verliert dieser Gegner !M! TP."
   },
 
@@ -232,7 +232,7 @@
   },
 
   "Gremlin:InfiniteBlocks": {
-    "NAME": "Unendlicher Schutz",
+    "NAME": "Vorrätiger Schutz",
     "DESCRIPTION": "Nimm immer zu Beginn deines Zuges einen *Schutz in die Hand.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Nimm immer zu Beginn deines Zuges einen *Schutz in die Hand."
   },
@@ -392,7 +392,7 @@
   },
 
   "Gremlin:ShadowShiv": {
-    "NAME": "Verstecktes Messer",
+    "NAME": "Versteckte Messer",
     "DESCRIPTION": "Erhalte ein Messer jedes Mal, wenn du einen Angriff spielst, der nicht erschöpft."
   },
 
@@ -495,8 +495,8 @@
 
   "Gremlin:Whiz": {
     "NAME": "Energie sammeln",
-    "DESCRIPTION": "Erhalte !M! gremlin:Esprit. Nimm im nächsten Zug einen *Ultimativen *Stoß auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! gremlin:Esprit. Nimm im nächsten Zug einen *Ultimativen *Stoß+ auf die Hand."
+    "DESCRIPTION": "Erhalte !M! gremlin:Esprit. Erhalte im nächsten Zug den *Ultimativen *Stoß. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! gremlin:Esprit. Erhalte im nächsten Zug den *Ultimativen *Stoß+."
   },
 
   "Gremlin:Wizardry": {

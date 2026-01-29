@@ -17,7 +17,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ein zufälliger *Tackle auf deiner Hand kostet diesen Kampf 0."
   },
   "Slimebound:ComboTackle": {
-    "NAME": "Speer-Tackle",
+    "NAME": "Flinker Tackle",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Ziehe !M! Karten."
   },
   "Slimebound:CorrosiveSpit": {
@@ -52,8 +52,8 @@
   },
   "Slimebound:DuplicatedForm": {
     "NAME": "Duplizierte Form",
-    "DESCRIPTION": "Die erste in deinem Zug gespielte Karte, die auf Gegener abzielt, wird zweimal gespielt.",
-    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn deines Zuges [E] . NL Die erste in deinem Zug gespielte Karte, die auf Gegener abzielt, wird zweimal gespielt.",
+    "DESCRIPTION": "Die erste in deinem Zug gespielte Karte, die auf Gegner abzielt, wird zweimal gespielt.",
+    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn deines Zuges [E] . NL Die erste in deinem Zug gespielte Karte, die auf Gegner abzielt, wird zweimal gespielt.",
     "EXTENDED_DESCRIPTION": [
       "Brauche... TP..."
     ]
@@ -63,7 +63,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Heile !M! TP. NL slimeboundmod:Konsum - Spiele diese Karte ein zweites Mal. NL Erschöpft."
   },
   "Slimebound:FinishingTackle": {
-    "NAME": "Eröffnungs-Tackle",
+    "NAME": "Eröffnungstackle",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. slimeboundmod:Konsum - Wende !M! Verwundbar an."
   },
   "Slimebound:FirmFortitude": {
@@ -71,7 +71,7 @@
     "DESCRIPTION": "Verliere 2 Stärke. NL Erhalte !M! slimeboundmod:Potenz."
   },
   "Slimebound:FlameTackle": {
-    "NAME": "Flammen-Tackle",
+    "NAME": "Flammentackle",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Deine *Tackle Karten fügen in diesem Kampf !M! mehr Schaden zu."
   },
   "Slimebound:FormOfPuddle": {
@@ -79,7 +79,7 @@
     "DESCRIPTION": "Flüchtig. NL Erhalte 1 Immateriell. NL Erschöpft."
   },
   "Slimebound:ForwardTackle": {
-    "NAME": "Offensiv-Tackle",
+    "NAME": "Offensivtackle",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL slimeboundmod:Kommando zweimal.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL slimeboundmod:Kommando drei Mal."
   },
@@ -93,7 +93,7 @@
     "DESCRIPTION": "Wende !slime! slimeboundmod:Glibber und !M! Schwach auf ALLE Gegner an."
   },
   "Slimebound:GoopTackle": {
-    "NAME": "Combo-Tackle",
+    "NAME": "Tackle-Combo",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Erhalte eine zufällige *Tackle Karte. Sie kostet diesen Zug 0.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Erhalte eine zufällige verbesserte *Tackle Karte. Sie kostet diesen Zug 0."
   },
@@ -122,8 +122,8 @@
   },
   "Slimebound:LeadByExample": {
     "NAME": "Den Ton angeben",
-    "DESCRIPTION": "Die erste gespielte Karte des Zuges, die auf Gegener abzielt, erteilt ein slimeboundmod:Kommando.",
-    "UPGRADE_DESCRIPTION": "Die ersten !M! gespielten Karten des Zuges, die auf Gegener abzielen, erteilen ein slimeboundmod:Kommando."
+    "DESCRIPTION": "Die erste gespielte Karte des Zuges, die auf Gegner abzielt, erteilt ein slimeboundmod:Kommando.",
+    "UPGRADE_DESCRIPTION": "Die ersten !M! gespielten Karten des Zuges, die auf Gegner abzielen, erteilen ein slimeboundmod:Kommando."
   },
   "Slimebound:LeechEnergy": {
     "NAME": "Laben",

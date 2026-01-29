@@ -13,7 +13,7 @@
   },
   "hermit:Desperado": {
     "NAME": "Desperado",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Verdopple den Schaden dieser Karte und erhöhe seine Kosten um 1 für diesen Kampf."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Verdopple den Schaden dieser Karte und erhöhe ihre Kosten um 1."
   },
   "hermit:Headshot": {
     "NAME": "Kopfschuss",
@@ -39,7 +39,7 @@
   },
   "hermit:BodyArmor": {
     "NAME": "Schutzweste",
-    "DESCRIPTION": "Wirf eine Karte ab. NL Erhalte !B! Block. NL Wurde ein nicht-Angriff abgeworfen, dann erhalte nochmal !B! Block."
+    "DESCRIPTION": "Wirf eine Karte ab. NL Erhalte !B! Block - zweimal, wenn ein nicht-Angriff abgeworfen wurde."
   },
   "hermit:Snipe": {
     "NAME": "Zielen",
@@ -48,8 +48,8 @@
   },
   "hermit:CalledShot": {
     "NAME": "Nachschuss",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Kampf gespielte Karte ein hermit:Volltreffer war.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Kampf gespielte Karte ein hermit:Volltreffer war."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Zug gespielte Karte ein hermit:Volltreffer war.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Zug gespielte Karte ein hermit:Volltreffer war."
   },
   "hermit:Dissolve": {
     "NAME": "Auflösen",
@@ -66,7 +66,7 @@
   },
   "hermit:ShadowCloak": {
     "NAME": "Schattenmantel",
-    "DESCRIPTION": "Erhalte immer, wenn du einen Fluch ziehst oder erschöpfst, !M! Block."
+    "DESCRIPTION": "Erhalte immer, wenn du einen Fluch ziehst oder *erschöpfst, !M! Block."
   },
   "hermit:FatalDesire": {
     "NAME": "Todestrieb",
@@ -83,7 +83,7 @@
   },
   "hermit:Malice": {
     "NAME": "Bosheit",
-    "DESCRIPTION": "Erschöpfe eine Karte. NL Füge !D! Schaden zu. NL Wenn du einen Fluch erschöpfst, werden ALLE Gegner getroffen."
+    "DESCRIPTION": "Erschöpfe eine Karte. NL Füge !D! Schaden zu. NL Wurde ein Fluch erschöpft, werden ALLE Gegner getroffen."
   },
   "hermit:Deadeye": {
     "NAME": "Adlerauge",
@@ -149,7 +149,7 @@
   },
   "hermit:Grudge": {
     "NAME": "Groll",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Fügt !M! mehr Schaden zu für jeden deiner *Flüche."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Der Schaden wird für jeden deiner *Flüche um !M! erhöht."
   },
   "hermit:Spite": {
     "NAME": "Hass",
@@ -195,7 +195,7 @@
   },
   "hermit:BigShot": {
     "NAME": "Rauchender Colt",
-    "DESCRIPTION": "Immer wenn du ein hermit:Volltreffer erzielst, Erhältst du !M! *Elan."
+    "DESCRIPTION": "Immer wenn du ein hermit:Volltreffer erzielst, erhältst du !M! *Elan."
   },
   "hermit:OverwhelmingPower": {
     "NAME": "Ausufernde Macht",
@@ -212,8 +212,8 @@
   },
   "hermit:FullyLoaded": {
     "NAME": "Vollgeladen",
-    "DESCRIPTION": "Nimm ALLE deine *Schlag und *Verteidigen Karten vom Nachziehstapel auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Nimm ALLE deine *Schlag und *Verteidigen Karten vom Nachziehstapel auf die Hand. NL Erschöpft."
+    "DESCRIPTION": "Nimm alle *Schlag und *Verteidigen Karten vom Nachziehstapel auf die Hand. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Nimm alle *Schlag und *Verteidigen Karten vom Nachziehstapel auf die Hand. Erschöpft."
   },
   "hermit:Gestalt": {
     "NAME": "Gestalt",
@@ -225,7 +225,7 @@
   },
   "hermit:CursedWeapon": {
     "NAME": "Verfluchte Waffe",
-    "DESCRIPTION": "Verliere !M! TP. NL Füge !D! Schaden zu. NL Alle *Verfluchten *Waffen fügen permanent !hermit:SecondMagic! mehr Schaden zu. NL Erschöpft."
+    "DESCRIPTION": "Verliere !M! TP. Füge !D! Schaden zu. NL Alle *Verfluchten *Waffen fügen permanent !hermit:SecondMagic! mehr Schaden zu. Erschöpft."
   },
   "hermit:Enervate": {
     "NAME": "Entziehen",
@@ -233,7 +233,7 @@
   },
   "hermit:Ricochet": {
     "NAME": "Querschläger",
-    "DESCRIPTION": "Füge !D! Schaden zu. Wiederhole das auf einen zufälligen Gegner für jeden aktivierten hermit:Volltreffer in diesem Zug.",
+    "DESCRIPTION": "Füge !D! Schaden zu. Wiederhole das auf zufällige Gegner für jeden hermit:Volltreffer in diesem Zug.",
     "EXTENDED_DESCRIPTION": [" NL (Wiederholt !M! ", "Mal.)","Mal.)"]
   },
   "hermit:TrackingShot": {

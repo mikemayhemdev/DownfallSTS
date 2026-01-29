@@ -53,8 +53,8 @@
   },
   "collector:BramblesparKindling": {
     "NAME": "Dorniger Anzünder",
-    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, nimm einen *Brennenden *Schlag auf die Hand.",
-    "UPGRADE_DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, nimm einen *Brennenden *Schlag+ auf die Hand.",
+    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte einen *Brennenden *Schlag.",
+    "UPGRADE_DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte einen *Brennenden *Schlag+.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss das zum Gebrauch anzünden."
     ]
@@ -156,7 +156,7 @@
   },
   "collector:FleetingEmbers": {
     "NAME": "Flüchtige Glut",
-    "DESCRIPTION": "collector:Opfergabe. NL Erhalte !B! Block. NL Nimm !M! *Glut Karten auf die Hand."
+    "DESCRIPTION": "collector:Opfergabe. NL Erhalte !B! Block. NL Erhalte !M! *Glut Karten."
   },
   "collector:Forgery": {
     "NAME": "Fälschen",
@@ -225,7 +225,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende 2 Schwach und Verwundbar an, falls der Gegner nicht collector:geplagt ist."
   },
   "collector:Invigorate": {
-    "NAME": "Aufblitzen",
+    "NAME": "Sabotage",
     "DESCRIPTION": "collector:Opfergabe. NL Nimm *Straucheln oder *Blenden auf die Hand. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "collector:Opfergabe. NL Nimm *Straucheln+ oder *Blenden+ auf die Hand. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
@@ -381,8 +381,8 @@
     "DESCRIPTION": "Wende immer wenn du *Schwach oder *Verwundbar anwendest zusätzlich !M! collector:Verdammnis an."
   },
   "collector:SunbloomKindling": {
-    "NAME": "Glitzernder Anzünder",
-    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte !M! Stärke und nimm 2 *Glut Karten auf die Hand.",
+    "NAME": "Starker Anzünder",
+    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte !M! Stärke und 2 *Glut Karten.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss das zum Gebrauch anzünden."
     ]
@@ -418,8 +418,8 @@
   },
   "collector:AcidSlimeCard": {
     "NAME": "Säureschleim",
-    "DESCRIPTION": "Nimm !M! zufällige Karte, die 0 Kostet, auf die Hand.",
-    "UPGRADE_DESCRIPTION": "Nimm !M! zufällige Karten, die 0 Kosten, auf die Hand."
+    "DESCRIPTION": "Erhalte !M! zufällige Karte, die 0 Kostet.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! zufällige Karten, die 0 Kosten."
   },
   "collector:AugmenterCard": {
     "NAME": "Erweiterer",
@@ -486,7 +486,7 @@
   },
   "collector:FaceTraderCard": {
     "NAME": "Gesichtshändler",
-    "DESCRIPTION": "Nimm !M! zufällige Karten von allen möglichen Farben auf die Hand. NL Sie sind Flüchtig."
+    "DESCRIPTION": "Erhalte !M! zufällige Karten von allen möglichen Farben. NL Sie sind Flüchtig."
   },
   "collector:FatGremlinCard": {
     "NAME": "Fetter Gremlin",
@@ -550,7 +550,7 @@
   },
   "collector:MerchantCard": {
     "NAME": "Händler",
-    "DESCRIPTION": "Nimm !M! zufällige farblose Karten auf die Hand. NL Sie kosten in diesem Zug 0."
+    "DESCRIPTION": "Erhalte !M! zufällige farblose Karten. NL Sie kosten in diesem Zug 0."
   },
   "collector:MushroomCard": {
     "NAME": "Pilze",
@@ -566,12 +566,12 @@
   },
   "collector:NlothCard": {
     "NAME": "N'Loth",
-    "DESCRIPTION": "collector:Opfergabe. NL Nimm eine zufällige seltene Karte auf die Hand. NL Sie kostet 1 weniger.",
-    "UPGRADE_DESCRIPTION": "collector:Opfergabe. NL Nimm eine zufällige seltene Karte auf die Hand. NL Sie kostet 0."
+    "DESCRIPTION": "collector:Opfergabe. NL Erhalte eine zufällige seltene Karte. NL Sie kostet 1 weniger.",
+    "UPGRADE_DESCRIPTION": "collector:Opfergabe. NL Erhalte eine zufällige seltene Karte. NL Sie kostet 0."
   },
   "collector:OrbWalkerCard": {
     "NAME": "Kugelwandler",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm !M! *Glut Karten auf die Hand."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! *Glut Karten."
   },
   "collector:PointyCard": {
     "NAME": "Pointy",
@@ -599,7 +599,7 @@
   },
   "collector:ScrapOozeCard": {
     "NAME": "Schrottschlamm",
-    "DESCRIPTION": "collector:Opfergabe. NL Verliere 3 TP. NL Nimm !M! zufällige Angriffe auf die Hand. NL Sie kosten diesen Zug 0."
+    "DESCRIPTION": "collector:Opfergabe. NL Verliere 3 TP. NL Erhalte !M! zufällige Angriffe. NL Sie kosten diesen Zug 0."
   },
   "collector:SentryCard": {
     "NAME": "Wache",
@@ -663,7 +663,7 @@
   },
   "collector:TorchHeadCard": {
     "NAME": "Fackelkopf",
-    "DESCRIPTION": "Nimm einen zufälligen Fackelkopf-Ruf auf die Hand. NL Er kostet diesen Zug 0."
+    "DESCRIPTION": "Erhalte einen zufälligen Fackelkopf-Ruf. NL Er kostet diesen Zug 0."
   },
   "collector:TransientCard": {
     "NAME": "Schwundling",

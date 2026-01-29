@@ -16,7 +16,7 @@
   "champ:FocusedBerPower": {
     "NAME": "Graziöser Gang",
     "DESCRIPTIONS": [
-      "Wenn du in diesem Zug einen #yAbschluss spielst, dann füge ALLEN Gegenern #b",
+      "Wenn du in diesem Zug einen #yAbschluss spielst, dann füge ALLEN Gegnern #b",
       " Schaden zu."
     ]
   },
@@ -139,9 +139,9 @@
     ]
   },
   "champ:IronFortressPower": {
-    "NAME": "Launiges Gezappel",
+    "NAME": "Launiges Zappeln",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du eine #yHaltung annimmst #b",
+      "Erhalte immer, wenn du eine #yHaltung annimmst, #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -156,7 +156,7 @@
   "champ:LastStandMod": {
     "NAME": "Letztes Aufgebot",
     "DESCRIPTIONS": [
-      "Wenn deine TP zu Beginn deines Zuges bei 50% oder darunter liegen, entferne alle Debuffs und erhalte ",
+      "Wenn deine TP bei 50% oder darunter liegen, entferne alle Debuffs und erhalte ",
       " #yStärke [REMOVE_SPACE]."
     ]
   },

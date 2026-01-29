@@ -38,8 +38,8 @@
   },
   "awakened:Intensify": {
     "NAME": "Intensivieren",
-    "DESCRIPTION": "awakened:Aufrufen. NL In diesem Zug kosten Zauber 0 und du kannst nicht erneut awakened:aufrufen.",
-    "UPGRADE_DESCRIPTION": "Behalten. awakened:Aufrufen. NL In diesem Zug kosten Zauber 0 und du kannst nicht erneut awakened:aufrufen."
+    "DESCRIPTION": "awakened:Aufrufen. NL In diesem Zug kosten *Zauber 0 und du kannst nicht erneut awakened:aufrufen.",
+    "UPGRADE_DESCRIPTION": "Behalten. awakened:Aufrufen. NL In diesem Zug kosten *Zauber 0 und du kannst nicht erneut awakened:aufrufen."
   },
   "awakened:DarkEcho": {
     "NAME": "Dunkles Echo",
@@ -68,7 +68,7 @@
   },
   "awakened:Psalm": {
     "NAME": "Psalm",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu und Wende !M! Schwach auf sie an."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu und wende !M! Schwach auf sie an."
   },
   "awakened:DemonGlyph": {
     "NAME": "Dämonenglyphen",
@@ -121,7 +121,7 @@
   },
   "awakened:Envision": {
     "NAME": "Manifestieren",
-    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Rufe einen Zauberspruch *auf und lege ihn auf den Nachziehstapel."
+    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Rufe einen *Zauberspruch *auf und lege ihn auf den Nachziehstapel."
   },
   "awakened:Thaumaturgy": {
     "NAME": "Quacksalbereien",
@@ -132,7 +132,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Wende !awakened:m2! awakened:Manabrand auf ALLE Gegner an. NL Erschöpft."
   },
   "awakened:SludgeBomb": {
-    "NAME": "Schmutzige Bombe",
+    "NAME": "Dimensionsbombe",
     "DESCRIPTION": "Erfordert eine *Leere im Erschöpfungsstapel. Entferne sie und füge zweimal !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "Ich habe keine erschöpfte Leere."
@@ -164,7 +164,7 @@
   "awakened:BirdsEye": {
     "NAME": "Foglauge",
     "DESCRIPTION": "awakened:Rufe einen *Zauberspruch deiner Wahl *auf.",
-    "UPGRADE_DESCRIPTION": "Fülle dein Zauberbuch neu auf und awakened:Rufe danach einen *Zauberspruch deiner Wahl *auf."
+    "UPGRADE_DESCRIPTION": "Fülle das Zauberbuch neu auf und awakened:Rufe danach einen *Zauberspruch deiner Wahl *auf."
   },
   "awakened:Initiation": {
     "NAME": "Initiierung",
@@ -199,7 +199,7 @@
   },
   "awakened:MoonlitVision": {
     "NAME": "Mondfinsternis",
-    "DESCRIPTION": "Erhalte [E] das erste Mal, an dem du im Zug einen Zauber spielst."
+    "DESCRIPTION": "Erhalte [E] das erste Mal, an dem du im Zug einen *Zauber spielst."
   },
   "awakened:Rebirth": {
     "NAME": "Wiedergeburt",
@@ -220,8 +220,8 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "Ringfinsternis",
-    "DESCRIPTION": "Erhalte immer wenn awakened:ausgelaugt wirst !M! Block und !awakened:m2! Stärke.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer wenn awakened:ausgelaugt wirst !M! Block und !awakened:m2! Stärke."
+    "DESCRIPTION": "Erhalte immer, wenn awakened:ausgelaugt wirst, !M! Block und !awakened:m2! Stärke.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer, wenn awakened:ausgelaugt wirst, !M! Block und !awakened:m2! Stärke."
   },
   "awakened:Eventide": {
     "NAME": "Dämmerung",
@@ -229,15 +229,15 @@
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Sonnenfinsternis",
-    "DESCRIPTION": "Immer wenn du eine *Leere erschöpfst, ziehe im nächsten Zug eine Karte und erhalte [E] ."
+    "DESCRIPTION": "Immer, wenn du eine *Leere *erschöpfst, ziehe im nächsten Zug eine Karte und erhalte [E] ."
   },
   "awakened:Clutch": {
     "NAME": "Umklammern",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte die 0 kostet."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte, die 0 kostet."
   },
   "awakened:Gloomguard": {
     "NAME": "Düsterer Schutz",
-    "DESCRIPTION": "Erhalte !B! Block. NL Kostet 0 wenn sich eine *Leere auf der Hand befindet."
+    "DESCRIPTION": "Erhalte !B! Block. NL Kostet 0, wenn sich eine *Leere auf der Hand befindet."
   },
   "awakened:Carrionmaker": {
     "NAME": "Aasproduktion",
@@ -258,7 +258,7 @@
   },
   "awakened:Dejection": {
     "NAME": "Schwermut",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe eine Karte. Wurde ein Zauber erschöpft, dann erhalte eine *Zeremonie."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe eine Karte. Wurde ein *Zauber erschöpft, dann erhalte eine *Zeremonie."
   },
   "awakened:BloodRite": {
     "NAME": "Blutiges Ritual",
@@ -291,7 +291,7 @@
   },
   "awakened:ArcaneNesting": {
     "NAME": "Arkane Ausbrütung",
-    "DESCRIPTION": "Unspielbar. NL Erhalte !B! Block wenn du mit dieser Karte auf der Hand eine Macht spielst.",
+    "DESCRIPTION": "Unspielbar. NL Erhalte !B! Block, wenn du mit dieser Karte auf der Hand eine Macht spielst.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss Mächte ausspielen um Block zu erhalten."
     ]
@@ -323,7 +323,7 @@
   },
   "awakened:AphoticFount": {
     "NAME": "Gefrorene Quellen",
-    "DESCRIPTION": "awakened:Aufrufen. NL Erhalte immer wenn du *Kryostase spielst !M! expansioncontent:Panzerrüstung."
+    "DESCRIPTION": "awakened:Aufrufen. NL Erhalte immer, wenn du *Kryostase spielst, !M! expansioncontent:Panzerrüstung."
   },
   "awakened:Bloodthirst": {
     "NAME": "Blutdurst",
@@ -336,7 +336,7 @@
   },
   "awakened:SplitWide": {
     "NAME": "Aufschlitzen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte immer wenn du diesen Gegner angreifst !M! *temporäre Stärke. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte immer, wenn du diesen Gegner angreifst, !M! *temporäre Stärke. NL Erschöpft."
   },
   "awakened:Spellshield": {
     "NAME": "Zauberschild",
@@ -369,7 +369,7 @@
   },
   "awakened:ManaShield": {
     "NAME": "Manaschild",
-    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Aufrufen. NL Ein zufälliger Zauber auf der Hand kostet 1 weniger."
+    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Aufrufen. NL Ein zufälliger *Zauber auf der Hand kostet 1 weniger."
   },
   "awakened:Crusher": {
     "NAME": "Brecher",
@@ -405,7 +405,7 @@
   },
   "awakened:Inscribe": {
     "NAME": "Einschreiben",
-    "DESCRIPTION": "Wähle einen *Zauberspruch. Lege für den Rest des Kampfes !M! Kopien davon in das Zauberbuch.",
-    "UPGRADE_DESCRIPTION": "awakened:Aufrufen. NL Wähle einen *Zauberspruch. Lege für den Rest des Kampfes !M! Kopien davon in das Zauberbuch."
+    "DESCRIPTION": "Wähle einen *Zauberspruch. Lege für den Rest des Kampfes !M! Kopien in das Zauberbuch.",
+    "UPGRADE_DESCRIPTION": "awakened:Aufrufen. NL Wähle einen *Zauberspruch. Lege für den Rest des Kampfes !M! Kopien in das Zauberbuch."
   }
 }
