@@ -5,7 +5,7 @@
   },
   "downfall:Bewildered": {
     "NAME": "Irritation",
-    "DESCRIPTION": "sneckomod:Irre diese Karte wenn sie gezogen wird. NL Erschöpft."
+    "DESCRIPTION": "sneckomod:Irre diese Karte, wenn sie gezogen wird. NL Erschöpft."
   },
   "downfall:Icky": {
     "NAME": "Ekel",
@@ -25,7 +25,7 @@
   },
   "downfall:CurseOfBlood": {
     "NAME": "Blutleer",
-    "DESCRIPTION": "Verliere [E] zu Beginn deines nächsten Zuges. NL Erschöpft.",
+    "DESCRIPTION": "Verliere im nächsten Zug [E]. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": ["Note for LOC: Hemophilia is a name for a disorder for when your blood doesn’t clot properly. I added the a in the middle for coolness factor."]
   },
   "downfall:SummonMushrooms": {
@@ -70,7 +70,7 @@
   },
   "downfall:EyeForAnEye": {
     "NAME": "Auge um Auge",
-    "DESCRIPTION": "Wenn dein Gegner mehr Angriffe als nicht-Agriffe ausgespielt hat, nimmst du Zorn an. Ansonsten nimmst du Ruhe an."
+    "DESCRIPTION": "Wenn dein Gegner mehr Angriffe als nicht-Agriffe ausgespielt hat, nimmst du Zorn an. Anderenfalls nimmst du Ruhe an."
   },
   "downfall:TruePeace": {
     "NAME": "Wahrhaftiger Frieden",
@@ -82,7 +82,7 @@
   },
   "downfall:FalseWorship": {
     "NAME": "Falsche Anbetung",
-    "DESCRIPTION": "Belebe deinen Kultisten wieder wenn er tot ist. Ansonsten wird er beim nächsten Tod mit 50% seiner TP wiederbelebt."
+    "DESCRIPTION": "Belebe deinen Kultisten wieder wenn er tot ist. Anderenfalls wird er beim nächsten Tod mit 50% seiner TP wiederbelebt."
   },
   "downfall:FleetingFaith": {
     "NAME": "Geistesgegenwart",

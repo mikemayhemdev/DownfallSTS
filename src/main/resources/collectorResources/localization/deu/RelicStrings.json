@@ -22,8 +22,8 @@
     ]
   },
   "collector:BagOfTricks": {
-    "NAME": "Sack voller Tricks",
-    "FLAVOR": "Trickreich.",
+    "NAME": "Wundertüte",
+    "FLAVOR": "Wundervoll.",
     "DESCRIPTIONS": [
       "Ziehe zu Beginn jedes Kampfes #b",
       " zusätzliche Karten vom #ySammlungsstapel."
@@ -87,7 +87,7 @@
       "#yVerbessere beim Aufheben eine Karte in deiner #ySammlung. Beginne jeden Kampf mit der gewählten Karte auf deinem #ySammlungsstapel.",
       "Beginne jeden Kampf mit ",
       " auf deinem #ySammlungsstapel.",
-      "Wähle eine Karte für ",
+      "Wähle eine Karte für das ",
       "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
     ]
   },
@@ -117,7 +117,7 @@
     ]
   },
   "collector:BlockedChakra": {
-    "NAME": "Blockiertes Chakra",
+    "NAME": "Gehemmtes Chakra",
     "FLAVOR": "Es reicht bloß ein gezerrter Muskel.",
     "DESCRIPTIONS": [
       "Erhalte in deinem Zug [E] . Du kannst erst ab deinem vierten Zug vom #ySammlungsstapel ziehen."

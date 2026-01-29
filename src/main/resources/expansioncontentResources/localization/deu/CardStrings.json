@@ -1,7 +1,7 @@
 {
   "expansioncontent:GuardianWhirl": {
     "NAME": "Wächter-Wirbel",
-    "DESCRIPTION": "Füge !M! Mal ALLEN Gegnern !D! Schaden zu. NL Wenn du mindestens !DM! Block hast, füge den Schaden !M! weitere Male zu.",
+    "DESCRIPTION": "Füge ALLEN Gegnern !M! Mal !D! Schaden zu. NL Wenn du mindestens !DM! Block hast, füge den Schaden !M! weitere Male zu.",
     "EXTENDED_DESCRIPTION": [
       "Benötigt mehr Block."
     ]
@@ -17,7 +17,7 @@
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Strahl",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine *Leere auf deinen Nachziehstapel. NL Erschöpft."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine *Leere auf den Nachziehstapel. NL Erschöpft."
   },
   "expansioncontent:LastStand": {
     "NAME": "Finales Aufgebot",
@@ -73,14 +73,14 @@
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Schnellstudien",
-    "DESCRIPTION": "Wähle 1 aus 3 zufälligen *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wähle 1 aus 3 zufälligen *verbesserten *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. NL Erschöpft.",
+    "DESCRIPTION": "Wähle 1 aus 3 zufälligen *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wähle 1 aus 3 zufälligen *verbesserten *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle eine Boss-Karte."
     ]
   },
   "expansioncontent:DashGenerateEvil": {
-    "NAME": "Das Böse in Sich",
+    "NAME": "Das pure Böse",
     "DESCRIPTION": "Füge ALLEN Gegnern !M! Schaden zu, immer wenn du !DM! Debuffs anwendest."
   },
   "expansioncontent:KnowingSkullWish": {
@@ -145,7 +145,7 @@
   },
 
   "expansioncontent:SuperWhirlingFlame": {
-    "NAME": "Wirbelndes Lodern",
+    "NAME": "Wirbelnder Funke",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine Karte aus dem Abwurfstapel auf den Nachziehstapel."
   },
   "expansioncontent:Flail": {
@@ -173,11 +173,11 @@
 
   "expansioncontent:Virus": {
     "NAME": "404 Virus",
-    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. Mische einen *Großen *Strahl für jede auf diese Weise erschöpfte Karte in den Nachziehstapel. NL Erschöpft."
+    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. bronze:Setze pro erschöpfter Karte einen *Hypostrahl *ein. NL Erschöpft."
   },
 
   "expansioncontent:MajorBeam": {
-    "NAME": "Großer Strahl",
+    "NAME": "Hypostrahl",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karte.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten."
   },
@@ -189,19 +189,19 @@
   },
   "expansioncontent:Pandemonium": {
     "NAME": "Pandämonium",
-    "DESCRIPTION": "Spiele zu Beginn deines Zuges eine zufällige Karte deines Abwurfstapels."
+    "DESCRIPTION": "Spiele zu Beginn deines Zuges eine zufällige Karte im Abwurfstapel."
   },
   "expansioncontent:Reverie": {
-    "NAME": "Nostalgie",
-    "DESCRIPTION": "Nimm zu Beginn deines Zuges eine der obersten !M! Karten deines Abwurfstapels auf die Hand."
+    "NAME": "Déjà-vu",
+    "DESCRIPTION": "Schnapp dir zu Beginn deines Zuges eine der !M! obersten Karten des Abwurfstapels."
   },
   "expansioncontent:ExploitVulnerability": {
     "NAME": "Donu-Strahl",
-    "DESCRIPTION": "Entferne allen Block des Gegners, und erhalte genausoviel Block. Füge zweimal !D! Schaden zu."
+    "DESCRIPTION": "Entferne allen Block des Gegners, und erhalte genauso viel Block. Füge zweimal !D! Schaden zu."
   },
   "expansioncontent:PeekPages": {
-    "NAME": "Seiten spicken",
-    "DESCRIPTION": "Lege !M! *Einsicht Karten auf deinen Nachziehstapel. NL Erschöpft."
+    "NAME": "Nachlesen",
+    "DESCRIPTION": "Lege !M! *Einsicht Karten auf den Nachziehstapel. NL Erschöpft."
   },
   "expansioncontent:BloodBarrage": {
     "NAME": "Blutsalve",

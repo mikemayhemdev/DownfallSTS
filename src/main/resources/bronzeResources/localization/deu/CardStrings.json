@@ -130,7 +130,7 @@
     "UPGRADE_DESCRIPTION": "Angeboren. NL Verhindere die nächsten !M! *Kompilierungsfehler die du *kodierst."
   },
   "bronze:CloningBeam": {
-    "NAME": "Mergekonflikt",
+    "NAME": "Code-Duplizierung",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste Karte die bronze:kodiert wird, bronze:kodiert ein weiteres Mal. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste Karte die bronze:kodiert wird, bronze:kodiert ein weiteres Mal."
   },
@@ -207,7 +207,7 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "Suchen-Ersetzen",
-    "DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel und lege ein *Benommen an der Stelle von der du die Karte genommen hast. NL Erschöpft.",
+    "DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel und lege ein *Benommen an ihrer Stelle ein. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle."
@@ -228,7 +228,7 @@
   },
   "bronze:FollowUp": {
     "NAME": "Nachlegen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Hast du diesen Kampf zuletzt eine Funktion gespielt, dann spiele diese Karte erneut."
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Hast du diesen Kampf zuletzt eine Funktion gespielt, dann spiele diese Karte nochmal."
   },
   "bronze:ForceShield": {
     "NAME": "Kraftschild",
@@ -282,7 +282,7 @@
     "DESCRIPTION": "Erhalte eine zufällige Karte mit bronze:Kodieren. Sie kostet 0 bis du sie spielst. NL Erschöpft."
   },
   "bronze:Goto": {
-    "NAME": "Goto",
+    "NAME": "Subroutine",
     "DESCRIPTION": "Ziehe !M! Karte. NL bronze:Kompilierung - Ziehe im nächsten Zug !M! Karte.",
     "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL bronze:Kompilierung - Ziehe im nächsten Zug !M! Karten.",
     "EXTENDED_DESCRIPTION": [
@@ -346,8 +346,8 @@
   },
   "bronze:Mutator": {
     "NAME": "Variable",
-    "DESCRIPTION": "Erhalte !M! Stärke. NL *Transformiere einen Status auf der Hand in eine Kopie dieser Karte.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte !M! Stärke. NL *Transformiere einen Status auf der Hand in eine Kopie dieser Karte."
+    "DESCRIPTION": "Erhalte !M! Stärke. NL expansioncontent:Transformiere einen Status auf der Hand in eine Kopie dieser Karte.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte !M! Stärke. NL expansioncontent:Transformiere einen Status auf der Hand in eine Kopie dieser Karte."
   },
   "bronze:NullPointer": {
     "NAME": "Nullpointer",
@@ -397,7 +397,7 @@
   },
   "bronze:Refactor": {
     "NAME": "Überschreiben",
-    "DESCRIPTION": "Spähe !M!. NL Erschöpfe alle abgeworfenen Statuskarten. NL Erhalte !B! Block für jeden erschöpften Status."
+    "DESCRIPTION": "Spähe !M!. NL Erschöpfe abgeworfene Statuskarten. NL Erhalte pro erschöpftem Status !B! Block."
   },
   "bronze:Repair": {
     "NAME": "Reparieren",
@@ -468,8 +468,8 @@
   },
   "bronze:SpaghettiCode": {
     "NAME": "Spaghetticode",
-    "DESCRIPTION": "Wähle 1 von 3 zufälligen Karten zum bronze:kodieren. Wiederhole das bis eine Funktion kompiliert. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wähle 1 von 3 zufälligen Karten zum bronze:kodieren. Wiederhole das bis eine Funktion kompiliert."
+    "DESCRIPTION": "Wähle 1 von 3 zufälligen Karten zum bronze:kodieren. Wiederhole das, bis eine Funktion kompiliert. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wähle 1 von 3 zufälligen Karten zum bronze:kodieren. Wiederhole das, bis eine Funktion kompiliert."
   },
   "bronze:Strike": {
     "NAME": "Schlag",
@@ -481,7 +481,7 @@
   },
   "bronze:Terminator": {
     "NAME": "Terminator",
-    "DESCRIPTION": "bronze:Kompilierung - Wird im letzten Slot mit 'Spiele dieser Karte erneut' *kodiert.",
+    "DESCRIPTION": "bronze:Kompilierung - Wird im letzten Slot mit 'Spiele dieser Karte nochmal' *kodiert.",
     "EXTENDED_DESCRIPTION": [
       "trauriges",
       "Ende"
@@ -588,8 +588,8 @@
   },
   "bronze:Decompile": {
     "NAME": "Dekompilieren",
-    "DESCRIPTION": "Erschöpfe alle derzeit kodierten Karten. Ziehe Karten und erhalte [E] in Höhe der erschöpften Karten. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Erschöpfe alle derzeit kodierten Karten. Ziehe Karten und erhalte [E] in Höhe der erschöpften Karten. NL Erschöpft."
+    "DESCRIPTION": "Erschöpfe alle kodierten Karten. Ziehe Karten und erhalte [E] in Höhe ihrer Anzahl. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erschöpfe alle kodierten Karten. Ziehe Karten und erhalte [E] in Höhe ihrer Anzahl. NL Erschöpft."
   },
   "bronze:DonuBeam": {
     "NAME": "Proto-Strahl",

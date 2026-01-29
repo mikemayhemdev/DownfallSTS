@@ -1,12 +1,12 @@
 {
   "hexamod:SealCommonReward": {
     "TEXT": [
-      "Nimm eine gewöhnliche Karte in dein Deck auf."
+      "Erhalte eine gewöhnliche Karte"
     ]
   },
   "hexamod:SealSealReward": {
     "TEXT": [
-      "Nimm ein Siegel in dein Deck auf",
+      "Erhalte ein Siegel",
       "Wähle eine Karte."
     ]
   },

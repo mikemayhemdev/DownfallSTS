@@ -1,7 +1,7 @@
 {
   "collector:CollectionReward": {
     "TEXT": [
-      "Wähle eine Karte für deine Sammlung aus."
+      "Wähle ein Sammlerstück aus."
     ]
   },
   "collector:CollectibleCardTab": {
@@ -19,7 +19,7 @@
     "TEXT": [
       "Sammlung",
       "Sieh alle Karten deiner Sammlung an.",
-      "Diese Karten landen zu Beginn jedes Kampfes in den Sammlungsstapel."
+      "Diese Karten landen zu Beginn jedes Kampfes im Sammlungsstapel."
     ]
   },
   "collector:CombatCollectionPileButton": {
@@ -32,8 +32,8 @@
   "collector:EssenceCount": {
     "TEXT": [
       "Essenzen",
-      "Wandle Essenzen in Karten für deine Sammlung (Sammlerstücke) um. Normale Kämpfe erzeugen #b1 #yEssenz. Elitekämpfe #b2 #yEssence, und Bosskämpfe #b3! NL You hast #b",
-      " Essenzen."
+      "Wandle Essenzen in Karten für deine Sammlung (Sammlerstücke) um. Normale Kämpfe erzeugen #b1 Essenz. Elitekämpfe #b2 Essenzen, und Bosskämpfe #b3! NL Du hast #b",
+      " #yEssenzen."
     ]
   },
   "collector:CombatCollectionViewScreen": {
@@ -55,7 +55,7 @@
   },
   "collector:CollectibleCardReward": {
     "TEXT": [
-      "Sammlerstück: ",
+      "Sammeln: ",
       "Du kannst diese Karte aufsammeln"
     ]
   },

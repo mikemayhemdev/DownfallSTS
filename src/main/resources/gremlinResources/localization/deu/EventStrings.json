@@ -46,17 +46,17 @@
     "NAME": "Schrottschlamm",
     "DESCRIPTIONS": [
       "Als ihr den Raum betretet, hört ihr ein ~Gurgeln~ und das @Zermahlen@ von Metallen. Es ist ein #ySchrottschleim! Diese lustigen kleinen Wesen finden allen möglichen #yKram. Und sie sind zu schwach und zu lamngsam um euch vom Diebstahl abzuhalten! Ihr wisst, wie man in sie hineingreifen kann, ohne sich an deren Säure zu verätzen. Allerdings ist es zeitintensiv und erfordert #rKonzentration.",
-      "Immer vorsichtig... ihr weicht den schrottigen Dingen und den spitzen Dingen aus. Wenn es doch bloß nicht so #r@langweilig@ wäre. NL Aber wenn ihr dranbleibt, dann wartet ein wertvolles #yRelikt auf euch...",
+      "Immer vorsichtig... ihr weicht den schrottigen und spitzen Dingen aus. Wenn es doch bloß nicht so #r@langweilig@ wäre. NL Aber wenn ihr dranbleibt, dann wartet ein wertvolles #yRelikt auf euch...",
       "#gGeschafft! NL Nachdem ihr euch durch das Metall und die brennende Säure gewühlt habt, bekommt ihr endlich das #yRelikt zu fassen und werft es heraus. NL Ihr zeiht euch aus dem Schlamm heraus und macht euch mit eurem neuen Spielzeug davon.",
       "Das ist viel zu #rlangweilig. Warum tun wir das nochmal?",
       "Du entschließt dich, die Gegend zu verlassen. NL Der Schleim ist unaufmerksam, da er mit seiner Mahlzeit zufrieden ist."
     ],
     "OPTIONS": [
-      "[Vorsichtig Hineingreifen] #r",
+      "[Hineingreifen] #r",
       "%: #rWerde #rverflucht #r- #rZerstreutheit. #g",
       "%: #gFinde #gein #gRelikt.",
       "[Verlassen]",
-      "[Bleibe vorsichtig] #r"
+      "[Ruhig bleiben] #r"
     ]
   },
   "Gremlin:SensoryStone": {

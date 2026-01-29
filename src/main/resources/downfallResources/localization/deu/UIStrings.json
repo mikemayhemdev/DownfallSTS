@@ -24,7 +24,7 @@
       "Rubin zerbrechen",
       "Saphir zerbrechen",
       "Smaragd zerbrechen",
-      "(Kleine Aktion) Ausgeben ",
+      "(Kleine Aktion) Für ",
       " gewöhnlichen Karten zu erhalten.",
       " ungewöhnlichen Karten zu erhalten.",
       " seltenen Karten zu erhalten.",
@@ -83,19 +83,19 @@
   },
   "downfall:RemoveCardReward": {
   "TEXT": [
-      "Entferne eine Karte aus deinem Deck",
+      "Entferne eine Karte",
       "Wähle eine Karte zum Entfernen"
     ]
   },
   "downfall:TransformCardReward": {
     "TEXT": [
-      "Transformiere eine Karte aus deinem Deck",
+      "Transformiere eine Karte",
       "Wähle eine Karte zum Transformieren"
     ]
   },
   "downfall:UpgradeCardReward": {
     "TEXT": [
-      "Verbessere eine Karte aus deinem Deck",
+      "Verbessere eine Karte",
       "Wähle eine Karte zum Verbessern"
     ]
   },
@@ -136,42 +136,42 @@
   },
   "downfall:ColorfulCardReward": {
     "TEXT": [
-      "Nimm eine ",
-      " Karte in dein Deck auf",
+      "Erhalte eine ",
+      " Karte",
       "Wähle eine Karte."
     ]
   },
   "downfall:ColorfulUncommonCardReward": {
     "TEXT": [
-      "Nimm eine ",
-      " Karte in dein Deck auf",
+      "Erhalte eine ",
+      " Karte",
       "Wähle eine Karte."
     ]
   },
   "downfall:ColorfulRareCardReward": {
     "TEXT": [
-      "Nimm eine ",
-      " Karte in dein Deck auf",
+      "Erhalte eine ",
+      " Karte",
       "Wähle eine Karte."
     ]
   },
   "downfall:DiceRollPotionReward": {
     "TEXT": [
-      "Nimm eine verbesserte ",
-      " Karte in dein Deck auf",
+      "Erhalte eine verbesserte ",
+      " Karte",
       "Wähle eine Karte."
     ]
   },
   "downfall:ColorfulPowersCardReward": {
     "TEXT": [
-      "Nimm eine verbesserte Macht ",
-      " in dein Deck auf",
+      "Erhalte eine verbesserte Macht ",
+      " ",
       "Wähle eine Karte."
     ]
   },
   "downfall:RunHistoryMonsterNames": {
     "TEXT": [
-      "Living Wall Heads",
+      "Lebendige Wandgesichter",
       "Der Eiserne",
       "Die Stille",
       "Das Defekte",

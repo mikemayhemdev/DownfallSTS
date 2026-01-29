@@ -1,7 +1,7 @@
 {
   "HermitMod:HermitTutorials": {
     "TEXT": [
-      "Der Einsiedler besitzt Karten die einen #yVolltreffer erzielen können. NL NL Ein Volltreffer wird erzielt, wenn diese Karten aus der Mitte deiner Hand gespielt werden.",
+      "Der Einsiedler besitzt Karten, die einen #yVolltreffer erzielen können. NL NL Ein Volltreffer wird erzielt, wenn diese Karten aus der Mitte deiner Hand gespielt werden.",
       "Bei einer geraden Anzahl an Handkarten gibt es #yzwei mittlere Karten, auch wenn es die einzigen Karten in deiner Hand sind."
     ],
     "LABEL": [
@@ -14,8 +14,8 @@
   },
   "HermitMod:GuardianTutorials": {
     "TEXT": [
-      "Der Wächter kann sich in den Defensivmodus einrollen nachdem er sich genug abgehärtet, oder TP verloren hat.",
-      "Er kann auch Juwelen in bestimmte Karten einsetzen, um sie zu verstärken."
+      "Der Wächter kann sich in den #yDefensivmodus einrollen, nachdem er sich genug #yabgehärtet, oder TP verloren hat.",
+      "Er kann auch #yJuwelen in bestimmte Karten einsetzen, um sie zu verstärken."
     ],
     "LABEL": [
       "Weiter",
@@ -27,8 +27,8 @@
   },
   "HermitMod:HexaghostTutorials": {
     "TEXT": [
-      "Der Hexageist durch das Entzünden seiner Geisterflammen Kräfte freisetzen.",
-      "Die aktuelle Geisterflamme wird durch bestimmte Aktionen entzündet."
+      "Der Hexageist durch das #yEntzünden seiner #yGeisterflammen Kräfte freisetzen.",
+      "Die aktuelle #yGeisterflamme wird durch bestimmte Aktionen entzündet."
     ],
     "LABEL": [
       "Weiter",
@@ -41,7 +41,7 @@
   "HermitMod:CharbossTutorials": {
     "TEXT": [
       "Die gegnerischen Helden haben besondere Fähigkeiten, die einen Strategiewechsel erforderlich machen können.",
-      "Achte also auf die Buffs der Helden bevor du etwas Unüberlegtes tust."
+      "Achte also auf die Buffs der Helden, bevor du etwas Unüberlegtes tust."
     ],
     "LABEL": [
       "Weiter",
@@ -53,8 +53,8 @@
   },
   "HermitMod:ChampTutorials": {
     "TEXT": [
-      "Der Champ kann zwei Haltungen im Kampf annehmen: Offensiv und Defensiv. Das Ausspielen einer Fertigkeit während einer Haltung aktiviert den jeweiligen Bonus der Haltung, was bis zu drei Mal möglich ist.",
-      "Während einer Haltung können Abschlusskarten gespielt werden, welche den Abschlussbonus der Haltung aktivieren, jedoch zum Verlassen der Haltung führen."
+      "Der Champ kann zwei #yHaltungen im Kampf annehmen: #yOffensiv und #yDefensiv. Das Ausspielen einer Fertigkeit während einer Haltung aktiviert den jeweiligen #yBonus der Haltung, was bis zu drei Mal möglich ist.",
+      "Während einer Haltung können #yAbschlusskarten gespielt werden, welche den #yAbschlussbonus der Haltung aktivieren, jedoch zum Verlassen der Haltung führen."
     ],
     "LABEL": [
       "Weiter",
@@ -66,8 +66,8 @@
   },
   "HermitMod:AutomatonTutorials": {
     "TEXT": [
-      "Das Automaton kann Karten Kodieren. Drei Kodierte Karten werden dabei zu einer Funktions-Karte kombiniert",
-      "Manche Karten haben einen Effekt beim Kompilieren. Diese Effekte werden aktiviert, wenn diese Karte Teil einer gerade entstandenen Funktion ist. Negative Effekte werden als Kompilierungsfehler bezeichnet."
+      "Das Automaton kann Karten #yKodieren. Drei #yKodierte Karten werden dabei zu einer #yFunktions-Karte kombiniert",
+      "Manche Karten haben einen Effekt beim #yKompilieren. Diese Effekte werden aktiviert, wenn diese Karte Teil einer gerade entstandenen Funktion ist. Negative Effekte werden als #yKompilierungsfehler bezeichnet."
     ],
     "LABEL": [
       "Weiter",
@@ -79,8 +79,8 @@
   },
   "HermitMod:SneckoTutorials": {
     "TEXT": [
-      "Snecko kann Karten irren um ihre Kosten für den Zug auf einen Zufallswert zwischen 0 and 3 zu verändern. Durch das Irren werden die Kosten immer verändert - die Kosten welche die Karte vor dem Irren hatte ist vom Ergebnis ausgeschlossen.",
-      "Snecko kann auch Geschenkkarten finden. Diese Karten geben Snecko eine weitere Karte eines anderen Charakters."
+      "Snecko kann Karten #yirren, um ihre Kosten für den Zug auf einen Zufallswert zwischen 0 and 3 zu verändern. Durch das Irren werden die Kosten immer verändert - die Kosten welche die Karte vor dem Irren hatte sind vom Ergebnis ausgeschlossen.",
+      "Snecko kann auch #yGeschenkkarten finden. Diese Karten geben Snecko beim Aufheben eine weitere Karte eines anderen Charakters."
     ],
     "LABEL": [
       "Weiter",
@@ -93,7 +93,7 @@
   "HermitMod:GremlinsTutorials": {
     "TEXT": [
       "Die Gremlins sind zu fünft - alle haben ihre eigenen TP und Besonderheiten.",
-      "Der aktive Gremlin kann ausgewechselt werden. Ein Wechsel kann zum Beispiel durch das Ausspielen bestimmter Karten erfolgen."
+      "Der aktive Gremlin kann #yausgewechselt werden. Ein Wechsel kann zum Beispiel durch das Ausspielen bestimmter Karten erfolgen."
     ],
     "LABEL": [
       "Weiter",
@@ -105,8 +105,8 @@
   },
   "HermitMod:SlimeBossTutorials": {
     "TEXT": [
-      "Der Schleimboss kann Gegner mit Glibber besprühen. Dadurch erleiden sie durch den nächsten Angriff mehr Schaden. Der Glibber wird durch den Angriff entfernt, und etwaige Konsum-Effekte aktiviert.",
-      "Er kann auch kleinere Schleimuntertanen von sich abspalten, die am Anfang des Zuges und auf Kommando angreifen."
+      "Der Schleimboss kann Gegner mit #yGlibber besprühen. Dadurch erleiden sie durch den nächsten Angriff mehr Schaden. Der Glibber wird durch den Angriff entfernt, und etwaige #yKonsum-Effekte aktiviert.",
+      "Er kann auch kleinere Schleimuntertanen von sich abspalten, die am Anfang des Zuges und auch auf #yKommando angreifen."
     ],
     "LABEL": [
       "Weiter",
@@ -118,7 +118,7 @@
   },
   "HermitMod:CollectorTutorials": {
     "TEXT": [
-      "Die Sammlerin erntet die Essenz getöteter Feinde. Mit Essenz können ihre Geister in die Sammlung aufgenommen werden.",
+      "Die Sammlerin erntet die #yEssenz getöteter Feinde. Mit #yEssenz können ihre Geister in die #ySammlung aufgenommen werden.",
       "Die Sammlung ist ein eigenständiges Deck. In jedem Zug wird eine Karte von der Sammlung gezogen, sofern noch eine übrig ist."
     ],
     "LABEL": [
@@ -131,8 +131,8 @@
   },
   "HermitMod:AwakenedOneTutorials": {
     "TEXT": [
-      "Der Erweckte verfügt über eine Sammlung starker Zauberkarten in seinem Zauberbuch.",
-      "Wird eine Karte mit Aufruf gespielt, dann wird die nächste Karte vom Zauberbuch gezogen. Wenn das Zauberbuch leer ist werden die Zauberkarten wieder aufgefüllt."
+      "Der Erweckte verfügt über eine Sammlung starker #yZauberkarten in seinem #yZauberbuch.",
+      "Wird eine Karte mit #yAufruf gespielt, dann wird die nächste Karte vom Zauberbuch gezogen. Wenn das Zauberbuch leer ist werden die Zauberkarten wieder aufgefüllt."
     ],
     "LABEL": [
       "Weiter",

@@ -15,7 +15,7 @@
     ]
   },
   "Slimebound:PreventTackleDamagePower": {
-    "NAME": "Beschützt",
+    "NAME": "Geschützt",
     "DESCRIPTIONS": [
       "Du erleidest keinen Schaden von den #b",
       " nächsten #yTackles die du spielst."
@@ -117,14 +117,14 @@
     ]
   },
   "Slimebound:SelfFormingGooPower": {
-    "NAME": "Reformation",
+    "NAME": "Wiedervereinigung",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du einen Schleim absorbierst #b",
       " #yStärke [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SelfFormingGooPowerPlus": {
-    "NAME": "Reformation+",
+    "NAME": "Wiedervereinigung+",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du einen Schleim absorbierst #b",
       " #yGeschicklichkeit [REMOVE_SPACE]."
@@ -311,7 +311,7 @@
     ]
   },
   "Slimebound:StunnedPower": {
-    "NAME": "Total erschöpft",
+    "NAME": "Betäubt",
     "DESCRIPTIONS": [
       "Überspringe deinen nächsten Zug.",
       "Überspringe deine nächsten #b",
@@ -492,8 +492,8 @@
   "Slimebound:TackleSelfDamagePreventPower": {
     "NAME": "Rücksichtslos",
     "DESCRIPTIONS": [
-      "#yTackle Karten fügen bei dir #b",
-      " mehr Schaden zu."
+      " Erleide #b",
+      " mehr Schaden durch #yTackle Karten."
     ]
   },
   "Slimebound:GoopArmorPower": {
@@ -504,7 +504,7 @@
     ]
   },
   "Slimebound:CommandOnPlayPower": {
-    "NAME": "Mobilisieren",
+    "NAME": "Schleimgeneral",
     "DESCRIPTIONS": [
       "#yKommandiere das nächste Mal wenn du eine Karte ausspielst.",
       "#yKommandiere das nächsten ",

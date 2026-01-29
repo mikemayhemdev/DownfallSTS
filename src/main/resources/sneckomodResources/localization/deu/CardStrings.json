@@ -1,7 +1,7 @@
 {
   "sneckomod:Blunderbus": {
-    "NAME": "Donnerbüchse",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Wiederhole das für jede Karte auf der Hand, die mindestens 3 kostet."
+    "NAME": "Irre Kanone",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Wiederhole das für jede Handkarte, die mindestens 3 kostet."
   },
   "sneckomod:Tsunami": {
     "NAME": "Tsunami",
@@ -9,8 +9,8 @@
   },
   "sneckomod:CheapStock": {
     "NAME": "Ladenhüter",
-    "DESCRIPTION": "sneckomod:Irre zu Beginn jedes Zuges die teuerste Karte auf der Hand.",
-    "UPGRADE_DESCRIPTION": "sneckomod:Irre zu Beginn jedes Zuges die !M! teuersten Karten auf der Hand."
+    "DESCRIPTION": "sneckomod:Irre zu Beginn jedes Zuges eine zufällige Handkarte mit den höchsten Kosten.",
+    "UPGRADE_DESCRIPTION": "sneckomod:Irre zu Beginn jedes Zuges !M! zufällige Handkarten mit den höchsten Kosten."
   },
   "sneckomod:Cheat": {
     "NAME": "Pure Luck",
@@ -26,17 +26,17 @@
     "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL sneckomod:Irre eine Karte."
   },
   "sneckomod:Deception": {
-    "NAME": "Täuschung",
-    "DESCRIPTION": "Erhalte !B! Block. NL Nimm eine *Schockwelle auf die Hand. NL Erschöpft."
+    "NAME": "Erschrecken",
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte eine *Schockwelle. NL Erschöpft."
   },
   "sneckomod:Defend": {
     "NAME": "Verteidigen",
     "DESCRIPTION": "Erhalte !B! Block."
   },
   "sneckomod:DefensiveFlair": {
-    "NAME": "Defensiver Flair",
-    "DESCRIPTION": "Erhalte !B! Block. Block wird für jede Karte einer sneckomod:Fremdklasse auf der Hand um !M! erhöht. NL sneckomod:Geschenk: Ungewöhnlich.",
-    "DESCRIPTION_BATTLE": "Erhalte !B! Block. NL Das Block dieser Karte wird für jede Karte einer sneckomod:Fremdklasse auf der Hand um !M! erhöht."
+    "NAME": "Defensives Gespür",
+    "DESCRIPTION": "Erhalte !B! Block. NL Block wird für jede Handkarte aus sneckomod:Fremdklassen um !M! erhöht. NL sneckomod:Geschenk: Ungewöhnlich.",
+    "DESCRIPTION_BATTLE": "Erhalte !B! Block. NL Block wird für jede Handkarte aus sneckomod:Fremdklassen um !M! erhöht."
   },
   "sneckomod:DiceBlock": {
     "NAME": "Würfelblock",
@@ -79,7 +79,7 @@
   },
   "sneckomod:IronFang": {
     "NAME": "Eisenmaul",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu wende !M! Schwach auf sie an enemies."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu wende !M! Schwach auf sie an."
   },
   "sneckomod:ImprovisedAttack": {
     "NAME": "Improvised Attack",
@@ -97,10 +97,10 @@
   },
   "sneckomod:LuckyBreak": {
     "NAME": "Verschnaufpause",
-    "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karten für jede Karte auf der Hand, die mindestens 2 kostet."
+    "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karte für jede Handkarte, die mindestens 2 kostet."
   },
   "sneckomod:Nope": {
-    "NAME": "Umtausch",
+    "NAME": "Transformation",
     "DESCRIPTION": "Erhalte !B! Block. NL Erschöpfe eine Karte. Wenn sie eine Farbe hatte, dann erhalte eine zufällige Karte derselben Klasse.",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erschöpfe eine Karte. Wenn sie eine Farbe hatte, dann erhalte eine zufällige Karte derselben Klasse.",
     "EXTENDED_DESCRIPTION": [
@@ -124,7 +124,7 @@
     ]
   },
   "sneckomod:MintCondition": {
-    "NAME": "Neuzustand",
+    "NAME": "Überproduktion",
     "DESCRIPTION": "sneckomod:Überschuss: Erhalte !M! Stärke."
   },
   "sneckomod:MixItUp": {
@@ -151,8 +151,8 @@
     "UPGRADE_DESCRIPTION": "Das erste Mal wenn du im Zug eine Karte einer sneckomod:Fremdklasse spielst, ziehe eine Karte."
   },
   "sneckomod:RiskySword": {
-    "NAME": "Risikoklinge",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Jedes Mal wenn diese Karte sneckomod:geirrt wird, erhöhe ihren Schaden für diesen Kampf um !M!."
+    "NAME": "Irrläufer",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Der Schaden wird um !M! erhöht, wenn diese Karte sneckomod:geirrt wird."
   },
   "sneckomod:PoisonParadise": {
     "NAME": "Fontäne",
@@ -201,12 +201,13 @@
     "NAME": "Exotische Form",
     "DESCRIPTION": "Flüchtig. Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast. NL sneckomod:Geschenk: Selten.",
     "UPGRADE_DESCRIPTION": "Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast. NL sneckomod:Geschenk: Selten.",
-    "DESCRIPTION_BATTLE": "Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast."
+    "DESCRIPTION_BATTLE": "Flüchtig. NL Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast."
   },
   "sneckomod:SlitherThrough": {
     "NAME": "Durchschlängeln",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten diesen Zug !M! weniger. NL sneckomod:Geschenk: Ungewöhnlich.",
-    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Karten aus sneckomod:Fremdklassen auf der Hand kosten diesen Zug !M! weniger."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Handkarten aus sneckomod:Fremdklassen kosten diesen Zug !M! weniger. NL sneckomod:Geschenk: Ungewöhnlich.",
+    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Handkarten aus sneckomod:Fremdklassen kosten diesen Zug !M! weniger."
   },
   "sneckomod:SnakeSap": {
     "NAME": "Snake Sap",
@@ -233,8 +234,8 @@
     ]
   },
   "sneckomod:SoulDraw": {
-    "NAME": "Seelenziehen",
-    "DESCRIPTION": "Erhalte !M! zufällige Karte aus sneckomod:Fremdklassen. NL Sie erhalten Behalten. NL Erschöpft."
+    "NAME": "Seelenextrakt",
+    "DESCRIPTION": "Erhalte !M! zufällige Karten aus sneckomod:Fremdklassen. NL Sie erhalten Behalten. NL Erschöpft."
   },
   "sneckomod:SoulExchange": {
     "NAME": "Seelentausch",
@@ -256,7 +257,7 @@
     "UPGRADE_DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Erhalte für jede Klasse auf der Hand ein Messer+."
   },
   "sneckomod:TyphoonFang": {
-    "NAME": "Taifunbiss",
+    "NAME": "Überbiss",
     "DESCRIPTION": "Füge !D! Schaden zu. NL sneckomod:Überschuss: Wenn du in diesem Zug einen sneckomod:Überschuss Effekt aktivierst, spiele eine Kopie dieser Karte."
   },
   "sneckomod:Yearn": {
@@ -438,7 +439,7 @@
     ]
   },
   "sneckomod:Behold": {
-    "NAME": "Siede da!",
+    "NAME": "Alle Hände voll",
     "DESCRIPTION": "Füge !D! Schaden zu. NL sneckomod:Überschuss: Erhalte !M! Messer.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL sneckomod:Überschuss: Erhalte !M! Messer."
   },
@@ -453,11 +454,11 @@
   },
   "sneckomod:LilGuardian": {
     "NAME": "Taschenschutz",
-    "DESCRIPTION": "Erhalte !B! Block. Wenn du eine Karte ausspielst die mindestens 2 kostet, spiele diese Karte aus der Hand."
+    "DESCRIPTION": "Erhalte !B! Block. NL Wenn du eine Karte ausspielst, die mindestens 2 kostet, spiele diese Karte aus der Hand."
   },
   "sneckomod:CrystalBoomerang": {
     "NAME": "Kristallbumerang",
-    "DESCRIPTION": "Nimm eine Karte vom Abwurfstapel auf die. NL Gehört sie zu einer sneckomod:Fremdklasse, dann erhalte !B! Block."
+    "DESCRIPTION": "Schnapp dir eine Karte vom Abwurfstapel. NL Gehört sie zu einer sneckomod:Fremdklasse, dann erhalte !B! Block."
   },
   "sneckomod:ViperEssence": {
     "NAME": "Vipernessenz",
@@ -469,17 +470,17 @@
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Block wird um die DOPPELTE Summe der Kosten aller Handkarten erhöht."
   },
   "sneckomod:Medusa": {
-    "NAME": "Medusa",
+    "NAME": "Giftschlange",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !M! sneckomod:Toxin an. NL sneckomod:Geschenk: Gewöhnlicher Debuff.",
     "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wende !M! sneckomod:Toxin an."
   },
   "sneckomod:Cower": {
     "NAME": "Niederkauern",
-    "DESCRIPTION": "Erhalte !B! Block. NL Nimm ein *Verschanzen auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Nimm ein *Verschanzen+ auf die Hand. NL Erschöpft."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte *Verschanzen. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erhalte *Verschanzen+. NL Erschöpft."
   },
   "sneckomod:WideSting": {
-    "NAME": "Weiter Stich",
+    "NAME": "Fernkampf",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Verbessere alle Karten aus sneckomod:Fremdklassen in deiner Hand. NL sneckomod:Geschenk: Gewöhnlich.",
     "DESCRIPTION_BATTLE": "Füge ALLEN Gegnern !D! Schaden zu. NL Verbessere alle Karten aus sneckomod:Fremdklassen in deiner Hand."
   },
@@ -496,22 +497,22 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 expansioncontent:Panzerrüstung. NL sneckomod:Überschuss: Erhalte stattdessen !M! expansioncontent:Panzerrüstung."
   },
   "sneckomod:OtherworldlySlash": {
-    "NAME": "Entrückter Hieb",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn du in diesem Zug eine Karte einer sneckomod:Fremdklasse gespielt hast, füge erneut !D! Schaden zu. NL sneckomod:Geschenk: Gewöhnlich.",
-    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wenn du in diesem Zug eine Karte einer sneckomod:Fremdklasse gespielt hast, füge erneut !D! Schaden zu."
+    "NAME": "Exotischer Hieb",
+    "DESCRIPTION": "Füge !D! Schaden zu - zweimal, wenn du in diesem Zug eine Karte einer sneckomod:Fremdklasse gespielt hast. NL sneckomod:Geschenk: Gewöhnlich.",
+    "DESCRIPTION_BATTLE": "Füge !D! Schaden - zweimal, wenn du in diesem Zug eine Karte einer sneckomod:Fremdklasse gespielt hast."
   },
   "sneckomod:BeyondArmor": {
-    "NAME": "Jenseitige Rüstung",
+    "NAME": "Fremde Rüstung",
     "DESCRIPTION": "Erhalte !B! Block. NL Nimm !M! zufällige Karten aus sneckomod:Fremdklassen vom Nachziehstapel auf die Hand. NL sneckomod:Geschenk: Gewöhnlich.",
     "DESCRIPTION_BATTLE": "Erhalte !B! Block. NL Nimm !M! zufällige Karten aus sneckomod:Fremdklassen vom Nachziehstapel auf die Hand."
   },
   "sneckomod:BlunderGuard": {
     "NAME": "Schwere Geschütze",
-    "DESCRIPTION": "Wenn du eine Karte spielst die mindestes 3 kostet, erhalte !qqq! Block und !M! Stärke.",
-    "UPGRADE_DESCRIPTION": "Wenn du eine Karte spielst die mindestes 3 kostet, erhalte !qqq! Block und !M! Stärke."
+    "DESCRIPTION": "Wenn du eine Karte spielst, die mindestes 3 kostet, erhalte !qqq! Block und !M! Stärke.",
+    "UPGRADE_DESCRIPTION": "Wenn du eine Karte spielst, die mindestes 3 kostet, erhalte !qqq! Block und !M! Stärke."
   },
   "sneckomod:WideAngle": {
-    "NAME": "Weitwinkel",
+    "NAME": "Weiter Winkel",
     "DESCRIPTION": "Behalten. NL Füge ALLEN Gegnern !D! Schaden zu."
   },
   "sneckomod:SerpentsNest": {
@@ -520,12 +521,12 @@
     "DESCRIPTION_BATTLE": "Immer wenn du eine Macht spielst, füge ALLEN Gegnern !M! Schaden zu."
   },
   "sneckomod:Whack": {
-    "NAME": "Wumms!",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm ein *Verhauen auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Nimm ein *Verhauen+ auf die Hand. NL Erschöpft."
+    "NAME": "Verprügeln",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte *Verhauen. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte *Verhauen+. NL Erschöpft."
   },
   "sneckomod:CobraCoil": {
-    "NAME": "Pythonschlinge",
+    "NAME": "Würgeschlange",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Der Gegner erleidet am Ende seiner Züge !M! Schaden. NL sneckomod:Geschenk: Seltener Angriff."
   },
   "sneckomod:Belittle": {
@@ -544,17 +545,17 @@
     "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. Wenn der Gegner mindestens !M! Debuffs hat, ziehe !qqq! Karten."
   },
   "sneckomod:LatchOn": {
-    "NAME": "Festklammern",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Nimm eine *Vipernessenz auf die Hand."
+    "NAME": "Vipernklaue",
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte eine *Vipernessenz."
   },
   "sneckomod:ComboString": {
     "NAME": "Verkettung",
-    "DESCRIPTION": "Füge für jede Karte einer sneckomod:Fremdklasse die in diesem Zug gespielt wurde !D! Schaden zu. NL sneckomod:Geschenk: Ungewöhnlich.",
+    "DESCRIPTION": "Füge für jede Karte einer sneckomod:Fremdklasse, die in diesem Zug gespielt wurde, !D! Schaden zu. NL sneckomod:Geschenk: Ungewöhnlich.",
     "EXTENDED_DESCRIPTION": [
       " NL (trifft ",
       " Mal.)"
     ],
-    "DESCRIPTION_BATTLE": "Füge für jede Karte einer sneckomod:Fremdklasse die in diesem Zug gespielt wurde !D! Schaden zu."
+    "DESCRIPTION_BATTLE": "Füge für jede Karte einer sneckomod:Fremdklasse, die in diesem Zug gespielt wurde, !D! Schaden zu."
   },
   "sneckomod:ThrowingCards": {
     "NAME": "Kartenwurf",
@@ -562,7 +563,7 @@
     "UPGRADE_DESCRIPTION": "Nimm X *FTL+ Karten auf die Hand. NL Erhalte [E]. NL Erschöpft."
   },
   "sneckomod:RoundaboutSwing": {
-    "NAME": "Herumschwingen",
+    "NAME": "Umzingeln",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Lege eine Handkarte auf den Nachziehstapel. NL Ziehe im nächsten Zug !M! zusätzliche Karten."
   },
   "sneckomod:MarkedCard": {
@@ -580,11 +581,11 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL sneckomod:Überschuss: Erhalte NL [E] [E]."
   },
   "sneckomod:LastStrike": {
-    "NAME": "Ultimativer Schlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jeden verschiedene \"Schlag\" Karte der in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jeden verschiedene \"Schlag\" Karte der in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
-    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wiederhole das für jeden verschiedene \"Schlag\" Karte der in diesem Kampf gespielt wurde.",
-    "UPGRADE_DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wiederhole das für jeden verschiedene \"Schlag\" Karte der in diesem Kampf gespielt wurde.",
+    "NAME": "Meisterschlag",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
+    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde.",
     "EXTENDED_DESCRIPTION": [
       " NL (trifft ",
       " Mal zusätzlich.)"
@@ -596,21 +597,21 @@
     "UPGRADE_DESCRIPTION": "Erhalte immer wenn du einen Debuff anwendest !M! Block. NL sneckomod:Geschenk: Debuff."
   },
   "sneckomod:FlashInThePan": {
-    "NAME": "Instant-Blitz",
-    "DESCRIPTION": "Erhalte !B! Block. NL Wirf deine Hand ab. NL Ziehe im nächsten Zug zusätzliche Karten in Höhe der abgeworfenen Karten."
+    "NAME": "Blitzschnell",
+    "DESCRIPTION": "Erhalte !B! Block. NL Wirf deine Hand ab und ziehe im nächsten Zug genauso viele zusätzliche Karten."
   },
   "sneckomod:TrashCan": {
     "NAME": "Mülleimer",
     "DESCRIPTION": "Du kannst am Ende jedes Zuges eine Karte erschöpfen."
   },
   "sneckomod:Lacerate": {
-    "NAME": "Aufschlitzen",
+    "NAME": "Giftgas",
     "DESCRIPTION": "Wende !M! sneckomod:Toxin auf ALLE Gegner an. NL Erhalte eine *Lähmende *Wolke. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Wende !M! sneckomod:Toxin auf ALLE Gegner an. NL Erhalte eine *Lähmende *Wolke+. NL Erschöpft."
   },
   "sneckomod:SerpentineSleuth": {
-    "NAME": "Schlangendetektiv",
-    "DESCRIPTION": "Flüchtig. NL Erhalte immer wenn du eine Macht ausspielst [E] . NL sneckomod:Geschenk: Seltene Macht.",
-    "DESCRIPTION_BATTLE": "Flüchtig. NL Erhalte immer wenn du eine Macht ausspielst [E]."
+    "NAME": "Vipernmacht",
+    "DESCRIPTION": "Flüchtig. NL Erhalte immer wenn du eine Macht spielst [E] . NL sneckomod:Geschenk: Seltene Macht.",
+    "DESCRIPTION_BATTLE": "Flüchtig. NL Erhalte immer wenn du eine Macht spielst [E]."
   }
 }
