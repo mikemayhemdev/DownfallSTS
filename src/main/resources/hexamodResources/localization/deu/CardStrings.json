@@ -4,7 +4,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Bewege dich hexamod:vorwärts."
   },
   "hexamod:FleetingFlash": {
-    "NAME": "Kurzes Aufblitzen",
+    "NAME": "Aufflackern",
     "DESCRIPTION": "hexamod:Entzünde die aktuelle Geisterflamme, und hexamod:lösche sie dann."
   },
   "hexamod:ApocalypseNow": {
@@ -67,7 +67,7 @@
     "TRANSLATOR_NOTE:": "Not used in game  Not used in game  Not used in game  Not used in game  Not used in game  Not used in game   "
   },
   "hexamod:EmpoweredFlame": {
-    "NAME": "Feuer und Flamme",
+    "NAME": "Lichterloh",
     "DESCRIPTION": "Erhalte !M! hexamod:Intensität."
   },
   "hexamod:EtherealExpedition": {
@@ -183,7 +183,7 @@
     "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karte. NL ",
     "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karten. NL ",
     "EXTENDED_DESCRIPTION": [
-      "Ziehe weiter, bis du eine nicht-Flüchtige Karte gezogen hast."
+      "Ziehe weiter, bis du eine nicht-flüchtige Karte gezogen hast."
     ]
   },
   "hexamod:HauntingEcho": {
@@ -228,8 +228,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Würdiges Opfer",
-    "DESCRIPTION": "Erschöpfe 2 Karten. NL Erschöpfte Angriffe und Fertigkeiten werden in den jeweils anderen Typ expansioncontent:transformiert.",
-    "UPGRADE_DESCRIPTION": "Erschöpfe 2 Karten. NL Erschöpfte Angriffe und Fertigkeiten werden in den jeweils anderen Typ expansioncontent:transformiert und verbessert.",
+    "DESCRIPTION": "Erschöpfe 2 Karten. NL Angriffe und Fertigkeiten werden in den jeweils anderen Typ expansioncontent:transformiert.",
+    "UPGRADE_DESCRIPTION": "Erschöpfe 2 Karten. NL Angriffe und Fertigkeiten werden in den jeweils anderen Typ expansioncontent:transformiert und verbessert.",
     "EXTENDED_DESCRIPTION": [
       "Erschöpfe für ein würdiges Opfer."
     ]
@@ -378,9 +378,9 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm diese Karte vom Abwurfstapel auf die Hand, immer wenn du dich hexamod:vorwärts oder hexamod:rückwärts bewegst."
   },
   "hexamod:FlareFlick": {
-    "NAME": "Flackernder Funke",
+    "NAME": "Zündender Funke",
     "DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme und bewege dich hexamod:vorwärts.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. NL Du kannst dich NL hexamod:vorwärts oder hexamod:rückwärts bewegen.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. Du kannst dich NL hexamod:vorwärts oder hexamod:rückwärts bewegen.",
     "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Tu nichts."]
   },
   "hexamod:TurnItUp": {
@@ -394,7 +394,7 @@
     "UPGRADE_DESCRIPTION": " NL (Trifft !M! Mal.)"
   },
   "hexamod:UnlimitedPower": {
-    "NAME": "Unbegrenzte Macht",
+    "NAME": "Hexabrand",
     "DESCRIPTION": "hexamod:Entzünde alle Geisterflammen im Uhrzeigersinn. NL Erschöpft."
   },
   "hexamod:VolcanoVisage": {
@@ -491,9 +491,9 @@
     "DESCRIPTION": "Wende !burny! hexamod:Seelenfeuer an. Ist die aktuelle Geisterflamme hexamod:entzündet, nimm diese Karte auf die Hand und bewege dich hexamod:rückwärts."
   },
   "hexamod:Toasty": {
-    "NAME": "Flackernder Funke",
+    "NAME": "Zündender Funke",
     "DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme und bewege dich hexamod:vorwärts.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. NL Bewege dich hexamod:vorwärts oder hexamod:rückwärts."
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. Bewege dich hexamod:vorwärts oder hexamod:rückwärts."
     },
   "hexamod:ParanormalForm": {
     "NAME": "Poltergeist",
@@ -514,7 +514,7 @@
     "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karte. NL ",
     "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karten. NL ",
     "EXTENDED_DESCRIPTION": [
-      "Ziehe weiter, bis du eine nicht-Flüchtige Karte gezogen hast."
+      "Ziehe weiter, bis du eine nicht-flüchtige Karte gezogen hast."
     ]
   },
   "hexamod:InspiringFlames": {

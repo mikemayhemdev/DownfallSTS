@@ -90,9 +90,9 @@
   "Slimebound:ComboAttackPower": {
     "NAME": "Den Ton angeben",
     "DESCRIPTIONS": [
-      "Die erste in deinem Zug gespielte Karte, die auf Gegener abzielt, #ykommandiert deinen führenden Schleim.",
+      "Die erste in deinem Zug gespielte Karte, die auf Gegner abzielt, #ykommandiert deinen führenden Schleim.",
       "Die ersten #b",
-      " gespielten Karten des Zuges, die auf Gegener abzielen, #ykommandieren deinen führenden Schleim.",
+      " gespielten Karten des Zuges, die auf Gegner abzielen, #ykommandieren deinen führenden Schleim.",
       " NL Dieser Effekt kann in diesem Zug noch #b",
       " Mal aktiviert werden.",
       " Mal aktiviert werden.",
@@ -169,9 +169,9 @@
   "Slimebound:DuplicatedFormPower": {
     "NAME": "Duplizierte Form",
     "DESCRIPTIONS": [
-      "Die erste in deinem Zug gespielte Karte, die auf Gegener abzielt, wird zweimal gespielt.",
+      "Die erste in deinem Zug gespielte Karte, die auf Gegner abzielt, wird zweimal gespielt.",
       "Die ersten #b",
-      " in deinem Zug gespielten Karten, die auf Gegener abzielen, werden zweimal gespielt."
+      " in deinem Zug gespielten Karten, die auf Gegner abzielen, werden zweimal gespielt."
     ]
   },
   "Slimebound:DuplicatedFormNoHealPower": {

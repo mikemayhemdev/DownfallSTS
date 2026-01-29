@@ -117,7 +117,7 @@
     "UPGRADE_DESCRIPTION": "Füge !M! Mal !D! Schaden zu."
   },
   "Guardian:SphericShield": {
-    "NAME": "Sphärischer Schild",
+    "NAME": "Schildkuppel",
     "DESCRIPTION": "Flüchtig. NL Erhalte eine guardianmod:Panzerpolitur. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Erhalte eine guardianmod:Panzerpolitur. NL Erschöpft."
   },
@@ -292,7 +292,7 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "Prismenstrahl",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Kann beliebig oft verbessert werden. NL Für jede Verbesserung +1 Mal:"
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Kann beliebig oft verbessert werden. Pro Verbesserung +1 Mal:"
   },
   "Guardian:MultiBeam": {
     "NAME": "Multistrahl",

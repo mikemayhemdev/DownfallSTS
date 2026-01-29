@@ -296,7 +296,7 @@
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erschöpfe eine Karte. NL Erhalte [E] in Höhe ihrer Kosten."
   },
   "sneckomod:UnendingSupply": {
-    "NAME": "Unendlicher Vorrat",
+    "NAME": "Exotischer Vorrat",
     "DESCRIPTION": "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen Klasse einer sneckomod:Fremdklasse.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen Klasse einer sneckomod:Fremdklasse."
 },
@@ -457,7 +457,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Wenn du eine Karte ausspielst, die mindestens 2 kostet, spiele diese Karte aus der Hand."
   },
   "sneckomod:CrystalBoomerang": {
-    "NAME": "Kristallbumerang",
+    "NAME": "Bunter Bumerang",
     "DESCRIPTION": "Schnapp dir eine Karte vom Abwurfstapel. NL Gehört sie zu einer sneckomod:Fremdklasse, dann erhalte !B! Block."
   },
   "sneckomod:ViperEssence": {
@@ -485,7 +485,7 @@
     "DESCRIPTION_BATTLE": "Füge ALLEN Gegnern !D! Schaden zu. NL Verbessere alle Karten aus sneckomod:Fremdklassen in deiner Hand."
   },
   "sneckomod:GildedShield": {
-    "NAME": "Vergoldeter Schild",
+    "NAME": "Sneckoschuppe",
     "DESCRIPTION": "Erhalte !B! Block. NL sneckomod:Irre diese Karte und nimm sie zurück auf die Hand."
   },
   "sneckomod:Mesmerize": {
@@ -493,7 +493,7 @@
     "DESCRIPTION": "ALLE Gegner verlieren !M! Stärke. NL sneckomod:Irre eine Karte. NL Erschöpft."
   },
   "sneckomod:Serpentscale": {
-    "NAME": "Schlangenschuppe",
+    "NAME": "Häuten",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 expansioncontent:Panzerrüstung. NL sneckomod:Überschuss: Erhalte stattdessen !M! expansioncontent:Panzerrüstung."
   },
   "sneckomod:OtherworldlySlash": {

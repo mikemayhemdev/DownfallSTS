@@ -102,7 +102,7 @@
     "NAME": "Paradoxes Artefakt",
     "FLAVOR": "Du warst beim Coden noch nie so sehr in Ekstase.",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn jedes Zuges eine zufällige Karte mit #ybronze:Kodieren auf die Hand. Sie ist #yflüchtig [REMOVE_SPACE]."
+      "Erhalte zu Beginn jedes Zuges eine zufällige Karte mit #ybronze:Kodieren. Sie ist #yflüchtig [REMOVE_SPACE]."
     ]
   }
 }

@@ -61,15 +61,15 @@
   "bronze:Library": {
     "NAME": "Bibliothek",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn jedes Zuges eine zufällige Karte mit #yKodieren auf die Hand. Sie kostet #b0 bis du sie spielst.",
-      "Nimm zu Beginn jedes Zuges #b",
-      " zufällige Karten mit #yKodieren auf die Hand. Sie kosten #b0 bis du sie spielst."
+      "Erhalte zu Beginn jedes Zuges eine zufällige Karte mit #yKodieren. Sie kostet #b0 bis du sie spielst.",
+      "Erhalte zu Beginn jedes Zuges #b",
+      " zufällige Karten mit #yKodieren. Sie kosten #b0 bis du sie spielst."
     ]
   },
   "bronze:LibraryMod": {
     "NAME": "Externe Bibliothek",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn jedes Zuges eine zufällige Karte mit #yKodieren auf die Hand. Sie ist #yflüchtig [REMOVE_SPACE]."
+      "Erhalte zu Beginn jedes Zuges eine zufällige Karte mit #yKodieren. Sie ist #yflüchtig [REMOVE_SPACE]."
     ]
   },
   "bronze:BronzeHeatsink": {

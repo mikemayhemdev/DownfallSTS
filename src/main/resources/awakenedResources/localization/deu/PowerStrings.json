@@ -93,8 +93,8 @@
   "awakened:EclipseEmbracePower": {
     "NAME": "Sonnenfinsternis",
     "DESCRIPTIONS": [
-      "Immer wenn du eine #yLeere #yerschöpfst [REMOVE_SPACE], ziehe im nächsten Zug eine Karte und erhalte [E] .",
-      "Immer wenn du eine #yLeere #yerschöpfst [REMOVE_SPACE], erhalte im nächsten Zug #b",
+      "Immer, wenn du eine #yLeere #yerschöpfst [REMOVE_SPACE], ziehe im nächsten Zug eine Karte und erhalte [E] .",
+      "Immer, wenn du eine #yLeere #yerschöpfst [REMOVE_SPACE], erhalte im nächsten Zug #b",
       " [E] und ziehe #b",
       " Karten."
     ]
@@ -116,7 +116,7 @@
   "awakened:StrengthReturnPower": {
     "NAME": "Aufgeschlitzt",
     "DESCRIPTIONS": [
-      "Wenn du diesen Gegner angreifst erhältst du #b",
+      "Wenn du diesen Gegner angreifst, erhältst du #b",
       " #ytemporäre #yStärke [REMOVE_SPACE]."
     ]
   },
@@ -148,7 +148,7 @@
   "awakened:DarknessFallsPower": {
     "NAME": "Ringfinsternis",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du #yausgelaugt wirst #b",
+      "Erhalte immer, wenn du #yausgelaugt wirst, #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -193,17 +193,17 @@
   "awakened:ChosensVersePower": {
     "NAME": "Auserwählter Vers",
     "DESCRIPTIONS": [
-      "Das nächste Mal wenn du in diesem Zug einen #ynicht-Angriff spielst, erhalte #b",
+      "Das nächste Mal, wenn du in diesem Zug einen #ynicht-Angriff spielst, erhalte #b",
       " #yBlock und ziehe eine Karte.",
       "Die nächsten #b",
-      " Male an denen du in diesem Zug einen #ynicht-Angriff spielst, erhalte #b",
+      " Male, an denen du in diesem Zug einen #ynicht-Angriff spielst, erhalte #b",
       " #yBlock und ziehe eine Karte."
     ]
   },
   "awakened:AphoticFountPower": {
     "NAME": "Gefrorene Quellen",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du #yKryostase spielst #b",
+      "Erhalte immer, wenn du #yKryostase spielst, #b",
       " #yPanzerrüstung [REMOVE_SPACE]."
     ]
   },

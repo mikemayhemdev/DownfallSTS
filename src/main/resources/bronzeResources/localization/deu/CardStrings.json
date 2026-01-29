@@ -130,7 +130,7 @@
     "UPGRADE_DESCRIPTION": "Angeboren. NL Verhindere die nächsten !M! *Kompilierungsfehler die du *kodierst."
   },
   "bronze:CloningBeam": {
-    "NAME": "Code-Duplizierung",
+    "NAME": "Codeduplizierung",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste Karte die bronze:kodiert wird, bronze:kodiert ein weiteres Mal. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste Karte die bronze:kodiert wird, bronze:kodiert ein weiteres Mal."
   },
@@ -144,7 +144,7 @@
     ]
   },
   "bronze:CopyPaste": {
-    "NAME": "Kopieren-Einfügen",
+    "NAME": "Kopie einfügen",
     "DESCRIPTION": "In diesem Zug spielst du deine nächste Funktion zweimal aus.",
     "UPGRADE_DESCRIPTION": "Behalten. NL In diesem Zug spielst du deine nächste Funktion zweimal aus."
   },
@@ -173,7 +173,7 @@
     ]
   },
   "bronze:DelayedGuard": {
-    "NAME": "Verspäteter Schutz",
+    "NAME": "Nachlaufschutz",
     "DESCRIPTION": "Erhalte im nächsten Zug !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "spätes",
@@ -215,8 +215,8 @@
   },
   "bronze:FineTuning": {
     "NAME": "Feinjustierung",
-    "DESCRIPTION": "Erhöhe alle Zahlen auf deine kodierten Karten um !M! (Kosten ausgenommen). NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Erhöhe alle Zahlen auf deine kodierten Karten um !M! (Kosten ausgenommen). NL Erschöpft."
+    "DESCRIPTION": "Erhöhe alle Zahlen auf kodierte Karten um !M! (Kosten ausgenommen). NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erhöhe alle Zahlen auf kodierte Karten um !M! (Kosten ausgenommen). NL Erschöpft."
   },
   "bronze:Flail": {
     "NAME": "Verdreschen",
@@ -270,7 +270,7 @@
   },
   "bronze:FullRelease": {
     "NAME": "Release",
-    "DESCRIPTION": "bronze:Kompilierung - Die Funktion Wird eine Macht mit 'Zu Beginn jedes Zuges...'",
+    "DESCRIPTION": "bronze:Kompilierung - Die Funktion wird eine Macht mit 'Zu Beginn jedes Zuges...'",
     "EXTENDED_DESCRIPTION": [
       "volles",
       "Release",
@@ -334,11 +334,11 @@
   },
   "bronze:ItsAFeature": {
     "NAME": "Es ist ein Feature",
-    "DESCRIPTION": "Erhalte immer wenn du einen Status ziehst oder erschöpfst !M! Block."
+    "DESCRIPTION": "Erhalte immer wenn du einen Status ziehst oder *erschöpfst !M! Block."
   },
   "bronze:Library": {
     "NAME": "Bibliothek",
-    "DESCRIPTION": "Nimm zu Beginn jedes Zuges eine zufällige Karte mit bronze:Kodieren auf die Hand. Sie kostet 0 bis du sie spielst."
+    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges eine zufällige Karte mit bronze:Kodieren. Sie kostet 0 bis du sie spielst."
   },
   "bronze:MaxOutput": {
     "NAME": "Maximaler Output",
@@ -397,7 +397,7 @@
   },
   "bronze:Refactor": {
     "NAME": "Überschreiben",
-    "DESCRIPTION": "Spähe !M!. NL Erschöpfe abgeworfene Statuskarten. NL Erhalte pro erschöpftem Status !B! Block."
+    "DESCRIPTION": "Spähe !M!. NL Erschöpfe abgeworfene Statuskarten. Erhalte pro erschöpften Status !B! Block."
   },
   "bronze:Repair": {
     "NAME": "Reparieren",
@@ -497,8 +497,8 @@
   },
   "bronze:TinkerersToolbox": {
     "NAME": "Entwicklertools",
-    "DESCRIPTION": "Behalten. NL Erhalte *Debuggen, *Batch, *Dekompilieren, oder *Byteshift. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte *Debuggen, *Batch, *Dekompilieren, oder *Byteshift."
+    "DESCRIPTION": "Behalten. NL Erhalte *Debuggen, *Dekompilieren, *Batch, oder *Byteshift. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte *Debuggen, *Dekompilieren, *Batch, oder *Byteshift."
   },
   "bronze:Turbo": {
     "NAME": "Turbo",
@@ -516,8 +516,8 @@
   },
   "bronze:Virus": {
     "NAME": "Virus",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte für jede Karte einen *Kleinen *Strahl. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte für jede Karte einen *Kleinen *Strahl+. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wirf alle Handkarten ab und erhalte genauso viele *Kleine *Strahlen. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wirf alle Handkarten ab und erhalte genauso viele *Kleine *Strahlen+. NL Erschöpft."
   },
   "bronze:WhirlingStrike": {
     "NAME": "Durchschuss",
