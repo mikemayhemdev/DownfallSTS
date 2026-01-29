@@ -105,7 +105,7 @@ public class EtherealExpedition extends AbstractHexaCard implements HexaPurpleTe
     @Override
     public void initializeDescription() {
         super.initializeDescription();
-        if(Settings.language != Settings.GameLanguage.ZHS) {
+        if(Settings.language != Settings.GameLanguage.ZHS && Settings.language != Settings.GameLanguage.ZHT) {
             this.keywords.add(downfallMod.keywords_and_proper_names.get("afterlife"));
         }
     }
