@@ -29,8 +29,8 @@
   },
   "hermit:Covet": {
     "NAME": "Begehrung",
-    "DESCRIPTION": "Wirf 1 Karte ab. Ziehe !M! Karte. NL Abgeworfene *Flüche werden erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wirf 1 Karte ab. Ziehe !M! Karten. NL Abgeworfene *Flüche werden erschöpft."
+    "DESCRIPTION": "Wirf 1 Karte ab. Ziehe !M! Karte. NL Abgeworfene Flüche werden erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wirf 1 Karte ab. Ziehe !M! Karten. NL Abgeworfene Flüche werden erschöpft."
   },
   "hermit:HighCaliber": {
     "NAME": "Hochkarätig",
@@ -48,8 +48,8 @@
   },
   "hermit:CalledShot": {
     "NAME": "Nachschuss",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Zug gespielte Karte ein hermit:Volltreffer war.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte in diesem Zug gespielte Karte ein hermit:Volltreffer war."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte im Zug gespielte Karte ein hermit:Volltreffer war.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Ziehe eine Karte, wenn die letzte im Zug gespielte Karte ein hermit:Volltreffer war."
   },
   "hermit:Dissolve": {
     "NAME": "Auflösen",
@@ -145,11 +145,11 @@
   },
   "hermit:Shortfuse": {
     "NAME": "Kurze Lunte",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Kostet diesen Zug 1 [E] weniger pro gespielte *Schlag oder *Verteidigen Karte in diesem Zug."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Kostet diesen Zug 1 [E] weniger pro gespielte Basis *Schlag oder *Verteidigen Karte in diesem Zug."
   },
   "hermit:Grudge": {
     "NAME": "Groll",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Der Schaden wird für jeden deiner *Flüche um !M! erhöht."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Der Schaden wird für jeden deiner Flüche um !M! erhöht."
   },
   "hermit:Spite": {
     "NAME": "Hass",
@@ -203,7 +203,7 @@
   },
   "hermit:Maintenance": {
     "NAME": "Wartung",
-    "DESCRIPTION": "*Schläge fügen in diesem Kampf !M! mehr Schaden zu. Erhalte !hermit:SecondMagic! *Geschicklichkeit. NL Erhöhe die Kosten dieser Karte um 1."
+    "DESCRIPTION": "Basis *Schläge fügen diesen Kampf !M! mehr Schaden zu. Erhalte !hermit:SecondMagic! *Geschicklichkeit. NL Erhöhe die Kosten dieser Karte um 1."
   },
   "hermit:EternalForm": {
     "NAME": "Ewige Form",
@@ -212,8 +212,8 @@
   },
   "hermit:FullyLoaded": {
     "NAME": "Vollgeladen",
-    "DESCRIPTION": "Nimm alle *Schlag und *Verteidigen Karten vom Nachziehstapel auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Nimm alle *Schlag und *Verteidigen Karten vom Nachziehstapel auf die Hand. Erschöpft."
+    "DESCRIPTION": "Nimm alle Basis *Schlag und *Verteidigen Karten vom Nachziehstapel auf die Hand. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Nimm alle Basis *Schlag und *Verteidigen Karten vom Nachziehstapel auf die Hand. Erschöpft."
   },
   "hermit:Gestalt": {
     "NAME": "Gestalt",
@@ -246,7 +246,7 @@
   },
   "hermit:HighNoon": {
     "NAME": "Duell",
-    "DESCRIPTION": "Ziehe immer, wenn du einen *Schlag oder ein *Verteidigen spielst, eine Karte."
+    "DESCRIPTION": "Ziehe immer, wenn du einen Basis *Schlag oder ein *Verteidigen spielst, eine Karte."
   },
   "hermit:Reprieve": {
     "NAME": "Gnadenfrist",
@@ -263,8 +263,8 @@
   },
   "hermit:Determination": {
     "NAME": "Entschlossenheit",
-    "DESCRIPTION": "Erhalte immer wenn ein Debuff auf dich angewendet wird 1 Stärke.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer wenn ein Debuff auf dich angewendet wird 1 Stärke."
+    "DESCRIPTION": "Erhalte immer, wenn ein Debuff auf dich angewendet wird, 1 Stärke.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer, wenn ein Debuff auf dich angewendet wird, 1 Stärke."
   },
   "hermit:Showdown": {
     "NAME": "Showdown",
@@ -284,7 +284,7 @@
   },
   "hermit:DeadMansHand": {
     "NAME": "Totenhand",
-    "DESCRIPTION": "Wirf deine Handkarten ab. Nimm die !M! seltensten Karten aus dem Nachziehstapel auf die Hand."
+    "DESCRIPTION": "Wirf deine Hand ab. NL Nimm die !M! seltensten Karten aus dem Nachziehstapel auf die Hand."
   },
   "hermit:DeadOrAlive": {
     "NAME": "Tot oder Lebendig",
@@ -309,7 +309,7 @@
   },
   "hermit:FinalCanter": {
     "NAME": "Letzter Ritt",
-    "DESCRIPTION": "Behalten. NL Füge für jeden *Fluch auf der Hand !D! Schaden zu. NL Erschöpft.",
+    "DESCRIPTION": "Behalten. NL Füge für jeden Fluch auf der Hand !D! Schaden zu. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": " NL (Du hast !M! Fluch.)",
     "EXTENDED_DESCRIPTION": [" NL (Du hast !M! Flüche.)"]
   },

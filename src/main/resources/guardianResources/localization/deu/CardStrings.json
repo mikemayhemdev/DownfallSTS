@@ -258,7 +258,7 @@
   },
   "Guardian:Reroute": {
     "NAME": "Umsteuern",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege die nächste Karte die du in diesem Zug spielst in guardianmod:Stasis."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege die nächste Karte, die du in diesem Zug spielst, in guardianmod:Stasis."
   },
   "Guardian:PiercingHide": {
     "NAME": "Stechende Haut",

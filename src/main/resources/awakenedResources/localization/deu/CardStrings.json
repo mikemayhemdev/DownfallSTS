@@ -34,7 +34,7 @@
   },
   "awakened:Brainshock": {
     "NAME": "Hirnschock",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege eine *Leere in den Abwurfstapel."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege eine Leere in den Abwurfstapel."
   },
   "awakened:Intensify": {
     "NAME": "Intensivieren",
@@ -133,7 +133,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "Dimensionsbombe",
-    "DESCRIPTION": "Erfordert eine *Leere im Erschöpfungsstapel. Entferne sie und füge zweimal !D! Schaden zu.",
+    "DESCRIPTION": "Erfordert eine Leere im Erschöpfungsstapel. Entferne sie und füge zweimal !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "Ich habe keine erschöpfte Leere."
     ]
@@ -211,8 +211,8 @@
   },
   "awakened:Planeswalk": {
     "NAME": "Grenzgänger",
-    "DESCRIPTION": "Erhalte [E] [E] . NL bronze:Setze eine *Leere *ein.",
-    "UPGRADE_DESCRIPTION": "Erhalte [E] [E] [E] . NL bronze:Setze eine *Leere *ein."
+    "DESCRIPTION": "Erhalte [E] [E] . NL bronze:Setze eine Leere *ein.",
+    "UPGRADE_DESCRIPTION": "Erhalte [E] [E] [E] . NL bronze:Setze eine Leere *ein."
   },
   "awakened:Spew": {
     "NAME": "Ausspeien",
@@ -225,11 +225,11 @@
   },
   "awakened:Eventide": {
     "NAME": "Dämmerung",
-    "DESCRIPTION": "Füge zweimal einem zufälligen Gegner !D! Schaden zu. NL Lege eine *Leere auf den Nachziehstapel."
+    "DESCRIPTION": "Füge zweimal einem zufälligen Gegner !D! Schaden zu. NL Lege eine Leere auf den Nachziehstapel."
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Sonnenfinsternis",
-    "DESCRIPTION": "Immer, wenn du eine *Leere *erschöpfst, ziehe im nächsten Zug eine Karte und erhalte [E] ."
+    "DESCRIPTION": "Immer, wenn du eine Leere *erschöpfst, ziehe im nächsten Zug eine Karte und erhalte [E] ."
   },
   "awakened:Clutch": {
     "NAME": "Umklammern",
@@ -237,7 +237,7 @@
   },
   "awakened:Gloomguard": {
     "NAME": "Düsterer Schutz",
-    "DESCRIPTION": "Erhalte !B! Block. NL Kostet 0, wenn sich eine *Leere auf der Hand befindet."
+    "DESCRIPTION": "Erhalte !B! Block. NL Kostet 0, wenn sich eine Leere auf der Hand befindet."
   },
   "awakened:Carrionmaker": {
     "NAME": "Aasproduktion",
@@ -266,7 +266,7 @@
   },
   "awakened:SongOfSorrow": {
     "NAME": "Leidenslieder",
-    "DESCRIPTION": "Immer wenn du eine *Leere erhältst verlieren ALLE Gegner !M! TP."
+    "DESCRIPTION": "Immer wenn du eine Leere erhältst, verlieren ALLE Gegner !M! TP."
   },
   "awakened:MysticOrder": {
     "NAME": "Mystische Sitten",
@@ -340,7 +340,7 @@
   },
   "awakened:Spellshield": {
     "NAME": "Zauberschild",
-    "DESCRIPTION": "Erhalte am Ende des Zuges !M! Block für jede Karte, die du behältst."
+    "DESCRIPTION": "Erhalte am Ende des Zuges !M! Block für jede Karte, die du *behältst."
   },
   "awakened:Siphon": {
     "NAME": "Siphon",
@@ -377,7 +377,7 @@
   },
   "awakened:Minniegun": {
     "NAME": "Minniegun",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL bronze:Setze eine *Leere *ein."
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL bronze:Setze eine Leere *ein."
   },
   "awakened:SignInBlood": {
     "NAME": "Blutschwur",

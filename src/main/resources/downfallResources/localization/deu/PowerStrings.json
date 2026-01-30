@@ -475,7 +475,7 @@
   "downfall:DefectAttackVoidPower":{
     "NAME": "Energiedieb",
     "DESCRIPTIONS": [
-      "Immer wenn du ungeblockten Angriffsschaden zufügst, lege eine *Leere in den Abwurfstapel deines Gegners."
+      "Immer wenn du ungeblockten Angriffsschaden zufügst, lege eine #yLeere in den Abwurfstapel deines Gegners."
     ]
   },
   "downfall:WatcherTrackerAttacksPower":{

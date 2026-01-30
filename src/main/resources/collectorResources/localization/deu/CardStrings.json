@@ -189,7 +189,7 @@
     "DESCRIPTION": "Flüchtig. NL Füge !D! Schaden zu. NL Wenn diese Karte *erschöpft, erhalte eine *Glut."
   },
   "collector:GreenpyreLocus": {
-    "NAME": "Grünfeuerhort",
+    "NAME": "Geheimer Hort",
     "DESCRIPTION": "Wähle 1 von 3 *Sammlerstücken und nimm es auf die Hand. Mische !M! weitere Kopien in den Sammlungsstapel.",
     "EXTENDED_DESCRIPTION": [
       "Wähle eine Karte, die du auf die Hand nimmst."
@@ -246,7 +246,7 @@
   },
   "collector:JadedJabs": {
     "NAME": "Abgebrühte Stiche",
-    "DESCRIPTION": "collector:Opfergabe. NL Füge !D! Schaden zu. NL Erhalte *Messer in Anzahl der Höhe der Kosten der *geopferten Karte + !M!."
+    "DESCRIPTION": "collector:Opfergabe. NL Füge !D! Schaden zu. NL Erhalte Messer in Anzahl der Höhe der Kosten der *geopferten Karte + !M!."
   },
   "collector:Karma": {
     "NAME": "Karma",
@@ -389,7 +389,7 @@
   },
   "collector:ThornWhip": {
     "NAME": "Dornenpeitsche",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu und wende !M! hermit:Prügel auf sie an. Erhalte ein *Messer."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu und wende !M! hermit:Prügel auf sie an. Erhalte ein Messer."
   },
   "collector:Torchbearer": {
     "NAME": "Fackelträger",

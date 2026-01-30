@@ -38,7 +38,7 @@
       "strike",
       "strikes"
     ],
-    "DESCRIPTION": "Jede Karte mit \"Schlag\" im Namen. Nicht zu verwechseln mit #ySchlägen - damit sind nur Basis Schlag Karten gemeint."
+    "DESCRIPTION": "Jede Karte mit \"Schlag\" im Namen."
   },
   {
     "PROPER_NAME": "Abschluss",

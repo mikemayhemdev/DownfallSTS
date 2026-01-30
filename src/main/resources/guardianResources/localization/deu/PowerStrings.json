@@ -31,9 +31,9 @@
   "Guardian:ClonePower": {
     "NAME": "Umsteuern",
     "DESCRIPTIONS": [
-      "Lege die nächste Karte die du in diesem Zug spielst in #yStasis.",
+      "Lege die nächste Karte, die du in diesem Zug spielst, in #yStasis.",
       "Lege die nächsten #b",
-      " Karten die du in diesem Zug spielst in #yStasis."
+      " Karten, die du in diesem Zug spielst, in #yStasis."
     ]
   },
   "Guardian:GemFinderPower": {

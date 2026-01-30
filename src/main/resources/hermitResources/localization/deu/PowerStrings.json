@@ -5,7 +5,7 @@
 },
 "hermit:HighNoonPower": {
         "NAME": "Duell",
-        "DESCRIPTIONS": ["Ziehe immer, wenn du einen #ySchlag oder ein #yVerteidigen spielst, #b", " Karte.", " Karten."]
+        "DESCRIPTIONS": ["Ziehe immer, wenn du einen Basis #ySchlag oder ein #yVerteidigen spielst, #b", " Karte.", " Karten."]
 },
 "hermit:FatalDesirePower": {
         "NAME": "Todestrieb",
@@ -25,7 +25,7 @@
 },
 "hermit:Bruise": {
         "NAME": "Prügel",
-        "DESCRIPTIONS": ["Nimmt in diesem Zug #b", " mehr Angriffschaden"]
+        "DESCRIPTIONS": ["Nimmt in diesem Zug #b", " mehr Angriffsschaden"]
 },
 "hermit:HorrorPower": {
         "NAME": "Horror",
@@ -45,7 +45,7 @@
 },
 "hermit:Rugged": {
         "NAME": "Robust",
-        "DESCRIPTIONS": ["TP-Verlust durch ungeblockten Angriffschaden wird noch ", " Mal zu #b2 reduziert.", " beim nächsten Mal zu #b2 reduziert."]
+        "DESCRIPTIONS": ["TP-Verlust durch ungeblockten Angriffsschaden wird noch ", " Mal zu #b2 reduziert.", " beim nächsten Mal zu #b2 reduziert."]
 },
 "hermit:EternalPower": {
         "NAME": "Ewige Form",
@@ -65,7 +65,7 @@
 },
 "hermit:DeterminationPower": {
         "NAME": "Entschlossenheit",
-        "DESCRIPTIONS": ["Erhalte immer wenn ein Debuff auf dich angewendet wird #b", " #yStärke."]
+        "DESCRIPTIONS": ["Erhalte immer, wenn ein Debuff auf dich angewendet wird, #b", " #yStärke."]
 },
 "hermit:RyeStalkPower": {
         "NAME": "Roggenhalm",
@@ -89,6 +89,6 @@
 },
 "hermit:MaintenanceStrikePower": {
         "NAME": "Wartung",
-        "DESCRIPTIONS": ["Deine #ySchläge fügen #b", " mehr Schaden zu."]
+        "DESCRIPTIONS": ["Deine Basis #ySchläge fügen #b", " mehr Schaden zu."]
 }
 }

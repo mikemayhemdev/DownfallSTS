@@ -44,7 +44,7 @@
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Infanterie",
-    "DESCRIPTION": "Füge für jeden Schleim einem zufälligen gegner !D! Schaden zu. NL slimeboundmod:Absorbiere alle Schleime. NL Erschöpft."
+    "DESCRIPTION": "Füge für jeden Schleim einem zufälligen Gegner !D! Schaden zu. NL slimeboundmod:Absorbiere alle Schleime. NL Erschöpft."
   },
   "Slimebound:DouseInSlime": {
     "NAME": "Einschleimen",
@@ -72,7 +72,7 @@
   },
   "Slimebound:FlameTackle": {
     "NAME": "Flammentackle",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Deine *Tackle Karten fügen in diesem Kampf !M! mehr Schaden zu."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erleide !SlimeboundSelfharm! Schaden. NL Deine *Tackle Karten fügen diesen Kampf !M! mehr Schaden zu."
   },
   "Slimebound:FormOfPuddle": {
     "NAME": "Pfützenform",
@@ -211,8 +211,8 @@
   },
   "Slimebound:ProtectTheBoss": {
     "NAME": "Opferschleim",
-    "DESCRIPTION": "Verhindere deinen nächsten TP-Verlust durch Angriffsschaden indem du deinen führenden Schleim slimeboundmod:absorbierst.",
-    "UPGRADE_DESCRIPTION": "Verhindere deine nächsten 2 TP-Verluste durch Angriffsschaden indem du jeweils deinen führenden Schleim slimeboundmod:absorbierst."
+    "DESCRIPTION": "Verhindere deinen nächsten TP-Verlust durch Angriffsschaden, indem du deinen führenden Schleim slimeboundmod:absorbierst.",
+    "UPGRADE_DESCRIPTION": "Verhindere deine nächsten 2 TP-Verluste durch Angriffsschaden, indem du jeweils deinen führenden Schleim slimeboundmod:absorbierst."
   },
   "Slimebound:RainOfGoop": {
     "NAME": "Glibberregen",
@@ -274,7 +274,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Lege eine Karte aus dem Abwurfstapel auf den Nachziehstapel."
   },
   "Slimebound:ServeAndProtect": {
-    "NAME": "Freund und Helfer",
+    "NAME": "Wiedervereinigung",
     "DESCRIPTION": "Erhalte für jeden Schleim !B! Block und 1 bronze:Verschwimmen. NL slimeboundmod:Absorbiere alle Schleime. NL Erschöpft."
   },
   "Slimebound:SlimeBarrage": {

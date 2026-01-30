@@ -1,7 +1,7 @@
 {
   "downfall:Aged": {
     "NAME": "Altern",
-    "DESCRIPTION": "Unspielbar. Flüchtig. NL Nimm am Ende des Zuges eine *Leere auf den Abwurfstapel."
+    "DESCRIPTION": "Unspielbar. Flüchtig. NL Nimm am Ende des Zuges eine Leere auf den Abwurfstapel."
   },
   "downfall:Bewildered": {
     "NAME": "Irritation",
@@ -17,7 +17,7 @@
   },
   "downfall:Malfunctioning": {
     "NAME": "Unreinheit",
-    "DESCRIPTION": "Nimm am Ende des Zuges eine *Wunde auf den Abwurfstapel. NL Erschöpft."
+    "DESCRIPTION": "Nimm am Ende des Zuges eine Wunde auf den Abwurfstapel. NL Erschöpft."
   },
   "downfall:Scatterbrained": {
     "NAME": "Zerstreutheit",
@@ -34,7 +34,7 @@
   },
   "downfall:BossMaintenance": {
     "NAME": "Wartung",
-    "DESCRIPTION": "*Schläge fügen in diesem Kampf !M! mehr Schaden zu. Erhalte !B! Geschicklichkeit."
+    "DESCRIPTION": "Basis *Schläge fügen diesen Kampf !M! mehr Schaden zu. Erhalte !B! Geschicklichkeit."
   },
   "downfall:CuriousRobot": {
     "NAME": "Neugieriger Roboter",
@@ -42,7 +42,7 @@
   },
   "downfall:Murderbot": {
     "NAME": "Energiedieb",
-    "DESCRIPTION": "Immer wenn du ungeblockten Angriffsschaden zufügst, lege eine *Leere in den Abwurfstapel deines Gegners."
+    "DESCRIPTION": "Immer wenn du ungeblockten Angriffsschaden zufügst, lege eine Leere in den Abwurfstapel deines Gegners."
   },
   "downfall:Temptation": {
     "NAME": "Versuchung",
@@ -50,7 +50,7 @@
   },
   "downfall:BagOfKnives": {
     "NAME": "Sack voller Messer",
-    "DESCRIPTION": "Wenn du in einem Zug das erste Mal eine Karte ausspielst die 2 oder mehr kostet, erhalte 2 *Messer."
+    "DESCRIPTION": "Wenn du in einem Zug das erste Mal eine Karte ausspielst die 2 oder mehr kostet, erhalte 2 Messer."
   },
   "downfall:Hallunication": {
     "NAME": "Halluzination",

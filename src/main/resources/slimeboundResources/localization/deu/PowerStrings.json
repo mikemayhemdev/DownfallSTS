@@ -71,11 +71,11 @@
     ]
   },
   "Slimebound:ProtectTheBoss": {
-    "NAME": "Schleimiger Schutzschild",
+    "NAME": "Opferschleim",
     "DESCRIPTIONS": [
-      "Verhindere deinen nächsten TP-Verlust durch Angriffsschaden indem du deinen führenden Schleim #yabsorbierst.",
+      "Verhindere deinen nächsten TP-Verlust durch Angriffsschaden, indem du deinen führenden Schleim #yabsorbierst.",
       "Verhindere deinen nächsten #b",
-      " TP-Verluste durch Angriffsschaden indem du jeweils deinen führenden Schleim #yabsorbierst."
+      " TP-Verluste durch Angriffsschaden, indem du jeweils deinen führenden Schleim #yabsorbierst."
     ]
   },
   "Slimebound:SplitForLessPower": {

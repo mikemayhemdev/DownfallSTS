@@ -17,7 +17,7 @@
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Strahl",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine *Leere auf den Nachziehstapel. NL Erschöpft."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine Leere auf den Nachziehstapel. NL Erschöpft."
   },
   "expansioncontent:LastStand": {
     "NAME": "Finales Aufgebot",
@@ -29,7 +29,7 @@
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "Neugier",
-    "DESCRIPTION": "Immer wenn du eine Macht spielst, erhältst du !M! Stärke."
+    "DESCRIPTION": "Erhalte !M! awakened:Neugier."
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Zeitbooster",

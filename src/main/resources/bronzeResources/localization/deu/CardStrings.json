@@ -1,7 +1,7 @@
 {
   "bronze:Allocate": {
     "NAME": "Allokieren",
-    "DESCRIPTION": "Erhalte [E] für jeden *Status im Nachziehstapel.",
+    "DESCRIPTION": "Erhalte [E] für jeden Status im Nachziehstapel.",
     "EXTENDED_DESCRIPTION": [
       " NL (Erhalte ",
       " [E] .)"
@@ -61,7 +61,7 @@
   },
   "bronze:Break": {
     "NAME": "Abbruch",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - Erhalte je 1 *Benommen, *Verschleimt, *Wunde, *Brennen, *Leere.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - Erhalte je 1 Benommen, *Verschleimt, Wunde, Brennen, Leere.",
     "EXTENDED_DESCRIPTION": [
       "gehemmtes",
       "Abbrechen"
@@ -81,8 +81,8 @@
   },
   "bronze:BugBarrage": {
     "NAME": "Bugbefall",
-    "DESCRIPTION": "Erhalte !M! *Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! *Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
+    "DESCRIPTION": "Erhalte !M! Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       " NL (Trifft ",
       " Mal.)"
@@ -90,7 +90,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "Verbuggter Code",
-    "DESCRIPTION": "bronze:Setze ein *Benommen *ein. NL Erhalte !M! [E] .",
+    "DESCRIPTION": "bronze:Setze ein Benommen *ein. NL Erhalte !M! [E] .",
     "EXTENDED_DESCRIPTION": [
       "verbuggtes",
       "Chaos"
@@ -98,9 +98,9 @@
   },
   "bronze:BurnOut": {
     "NAME": "Burnout",
-    "DESCRIPTION": "Füge einem zufälligen Gegner für JEDEN *Status !D! Schaden zu. Erschöpfe dann die Statuskarten. NL Erschöpft.",
+    "DESCRIPTION": "Füge einem zufälligen Gegner für JEDEN Status !D! Schaden zu. Erschöpfe dann die Statuskarten. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
-      "Fügt einem zufälligen Gegner !D! Schaden für JEDEN *Status zu (",
+      "Fügt einem zufälligen Gegner !D! Schaden für JEDEN Status zu (",
       "), und erschöpft sie dann. NL Erschöpft."
     ]
   },
@@ -130,7 +130,7 @@
     "UPGRADE_DESCRIPTION": "Angeboren. NL Verhindere die nächsten !M! *Kompilierungsfehler die du *kodierst."
   },
   "bronze:CloningBeam": {
-    "NAME": "Codeduplizierung",
+    "NAME": "Code-Duplizierung",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste Karte die bronze:kodiert wird, bronze:kodiert ein weiteres Mal. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste Karte die bronze:kodiert wird, bronze:kodiert ein weiteres Mal."
   },
@@ -158,7 +158,7 @@
   },
   "bronze:DarkDash": {
     "NAME": "Dunkler Sprint",
-    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - bronze:Setze eine *Leere *ein.",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - bronze:Setze eine Leere *ein.",
     "EXTENDED_DESCRIPTION": [
       "dunkles",
       "Dunkel"
@@ -207,7 +207,7 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "Suchen-Ersetzen",
-    "DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel und lege ein *Benommen an ihrer Stelle ein. NL Erschöpft.",
+    "DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel und lege ein Benommen an ihrer Stelle ein. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle."
@@ -342,7 +342,7 @@
   },
   "bronze:MaxOutput": {
     "NAME": "Maximaler Output",
-    "DESCRIPTION": "Ziehe !M! Karten. NL Ziehe zu Beginn des Zuges 1 zusätzliche Karte und bronze:Setze 1 *Benommen *ein."
+    "DESCRIPTION": "Ziehe !M! Karten. NL Ziehe zu Beginn des Zuges 1 zusätzliche Karte und bronze:Setze 1 Benommen *ein."
   },
   "bronze:Mutator": {
     "NAME": "Variable",
@@ -502,12 +502,12 @@
   },
   "bronze:Turbo": {
     "NAME": "Turbo",
-    "DESCRIPTION": "Erhalte [E] [E] . NL Nimm eine *Leere auf den Abwurfstapel.",
-    "UPGRADE_DESCRIPTION": "Erhalte [E] [E] [E]. NL Nimm eine *Leere auf den Abwurfstapel."
+    "DESCRIPTION": "Erhalte [E] [E] . NL Nimm eine Leere auf den Abwurfstapel.",
+    "UPGRADE_DESCRIPTION": "Erhalte [E] [E] [E]. NL Nimm eine Leere auf den Abwurfstapel."
   },
   "bronze:Undervolt": {
     "NAME": "Unterspannung",
-    "DESCRIPTION": "ALLE Gegner verlieren !M! Stärke. NL Erhalte 2 *Brennen. NL Erschöpft."
+    "DESCRIPTION": "ALLE Gegner verlieren !M! Stärke. NL Erhalte 2 Brennen. NL Erschöpft."
   },
   "bronze:Verify": {
     "NAME": "Bewusste Form",
@@ -516,8 +516,8 @@
   },
   "bronze:Virus": {
     "NAME": "Virus",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wirf alle Handkarten ab und erhalte genauso viele *Kleine *Strahlen. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wirf alle Handkarten ab und erhalte genauso viele *Kleine *Strahlen+. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte genauso viele *Kleine *Strahlen. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte genauso viele *Kleine *Strahlen+. NL Erschöpft."
   },
   "bronze:WhirlingStrike": {
     "NAME": "Durchschuss",
@@ -537,7 +537,7 @@
   },
   "bronze:WildStrike": {
     "NAME": "Wilder Schlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze eine *Wunde *ein."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze eine Wunde *ein."
   },
   
   "bronze:Batch": {
@@ -568,7 +568,7 @@
   },
   "bronze:DazingPulse": {
     "NAME": "Betäubender Puls",
-    "DESCRIPTION": "Erhalte !B! Block NL Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - bronze:Setze !M! *Benommen *ein.",
+    "DESCRIPTION": "Erhalte !B! Block NL Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - bronze:Setze !M! Benommen *ein.",
     "EXTENDED_DESCRIPTION": [
       "lahmes",
       "Pulsieren"
@@ -580,7 +580,7 @@
   },
   "bronze:DecaBeam": {
     "NAME": "Proto-Schild",
-    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Erhalte !M! *Panzerrüstung und bronze:Setze !bauto! *Benommen *ein.",
+    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Erhalte !M! *Panzerrüstung und bronze:Setze !bauto! Benommen *ein.",
     "EXTENDED_DESCRIPTION": [
       "gepanzertes",
       "Panzern"
@@ -601,7 +601,7 @@
   },
   "bronze:Explode": {
     "NAME": "Explodieren",
-    "DESCRIPTION": "Wende !M! hexamod:Seelenfeuer auf ALLE Gegner an. NL bronze:Kompilierungsfehler - bronze:Setze !bauto! *Brennen *ein.",
+    "DESCRIPTION": "Wende !M! hexamod:Seelenfeuer auf ALLE Gegner an. NL bronze:Kompilierungsfehler - bronze:Setze !bauto! Brennen *ein.",
     "EXTENDED_DESCRIPTION": [
       "instabiles",
       "Detonieren"

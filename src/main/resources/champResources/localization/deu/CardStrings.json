@@ -174,7 +174,7 @@
   },
   "champ:RapidStrikes": {
     "NAME": "Rapide Schläge",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. Eine zufällige \"Schlag\" Karte auf deiner Hand kostet in diesem Zug 0."
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. Eine zufällige Schlag Karte auf deiner Hand kostet in diesem Zug 0."
   },
   "champ:EnchantSword": {
     "NAME": "Schwertzauber",
@@ -185,7 +185,7 @@
   },
   "champ:BladeFlurry": {
     "NAME": "Schlagserie",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste \"Schlag\" Karte in diesem Zug wird doppelt gespielt."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Die nächste Schlag Karte in diesem Zug wird doppelt gespielt."
   },
   "champ:SwordThrow": {
     "NAME": "Schwertwurf",
@@ -299,7 +299,7 @@
   },
   "champ:PerfectedStrike": {
     "NAME": "Perfekterer Schlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Fügt für JEDE deiner \"Schlag\" beinhaltenden Karten !M! zusätzlichen Schaden zu."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Fügt für JEDE deiner Schlag Karten !M! zusätzlichen Schaden zu."
   },
   "champ:GladiatorForm": {
     "NAME": "Gladiatorenform",
@@ -316,8 +316,8 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "Genieschlag",
-    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen \"Schlag\" Karte. NL Es kostet 0 bis du es spielst.",
-    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen verbesserten \"Schlag\" Karte. NL Es kostet 0 bis du es spielst."
+    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen Schlag Karte. NL Es kostet 0 bis du es spielst.",
+    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen verbesserten Schlag Karte. NL Es kostet 0 bis du es spielst."
   },
   "champ:DefensiveStyle": {
     "NAME": "Doppelter Stil",
@@ -329,7 +329,7 @@
   },
   "champ:BerserkerStyle": {
     "NAME": "Klinge schleifen",
-    "DESCRIPTION": "\"Schlag\" Karten fügen !M! mehr Schaden zu."
+    "DESCRIPTION": "Schlag Karten fügen !M! mehr Schaden zu."
   },
   "champ:Riposte": {
     "NAME": "Konterschlag",
@@ -378,8 +378,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "Dreifachschlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 *Schlag gremlin:Echos. Sie kosten 0 und aktivieren den champ:Fertigkeitsbonus.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 *Schlag+ gremlin:Echos. Sie kosten 0 und aktivieren den champ:Fertigkeitsbonus."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 Basis *Schlag gremlin:Echos. Sie kosten 0 und aktivieren den champ:Fertigkeitsbonus.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 Basis *Schlag+ gremlin:Echos. Sie kosten 0 und aktivieren den champ:Fertigkeitsbonus."
   },
   "champ:WindUp": {
     "NAME": "Aufziehen",
