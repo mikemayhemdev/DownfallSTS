@@ -17,12 +17,12 @@
     ]
   },
   "bronze:Assembly": {
-    "NAME": "Zusammensetzen",
+    "NAME": "Programmieren",
     "DESCRIPTION": "Spähe !M!. NL bronze:Kodiere alle abgeworfenen Karten mit *Kodieren in der gewählten Reihenfolge. NL Erschöpft."
   },
   "bronze:Backtrace": {
-    "NAME": "Zurückverfolgen",
-    "DESCRIPTION": "Angeboren. NL \u00A0 Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - Die Funktion Erschöpft.",
+    "NAME": "Destruktor",
+    "DESCRIPTION": "Angeboren. NL \u00A0 Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - Die Funktion erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "feiges",
       "Folgen"
@@ -61,7 +61,7 @@
   },
   "bronze:Break": {
     "NAME": "Abbruch",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - Erhalte je 1 Benommen, *Verschleimt, Wunde, Brennen, Leere.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - Erhalte je 1 Benommen, *Verschleimt, Wunde, Brennen und Leere.",
     "EXTENDED_DESCRIPTION": [
       "gehemmtes",
       "Abbrechen"
@@ -76,7 +76,7 @@
     ]
   },
   "bronze:BronzeOrb": {
-    "NAME": "Bronzener Orb",
+    "NAME": "Orb-Strahl",
     "DESCRIPTION": "Angeboren. NL Füge !D! Schaden zu. NL bronze:Kodiere eine zufällige Karte im Nachziehstapel. Erschöpft."
   },
   "bronze:BugBarrage": {
@@ -122,12 +122,12 @@
   },
   "bronze:ClassDefault": {
     "NAME": "Standardklasse",
-    "DESCRIPTION": "Die nächsten !M! Male an denen eine Funktion kompiliert, bronze:kodiere eine Kopie der Karte im ersten Slot."
+    "DESCRIPTION": "Die nächsten !M! Male an, denen eine Funktion kompiliert, bronze:kodiere eine Kopie der Karte im ersten Slot."
   },
   "bronze:CleanCode": {
     "NAME": "Sauberer Code",
-    "DESCRIPTION": "Verhindere die nächsten !M! *Kompilierungsfehler die du *kodierst.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Verhindere die nächsten !M! *Kompilierungsfehler die du *kodierst."
+    "DESCRIPTION": "Verhindere die nächsten !M! *Kompilierungsfehler, die du *kodierst.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Verhindere die nächsten !M! *Kompilierungsfehler, die du *kodierst."
   },
   "bronze:CloningBeam": {
     "NAME": "Code-Duplizierung",
@@ -173,7 +173,7 @@
     ]
   },
   "bronze:DelayedGuard": {
-    "NAME": "Nachlaufschutz",
+    "NAME": "Herunterladen",
     "DESCRIPTION": "Erhalte im nächsten Zug !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "spätes",
@@ -227,7 +227,7 @@
     ]
   },
   "bronze:FollowUp": {
-    "NAME": "Nachlegen",
+    "NAME": "Laufwerk",
     "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Hast du diesen Kampf zuletzt eine Funktion gespielt, dann spiele diese Karte nochmal."
   },
   "bronze:ForceShield": {
@@ -278,11 +278,11 @@
     ]
   },
   "bronze:GetLatest": {
-    "NAME": "Aktualisieren",
+    "NAME": "Variable",
     "DESCRIPTION": "Erhalte eine zufällige Karte mit bronze:Kodieren. Sie kostet 0 bis du sie spielst. NL Erschöpft."
   },
   "bronze:Goto": {
-    "NAME": "Subroutine",
+    "NAME": "Update",
     "DESCRIPTION": "Ziehe !M! Karte. NL bronze:Kompilierung - Ziehe im nächsten Zug !M! Karte.",
     "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL bronze:Kompilierung - Ziehe im nächsten Zug !M! Karten.",
     "EXTENDED_DESCRIPTION": [
@@ -345,7 +345,7 @@
     "DESCRIPTION": "Ziehe !M! Karten. NL Ziehe zu Beginn des Zuges 1 zusätzliche Karte und bronze:Setze 1 Benommen *ein."
   },
   "bronze:Mutator": {
-    "NAME": "Variable",
+    "NAME": "Antivirus",
     "DESCRIPTION": "Erhalte !M! Stärke. NL expansioncontent:Transformiere einen Status auf der Hand in eine Kopie dieser Karte.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte !M! Stärke. NL expansioncontent:Transformiere einen Status auf der Hand in eine Kopie dieser Karte."
   },
@@ -426,11 +426,11 @@
     "UPGRADE_DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E] [E] ."
   },
   "bronze:Safeguard": {
-    "NAME": "Schutzmaßnahme",
+    "NAME": "Hochladen",
     "DESCRIPTION": "Erhalte !B! Block.",
     "EXTENDED_DESCRIPTION": [
-      "sicheres",
-      "Schützen"
+      "frühes",
+      "Blocken"
     ]
   },
   "bronze:Separator": {

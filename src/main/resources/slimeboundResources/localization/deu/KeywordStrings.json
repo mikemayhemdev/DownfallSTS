@@ -79,15 +79,15 @@
   },
   {
     "NAMES": [
-      "raufboldschleim",
-      "Raufbold",
+      "kampfschleim",
+      "kampf",
       "bruiser slime",
       "bruiser_slime",
       "bruiser slimes",
       "bruiser_slimes",
       "bruiser"
     ],
-    "PROPER_NAME": "Raufboldschleim",
+    "PROPER_NAME": "Kampfschleim",
     "DESCRIPTION": "Fügt mit seinem Angriff zweimal #b3 Schaden zu."
   },
   {
@@ -113,14 +113,14 @@
   },
   {
     "NAMES": [
-      "guerillaschleim",
+      "minischleim",
       "guerilla slime",
       "guerilla_slime",
       "guerilla slimes",
       "guerilla_slimes",
       "guerilla"
     ],
-    "PROPER_NAME": "Guerillaschleim",
+    "PROPER_NAME": "Minischleim",
     "DESCRIPTION": "Fügt mit seinem Angriff ALLEN Gegnern #b3 Schaden zu."
   },
   {
@@ -207,13 +207,13 @@
   },
   {
     "NAMES": [
-      "dunkelschleim",
-      "dunkelschleime",
+      "dunkeling",
+      "dunkelinge",
       "darkling slime",
       "darkling_slime"
     ],
-    "PROPER_NAME": "Dunkelschleim",
-    "DESCRIPTION": "Fügt mit seinem Angriff #b3 Schaden zu. Greift auch an, wenn ein anderer Dunkelschleim angreift."
+    "PROPER_NAME": "Dunkeling",
+    "DESCRIPTION": "Fügt mit seinem Angriff #b3 Schaden zu. Greift auch an, wenn ein anderer Dunkeling #ykommandiert wird."
   },
   {
     "NAMES": [
@@ -246,7 +246,7 @@
       "consume"
     ],
     "PROPER_NAME": "Konsumieren",
-    "DESCRIPTION": "Bonus der aktiviert wird, wenn der #yAngriff auf einen Gegner mit #yGlibber angewendet wird."
+    "DESCRIPTION": "Bonuseffekt, der aktiviert wird, wenn ein #yAngriff auf einen Gegner mit #yGlibber angewendet wird."
   },
   {
     "NAMES": [

@@ -125,7 +125,7 @@
   },
   "awakened:Thaumaturgy": {
     "NAME": "Quacksalbereien",
-    "DESCRIPTION": "Erhalte !awakened:m2! Geschicklichkeit. NL Nimm zu Beginn deiner nächsten !M! Züge eine *Zeremonie auf die Hand."
+    "DESCRIPTION": "Erhalte !awakened:m2! Geschicklichkeit. NL Erhalte zu Beginn deiner nächsten !M! Züge eine *Zeremonie."
   },
   "awakened:WaveOfMiasma": {
     "NAME": "Miasma-Schleier",
@@ -299,7 +299,7 @@
   "awakened:MiddenHeap": {
     "NAME": "Misthaufen",
     "DESCRIPTION": "Erhalte !B! Block. NL Schnapp dir !M! Status oder Fluch vom Nachzieh- oder Abwurfstapel.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Schnapp dir !M! Status- oder Fluchkarten vom Nachzieh- oder Abwurfstapel.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Schnapp dir !M! Status- oder *Fluchkarten vom Nachzieh- oder Abwurfstapel.",
     "EXTENDED_DESCRIPTION": [
       "Nimm eine Karte auf die Hand.",
       "Nimm Karten auf die Hand."

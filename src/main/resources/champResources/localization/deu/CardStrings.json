@@ -36,7 +36,7 @@
     "DESCRIPTION": "Aktiviere den champ:Fertigkeitsbonus deiner *Haltung !M! Mal."
   },
   "champ:FaceSlap": {
-    "NAME": "Schelle ins Gesicht",
+    "NAME": "Maulschelle",
     "DESCRIPTION": "Füge !D! Schaden zu. NL champ:Offensivcombo: Wende !M! Verwundbar an."
   },
   "champ:FlashCut": {
@@ -126,7 +126,7 @@
   },
   "champ:ShieldThrow": {
     "NAME": "Schildwurf",
-    "DESCRIPTION": "Füge zweimal Schaden in Höhe deines Blocks zu. Bist du nicht in champ:Defensivhaltung, geben Karten im nächsten Zug keinen Block.",
+    "DESCRIPTION": "Füge 2 Mal Schaden in Höhe deines Blocks zu. Bist du nicht in champ:Defensivhaltung, geben Karten im nächsten Zug keinen Block.",
     "EXTENDED_DESCRIPTION": [
       "Füge zweimal Schaden in Höhe deines Blocks ( !D! ) zu. Bist du nicht in champ:Defensivhaltung, geben Karten im nächsten Zug keinen Block."
     ]
@@ -298,7 +298,7 @@
     ]
   },
   "champ:PerfectedStrike": {
-    "NAME": "Perfekterer Schlag",
+    "NAME": "Perfektionsschlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Fügt für JEDE deiner Schlag Karten !M! zusätzlichen Schaden zu."
   },
   "champ:GladiatorForm": {

@@ -85,7 +85,7 @@
       "Nach einer kurzen Unterredung schließen sich die Schleime dir an. Sie verlassen ihren Posten nur kurz um dir zu helfen."
     ],
     "OPTIONS": [
-      "[Rekrutieren] #gErhalte #gDunkeling-Duo. #rVerliere ",
+      "[Rekrutieren] #gErhalte #gDunkelingduo. #rVerliere ",
       "[Kämpfen]",
       "[Verlassen]",
       ".",

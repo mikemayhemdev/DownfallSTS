@@ -35,9 +35,9 @@
     ]
   },
   "Slimebound:BuffAttackSlimesPower": {
-    "NAME": "Upgrade: Raufbold",
+    "NAME": "Upgrade: Kämpfer",
     "DESCRIPTIONS": [
-      "#yRaufboldschleime fügen um #b",
+      "#yKampfschleime fügen um #b",
       " mehr Schaden zu."
     ]
   },
@@ -482,7 +482,7 @@
     ]
   },
   "Slimebound:BuffSecondarySlimeEffectsPower": {
-    "NAME": "Meister der Untertanen",
+    "NAME": "Bossaura",
     "DESCRIPTIONS": [
       "Immer wenn du eine Karte mit slimeboundmod:Kommando spielst, #yKommandiere ein weiteres Mal.",
       "Immer wenn du eine Karte mit slimeboundmod:Kommando spielst, #yKommandiere #b",

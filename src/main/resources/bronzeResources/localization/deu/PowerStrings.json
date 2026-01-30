@@ -12,7 +12,7 @@
     "DESCRIPTIONS": [
       "Wird das nächste Mal eine Funktion kompiliert, dann #ykodiere eine Kopie der Karte im ersten Slot.",
       "Die nächsten #b",
-      " Male an denen eine Funktion kompiliert, #ykodiere eine Kopie der Karte im ersten Slot."
+      " Male, an denen eine Funktion kompiliert, #ykodiere eine Kopie der Karte im ersten Slot."
     ]
   },
   "bronze:Feature": {
@@ -137,9 +137,9 @@
   "bronze:RemoveNextError": {
     "NAME": "Fehler beheben",
     "DESCRIPTIONS": [
-      "Verhindere den nächsten #yKompilierungsfehler der #ykodiert wird.",
+      "Verhindere den nächsten #yKompilierungsfehler [REMOVE_SPACE], der #ykodiert wird.",
       "Verhindere die nächsten #b",
-      " #yKompilierungsfehler die #ykodiert werden."
+      " #yKompilierungsfehler [REMOVE_SPACE], die #ykodiert werden."
     ]
   }
 }

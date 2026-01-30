@@ -88,8 +88,8 @@
     "NAME": "Hexafeuer",
     "DESCRIPTIONS": [
       "Füge nach #b",
-      " Zügen #b6 Mal einem Zufälligen Gegner #b",
-      "Füge am Ende des Zuges #b6 Mal einem Zufälligen Gegner #b",
+      " Zügen #b6 Mal einem zufälligen Gegner #b",
+      "Füge am Ende des Zuges #b6 Mal einem zufälligen Gegner #b",
       " Schaden zu."
     ]
   },

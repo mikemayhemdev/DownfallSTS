@@ -382,7 +382,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL guardianmod:Härte dich in Höhe des ungeblockten Schadens *ab. NL Erschöpft."
   },
   "Guardian:RevengeProtocol": {
-    "NAME": "Racheprotokoll",
+    "NAME": "Kampfprotokoll",
     "DESCRIPTION": "Erhalte jedes Mal, wenn du in den *Defensivmodus wechselst, !M! Stärke. NL Zu Beginn jedes Zuges: guardianmod:Abhärten !GuardianSecondM!."
   },
   "Guardian:GatlingBeam": {

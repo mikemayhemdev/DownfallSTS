@@ -148,12 +148,12 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Kostet diesen Zug 1 [E] weniger pro gespielte Basis *Schlag oder *Verteidigen Karte in diesem Zug."
   },
   "hermit:Grudge": {
-    "NAME": "Groll",
+    "NAME": "Unwesen",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Der Schaden wird für jeden deiner Flüche um !M! erhöht."
   },
   "hermit:Spite": {
     "NAME": "Hass",
-    "DESCRIPTION": "Erschöpfe alle unspielbaren Karten auf deiner Hand. NL Erhalte !B! Block. NL Ziehe !M! Karten"
+    "DESCRIPTION": "Erschöpfe alle unspielbaren Handkarten. NL Erhalte !B! Block. NL Ziehe !M! Karten"
   },
   "hermit:Manifest": {
     "NAME": "Verkörperung",

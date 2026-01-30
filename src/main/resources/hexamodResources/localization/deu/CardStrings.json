@@ -131,7 +131,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Immer wenn eine Karte in diesem Zug erschöpft wird, wende !burny! hexamod:Seelenfeuer auf den Gegner an."
   },
   "hexamod:InstantInferno": {
-    "NAME": "Instant Inferno",
+    "NAME": "Zündende Idee",
     "DESCRIPTION": "Behalten. NL Wende !burny! hexamod:Seelenfeuer an. Wechsle zur Inferno Geisterflamme und hexamod:entzünde sie. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Wende !burny! hexamod:Seelenfeuer an. NL hexamod:Entzünde die Inferno Geisterflamme. NL Erschöpft."
   },
@@ -157,8 +157,8 @@
   },
   "hexamod:DevilsDance": {
     "NAME": "Totentanz",
-    "DESCRIPTION": "Ziehe wenn du dich das erste Mal im Zug hexamod:vorwärts oder hexamod:rückwärts bewegst eine Karte.",
-    "UPGRADE_DESCRIPTION": "Ziehe die ersten !M! Male an denen du dich im Zug hexamod:vorwärts oder hexamod:rückwärts bewegst eine Karte."
+    "DESCRIPTION": "Ziehe, wenn du dich das erste Mal im Zug hexamod:vorwärts oder hexamod:rückwärts bewegst, eine Karte.",
+    "UPGRADE_DESCRIPTION": "Ziehe die ersten !M! Male, an denen du dich im Zug hexamod:vorwärts oder hexamod:rückwärts bewegst, eine Karte."
   },
   "hexamod:HereAndNow": {
     "NAME": "Hier und Jetzt",
@@ -253,7 +253,7 @@
     "DESCRIPTION": "Flüchtig. NL Erhalte !M! Geschicklichkeit und verliere 1 Stärke."
   },
   "hexamod:PhantomFireball": {
-    "NAME": "Phantomfeuerball",
+    "NAME": "Zündung",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn der Gegner *Seelenfeuer hat, detoniere es vollständig.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wenn der Gegner *Seelenfeuer hat, detoniere es bis auf 1."
   },
@@ -394,7 +394,7 @@
     "UPGRADE_DESCRIPTION": " NL (Trifft !M! Mal.)"
   },
   "hexamod:UnlimitedPower": {
-    "NAME": "Hexabrand",
+    "NAME": "Hexaflamme",
     "DESCRIPTION": "hexamod:Entzünde alle Geisterflammen im Uhrzeigersinn. NL Erschöpft."
   },
   "hexamod:VolcanoVisage": {
@@ -480,7 +480,7 @@
   "hexamod:ApocalypticArmor": {
     "NAME": "Jüngstes Gericht",
     "DESCRIPTION": "Das nächste Mal, wenn alle !M! Geisterflammen *entzündet sind, hast du einen weiteren Zug nach diesem.",
-    "UPGRADE_DESCRIPTION": "Das nächste Mal, wenn mindestens !M! Geisterflammen *entzündet sind, hast du einen weiteren Zug nach diesem."
+    "UPGRADE_DESCRIPTION": "Das nächste Mal, wenn min. !M! Geisterflammen *entzündet sind, hast du einen weiteren Zug nach diesem."
   },
   "hexamod:RetreatToShadows": {
     "NAME": "Unkörperlich",
@@ -531,8 +531,8 @@
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Totentanz",
-    "DESCRIPTION": "Ziehe wenn du dich das erste Mal im Zug hexamod:vorwärts oder hexamod:rückwärts bewegst eine Karte.",
-    "UPGRADE_DESCRIPTION": "Ziehe die ersten !M! Male an denen du dich im Zug hexamod:vorwärts oder hexamod:rückwärts bewegst eine Karte."
+    "DESCRIPTION": "Ziehe, wenn du dich das erste Mal im Zug hexamod:vorwärts oder hexamod:rückwärts bewegst, eine Karte.",
+    "UPGRADE_DESCRIPTION": "Ziehe die ersten !M! Male, an denen du dich im Zug hexamod:vorwärts oder hexamod:rückwärts bewegst, eine Karte."
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Aus dem Schatten",

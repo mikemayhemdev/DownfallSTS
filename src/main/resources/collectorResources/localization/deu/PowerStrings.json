@@ -211,7 +211,7 @@
   "collector:MastersCall": {
     "NAME": "Meisterruf",
     "DESCRIPTIONS": [
-      "Füge immer wenn du einen #yAngriff spielst während du #ytemporäre #yTP hast einem zufälligen Gegner #b",
+      "Füge immer, wenn du einen #yAngriff spielst, während du #ytemporäre #yTP hast, einem zufälligen Gegner #b",
       " Schaden zu.",
       "Translator Note: NOT USED"
     ]

@@ -14,7 +14,7 @@
     ]
   },
   "Slimebound:AttackSlime": {
-    "NAME": "Raufboldschleim",
+    "NAME": "Kampfschleim",
     "DESCRIPTION": [
       "Fügt mit seinem Angriff zweimal #b",
       " Schaden zu."
@@ -57,7 +57,7 @@
     ]
   },
   "Slimebound:PoisonSlime": {
-    "NAME": "Guerillaschleim",
+    "NAME": "Minischleim",
     "DESCRIPTION": [
       "Fügt mit seinem Angriff ALLEN Gegnern #b",
       " Schaden zu."
@@ -112,10 +112,10 @@
     ]
   },
   "Slimebound:DarklingSlime": {
-    "NAME": "Dunkelschleim",
+    "NAME": "Dunkeling",
     "DESCRIPTION": [
       "Fügt mit seinem Angriff #b",
-      " Schaden zu. Greift auch an, wenn ein anderer Dunkelschleim angreift."
+      " Schaden zu. Greift auch an, wenn ein anderer Dunkeling #kommandiert wird."
     ]
   }
 }

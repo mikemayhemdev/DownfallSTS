@@ -68,7 +68,7 @@
     "NAME": "Schleimiger Bewohner",
     "FLAVOR": "Es ist mir heimgefolgt. Darf ich es behalten?",
     "DESCRIPTIONS": [
-      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #yslimeboundmod:Raufboldschleim #yab [REMOVE_SPACE]."
+      "#yslimeboundmod:Spalte zu Beginn des Kampfes einen #yslimeboundmod:Kampfschleim #yab [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SlimedSkullRelic": {

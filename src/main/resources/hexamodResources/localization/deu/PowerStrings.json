@@ -153,7 +153,7 @@
   "hexamod:PastPower": {
     "NAME": "Totentanz",
     "DESCRIPTIONS": [
-      "Ziehe eine Karte wenn du dich das erste Mal im Zug #yvorwärts oder #yrückwärts bewegst.",
+      "Ziehe eine Karte, wenn du dich das erste Mal im Zug #yvorwärts oder #yrückwärts bewegst.",
       "Ziehe eine Karte für die ersten #b",
       " Male, an denen du dich im Zug #yvorwärts oder #yrückwärts bewegst.",
       " NL Dieser Effekt kann in diesem Zug noch #b",
@@ -235,7 +235,7 @@
     ]
   },
   "hexamod:InfernoPotionPower": {
-    "NAME": "Hexafeuer",
+    "NAME": "Hexabrand",
     "DESCRIPTIONS": [
       "Die Geisterflammen-Effekte werden in diesem Kampf auf ALLE Gegner angewendet.",
       "Die Geisterflammen-Effekte werden in diesem Kampf auf ALLE Gegner #b",

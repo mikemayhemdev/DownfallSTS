@@ -8,7 +8,7 @@
     "DESCRIPTION": "collector:Opfergabe. NL Erhalte !M! Gold."
   },
   "collector:AshenStrike": {
-    "NAME": "Äscherner Schlag",
+    "NAME": "Äschernder Schlag",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte eine *Glut."
   },
   "collector:Arrogance": {
@@ -48,8 +48,8 @@
   },
   "collector:BrainDrain": {
     "NAME": "Braindrain",
-    "DESCRIPTION": "Der Gegner verliert !M! HP. Nimm sein *Sammlerstück auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Der Gegner verliert !M! HP. NL Nimm sein verbessertes *Sammlerstück auf die Hand. NL Erschöpft."
+    "DESCRIPTION": "Der Gegner verliert !M! TP. Nimm sein *Sammlerstück auf die Hand. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Der Gegner verliert !M! TP. Nimm sein verbessertes *Sammlerstück auf die Hand. NL Erschöpft."
   },
   "collector:BramblesparKindling": {
     "NAME": "Dorniger Anzünder",
@@ -435,7 +435,7 @@
   },
   "collector:BonfireSpiritsCard": {
     "NAME": "Lagerfeuergeister",
-    "DESCRIPTION": "collector:Opfergabe. NL Heile !M! TP. NL Erhöhe deine Max TP um 1 falls die *geopferte Karte *selten war."
+    "DESCRIPTION": "collector:Opfergabe. NL Heile !M! TP. NL Erhöhe deine Max TP um 1, falls die *geopferte Karte *selten war."
   },
   "collector:BookOfStabbingCard": {
     "NAME": "Buch des Stechens",
