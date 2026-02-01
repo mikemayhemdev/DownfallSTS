@@ -31,8 +31,8 @@
       "Wähle 10 Karten und füge sie deinem Deck hinzu.",
       "[ #gDie #gGegner #gdeiner #gnächsten #gdrei #gKämpfe #gfliehen #gin #gFurcht ]",
       "[ Gesperrt - Kann nicht im ertsen Run ausgewählt werden ]",
-      "[ #gAlle #gGremlins #gerhalten #gMax #gTP #g+",
-      "#gAlle #gGremlins #gerhalten #gMax #gTP #g+",
+      "[ #gAlle #gGremlins #gerhalten #gmax. #gTP #g+",
+      "#gAlle #gGremlins #gerhalten #gmax. #gTP #g+",
       "[ #rAlle #rGremlins #rverlieren #r",
       "[ #rAlle #rGremlins #rerleiden #r"
     ]
@@ -175,7 +175,7 @@
       "Zeitschleim"
     ],
     "TEXT": [
-      "Verliere 3 TP. NL Erhalte 15 Gold.",
+      "Verliere 3 TP. NL Erhalte 15 Seelen.",
       "Verliere 3 TP. NL Nimm eine zufällige farblose Karte auf die Hand.",
       "Verliere 7 TP. NL Erhalte einen zufälligen *Trank.",
       "Erhalte Wächter *Boss-Karten.",

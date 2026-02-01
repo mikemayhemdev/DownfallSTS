@@ -11,7 +11,7 @@
     "NAME": "Das gebrochene Siegel",
     "FLAVOR": "Unbegrenzte, ungebändigte, unstillbare Macht.",
     "DESCRIPTIONS": [
-      "Erhöhe beim Aufheben deine Max TP um #b",
+      "Erhöhe beim Aufheben deine max. TP um #b",
       " und heile deine TP komplett. Beginne jeden Kampf mit #b",
       " #yStärke [REMOVE_SPACE], #yGeschicklichkeit [REMOVE_SPACE], und #yhexamod:Intensität [REMOVE_SPACE]. Du kannst keine weiteren Siegel oder #pGebrochene #pSiegel erhalten."
     ]

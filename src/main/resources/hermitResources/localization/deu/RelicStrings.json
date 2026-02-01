@@ -49,7 +49,7 @@
     "NAME": "Verbeulter Brustpanzer",
     "FLAVOR": "Es stecken immer noch ein paar Kugeln darin.",
     "DESCRIPTIONS": [
-      "Wenn deine TP zu Beginn des Zuges bei #b50% der Max TP under darunter sind, ziehe #b1 Karte erhalte [E] ."
+      "Wenn deine TP zu Beginn des Zuges bei #b50% der max. TP under darunter sind, ziehe #b1 Karte erhalte [E] ."
     ]
   },
   "hermit:PetGhost": {

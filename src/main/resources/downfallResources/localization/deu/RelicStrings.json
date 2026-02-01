@@ -3,7 +3,7 @@
     "NAME": "Niaus Segnung",
     "FLAVOR": "Kühle deinen Zorn ab. Sei so taff und unnachgiebig wie es der Spire selbst ist.",
     "DESCRIPTIONS": [
-      "Der Boss hat mehr Max TP und kein Starter Relikt, zieht #b2 Karten weniger, und erhält #b1 ",
+      "Der Boss hat mehr max. TP und kein Starter Relikt, zieht #b2 Karten weniger, und erhält #b1 ",
       " weniger. NL Zu Beginn des Kampfes erhält der Boss einen einzigartigen Buff. Der Boss kann nicht #yBetäubt werden."
     ]
   },
@@ -11,7 +11,7 @@
     "NAME": "Niaus Segnung",
     "FLAVOR": "Kühle deinen Zorn ab. Sei so taff und unnachgiebig wie es der Spire selbst ist.",
     "DESCRIPTIONS": [
-      "Erhöhe beim Aufheben deine Max TP um #b100. Erhöhe deine Max TP um #b100 wenn du einen neuen Akt erreichst. NL Verliere alle Trankslots. NL Ziehe #b1 Karte weniger und verliere [E] zu Beginn deines Zuges."
+      "Erhöhe beim Aufheben deine max. TP um #b100. Erhöhe deine max. TP um #b100 wenn du einen neuen Akt erreichst. NL Verliere alle Trankslots. NL Ziehe #b1 Karte weniger und verliere [E] zu Beginn deines Zuges."
     ]
   },
   "downfall:CoffeeDripper": {
@@ -110,7 +110,7 @@
   },
   "downfall:CBRFaceOfCleric": {
     "DESCRIPTIONS": [
-      " Max TP wurden durch dieses Relikt erlangt."
+      " max. TP wurden durch dieses Relikt erlangt."
     ]
   },
   "downfall:Omamori": {
@@ -128,14 +128,14 @@
     "FLAVOR": "Das Blut des Meisters... Das Blut des Meisters! DAS BLUT DES MEISTERS!",
     "DESCRIPTIONS": [
       "Schläge wurden durch Bisse ersetzt. NL -",
-      " Max TP."
+      " max. TP."
     ]
   },
   "downfall:BonfireSpirits": {
     "NAME": "Ereignis: Geister des Lagerfeuers",
     "FLAVOR": "Die Geister werfen kleine Knochen und Stückchen ins Feuer, das mit jedem Mal hell auflodert...",
     "DESCRIPTIONS": [
-      "Der Boss entfernte eine Karte um 10 Max TP zu erhalten."
+      "Der Boss entfernte eine Karte um 10 max. TP zu erhalten."
     ]
   },
   "downfall:DesignerInSpire": {
@@ -163,7 +163,7 @@
     "NAME": "Ereignis: Großer Fang",
     "FLAVOR": "Dein Weg führt dich durch einen langen Korridor, wo du eine Banane, einen Donut und eine Kiste herumschweben siehst.",
     "DESCRIPTIONS": [
-      "Der Donut wurde gewählt. NL +5 Max TP.",
+      "Der Donut wurde gewählt. NL +5 max. TP.",
       "Die Kiste wurde gewählt. NL Ein Reue Fluch und ein Relikt wurden hinzugefügt."
     ]
   },
@@ -309,7 +309,7 @@
     "NAME": "Ereignis: Goldener Götze",
     "FLAVOR": "Du findest ein unscheinbares Podest, auf dem friedlich ein glänzender goldener Götze ruht.",
     "DESCRIPTIONS": [
-      "Der Boss nahm den goldenen Götzen und erhielt den Fluch Verletzung. Für das zusätzliche Gold kaufte er "
+      "Der Boss nahm den Goldenen Götzen und erhielt den Fluch Verletzung. Für das zusätzliche Gold kaufte er "
     ]
   },
   "downfall:FaceTrader": {
@@ -471,7 +471,7 @@
     "NAME": "Bürde des Wissens",
     "FLAVOR": "Die Wahrheit tut weh.",
     "DESCRIPTIONS": [
-      "#rVerliere beim Aufheben #rALLE #rSegnungen #rdes #rHerzen und #b20 Max TP. #yVerbessere #rALLE Karten #rIMMER und #rÜBERALL [REMOVE_SPACE]. Beginne jeden Kampf mit #b2 weniger #yStärke und #yGeschicklichkeit [REMOVE_SPACE]."
+      "#rVerliere beim Aufheben #rALLE #rSegnungen #rdes #rHerzen und #b20 max. TP. #yVerbessere #rALLE Karten #rIMMER und #rÜBERALL [REMOVE_SPACE]. Beginne jeden Kampf mit #b2 weniger #yStärke und #yGeschicklichkeit [REMOVE_SPACE]."
     ]
   },
   "downfall:TeleportStone": {
@@ -511,14 +511,14 @@
     "NAME": "",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "In Händler-, Elite- und Bosskämpfen erhalte in deinem Zug [E] .",
+      "In Händler-, Elite- und Bosskämpfen, erhalte in deinem Zug [E] .",
       "Verfluchte Münze",
       "Nur noch wenige wissen um den Wert dieser alten Münze bescheid...",
       "MVB-Karte",
-      "Du bist wahrlich des Herzens MVB: Meist Versorgender Boss.",
+      "Du bist wahrlich des Herzens MVB: Meist versorgender Boss.",
       "Das Herz kennt keine Gnade und verdirbt sogar die Liebsten... unsere Haustiere.",
       "Verdorbene Kurierin",
-      "Dem Herz gehen nie mehr Karten, Relikte oder Tränke aus und seine Preise sind um #b20% gesenkt.",
+      "Dem Herzen gehen nie mehr Karten, Relikte oder Tränke aus und seine Preise sind um #b20% gesenkt.",
       "Kampf-Kartenbelohnungen enthalten jetzt auch farblose und andersfarbige Karten, inklusive Helden-Karten.",
       "Du kannst keine #ySeelen mehr erhalten. Erhalte in deinem Zug [E]. Das Zerbrechen der Schlüssel erfordert keine #ySeelen [REMOVE_SPACE]."
     ]
@@ -527,7 +527,7 @@
     "NAME": "Super-Echsenschwanz",
     "FLAVOR": "Ein falscher Schwanz, um Gegner während des Kampfes hereinzulegen.",
     "DESCRIPTIONS": [
-      "Anstatt zu sterben, heile #b100% deiner Max TP (funktioniert einmal)."
+      "Anstatt zu sterben, heile #b100% deiner max. TP (funktioniert einmal)."
     ]
   },
   "downfall:TestRelic": {

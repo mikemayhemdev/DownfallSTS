@@ -15,9 +15,9 @@
     ]
   },
   "Guardian:FloatingOrbsPower": {
-    "NAME": "Schwebende Orbd",
+    "NAME": "Schwebende Orbs",
     "DESCRIPTIONS": [
-      "Immer wenn du eine Karte ausspielst die #y0 kostet, füge einem zufälligen Gegner #b",
+      "Immer wenn du eine Karte ausspielst, die #y0 kostet, füge einem zufälligen Gegner #b",
       " Schaden zu."
     ]
   },
@@ -152,7 +152,7 @@
   "Guardian:StasisEnginePower": {
     "NAME": "Stasismotor",
     "DESCRIPTIONS": [
-      "Immer wenn du in einem Zug #b3 Karten spielst die #b0 kosten, erhalte #b",
+      "Wenn du in einem Zug die #bdritte Karte mit Kosten #b0 spielst, erhalte #b",
       " [E] und ziehe #b",
       " Karte",
       " Karten",

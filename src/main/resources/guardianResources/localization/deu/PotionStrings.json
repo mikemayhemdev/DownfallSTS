@@ -23,9 +23,9 @@
   "Guardian:StasisDiscoveryPotion": {
     "NAME": "Quantum Elixier",
     "DESCRIPTIONS": [
-      "Erhalte Stasis-Slots bis du #b",
-      " hast. NL Führe folgendes #b",
-      " Mal aus: wähle #b1 von #b3 Karten aus, um sie in #yStasis zu legen."
+      "Erhalte Stasis-Slots, bis du #b",
+      " hast. Führe folgendes #b",
+      " Mal aus: NL Wähle #b1 von #b3 Karten aus, um sie in #yStasis zu legen."
     ]
   }
 }

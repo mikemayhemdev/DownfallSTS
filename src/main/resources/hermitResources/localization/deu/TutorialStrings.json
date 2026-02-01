@@ -92,7 +92,7 @@
   },
   "HermitMod:GremlinsTutorials": {
     "TEXT": [
-      "Die Gremlins sind zu fünft - alle haben ihre eigenen TP und Besonderheiten.",
+      "Die Gremlins sind zu fünft - alle haben ihre eigenen TP und Besonderheiten. Nur der Bonus des aktiven Gremlins wird ausgelöst.",
       "Der aktive Gremlin kann #yausgewechselt werden. Ein Wechsel kann zum Beispiel durch das Ausspielen bestimmter Karten erfolgen."
     ],
     "LABEL": [

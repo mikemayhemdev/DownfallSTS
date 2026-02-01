@@ -119,7 +119,7 @@
     "NAME": "Klinge beschwören",
     "FLAVOR": "Na komm, mach es schon. Beschwöre eine Klinge, jetzt gleich. Ich warte. :^)",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn deine Kampfes eine #yKlinge #ybeschwören Karte in die Hand?",
+      "Nimm zu Beginn des Kampfes eine #yKlinge #ybeschwören Karte in die Hand?",
       "NOTE: THE PLAYER CANNOT OBTAIN THIS RELIC OUTSIDE OF CONSOLE, IT'S A JOKE RELIC!"
     ]
   },
@@ -128,7 +128,7 @@
     "FLAVOR": "Diese Klinge wird von Magiern bevorzugt, da sie einen Teil der gesprochenen Zauber wieder aufnimmt.",
     "DESCRIPTIONS": [
       "Erhalte eine #yZeremonie für alle #b",
-      " Zauber die du in einem Kampf ausspielst."
+      " Zauber, die du in einem Kampf ausspielst."
     ]
   },
   "awakened:MoonTalisman": {

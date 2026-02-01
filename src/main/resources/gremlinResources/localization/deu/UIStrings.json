@@ -32,9 +32,9 @@
   "Gremlin:RestOption": {
     "TEXT": [
       "Ausruhen",
-      "Heile jeden Gremlin um 100% der Max TP (",
+      "Heile jeden Gremlin um 100% der max. TP (",
       " TP von ",
-      "Heile jeden Gremlin um 100% der Max TP (",
+      "Heile jeden Gremlin um 100% der max. TP (",
       "Sind Gremlins tot wird ein zufälliger wiederbelebt."
     ]
   },

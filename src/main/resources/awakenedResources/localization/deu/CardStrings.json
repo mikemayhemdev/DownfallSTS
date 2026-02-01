@@ -60,7 +60,7 @@
   },
   "awakened:TalonRake": {
     "NAME": "Krallenkratzer",
-    "DESCRIPTION": "Füge zweimal !D! Schaden zu. NL awakened:Aufrufen."
+    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu. NL awakened:Aufrufen."
   },
   "awakened:Hymn": {
     "NAME": "Hymne",
@@ -133,7 +133,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "Dimensionsbombe",
-    "DESCRIPTION": "Erfordert eine Leere im Erschöpfungsstapel. Entferne sie und füge zweimal !D! Schaden zu.",
+    "DESCRIPTION": "Erfordert eine Leere im Erschöpfungsstapel. Entferne sie und füge 2 Mal !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "Ich habe keine erschöpfte Leere."
     ]
@@ -225,7 +225,7 @@
   },
   "awakened:Eventide": {
     "NAME": "Dämmerung",
-    "DESCRIPTION": "Füge zweimal einem zufälligen Gegner !D! Schaden zu. NL Lege eine Leere auf den Nachziehstapel."
+    "DESCRIPTION": "Füge 2 Mal einem zufälligen Gegner !D! Schaden zu. NL Lege eine Leere auf den Nachziehstapel."
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Sonnenfinsternis",
@@ -348,7 +348,7 @@
   },
   "awakened:PlumeJab": {
     "NAME": "Federstiche",
-    "DESCRIPTION": "Behalten. NL Füge zweimal einem zufälligen Gegner !D! Schaden zu. NL Erschöpft."
+    "DESCRIPTION": "Behalten. NL Füge 2 Mal einem zufälligen Gegner !D! Schaden zu. NL Erschöpft."
   },
   "awakened:Primacy": {
     "NAME": "Vorrang",
@@ -361,7 +361,7 @@
   },
   "awakened:PackRat": {
     "NAME": "Rudelratte",
-    "DESCRIPTION": "Füge zweimal !D! Schaden zu und erhalte zweimal !B! Block. NL Erhalte einen zufälligen Trank. NL Erschöpft."
+    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu und erhalte 2 Mal !B! Block. NL Erhalte einen zufälligen Trank. NL Erschöpft."
   },
   "awakened:Mantis": {
     "NAME": "Mantis",

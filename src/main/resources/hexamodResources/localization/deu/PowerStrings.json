@@ -228,10 +228,10 @@
     ]
   },
   "hexamod:MaxHPPostCombatPower": {
-    "NAME": "Versiegelte Belohnung: Max TP",
+    "NAME": "Versiegelte Belohnung: max. TP",
     "DESCRIPTIONS": [
       "Erhalte am Ende des Kampfes #b",
-      " Max TP."
+      " max. TP."
     ]
   },
   "hexamod:InfernoPotionPower": {

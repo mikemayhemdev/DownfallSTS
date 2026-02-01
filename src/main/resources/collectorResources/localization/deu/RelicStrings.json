@@ -103,7 +103,7 @@
     "NAME": "Verbotene Frucht",
     "FLAVOR": "Die Art dieser Frucht sieht äußerst fremdartig aus.",
     "DESCRIPTIONS": [
-      "Füge beim Aufheben einen #rParasiten in dein Deck hinzu und erhöhe deine Max TP um #b",
+      "Füge beim Aufheben einen #rParasiten in dein Deck hinzu und erhöhe deine max. TP um #b",
       " [REMOVE_SPACE]. Beginne jeden Kampf mit #b",
       " #yGeschicklichkeit."
     ]

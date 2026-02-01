@@ -238,7 +238,7 @@
   },
   "hermit:TrackingShot": {
     "NAME": "Doppelschuss",
-    "DESCRIPTION": "hermit:Konzentriere dich. NL Füge zweimal !D! Schaden zu."
+    "DESCRIPTION": "hermit:Konzentriere dich. NL Füge 2 Mal !D! Schaden zu."
   },
   "hermit:LoneWolf": {
     "NAME": "Einsamer Wolf",

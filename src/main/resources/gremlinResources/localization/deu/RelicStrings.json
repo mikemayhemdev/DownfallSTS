@@ -79,7 +79,7 @@
     "NAME": "Kleine Statue",
     "FLAVOR": "Es ist überraschend, wie gut sie funktioniert.",
     "DESCRIPTIONS": [
-      "Das erste Mal im Kampf, wenn ein Gremlin sterben würde, werden seine TP stattdessen um #b75% der Max TP geheilt.",
+      "Das erste Mal im Kampf, wenn ein Gremlin sterben würde, werden seine TP stattdessen um #b75% der max. TP geheilt.",
       "Bereits in diesem Kampf aktiviert."
     ]
   },
@@ -133,11 +133,11 @@
     "NAME": "",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Erhöhe beim Aufheben die Max TP jedes Gremlins um #b",
-      "Anstatt eine Karte deinem Deck hinzuzufügen, können alle Gremlins #b+1 Max TP erhalten.",
-      " #yGold. NL Erhöhe die Max TP jedes Gremlins um #b",
-      "Erhöhe die Max TP aller Gremlins nach jedem fünften Kampf um #b1.",
-      "+1 Max TP"
+      "Erhöhe beim Aufheben die max. TP jedes Gremlins um #b",
+      "Anstatt eine Karte deinem Deck hinzuzufügen, können alle Gremlins #b+1 max. TP erhalten.",
+      " #yGold. NL Erhöhe die max. TP jedes Gremlins um #b",
+      "Erhöhe die max. TP aller Gremlins nach jedem fünften Kampf um #b1.",
+      "+1 max. TP"
     ]
   }
 }

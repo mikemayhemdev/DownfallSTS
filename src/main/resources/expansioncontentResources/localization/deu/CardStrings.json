@@ -13,7 +13,7 @@
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Unverwundbar",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:Unverwundbar. NL Hattest du bereits expansioncontent:Unverwundbar, dann hält es für ein weiteres Mal."
+    "DESCRIPTION": "Erhalte !M! expansioncontent:Unverwundbar. NL Hattest du bereits expansioncontent:Unverwundbar, dann hält es ein weiteres Mal."
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Strahl",
@@ -41,7 +41,7 @@
   },
   "expansioncontent:DecaShield": {
     "NAME": "Deka-Schild",
-    "DESCRIPTION": "Erhalte !B! Panzerrüstung."
+    "DESCRIPTION": "Erhalte !B! expansioncontent:Panzerrüstung."
   },
   "expansioncontent:ShapePower": {
     "NAME": "Antiker Segen",
@@ -81,7 +81,7 @@
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "Das pure Böse",
-    "DESCRIPTION": "Füge ALLEN Gegnern !M! Schaden zu, immer wenn du !DM! Debuffs anwendest."
+    "DESCRIPTION": "Füge ALLEN Gegnern !M! Schaden zu, immer wenn du im Kampf !DM! Debuffs anwendest."
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Wissender Schädel",
@@ -197,7 +197,7 @@
   },
   "expansioncontent:ExploitVulnerability": {
     "NAME": "Donu-Strahl",
-    "DESCRIPTION": "Entferne allen Block des Gegners, und erhalte genauso viel Block. Füge zweimal !D! Schaden zu."
+    "DESCRIPTION": "Entferne allen Block des Gegners, und erhalte genauso viel Block. Füge 2 Mal !D! Schaden zu."
   },
   "expansioncontent:PeekPages": {
     "NAME": "Nachlesen",
@@ -213,9 +213,9 @@
   },
   "expansioncontent:BloodySacrifice": {
     "NAME": "Blutiges Opfer",
-    "DESCRIPTION": "Flüchtig. NL Verliere !M! % deiner Max TP. NL Erhalte 1 Ritual. Erschöpft.",
+    "DESCRIPTION": "Flüchtig. NL Verliere !M! % deiner max. TP. NL Erhalte 1 Ritual. Erschöpft.",
     "EXTENDED_DESCRIPTION":[
-      " NL (Verliere {amount} Max TP. )"
+      " NL (Verliere {amount} max. TP. )"
     ]
   }
 }

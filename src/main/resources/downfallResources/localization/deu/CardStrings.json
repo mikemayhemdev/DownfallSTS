@@ -30,7 +30,7 @@
   },
   "downfall:SummonMushrooms": {
     "NAME": "Fungus unter uns",
-    "DESCRIPTION": "Töte alle Pilze. Heile TP in Höhe ihrer verbleibenden TP. NL Beschwöre zwei zufällige Pilze."
+    "DESCRIPTION": "Töte alle *Pilze. Heile TP in Höhe ihrer verbleibenden TP. NL Beschwöre zwei zufällige *Pilze."
   },
   "downfall:BossMaintenance": {
     "NAME": "Wartung",
@@ -50,7 +50,7 @@
   },
   "downfall:BagOfKnives": {
     "NAME": "Sack voller Messer",
-    "DESCRIPTION": "Wenn du in einem Zug das erste Mal eine Karte ausspielst die 2 oder mehr kostet, erhalte 2 Messer."
+    "DESCRIPTION": "Wenn du in einem Zug das erste Mal eine Karte ausspielst, die 2 oder mehr kostet, erhalte 2 Messer."
   },
   "downfall:Hallunication": {
     "NAME": "Halluzination",

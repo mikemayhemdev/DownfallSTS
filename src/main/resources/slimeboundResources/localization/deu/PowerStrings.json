@@ -167,7 +167,7 @@
     ]
   },
   "Slimebound:DuplicatedFormPower": {
-    "NAME": "Duplizierte Form",
+    "NAME": "Gespaltene Form",
     "DESCRIPTIONS": [
       "Die erste in deinem Zug gespielte Karte, die auf Gegner abzielt, wird zweimal gespielt.",
       "Die ersten #b",
@@ -177,12 +177,12 @@
   "Slimebound:DuplicatedFormNoHealPower": {
     "NAME": "Gespalten",
     "DESCRIPTIONS": [
-      "Max TP ist vorläufig um #b",
+      "max. TP ist vorläufig um #b",
       " reduziert."
     ]
   },
   "Slimebound:DuplicatedFormEnergyPower": {
-    "NAME": "Tag-Team",
+    "NAME": "Schleimenergie",
     "DESCRIPTIONS": [
       "Erhalte zu Beginn deines Zuges #b",
       " [E] ."
@@ -211,7 +211,7 @@
   "Slimebound:PoisonThornsPower": {
     "NAME": "Säureglibber",
     "DESCRIPTIONS": [
-      "Wende jedes Mal, wenn du #ykonsumierst #b",
+      "Wende jedes Mal, wenn du #ykonsumierst [REMOVE_SPACE], #b",
       " #yGift an."
     ]
   },
@@ -240,28 +240,28 @@
   "Slimebound:AcidTonguePower": {
     "NAME": "Säurezunge",
     "DESCRIPTIONS": [
-      "Wende immer wenn du #yGlibber anwendest #b",
+      "Wende immer, wenn du #yGlibber anwendest, #b",
       " #yGift an."
     ]
   },
   "Slimebound:AcidTonguePowerUpgraded": {
     "NAME": "Schleimzunge",
     "DESCRIPTIONS": [
-      "Immer wenn #yGlibber angewendet wird, wird die Anzahl um #b",
-      " erhöht."
+      "Immer wenn #yGlibber angewendet wird, erhöhe die angewendete Anzahl um #b",
+      " [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SelfDamageSlimedPower": {
     "NAME": "Loser Glibber",
     "DESCRIPTIONS": [
-      "Wende immer wenn du TP verlierst #b",
+      "Wende immer, wenn du TP verlierst, #b",
       " #yGlibber auf einen zufälligen Gegner an."
     ]
   },
   "Slimebound:TackleBuffPower": {
     "NAME": "Offensives Tackling",
     "DESCRIPTIONS": [
-      "#yTackle Karten fügen bei Gegnern #b",
+      "#yTackle Karten fügen Gegnern #b",
       " mehr Schaden zu."
     ]
   },

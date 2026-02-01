@@ -46,7 +46,7 @@
       "Schleimboss?"
     ],
     "EXTRA_TEXT": [
-      "Dieser ungewöhnliche Schleim ernährt sich von leckeren Relitken. NL Er dient dem Herz nur durch bloßem Zufall.",
+      "Dieser ungewöhnliche Schleim ernährt sich von leckeren Relitken. NL Er dient dem Herzen nur durch bloßem Zufall.",
       "Ist das... der Schleimboss? Er sieht erschreckend zutraulich aus. NL Nun, da er den größten Hut von allen hat, muss er das Sagen haben..."
     ]
   },
@@ -68,8 +68,8 @@
       "Sneckdor"
     ],
     "EXTRA_TEXT": [
-      "Nutzt die Augen um mittels kognitiver Verzerrung die eigene schreckliche Form zu verschleiern. NL Studien kamen zum Ergebnis, dass verwirrte Wesen die Welt ganz anders wahrnehmen.",
-      "Dieser ambitionierte Snecko trat in die Fußstapfen seines Helden, suchend nach größerer Macht. NL Es nennt sich selbst \"Sneckdor\": vollkommen, und mit einem kräftigen Arm."
+      "Nutzt die Augen, um mittels kognitiver Verzerrung die eigene, schreckliche Form zu verschleiern. NL Studien kamen zum Ergebnis, dass verwirrte Wesen die Welt ganz anders wahrnehmen.",
+      "Dieses ambitionierte Snecko trat in die Fußstapfen seines Helden, suchend nach größerer Macht. NL Es nennt sich selbst \"Sneckdor\": vollkommen, und mit einem kräftigen Arm."
     ]
   },
   "reskinContent:ReSkinChamp": {
@@ -78,7 +78,7 @@
       "Champ am Waschtag"
     ],
     "EXTRA_TEXT": [
-      "Das Schwert sieht zu schwer für sie aus, NL allerdings ist sie die Einzige die stark genug ist, es zu führen.",
+      "Das Schwert sieht zu schwer für sie aus - NL Allerdings ist sie die Einzige, die stark genug ist, es zu führen.",
       "Es ist Waschtag. Nichts Sauberes mehr übrig..."
     ]
   },

@@ -42,11 +42,11 @@
     "UPGRADE_DESCRIPTION": "Behalten. NL Nimm eine *kodierte Karte zurück auf die Hand. NL Sie erhält Behalten. NL Erschöpft."
   },
   "bronze:Boost": {
-    "NAME": "Booster",
+    "NAME": "Software",
     "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Erhalte !M! Stärke.",
     "EXTENDED_DESCRIPTION": [
-      "stärkendes",
-      "Boosten"
+      "weiches",
+      "Setup"
     ]
   },
   "bronze:Branch": {
@@ -71,7 +71,7 @@
     "NAME": "Bronzerüstung",
     "DESCRIPTION": "Erhalte !bauto! Artefakt. NL bronze:Kompilierungsfehler - ALLE Gegner erhalten !M! Block.",
     "EXTENDED_DESCRIPTION": [
-      "bronzenes",
+      "flexibles",
       "Rüsten"
     ]
   },
@@ -253,11 +253,11 @@
     ]
   },
   "bronze:Fortify": {
-    "NAME": "Verstärken",
+    "NAME": "Hardware",
     "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung - Erhalte !M! Geschicklichkeit.",
     "EXTENDED_DESCRIPTION": [
-      "festes",
-      "Ankern"
+      "hartes",
+      "Bauen"
     ]
   },
   "bronze:Frontload": {
@@ -374,7 +374,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Verhindere den nächsten *Kompilierungsfehler den du *kodierst."
   },
   "bronze:Overload": {
-    "NAME": "Kopieren-Einfügen",
+    "NAME": "Kopie einfügen",
     "DESCRIPTION": "Spiele jeweils eine Kopie jeder kodierten Karte. Die Kopien werden nicht kodiert. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Spiele jeweils eine Kopie jeder kodierten Karte. Die Kopien werden nicht kodiert."
   },
@@ -488,7 +488,7 @@
     ]
   },
   "bronze:ThunderWave": {
-    "NAME": "Donnerwelle",
+    "NAME": "Blitzableiter",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte 1 guardianmod:Puffer. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       " NL (Trifft ",
@@ -520,7 +520,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte genauso viele *Kleine *Strahlen+. NL Erschöpft."
   },
   "bronze:WhirlingStrike": {
-    "NAME": "Durchschuss",
+    "NAME": "Bronzestrahl",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "dringendes",

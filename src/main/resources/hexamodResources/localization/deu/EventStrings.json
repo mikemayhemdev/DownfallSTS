@@ -18,7 +18,7 @@
       "[Verjagen] #gErhalte #geine #bfluchbannende #bKerze. #rVerliere #r5 #rTP.",
       "[Verjagen] Verlassen.",
       "[Verlange Macht] #gErhalte eine #gzufällige #yseltene #gKarte. #rVerflucht #r- #rzufällig.",
-      "[Verlange Leben] #gErhalte #g12 #gMax #gTP. #rVerflucht #r- #rzufällig.",
+      "[Verlange Leben] #gErhalte #g12 #gmax. #gTP. #rVerflucht #r- #rzufällig.",
       "[Verlange Seelen] #gErhalte #g180 #gSeelen. #rVerflucht #r- #rzufällig.",
       "[Gesperrt] Geschäft abgeschlossen.",
       "[Verlassen]"
@@ -45,8 +45,8 @@
       "[Gesperrt] Opfer gebracht.",
       ". #gErhalte #gdas #gFünfte #gSiegel.",
       "[Gesperrt] Erfordert eine verbesserte Karte.",
-      " Max TP. #gErhalte #gdas #gSechste #gSiegel.",
-      "[Gesperrt] Erfordert 2 Max TP."
+      " max. TP. #gErhalte #gdas #gSechste #gSiegel.",
+      "[Gesperrt] Erfordert 2 max. TP."
     ]
   },
   "hexamod:HexaFalling": {
@@ -74,7 +74,7 @@
       ],
     "OPTIONS": [
       "[Annehmen] #rVerliere #r",
-      " #rMax #rTP. Schalte Studieren und Lernen frei.",
+      " #rmax. #rTP. Schalte Studieren und Lernen frei.",
       "[Studieren] #rVerliere #ralle #rSchläge. #gErhalte #g3 #gGeisterstrafen.",
       "[Lernen] #rVerliere #ralle #rVerteidigen Karten. #gErhalte #g",
       "[Abschließen]",

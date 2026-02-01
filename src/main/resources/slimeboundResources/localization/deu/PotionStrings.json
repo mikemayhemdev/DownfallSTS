@@ -9,12 +9,12 @@
   "Slimebound:SlimyTonguePotion": {
     "NAME": "Schleimelixier",
     "DESCRIPTIONS": [
-      "Wenn in diesem Kampf #yGlibber angewendet wird, wird die Anzahl um #b",
-      " erhöht."
+      "Wenn in diesem Kampf #yGlibber angewendet wird, erhöhe die angewendete Anzahl um #b",
+      " [REMOVE_SPACE]."
     ]
   },
   "Slimebound:SpawnSlimePotion": {
-    "NAME": "Armee in der Flasche",
+    "NAME": "Armee aus der Flasche",
     "DESCRIPTIONS": [
       "#ySpalte #b",
       " zufällige Schleime ab (Normale und #ySpezialisten [REMOVE_SPACE])."
@@ -24,7 +24,7 @@
     "NAME": "Öliges Getränk",
     "DESCRIPTIONS": [
       "Nimm #b",
-      " zufällige Karten die 0 kosten auf die Hand."
+      " zufällige Karten, die 0 kosten, auf die Hand."
     ]
   }
 }

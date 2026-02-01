@@ -435,7 +435,7 @@
   },
   "collector:BonfireSpiritsCard": {
     "NAME": "Lagerfeuergeister",
-    "DESCRIPTION": "collector:Opfergabe. NL Heile !M! TP. NL Erhöhe deine Max TP um 1, falls die *geopferte Karte *selten war."
+    "DESCRIPTION": "collector:Opfergabe. NL Heile !M! TP. NL Erhöhe deine max. TP um 1, falls die *geopferte Karte *selten war."
   },
   "collector:BookOfStabbingCard": {
     "NAME": "Buch des Stechens",
@@ -575,7 +575,7 @@
   },
   "collector:PointyCard": {
     "NAME": "Pointy",
-    "DESCRIPTION": "Füge zweimal !D! Schaden zu. NL Ziehe eine Karte."
+    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu. NL Ziehe eine Karte."
   },
   "collector:RanwidCard": {
     "NAME": "Ranwid",

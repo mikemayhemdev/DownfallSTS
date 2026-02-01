@@ -20,7 +20,7 @@
   },
   "hexamod:BacktrackSmack": {
     "NAME": "Rückhandschelle",
-    "DESCRIPTION": "Füge zweimal !D! Schaden zu. NL Bewege dich hexamod:rückwärts."
+    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu. NL Bewege dich hexamod:rückwärts."
   },
   "hexamod:BurningQuestion": {
     "NAME": "Brennende Frage",
@@ -428,8 +428,8 @@
   },
   "hexamod:FifthSeal": {
     "NAME": "Sechstes Siegel",
-    "DESCRIPTION": "Flüchtig hexamod:Siegel. NL Erhöhe am Ende des Kampfes deine Max TP um !M!.",
-    "UPGRADE_DESCRIPTION": "hexamod:Siegel. NL Erhöhe am Ende des Kampfes deine Max TP um !M!."
+    "DESCRIPTION": "Flüchtig hexamod:Siegel. NL Erhöhe am Ende des Kampfes deine max. TP um !M!.",
+    "UPGRADE_DESCRIPTION": "hexamod:Siegel. NL Erhöhe am Ende des Kampfes deine max. TP um !M!."
   },
   "hexamod:SixthSeal": {
     "NAME": "Fünftes Siegel",

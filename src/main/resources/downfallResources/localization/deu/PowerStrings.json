@@ -2,14 +2,14 @@
   "downfall:FairyPotion": {
     "NAME": "Feenflasche",
     "DESCRIPTIONS": [
-      "Anstatt zu sterben, wird dieser Trank abgeworfen und die TP auf #b30% der Max TP geheilt.",
+      "Anstatt zu sterben, wird dieser Trank abgeworfen und die TP auf #b30% der max. TP geheilt.",
       "Ha! Feenflasche, du Depp!"
     ]
   },
   "downfall:CultistRevivePower": {
     "NAME": "Götzenanbetung",
     "DESCRIPTIONS": [
-      "Anstatt zu sterben, wird dieser Effekt aufgehoben und die TP auf #b50% der Max TP geheilt.",
+      "Anstatt zu sterben, wird dieser Effekt aufgehoben und die TP auf #b50% der max. TP geheilt.",
       "KRÄÄÄÄCHZ!"
     ]
   },
@@ -86,14 +86,14 @@
   "downfall:WatcherAngryPower": {
     "NAME": "Zurückhaltend",
     "DESCRIPTIONS": [
-      "Wenn die Seherin am Ende deines Zuges #b50% oder weniger ihrer Max TP hat, nimmt sie #yZorn an. NL Durch #yZorn wird nur #b50% zusätzlicher Schaden hinzugefügt und erlitten, anstelle von #b100% [REMOVE_SPACE].",
+      "Wenn die Seherin am Ende deines Zuges #b50% oder weniger ihrer max. TP hat, nimmt sie #yZorn an. NL Durch #yZorn wird nur #b50% zusätzlicher Schaden hinzugefügt und erlitten, anstelle von #b100% [REMOVE_SPACE].",
       "Durch #yZorn wird nur #b50% zusätzlicher Schaden hinzugefügt und erlitten, anstelle von #b100% [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowUnbridledRage": {
     "NAME": "Ungezügelte Rage",
     "DESCRIPTIONS": [
-      "Wenn Niau am Ende deines Zuges #b50% oder weniger ihrer Max TP hat, erhält sie #b6 #yStärke. NL Dieser Effekt wird nur ein Mal pro Kampf aktiviert."
+      "Wenn Niau am Ende deines Zuges #b50% oder weniger ihrer max. TP hat, erhält sie #b6 #yStärke. NL Dieser Effekt wird nur ein Mal pro Kampf aktiviert."
     ]
   },
   "downfall:WatcherCripplePower": {
@@ -270,8 +270,8 @@
   "downfall:IroncladMushroomPower": {
     "NAME": "Fressanfall",
     "DESCRIPTIONS": [
-      "#ySchnitter #yErschöpft nicht und trifft zusätzlich ALLE Pilze. NL Wenn der Eiserne einen Pilz tötet, erhält er #b1 #yStärke [REMOVE_SPACE].",
-      "#ySchnitter #yErschöpft nicht und trifft zusätzlich ALLE Pilze. NL Wenn der Eiserne einen Pilz tötet, erhält er #b",
+      "#ySchnitter #yErschöpft nicht und trifft zusätzlich ALLE #yPilze. NL Wenn der Eiserne einen #yPilz tötet, erhält er #b1 #yStärke [REMOVE_SPACE].",
+      "#ySchnitter #yErschöpft nicht und trifft zusätzlich ALLE #yPilze. NL Wenn der Eiserne einen #yPilz tötet, erhält er #b",
       " #yStärke [REMOVE_SPACE]."
     ]
   },
@@ -316,7 +316,7 @@
   "downfall:CrowbotRitualPower": {
     "NAME": "Umprogrammieren:Ritual",
     "DESCRIPTIONS": [
-      "Wenn #yCrowBot #b50% oder weniger seiner Max TP hat, verliert es #b3 TP und erhält #b",
+      "Wenn #yCrowBot #b50% oder weniger seiner max. TP hat, verliert es #b3 TP und erhält #b",
       " #yStärke am Ende seines Zuges."
     ]
   },
@@ -496,7 +496,7 @@
     "NAME": "Leere Hülle",
     "DESCRIPTIONS": [
       "Wenn die leere Hülle stirbt, heilt sie alle TP des Defekten und entfernt einen seiner #ySchatten Orbs.",
-      " Erhält 5 Max TP für jedes Mal, wenn dieser Effekt zum Einsatz kommt."
+      " Erhält 5 max. TP für jedes Mal, wenn dieser Effekt zum Einsatz kommt."
     ]
   }
 }

@@ -112,9 +112,9 @@
     "NAME": "Das pure Böse",
     "DESCRIPTIONS": [
       "Füge ALLEN Gegnern #b",
-      " Schaden zu nachdem du #b",
-      " weitere Debuffs anwendest.",
-      " weiteren Debuff anwendest."
+      " Schaden zu, nachdem du #b",
+      " weitere Debuffs angewendet hast.",
+      " weiteren Debuff angewendet hast."
     ]
   },
   "expansioncontent:ReveriePower":{
@@ -130,10 +130,10 @@
     "NAME": "Unverwundbar",
     "DESCRIPTIONS": [
       "Verhindert jeglichen TP-Verlust, der innerhalb eines Zuges über #b",
-      " hinausgeht. Entferne diesen Effekt, nachdem er aktiviert wurde.",
+      " hinausgeht. Entferne diesen Effekt am Ende des Zuges, wenn er TP-Verlust verhindert hat.",
       "Verhindert jeglichen TP-Verlust, der innerhalb eines Zuges über #b",
-      " hinausgeht. Entferne diesen Effekt, nachdem er #b",
-      " Mal aktiviert wurde."
+      " hinausgeht. Entferne 1 #yUnverwundbar am Ende des Zuges, wenn es TP-Verlust verhindert hat (noch #b",
+      " übrig)."
     ]
   }
 }

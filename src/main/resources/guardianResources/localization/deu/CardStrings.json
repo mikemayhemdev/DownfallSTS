@@ -67,7 +67,7 @@
     "NAME": "Wächter-Wind",
     "DESCRIPTION": "Füge ALLEN Gegnern 2 Mal !D! Schaden zu. NL Wenn du mindestens 16 Block hast, füge den Schaden !M! weitere Male zu.",
     "EXTENDED_DESCRIPTION": [
-      "Mehr Block benötigt."
+      "Benötigt mehr Block."
     ]
   },
   "Guardian:VentSteam": {
@@ -95,7 +95,7 @@
   },
   "Guardian:FloatingOrbs": {
     "NAME": "Schwebende Orbs",
-    "DESCRIPTION": "Immer wenn du eine Karte ausspielst die 0 kostet, füge einem zufälligen Gegner !M! Schaden zu."
+    "DESCRIPTION": "Immer wenn du eine Karte ausspielst, die 0 kostet, füge einem zufälligen Gegner !M! Schaden zu."
   },
   "Guardian:OrbSlam": {
     "NAME": "Kugelknaller",
@@ -395,8 +395,8 @@
   },
   "Guardian:StasisEngine": {
     "NAME": "Stasismotor",
-    "DESCRIPTION": "Immer wenn du in einem Zug 3 Karten spielst die 0 kosten, Erhalte [E] und ziehe eine Karte.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Immer wenn du in einem Zug 3 Karten spielst die 0 kosten, Erhalte [E] und ziehe eine Karte."
+    "DESCRIPTION": "Wenn du in einem Zug die dritte Karte mit Kosten 0 spielst, erhalte [E] und ziehe eine Karte.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Wenn du in einem Zug die dritte Karte mit Kosten 0 spielst, erhalte [E] und ziehe eine Karte."
   },
   "Guardian:HammerDown": {
     "NAME": "Runterhämmern",
