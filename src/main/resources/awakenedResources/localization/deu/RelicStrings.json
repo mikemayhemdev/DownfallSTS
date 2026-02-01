@@ -20,7 +20,7 @@
     "FLAVOR": "Verleiht gesprochenen Worten auch außerhalb von Ritualen Macht.",
     "DESCRIPTIONS": [
       "Erhalte immer, wenn du eine Karte mit #yawakened:Chor spielst, #b",
-      " #yBlock [REMOVE_SPACE], selbst wenn der Effekt nicht aktiviert ist."
+      " #yBlock - auch wenn der Effekt nicht aktiviert ist."
     ]
   },
   "awakened:HexxBomb": {
@@ -65,7 +65,7 @@
     "FLAVOR": "...nein, nicht diese Art von Fokus.",
     "DESCRIPTIONS": [
       "Beginne jeden Kampf mit #b",
-      " #yStärke [REMOVE_SPACE]. Verliere diese #yStärke wieder sobald du das erste Mal im Kampf TP verlierst."
+      " #yStärke [REMOVE_SPACE]. Verliere diese #yStärke wieder, sobald du das erste Mal im Kampf TP verlierst."
     ]
   },
   "awakened:VioletPlumage": {
@@ -87,7 +87,7 @@
     "NAME": "Krächzendes Fass",
     "FLAVOR": "Ein zeremoniell beschnitztes Fass, das den Krähengott Mazaleth darstellt. Der Inhalt riecht äußerst fragwürdig...",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du einen Trank benutzt #b",
+      "Erhalte immer, wenn du einen Trank benutzt, #b",
       " #yRitual [REMOVE_SPACE]."
     ]
   },
@@ -102,7 +102,7 @@
     "NAME": "Papierkrähe",
     "FLAVOR": "Der Gebieter von Flüchen und Zweifel - ein Tausend Mal gefaltet...",
     "DESCRIPTIONS": [
-      "Gegner verlieden um #b",
+      "Gegner verlieren um #b",
       "% mehr TP durch #yawakened:Manabrand [REMOVE_SPACE]."
     ]
   },

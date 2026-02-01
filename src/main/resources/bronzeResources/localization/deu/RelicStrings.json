@@ -3,7 +3,7 @@
     "NAME": "Bronzekern",
     "FLAVOR": "Hält 50.000 Jahre.",
     "DESCRIPTIONS": [
-      "Erhalte [E] wenn du das erste Mal im Kampf eine #yFunktion #ykompilierst."
+      "Erhalte [E] , wenn du das erste Mal im Kampf eine #yFunktion #ykompilierst."
     ]
   },
   "bronze:ProtectiveGoggles": {
@@ -16,7 +16,7 @@
   },
   "bronze:DecasWashers": {
     "NAME": "Dekas Dichtungen",
-    "FLAVOR": "Es ist nicht ganz klar warum Deka sie sammelt.",
+    "FLAVOR": "Es ist nicht ganz klar, warum Deka sie sammelt.",
     "DESCRIPTIONS": [
       "Ziehe zu Beginn deiner ersten #b",
       " Züge jeweils eine zusätzliche Karte."
@@ -26,7 +26,7 @@
     "NAME": "Frostige Grundierung",
     "FLAVOR": "22 Miligramm des Isotops Ne22 - Lebensdauer: 22 Jahre. Zu lagern in einem Mahagonikühlschrank.",
     "DESCRIPTIONS": [
-      "Alle #yFunktionen die du #ykompilierst erhalten #yBehalten [REMOVE_SPACE]."
+      "Alle #yFunktionen [REMOVE_SPACE], die du #ykompilierst erhalten #yBehalten [REMOVE_SPACE]."
     ]
   },
   "bronze:Mallet": {
@@ -54,7 +54,7 @@
     "NAME": "Kabeltrommel",
     "FLAVOR": "Verstrickt...",
     "DESCRIPTIONS": [
-      "Die erste Karte die im Kampf #ybronze:kodiert wird, #ykodiert ein zweites Mal."
+      "Die erste Karte, die im Kampf #ybronze:kodiert wird, #ykodiert ein zweites Mal."
     ]
   },
   "bronze:ElectromagneticCoil": {
@@ -86,7 +86,7 @@
   },
   "bronze:DonusWashers": {
     "NAME": "Donus Dichtungen",
-    "FLAVOR": "Es ist offensichtlich warum Donu sie sammelt.",
+    "FLAVOR": "Es ist offensichtlich, warum Donu sie sammelt.",
     "DESCRIPTIONS": [
       "Erhalte im ersten Zug jedes Kampfes [E] [E] und mische #b1 #yLeere in den Nachziehstapel."
     ]
