@@ -43,7 +43,7 @@
       "reserve",
       "reserves"
     ],
-    "DESCRIPTION": "Eine zweite Energiequelle, die angezapft wird wenn die reguläre Energie erschöpft ist. Reserve verfällt nicht am Ende des Zuges"
+    "DESCRIPTION": "Eine zweite Energiequelle, die angezapft wird wenn die reguläre Energie erschöpft ist. Reserve verfällt nicht am Ende des Zuges."
   },
   {
     "PROPER_NAME": "Superflüchtig",

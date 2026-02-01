@@ -399,7 +399,7 @@
   },
   "hexamod:VolcanoVisage": {
     "NAME": "Vulkanvisage",
-    "DESCRIPTION": "Wende immer wenn du eine Geisterflamme hexamod:entzündest !M! hexamod:Seelenfeuer auf ALLE Gegner an."
+    "DESCRIPTION": "Wende immer, wenn du eine Geisterflamme hexamod:entzündest, !M! hexamod:Seelenfeuer auf ALLE Gegner an."
   },
   "hexamod:WildfireWeapon": {
     "NAME": "Brandstiftung",

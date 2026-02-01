@@ -57,7 +57,7 @@
     "NAME": "Klinge der Leere",
     "FLAVOR": "Ungültige Rückerstattung.",
     "DESCRIPTIONS": [
-      "Das erste Mal wenn du im Zug #yawakened:ausgelaugt bist, ziehe eine Karte und erhalte [E] ."
+      "Das erste Mal, wenn du im Zug #yawakened:ausgelaugt bist, ziehe eine Karte und erhalte [E] ."
     ]
   },
   "awakened:ShardOfNowak": {

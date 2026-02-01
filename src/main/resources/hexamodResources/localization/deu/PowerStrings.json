@@ -197,7 +197,7 @@
   "hexamod:VolcanoVisagePower": {
     "NAME": "Vulkanvisage",
     "DESCRIPTIONS": [
-      "Wende immer, wenn du eine Geisterflamme #yentzündest, #b",
+      "Wende immer, wenn du eine Geisterflamme #yentzündest [REMOVE_SPACE], #b",
       " #ySeelenfeuer auf ALLE Gegner an."
     ]
   },
@@ -216,7 +216,7 @@
   "hexamod:SoulburnOnExhaustPower": {
     "NAME": "Seelenfeuer-Befall",
     "DESCRIPTIONS": [
-      "Immer wenn in diesem Zug eine Karte #yErschöpft wende #b",
+      "Immer wenn in diesem Zug eine Karte #yerschöpft [REMOVE_SPACE], wende #b",
       " #ySeelenfeuer auf diesen Gegner an."
     ]
   },

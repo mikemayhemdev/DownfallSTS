@@ -92,7 +92,7 @@
     "DESCRIPTION": "Behalten. NL Entferne !M! Gift."
   },
   "expansioncontent:AntidoteAsPower": {
-    "NAME": "Keine Zurückhaltung",
+    "NAME": "Volle Offensive",
     "DESCRIPTION": "Behalten. NL Immer wenn du ungeblockten Angriffsschaden zufügst, entferne !M! von deinem Gift."
   },
   "expansioncontent:SuperGhostShield": {
@@ -173,11 +173,11 @@
 
   "expansioncontent:Virus": {
     "NAME": "Trojaner",
-    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. bronze:Setze pro erschöpfter Karte einen *Hypostrahl *ein. NL Erschöpft."
+    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. bronze:Setze pro erschöpfter Karte einen *Schnellen *Strahl *ein. NL Erschöpft."
   },
 
   "expansioncontent:MajorBeam": {
-    "NAME": "Hypostrahl",
+    "NAME": "Schneller Strahl",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karte.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten."
   },

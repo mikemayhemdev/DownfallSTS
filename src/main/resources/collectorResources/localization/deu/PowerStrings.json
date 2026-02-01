@@ -24,9 +24,9 @@
   "collector:Crackle": {
     "NAME": "Pyromanie",
     "DESCRIPTIONS": [
-      "Erhalte zu Beginn deines Zuges #b1 #yReserve.",
+      "Erhalte zu Beginn deines Zuges #b1 #yReserve [REMOVE_SPACE].",
       "Erhalte zu Beginn deines Zuges #b",
-      " #yReserve."
+      " #yReserve [REMOVE_SPACE]."
     ]
   },
   "collector:DarkLordForm": {
@@ -40,7 +40,7 @@
   "collector:DarkLordFormPlus": {
     "NAME": "Schattenlord Form+",
     "DESCRIPTIONS": [
-      "Spiele zu Beginn deines Zuges #yDu #yGehörst #yMir+ auf einen zufälligen Gegner..",
+      "Spiele zu Beginn deines Zuges #yDu #yGehörst #yMir+ auf einen zufälligen Gegner.",
       "Spiele zu Beginn deines Zuges #yDu #yGehörst #yMir+ auf #b",
       " zufällige Gegner."
     ]
@@ -58,7 +58,7 @@
     "NAME": "Verdammnis",
     "DESCRIPTIONS": [
       "Verliert zu Beginn seines Zuges #b",
-      " TP. Sämtliche #yVerdammnis wird danach entfernt, es sei denn, der Gegner ist #ygeplagt."
+      " TP. Sämtliche #yVerdammnis wird danach entfernt - es sei denn, der Gegner ist #ygeplagt [REMOVE_SPACE]."
     ]
   },
   "collector:DoublePlayCollectibles": {
@@ -124,16 +124,16 @@
   "collector:NextTurnReserve": {
     "NAME": "Reservevorrat",
     "DESCRIPTIONS": [
-      "Erhalte zu Beginn deines nächsten Zuges #b1 #yReserve.",
+      "Erhalte zu Beginn deines nächsten Zuges #b1 #yReserve [REMOVE_SPACE].",
       "Erhalte zu Beginn deines nächsten Zuges #b",
-      " #yReserve."
+      " #yReserve [REMOVE_SPACE]."
     ]
   },
   "collector:Omen": {
-    "NAME": "Omen",
+    "NAME": "Vorbote",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du ein #ySammlerstück spielst #b",
-      " #yStärke."
+      "Erhalte immer, wenn du ein #ySammlerstück spielst, #b",
+      " #yStärke [REMOVE_SPACE]."
     ]
   },
   "collector:ProtectingCall": {
@@ -155,9 +155,9 @@
   "collector:Reserve": {
     "NAME": "Reserve",
     "DESCRIPTIONS": [
-      "You have #b1 #yReserve.",
-      "You have #b",
-      " #yReserve."
+      "Du hast #b1 #yReserve [REMOVE_SPACE].",
+      "Du hast #b",
+      " #yReserve [REMOVE_SPACE]."
     ]
   },
   "collector:Soulforge": {
@@ -235,7 +235,7 @@
     "NAME": "Aufladen",
     "DESCRIPTIONS": [
       "Erhalte im nächsten Zug #b",
-      " #yElan."
+      " #yElan [REMOVE_SPACE]."
     ]
   },
   "collector:ThievesCard": {
@@ -278,7 +278,7 @@
     "NAME": "Elan in Reserve",
     "DESCRIPTIONS": [
       "Erhalte zu Beginn deines nächsten Zuges #b",
-      " #yElan."
+      " #yElan [REMOVE_SPACE]."
     ]
   },
   "collector:AcidSlimeCard": {
@@ -293,14 +293,14 @@
     "NAME": "Erzürnen",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du eine #yFertigkeit spielst #b",
-      " #yElan."
+      " #yElan [REMOVE_SPACE]."
     ]
   },
   "collector:LanternFlare": {
     "NAME": "Todeslaterne",
     "DESCRIPTIONS": [
       "Erhält am Ende seines Zuges #b",
-      " #yVerdammnis."
+      " #yVerdammnis [REMOVE_SPACE]."
     ]
   },
   "collector:WomanInBlueCard": {

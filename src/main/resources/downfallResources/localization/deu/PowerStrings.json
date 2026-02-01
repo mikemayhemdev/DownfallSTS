@@ -64,7 +64,7 @@
     ]
   },
   "downfall:PoisonResist": {
-    "NAME": "Keine Zurückhaltung",
+    "NAME": "Volle Offensive",
     "DESCRIPTIONS": [
       "Immer wenn du ungeblockten Schaden durch einen #yAnngriff zufügst, entferne #b",
       " #yGift."

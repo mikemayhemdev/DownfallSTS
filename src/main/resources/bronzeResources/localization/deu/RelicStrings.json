@@ -37,10 +37,10 @@
     ]
   },
   "bronze:SilverBullet": {
-    "NAME": "Silberkugel",
-    "FLAVOR": "Spirewölfe sind doch schon ausgestorben.",
+    "NAME": "Bronzekugel",
+    "FLAVOR": "Nicht effektiv gegen Spirewölfe - zum Glück sind sie schon ausgestorben.",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn jedes Kampfes einen #yDurchschuss auf die Hand. Er kostet #b0 [REMOVE_SPACE]."
+      "Nimm zu Beginn jedes Kampfes einen #yBronzestrahl auf die Hand. Er kostet #b0 [REMOVE_SPACE]."
     ]
   },
   "bronze:MakeshiftBattery": {

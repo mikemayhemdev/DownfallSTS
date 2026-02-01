@@ -24,8 +24,8 @@
     "NAME": "Destruktor",
     "DESCRIPTION": "Angeboren. NL \u00A0 Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - Die Funktion erschöpft.",
     "EXTENDED_DESCRIPTION": [
-      "feiges",
-      "Folgen"
+      "brutales",
+      "Zerstören"
     ]
   },
   "bronze:BetaBuild": {
@@ -304,8 +304,8 @@
   },
   "bronze:InfiniteBeams": {
     "NAME": "Zahllose Strahlen",
-    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges einen *Kleinen *Strahl.",
-    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn jedes Zuges einen *Kleinen *Strahl+."
+    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges einen *hypostrahl.",
+    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn jedes Zuges einen *hypostrahl+."
   },
   "bronze:InfiniteLoop": {
     "NAME": "Endlosschleife",
@@ -516,11 +516,11 @@
   },
   "bronze:Virus": {
     "NAME": "Virus",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte genauso viele *Kleine *Strahlen. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte genauso viele *Kleine *Strahlen+. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte genauso viele *hypostrahlen. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte genauso viele *hypostrahlen+. NL Erschöpft."
   },
   "bronze:WhirlingStrike": {
-    "NAME": "Bronzestrahl",
+    "NAME": "Bronzegeschoss",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "dringendes",
@@ -617,11 +617,11 @@
     ]
   },
   "bronze:MinorBeam": {
-    "NAME": "Kleiner Strahl",
+    "NAME": "hypostrahl",
     "DESCRIPTION": "Füge !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "kleines",
-      "Kratzen"
+      "Leuchten"
     ]
   },
   "bronze:Spike": {

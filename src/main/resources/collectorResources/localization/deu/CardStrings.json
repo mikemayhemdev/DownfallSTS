@@ -1,6 +1,6 @@
 {
   "collector:ActOfAggression": {
-    "NAME": "Akt der Aggression",
+    "NAME": "Aggression",
     "DESCRIPTION": "Erhalte !B! Block. NL Wende !M! Verwundbar auf ALLE Gegner an."
   },
   "collector:AlwaysMore": {
@@ -286,9 +286,9 @@
     ]
   },
   "collector:Omen": {
-    "NAME": "Omen",
-    "DESCRIPTION": "Erhalte immer wenn du ein *Sammlerstück spielst 1 Stärke.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer wenn du ein *Sammlerstück spielst 1 Stärke."
+    "NAME": "Vorbote",
+    "DESCRIPTION": "Erhalte immer, wenn du ein *Sammlerstück spielst, 1 Stärke.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer, wenn du ein *Sammlerstück spielst, 1 Stärke."
   },
   "collector:ProtectingCall": {
     "NAME": "Schützender Ruf",
@@ -443,7 +443,7 @@
   },
   "collector:BronzeOrbCard": {
     "NAME": "Bronzeorb",
-    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Die oberste Karte des Nachziehstapel kostet 0 bis du sie spielst."
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Die oberste Karte des Nachziehstapels kostet 0 bis du sie spielst."
   },
   "collector:ByrdCard": {
     "NAME": "Fogl",
@@ -623,7 +623,7 @@
   },
   "collector:SneckoCard": {
     "NAME": "Snecko",
-    "DESCRIPTION": "Ziehe !M! Karten. NL sneckomod:Irre deine Hand."
+    "DESCRIPTION": "Ziehe !M! Karten. NL sneckomod:Irre alle Handkarten."
   },
   "collector:SphericGuardianCard": {
     "NAME": "Sphären-Wächter",

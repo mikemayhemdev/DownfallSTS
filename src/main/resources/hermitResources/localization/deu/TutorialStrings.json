@@ -79,8 +79,8 @@
   },
   "HermitMod:SneckoTutorials": {
     "TEXT": [
-      "Snecko kann Karten #yirren, um ihre Kosten für den Zug auf einen Zufallswert zwischen 0 and 3 zu verändern. Durch das Irren werden die Kosten immer verändert - die Kosten welche die Karte vor dem Irren hatte sind vom Ergebnis ausgeschlossen.",
-      "Snecko kann auch #yGeschenkkarten finden. Diese Karten geben Snecko beim Aufheben eine weitere Karte eines anderen Charakters."
+      "Snecko kann Karten #yirren, um ihre Kosten für den Zug auf einen Zufallswert zwischen 0 and 3 zu verändern. Durch das Irren werden die Kosten IMMER verändert.",
+      "Snecko kann auch #yGeschenkkarten finden. Diese Karten geben Snecko beim Aufheben eine weitere Kartenbelohnung - allerdings nur Karten anderer Charaktere bzw Klassen (auch #yFremdklassen genannt)."
     ],
     "LABEL": [
       "Weiter",
