@@ -34,8 +34,8 @@
       "Ausruhen",
       "Heile jeden Gremlin um 100% der max. TP (",
       " TP von ",
-      "Heile jeden Gremlin um 100% der max. TP (",
-      "Sind Gremlins tot wird ein zufälliger wiederbelebt."
+      "Heile jeden Gremlin um 30% der max. TP (",
+      "Sind Gremlins tot, wird ein zufälliger wiederbelebt."
     ]
   },
   "Gremlin:Swap": {
@@ -48,7 +48,7 @@
   "Gremlin:ArtMode": {
     "TEXT": [
       "Gremlinbild-Modus",
-      "Gremlins machen sich auf dem Kartentext breit. Ändert nur das Visuelle. Erleichtert das Finden von Synergien."
+      "Die Gremlins machen sich auf den Kartentexten breit und erleichtern so das Finden bzw. Verstehen von Synergien. Hat keine Auswirkungen auf die Karteneffekte."
     ]
   },
   "Gremlin:BonusGold": {
