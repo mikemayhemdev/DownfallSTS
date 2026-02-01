@@ -520,7 +520,7 @@
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte genauso viele *hypostrahlen+. NL Erschöpft."
   },
   "bronze:WhirlingStrike": {
-    "NAME": "Bronzegeschoss",
+    "NAME": "Bronzegeschütz",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "dringendes",
