@@ -17,7 +17,7 @@
     ]
   },
   "hexamod:ApplyBurnAtTurnStartOncePower": {
-    "NAME": "Verspätete Flamme",
+    "NAME": "Spätzünder",
     "DESCRIPTIONS": [
       "Wende zu Beginn des nächsten Zuges #b",
       " #ySeelenfeuer auf ALLE Gegner an."
@@ -25,9 +25,9 @@
     "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:BurnPerTurnPower": {
-    "NAME": "Schmelzendes Metall",
+    "NAME": "Heißes Eisen",
     "DESCRIPTIONS": [
-      "Wendet das nächste Mal, an dem das #ySeelenfeuer dieses Feindes detoniert #b",
+      "Wende das nächste Mal, an dem das #ySeelenfeuer dieses Feindes detoniert #b",
       " #ySeelenfeuer an."
     ],
     "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
@@ -60,8 +60,8 @@
   "hexamod:CrispyPower_new": {
     "NAME": "Extra knusprig",
     "DESCRIPTIONS": [
-      "Wenn #ySeelenfeuer an Gegnern detoniert, wende nach der Detonation #b",
-      " #ySeelenfeuer auf sie an."
+      "Wenn #ySeelenfeuer detoniert, dann wende umgehend nach der Detonation #b",
+      " #ySeelenfeuer an."
     ]
   },
   "hexamod:EnhancePower": {
@@ -82,7 +82,7 @@
     "TRANSLATOR_NOTE": "not used not used not used not used not used not used not used not used"
   },
   "hexamod:FuturePower": {
-    "NAME": "Im Schatten",
+    "NAME": "Aus dem Schatten",
     "DESCRIPTIONS": [
       "Die #b",
       " nächste gespielte Karte wird jedes Mal, wenn du dich #yrückwärts bewegst, #b0 kosten und #yerschöpfen [REMOVE_SPACE].",
@@ -243,7 +243,7 @@
     ]
   },
   "hexamod:PlayCardAndExhaustPower": {
-    "NAME": "In den Schatten schieben",
+    "NAME": "In den Schatten",
     "DESCRIPTIONS": [
       "Die nächste Karte die du spielst kostet #b0 und #yerschöpft [REMOVE_SPACE].",
       "Die nächsten #b",

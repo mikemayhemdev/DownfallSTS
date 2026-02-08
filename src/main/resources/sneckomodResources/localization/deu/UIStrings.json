@@ -1,7 +1,7 @@
 {
   "sneckomod:Unknown": {
     "TEXT": [
-      "Unidentifiziert",
+      "Unidentifizierte",
       " verbesserte ",
       "Zu Beginn des Kampfes nehmen unidentifizierte Karten die Gestalt einer zufälligen Karte an, die ins Schema passt.",
       " NL Gewählte Klassen:",
@@ -17,8 +17,8 @@
   "sneckomod:UnknownClass": {
     "TEXT": [
       "???",
-      "*Unidentifiziert ",
-      " Karte.",
+      " ",
+      " ",
       "Character",
       " ",
       "You should never see this. Report to Vex",
@@ -27,7 +27,7 @@
   },
   "sneckomod:UpgradedUnknownReward": {
     "TEXT": [
-      "Nimm eine verbesserte unidentifizierte Karte in dein Deck auf",
+      "Erhalte eine verbesserte unidentifizierte Karte",
       "Wähle eine Karte."
     ]
   },
@@ -58,19 +58,19 @@
   },
   "sneckomod:CommonAttackReward": {
     "TEXT": [
-      "Nimm eine Karte einer Fremdklasse in dein Deck auf",
+      "Erhalte eine Karte aus Fremdklassen",
       "Wähle eine Karte."
     ]
   },
   "sneckomod:DiceRollPotionReward": {
     "TEXT": [
-      "Nimm eine verbesserte Karte in dein Deck auf",
+      "Erhalte eine verbesserte Karte",
       "Wähle eine Karte."
     ]
   },
   "sneckomod:ColorfulPowersCardReward": {
     "TEXT": [
-      "Nimm eine verbesserte Machtkarte in dein Deck auf",
+      "Erhalte eine verbesserte Macht",
       "Wähle eine Karte."
     ]
   },

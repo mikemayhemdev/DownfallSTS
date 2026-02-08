@@ -13,7 +13,7 @@
     ]
   },
   "awakened:SacramentalWine": {
-    "NAME": "Messwein",
+    "NAME": "Sekten-Messwein",
     "DESCRIPTIONS": [
       "Erhalte immer wenn du in diesem Kampf eine #yMacht ausspielst #b",
       " #yBlock [REMOVE_SPACE]. Nimm eine zufällige #yMachtkarte auf die Hand. Sie kostet diesen Zug #b0 [REMOVE_SPACE]."
@@ -22,7 +22,7 @@
   "awakened:SneckoPowersPotion": {
     "NAME": "Snecko-Essenz",
     "DESCRIPTIONS": [
-      "Wähle #b1 von #b3 zufälligen #yMachtkarten einer #yFremdklasse. Nimm sie auf die Hand, sie kostet diesen Zug #b0.",
+      "Wähle #b1 von #b3 zufälligen #yMachtkarten einer #yFremdklasse. Nimm sie auf die Hand, sie kostet diesen Zug #b0 [REMOVE_SPACE].",
       "Wähle #b1 von #b3 zufälligen #yMachtkarten einer #yFremdklasse. Nimm #b",
       " Kopien auf die Hand, sie kosten diesen Zug #b0 [REMOVE_SPACE]."
     ]

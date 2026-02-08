@@ -40,7 +40,7 @@
     ],
     "NAME": "Plünderer",
     "DIALOG": [
-      "~Hey,~ du hast gar kein Gold!",
+      "~Hey,~ du hast ja gar kein Gold!",
       "@NEIIiiiin!@",
       "Jetzt bist du fällig, Trottel."
     ]
@@ -51,7 +51,7 @@
     "NAME": "Straßenräuber",
     "DIALOG": [
       "Erteilen wir ihm eine Lektion.",
-      "Dem zeigen wir wo es lang geht!"
+      "Dem zeigen wir, wo es lang geht!"
     ]
   },
   "downfall:Fortification": {

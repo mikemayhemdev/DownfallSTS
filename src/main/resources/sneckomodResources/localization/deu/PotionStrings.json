@@ -19,13 +19,13 @@
     "NAME": "Irrer Energietrank",
     "DESCRIPTIONS": [
       "#yIrre die #b",
-      " teuersten Karten auf der Hand. Karten die durch diesen Trank #ygerirrt werden können dadurch nicht #b3 kosten."
+      " teuersten Karten auf der Hand. Karten, die durch diesen Trank #ygerirrt werden, können dadurch nicht #b3 kosten."
     ]
   },
   "sneckomod:OffclassReductionPotion": {
     "NAME": "Exotischer Saft",
     "DESCRIPTIONS": [
-      "Karten aus #yfremden #yKlassen auf der Hand kosten #b",
+      "Handkarten aus #yFremdklassen kosten #b",
       " weniger."
     ]
   }

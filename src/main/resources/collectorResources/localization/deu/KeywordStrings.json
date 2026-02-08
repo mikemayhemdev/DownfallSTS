@@ -26,6 +26,7 @@
     "PROPER_NAME": "Opfergabe",
     "NAMES": [
       "opfergabe",
+      "opferst",
       "geopfert",
       "geopferte",
       "geopferten",
@@ -58,6 +59,6 @@
       "fackelkopf",
       "torchhead"
     ],
-    "DESCRIPTION": "Solange du üner #ytemporäre #yTP verfügst, aktiviert jeder Angriff die Fackelkopf-Effekte."
+    "DESCRIPTION": "Solange du über #ytemporäre #yTP verfügst, aktiviert jeder Angriff die Fackelkopf-Effekte."
   }
 ]

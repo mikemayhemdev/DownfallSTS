@@ -29,11 +29,11 @@
   },
   "downfall:ChampStances": {
     "NAME": "Neuer Herausforderer",
-    "DESCRIPTION": "Beginne jeden Kampf mit einer zufälligen Champ Haltung. Du erhältst einen Abschlusschlag. Alle Starter Karten erhalten Technique."
+    "DESCRIPTION": "Beginne jeden Kampf in einer zufälligen Champ Haltung. Du erhältst einen Abschlusschlag. Alle Basis Karten aktivieren den Fertigkeitsbonus."
   },
   "downfall:Enraging": {
     "NAME": "Letztes Aufgebot",
-    "DESCRIPTION": "Alle gegner erhalten Stärke und verlieren ihre Debuffs sobald sie weniger als 50% ihrer Max TP übrig haben."
+    "DESCRIPTION": "Alle Gegner erhalten Stärke und verlieren ihre Debuffs sobald sie weniger als 50% ihrer Max TP übrig haben."
   },
   "downfall:Analytical": {
     "NAME": "Analytisch",
@@ -41,7 +41,7 @@
   },
   "downfall:StatusAbuse": {
     "NAME": "Auferlegt",
-    "DESCRIPTION": "Beginne den Run mit einer Improvisierten Batterie, Donus Dichtungen, Dekas Dichtungen, Verbandskasten, und einem Bronzenen Götzen. All anderen Relikte werden durch Reife ersetzt."
+    "DESCRIPTION": "Beginne den Run mit einer Improvisierten Batterie, Donus Dichtungen, Dekas Dichtungen, Verbandskasten, und einem Bronzenen Götzen. Alle anderen Relikte werden durch Reife ersetzt."
   },
   "downfall:TooManyShivs": {
     "NAME": "Zu viele Messer",
