@@ -146,9 +146,13 @@
   "hexamod:PastPower": {
     "NAME": "Danza del Diablo",
     "DESCRIPTIONS": [
-      "Cada vez que #yRetrocedas, roba #b",
-      " carta.",
-      " cartas."
+      "La primera vez que #yAvances o #yRetrocedas cada turno, roba una carta.",
+      "Las primeras #b",
+      " vez que #yAvances o #yRetrocedas cada turno, roba una carta.",
+      " NL Este efecto puede activarse #b",
+      " veces más este turno.",
+      " vez más este turno.",
+      " NL Este efecto no se puede activar de nuevo este turno."
     ]
   },
   "hexamod:PotionPostCombatPower": {
