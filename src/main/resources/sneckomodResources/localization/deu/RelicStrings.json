@@ -14,7 +14,7 @@
     ]
   },
   "sneckomod:CleanMud": {
-    "NAME": "Schlangenbeschwörerflöte",
+    "NAME": "Sneckobeschwörerflöte",
     "FLAVOR": "Sssssss...",
     "DESCRIPTIONS": [
       "#ysneckomod:Geirrte Karten kosten niemals #b3 [REMOVE_SPACE]."
@@ -44,17 +44,17 @@
     ]
   },
   "sneckomod:RareBoosterPack": {
-    "NAME": "Seltenes Boosterpack",
+    "NAME": "Boosterpack",
     "FLAVOR": "Noch im Neuzustand.",
     "DESCRIPTIONS": [
       "Erhalte beim Aufheben eine #yseltene Karte einer #ysneckomod:Fremdklasse [REMOVE_SPACE]."
     ]
   },
   "sneckomod:SleevedAce": {
-    "NAME": "Ass im Ärmel",
+    "NAME": "Gezinkte Karte",
     "FLAVOR": "Wir alle sind Asse.",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn jedes Kampfes eine #yGezinkte #yKarte+ auf die Hand."
+      "Nimm zu Beginn jedes Kampfes ein #yFalschspielen+ auf die Hand."
     ]
   },
   "sneckomod:UnknownEgg": {
@@ -75,7 +75,7 @@
     "NAME": "Abbild der Retromation",
     "FLAVOR": "Oft als Retroabbild abgekürzt.",
     "DESCRIPTIONS": [
-      "Zu Beginn jedes Zuges kostet eine zufällige Handkarte #b1 weniger bis du sie spielst."
+      "Zu Beginn jedes Zuges kostet eine zufällige Handkarte #b1 weniger, bis du sie spielst."
     ]
   },
   "sneckomod:BlankCard": {
@@ -90,7 +90,7 @@
     "FLAVOR": "Es scheint auf einer Seite schwerer zu sein.",
     "DESCRIPTIONS": [
       "Wähle beim Aufheben eine Karte mit #ysneckomod:Überschuss Effekt. Wenn du sie spielst, erhalte #b4 #yBlock und aktiviere den #yÜberschuss Effekt, unabhängig von der Handgröße.",
-      "Wähle eine Karte für ",
+      "Wähle eine Karte für ein ",
       "Immer wenn du ",
       " spielst, erhalte #b4 #yBlock und aktiviere den #yÜberschuss Effekt, unabhängig von der Handgröße.",
       "Die eingelegte Karte wurde aus dem Deck #rentfernt [REMOVE_SPACE]. Das Relikt hat keine Wirkung mehr."
@@ -111,7 +111,7 @@
     ]
   },
   "sneckomod:SneckoBoss": {
-    "NAME": "Glücksbringer-Hufeisen",
+    "NAME": "Glücksbringer",
     "FLAVOR": "Sei deines Glückes Schmied.",
     "DESCRIPTIONS": [
       "Wähle beim Aufheben #b1 von #b3 #yCharakteren [REMOVE_SPACE]. Für diese Klasse: Wähle #b3 #yverbesserte ungewöhnliche Karten und #b2 seltene Karten. Erhalte nach jedem Kampf eine zusätzliche Kartenbelohnung.",

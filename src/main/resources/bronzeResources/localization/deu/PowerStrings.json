@@ -1,6 +1,6 @@
 {
   "bronze:Cloning": {
-    "NAME": "Mergen",
+    "NAME": "Code-Duplizierung",
     "DESCRIPTIONS": [
       "Die nächste Karte die #ykodiert wird, #ykodiert ein weiteres Mal.",
       "Die nächste Karte die #ykodiert wird, #ykodiert #b",
@@ -51,7 +51,7 @@
     ]
   },
   "bronze:Return": {
-    "NAME": "Retour",
+    "NAME": "Rückgängig",
     "DESCRIPTIONS": [
       "Ziehe zu Beginn deines nächsten Zuges #b1 Karte und erhalte [E] .",
       "Zu Beginn deiner nächsten #b",
@@ -81,7 +81,7 @@
     ]
   },
   "bronze:HardenedForm": {
-    "NAME": "Orb Beschwören",
+    "NAME": "Orb-Gehilfe",
     "DESCRIPTIONS": [
       "Immer wenn du eine Funktion spielst oder kompilierst, erhalte #b",
       " #yBlock und füge einem zufälligen Gegner #b",

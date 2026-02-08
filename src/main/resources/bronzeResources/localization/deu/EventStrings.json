@@ -52,17 +52,17 @@
   "bronze:CrystalForge": {
     "NAME": "Düstere Schmiede",
     "DESCRIPTIONS": [
-      "Durch Geheimgänge, die nur ein Konstrukt des Spire kennt, betrittst du eine Kammer die der Wartung und Reparatur von Automatonen gewidmet ist. Die Werkzeuge hier sind dir von großem Nutzen.",
+      "Durch Geheimgänge, die nur ein Konstrukt des Spire kennt, betrittst du eine Kammer, die der Wartung und Reparatur von Automatonen gewidmet ist. Die Werkzeuge hier sind dir von großem Nutzen.",
       "Mit der magischen Zange bettest du eine Waffe direkt in deinen Kern ein. #y@Bzzzt!@ Dich selbst zu kodieren ist nicht so einfach wie du dachtest.",
-      "Mit Hilfe des magischen Ambosses zerschlägst du ein Stück deiner Rüstung, um ihn dann in der Schmiede zu Energie zu konvertieren. Sie ~verschmilzt~ ~mit~ ~dir,~ und du spürst mit der Wärme neue Kräfte in dir.",
+      "Mit Hilfe des magischen Ambosses zerschlägst du ein Stück deiner Rüstung, um es dann in der Schmiede zu Energie zu konvertieren. Es ~verschmilzt~ ~mit~ ~dir,~ und du spürst mit der Wärme neue Kräfte in dir wachsen.",
       "Du wirfst einen entbehrlichen Teil deiner Rüstung in das magische Schmiedefeuer, das Materie umwandeln kann. Nach einiger Zeit hat sich das Material aufgelöst und in eine Verbesserung für deinen Panzer umgewandelt.",
       "Du verlässt die Schmiede auf den selben Weg, wie du sie betreten hast. Deine Reise geht weiter zur Dämmerung, die dich auf der Spitze des Spire erwartet.",
       "Wähle eine Karte zum Entfernen aus."
     ],
     "OPTIONS": [
       "[Kreieren] #gErhalte #gFlaschencode. #rVerliere #r10 #rMax #rTP.",
-      "[Umwandeln] #gRemove #ga #gCard. #gErhalte #geine #gzufällige #gKarte #gmit #gKodieren.",
-      "[Wiederverwerten] #rEntferne eine #yseltene Karte. #gErhalte #g10 #gMax #gTP #gund #gheile #gdeine #gTP #gkomplett.",
+      "[Umwandeln] #gTausche #geine #gKarte #ggegen #geine #gzufällige #gKarte #gmit #gKodieren.",
+      "[Verwerten] #rEntferne eine #yseltene Karte. #gErhalte #g10 #gMax #gTP #gund #gheile #gdich.",
       "[Gesperrt] Bereits benutzt.",
       "[Verlassen]",
       "[Gesperrt] Erfordert eine Karte mit Kodieren.",

@@ -46,7 +46,7 @@
       "robust",
       "rugged"
       ],
-    "DESCRIPTION": "Reduziert den nächsten erlitennen TP-Verlust durch Angriffschaden zu #b2."
+    "DESCRIPTION": "Reduziert den nächsten erlitennen TP-Verlust durch Angriffschaden zu #b2 [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Kopfgeld",
@@ -55,7 +55,7 @@
       "kopfgeld",
       "bounty"
     ],
-    "DESCRIPTION": "Normaler Gegner: #b15 Gold.    Elite Gegner: #b35 Gold.             Boss: #b75 Gold."
+    "DESCRIPTION": "Normaler Gegner: #b15 Gold. NL Elitegegner: #b35 Gold. NL Boss: #b75 Gold."
   },
   {
     "PROPER_NAME": "Betäuben",
@@ -64,6 +64,6 @@
       "betäube",
       "betäuben"
     ],
-    "DESCRIPTION": "Betäubte Gegner übergehen ihren nächsten Zug."
+    "DESCRIPTION": "Betäubte Wesen übergehen ihren nächsten Zug."
   }
 ]

@@ -58,7 +58,7 @@
       "extinguish",
       "extinguished"
     ],
-    "DESCRIPTION": "Erlaubt es, eine Geisterflamme erneut durch die spezifischen Anforderungen zu #yentzünden."
+    "DESCRIPTION": "Löscht #yentzündete Geisterflammen und erlaubt es, sie erneut durch die spezifischen Anforderungen zu #yentzünden."
   },
   {
     "PROPER_NAME": "Entzünden",

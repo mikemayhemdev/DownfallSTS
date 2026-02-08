@@ -7,7 +7,7 @@
     ]
   },
   "Guardian:DefensiveModePotion": {
-    "NAME": "Politur",
+    "NAME": "Panzerpolitur",
     "DESCRIPTIONS": [
       "Erhalte #b",
       " #yBlock [REMOVE_SPACE]. Wechsle in den #yDefensivmodus [REMOVE_SPACE]."
@@ -16,7 +16,7 @@
   "Guardian:BlockOnCardUsePotion": {
     "NAME": "Rüstungstinktur",
     "DESCRIPTIONS": [
-      "Erhalte jedes Mal wenn du in diesem Zug eine Karte spielst #b",
+      "Erhalte jedes Mal, wenn du in diesem Zug eine Karte spielst, #b",
       " #yBlock."
     ]
   },
@@ -24,8 +24,8 @@
     "NAME": "Quantum Elixier",
     "DESCRIPTIONS": [
       "Erhalte Stasis-Slots bis du #b",
-      " hast. NL Wiederhole #b",
-      " Mal: wähle #b1 von #b3 Karten aus, um sie in #yStasis zu legen."
+      " hast. NL Führe folgendes #b",
+      " Mal aus: wähle #b1 von #b3 Karten aus, um sie in #yStasis zu legen."
     ]
   }
 }
