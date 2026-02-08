@@ -68,11 +68,11 @@ public class BustKeyEffect extends AbstractGameEffect {
                     while (containsDupe) {
                         containsDupe = false;
 
-                        if (card instanceof AbstractGemCard) {
-                            containsDupe = true;
-                            card = AbstractDungeon.getCard(rarity).makeCopy();
-                            break;
-                        }
+//                        if (card instanceof AbstractGemCard) {
+//                            containsDupe = true;
+//                            card = AbstractDungeon.getCard(rarity).makeCopy();
+//                            break;
+//                        }
 
                         var6 = group.group.iterator();
 
@@ -114,6 +114,7 @@ public class BustKeyEffect extends AbstractGameEffect {
             if (CampfireUI.hidden) {
                 AbstractRoom.waitTimer = 0.0F;
                 if (AbstractDungeon.getCurrRoom() instanceof RestRoom) {
+                    GuardianMod.socketBonfireOption.reCheck();
                     ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI.reopen();
                     // there was a bug with the fire sound persisting and I'm not sure why,
                     // so this is basically a randomly thrown out preventative measure.
