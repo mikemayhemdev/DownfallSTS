@@ -34,7 +34,7 @@ public class D8 extends AbstractImageEvent {
     }
 
     public D8() {
-        super(NAME, DESCRIPTIONS[0], "sneckomodResources/images/events/D8.png");
+        super(NAME, DESCRIPTIONS[0], "images/events/shrine3.jpg");
         this.screen = CurScreen.INTRO;
         this.noCardsInRewards = true;
         this.finalDmg = AbstractDungeon.ascensionLevel >= 15 ? 15 : 10;
