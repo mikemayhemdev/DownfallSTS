@@ -27,7 +27,7 @@ public class MinorLeagueArena extends AbstractImageEvent {
     private CurScreen screen;
 
     public MinorLeagueArena() {
-        super(NAME, DESCRIPTIONS[0], "images/events/colosseum.jpg");
+        super(NAME, DESCRIPTIONS[0], "champResources/images/events/minorarena.png");
 
         this.screen = CurScreen.INTRO;
         this.imageEventText.clearAllDialogs();

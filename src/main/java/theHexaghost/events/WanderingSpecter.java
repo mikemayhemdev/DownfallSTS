@@ -49,7 +49,7 @@ public class WanderingSpecter extends AbstractImageEvent {
     private boolean shopForMore2;
 
     public WanderingSpecter() {
-        super(NAME, DESCRIPTIONS[0], (downfallMod.assetPath("images/events/soulShrine.png")));
+        super(NAME, DESCRIPTIONS[0], "hexamodResources/images/events/specter.png");
         this.screen = CurScreen.INTRO;
         this.noCardsInRewards = true;
 

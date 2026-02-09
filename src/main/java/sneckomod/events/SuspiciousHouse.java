@@ -31,7 +31,7 @@ public class SuspiciousHouse extends AbstractImageEvent {
     private boolean postFightTriggered = false;
 
     public SuspiciousHouse() {
-        super(NAME, DESCRIPTIONS[0], (downfallMod.assetPath("images/events/mausoleumNoSpirit.png")));
+        super(NAME, DESCRIPTIONS[0], (downfallMod.assetPath("images/events/soulShrine.png")));
         this.screen = CurScreen.INTRO;
         this.noCardsInRewards = true;
 

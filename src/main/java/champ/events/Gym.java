@@ -38,7 +38,7 @@ public class Gym extends AbstractImageEvent {
     private StanceChosen stance;
 
     public Gym() {
-        super(NAME, DESCRIPTIONS[0], "images/events/colosseum.jpg");
+        super(NAME, DESCRIPTIONS[0], "champResources/images/events/gym.png");
         this.screen = CurScreen.INTRO;
 
         this.imageEventText.setDialogOption(OPTIONS[0] + this.maxHP + OPTIONS[1]);
