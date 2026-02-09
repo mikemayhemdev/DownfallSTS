@@ -102,13 +102,13 @@
   "downfall:BonfireSpirits": {
     "NAME": "Geister des Lagerfeuers",
     "DESCRIPTIONS": [
-      "Gierig laben sich die Geister an deinem Opfer! Sie lodern nun heller und das Feuer brennt @doppelt@ so intensiv wie zuvor. NL Die geister Tanzen in Ekstase um dich bevor sie sich ~mit~ ~dir~ ~verschmelzen.~ Du fühlst ihre Wärme und Stärke in dir: NL Deine Max TP wurden erhöht und deine TP wurden #gkomplett #ggeheilt.",
+      "Gierig laben sich die Geister an deinem Opfer! Sie lodern nun heller und das Feuer brennt @doppelt@ so intensiv wie zuvor. NL Die geister Tanzen in Ekstase um dich bevor sie sich ~mit~ ~dir~ ~verschmelzen.~ Du fühlst ihre Wärme und Stärke in dir: NL Deine max. TP wurden erhöht und deine TP wurden #gkomplett #ggeheilt.",
       "Du #pgreifst mit deiner Hand nach ihnen... NL Die Geister @kreischen,@ doch können sie dem ~Strudel,~ der sich von deiner Handfläche ausbreitet nicht entkommen. NL Nun sind die Geister nichts weiter als ein weiteres Objekt in deiner Sammlung."
     ],
     "OPTIONS": [
-      "[Opfern] #rVerliere #r150 #rSeelen. #gErhalte #g10 #gMax #gTP #gund #gheile #gdeine #gTP #gkomplett.",
+      "[Opfern] #rVerliere #r150 #rSeelen. #gErhalte #g10 #gmax. #gTP #gund #gheile #gdeine #gTP #gkomplett.",
       "[Gesperrt] Erfordert 150 Seelen.",
-      "[Opfern] #rVerliere #r150 #rSeelen. #gErhalte #g2 #gMax #gTP #gund #gheile #galle #gGremlins.",
+      "[Opfern] #rVerliere #r150 #rSeelen. #gErhalte #g2 #gmax. #gTP #gund #gheile #galle #gGremlins.",
       "[Einsammeln]"
     ]
   },
@@ -294,7 +294,7 @@
   "downfall:Cleric": {
     "NAME": "Der Priester",
     "DESCRIPTIONS": [
-      "Ein seltsamer blauer Humanoider mit einem goldenen Helm (?) nähert sich dir grinsend. NL Nachdem ihm klar wird, wer du bist, verwandelt sich sein Grinsen schnell in einen Ausdruck großer Angst. NL ~„M-MONSTER!!“~ schreit er, und versucht zu fliehen.",
+      "Ein seltsamer blauer Humanoider mit einem güldenen Helm (?) nähert sich dir grinsend. NL Nachdem ihm klar wird, wer du bist, verwandelt sich sein Grinsen schnell in einen Ausdruck großer Angst. NL ~„M-MONSTER!!“~ schreit er, und versucht zu fliehen.",
       "Die Kreatur bricht nach einem einzigen Schlag zusammen, und übrig bleibt nur ein Haufen blaues Hackfleisch. Du absorbierst seine #ySeele und schreitest weiter voran.",
       "„Priester hilft! Priester hilft!“ bettelt das Wesen, als es in die Ecke gedrängt wurde. NL Eine kalte blaue Flamme umhüllt deinen Körper und zerstreut sich. NL Dieser \"Priester\" flieht daraufhin."
     ],
@@ -395,8 +395,8 @@
   "downfall:Beggar": {
     "NAME": "Alter Bettler",
     "DESCRIPTIONS": [
-      "Der Bettler nimmt seinen Mantel ab, und sichtbar wird ein seltsamer blauer Humanoider mit einem goldenen Helm (?). NL Nachdem ihm klar wird, wer du bist, verwandelt sich sein Grinsen schnell in einen Ausdruck großer Angst. NL ~„M-MONSTER!!“~ schreit er, und versucht zu fliehen.",
-      "Der Bettler sieht sich scheinbar verwirrt um. Zuerst ignoriert er dich, doch dann wendet er sich dir zu. NL „Hast du einen jungen, blauhäutigen Mann in der Nähe gesehen? Trägt einen komischen, goldenen Helm. Normalerweise lungert er in der Stadt herum, und gibt sein letztes Geld für Essen aus, das er uns spendet...“ NL Der Bettler meint bestimmt diesen #bPriester, um den du dich vor kurzem gekümmert hast.",
+      "Der Bettler nimmt seinen Mantel ab, und sichtbar wird ein seltsamer blauer Humanoider mit einem güldenen Helm (?). NL Nachdem ihm klar wird, wer du bist, verwandelt sich sein Grinsen schnell in einen Ausdruck großer Angst. NL ~„M-MONSTER!!“~ schreit er, und versucht zu fliehen.",
+      "Der Bettler sieht sich scheinbar verwirrt um. Zuerst ignoriert er dich, doch dann wendet er sich dir zu. NL „Hast du einen jungen, blauhäutigen Mann in der Nähe gesehen? Trägt einen komischen, güldenen Helm. Normalerweise lungert er in der Stadt herum, und gibt sein letztes Geld für Essen aus, das er uns spendet...“ NL Der Bettler meint bestimmt diesen #bPriester, um den du dich vor kurzem gekümmert hast.",
       "@„Hab@ @keine@ @Angst,@ @alter@ @Mann.@ @Du@ @wirst@ @deinen@ @Freund@ @schon@ @bald@ @wiedersehen.“@ NL NL Der Bettler kann keinen ernsthaften Widerstand leisten während du ihn niederstreckst. NL Voller #yStolz auf das, was du heute geleistet hast, verlässt du die Gasse.",
       "Dieser Mann hat bereits genug durch deine Taten gelitten. Du verschonst ihn und verlässt die Gasse.",
       "Der Bettler nimmt seinen Mantel ab, um zu offenbaren, dass er #bPriester ist! NL @„Du@ @bist@ @eine@ @böse@ @Seele.@ @Priester@ @hat@ @Bodyguards@ @angeheuert!“@ schreit er. NL NL Zwei riesige, vollausgerüstete Gestalten kommen aus der Gasse hervor. Sie ziehen ihre Waffen bevor du die Möglichkeit hast zu reagieren!",
@@ -491,7 +491,7 @@
     "OPTIONS": [
       "[Opfern] #rVerliere #r",
       " #rSeelen. #gErhalte #g",
-      " #gMax #gTP und #gheile #gdeine #gTP #gkomplett.",
+      " #gmax. #gTP und #gheile #gdeine #gTP #gkomplett.",
       "[Gesperrt] Efordert ",
       " Seelen.",
       " #rSeelen. #gJeder #gGremlin #gErhält #g",
@@ -622,7 +622,7 @@
     "OPTIONS": [
       "[Entweihen] #gDupliziere #g2 #gKarten. #rWerde #rverflucht #r- #rAltern.",
       "[Entweihen] #gEntferne #g2 #gKarten. #rVerliere #r",
-      " #rMax #rTP.",
+      " #rmax. #rTP.",
       "[Entweihen] #gTransformiere #g2 #gKarten. #rVerliere #r",
       "[Entweihen] #gVerbessere #g2 #gKarten. #rWerde #rverflucht #r- #rSchmerz.",
       " #rTP.",

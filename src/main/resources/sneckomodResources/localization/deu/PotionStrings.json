@@ -3,8 +3,8 @@
     "NAME": "Kartenflasche",
     "DESCRIPTIONS": [
       "Erhalte am Ende des Kampfes #b",
-      " zusätzliche Kartenbelohnung mit #b3 #yverbesserten ungewöhnlichen Karten aus #yFremdklassen.",
-      " zusätzliche Kartenbelohnungen mit jeweils #b3 #yverbesserten ungewöhnlichen Karten aus #yFremdklassen."
+      " zusätzliche Kartenbelohnung mit #b3 #yverbesserten ungewöhnlichen Karten aus #yFremdklassen [REMOVE_SPACE].",
+      " zusätzliche Kartenbelohnungen mit jeweils #b3 #yverbesserten ungewöhnlichen Karten aus #yFremdklassen [REMOVE_SPACE]."
     ]
   },
   "sneckomod:CheatPotion": {

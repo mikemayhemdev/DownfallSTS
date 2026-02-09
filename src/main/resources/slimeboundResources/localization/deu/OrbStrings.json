@@ -2,21 +2,21 @@
   "Slimebound:EmptySlimeSlot": {
     "NAME": "Schleim-Slot",
     "DESCRIPTION": [
-      "Schleimuntertane, die du von dir #yabspaltest finden hier Platz."
+      "Schleimuntertane, die du von dir #yabspaltest [REMOVE_SPACE], finden hier Platz."
     ]
   },
   "Slimebound:BronzeSlime": {
     "NAME": "Strahlschleim",
     "DESCRIPTION": [
       "Fügt mit seinem Angriff ALLEN Gegnern #b",
-      " Schaden zu, und setzt dann seinen nächsten Angriff aus.",
+      " Schaden zu und setzt dann seinen nächsten Angriff aus.",
       ""
     ]
   },
   "Slimebound:AttackSlime": {
-    "NAME": "Raufboldschleim",
+    "NAME": "Kampfschleim",
     "DESCRIPTION": [
-      "Fügt mit seinem Angriff zweimal #b",
+      "Fügt mit seinem Angriff 2 Mal #b",
       " Schaden zu."
     ]
   },
@@ -45,19 +45,19 @@
     "NAME": "Krähenschleim",
     "DESCRIPTION": [
       "Fügt mit seinem Angriff #b",
-      " Schaden zu, und erhöht danach seinen Schaden um #b1 [REMOVE_SPACE]."
+      " Schaden zu und erhöht danach seinen Schaden um #b1 [REMOVE_SPACE]."
     ]
   },
   "Slimebound:ShieldSlime": {
     "NAME": "Beschützerschleim",
     "DESCRIPTION": [
       "Fügt mit seinem Angriff #b",
-      " Schaden zu, und gibt dir danach #b",
+      " Schaden zu und gibt dir danach #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
   "Slimebound:PoisonSlime": {
-    "NAME": "Guerillaschleim",
+    "NAME": "Minischleim",
     "DESCRIPTION": [
       "Fügt mit seinem Angriff ALLEN Gegnern #b",
       " Schaden zu."
@@ -99,7 +99,7 @@
     "NAME": "Dornenschleim",
     "DESCRIPTION": [
       "Fügt mit seinem Angriff #b",
-      " Schaden zu, und gibt dir danach #b",
+      " Schaden zu und gibt dir danach #b",
       " #ytemporäre #yStacheln [REMOVE_SPACE]."
     ]
   },
@@ -112,10 +112,10 @@
     ]
   },
   "Slimebound:DarklingSlime": {
-    "NAME": "Dunkelschleim",
+    "NAME": "Dunkeling",
     "DESCRIPTION": [
       "Fügt mit seinem Angriff #b",
-      " Schaden zu. Greift auch an, wenn ein anderer Dunkelschleim angreift."
+      " Schaden zu. Greift auch an, wenn ein anderer Dunkeling #kommandiert wird."
     ]
   }
 }

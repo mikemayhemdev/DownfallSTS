@@ -54,7 +54,7 @@
       "echos",
       "echo"
     ],
-    "DESCRIPTION": "Echos sind Kopien von Karten die zusätzlich #yflüchtig sind und #yerschöpfen. Von einem Echo kann kein Echo erstellt werden."
+    "DESCRIPTION": "Echos sind Kopien von Karten, die zusätzlich #yflüchtig sind und #yerschöpfen. Von einem Echo kann kein Echo erstellt werden."
   },
   {
     "PROPER_NAME": "Exhumieren",

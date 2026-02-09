@@ -16,9 +16,9 @@
   "hexamod:EctoCoolerPotion": {
     "NAME": "Ecto-Kühler",
     "DESCRIPTIONS": [
-      "Wähle #b1 von #b3 zufälligen #yflüchtigen Karten. Nimm sie auf die Hand, sie kostet diesen Zug #b0.",
+      "Wähle #b1 von #b3 zufälligen #yflüchtigen Karten. Nimm sie auf die Hand, sie kostet diesen Zug #b0 [REMOVE_SPACE].",
       "Wähle #b1 von #b3 zufälligen #yflüchtigen Karten. Nimm #b",
-      " Kopien auf die Hand, sie kosten diesen Zug #b0."
+      " Kopien auf die Hand, sie kosten diesen Zug #b0 [REMOVE_SPACE]."
     ]
   },
   "hexamod:InfernoChargePotion": {

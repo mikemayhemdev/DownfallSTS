@@ -314,7 +314,7 @@
     ]
   },
   "downfall:CrowbotRitualPower": {
-    "NAME": "Reprogrammer:Rituel",
+    "NAME": "Reprogrammer:Ritual",
     "DESCRIPTIONS": [
       "Quand #yCrowBot est à #b50% de PV ou moins, il perd #b3 PV et gagne #b",
       " de #yForce à la fin de son tour."

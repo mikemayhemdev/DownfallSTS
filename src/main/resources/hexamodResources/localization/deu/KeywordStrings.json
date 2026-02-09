@@ -101,7 +101,7 @@
       "schlagenden",
       "crushing"
     ],
-    "DESCRIPTION": "#yGeisterflamme. #yEntzündet sich wenn #b2 #yFertigkeiten gespielt werden, während man sich auf ihr befindet. #yEntzündung [REMOVE_SPACE]: Füge zweimal einem zufälligen Gegner #b3 Schaden zu.",
+    "DESCRIPTION": "#yGeisterflamme. #yEntzündet sich wenn #b2 #yFertigkeiten gespielt werden, während man sich auf ihr befindet. #yEntzündung [REMOVE_SPACE]: Füge 2 Mal einem zufälligen Gegner #b3 Schaden zu.",
     "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   },
   {
@@ -132,7 +132,7 @@
       "sengenden",
       "searing"
     ],
-    "DESCRIPTION": "#yGeisterflamme. #yEntzündet sich wenn #b2 #yAngriffe gespielt werden, während man sich auf ihr befindet. #yEntzündung [REMOVE_SPACE]: Wende zweimal #b3 #ySeelenfeuer auf einen zufälligen Gegner an.",
+    "DESCRIPTION": "#yGeisterflamme. #yEntzündet sich wenn #b2 #yAngriffe gespielt werden, während man sich auf ihr befindet. #yEntzündung [REMOVE_SPACE]: Wende 2 Mal #b3 #ySeelenfeuer auf einen zufälligen Gegner an.",
     "TRANSLATOR_NOTE": "Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used Not used "
   },
   {

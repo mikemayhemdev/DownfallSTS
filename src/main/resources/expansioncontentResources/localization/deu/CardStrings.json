@@ -13,11 +13,11 @@
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Unverwundbar",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:Unverwundbar. NL Hattest du bereits expansioncontent:Unverwundbar, dann hält es für ein weiteres Mal."
+    "DESCRIPTION": "Erhalte !M! expansioncontent:Unverwundbar. NL Hattest du bereits expansioncontent:Unverwundbar, dann hält es ein weiteres Mal."
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Strahl",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine *Leere auf den Nachziehstapel. NL Erschöpft."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Lege eine Leere auf den Nachziehstapel. NL Erschöpft."
   },
   "expansioncontent:LastStand": {
     "NAME": "Finales Aufgebot",
@@ -29,7 +29,7 @@
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "Neugier",
-    "DESCRIPTION": "Immer wenn du eine Macht spielst, erhältst du !M! Stärke."
+    "DESCRIPTION": "Erhalte !M! awakened:Neugier."
   },
   "expansioncontent:Chronoboost": {
     "NAME": "Zeitbooster",
@@ -41,7 +41,7 @@
   },
   "expansioncontent:DecaShield": {
     "NAME": "Deka-Schild",
-    "DESCRIPTION": "Erhalte !B! Panzerrüstung."
+    "DESCRIPTION": "Erhalte !B! expansioncontent:Panzerrüstung."
   },
   "expansioncontent:ShapePower": {
     "NAME": "Antiker Segen",
@@ -55,8 +55,8 @@
   },
   "expansioncontent:SuperPrepareCrush": {
     "NAME": "Vor-Schmettern",
-    "DESCRIPTION": "Erhalte im nächsten Zug *ZERSCHMETTERN!!!, [E] [E] [E] und !M! Stärke. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte im nächsten Zug *ZERSCHMETTERN!!!+, [E] [E] [E] [E] und !M! Stärke. NL Erschöpft.",
+    "DESCRIPTION": "Erhalte im nächsten Zug *ZERSCHMETTERN!, [E] [E] [E] und !M! Stärke. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte im nächsten Zug *ZERSCHMETTERN!+, [E] [E] [E] [E] und !M! Stärke. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "~Schleim~ ~...~ NL #r~ZERSCHMETTERN!!!~"
     ]
@@ -68,20 +68,20 @@
 
   "expansioncontent:StudyTheSpire": {
     "NAME": "Spire-Studien",
-    "DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge jeweils eine zufällige *Boss-Karte. Sie kosten 0.",
-    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge jeweils eine zufällige *verbesserte *Boss-Karte. Sie kosten 0."
+    "DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge jeweils eine zufällige *Boss Karte. Sie kosten 0.",
+    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge jeweils eine zufällige *verbesserte *Boss Karte. Sie kosten 0."
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Schnellstudien",
-    "DESCRIPTION": "Wähle 1 aus 3 zufälligen *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wähle 1 aus 3 zufälligen *verbesserten *Boss-Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. Erschöpft.",
+    "DESCRIPTION": "Wähle 1 aus 3 zufälligen *Boss Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Wähle 1 aus 3 zufälligen *verbesserten *Boss Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle eine Boss-Karte."
     ]
   },
   "expansioncontent:DashGenerateEvil": {
     "NAME": "Das pure Böse",
-    "DESCRIPTION": "Füge ALLEN Gegnern !M! Schaden zu, immer wenn du !DM! Debuffs anwendest."
+    "DESCRIPTION": "Füge ALLEN Gegnern !M! Schaden zu, immer wenn du im Kampf !DM! Debuffs anwendest."
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Wissender Schädel",
@@ -92,7 +92,7 @@
     "DESCRIPTION": "Behalten. NL Entferne !M! Gift."
   },
   "expansioncontent:AntidoteAsPower": {
-    "NAME": "Keine Zurückhaltung",
+    "NAME": "Volle Offensive",
     "DESCRIPTION": "Behalten. NL Immer wenn du ungeblockten Angriffsschaden zufügst, entferne !M! von deinem Gift."
   },
   "expansioncontent:SuperGhostShield": {
@@ -172,12 +172,12 @@
   },
 
   "expansioncontent:Virus": {
-    "NAME": "404 Virus",
-    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. bronze:Setze pro erschöpfter Karte einen *Hypostrahl *ein. NL Erschöpft."
+    "NAME": "Trojaner",
+    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. bronze:Setze pro erschöpfter Karte einen *Schnellen *Strahl *ein. NL Erschöpft."
   },
 
   "expansioncontent:MajorBeam": {
-    "NAME": "Hypostrahl",
+    "NAME": "Schneller Strahl",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karte.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe !M! Karten."
   },
@@ -197,7 +197,7 @@
   },
   "expansioncontent:ExploitVulnerability": {
     "NAME": "Donu-Strahl",
-    "DESCRIPTION": "Entferne allen Block des Gegners, und erhalte genauso viel Block. Füge zweimal !D! Schaden zu."
+    "DESCRIPTION": "Entferne allen Block des Gegners, und erhalte genauso viel Block. Füge 2 Mal !D! Schaden zu."
   },
   "expansioncontent:PeekPages": {
     "NAME": "Nachlesen",
@@ -213,9 +213,9 @@
   },
   "expansioncontent:BloodySacrifice": {
     "NAME": "Blutiges Opfer",
-    "DESCRIPTION": "Flüchtig. NL Verliere !M! % deiner Max TP. NL Erhalte 1 Ritual. Erschöpft.",
+    "DESCRIPTION": "Flüchtig. NL Verliere !M! % deiner max. TP. NL Erhalte 1 Ritual. Erschöpft.",
     "EXTENDED_DESCRIPTION":[
-      " NL (Verliere {amount} Max TP. )"
+      " NL (Verliere {amount} max. TP. )"
     ]
   }
 }

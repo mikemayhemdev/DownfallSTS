@@ -12,13 +12,13 @@
     "DESCRIPTIONS": [
       "Wird das nächste Mal eine Funktion kompiliert, dann #ykodiere eine Kopie der Karte im ersten Slot.",
       "Die nächsten #b",
-      " Male an denen eine Funktion kompiliert, #ykodiere eine Kopie der Karte im ersten Slot."
+      " Male, an denen eine Funktion kompiliert, #ykodiere eine Kopie der Karte im ersten Slot."
     ]
   },
   "bronze:Feature": {
     "NAME": "Es ist ein Feature",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du einen #rStatus ziehst oder #yerschöpfst #b",
+      "Erhalte immer, wenn du einen #rStatus ziehst oder #yerschöpfst [REMOVE_SPACE], #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -61,15 +61,15 @@
   "bronze:Library": {
     "NAME": "Bibliothek",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn jedes Zuges eine zufällige Karte mit #yKodieren auf die Hand. Sie kostet #b0 bis du sie spielst.",
-      "Nimm zu Beginn jedes Zuges #b",
-      " zufällige Karten mit #yKodieren auf die Hand. Sie kosten #b0 bis du sie spielst."
+      "Erhalte zu Beginn jedes Zuges eine zufällige Karte mit #yKodieren. Sie kostet #b0 bis du sie spielst.",
+      "Erhalte zu Beginn jedes Zuges #b",
+      " zufällige Karten mit #yKodieren. Sie kosten #b0 bis du sie spielst."
     ]
   },
   "bronze:LibraryMod": {
     "NAME": "Externe Bibliothek",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn jedes Zuges eine zufällige Karte mit #yKodieren auf die Hand. Sie ist #yflüchtig [REMOVE_SPACE]."
+      "Erhalte zu Beginn jedes Zuges eine zufällige Karte mit #yKodieren. Sie ist #yflüchtig [REMOVE_SPACE]."
     ]
   },
   "bronze:BronzeHeatsink": {
@@ -121,7 +121,7 @@
     ]
   },
   "bronze:CopyPaste": {
-    "NAME": "Kopieren & Einfügen",
+    "NAME": "Kopie einfügen",
     "DESCRIPTIONS": [
       "In diesem Zug spielst du deine nächste #yFunktion doppelt.",
       "In diesem Zug spielst du deine nächsten #b",
@@ -137,9 +137,9 @@
   "bronze:RemoveNextError": {
     "NAME": "Fehler beheben",
     "DESCRIPTIONS": [
-      "Verhindere den nächsten #yKompilierungsfehler der #ykodiert wird.",
+      "Verhindere den nächsten #yKompilierungsfehler [REMOVE_SPACE], der #ykodiert wird.",
       "Verhindere die nächsten #b",
-      " #yKompilierungsfehler die #ykodiert werden."
+      " #yKompilierungsfehler [REMOVE_SPACE], die #ykodiert werden."
     ]
   }
 }

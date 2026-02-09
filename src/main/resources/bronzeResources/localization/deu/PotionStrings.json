@@ -9,9 +9,9 @@
   "bronze:CleanCodePotion": {
     "NAME": "Matetee",
     "DESCRIPTIONS": [
-      "Entferne alle #yKompilierungsfehler, die gerade #ykodiert sind. Die nächste #yFunktion [REMOVE_SPACE], die #yKompiliert [REMOVE_SPACE], kostet #b0 bis du sie spielst.",
-      "Entferne alle #yKompilierungsfehler, die gerade #ykodiert sind. Die nächsten #b",
-      " #yFunktionen [REMOVE_SPACE], die #yKompilieren [REMOVE_SPACE], kosten #b0 bis du sie spielst."
+      "Entferne alle #yKompilierungsfehler [REMOVE_SPACE], die gerade #ykodiert sind. Die nächste #yFunktion [REMOVE_SPACE], die #ykompiliert [REMOVE_SPACE], kostet #b0 bis du sie spielst.",
+      "Entferne alle #yKompilierungsfehler [REMOVE_SPACE], die gerade #ykodiert sind. Die nächsten #b",
+      " #yFunktionen [REMOVE_SPACE], die #ykompilieren [REMOVE_SPACE], kosten #b0 bis du sie spielst."
     ]
   },
   "bronze:BurnAndBuffPotion": {

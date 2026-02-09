@@ -9,7 +9,7 @@
   "collector:BindingCall": {
     "NAME": "Bindender Ruf",
     "DESCRIPTIONS": [
-      "Wende immer wenn du deine gesamten #ytemporären #yTP verlierst #b",
+      "Wende immer, wenn du deine gesamten #ytemporären #yTP verlierst, #b",
       " #yVerdammnis auf ALLE Gegner an.",
       "Translator Note: NOT USED"
     ]
@@ -24,9 +24,9 @@
   "collector:Crackle": {
     "NAME": "Pyromanie",
     "DESCRIPTIONS": [
-      "Erhalte zu Beginn deines Zuges #b1 #yReserve.",
+      "Erhalte zu Beginn deines Zuges #b1 #yReserve [REMOVE_SPACE].",
       "Erhalte zu Beginn deines Zuges #b",
-      " #yReserve."
+      " #yReserve [REMOVE_SPACE]."
     ]
   },
   "collector:DarkLordForm": {
@@ -40,7 +40,7 @@
   "collector:DarkLordFormPlus": {
     "NAME": "Schattenlord Form+",
     "DESCRIPTIONS": [
-      "Spiele zu Beginn deines Zuges #yDu #yGehörst #yMir+ auf einen zufälligen Gegner..",
+      "Spiele zu Beginn deines Zuges #yDu #yGehörst #yMir+ auf einen zufälligen Gegner.",
       "Spiele zu Beginn deines Zuges #yDu #yGehörst #yMir+ auf #b",
       " zufällige Gegner."
     ]
@@ -58,7 +58,7 @@
     "NAME": "Verdammnis",
     "DESCRIPTIONS": [
       "Verliert zu Beginn seines Zuges #b",
-      " TP. Sämtliche #yVerdammnis wird danach entfernt, es sei denn, der Gegner ist #ygeplagt."
+      " TP. Sämtliche #yVerdammnis wird danach entfernt - es sei denn, der Gegner ist #ygeplagt [REMOVE_SPACE]."
     ]
   },
   "collector:DoublePlayCollectibles": {
@@ -124,16 +124,16 @@
   "collector:NextTurnReserve": {
     "NAME": "Reservevorrat",
     "DESCRIPTIONS": [
-      "Erhalte zu Beginn deines nächsten Zuges #b1 #yReserve.",
+      "Erhalte zu Beginn deines nächsten Zuges #b1 #yReserve [REMOVE_SPACE].",
       "Erhalte zu Beginn deines nächsten Zuges #b",
-      " #yReserve."
+      " #yReserve [REMOVE_SPACE]."
     ]
   },
   "collector:Omen": {
-    "NAME": "Omen",
+    "NAME": "Vorbote",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du ein #ySammlerstück spielst #b",
-      " #yStärke."
+      "Erhalte immer, wenn du ein #ySammlerstück spielst, #b",
+      " #yStärke [REMOVE_SPACE]."
     ]
   },
   "collector:ProtectingCall": {
@@ -155,17 +155,17 @@
   "collector:Reserve": {
     "NAME": "Reserve",
     "DESCRIPTIONS": [
-      "You have #b1 #yReserve.",
-      "You have #b",
-      " #yReserve."
+      "Du hast #b1 #yReserve [REMOVE_SPACE].",
+      "Du hast #b",
+      " #yReserve [REMOVE_SPACE]."
     ]
   },
   "collector:Soulforge": {
     "NAME": "Seelenschmiede",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn deines Zuges eine #yGlut in die Hand.",
-      "Nimm zu Beginn deines Zuges #b",
-      " #yGlut Karten in die Hand."
+      "Erhalte zu Beginn deines Zuges eine #yGlut [REMOVE_SPACE].",
+      "Erhalte zu Beginn deines Zuges #b",
+      " #yGlut Karten."
     ]
   },
   "collector:StrengthOverTurns": {
@@ -180,7 +180,7 @@
   "collector:Suffering": {
     "NAME": "Leiden lassen",
     "DESCRIPTIONS": [
-      "Wende immer wenn du #ySchwach oder #yVerwundbar anwendest zusätzlich #b",
+      "Wende immer, wenn du #ySchwach oder #yVerwundbar anwendest, zusätzlich #b",
       " #yVerdammnis an."
     ]
   },
@@ -211,7 +211,7 @@
   "collector:MastersCall": {
     "NAME": "Meisterruf",
     "DESCRIPTIONS": [
-      "Füge immer wenn du einen #yAngriff spielst während du #ytemporäre #yTP hast einem zufälligen Gegner #b",
+      "Füge immer, wenn du einen #yAngriff spielst, während du #ytemporäre #yTP hast, einem zufälligen Gegner #b",
       " Schaden zu.",
       "Translator Note: NOT USED"
     ]
@@ -226,16 +226,16 @@
   "collector:MadGremlinCard": {
     "NAME": "Wütend",
     "DESCRIPTIONS": [
-      "Nimm das Nächste Mal wenn du in diesem Zug ungeblockten Angriffsschaden erleidest einen #yWütenden #yGremlin in die Hand.",
-      "Nimm das Nächste Mal wenn du in diesem Zug ungeblockten Angriffsschaden erleidest #b",
-      " #yWütende #yGremlins in die Hand."
+      "Nimm das Nächste Mal, wenn du in diesem Zug ungeblockten Angriffsschaden erleidest, einen #yWütenden #yGremlin auf die Hand.",
+      "Nimm das Nächste Mal, wenn du in diesem Zug ungeblockten Angriffsschaden erleidest, #b",
+      " #yWütende #yGremlins auf die Hand."
     ]
   },
   "collector:GremlinWizardCard": {
     "NAME": "Aufladen",
     "DESCRIPTIONS": [
       "Erhalte im nächsten Zug #b",
-      " #yElan."
+      " #yElan [REMOVE_SPACE]."
     ]
   },
   "collector:ThievesCard": {
@@ -278,7 +278,7 @@
     "NAME": "Elan in Reserve",
     "DESCRIPTIONS": [
       "Erhalte zu Beginn deines nächsten Zuges #b",
-      " #yElan."
+      " #yElan [REMOVE_SPACE]."
     ]
   },
   "collector:AcidSlimeCard": {
@@ -292,15 +292,15 @@
   "collector:GremlinNobCard": {
     "NAME": "Erzürnen",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du eine #yFertigkeit spielst #b",
-      " #yElan."
+      "Erhalte immer, wenn du eine #yFertigkeit spielst, #b",
+      " #yElan [REMOVE_SPACE]."
     ]
   },
   "collector:LanternFlare": {
     "NAME": "Todeslaterne",
     "DESCRIPTIONS": [
       "Erhält am Ende seines Zuges #b",
-      " #yVerdammnis."
+      " #yVerdammnis [REMOVE_SPACE]."
     ]
   },
   "collector:WomanInBlueCard": {
@@ -312,7 +312,7 @@
   "collector:ShootingStar": {
     "NAME": "Sternschnuppe",
     "DESCRIPTIONS": [
-      "Das erste Mal im Zug wenn du einen #yAngriff als #yOpfergabe anbietest, nimm eine Kopie des Angriffs auf die Hand. Sie kostet #b0 bis du sie spielst.",
+      "Wenn du das erste Mal im Zug einen #yAngriff als #yOpfergabe anbietest, nimm eine Kopie des Angriffs auf die Hand. Sie kostet #b0 bis du sie spielst.",
       "Die ersten #b",
       " Male im Zug, an denen du einen #yAngriff als #yOpfergabe anbietest, nimm jeweils eine Kopie des Angriffs auf die Hand. Sie kosten #b0 bis du sie spielst."
     ]

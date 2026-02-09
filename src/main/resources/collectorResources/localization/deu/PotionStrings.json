@@ -1,11 +1,11 @@
 {
   "collector:MiniCursePotion": {
-    "NAME": "Seelenextrakt",
+    "NAME": "Seelengift",
     "DESCRIPTIONS": [
-      "Wende #b1 #ySchwach, #b1 #yVerwundbar, und #b6 #yVerdammnis an.",
+      "Wende #b1 #ySchwach [REMOVE_SPACE], #b1 #yVerwundbar [REMOVE_SPACE], und #b6 #yVerdammnis an.",
       "Wende #b",
-      " #ySchwach, #b",
-      " #yVerwundbar, und #b",
+      " #ySchwach [REMOVE_SPACE], #b",
+      " #yVerwundbar [REMOVE_SPACE], und #b",
       " #yVerdammnis an."
     ]
   },
@@ -22,13 +22,13 @@
     "DESCRIPTIONS": [
       "Verdopple die Debuffs des Gegners.",
       "Multipliziere die Debuffs des Gegners mit #b",
-      "."
+      " [REMOVE_SPACE]."
     ]
   },
   "collector:TempHPPotion": {
     "NAME": "Höllenwasser",
     "DESCRIPTIONS": [
-      "Erhalte #b8 #ytemporäre #yTP.",
+      "Erhalte #b8 #ytemporäre #yTP [REMOVE_SPACE].",
       "Erhalte #b",
       " #ytemporäre #yTP [REMOVE_SPACE]."
     ]

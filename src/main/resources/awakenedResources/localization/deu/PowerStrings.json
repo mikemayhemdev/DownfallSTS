@@ -26,7 +26,7 @@
   "awakened:CursedStrength": {
     "NAME": "Neumond",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du #yausgelaugt wirst #b",
+      "Erhalte immer, wenn du #yausgelaugt wirst, #b",
       " #yStärke [REMOVE_SPACE]."
     ]
   },
@@ -40,7 +40,7 @@
   "awakened:SacramentPower": {
     "NAME": "Sakrament",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du eine #yMacht ausspielst #b",
+      "Erhalte immer, wenn du eine #yMacht ausspielst, #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -54,7 +54,7 @@
   "awakened:PrimacyPower": {
     "NAME": "Vorrang",
     "DESCRIPTIONS": [
-      "Ziehe das erste Mal, an dem du im Zug #yStärke erhältst, eine Karte.",
+      "Wenn du das erste Mal im Zug #yStärke erhältst, ziehe eine Karte.",
       "Ziehe die ersten #b",
       " Male, an denen du im Zug #yStärke erhältst, eine Karte.",
       " NL Dieser Effekt kann in diesem Zug noch #b",
@@ -83,9 +83,9 @@
   "awakened:MoonlitVisionPower": {
     "NAME": "Mondfinsternis",
     "DESCRIPTIONS": [
-      "Erhalte [E] das erste Mal, an dem du im Zug einen Zauber spielst.",
+      "Erhalte [E] , wenn du das erste Mal im Zug einen Zauber spielst.",
       "Die ersten #b",
-      " Male an dem du im Zug einen Zauber spielst, erhalte [E] .",
+      " Male im Zug, an denen du einen Zauber spielst, erhalte [E] .",
       " NL Noch #b",
       " Mal möglich in diesem Zug."
     ]
@@ -109,14 +109,14 @@
   "awakened:ShroudOfMiasmaPower": {
     "NAME": "Miasma-Schleier",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du einen #yverhexten Gegner angreifst #b",
+      "Erhalte immer, wenn du einen #yverhexten Gegner angreifst, #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
   "awakened:StrengthReturnPower": {
     "NAME": "Aufgeschlitzt",
     "DESCRIPTIONS": [
-      "Wenn du diesen Gegner angreifst erhältst du #b",
+      "Wenn du diesen Gegner angreifst, erhältst du #b",
       " #ytemporäre #yStärke [REMOVE_SPACE]."
     ]
   },
@@ -148,7 +148,7 @@
   "awakened:DarknessFallsPower": {
     "NAME": "Ringfinsternis",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du #yausgelaugt wirst #b",
+      "Erhalte immer, wenn du #yausgelaugt wirst, #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -193,17 +193,17 @@
   "awakened:ChosensVersePower": {
     "NAME": "Auserwählter Vers",
     "DESCRIPTIONS": [
-      "Das nächste Mal wenn du in diesem Zug einen #ynicht-Angriff spielst, erhalte #b",
+      "Das nächste Mal, wenn du in diesem Zug einen #ynicht-Angriff spielst, erhalte #b",
       " #yBlock und ziehe eine Karte.",
       "Die nächsten #b",
-      " Male an denen du in diesem Zug einen #ynicht-Angriff spielst, erhalte #b",
+      " Male im Zug, an denen du einen #ynicht-Angriff spielst, erhalte #b",
       " #yBlock und ziehe eine Karte."
     ]
   },
   "awakened:AphoticFountPower": {
     "NAME": "Gefrorene Quellen",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du #yKryostase spielst #b",
+      "Erhalte immer, wenn du #yKryostase spielst, #b",
       " #yPanzerrüstung [REMOVE_SPACE]."
     ]
   },

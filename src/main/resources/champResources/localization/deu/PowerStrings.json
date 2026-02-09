@@ -16,7 +16,7 @@
   "champ:FocusedBerPower": {
     "NAME": "Graziöser Gang",
     "DESCRIPTIONS": [
-      "Wenn du in diesem Zug einen #yAbschluss spielst, dann füge ALLEN Gegenern #b",
+      "Wenn du in diesem Zug einen #yAbschluss spielst, dann füge ALLEN Gegnern #b",
       " Schaden zu."
     ]
   },
@@ -54,7 +54,7 @@
   "champ:WorseRupturePower": {
     "NAME": "Endlose Wut",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du während deines Zuges TP verlierst #b",
+      "Erhalte immer, wenn du während deines Zuges TP verlierst, #b",
       " #ytemporäre #yStärke [REMOVE_SPACE]."
     ]
   },
@@ -108,7 +108,7 @@
     ]
   },
   "champ:GladiatorStylePower": {
-    "NAME": "Fairer sauberer Kampf",
+    "NAME": "Sauberer Kampf",
     "DESCRIPTIONS": [
       "Erhalte wenn du deinen Zug ohne #yHaltung beginnst #b",
       " #ytemporäre #yStärke und #ytemporäre #yGeschicklichkeit."
@@ -139,9 +139,9 @@
     ]
   },
   "champ:IronFortressPower": {
-    "NAME": "Launiges Gezappel",
+    "NAME": "Launiges Zappeln",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du eine #yHaltung annimmst #b",
+      "Erhalte immer, wenn du eine #yHaltung annimmst, #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -156,7 +156,7 @@
   "champ:LastStandMod": {
     "NAME": "Letztes Aufgebot",
     "DESCRIPTIONS": [
-      "Wenn deine TP zu Beginn deines Zuges bei 50% oder darunter liegen, entferne alle Debuffs und erhalte ",
+      "Wenn deine TP bei 50% oder darunter liegen, entferne alle Debuffs und erhalte ",
       " #yStärke [REMOVE_SPACE]."
     ]
   },

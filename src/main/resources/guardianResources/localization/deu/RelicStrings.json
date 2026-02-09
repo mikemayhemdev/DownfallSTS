@@ -3,7 +3,7 @@
     "NAME": "Bronzenes Zahnrad",
     "FLAVOR": "Schutz, wenn du ihn am dringendsten nötig hast.",
     "DESCRIPTIONS": [
-      "Nimm zu Beginn jedes Kampfes #yHochschalten auf die Hand. NL Der Wächter beginnt den Run mit einem zufälligen gewöhnlichen #yJuwel [REMOVE_SPACE]."
+      "Nimm zu Beginn jedes Kampfes #yHochschalten auf die Hand. NL Der Wächter beginnt den Run mit einem zufälligen gewöhnlichen #yguardianmod:Juwel [REMOVE_SPACE]."
     ]
   },
   "Guardian:ModeShifterPlus": {
@@ -11,7 +11,7 @@
     "FLAVOR": "Hält 3.000 Stockwerke.",
     "DESCRIPTIONS": [
       "Ersetzt ",
-      " [REMOVE_SPACE].[] NL Nimm zu Beginn jedes Kampfes #yHochschalten auf die Hand. NL Immer wenn du in den #yDefensivmodus wechselst, erhalte [E] und ziehe #b2 Karten."
+      " [REMOVE_SPACE].[] NL Nimm zu Beginn jedes Kampfes #yHochschalten auf die Hand. NL Immer wenn du in den #yguardianmod:Defensivmodus wechselst, erhalte [E] und ziehe #b2 Karten."
     ]
   },
   "Guardian:ObsidianScales": {
@@ -19,8 +19,8 @@
     "FLAVOR": "Schwärze den Himmel mit deinem Blut. Räche dich an alle, die dich geschlagen haben.",
     "DESCRIPTIONS": [
       "Erhalte zu Beginn jedes Kampfes #b",
-      " #yStacheln [REMOVE_SPACE]. Erhalte #b",
-      " #yStacheln immer wenn du einen Debuff erhältst oder debuffed wirst"
+      " #yStacheln [REMOVE_SPACE]. Erhalte immer, wenn du einen Debuff erhältst oder debuffed wirst #b",
+      " #yStacheln [REMOVE_SPACE]."
     ]
   },
   "Guardian:DefensiveModeMoreBlock": {
@@ -112,7 +112,7 @@
     "NAME": "Singende Spitzhacke",
     "FLAVOR": "Kaum zu glauben, dass jemand mit der Spitzhacke nach Juwelen suchen muss, wo doch im Spire so viele herumliegen.",
     "DESCRIPTIONS": [
-      "Jedes Mal wenn du einen Elitekampf gewinnst, erhältst du zusätzlich ein zufälliges #yguardianmod:Juwel zur Belohnung."
+      "Jedes Mal, wenn du einen Elitekampf gewinnst, erhältst du zusätzlich ein zufälliges #yguardianmod:Juwel zur Belohnung."
     ]
   },
   "Guardian:GemstoneGun": {

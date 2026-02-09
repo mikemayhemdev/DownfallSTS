@@ -28,7 +28,7 @@ public class MarkedCard extends AbstractSneckoCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         String stuff;
         if(Settings.language == Settings.GameLanguage.DEU){
-            stuff = "irsst";
+            stuff = "irrst";
         } else {
             stuff = BaseMod.getKeywordProper("sneckomod:muddle");
         }

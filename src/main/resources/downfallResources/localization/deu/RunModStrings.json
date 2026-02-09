@@ -33,7 +33,7 @@
   },
   "downfall:Enraging": {
     "NAME": "Letztes Aufgebot",
-    "DESCRIPTION": "Alle Gegner erhalten Stärke und verlieren ihre Debuffs sobald sie weniger als 50% ihrer Max TP übrig haben."
+    "DESCRIPTION": "Alle Gegner erhalten Stärke und verlieren ihre Debuffs sobald sie weniger als 50% ihrer max. TP übrig haben."
   },
   "downfall:Analytical": {
     "NAME": "Analytisch",

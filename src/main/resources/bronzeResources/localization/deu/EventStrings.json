@@ -60,9 +60,9 @@
       "Wähle eine Karte zum Entfernen aus."
     ],
     "OPTIONS": [
-      "[Kreieren] #gErhalte #gFlaschencode. #rVerliere #r10 #rMax #rTP.",
+      "[Kreieren] #gErhalte #gFlaschencode. #rVerliere #r10 #rmax. #rTP.",
       "[Umwandeln] #gTausche #geine #gKarte #ggegen #geine #gzufällige #gKarte #gmit #gKodieren.",
-      "[Verwerten] #rEntferne eine #yseltene Karte. #gErhalte #g10 #gMax #gTP #gund #gheile #gdich.",
+      "[Verwerten] #rEntferne eine #yseltene Karte. #gErhalte #g10 #gmax. #gTP #gund #gheile #gdich.",
       "[Gesperrt] Bereits benutzt.",
       "[Verlassen]",
       "[Gesperrt] Erfordert eine Karte mit Kodieren.",
