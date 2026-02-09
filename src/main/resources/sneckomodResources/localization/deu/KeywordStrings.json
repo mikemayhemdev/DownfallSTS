@@ -39,7 +39,7 @@
       "geirrt",
       "geirrte"
     ],
-    "DESCRIPTION": "Das Irren einer Karte verändert ihre Kosten in diesem Zug auf einen Zufallswert zwischen #b0 und #b3 [REMOVE_SPACE]. Durch das Irren werden die Kosten immer verändert - die Kosten welche die Karte vor dem Irren hatte ist vom Ergebnis ausgeschlossen"
+    "DESCRIPTION": "Das Irren einer Karte verändert ihre Kosten in diesem Zug auf einen Zufallswert zwischen #b0 und #b3 [REMOVE_SPACE]. Durch das Irren werden die Kosten IMMER verändert."
   },
   {
     "PROPER_NAME": "Fremdklasse",
@@ -50,7 +50,7 @@
       "fremden",
       "offclass"
     ],
-    "DESCRIPTION": "Alle Karten die nicht dem eigenen Charakter zugehörig sind zählen als fremd (darunter auch farblose Karten, #rFlüche [REMOVE_SPACE], und #yStatuskarten [REMOVE_SPACE])."
+    "DESCRIPTION": "Alle Karten, die nicht dem eigenen Charakter zugehörig sind, zählen als fremd (darunter auch farblose Karten, #rFlüche [REMOVE_SPACE], und #yStatuskarten [REMOVE_SPACE])."
   },
   {
     "PROPER_NAME": "Geschenk",

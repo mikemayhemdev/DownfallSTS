@@ -143,12 +143,12 @@
   },
   "sneckomod:Mudshield": {
     "NAME": "Irrlichtschild",
-    "DESCRIPTION": "Erhalte immer wenn du eine Karte sneckomod:irrst !M! Block."
+    "DESCRIPTION": "Erhalte immer, wenn du eine Karte sneckomod:irrst, !M! Block."
   },
   "sneckomod:OverwhelmingPresence": {
     "NAME": "Überwältigen",
-    "DESCRIPTION": "Flüchtig. NL Das erste Mal wenn du im Zug eine Karte einer sneckomod:Fremdklasse spielst, ziehe eine Karte.",
-    "UPGRADE_DESCRIPTION": "Das erste Mal wenn du im Zug eine Karte einer sneckomod:Fremdklasse spielst, ziehe eine Karte."
+    "DESCRIPTION": "Flüchtig. NL Wenn du das erste Mal im Zug eine Karte einer sneckomod:Fremdklasse spielst, ziehe eine Karte.",
+    "UPGRADE_DESCRIPTION": "Wenn du das erste Mal im Zug eine Karte einer sneckomod:Fremdklasse spielst, ziehe eine Karte."
   },
   "sneckomod:RiskySword": {
     "NAME": "Irrläufer",
@@ -199,10 +199,10 @@
   },
   "sneckomod:SerpentMind": {
     "NAME": "Exotische Form",
-    "DESCRIPTION": "Flüchtig. Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast. NL sneckomod:Geschenk: Selten.",
-    "UPGRADE_DESCRIPTION": "Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast. NL sneckomod:Geschenk: Selten.",
-    "DESCRIPTION_BATTLE": "Flüchtig. NL Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast.",
-    "UPGRADE_DESCRIPTION_BATTLE": "Erhalte am Ende des Zuges !M! Stärke für jede Klasse von der du mindestens 1 Karte gespielt hast."
+    "DESCRIPTION": "Flüchtig. Erhalte am Ende des Zuges !M! Stärke für jede Klasse, von der du mindestens 1 Karte gespielt hast. NL sneckomod:Geschenk: Selten.",
+    "UPGRADE_DESCRIPTION": "Erhalte am Ende des Zuges !M! Stärke für jede Klasse, von der du mindestens 1 Karte gespielt hast. NL sneckomod:Geschenk: Selten.",
+    "DESCRIPTION_BATTLE": "Flüchtig. NL Erhalte am Ende des Zuges !M! Stärke für jede Klasse, von der du mindestens 1 Karte gespielt hast.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Erhalte am Ende des Zuges !M! Stärke für jede Klasse, von der du mindestens 1 Karte gespielt hast."
   },
   "sneckomod:SlitherThrough": {
     "NAME": "Durchschlängeln",
@@ -239,7 +239,7 @@
   },
   "sneckomod:SoulExchange": {
     "NAME": "Seelentausch",
-    "DESCRIPTION": "Behalten. NL sneckomod:Irre deine Hand. NL Erschöpft."
+    "DESCRIPTION": "Behalten. NL sneckomod:Irre alle Handkarten. NL Erschöpft."
   },
   "sneckomod:SoulRoll": {
     "NAME": "Seelenwürfel",
@@ -296,7 +296,7 @@
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Erschöpfe eine Karte. NL Erhalte [E] in Höhe ihrer Kosten."
   },
   "sneckomod:UnendingSupply": {
-    "NAME": "Unendlicher Vorrat",
+    "NAME": "Exotischer Vorrat",
     "DESCRIPTION": "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen Klasse einer sneckomod:Fremdklasse.",
     "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen Klasse einer sneckomod:Fremdklasse."
 },
@@ -457,7 +457,7 @@
     "DESCRIPTION": "Erhalte !B! Block. NL Wenn du eine Karte ausspielst, die mindestens 2 kostet, spiele diese Karte aus der Hand."
   },
   "sneckomod:CrystalBoomerang": {
-    "NAME": "Kristallbumerang",
+    "NAME": "Bunter Bumerang",
     "DESCRIPTION": "Schnapp dir eine Karte vom Abwurfstapel. NL Gehört sie zu einer sneckomod:Fremdklasse, dann erhalte !B! Block."
   },
   "sneckomod:ViperEssence": {
@@ -485,7 +485,7 @@
     "DESCRIPTION_BATTLE": "Füge ALLEN Gegnern !D! Schaden zu. NL Verbessere alle Karten aus sneckomod:Fremdklassen in deiner Hand."
   },
   "sneckomod:GildedShield": {
-    "NAME": "Vergoldeter Schild",
+    "NAME": "Sneckoschuppe",
     "DESCRIPTION": "Erhalte !B! Block. NL sneckomod:Irre diese Karte und nimm sie zurück auf die Hand."
   },
   "sneckomod:Mesmerize": {
@@ -493,7 +493,7 @@
     "DESCRIPTION": "ALLE Gegner verlieren !M! Stärke. NL sneckomod:Irre eine Karte. NL Erschöpft."
   },
   "sneckomod:Serpentscale": {
-    "NAME": "Schlangenschuppe",
+    "NAME": "Häuten",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 expansioncontent:Panzerrüstung. NL sneckomod:Überschuss: Erhalte stattdessen !M! expansioncontent:Panzerrüstung."
   },
   "sneckomod:OtherworldlySlash": {
@@ -582,10 +582,10 @@
   },
   "sneckomod:LastStrike": {
     "NAME": "Meisterschlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
-    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde.",
-    "UPGRADE_DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene \"Schlag\" Karte, die in diesem Kampf gespielt wurde.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene Schlag Karte, die in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene Schlag Karte, die in diesem Kampf gespielt wurde. NL sneckomod:Geschenk: Schlag.",
+    "DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene Schlag Karte, die in diesem Kampf gespielt wurde.",
+    "UPGRADE_DESCRIPTION_BATTLE": "Füge !D! Schaden zu. NL Wiederhole das für jede verschiedene Schlag Karte, die in diesem Kampf gespielt wurde.",
     "EXTENDED_DESCRIPTION": [
       " NL (trifft ",
       " Mal zusätzlich.)"
@@ -593,8 +593,8 @@
   },
   "sneckomod:AceOfWands": {
     "NAME": "Pentagrammkönig",
-    "DESCRIPTION": "Flüchtig. NL Erhalte immer wenn du einen Debuff anwendest !M! Block. NL sneckomod:Geschenk: Debuff.",
-    "UPGRADE_DESCRIPTION": "Erhalte immer wenn du einen Debuff anwendest !M! Block. NL sneckomod:Geschenk: Debuff."
+    "DESCRIPTION": "Flüchtig. NL Erhalte immer, wenn du einen Debuff anwendest, !M! Block. NL sneckomod:Geschenk: Debuff.",
+    "UPGRADE_DESCRIPTION": "Erhalte immer, wenn du einen Debuff anwendest, !M! Block. NL sneckomod:Geschenk: Debuff."
   },
   "sneckomod:FlashInThePan": {
     "NAME": "Blitzschnell",
@@ -611,7 +611,7 @@
   },
   "sneckomod:SerpentineSleuth": {
     "NAME": "Vipernmacht",
-    "DESCRIPTION": "Flüchtig. NL Erhalte immer wenn du eine Macht spielst [E] . NL sneckomod:Geschenk: Seltene Macht.",
-    "DESCRIPTION_BATTLE": "Flüchtig. NL Erhalte immer wenn du eine Macht spielst [E]."
+    "DESCRIPTION": "Flüchtig. NL Erhalte immer, wenn du eine Macht spielst, [E] . NL sneckomod:Geschenk: Seltene Macht.",
+    "DESCRIPTION_BATTLE": "Flüchtig. NL Erhalte immer, wenn du eine Macht spielst, [E]."
   }
 }

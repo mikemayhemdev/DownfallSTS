@@ -3,7 +3,7 @@
     "NAME": "Einwandfreie Muskeln",
     "FLAVOR": "Glorreich.",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du #yStärke erhältst die gleiche Anzahl an #ytemporären #yTP [REMOVE_SPACE]. NL Beginne jeden Kampf mit #b1 #yStärke."
+      "Erhalte immer, wenn du #yStärke erhältst, die gleiche Anzahl an #ytemporären #yTP [REMOVE_SPACE]. NL Beginne jeden Kampf mit #b1 #yStärke [REMOVE_SPACE]."
     ]
   },
   "Gremlin:FragmentationGrenade": {
@@ -22,7 +22,7 @@
   },
   "Gremlin:GremlinGravestone": {
     "NAME": "Gremlin-Grabstein",
-    "FLAVOR": "Wohin gehen Gremlins nach den Tod? Jedenfalls verdammt noch mal nicht weit genug.",
+    "FLAVOR": "Wohin gehen Gremlins nach den Tod? Egal wohin - es ist jedenfalls verdammt noch mal nicht weit genug.",
     "DESCRIPTIONS": [
       "Tote Gremlins können als kleine Aktion am Lagerfeuer wiederbelebt werden."
     ]
@@ -31,7 +31,7 @@
     "NAME": "Horn des Anführers",
     "FLAVOR": "Der Gremlin mit dem besten Horn ist so lange der Anführer seiner Gruppe, bis ein anderer es ihm gestohlen hat.",
     "DESCRIPTIONS": [
-      "Zu Beginn jedes Kampfes, ziehe #b1 Karte, erhalte [E] , und #ywechsle zum nächsten Gremlin."
+      "Zu Beginn jedes Kampfes, ziehe #b1 Karte, erhalte [E] , und #ygremlin:wechsle zum nächsten Gremlin."
     ]
   },
   "Gremlin:GremlinKnobUpgrade": {
@@ -39,7 +39,7 @@
     "FLAVOR": "Je schöner das Symbol der Macht, desto häufiger wird es gestohlen.",
     "DESCRIPTIONS": [
       "Ersetzt ",
-      ". NL Das erste Mal wenn du im Zug den Nachziehstapel mischst, ziehe #b1 Karte, erhalte [E] , und #ywechsle zum nächsten Gremlin."
+      ". NL Wenn du das erste Mal im Zug den Nachziehstapel mischst, ziehe #b1 Karte, erhalte [E] , und #ygremlin:wechsle zum nächsten Gremlin."
     ]
   },
   "Gremlin:GremlinMask": {
@@ -51,7 +51,7 @@
   },
   "Gremlin:LeaderVoucher": {
     "NAME": "Gutschein des Anführers",
-    "FLAVOR": "Ich schulde dir: 1 Gremlin",
+    "FLAVOR": "Gutschein für 1 Gremlin",
     "DESCRIPTIONS": [
       "Erhalte in deinem Zug [E] . NL Verliere beim Aufheben einen Gremlin #rfür #rden #rRest #rdes #rRuns.",
       " NL #r( #rFetter #rGremlin #r)",
@@ -65,12 +65,12 @@
     "NAME": "Zauberhammer",
     "FLAVOR": "Stößt Zehen doppelt so hart.",
     "DESCRIPTIONS": [
-      "Bis zu #b3 Mal im Zug erhältst du beim Anwenden von #ySchwach zusätzlich #b1 #yEsprit [REMOVE_SPACE]."
+      "Bis zu #b3 Mal im Zug erhältst du beim Anwenden von #ySchwach zusätzlich #b1 #ygremlin:Esprit [REMOVE_SPACE]."
     ]
   },
   "Gremlin:PricklyShields": {
     "NAME": "Rüstungsnägel",
-    "FLAVOR": "Gremlins nutzen fast jeden Unrat den sie finden als Waffe oder Rrüstung. Manchmal sogar als Beides.",
+    "FLAVOR": "Gremlins nutzen fast jeden Unrat, den sie finden, als Waffe oder Rüstung. Manchmal sogar als Beides.",
     "DESCRIPTIONS": [
       "Füge immer wenn du #yBlock erhältst einem zufälligen Gegner #b"," Schaden zu."
     ]
@@ -79,7 +79,7 @@
     "NAME": "Kleine Statue",
     "FLAVOR": "Es ist überraschend, wie gut sie funktioniert.",
     "DESCRIPTIONS": [
-      "Das erste Mal im Kampf, wenn ein Gremlin sterben würde, werden seine TP stattdessen um #b75% der Max TP geheilt.",
+      "Wenn das erste Mal im Kampf ein Gremlin sterben würde, werden seine TP stattdessen um #b75% der max. TP geheilt.",
       "Bereits in diesem Kampf aktiviert."
     ]
   },
@@ -87,7 +87,7 @@
     "NAME": "Diebesgut",
     "FLAVOR": "„Vermaledeite, diebische Gremlins!“",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du #ywechselst ein #yEcho einer zufälligen farblosen Karte. NL Der Händler erhält zu Beginn jedes Kampfes #b",
+      "Erhalte immer, wenn du #ygremlin:wechselst [REMOVE_SPACE], ein #yEcho einer zufälligen farblosen Karte. NL Der Händler erhält zu Beginn jedes Kampfes #b",
       " #yStärke [REMOVE_SPACE].",
       "Ihr diebischen, verdammten Tunichtgute!",
       "Feiges Ungezifer!",
@@ -112,14 +112,14 @@
     "NAME": "Magierhut",
     "FLAVOR": "Die dazu passende Robe wurde schon längst gestohlen.",
     "DESCRIPTIONS": [
-      "Immer wenn du #yEsprit verbrauchst, entferne einen zufälligen Debuff."
+      "Immer wenn du #ygremlin:Esprit verbrauchst, entferne einen zufälligen Debuff."
     ]
   },
   "Gremlin:WizardStaff": {
     "NAME": "Zauberstab",
     "FLAVOR": "Der Stolz und Ruhm eines jeden Gremlinzauberers. Diese Stäbe werden oft von feindlichen Gruppen gestohlen.",
     "DESCRIPTIONS": [
-      "Der Verbauch von #yEsprit fügt zusätzlich #b7 Schaden zu."
+      "Der Verbauch von #ygremlin:Esprit fügt zusätzlich #b7 Schaden zu."
     ]
   },
   "Gremlin:WoundPoker": {
@@ -133,11 +133,11 @@
     "NAME": "",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "Erhöhe beim Aufheben die Max TP jedes Gremlins um #b",
-      "Anstatt eine Karte deinem Deck hinzuzufügen, können alle Gremlins #b+1 Max TP erhalten.",
-      " #yGold. NL Erhöhe die Max TP jedes Gremlins um #b",
-      "Erhöhe die Max TP aller Gremlins nach jedem fünften Kampf um #b1.",
-      "+1 Max TP"
+      "Erhöhe beim Aufheben die max. TP jedes Gremlins um #b",
+      "Anstatt eine Karte deinem Deck hinzuzufügen, können alle Gremlins #b+1 max. TP erhalten.",
+      " #yGold. NL Erhöhe die max. TP jedes Gremlins um #b",
+      "Erhöhe die max. TP aller Gremlins nach jedem fünften Kampf um #b1.",
+      "+1 max. TP"
     ]
   }
 }

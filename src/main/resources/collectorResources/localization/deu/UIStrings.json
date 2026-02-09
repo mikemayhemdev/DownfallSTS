@@ -32,7 +32,7 @@
   "collector:EssenceCount": {
     "TEXT": [
       "Essenzen",
-      "Wandle Essenzen in Karten für deine Sammlung (Sammlerstücke) um. Normale Kämpfe erzeugen #b1 Essenz. Elitekämpfe #b2 Essenzen, und Bosskämpfe #b3! NL Du hast #b",
+      "Wandle Essenzen in Karten für deine Sammlung (Sammlerstücke) um. Normale Kämpfe erzeugen #b1 Essenz, Elitekämpfe #b2 Essenzen, und Bosskämpfe #b3 [REMOVE_SPACE]! NL Du hast #b",
       " #yEssenzen."
     ]
   },
@@ -69,7 +69,7 @@
   "collector:SecondEnergyOrb": {
     "TEXT": [
       "Reserve",
-      "Eine zweite Energiequelle, die angezapft wird wenn die reguläre Energie erschöpft ist. Reserve verfällt nicht am Ende des Zuges."
+      "Eine zweite Energiequelle, die angezapft wird, wenn die reguläre Energie erschöpft ist. Reserve verfällt nicht am Ende des Zuges."
     ]
   },
   "collector:PyreCostSpendScreen": {

@@ -24,12 +24,12 @@
     "NAME": "Ring des Snek",
     "FLAVOR": "Unleserlich - Dienstag ist Deadline.",
     "DESCRIPTIONS": [
-      "Wende immer wenn du #b",
-      " #ysneckomod:Überschuss Effekte aktivierst #b1 #ySchwach und #yVerwundbar auf einen zufälligen Gegner an."
+      "Wende immer, wenn du #b",
+      " #ysneckomod:Überschuss Effekte aktivierst, #b1 #ySchwach und #yVerwundbar auf einen zufälligen Gegner an."
     ]
   },
   "sneckomod:CrystallizedMud": {
-    "NAME": "Hypnotisierender Anhänger",
+    "NAME": "Hypnoseanhänger",
     "FLAVOR": "Täuschender Nippes.",
     "DESCRIPTIONS": [
       "Erhalte in deinem Zug [E] . #ysneckomod:Geirrte Karten kosten niemals #b0 [REMOVE_SPACE]."
@@ -39,7 +39,7 @@
     "NAME": "Gezinkter Würfel",
     "FLAVOR": "Mit Käse gefüllt.",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn eine Karte #ysneckomod:geirrt wird #b",
+      "Erhalte immer, wenn eine Karte #ysneckomod:geirrt wird, #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
@@ -61,14 +61,14 @@
     "NAME": "Unidentifiziertes Ei",
     "FLAVOR": "Was wird daraus schlüpfen? Zahle $1000 um zuzusehen.",
     "DESCRIPTIONS": [
-      "Jede Karte einer #ysneckomod:Fremdklasse, die du erhältst, ist #yverbessert. #yVerbessere beim Aufheben #b2 zufällige Karten aus #ysneckomod:Fremdklassen [REMOVE_SPACE]."
+      "Jede Karte einer #ysneckomod:Fremdklasse, die du erhältst, ist #yverbessert [REMOVE_SPACE]. #yVerbessere beim Aufheben #b2 zufällige Karten aus #yFremdklassen [REMOVE_SPACE]."
     ]
   },
   "sneckomod:SuperSneckoEye": {
     "NAME": "Super-Snecko-Auge",
     "FLAVOR": "0121012",
     "DESCRIPTIONS": [
-      "Ersetzt #ySnecko-Auge. Ziehe in jedem Zug #b4 Karten mehr. Beginne jeden Kampf #yVerwirrt."
+      "Ersetzt #ySnecko-Auge [REMOVE_SPACE]. Ziehe in jedem Zug #b4 Karten mehr. Beginne jeden Kampf #yVerwirrt [REMOVE_SPACE]."
     ]
   },
   "sneckomod:SneckoTalon": {
@@ -105,9 +105,9 @@
   },
   "sneckomod:SneckoCommon": {
     "NAME": "Gütesiegel",
-    "FLAVOR": "Ich bin der Eiserne, und das ist mein Lieblingsrelikt im Spire. -Werbebroschüre des Händlers",
+    "FLAVOR": "Ich bin der Eiserne, und das ist mein Lieblingsrelikt im Spire! - Werbebroschüre des Händlers",
     "DESCRIPTIONS": [
-      "Wähle beim Aufheben #b1 von #b5 ungewöhnlichen #yMachtkarten einer #ysneckomod:Fremdklasse in dein Deck auf."
+      "Nimm beim Aufheben #b1 von #b5 ungewöhnlichen #yMachtkarten einer #ysneckomod:Fremdklasse in dein Deck auf."
     ]
   },
   "sneckomod:SneckoBoss": {

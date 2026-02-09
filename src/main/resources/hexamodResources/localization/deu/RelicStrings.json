@@ -4,14 +4,14 @@
     "FLAVOR": "Ein an mich gebundener Beschützer.",
     "DESCRIPTIONS": [
       "Erhalte #b",
-      " #yBlock wenn das erste Mal im Zug eine #yGeisterflamme #yhexamod:entzündet wird."
+      " #yBlock [REMOVE_SPACE], wenn das erste Mal im Zug eine #yGeisterflamme #yhexamod:entzündet wird."
     ]
   },
   "hexamod:TheBrokenSeal": {
     "NAME": "Das gebrochene Siegel",
     "FLAVOR": "Unbegrenzte, ungebändigte, unstillbare Macht.",
     "DESCRIPTIONS": [
-      "Erhöhe beim Aufheben deine Max TP um #b",
+      "Erhöhe beim Aufheben deine max. TP um #b",
       " und heile deine TP komplett. Beginne jeden Kampf mit #b",
       " #yStärke [REMOVE_SPACE], #yGeschicklichkeit [REMOVE_SPACE], und #yhexamod:Intensität [REMOVE_SPACE]. Du kannst keine weiteren Siegel oder #pGebrochene #pSiegel erhalten."
     ]
@@ -45,7 +45,7 @@
     "NAME": "Recycler",
     "FLAVOR": "Eines Tages werde ich auch recycelt.",
     "DESCRIPTIONS": [
-      "Wenn das erste Mal im Kampf eine #yflüchtige Karte #yerschöpft, die weder ein #yStatus noch ein #rFluch ist, nimm eine Kopie dieser Karte auf die Hand, die #b0 kostet bis du sie spielst."
+      "Wenn das erste Mal im Kampf eine #yflüchtige Karte #yerschöpft [REMOVE_SPACE], die weder ein #yStatus noch ein #rFluch ist, nimm eine Kopie dieser Karte auf die Hand, die #b0 kostet bis du sie spielst."
     ]
   },
   "hexamod:MatchstickCase": {
@@ -60,7 +60,7 @@
     "FLAVOR": "Etwas extra-Schärfe macht alles besser.",
     "DESCRIPTIONS": [
       "Beginne jeden Kampf mit #b",
-      " #yhexamod:Intensität."
+      " #yhexamod:Intensität [REMOVE_SPACE]."
     ]
   },
   "hexamod:SoulOfChaos": {
@@ -74,14 +74,14 @@
     "NAME": "Olexas Schild",
     "FLAVOR": "Schutz auf Nachfrage.",
     "DESCRIPTIONS": [
-      "#yMachtkarten bringen auch #ySengende und #ySchlagende #yGeisterflammen voran."
+      "#yMachtkarten bringen auch die #yhexamod:Entzündung #ySengender und #ySchlagender #yGeisterflammen voran."
     ]
   },
   "hexamod:BolsterEngine": {
     "NAME": "Trickys Stärkungsstab",
     "FLAVOR": "Unterstützt durch die Recherche tausender Bücher. Wissen ist Macht!",
     "DESCRIPTIONS": [
-      "Erhalte für die erste #yMachtkarte die du im Kampf spielst #b",
+      "Erhalte für die erste #yMacht [REMOVE_SPACE], die du im Kampf spielst, #b",
       " #yBlock und #b",
       " #yStärke [REMOVE_SPACE]."
     ]
@@ -91,7 +91,7 @@
     "FLAVOR": "Feuer BRENNT...",
     "DESCRIPTIONS": [
       "Immer wenn du #yhexamod:Seelenfeuer anwendest, wende zusätzlich #b",
-      " #yhexamod:Seelenfeuer an."
+      " #ySeelenfeuer an."
     ]
   },
   "hexamod:Sixitude": {
@@ -108,7 +108,7 @@
     "DESCRIPTIONS": [
       "#yTransformiere jeweils eine beliebige Anzahl deiner #ySchläge in zufällige Fertigkeiten und #yVerteidigen in zufällige Angriffe.",
       "Die Waage der Gerechtigkeit neigt sich.",
-      "Wähle eine beliebige Anzahl an Karten um sie zu ihren gegenteiligen Typen zu transformieren."
+      "Wähle eine beliebige Anzahl an Karten, um sie zu ihren gegenteiligen Typen zu transformieren."
     ]
   }
 }

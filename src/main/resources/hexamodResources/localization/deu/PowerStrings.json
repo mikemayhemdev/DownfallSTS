@@ -153,7 +153,7 @@
   "hexamod:PastPower": {
     "NAME": "Totentanz",
     "DESCRIPTIONS": [
-      "Ziehe eine Karte wenn du dich das erste Mal im Zug #yvorwärts oder #yrückwärts bewegst.",
+      "Wenn du dich das erste Mal im Zug #yvorwärts oder #yrückwärts bewegst, ziehe eine Karte.",
       "Ziehe eine Karte für die ersten #b",
       " Male, an denen du dich im Zug #yvorwärts oder #yrückwärts bewegst.",
       " NL Dieser Effekt kann in diesem Zug noch #b",
@@ -197,7 +197,7 @@
   "hexamod:VolcanoVisagePower": {
     "NAME": "Vulkanvisage",
     "DESCRIPTIONS": [
-      "Wende immer, wenn du eine Geisterflamme #yentzündest, #b",
+      "Wende immer, wenn du eine Geisterflamme #yentzündest [REMOVE_SPACE], #b",
       " #ySeelenfeuer auf ALLE Gegner an."
     ]
   },
@@ -216,7 +216,7 @@
   "hexamod:SoulburnOnExhaustPower": {
     "NAME": "Seelenfeuer-Befall",
     "DESCRIPTIONS": [
-      "Immer wenn in diesem Zug eine Karte #yErschöpft wende #b",
+      "Immer wenn in diesem Zug eine Karte #yerschöpft [REMOVE_SPACE], wende #b",
       " #ySeelenfeuer auf diesen Gegner an."
     ]
   },
@@ -228,14 +228,14 @@
     ]
   },
   "hexamod:MaxHPPostCombatPower": {
-    "NAME": "Versiegelte Belohnung: Max TP",
+    "NAME": "Versiegelte Belohnung: max. TP",
     "DESCRIPTIONS": [
       "Erhalte am Ende des Kampfes #b",
-      " Max TP."
+      " max. TP."
     ]
   },
   "hexamod:InfernoPotionPower": {
-    "NAME": "Hexafeuer",
+    "NAME": "Hexabrand",
     "DESCRIPTIONS": [
       "Die Geisterflammen-Effekte werden in diesem Kampf auf ALLE Gegner angewendet.",
       "Die Geisterflammen-Effekte werden in diesem Kampf auf ALLE Gegner #b",

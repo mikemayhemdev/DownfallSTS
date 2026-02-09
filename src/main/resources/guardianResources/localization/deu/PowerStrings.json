@@ -15,9 +15,9 @@
     ]
   },
   "Guardian:FloatingOrbsPower": {
-    "NAME": "Schwebende Orbd",
+    "NAME": "Schwebende Orbs",
     "DESCRIPTIONS": [
-      "Immer wenn du eine Karte ausspielst die #y0 kostet, füge einem zufälligen Gegner #b",
+      "Immer wenn du eine Karte ausspielst, die #y0 kostet, füge einem zufälligen Gegner #b",
       " Schaden zu."
     ]
   },
@@ -31,9 +31,9 @@
   "Guardian:ClonePower": {
     "NAME": "Umsteuern",
     "DESCRIPTIONS": [
-      "Lege die nächste Karte die du in diesem Zug spielst in #yStasis.",
+      "Lege die nächste Karte, die du in diesem Zug spielst, in #yStasis.",
       "Lege die nächsten #b",
-      " Karten die du in diesem Zug spielst in #yStasis."
+      " Karten, die du in diesem Zug spielst, in #yStasis."
     ]
   },
   "Guardian:GemFinderPower": {
@@ -139,11 +139,11 @@
     "DESCRIPTIONS": [
       "Wenn du im Zug das erste Mal einen #yStatus oder #yFluch ziehst, #yerschöpfe ihn und ziehe eine Karte.",
       "Die ersten #b",
-      " Male, die du im Zug einen #yStatus oder #yFluch ziehst, #yerschöpfe ihn und ziehe eine Karte."
+      " Male im Zug, an denen du einen #yStatus oder #yFluch ziehst, #yerschöpfe ihn und ziehe eine Karte."
     ]
   },
   "Guardian:RevengePower": {
-    "NAME": "Racheprotokoll",
+    "NAME": "Kampfprotokoll",
     "DESCRIPTIONS": [
       "Erhalte jedes Mal, wenn du in den #yDefensivmodus wechselst, #b",
       " #yStrength [REMOVE_SPACE]."
@@ -152,7 +152,7 @@
   "Guardian:StasisEnginePower": {
     "NAME": "Stasismotor",
     "DESCRIPTIONS": [
-      "Immer wenn du in einem Zug #b3 Karten spielst die #b0 kosten, erhalte #b",
+      "Wenn du in einem Zug die #bdritte Karte mit Kosten #b0 spielst, erhalte #b",
       " [E] und ziehe #b",
       " Karte",
       " Karten",

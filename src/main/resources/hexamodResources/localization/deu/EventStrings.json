@@ -18,7 +18,7 @@
       "[Verjagen] #gErhalte #geine #bfluchbannende #bKerze. #rVerliere #r5 #rTP.",
       "[Verjagen] Verlassen.",
       "[Verlange Macht] #gErhalte eine #gzufällige #yseltene #gKarte. #rVerflucht #r- #rzufällig.",
-      "[Verlange Leben] #gErhalte #g12 #gMax #gTP. #rVerflucht #r- #rzufällig.",
+      "[Verlange Leben] #gErhalte #g12 #gmax. #gTP. #rVerflucht #r- #rzufällig.",
       "[Verlange Seelen] #gErhalte #g180 #gSeelen. #rVerflucht #r- #rzufällig.",
       "[Gesperrt] Geschäft abgeschlossen.",
       "[Verlassen]"
@@ -45,8 +45,8 @@
       "[Gesperrt] Opfer gebracht.",
       ". #gErhalte #gdas #gFünfte #gSiegel.",
       "[Gesperrt] Erfordert eine verbesserte Karte.",
-      " Max TP. #gErhalte #gdas #gSechste #gSiegel.",
-      "[Gesperrt] Erfordert 2 Max TP."
+      " max. TP. #gErhalte #gdas #gSechste #gSiegel.",
+      "[Gesperrt] Erfordert 2 max. TP."
     ]
   },
   "hexamod:HexaFalling": {
@@ -69,12 +69,12 @@
       "#y„Exzellent!“ NL Du bemerkst, wie sich bei den Worten der Geisterfigur ihr riesiger Mund weiter und weiter öffnet. #p~Dicker~ #p~schwarzer~ #p~Rauch~ quillt hervor und verhüllt den Raum. Du kannst weder sehen noch atmen...",
       "Während du noch immer vom #p~schwarzen~ #p~Rauch~ umgeben bist, verfault dein Körper mehr, doch dein Geist #pbrennt #pheller als jemals zuvor. NL Du verstehst jetzt wie das Körperliche und Unkörperliche auf solche Weisen verbunden sind, die deine kühnsten Vorstellungen übersteigen.",
       "Inmitten der Dunkelheit siehst du mit ungetrübtem Auge. Die Geister haben dir gezeigt, wie du deine Form meisterst - wie du mit Leichtigkeit in diese und die andere Welt übergehen kannst.",
-      "„Viel Erfolg, #pVerfluchter...“ NL ~„Wir~ ~bleiben~ ~hier~ ~um~ ~anderen~ ~zu~ ~helfen...“~ NL #r@„HA@ #r@HA@ #r@HA@ #r@HAHAHA!“@ NL NL Du bist dir nicht sicher warum der letzte Geist, der den Rat verlassen hat, lachte. Doch du bist in erster Linie dankbar dafür, dass sie dich in ihre Geheimnisse eingeweiht haben.",
+      "„Viel Erfolg, #pVerfluchter...“ NL ~„Wir~ ~bleiben~ ~hier~ ~um~ ~anderen~ ~zu~ ~helfen...“~ NL #r@„HA@ #r@HA@ #r@HA@ #r@HAHAHA!“@ NL NL Du bist dir nicht sicher, warum der letzte Geist, der den Rat verlassen hat, lachte. Doch du bist in erster Linie dankbar dafür, dass sie dich in ihre Geheimnisse eingeweiht haben.",
       "„Wie enttäuschend...“ NL ~„Du~ ~wirst~ ~diesm~ ~Ort~ ~niemals~ ~entkommen...“~ NL #r@„HA@ #r@HA@ #r@HA@ #r@HAHAHA!“@ NL NL Die Formen verblassen, nur das nervtötende Lachen klingt in deinen Ohren nach."
       ],
     "OPTIONS": [
       "[Annehmen] #rVerliere #r",
-      " #rMax #rTP. Schalte Studieren und Lernen frei.",
+      " #rmax. #rTP. Schalte Studieren und Lernen frei.",
       "[Studieren] #rVerliere #ralle #rSchläge. #gErhalte #g3 #gGeisterstrafen.",
       "[Lernen] #rVerliere #ralle #rVerteidigen Karten. #gErhalte #g",
       "[Abschließen]",
