@@ -42,7 +42,7 @@ public class TechniqueTome extends AbstractImageEvent {
     private int prideGained;
 
     public TechniqueTome() {
-        super(NAME, DESCRIPTIONS[0], "champResources/images/events/book.png");
+        super(NAME, DESCRIPTIONS[0], "images/events/cursedTome.jpg");
 
         if (getNonTechniqueCards().size() == 0) {
             this.imageEventText.setDialogOption(OPTIONS[3], true);

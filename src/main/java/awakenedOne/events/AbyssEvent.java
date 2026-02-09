@@ -34,7 +34,7 @@ public class AbyssEvent extends AbstractImageEvent {
     private int prideGained;
 
     public AbyssEvent() {
-        super(NAME, DESCRIPTIONS[0], "champResources/images/events/book.png");
+        super(NAME, DESCRIPTIONS[0], "images/events/cursedTome.jpg");
 
 
         this.imageEventText.setDialogOption(OPTIONS[0], new RealityRift());
