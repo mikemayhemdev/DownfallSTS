@@ -10,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.MonsterGroup;
 import com.megacrit.cardcrawl.monsters.city.Centurion;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import downfall.cards.curses.Bewildered;
-import downfall.downfallMod;
 import sneckomod.relics.BabySnecko;
 
 public class SuspiciousHouse extends AbstractImageEvent {
@@ -31,7 +30,7 @@ public class SuspiciousHouse extends AbstractImageEvent {
     private boolean postFightTriggered = false;
 
     public SuspiciousHouse() {
-        super(NAME, DESCRIPTIONS[0], (downfallMod.assetPath("images/events/soulShrine.png")));
+        super(NAME, DESCRIPTIONS[0], "sneckomodResources/images/events/cityStreet.png");
         this.screen = CurScreen.INTRO;
         this.noCardsInRewards = true;
 
