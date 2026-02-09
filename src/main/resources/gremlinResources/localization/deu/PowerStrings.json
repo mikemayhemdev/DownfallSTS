@@ -161,7 +161,8 @@
     "NAME": "Schildgremlin",
     "DESCRIPTION": [
       "Erhalte nach dem Ausspielen einer Fertigkeit #b",
-      " #yBlock [REMOVE_SPACE]."
+      " #yBlock [REMOVE_SPACE].",
+      ""
     ]
   },
   "Gremlin:SneakyGremlin": {

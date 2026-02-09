@@ -133,7 +133,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "Sludge Bomb",
-    "DESCRIPTION": "Requires and erases an Exhausted *Void. NL Deal !D! damage twice.",
+    "DESCRIPTION": "Requires and erases an Exhausted *Void. NL Deal !D! damage to ALL enemies.",
     "EXTENDED_DESCRIPTION": [
       "I do not have an Exhausted Void."
     ]
@@ -331,8 +331,7 @@
   },
   "awakened:Procession": {
     "NAME": "Procession",
-    "DESCRIPTION": "Play a card in your draw pile and shuffle in *Voids equal to its cost. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Play a card in your draw pile and shuffle in *Voids equal to its cost."
+    "DESCRIPTION": "Play a card in your draw pile and shuffle in *Voids equal to its cost. NL Exhaust."
   },
   "awakened:SplitWide": {
     "NAME": "Split Wide",

@@ -2,7 +2,9 @@ package awakenedOne.cards;
 
 import automaton.cards.goodstatus.IntoTheVoid;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,14 +18,14 @@ public class SludgeBomb extends AbstractAwakenedCard {
     // intellij stuff skill, self, basic, , , 5, 3, ,
 
     public SludgeBomb() {
-        super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ENEMY);
-        baseDamage = 12;
+        super(ID, 0, CardType.ATTACK, CardRarity.RARE, CardTarget.ALL_ENEMY);
+        baseDamage = 18;
+        isMultiDamage = true;
         loadJokeCardImage(this, makeBetaCardPath(SludgeBomb.class.getSimpleName() + ".png"));
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
-        dmg(m, AbstractGameAction.AttackEffect.FIRE);
+        this.addToBot(new DamageAllEnemiesAction(p, multiDamage, DamageInfo.DamageType.NORMAL, AbstractGameAction.AttackEffect.FIRE));
         AbstractCard toRemove = null;
         for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
             if (c instanceof VoidCard || c instanceof IntoTheVoid) {
@@ -50,6 +52,6 @@ public class SludgeBomb extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        upgradeDamage(3);
+        upgradeDamage(4);
     }
 }

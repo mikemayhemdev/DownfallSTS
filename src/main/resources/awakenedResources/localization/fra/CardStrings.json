@@ -133,7 +133,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "Bomb-beurk",
-    "DESCRIPTION": "Requiert un *Néant Épuisé qui sera effacé. NL Infligez !D! dégâts deux fois.",
+    "DESCRIPTION": "Requiert un *Néant Épuisé qui sera effacé. NL Infligez !D! dégâts à TOUS les ennemis.",
     "EXTENDED_DESCRIPTION": [
       "Je n'ai pas de Néant Épuisé."
     ]
@@ -331,8 +331,7 @@
   },
   "awakened:Procession": {
     "NAME": "Cortège",
-    "DESCRIPTION": "Jouez une carte de votre pioche et mélangez autant de *Néants que son coût. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Jouez une carte de votre pioche et mélangez autant de *Néants que son coût."
+    "DESCRIPTION": "Jouez une carte de votre pioche et mélangez autant de *Néants que son coût. NL Épuisement."
   },
   "awakened:SplitWide": {
     "NAME": "Flagellation",

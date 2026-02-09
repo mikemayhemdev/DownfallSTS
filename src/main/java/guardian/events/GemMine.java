@@ -115,7 +115,8 @@ public class GemMine extends AbstractImageEvent {
 
 
                             CardCrawlGame.sound.play("MONSTER_BOOK_STAB_0");
-                            AbstractDungeon.player.getRelic(PickAxe.ID).onTrigger();
+                            //AbstractDungeon.player.getRelic(PickAxe.ID).onTrigger();
+                            AbstractDungeon.player.loseRelic(PickAxe.ID);
                             this.tookGems = true;
                         } else {
 

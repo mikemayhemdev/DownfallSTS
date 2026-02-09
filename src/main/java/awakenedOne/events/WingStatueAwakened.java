@@ -34,9 +34,9 @@ public class WingStatueAwakened extends AbstractImageEvent {
         this.screen = CurScreen.INTRO;
 
         if (AbstractDungeon.ascensionLevel >= 15) {
-            this.damage = (int) ((float) AbstractDungeon.player.maxHealth * 0.35F);
+            this.damage = 7;
         } else {
-            this.damage = (int) ((float) AbstractDungeon.player.maxHealth * 0.25F);
+            this.damage = 5;
         }
 
         this.imageEventText.setDialogOption(OPTIONS[0], new ShatteredFragment());

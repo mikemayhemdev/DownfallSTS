@@ -133,7 +133,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "スラッジボム",
-    "DESCRIPTION": "廃棄札に存在する *空虚 をコストとして使用する。 NL !D! ダメージを2回与える。",
+    "DESCRIPTION": "廃棄札に存在する *空虚 をコストとして使用する。 NL 敵全体に !D! ダメージを与える。",
     "EXTENDED_DESCRIPTION": [
       "空虚が廃棄されていない"
     ]
@@ -331,8 +331,7 @@
   },
   "awakened:Procession": {
     "NAME": "行進",
-    "DESCRIPTION": "山札のカードをプレイし、そのコストに等しい *空虚 を山札に加えシャッフルする。 NL 廃棄",
-    "UPGRADE_DESCRIPTION": "山札のカードをプレイし、そのコストに等しい *空虚 を山札に加えシャッフルする。"
+    "DESCRIPTION": "山札のカードをプレイし、そのコストに等しい *空虚 を山札に加えシャッフルする。 NL 廃棄"
   },
   "awakened:SplitWide": {
     "NAME": "引き裂く",
