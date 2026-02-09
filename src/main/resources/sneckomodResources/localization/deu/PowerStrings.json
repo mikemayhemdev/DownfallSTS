@@ -35,15 +35,15 @@
   "sneckomod:MudshieldPower": {
     "NAME": "Irrlichtschild",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du eine Karte #yirrst #b",
+      "Erhalte immer, wenn du eine Karte #yirrst [REMOVE_SPACE], #b",
       " #yBlock [REMOVE_SPACE]."
     ]
   },
   "sneckomod:OverwhelmingPresencePower": {
     "NAME": "Überwältigende Präsenz",
     "DESCRIPTIONS": [
-      "Das erste Mal wenn du im Zug eine Karte einer #yFremdklasse spielst, ziehe #b1 Karte.",
-      "Das erste Mal wenn du im Zug eine Karte einer #yFremdklasse spielst, ziehe #b ",
+      "Wenn du das erste Mal im Zug eine Karte einer #yFremdklasse spielst, ziehe #b1 Karte.",
+      "Wenn du das erste Mal im Zug eine Karte einer #yFremdklasse spielst, ziehe #b ",
       " Karten."
     ]
   },
@@ -58,7 +58,7 @@
   "sneckomod:SerpentMindPower": {
     "NAME": "Exotische Form",
     "DESCRIPTIONS": [
-      "Erhalte am Ende deines Zuges für jede #yKlasse, aus der du zumindest eine Karte gespielt hast, #b",
+      "Erhalte am Ende deines Zuges für jede #yKlasse [REMOVE_SPACE], von der du zumindest eine Karte gespielt hast, #b",
       " #yStärke.",
       " #yStärke."
     ]
@@ -72,7 +72,7 @@
     ]
   },
   "sneckomod:UnendingSupplyPower": {
-    "NAME": "Unendlicher Vorrat",
+    "NAME": "Exotischer Vorrat",
     "DESCRIPTIONS": [
       "Nimm zu Beginn jedes Zuges #b",
       "Nimm zu Beginn jedes Zuges ein #yEcho einer zufälligen Karte einer #yFremdklasse auf die Hand.",
@@ -130,7 +130,7 @@
   "sneckomod:SerpentineSleuthPower": {
     "NAME": "Vipernmacht",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du eine #yMacht spielst #b",
+      "Erhalte immer, wenn du eine #yMacht spielst [REMOVE_SPACE], #b",
       " [E] .",
       " [E] ."
     ]
@@ -138,7 +138,7 @@
   "sneckomod:BigGunsStrengthPower": {
     "NAME": "Schwere Geschütze",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du eine Karte spielst, die mindestens #b3 kostet, #b",
+      "Erhalte immer, wenn du eine Karte spielst, die mindestens #b3 kostet, #b",
       " #yStärke [REMOVE_SPACE].",
       " #yStärke [REMOVE_SPACE]."
     ]
@@ -146,7 +146,7 @@
   "sneckomod:BigGunsBlockPower": {
     "NAME": "Schwere Panzerung",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du eine Karte spielst, die mindestens #b3 kostet, #b",
+      "Erhalte immer, wenn du eine Karte spielst, die mindestens #b3 kostet, #b",
       " #yBlock [REMOVE_SPACE].",
       " #yBlock [REMOVE_SPACE]."
     ]
@@ -154,7 +154,7 @@
   "sneckomod:AceOfWandsPower": {
     "NAME": "König der Pentagramme",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du einen Debuff anwendest #b",
+      "Erhalte immer, wenn du einen Debuff anwendest, #b",
       " #yBlock [REMOVE_SPACE].",
       " #yBlock [REMOVE_SPACE]."
     ]

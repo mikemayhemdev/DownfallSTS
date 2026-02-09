@@ -7,10 +7,10 @@
     ]
   },
   "champ:BlackKnightHelmet": {
-    "NAME": "Helm des Herausforderers",
-    "FLAVOR": "Nur eine Fleischwunde.",
+    "NAME": "Schwarzer Helm",
+    "FLAVOR": "Es ist nur eine Fleischwunde.",
     "DESCRIPTIONS": [
-      "Das erste Mal wenn du im Kampf die entsprechende #yHaltung annimst: NL #bchamp:Defensiv : Erhalte #b2 #yGeschicklichkeit und verliere #b1 #yStärke [REMOVE_SPACE]. NL #rchamp:Offensiv : Erhalte #b2 #yStärke und verliere #b1 #yGeschicklichkeit [REMOVE_SPACE]."
+      "Wenn du das erste Mal im Kampf die entsprechende #yHaltung annimst: NL #ychamp:Defensiv [REMOVE_SPACE]: #gErhalte #b2 #yGeschicklichkeit und #rverliere #b1 #yStärke [REMOVE_SPACE]. #ychamp:Offensiv [REMOVE_SPACE]: #gErhalte #b2 #yStärke und #rverliere #b1 #yGeschicklichkeit [REMOVE_SPACE]."
     ]
   },
   "champ:Barbells": {
@@ -34,7 +34,7 @@
     "FLAVOR": "Conglaturation!! You are the greatest winner.",
     "DESCRIPTIONS": [
       "Ersetzt ",
-      " [REMOVE_SPACE].[] NL Das erste Mal wenn du im Zug einen #ychamp:Abschluss spielst, ziehe #b",
+      " [REMOVE_SPACE].[] NL Wenn du das erste Mal im Zug einen #ychamp:Abschluss spielst, ziehe #b",
       " Karten und nimm eine zufällige #yHaltung an."
     ]
   },
@@ -50,7 +50,7 @@
     "NAME": "Ablenkende Armschienen",
     "FLAVOR": "Wenn du schon dachtest, dass Abblocken gut wäre...",
     "DESCRIPTIONS": [
-      "Erhalte zu Beginn deines Zuges #ychamp:Konter in Höhe der Hälfte es ungebrauchten #yBlock [REMOVE_SPACE]."
+      "Erhalte zu Beginn deines Zuges #ychamp:Konter in Höhe der Hälfte es ungebrauchten NL #yBlock [REMOVE_SPACE]."
     ]
   },
   "champ:DuelingGlove": {
@@ -71,7 +71,7 @@
     "NAME": "Lehren der Gladiatoren",
     "FLAVOR": "Probiere alles aus - etwas wird schon hängenbleiben.",
     "DESCRIPTIONS": [
-      "Immer wenn du im selben Zug jeweils mindetens eine Karte mit #ychamp:Combo (egal ob aktiv oder nicht) und einen #ychamp:Abschluss ausspielst, sowie eine #yHaltung annimmst, dann erhalte #b1 #yStärke und #yGeschicklichkeit [REMOVE_SPACE]."
+      "Immer wenn du im selben Zug jeweils mindetens eine Karte mit #ychamp:Combo (egal ob aktiv oder nicht) und einen #ychamp:Abschluss ausspielst, sowie eine #yHaltung annimmst, erhalte #b1 #yStärke und #yGeschicklichkeit [REMOVE_SPACE]."
     ]
   },
   "champ:PowerArmor": {
@@ -104,7 +104,7 @@
     "NAME": "Phantomhand",
     "FLAVOR": "Manche Siege bleiben bei dir.",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du eine #yHaltung annimmst ein #ygremlin:Echo einer Basis #ySchlag oder #yVerteidigen Karte. Es kostet #b0 [REMOVE_SPACE]."
+      "Erhalte immer, wenn du eine #yHaltung annimmst, ein #ygremlin:Echo einer Basis #ySchlag oder #yVerteidigen Karte. Es kostet #b0 [REMOVE_SPACE]."
     ]
   },
   "champ:LiftRelic": {
@@ -119,7 +119,7 @@
     "NAME": "Neuer Herausforderer",
     "FLAVOR": "Hältst du der Krone stand?",
     "DESCRIPTIONS": [
-      "Beginne jeden Kamp in einer zufälligen Champ #yHaltung [REMOVE_SPACE]."
+      "Beginne jeden Kampf in einer zufälligen Champ #yHaltung [REMOVE_SPACE]."
     ]
   },
   "downfall:BustedCrownGagText": {

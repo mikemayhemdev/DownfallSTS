@@ -36,7 +36,7 @@
       "bruise",
       "bruised"
     ],
-    "DESCRIPTION": "Ziele mit Prügel nehmen mehr Angriffschaden. Läuft am ende des Zuges ab."
+    "DESCRIPTION": "Ziele mit Prügel nehmen mehr Angriffsschaden. Läuft am ende des Zuges ab."
   },
   {
     "ID": "rugged",
@@ -46,7 +46,7 @@
       "robust",
       "rugged"
       ],
-    "DESCRIPTION": "Reduziert den nächsten erlitennen TP-Verlust durch Angriffschaden zu #b2 [REMOVE_SPACE]."
+    "DESCRIPTION": "Reduziert den nächsten erlitennen TP-Verlust durch Angriffsschaden zu #b2 [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Kopfgeld",

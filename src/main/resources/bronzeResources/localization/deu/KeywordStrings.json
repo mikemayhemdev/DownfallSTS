@@ -11,7 +11,7 @@
       "encode",
       "encoded"
     ],
-    "DESCRIPTION": "Eine Karte, die beim Spielen kodiert wird, landet nicht auf den Abwurfstapel. NL Sind 3 Karten kodiert, #ykompilieren sie zu einer #yFunktion, die #b1 kostet und die Effekte der kodierten Karten kombiniert."
+    "DESCRIPTION": "Eine Karte, die beim Spielen kodiert wird, landet nicht auf den Abwurfstapel. NL Sind 3 Karten kodiert, #ykompilieren sie zu einer #yFunktion [REMOVE_SPACE], die #b1 kostet und die Effekte der kodierten Karten kombiniert."
   },
   {
     "PROPER_NAME": "Kompilieren",

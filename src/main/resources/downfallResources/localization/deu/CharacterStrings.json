@@ -31,8 +31,8 @@
       "Wähle 10 Karten und füge sie deinem Deck hinzu.",
       "[ #gDie #gGegner #gdeiner #gnächsten #gdrei #gKämpfe #gfliehen #gin #gFurcht ]",
       "[ Gesperrt - Kann nicht im ertsen Run ausgewählt werden ]",
-      "[ #gAlle #gGremlins #gerhalten #gMax #gTP #g+",
-      "#gAlle #gGremlins #gerhalten #gMax #gTP #g+",
+      "[ #gAlle #gGremlins #gerhalten #gmax. #gTP #g+",
+      "#gAlle #gGremlins #gerhalten #gmax. #gTP #g+",
       "[ #rAlle #rGremlins #rverlieren #r",
       "[ #rAlle #rGremlins #rerleiden #r"
     ]
@@ -175,7 +175,7 @@
       "Zeitschleim"
     ],
     "TEXT": [
-      "Verliere 3 TP. NL Erhalte 15 Gold.",
+      "Verliere 3 TP. NL Erhalte 15 Seelen.",
       "Verliere 3 TP. NL Nimm eine zufällige farblose Karte auf die Hand.",
       "Verliere 7 TP. NL Erhalte einen zufälligen *Trank.",
       "Erhalte Wächter *Boss-Karten.",
@@ -195,8 +195,8 @@
       "slimeboundmod:Spalte einen slimeboundmod:Spötterschleim *ab.",
       "slimeboundmod:Spalte einen slimeboundmod:Antiken_Schleim *ab.",
       "slimeboundmod:Spalte einen slimeboundmod:Zeitschleim *ab.",
-      "slimeboundmod:Spalte einen slimeboundmod:Raufboldschleim *ab.",
-      "slimeboundmod:Spalte einen slimeboundmod:Guerillaschleim *ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Kampfschleim *ab.",
+      "slimeboundmod:Spalte einen slimeboundmod:Minischleim *ab.",
       "slimeboundmod:Spalte einen slimeboundmod:Schlammschleim *ab.",
       "slimeboundmod:Spalte einen slimeboundmod:Beschützerschleim *ab.",
       "Verliere 3 TP. NL Erhalte 20 Seelen.",

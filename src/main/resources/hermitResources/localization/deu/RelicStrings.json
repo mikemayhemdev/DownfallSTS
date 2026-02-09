@@ -19,7 +19,7 @@
     "DESCRIPTIONS": [
       "Die ersten #b",
       "Du kannst in diesem Kampf keine Tränke mehr benutzen.",
-      " Male bei denen ein Trank im Kampf benutzt wird, erhältst du einen zufälligen Trank. Du kannst maximal #b",
+      " Male, bei denen ein Trank im Kampf benutzt wird, erhältst du einen zufälligen Trank. Du kannst maximal #b",
       " Tränke pro Kampf benutzen."
     ]
   },
@@ -27,7 +27,7 @@
     "NAME": "Hufeisen",
     "FLAVOR": "Ein Glücksbringer. Jemand wird es sicherlich vermissen.",
     "DESCRIPTIONS": [
-      "Immer wenn du #ySchwach, #yGebrechlich oder #yVerwundbar erhältst, erhalte stattdessen #b1 weniger davon."
+      "Immer wenn du #ySchwach, #yGebrechlich oder #yVerwundbar erhältst, erhältst du stattdessen #b1 weniger davon."
     ]
   },
   "hermit:Spyglass": {
@@ -49,7 +49,7 @@
     "NAME": "Verbeulter Brustpanzer",
     "FLAVOR": "Es stecken immer noch ein paar Kugeln darin.",
     "DESCRIPTIONS": [
-      "Wenn deine TP zu Beginn des Zuges bei #b50% der Max TP under darunter sind, ziehe #b1 Karte erhalte [E] ."
+      "Wenn deine TP zu Beginn des Zuges bei #b50% der max. TP under darunter sind, ziehe #b1 Karte erhalte [E] ."
     ]
   },
   "hermit:PetGhost": {
@@ -63,15 +63,15 @@
     "NAME": "Verkohlter Handschuh",
     "FLAVOR": "In Teilen des Handschus glüht immer noch unheimliche Asche.",
     "DESCRIPTIONS": [
-      "Erhalte immer wenn du einen #rFluch ziehst #b",
-      " #yElan."
+      "Erhalte immer, wenn du einen #rFluch ziehst, #b",
+      " #yElan [REMOVE_SPACE]."
     ]
   },
   "hermit:ClaspedLocket": {
     "NAME": "Zugeklapptes Medaillon",
     "FLAVOR": "Es kann nicht mehr geöffnet werden.",
     "DESCRIPTIONS": [
-      "Ersetzt #yAltes #yMedaillon [REMOVE_SPACE]. Wenn zum ersten Mal im Zug ein #rFluch gezogen wird, #yerschöpfe ihn und ziehe #b",
+      "Ersetzt das #yAlte #yMedaillon [REMOVE_SPACE]. Wenn zum ersten Mal im Zug ein #rFluch gezogen wird, #yerschöpfe ihn und ziehe #b",
       "Nie wieder...",
       " Karten. Nimm beim Aufheben #b",
       " #rVerletzungen in dein Deck auf."

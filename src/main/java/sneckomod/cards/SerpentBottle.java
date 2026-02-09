@@ -36,7 +36,7 @@ public class SerpentBottle extends AbstractSneckoCard {
 
         String stuff;
         if(Settings.language == Settings.GameLanguage.DEU){
-            stuff = "irsst";
+            stuff = "irrst";
         } else {
             stuff = BaseMod.getKeywordProper("sneckomod:muddle");
         }

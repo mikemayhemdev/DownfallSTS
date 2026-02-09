@@ -1,7 +1,7 @@
 {
   "downfall:Aged": {
     "NAME": "Altern",
-    "DESCRIPTION": "Unspielbar. Flüchtig. NL Nimm am Ende des Zuges eine *Leere auf den Abwurfstapel."
+    "DESCRIPTION": "Unspielbar. NL Flüchtig. NL Nimm am Ende des Zuges eine Leere auf den Abwurfstapel."
   },
   "downfall:Bewildered": {
     "NAME": "Irritation",
@@ -13,15 +13,15 @@
   },
   "downfall:Haunted": {
     "NAME": "Spuk",
-    "DESCRIPTION": "Flüchtig. NL Erleide am Ende deines Zuges !M! Schaden."
+    "DESCRIPTION": "Flüchtig. NL Ist diese Karte am Ende des Zuges auf der Hand, erleidest du !M! Schaden."
   },
   "downfall:Malfunctioning": {
     "NAME": "Unreinheit",
-    "DESCRIPTION": "Nimm am Ende des Zuges eine *Wunde auf den Abwurfstapel. NL Erschöpft."
+    "DESCRIPTION": "Ist diese Karte am Ende des Zuges auf der Hand, dann lege eine Wunde auf den Abwurfstapel. NL Erschöpft."
   },
   "downfall:Scatterbrained": {
     "NAME": "Zerstreutheit",
-    "DESCRIPTION": "Nimm am Ende des Zuges eine Kopie dieser Karte auf den Abwurfstapel. NL Erschöpft."
+    "DESCRIPTION": "Ist diese Karte am Ende des Zuges auf der Hand, dann lege eine Kopie auf den Abwurfstapel. NL Erschöpft."
   },
   "downfall:CurseOfBlood": {
     "NAME": "Blutleer",
@@ -30,11 +30,11 @@
   },
   "downfall:SummonMushrooms": {
     "NAME": "Fungus unter uns",
-    "DESCRIPTION": "Töte alle Pilze. Heile TP in Höhe ihrer verbleibenden TP. NL Beschwöre zwei zufällige Pilze."
+    "DESCRIPTION": "Töte alle *Pilze. Heile TP in Höhe ihrer verbleibenden TP. NL Beschwöre zwei zufällige *Pilze."
   },
   "downfall:BossMaintenance": {
     "NAME": "Wartung",
-    "DESCRIPTION": "*Schläge fügen in diesem Kampf !M! mehr Schaden zu. Erhalte !B! Geschicklichkeit."
+    "DESCRIPTION": "Basis *Schläge fügen diesen Kampf !M! mehr Schaden zu. Erhalte !B! Geschicklichkeit."
   },
   "downfall:CuriousRobot": {
     "NAME": "Neugieriger Roboter",
@@ -42,7 +42,7 @@
   },
   "downfall:Murderbot": {
     "NAME": "Energiedieb",
-    "DESCRIPTION": "Immer wenn du ungeblockten Angriffsschaden zufügst, lege eine *Leere in den Abwurfstapel deines Gegners."
+    "DESCRIPTION": "Immer wenn du ungeblockten Angriffsschaden zufügst, lege eine Leere in den Abwurfstapel deines Gegners."
   },
   "downfall:Temptation": {
     "NAME": "Versuchung",
@@ -50,7 +50,7 @@
   },
   "downfall:BagOfKnives": {
     "NAME": "Sack voller Messer",
-    "DESCRIPTION": "Wenn du in einem Zug das erste Mal eine Karte ausspielst die 2 oder mehr kostet, erhalte 2 *Messer."
+    "DESCRIPTION": "Wenn du das erste Mal im Zug eine Karte ausspielst, die 2 oder mehr kostet, erhalte 2 Messer."
   },
   "downfall:Hallunication": {
     "NAME": "Halluzination",

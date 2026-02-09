@@ -422,7 +422,11 @@ public class HeartEvent extends AbstractEvent {
         this.roomEventText.clearRemainingOptions();
         this.roomEventText.updateDialogOption(0, ((HeartReward) this.rewards.get(0)).optionLabel);
         this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(1)).optionLabel);
-        this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(2)).optionLabel);
+        String label = ((HeartReward) this.rewards.get(2)).optionLabel;
+        if (Settings.language == Settings.GameLanguage.DEU && label.startsWith("[ #rVerliere #rdein #rgesamtes")) {
+            label = "[ #rVerliere #ralle" + label.substring(30);
+        }
+        this.roomEventText.addDialogOption(label);
         this.roomEventText.addDialogOption(((HeartReward) this.rewards.get(3)).optionLabel);
         this.screenNum = 3;
     }

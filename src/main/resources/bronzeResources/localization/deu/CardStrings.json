@@ -1,7 +1,7 @@
 {
   "bronze:Allocate": {
     "NAME": "Allokieren",
-    "DESCRIPTION": "Erhalte [E] für jeden *Status im Nachziehstapel.",
+    "DESCRIPTION": "Erhalte [E] für jeden Status im Nachziehstapel.",
     "EXTENDED_DESCRIPTION": [
       " NL (Erhalte ",
       " [E] .)"
@@ -9,28 +9,28 @@
   },
   "bronze:AlphaBuild": {
     "NAME": "Früher Zugang",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze einen zufälligen Status *ein. NL bronze:Kompilierung - bronze:Setze *Betaversion *ein.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL \u00A0 Füge !D! Schaden zu. NL bronze:Setze einen zufälligen Status *ein. NL bronze:Kompilierung - bronze:Setze *Betaversion *ein.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze einen zufälligen Status *ein. NL bronze:Kompilierung: bronze:Setze *Betaversion *ein.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL \u00A0 Füge !D! Schaden zu. NL bronze:Setze einen zufälligen Status *ein. NL bronze:Kompilierung: bronze:Setze *Betaversion *ein.",
     "EXTENDED_DESCRIPTION": [
       "frühes",
       "Alpha"
     ]
   },
   "bronze:Assembly": {
-    "NAME": "Zusammensetzen",
+    "NAME": "Programmieren",
     "DESCRIPTION": "Spähe !M!. NL bronze:Kodiere alle abgeworfenen Karten mit *Kodieren in der gewählten Reihenfolge. NL Erschöpft."
   },
   "bronze:Backtrace": {
-    "NAME": "Zurückverfolgen",
-    "DESCRIPTION": "Angeboren. NL \u00A0 Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - Die Funktion Erschöpft.",
+    "NAME": "Destruktor",
+    "DESCRIPTION": "Angeboren. NL \u00A0 Füge !D! Schaden zu. NL bronze:Kompilierungsfehler: Die Funktion erschöpft.",
     "EXTENDED_DESCRIPTION": [
-      "feiges",
-      "Folgen"
+      "brutales",
+      "Zerstören"
     ]
   },
   "bronze:BetaBuild": {
     "NAME": "Betaversion",
-    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Setze einen zufälligen Status *ein. NL bronze:Kompilierung - bronze:Setze *Release *ein.",
+    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Setze einen zufälligen Status *ein. NL bronze:Kompilierung: bronze:Setze *Release *ein.",
     "EXTENDED_DESCRIPTION": [
       "unausgereftes",
       "Beta"
@@ -42,11 +42,11 @@
     "UPGRADE_DESCRIPTION": "Behalten. NL Nimm eine *kodierte Karte zurück auf die Hand. NL Sie erhält Behalten. NL Erschöpft."
   },
   "bronze:Boost": {
-    "NAME": "Booster",
-    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Erhalte !M! Stärke.",
+    "NAME": "Software",
+    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung: Erhalte !M! Stärke.",
     "EXTENDED_DESCRIPTION": [
-      "stärkendes",
-      "Boosten"
+      "weiches",
+      "Setup"
     ]
   },
   "bronze:Branch": {
@@ -61,7 +61,7 @@
   },
   "bronze:Break": {
     "NAME": "Abbruch",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - Erhalte je 1 *Benommen, *Verschleimt, *Wunde, *Brennen, *Leere.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierungsfehler: Erhalte Benommen, *Verschleimt, Wunde, Brennen und Leere.",
     "EXTENDED_DESCRIPTION": [
       "gehemmtes",
       "Abbrechen"
@@ -69,20 +69,20 @@
   },
   "bronze:BronzeArmor": {
     "NAME": "Bronzerüstung",
-    "DESCRIPTION": "Erhalte !bauto! Artefakt. NL bronze:Kompilierungsfehler - ALLE Gegner erhalten !M! Block.",
+    "DESCRIPTION": "Erhalte !bauto! Artefakt. NL bronze:Kompilierungsfehler: ALLE Gegner erhalten !M! Block.",
     "EXTENDED_DESCRIPTION": [
-      "bronzenes",
+      "flexibles",
       "Rüsten"
     ]
   },
   "bronze:BronzeOrb": {
-    "NAME": "Bronzener Orb",
+    "NAME": "Orb-Strahl",
     "DESCRIPTION": "Angeboren. NL Füge !D! Schaden zu. NL bronze:Kodiere eine zufällige Karte im Nachziehstapel. Erschöpft."
   },
   "bronze:BugBarrage": {
     "NAME": "Bugbefall",
-    "DESCRIPTION": "Erhalte !M! *Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! *Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
+    "DESCRIPTION": "Erhalte !M! Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! Wunden. NL bronze:Tausche jeden Status *um und füge für jeden davon !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       " NL (Trifft ",
       " Mal.)"
@@ -90,7 +90,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "Verbuggter Code",
-    "DESCRIPTION": "bronze:Setze ein *Benommen *ein. NL Erhalte !M! [E] .",
+    "DESCRIPTION": "bronze:Setze ein Benommen *ein. NL Erhalte !M! [E] .",
     "EXTENDED_DESCRIPTION": [
       "verbuggtes",
       "Chaos"
@@ -98,15 +98,15 @@
   },
   "bronze:BurnOut": {
     "NAME": "Burnout",
-    "DESCRIPTION": "Füge einem zufälligen Gegner für JEDEN *Status !D! Schaden zu. Erschöpfe dann die Statuskarten. NL Erschöpft.",
+    "DESCRIPTION": "Füge einem zufälligen Gegner für JEDEN Status !D! Schaden zu. Erschöpfe dann die Statuskarten. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
-      "Fügt einem zufälligen Gegner !D! Schaden für JEDEN *Status zu (",
+      "Fügt einem zufälligen Gegner !D! Schaden für JEDEN Status zu (",
       "), und erschöpft sie dann. NL Erschöpft."
     ]
   },
   "bronze:ChildClass": {
     "NAME": "Aufrufen",
-    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Erhalte [E] in Höhe der Gesamtkosten deiner *kodierten Karten.",
+    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung: Erhalte [E] in Höhe der Gesamtkosten deiner kodierten Karten.",
     "EXTENDED_DESCRIPTION": [
       "gerufenes",
       "Aufladen"
@@ -114,7 +114,7 @@
   },
   "bronze:ChosenStrike": {
     "NAME": "Kultistenschlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung - Erhöhe den Schaden dieser Karte permanent um !M!.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung: Erhöhe den Schaden dieser Karte permanent um !M!.",
     "EXTENDED_DESCRIPTION": [
       "kultiges",
       "Krächzen"
@@ -122,12 +122,12 @@
   },
   "bronze:ClassDefault": {
     "NAME": "Standardklasse",
-    "DESCRIPTION": "Die nächsten !M! Male an denen eine Funktion kompiliert, bronze:kodiere eine Kopie der Karte im ersten Slot."
+    "DESCRIPTION": "Die nächsten !M! Male an, denen eine Funktion kompiliert, bronze:kodiere eine Kopie der Karte im ersten Slot."
   },
   "bronze:CleanCode": {
     "NAME": "Sauberer Code",
-    "DESCRIPTION": "Verhindere die nächsten !M! *Kompilierungsfehler die du *kodierst.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Verhindere die nächsten !M! *Kompilierungsfehler die du *kodierst."
+    "DESCRIPTION": "Verhindere die nächsten !M! *Kompilierungsfehler, die du *kodierst.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Verhindere die nächsten !M! *Kompilierungsfehler, die du *kodierst."
   },
   "bronze:CloningBeam": {
     "NAME": "Code-Duplizierung",
@@ -144,13 +144,13 @@
     ]
   },
   "bronze:CopyPaste": {
-    "NAME": "Kopieren-Einfügen",
+    "NAME": "Kopie einfügen",
     "DESCRIPTION": "In diesem Zug spielst du deine nächste Funktion zweimal aus.",
     "UPGRADE_DESCRIPTION": "Behalten. NL In diesem Zug spielst du deine nächste Funktion zweimal aus."
   },
   "bronze:CutThrough": {
     "NAME": "Ausschneiden",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Spähe !M!. NL bronze:Kompilierung - Ziehe !bauto! Karte.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Spähe !M!. NL bronze:Kompilierung: Ziehe !bauto! Karte.",
     "EXTENDED_DESCRIPTION": [
       "fehlendes",
       "Schneiden"
@@ -158,7 +158,7 @@
   },
   "bronze:DarkDash": {
     "NAME": "Dunkler Sprint",
-    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - bronze:Setze eine *Leere *ein.",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL bronze:Kompilierungsfehler: bronze:Setze eine Leere *ein.",
     "EXTENDED_DESCRIPTION": [
       "dunkles",
       "Dunkel"
@@ -173,7 +173,7 @@
     ]
   },
   "bronze:DelayedGuard": {
-    "NAME": "Verspäteter Schutz",
+    "NAME": "Herunterladen",
     "DESCRIPTION": "Erhalte im nächsten Zug !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "spätes",
@@ -199,7 +199,7 @@
   },
   "bronze:DigitalCarnage": {
     "NAME": "Digitales Blutbad",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - Die Funktion ist flüchtig.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierungsfehler: Die Funktion ist flüchtig.",
     "EXTENDED_DESCRIPTION": [
       "digitales",
       "Blutbad"
@@ -207,7 +207,7 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "Suchen-Ersetzen",
-    "DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel und lege ein *Benommen an ihrer Stelle ein. NL Erschöpft.",
+    "DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel und lege ein Benommen an ihrer Stelle ein. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle."
@@ -215,8 +215,8 @@
   },
   "bronze:FineTuning": {
     "NAME": "Feinjustierung",
-    "DESCRIPTION": "Erhöhe alle Zahlen auf deine kodierten Karten um !M! (Kosten ausgenommen). NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Erhöhe alle Zahlen auf deine kodierten Karten um !M! (Kosten ausgenommen). NL Erschöpft."
+    "DESCRIPTION": "Erhöhe alle Zahlen auf kodierte Karten um !M! (Kosten ausgenommen). NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erhöhe alle Zahlen auf kodierte Karten um !M! (Kosten ausgenommen). NL Erschöpft."
   },
   "bronze:Flail": {
     "NAME": "Verdreschen",
@@ -227,7 +227,7 @@
     ]
   },
   "bronze:FollowUp": {
-    "NAME": "Nachlegen",
+    "NAME": "Laufwerk",
     "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Hast du diesen Kampf zuletzt eine Funktion gespielt, dann spiele diese Karte nochmal."
   },
   "bronze:ForceShield": {
@@ -253,16 +253,16 @@
     ]
   },
   "bronze:Fortify": {
-    "NAME": "Verstärken",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung - Erhalte !M! Geschicklichkeit.",
+    "NAME": "Hardware",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung: Erhalte !M! Geschicklichkeit.",
     "EXTENDED_DESCRIPTION": [
-      "festes",
-      "Ankern"
+      "hartes",
+      "Bauen"
     ]
   },
   "bronze:Frontload": {
     "NAME": "Konstante",
-    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Die Funktion erhält Behalten.",
+    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung: Die Funktion erhält Behalten.",
     "EXTENDED_DESCRIPTION": [
       "fixes",
       "Fixieren"
@@ -270,7 +270,7 @@
   },
   "bronze:FullRelease": {
     "NAME": "Release",
-    "DESCRIPTION": "bronze:Kompilierung - Die Funktion Wird eine Macht mit 'Zu Beginn jedes Zuges...'",
+    "DESCRIPTION": "bronze:Kompilierung: Die Funktion wird eine Macht mit 'Zu Beginn jedes Zuges...'",
     "EXTENDED_DESCRIPTION": [
       "volles",
       "Release",
@@ -278,13 +278,13 @@
     ]
   },
   "bronze:GetLatest": {
-    "NAME": "Aktualisieren",
+    "NAME": "Variable",
     "DESCRIPTION": "Erhalte eine zufällige Karte mit bronze:Kodieren. Sie kostet 0 bis du sie spielst. NL Erschöpft."
   },
   "bronze:Goto": {
-    "NAME": "Subroutine",
-    "DESCRIPTION": "Ziehe !M! Karte. NL bronze:Kompilierung - Ziehe im nächsten Zug !M! Karte.",
-    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL bronze:Kompilierung - Ziehe im nächsten Zug !M! Karten.",
+    "NAME": "Update",
+    "DESCRIPTION": "Ziehe !M! Karte. NL bronze:Kompilierung: Ziehe im nächsten Zug !M! Karte.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL bronze:Kompilierung: Ziehe im nächsten Zug !M! Karten.",
     "EXTENDED_DESCRIPTION": [
       "laufendes",
       "Sprinten"
@@ -292,7 +292,7 @@
   },
   "bronze:Hardcode": {
     "NAME": "Hardcoden",
-    "DESCRIPTION": "Die nächste Funktion die du kompilierst wird deinem Deck hinzugefügt. Die *kodierten Karten werden aus dem Deck entfernt."
+    "DESCRIPTION": "Die nächste Funktion die du kompilierst wird deinem Deck hinzugefügt. Die kodierten Karten werden aus dem Deck entfernt."
   },
   "bronze:HardenedForm": {
     "NAME": "Orb beschwören",
@@ -304,13 +304,13 @@
   },
   "bronze:InfiniteBeams": {
     "NAME": "Zahllose Strahlen",
-    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges einen *Kleinen *Strahl.",
-    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn jedes Zuges einen *Kleinen *Strahl+."
+    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges einen *hypostrahl.",
+    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn jedes Zuges einen *hypostrahl+."
   },
   "bronze:InfiniteLoop": {
     "NAME": "Endlosschleife",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung - Erhalte eine Kopie dieser Karte mit !M! mehr Schaden.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL bronze:Kompilierung - Erhalte eine Kopie dieser Karte mit !M! mehr Schaden.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung: Erhalte eine Kopie dieser Karte mit !M! mehr Schaden.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL bronze:Kompilierung: Erhalte eine Kopie dieser Karte mit !M! mehr Schaden.",
     "EXTENDED_DESCRIPTION": [
       "endloses",
       "Unendliche"
@@ -334,24 +334,24 @@
   },
   "bronze:ItsAFeature": {
     "NAME": "Es ist ein Feature",
-    "DESCRIPTION": "Erhalte immer wenn du einen Status ziehst oder erschöpfst !M! Block."
+    "DESCRIPTION": "Erhalte immer, wenn du einen Status ziehst oder *erschöpfst, !M! Block."
   },
   "bronze:Library": {
     "NAME": "Bibliothek",
-    "DESCRIPTION": "Nimm zu Beginn jedes Zuges eine zufällige Karte mit bronze:Kodieren auf die Hand. Sie kostet 0 bis du sie spielst."
+    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges eine zufällige Karte mit bronze:Kodieren. Sie kostet 0 bis du sie spielst."
   },
   "bronze:MaxOutput": {
     "NAME": "Maximaler Output",
-    "DESCRIPTION": "Ziehe !M! Karten. NL Ziehe zu Beginn des Zuges 1 zusätzliche Karte und bronze:Setze 1 *Benommen *ein."
+    "DESCRIPTION": "Ziehe !M! Karten. NL Ziehe zu Beginn des Zuges 1 zusätzliche Karte und bronze:Setze 1 Benommen *ein."
   },
   "bronze:Mutator": {
-    "NAME": "Variable",
+    "NAME": "Antivirus",
     "DESCRIPTION": "Erhalte !M! Stärke. NL expansioncontent:Transformiere einen Status auf der Hand in eine Kopie dieser Karte.",
     "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte !M! Stärke. NL expansioncontent:Transformiere einen Status auf der Hand in eine Kopie dieser Karte."
   },
   "bronze:NullPointer": {
     "NAME": "Nullpointer",
-    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - Die Funktion ist unspielbar.",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL bronze:Kompilierungsfehler: Die Funktion ist unspielbar.",
     "EXTENDED_DESCRIPTION": [
       "null",
       "Nichts"
@@ -359,7 +359,7 @@
   },
   "bronze:OilSpill": {
     "NAME": "Ölleck",
-    "DESCRIPTION": "Füge !D! Schaden zu und wende !M! Gift an. NL bronze:Kompilierungsfehler - bronze:Setze ein *Verschleimt *ein.",
+    "DESCRIPTION": "Füge !D! Schaden zu und wende !M! Gift an. NL bronze:Kompilierungsfehler: bronze:Setze ein *Verschleimt *ein.",
     "EXTENDED_DESCRIPTION": [
       "öliges",
       "Leck"
@@ -374,13 +374,13 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Verhindere den nächsten *Kompilierungsfehler den du *kodierst."
   },
   "bronze:Overload": {
-    "NAME": "Kopieren-Einfügen",
+    "NAME": "Kopie einfügen",
     "DESCRIPTION": "Spiele jeweils eine Kopie jeder kodierten Karte. Die Kopien werden nicht kodiert. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Spiele jeweils eine Kopie jeder kodierten Karte. Die Kopien werden nicht kodiert."
   },
   "bronze:Philosophize": {
     "NAME": "Philosophieren",
-    "DESCRIPTION": "Erhalte !bauto! Stärke. NL bronze:Kompilierungsfehler - ALLE Gegner erhalten !M! Stärke.",
+    "DESCRIPTION": "Erhalte !bauto! Stärke. NL bronze:Kompilierungsfehler: ALLE Gegner erhalten !M! Stärke.",
     "EXTENDED_DESCRIPTION": [
       "schlaues",
       "Konzept"
@@ -397,11 +397,11 @@
   },
   "bronze:Refactor": {
     "NAME": "Überschreiben",
-    "DESCRIPTION": "Spähe !M!. NL Erschöpfe abgeworfene Statuskarten. NL Erhalte pro erschöpftem Status !B! Block."
+    "DESCRIPTION": "Spähe !M!. NL Erschöpfe abgeworfene Statuskarten. Erhalte pro erschöpften Status !B! Block."
   },
   "bronze:Repair": {
     "NAME": "Reparieren",
-    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Heile !M! TP.",
+    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung: Heile !M! TP.",
     "EXTENDED_DESCRIPTION": [
       "bastelndes",
       "Werkzeug"
@@ -417,8 +417,8 @@
   },
   "bronze:Repulsor": {
     "NAME": "Validieren",
-    "DESCRIPTION": "Wenn du im Zug das erste Mal einen Status oder Fluch ziehst, erschöpfe ihn und ziehe eine Karte.",
-    "UPGRADE_DESCRIPTION": "Wenn du im Zug das erste Mal einen Status oder Fluch ziehst, erschöpfe ihn und ziehe eine Karte."
+    "DESCRIPTION": "Wenn du das erste Mal im Zug einen Status oder Fluch ziehst, erschöpfe ihn und ziehe eine Karte.",
+    "UPGRADE_DESCRIPTION": "Wenn du das erste Mal im Zug einen Status oder Fluch ziehst, erschöpfe ihn und ziehe eine Karte."
   },
   "bronze:Return": {
     "NAME": "Rückgängig",
@@ -426,11 +426,11 @@
     "UPGRADE_DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E] [E] ."
   },
   "bronze:Safeguard": {
-    "NAME": "Schutzmaßnahme",
+    "NAME": "Hochladen",
     "DESCRIPTION": "Erhalte !B! Block.",
     "EXTENDED_DESCRIPTION": [
-      "sicheres",
-      "Schützen"
+      "frühes",
+      "Blocken"
     ]
   },
   "bronze:Separator": {
@@ -444,7 +444,7 @@
   "bronze:Shell": {
     "NAME": "Blockchain",
     "DESCRIPTION": "Erhalte !M! bronze:Verschwimmen.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! bronze:Verschwimmen. NL bronze:Kompilierung - Erhalte !M! bronze:Verschwimmen.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! bronze:Verschwimmen. NL bronze:Kompilierung: Erhalte !M! bronze:Verschwimmen.",
     "EXTENDED_DESCRIPTION": [
       "reihendes",
       "Muster"
@@ -481,14 +481,14 @@
   },
   "bronze:Terminator": {
     "NAME": "Terminator",
-    "DESCRIPTION": "bronze:Kompilierung - Wird im letzten Slot mit 'Spiele dieser Karte nochmal' *kodiert.",
+    "DESCRIPTION": "bronze:Kompilierung: Wird im letzten Slot mit 'Spiele dieser Karte nochmal' *kodiert.",
     "EXTENDED_DESCRIPTION": [
       "trauriges",
       "Ende"
     ]
   },
   "bronze:ThunderWave": {
-    "NAME": "Donnerwelle",
+    "NAME": "Blitzableiter",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte 1 guardianmod:Puffer. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       " NL (Trifft ",
@@ -497,17 +497,17 @@
   },
   "bronze:TinkerersToolbox": {
     "NAME": "Entwicklertools",
-    "DESCRIPTION": "Behalten. NL Erhalte *Debuggen, *Batch, *Dekompilieren, oder *Byteshift. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte *Debuggen, *Batch, *Dekompilieren, oder *Byteshift."
+    "DESCRIPTION": "Behalten. NL Erhalte *Debuggen, *Dekompilieren, *Batch, oder *Byteshift. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte *Debuggen, *Dekompilieren, *Batch, oder *Byteshift."
   },
   "bronze:Turbo": {
     "NAME": "Turbo",
-    "DESCRIPTION": "Erhalte [E] [E] . NL Nimm eine *Leere auf den Abwurfstapel.",
-    "UPGRADE_DESCRIPTION": "Erhalte [E] [E] [E]. NL Nimm eine *Leere auf den Abwurfstapel."
+    "DESCRIPTION": "Erhalte [E] [E] . NL Nimm eine Leere auf den Abwurfstapel.",
+    "UPGRADE_DESCRIPTION": "Erhalte [E] [E] [E]. NL Nimm eine Leere auf den Abwurfstapel."
   },
   "bronze:Undervolt": {
     "NAME": "Unterspannung",
-    "DESCRIPTION": "ALLE Gegner verlieren !M! Stärke. NL Erhalte 2 *Brennen. NL Erschöpft."
+    "DESCRIPTION": "ALLE Gegner verlieren !M! Stärke. NL Erhalte 2 Brennen. NL Erschöpft."
   },
   "bronze:Verify": {
     "NAME": "Bewusste Form",
@@ -516,11 +516,11 @@
   },
   "bronze:Virus": {
     "NAME": "Virus",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte für jede Karte einen *Kleinen *Strahl. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte für jede Karte einen *Kleinen *Strahl+. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte genauso viele *hypostrahlen. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte genauso viele *hypostrahlen+. NL Erschöpft."
   },
   "bronze:WhirlingStrike": {
-    "NAME": "Durchschuss",
+    "NAME": "Bronzegeschütz",
     "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "dringendes",
@@ -537,7 +537,7 @@
   },
   "bronze:WildStrike": {
     "NAME": "Wilder Schlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze eine *Wunde *ein."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Setze eine Wunde *ein."
   },
   
   "bronze:Batch": {
@@ -568,7 +568,7 @@
   },
   "bronze:DazingPulse": {
     "NAME": "Betäubender Puls",
-    "DESCRIPTION": "Erhalte !B! Block NL Füge !D! Schaden zu. NL bronze:Kompilierungsfehler - bronze:Setze !M! *Benommen *ein.",
+    "DESCRIPTION": "Erhalte !B! Block NL Füge !D! Schaden zu. NL bronze:Kompilierungsfehler: bronze:Setze !M! Benommen *ein.",
     "EXTENDED_DESCRIPTION": [
       "lahmes",
       "Pulsieren"
@@ -580,7 +580,7 @@
   },
   "bronze:DecaBeam": {
     "NAME": "Proto-Schild",
-    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung - Erhalte !M! *Panzerrüstung und bronze:Setze !bauto! *Benommen *ein.",
+    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung: Erhalte !M! *Panzerrüstung und bronze:Setze !bauto! Benommen *ein.",
     "EXTENDED_DESCRIPTION": [
       "gepanzertes",
       "Panzern"
@@ -593,7 +593,7 @@
   },
   "bronze:DonuBeam": {
     "NAME": "Proto-Strahl",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL bronze:Kompilierung - Erhalte !M! Stärke.",
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL bronze:Kompilierung: Erhalte !M! Stärke.",
     "EXTENDED_DESCRIPTION": [
       "sanftes",
       "Schießen"
@@ -601,7 +601,7 @@
   },
   "bronze:Explode": {
     "NAME": "Explodieren",
-    "DESCRIPTION": "Wende !M! hexamod:Seelenfeuer auf ALLE Gegner an. NL bronze:Kompilierungsfehler - bronze:Setze !bauto! *Brennen *ein.",
+    "DESCRIPTION": "Wende !M! hexamod:Seelenfeuer auf ALLE Gegner an. NL bronze:Kompilierungsfehler: bronze:Setze !bauto! Brennen *ein.",
     "EXTENDED_DESCRIPTION": [
       "instabiles",
       "Detonieren"
@@ -617,16 +617,16 @@
     ]
   },
   "bronze:MinorBeam": {
-    "NAME": "Kleiner Strahl",
+    "NAME": "hypostrahl",
     "DESCRIPTION": "Füge !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "kleines",
-      "Kratzen"
+      "Leuchten"
     ]
   },
   "bronze:Spike": {
     "NAME": "Spikes",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung - Erhalte !M! Stacheln.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung: Erhalte !M! Stacheln.",
     "EXTENDED_DESCRIPTION": [
       "dorniges",
       "Eck"

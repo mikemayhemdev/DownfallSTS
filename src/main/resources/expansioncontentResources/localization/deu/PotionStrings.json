@@ -2,9 +2,9 @@
   "expansioncontent:BossPotion": {
     "NAME": "Boss-Trank",
     "DESCRIPTIONS": [
-      "Wähle #b1 von #b3 zufälligen #yBoss-Karten. Nimm sie auf die Hand, sie kostet diesen Zug #b0.",
+      "Wähle #b1 von #b3 zufälligen #yBoss-Karten [REMOVE_SPACE]. Nimm sie auf die Hand, sie kostet diesen Zug #b0 [REMOVE_SPACE].",
       "Wähle #b1 von #b3 zufälligen #yBoss-Karten und nimm #b",
-      " Kopien auf die Hand, sie kosten diesen Zug #b0."
+      " Kopien auf die Hand, sie kosten diesen Zug #b0 [REMOVE_SPACE]."
     ]
   }
 }
