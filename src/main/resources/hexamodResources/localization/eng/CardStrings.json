@@ -215,8 +215,8 @@
   },
   "hexamod:InfernalForm": {
     "NAME": "Infernal Form",
-    "DESCRIPTION": "Ethereal. NL At the start of your turn, gain !M! hexamod:Intensity.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity."
+    "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
+    "UPGRADE_DESCRIPTION": "Gain !M! hexamod:Intensity. NL At the start of your turn, gain !M! hexamod:Intensity."
   },
   "hexamod:Incineration": {
     "NAME": "Incineration",
@@ -544,8 +544,8 @@
       },
   "hexamod:HexaLevel": {
     "NAME": "Infernal Form",
-    "DESCRIPTION": "Ethereal. NL At the start of your turn, gain !M! hexamod:Intensity.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity."
+    "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
+    "UPGRADE_DESCRIPTION": "Gain !M! hexamod:Intensity. NL At the start of your turn, gain !M! hexamod:Intensity."
   },
   "hexamod:SkipABeat": {
     "NAME": "Kindle",

@@ -215,8 +215,8 @@
   },
   "hexamod:InfernalForm": {
     "NAME": "Forme infernale",
-    "DESCRIPTION": "Éthérée. NL Au début de votre tour, gagnez !M! hexamod:d'Intensité.",
-    "UPGRADE_DESCRIPTION": "Au début de votre tour, gagnez !M! hexamod:d'Intensité."
+    "DESCRIPTION": "Au début de votre tour, gagnez !M! hexamod:d'Intensité.",
+    "UPGRADE_DESCRIPTION": "Gagnez !M! hexamod:d'Intensité. NL Au début de votre tour, gagnez !M! hexamod:d'Intensité."
   },
   "hexamod:Incineration": {
     "NAME": "Incinération",
@@ -544,8 +544,8 @@
       },
   "hexamod:HexaLevel": {
     "NAME": "Forme infernale",
-    "DESCRIPTION": "Éthérée. NL Au début de votre tour, gagnez !M! hexamod:d'Intensité.",
-    "UPGRADE_DESCRIPTION": "Au début de votre tour, gagnez !M! hexamod:d'Intensité."
+    "DESCRIPTION": "Au début de votre tour, gagnez !M! hexamod:d'Intensité.",
+    "UPGRADE_DESCRIPTION": "Gagnez !M! hexamod:d'Intensité. NL Au début de votre tour, gagnez !M! hexamod:d'Intensité."
   },
   "hexamod:SkipABeat": {
     "NAME": "Allumage",

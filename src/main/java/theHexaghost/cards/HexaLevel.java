@@ -22,19 +22,17 @@ public class HexaLevel extends AbstractHexaCard {
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         tags.add(BaseModCardTags.FORM);
-        this.isEthereal = true;
         HexaMod.loadJokeCardImage(this, "HexaLevel.png");
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
         applyToSelf(new HexalevelPower(magicNumber));
-        //if (upgraded) applyToSelf(new EnhancePower(magicNumber));
+        if (upgraded) applyToSelf(new EnhancePower(magicNumber));
     }
 
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            this.isEthereal = false;
             //upgradeMagicNumber(1);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
