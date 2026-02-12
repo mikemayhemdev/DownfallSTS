@@ -123,7 +123,7 @@ public class StasisEgg extends CustomRelic implements CustomBottleRelic, CustomS
         }
     }
 
-    private void setDescriptionAfterLoading() {
+    public void setDescriptionAfterLoading() {
         boolean cardExists = false;
 
             if (card != null) {

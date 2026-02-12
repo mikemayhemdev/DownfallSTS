@@ -88,7 +88,7 @@ public class MoreBottleUpgrades {
                 StasisEgg i = (StasisEgg) __instance.getRelic(StasisEgg.ID);
                 if (i.card != null && i.card.uuid != null) {
                     if (i.card.uuid == c.uuid) {
-                        ((BottledCode) __instance.getRelic(BottledCode.ID)).setDescriptionAfterLoading();
+                        ((StasisEgg) __instance.getRelic(StasisEgg.ID)).setDescriptionAfterLoading();
                     }
                 }
             }
