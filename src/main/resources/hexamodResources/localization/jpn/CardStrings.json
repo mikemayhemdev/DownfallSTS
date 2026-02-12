@@ -215,8 +215,8 @@
   },
   "hexamod:InfernalForm": {
     "NAME": "地獄化",
-    "DESCRIPTION": "ターン開始時、 hexamod:火力 !M! を得る。",
-    "UPGRADE_DESCRIPTION": "hexamod:火力 !M! を得る。 NL ターン開始時、 hexamod:火力 !M! を得る。"
+    "DESCRIPTION": "エセリアル NL ターン開始時、 hexamod:火力 !M! を得る。",
+    "UPGRADE_DESCRIPTION": "ターン開始時、 hexamod:火力 !M! を得る。"
   },
   "hexamod:Incineration": {
     "NAME": "焼却",
@@ -546,8 +546,8 @@
       },
   "hexamod:HexaLevel": {
     "NAME": "地獄化",
-    "DESCRIPTION": "ターン開始時、 hexamod:火力 !M! を得る。",
-    "UPGRADE_DESCRIPTION": "hexamod:火力 !M! を得る。 NL ターン開始時、 hexamod:火力 !M! を得る。"
+    "DESCRIPTION": "エセリアル NL ターン開始時、 hexamod:火力 !M! を得る。",
+    "UPGRADE_DESCRIPTION": "ターン開始時、 hexamod:火力 !M! を得る。"
   },
   "hexamod:SkipABeat": {
     "NAME": "Kindle",

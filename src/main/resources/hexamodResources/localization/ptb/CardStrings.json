@@ -173,8 +173,8 @@
   },
   "hexamod:InfernalForm": {
     "NAME": "Forma Infernal",
-    "DESCRIPTION": "No início do seu turno, ganhe !M! hexamod:Intensidade.",
-    "UPGRADE_DESCRIPTION": "Ganhe !M! hexamod:Intensidade. NL No início do seu turno, ganhe !M! hexamod:Intensidade."
+    "DESCRIPTION": "Etéreo. NL No início do seu turno, ganhe !M! hexamod:Intensidade.",
+    "UPGRADE_DESCRIPTION": "No início do seu turno, ganhe !M! hexamod:Intensidade."
   },
   "hexamod:Incineration": {
     "NAME": "Incinerar",

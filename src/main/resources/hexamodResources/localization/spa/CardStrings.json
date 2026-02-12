@@ -187,8 +187,8 @@
   },
   "hexamod:InfernalForm": {
     "NAME": "Forma Infernal",
-    "DESCRIPTION": "Al inicio de tu turno, gana !M! de hexamod:Intensidad.",
-    "UPGRADE_DESCRIPTION": "Gana !M! de hexamod:Intensidad. NL Al inicio de tu turno, gana !M! de hexamod:Intensidad."
+    "DESCRIPTION": "Etérea. NL Al inicio de tu turno, gana !M! de hexamod:Intensidad.",
+    "UPGRADE_DESCRIPTION": "Al inicio de tu turno, gana !M! de hexamod:Intensidad."
   },
   "hexamod:Incineration": {
     "NAME": "Incineración",
@@ -505,8 +505,8 @@
       },
   "hexamod:HexaLevel": {
     "NAME": "Forma Infernal",
-    "DESCRIPTION": "Al inicio de tu turno, gana !M! de hexamod: Intensidad.",
-    "UPGRADE_DESCRIPTION": "Gana !M! de hexamod: Intensidad. NL Al inicio de tu turno, gana !M! de hexamod: Intensidad."
+    "DESCRIPTION": "Etérea. NL Al inicio de tu turno, gana !M! de hexamod: Intensidad.",
+    "UPGRADE_DESCRIPTION": "Al inicio de tu turno, gana !M! de hexamod: Intensidad."
   },
   "hexamod:SkipABeat": {
     "NAME": "Avivar",

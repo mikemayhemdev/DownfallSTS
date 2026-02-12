@@ -208,8 +208,8 @@
   },
   "hexamod:InfernalForm": {
     "NAME": "Адский облик",
-    "DESCRIPTION": "Даёт !M! hexamod:Интенсивности в начале каждого вашего хода.",
-    "UPGRADE_DESCRIPTION": "Даёт !M! hexamod:Интенсивности. NL Даёт !M! hexamod:Интенсивности в начале каждого вашего хода."
+    "DESCRIPTION": "Эфирная. NL Даёт !M! hexamod:Интенсивности в начале каждого вашего хода.",
+    "UPGRADE_DESCRIPTION": "Даёт !M! hexamod:Интенсивности в начале каждого вашего хода."
   },
   "hexamod:Incineration": {
     "NAME": "Испепелить",
@@ -544,8 +544,8 @@
   },
   "hexamod:HexaLevel": {
     "NAME": "Infernal Form",
-    "DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity.",
-    "UPGRADE_DESCRIPTION": "Gain !M! hexamod:Intensity. NL At the start of your turn, gain !M! hexamod:Intensity."
+    "DESCRIPTION": "Ethereal. NL At the start of your turn, gain !M! hexamod:Intensity.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, gain !M! hexamod:Intensity."
   },
   "hexamod:SkipABeat": {
     "NAME": "Kindle",

@@ -215,8 +215,8 @@
   },
   "hexamod:InfernalForm": {
     "NAME": "Infernale Form",
-    "DESCRIPTION": "Zu Beginn deines Zuges erhältst du !M! hexamod:Intensität.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! hexamod:Intensität. NL Zu Beginn deines Zuges erhältst du !M! hexamod:Intensität."
+    "DESCRIPTION": "Flüchtig. NL Zu Beginn deines Zuges erhältst du !M! hexamod:Intensität.",
+    "UPGRADE_DESCRIPTION": "Zu Beginn deines Zuges erhältst du !M! hexamod:Intensität."
   },
   "hexamod:Incineration": {
     "NAME": "Einäscherung",
@@ -544,8 +544,8 @@
   },
   "hexamod:HexaLevel": {
     "NAME": "Infernale Form",
-    "DESCRIPTION": "Zu Beginn deines Zuges erhältst du !M! hexamod:Intensität.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! hexamod:Intensität. NL Zu Beginn deines Zuges erhältst du !M! hexamod:Intensität."
+    "DESCRIPTION": "Flüchtig. NL Zu Beginn deines Zuges erhältst du !M! hexamod:Intensität.",
+    "UPGRADE_DESCRIPTION": "Zu Beginn deines Zuges erhältst du !M! hexamod:Intensität."
   },
   "hexamod:SkipABeat": {
     "NAME": "Anfachen",
