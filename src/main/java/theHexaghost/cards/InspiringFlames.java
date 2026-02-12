@@ -15,7 +15,7 @@ public class InspiringFlames extends AbstractHexaCard {
     //Stoke the Fire
     public InspiringFlames() {
         super(ID, 1, CardType.SKILL, CardRarity.COMMON, CardTarget.SELF);
-        baseBlock = 7;
+        baseBlock = 8;
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
         HexaMod.loadJokeCardImage(this, "InspiringFlames.png");
     }

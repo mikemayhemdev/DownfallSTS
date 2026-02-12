@@ -15,7 +15,7 @@ public class LingeringShades extends AbstractHexaCard{
 
     public LingeringShades() {
         super(ID, 1, AbstractCard.CardType.SKILL, AbstractCard.CardRarity.RARE, AbstractCard.CardTarget.ENEMY);
-        baseBurn = burn = 11;
+        baseBurn = burn = 12;
         HexaMod.loadJokeCardImage(this, "LingeringShades.png");
         tags.add(HexaMod.GHOSTWHEELCARD);
         this.tags.add(SneckoMod.BANNEDFORSNECKO);
@@ -30,7 +30,7 @@ public class LingeringShades extends AbstractHexaCard{
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBurn(5);
+            upgradeBurn(6);
         }
     }
 
