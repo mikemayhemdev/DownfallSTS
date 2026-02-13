@@ -30,7 +30,7 @@ public class LingeringShades extends AbstractHexaCard{
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
-            upgradeBurn(6);
+            upgradeBurn(5);
         }
     }
 
