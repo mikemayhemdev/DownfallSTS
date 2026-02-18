@@ -123,9 +123,9 @@ public class Serpent_Snecko extends AbstractImageEvent {
             ids.add(LoadedDie.ID);
         }
         //        BaseMod.addRelicToCustomPool(new RareBoosterPack(), TheSnecko.Enums.SNECKO_CYAN);
-        if (!AbstractDungeon.player.hasRelic(RareBoosterPack.ID)) {
-            ids.add(RareBoosterPack.ID);
-        }
+////        if (!AbstractDungeon.player.hasRelic(RareBoosterPack.ID)) {
+//            ids.add(RareBoosterPack.ID);
+//        }
         //        BaseMod.addRelicToCustomPool(new SleevedAce(), TheSnecko.Enums.SNECKO_CYAN);
         if (!AbstractDungeon.player.hasRelic(SleevedAce.ID)) {
             ids.add(SleevedAce.ID);
