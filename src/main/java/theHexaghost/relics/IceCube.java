@@ -34,7 +34,7 @@ public class IceCube extends CustomRelic {
     }// 43
 
     @Override
-    public void atBattleStart() {
+    public void atPreBattle() {
             this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(-INTENSITY_LOSS), -INTENSITY_LOSS));
     }
 
