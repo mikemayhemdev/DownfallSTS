@@ -63,7 +63,7 @@ public class Serpent_Snecko extends AbstractImageEvent {
 
         if (AbstractDungeon.player.hasRelic(ConfusingCodex.ID) &&
                 AbstractDungeon.player.hasRelic(LoadedDie.ID) &&
-                AbstractDungeon.player.hasRelic(RareBoosterPack.ID) &&
+                //AbstractDungeon.player.hasRelic(RareBoosterPack.ID) &&
                 AbstractDungeon.player.hasRelic(SleevedAce.ID) &&
                 AbstractDungeon.player.hasRelic(UnknownEgg.ID) &&
                 AbstractDungeon.player.hasRelic(SneckoCommon.ID)){
