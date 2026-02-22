@@ -54,6 +54,7 @@ public class OrbitingSpells {
     private static final Texture panelBG = TexLoader.getTexture("awakenedResources/images/ui/panelBg.png");
     private static final Color defaultNextColor = Color.GREEN.cpy();
     public static ArrayList<AbstractCard> spellCards = new ArrayList<>();
+    public static ArrayList<AbstractCard> spellCardsInscribe = new ArrayList<>();
     public static ArrayList<Hitbox> boxes = new ArrayList<>();
     private static int hoveredCard = -1;
 
@@ -117,6 +118,13 @@ public class OrbitingSpells {
         if (AbstractDungeon.player.hasRelic(ZenerDeck.ID)) {
             addSpellCard(CardLibrary.getCard(ESPSpell.ID).makeCopy());
         }
+
+        if (!spellCardsInscribe.isEmpty()) {
+            for (int i = 0; i < spellCardsInscribe.size(); i++) {
+                addSpellCard(CardLibrary.getCard(spellCardsInscribe.get(i).cardID).makeCopy());
+            }
+        }
+
         setupnext();
     }
 
@@ -147,7 +155,7 @@ public class OrbitingSpells {
         if (Wiz.isAwakened()) {
             card.upgrade();
         }
-        if (spellCards.size() < 10) {
+        if (spellCards.size() < 30) {
             spellCards.add(card);
         } else {
             AbstractDungeon.effectList.add(new ThoughtBubble(AbstractDungeon.player.dialogX, AbstractDungeon.player.dialogY, 3.0F, CardCrawlGame.languagePack.getUIString("awakened:FullSpellbook").TEXT[0], true));
