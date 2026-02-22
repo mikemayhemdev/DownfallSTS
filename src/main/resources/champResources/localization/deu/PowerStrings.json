@@ -85,7 +85,7 @@
     ]
   },
   "champ:StrikeOfGeniusPower": {
-    "NAME": "Genieschlag",
+    "NAME": "Schlagfertig",
     "DESCRIPTIONS": [
       "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen \"Schlag\" Karte. Es kostet #b0 bis du es spielst.",
       "Erhalte zu Beginn jedes Zuges #b",
@@ -242,10 +242,10 @@
     ]
   },
   "champ:DoubleStyleThisTurnPower": {
-    "NAME": "Kettenpeitsche",
+    "NAME": "Doppelter Stil",
     "DESCRIPTIONS": [
-      "In diesem Zug sind die #yFertigkeitsboni um #b",
-      " effektiver."
+      "In diesem Zug geben #yFertigkeitsboni #b",
+      " mehr #yElan und #yKonter [REMOVE_SPACE]."
     ]
   }
 }

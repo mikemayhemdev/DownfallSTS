@@ -55,8 +55,8 @@
   },
   "expansioncontent:SuperPrepareCrush": {
     "NAME": "Vor-Schmettern",
-    "DESCRIPTION": "Erhalte im nächsten Zug *ZERSCHMETTERN!, [E] [E] [E] und !M! Stärke. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte im nächsten Zug *ZERSCHMETTERN!+, [E] [E] [E] [E] und !M! Stärke. NL Erschöpft.",
+    "DESCRIPTION": "Erhalte im nächsten Zug [E] [E] [E], *ZERSCHMETTERN! und !M! Stärke. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte im nächsten Zug [E] [E] [E] [E], *ZERSCHMETTERN!+ und !M! Stärke. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "~Schleim~ ~...~ NL #r~ZERSCHMETTERN!!!~"
     ]
@@ -68,15 +68,15 @@
 
   "expansioncontent:StudyTheSpire": {
     "NAME": "Spire-Studien",
-    "DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge jeweils eine zufällige *Boss Karte. Sie kosten 0.",
-    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge jeweils eine zufällige *verbesserte *Boss Karte. Sie kosten 0."
+    "DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge eine zufällige *Boss Karte. Sie kosten 0.",
+    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge eine zufällige *verbesserte *Boss Karte. Sie kosten 0."
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Schnellstudien",
     "DESCRIPTION": "Wähle 1 aus 3 zufälligen *Boss Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. Erschöpft.",
     "UPGRADE_DESCRIPTION": "Wähle 1 aus 3 zufälligen *verbesserten *Boss Karten und nimm sie auf die Hand. Sie kostet 0, bis du sie spielst. Erschöpft.",
     "EXTENDED_DESCRIPTION": [
-      "Wähle eine Boss-Karte."
+      "Wähle eine Boss Karte."
     ]
   },
   "expansioncontent:DashGenerateEvil": {
@@ -113,7 +113,7 @@
     "UPGRADE_DESCRIPTION": "Reduziere deine Debuffs um !M!."
   },
   "expansioncontent:SuperTaunt": {
-    "NAME": "Spott",
+    "NAME": "Fieser Spott",
     "DESCRIPTION": "Wende !M! Schwach und !M! Verwundbar an.",
     "UPGRADE_DESCRIPTION": "Wende !M! Schwach und !M! Verwundbar auf ALLE Gegner an."
   },
@@ -162,7 +162,7 @@
   },
   "expansioncontent:SuperBodyCrash": {
     "NAME": "Bodycheck",
-    "DESCRIPTION": "Erhalte !B! Block. NL Füge Schaden in Höhe deines aktuellen Blocks zu.",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge Schaden in Höhe deines aktuellen *Blocks zu.",
     "UPGRADE_DESCRIPTION": " NL (Fügt !D! Schaden zu.)"
   },
   "expansioncontent:SuperEtherStep": {
@@ -193,7 +193,7 @@
   },
   "expansioncontent:Reverie": {
     "NAME": "Déjà-vu",
-    "DESCRIPTION": "Schnapp dir zu Beginn deines Zuges eine der !M! obersten Karten des Abwurfstapels."
+    "DESCRIPTION": "Schnappe zu Beginn deines Zuges eine der !M! obersten Karten des Abwurfstapels."
   },
   "expansioncontent:ExploitVulnerability": {
     "NAME": "Donu-Strahl",
@@ -215,7 +215,7 @@
     "NAME": "Blutiges Opfer",
     "DESCRIPTION": "Flüchtig. NL Verliere !M! % deiner max. TP. NL Erhalte 1 Ritual. Erschöpft.",
     "EXTENDED_DESCRIPTION":[
-      " NL (Verliere {amount} max. TP. )"
+      " NL (Verliere {amount} max. TP.)"
     ]
   }
 }

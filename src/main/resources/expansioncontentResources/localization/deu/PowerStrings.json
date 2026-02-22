@@ -2,12 +2,12 @@
   "expansioncontent:StudyTheSpirePower": {
     "NAME": "Spire-Studien",
     "DESCRIPTIONS": [
-      "Erhalte zu Beginn deines nächsten Zuges eine zufällige #yBoss-Karte. NL Sie kostet #b0 bis sie gespielt wurde.",
+      "Erhalte zu Beginn deines nächsten Zuges eine zufällige #yBoss Karte. NL Sie kostet #b0 bis sie gespielt wurde.",
       "Erhalte zu Beginn deiner nächsten #b",
-      " Züge eine zufällige #yBoss-Karte. NL Sie kosten #b0 bis sie gespielt wurden.",
-      "Erhalte zu Beginn deines nächsten Zuges eine zufällige #yverbesserte #yBoss-Karte. NL Sie kostet #b0 bis sie gespielt wurde.",
+      " Züge eine zufällige #yBoss Karte. NL Sie kosten #b0 bis sie gespielt wurden.",
+      "Erhalte zu Beginn deines nächsten Zuges eine zufällige #yverbesserte #yBoss Karte. NL Sie kostet #b0 bis sie gespielt wurde.",
       "Erhalte zu Beginn deiner nächsten #b",
-      " Züge eine zufällige #yverbesserte #yBoss-Karte. NL Sie kosten #b0 bis sie gespielt wurden."
+      " Züge eine zufällige #yverbesserte #yBoss Karte. NL Sie kosten #b0 bis sie gespielt wurden."
     ]
   },
   "expansioncontent:AwakenedOnePower": {
@@ -120,8 +120,8 @@
   "expansioncontent:ReveriePower":{
   "NAME": "Déjà-vu",
   "DESCRIPTIONS": [
-    "Schnapp dir zu Beginn deines Zuges die oberste Karte des Abwurfstapels.",
-    "Schnapp dir zu Beginn deines Zuges eine der obersten #b",
+    "Schnappe zu Beginn deines Zuges die oberste Karte des Abwurfstapels.",
+    "Schnappe zu Beginn deines Zuges eine der obersten #b",
     " Karten des Abwurfstapels.",
     "Wähle eine Karte, die du auf die Hand nimmst."
   ]

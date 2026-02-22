@@ -47,7 +47,7 @@
     "NAME": "Improvisierte Batterie",
     "FLAVOR": "Sie hat 8,9 Volt.",
     "DESCRIPTIONS": [
-      "Erhalte in deinem Zug [E] . Lege zu Beginn jedes Zuges eine #yVerschleimt Karte in den Abwurfstapel."
+      "Erhalte in deinem Zug [E]. Lege zu Beginn jedes Zuges eine #yVerschleimt Karte in den Abwurfstapel."
     ]
   },
   "bronze:CableSpool": {

@@ -18,9 +18,9 @@
   "sneckomod:CheatPower": {
     "NAME": "Schummeln",
     "DESCRIPTIONS": [
-      "#yÜberschuss Effekte werden in diesem Zug immer aktiviert - unabhängig von der Handgröße.",
+      "#yÜberschuss Effekte werden in diesem Zug immer aktiviert - unabhängig von der Anzahl der Handkarten.",
       "#yÜberschuss Effekte werden in den nächsten #b",
-      " Zügen immer aktiviert - unabhängig von der Handgröße."
+      " Zügen immer aktiviert - unabhängig von der Anzahl der Handkarten."
     ]
   },
   "sneckomod:MuddleDrawnCardsPower": {
@@ -40,10 +40,10 @@
     ]
   },
   "sneckomod:OverwhelmingPresencePower": {
-    "NAME": "Überwältigende Präsenz",
+    "NAME": "Überläufer",
     "DESCRIPTIONS": [
-      "Wenn du das erste Mal im Zug eine Karte einer #yFremdklasse spielst, ziehe #b1 Karte.",
-      "Wenn du das erste Mal im Zug eine Karte einer #yFremdklasse spielst, ziehe #b ",
+      "Wenn du das erste Mal im Zug eine #yfremde Karte spielst, ziehe #b1 Karte.",
+      "Wenn du das erste Mal im Zug eine #yfremde Karte spielst, ziehe #b ",
       " Karten."
     ]
   },
@@ -66,17 +66,17 @@
   "sneckomod:SnakeEyesPower": {
     "NAME": "Schlangenaugen",
     "DESCRIPTIONS": [
-      "In diesem Zug spielst du deine nächste Karte einer #yFremdklasse doppelt.",
+      "In diesem Zug spielst du deine nächste #yfremde Karte doppelt.",
       "In diesem Zug spielst du deine nächsten #b",
-      " Karten einer #yFremdklasse doppelt."
+      " #yfremden Karten doppelt."
     ]
   },
   "sneckomod:UnendingSupplyPower": {
     "NAME": "Exotischer Vorrat",
     "DESCRIPTIONS": [
       "Nimm zu Beginn jedes Zuges #b",
-      "Nimm zu Beginn jedes Zuges ein #yEcho einer zufälligen Karte einer #yFremdklasse auf die Hand.",
-      " #yEchos von zufälligen Karten aus #yFremdklassen auf die Hand."
+      "Nimm zu Beginn jedes Zuges ein #yEcho einer zufälligen #yfremden Karte auf die Hand.",
+      " #yEchos von zufälligen #yfremden Karten auf die Hand."
     ]
   },
   "sneckomod:UnknownUpgradedPostCombatPower": {
@@ -131,8 +131,8 @@
     "NAME": "Vipernmacht",
     "DESCRIPTIONS": [
       "Erhalte immer, wenn du eine #yMacht spielst [REMOVE_SPACE], #b",
-      " [E] .",
-      " [E] ."
+      " [E].",
+      " [E]."
     ]
   },
   "sneckomod:BigGunsStrengthPower": {
@@ -168,7 +168,7 @@
     ]
   },
   "sneckomod:FountainPower": {
-    "NAME": "Fontäne",
+    "NAME": "Überfluss",
     "DESCRIPTIONS": [
       "#yÜberschuss Effekte wenden zusätzlich #b",
       " #yToxin auf einen zufälligen Gegner an.",

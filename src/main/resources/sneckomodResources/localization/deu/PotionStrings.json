@@ -3,16 +3,16 @@
     "NAME": "Kartenflasche",
     "DESCRIPTIONS": [
       "Erhalte am Ende des Kampfes #b",
-      " zusätzliche Kartenbelohnung mit #b3 #yverbesserten ungewöhnlichen Karten aus #yFremdklassen [REMOVE_SPACE].",
-      " zusätzliche Kartenbelohnungen mit jeweils #b3 #yverbesserten ungewöhnlichen Karten aus #yFremdklassen [REMOVE_SPACE]."
+      " zusätzliche Kartenbelohnung mit #b3 #yverbesserten ungewöhnlichen #yfremden Karten.",
+      " zusätzliche Kartenbelohnungen mit jeweils #b3 #yverbesserten ungewöhnlichen #yfremden Karten."
     ]
   },
   "sneckomod:CheatPotion": {
     "NAME": "Felix Felicis",
     "DESCRIPTIONS": [
-      "#yÜberschuss Effekte werden in diesem Zug immer aktiviert - unabhängig von der Handgröße.",
+      "#yÜberschuss Effekte werden in diesem Zug immer aktiviert - unabhängig von der Anzahl der Handkarten.",
       "#yÜberschuss Effekte werden in den nächsten #b",
-      " Zügen immer aktiviert - unabhängig von der Handgröße."
+      " Zügen immer aktiviert - unabhängig von der Anzahl der Handkarten."
     ]
   },
   "sneckomod:MuddlingPotion": {
@@ -25,7 +25,7 @@
   "sneckomod:OffclassReductionPotion": {
     "NAME": "Exotischer Saft",
     "DESCRIPTIONS": [
-      "Handkarten aus #yFremdklassen kosten #b",
+      "#yFremde Handkarten kosten #b",
       " weniger."
     ]
   }

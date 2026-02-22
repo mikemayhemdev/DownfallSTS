@@ -33,7 +33,7 @@
       "splitting"
     ],
     "PROPER_NAME": "Abspalten",
-    "DESCRIPTION": "Spalte einen Schleimuntertanen von dir ab. Er greift am Anfang jedes Zuges an. NL Wenn du keine Schleim-Slots übrig hast, wird dein ältester Schleimuntertan #yabsorbiert, und du erhältst #b1 #yStärke [REMOVE_SPACE]."
+    "DESCRIPTION": "Spalte einen Schleimuntertanen von dir ab. Er greift am Anfang jedes Zuges an. Wenn du keine Schleim-Slots übrig hast, wird dein ältester Schleimuntertan #yabsorbiert, und du erhältst #b1 #yStärke [REMOVE_SPACE]."
   },
   {
     "NAMES": [
@@ -246,7 +246,7 @@
       "consume"
     ],
     "PROPER_NAME": "Konsumieren",
-    "DESCRIPTION": "Bonuseffekt, der aktiviert wird, wenn ein #yAngriff auf einen Gegner mit #yGlibber angewendet wird."
+    "DESCRIPTION": "#yGlibber des Gegners wird konsumiert, wenn er angegriffen wird. Manche #yAngriffe haben einen Bonuseffekt, wenn durch sie #ykonsumiert wird."
   },
   {
     "NAMES": [

@@ -53,12 +53,12 @@
     "NAME": "Gutschein des Anführers",
     "FLAVOR": "Gutschein für 1 Gremlin",
     "DESCRIPTIONS": [
-      "Erhalte in deinem Zug [E] . NL Verliere beim Aufheben einen Gremlin #rfür #rden #rRest #rdes #rRuns.",
-      " NL #r( #rFetter #rGremlin #r)",
-      " NL #r( #rGremlinzauberer #r)",
-      " NL #r( #rWütender #rGremlin #r)",
-      " NL #r( #rSchildgremlin #r)",
-      " NL #r( #rSchleichender #rGremlin #r)"
+      "Erhalte in deinem Zug [E]. NL Verliere beim Aufheben einen Gremlin #rfür #rden #rRest #rdes #rRuns.",
+      " NL #r(Fetter #rGremlin)",
+      " NL #r(Gremlinzauberer)",
+      " NL #r(Wütender #rGremlin)",
+      " NL #r(Schildgremlin)",
+      " NL #r(Schleichender #rGremlin)"
     ]
   },
   "Gremlin:MagicalMallet": {

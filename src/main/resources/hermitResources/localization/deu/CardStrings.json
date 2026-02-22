@@ -53,7 +53,7 @@
   },
   "hermit:Dissolve": {
     "NAME": "Auflösen",
-    "DESCRIPTION": "Erhalte !M! Block. NL Erhalte 2 expansioncontent:Verschwimmen. NL Erschöpft."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte 2 expansioncontent:Verschwimmen. NL Erschöpft."
   },
   "hermit:BlackWind": {
     "NAME": "Schwarzer Wind",
@@ -111,7 +111,7 @@
   },
   "hermit:Midnight": {
     "NAME": "Mitternacht",
-    "DESCRIPTION": "Erhalte !B! Block. NL Nimm das *Drohende *Verhängnis auf die Hand."
+    "DESCRIPTION": "Erhalte !B! Block. NL Nimm das *Drohende *Unheil auf die Hand."
   },
   "hermit:Glare": {
     "NAME": "Starren",
@@ -136,7 +136,7 @@
     "DESCRIPTION": "Erhalte !M! expansioncontent:Panzerrüstung. NL hermit:Volltreffer: NL Erhalte !hermit:SecondMagic! Gold. NL Erschöpft."
   },
   "hermit:ImpendingDoom": {
-    "NAME": "Drohendes Verhängnis",
+    "NAME": "Drohendes Unheil",
     "DESCRIPTION": "Unspielbar. NL Ist diese Karte am Ende des Zuges in hermit:Volltreffer Position, fügt sie ALLEN 13 Schaden zu."
   },
   "hermit:MementoCard": {
@@ -145,7 +145,7 @@
   },
   "hermit:Shortfuse": {
     "NAME": "Kurze Lunte",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Kostet diesen Zug 1 [E] weniger pro gespielte Basis *Schlag oder *Verteidigen Karte in diesem Zug."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Kostet diesen Zug [E] weniger pro gespielte Basis *Schlag oder *Verteidigen Karte in diesem Zug."
   },
   "hermit:Grudge": {
     "NAME": "Unwesen",
@@ -190,8 +190,8 @@
   },
   "hermit:Combo": {
     "NAME": "Combo",
-    "DESCRIPTION": "Nimm in jedem Zug die erste Karte, die einen hermit:Volltreffer ausgelöst hat, wieder auf die Hand.",
-    "UPGRADE_DESCRIPTION": "Nimm in jedem Zug die ersten !M! Karten, die einen hermit:Volltreffer ausgelöst haben, wieder auf die Hand."
+    "DESCRIPTION": "Nimm in jedem Zug die erste Karte, NL die einen hermit:Volltreffer ausgelöst hat, wieder auf die Hand.",
+    "UPGRADE_DESCRIPTION": "Nimm in jedem Zug die ersten !M! Karten, NL die einen hermit:Volltreffer ausgelöst haben, wieder auf die Hand."
   },
   "hermit:BigShot": {
     "NAME": "Rauchender Colt",
@@ -199,7 +199,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "Ausufernde Macht",
-    "DESCRIPTION": "Erhalte [E] [E] [E]. NL Ziehe !hermit:SecondMagic! Karten. NL Immer wenn du deinen Zug mit 0 Energie beendest, verliere !M! TP."
+    "DESCRIPTION": "Erhalte [E] [E] [E]. NL Ziehe !hermit:SecondMagic! Karten. NL Immer wenn du deinen Zug mit 0 Energie beendest, verliere NL !M! TP."
   },
   "hermit:Maintenance": {
     "NAME": "Wartung",
@@ -268,7 +268,7 @@
   },
   "hermit:Showdown": {
     "NAME": "Showdown",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Spiele alle *Schläge in deiner Hand aus."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Spiele alle Basis *Schläge in deiner Hand aus."
   },
   "hermit:LuckOfTheDraw": {
     "NAME": "Glückszug",
@@ -295,7 +295,7 @@
     "DESCRIPTION": "Füge !D! Schaden zu. NL Falls tödlich, kostet diese Karte permanent 1 weniger. NL Erschöpft."
   },
   "hermit:HoleUp": {
-    "NAME": "Verschanzen",
+    "NAME": "Verkriechen",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! Schwach."
   },
   "hermit:ItchyTrigger": {

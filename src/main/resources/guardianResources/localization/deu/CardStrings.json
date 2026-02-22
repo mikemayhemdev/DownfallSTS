@@ -25,7 +25,7 @@
   "Guardian:Gem_White": {
     "NAME": "Opal",
     "DESCRIPTION": "guardianmod:Juwel. NL Ziehe eine Karte.",
-    "UPGRADE_DESCRIPTION": "Ziehe eine Karte."
+    "UPGRADE_DESCRIPTION": "Ziehe 1 Karte."
   },
   "Guardian:Gem_Orange": {
     "NAME": "Zitrin",
@@ -35,7 +35,7 @@
   "Guardian:Gem_Cyan": {
     "NAME": "Aquamarin",
     "DESCRIPTION": "guardianmod:Juwel. NL Erhalte einen *Kristallschutz.",
-    "UPGRADE_DESCRIPTION": "Erhalte einen *Kristallschutz."
+    "UPGRADE_DESCRIPTION": "Erhalte *Kristallschutz."
   },
   "Guardian:ChargeUp": {
     "NAME": "Aufladen",
@@ -52,7 +52,7 @@
   },
   "Guardian:FierceBash": {
     "NAME": "Erbitterter Hieb",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege diese Karte in guardianmod:Stasis. NL guardianmod:Ticken - Erhöhe den Schaden dieser Karte um !M!."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege diese Karte in guardianmod:Stasis. NL guardianmod:Ticken - Erhöhe den Schaden um !M!."
   },
   "Guardian:PolyBeam": {
     "NAME": "Poly-Strahl",
@@ -136,7 +136,7 @@
   "Guardian:SentryWave": {
     "NAME": "Wache-Welle",
     "DESCRIPTION": "Wende !M! Schwach an. NL Lege einen *Wache-Strahl in guardianmod:Stasis. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wende !M! Schwach an. NL guardianmod:Abhärten 2. NL Lege einen *Wache-Strahl+ in guardianmod:Stasis. NL Erschöpft."
+    "UPGRADE_DESCRIPTION": "Wende !M! Schwach an. guardianmod:Abhärten 2. Lege einen *Wache-Strahl+ in guardianmod:Stasis. NL Erschöpft."
   },
   "Guardian:CompilePackage": {
     "NAME": "Paket kompilieren",
@@ -245,7 +245,7 @@
   },
   "Guardian:RollAttack": {
     "NAME": "Rollender Angriff",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft im *Defensivmodus ALLE Gegner. Erhalte anderenfalls guardianmod:Abhärten 8."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft ALLE Gegner im *Defensivmodus. Anderenfalls: guardianmod:Abhärten 8."
   },
   "Guardian:GemFire": {
     "NAME": "Juwelenkanone",
@@ -254,7 +254,7 @@
   },
   "Guardian:ChargeCore": {
     "NAME": "Kernladung",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege diese Karte in guardianmod:Stasis. NL guardianmod:Ticken - Ziehe eine Karte. NL guardianmod:Volatil."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege diese Karte in guardianmod:Stasis. NL guardianmod:Ticken - Ziehe eine Karte. guardianmod:Volatil."
   },
   "Guardian:Reroute": {
     "NAME": "Umsteuern",
@@ -296,7 +296,7 @@
   },
   "Guardian:MultiBeam": {
     "NAME": "Multistrahl",
-    "DESCRIPTION": "Füge ALLEN Gegnern X mal !D! Schaden zu. NL guardianmod:Ticken - Erhöhe den Schaden dieser Karte um !M!."
+    "DESCRIPTION": "Füge ALLEN Gegnern X mal !D! Schaden zu. NL guardianmod:Ticken - Erhöhe den Schaden um !M!."
   },
   "Guardian:BaubleBeam": {
     "NAME": "Orb-Fassung",
@@ -337,7 +337,7 @@
   "Guardian:Gem_Synthetic": {
     "NAME": "Onyx",
     "DESCRIPTION": "guardianmod:Juwel. NL Reduziere deine Debuffs um 1.",
-    "UPGRADE_DESCRIPTION": "Reduziere deine Debuffs um 1."
+    "UPGRADE_DESCRIPTION": "Reduziere Debuffs um 1."
   },
   "Guardian:Gem_Yellow": {
     "NAME": "Bernstein",
@@ -347,7 +347,7 @@
   "Guardian:Gem_Purple": {
     "NAME": "Amethyst",
     "DESCRIPTION": "guardianmod:Juwel. NL ALLE Gegner verlieren für diesen Zug 2 Stärke.",
-    "UPGRADE_DESCRIPTION": "ALLE Gegner verlieren für diesen Zug 2 Stärke."
+    "UPGRADE_DESCRIPTION": "ALLE Gegner verlieren diesen Zug 2 Stärke."
   },
   "Guardian:Gem_Crimson": {
     "NAME": "Granat",
@@ -362,7 +362,7 @@
   "Guardian:Gem_Fragmented": {
     "NAME": "Edelsteinsplitter",
     "DESCRIPTION": "guardianmod:Juwel. NL Erhalte ein *Kristallmesser.",
-    "UPGRADE_DESCRIPTION": "Erhalte ein *Kristallmesser."
+    "UPGRADE_DESCRIPTION": "Erhalte *Kristallmesser."
   },
   "Guardian:CrystalShiv": {
     "NAME": "Kristallmesser",
@@ -441,7 +441,7 @@
   },
   "Guardian:BodySlam": {
     "NAME": "Körpereinsatz",
-    "DESCRIPTION": "Erhalte !B! Block. NL Füge Schaden in Höhe deines aktuellen Blocks zu.",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge Schaden in Höhe deines aktuellen *Blocks zu.",
     "UPGRADE_DESCRIPTION": " NL (Fügt !D! Schaden zu.)"
   },
   "Guardian:SecondStrike": {

@@ -9,8 +9,8 @@
   },
   "hexamod:ApocalypseNow": {
     "NAME": "Apokalypse",
-    "DESCRIPTION": "Flüchtig. NL Erhalte [E] [E] . NL Bewege dich zur *Inferno Geisterflamme. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Flüchtig. NL Erhalte [E] [E] . NL Bewege dich zur *Inferno Geisterflamme. NL Erschöpft.",
+    "DESCRIPTION": "Flüchtig. NL Erhalte [E] [E]. NL Bewege dich zur *Inferno Geisterflamme. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Flüchtig. NL Erhalte [E] [E]. NL Bewege dich zur *Inferno Geisterflamme. NL Erschöpft.",
     "TRANSLATOR_NOTE:": "Not used in game  Not used in game  Not used in game  Not used in game  Not used in game  Not used in game   "
   },
   "hexamod:Doomsday": {
@@ -47,7 +47,7 @@
   },
   "hexamod:ChargedBarrage": {
     "NAME": "Dauerbrenner",
-    "DESCRIPTION": "Wende !burny! hexamod:Seelenfeuer an. NL Wiederhole das für jede *entzündete Geisterflamme."
+    "DESCRIPTION": "Wende !burny! hexamod:Seelenfeuer an. Wiederhole das für jede *entzündete Geisterflamme."
   },
   "hexamod:CouncilsJustice": {
     "NAME": "Geisterstrafe",
@@ -71,11 +71,11 @@
     "DESCRIPTION": "Erhalte !M! hexamod:Intensität."
   },
   "hexamod:EtherealExpedition": {
-    "NAME": "Reise zum Äther",
+    "NAME": "Flucht zum Äther",
     "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Setze[] !M! [#e087a4]zufällige[] [#e087a4]Reinkarnation [#e087a4]Karte[] [#e087a4]ein[] und nimm eine weitere auf die Hand."
   },
   "hexamod:ExtraCrispy": {
-    "NAME": "Extra knusprig",
+    "NAME": "Restwärme",
     "DESCRIPTION": "Wenn hexamod:Seelenfeuer detoniert, dann wende umgehend nach der Detonation !M! hexamod:Seelenfeuer an."
   },
   "hexamod:FastForward": {
@@ -110,8 +110,8 @@
   },
   "hexamod:MatchstickFloat": {
     "NAME": "Magisches Zündholz",
-    "DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
-    "UPGRADE_DESCRIPTION": "This card shouldn't be encountered in a run. NL If you're reading this, you've probably encountered a bug. NL Please report this to a mod dev.",
+    "DESCRIPTION": "Diese Karte sollte nicht auftauchen. NL Wenn du das liest, bist du auf einen Bug gestoßen. NL Bitte melde das dem Dev-Team.",
+    "UPGRADE_DESCRIPTION": "Diese Karte sollte nicht auftauchen. NL Wenn du das liest, bist du auf einen Bug gestoßen. NL Bitte melde das dem Dev-Team.",
     "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Tu nichts."]
   },
   "hexamod:Floatwork": {
@@ -162,7 +162,7 @@
   },
   "hexamod:HereAndNow": {
     "NAME": "Hier und Jetzt",
-    "DESCRIPTION": "Erhalte zu Beginn deines Zuges [E] . NL hexamod:Lösche am Ende jedes Zuges die aktuelle Geisterflamme."
+    "DESCRIPTION": "Erhalte zu Beginn deines Zuges [E]. NL hexamod:Lösche am Ende jedes Zuges die aktuelle Geisterflamme."
   },
   "hexamod:GhostShield": {
     "NAME": "Geisterschild",
@@ -192,7 +192,7 @@
   },
   "hexamod:HeatCrush": {
     "NAME": "Hitzehammer",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhöhe den Schaden um die Höhe des gegnerischen *Seelenfeuers."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Der Schaden wird um die Höhe des gegnerischen *Seelenfeuers erhöht."
   },
   "hexamod:HeatMetal": {
     "NAME": "Heißes Eisen",
@@ -259,8 +259,8 @@
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Macht der Geister",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Im[] [#e087a4]nächsten[] [#e087a4]Zug,[] [#e087a4]ziehe[] !M! [#e087a4]Karten[] und erhalte [E] . NL ",
-    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Im[] [#e087a4]nächsten[] [#e087a4]Zug,[] [#e087a4]ziehe[] !M! [#e087a4]Karten[] und erhalte [E] [E] . NL ",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Im[] [#e087a4]nächsten[] [#e087a4]Zug,[] [#e087a4]ziehe[] !M! [#e087a4]Karten[] und NL erhalte [E]. NL ",
+    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Im[] [#e087a4]nächsten[] [#e087a4]Zug,[] [#e087a4]ziehe[] !M! [#e087a4]Karten[] und NL erhalte [E] [E]. NL ",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -298,8 +298,8 @@
   },
   "hexamod:Rewind": {
     "NAME": "Zurückspulen",
-    "DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL Schnapp dir eine Karte vom Abwurfstapel. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL Schnapp dir !M! Karten vom Abwurfstapel. NL Erschöpft."
+    "DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL Schnappe eine Karte vom Abwurfstapel. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL Schnappe !M! Karten vom Abwurfstapel. NL Erschöpft."
   },
   "hexamod:Sear": {
     "NAME": "Versengen",
@@ -319,7 +319,7 @@
     "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. NL Erschöpft."
   },
   "hexamod:ShieldOfDarkness": {
-    "NAME": "Schild der Nacht",
+    "NAME": "Nachtschild",
     "DESCRIPTION": "Erhalte !B! Block. NL Spähe !M!. NL Erschöpfe abgeworfene *flüchtige Karten."
   },
   "hexamod:Kindle": {
@@ -337,7 +337,7 @@
   },
   "hexamod:BrightRitual": {
     "NAME": "Grelles Ritual",
-    "DESCRIPTION": "Setze das Geisterrad zurück. NL Erhalte [E] und ziehe 1 Karte für jede hexamod:gelöschte Geisterflamme. Erschöpft."
+    "DESCRIPTION": "Spring zur ersten Geisterflamme, hexamod:lösche alle, erhalte [E] und ziehe 1 Karte pro *gelöschter. Erschöpft."
   },
   "hexamod:NaughtySpirit": {
     "NAME": "Frecher Geist",
@@ -362,11 +362,11 @@
     "TRANSLATOR_NOTE:": "Not used in game  Not used in game  Not used in game  Not used in game  Not used in game  Not used in game   "
   },
   "hexamod:SwordOfDarkness": {
-    "NAME": "Klinge der Nacht",
+    "NAME": "Nachtschwert",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Spähe !M!. NL Erschöpfe abgeworfene *flüchtige Karten."
   },
   "hexamod:ThermalTransfer": {
-    "NAME": "Thermaltransfer",
+    "NAME": "Thermotransfer",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !B! Block, wenn der Gegner *Seelenfeuer hat."
   },
   "hexamod:TimeOfNeed": {
@@ -385,8 +385,8 @@
   },
   "hexamod:TurnItUp": {
     "NAME": "Aufgedreht",
-    "DESCRIPTION": "Erhalte für diesen Zug *temporär !M! hexamod:Intensität, !M! Stärke, und !M! Geschicklichkeit.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte für diesen Zug temporär !M! hexamod:Intensität, !M! Stärke, und !M! Geschicklichkeit."
+    "DESCRIPTION": "Erhalte für diesen Zug *temporär !M! hexamod:Intensität, !M! Stärke, und NL !M! Geschicklichkeit.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erhalte für diesen Zug temporär !M! hexamod:Intensität, !M! Stärke, und NL !M! Geschicklichkeit."
   },
   "hexamod:UnleashSpirits": {
     "NAME": "Geister rufen",
@@ -436,9 +436,9 @@
     "DESCRIPTION": "Flüchtig hexamod:Siegel. NL Verbessere am Ende des Kampfes 1 zufällige Karte für alle 13 unverbesserten Karten im Deck.",
     "UPGRADE_DESCRIPTION": "hexamod:Siegel. NL Verbessere am Ende des Kampfes 1 zufällige Karte für alle 13 unverbesserten Karten im Deck.",
     "EXTENDED_DESCRIPTION": [
-      "( Verbessert ",
-      " Karte. ) NL ",
-      " Karten. ) NL "
+      "(Verbessert ",
+      " Karte.) NL ",
+      " Karten.) NL "
     ]
   },
   "hexamod:LingeringShades": {
@@ -457,8 +457,8 @@
   },
   "hexamod:SeventhEye": {
     "NAME": "Siebtes Auge",
-    "DESCRIPTION": "Schnapp dir eine Karte vom Nachziehstapel. NL Spring auf eine zufällige Geisterflamme. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Schnapp dir eine Karte vom Nachziehstapel. NL Spring auf eine zufällige Geisterflamme. NL Erschöpft."
+    "DESCRIPTION": "Schnappe eine Karte vom Nachziehstapel. NL Spring auf eine zufällige Geisterflamme. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Schnappe eine Karte vom Nachziehstapel. NL Spring auf eine zufällige Geisterflamme. NL Erschöpft."
   },
   "hexamod:FlameDevourer": {
     "NAME": "Pyrovor",
@@ -527,7 +527,7 @@
   },
   "hexamod:GhostOfSpirePresent": {
     "NAME": "Hier und Jetzt",
-    "DESCRIPTION": "Erhalte zu Beginn deines Zuges [E] . NL hexamod:Lösche am Ende jedes Zuges die aktuelle Geisterflamme."
+    "DESCRIPTION": "Erhalte zu Beginn deines Zuges [E]. NL hexamod:Lösche am Ende jedes Zuges die aktuelle Geisterflamme."
   },
   "hexamod:GhostOfSpirePast": {
     "NAME": "Totentanz",

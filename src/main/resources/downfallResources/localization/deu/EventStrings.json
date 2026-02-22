@@ -513,9 +513,9 @@
       "Andererseits sollte man Erinnerungen wohl besser ruhen lassen."
     ],
     "OPTIONS": [
-      "[Erinnern] #gWähle #g1 #gBoss-Karte #gfür #gdein #gDeck.",
-      "[Erinnern] #gWähle #g2 #gBoss-Karten #gfür #gdein #gDeck. #rVerliere #r",
-      "[Erinnern] #gWähle #g3 #gBoss-Karten #gfür #gdein #gDeck. #rVerliere #r"
+      "[Erinnern] #gWähle #g1 #gBoss #gKarte #gfür #gdein #gDeck.",
+      "[Erinnern] #gWähle #g2 #gBoss #gKarten #gfür #gdein #gDeck. #rVerliere #r",
+      "[Erinnern] #gWähle #g3 #gBoss #gKarten #gfür #gdein #gDeck. #rVerliere #r"
     ]
   },
   "downfall:SecretPortal": {

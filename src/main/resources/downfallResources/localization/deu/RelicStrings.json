@@ -511,7 +511,7 @@
     "NAME": "",
     "FLAVOR": "",
     "DESCRIPTIONS": [
-      "In Händler-, Elite- und Bosskämpfen, erhalte in deinem Zug [E] .",
+      "In Händler-, Elite- und Bosskämpfen, erhalte in deinem Zug [E].",
       "Verfluchte Münze",
       "Nur noch wenige wissen um den Wert dieser alten Münze bescheid...",
       "MVB-Karte",
@@ -558,7 +558,7 @@
     "NAME": "Zerbrochene Krone",
     "FLAVOR": "Nachahmung ist die aufrichtigste Form der Schmeichelei... oder doch nicht? Diese Krone sieht deiner nichtmal besonders ähnlich. Eigentlich ist sie eine Beleidigung.",
     "DESCRIPTIONS": [
-      "Bei Kartenbelohnungen hast du #b2 Karten weniger zur Auswahl. Erhalte in deinem Zug [E] ."
+      "Bei Kartenbelohnungen hast du #b2 Karten weniger zur Auswahl. Erhalte in deinem Zug [E]."
     ]
   }
 }

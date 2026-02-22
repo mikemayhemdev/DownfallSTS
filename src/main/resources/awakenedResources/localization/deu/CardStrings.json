@@ -17,7 +17,7 @@
   },
   "awakened:DeathCoil": {
     "NAME": "Todesschlinge",
-    "DESCRIPTION": "Wende !M! awakened:Manabrand an. NL Verliere im nächsten Zug [E] ."
+    "DESCRIPTION": "Wende !M! awakened:Manabrand an. Verliere im nächsten Zug [E]."
   },
   "awakened:ESPSpell": {
     "NAME": "Sechster Sinn",
@@ -64,7 +64,7 @@
   },
   "awakened:Hymn": {
     "NAME": "Hymne",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte eine *Zeremonie. NL Verliere im nächsten Zug [E] ."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte eine *Zeremonie. NL Verliere im nächsten Zug [E]."
   },
   "awakened:Psalm": {
     "NAME": "Psalm",
@@ -101,7 +101,7 @@
   },
   "awakened:ClarionCall": {
     "NAME": "Kriegsfanfare",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte das nächste Mal wenn du awakened:ausgelaugt wirst [E] ."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte das nächste Mal wenn du awakened:ausgelaugt wirst [E]."
   },
   "awakened:Recitation": {
     "NAME": "Rezitieren",
@@ -144,7 +144,7 @@
   },
   "awakened:FourthDimension": {
     "NAME": "Vierte Dimension",
-    "DESCRIPTION": "Erschöpfe eine Karte. NL bronze:Setze !M! Kopien der Karte *ein. NL Erschöpft.",
+    "DESCRIPTION": "Erschöpfe eine Handkarte. NL bronze:Setze !M! Kopien der Karte *ein. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Erschöpfe eine Karte in die Vierte Dimension."
     ]
@@ -185,8 +185,8 @@
   },
   "awakened:FeatherWhirl": {
     "NAME": "Federwirbel",
-    "DESCRIPTION": "Erhalte X *Federstiche.",
-    "UPGRADE_DESCRIPTION": "Erhalte X+1 *Federstiche."
+    "DESCRIPTION": "Erhalte NL X *Federstiche.",
+    "UPGRADE_DESCRIPTION": "Erhalte NL X+1 *Federstiche."
   },
   "awakened:Murder": {
     "NAME": "Mord",
@@ -211,8 +211,8 @@
   },
   "awakened:Planeswalk": {
     "NAME": "Grenzgänger",
-    "DESCRIPTION": "Erhalte [E] [E] . NL bronze:Setze eine Leere *ein.",
-    "UPGRADE_DESCRIPTION": "Erhalte [E] [E] [E] . NL bronze:Setze eine Leere *ein."
+    "DESCRIPTION": "Erhalte [E] [E]. NL bronze:Setze eine Leere *ein.",
+    "UPGRADE_DESCRIPTION": "Erhalte [E] [E] [E]. NL bronze:Setze eine Leere *ein."
   },
   "awakened:Spew": {
     "NAME": "Ausspeien",
@@ -220,8 +220,8 @@
   },
   "awakened:DarknessFalls": {
     "NAME": "Ringfinsternis",
-    "DESCRIPTION": "Erhalte immer, wenn awakened:ausgelaugt wirst, !M! Block und !awakened:m2! Stärke.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer, wenn awakened:ausgelaugt wirst, !M! Block und !awakened:m2! Stärke."
+    "DESCRIPTION": "Erhalte immer, wenn awakened:ausgelaugt wirst, NL !M! Block und !awakened:m2! Stärke.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer, wenn awakened:ausgelaugt wirst, NL !M! Block und !awakened:m2! Stärke."
   },
   "awakened:Eventide": {
     "NAME": "Dämmerung",
@@ -229,7 +229,7 @@
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Sonnenfinsternis",
-    "DESCRIPTION": "Immer wenn du eine Leere *erschöpfst, ziehe im nächsten Zug eine Karte und erhalte [E] ."
+    "DESCRIPTION": "Immer wenn du eine Leere *erschöpfst, ziehe im nächsten Zug eine Karte und NL erhalte [E]."
   },
   "awakened:Clutch": {
     "NAME": "Umklammern",
@@ -250,11 +250,11 @@
   },
   "awakened:MirePit": {
     "NAME": "Schlammgrube",
-    "DESCRIPTION": "ALLE Gegner verlieren für diesen Zug !M! Stärke. Verliere im nächsten Zug [E] . NL Erschöpft."
+    "DESCRIPTION": "ALLE Gegner verlieren für diesen Zug !M! Stärke. Verliere im nächsten Zug [E]. NL Erschöpft."
   },
   "awakened:SingularityShield": {
     "NAME": "Singularitätsschild",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte im nächsten Zug !B! Block und verliere [E] ."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte im nächsten Zug !B! Block und verliere [E]."
   },
   "awakened:Dejection": {
     "NAME": "Schwermut",
@@ -278,12 +278,12 @@
   },
   "awakened:Victuals": {
     "NAME": "Verpflegung",
-    "DESCRIPTION": "awakened:Chor: Erhalte [E] [E] . NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "awakened:Chor: NL Erhalte [E] [E] [E] . NL Erschöpft."
+    "DESCRIPTION": "awakened:Chor: NL Erhalte [E] [E]. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "awakened:Chor: NL Erhalte [E] [E] [E]. NL Erschöpft."
   },
   "awakened:Gather": {
     "NAME": "Ansammeln",
-    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Chor: Schnapp dir eine Karte aus dem Abwurfstapel."
+    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Chor: Schnappe eine Karte aus dem Abwurfstapel."
   },
   "awakened:TheTower": {
     "NAME": "Der Turm",
@@ -298,8 +298,8 @@
   },
   "awakened:MiddenHeap": {
     "NAME": "Misthaufen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Schnapp dir !M! Status oder Fluch vom Nachzieh- oder Abwurfstapel.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Schnapp dir !M! Status- oder *Fluchkarten vom Nachzieh- oder Abwurfstapel.",
+    "DESCRIPTION": "Erhalte !B! Block. NL Schnappe !M! Status oder Fluch vom Nachzieh- oder Abwurfstapel.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL Schnappe !M! Status- oder *Fluchkarten vom Nachzieh- oder Abwurfstapel.",
     "EXTENDED_DESCRIPTION": [
       "Nimm eine Karte auf die Hand.",
       "Nimm Karten auf die Hand."
@@ -335,7 +335,7 @@
   },
   "awakened:SplitWide": {
     "NAME": "Aufschlitzen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte immer, wenn du diesen Gegner angreifst, !M! *temporäre Stärke. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte immer, wenn du diesen Gegner triffst, !M! *temporäre Stärke. NL Erschöpft."
   },
   "awakened:Spellshield": {
     "NAME": "Zauberschild",
@@ -404,7 +404,7 @@
   },
   "awakened:Inscribe": {
     "NAME": "Einschreiben",
-    "DESCRIPTION": "Wähle einen *Zauberspruch. Lege für den Rest des Kampfes !M! Kopien in das Zauberbuch.",
-    "UPGRADE_DESCRIPTION": "awakened:Aufrufen. NL Wähle einen *Zauberspruch. Lege für den Rest des Kampfes !M! Kopien in das Zauberbuch."
+    "DESCRIPTION": "Wähle einen *Zauber. Lege für den Rest des Kampfes !M! Kopien in das Zauberbuch.",
+    "UPGRADE_DESCRIPTION": "awakened:Aufrufen. NL Wähle einen *Zauber. Lege für den Rest des Kampfes !M! Kopien in das Zauberbuch."
   }
 }

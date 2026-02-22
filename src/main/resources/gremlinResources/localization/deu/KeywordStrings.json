@@ -71,7 +71,7 @@
       "swap"
     ],
     "PROPER_NAME": "Auswechseln",
-    "DESCRIPTION": "Tausche die Position mit einem anderen Gremlin. Wenn es kein legales Ziel gibt passiert nichts"
+    "DESCRIPTION": "Effekte, die den führenden Gremlin austauschen. Wenn es kein legales Ziel für den Tausch gibt, passiert nichts."
   },
   {
     "NAMES": [

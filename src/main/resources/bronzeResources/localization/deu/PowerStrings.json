@@ -42,7 +42,7 @@
     ]
   },
   "bronze:MaxOutput": {
-    "NAME": "Maximaler Output",
+    "NAME": "Laufwerk",
     "DESCRIPTIONS": [
       "Ziehe zu Beginn des Zuges zusätzlich #b1 Karte und mische #b1 #yBenommen in den Nachziehstapel.",
       "Ziehe zu Beginn des Zuges #b",
@@ -53,7 +53,7 @@
   "bronze:Return": {
     "NAME": "Rückgängig",
     "DESCRIPTIONS": [
-      "Ziehe zu Beginn deines nächsten Zuges #b1 Karte und erhalte [E] .",
+      "Ziehe zu Beginn deines nächsten Zuges #b1 Karte und erhalte [E].",
       "Zu Beginn deiner nächsten #b",
       " Züge, ziehe #b1 Karte und erhalte [E]."
     ]

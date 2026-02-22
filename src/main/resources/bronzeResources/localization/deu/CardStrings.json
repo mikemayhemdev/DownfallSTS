@@ -4,7 +4,7 @@
     "DESCRIPTION": "Erhalte [E] für jeden Status im Nachziehstapel.",
     "EXTENDED_DESCRIPTION": [
       " NL (Erhalte ",
-      " [E] .)"
+      " [E].)"
     ]
   },
   "bronze:AlphaBuild": {
@@ -90,7 +90,7 @@
   },
   "bronze:BuggyMess": {
     "NAME": "Verbuggter Code",
-    "DESCRIPTION": "bronze:Setze ein Benommen *ein. NL Erhalte !M! [E] .",
+    "DESCRIPTION": "bronze:Setze ein Benommen *ein. NL Erhalte !M! [E].",
     "EXTENDED_DESCRIPTION": [
       "verbuggtes",
       "Chaos"
@@ -114,7 +114,7 @@
   },
   "bronze:ChosenStrike": {
     "NAME": "Kultistenschlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung: Erhöhe den Schaden dieser Karte permanent um !M!.",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL bronze:Kompilierung: Erhöhe den Schaden permanent um !M!.",
     "EXTENDED_DESCRIPTION": [
       "kultiges",
       "Krächzen"
@@ -173,7 +173,7 @@
     ]
   },
   "bronze:DelayedGuard": {
-    "NAME": "Herunterladen",
+    "NAME": "Backup",
     "DESCRIPTION": "Erhalte im nächsten Zug !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "spätes",
@@ -207,10 +207,10 @@
   },
   "bronze:FindAndReplace": {
     "NAME": "Suchen-Ersetzen",
-    "DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel und lege ein Benommen an ihrer Stelle ein. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Schnapp dir eine Karte vom Nachzieh- oder Abwurfstapel. NL Erschöpft.",
+    "DESCRIPTION": "Schnappe eine Karte vom Nachzieh- oder Abwurfstapel und lege ein Benommen an ihrer Stelle ein. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Schnappe eine Karte vom Nachzieh- oder Abwurfstapel. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
-      "Wähle."
+      "Wähle eine Karte."
     ]
   },
   "bronze:FineTuning": {
@@ -227,12 +227,12 @@
     ]
   },
   "bronze:FollowUp": {
-    "NAME": "Laufwerk",
+    "NAME": "Auswerten",
     "DESCRIPTION": "Erhalte !B! Block. NL Füge !D! Schaden zu. NL Hast du diesen Kampf zuletzt eine Funktion gespielt, dann spiele diese Karte nochmal."
   },
   "bronze:ForceShield": {
     "NAME": "Kraftschild",
-    "DESCRIPTION": "Kostet 1 [E] weniger für jede in diesem Kampf kompilierte Funktion. NL Erhalte !B! Block."
+    "DESCRIPTION": "Kostet [E] weniger für jede in diesem Kampf kompilierte Funktion. NL Erhalte !B! Block."
   },
   "bronze:ForLoop": {
     "NAME": "For-Schleife",
@@ -241,8 +241,8 @@
   },
   "bronze:Format": {
     "NAME": "Formatieren",
-    "DESCRIPTION": "bronze:Kodiere X *Fragmentieren Karten. NL Erhalte [E] . NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "bronze:Kodiere X+1 *Fragmentieren Karten. NL Erhalte [E] . NL Erschöpft."
+    "DESCRIPTION": "bronze:Kodiere X *Fragmentieren Karten. NL Erhalte [E]. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "bronze:Kodiere X+1 *Fragmentieren Karten. NL Erhalte [E]. NL Erschöpft."
   },
   "bronze:FormatEncoded": {
     "NAME": "Fragmentieren",
@@ -282,12 +282,12 @@
     "DESCRIPTION": "Erhalte eine zufällige Karte mit bronze:Kodieren. Sie kostet 0 bis du sie spielst. NL Erschöpft."
   },
   "bronze:Goto": {
-    "NAME": "Update",
-    "DESCRIPTION": "Ziehe !M! Karte. NL bronze:Kompilierung: Ziehe im nächsten Zug !M! Karte.",
-    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL bronze:Kompilierung: Ziehe im nächsten Zug !M! Karten.",
+    "NAME": "Aktualisieren",
+    "DESCRIPTION": "Ziehe !M! Karte. NL bronze:Kompilierung: Ziehe im nächsten Zug !M! zusätzliche Karte.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL bronze:Kompilierung: Ziehe im nächsten Zug !M! zusätzliche Karten.",
     "EXTENDED_DESCRIPTION": [
-      "laufendes",
-      "Sprinten"
+      "schnelles",
+      "Update"
     ]
   },
   "bronze:Hardcode": {
@@ -341,7 +341,7 @@
     "DESCRIPTION": "Erhalte zu Beginn jedes Zuges eine zufällige Karte mit bronze:Kodieren. Sie kostet 0 bis du sie spielst."
   },
   "bronze:MaxOutput": {
-    "NAME": "Maximaler Output",
+    "NAME": "Laufwerk",
     "DESCRIPTION": "Ziehe !M! Karten. NL Ziehe zu Beginn des Zuges 1 zusätzliche Karte und bronze:Setze 1 Benommen *ein."
   },
   "bronze:Mutator": {
@@ -401,7 +401,7 @@
   },
   "bronze:Repair": {
     "NAME": "Reparieren",
-    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung: Heile !M! TP.",
+    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung: NL Heile !M! TP.",
     "EXTENDED_DESCRIPTION": [
       "bastelndes",
       "Werkzeug"
@@ -422,11 +422,11 @@
   },
   "bronze:Return": {
     "NAME": "Rückgängig",
-    "DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E] .",
-    "UPGRADE_DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E] [E] ."
+    "DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E].",
+    "UPGRADE_DESCRIPTION": "Lege eine Karte vom Abwurfstapel auf den Nachziehstapel. NL Erhalte im nächsten Zug [E] [E]."
   },
   "bronze:Safeguard": {
-    "NAME": "Hochladen",
+    "NAME": "Cybersicherheit",
     "DESCRIPTION": "Erhalte !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "frühes",
@@ -435,7 +435,7 @@
   },
   "bronze:Separator": {
     "NAME": "Separator",
-    "DESCRIPTION": "Füge !D! Schaden zu. \u202F Wird im ersten Slot mit !M! mehr Schaden *kodiert.",
+    "DESCRIPTION": "Füge !D! Schaden zu. \u202F Wird in mittleren Slots mit !M! mehr Schaden *kodiert.",
     "EXTENDED_DESCRIPTION": [
       "geteiltes",
       "Areal"
@@ -502,7 +502,7 @@
   },
   "bronze:Turbo": {
     "NAME": "Turbo",
-    "DESCRIPTION": "Erhalte [E] [E] . NL Nimm eine Leere auf den Abwurfstapel.",
+    "DESCRIPTION": "Erhalte [E] [E]. NL Nimm eine Leere auf den Abwurfstapel.",
     "UPGRADE_DESCRIPTION": "Erhalte [E] [E] [E]. NL Nimm eine Leere auf den Abwurfstapel."
   },
   "bronze:Undervolt": {

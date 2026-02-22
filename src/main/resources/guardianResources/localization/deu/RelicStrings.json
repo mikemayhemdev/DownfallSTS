@@ -69,7 +69,7 @@
     "NAME": "Wanderbots",
     "FLAVOR": "Diese Drohnen waren ein äußerst nützlicher Fund, doch sie benötigen viel Energie für den Antrieb.",
     "DESCRIPTIONS": [
-      "Verliere zu Beginn deines Kampfes #b1 Stasis-Slot. NL Erhalte in deinem Zug [E] ."
+      "Verliere zu Beginn deines Kampfes #b1 Stasis-Slot. NL Erhalte in deinem Zug [E]."
     ]
   },
   "Guardian:StasisUpgradeRelic": {

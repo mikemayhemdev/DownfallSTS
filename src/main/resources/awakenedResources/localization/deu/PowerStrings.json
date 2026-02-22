@@ -85,7 +85,7 @@
     "DESCRIPTIONS": [
       "Erhalte [E] , wenn du das erste Mal im Zug einen Zauber spielst.",
       "Die ersten #b",
-      " Male im Zug, an denen du einen Zauber spielst, erhalte [E] .",
+      " Male im Zug, an denen du einen Zauber spielst, erhalte [E].",
       " NL Noch #b",
       " Mal möglich in diesem Zug."
     ]
@@ -93,7 +93,7 @@
   "awakened:EclipseEmbracePower": {
     "NAME": "Sonnenfinsternis",
     "DESCRIPTIONS": [
-      "Immer wenn du eine #yLeere #yerschöpfst [REMOVE_SPACE], ziehe im nächsten Zug eine Karte und erhalte [E] .",
+      "Immer wenn du eine #yLeere #yerschöpfst [REMOVE_SPACE], ziehe im nächsten Zug eine Karte und erhalte [E].",
       "Immer wenn du eine #yLeere #yerschöpfst [REMOVE_SPACE], erhalte im nächsten Zug #b",
       " [E] und ziehe #b",
       " Karten."
@@ -116,7 +116,7 @@
   "awakened:StrengthReturnPower": {
     "NAME": "Aufgeschlitzt",
     "DESCRIPTIONS": [
-      "Wenn du diesen Gegner angreifst, erhältst du #b",
+      "Wenn du diesen Gegner triffst, erhältst du #b",
       " #ytemporäre #yStärke [REMOVE_SPACE]."
     ]
   },
@@ -133,7 +133,7 @@
       "Der erste in deinem Zug gespielte #yZauber wird zweimal gespielt.",
       "Die ersten #b",
       " in deinem Zug gespielten #yZauber werden zweimal gespielt.",
-      " NL ( Noch #b",
+      " NL (Noch #b",
       " Zauberwiederholungen für diesen Zug übrig)"
     ]
   },
@@ -155,9 +155,9 @@
   "awakened:VoidRefundPower": {
     "NAME": "Kriegsfanfare",
     "DESCRIPTIONS": [
-      "Erhalte das nächste Mal an dem du #yausgelaugt wirst [E] .",
+      "Erhalte das nächste Mal an dem du #yausgelaugt wirst [E].",
       "Erhalte das nächste Mal an dem du #yausgelaugt wirst #b",
-      " [E] ."
+      " [E]."
     ]
   },
   "awakened:DemonGlyphPower": {
