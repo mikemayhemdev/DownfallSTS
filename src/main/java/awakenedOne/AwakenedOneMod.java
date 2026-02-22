@@ -60,6 +60,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import static awakenedOne.ui.OrbitingSpells.spellCards;
+import static awakenedOne.ui.OrbitingSpells.spellCardsInscribe;
 import static awakenedOne.util.Wiz.awaken;
 
 @SuppressWarnings({"ConstantConditions", "unused", "WeakerAccess"})
@@ -345,6 +346,7 @@ public class AwakenedOneMod implements
         OnCreateCardSubscriber.CardsCreatedThisTurn = 0;
         ConjureAction.refreshedthisturn = false;
         spellCards.clear();
+        spellCardsInscribe.clear();
         OrbitingSpells.atBattleStart();
     }
 
@@ -355,6 +357,7 @@ public class AwakenedOneMod implements
         OnCreateCardSubscriber.CardsCreatedThisTurn = 0;
         awakenedthiscombat = false;
         spellCards.clear();
+        spellCardsInscribe.clear();
         OrbitingSpells.empty();
     }
 

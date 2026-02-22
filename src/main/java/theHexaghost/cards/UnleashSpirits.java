@@ -1,9 +1,11 @@
 package theHexaghost.cards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import hermit.patches.EnumPatch;
 import theHexaghost.HexaMod;
 
 public class UnleashSpirits extends AbstractHexaCard {
@@ -20,22 +22,9 @@ public class UnleashSpirits extends AbstractHexaCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        atb(new DamageRandomEnemyAction(makeInfo(), AbstractGameAction.AttackEffect.FIRE));
-        atb(new AbstractGameAction() {
-            @Override
-            public void update() {
-                isDone = true;
-//                int i = 0;
-//                for (AbstractCard c : AbstractDungeon.player.exhaustPile.group) {
-//                    if (c.isEthereal) {
-//                        i++;
-//                    }
-//                }
-                for (int q = 0; q < HexaMod.cards_exhausted_last_turn; q++) {
-                    addToTop(new DamageRandomEnemyAction(makeInfo(), AbstractGameAction.AttackEffect.FIRE));
-                }
-            }
-        });
+        for (int q = 0; q < HexaMod.cards_exhausted_last_turn + 1; q++) {
+            this.addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.FIRE));
+        }
     }
 
     public void applyPowers() {
