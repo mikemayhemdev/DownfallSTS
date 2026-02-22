@@ -116,7 +116,7 @@
   "awakened:StrengthReturnPower": {
     "NAME": "Aufgeschlitzt",
     "DESCRIPTIONS": [
-      "Wenn du diesen Gegner angreifst, erhältst du #b",
+      "Wenn du diesen Gegner triffst, erhältst du #b",
       " #ytemporäre #yStärke [REMOVE_SPACE]."
     ]
   },

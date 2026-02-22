@@ -336,7 +336,7 @@
   },
   "awakened:SplitWide": {
     "NAME": "Aufschlitzen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte immer, wenn du diesen Gegner angreifst, !M! *temporäre Stärke. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte immer, wenn du diesen Gegner triffst, !M! *temporäre Stärke. NL Erschöpft."
   },
   "awakened:Spellshield": {
     "NAME": "Zauberschild",
@@ -405,7 +405,7 @@
   },
   "awakened:Inscribe": {
     "NAME": "Einschreiben",
-    "DESCRIPTION": "Wähle einen *Zauberspruch. Lege !M! Kopien in das Zauberbuch.",
-    "UPGRADE_DESCRIPTION": "awakened:Aufrufen. NL Wähle einen *Zauberspruch. Lege !M! Kopien in das Zauberbuch."
+    "DESCRIPTION": "Wähle einen *Zauber. Lege für den Rest des Kampfes !M! Kopien in das Zauberbuch.",
+    "UPGRADE_DESCRIPTION": "awakened:Aufrufen. NL Wähle einen *Zauber. Lege für den Rest des Kampfes !M! Kopien in das Zauberbuch."
   }
 }
