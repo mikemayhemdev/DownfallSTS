@@ -53,11 +53,11 @@
   },
   "hermit:Dissolve": {
     "NAME": "Auflösen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte 2 expansioncontent:Verschwimmen. NL Erschöpft."
+    "DESCRIPTION": "Erhalte !B! Block und NL 2 expansioncontent:Verschwimmen. NL Erschöpft."
   },
   "hermit:BlackWind": {
     "NAME": "Schwarzer Wind",
-    "DESCRIPTION": "Flüchtig. NL Füge Schaden in Höhe deiner fehlenden TP zu. NL Erschöpft.",
+    "DESCRIPTION": "Flüchtig. NL Füge Schaden in Höhe deiner fehlenden TP zu. Erschöpft.",
     "UPGRADE_DESCRIPTION": " NL (Fügt !D! Schaden zu.)"
   },
   "hermit:Purgatory": {
@@ -66,7 +66,7 @@
   },
   "hermit:ShadowCloak": {
     "NAME": "Schattenmantel",
-    "DESCRIPTION": "Erhalte immer, wenn du einen Fluch ziehst oder *erschöpfst, !M! Block."
+    "DESCRIPTION": "Erhalte immer, wenn du einen Fluch ziehst oder *erschöpfst, NL !M! Block."
   },
   "hermit:FatalDesire": {
     "NAME": "Todestrieb",
@@ -95,11 +95,11 @@
   },
   "hermit:Adapt": {
     "NAME": "Anpassen",
-    "DESCRIPTION": "Zu Beginn deines Zuges kannst du eine Karte erschöpfen um 8 Block zu erhalten."
+    "DESCRIPTION": "Zu Beginn deines Zuges kannst du eine Karte erschöpfen um NL 8 Block zu erhalten."
   },
   "hermit:Dive": {
     "NAME": "Wegducken",
-    "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Erhalte !M! expansioncontent:Panzerrüstung."
+    "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Erhalte NL !M! expansioncontent:Panzerrüstung."
   },
   "hermit:FlashPowder": {
     "NAME": "Blitzpulver",
@@ -120,8 +120,8 @@
   },
   "hermit:TakeCover": {
     "NAME": "In Deckung gehen",
-    "DESCRIPTION": "Nimm ein NL *Verteidigen, das 0 kostet, auf die Hand. NL *Verbessere es danach X Mal. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Nimm ein NL *Verteidigen+, das 0 kostet, auf die Hand. NL *Verbessere es danach X Mal. NL Erschöpft."
+    "DESCRIPTION": "Erhalte ein *Verteidigen, das 0 kostet. *Verbessere es danach X Mal. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte ein *Verteidigen+, das 0 kostet. *Verbessere es danach X Mal. NL Erschöpft."
   },
   "hermit:Misfire": {
     "NAME": "Rohrkrepierer",
@@ -133,7 +133,7 @@
   },
   "hermit:Scavenge": {
     "NAME": "Erbeuten",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:Panzerrüstung. NL hermit:Volltreffer: NL Erhalte !hermit:SecondMagic! Gold. NL Erschöpft."
+    "DESCRIPTION": "Erhalte NL !M! expansioncontent:Panzerrüstung. NL hermit:Volltreffer: NL Erhalte !hermit:SecondMagic! Gold. NL Erschöpft."
   },
   "hermit:ImpendingDoom": {
     "NAME": "Drohendes Unheil",
@@ -203,7 +203,7 @@
   },
   "hermit:Maintenance": {
     "NAME": "Wartung",
-    "DESCRIPTION": "Basis *Schläge fügen diesen Kampf !M! mehr Schaden zu. Erhalte !hermit:SecondMagic! *Geschicklichkeit. NL Erhöhe die Kosten dieser Karte um 1."
+    "DESCRIPTION": "Basis *Schläge fügen diesen Kampf !M! mehr Schaden zu. Erhalte NL !hermit:SecondMagic! *Geschicklichkeit. NL Erhöhe die Kosten dieser Karte um 1."
   },
   "hermit:EternalForm": {
     "NAME": "Ewige Form",
@@ -225,7 +225,7 @@
   },
   "hermit:CursedWeapon": {
     "NAME": "Verfluchte Waffe",
-    "DESCRIPTION": "Verliere !M! TP. Füge !D! Schaden zu. NL Alle *Verfluchten *Waffen fügen permanent !hermit:SecondMagic! mehr Schaden zu. Erschöpft."
+    "DESCRIPTION": "Verliere !M! TP. Füge NL !D! Schaden zu. NL Alle *Verfluchten *Waffen fügen permanent !hermit:SecondMagic! mehr Schaden zu. Erschöpft."
   },
   "hermit:Enervate": {
     "NAME": "Entziehen",
@@ -242,7 +242,7 @@
   },
   "hermit:LoneWolf": {
     "NAME": "Einsamer Wolf",
-    "DESCRIPTION": "Wähle eine Handkarte. Sie kostet diesen Zug 0. NL Wirf alle anderen Handkarten ab."
+    "DESCRIPTION": "Wähle eine Handkarte. Sie kostet diesen Zug 0. Wirf alle anderen Handkarten ab."
   },
   "hermit:HighNoon": {
     "NAME": "Duell",
@@ -263,8 +263,8 @@
   },
   "hermit:Determination": {
     "NAME": "Entschlossenheit",
-    "DESCRIPTION": "Erhalte immer, wenn ein Debuff auf dich angewendet wird, 1 Stärke.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer, wenn ein Debuff auf dich angewendet wird, 1 Stärke."
+    "DESCRIPTION": "Erhalte immer, wenn ein Debuff auf dich angewendet wird, NL 1 Stärke.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Erhalte immer, wenn ein Debuff auf dich angewendet wird, NL 1 Stärke."
   },
   "hermit:Showdown": {
     "NAME": "Showdown",
@@ -288,7 +288,7 @@
   },
   "hermit:DeadOrAlive": {
     "NAME": "Tot oder Lebendig",
-    "DESCRIPTION": "Füge X Mal !D! Schaden zu. NL Falls tödlich, erhältst du hermit:Kopfgeld. NL Erschöpft."
+    "DESCRIPTION": "Füge X Mal !D! Schaden zu. Falls tödlich, erhältst du hermit:Kopfgeld. NL Erschöpft."
   },
   "hermit:GoldenBullet": {
     "NAME": "Goldener Schuss",

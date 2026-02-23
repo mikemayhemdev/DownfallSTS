@@ -20,13 +20,13 @@
   },
   "hexamod:BacktrackSmack": {
     "NAME": "Rückhandschelle",
-    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu. NL Bewege dich hexamod:rückwärts."
+    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu. Bewege dich hexamod:rückwärts."
   },
   "hexamod:BurningQuestion": {
     "NAME": "Brennende Frage",
     "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Erhalte !M! Stärke. NL ",
     "EXTENDED_DESCRIPTION": [
-      "Erhalte 1 Geschicklichkeit."
+      "Erhalte NL 1 Geschicklichkeit."
     ],
     "Translator Note":[
       "For card text simplicity, we have designed a new text system for afterlife cards. Now if an Afterlife card has EXTENDED_DESCRIPTION, it means",
@@ -51,7 +51,7 @@
   },
   "hexamod:CouncilsJustice": {
     "NAME": "Geisterstrafe",
-    "DESCRIPTION": "Füge !D! Schaden zu. Der Schaden wird für jedes *erschöpfte *Apparieren um !M! erhöht. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. Der Schaden wird für jedes *erschöpfte *Apparieren um NL !M! erhöht. Erschöpft."
   },
   "hexamod:Defend": {
     "NAME": "Verteidigen",
@@ -76,7 +76,7 @@
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Restwärme",
-    "DESCRIPTION": "Wenn hexamod:Seelenfeuer detoniert, dann wende umgehend nach der Detonation !M! hexamod:Seelenfeuer an."
+    "DESCRIPTION": "Wenn hexamod:Seelenfeuer detoniert, dann wende umgehend nach der Detonation NL !M! hexamod:Seelenfeuer an."
   },
   "hexamod:FastForward": {
     "NAME": "Vorspulen",
@@ -94,7 +94,7 @@
   "hexamod:BadOmen": {
     "NAME": "Böses Omen",
     "DESCRIPTION": "Wähle einen Geisterflammen-Typ. Die aktuelle Geisterflamme wird zum gewählten Typ. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Wähle einen Geisterflammen-Typ. Die aktuelle Geisterflamme wird zum gewählten Typ. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. Wähle einen Geisterflammen-Typ. Die aktuelle Geisterflamme wird zum gewählten Typ. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Ersetze die aktuelle Geisterflamme durch eine hexamod:Stärkende Geisterflamme",
       "Ersetze die aktuelle Geisterflamme durch eine hexamod:Schlagende Geisterflamme",
@@ -116,9 +116,9 @@
   },
   "hexamod:Floatwork": {
     "NAME": "Schwebekraft",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Erhalte 1 Geschicklichkeit. NL ",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Erhalte NL 1 Geschicklichkeit. NL ",
     "EXTENDED_DESCRIPTION": [
-      "Erhalte !M! Panzerrüstung."
+      "Erhalte NL !M! Panzerrüstung."
     ]
   },
   "hexamod:ForkedFlame": {
@@ -166,7 +166,7 @@
   },
   "hexamod:GhostShield": {
     "NAME": "Geisterschild",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Erhalte 1 expansioncontent:Verschwimmen. NL ",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Erhalte NL 1 expansioncontent:Verschwimmen. NL ",
     "EXTENDED_DESCRIPTION": [
       "Erhalte !B! Block."
     ]
@@ -215,16 +215,16 @@
   },
   "hexamod:InfernalForm": {
     "NAME": "Infernale Form",
-    "DESCRIPTION": "Zu Beginn deines Zuges erhältst du !M! hexamod:Intensität.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! hexamod:Intensität. NL Zu Beginn deines Zuges erhältst du !M! hexamod:Intensität."
+    "DESCRIPTION": "Zu Beginn deines Zuges erhältst du NL !M! hexamod:Intensität.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! hexamod:Intensität. NL Zu Beginn deines Zuges erhältst du NL !M! hexamod:Intensität."
   },
   "hexamod:Incineration": {
     "NAME": "Einäscherung",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu und wende !M! Mal !burny! hexamod:Seelenfeuer an."
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu und wende !M! Mal NL !burny! hexamod:Seelenfeuer an."
   },
   "hexamod:StokeTheFire": {
     "NAME": "Anheizen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Verbessere für jede *entzündete Geisterflamme eine zufällige Handkarte in diesem Kampf."
+    "DESCRIPTION": "Erhalte !B! Block. NL Verbessere für jede *entzündete Geisterflamme eine zufällige Handkarte."
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Würdiges Opfer",
@@ -279,12 +279,12 @@
   },
   "hexamod:RainOfEmbers": {
     "NAME": "Ascheregen",
-    "DESCRIPTION": "Füge X Mal !D! Schaden zu und wende X Mal !M! Schwach an.",
-    "UPGRADE_DESCRIPTION": "Füge X+1 Mal !D! Schaden zu und wende X+1 Mal !M! Schwach an."
+    "DESCRIPTION": "Füge X Mal !D! Schaden zu und wende X Mal NL !M! Schwach an.",
+    "UPGRADE_DESCRIPTION": "Füge X+1 Mal !D! Schaden zu und wende X+1 Mal NL !M! Schwach an."
   },
   "hexamod:NightmareVision": {
     "NAME": "Albtraumvisionen",
-    "DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL expansioncontent:Exhumiere eine *flüchtige Karte. NL Erschöpft.",
+    "DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL expansioncontent:Exhumiere 1 *flüchtige Karte. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL expansioncontent:Exhumiere !M! *flüchtige Karten. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle eine flüchtige Karte und nimm sie auf die Hand.",
@@ -399,7 +399,7 @@
   },
   "hexamod:VolcanoVisage": {
     "NAME": "Vulkanvisage",
-    "DESCRIPTION": "Wende immer, wenn du eine Geisterflamme hexamod:entzündest, !M! hexamod:Seelenfeuer auf ALLE Gegner an."
+    "DESCRIPTION": "Wende immer, wenn du eine Geisterflamme hexamod:entzündest, NL !M! hexamod:Seelenfeuer auf ALLE Gegner an."
   },
   "hexamod:WildfireWeapon": {
     "NAME": "Brandstiftung",
@@ -501,7 +501,7 @@
     },
   "hexamod:RecurringNightmare": {
     "NAME": "Albtraumvisionen",
-    "DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL expansioncontent:Exhumiere eine *flüchtige Karte. NL Erschöpft.",
+    "DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL expansioncontent:Exhumiere 1 *flüchtige Karte. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Bewege dich Hexamod:rückwärts. NL expansioncontent:Exhumiere !M! *flüchtige Karten. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle eine flüchtige Karte und nimm sie auf die Hand.",
@@ -519,7 +519,7 @@
   },
   "hexamod:InspiringFlames": {
     "NAME": "Anheizen",
-    "DESCRIPTION": "Erhalte !B! Block. NL Verbessere für jede *entzündete Geisterflamme eine zufällige Handkarte in diesem Kampf."
+    "DESCRIPTION": "Erhalte !B! Block. NL Verbessere für jede *entzündete Geisterflamme eine zufällige Handkarte."
   },
   "hexamod:SpectralAdrenaline": {
     "NAME": "Grelles Ritual",
@@ -555,7 +555,7 @@
   "hexamod:FlameSwitch": {
     "NAME": "Böses Omen",
     "DESCRIPTION": "Wähle einen Geisterflammen-Typ. Die aktuelle Geisterflamme wird zum gewählten Typ. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Wähle einen Geisterflammen-Typ. Die aktuelle Geisterflamme wird zum gewählten Typ. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. Wähle einen Geisterflammen-Typ. Die aktuelle Geisterflamme wird zum gewählten Typ. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Ersetze die aktuelle Geisterflamme durch eine hexamod:Stärkende Geisterflamme",
       "Ersetze die aktuelle Geisterflamme durch eine hexamod:Schlagende Geisterflamme",

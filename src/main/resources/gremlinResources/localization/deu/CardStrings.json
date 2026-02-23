@@ -107,7 +107,7 @@
 
   "Gremlin:Encore": {
     "NAME": "Zugabe",
-    "DESCRIPTION": "Erhalte 3 gremlin:Esprit. NL Der Verbauch von gremlin:Esprit fügt zusätzlich !M! Schaden zu."
+    "DESCRIPTION": "Erhalte 3 gremlin:Esprit. NL Der Verbauch von gremlin:Esprit fügt zusätzlich NL !M! Schaden zu."
   },
 
   "Gremlin:Enthusiasm": {
@@ -286,7 +286,7 @@
 
   "Gremlin:Nob": {
     "NAME": "Aristo-Form",
-    "DESCRIPTION": "Erhalte !M! *temporäre *TP. NL Mutiere zum gremlin:Gremlin-Aristo, bis deine expansioncontent:temporären_TP verbraucht sind."
+    "DESCRIPTION": "Erhalte !M! *temporäre *TP. Mutiere zum gremlin:Gremlin-Aristo, bis deine expansioncontent:temporären_TP verbraucht sind."
   },
 
   "Gremlin:NobChoice": {
@@ -296,7 +296,7 @@
 
   "Gremlin:PartyStick": {
     "NAME": "Leuchtstab",
-    "DESCRIPTION": "Flüchtig. NL Unspielbar. NL Erhalte [E] , wenn du mit dieser Karte auf der Hand gremlin:wechselst.",
+    "DESCRIPTION": "Flüchtig. Unspielbar. NL Erhalte [E] , wenn du mit dieser Karte auf der Hand gremlin:wechselst.",
     "UPGRADE_DESCRIPTION": "Unspielbar. NL Erhalte [E] , wenn du mit dieser Karte auf der Hand gremlin:wechselst.",
     "EXTENDED_DESCRIPTION": ["Niemand darf mit dem Leuchtstab spielen."]
   },
@@ -340,7 +340,7 @@
 
   "Gremlin:Pretaliation": {
     "NAME": "Eilangriff",
-    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu. NL Der Gegner greift dich mit !M! Schaden an."
+    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu. Der Gegner greift dich mit !M! Schaden an."
   },
 
   "Gremlin:ProperTools": {
@@ -475,7 +475,7 @@
   "Gremlin:TwistTheKnife": {
     "NAME": "Zweischneidig",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 Messer.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 Messer+."
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 *Messer+."
   },
 
   "Gremlin:ToeStub": {
