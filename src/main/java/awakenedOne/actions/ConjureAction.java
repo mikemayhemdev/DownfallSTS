@@ -19,8 +19,7 @@ import java.util.ArrayList;
 
 import static awakenedOne.AwakenedOneMod.UP_NEXT;
 import static awakenedOne.ui.AwakenButton.awaken;
-import static awakenedOne.ui.OrbitingSpells.spellCards;
-import static awakenedOne.ui.OrbitingSpells.spells;
+import static awakenedOne.ui.OrbitingSpells.*;
 import static awakenedOne.util.Wiz.isAwakened;
 import static downfall.downfallMod.DeterministicConjure;
 
@@ -180,6 +179,7 @@ public class ConjureAction extends AbstractGameAction {
                 } else {
                     for (int i = 0; i < permaAdd; i++) {
                         spellCards.add(q.makeStatEquivalentCopy());
+                        spellCardsInscribe.add(q.makeStatEquivalentCopy());
                     }
                 }
             }));

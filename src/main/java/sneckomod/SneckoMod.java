@@ -753,7 +753,7 @@ public class SneckoMod implements
 
                 BlankCard.ID,
                 SneckoTalon.ID,
-                SleevedAce.ID,
+                RareBoosterPack.ID,
 
                 TheSnecko.Enums.THE_SNECKO
         );

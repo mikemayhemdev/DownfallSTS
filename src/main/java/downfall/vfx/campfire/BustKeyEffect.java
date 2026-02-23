@@ -20,6 +20,7 @@ import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndObtainEffect;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardBrieflyEffect;
 import downfall.ui.campfire.BustKeyOption;
 import guardian.GuardianMod;
+import guardian.cards.AbstractGemCard;
 import guardian.cards.AbstractGuardianCard;
 import slimebound.SlimeboundMod;
 
@@ -66,6 +67,13 @@ public class BustKeyEffect extends AbstractGameEffect {
                     Iterator var6;
                     while (containsDupe) {
                         containsDupe = false;
+
+//                        if (card instanceof AbstractGemCard) {
+//                            containsDupe = true;
+//                            card = AbstractDungeon.getCard(rarity).makeCopy();
+//                            break;
+//                        }
+
                         var6 = group.group.iterator();
 
                         while (var6.hasNext()) {
@@ -106,6 +114,7 @@ public class BustKeyEffect extends AbstractGameEffect {
             if (CampfireUI.hidden) {
                 AbstractRoom.waitTimer = 0.0F;
                 if (AbstractDungeon.getCurrRoom() instanceof RestRoom) {
+                    GuardianMod.socketBonfireOption.reCheck();
                     ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI.reopen();
                     // there was a bug with the fire sound persisting and I'm not sure why,
                     // so this is basically a randomly thrown out preventative measure.

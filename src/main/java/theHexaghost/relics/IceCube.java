@@ -13,7 +13,7 @@ import static theHexaghost.HexaMod.makeRelicPath;
 
 public class IceCube extends CustomRelic {
 
-    //snow flake Xanatos' Icy Charm
+    //Xanatos' Icy Charm
     public static final String ID = HexaMod.makeID("IceCube");
     private static final Texture IMG = TextureLoader.getTexture(makeRelicPath("IceCube.png"));
     private static final Texture OUTLINE = TextureLoader.getTexture(makeRelicOutlinePath("IceCube.png"));
@@ -34,7 +34,7 @@ public class IceCube extends CustomRelic {
     }// 43
 
     @Override
-    public void atBattleStart() {
+    public void atPreBattle() {
             this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new EnhancePower(-INTENSITY_LOSS), -INTENSITY_LOSS));
     }
 

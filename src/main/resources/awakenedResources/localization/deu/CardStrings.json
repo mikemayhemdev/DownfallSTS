@@ -133,7 +133,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "Dimensionsbombe",
-    "DESCRIPTION": "Erfordert eine Leere im Erschöpfungsstapel. Entferne sie und füge 2 Mal !D! Schaden zu.",
+    "DESCRIPTION": "Erfordert eine *Leere im Erschöpfungsstapel. Entferne sie und füge ALLEN Gegnern !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "Ich habe keine erschöpfte Leere."
     ]
@@ -331,8 +331,7 @@
   },
   "awakened:Procession": {
     "NAME": "Prozession",
-    "DESCRIPTION": "Spiele eine Karte aus dem Nachziehstapel und bronze:setze *Leeren in Anzahl der Höhe ihrer Kosten *ein. Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Spiele eine Karte aus dem Nachziehstapel und bronze:setze *Leeren in Anzahl der Höhe ihrer Kosten *ein."
+    "DESCRIPTION": "Spiele eine Karte aus dem Nachziehstapel und bronze:setze *Leeren in Anzahl der Höhe ihrer Kosten *ein. Erschöpft."
   },
   "awakened:SplitWide": {
     "NAME": "Aufschlitzen",

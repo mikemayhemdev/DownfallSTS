@@ -133,7 +133,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "Bomba de Lodo",
-    "DESCRIPTION": "Solo se puede jugar si un *Vacío está Agotado. NL Haz !D! de daño dos veces. NL Borra un *Vacío de tu Pila de Descarte.",
+    "DESCRIPTION": "Solo se puede jugar si un *Vacío está Agotado. NL Haz !D! de daño a TODOS los enemigos. NL Borra un *Vacío de tu Pila de Descarte.",
     "EXTENDED_DESCRIPTION": [
       "No tengo un Vacío Agotado."
     ]
@@ -330,8 +330,7 @@
   },
   "awakened:Procession": {
     "NAME": "Procesión",
-    "DESCRIPTION": "Juega una carta de tu pila de extracción y baraja *Vacíos iguales a su coste. NL Agota.",
-    "UPGRADE_DESCRIPTION": "Juega una carta de tu pila de extracción y baraja *Vacíos iguales a su coste."
+    "DESCRIPTION": "Juega una carta de tu pila de extracción y baraja *Vacíos iguales a su coste. NL Agota."
   },
   "awakened:SplitWide": {
     "NAME": "Separar",

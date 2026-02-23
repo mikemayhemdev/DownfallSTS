@@ -135,7 +135,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "污泥弹",
-    "DESCRIPTION": "此牌需要一张被消耗的 *虚空 才能被打出 ｡ NL 造成 !D! 点伤害两次 ｡ NL 从消耗堆中消除一张 *虚空 ｡ ",
+    "DESCRIPTION": "此牌需要一张被消耗的 *虚空 才能被打出 ｡ NL 对所有敌人造成 !D! 点伤害 ｡ NL 从消耗堆中消除一张 *虚空 ｡ ",
     "EXTENDED_DESCRIPTION": [
       "我没有已消耗的虚空牌 ｡"
     ]
@@ -333,8 +333,7 @@
   },
   "awakened:Procession": {
     "NAME": "行进",
-    "DESCRIPTION": "打出抽牌堆中的一张牌 , 放入等同耗能数目的 *虚空 ｡ NL 消耗 ｡",
-    "UPGRADE_DESCRIPTION": "从抽牌堆打出一张牌 , 放入等同耗能数目的 *虚空 ｡"
+    "DESCRIPTION": "打出抽牌堆中的一张牌 , 放入等同耗能数目的 *虚空 ｡ NL 消耗 ｡"
   },
   "awakened:SplitWide": {
     "NAME": "劈破",

@@ -3,9 +3,12 @@ package awakenedOne.cards;
 import awakenedOne.AwakenedOneMod;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.PlayTopCardAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+
+import java.util.Iterator;
 
 import static awakenedOne.AwakenedOneMod.*;
 import static awakenedOne.util.Wiz.att;
@@ -41,11 +44,28 @@ public class RavenStrike extends AbstractAwakenedCard {
                 @Override
                 public void update() {
                     isDone = true;
-                    att(new PlayTopCardAction(AbstractDungeon.getRandomMonster(), false));
+                    if (!checksoftlock()) {
+                        att(new PlayTopCardAction(AbstractDungeon.getRandomMonster(), false));
+                    }
                 }
             });
         }
         checkOnChant();
+    }
+
+    public static boolean checksoftlock(){
+        if (!AbstractDungeon.player.drawPile.isEmpty() || AbstractDungeon.actionManager.cardsPlayedThisTurn.size() < 50) {
+            return false;
+        }
+        Iterator var1 = AbstractDungeon.player.discardPile.group.iterator();
+        AbstractCard c;
+        while (var1.hasNext()) {
+            c = (AbstractCard) var1.next();
+            if (!(c instanceof RavenStrike)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     public void triggerOnGlowCheck() {

@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.dungeons.TheCity;
 import com.megacrit.cardcrawl.dungeons.TheEnding;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
 import com.megacrit.cardcrawl.map.DungeonMap;
+import com.megacrit.cardcrawl.relics.Sling;
 import downfall.downfallMod;
 import downfall.monsters.NeowBoss;
 import downfall.monsters.NeowBossFinal;
@@ -37,6 +38,8 @@ public class BossSetPatch {
             });
         }
         if (__instance instanceof TheEnding && EvilModeCharacterSelect.evilMode) {
+
+            downfallMod.removeAnyRelicFromPools(Sling.ID);
 
             AbstractDungeon.bossList.clear();
 

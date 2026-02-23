@@ -139,8 +139,8 @@
   },
   "hexamod:DevilsDance": {
     "NAME": "Danza del Diablo",
-    "DESCRIPTION": "Siempre que hexamod:Retrocedas, roba una carta.",
-    "UPGRADE_DESCRIPTION": "Innato. NL La primera vez que *Retrocedas cada turno, gana [E] y roba 1 carta. NL hexamod:Retroceder."
+    "DESCRIPTION": "La primera vez que hexamod:Avances o hexamod:Retrocedas cada turno, roba una carta.",
+    "UPGRADE_DESCRIPTION": "Las primeras !M! veces que hexamod:Avances o hexamod:Retrocedas cada turno, roba una carta."
   },
   "hexamod:HereAndNow": {
     "NAME": "Aquí y Ahora",

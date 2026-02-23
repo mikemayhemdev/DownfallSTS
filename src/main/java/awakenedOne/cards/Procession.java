@@ -12,7 +12,7 @@ public class Procession extends AbstractAwakenedCard {
     // intellij stuff skill, enemy, uncommon, , , , , 1, 1
 
     public Procession() {
-        super(ID, 0, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
+        super(ID, 1, CardType.SKILL, CardRarity.RARE, CardTarget.SELF);
         this.exhaust = true;
         loadJokeCardImage(this, makeBetaCardPath(Procession.class.getSimpleName() + ".png"));
     }
@@ -28,7 +28,8 @@ public class Procession extends AbstractAwakenedCard {
     }
 
     public void upp() {
-        this.exhaust = false;
+        //this.exhaust = false;
+        upgradeBaseCost(0);
         //upgradeSecondMagic(1);
     }
 }

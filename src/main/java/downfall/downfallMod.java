@@ -1935,9 +1935,6 @@ public class downfallMod implements OnPlayerDamagedSubscriber, OnStartBattleSubs
 
         // Code 0 is Hermit's Tutorial and already within his own mod.
 
-        if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(ChampStances.ID)) || ModHelper.isModEnabled(ChampStances.ID)) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new ModFinisher()));
-        }
 
         if ((CardCrawlGame.trial != null && CardCrawlGame.trial.dailyModIDs().contains(Enraging.ID)) || ModHelper.isModEnabled(Enraging.ID)) {
             for (AbstractMonster m : abstractRoom.monsters.monsters)
