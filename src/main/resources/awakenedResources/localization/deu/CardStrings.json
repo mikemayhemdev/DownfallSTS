@@ -253,7 +253,7 @@
     "DESCRIPTION": "ALLE Gegner verlieren für diesen Zug !M! Stärke. Verliere im nächsten Zug [E]. NL Erschöpft."
   },
   "awakened:SingularityShield": {
-    "NAME": "Singularitätsschild",
+    "NAME": "Dualer Schild",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte im nächsten Zug !B! Block und verliere [E]."
   },
   "awakened:Dejection": {
