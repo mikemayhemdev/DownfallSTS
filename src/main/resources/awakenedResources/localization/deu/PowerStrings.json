@@ -85,7 +85,7 @@
     "DESCRIPTIONS": [
       "Erhalte [E] , wenn du das erste Mal im Zug einen Zauber spielst.",
       "Die ersten #b",
-      " Male im Zug, an denen du einen Zauber spielst, erhalte [E].",
+      " Male im Zug, an denen du einen Zauber spielst, erhalte [E] .",
       " NL Noch #b",
       " Mal möglich in diesem Zug."
     ]
@@ -93,7 +93,7 @@
   "awakened:EclipseEmbracePower": {
     "NAME": "Sonnenfinsternis",
     "DESCRIPTIONS": [
-      "Immer wenn du eine #yLeere #yerschöpfst [REMOVE_SPACE], ziehe im nächsten Zug eine Karte und erhalte [E].",
+      "Immer wenn du eine #yLeere #yerschöpfst [REMOVE_SPACE], ziehe im nächsten Zug eine Karte und erhalte [E] .",
       "Immer wenn du eine #yLeere #yerschöpfst [REMOVE_SPACE], erhalte im nächsten Zug #b",
       " [E] und ziehe #b",
       " Karten."
@@ -155,9 +155,9 @@
   "awakened:VoidRefundPower": {
     "NAME": "Kriegsfanfare",
     "DESCRIPTIONS": [
-      "Erhalte das nächste Mal an dem du #yausgelaugt wirst [E].",
+      "Erhalte das nächste Mal an dem du #yausgelaugt wirst [E] .",
       "Erhalte das nächste Mal an dem du #yausgelaugt wirst #b",
-      " [E]."
+      " [E] ."
     ]
   },
   "awakened:DemonGlyphPower": {
