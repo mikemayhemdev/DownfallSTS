@@ -97,7 +97,7 @@
   },
   "awakened:FlareShot": {
     "NAME": "Federflackern",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: Ziehe im nächsten Zug !M! zusätzliche Karte."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: Ziehe im nächsten Zug NL !M! zusätzliche Karte."
   },
   "awakened:ClarionCall": {
     "NAME": "Kriegsfanfare",
@@ -133,7 +133,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "Dimensionsbombe",
-    "DESCRIPTION": "Erfordert eine *Leere im Erschöpfungsstapel. Entferne sie und füge ALLEN Gegnern !D! Schaden zu.",
+    "DESCRIPTION": "Erfordert eine *Leere im Erschöpfungsstapel. Entferne sie und füge ALLEN Gegnern NL !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "Ich habe keine erschöpfte Leere."
     ]
@@ -250,7 +250,7 @@
   },
   "awakened:MirePit": {
     "NAME": "Schlammgrube",
-    "DESCRIPTION": "ALLE Gegner verlieren für diesen Zug !M! Stärke. Verliere im nächsten Zug [E]. NL Erschöpft."
+    "DESCRIPTION": "ALLE Gegner verlieren für diesen Zug NL !M! Stärke. Verliere im nächsten Zug [E]. NL Erschöpft."
   },
   "awakened:SingularityShield": {
     "NAME": "Dualer Schild",
@@ -343,7 +343,7 @@
   },
   "awakened:Siphon": {
     "NAME": "Siphon",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: gremlin:Stiehl !M! *temporäre Stärke."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: gremlin:Stiehl NL !M! *temporäre Stärke."
   },
   "awakened:PlumeJab": {
     "NAME": "Federstiche",

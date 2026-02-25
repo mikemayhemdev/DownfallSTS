@@ -99,7 +99,7 @@
   },
   "hermit:Dive": {
     "NAME": "Wegducken",
-    "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Erhalte NL !M! expansioncontent:Panzerrüstung."
+    "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: Erhalte NL !M! expansioncontent:Panzerrüstung."
   },
   "hermit:FlashPowder": {
     "NAME": "Blitzpulver",
@@ -120,8 +120,8 @@
   },
   "hermit:TakeCover": {
     "NAME": "In Deckung gehen",
-    "DESCRIPTION": "Erhalte ein *Verteidigen, das 0 kostet. *Verbessere es danach X Mal. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte ein *Verteidigen+, das 0 kostet. *Verbessere es danach X Mal. NL Erschöpft."
+    "DESCRIPTION": "Erhalte ein *Verteidigen, das 0 kostet. *Verbessere es X Mal. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte ein *Verteidigen+, das 0 kostet. *Verbessere es X Mal. NL Erschöpft."
   },
   "hermit:Misfire": {
     "NAME": "Rohrkrepierer",
@@ -181,7 +181,7 @@
   },
   "hermit:Vantage": {
     "NAME": "Ausspähen",
-    "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Ziehe eine Karte und verbessere sie bis zum Ende des Kampfes.",
+    "DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Ziehe 1 Karte und verbessere sie bis zum Ende des Kampfes.",
     "UPGRADE_DESCRIPTION": "Erhalte !B! Block. NL hermit:Volltreffer: NL Ziehe !M! Karten und verbessere sie bis zum Ende des Kampfes."
   },
   "hermit:Brawl": {
@@ -199,7 +199,7 @@
   },
   "hermit:OverwhelmingPower": {
     "NAME": "Ausufernde Macht",
-    "DESCRIPTION": "Erhalte [E] [E] [E]. NL Ziehe !hermit:SecondMagic! Karten. NL Immer wenn du deinen Zug mit 0 Energie beendest, verliere NL !M! TP."
+    "DESCRIPTION": "Erhalte [E] [E] [E]. NL Ziehe !hermit:SecondMagic! Karten. NL Wenn du am Ende des Zuges 0 Energie hast, verliere !M! TP."
   },
   "hermit:Maintenance": {
     "NAME": "Wartung",
@@ -212,8 +212,8 @@
   },
   "hermit:FullyLoaded": {
     "NAME": "Vollgeladen",
-    "DESCRIPTION": "Nimm alle Basis *Schlag und *Verteidigen Karten vom Nachziehstapel auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Nimm alle Basis *Schlag und *Verteidigen Karten vom Nachziehstapel auf die Hand. Erschöpft."
+    "DESCRIPTION": "Schnapp alle Basis *Schlag und *Verteidigen Karten vom Nachziehstapel. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Schnapp alle Basis *Schlag und *Verteidigen Karten vom Nachziehstapel. NL Erschöpft."
   },
   "hermit:Gestalt": {
     "NAME": "Gestalt",
@@ -225,7 +225,7 @@
   },
   "hermit:CursedWeapon": {
     "NAME": "Verfluchte Waffe",
-    "DESCRIPTION": "Verliere !M! TP. Füge NL !D! Schaden zu. NL Alle *Verfluchten *Waffen fügen permanent !hermit:SecondMagic! mehr Schaden zu. Erschöpft."
+    "DESCRIPTION": "Verliere !M! TP. Füge NL !D! Schaden zu. Alle *Verfluchten *Waffen fügen permanent !hermit:SecondMagic! mehr Schaden zu. Erschöpft."
   },
   "hermit:Enervate": {
     "NAME": "Entziehen",

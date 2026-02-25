@@ -2,7 +2,7 @@
   "champ:CounterPower": {
     "NAME": "Konter",
     "DESCRIPTIONS": [
-      "Wenn du das nächste Mal angegriffen wirst, verliere dein Konter und erhalte einen #yGegenschlag der #b",
+      "Wenn du das nächste Mal angegriffen wirst, verliere dein Konter und erhalte einen #yKonterschlag der #b",
       " Schaden zufügt."
     ]
   },

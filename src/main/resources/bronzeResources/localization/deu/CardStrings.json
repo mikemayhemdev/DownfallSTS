@@ -18,7 +18,7 @@
   },
   "bronze:Assembly": {
     "NAME": "Programmieren",
-    "DESCRIPTION": "Spähe !M!. NL bronze:Kodiere abgeworfene Karten mit *Kodieren in der gewählten Reihenfolge. Erschöpft."
+    "DESCRIPTION": "Spähe !M!. bronze:Kodiere abgeworfene Karten mit *Kodieren in der gewählten Reihenfolge. Erschöpft."
   },
   "bronze:Backtrace": {
     "NAME": "Destruktor",
@@ -43,7 +43,7 @@
   },
   "bronze:Boost": {
     "NAME": "Software",
-    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung: Erhalte !M! Stärke.",
+    "DESCRIPTION": "Erhalte !B! Block. NL bronze:Kompilierung: NL Erhalte !M! Stärke.",
     "EXTENDED_DESCRIPTION": [
       "weiches",
       "Setup"
@@ -215,8 +215,8 @@
   },
   "bronze:FineTuning": {
     "NAME": "Feinjustierung",
-    "DESCRIPTION": "Erhöhe alle Zahlen auf kodierte Karten um !M! (Kosten ausgenommen). NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Behalten. NL Erhöhe alle Zahlen auf kodierte Karten um !M! (Kosten ausgenommen). NL Erschöpft."
+    "DESCRIPTION": "Erhöhe alle Zahlen auf kodierte Karten um !M! (ausgenommen Kosten). Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Behalten. NL Erhöhe alle Zahlen auf kodierte Karten um !M! (ausgenommen Kosten). Erschöpft."
   },
   "bronze:Flail": {
     "NAME": "Verdreschen",
@@ -367,7 +367,7 @@
   },
   "bronze:Optimize": {
     "NAME": "Optimieren",
-    "DESCRIPTION": "Die nächsten !M! nicht verbesserten Karten die bronze:kodiert werden, kodieren verbessert."
+    "DESCRIPTION": "Die nächsten !M! nicht *verbesserten Karten, die bronze:kodiert werden, kodieren verbessert."
   },
   "bronze:Overheat": {
     "NAME": "Überhitzen",
@@ -388,8 +388,8 @@
   },
   "bronze:RecursiveStrike": {
     "NAME": "Rekursiver Schlag",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL bronze:Kodiere !M! Kopien von *Schlag.",
-    "UPGRADE_DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL bronze:Kodiere !M! Kopien von *Schlag+.",
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. bronze:Kodiere !M! Kopien von *Schlag.",
+    "UPGRADE_DESCRIPTION": "Füge !M! Mal !D! Schaden zu. bronze:Kodiere !M! Kopien von *Schlag+.",
     "EXTENDED_DESCRIPTION": [
       "rekursives",
       "Vorkommen"
@@ -397,7 +397,7 @@
   },
   "bronze:Refactor": {
     "NAME": "Überschreiben",
-    "DESCRIPTION": "Spähe !M!. NL Erschöpfe abgeworfene Statuskarten. Erhalte für Jede !B! Block."
+    "DESCRIPTION": "Spähe !M!. Erschöpfe abgeworfene Statuskarten. Erhalte für Jede !B! Block."
   },
   "bronze:Repair": {
     "NAME": "Reparieren",
@@ -517,7 +517,7 @@
   "bronze:Virus": {
     "NAME": "Virus",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte genauso viele *hypostrahlen. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte genauso viele *hypostrahlen+. NL Erschöpft."
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Wirf deine Hand ab und erhalte genauso viele *hypostrahl+ Karten. Erschöpft."
   },
   "bronze:WhirlingStrike": {
     "NAME": "Bronzegeschütz",

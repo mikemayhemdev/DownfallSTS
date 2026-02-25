@@ -178,7 +178,7 @@
   },
   "sneckomod:Restock": {
     "NAME": "Nachfüllen",
-    "DESCRIPTION": "Wird deine Hand ab. NL Ziehe !M! Karten, und sneckomod:irre dann alle Handkarten. NL Erschöpft."
+    "DESCRIPTION": "Wirf deine Hand ab. NL Ziehe !M! Karten, und sneckomod:irre dann alle Handkarten. NL Erschöpft."
   },
   "sneckomod:Rotation": {
     "NAME": "Rotation",

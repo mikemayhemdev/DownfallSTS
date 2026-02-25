@@ -150,7 +150,7 @@
   },
   "Slimebound:LivingWall": {
     "NAME": "Lebendige Mauer",
-    "DESCRIPTION": "Erhalte !B! Block. NL Immer wenn dich in diesem Zug ein Gegner angreift, wende !slime! slimeboundmod:Glibber auf ihn an."
+    "DESCRIPTION": "Erhalte !B! Block. NL Immer wenn dich in diesem Zug ein Gegner angreift, wende NL !slime! slimeboundmod:Glibber auf ihn an."
   },
   "Slimebound:MassFeed": {
     "NAME": "Massenschlingen",

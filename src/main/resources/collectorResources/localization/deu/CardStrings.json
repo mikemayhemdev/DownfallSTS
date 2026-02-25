@@ -13,7 +13,7 @@
   },
   "collector:Arrogance": {
     "NAME": "Arroganz",
-    "DESCRIPTION": "Erhalte !B! Block. NL Dein nächster Angriff in diesem Zug wendet zusätzlich !M! collector:Verdammnis an."
+    "DESCRIPTION": "Erhalte !B! Block. NL Dein nächster Angriff in diesem Zug wendet zusätzlich NL !M! collector:Verdammnis an."
   },
   "collector:AshesAndDust": {
     "NAME": "Schutt und Asche",
@@ -327,11 +327,11 @@
   },
   "collector:ScorchingRay": {
     "NAME": "Sengender Strahl",
-    "DESCRIPTION": "Füge X Mal einem zufälligen Gegner !D! Schaden zu."
+    "DESCRIPTION": "Füge X Mal einem zufälligen Gegner NL !D! Schaden zu."
   },
   "collector:SeedOfDoubt": {
     "NAME": "Saat des Zweifels",
-    "DESCRIPTION": "Wende !M! collector:Verdammnis an. Wenn diese Karte auf der Hand ist während eine Karte *erschöpft, erhöhe ihre *Verdammnis um !clm2!."
+    "DESCRIPTION": "Wende !M! collector:Verdammnis an. Wenn diese Karte auf der Hand ist, während eine Karte *erschöpft, erhöhe ihre *Verdammnis um !clm2!."
   },
   "collector:ShadowDaggers": {
     "NAME": "Schattendolche",
