@@ -63,7 +63,7 @@
   },
   "hexamod:DynamicBlow": {
     "NAME": "Dynamischer Hieb",
-    "DESCRIPTION": "Flüchtig. NL Wenn die aktuelle Geisterflamme hexamod:entzündet ist, wende !burny! hexamod:Seelenfeuer an. Anderenfalls, füge !D! Schaden zu.",
+    "DESCRIPTION": "Flüchtig. NL Wenn die aktuelle Geisterflamme hexamod:entzündet ist, wende !burny! hexamod:Seelenfeuer an - ansonsten füge !D! Schaden zu.",
     "TRANSLATOR_NOTE:": "Not used in game  Not used in game  Not used in game  Not used in game  Not used in game  Not used in game   "
   },
   "hexamod:EmpoweredFlame": {
@@ -106,13 +106,13 @@
     "NAME": "Schweben",
     "DESCRIPTION": "Ziehe eine Karte. NL Bewege dich hexamod:vorwärts.",
     "UPGRADE_DESCRIPTION": "Ziehe eine Karte. NL Du kannst dich NL hexamod:vorwärts oder hexamod:rückwärts bewegen.",
-    "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Tu nichts."]
+    "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Stehen bleiben."]
   },
   "hexamod:MatchstickFloat": {
     "NAME": "Magisches Zündholz",
     "DESCRIPTION": "Diese Karte sollte nicht auftauchen. NL Wenn du das liest, bist du auf einen Bug gestoßen. NL Bitte melde das dem Dev-Team.",
     "UPGRADE_DESCRIPTION": "Diese Karte sollte nicht auftauchen. NL Wenn du das liest, bist du auf einen Bug gestoßen. NL Bitte melde das dem Dev-Team.",
-    "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Tu nichts."]
+    "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Stehen bleiben."]
   },
   "hexamod:Floatwork": {
     "NAME": "Schwebekraft",
@@ -381,7 +381,7 @@
     "NAME": "Zündender Funke",
     "DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme und bewege dich hexamod:vorwärts.",
     "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. Du kannst dich NL hexamod:vorwärts oder hexamod:rückwärts bewegen.",
-    "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Tu nichts."]
+    "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Stehen bleiben."]
   },
   "hexamod:TurnItUp": {
     "NAME": "Aufgedreht",

@@ -82,7 +82,7 @@
   },
   "Gremlin:GremlinWizard": {
     "NAME": "Gremlinzauberer",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "Erhalte nach dem Ausspielen einer Fertigkeit #b",
       " #yEsprit [REMOVE_SPACE]."
     ]
@@ -104,7 +104,7 @@
   },
   "Gremlin:MadGremlin": {
     "NAME": "Wütender Gremlin",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "Erhalte jdes Mal wenn du angegriffen wirst #b",
       " #ytemporäre #yStärke pro Treffer."
     ]
@@ -159,7 +159,7 @@
   },
   "Gremlin:ShieldGremlin": {
     "NAME": "Schildgremlin",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "Erhalte nach dem Ausspielen einer Fertigkeit #b",
       " #yBlock [REMOVE_SPACE].",
       ""
@@ -167,7 +167,7 @@
   },
   "Gremlin:SneakyGremlin": {
     "NAME": "Schleichender Gremlin",
-    "DESCRIPTION": [
+    "DESCRIPTIONS": [
       "Angriffe, die 0 kosten, fügen #b",
       " zusätzlichen Schaden zu. Füge nach dem Ausspielen eines Angriffs einem zufälligen Gegner #b",
       " Schaden zu."

@@ -193,7 +193,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Durchschlag",
-    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. Erhöhe den Schaden um !M! wenn du mit dieser Karte in der Hand eine Fertigkeit spielst."
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. Erhöhe den Schaden um !M!, wenn du mit dieser Karte in der Hand eine Fertigkeit spielst."
   },
   "champ:HeavySlash": {
     "NAME": "Austeilen",
@@ -201,7 +201,7 @@
   },
   "champ:CheapShot": {
     "NAME": "Fieser Trick",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft bei Bossen zwei weitere Male. Ansonsten wird das Ziel hermit:betäubt. Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft bei Bossen zwei weitere Male - ansonsten wird das Ziel hermit:betäubt. Erschöpft."
   },
   "champ:RisingSlash": {
     "NAME": "Nachschlag",

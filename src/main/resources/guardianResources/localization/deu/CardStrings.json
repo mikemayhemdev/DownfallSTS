@@ -245,7 +245,7 @@
   },
   "Guardian:RollAttack": {
     "NAME": "Rollender Angriff",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft ALLE Gegner im *Defensivmodus. Ansonsten: guardianmod:Abhärten 8."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft ALLE Gegner im *Defensivmodus - ansonsten: guardianmod:Abhärten 8."
   },
   "Guardian:GemFire": {
     "NAME": "Juwelenkanone",
