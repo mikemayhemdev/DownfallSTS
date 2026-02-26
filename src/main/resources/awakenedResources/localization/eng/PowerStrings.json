@@ -4,7 +4,7 @@
     "DESCRIPTIONS": [
       "This turn, all Spell cards cost #b0 [REMOVE_SPACE].",
       "For the next #b",
-      " turns, all Spell cards cards cost #b0 [REMOVE_SPACE]."
+      " turns, all Spell cards cost #b0 [REMOVE_SPACE]."
     ]
   },
   "awakened:IntensifyDebuffPower": {
