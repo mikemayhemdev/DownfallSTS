@@ -12,6 +12,8 @@
     "PROPER_NAME": "Vorwärts",
     "NAMES": [
       "vorwärts",
+      "voran",
+      "vor",
       "advance",
       "advanced",
       "advancing"
@@ -22,6 +24,7 @@
     "PROPER_NAME": "Rückwärts",
     "NAMES": [
       "rückwärts",
+      "zurück",
       "retract",
       "retracted",
       "retracting"

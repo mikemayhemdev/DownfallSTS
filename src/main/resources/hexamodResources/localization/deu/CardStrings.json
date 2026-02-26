@@ -106,13 +106,13 @@
     "NAME": "Schweben",
     "DESCRIPTION": "Ziehe eine Karte. NL Schreite hexamod:vorwärts.",
     "UPGRADE_DESCRIPTION": "Ziehe eine Karte. NL Du kannst NL hexamod:vorwärts oder hexamod:rückwärts schreiten.",
-    "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Stehen bleiben."]
+    "EXTENDED_DESCRIPTION": ["Schreite hexamod:vorwärts.", "Schreite hexamod:rückwärts.", "Bleib stehen."]
   },
   "hexamod:MatchstickFloat": {
     "NAME": "Magisches Zündholz",
     "DESCRIPTION": "Diese Karte sollte nicht auftauchen. NL Wenn du das liest, bist du auf einen Bug gestoßen. NL Bitte melde das dem Dev-Team.",
     "UPGRADE_DESCRIPTION": "Diese Karte sollte nicht auftauchen. NL Wenn du das liest, bist du auf einen Bug gestoßen. NL Bitte melde das dem Dev-Team.",
-    "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Stehen bleiben."]
+    "EXTENDED_DESCRIPTION": ["Schreite hexamod:vorwärts.", "Schreite hexamod:rückwärts.", "Bleib stehen."]
   },
   "hexamod:Floatwork": {
     "NAME": "Schwebekraft",
@@ -375,13 +375,13 @@
   },
   "hexamod:TimeWarp": {
     "NAME": "Zeitsprung",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm diese Karte vom Abwurfstapel auf die Hand, immer wenn du hexamod:vorwärts oder hexamod:rückwärts schreitest."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Nimm diese Karte vom Abwurfstapel auf die Hand, wenn du hexamod:vor oder hexamod:zurück schreitest."
   },
   "hexamod:FlareFlick": {
     "NAME": "Zündender Funke",
     "DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme und schreite hexamod:vorwärts.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. Du kannst NL hexamod:vorwärts oder hexamod:rückwärts schreiten.",
-    "EXTENDED_DESCRIPTION": ["hexamod:Vorwärts.", "hexamod:Rückwärts.", "Stehen bleiben."]
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. Du kannst NL hexamod:vor oder hexamod:zurück schreiten.",
+    "EXTENDED_DESCRIPTION": ["Schreite hexamod:vorwärts.", "Schreite hexamod:rückwärts.", "Bleib stehen."]
   },
   "hexamod:TurnItUp": {
     "NAME": "Aufgedreht",
@@ -408,33 +408,33 @@
   },
   "hexamod:FirstSeal": {
     "NAME": "Erstes Siegel",
-    "DESCRIPTION": "Flüchtig hexamod:Siegel. NL Heile !M! TP am Ende des Kampfes.",
-    "UPGRADE_DESCRIPTION": "hexamod:Siegel. NL Heile !M! TP am Ende des Kampfes."
+    "DESCRIPTION": "Flüchtig. hexamod:Siegel. NL Heile am Ende des Kampfes !M! TP.",
+    "UPGRADE_DESCRIPTION": "hexamod:Siegel. NL Heile am Ende des Kampfes !M! TP."
   },
   "hexamod:SecondSeal": {
     "NAME": "Zweites Siegel",
-    "DESCRIPTION": "Flüchtig hexamod:Siegel. NL Erhalte am Ende des Kampfes zusätzlich !M! Gold.",
-    "UPGRADE_DESCRIPTION": "hexamod:Siegel. NL Erhalte am Ende des Kampfes zusätzlich !M! Gold."
+    "DESCRIPTION": "Flüchtig. hexamod:Siegel. NL Erhalte am Ende des Kampfes zusätzlich NL !M! Gold.",
+    "UPGRADE_DESCRIPTION": "hexamod:Siegel. NL Erhalte am Ende des Kampfes zusätzlich NL !M! Gold."
   },
   "hexamod:ThirdSeal": {
     "NAME": "Drittes Siegel",
-    "DESCRIPTION": "Flüchtig hexamod:Siegel. NL Erhalte am Ende des Kampfes eine zusätzliche Kartenbelohnung.",
+    "DESCRIPTION": "Flüchtig. hexamod:Siegel. NL Erhalte am Ende des Kampfes eine zusätzliche Kartenbelohnung.",
     "UPGRADE_DESCRIPTION": "hexamod:Siegel. NL Erhalte am Ende des Kampfes eine zusätzliche Kartenbelohnung."
   },
   "hexamod:FourthSeal": {
     "NAME": "Viertes Siegel",
-    "DESCRIPTION": "Flüchtig hexamod:Siegel. NL Erhalte am Ende des Kampfes einen zusätzlichen Trank.",
+    "DESCRIPTION": "Flüchtig. hexamod:Siegel. NL Erhalte am Ende des Kampfes einen zusätzlichen Trank.",
     "UPGRADE_DESCRIPTION": "hexamod:Siegel. NL Erhalte am Ende des Kampfes einen zusätzlichen Trank."
   },
   "hexamod:FifthSeal": {
     "NAME": "Sechstes Siegel",
-    "DESCRIPTION": "Flüchtig hexamod:Siegel. NL Erhöhe am Ende des Kampfes deine max. TP um !M!.",
+    "DESCRIPTION": "Flüchtig. hexamod:Siegel. NL Erhöhe am Ende des Kampfes deine max. TP um !M!.",
     "UPGRADE_DESCRIPTION": "hexamod:Siegel. NL Erhöhe am Ende des Kampfes deine max. TP um !M!."
   },
   "hexamod:SixthSeal": {
     "NAME": "Fünftes Siegel",
-    "DESCRIPTION": "Flüchtig hexamod:Siegel. NL Verbessere am Ende des Kampfes 1 zufällige Karte für alle 13 unverbesserten Karten im Deck.",
-    "UPGRADE_DESCRIPTION": "hexamod:Siegel. NL Verbessere am Ende des Kampfes 1 zufällige Karte für alle 13 unverbesserten Karten im Deck.",
+    "DESCRIPTION": "Flüchtig. hexamod:Siegel. NL Verbessere am Ende des Kampfes für alle 13 verbesserbaren Karten im Deck je 1 Zufällige.",
+    "UPGRADE_DESCRIPTION": "hexamod:Siegel. NL Verbessere am Ende des Kampfes für alle 13 verbesserbaren Karten im Deck je 1 Zufällige.",
     "EXTENDED_DESCRIPTION": [
       "(Verbessert ",
       " Karte.) NL ",
@@ -493,7 +493,7 @@
   "hexamod:Toasty": {
     "NAME": "Zündender Funke",
     "DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme und schreite hexamod:vorwärts.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. Schreite hexamod:vorwärts oder hexamod:rückwärts."
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. Schreite hexamod:vor oder hexamod:zurück."
     },
   "hexamod:ParanormalForm": {
     "NAME": "Poltergeist",
