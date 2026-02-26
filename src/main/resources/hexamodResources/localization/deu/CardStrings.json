@@ -144,8 +144,8 @@
   },
   "hexamod:IntoShadow": {
     "NAME": "Aus dem Schatten",
-    "DESCRIPTION": "Flüchtig. NL Immer wenn du hexamod:rückwärts schreitest, kostet die nächste gespielte Karte 0 und sie erschöpft.",
-    "UPGRADE_DESCRIPTION": "Immer wenn du hexamod:rückwärts schreitest, kostet die nächste gespielte Karte 0 und sie erschöpft.",
+    "DESCRIPTION": "Flüchtig. NL Immer wenn du hexamod:zurück schreitest, kostet die nächste gespielte Karte 0 und sie erschöpft.",
+    "UPGRADE_DESCRIPTION": "Immer wenn du hexamod:zurück schreitest, kostet die nächste gespielte Karte 0 und sie erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "zum Ausspielen und Erschöpfen."
     ],
@@ -536,8 +536,8 @@
   },
   "hexamod:GhostOfSpireFuture": {
     "NAME": "Aus dem Schatten",
-    "DESCRIPTION": "Flüchtig. NL Immer wenn du hexamod:rückwärts schreitest, spiele eine Handkarte und erschöpfe sie.",
-    "UPGRADE_DESCRIPTION": "Immer wenn du hexamod:rückwärts schreitest, spiele eine Handkarte und erschöpfe sie.",
+    "DESCRIPTION": "Flüchtig. NL Immer wenn du hexamod:zurück schreitest, spiele eine Handkarte und erschöpfe sie.",
+    "UPGRADE_DESCRIPTION": "Immer wenn du hexamod:zurück schreitest, spiele eine Handkarte und erschöpfe sie.",
     "EXTENDED_DESCRIPTION": [
       "zum Ausspielen und Erschöpfen."
     ]
