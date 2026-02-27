@@ -146,7 +146,7 @@
   },
   "champ:HoldFirm": {
     "NAME": "Einstecken",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL Erhalte 1 bronze:Verschwimmen."
+    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! champ:Konter. NL Erhalte NL 1 bronze:Verschwimmen."
   },
   "champ:ShieldWall": {
     "NAME": "Eiserne Festung",
@@ -193,7 +193,7 @@
   },
   "champ:MurderStrike": {
     "NAME": "Durchschlag",
-    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. Erhöhe den Schaden um !M! wenn du mit dieser Karte in der Hand eine Fertigkeit spielst."
+    "DESCRIPTION": "Behalten. NL Füge !D! Schaden zu. Erhöhe den Schaden um !M!, wenn du mit dieser Karte in der Hand eine Fertigkeit spielst."
   },
   "champ:HeavySlash": {
     "NAME": "Austeilen",
@@ -201,7 +201,7 @@
   },
   "champ:CheapShot": {
     "NAME": "Fieser Trick",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft bei Bossen zwei weitere Male. Anderenfalls wird das Ziel hermit:betäubt. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft bei Bossen zwei weitere Male - ansonsten wird das Ziel hermit:betäubt. Erschöpft."
   },
   "champ:RisingSlash": {
     "NAME": "Nachschlag",
@@ -260,8 +260,8 @@
   },
   "champ:IgnorePain": {
     "NAME": "Analgesie",
-    "DESCRIPTION": "Deine TP können bis zum Beginn des nächsten Zuges nicht fallen. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Deine TP können bis zum Beginn des nächsten Zuges nicht fallen. NL Erschöpft."
+    "DESCRIPTION": "Deine TP können bis zum Beginn des nächsten Zuges nicht fallen. Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Deine TP können bis zum Beginn des nächsten Zuges nicht fallen. Erschöpft."
   },
   "champ:DeathBlow": {
     "NAME": "Todesstoß",
@@ -316,8 +316,8 @@
   },
   "champ:StrikeOfGenius": {
     "NAME": "Schlagfertig",
-    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen Schlag Karte. NL Es kostet 0 bis du es spielst.",
-    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen verbesserten Schlag Karte. NL Es kostet 0 bis du es spielst."
+    "DESCRIPTION": "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen Schlag Karte. Es kostet 0 bis du es spielst.",
+    "UPGRADE_DESCRIPTION": "Erhalte zu Beginn jedes Zuges ein gremlin:Echo einer zufälligen verbesserten Schlag Karte. Es kostet 0 bis du es spielst."
   },
   "champ:DefensiveStyle": {
     "NAME": "Doppelter Stil",
@@ -325,11 +325,11 @@
   },
   "champ:GladiatorStyle": {
     "NAME": "Sauberer Kampf",
-    "DESCRIPTION": "champ:Offensivcombo: NL Erhalte !M! Stärke. NL champ:Defensivcombo: NL Erhalte !M! Geschicklichkeit."
+    "DESCRIPTION": "champ:Offensivcombo: NL Erhalte !M! Stärke. NL champ:Defensivcombo: NL Erhalte NL !M! Geschicklichkeit."
   },
   "champ:BerserkerStyle": {
     "NAME": "Klinge schleifen",
-    "DESCRIPTION": "Schlag Karten fügen !M! mehr Schaden zu."
+    "DESCRIPTION": "Schlag Karten fügen NL !M! mehr Schaden zu."
   },
   "champ:Riposte": {
     "NAME": "Konterschlag",
@@ -378,8 +378,8 @@
   },
   "champ:TripleStrike": {
     "NAME": "Dreifachschlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 Basis *Schlag gremlin:Echos. Sie kosten 0 und aktivieren den champ:Fertigkeitsbonus.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 Basis *Schlag+ gremlin:Echos. Sie kosten 0 und aktivieren den champ:Fertigkeitsbonus."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 Basis NL *Schlag gremlin:Echos. Sie kosten 0 und aktivieren den champ:Fertigkeitsbonus.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 2 Basis NL *Schlag+ gremlin:Echos. Sie kosten 0 und aktivieren den champ:Fertigkeitsbonus."
   },
   "champ:WindUp": {
     "NAME": "Aufziehen",

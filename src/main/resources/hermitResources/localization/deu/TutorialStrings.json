@@ -27,8 +27,8 @@
   },
   "HermitMod:HexaghostTutorials": {
     "TEXT": [
-      "Der Hexageist durch das #yEntzünden seiner #yGeisterflammen Kräfte freisetzen.",
-      "Die aktuelle #yGeisterflamme wird durch bestimmte Aktionen entzündet."
+      "Der Hexageist kann durch das #yEntzünden seiner #yGeisterflammen Kräfte freisetzen.",
+      "Die aktuelle #yGeisterflamme wird durch das Ausspielen bestimmter Karten #yentzündet. Wird der Zug auf eine #yentzündete #yGeisterflamme beendet, schreitest du zur nächsten."
     ],
     "LABEL": [
       "Weiter",
@@ -40,7 +40,7 @@
   },
   "HermitMod:CharbossTutorials": {
     "TEXT": [
-      "Die gegnerischen Helden haben besondere Fähigkeiten, die einen Strategiewechsel erforderlich machen können.",
+      "Die gegnerischen Helden haben besondere Fähigkeiten, die eine andere Strategie erfordern können.",
       "Achte also auf die Buffs der Helden, bevor du etwas Unüberlegtes tust."
     ],
     "LABEL": [
@@ -92,7 +92,7 @@
   },
   "HermitMod:GremlinsTutorials": {
     "TEXT": [
-      "Die Gremlins sind zu fünft - alle haben ihre eigenen TP und Besonderheiten. Nur der Bonus des aktiven Gremlins wird ausgelöst.",
+      "Die Gremlins sind zu fünft - alle haben ihre eigenen TP und Boni. Nur der Bonus des aktiven Gremlins wird ausgelöst.",
       "Der aktive Gremlin kann #yausgewechselt werden. Ein Wechsel kann zum Beispiel durch das Ausspielen bestimmter Karten erfolgen."
     ],
     "LABEL": [
@@ -132,7 +132,7 @@
   "HermitMod:AwakenedOneTutorials": {
     "TEXT": [
       "Der Erweckte verfügt über eine Sammlung starker #yZauberkarten in seinem #yZauberbuch.",
-      "Wird eine Karte mit #yAufruf gespielt, dann wird die nächste Karte vom Zauberbuch gezogen. Wenn das Zauberbuch leer ist werden die Zauberkarten wieder aufgefüllt."
+      "Wird eine Karte mit #yAufruf gespielt, dann wird die nächste Karte vom Zauberbuch gezogen. Wenn das Zauberbuch leer ist, werden die Zauberkarten wieder aufgefüllt."
     ],
     "LABEL": [
       "Weiter",

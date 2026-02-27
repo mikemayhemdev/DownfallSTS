@@ -48,7 +48,7 @@
   },
   "Guardian:DecasProtection": {
     "NAME": "Antike Macht",
-    "DESCRIPTION": "Erhalte !M! *temporäre Stärke und !M! *temporäre Geschicklichkeit."
+    "DESCRIPTION": "Erhalte !M! *temporäre Stärke und NL !M! *temporäre Geschicklichkeit."
   },
   "Guardian:FierceBash": {
     "NAME": "Erbitterter Hieb",
@@ -60,8 +60,8 @@
   },
   "Guardian:TwinSlam": {
     "NAME": "Zwillingshieb",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte einen *Zweiten *Hieb.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte einen *Zweiten *Hieb+."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte einen NL *Zweiten *Hieb.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte einen NL *Zweiten *Hieb+."
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Wächter-Wind",
@@ -95,7 +95,7 @@
   },
   "Guardian:FloatingOrbs": {
     "NAME": "Schwebende Orbs",
-    "DESCRIPTION": "Immer wenn du eine Karte ausspielst, die 0 kostet, füge einem zufälligen Gegner !M! Schaden zu."
+    "DESCRIPTION": "Immer wenn du eine Karte ausspielst, die NL 0 kostet, füge einem zufälligen Gegner NL !M! Schaden zu."
   },
   "Guardian:OrbSlam": {
     "NAME": "Kugelknaller",
@@ -108,8 +108,8 @@
   },
   "Guardian:Orbwalk": {
     "NAME": "Kugelwandlung",
-    "DESCRIPTION": "Erhalte !M! Stärke. NL guardianmod:Ticken - Erhalte 1 Stärke. NL guardianmod:Volatil.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! Stärke. NL guardianmod:Ticken - Erhalte 1 Stärke."
+    "DESCRIPTION": "Erhalte !M! Stärke. NL guardianmod:Ticken - Erhalte NL 1 Stärke. NL guardianmod:Volatil.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! Stärke. NL guardianmod:Ticken - Erhalte NL 1 Stärke."
   },
   "Guardian:WalkerClaw": {
     "NAME": "Wandlerklaue",
@@ -141,7 +141,7 @@
   "Guardian:CompilePackage": {
     "NAME": "Paket kompilieren",
     "DESCRIPTION": "Lege 1 von 3 *Paketen in guardianmod:Stasis. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Lege 1 von 3 verbesserten *Paketen in guardianmod:Stasis. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Lege 1 von 3 *verbesserten *Paketen in guardianmod:Stasis. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle ein Paket."
     ]
@@ -213,7 +213,7 @@
   },
   "Guardian:Metallicize": {
     "NAME": "Erhärten",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:Panzerrüstung."
+    "DESCRIPTION": "Erhalte NL !M! expansioncontent:Panzerrüstung."
   },
   "Guardian:StasisStrike": {
     "NAME": "Stasisschlag",
@@ -221,8 +221,8 @@
   },
   "Guardian:FuturePlans": {
     "NAME": "Zukunftspläne",
-    "DESCRIPTION": "Du kannst am Ende jedes Zuges bis zu !M! Karte in guardianmod:Stasis legen.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Du kannst am Ende jedes Zuges bis zu !M! Karte in guardianmod:Stasis legen."
+    "DESCRIPTION": "Du kannst am Ende jedes Zuges bis zu NL !M! Karte in guardianmod:Stasis legen.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Du kannst am Ende jedes Zuges bis zu NL !M! Karte in guardianmod:Stasis legen."
   },
   "Guardian:Suspension": {
     "NAME": "Aufschub",
@@ -245,7 +245,7 @@
   },
   "Guardian:RollAttack": {
     "NAME": "Rollender Angriff",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft ALLE Gegner im *Defensivmodus. Anderenfalls: guardianmod:Abhärten 8."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft ALLE Gegner im *Defensivmodus - ansonsten: guardianmod:Abhärten 8."
   },
   "Guardian:GemFire": {
     "NAME": "Juwelenkanone",
@@ -262,8 +262,8 @@
   },
   "Guardian:PiercingHide": {
     "NAME": "Stechende Haut",
-    "DESCRIPTION": "Erhalte !B! Block und !M! *temporäre Stacheln. NL guardianmod:Abhärten 3.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block und !M! *temporäre Stacheln. NL guardianmod:Abhärten 4."
+    "DESCRIPTION": "Erhalte !B! Block und NL !M! *temporäre Stacheln. NL guardianmod:Abhärten 3.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block und NL !M! *temporäre Stacheln. NL guardianmod:Abhärten 4."
   },
   "Guardian:ShieldSpikes": {
     "NAME": "Stachelschild",
@@ -292,7 +292,7 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "Prismenstrahl",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Kann beliebig oft verbessert werden. Pro Verbesserung +1 Mal:"
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. Kann beliebig oft verbessert werden. Pro Verbesserung +1 Mal:"
   },
   "Guardian:MultiBeam": {
     "NAME": "Multistrahl",
@@ -346,7 +346,7 @@
   },
   "Guardian:Gem_Purple": {
     "NAME": "Amethyst",
-    "DESCRIPTION": "guardianmod:Juwel. NL ALLE Gegner verlieren für diesen Zug 2 Stärke.",
+    "DESCRIPTION": "guardianmod:Juwel. NL ALLE Gegner verlieren für diesen Zug NL 2 Stärke.",
     "UPGRADE_DESCRIPTION": "ALLE Gegner verlieren diesen Zug 2 Stärke."
   },
   "Guardian:Gem_Crimson": {
@@ -379,7 +379,7 @@
   },
   "Guardian:BronzeOrb": {
     "NAME": "Orb-Assistenz",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL guardianmod:Härte dich in Höhe des ungeblockten Schadens *ab. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL guardianmod:Härte dich in Höhe des ungeblockten Schadens *ab. Erschöpft."
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Kampfprotokoll",

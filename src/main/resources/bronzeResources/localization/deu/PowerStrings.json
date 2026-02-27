@@ -53,9 +53,9 @@
   "bronze:Return": {
     "NAME": "Rückgängig",
     "DESCRIPTIONS": [
-      "Ziehe zu Beginn deines nächsten Zuges #b1 Karte und erhalte [E].",
+      "Ziehe zu Beginn deines nächsten Zuges #b1 Karte und erhalte [E] .",
       "Zu Beginn deiner nächsten #b",
-      " Züge, ziehe #b1 Karte und erhalte [E]."
+      " Züge, ziehe #b1 Karte und erhalte [E] ."
     ]
   },
   "bronze:Library": {
