@@ -52,7 +52,6 @@ public class Sixitude extends CustomRelic {
                 if (!(possList.isEmpty())) {
                     tmp = possList.get(0);
                 }
-                tmp.updateCost(-1);
                 addToBot(new EchoACardAction(tmp, true));
             }
         }
