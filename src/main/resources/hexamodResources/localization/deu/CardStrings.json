@@ -24,7 +24,7 @@
   },
   "hexamod:BurningQuestion": {
     "NAME": "Brennende Frage",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Erhalte !M! Stärke. NL ",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL Erhalte !M! Stärke. NL ",
     "EXTENDED_DESCRIPTION": [
       "Erhalte NL 1 Geschicklichkeit."
     ],
@@ -72,7 +72,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Flucht zum Äther",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Setze[] !M! [#e087a4]zufällige[] [#e087a4]Reinkarnation [#e087a4]Karte[] [#e087a4]ein[] und nimm eine weitere auf die Hand."
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL [#e087a4]Setze[] !M! [#e087a4]zufällige[] [#e087a4]Morbide [#e087a4]Karte[] [#e087a4]ein[] und nimm eine weitere auf die Hand."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Restwärme",
@@ -89,7 +89,7 @@
   },
   "hexamod:FlamesFromBeyond": {
     "NAME": "Jenseitsflamme",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Wende[] !burny! [#e087a4]Seelenfeuer[] [#e087a4]auf[] [#e087a4]ALLE[] [#e087a4]Gegner[] [#e087a4]an[] - zweimal."
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL [#e087a4]Wende[] !burny! [#e087a4]Seelenfeuer[] [#e087a4]auf[] [#e087a4]ALLE[] [#e087a4]Gegner[] [#e087a4]an[] - zweimal."
   },
   "hexamod:BadOmen": {
     "NAME": "Böses Omen",
@@ -116,7 +116,7 @@
   },
   "hexamod:Floatwork": {
     "NAME": "Schwebekraft",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Erhalte NL 1 Geschicklichkeit. NL ",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL Erhalte NL 1 Geschicklichkeit. NL ",
     "EXTENDED_DESCRIPTION": [
       "Erhalte NL !M! Panzerrüstung."
     ]
@@ -137,7 +137,7 @@
   },
   "hexamod:GhostLash": {
     "NAME": "Geisterpeitsche",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Füge[] !D! [#e087a4]Schaden[] [#e087a4]zu.[] NL Der Schaden wird für jede andere flüchtige Handkarte um !M! erhöht.",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL [#e087a4]Füge[] !D! [#e087a4]Schaden[] [#e087a4]zu.[] NL Der Schaden wird für jede andere flüchtige Handkarte um !M! erhöht.",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -166,22 +166,22 @@
   },
   "hexamod:GhostShield": {
     "NAME": "Geisterschild",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Erhalte NL 1 expansioncontent:Verschwimmen. NL ",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL Erhalte NL 1 expansioncontent:Verschwimmen. NL ",
     "EXTENDED_DESCRIPTION": [
       "Erhalte !B! Block."
     ]
   },
   "hexamod:GiftsFromBeyond": {
     "NAME": "Gabe der Toten",
-    "DESCRIPTION": "Nimm zu Beginn des Zuges !M! zufällige hexamod:Reinkarnation Karte auf die Hand.",
+    "DESCRIPTION": "Nimm zu Beginn des Zuges !M! zufällige hexamod:morbide Karte auf die Hand.",
     "EXTENDED_DESCRIPTION": [
       "Diese Geister sind zu mächtig um sie direkt zu rufen."
     ]
   },
   "hexamod:HauntedHand": {
     "NAME": "Geisterhand",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karte. NL ",
-    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karten. NL ",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL Ziehe !M! Karte. NL ",
+    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL Ziehe !M! Karten. NL ",
     "EXTENDED_DESCRIPTION": [
       "Ziehe Karten, bis du eine nicht-flüchtige gezogen hast."
     ]
@@ -208,7 +208,7 @@
   },
   "hexamod:Hexaguard": {
     "NAME": "Hexaschutz",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karten. NL ",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL Ziehe !M! Karten. NL ",
     "EXTENDED_DESCRIPTION": [
       "Erhalte !B! Block."
     ]
@@ -236,13 +236,13 @@
   },
   "hexamod:NightmareGuise": {
     "NAME": "Albtraumgestalt",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Erhalte !B! Block. NL [#e087a4]Erhalte[] [#e087a4]eine[] [#e087a4]Schattengestalt.[]",
-    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Erhalte !B! Block. NL [#e087a4]Erhalte[] [#e087a4]eine[] [#e087a4]Schattengestalt+.[]"
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL Erhalte !B! Block. NL [#e087a4]Erhalte[] [#e087a4]eine[] [#e087a4]Schattengestalt.[]",
+    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL Erhalte !B! Block. NL [#e087a4]Erhalte[] [#e087a4]eine[] [#e087a4]Schattengestalt+.[]"
   },
   "hexamod:NightmareStrike": {
     "NAME": "Albtraumschlag",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Füge !D! Schaden zu. NL [#e087a4]Erhalte[] [#e087a4]einen[] [#e087a4]Schattenschlag.[]",
-    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Füge !D! Schaden zu. NL [#e087a4]Erhalte[] [#e087a4]einen[] [#e087a4]Schattenschlag+.[]"
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL Füge !D! Schaden zu. NL [#e087a4]Erhalte[] [#e087a4]einen[] [#e087a4]Schattenschlag.[]",
+    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL Füge !D! Schaden zu. NL [#e087a4]Erhalte[] [#e087a4]einen[] [#e087a4]Schattenschlag+.[]"
   },
   "hexamod:Poltergeist": {
     "NAME": "Poltergeist",
@@ -259,8 +259,8 @@
   },
   "hexamod:PowerFromBeyond": {
     "NAME": "Macht der Geister",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Im[] [#e087a4]nächsten[] [#e087a4]Zug,[] [#e087a4]ziehe[] !M! [#e087a4]Karten[] NL und erhalte [E]. NL ",
-    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Im[] [#e087a4]nächsten[] [#e087a4]Zug,[] [#e087a4]ziehe[] !M! [#e087a4]Karten[] NL und erhalte [E] [E]. NL ",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL [#e087a4]Im[] [#e087a4]nächsten[] [#e087a4]Zug,[] [#e087a4]ziehe[] !M! [#e087a4]Karten[] NL und erhalte [E]. NL ",
+    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL [#e087a4]Im[] [#e087a4]nächsten[] [#e087a4]Zug,[] [#e087a4]ziehe[] !M! [#e087a4]Karten[] NL und erhalte [E] [E]. NL ",
     "EXTENDED_DESCRIPTION": [
       ""
     ]
@@ -303,7 +303,7 @@
   },
   "hexamod:Sear": {
     "NAME": "Versengen",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation. NL Füge !D! Schaden zu. NL [#e087a4]Wende[] !burny! [#e087a4]Seelenfeuer[] [#e087a4]an.[]"
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid. NL Füge !D! Schaden zu. NL [#e087a4]Wende[] !burny! [#e087a4]Seelenfeuer[] [#e087a4]an.[]"
   },
   "hexamod:SearingWound": {
     "NAME": "Brandblasen",
@@ -333,7 +333,7 @@
   },
   "hexamod:SpectersWail": {
     "NAME": "Gespenstergeheul",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Füge[] [#e087a4]ALLEN[] [#e087a4]Gegnern[] !D! [#e087a4]Schaden[] [#e087a4]zu[] - zweimal."
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL [#e087a4]Füge[] [#e087a4]ALLEN[] [#e087a4]Gegnern[] !D! [#e087a4]Schaden[] [#e087a4]zu[] - zweimal."
   },
   "hexamod:BrightRitual": {
     "NAME": "Grelles Ritual",
@@ -447,8 +447,8 @@
   },
   "hexamod:EtherStep": {
     "NAME": "Ätherschritt",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Füge[] !D! [#e087a4]Schaden[] [#e087a4]zu.[] NL Erschöpfe eine Karte. NL Ziehe !M! Karte.",
-    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Füge[] !D! [#e087a4]Schaden[] [#e087a4]zu.[] NL Erschöpfe eine Karte. NL Ziehe !M! Karten."
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL [#e087a4]Füge[] !D! [#e087a4]Schaden[] [#e087a4]zu.[] NL Erschöpfe eine Karte. NL Ziehe !M! Karte.",
+    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL [#e087a4]Füge[] !D! [#e087a4]Schaden[] [#e087a4]zu.[] NL Erschöpfe eine Karte. NL Ziehe !M! Karten."
   },
   "hexamod:OpposingAction": {
     "NAME": "Entgegensetzen",
@@ -511,8 +511,8 @@
     },
   "hexamod:Haunt": {
     "NAME": "Geisterhand",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karte. NL ",
-    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL Ziehe !M! Karten. NL ",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL Ziehe !M! Karte. NL ",
+    "UPGRADE_DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL Ziehe !M! Karten. NL ",
     "EXTENDED_DESCRIPTION": [
       "Ziehe Karten, bis du eine nicht-flüchtige gezogen hast."
     ]

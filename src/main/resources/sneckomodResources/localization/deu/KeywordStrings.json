@@ -54,9 +54,9 @@
     "DESCRIPTION": "Alle Karten, die nicht dem eigenen Charakter zugehörig sind, zählen als #yfremd (darunter auch farblose Karten, #rFlüche [REMOVE_SPACE], und #yStatuskarten [REMOVE_SPACE])."
   },
   {
-    "PROPER_NAME": "Geschenk",
+    "PROPER_NAME": "Extra",
     "NAMES": [
-      "geschenk",
+      "extra",
       "gift"
     ],
     "DESCRIPTION": "Wenn du diese Karte in dein Deck aufnimmst, erhältst du eine zusätzliche spezifische Kartenbelohnung."

@@ -97,7 +97,7 @@
   },
   "expansioncontent:SuperGhostShield": {
     "NAME": "Phantomschild",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Erhalte[] [#e087a4]!B![] [#e087a4]Block[] [#e087a4]und[] NL [#e087a4]!M![] [#e087a4]Verschwimmen.[]",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL [#e087a4]Erhalte[] [#e087a4]!B![] [#e087a4]Block[] [#e087a4]und[] NL [#e087a4]!M![] [#e087a4]Verschwimmen.[]",
     "EXTENDED_DESCRIPTION": [
       "Erhalte !B! Block."
     ]

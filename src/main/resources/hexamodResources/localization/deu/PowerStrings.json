@@ -115,8 +115,8 @@
     "NAME": "Geschenkte Karten",
     "DESCRIPTIONS": [
       "Nimm zu Beginn des Zuges #b",
-      " zufällige #yReinkarnation Karte auf die Hand.",
-      " zufällige #yReinkarnation Karten auf die Hand."
+      " zufällige #ymorbide Karte auf die Hand.",
+      " zufällige #ymorbide Karten auf die Hand."
     ]
   },
   "hexamod:GoldPostCombatPower": {
