@@ -13,7 +13,7 @@
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Unverwundbar",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:Unverwundbar. NL Hattest du bereits expansioncontent:Unverwundbar, dann hält es ein weiteres Mal."
+    "DESCRIPTION": "Erhalte !M! expansioncontent:Unverwundbar. NL Hattest du bereits expansioncontent:Unverwundbar, hält es ein weiteres Mal."
   },
   "expansioncontent:HyperBeam": {
     "NAME": "Automa-Strahl",
@@ -25,7 +25,7 @@
   },
   "expansioncontent:YouAreMine": {
     "NAME": "DU BIST MEIN!!!",
-    "DESCRIPTION": "Wende !M! Schwach, !M! Verwundbar, und !DM! expansioncontent:Verdammnis auf ALLE Gegner an. NL Erschöpft."
+    "DESCRIPTION": "Wende !M! Schwach, NL !M! Verwundbar, und NL !DM! expansioncontent:Verdammnis auf ALLE Gegner an. NL Erschöpft."
   },
   "expansioncontent:AwakenDeath": {
     "NAME": "Neugier",
@@ -45,7 +45,7 @@
   },
   "expansioncontent:ShapePower": {
     "NAME": "Antiker Segen",
-    "DESCRIPTION": "Erhalte !M! Stärke und !DM! expansioncontent:Panzerrüstung.",
+    "DESCRIPTION": "Erhalte !M! Stärke und NL !DM! expansioncontent:Panzerrüstung.",
     "EXTENDED_DESCRIPTION": [
       "Donus Macht",
       "Erhalte !M! Stärke.",
@@ -55,20 +55,20 @@
   },
   "expansioncontent:SuperPrepareCrush": {
     "NAME": "Vor-Schmettern",
-    "DESCRIPTION": "Erhalte im nächsten Zug [E] [E] [E], *ZERSCHMETTERN! und !M! Stärke. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erhalte im nächsten Zug [E] [E] [E] [E], *ZERSCHMETTERN!+ und !M! Stärke. NL Erschöpft.",
+    "DESCRIPTION": "Erhalte im nächsten Zug [E] [E] [E] , *ZERSCHMETTERN! und !M! Stärke. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erhalte im nächsten Zug [E] [E] [E] [E] , *ZERSCHMETTERN!+ und !M! Stärke. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "~Schleim~ ~...~ NL #r~ZERSCHMETTERN!!!~"
     ]
   },
   "expansioncontent:SuperLivingWall": {
     "NAME": "Gallertmauer",
-    "DESCRIPTION": "Erhalte !B! Block. NL Immer wenn dich in diesem Zug ein Gegner angreift, wende !M! expansioncontent:Glibber auf ihn an."
+    "DESCRIPTION": "Erhalte !B! Block. NL Immer wenn dich in diesem Zug ein Gegner angreift, wende NL !M! expansioncontent:Glibber auf ihn an."
   },
 
   "expansioncontent:StudyTheSpire": {
     "NAME": "Spire-Studien",
-    "DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge eine zufällige *Boss Karte. Sie kosten 0.",
+    "DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge eine zufällige *Boss Karte. NL Sie kosten 0.",
     "UPGRADE_DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge eine zufällige *verbesserte *Boss Karte. Sie kosten 0."
   },
   "expansioncontent:QuickStudy": {
@@ -85,7 +85,7 @@
   },
   "expansioncontent:KnowingSkullWish": {
     "NAME": "Wissender Schädel",
-    "DESCRIPTION": "Flüchtig. NL Opfere TP um dir *Gold, einen *Trank, oder eine *farblose *Karte zu *wünschen. NL Erschöpft."
+    "DESCRIPTION": "Flüchtig. Erschöpft. NL Opfere TP, um dir *Gold, einen *Trank, oder eine *farblose *Karte zu *wünschen."
   },
   "expansioncontent:Antidote": {
     "NAME": "Gegengift",
@@ -97,7 +97,7 @@
   },
   "expansioncontent:SuperGhostShield": {
     "NAME": "Phantomschild",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Reinkarnation.[] NL [#e087a4]Erhalte[] [#e087a4]!B![] [#e087a4]Block.[] NL [#e087a4]Erhalte[] [#e087a4]!M![] [#e087a4]Verschwimmen.[]",
+    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL [#e087a4]Erhalte[] [#e087a4]!B![] [#e087a4]Block[] [#e087a4]und[] NL [#e087a4]!M![] [#e087a4]Verschwimmen.[]",
     "EXTENDED_DESCRIPTION": [
       "Erhalte !B! Block."
     ]
@@ -128,7 +128,7 @@
   },
   "expansioncontent:BeatOfDeath": {
     "NAME": "Pochen des Todes",
-    "DESCRIPTION": "Immer wenn du eine Karte ausspielst, NL füge ALLEN Gegnern !M! Schaden zu."
+    "DESCRIPTION": "Immer wenn du eine Karte ausspielst, NL füge ALLEN Gegnern NL !M! Schaden zu."
   },
   "expansioncontent:SuperViciousMockery": {
     "NAME": "Bösartiger Hohn",
@@ -173,7 +173,7 @@
 
   "expansioncontent:Virus": {
     "NAME": "Trojaner",
-    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. bronze:Setze pro erschöpfter Karte einen *Schnellen *Strahl *ein. NL Erschöpft."
+    "DESCRIPTION": "Erschöpfe bis zu !M! Karten. bronze:Setze für Jede einen *Schnellen *Strahl *ein. NL Erschöpft."
   },
 
   "expansioncontent:MajorBeam": {

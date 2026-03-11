@@ -33,7 +33,7 @@
       "splitting"
     ],
     "PROPER_NAME": "Abspalten",
-    "DESCRIPTION": "Spalte einen Schleimuntertanen von dir ab. Er greift am Anfang jedes Zuges an. Wenn du keine Schleim-Slots übrig hast, wird dein ältester Schleimuntertan #yabsorbiert, und du erhältst #b1 #yStärke [REMOVE_SPACE]."
+    "DESCRIPTION": "Spalte einen Schleimuntertanen von dir ab. Er greift am Anfang jedes Zuges an. Wenn du keine Schleim-Slots übrig hast, wird dein ältester Schleimuntertan #yabsorbiert [REMOVE_SPACE], und du erhältst #b1 #yStärke [REMOVE_SPACE]."
   },
   {
     "NAMES": [

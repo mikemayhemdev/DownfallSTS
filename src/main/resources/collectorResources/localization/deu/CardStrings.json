@@ -13,7 +13,7 @@
   },
   "collector:Arrogance": {
     "NAME": "Arroganz",
-    "DESCRIPTION": "Erhalte !B! Block. NL Dein nächster Angriff in diesem Zug wendet zusätzlich !M! collector:Verdammnis an."
+    "DESCRIPTION": "Erhalte !B! Block. NL Dein nächster Angriff in diesem Zug wendet zusätzlich NL !M! collector:Verdammnis an."
   },
   "collector:AshesAndDust": {
     "NAME": "Schutt und Asche",
@@ -36,7 +36,7 @@
   },
   "collector:BlackBindings": {
     "NAME": "Dunkle Bandagen",
-    "DESCRIPTION": "Wende !M! Schwach an. Wende danach für jeden Debuff des Gegners !clm2! collector:Verdammnis an."
+    "DESCRIPTION": "Wende !M! Schwach an. Wende danach für jeden Debuff des Gegners NL !clm2! collector:Verdammnis an."
   },
   "collector:Blightning": {
     "NAME": "Fäulnisblitz",
@@ -48,8 +48,8 @@
   },
   "collector:BrainDrain": {
     "NAME": "Braindrain",
-    "DESCRIPTION": "Der Gegner verliert !M! TP. Nimm sein *Sammlerstück auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Der Gegner verliert !M! TP. Nimm sein verbessertes *Sammlerstück auf die Hand. NL Erschöpft."
+    "DESCRIPTION": "Der Gegner verliert NL !M! TP. Nimm sein *Sammlerstück auf die Hand. Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Der Gegner verliert NL !M! TP. Nimm sein verbessertes *Sammlerstück auf die Hand. Erschöpft."
   },
   "collector:BramblesparKindling": {
     "NAME": "Dorniger Anzünder",
@@ -86,8 +86,8 @@
   },
   "collector:DarkLordForm": {
     "NAME": "Schattenlord Form",
-    "DESCRIPTION": "Spiele zu Beginn deines Zuges *Du *gehörst *mir! auf einen zufälligen Gegner.",
-    "UPGRADE_DESCRIPTION": "Spiele zu Beginn deines Zuges *Du *gehörst *mir!+ auf einen zufälligen Gegner."
+    "DESCRIPTION": "Spiele zu Beginn deines Zuges NL *Du *gehörst *mir! auf einen zufälligen Gegner.",
+    "UPGRADE_DESCRIPTION": "Spiele zu Beginn deines Zuges NL *Du *gehörst *mir!+ auf einen zufälligen Gegner."
   },
   "collector:Darkstorm": {
     "NAME": "Finsterer Sturm",
@@ -95,8 +95,8 @@
   },
   "collector:DarkwoodKindling": {
     "NAME": "Finsterer Anzünder",
-    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte im nächsten Zug !M! collector:Reserve.",
-    "UPGRADE_DESCRIPTION": "Unspielbar. NL Behalten. NL Wenn diese Karte *erschöpft, erhalte im nächsten Zug !M! collector:Reserve.",
+    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte im nächsten Zug NL !M! collector:Reserve.",
+    "UPGRADE_DESCRIPTION": "Unspielbar. Behalten. NL Wenn diese Karte *erschöpft, erhalte im nächsten Zug NL !M! collector:Reserve.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss das zum Gebrauch anzünden."
     ]
@@ -119,14 +119,14 @@
   },
   "collector:Ember": {
     "NAME": "Glut",
-    "DESCRIPTION": "Behalten. NL Erschöpft. NL Wenn diese Karte *erschöpft, erhalte !M! Stärke.",
+    "DESCRIPTION": "Behalten. Erschöpft. NL Wenn diese Karte *erschöpft, erhalte NL !M! Stärke.",
     "EXTENDED_DESCRIPTION": [
       "Die Glut muss entzündet, und nicht ausgespielt werden."
     ]
   },
   "collector:Empower": {
     "NAME": "Ermächtigen",
-    "DESCRIPTION": "Erhalte zu Beginn deiner nächsten !M! Züge X Stärke."
+    "DESCRIPTION": "Erhalte zu Beginn deiner nächsten NL !M! Züge X Stärke."
   },
   "collector:Extricate": {
     "NAME": "Seele trennen",
@@ -142,7 +142,7 @@
   },
   "collector:Finalize": {
     "NAME": "Vollenden",
-    "DESCRIPTION": "Heile !clm2! TP wenn der Gegner stirbt. NL Wende !M! collector:Verdammnis an. NL Erschöpft."
+    "DESCRIPTION": "Heile !clm2! TP wenn der Gegner stirbt. NL Wende !M! collector:Verdammnis an. Erschöpft."
   },
   "collector:FingerOfDeath": {
     "NAME": "Todesberührung",
@@ -151,8 +151,8 @@
   },
   "collector:FlameLash": {
     "NAME": "Flammenpeitsche",
-    "DESCRIPTION": "collector:Opfergabe. NL Füge !D! Schaden zu. Erhöhe den Schaden dieser Karte um den Schaden der *geopferten Karte.",
-    "UPGRADE_DESCRIPTION": "collector:Opfergabe. NL Füge !D! Schaden zu. Erhöhe den Schaden dieser Karte um den Schaden der *geopferten Karte plus !M! ."
+    "DESCRIPTION": "collector:Opfergabe. NL Füge !D! Schaden zu. Erhöhe den Schaden um den Schaden der *geopferten Karte.",
+    "UPGRADE_DESCRIPTION": "collector:Opfergabe. NL Füge !D! Schaden zu. Erhöhe den Schaden um den Schaden der *geopferten Karte plus !M! ."
   },
   "collector:FleetingEmbers": {
     "NAME": "Flüchtige Glut",
@@ -214,7 +214,7 @@
   },
   "collector:IllTakeThat": {
     "NAME": "Einsammeln",
-    "DESCRIPTION": "Stiehl bis zu !M! Block des Gegners. NL Füge danach !D! Schaden zu."
+    "DESCRIPTION": "Stiehl bis zu !M! Block des Gegners. NL Füge danach NL !D! Schaden zu."
   },
   "collector:InevitableDemise": {
     "NAME": "Untergang",
@@ -234,8 +234,8 @@
   },
   "collector:IronbarkKindling": {
     "NAME": "Eiserner Anzünder",
-    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte !B! Block.",
-    "UPGRADE_DESCRIPTION": "Unspielbar. Behalten. NL Wenn diese Karte *erschöpft, erhalte !B! Block.",
+    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte NL !B! Block.",
+    "UPGRADE_DESCRIPTION": "Unspielbar. Behalten. NL Wenn diese Karte *erschöpft, erhalte NL !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss das zum Gebrauch anzünden."
     ]
@@ -280,7 +280,7 @@
   },
   "collector:OakbrimKindling": {
     "NAME": "Greller Anzünder",
-    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, ziehe !M! Karten.",
+    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, ziehe NL !M! Karten.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss das zum Gebrauch anzünden."
     ]
@@ -316,7 +316,7 @@
   },
   "collector:RotwoodKindling": {
     "NAME": "Morscher Anzünder",
-    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, wende !M! Verwundbar und !clm2! collector:Verdammnis auf ALLE Gegner an.",
+    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, wende NL !M! Verwundbar und NL !clm2! collector:Verdammnis auf ALLE Gegner an.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss das zum Gebrauch anzünden."
     ]
@@ -327,11 +327,11 @@
   },
   "collector:ScorchingRay": {
     "NAME": "Sengender Strahl",
-    "DESCRIPTION": "Füge X Mal einem zufälligen Gegner !D! Schaden zu."
+    "DESCRIPTION": "Füge X Mal einem zufälligen Gegner NL !D! Schaden zu."
   },
   "collector:SeedOfDoubt": {
     "NAME": "Saat des Zweifels",
-    "DESCRIPTION": "Wende !M! collector:Verdammnis an. Wenn diese Karte auf der Hand ist während eine Karte *erschöpft, erhöhe ihre *Verdammnis um !clm2!."
+    "DESCRIPTION": "Wende !M! collector:Verdammnis an. Wenn diese Karte auf der Hand ist, während eine Karte *erschöpft, erhöhe ihre *Verdammnis um !clm2!."
   },
   "collector:ShadowDaggers": {
     "NAME": "Schattendolche",
@@ -352,8 +352,8 @@
   },
   "collector:Soulforge": {
     "NAME": "Seelenschmiede",
-    "DESCRIPTION": "Ziehe eine Karte vom Sammlungsstapel. Nimm zusäzlich !M! verbesserte Kopie auf die Hand. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Ziehe eine Karte vom Sammlungsstapel. Nimm zusäzlich !M! verbesserte Kopien auf die Hand. NL Erschöpft."
+    "DESCRIPTION": "Ziehe eine Karte vom Sammlungsstapel. Nimm zusäzlich !M! verbesserte Kopie auf die Hand. Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Ziehe eine Karte vom Sammlungsstapel. Nimm zusäzlich !M! verbesserte Kopien auf die Hand. Erschöpft."
   },
   "collector:Spark": {
     "NAME": "Funke",
@@ -382,7 +382,7 @@
   },
   "collector:SunbloomKindling": {
     "NAME": "Starker Anzünder",
-    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte !M! Stärke und 2 *Glut Karten.",
+    "DESCRIPTION": "Unspielbar. NL Wenn diese Karte *erschöpft, erhalte NL !M! Stärke und 2 *Glut Karten.",
     "EXTENDED_DESCRIPTION": [
       "Ich muss das zum Gebrauch anzünden."
     ]
@@ -393,8 +393,8 @@
   },
   "collector:Torchbearer": {
     "NAME": "Fackelträger",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erschöpft wenn du expansioncontent:temporäre_TP hast. NL Erhalte !M! expansioncontent:temporäre_TP."
+    "DESCRIPTION": "Erhalte NL !M! expansioncontent:temporäre_TP. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erschöpft wenn du expansioncontent:temporäre_TP hast. NL Erhalte NL !M! expansioncontent:temporäre_TP."
   },
   "collector:WhirlingFlame": {
     "NAME": "Wirbelflamme",
@@ -410,7 +410,7 @@
   },
   "collector:YouAreMine": {
     "NAME": "Du gehörst mir!",
-    "DESCRIPTION": "Wende !M! Schwach, !M! Verwundbar und !clm2! collector:Verdammnis an."
+    "DESCRIPTION": "Wende !M! Schwach, NL !M! Verwundbar und NL !clm2! collector:Verdammnis an."
   },
   "collector:Whomp": {
     "NAME": "Schröpfen",
@@ -451,7 +451,7 @@
   },
   "collector:CenturionCard": {
     "NAME": "Zenturio",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! Geschicklichkeit."
+    "DESCRIPTION": "Erhalte !B! Block und NL !M! Geschicklichkeit."
   },
   "collector:ChosenCard": {
     "NAME": "Auserwählte",
@@ -518,11 +518,11 @@
   },
   "collector:GremlinWizardCard": {
     "NAME": "Gremlinzauberer",
-    "DESCRIPTION": "Erhalte im nächsten Zug !M! *Elan und 1 collector:Reserve."
+    "DESCRIPTION": "Erhalte im nächsten Zug !M! *Elan und NL 1 collector:Reserve."
   },
   "collector:JawWormCard": {
     "NAME": "Kieferwurm",
-    "DESCRIPTION": "Erhalte !B! Block. NL Erhalte !M! Stärke."
+    "DESCRIPTION": "Erhalte !B! Block und NL !M! Stärke."
   },
   "collector:JousterCard": {
     "NAME": "Ritter",
@@ -542,7 +542,7 @@
   },
   "collector:MadGremlinCard": {
     "NAME": "Wütender Gremlin",
-    "DESCRIPTION": "Erhalte !M! temporäre Stärke."
+    "DESCRIPTION": "Erhalte !M! *temporäre Stärke."
   },
   "collector:MawCard": {
     "NAME": "Der Schlund",
@@ -575,7 +575,7 @@
   },
   "collector:PointyCard": {
     "NAME": "Pointy",
-    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu. NL Ziehe eine Karte."
+    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu. Ziehe eine Karte."
   },
   "collector:RanwidCard": {
     "NAME": "Ranwid",
@@ -587,7 +587,7 @@
   },
   "collector:ReptomancerCard": {
     "NAME": "Reptilomantin",
-    "DESCRIPTION": "Erhalte NL !M! expansioncontent:temporäre_TP. NL collector:Fackelkopf: \"Wende !clm2! Gift auf einen zufälligen Gegner an.\""
+    "DESCRIPTION": "Erhalte NL !M! expansioncontent:temporäre_TP. NL collector:Fackelkopf: \"Wende NL !clm2! Gift auf einen zufälligen Gegner an.\""
   },
   "collector:RepulsorCard": {
     "NAME": "Repulsor",
@@ -599,7 +599,7 @@
   },
   "collector:ScrapOozeCard": {
     "NAME": "Schrottschlamm",
-    "DESCRIPTION": "collector:Opfergabe. NL Verliere 3 TP. NL Erhalte !M! zufällige Angriffe. Sie kosten diesen NL Zug 0."
+    "DESCRIPTION": "collector:Opfergabe. NL Verliere 3 TP. Erhalte !M! zufällige Angriffe. Sie kosten diesen Zug 0."
   },
   "collector:SentryCard": {
     "NAME": "Wache",
@@ -607,7 +607,7 @@
   },
   "collector:ShelledParasiteCard": {
     "NAME": "Panzerparasit",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:Panzerrüstung."
+    "DESCRIPTION": "Erhalte NL !M! expansioncontent:Panzerrüstung."
   },
   "collector:ShieldGremlinCard": {
     "NAME": "Schildgremlin",
@@ -627,7 +627,7 @@
   },
   "collector:SphericGuardianCard": {
     "NAME": "Sphären-Wächter",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:Verschwimmen."
+    "DESCRIPTION": "Erhalte NL !M! expansioncontent:Verschwimmen."
   },
   "collector:SpikerCard": {
     "NAME": "Stachler",
@@ -639,11 +639,11 @@
   },
   "collector:SpireGrowthCard": {
     "NAME": "Spire-Wuchs",
-    "DESCRIPTION": "Der Gegner erleidet am Ende seiner Züge !M! Schaden."
+    "DESCRIPTION": "Der Gegner erleidet am Ende seiner Züge NL !M! Schaden."
   },
   "collector:SpireShieldCard": {
     "NAME": "Spire-Schild",
-    "DESCRIPTION": "Erhalte !M! Geschicklichkeit."
+    "DESCRIPTION": "Erhalte NL !M! Geschicklichkeit."
   },
   "collector:SpireSpearCard": {
     "NAME": "Spire-Speer",
@@ -655,7 +655,7 @@
   },
   "collector:TaskmasterCard": {
     "NAME": "Zuchtmeister",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !clm2! collector:Verdammnis an. NL Erhalte !M! Stärke."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wende !clm2! collector:Verdammnis an. Erhalte !M! Stärke."
   },
   "collector:ThievesCard": {
     "NAME": "Räuber",
@@ -691,7 +691,7 @@
   },
   "collector:CollectorCard": {
     "NAME": "Ouroboros",
-    "DESCRIPTION": "collector:Opfergabe. NL Wende !M! Schwach und !M! Verwundbar an. NL Erhalte !clm2! expansioncontent:temporäre_TP."
+    "DESCRIPTION": "collector:Opfergabe. NL Wende !M! Schwach und !M! Verwundbar an. NL Erhalte NL !clm2! expansioncontent:temporäre_TP."
   },
   "collector:Sapped": {
     "NAME": "Ausgelaugt",

@@ -13,7 +13,7 @@
   },
   "awakened:Darkleech": {
     "NAME": "Verderben",
-    "DESCRIPTION": "Behalten. NL Wende !M! Verwundbar an. Wende !awakened:m2! awakened:Manabrand an. NL Erschöpft."
+    "DESCRIPTION": "Behalten. NL Wende !M! Verwundbar und !awakened:m2! awakened:Manabrand an. NL Erschöpft."
   },
   "awakened:DeathCoil": {
     "NAME": "Todesschlinge",
@@ -60,7 +60,7 @@
   },
   "awakened:TalonRake": {
     "NAME": "Krallenkratzer",
-    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu. NL awakened:Aufrufen."
+    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu. awakened:Aufrufen."
   },
   "awakened:Hymn": {
     "NAME": "Hymne",
@@ -72,11 +72,11 @@
   },
   "awakened:DemonGlyph": {
     "NAME": "Dämonenglyphen",
-    "DESCRIPTION": "Erhalte !M! Stärke und Geschicklichkeit. NL Wenn du *erwachst, erhalte weitere !awakened:m2! von Beiden."
+    "DESCRIPTION": "Erhalte !M! Stärke und !M! Geschicklichkeit. NL Wenn du *erwachst, erhalte weitere !awakened:m2! von Beiden."
   },
   "awakened:TakeFlight": {
     "NAME": "Abheben",
-    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Chor: Erhalte 1 expansioncontent:Verschwimmen."
+    "DESCRIPTION": "Erhalte !B! Block. NL awakened:Chor: Erhalte NL 1 expansioncontent:Verschwimmen."
   },
   "awakened:FeatherVeil": {
     "NAME": "Federkleid",
@@ -97,7 +97,7 @@
   },
   "awakened:FlareShot": {
     "NAME": "Federflackern",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: Ziehe im nächsten Zug !M! zusätzliche Karte."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: Ziehe im nächsten Zug NL !M! zusätzliche Karte."
   },
   "awakened:ClarionCall": {
     "NAME": "Kriegsfanfare",
@@ -109,11 +109,11 @@
   },
   "awakened:ChosenVerse": {
     "NAME": "Auserwählter Vers",
-    "DESCRIPTION": "Die nächsten !M! Male, an denen du in diesem Zug einen nicht-Angriff spielst, ziehe eine Karte und erhalte !B! Block."
+    "DESCRIPTION": "Für die nächsten !M! in diesem Zug gespielten nicht-Angriffe ziehst du 1 Karte und erhältst !B! Block."
   },
   "awakened:SoulStrike": {
     "NAME": "Seelenschlag",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Kostet für jede in diesem Zug gespielte Macht [E] weniger."
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. Kostet für jede in diesem Zug gespielte Macht [E] weniger."
   },
   "awakened:Altar": {
     "NAME": "Altar",
@@ -133,7 +133,7 @@
   },
   "awakened:SludgeBomb": {
     "NAME": "Dimensionsbombe",
-    "DESCRIPTION": "Erfordert eine *Leere im Erschöpfungsstapel. Entferne sie und füge ALLEN Gegnern !D! Schaden zu.",
+    "DESCRIPTION": "Erfordert eine *Leere im Erschöpfungsstapel. Entferne sie und füge ALLEN Gegnern NL !D! Schaden zu.",
     "EXTENDED_DESCRIPTION": [
       "Ich habe keine erschöpfte Leere."
     ]
@@ -144,7 +144,7 @@
   },
   "awakened:FourthDimension": {
     "NAME": "Vierte Dimension",
-    "DESCRIPTION": "Erschöpfe eine Handkarte. NL bronze:Setze !M! Kopien der Karte *ein. NL Erschöpft.",
+    "DESCRIPTION": "Erschöpfe eine Handkarte. NL bronze:Setze !M! Kopien der Karte *ein. Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Erschöpfe eine Karte in die Vierte Dimension."
     ]
@@ -176,7 +176,7 @@
   },
   "awakened:Skyward": {
     "NAME": "Himmelswache",
-    "DESCRIPTION": "Erhalte !B! Block. NL Ziehe !M! Karte. NL Kostet für jede in diesem Kampf gespielte Macht [E] weniger."
+    "DESCRIPTION": "Erhalte !B! Block. Ziehe !M! Karte. Kostet für jede in diesem Kampf gespielte Macht [E] weniger."
   },
   "awakened:RisingChant": {
     "NAME": "Aufstiegschor",
@@ -233,7 +233,7 @@
   },
   "awakened:Clutch": {
     "NAME": "Umklammern",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte, die 0 kostet."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Ziehe eine Karte, NL die 0 kostet."
   },
   "awakened:Gloomguard": {
     "NAME": "Düsterer Schutz",
@@ -250,15 +250,15 @@
   },
   "awakened:MirePit": {
     "NAME": "Schlammgrube",
-    "DESCRIPTION": "ALLE Gegner verlieren für diesen Zug !M! Stärke. Verliere im nächsten Zug [E]. NL Erschöpft."
+    "DESCRIPTION": "ALLE Gegner verlieren für diesen Zug NL !M! Stärke. Verliere im nächsten Zug [E]. NL Erschöpft."
   },
   "awakened:SingularityShield": {
-    "NAME": "Singularitätsschild",
+    "NAME": "Dualer Schild",
     "DESCRIPTION": "Erhalte !B! Block. NL Erhalte im nächsten Zug !B! Block und verliere [E]."
   },
   "awakened:Dejection": {
     "NAME": "Schwermut",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe eine Karte. Wurde ein *Zauber erschöpft, dann erhalte eine *Zeremonie."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erschöpfe eine Karte. Wurde ein *Zauber erschöpft, erhalte eine *Zeremonie."
   },
   "awakened:BloodRite": {
     "NAME": "Blutiges Ritual",
@@ -331,11 +331,11 @@
   },
   "awakened:Procession": {
     "NAME": "Prozession",
-    "DESCRIPTION": "Spiele eine Karte aus dem Nachziehstapel und mische *Leeren in Höhe ihrer Kosten hinein. NL Erschöpft."
+    "DESCRIPTION": "Spiele eine Karte aus dem Nachziehstapel und bronze:setze *Leeren in Anzahl der Höhe ihrer Kosten *ein. Erschöpft."
   },
   "awakened:SplitWide": {
     "NAME": "Aufschlitzen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte immer, wenn du diesen Gegner triffst, !M! *temporäre Stärke. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte immer, wenn du diesen Gegner triffst, !M! *temporäre Stärke. Erschöpft."
   },
   "awakened:Spellshield": {
     "NAME": "Zauberschild",
@@ -343,7 +343,7 @@
   },
   "awakened:Siphon": {
     "NAME": "Siphon",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: gremlin:Stiehl !M! *temporäre Stärke."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL awakened:Chor: gremlin:Stiehl NL !M! *temporäre Stärke."
   },
   "awakened:PlumeJab": {
     "NAME": "Federstiche",
@@ -400,7 +400,7 @@
   },
   "awakened:RealityRift": {
     "NAME": "Dimensionsspalte",
-    "DESCRIPTION": "Erhalte !awakened:m2! von !M! Karten einer *ANDEREN *DIMENSION. Lege 2 *Leeren in den Abwurfstapel. Erschöpft."
+    "DESCRIPTION": "Erhalte !awakened:m2! von !M! Karten einer *ANDEREN *DIMENSION. Lege NL 2 *Leeren in den Abwurfstapel. Erschöpft."
   },
   "awakened:Inscribe": {
     "NAME": "Einschreiben",

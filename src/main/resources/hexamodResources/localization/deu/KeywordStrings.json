@@ -12,21 +12,24 @@
     "PROPER_NAME": "Vorwärts",
     "NAMES": [
       "vorwärts",
+      "voran",
+      "vor",
       "advance",
       "advanced",
       "advancing"
     ],
-    "DESCRIPTION": "Bewege dich im Uhrzeigersinn auf die nächste Geisterflamme. Das bewegen AUF eine #yentzündete Geisterflamme #ylöscht sie."
+    "DESCRIPTION": "Schreite im Uhrzeigersinn zur nächsten Geisterflamme. Das bewegen AUF eine #yentzündete Geisterflamme #ylöscht sie."
   },
   {
     "PROPER_NAME": "Rückwärts",
     "NAMES": [
       "rückwärts",
+      "zurück",
       "retract",
       "retracted",
       "retracting"
     ],
-    "DESCRIPTION": "Bewege dich im Gegenuhrzeigersinn auf die vorherige Geisterflamme. Das bewegen AUF eine #yentzündete Geisterflamme #ylöscht sie."
+    "DESCRIPTION": "Schreite im Gegenuhrzeigersinn zur vorherigen Geisterflamme. Das bewegen AUF eine #yentzündete Geisterflamme #ylöscht sie."
   },
   {
     "PROPER_NAME": "Intensität",
@@ -86,9 +89,10 @@
   },
   {
     "ID": "afterlife",
-    "PROPER_NAME": "Reinkarnation",
+    "PROPER_NAME": "Morbid",
     "NAMES": [
-      "reinkarnation",
+      "morbid",
+      "morbide",
       "afterlife"
     ],
     "DESCRIPTION": "Der #pviolett hervorgehobene Effekt wird auch beim #yErschöpfen der Karte aktiviert."
