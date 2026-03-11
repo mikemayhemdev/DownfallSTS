@@ -74,11 +74,6 @@ public class CounterStrikeAction extends AbstractGameAction
                             new DamageRandomEnemyAction(new DamageInfo(AbstractDungeon.player, SneakyGremlin.DAMAGE, DamageInfo.DamageType.THORNS),
                                     AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
                 }
-
-                if(gremlin.equals("wizard")){
-                    AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player,
-                            new WizPower(AbstractDungeon.player, 1), 1));
-                }
             }
         this.isDone = true;
     }
