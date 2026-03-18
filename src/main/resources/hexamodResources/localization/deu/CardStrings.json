@@ -16,7 +16,7 @@
   "hexamod:Doomsday": {
     "NAME": "Jüngstes Gericht",
     "DESCRIPTION": "Das nächste Mal, wenn alle !M! Geisterflammen *entzündet sind, hast du einen weiteren Zug nach diesem.",
-    "UPGRADE_DESCRIPTION": "Das nächste Mal, wenn mindestens !M! Geisterflammen *entzündet sind, hast du einen weiteren Zug nach diesem."
+    "UPGRADE_DESCRIPTION": "Das nächste Mal, wenn min. !M! Geisterflammen *entzündet sind, hast du einen weiteren Zug nach diesem."
   },
   "hexamod:BacktrackSmack": {
     "NAME": "Rückhandschelle",
@@ -298,8 +298,8 @@
   },
   "hexamod:Rewind": {
     "NAME": "Zurückspulen",
-    "DESCRIPTION": "Schreite Hexamod:rückwärts. NL Schnappe 1 Karte vom Abwurfstapel. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Schreite Hexamod:rückwärts. NL Schnappe !M! Karten vom Abwurfstapel. NL Erschöpft."
+    "DESCRIPTION": "Schreite Hexamod:rückwärts. NL Schnappe 1 Karte NL vom Abwurfstapel. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Schreite Hexamod:rückwärts. NL Schnappe !M! Karten NL vom Abwurfstapel. NL Erschöpft."
   },
   "hexamod:Sear": {
     "NAME": "Versengen",
@@ -380,7 +380,7 @@
   "hexamod:FlareFlick": {
     "NAME": "Zündender Funke",
     "DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme und schreite hexamod:vorwärts.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. Du kannst NL hexamod:vor oder hexamod:zurück schreiten.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL hexamod:Entzünde die aktuelle Geisterflamme. Du kannst hexamod:vor oder hexamod:zurück schreiten.",
     "EXTENDED_DESCRIPTION": ["Schreite hexamod:vorwärts.", "Schreite hexamod:rückwärts.", "Bleib stehen."]
   },
   "hexamod:TurnItUp": {

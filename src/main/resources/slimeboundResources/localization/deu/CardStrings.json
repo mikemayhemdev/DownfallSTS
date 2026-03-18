@@ -26,7 +26,7 @@
   },
   "Slimebound:Darklings": {
     "NAME": "Dunkelingduo",
-    "DESCRIPTION": "Beschwöre !M! slimeboundmod:Dunkelinge. Zählt als slimeboundmod:Abspaltung. NL Erschöpft.",
+    "DESCRIPTION": "Beschwöre NL !M! slimeboundmod:Dunkelinge. Zählt als slimeboundmod:Abspaltung. NL Erschöpft.",
     "UPGRADE_DESCRIPTION": "Dunkelingtrio"
   },
   "Slimebound:Defend_Slimebound": {
@@ -39,8 +39,8 @@
   },
   "Slimebound:Dissolve": {
     "NAME": "Fast Food",
-    "DESCRIPTION": "Ziehe !M! Karte. NL Erschöpfe eine Karte. Erhalte *Wabbel in Anzahl der Höhe ihrer Kosten. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Erschöpfe eine Karte. Erhalte *Wabbel in Anzahl der Höhe ihrer Kosten. NL Erschöpft."
+    "DESCRIPTION": "Ziehe !M! Karte. NL Erschöpfe eine Karte. Erhalte *Wabbel in Anzahl der Höhe ihrer Kosten. Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL Erschöpfe eine Karte. Erhalte *Wabbel in Anzahl der Höhe ihrer Kosten. Erschöpft."
   },
   "Slimebound:DivideAndConquer": {
     "NAME": "Kräfte bündeln",

@@ -241,8 +241,8 @@
   },
   "bronze:Format": {
     "NAME": "Formatieren",
-    "DESCRIPTION": "bronze:Kodiere X *Fragmentieren Karten. NL Erhalte [E]. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "bronze:Kodiere X+1 *Fragmentieren Karten. NL Erhalte [E]. NL Erschöpft."
+    "DESCRIPTION": "bronze:Kodiere X *Fragmentieren Karten. Erhalte [E]. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "bronze:Kodiere X+1 *Fragmentieren Karten. Erhalte [E]. NL Erschöpft."
   },
   "bronze:FormatEncoded": {
     "NAME": "Fragmentieren",
@@ -283,8 +283,8 @@
   },
   "bronze:Goto": {
     "NAME": "Aktualisieren",
-    "DESCRIPTION": "Ziehe !M! Karte. NL bronze:Kompilierung: Ziehe im nächsten Zug !M! zusätzliche Karte.",
-    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL bronze:Kompilierung: Ziehe im nächsten Zug !M! zusätzliche Karten.",
+    "DESCRIPTION": "Ziehe !M! Karte. NL bronze:Kompilierung: Ziehe im nächsten Zug NL !M! zusätzliche Karte.",
+    "UPGRADE_DESCRIPTION": "Ziehe !M! Karten. NL bronze:Kompilierung: Ziehe im nächsten Zug NL !M! zusätzliche Karten.",
     "EXTENDED_DESCRIPTION": [
       "schnelles",
       "Update"
