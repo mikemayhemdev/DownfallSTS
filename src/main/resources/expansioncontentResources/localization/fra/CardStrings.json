@@ -8,7 +8,8 @@
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Hexabrûlure",
-    "DESCRIPTION": "Dans !M! tours, infligez !D! dégâts à un ennemi aléatoire 6 fois. NL  S'adapte avec la Force."
+    "DESCRIPTION": "Dans !M! tours, infligez !D! dégâts à un ennemi aléatoire 6 fois. NL  S'adapte avec la Force. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Dans !M! tours, infligez !D! dégâts à un ennemi aléatoire 6 fois. NL  S'adapte avec la Force."
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Invincibilité",
