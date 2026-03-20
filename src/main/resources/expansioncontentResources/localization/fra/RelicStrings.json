@@ -1,7 +1,7 @@
 {
   "expansioncontent:StudyCardRelic": {
     "NAME": "Tout petit chapeau melon",
-    "FLAVOR": "Qui contrôle le chapeau contrôle la tour.",
+    "FLAVOR": "Qui contrôle le chapeau contrôle la Tour.",
     "DESCRIPTIONS": [
       "Au début de chaque combat, choisissez #b1 carte de #yBoss parmi #b3 aléatoires et ajoutez-la à votre main."
     ]
