@@ -70,6 +70,7 @@
     "NAMES": [
       "d'invincibilité",
       "invincibilité",
+      "l'invincibilité",
       "invincible"
     ],
     "DESCRIPTION": "Limite les dégâts et pertes de PV que vous devriez subir. NL Si cet effet prévient une perte de PV, il disparaît à la fin du tour."
