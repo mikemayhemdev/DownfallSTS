@@ -1,20 +1,20 @@
 {
   "reskinContent:ReSkin": {
     "TEXT": [
-      "Skin",
-      "Original"
+      "Apparence",
+      "Originale"
     ]
   },
   "reskinContent:PortraitAnimation": {
     "TEXT": [
-      "Type de portrait"
+      "Animation du portrait"
     ]
   },
   "reskinContent:PortraitAnimationType": {
     "TEXT": [
       "Statique",
       "Animé",
-      "Plein effet"
+      "Effets spéciaux"
     ]
   },
   "reskinContent:BetaArtUnlockEffect": {
