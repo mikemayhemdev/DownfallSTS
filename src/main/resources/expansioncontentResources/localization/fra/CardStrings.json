@@ -53,7 +53,7 @@
       "Gagnez !M! d'Armure Plaquée."
     ]
   },
-  "expansioncontent:PrepareCrush": {
+  "expansioncontent:SuperPrepareCrush": {
     "NAME": "Prépration du Crush",
     "DESCRIPTION": "Au prochain tour, obtenez *SLIME *CRUSH, [E] [E] [E] et !M! de Force. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Au prochain tour, obtenez *SLIME *CRUSH+, [E] [E] [E] [E] et !M! de Force. NL Épuisement.",
@@ -65,6 +65,7 @@
     "NAME": "Mur gélatineux",
     "DESCRIPTION": "Gagnez !B! d'Armure. NL Quand on vous attaque ce tour, appliquez !M! de expansioncontent:Goop [REMOVE_SPACE]."
   },
+  
   "expansioncontent:StudyTheSpire": {
     "NAME": "Étude de la Tour",
     "DESCRIPTION": "Ajoutez une carte de *Boss aléatoire dans votre main au début de vos !M! prochains tours. Elles coûtent 0.",
