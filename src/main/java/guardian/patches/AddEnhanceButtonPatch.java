@@ -26,13 +26,17 @@ public class AddEnhanceButtonPatch {
         @SpireInsertPatch(locator = Locator.class)
         public static void patch(CampfireUI __instance, ArrayList<AbstractCampfireOption> ___buttons) {
             Boolean active = true;
+            Boolean vibes = false;
             if (GuardianMod.getSocketableCards().size() == 0) {
                 active = false;
             }
             if (GuardianMod.getGemCards().size() == 0) {
                 active = false;
             }
-            if (AbstractDungeon.player instanceof GuardianCharacter || active) {
+            if (GuardianMod.getSocketableCards().size() > 0 || GuardianMod.getGemCards().size() > 0) {
+                vibes = true;
+            }
+            if (AbstractDungeon.player instanceof GuardianCharacter || vibes) {
                 GuardianMod.socketBonfireOption = new EnhanceBonfireOption(active);
                 ___buttons.add(GuardianMod.socketBonfireOption);
             }
