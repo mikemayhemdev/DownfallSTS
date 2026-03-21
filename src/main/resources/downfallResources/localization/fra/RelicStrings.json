@@ -3,30 +3,30 @@
     "NAME": "Bénédiction de Neow",
     "FLAVOR": "Apaisez votre rage. Soyez aussi rude et inflexible que la Tour elle-même.",
     "DESCRIPTIONS": [
-      "Le Boss a augmenté ses PV Max, n'a pas de relique de starter, pioche 2 cartes de moins, et a #b1 ",
-      " de moins . NL Au début du combat, le Boss gagne un effet de Buff unique. Ne peut pas être #yÉtourdi"
+      "Le Boss a plus de PV max, ne peut pas être #yÉtourdi, n'a pas de relique de départ, pioche 2 cartes de moins, et a #b1 ",
+      " de moins . NL Au début du combat, le Boss gagne un effet unique."
     ]
   },
   "downfall:NeowBlessing_Player": {
     "NAME": "Bénédiction de Neow",
     "FLAVOR": "Apaisez votre rage. Soyez aussi rude et inflexible que la Tour elle-même.",
     "DESCRIPTIONS": [
-      "Lorsque vous la ramassez, augmentez vos PV Max de #b100. NL Augmentez vos PV max de #b100 au début de chaque Acte. NL Perdez tous vos emplacements de potion. NL Piochez #b1 carte de moins et perdez [E] au début de votre tour."
+      "Lorsque vous l'obtenez, augmentez vos PV max de #b100. NL Augmentez vos PV max de #b100 au début de chaque Acte. NL Perdez tous vos emplacements de potion. NL Piochez #b1 carte de moins et perdez [E] au début de votre tour."
     ]
   },
   "downfall:CoffeeDripper": {
     "DESCRIPTIONS": [
-      " NL Incapable de se reposer, le Boss a commencé avec moins de vie maximale."
+      " NL Incapable de se reposer, le Boss a moins de PV."
     ]
   },
   "downfall:BustedCrown": {
     "DESCRIPTIONS": [
-      " NL Incapable de pouvoir prendre des cartes optimisées, le Boss a moins de cartes synergisantes que d'habitude."
+      " NL À cause de ses options limitées, le Boss a moins de cartes qui synergisent que d'habitude."
     ]
   },
   "downfall:Girya": {
     "DESCRIPTIONS": [
-      " NL Optant pour lever des poids plutôt que de se reposer, le Boss a commencé avec moins de vie maximale."
+      " NL Optant pour lever des poids plutôt que de se reposer, le Boss a moins de PV."
     ]
   },
   "downfall:Matroyshka": {
@@ -44,7 +44,7 @@
   "downfall:BlackStar": {
     "DESCRIPTIONS": [
       " NL Le Boss a acquis ",
-      " reliques supplémentaires, mais commence avec moins de vie maximale."
+      " reliques supplémentaires, mais a moins de PV."
     ]
   },
   "downfall:MoltenEgg": {
@@ -61,24 +61,24 @@
   },
   "downfall:FrozenEgg": {
     "DESCRIPTIONS": [
-      "Le Boss a amélioré plusieurs Pouvoirs."
+      "Le Boss a plusieurs Pouvoirs Améliorés."
     ]
   },
   "downfall:Shovel": {
     "DESCRIPTIONS": [
       " NL Le Boss a acquis ",
-      " reliques supplémentaires, mais commence avec moins de vie maximale dû au fait de ne pas s'être Reposé."
+      " reliques supplémentaires, mais a moins de PV car s'est moins reposé."
     ]
   },
   "downfall:CBRSerpentHead": {
     "DESCRIPTIONS": [
-      " NL Le Boss a utilisé cet or pour retirer 2 cartes de leur deck."
+      " NL Le Boss a utilisé cet or pour retirer 2 cartes de son deck."
     ]
   },
   "downfall:CursedKey": {
     "DESCRIPTIONS": [
       " NL Le Boss a gagné ",
-      " Malédictions avec cette relique."
+      " Malédictions à cause de cette relique."
     ]
   },
   "downfall:DreamCatcher": {
@@ -89,18 +89,18 @@
   "downfall:PrayerWheel": {
     "DESCRIPTIONS": [
       " NL Le Boss a gagné ",
-      " cartes supplémentaires avec cette relique."
+      " cartes supplémentaires grâce à cette relique."
     ]
   },
   "downfall:PeacePipe": {
     "DESCRIPTIONS": [
       " NL Le Boss a retiré ",
-      " cartes supplémentaires, mais commence avec moins de vie maximale."
+      " cartes supplémentaires, mais a moins de PV."
     ]
   },
   "downfall:RunicDome": {
     "DESCRIPTIONS": [
-      " NL Le Boss peut choisir l'ordre de ses cartes en votre défaveur."
+      " NL Le Boss peut choisir l'ordre de ses cartes défavorablement."
     ]
   },
   "downfall:CentennialPuzzle": {
@@ -110,17 +110,17 @@
   },
   "downfall:CBRFaceOfCleric": {
     "DESCRIPTIONS": [
-      " Des PV Max ont été obtenus avec cette relique."
+      " Des PV max ont été obtenus grâce à cette relique."
     ]
   },
   "downfall:Omamori": {
     "DESCRIPTIONS": [
-      " NL A empêché le Boss d'obtenir "
+      " NL A empêché le Boss d'obtenir une "
     ]
   },
   "downfall:DollysMirror": {
     "DESCRIPTIONS": [
-      " NL Le miroir a dupliqué"
+      " NL Le miroir a dupliqué "
     ]
   },
   "downfall:Vampires": {
@@ -128,21 +128,21 @@
     "FLAVOR": "Le sang du maître... le sang du maître! LE SANG DU MAÎTRE!",
     "DESCRIPTIONS": [
       "Les Frappes ont été remplacées par des Morsures. NL -",
-      " PV Max."
+      " PV max."
     ]
   },
   "downfall:BonfireSpirits": {
     "NAME": "Évènement : Esprits du feu",
     "FLAVOR": "Les esprits lancent des petits os et des fragments dans le feu, qui éruptent brillemment chaque fois...",
     "DESCRIPTIONS": [
-      "Le Boss a retiré une carte de leur deck pour gagner 10 PV Max."
+      "Le Boss a retiré une carte de son deck pour gagner 10 PV Max."
     ]
   },
   "downfall:DesignerInSpire": {
-    "NAME": "Évènement : Designer",
+    "NAME": "Évènement : Le designer",
     "FLAVOR": "Ça va pas le faire, non non. C'est quoi ce style? Affreux! Vous saiiiiiiignez? Dégueeeeeeu.",
     "DESCRIPTIONS": [
-      "Une carte a été retirée de leur deck, et une autre a été améliorée."
+      "Une carte a été retirée de son deck, et une autre a été améliorée."
     ]
   },
   "downfall:DivineFountain": {
@@ -163,15 +163,15 @@
     "NAME": "Évènement : Belle prise",
     "FLAVOR": "Alors que vous traversez un long couloir vous voyez une banane, un donut, et une boîte en train de flotter.",
     "DESCRIPTIONS": [
-      "Le Donut a été choisi. NL +5 PV Maximum.",
-      "La Boîte a été choisie. NL Une Malédiction Regret et une relique a été obtenue."
+      "Le Donut a été choisi. NL +5 PV max.",
+      "La Boîte a été choisie. NL Une relique et un Regret ont été obtenus."
     ]
   },
   "downfall:LivingWall": {
-    "NAME": "Évènement : Murs vivants",
-    "FLAVOR": "Oubliez ce que vous savez, et je vous laisserez partir.",
+    "NAME": "Évènement : Mur vivant",
+    "FLAVOR": "Oubliez ce que vous savez, et je vous laisserai partir.",
     "DESCRIPTIONS": [
-      "Le Boss a retiré",
+      "Le Boss a retiré ",
       "Le Boss a amélioré ",
       "Le Boss a transformé ",
       " en "
@@ -179,7 +179,7 @@
   },
   "downfall:WheelOfChange": {
     "NAME": "Évènement : Roue du changement",
-    "FLAVOR": "Il est temps de tourner la roue! Êtes-vous PRÊT? Bien sûr que oui!",
+    "FLAVOR": "Il est temps de tourner la roue ! Êtes-vous PRÊT ? Bien sûr que oui !",
     "DESCRIPTIONS": [
       "La Roue a donné au Boss ",
       "Le Boss a été soigné au maximum.",
@@ -197,7 +197,7 @@
   },
   "downfall:Augmenter": {
     "NAME": "Évènement : Dealer",
-    "FLAVOR": "Hola, étranger ! Intéressé en sciences avancées?",
+    "FLAVOR": "Hola, étranger ! Intéressé par les sciences avancées ?",
     "DESCRIPTIONS": [
       "Le Boss a transformé 2 cartes",
       "Le Boss a gagné de la D.O.P.E.",
@@ -205,17 +205,17 @@
     ]
   },
   "downfall:AncientWriting": {
-    "NAME": "Évènement : Ancient Writing",
+    "NAME": "Évènement : Écritures antiques",
     "FLAVOR": "Soudainement, le message devint clair...",
     "DESCRIPTIONS": [
       "Le Boss a amélioré ses Frappes et Défenses."
     ]
   },
   "downfall:Bandits": {
-    "NAME": "Évènement : Bandits",
-    "FLAVOR": "Vas-y Balourd!",
+    "NAME": "Évènement : Bandits masqués",
+    "FLAVOR": "Vas-y Balourd !",
     "DESCRIPTIONS": [
-      "Le Boss a battu les Bandits, gagnant le Masque Rouge, mais commence avec moins de vie maximale."
+      "Le Boss a battu les Bandits, gagnant le Masque Rouge, mais commence avec moins de PV max."
     ]
   },
   "downfall:WingStatue": {
@@ -227,27 +227,27 @@
   },
   "downfall:Serpent": {
     "NAME": "Évènement : Le Ssssserpent",
-    "FLAVOR": "La plus heureuse des vies est celle où vous pouvez tout acheter! Pas vrai?",
+    "FLAVOR": "La plus heureuse des vies est celle où vous pouvez tout acheter ! Pas vrai ?",
     "DESCRIPTIONS": [
-      "Le Boss a gagné une Malédiction Doute pour gagner de l'or et donc acheter une relique."
+      "Le Boss a gagné un Doute et de l'or, qui lui a permis d'acheter une relique."
     ]
   },
   "downfall:Cleric": {
     "NAME": "Évènement : Clerc",
-    "FLAVOR": "Bonjour mon ami! Je suis le Clerc! Êtes-vous intéressé par mes services?!",
+    "FLAVOR": "Bonjour mon ami ! Je suis le Clerc ! Êtes-vous intéressé par mes services ?!",
     "DESCRIPTIONS": [
       "Le Boss a retiré une carte de son deck."
     ]
   },
   "downfall:OldBeggar": {
     "NAME": "Évènement : Vieux mendiant",
-    "FLAVOR": "Une petite pièce, mon enfant?",
+    "FLAVOR": "Une petite pièce, mon enfant ?",
     "DESCRIPTIONS": [
       "Une carte a été retirée du deck."
     ]
   },
   "downfall:Library": {
-    "NAME": "Évènement : Librairie",
+    "NAME": "Évènement : Bibliothèque",
     "FLAVOR": "Vous aprcervez un bâtiment orné qui semble abandonnée.",
     "DESCRIPTIONS": [
       "Le Boss a obtenue une carte synergisante supplémentaire."
@@ -255,9 +255,9 @@
   },
   "downfall:Mausoleum": {
     "NAME": "Évènement : Mausolée",
-    "FLAVOR": "Vous n'arrivez pas à traduire ce qui écrit sur le tombeau, cependant, vous observez une brume noire qui sort des côtés.",
+    "FLAVOR": "Vous n'arrivez pas à traduire ce qui écrit sur le tombeau, cependant, vous observez une brume noire qui sort de ses côtés.",
     "DESCRIPTIONS": [
-      "Le Boss a obtenu une Malédiction Souffrance et une relique supplémentaire."
+      "Le Boss a obtenu une Souffrance et une relique supplémentaire."
     ]
   },
   "downfall:Nest": {
@@ -268,25 +268,25 @@
     ]
   },
   "downfall:Colosseum": {
-    "NAME": "Évènement : Colosseum",
+    "NAME": "Évènement : Colisée",
     "FLAVOR": "LE COMBAT VA MAINTENANT@ DEMARRER!!!!",
     "DESCRIPTIONS": [
-      "Le Boss a complété le Colosseum, obtenant deux reliques supplémentaires."
+      "Le Boss a triomphé du Colisée, obtenant deux reliques supplémentaires."
     ]
   },
   "downfall:PleadingVagrant": {
     "NAME": "Évènement : N'Loth",
-    "FLAVOR": "Est-ce que vous avez quelque chose pour moi? S'vous plaît... pt'être une #ypièce?",
+    "FLAVOR": "Est-ce que vous avez quelque chose pour moi ? S'vous plaît... pt'être une #ypièce ?",
     "DESCRIPTIONS": [
-      "Le Boss a volé N'Loth, obtenant une malédiction Honte et "
+      "Le Boss a volé N'Loth, obtenant une Honte et "
     ]
   },
   "downfall:Mushroom": {
     "NAME": "Évènement : Champignons",
     "FLAVOR": "Vous entrez dans un couloir rempli de champignons hypnotisants colorés.",
     "DESCRIPTIONS": [
-      "Le Boss s'est entièrement soigné et a gagné une Malédiction Parasite.",
-      "Le Boss a obtenu le Champignon étrange, but starts with less than maximum health."
+      "Le Boss s'est entièrement soigné et a gagné un Parasite.",
+      "Le Boss a obtenu le Champignon étrange, mais a moins de PV."
     ]
   },
   "downfall:ShiningLight": {
@@ -295,7 +295,7 @@
     "DESCRIPTIONS": [
       "Le Boss a amélioré",
       " et ",
-      ", mais commence avec moins de vie maximale."
+      ", mais a moins de PV."
     ]
   },
   "downfall:ScrapOoze": {
@@ -309,7 +309,7 @@
     "NAME": "Évènement : Idole dorée",
     "FLAVOR": "Vous croisez un piédestal des plus anodins sur lequel trône paisiblement une idole dorée étincelante.",
     "DESCRIPTIONS": [
-      "Le Boss a pris l'Idole Dorée, obtenant une Malédiction Blessure et a utilisé l'or supplémentaire pour acheter "
+      "Le Boss a obtenu l'Idole Dorée et une Blessure, et a utilisé l'or supplémentaire pour acheter "
     ]
   },
   "downfall:FaceTrader": {
@@ -323,7 +323,7 @@
     "NAME": "Évènement : Forge maudite",
     "FLAVOR": "CLANG! CLAAANG! CLANG!",
     "DESCRIPTIONS": [
-      "Le Boss a obtenu Pinces déformées et une Malédiction Douleur."
+      "Le Boss a obtenu les Pinces déformées et une Douleur."
     ]
   },
   "downfall:Purifier": {
@@ -335,7 +335,7 @@
   },
   "downfall:MatchAndKeep": {
     "NAME": "Évènement : Trouvez les Paires",
-    "FLAVOR": "Douze cartes! Trouvez les paires pour les conserver! Cinq essais, pas une de plus. Vous êtes prêt? C'est parti!",
+    "FLAVOR": "Douze cartes ! Trouvez les paires pour les conserver ! Cinq essais, pas une de plus. Vous êtes prêt ? C'est parti !",
     "DESCRIPTIONS": [
       "Le Boss a réussi à trouver une paire et obtenu une carte puissante."
     ]
@@ -344,7 +344,7 @@
     "NAME": "Évènement : Transmogrifeur",
     "FLAVOR": "Devant vous se tient un autel élaboré consacré à un esprit oublié",
     "DESCRIPTIONS": [
-      "Le Boss a transformé une carte starter en une nouvelle carte."
+      "Le Boss a transformé une carte de départ en une nouvelle carte."
     ]
   },
   "downfall:TombRedMask": {
@@ -358,12 +358,12 @@
     "NAME": "Évènement: Autel d'amélioration",
     "FLAVOR": "Devant vous se tient un autel élaboré consacré à un esprit oublié.",
     "DESCRIPTIONS": [
-      "Le Boss a #yAmélioré une carte avec l'autel."
+      "Le Boss a #yAmélioré une carte grâce à l'autel."
     ]
   },
   "downfall:WeMeetAgain": {
-    "NAME": "Évènement: Rencontre à nouveau",
-    "FLAVOR": "C'est moi, #yRanwid! Comment allez-vous ajourd'hui? La routine? Un gars comme moi ne peut pas s'en sortir seul, vous savez?",
+    "NAME": "Évènement: Nous nous rencontrons à nouveau",
+    "FLAVOR": "C'est moi, #yRanwid ! Comment allez-vous ajourd'hui ? La routine ? Un gars comme moi ne peut pas s'en sortir seul, vous savez ?",
     "DESCRIPTIONS": [
       "De l'or a été échangé à Ranwid contre une relique supplémentaire."
     ]
@@ -372,7 +372,7 @@
     "NAME": "Évènement: Autel doré",
     "FLAVOR": "Devant vous se tient un autel élaboré consacré à un esprit oublié.",
     "DESCRIPTIONS": [
-      "Le Boss a obtenu une Malédiction Regret en échange d'or, qui a servi pour acheter "
+      "Le Boss a obtenu un Regret et de l'or, qui a servi à acheter "
     ]
   },
   "downfall:GremlinSack": {
@@ -381,9 +381,9 @@
     "DESCRIPTIONS": [
       "Lorsque vous le ramassez, ajoutez les cartes suivantes dans votre deck: NL ",
       "Lorsque vous le ramassez, ajoutez 6 cartes du jeu des Paires à votre deck.",
-      "#g(Starter) ",
-      "#g(Commun) ",
-      "#b(Peu commun) ",
+      "#g(Basique) ",
+      "#g(Communne) ",
+      "#b(Peu communne) ",
       "#y(Rare) ",
       "#b(Incolore) ",
       "#r(Malédiction) "
@@ -393,7 +393,7 @@
     "NAME": "Roue du Changement",
     "FLAVOR": "Il a dit : pas le droit à plusieurs essais.",
     "DESCRIPTIONS": [
-      "À chaque site de repos, vous pouvez tourner la roue une fois. Prendre cette option et collecter la récompense utilise la relique..",
+      "À chaque feu de camp, vous pouvez tourner la roue une fois. Collecter la récompense désactive cette relique.",
       "Cette relique a été utilisée."
     ]
   },
@@ -401,56 +401,56 @@
     "NAME": "Manteau aux multiples Visages",
     "FLAVOR": "C'était Steve, et Bill, et Ian, et Fred, et John...",
     "DESCRIPTIONS": [
-      "Lorsque vous le ramassez, obtenez le Casque d'Adepte, la Tête de Clerc, le masque de N'loth, le Visage de goblin et la Tête de ssserpent."
+      "Lorsque vous le ramassez, obtenez le Casque d'Adepte, la Tête de Clerc, le Masque de N'loth, le Visage de goblin et la Tête de ssserpent."
     ]
   },
   "downfall:BrokenWingStatue": {
-    "NAME": "Statue ailée brisée",
+    "NAME": "Éclat de statue ailée",
     "FLAVOR": "Un morceau brisé d'une statue autrefois magnifique.",
     "DESCRIPTIONS": [
-      "Les cultistes qui vénèrent l'Éveillé seront peut-être intéréssés par ceci....",
-      "Au début de chaque combat, si les ennemis appartiennent au groupe des Cultistes, ils vous prendront cette relique et s'échapperont du combat."
+      "Les cultistes qui vénèrent l'Éveillé seront peut-être intéréssés par ceci...",
+      "Au début de chaque combat, si les ennemis appartiennent au groupe des Cultistes, ils vous prendront cette relique et s'enfuiront."
     ]
   },
   "downfall:ShatteredFragment": {
     "NAME": "Fragment aiguisé",
-    "FLAVOR": "Une statue brisée autrefois - aujourd'hui une arme de fortune.",
+    "FLAVOR": "C'était une statue brisée ; maintenant c'est une arme de fortune.",
     "DESCRIPTIONS": [
-      "Pendant les combats d'Élites et de Boss, chaque fois que vous jouez une carte #yPouvoir [REMOVE_SPACE], gagnez #b",
+      "Pendant les combats d'Élites et de Boss, chaque fois que vous jouez un #yPouvoir [REMOVE_SPACE], gagnez #b",
       " de #yForce [REMOVE_SPACE]."
     ]
   },
   "downfall:RedIOU": {
     "NAME": "Contrat de bandit",
-    "FLAVOR": "Un accord du trio de Bandits - en partie contre un bibelot, mais surtout en échange de leurs vies.",
+    "FLAVOR": "Un accord avec le trio de bandits ; en partie contre un bibelot, mais surtout en échange de leurs vies.",
     "DESCRIPTIONS": [
-      "Au début du #b3ème combat de boss, les Bandits au Masque Rouge viendront vous aider.",
-      "Au boulot, les gars!",
-      "Vas-y Balourd!",
+      "Au début du #b3ème combat de boss, les bandits masqués viendront vous aider.",
+      "Au boulot, les gars !",
+      "Vas-y Balourd !",
       "Un deal est un deal. NL On arrête ici.",
-      "Vive le nouveau NL ~Seigneur~ ~au~  ~Masque~ ~Rouge!~",
-      "Bonne chance, patron!"
+      "Vive le nouveau NL ~Seigneur~ ~au~ ~Masque~ ~rouge~ ~!~",
+      "Bonne chance, patron !"
     ]
   },
   "downfall:RedIOUUpgrade": {
-    "NAME": "Contrat de Bandit+",
-    "FLAVOR": "Un accord du trio de Bandits - en partie contre un bibelot, mais surtout en échange de leurs vies.",
+    "NAME": "Contrat de bandit+",
+    "FLAVOR": "Un accord avec le trio de bandits ; en partie contre un bibelot, mais surtout en échange de leurs vies.",
     "DESCRIPTIONS": [
-      "Au début du #b3ème combat de boss, les Bandits au Masque Rouge viendront vous aider."
+      "Au début du #b3ème combat de boss, les bandits masqués viendront vous aider."
     ]
   },
   "downfall:KnowingSkull": {
     "NAME": "Crâne savant",
-    "FLAVOR": "Lâche-moi!",
+    "FLAVOR": "Lâche-moi !",
     "DESCRIPTIONS": [
-      "Au début de chaque combat vous pouvez faire le voeu d'avoir des Âmes, des Potions ou une carte Incolore au prix de vos PV."
+      "Au début de chaque combat, vous pouvez faire le voeu d'avoir des Âmes, des Potions ou une carte Incolore, au prix de vos PV."
     ]
   },
   "downfall:HeartBlessingRed": {
     "NAME": "Bénédiction du Cœur de Rubis",
     "FLAVOR": "Le Cœur est puissant.",
     "DESCRIPTIONS": [
-      "Durant les combats de Boss, gagnez #b1 de #yForce."
+      "Commencez les combats de Boss avec #b1 de #yForce [REMOVE_SPACE]."
     ]
   },
   "downfall:HeartBlessingBlue": {
@@ -464,14 +464,14 @@
     "NAME": "Bénédiction du Cœur d'Émeraude",
     "FLAVOR": "Le Cœur est tout.",
     "DESCRIPTIONS": [
-      "Durant les combats de Boss, gagnez #b1 de #yDexterité."
+      "Commencez les combats de Boss avec #b1 de #yDexterité [REMOVE_SPACE]."
     ]
   },
   "downfall:BurdenOfKnowledge": {
     "NAME": "Fardeau du savoir",
     "FLAVOR": "La vérité fait mal.",
     "DESCRIPTIONS": [
-      "Lorsque vous le ramassez, #rperdez #rTOUTES #rles #rBénédictions #rdu #rCœur et #b20 PV Max. #yAméliorez #yTOUTES #yvos #ycartes #rPARTOUT de façon permanente. Commencez les combats avec #b2 de #yForce en moins et #b2 de #yDextérité en moins."
+      "Lorsque vous le ramassez, #rperdez #rTOUTES #rles #rBénédictions #rdu #rCœur et #b20 PV max. #yAméliorez #yTOUTES #yvos #ycartes #rPARTOUT de façon permanente. Commencez les combats avec #b2 de #yForce et de #yDextérité en moins."
     ]
   },
   "downfall:TeleportStone": {
@@ -493,18 +493,18 @@
   },
   "downfall:Hecktoplasm": {
     "NAME": "Hecktoplasme",
-    "FLAVOR": "Cette boule de slime semble déborder d'énergie de centaines d'âmes. Pas étonnant que personne n'en veut. ",
+    "FLAVOR": "Cette boule de slime semble déborder d'énergie de centaines d'âmes. Pas étonnant que personne n'en veuille. ",
     "DESCRIPTIONS": [
       "Gagnez [E] au début de votre tour. Vous ne pouvez plus obtenir d'#yÂmes [REMOVE_SPACE]. Briser des clés ne coûte pas d'#yÂmes [REMOVE_SPACE].",
-      "Hecktoplasm"
+      "Hecktoplasme"
     ]
   },
   "downfall:BlackCandle": {
     "NAME": "Bougie noire",
     "FLAVOR": "La flamme brille encore plus fort dans l'obscurité.",
     "DESCRIPTIONS": [
-      "Les #rMalédictions #yInjouables peuvent être jouées et les #rMalédictions jouables coûtent désormais #b0 [REMOVE_SPACE]. Lorsque vous jouez une carte #rMalédiction #yInjouable ou à prix réduit, #yÉpuisez-la et perdez #b1 PV.",
-      "Black Candle"
+      "Les #rMalédictions #yInjouables peuvent être jouées et les #rMalédictions jouables coûtent désormais #b0 [REMOVE_SPACE]. Lorsque vous jouez une #rMalédiction #yInjouable ou à un coût réduit, #yÉpuisez-la et perdez #b1 PV.",
+      "Bougie noire"
     ]
   },
   "downfall:replacements": {
@@ -518,37 +518,37 @@
       "Vraiment, vous êtes le BPP du Cœur : Boss le Plus Précieux.",
       "La corruption du Cœur ne connaît aucune limite - pas même de jolis animaux domestiques.",
       "Courrier corrompu",
-      "Le Cœur réapprovisionne les cartes, reliques, et les potions. Tous les prix sont réduits de #b20%.",
-      "Les récompenses de combat contiennent désormais des cartes Incolores et des cartes de la couleur des Héros.",
-      "Gagnez [E] au début de votre tour. Vous ne pouvez plus obtenir #yd'Âmes. Briser les clés ne coûte pas #yd'Âmes."
+      "Le Cœur réapprovisionne les cartes, reliques, et les potions. Tous les prix sont réduits de #b20% [REMOVE_SPACE].",
+      "Les récompenses de combat contiennent désormais des cartes Incolores et des cartes des Héros.",
+      "Gagnez [E] au début de votre tour. Vous ne pouvez plus obtenir #yd'Âmes [REMOVE_SPACE]. Briser les clés ne coûte pas #yd'Âmes [REMOVE_SPACE]."
     ]
   },
   "downfall:LizardTail": {
     "NAME": "Super queue de lézard",
     "FLAVOR": "Une fausse queue pour tromper ses ennemis durant le combat.",
     "DESCRIPTIONS": [
-      "Quand vous mourrez, soignez vous de #b100% de vos PV Max à la place (ne marche qu'une fois)."
+      "Quand vous devriez mourir, récupérez #b100 % de vos PV max à la place (une seule fois)."
     ]
   },
   "downfall:TestRelic": {
     "NAME": "Testeur VFX",
     "FLAVOR": "Quand il s'agit d'indexer des objets, vous savez le faire.",
     "DESCRIPTIONS": [
-      "#pClic #pDroit: Jouez la prochaine carte."
+      "#pClic #pDroit : Jouez la prochaine carte."
     ]
   },
   "downfall:ExtraCursedKey": {
     "NAME": "Clé Ultra-maudite",
     "FLAVOR": "Enfermée pour une bonne raison.",
     "DESCRIPTIONS": [
-      "Gagnez [E] au début de votre tour. NL Lorsque vous ouvrez un coffre qui n'est pas de Boss, obtenez #b2 #rMalédictions."
+      "Gagnez [E] au début de votre tour. NL Lorsque vous ouvrez un coffre (sauf coffre de Boss), obtenez #b2 #rMalédictions [REMOVE_SPACE]."
     ]
   },
   "downfall:ExtraCursedBell": {
     "NAME": "Cloche Ultra-maudite",
     "FLAVOR": "Vous pensez l'entendre résonner, mais ne pouvez jamais le confirmer.",
     "DESCRIPTIONS": [
-      "Lorsque vous la ramassez, obtenez #b2 #rMalédictions uniques et #b3 reliques.",
+      "Lorsque vous la ramassez, obtenez #b2 #rMalédictions uniques et #b3 reliques Communes.",
       "La cloche sonne deux fois...",
       "Passer les récompenses",
       "Fermer"
