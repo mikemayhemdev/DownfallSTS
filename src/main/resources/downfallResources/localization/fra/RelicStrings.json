@@ -348,28 +348,28 @@
     ]
   },
   "downfall:TombRedMask": {
-    "NAME": "Évènement: Tombe du seigneur",
+    "NAME": "Évènement : Tombe du seigneur",
     "FLAVOR": "Une tombe richement décorée peut être observée de l'autre côté d'un chemin flottant.",
     "DESCRIPTIONS": [
       "Le Boss a obtenu le Masque Rouge."
     ]
   },
   "downfall:UpgradeShrine": {
-    "NAME": "Évènement: Autel d'amélioration",
+    "NAME": "Évènement : Autel d'amélioration",
     "FLAVOR": "Devant vous se tient un autel élaboré consacré à un esprit oublié.",
     "DESCRIPTIONS": [
       "Le Boss a #yAmélioré une carte grâce à l'autel."
     ]
   },
   "downfall:WeMeetAgain": {
-    "NAME": "Évènement: Nous nous rencontrons à nouveau",
+    "NAME": "Évènement : Nous nous rencontrons à nouveau",
     "FLAVOR": "C'est moi, #yRanwid ! Comment allez-vous ajourd'hui ? La routine ? Un gars comme moi ne peut pas s'en sortir seul, vous savez ?",
     "DESCRIPTIONS": [
       "De l'or a été échangé à Ranwid contre une relique supplémentaire."
     ]
   },
   "downfall:GoldenShrine": {
-    "NAME": "Évènement: Autel doré",
+    "NAME": "Évènement : Autel doré",
     "FLAVOR": "Devant vous se tient un autel élaboré consacré à un esprit oublié.",
     "DESCRIPTIONS": [
       "Le Boss a obtenu un Regret et de l'or, qui a servi à acheter "
@@ -398,7 +398,7 @@
     ]
   },
   "downfall:CloakOfManyFaces": {
-    "NAME": "Manteau aux multiples Visages",
+    "NAME": "Manteau aux multiples visages",
     "FLAVOR": "C'était Steve, et Bill, et Ian, et Fred, et John...",
     "DESCRIPTIONS": [
       "Lorsque vous le ramassez, obtenez le Casque d'Adepte, la Tête de Clerc, le Masque de N'loth, le Visage de goblin et la Tête de ssserpent."
@@ -538,14 +538,14 @@
     ]
   },
   "downfall:ExtraCursedKey": {
-    "NAME": "Clé Ultra-maudite",
+    "NAME": "Clé ultra-maudite",
     "FLAVOR": "Enfermée pour une bonne raison.",
     "DESCRIPTIONS": [
       "Gagnez [E] au début de votre tour. NL Lorsque vous ouvrez un coffre (sauf coffre de Boss), obtenez #b2 #rMalédictions [REMOVE_SPACE]."
     ]
   },
   "downfall:ExtraCursedBell": {
-    "NAME": "Cloche Ultra-maudite",
+    "NAME": "Cloche ultra-maudite",
     "FLAVOR": "Vous pensez l'entendre résonner, mais ne pouvez jamais le confirmer.",
     "DESCRIPTIONS": [
       "Lorsque vous la ramassez, obtenez #b2 #rMalédictions uniques et #b3 reliques Communes.",
