@@ -41,16 +41,16 @@
   },
   "expansioncontent:DecaShield": {
     "NAME": "Bouclier Déca",
-    "DESCRIPTION": "Gagnez !B! *d'Armure expansioncontent:Plaquée [REMOVE_SPACE]."
+    "DESCRIPTION": "Gagnez !B! *d'Armure expansioncontent:plaquée."
   },
   "expansioncontent:ShapePower": {
     "NAME": "Béndiction de la Forme",
-    "DESCRIPTION": "Choisissez - Gagnez !M! de Force ou !DM! *d'Armure expansioncontent:Plaquée [REMOVE_SPACE].",
+    "DESCRIPTION": "Choisissez - Gagnez !M! de Force ou !DM! *d'Armure expansioncontent:plaquée.",
     "EXTENDED_DESCRIPTION": [
       "Pouvoir de Donu",
       "Gagnez !M! de Force.",
       "Bouclier de Déca",
-      "Gagnez !M! d'Armure Plaquée."
+      "Gagnez !M! d'Armure plaquée."
     ]
   },
   "expansioncontent:SuperPrepareCrush": {
@@ -63,7 +63,7 @@
   },
   "expansioncontent:SuperLivingWall": {
     "NAME": "Mur gélatineux",
-    "DESCRIPTION": "Gagnez !B! d'Armure. NL Quand on vous attaque ce tour, appliquez !M! de expansioncontent:Goop [REMOVE_SPACE]."
+    "DESCRIPTION": "Gagnez !B! d'Armure. NL Quand on vous attaque ce tour, appliquez !M! de expansioncontent:Goop."
   },
   
   "expansioncontent:StudyTheSpire": {
