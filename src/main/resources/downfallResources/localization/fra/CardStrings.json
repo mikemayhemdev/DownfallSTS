@@ -1,7 +1,7 @@
 {
   "downfall:Aged": {
     "NAME": "Vieillesse",
-    "DESCRIPTION": "Injouable. Éthérée. NL À la fin de votre tour, ajoutez un *Néant à votre défausse."
+    "DESCRIPTION": "Injouable. Éthérée. NL À la fin du tour, ajoutez un *Néant à votre défausse."
   },
   "downfall:Bewildered": {
     "NAME": "Perplexité",
@@ -17,11 +17,11 @@
   },
   "downfall:Malfunctioning": {
     "NAME": "Vicié",
-    "DESCRIPTION": "À la fin de votre tour, si cette carte est dans votre main, ajoutez une *Blessure à votre défausse. NL Épuisement."
+    "DESCRIPTION": "À la fin du tour, si cette carte est dans votre main, ajoutez une *Blessure à votre défausse. NL Épuisement."
   },
   "downfall:Scatterbrained": {
     "NAME": "Écervellé",
-    "DESCRIPTION": "À la fin de votre tour, si cette carte est dans votre main, ajoutez-en une copie à votre défausse. NL Épuisement."
+    "DESCRIPTION": "À la fin du tour, si cette carte est dans votre main, ajoutez-en une copie à votre défausse. NL Épuisement."
   },
   "downfall:CurseOfBlood": {
     "NAME": "Hémophilie",
@@ -37,11 +37,11 @@
     "DESCRIPTION": "Vos *Frappes infligent !M! dégâts supplémentaires ce combat. NL Gagnez !B! de Dextérité."
   },
   "downfall:CuriousRobot": {
-    "NAME": "Robot Curieux",
+    "NAME": "Robot curieux",
     "DESCRIPTION": "Lorsque votre adversaire joue un Pouvoir, gagnez 1 de Concentration. Votre Force affecte votre Concentration."
   },
   "downfall:Murderbot": {
-    "NAME": "Voleur d'Énergie",
+    "NAME": "Voleur d'énergie",
     "DESCRIPTION": "Lorsque vous infligez des dégâts non-bloqués, ajoutez un *Néant dans la défausse de votre adversaire."
   },
   "downfall:Temptation": {
@@ -50,7 +50,7 @@
   },
   "downfall:BagOfKnives": {
     "NAME": "Sac de couteaux",
-    "DESCRIPTION": "La première fois que vous jouez une carte qui coûte 2 [E] ou plus chaque tour, gagnez 2 *Surins [REMOVE_SPACE]."
+    "DESCRIPTION": "La première fois que vous jouez une carte qui coûte 2 [E] ou plus chaque tour, gagnez 2 *Surins."
   },
   "downfall:Hallunication": {
     "NAME": "Hallucination",
@@ -61,15 +61,15 @@
     "DESCRIPTION": "Le Poison ne se dissipe plus, mais peut être bloqué et inflige des dégâts à la fin du tour plutôt qu'au début."
   },
   "downfall:FeedingFrenzy": {
-    "NAME": "Faim Frénétique",
-    "DESCRIPTION": "*Faucheuse cible également TOUS les *Champignons [REMOVE_SPACE]. Gagnez 1 de Force lorsque vous tuez un de vos *Champignons [REMOVE_SPACE]."
+    "NAME": "Faim frénétique",
+    "DESCRIPTION": "*Faucheuse cible également TOUS les *Champignons. Gagnez 1 de Force lorsque vous tuez un de vos *Champignons."
   },
   "downfall:StatusMirror": {
     "NAME": "Miroir magique",
     "DESCRIPTION": "Les cartes Statut que ce personnage génère vous sont ajoutées à vos cartes."
   },
   "downfall:EyeForAnEye": {
-    "NAME": "Œil pour Œil",
+    "NAME": "Œil pour œil",
     "DESCRIPTION": "Si votre adversaire a joué plus d'Attaques que d'autres cartes, vous entrez en Colère. Sinon, vous êtes en Calme."
   },
   "downfall:TruePeace": {
@@ -89,7 +89,7 @@
     "DESCRIPTION": "Ajoutez !M! *Hanté à la défausse de votre adversaire."
   },
   "downfall:FaithRewarded": {
-    "NAME": "Foi Récompensée",
+    "NAME": "Foi récompensée",
     "DESCRIPTION": "Lorsque vous entrez en Divinité, vous ne pouvez plus la quitter. La Divinité double les dégâts au lieu de les tripler."
   },
   "downfall:Crusade": {
@@ -98,7 +98,7 @@
   },
   "downfall:Hyperfocused": {
     "NAME": "Focus mortel",
-    "DESCRIPTION": "Déclenchez toujours vos effets *Dans *Le *Mille [REMOVE_SPACE]. Après avoir subi 10 dégâts, ne déclenchez aucun effet *Dans *Le *Mille pour un tour."
+    "DESCRIPTION": "Déclenchez toujours vos effets *Dans *Le *Mille. Après avoir subi 10 dégâts, ne déclenchez aucun effet *Dans *Le *Mille pour un tour."
   },
   "downfall:Arsenal": {
     "NAME": "Arsenal vivant",
@@ -110,6 +110,6 @@
   },
   "downfall:Revolver": {
     "NAME": "Revolver",
-    "DESCRIPTION": "Les tours futurs seront dictées par la *Roue *de *la *Destinée [REMOVE_SPACE]. Lorsqu'on vous attaque, la *Roue avance d'une étape."
+    "DESCRIPTION": "Les tours futurs seront dictées par la *Roue *de *la *Destinée. Lorsqu'on vous attaque, la *Roue avance d'une étape."
   }
 }
