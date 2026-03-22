@@ -1,7 +1,7 @@
 {
   "downfall:Aged": {
     "NAME": "Vieillesse",
-    "DESCRIPTION": "Injouable. Éthérée. NL À la fin de votre tour, ajoutez un *Néant dans votre défausse."
+    "DESCRIPTION": "Injouable. Éthérée. NL À la fin de votre tour, ajoutez un *Néant à votre défausse."
   },
   "downfall:Bewildered": {
     "NAME": "Perplexité",
@@ -13,15 +13,15 @@
   },
   "downfall:Haunted": {
     "NAME": "Hantise",
-    "DESCRIPTION": "Éthérée. NL À la fin du tour, subissez !M! dégâts."
+    "DESCRIPTION": "Éthérée. NL À la fin du tour, si cette carte est dans votre main, subissez !M! dégâts."
   },
   "downfall:Malfunctioning": {
     "NAME": "Vicié",
-    "DESCRIPTION": "À la fin de votre tour, ajoutez une *Blessure dans votre défausse. NL Épuisement."
+    "DESCRIPTION": "À la fin de votre tour, si cette carte est dans votre main, ajoutez une *Blessure à votre défausse. NL Épuisement."
   },
   "downfall:Scatterbrained": {
     "NAME": "Écervellé",
-    "DESCRIPTION": "Injouable. NL Quand cette carte est piochée, si c'est votre tour, remplissez votre main avec des gremlin:Échos de cette carte."
+    "DESCRIPTION": "À la fin de votre tour, si cette carte est dans votre main, ajoutez-en une copie à votre défausse. NL Épuisement."
   },
   "downfall:CurseOfBlood": {
     "NAME": "Hémophilie",
@@ -29,7 +29,7 @@
     "EXTENDED_DESCRIPTION": ["Note for LOC: Hemophilia is a name for a disorder for when your blood doesn’t clot properly. I added the a in the middle for coolness factor."]
   },
   "downfall:SummonMushrooms": {
-    "NAME": "Fungus Among Us",
+    "NAME": "Saison des champignons",
     "DESCRIPTION": "Tuez tous les Champignons. Soignez vous autant de leurs PV restants. NL Invoquez deux Champignons."
   },							   
   "downfall:BossMaintenance": {
@@ -49,24 +49,24 @@
     "DESCRIPTION": "Mélangez !M! Pouvoirs aléatoires, dans la pioche de votre adversaire."
   },
   "downfall:BagOfKnives": {
-    "NAME": "Sac de Couteaux",
-    "DESCRIPTION": "La première fois que vous jouez une carte qui coûte 2 [E] ou plus chaque tour, gagnez 2 *Surins."
+    "NAME": "Sac de couteaux",
+    "DESCRIPTION": "La première fois que vous jouez une carte qui coûte 2 [E] ou plus chaque tour, gagnez 2 *Surins [REMOVE_SPACE]."
   },
   "downfall:Hallunication": {
     "NAME": "Hallucination",
-    "DESCRIPTION": "Cachez votre véritable emplacement à chaque tour. Lorsque vous ou l'illusion êtes Attaqués, l'illusion disparaît."
+    "DESCRIPTION": "Cachez votre véritable position au début de chaque tour. Lorsque vous ou l'illusion êtes Attaqués, l'illusion disparaît."
   },
   "downfall:NewToxins": {
-    "NAME": "Nouvelles Toxines",
+    "NAME": "Nouvelles toxines",
     "DESCRIPTION": "Le Poison ne se dissipe plus, mais peut être bloqué et inflige des dégâts à la fin du tour plutôt qu'au début."
   },
   "downfall:FeedingFrenzy": {
     "NAME": "Faim Frénétique",
-    "DESCRIPTION": "*Faucheuse cible également TOUS les *Champignons. Gagnez 1 de Force lorsque vous tuez votre propre *Champignon."
+    "DESCRIPTION": "*Faucheuse cible également TOUS les *Champignons [REMOVE_SPACE]. Gagnez 1 de Force lorsque vous tuez un de vos *Champignons [REMOVE_SPACE]."
   },
   "downfall:StatusMirror": {
     "NAME": "Miroir magique",
-    "DESCRIPTION": "Les cartes Statut que ce personnage génère vous sont ajoutées à vous à la place."
+    "DESCRIPTION": "Les cartes Statut que ce personnage génère vous sont ajoutées à vos cartes."
   },
   "downfall:EyeForAnEye": {
     "NAME": "Œil pour Œil",
@@ -82,23 +82,23 @@
   },
   "downfall:FalseWorship": {
     "NAME": "Faux culte",
-    "DESCRIPTION": "Ressucitez votre Cultiste s'il est mort. Sinon, il ressucite lorsqu'il mourra avec 50% de ses PV Max."
+    "DESCRIPTION": "Ressucitez votre Cultiste s'il est mort. Sinon, il survivra à sa prochaine mort et récupèrera 50% de ses PV max."
   },
   "downfall:FleetingFaith": {
     "NAME": "Présence spectrale",
-    "DESCRIPTION": "Ajoutez !M! cartes *Hanté dans la défausse de votre adversaire."
+    "DESCRIPTION": "Ajoutez !M! *Hanté à la défausse de votre adversaire."
   },
   "downfall:FaithRewarded": {
     "NAME": "Foi Récompensée",
-    "DESCRIPTION": "Lorsque vous entrez en Divinité, vous ne pouvez plus la quitter. Les dégâts bonus de la Divinité sont réduits à 200%."
+    "DESCRIPTION": "Lorsque vous entrez en Divinité, vous ne pouvez plus la quitter. La Divinité double les dégâts au lieu de les tripler."
   },
   "downfall:Crusade": {
     "NAME": "Croisade",
-    "DESCRIPTION": "Retirez tous les Débuffs. NL Perdez tout votre Mantra. soignez-vous de !M! PV et gagnez 1 de Force pour chaque Mantra perdu."
+    "DESCRIPTION": "Retirez tous les débuffs. NL Perdez tout votre Mantra. Récupérez !M! PV et gagnez 1 de Force par Mantra perdu."
   },
   "downfall:Hyperfocused": {
     "NAME": "Focus mortel",
-    "DESCRIPTION": "Obtenez toujours vos effets *Dans *Le *Mille. Après avoir reçu 10 dégâts, perdez vos effets *Dans *Le *Mille pour ce tour."
+    "DESCRIPTION": "Déclenchez toujours vos effets *Dans *Le *Mille [REMOVE_SPACE]. Après avoir subi 10 dégâts, ne déclenchez aucun effet *Dans *Le *Mille pour un tour."
   },
   "downfall:Arsenal": {
     "NAME": "Arsenal vivant",
@@ -110,6 +110,6 @@
   },
   "downfall:Revolver": {
     "NAME": "Revolver",
-    "DESCRIPTION": "Les tours futurs seront dictées par la *Roue *de *la *Destinée. Lorsqu'elle est attaquée, la *Roue avance d'une étape."
+    "DESCRIPTION": "Les tours futurs seront dictées par la *Roue *de *la *Destinée [REMOVE_SPACE]. Lorsqu'on vous attaque, la *Roue avance d'une étape."
   }
 }
