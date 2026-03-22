@@ -8,8 +8,8 @@
   },
   "expansioncontent:Hexaburn": {
     "NAME": "Hexabrûlure",
-    "DESCRIPTION": "Dans !M! tours, infligez !D! dégâts à un ennemi aléatoire 6 fois. NL  S'adapte avec la Force. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Dans !M! tours, infligez !D! dégâts à un ennemi aléatoire 6 fois. NL  S'adapte avec la Force."
+    "DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire !M! fois. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Infligez !D! dégâts à un ennemi aléatoire !M! fois."
   },
   "expansioncontent:InvincibleStrength": {
     "NAME": "Invincibilité",
@@ -32,7 +32,7 @@
     "DESCRIPTION": "Lorsque vous jouez un Pouvoir, gagnez !M! de Force."
   },
   "expansioncontent:Chronoboost": {
-    "NAME": "Chrono-Boost",
+    "NAME": "Chrono-boost",
     "DESCRIPTION": "Gagnez !M! de Force toutes les 12 cartes que vous jouez."
   },
   "expansioncontent:PolyBeam": {
@@ -54,7 +54,7 @@
     ]
   },
   "expansioncontent:SuperPrepareCrush": {
-    "NAME": "Prépration du Crush",
+    "NAME": "Prépration du crush",
     "DESCRIPTION": "Au prochain tour, obtenez *SLIME *CRUSH, [E] [E] [E] et !M! de Force. NL Épuisement.",
     "UPGRADE_DESCRIPTION": "Au prochain tour, obtenez *SLIME *CRUSH+, [E] [E] [E] [E] et !M! de Force. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
@@ -68,13 +68,13 @@
   
   "expansioncontent:StudyTheSpire": {
     "NAME": "Étude de la Tour",
-    "DESCRIPTION": "Ajoutez une carte de *Boss aléatoire dans votre main au début de vos !M! prochains tours. Elles coûtent 0.",
-    "UPGRADE_DESCRIPTION": "Ajoutez une carte Améliorée de *Boss aléatoire dans votre main au début de vos !M! prochains tours. Elles coûtent 0."
+    "DESCRIPTION": "Ajoutez une carte de *Boss aléatoire à votre main au début de vos !M! prochains tours. Elles coûtent 0.",
+    "UPGRADE_DESCRIPTION": "Ajoutez une carte Améliorée de *Boss aléatoire à votre main au début de vos !M! prochains tours. Elles coûtent 0."
   },
   "expansioncontent:QuickStudy": {
     "NAME": "Étude rapide",
-    "DESCRIPTION": "Choisissez 1 parmi 3 cartes de *Boss. NL Ajoutez-là à votre main. NL Elle coûte 0 jusqu'à ce qu'elle soit jouée. NL Épuisement.",
-    "UPGRADE_DESCRIPTION": "Choisissez 1 parmi 3 cartes de *Boss Améliorées. NL Ajoutez-là à votre main. NL Elle coûte 0 jusqu'à ce qu'elle soit jouée. NL Épuisement.",
+    "DESCRIPTION": "Choisissez 1 carte de *Boss parmi 3. NL Ajoutez-la à votre main. NL Elle coûte 0 jusqu'à ce qu'elle soit jouée. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Choisissez 1 carte de *Boss Améliorée parmi 3. NL Ajoutez-la à votre main. NL Elle coûte 0 jusqu'à ce qu'elle soit jouée. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "Choisissez une carte de Boss."
     ]
@@ -193,7 +193,7 @@
   },
   "expansioncontent:Reverie": {
     "NAME": "Rêverie",
-    "DESCRIPTION": "Au début de votre tour, mettez dans votre main l'une des !M! cartes du dessus de votre défausse."
+    "DESCRIPTION": "Au début de votre tour, prenez en main l'une des !M! premières cartes de votre défausse."
   },
   "expansioncontent:ExploitVulnerability": {
     "NAME": "Rayon Donu",
@@ -201,7 +201,7 @@
   },
   "expansioncontent:PeekPages": {
     "NAME": "Feuilleter les pages",
-    "DESCRIPTION": "Placez !M! *Perspicacités en haut de votre pioche. NL Épuisement."
+    "DESCRIPTION": "Placez !M! *Perspicacités au dessus de votre pioche. NL Épuisement."
   },
   "expansioncontent:BloodBarrage": {
     "NAME": "Barrage de sang",
