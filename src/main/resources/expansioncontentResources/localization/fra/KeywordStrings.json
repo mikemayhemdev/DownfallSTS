@@ -31,12 +31,12 @@
     "DESCRIPTION": "À la fin de votre tour, récupérez autant de PV que vous avez de #yRégénération [REMOVE_SPACE], puis perdez #b1 de #yRégénération [REMOVE_SPACE]."
   },
   {
-    "PROPER_NAME": "Armure Plaquée",
+    "PROPER_NAME": "Armure plaquée",
     "NAMES": [
-      "Plaquée",
+      "plaquée",
       "plated"
     ],
-    "DESCRIPTION": "À la fin de votre tour, gagnez autant #yd'Armure que vous avez #yd'Armure #yPlaquée [REMOVE_SPACE]. Subir des dégâts d'attaque non-bloqués réduit #yl'Armure #yPlaquée de #b1 [REMOVE_SPACE]."
+    "DESCRIPTION": "À la fin de votre tour, gagnez autant #yd'Armure que vous avez #yd'Armure #yplaquée [REMOVE_SPACE]. Subir des dégâts d'attaque non-bloqués réduit #yl'Armure #yplaquée de #b1 [REMOVE_SPACE]."
   },
   {
     "PROPER_NAME": "Boss",
