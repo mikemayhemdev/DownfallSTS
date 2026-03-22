@@ -213,7 +213,7 @@
   "downfall:DefectAncientConstructPower": {
     "NAME": "Structure antique",
     "DESCRIPTIONS": [
-      "Commence le combat avec 2 #yOrbes #yde #yBronze [REMOVE_SPACE]. NL La #ySurtension #yNucléique du Défectueux ne #s'Épuise pas [REMOVE_SPACE]."
+      "Commence le combat avec 2 #yOrbes #yde #yBronze [REMOVE_SPACE]. NL La #ySurtension #yNucléique du Défectueux ne #ys'Épuise pas [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowAncientConstruct": {
