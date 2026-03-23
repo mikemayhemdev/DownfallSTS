@@ -52,14 +52,14 @@
     "DESCRIPTIONS": [
       "Si vous jouez une #yAttaque ce tour, l'ennemi gagnera #b",
       " de #yForce.",
-      "Vous avez joué une Attaque ce tour. L'ennemi va gagner #b",
+      "Vous avez joué une #yAttaque ce tour. L'ennemi va gagner #b",
       " de #yForce."    
     ]
   },
   "downfall:FearNoEvil": {
     "NAME": "Sans crainte",
     "DESCRIPTIONS": [
-      "Si vous jouez une Attaque ce tour, cette ennemie entrera en #yCalme après avoir joué #ySans #yCrainte [REMOVE_SPACE].",
+      "Si vous jouez une #yAttaque ce tour, cette ennemie entrera en #yCalme après avoir joué #ySans #yCrainte [REMOVE_SPACE].",
       "Cette ennemie entrera en #yCalme après avoir joué #ySans #yCrainte [REMOVE_SPACE]."	 																																																		  
     ]
   },
@@ -140,11 +140,11 @@
   "downfall:SimpleWatcherDivinityPower": {
     "NAME": "Foi éphémère",
     "DESCRIPTIONS": [
-      "La Gardienne gagne #b1 de Mantra et #b1 #yd'Intangibilité après que vous ayez joué #b6 cartes en un tour.",
+      "La Gardienne gagne #b1 de #yMantra et #b1 #yd'Intangibilité si vous jouez #b6 cartes en un tour.",
       " NL Vous avez joué #b",
       " cartes ce tour.",
       " NL (A déjà été déclenché ce tour)",
-      " NL NL Une fois que La Gardienne entre en Divinité, elle ne la quitte pas pour le reste du combat, mais la Divinité double les dégâts de ses Attaques au lieu de les tripler."
+      " NL NL Une fois que La Gardienne entre en #pDivinité, elle ne la quitte pas pour le reste du combat, mais la #pDivinité double les dégâts de ses #yAttaques au lieu de les tripler."
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -176,7 +176,7 @@
   "downfall:SilentMirrorImagePower": {
     "NAME": "Voir double",
     "DESCRIPTIONS": [
-      "Au début de chaque tour, un reflet de la Silencieuse va cacher sa vraie position. Attaquer la Silencieuse ou le reflet fait disparaître ce dernier pour ce tour."
+      "Au début de chaque tour, une illusion de la Silencieuse va dissimuler sa vraie position. Attaquer la Silencieuse ou son mirage fait disparaître ce dernier pour ce tour."
     ]
   },
   "downfall:NeowSeeingDouble": {
@@ -401,8 +401,8 @@
   "downfall:HermitWheelOfFortune": {
     "NAME": "Roue de la destinée",
     "DESCRIPTIONS": [
-      "Lorsque vous jouez une Attaque, l'Ermite #yCycle sa première carte. Le coût des cartes de l'Ermite ne peut pas changer. Lorsque l'Ermite pioche #rMalédiction #rFatale, il gagne #b2 de #yForce.",
-      "Lorsque vous jouez une Attaque, l'Ermite #yCycle sa première carte."
+      "Lorsque vous jouez une #yAttaque, l'Ermite #yCycle sa première carte. Le coût des cartes de l'Ermite ne peut pas changer. Lorsque l'Ermite pioche #rMalédiction #rFatale, il gagne #b2 de #yForce.",
+      "Lorsque vous jouez une #yAttaque, l'Ermite #yCycle sa première carte."
     ]
   },
   "downfall:HermitDoomsday": {
