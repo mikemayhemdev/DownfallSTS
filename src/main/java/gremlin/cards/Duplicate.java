@@ -32,6 +32,7 @@ public class Duplicate extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
         this.exhaust = true;
         this.tags.add(SNEAKY_GREMLIN);
+        this.tags.add(CardTags.HEALING);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "Duplicate.png");
     }
