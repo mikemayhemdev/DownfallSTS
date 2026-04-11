@@ -46,9 +46,10 @@ public class Duplicate extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            this.rawDescription = strings.UPGRADE_DESCRIPTION;
-            initializeDescription();
-            this.exhaust = false;
+            upgradeBaseCost(1);
+            //this.rawDescription = strings.UPGRADE_DESCRIPTION;
+            //initializeDescription();
+            //this.exhaust = false;
         }
     }
 }
