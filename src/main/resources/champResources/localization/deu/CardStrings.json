@@ -150,7 +150,7 @@
   },
   "champ:ShieldWall": {
     "NAME": "Eiserne Festung",
-    "DESCRIPTION": "Erhalte 2 Geschicklichkeit. NL Erhalte am Ende jedes Zuges !M! Block."
+    "DESCRIPTION": "Erhalte NL 2 Geschicklichkeit. NL Erhalte am Ende jedes Zuges !M! Block."
   },
   "champ:Haymaker": {
     "NAME": "Piledriver",

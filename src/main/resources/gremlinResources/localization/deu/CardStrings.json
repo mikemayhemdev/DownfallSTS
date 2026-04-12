@@ -239,7 +239,7 @@
 
   "Gremlin:IrksomeBlow": {
     "NAME": "Verbissener Hieb",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Stärke beeinflusst den Lästigen Hieb !M! Mal."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Stärke beeinflusst den Verbissenen Hieb NL !M! Mal."
   },
 
   "Gremlin:Irritability": {

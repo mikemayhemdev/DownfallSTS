@@ -72,7 +72,7 @@
   },
   "awakened:DemonGlyph": {
     "NAME": "Dämonenglyphen",
-    "DESCRIPTION": "Erhalte !M! Stärke und !M! Geschicklichkeit. NL Wenn du *erwachst, erhalte weitere !awakened:m2! von Beiden."
+    "DESCRIPTION": "Erhalte !M! Stärke und NL !M! Geschicklichkeit. NL Wenn du *erwachst, erhalte weitere !awakened:m2! von Beiden."
   },
   "awakened:TakeFlight": {
     "NAME": "Abheben",
@@ -225,7 +225,7 @@
   },
   "awakened:Eventide": {
     "NAME": "Dämmerung",
-    "DESCRIPTION": "Füge 2 Mal einem zufälligen Gegner !D! Schaden zu. NL Lege eine Leere auf den Nachziehstapel."
+    "DESCRIPTION": "Füge 2 Mal einem zufälligen Gegner NL !D! Schaden zu. NL Lege eine Leere auf den Nachziehstapel."
   },
   "awakened:EclipseEmbrace": {
     "NAME": "Sonnenfinsternis",

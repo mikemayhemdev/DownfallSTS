@@ -66,7 +66,7 @@
   },
   "collector:CantTouchThis": {
     "NAME": "Unberührbar",
-    "DESCRIPTION": "Erhalte !M! Geschicklichkeit. NL Wende immer !clm2! collector:Verdammnis auf Angreifer, deren Angriffe du blockst, an."
+    "DESCRIPTION": "Erhalte NL !M! Geschicklichkeit. NL Wende immer !clm2! collector:Verdammnis auf Angreifer, deren Angriffe du blockst, an."
   },
   "collector:CoffinNail": {
     "NAME": "Sargnagel",
@@ -414,7 +414,7 @@
   },
   "collector:Whomp": {
     "NAME": "Schröpfen",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte !M! expansioncontent:temporäre_TP. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. Erhalte NL !M! expansioncontent:temporäre_TP. NL Erschöpft."
   },
   "collector:AcidSlimeCard": {
     "NAME": "Säureschleim",
@@ -439,7 +439,7 @@
   },
   "collector:BookOfStabbingCard": {
     "NAME": "Buch des Stechens",
-    "DESCRIPTION": "Wende immer, wenn du ungeblockten Angriffsschaden zufügst, !M! collector:Verdammnis an."
+    "DESCRIPTION": "Wende immer, wenn du ungeblockten Angriffsschaden zufügst, NL !M! collector:Verdammnis an."
   },
   "collector:BronzeOrbCard": {
     "NAME": "Bronzeorb",
@@ -455,7 +455,7 @@
   },
   "collector:ChosenCard": {
     "NAME": "Auserwählte",
-    "DESCRIPTION": "Wende !M! Schwach an. NL Wende zusätzlich !clm2! Verwundbar an, wenn der Gegner nicht angreifen will."
+    "DESCRIPTION": "Wende !M! Schwach an. NL Wende zusätzlich NL !clm2! Verwundbar an, wenn der Gegner nicht angreifen will."
   },
   "collector:ClericCard": {
     "NAME": "Priester",
@@ -494,7 +494,7 @@
   },
   "collector:FungiBeastCard": {
     "NAME": "Pilzbestie",
-    "DESCRIPTION": "Wende !M! Verwundbar an. Wende zusätzlich 1 Verwundbar auf ALLE Gegner an."
+    "DESCRIPTION": "Wende !M! Verwundbar an. Wende zusätzlich NL 1 Verwundbar auf ALLE Gegner an."
   },
   "collector:GiantHeadCardStageOne": {
     "NAME": "Tick",
@@ -538,7 +538,7 @@
   },
   "collector:LouseCard": {
     "NAME": "Laus",
-    "DESCRIPTION": "Erhalte 1 bronze:Verschwimmen. NL Erhalte das nächste Mal, wenn du ungeblockten Angriffsschaden erleidest, !B! Block."
+    "DESCRIPTION": "Erhalte NL 1 bronze:Verschwimmen. NL Erhalte das nächste Mal, wenn du ungeblockten Angriffsschaden erleidest, !B! Block."
   },
   "collector:MadGremlinCard": {
     "NAME": "Wütender Gremlin",
@@ -558,7 +558,7 @@
   },
   "collector:MysticCard": {
     "NAME": "Mystikerin",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP."
+    "DESCRIPTION": "Erhalte NL !M! expansioncontent:temporäre_TP."
   },
   "collector:NemesisCard": {
     "NAME": "Nemesis",

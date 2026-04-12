@@ -25,7 +25,7 @@
     ]
   },
   "expansioncontent:ChronoBoostPower": {
-    "NAME": "Zeitbooster",
+    "NAME": "Zahn der Zeit",
     "DESCRIPTIONS": [
       "Nach dem Ausspielen von #b",
       " Karten erhältst du #b",
@@ -33,7 +33,7 @@
     ]
   },
   "expansioncontent:ChronoBoostPlusPower": {
-    "NAME": "Zeitbooster+",
+    "NAME": "Zahn der Zeit+",
     "DESCRIPTIONS": [
       "Nach dem Ausspielen von #b",
       " Karten erhältst du #b",
