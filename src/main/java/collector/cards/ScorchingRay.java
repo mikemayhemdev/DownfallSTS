@@ -30,12 +30,17 @@ public class ScorchingRay extends AbstractCollectorCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-        att(new EasyXCostAction(this, (effect, params) -> {
+        atb(new EasyXCostAction(this, (effect, params) -> {
             for (int i = 0; i < effect; i++) {
-                //ScorchingRayAction couldn't cut it.
-                AbstractMonster q = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-                atb(new VFXAction(new ColoredVerticalAttackEffect(q.hb.x + MathUtils.random(q.hb.width / 3, ((q.hb.width / 3) * 2)), q.hb.cY, true, new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1))));
-                dmg(q, AbstractGameAction.AttackEffect.FIRE);
+                att(new AbstractGameAction() {
+                    @Override
+                    public void update() {
+                        isDone = true;
+                        AbstractMonster q = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
+                        dmgTop(q, AbstractGameAction.AttackEffect.FIRE);
+                        att(new VFXAction(new ColoredVerticalAttackEffect(q.hb.x + MathUtils.random(q.hb.width / 3, ((q.hb.width / 3) * 2)), q.hb.cY, true, new Color(MathUtils.random(), MathUtils.random(), MathUtils.random(), 1))));
+                    }
+                });
             }
             return true;
         }));
