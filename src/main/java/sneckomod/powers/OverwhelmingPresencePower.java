@@ -50,8 +50,9 @@ public class OverwhelmingPresencePower extends AbstractPower implements Cloneabl
 
     @Override
     public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (hasTriggeredThisTurn = false) {
+        if (hasTriggeredThisTurn == false) {
             if (card.color != AbstractDungeon.player.getCardColor() && !card.purgeOnUse) {
+                hasTriggeredThisTurn = true;
                 this.flash();
                 addToBot(new DrawCardAction(amount));
             }
