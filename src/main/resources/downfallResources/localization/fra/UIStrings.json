@@ -2,39 +2,39 @@
   "downfall:EvilMenuPanel": {
     "TEXT": [
       "Downfall",
-      "Défendez le Cœur des intrus qui s'aventurent et veulent d'emparer de la Tour.",
-      "Choisissez Votre Vilain",
+      "Défendez le Cœur des intrus qui s'aventurent et veulent conquérir la Tour.",
+      "Choisissez votre vilain",
       "Campagne"
     ]
   },
   "downfall:SoulToGoldChanges": {
     "TEXT": [
       "Âmes",
-      "Montre combien d'Âmes vous possédez. Les Âmes peuvent être données au Cœur pour des récompenses.",
+      "Montre combien d'Âmes vous avez en stock. Les Âmes peuvent être données au Cœur pour des récompenses.",
       "Statut du Marchand",
       "PV",
-      "Mort!",
-      "de Force",
+      "Mort !",
+      "Force",
       "Âmes volées",
-      "Perte"			
+      "Condamnation"			
     ]
   },
   "downfall:BustKeyButton": {
     "TEXT": [
-      "Casser le Rubis",
-      "Casser le Saphir",
-      "Casser l'Émeraude",
+      "Briser le Rubis",
+      "Briser le Saphir",
+      "Briser l'Émeraude",
       "(Action gratuite) Dépensez ",
       " Communes à obtenir.",
       " Peu Communes à obtenir.",
       " Rares à obtenir.",
-      "Clé détruite!",
+      "Clé détruite !",
       "Requiert ",
       " Âmes.",
       "(Action gratuite) Détruisez la clé pour ",
-      " Âmes: Choisissez jusqu'à ",
-      " cartes parmi ",
-      " Augmentez les destructions de clés futures."
+      " Âmes : Choisissez jusqu'à ",
+      " carte parmi ",
+      " La prochaine clé brisée donnera une meilleure récompense."
     ]
   },
   "downfall:WheelSpinButton": {
@@ -58,39 +58,39 @@
       "Permet aux runs standard de rencontrer des potions globales de Downfall.",
       "Permet aux runs standard de rencontrer des évènements globaux de Downfall.",
       "Permet aux runs standard de rencontrer des cartes Boss de Downfall.",
-      "Permet aux personnages standard de faire des runs Downfall, et aux Vilains de faire des runs standard.",
-      "Allow modded characters to play Downfall runs.",
+      "Permet aux personnages standard de faire des runs Downfall, et aux vilains de faire des runs standard.",
+      "Permet aux personnages moddés de faire des runs Downfall.",
       "Permet aux runs standard de rencontrer des cartes Malédiction de Downfall.",
-      "Les runs Downfall utilisent la disposition normale de la carte  - le feu avant le boss, pas au départ.",
-      "Débloque toutes les cartes verrouillées et les reliques des personnages Downfall (requiert un restart du jeu)",
-      "Désactive l'aide pour les poses du Champion - pour les Champions expérimentés",
-      "Prevent Snecko from using card pools from other mods.",
-      "Désactive le remplacement de la musique (requiert un restart du jeu)",
-      "Débloque tous les déguisements alternatifs des personnages Downfall",
+      "Les runs Downfall utilisent la disposition normale de la carte : le feu avant le boss, pas au départ.",
+      "Débloque toutes les cartes verrouillées et les reliques des personnages Downfall (requiert de relancer le jeu)",
+      "Désactive l'aide pour les poses du Champion : pour les Champions expérimentés",
+      "Empêche le Geckobra d'utiliser des cartes d'autres mods.",
+      "Désactive le remplacement de la musique (requiert de relancer le jeu)",
+      "Débloque tous les déguisements alternatifs des personnages de Downfall",
       "Utilisez des icônes au lieu de texte pour les propriétés appliquées.",
-      "Le grimoire met en évidence la prochaine carte que Conjure va piocher.",
-      "Aucun ajustement de Downfall pour les cartes et reliques originales (requiert un redémarrage du jeu)",
-      "Utilisez les Boss de Downfall Legacy (avant la 6.0)"
+      "Le grimoire met en évidence la prochaine carte Conjurée.",
+      "Aucun ajustement de Downfall pour les cartes et reliques originales (requiert de relancer le jeu)",
+      "Utilisez les anciens Boss de Downfall (avant la 6.0)"
     ]
   },
   "downfall:EnergyPanelTip": {
     "TEXT": [
-      "L'Énergie actuelle de l'ennemi. Les cartes requièrent de l'énergie pour les jouer."
+      "L'Énergie actuelle de l'ennemi. Utilisée pour jouer des cartes de sa main."
     ],
     "EXTRA_TEXT": [
-      "Energy"
+      "Énergie"
     ]
   },
   "downfall:RemoveCardReward": {
   "TEXT": [
     "Retirez une carte de votre deck",
-    "Choisissez une carte à Retirer"
+    "Choisissez une carte à retirer"
   ]
 },
   "downfall:TransformCardReward": {
     "TEXT": [
       "Transformez une carte de votre deck",
-      "Choisissez une carte à Transformer"
+      "Choisissez une carte à transformer"
     ]
   },
   "downfall:UpgradeCardReward": {
@@ -158,14 +158,14 @@
   "downfall:DiceRollPotionReward": {
     "TEXT": [
       "Ajoutez une carte Améliorée ",
-      " à votre deck",
+      "à votre deck",
       "Choisissez une carte."
     ]
   },
   "downfall:ColorfulPowersCardReward": {
     "TEXT": [
       "Ajoutez un Pouvoir Amélioré ",
-      " à votre deck",
+      "à votre deck",
       "Choisissez une carte."
     ]
   },
@@ -175,15 +175,15 @@
       "Le Soldat de Fer",
       "La Silencieuse",
       "Le Défectueux",
-      "The Watcher",
-      "Marchand",
+      "La Gardienne",
+      "Le Marchand",
       "L'Ermite"
     ]
   },
   "downfall:WhaleHunter": {
     "TEXT": [
       "Chasseur de baleine",
-      "Vous avez fini le cycle."
+      "Vous avez mis fin au cycle."
     ]
     },
   "downfall:Unfettered": {
@@ -209,7 +209,7 @@
   },
   "downfall:CantEscapeGauntlet": {
     "TEXT": [
-      "Je suis dépassé."
+      "Ils sont trop nombreux, ils me barrent la route."
     ],
     "Translator note": "This pops up when you try to escape the gauntlet fight, where there are more than 1 hero alive yet, so you are overwhelmed by number thus cant escape."
   }
