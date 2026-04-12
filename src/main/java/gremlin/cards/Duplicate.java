@@ -32,6 +32,7 @@ public class Duplicate extends AbstractGremlinCard {
         this.magicNumber = baseMagicNumber;
         this.exhaust = true;
         this.tags.add(SNEAKY_GREMLIN);
+        this.tags.add(CardTags.HEALING);
         setBackgrounds();
         GremlinMod.loadJokeCardImage(this, "Duplicate.png");
     }
@@ -46,9 +47,10 @@ public class Duplicate extends AbstractGremlinCard {
         if (!this.upgraded)
         {
             upgradeName();
-            this.rawDescription = strings.UPGRADE_DESCRIPTION;
-            initializeDescription();
-            this.exhaust = false;
+            upgradeBaseCost(1);
+            //this.rawDescription = strings.UPGRADE_DESCRIPTION;
+            //initializeDescription();
+            //this.exhaust = false;
         }
     }
 }
