@@ -72,7 +72,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "不気味な探索行",
-    "DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL !M! [#e087a4]枚のランダムな死後カードを山札に、[] 1 枚を手札に加える。"
+    "DESCRIPTION": "エセリアル を持つランダムなカードを手札に加える。プレイするまでそのコストは0 NL 廃棄"
   },
   "hexamod:ExtraCrispy": {
     "NAME": "カリッカリ",

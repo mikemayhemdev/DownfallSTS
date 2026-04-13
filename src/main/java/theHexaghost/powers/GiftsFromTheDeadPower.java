@@ -19,10 +19,12 @@ import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.vfx.cardManip.ShowCardAndAddToDiscardEffect;
 import theHexaghost.HexaMod;
 import downfall.util.TextureLoader;
-import theHexaghost.cards.EtherealExpedition;
+import theHexaghost.cards.*;
 
 import java.util.ArrayList;
 import java.util.stream.Collectors;
+
+import static com.megacrit.cardcrawl.dungeons.AbstractDungeon.cardRandomRng;
 
 public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePowerInterface {
 
@@ -77,11 +79,48 @@ public class GiftsFromTheDeadPower extends AbstractPower implements CloneablePow
 //        });
 //    }
 
+    public static AbstractCard returnTrulyRandomEtherealCardInCombat() {
+        ArrayList<AbstractCard> list = new ArrayList<>();// 1201
+        for (AbstractCard c : AbstractDungeon.srcCommonCardPool.group) {
+            if (c.hasTag(HexaMod.AFTERLIFE) && !c.hasTag(AbstractCard.CardTags.HEALING)) {
+                list.add(c);
+            }
+        }
+
+        for (AbstractCard c : AbstractDungeon.srcUncommonCardPool.group) {
+            if (c.hasTag(HexaMod.AFTERLIFE) && !c.hasTag(AbstractCard.CardTags.HEALING)) {
+                list.add(c);
+            }
+        }
+        for (AbstractCard c : AbstractDungeon.srcRareCardPool.group) {
+            if (c.hasTag(HexaMod.AFTERLIFE) && !c.hasTag(AbstractCard.CardTags.HEALING)) {
+                list.add(c);
+            }
+        }
+        if (list.isEmpty()) {
+            //Since this card can show up on Snecko, and Snecko obviously doesn't have any afterlife
+            //cards in their pool, ALL of these cards need to be added here, and not just Power from Beyond.
+            list.add(new Hexaguard());
+            list.add(new NightmareGuise());
+            list.add(new NightmareStrike());
+            list.add(new SpectersWail());
+            list.add(new BurningQuestion());
+            list.add(new FlamesFromBeyond());
+            list.add(new Floatwork());
+            list.add(new GhostLash());
+            list.add(new GhostShield());
+            list.add(new Haunt());
+            list.add(new PowerFromBeyond());
+            list.add(new EtherStep());
+        }
+        return list.get(cardRandomRng.random(list.size() - 1));
+    }
+
     @Override
     public void atStartOfTurn() {
         this.flash();
         for (int i = 0; i < GiftsFromTheDeadPower.this.amount; i++) {
-            AbstractCard q = EtherealExpedition.returnTrulyRandomEtherealCardInCombat().makeCopy();
+            AbstractCard q = returnTrulyRandomEtherealCardInCombat().makeCopy();
             addToBot(new MakeTempCardInHandAction(q));
         }
 //        this.addToBot(new DrawCardAction(2 * amount));

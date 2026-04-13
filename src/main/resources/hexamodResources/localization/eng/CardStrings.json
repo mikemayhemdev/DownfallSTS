@@ -72,7 +72,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Add[] !M! [#e087a4]random[] [#e087a4]Afterlife [#e087a4]card[] [#e087a4]to[] [#e087a4]your[] [#e087a4]drawpile[] and another to your hand."
+    "DESCRIPTION": "Gain a random *Ethereal card. It costs 0 this turn. NL Exhaust."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",

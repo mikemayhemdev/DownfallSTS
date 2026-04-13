@@ -169,10 +169,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "诡异探险",
-    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 随机获得一张 hexamod:阴世 牌。 NL ",
-    "EXTENDED_DESCRIPTION": [
-      "随机洗入抽牌堆一 张 阴 世 牌 。"
-    ]
+    "DESCRIPTION": "随机获得一张 虚无 牌， NL 本回合其耗能为0。 NL 消耗 。"
   },
   "hexamod:PhantomCloak": {
     "NAME": "幽灵披风",
