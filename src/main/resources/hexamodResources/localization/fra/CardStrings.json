@@ -228,8 +228,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Sacrifice honorable",
-    "DESCRIPTION": "Épuisez 2 cartes. NL Si c'était des Attaques ou des Compétences, transformez-les en cartes aléatoires du type opposé.",
-    "UPGRADE_DESCRIPTION": "Épuisez 2 cartes. NL Si c'était des Attaques ou des Compétences, transformez-les en cartes aléatoires Améliorées du type opposé.",
+    "DESCRIPTION": "Épuisez 2 cartes. NL Si c'était des Attaques ou des Compétences, transformez-les en cartes aléatoires du type opposé. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Épuisez 2 cartes. NL Si c'était des Attaques ou des Compétences, transformez-les en cartes aléatoires Améliorées du type opposé. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "à Épuiser pour Sacrifice honorable."
     ]

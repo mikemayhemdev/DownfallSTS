@@ -200,8 +200,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Sacrificio Digno",
-    "DESCRIPTION": "Agota 2 cartas. NL Si son de tipo Ataque o Habilidad, transfórmalas al tipo opuesto.",
-    "UPGRADE_DESCRIPTION": "Agota 2 cartas. NL Si son de tipo Ataque o Habilidad, transfórmalas al tipo opuesto y Mejóralas.",
+    "DESCRIPTION": "Agota 2 cartas. NL Si son de tipo Ataque o Habilidad, transfórmalas al tipo opuesto. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Agota 2 cartas. NL Si son de tipo Ataque o Habilidad, transfórmalas al tipo opuesto y Mejóralas. NL Agota.",
     "EXTENDED_DESCRIPTION": ["Agotar para Sacrificio Digno."]
   },
   "hexamod:NightmareGuise": {

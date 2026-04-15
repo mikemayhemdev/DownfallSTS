@@ -186,8 +186,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Sacrifício Necessário",
-    "DESCRIPTION": "Exaura uma carta. NL Se era Golpe ou Habilidade, ganhe uma carta aleatória do tipo oposto.",
-    "UPGRADE_DESCRIPTION": "Exaura uma carta. NL Se era Golpe ou Habilidade, ganhe uma carta aleatória do tipo oposto. Ela custa 1 a menos.",
+    "DESCRIPTION": "Exaura uma carta. NL Se era Golpe ou Habilidade, ganhe uma carta aleatória do tipo oposto. NL Exaurir.",
+    "UPGRADE_DESCRIPTION": "Exaura uma carta. NL Se era Golpe ou Habilidade, ganhe uma carta aleatória do tipo oposto. Ela custa 1 a menos. NL Exaurir.",
     "EXTENDED_DESCRIPTION": [
       "para Exaurir para Sacrífício Necessário."
     ]
