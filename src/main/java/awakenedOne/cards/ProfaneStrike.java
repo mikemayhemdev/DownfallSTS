@@ -12,8 +12,8 @@ public class ProfaneStrike extends AbstractAwakenedCard {
     // intellij stuff power, self, rare, , , , , ,
 
     public ProfaneStrike() {
-        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
-        baseDamage = 11;
+        super(ID, 0, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
+        baseDamage = 6;
         tags.add(CardTags.STRIKE);
         loadJokeCardImage(this, makeBetaCardPath(ProfaneStrike.class.getSimpleName() + ".png"));
     }
