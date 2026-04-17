@@ -72,7 +72,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Gain a random Ethereal card. NL It costs 0 this turn. NL Exhaust."
+    "DESCRIPTION": "Add a random Ethereal card into your hand. NL It costs 0 this turn. NL Exhaust."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
