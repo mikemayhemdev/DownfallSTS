@@ -116,7 +116,7 @@
   "awakened:StrengthReturnPower": {
     "NAME": "Aufgeschlitzt",
     "DESCRIPTIONS": [
-      "Wenn du diesen Gegner angreifst, erhältst du #b",
+      "Wenn du diesen Gegner triffst, erhältst du #b",
       " #ytemporäre #yStärke [REMOVE_SPACE]."
     ]
   },
@@ -133,7 +133,7 @@
       "Der erste in deinem Zug gespielte #yZauber wird zweimal gespielt.",
       "Die ersten #b",
       " in deinem Zug gespielten #yZauber werden zweimal gespielt.",
-      " NL ( Noch #b",
+      " NL (Noch #b",
       " Zauberwiederholungen für diesen Zug übrig)"
     ]
   },

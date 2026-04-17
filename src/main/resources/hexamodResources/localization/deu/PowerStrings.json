@@ -58,7 +58,7 @@
     ]
   },
   "hexamod:CrispyPower_new": {
-    "NAME": "Extra knusprig",
+    "NAME": "Restwärme",
     "DESCRIPTIONS": [
       "Wenn #ySeelenfeuer detoniert, dann wende umgehend nach der Detonation #b",
       " #ySeelenfeuer an."
@@ -85,8 +85,8 @@
     "NAME": "Aus dem Schatten",
     "DESCRIPTIONS": [
       "Die #b",
-      " nächste gespielte Karte wird jedes Mal, wenn du dich #yrückwärts bewegst, #b0 kosten und #yerschöpfen [REMOVE_SPACE].",
-      " nächsten gespielten Karten werden jedes Mal, wenn du dich #yrückwärts bewegst, #b0 kosten und #yerschöpfen [REMOVE_SPACE]."
+      " nächste gespielte Karte wird jedes Mal, wenn du #yrückwärts schreitest, #b0 kosten und #yerschöpfen [REMOVE_SPACE].",
+      " nächsten gespielten Karten werden jedes Mal, wenn du #yrückwärts schreitest, #b0 kosten und #yerschöpfen [REMOVE_SPACE]."
     ]
   },
   "hexamod:FutureUpgradePower": {
@@ -115,8 +115,8 @@
     "NAME": "Geschenkte Karten",
     "DESCRIPTIONS": [
       "Nimm zu Beginn des Zuges #b",
-      " zufällige #yReinkarnation Karte auf die Hand.",
-      " zufällige #yReinkarnation Karten auf die Hand."
+      " zufällige #ymorbide Karte auf die Hand.",
+      " zufällige #ymorbide Karten auf die Hand."
     ]
   },
   "hexamod:GoldPostCombatPower": {
@@ -153,9 +153,9 @@
   "hexamod:PastPower": {
     "NAME": "Totentanz",
     "DESCRIPTIONS": [
-      "Wenn du dich das erste Mal im Zug #yvorwärts oder #yrückwärts bewegst, ziehe eine Karte.",
+      "Wenn du das erste Mal im Zug #yvorwärts oder #yrückwärts schreitest, ziehe eine Karte.",
       "Ziehe eine Karte für die ersten #b",
-      " Male, an denen du dich im Zug #yvorwärts oder #yrückwärts bewegst.",
+      " Male, an denen du im Zug #yvorwärts oder #yrückwärts schreitest.",
       " NL Dieser Effekt kann in diesem Zug noch #b",
       " Mal aktiviert werden.",
       " Mal aktiviert werden.",

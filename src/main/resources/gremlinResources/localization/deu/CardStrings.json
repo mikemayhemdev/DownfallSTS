@@ -28,7 +28,7 @@
 
   "Gremlin:BrokenShin": {
     "NAME": "Schienbeinbruch",
-    "DESCRIPTION": "Wende gremlin:Agonie für alle !M! Schwach des Gegners an. NL Erschöpft."
+    "DESCRIPTION": "Wende 1 gremlin:Agonie für je !M! Schwach des Gegners an. NL Erschöpft."
   },
 
   "Gremlin:BubbleBarrier": {
@@ -42,7 +42,7 @@
   },
 
   "Gremlin:BurlyBlow": {
-    "NAME": "Strammer Hieb",
+    "NAME": "Schikanieren",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Wiederhole das ein Mal pro Schwach des Gegners."
   },
 
@@ -53,7 +53,7 @@
 
   "Gremlin:Changeo": {
     "NAME": "Abrakadabra!",
-    "DESCRIPTION": "Erhalte !B! Block und !M! gremlin:Esprit."
+    "DESCRIPTION": "Erhalte !B! Block und NL !M! gremlin:Esprit."
   },
 
   "Gremlin:CongaLine": {
@@ -64,7 +64,7 @@
 
   "Gremlin:CounterStrike": {
     "NAME": "Gegenschlag",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn der Gegner angreifen will, aktiviere den Bonus des aktuellen Gremlins !M! Mal."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Wenn der Gegner angreifen will, aktiviere den Bonus des Gremlins !M! Mal."
   },
 
   "Gremlin:CowerChoice": {
@@ -107,7 +107,7 @@
 
   "Gremlin:Encore": {
     "NAME": "Zugabe",
-    "DESCRIPTION": "Erhalte 3 gremlin:Esprit. NL Der Verbauch von gremlin:Esprit fügt zusätzlich !M! Schaden zu."
+    "DESCRIPTION": "Erhalte 3 gremlin:Esprit. NL Der Verbauch von gremlin:Esprit fügt zusätzlich NL !M! Schaden zu."
   },
 
   "Gremlin:Enthusiasm": {
@@ -122,12 +122,12 @@
 
   "Gremlin:Exacerbate": {
     "NAME": "Tortur",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Der Gegner verliert jedes Mal, wenn er Schwach erleidet, !M! TP. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. Der Gegner verliert jedes Mal, wenn er Schwach wird, !M! TP. NL Erschöpft."
   },
 
   "Gremlin:FairyDust": {
     "NAME": "Feenstaub",
-    "DESCRIPTION": "Erhalte !M! *Schutz Karten und ziehe !M! Karten. NL Erschöpft."
+    "DESCRIPTION": "Erhalte !M! *Schutz Karten und ziehe NL !M! Karten. NL Erschöpft."
   },
 
   "Gremlin:SleeveOfAces": {
@@ -143,7 +143,7 @@
 
   "Gremlin:FeelTheAudience": {
     "NAME": "Publikumsmagnet",
-    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. NL Erhalte !M! gremlin:Esprit für jeden, der angreifen will."
+    "DESCRIPTION": "Füge ALLEN Gegnern !D! Schaden zu. Erhalte !M! gremlin:Esprit für jeden, der angreifen will."
   },
 
   "Gremlin:FightChoice": {
@@ -158,8 +158,8 @@
   },
 
   "Gremlin:Flurry": {
-    "NAME": "Wirbel",
-    "DESCRIPTION": "Füge für jede in diesem Zug gespielte Karte !D! Schaden zu. NL Erschöpft.",
+    "NAME": "Tumult",
+    "DESCRIPTION": "Füge für jede in diesem Zug gespielte Karte NL !D! Schaden zu. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " Karte gespielt.)",
@@ -174,7 +174,7 @@
 
   "Gremlin:Fury": {
     "NAME": "Raserei",
-    "DESCRIPTION": "Kostet 1 [E] weniger für jede 2 deiner Stärke. NL Füge 3 Mal !D! Schaden zu."
+    "DESCRIPTION": "Kostet [E] weniger pro 2 deiner Stärke. NL Füge 3 Mal !D! Schaden zu."
   },
 
   "Gremlin:Glimmer": {
@@ -216,30 +216,30 @@
 
   "Gremlin:GremlinToss": {
     "NAME": "Gremlinweitwurf",
-    "DESCRIPTION": "Erhalte !M! *temporäre *TP. Füge Schaden in Höhe der Summe des aktuellen Blocks und der expansioncontent:temporären_TP zu.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! *temporäre *TP. Füge Schaden in Höhe der Summe des aktuellen Blocks und der expansioncontent:temporären_TP zu.",
+    "DESCRIPTION": "Erhalte !M! *temporäre *TP. Füge Schaden in Höhe der Summe des aktuellen *Blocks und der expansioncontent:temporären_TP zu.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! *temporäre *TP. Füge Schaden in Höhe der Summe des aktuellen *Blocks und der expansioncontent:temporären_TP zu.",
     "EXTENDED_DESCRIPTION": [" NL (Fügt !D! Schaden zu.)"]
   },
 
   "Gremlin:GremlinWizard": {
-    "NAME": "Gremlinzeuberer",
+    "NAME": "Gremlinzauberer",
     "DESCRIPTION": "gremlin:Wechsle zum gremlin:Gremlinzauberer."
   },
 
   "Gremlin:Heckle": {
     "NAME": "Zwischenrufen",
-    "DESCRIPTION": "Erhalte jedes Mal, wenn du einen Gegner debuffst, !M! expansioncontent:temporäre_TP."
+    "DESCRIPTION": "Erhalte jedes Mal, wenn du einen Gegner debuffst, NL !M! expansioncontent:temporäre_TP."
   },
 
   "Gremlin:InfiniteBlocks": {
-    "NAME": "Vorrätiger Schutz",
-    "DESCRIPTION": "Nimm immer zu Beginn deines Zuges einen *Schutz in die Hand.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Nimm immer zu Beginn deines Zuges einen *Schutz in die Hand."
+    "NAME": "Schutzbunker",
+    "DESCRIPTION": "Nimm immer zu Beginn deines Zuges einen *Schutz auf die Hand.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Nimm immer zu Beginn deines Zuges einen *Schutz auf die Hand."
   },
 
   "Gremlin:IrksomeBlow": {
-    "NAME": "Lästiger Hieb",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Stärke beeinflusst den *Lästigen *Hieb !M! Mal."
+    "NAME": "Verbissener Hieb",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Stärke beeinflusst den Verbissenen Hieb NL !M! Mal."
   },
 
   "Gremlin:Irritability": {
@@ -286,7 +286,7 @@
 
   "Gremlin:Nob": {
     "NAME": "Aristo-Form",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:temporäre_TP. NL Mutiere zum gremlin:Gremlin-Aristo, bis deine *temporären *TP verbraucht sind."
+    "DESCRIPTION": "Erhalte !M! *temporäre *TP. Mutiere zum gremlin:Gremlin-Aristo, bis deine expansioncontent:temporären_TP verbraucht sind."
   },
 
   "Gremlin:NobChoice": {
@@ -296,7 +296,7 @@
 
   "Gremlin:PartyStick": {
     "NAME": "Leuchtstab",
-    "DESCRIPTION": "Flüchtig. NL Unspielbar. NL Erhalte [E] , wenn du mit dieser Karte auf der Hand gremlin:wechselst.",
+    "DESCRIPTION": "Flüchtig. Unspielbar. NL Erhalte [E] , wenn du mit dieser Karte auf der Hand gremlin:wechselst.",
     "UPGRADE_DESCRIPTION": "Unspielbar. NL Erhalte [E] , wenn du mit dieser Karte auf der Hand gremlin:wechselst.",
     "EXTENDED_DESCRIPTION": ["Niemand darf mit dem Leuchtstab spielen."]
   },
@@ -334,18 +334,18 @@
   },
 
   "Gremlin:Presto": {
-    "NAME": "Presto!",
+    "NAME": "Hokuspokus!",
     "DESCRIPTION": "Füge !D! Schaden zu. Erhalte !M! gremlin:Esprit."
   },
 
   "Gremlin:Pretaliation": {
     "NAME": "Eilangriff",
-    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu. NL Der Gegner greift dich mit !M! Schaden an."
+    "DESCRIPTION": "Füge 2 Mal !D! Schaden zu. Der Gegner greift dich mit !M! Schaden an."
   },
 
   "Gremlin:ProperTools": {
     "NAME": "Adäquate Waffe",
-    "DESCRIPTION": "Füge !D! Schaden zu. Erhalte !M! *Schutz Karten, wenn der Gegner angreifen will. Erhalte anderenfalls !M! Messer."
+    "DESCRIPTION": "Füge !D! Schaden zu. Erhalte !M! *Schutz Karten, wenn der Gegner angreifen will - ansonsten !M! Messer."
   },
 
   "Gremlin:RageBreak": {
@@ -367,7 +367,7 @@
 
   "Gremlin:Rhythm": {
     "NAME": "Rhythmus",
-    "DESCRIPTION": "gremlin:Wechsle zum nächsten Gremlin. Schnapp dir eine Basis-Karte vom Nachziehstapel. Sie kostet diesen Zug 0."
+    "DESCRIPTION": "gremlin:Wechsle zum nächsten Gremlin. Schnappe eine Basis Karte vom Nachziehstapel. Sie kostet diesen Zug 0."
   },
 
   "Gremlin:Rush": {
@@ -381,9 +381,9 @@
   },
 
   "Gremlin:SecondVolley": {
-    "NAME": "Zweite Salve",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte ein Messer für jede Karte, die du in diesem Zug gespielt hast (Maximal bis deine Hand voll ist).",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte ein Messer+ für jede Karte, die du in diesem Zug gespielt hast (Maximal bis deine Hand voll ist).",
+    "NAME": "Zweite Welle",
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte ein Messer NL für jede Karte, die du in diesem Zug gespielt hast (Maximal bis deine Hand voll ist).",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte ein Messer+ NL für jede Karte, die du in diesem Zug gespielt hast (Maximal bis deine Hand voll ist).",
     "EXTENDED_DESCRIPTION": [
       " NL (",
       " Karte gespielt.)",
@@ -475,7 +475,7 @@
   "Gremlin:TwistTheKnife": {
     "NAME": "Zweischneidig",
     "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 Messer.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 Messer+."
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte 1 *Messer+."
   },
 
   "Gremlin:ToeStub": {

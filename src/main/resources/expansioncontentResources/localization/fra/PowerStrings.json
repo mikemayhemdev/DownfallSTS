@@ -1,12 +1,12 @@
 {
   "expansioncontent:StudyTheSpirePower": {
-    "NAME": "Étude de la tour",
+    "NAME": "Étude de la Tour",
     "DESCRIPTIONS": [
-      "Obtenez une carte #yBoss aléatoire au début de votre prochain tour. NL Elle coûte #b0 jusqu'à ce qu'elle soit jouée.",
-      "Obtenez une carte #yBoss aléatoire au début de vos #b",
+      "Obtenez une carte de #yBoss aléatoire au début de votre prochain tour. NL Elle coûte #b0 jusqu'à ce qu'elle soit jouée.",
+      "Obtenez une carte de #yBoss aléatoire au début de vos #b",
       " prochains tours. NL Elles coûtent #b0 jusqu'à ce qu'elles soient jouées.",
-      "Obtenez une carte #yBoss aléatoire #yAméliorée au début de votre prochain tour. NL Elle coûte #b0 jusqu'à ce qu'elle soit jouée.",
-      "Obtenez une carte #yBoss aléatoire #yAméliorée au début de vos #b",
+      "Obtenez une carte de #yBoss aléatoire #yAméliorée au début de votre prochain tour. NL Elle coûte #b0 jusqu'à ce qu'elle soit jouée.",
+      "Obtenez une carte de #yBoss aléatoire #yAméliorée au début de vos #b",
       " prochains tours. NL Elles coûtent #b0 jusqu'à ce qu'elles soient jouées."
     ]
   },
@@ -20,7 +20,7 @@
   "expansioncontent:AwakenDeathPower": {
     "NAME": "Éveil",
     "DESCRIPTIONS": [
-      "Quand vous auriez dû mourir, soignez-vous de #b",
+      "Quand vous devriez mourir, survivez avec #b",
       " PV et retirez cet effet."
     ]
   },
@@ -29,7 +29,7 @@
     "DESCRIPTIONS": [
       "Après avoir joué #b",
       " cartes de plus, gagnez #b",
-      " de #yForce."
+      " de #yForce [REMOVE_SPACE]."
     ]
   },
   "expansioncontent:ChronoBoostPlusPower": {
@@ -37,14 +37,14 @@
     "DESCRIPTIONS": [
       "Après avoir joué #b",
       " cartes de plus, gagnez #b",
-      " de #yForce."
+      " de #yForce [REMOVE_SPACE]."
     ]
   },
   "expansioncontent:DeEnergizedPower": {
     "NAME": "Hors tension",
     "DESCRIPTIONS": [
       "Au début de votre prochain tour, perdez #b",
-      " [E]."
+      " [E] ."
     ]
   },
   "expansioncontent:PolyBeamAgainPower": {
@@ -58,7 +58,7 @@
   "expansioncontent:PolyBeamAgainPowerUpgraded": {
     "NAME": "Puissance",
     "DESCRIPTIONS": [
-      "#yMultilaser+ sera jouée lors de votre prochain tour. ",
+      "#yMultilaser+ sera joué au début de votre prochain tour. ",
       "#yMultilaser+ sera joué au début de vos #b",
       " prochains tours."
     ]
@@ -67,14 +67,14 @@
     "NAME": "Carte retardée",
     "DESCRIPTIONS": [
       "Ajoutez ",
-      " dans votre main au début de votre prochain tour."
+      " à votre main au début de votre prochain tour."
     ]
   },
   "expansioncontent:AddSameInstancePower": {
     "NAME": "Carte retardée",
     "DESCRIPTIONS": [
       "Ajoutez  ",
-      " dans votre main au début de votre prochain tour."
+      " à votre main au début de votre prochain tour."
     ]
   },
   "expansioncontent:NextTurnExhumePower": {
@@ -112,15 +112,15 @@
     "NAME": "Mal intérieur",
     "DESCRIPTIONS": [
       "Infligez #b",
-      " dégâts à TOUS les ennemis après avoir appliqué #b",
-      " debuffs supplémentaires.",
-      " debuff supplémentaire."
+      " dégâts à TOUS les ennemis quand vous aurez appliqué #b",
+      " débuffs supplémentaires.",
+      " débuff supplémentaire."
     ]
   },
   "expansioncontent:ReveriePower":{
   "NAME": "Rêverie",
   "DESCRIPTIONS": [
-    "Au début de votre tour, regardez la carte du dessus de votre défausse et ajoutez-la à votre main.",
+    "Au début de votre tour, ajoutez la carte du dessus de votre défausse à votre main.",
     "Au début de votre tour, regardez les #b",
     " cartes du dessus de votre défausse et choisissez-en une à ajouter à votre main.",
     "Choisissez une carte à ajouter à votre main."
@@ -129,10 +129,10 @@
   "expansioncontent:VexVinciblePower": {
     "NAME": "Invincibilité",
     "DESCRIPTIONS": [
-      "Limite tous les dégâts et les pertes de PV reçus de #b",
-      " dans un tour. Retiré après activation.",
-      "Limite tous les dégâts et les pertes de PV reçus de #b",
-      " dans un tour. Retiré après #b",
+      "Limite tous les dégâts et les pertes de PV que vous devriez subir à #b",
+      " par tour. Retiré après activation.",
+      "Limite tous les dégâts et les pertes de PV que vous devriez subir à #b",
+      " par tour. Retiré après #b",
       " activations."
     ]
   }

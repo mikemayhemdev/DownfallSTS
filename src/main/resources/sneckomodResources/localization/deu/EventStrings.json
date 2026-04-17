@@ -9,7 +9,7 @@
     ],
     "OPTIONS": [
       "[Zerstören] #rVerliere #r",
-      " #r #rTP. #gErhalte eine #yseltene Karte einer #yFremdklasse.",
+      " #r #rTP. #gErhalte eine #yseltene #yfremde Karte.",
       "[Nehmen] #gErhalte das #gMystische #gOktaeder. #rWerde #rverflucht #r- #rSchmerz.",
       "[Verlassen]",
       "[Gesperrt] Erfordert eine Karte mit Überschuss."
@@ -21,7 +21,7 @@
       "Kreativität übertrifft Planung - jedes Mal aufs Neue!"
     ],
     "OPTIONS": [
-      "[Improvisation] Alle #gSchlag und #gVerteidigen Karten werden #yFremdklassig.",
+      "[Improvisation] Alle #gSchlag und #gVerteidigen Karten werden #yfremd.",
       "[Gesperrt] Erfordert einen Schlag oder ein Verteidigen."
     ]
   },
@@ -46,7 +46,7 @@
       "Die Schlange glotzt dich mit dem Anblick extremer Enttäuschung an - doch zur Verabschiedung lächelt sie wieder, und wünscht dir eine gute Reise."
     ],
     "OPTIONS": [
-      "[Retten] #gErhalte #gein #gSnecko-Küken. #rKämpfe #rgegen #reinen #rverärgerten #rZenturio.",
+      "[Retten] #gErhalte #gein #gSnecko-Junges. #rKämpfe #rgegen #reinen #rverärgerten #rZenturio.",
       "[Verlassen]"
     ]
   }

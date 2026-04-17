@@ -495,7 +495,7 @@
     "NAME": "Hecktoplasma",
     "FLAVOR": "Dieser Klumpen aus Schleim scheint mit der Kraft hunderter lebendiger Seelen zu pulsieren. Kein Wunder, dass den niemand wollte.",
     "DESCRIPTIONS": [
-      " NL Du kannst keine #ySeelen mehr erhalten. Erhalte in deinem Zug [E]. Das Zerbrechen der Schlüssel erfordert keine #ySeelen [REMOVE_SPACE].",
+      " NL Du kannst keine #ySeelen mehr erhalten. Erhalte in deinem Zug [E] . Das Zerbrechen der Schlüssel erfordert keine #ySeelen [REMOVE_SPACE].",
       "Hecktoplasma"
     ]
   },
@@ -520,7 +520,7 @@
       "Verdorbene Kurierin",
       "Dem Herzen gehen nie mehr Karten, Relikte oder Tränke aus und seine Preise sind um #b20% gesenkt.",
       "Kampf-Kartenbelohnungen enthalten jetzt auch farblose und andersfarbige Karten, inklusive Helden-Karten.",
-      "Du kannst keine #ySeelen mehr erhalten. Erhalte in deinem Zug [E]. Das Zerbrechen der Schlüssel erfordert keine #ySeelen [REMOVE_SPACE]."
+      "Du kannst keine #ySeelen mehr erhalten. Erhalte in deinem Zug [E] . Das Zerbrechen der Schlüssel erfordert keine #ySeelen [REMOVE_SPACE]."
     ]
   },
   "downfall:LizardTail": {

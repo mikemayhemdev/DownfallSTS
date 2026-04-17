@@ -414,7 +414,7 @@
   "downfall:NeowEclipse": {
     "NAME": "Verhängnisvoll",
     "DESCRIPTIONS": [
-      "In jedem Zug gibt dir Niau ein #yflüchtiges #yDrohendes #yVerhängnis auf die Hand."
+      "In jedem Zug gibt dir Niau ein #yflüchtiges #yDrohendes #Unheil auf die Hand."
     ]
   },
   "downfall:NeowWheelOfDeath": {
@@ -493,9 +493,9 @@
     ]
   },
   "downfall:VoidOrbPower":{
-    "NAME": "Leere Hülle",
+    "NAME": "Antikern",
     "DESCRIPTIONS": [
-      "Wenn die leere Hülle stirbt, heilt sie alle TP des Defekten und entfernt einen seiner #ySchatten Orbs.",
+      "Wenn der Antikern stirbt, heilt sie alle TP des Defekten und entfernt einen seiner #ySchatten Orbs.",
       " Erhält 5 max. TP für jedes Mal, wenn dieser Effekt zum Einsatz kommt."
     ]
   }

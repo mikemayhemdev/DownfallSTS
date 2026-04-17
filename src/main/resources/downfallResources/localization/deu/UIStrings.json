@@ -57,7 +57,7 @@
       "Aktiviere globale Downfall Relikte in Standard Runs.",
       "Aktiviere globale Downfall Tränke in Standard Runs.",
       "Aktiviere globale Downfall Ereignisse in Standard Runs.",
-      "Aktiviere Downfall Boss-Karten in Standard Runs.",
+      "Aktiviere Downfall Boss Karten in Standard Runs.",
       "Erlaube Standard Charactere in Downfall Runs, und Bosse in Standard Runs.",
       "Erlaube gemoddete Charactere in Downfall Runs.",
       "Aktiviere Downfall Flüche in Standard Runs.",
@@ -130,7 +130,7 @@
   },
   "downfall:BossCardReward": {
     "TEXT": [
-      "Erhalte eine Boss-Karte",
+      "Erhalte eine Boss Karte",
       "Wähle eine Karte."
     ]
   },

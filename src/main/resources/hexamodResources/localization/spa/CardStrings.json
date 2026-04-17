@@ -412,8 +412,8 @@
   },
   "hexamod:EtherStep": {
     "NAME": "Paso Etéreo",
-    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Agota 1 carta. NL Roba !M! carta(s). NL ",
-    "UPGRADE_DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL Agota 1 carta. NL Roba !M! carta(s). NL "
+    "DESCRIPTION": "Etérea. NL [#e087a4]Ultratumba.[] NL [#e087a4]Haz[] !D! [#e087a4]de[] [#e087a4]daño.[] NL Agota 1 carta. NL Roba !M! carta(s). NL ",
+    "UPGRADE_DESCRIPTION": "Etérea. NL [#e087a4]Ultratumba.[] NL [#e087a4]Haz[] !D! [#e087a4]de[] [#e087a4]daño.[]NL Agota 1 carta. NL Roba !M! carta(s). NL "
   },
   "hexamod:OpposingAction": {
     "NAME": "Acción Opuesta",
@@ -505,8 +505,8 @@
       },
   "hexamod:HexaLevel": {
     "NAME": "Forma Infernal",
-    "DESCRIPTION": "Al inicio de tu turno, gana !M! de hexamod: Intensidad.",
-    "UPGRADE_DESCRIPTION": "Gana !M! de hexamod: Intensidad. NL Al inicio de tu turno, gana !M! de hexamod: Intensidad."
+    "DESCRIPTION": "Al inicio de tu turno, gana !M! de hexamod:Intensidad.",
+    "UPGRADE_DESCRIPTION": "Gana !M! de hexamod:Intensidad. NL Al inicio de tu turno, gana !M! de hexamod:Intensidad."
   },
   "hexamod:SkipABeat": {
     "NAME": "Avivar",
@@ -525,4 +525,6 @@
       ]
   }
 }
+
+
 
