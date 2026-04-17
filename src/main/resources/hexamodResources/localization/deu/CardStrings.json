@@ -72,7 +72,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Reise zum Äther",
-    "DESCRIPTION": "Setze !M! zufällige Flüchtig Karte auf die Hand. NL Erschöpft."
+    "DESCRIPTION": "Setze !M! zufällige Flüchtig Karte auf die Hand. NL Sie kostet 0 bis du sie spielst. NL Erschöpft."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra knusprig",
