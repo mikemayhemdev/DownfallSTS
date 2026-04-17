@@ -21,7 +21,7 @@
     "MOVES": [
       "Rayon de croissance"
     ],
-    "NAME": "Tête de la croissance",
+    "NAME": "Tête du progrès",
     "DIALOG": [
       ""
     ]
@@ -40,7 +40,7 @@
     ],
     "NAME": "Brigand",
     "DIALOG": [
-      "~Hé,~ t'as pas d'argent sur toi!",
+      "~Hé,~ t'as pas d'argent sur toi !",
       "@NOOOoooon!@",
       "Tu vas crever, mon gars."
     ]
@@ -51,7 +51,7 @@
     "NAME": "Pickpocket",
     "DIALOG": [
       "Donnons-lui une leçon.",
-      "Il oubliera jamais ça!"
+      "Il oubliera jamais ça !"
     ]
   },
   "downfall:Fortification": {
@@ -92,7 +92,7 @@
   "downfall:VoidCore": {
     "MOVES": [
     ],
-    "NAME": "Noyau vide",
+    "NAME": "Noyau du néant",
     "DIALOG": [
     ]
 }

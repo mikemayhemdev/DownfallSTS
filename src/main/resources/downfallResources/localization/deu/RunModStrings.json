@@ -5,7 +5,7 @@
   },
   "downfall:Hexed": {
     "NAME": "Verhext",
-    "DESCRIPTION": "Beginne den Run mit einem Samthalsband. Jede karte die zu ziehst wird Flüchtig."
+    "DESCRIPTION": "Beginne den Run mit einem Samthalsband. Jede karte, die zu ziehst, wird Flüchtig."
   },
   "downfall:Improvised": {
     "NAME": "Improvisiert",
@@ -33,7 +33,7 @@
   },
   "downfall:Enraging": {
     "NAME": "Letztes Aufgebot",
-    "DESCRIPTION": "Alle Gegner erhalten Stärke und verlieren ihre Debuffs sobald sie weniger als 50% ihrer max. TP übrig haben."
+    "DESCRIPTION": "Alle Gegner erhalten Stärke und verlieren ihre Debuffs, sobald sie weniger als 50% ihrer max. TP übrig haben."
   },
   "downfall:Analytical": {
     "NAME": "Analytisch",

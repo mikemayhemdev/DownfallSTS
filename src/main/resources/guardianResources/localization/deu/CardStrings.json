@@ -25,7 +25,7 @@
   "Guardian:Gem_White": {
     "NAME": "Opal",
     "DESCRIPTION": "guardianmod:Juwel. NL Ziehe eine Karte.",
-    "UPGRADE_DESCRIPTION": "Ziehe eine Karte."
+    "UPGRADE_DESCRIPTION": "Ziehe 1 Karte."
   },
   "Guardian:Gem_Orange": {
     "NAME": "Zitrin",
@@ -35,7 +35,7 @@
   "Guardian:Gem_Cyan": {
     "NAME": "Aquamarin",
     "DESCRIPTION": "guardianmod:Juwel. NL Erhalte einen *Kristallschutz.",
-    "UPGRADE_DESCRIPTION": "Erhalte einen *Kristallschutz."
+    "UPGRADE_DESCRIPTION": "Erhalte *Kristallschutz."
   },
   "Guardian:ChargeUp": {
     "NAME": "Aufladen",
@@ -48,11 +48,11 @@
   },
   "Guardian:DecasProtection": {
     "NAME": "Antike Macht",
-    "DESCRIPTION": "Erhalte !M! *temporäre Stärke und !M! *temporäre Geschicklichkeit."
+    "DESCRIPTION": "Erhalte !M! *temporäre Stärke und NL !M! *temporäre Geschicklichkeit."
   },
   "Guardian:FierceBash": {
     "NAME": "Erbitterter Hieb",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege diese Karte in guardianmod:Stasis. NL guardianmod:Ticken - Erhöhe den Schaden dieser Karte um !M!."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege diese Karte in guardianmod:Stasis. NL guardianmod:Ticken - Erhöhe den Schaden um !M!."
   },
   "Guardian:PolyBeam": {
     "NAME": "Poly-Strahl",
@@ -60,8 +60,8 @@
   },
   "Guardian:TwinSlam": {
     "NAME": "Zwillingshieb",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte einen *Zweiten *Hieb.",
-    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte einen *Zweiten *Hieb+."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte einen NL *Zweiten *Hieb.",
+    "UPGRADE_DESCRIPTION": "Füge !D! Schaden zu. NL Erhalte einen NL *Zweiten *Hieb+."
   },
   "Guardian:GuardianWhirl": {
     "NAME": "Wächter-Wind",
@@ -95,7 +95,7 @@
   },
   "Guardian:FloatingOrbs": {
     "NAME": "Schwebende Orbs",
-    "DESCRIPTION": "Immer wenn du eine Karte ausspielst, die 0 kostet, füge einem zufälligen Gegner !M! Schaden zu."
+    "DESCRIPTION": "Immer wenn du eine Karte ausspielst, die NL 0 kostet, füge einem zufälligen Gegner NL !M! Schaden zu."
   },
   "Guardian:OrbSlam": {
     "NAME": "Kugelknaller",
@@ -108,8 +108,8 @@
   },
   "Guardian:Orbwalk": {
     "NAME": "Kugelwandlung",
-    "DESCRIPTION": "Erhalte !M! Stärke. NL guardianmod:Ticken - Erhalte 1 Stärke. NL guardianmod:Volatil.",
-    "UPGRADE_DESCRIPTION": "Erhalte !M! Stärke. NL guardianmod:Ticken - Erhalte 1 Stärke."
+    "DESCRIPTION": "Erhalte !M! Stärke. NL guardianmod:Ticken - Erhalte NL 1 Stärke. NL guardianmod:Volatil.",
+    "UPGRADE_DESCRIPTION": "Erhalte !M! Stärke. NL guardianmod:Ticken - Erhalte NL 1 Stärke."
   },
   "Guardian:WalkerClaw": {
     "NAME": "Wandlerklaue",
@@ -136,12 +136,12 @@
   "Guardian:SentryWave": {
     "NAME": "Wache-Welle",
     "DESCRIPTION": "Wende !M! Schwach an. NL Lege einen *Wache-Strahl in guardianmod:Stasis. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Wende !M! Schwach an. NL guardianmod:Abhärten 2. NL Lege einen *Wache-Strahl+ in guardianmod:Stasis. NL Erschöpft."
+    "UPGRADE_DESCRIPTION": "Wende !M! Schwach an. guardianmod:Abhärten 2. Lege einen *Wache-Strahl+ in guardianmod:Stasis. NL Erschöpft."
   },
   "Guardian:CompilePackage": {
     "NAME": "Paket kompilieren",
     "DESCRIPTION": "Lege 1 von 3 *Paketen in guardianmod:Stasis. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Lege 1 von 3 verbesserten *Paketen in guardianmod:Stasis. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Lege 1 von 3 *verbesserten *Paketen in guardianmod:Stasis. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Wähle ein Paket."
     ]
@@ -213,7 +213,7 @@
   },
   "Guardian:Metallicize": {
     "NAME": "Erhärten",
-    "DESCRIPTION": "Erhalte !M! expansioncontent:Panzerrüstung."
+    "DESCRIPTION": "Erhalte NL !M! expansioncontent:Panzerrüstung."
   },
   "Guardian:StasisStrike": {
     "NAME": "Stasisschlag",
@@ -221,8 +221,8 @@
   },
   "Guardian:FuturePlans": {
     "NAME": "Zukunftspläne",
-    "DESCRIPTION": "Du kannst am Ende jedes Zuges bis zu !M! Karte in guardianmod:Stasis legen.",
-    "UPGRADE_DESCRIPTION": "Angeboren. NL Du kannst am Ende jedes Zuges bis zu !M! Karte in guardianmod:Stasis legen."
+    "DESCRIPTION": "Du kannst am Ende jedes Zuges bis zu NL !M! Karte in guardianmod:Stasis legen.",
+    "UPGRADE_DESCRIPTION": "Angeboren. NL Du kannst am Ende jedes Zuges bis zu NL !M! Karte in guardianmod:Stasis legen."
   },
   "Guardian:Suspension": {
     "NAME": "Aufschub",
@@ -245,7 +245,7 @@
   },
   "Guardian:RollAttack": {
     "NAME": "Rollender Angriff",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft im *Defensivmodus ALLE Gegner. Erhalte anderenfalls guardianmod:Abhärten 8."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Trifft ALLE Gegner im *Defensivmodus - ansonsten: guardianmod:Abhärten 8."
   },
   "Guardian:GemFire": {
     "NAME": "Juwelenkanone",
@@ -254,7 +254,7 @@
   },
   "Guardian:ChargeCore": {
     "NAME": "Kernladung",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege diese Karte in guardianmod:Stasis. NL guardianmod:Ticken - Ziehe eine Karte. NL guardianmod:Volatil."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL Lege diese Karte in guardianmod:Stasis. NL guardianmod:Ticken - Ziehe eine Karte. guardianmod:Volatil."
   },
   "Guardian:Reroute": {
     "NAME": "Umsteuern",
@@ -262,8 +262,8 @@
   },
   "Guardian:PiercingHide": {
     "NAME": "Stechende Haut",
-    "DESCRIPTION": "Erhalte !B! Block und !M! *temporäre Stacheln. NL guardianmod:Abhärten 3.",
-    "UPGRADE_DESCRIPTION": "Erhalte !B! Block und !M! *temporäre Stacheln. NL guardianmod:Abhärten 4."
+    "DESCRIPTION": "Erhalte !B! Block und NL !M! *temporäre Stacheln. NL guardianmod:Abhärten 3.",
+    "UPGRADE_DESCRIPTION": "Erhalte !B! Block und NL !M! *temporäre Stacheln. NL guardianmod:Abhärten 4."
   },
   "Guardian:ShieldSpikes": {
     "NAME": "Stachelschild",
@@ -292,11 +292,11 @@
   },
   "Guardian:RefractedBeam": {
     "NAME": "Prismenstrahl",
-    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. NL Kann beliebig oft verbessert werden. Pro Verbesserung +1 Mal:"
+    "DESCRIPTION": "Füge !M! Mal !D! Schaden zu. Kann beliebig oft verbessert werden. Pro Verbesserung +1 Mal:"
   },
   "Guardian:MultiBeam": {
     "NAME": "Multistrahl",
-    "DESCRIPTION": "Füge ALLEN Gegnern X mal !D! Schaden zu. NL guardianmod:Ticken - Erhöhe den Schaden dieser Karte um !M!."
+    "DESCRIPTION": "Füge ALLEN Gegnern X mal !D! Schaden zu. NL guardianmod:Ticken - Erhöhe den Schaden um !M!."
   },
   "Guardian:BaubleBeam": {
     "NAME": "Orb-Fassung",
@@ -337,7 +337,7 @@
   "Guardian:Gem_Synthetic": {
     "NAME": "Onyx",
     "DESCRIPTION": "guardianmod:Juwel. NL Reduziere deine Debuffs um 1.",
-    "UPGRADE_DESCRIPTION": "Reduziere deine Debuffs um 1."
+    "UPGRADE_DESCRIPTION": "Reduziere Debuffs um 1."
   },
   "Guardian:Gem_Yellow": {
     "NAME": "Bernstein",
@@ -346,8 +346,8 @@
   },
   "Guardian:Gem_Purple": {
     "NAME": "Amethyst",
-    "DESCRIPTION": "guardianmod:Juwel. NL ALLE Gegner verlieren für diesen Zug 2 Stärke.",
-    "UPGRADE_DESCRIPTION": "ALLE Gegner verlieren für diesen Zug 2 Stärke."
+    "DESCRIPTION": "guardianmod:Juwel. NL ALLE Gegner verlieren für diesen Zug NL 2 Stärke.",
+    "UPGRADE_DESCRIPTION": "ALLE Gegner verlieren diesen Zug 2 Stärke."
   },
   "Guardian:Gem_Crimson": {
     "NAME": "Granat",
@@ -362,7 +362,7 @@
   "Guardian:Gem_Fragmented": {
     "NAME": "Edelsteinsplitter",
     "DESCRIPTION": "guardianmod:Juwel. NL Erhalte ein *Kristallmesser.",
-    "UPGRADE_DESCRIPTION": "Erhalte ein *Kristallmesser."
+    "UPGRADE_DESCRIPTION": "Erhalte *Kristallmesser."
   },
   "Guardian:CrystalShiv": {
     "NAME": "Kristallmesser",
@@ -379,7 +379,7 @@
   },
   "Guardian:BronzeOrb": {
     "NAME": "Orb-Assistenz",
-    "DESCRIPTION": "Füge !D! Schaden zu. NL guardianmod:Härte dich in Höhe des ungeblockten Schadens *ab. NL Erschöpft."
+    "DESCRIPTION": "Füge !D! Schaden zu. NL guardianmod:Härte dich in Höhe des ungeblockten Schadens *ab. Erschöpft."
   },
   "Guardian:RevengeProtocol": {
     "NAME": "Kampfprotokoll",
@@ -441,7 +441,7 @@
   },
   "Guardian:BodySlam": {
     "NAME": "Körpereinsatz",
-    "DESCRIPTION": "Erhalte !B! Block. NL Füge Schaden in Höhe deines aktuellen Blocks zu.",
+    "DESCRIPTION": "Erhalte !B! Block. NL Füge Schaden in Höhe deines aktuellen *Blocks zu.",
     "UPGRADE_DESCRIPTION": " NL (Fügt !D! Schaden zu.)"
   },
   "Guardian:SecondStrike": {

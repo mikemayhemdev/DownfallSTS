@@ -22,8 +22,8 @@
   "awakened:SneckoPowersPotion": {
     "NAME": "Snecko-Essenz",
     "DESCRIPTIONS": [
-      "Wähle #b1 von #b3 zufälligen #yMachtkarten einer #yFremdklasse. Nimm sie auf die Hand, sie kostet diesen Zug #b0 [REMOVE_SPACE].",
-      "Wähle #b1 von #b3 zufälligen #yMachtkarten einer #yFremdklasse. Nimm #b",
+      "Wähle #b1 von #b3 zufälligen #yfremden #yMachtkarten [REMOVE_SPACE]. Nimm sie auf die Hand, sie kostet diesen Zug #b0 [REMOVE_SPACE].",
+      "Wähle #b1 von #b3 zufälligen #yfremden #yMachtkarten [REMOVE_SPACE]. Nimm #b",
       " Kopien auf die Hand, sie kosten diesen Zug #b0 [REMOVE_SPACE]."
     ]
   }

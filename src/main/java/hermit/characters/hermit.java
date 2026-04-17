@@ -297,6 +297,11 @@ public class hermit extends CustomPlayer {
         return effects;
     }
 
+    @Override
+    public Texture getCustomModeCharacterButtonImage() {
+        return downfall.util.TextureLoader.getTexture(getModID() + "Resources/images/charSelect/leaderboard.png");
+    }
+
     public void damage(DamageInfo info) {
         if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.output - this.currentBlock > 0) {
             AnimationState.TrackEntry e;

@@ -115,7 +115,7 @@ public class BustKeyEffect extends AbstractGameEffect {
             if (CampfireUI.hidden) {
                 AbstractRoom.waitTimer = 0.0F;
                 if (AbstractDungeon.getCurrRoom() instanceof RestRoom) {
-                    if (AbstractDungeon.player instanceof GuardianCharacter) {
+                    if (GuardianMod.socketBonfireOption != null) {
                         GuardianMod.socketBonfireOption.reCheck();
                     }
                     ((RestRoom) AbstractDungeon.getCurrRoom()).campfireUI.reopen();

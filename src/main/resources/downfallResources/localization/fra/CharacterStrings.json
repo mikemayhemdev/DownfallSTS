@@ -4,37 +4,37 @@
       "Le Cœur"
     ],
     "TEXT": [
-      "~Servez...~ NL ~moi...~ ~maintenant...~",
-      "~Levez-vous...~ NL ~Servant..~",
-      "~Levez-vous...~",
-      "~Tuez~ NL ~les~ ~intrus...~",
-      "~Atteignez~ ~l'intrus...~ NL ~pour~ ~recevoir~ ~plus~ ~de..~ ~bénédictions...~",
-      "~Allez~ ~au~ ~moins...~ ~confronter~ NL ~le~ ~premier~ ~intrus...~",
-      "~Je~ ~vous~ ~ai~ ~ramené...~",
-      "~Choisissez...~",
+      "~Sers...~ NL ~moi...~ ~maintenant...~",
+      "~Lève-toi...~ NL ~Servant..~",
+      "~Lève-toi...~",
+      "~Tue~ NL ~les~ ~intrus...~",
+      "~Atteins~ ~l'intrus...~ NL ~pour~ ~recevoir~ ~plus~ ~de..~ ~bénédictions...~",
+      "~Va~ ~au~ ~moins...~ ~confronter~ NL ~le~ ~premier~ ~intrus...~",
+      "~Je~ ~t'ai~ ~ramené...~",
+      "~Choisis...~",
       "~Accepté...~",
       "~Sacrifice...~ NL ~...pour~ ~pouvoir....~",
-      "~PROUVEZ~ ~votre~ NL ~valeur...~",
+      "~PROUVE~ ~ta~ NL ~valeur...~",
       "Récompenses",
-      "~Continuez~ ~pour~ ~moi...~",
-      "~Descendez...~ ~..dans la folie...~",
+      "~Continue~ ~pour~ ~moi...~",
+      "~Descends...~ ~..dans la folie...~",
       "~Impressionant...~ ~encore...~",
-      "Maudit!",
-      "Écervelé!",
-      "Transformation!"
+      "Maudit !",
+      "Écervelé !",
+      "Transformation !"
     ],
     "OPTIONS": [
       "[Continuer]",
       "[Parler]",
       "[Passer]",
       "[Quitter]",
-      "Choisissez 10 cartes pour ajouter dans votre deck.",
+      "Choisissez 10 cartes à ajouter à votre deck.",
       "[ #gLes #gEnnemis #gdans #gvos #gtrois #gprochains #gcombats #gfuient #gpar #gterreur ]",
-      "[ Verrouillé - Ne peut pas être choisi pour la 1ère run]",
-      "[ #gTous #gles #gDiablotins #ggagnent #gPV #gMax #g+",
-      "#gTous #gles #gDiablotins #ggagnent #gPV #gMax #g+",
-      "[ #rTous #rles #rDiablotins #rperdent #r",
-      "[ #rTous #rles #rDiablotins #rperdent #r"
+      "[ Verrouillé : Ne peut pas être choisi pour la 1ère run ]",
+      "[ #gChaque #gDiablotin #ga #gses #gPV #gmax #gaugmentés #gde #g",
+      "#gChaque #gDiablotin #ga #gses #gPV #gmax #gaugmentés #gde #g",
+      "[ #rChaque #rDiablotin #rperd #r",
+      "[ #rChaque #rDiablotin #rsubit #r"
     ]
   },
   "downfall:Unlock": {
@@ -59,7 +59,7 @@
   },
   "downfall:HeartMerchant": {
     "NAMES": [
-      "Proceed",
+      "Procède",
       "~Sacrifice...~"
     ],
     "TEXT": [
@@ -165,28 +165,28 @@
       "Le Dévor'heures'",
       "L'Éveillé",
       "Les Anciens",
-      "Division: de Bronze",
-      "Division: Follet",
-      "Division: Torche",
-      "Division: Cultiste",
-      "Division: Protecteur",
-      "Division: Insultant",
-      "Division: Ancien",
-      "Division: Temporel"
+      "Division : Bronze",
+      "Division : Follet",
+      "Division : Torche",
+      "Division : Cultiste",
+      "Division : Protecteur",
+      "Division : Insultant",
+      "Division : Ancien",
+      "Division : Temporel"
     ],
     "TEXT": [
       "Perdez 3 PV. NL Obtenez 15 Âmes.",
-      "Perdez 3 PV. NL Ajoutez une carte Incolore aléatoire dans votre main.",
+      "Perdez 3 PV. NL Ajoutez une carte Incolore aléatoire à votre main.",
       "Perdez 7 PV. NL Obtenez une potion aléatoire.",
-      "Obtenez des cartes du Gardien expansioncontent:Boss.",
-      "Obtenez des cartes de l'Hexaplasme expansioncontent:Boss.",
-      "Obtenez des cartes du Parrain Slime expansioncontent:Boss.",
-      "Obtenez des cartes de l'Automate expansioncontent:Boss.",
-      "Obtenez des cartes du Champion expansioncontent:Boss cards.",
-      "Obtenez des cartes du Collecteur expansioncontent:Boss.",
-      "Obtenez des cartes du Dévor'heures expansioncontent:Boss.",
-      "Obtenez des cartes de l'Éveillé expansioncontent:Boss.",
-      "Obtenez des cartes des Anciens expansioncontent:Boss.",
+      "Obtenez des cartes de *Boss du Gardien.",
+      "Obtenez des cartes de *Boss de l'Hexaplasme.",
+      "Obtenez des cartes de *Boss du Parrain Slime.",
+      "Obtenez des cartes de *Boss de l'Automate.",
+      "Obtenez des cartes de *Boss du Champion.",
+      "Obtenez des cartes de *Boss du Collecteur.",
+      "Obtenez des cartes de *Boss du Dévor'heures.",
+      "Obtenez des cartes de *Boss de l'Éveillé.",
+      "Obtenez des cartes de *Boss des Anciens.",
       "Divisez vous en slimeboundmod:Slime_de_Bronze.",
       "Divisez vous en slimeboundmod:Slime_Follet.",
       "Divisez vous en slimeboundmod:Slime_Torché.",
@@ -210,7 +210,7 @@
     ],
     "TEXT": [
       "Choisissez un Boss à Étudier.",
-      "Choisissez à Avancer,Reculer ou ne Rien Faire"
+      "Choisissez entre Avancer, Reculer et ne rien faire."
     ]
   },
   "downfall:CharBossMerchant": {
@@ -239,7 +239,7 @@
   },
   "downfall:OldNeow": {
     "NAMES": [
-      "Ancien Neow"
+      "Ancienne Neow"
     ],
     "TEXT": [
     ]
@@ -250,7 +250,7 @@
     ],
     "TEXT": [
       "Non, ce n'est pas possible ! On a besoin de plus de toxines...",
-      "Meurs, monstre! Tu n'appartiens pas à ce monde !"
+      "Meurs, monstre ! Tu n'appartiens pas à ce monde !"
     ]
   }
 

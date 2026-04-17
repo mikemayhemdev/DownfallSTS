@@ -2,14 +2,14 @@
   "downfall:FairyPotion": {
     "NAME": "Potion féérique",
     "DESCRIPTIONS": [
-      "Se soigne de #b30% de ses PV Max au lieu de mourir, retirant cet effet.",
-      "Ha! Potion féérique, idiot!"
+      "Survit et récupère #b30% de ses PV Max au lieu de mourir, puis perd cet effet.",
+      "Ha ! Potion féérique, idiot!"
     ]
   },
   "downfall:CultistRevivePower": {
-    "NAME": "Faux Culte",
+    "NAME": "Faux culte",
     "DESCRIPTIONS": [
-      "Soigne #b50% de ses PV Max au lieu de mourir, retirant cet effet.",
+      "Survit et récupère #b50% de ses PV Max au lieu de mourir, puis perd cet effet.",
       "CAAAAWWWW!"
     ]
   },
@@ -17,11 +17,11 @@
     "NAME": "Voleur d'âmes",
     "DESCRIPTIONS": [
       "A volé #b",
-      " de vos Âmes."
+      " Âmes."
     ]
   },
   "downfall:NeowInvulnerable": {
-    "NAME": "Dieu de la vie",
+    "NAME": "Déesse de la vie",
     "DESCRIPTIONS": [
       "Se soigne de #b",
       " PV lorque vous jouez une carte."
@@ -31,20 +31,20 @@
     "NAME": "Transfo-pioche",
     "DESCRIPTIONS": [
       "#yTransformez les #b",
-      " premières cartes piochées lors de ce tour. (",
-      " cartes restantes)"
+      " premières cartes piochées lors de ce tour. (Encore ",
+      ")"
     ]
   },
   "downfall:TotemInvulnerable": {
-    "NAME": "Mur Vivant",
+    "NAME": "Mur vivant",
     "DESCRIPTIONS": [
-      "Ne peut pas mourir saus si toutes les autres Têtes sont à #b1 PV.  Meurt si n'importe quelle autre Tête meurt."
+      "Ne peut pas mourir, sauf si toutes les autres Têtes ont #b1 PV. Meurt si n'importe quelle autre Tête meurt."
     ]
   },
   "downfall:ExhaustCardsPower": {
     "NAME": "Amnésique",
     "DESCRIPTIONS": [
-      "À la fin de votre tour, choisissez une carte à Épuiser."
+      "À la fin de votre tour, #yÉpuisez une carte de votre main."
     ]
   },
   "downfall:SpotWeakness": {
@@ -52,21 +52,21 @@
     "DESCRIPTIONS": [
       "Si vous jouez une #yAttaque ce tour, l'ennemi gagnera #b",
       " de #yForce.",
-      "Vous avez joué une Attaque ce tour. l'ennemi va gagner #b",
+      "Vous avez joué une #yAttaque ce tour. L'ennemi va gagner #b",
       " de #yForce."    
     ]
   },
   "downfall:FearNoEvil": {
-    "NAME": "Craindre aucun mal",
+    "NAME": "Sans crainte",
     "DESCRIPTIONS": [
-      "Si vous jouez une carte attaque a se tour, cette ennemie changera sa posture en #yCalm une fois qu'il ora jouez sa carte #yFear #yNo #yEvil .",
-      "cette ennemie changera sa posture en #yCalm une fois qu'il ora jouez sa carte #yFear #yNo #yEvil."	 																																																		  
+      "Si vous jouez une #yAttaque ce tour, cette ennemie entrera en #yCalme après avoir joué #ySans #yCrainte [REMOVE_SPACE].",
+      "Cette ennemie entrera en #yCalme après avoir joué #ySans #yCrainte [REMOVE_SPACE]."	 																																																		  
     ]
   },
   "downfall:PoisonResist": {
     "NAME": "Impossible de ralentir",
     "DESCRIPTIONS": [
-      "Lorsque vous infligez des dégâts #yd'Attaque, perdez #b",
+      "Lorsque vous infligez des dégâts #yd'Attaque non-bloqués, perdez #b",
       " de #yPoison."
     ]
   },
@@ -80,14 +80,14 @@
   "downfall:NeowBuff": {
     "NAME": "Vigueur de Neow",
     "DESCRIPTIONS": [
-      "Gagne #b2 de #yForce à la fin du round."
+      "Gagne #b2 de #yForce à la fin de son tour."
     ]
   },
   "downfall:WatcherAngryPower": {
     "NAME": "Stabilité",
     "DESCRIPTIONS": [
-      "À la fin du tour, si la Gardienne est à #b50% de ses PV ou moins, elle entre en #yColère. NL La #yColère de la Gardienne augmente les dégâts infligés et reçus de #b50% au lieu de #b100%.",
-      "La #yColre de la Gardienne augmente les dégâts reçus et infligés de #b50% au lieu de #b100% [REMOVE_SPACE]."
+      "À la fin de son tour, si la Gardienne est à #b50% de ses PV ou moins, elle entre en #yColère. NL La #yColère de la Gardienne augmente les dégâts infligés et reçus de #b50% au lieu de #b100% [REMOVE_SPACE].",
+      "La #yColère de la Gardienne augmente les dégâts reçus et infligés de #b50% au lieu de #b100% [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowUnbridledRage": {
@@ -100,15 +100,15 @@
     "NAME": "Mort blasphématoire",
     "DESCRIPTIONS": [
       "Quand la Gardienne perd #b",
-      " PV de plus,s'applique #b-4 de #yForce quand elle entre pour la prochaine fois en #yDivinité ou joue #yRagnarok.",
-      "La Gardienne perdra #b4 de #yForce quand elle entre pour la prochaine fois en #yDivinité ou joue #yRagnarok."
+      " PV, elle perd #b1 de #yForce [REMOVE_SPACE], jusqu'à #b3 fois par tour. Votre #yArmure vous protège de la carte #yPoints #yVitaux [REMOVE_SPACE].",
+      "La Gardienne a déjà perdu #b3 de #yForce ce tour."
     ]
   },
   "downfall:WatcherSkillPower": {
     "NAME": "En proie à la discorde",
     "DESCRIPTIONS": [
-      "Lorsque vous jouez une Attaque, la Gardienne gagne #b",
-      " de #yDextérité Temporaire, #b",
+      "La Gardienne gagne #b",
+      " de #yDextérité Temporaire lorsque vous jouez une #yAttaque, #b",
       " de #yForce Temporaire quand vous jouez une #yCompétence, et #b",
       " des deux quand vous jouez un #yPouvoir.",
       "Si vous jouez plus de #b",
@@ -127,8 +127,8 @@
     "NAME": "Mort blasphématoire",
     "DESCRIPTIONS": [
       "Sauf si Neow perd #b",
-      " PV de plus, la prochaine fois qu'elle gagne un Buff, elle gagnera également #b10 de #yForce supplémentaires.",
-      "Neow est infirme et ne gagnera pas #b10 de #yForce supplémentaires durant son prochain tour de Buff."
+      " PV de plus, la prochaine fois qu'elle gagne un buff, elle gagnera également #b10 de #yForce [REMOVE_SPACE].",
+      "Neow est blessée et ne gagnera pas de #yForce supplémentaire durant son prochain tour de buff."
     ]
   },
   "downfall:WatcherDivinityPower": {
@@ -140,11 +140,11 @@
   "downfall:SimpleWatcherDivinityPower": {
     "NAME": "Foi éphémère",
     "DESCRIPTIONS": [
-      "La Gardienne gagne #b1 de Mantra et #b1 #yd'Intangibilité après que vous ayez joué #b6 cartes en un tour.",
+      "La Gardienne gagne #b1 de #yMantra et #b1 #yd'Intangibilité si vous jouez #b6 cartes en un tour.",
       " NL Vous avez joué #b",
       " cartes ce tour.",
       " NL (A déjà été déclenché ce tour)",
-      " NL NL Une fois que La Gardienne entre en Divinité, elle ne la quitte pas pour le reste du combat, mais la Divinité augmente les dégâts de 200% seulement."
+      " NL NL Une fois que La Gardienne entre en #pDivinité, elle ne la quitte pas pour le reste du combat, mais la #pDivinité double les dégâts de ses #yAttaques au lieu de les tripler."
     ]
   },
   "downfall:NeowFleetingFaith": {
@@ -156,13 +156,13 @@
   "downfall:SilentShivTimeEaterPower": {
     "NAME": "Sac de couteaux",
     "DESCRIPTIONS": [
-      "La première fois que vous jouez une carte qui coûte #b2 ou plus chaque tour, la Silencieuse gagne 2 #ySurins."
+      "Chaque tour, la première fois que vous jouez une carte qui coûte #b2 ou plus, la Silencieuse gagne 2 #ySurins [REMOVE_SPACE]."
     ]
   },
   "downfall:SilentDelayedWraithPower": {
     "NAME": "Possession fatale",
     "DESCRIPTIONS": [
-      "La première fois que la Silencieuse atteint 0 PV, elle activera #yForme #ySpectrale",
+      "La première fois que la Silencieuse atteint 0 PV, elle activera #yForme #yspectrale",
       " et se soignera de #b",
       " PV."
     ]
@@ -170,73 +170,73 @@
   "downfall:NeowBagOfKnives": {
     "NAME": "Sac de couteaux",
     "DESCRIPTIONS": [
-      "Les deux premières fois que vous jouez une carte qui coûte #b0 chaque tour, prenez #b4 de dégâts."
+      "Chaque tour, les deux premières fois que vous jouez une carte qui coûte #b0 [REMOVE_SPACE], subissez #b4 dégâts."
     ]
   },
   "downfall:SilentMirrorImagePower": {
-    "NAME": "Voir Double",
+    "NAME": "Voir double",
     "DESCRIPTIONS": [
-      "Au début de chaque tour, une image reflet de la Silencieuse va cacher sa vraie localisation. Attaquer la Silencieuse ou le reflet fait disparaître ce dernier du combat pour ce tour."
+      "Au début de chaque tour, une illusion de la Silencieuse va dissimuler sa vraie position. Attaquer la Silencieuse ou son mirage fait disparaître ce dernier pour ce tour."
     ]
   },
   "downfall:NeowSeeingDouble": {
-    "NAME": "Voir Double",
+    "NAME": "Voir double",
     "DESCRIPTIONS": [
-      "La première #yAttaque utilisée chaque tour contre Neow inflige #b0 de dégâts."
+      "Chaquez tour, la première #yAttaque utilisée contre Neow inflige #b0 dégâts."
     ]
   },
   "downfall:SilentPoisonPower": {
-    "NAME": "Nouvelles Toxines",
+    "NAME": "Nouvelles toxines",
     "DESCRIPTIONS": [
       "Le #yPoison peut être bloqué et inflige des dégâts à la fin du tour.",
-      "Le #yPoison peut être bloqué, ne se dégrade pas, et inflige des dégâts à la fin du tour."
+      "Le #yPoison peut être bloqué, ne diminue pas, et inflige des dégâts à la fin du tour."
     ]
   },
   "downfall:NeowHighlyToxic": {
-    "NAME": "Attention: Hautement toxique",
+    "NAME": "Attention : hautement toxique",
     "DESCRIPTIONS": [
-      "Neow vous applique #b5 de #yPoison par tour. Le Poison peut être défendu et inflige des dégâts à la fin du tour. NL Mélangez 2 #yAntidotes dans votre deck au début de votre tour."
+      "Neow vous applique #b5 de #yPoison par tour. Le Poison peut être bloqué et inflige des dégâts à la fin de votre tour. NL Mélangez 2 #yAntidotes dans votre pioche au début du combat."
     ]
   },
   "downfall:DefectVoidPower": {
-    "NAME": "Voleur d'Énergie",
+    "NAME": "Voleur d'énergie",
     "DESCRIPTIONS": [
-      "Lorsque le Défectueux génère un #yNéant, celui-ci va sur le haut de votre pioche."
+      "Lorsque le Défectueux génère un #yNéant, celui-ci va dans votre défausse."
     ]
   },
   "downfall:NeowEnergyThief": {
-    "NAME": "Voleur d'Énergie",
+    "NAME": "Voleuse d'énergie",
     "DESCRIPTIONS": [
-      "Quand Neow ajoute des #rMalédictions dans votre pioche, elle ajoute également 1 carte #yStatut #yNéant."
+      "Quand Neow ajoute des #rMalédictions à votre pioche, elle ajoute également 1 #yNéant [REMOVE_SPACE]."
     ]
   },
   "downfall:DefectAncientConstructPower": {
-    "NAME": "Structure Antique",
+    "NAME": "Structure antique",
     "DESCRIPTIONS": [
-      "Commence le combat avec 2 #yOrbes #yde #yBronze. NL Gagne 1 #yArtéfact à la fin de son tour si celui-ci n'a pas #yd'Artéfact."
+      "Commence le combat avec 2 #yOrbes #yde #yBronze [REMOVE_SPACE]. NL La #ySurtension #yNucléique du Défectueux ne #ys'Épuise pas [REMOVE_SPACE]."
     ]
   },
   "downfall:NeowAncientConstruct": {
-    "NAME": "Structure Antique",
+    "NAME": "Structure antique",
     "DESCRIPTIONS": [
-      "Neow gagne #b2 d'#yArtéfact à la fin de son tour si elle n'a pas  d'#yArtéfact."
+      "Neow gagne #b2 d'#yArtéfact à la fin de son tour si elle n'a pas d'#yArtéfact [REMOVE_SPACE]."
     ]
   },
   "downfall:DefectCuriosity": {
-    "NAME": "Cognition Impartiale",
+    "NAME": "Cognition impartiale",
     "DESCRIPTIONS": [
-      "Lorsque vous jouez une carte #yPouvoir, le Défectueux gagne #b",
+      "Lorsque vous jouez un #yPouvoir [REMOVE_SPACE], le Défectueux gagne #b",
       " de #yConcentration [REMOVE_SPACE].",
-      " Les changements de la Force du Défecteux change également sa #yConcentration [REMOVE_SPACE]."
+      " Les changements de #yForce du Défecteux changent également sa #yConcentration [REMOVE_SPACE]."
     ]
   },
   "downfall:DefectBiasCuriosity": {
-    "NAME": "Cognition corrigée",
+    "NAME": "Cognition biaisée",
     "DESCRIPTIONS": [
-      "Le Défectueux commence avec #b4 de #yConcentration et en gagne #b1 de plus lorsque vous jouez un #yPouvoir [REMOVE_SPACE], mais perd également #b1 de #yConcentration au début de leur tour.",
+      "Le Défectueux commence avec #b4 de #yConcentration et en gagne #b1 de plus lorsque vous jouez un #yPouvoir [REMOVE_SPACE], mais perd #b1 de #yConcentration au début de son tour.",
       "Le Défectueux perd #b",
       " de #yConcentration",
-      " à la fin de leur tour."
+      " à la fin de son tour."
     ]
   },
   "downfall:DefectCuriosityLighning": {
@@ -247,28 +247,28 @@
     ]
   },								   
   "downfall:NeowUnbiasedCognition": {
-    "NAME": "Cognition Impartiale",
+    "NAME": "Cognition impartiale",
     "DESCRIPTIONS": [
-      "Neow gagne #b2 de #yForce pour chaque carte #yPouvoir que vous jouez."
+      "Lorsque vous jouez un #yPouvoir [REMOVE_SPACE], Neow gagne #b2 de #yForce [REMOVE_SPACE]."
     ]
   },
   "downfall:IroncladStatusPower": {
     "NAME": "Synchronisation",
     "DESCRIPTIONS": [
-      "Lorsque le Soldat de Fer génère une carte #yStatut, un doublon est ajouté dans votre défausse.",
-      "Lorsque le Soldat de Fer génère une carte #yStatut, elle entre dans votre défausse à la place. NL Après avoir perdu #b",
-      " PV de plus, vous obtenez une #yPureté avec #yRetenue.",
-      "Lorsque le Soldat de Fer génère une carte #yStatut, elle entre dans votre pioche à la place. NL Après avoir perdu #b"
+      "Lorsque le Soldat de Fer génère une carte de #yStatut, un doublon est ajouté à votre défausse.",
+      "Lorsque le Soldat de Fer génère une carte de #yStatut [REMOVE_SPACE], elle va dans votre défausse. NL Si vous perdez encore #b",
+      " PV, ajoutez à votre main une #yPureté qui a #yRetenue [REMOVE_SPACE].",
+      "Lorsque le Soldat de Fer génère une carte de #yStatut [REMOVE_SPACE], elle va dans votre pioche. NL Si vous perdez encore #b"
     ]
   },
   "downfall:NeowSyncronize": {
     "NAME": "Synchronisation",
     "DESCRIPTIONS": [
-      "Neow ajoute une carte #yStatut aléatoire dans votre défausse chaque tour."
+      "Neow ajoute un #yStatut aléatoire à votre défausse chaque tour."
     ]
   },
   "downfall:IroncladMushroomPower": {
-    "NAME": "Faim Frénétique",
+    "NAME": "Faim frénétique",
     "DESCRIPTIONS": [
       "La #yFaucheuse du Soldat de Fer ne #ys'Épuise pas et cible TOUS les Champignons. NL Quand le Soldat de Fer tue un Champignon, il gagne #b1 de #yForce [REMOVE_SPACE].",
       "La #yFaucheuse du Soldat de Fer cible TOUS les Champignons. NL Quand le Soldat de Fer tue un Champignon, il gagne #b",
@@ -276,7 +276,7 @@
     ]
   },
   "downfall:NeowFeedingFrenzy": {
-    "NAME": "Faim Frénétique",
+    "NAME": "Faim frénétique",
     "DESCRIPTIONS": [
       "Neow se soigne lorsqu'elle inflige des dégâts non-bloqués."
     ]
@@ -286,7 +286,7 @@
     "DESCRIPTIONS": [
       "Le Soldat de fer commence le combat avec une #yFortification, qui lui octroie #b",
       " #yd'Armure chaque tour. NL Quand la #yFortification est détruite, le Soldat de Fer perd #yBarricade, mais gagne #b5 de #yForce au début de chaque tour.",
-      "Quand détruite, le Soldat de Fer perd #yBarricade, mais gagne #b5 de #yForce au début de chaque tour."
+      "Lorsque détruite, le Soldat de Fer perd #yBarricade, mais gagne #b5 de #yForce au début de chaque tour."
     ]
   },
   "downfall:NeowBastion": {
@@ -296,7 +296,7 @@
     ]
   },
   "downfall:MerchantStrengthPower": {
-    "NAME": "Voleur d'Âmes",
+    "NAME": "Voleur d'âmes",
     "DESCRIPTIONS": [
       "Le Marchand a le double de la #yForce obtenue par ses vols d'Âmes durant cette run, et gagne un montant égal de Dextérité."
     ]
@@ -304,24 +304,24 @@
   "downfall:NeowMantra": {
     "NAME": "Mantra",
     "DESCRIPTIONS": [
-      "Quand Neow a #b10 de #yMantra, elle entre en Divinité, infligeant des dégâts triplés au tour suivant."
+      "Quand Neow a #b10 de #yMantra, elle entre en Divinité, infligeant des dégâts triplés pour un tour."
     ]
   },
   "downfall:NeowSeeingDoubleProduct": {
     "NAME": "???",
     "DESCRIPTIONS": [
-      "Votre prochaine #yAttaque utilisée contre Neow inflige 0 de dégâts ce tour-ci."
+      "Votre prochaine #yAttaque utilisée contre Neow inflige 0 de dégâts."
     ]
   },
   "downfall:CrowbotRitualPower": {
-    "NAME": "Reprogrammer:Ritual",
+    "NAME": "Reprogrammer : Rituel",
     "DESCRIPTIONS": [
-      "Quand #yCrowBot est à #b50% de PV ou moins, il perd #b3 PV et gagne #b",
+      "Si #yCorBot a #b50% de PV ou moins, il perd #b3 PV et gagne #b",
       " de #yForce à la fin de son tour."
     ]
   },
   "downfall:DamageMultiplier": {
-    "NAME": "Damage Multiplier",
+    "NAME": "Multiplicateur de dégâts",
     "DESCRIPTIONS": [
       "Les #yAttaques infligent #b",
       " fois plus de dégâts."
@@ -334,79 +334,79 @@
     ]
   },
   "downfall:OnDeathEveryoneStr": {
-    "NAME": "Dernier Souffle: Enflammer+",
+    "NAME": "Dernier souffle : Enflammer+",
     "DESCRIPTIONS": [
-      "Quand ce personnage meurt, TOUS les personnages (vous incluant) gagnent #b",
-      " de #yForce."
+      "Quand ce personnage meurt, TOUS les personnages (y compris vous) gagnent #b",
+      " de #yForce [REMOVE_SPACE]."
     ]
   },
   "downfall:OnDeathEveryoneThorns": {
-    "NAME": "Dernier Souffle: Chausse-Trappes+",
+    "NAME": "Dernier souffle : Chausse-trapes+",
     "DESCRIPTIONS": [
-      "Quand ce personnage meurt, TOUS les personnages (vous incluant) gagnent #b",
-      " #yd'Épines."
+      "Quand ce personnage meurt, TOUS les personnages (y compris vous) gagnent #b",
+      " #yd'Épines [REMOVE_SPACE]."
     ]
   },
   "downfall:OnDeathEveryoneBuffer": {
-    "NAME": "Dernier Souffle: Tampon+",
+    "NAME": "Dernier souffle : Tampon+",
     "DESCRIPTIONS": [
-      "Quand ce personnage meurt, TOUS les personnages (vous incluant) gagnent #b",
-      " de #yTampon. (Tampon: Empêche la prochaine perte de PV)"
+      "Quand ce personnage meurt, TOUS les personnages (y compris vous) gagnent #b",
+      " de #yTampon. (Tampon empêche la prochaine perte de PV)"
     ]
   },
   "downfall:OnDeathEveryoneVigor": {
-    "NAME": "Dernier Souffle: Couronne de flammes+",
+    "NAME": "Dernier souffle : Couronne de flammes+",
     "DESCRIPTIONS": [
-      "Quand ce personnage meurt, TOUS les personnages (vous incluant) gagnent #b",
-      " de #yVigueur. (Vigueur: Augmente les dégâts d'une Attaque unique)"
+      "Quand ce personnage meurt, TOUS les personnages (y compris vous) gagnent #b",
+      " de #yVigueur. (Vigueur augmente les dégâts de la prochaine attaque)"
     ]
   },
   "downfall:OnDeathEveryoneRuggedVuln": {
-    "NAME": "Dernier Souffle: Gestalt",
+    "NAME": "Dernier souffle : Gestalt",
     "DESCRIPTIONS": [
-      "Quand ce personnage meurt, TOUS les personnages (vous incluant) gagnent #b",
+      "Quand ce personnage meurt, TOUS les personnages (y compris vous) gagnent #b",
       " de #yRobustesse et #b",
-      " de #yVulnérabilité. (Robustesse: Réduit les dégâts non-bloqués à 3) "
+      " de #yVulnérabilité. (Robustesse réduit les prochains dégâts non-bloqués à #b2 [REMOVE_SPACE]) "
     ]
   },
   "downfall:MonsterVigor": {
     "NAME": "Vigueur",
     "DESCRIPTIONS": [
-      "La prochaine Attaque de ce personnage inflige #b",
+      "La prochaine attaque de ce personnage infligera #b",
       " dégâts supplémentaires."
     ]
   },
   "downfall:HermitConcentrateAdder": {
     "NAME": "Focus mortel",
     "DESCRIPTIONS": [
-      "L'Ermite est Concentré, qui ajoute des effets spéciaux Dans le Mille à ses cartes. Infliger #b10 dégâts d'Attaque à l'Ermite brise sa concentration, causant ses cartes de perdre ses effets Dans Le Mille."
+      "L'Ermite est #yConcentré, ce qui déclenche les effets #yDans #yle #yMille de ses cartes. Infliger #b10 dégâts à l'Ermite brise sa #yConcentration jusqu'à la fin de son tour."
     ]
   },
   "downfall:HermitConcentrationPower": {
     "NAME": "Concentré",
     "DESCRIPTIONS": [
-      "Les cartes de l'Ermite ont des effets bonus #yDans #yLe #yMille pendant qu'il est concentré. Infligez #b",
-      " dégâts de plus pour briser sa Concentration ce tour.",
-      "La Concentration de l'Ermite est brisée et ses effets #yDans #yLe #yMille ne se déclencheront pas ce tour."
+      "Déclenche les effets #yDans #yLe #yMille des cartes de l'Ermite. Infligez encore #b",
+      " dégâts pour briser sa #yConcentration ce tour.",
+      "La #yConcentration de l'Ermite est brisée et ses effets #yDans #yLe #yMille ne se déclencheront pas ce tour."
     ]
   },
   "downfall:TangerinePower": {
-    "NAME": "Député",
+    "NAME": "Adjointe",
     "DESCRIPTIONS": [
-      "Quand Mandarine meurt, l'Ermite brise sa #yConcentration et gagne #b",
+      "Quand Mandarine meurt, la #yConcentration de l'Ermite est brisée, et il gagne #b",
       " de #yForce.",
-      "Quand Mandarine meurt, l'Ermite brise sa #yConcentration."
+      "Quand Mandarine meurt, la #yConcentration de l'Ermite est brisée."
     ]
   },							  	
   "downfall:HermitWheelOfFortune": {
-    "NAME": "Roue de la Destinée",
+    "NAME": "Roue de la destinée",
     "DESCRIPTIONS": [
-      "Lorsque vous jouez une Attaque, l'Ermite #yCycle sa première carte. Le coût des cartes de l'Ermite ne peut pas changer. Lorsque l'Ermite pioche #rMalédiction #rFatale, il gagne #b2 de #yForce.",
-      "Lorsque vous jouez une Attaque, l'Ermite #yCycle sa première carte."
+      "Lorsque vous jouez une #yAttaque, l'Ermite #yCycle sa première carte. Le coût des cartes de l'Ermite ne peut pas changer. Lorsque l'Ermite pioche #rMalédiction #rFatale, il gagne #b2 de #yForce.",
+      "Lorsque vous jouez une #yAttaque, l'Ermite #yCycle sa première carte."
     ]
   },
   "downfall:HermitDoomsday": {
-    "NAME": "Doomsday",
+    "NAME": "Catastrophe",
     "DESCRIPTIONS": [
       "L'Ermite commence avec #b1 de Rituel [REMOVE_SPACE]. Lorsque l'Ermite joue #yPurgatoire [REMOVE_SPACE], il invoque une #rDague #rCondamnée [REMOVE_SPACE]."
     ]
@@ -414,7 +414,7 @@
   "downfall:NeowEclipse": {
     "NAME": "Éclipse",
     "DESCRIPTIONS": [
-      "Neow ajoute un #rDestin #rImminent #yÉthérée à votre main chaque tour."
+      "Neow ajoute un #rDestin #rimminent #yÉthéré à votre main chaque tour."
     ]
   },
   "downfall:NeowWheelOfDeath": {
@@ -428,13 +428,13 @@
   "downfall:NeowDistracting": {
     "NAME": "Distraction",
     "DESCRIPTIONS": [
-      "La première fois que vous #yAttaquez Neow chaque tour, gagnez #b1 [E] de moins au prochain tour."
+      "Si vous infligez des dégâts #yd'Attaques à Neow, gagnez #b1 [E] de moins au prochain tour."
     ]
   },
   "downfall:NextTurnPowerPower": {
     "NAME": "Au prochain tour ",
     "DESCRIPTIONS": [
-      "BUG! You should not see this",
+      "BUG ! Vous ne devriez pas voir ce message.",
       "Au prochain tour, gagnez #b",
       " ",
       " #y",
@@ -458,46 +458,46 @@
   "downfall:NeowSpirit": {
     "NAME": "Esprit du Héros",
     "DESCRIPTIONS": [
-      "Quand Neow a l'intention de se Buff, elle gagne 6 de Force et... ",
-      " NL Gagne 1 Forme Démoniaque #y(Soldat de Fer)",
-      " NL Gagne 2 d'Épines #y(Silencieuse)",
-      " NL Gagne 2 de Tampon #y(Défectueux)",
-      " NL Gagne 5 de Mantra #y(Gardienne)",
-      " NL Ajoute un *Déclin dans votre pioche. #y(Ermite)"
+      "Quand Neow a l'intention de se Buff, elle gagne 6 de Force et :",
+      " NL Gagne #b1 Forme Démoniaque. #y(Soldat #yde #yFer)",
+      " NL Gagne #b2 d'Épines. #y(Silencieuse)",
+      " NL Gagne #b2 de Tampon. #y(Défectueux)",
+      " NL Gagne #b5 de Mantra. #y(Gardienne)",
+      " NL Ajoute un *Déclin à votre pioche. #y(Ermite)"
     ]
   },
   "downfall:HeartsFavorPower": {
     "NAME": "Faveur du Cœur",
     "DESCRIPTIONS": [
-      "Chaque fois que #yl'Invincibilité de Neow atteint #b0 [REMOVE_SPACE], réduisez sa compétence #yDieu #yde #yla #yVie de #b",
+      "Chaque fois que #yl'Invincibilité de Neow atteint #b0 [REMOVE_SPACE], réduisez sa compétence #yDéesse #yde #yla #yvie de #b",
       " [REMOVE_SPACE]."
     ]
   },
   "downfall:DefectAttackVoidPower":{
-    "NAME": "Energy Thief",
+    "NAME": "Voleur d'énergie",
     "DESCRIPTIONS": [
-      "Lorsque vous infligez des dégâts non-bloqués, ajoutez un Néant dans la défausse de l'adversaire."
+      "Lorsque vous infligez des dégâts non-bloqués, ajoutez un Néant à la défausse de votre adversaire."
     ]
   },
   "downfall:WatcherTrackerAttacksPower":{
-    "NAME": "Œil pour les attaques",
+    "NAME": "Œil pour les Attaques",
     "DESCRIPTIONS": [
       "Vous avez joué #b",
-      " Attaques. Lorsque ce nombre dépasse les non-Attaques, la Gardienne est en #yColère."
+      " #yAttaques [REMOVE_SPACE]. Tant que ce nombre dépasse celui des autres cartes, la Gardienne est en #yColère [REMOVE_SPACE]."
     ]
   },
   "downfall:WatcherTrackerSkillsPower":{
     "NAME": "Œil pour les Compétences",
     "DESCRIPTIONS": [
       "Vous avez joué #b",
-      " non-Attaques. Lorsque ce nombre dépasse ou égale celui des Attaques, la Gardienne est en #yCalme."
+      " cartes qui ne sont pas des #yAttaques [REMOVE_SPACE]. Lorsque ce nombre dépasse ou égale celui des #yAttaques [REMOVE_SPACE], la Gardienne est en #yCalme [REMOVE_SPACE]."
     ]
   },
   "downfall:VoidOrbPower":{
-    "NAME": "Void Core",
+    "NAME": "Noyau du néant",
     "DESCRIPTIONS": [
-      "Quand tué, le Noyau Vide restaure tous ses PV et retire un Orbe #yObscur du Défectueux.",
-      " Gagne 5 PV max chaque fois que cela occure."
+      "Lorsque le Noyau du néant meurt, il récupère tous ses PV et retire un #yOrbe #yObscur du Défectueux.",
+      " Gagne 5 PV max chaque fois que ceci se produit."
     ]
   }
 }

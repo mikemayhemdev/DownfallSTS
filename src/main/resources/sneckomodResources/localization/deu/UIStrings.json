@@ -44,7 +44,7 @@
   "sneckomod:ChallengeMode": {
     "TEXT": [
       "Alternativmodus - Reiner Snecko",
-      "Geschenke können von allen Klassen stammen. Für Spieler empfohlen, die mehr Zufall und einen Sieg durch Chaos bevorzugen."
+      "Extra-Kartenbelohnungen können von allen Klassen stammen. Für Spieler empfohlen, die mehr Zufall und einen Sieg durch Chaos bevorzugen."
     ]
   },
   "sneckomod:LockInBonfireOptions": {
@@ -58,7 +58,7 @@
   },
   "sneckomod:CommonAttackReward": {
     "TEXT": [
-      "Erhalte eine Karte aus Fremdklassen",
+      "Erhalte eine fremde Karte",
       "Wähle eine Karte."
     ]
   },
@@ -78,7 +78,7 @@
     "TEXT": [
       "",
       " Karten",
-      "Geschenke enthalten in diesem Run Karten von: ",
+      "Extras enthalten in diesem Run Karten von: ",
       " .",
       "Wähle."
     ]
