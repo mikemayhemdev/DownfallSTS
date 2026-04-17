@@ -30,6 +30,16 @@ public class Batch extends AbstractBronzeCard {
         });
     }
 
+    @Override
+    public boolean canUse(AbstractPlayer p, AbstractMonster m) {
+        if (FunctionHelper.isSequenceEmpty()) {
+            cantUseMessage = masterUI.TEXT[3];
+            return false;
+        }
+        return super.canUse(p, m);
+    }
+
+
     public void upp() {
         selfRetain = true;
         rawDescription = UPGRADE_DESCRIPTION;
