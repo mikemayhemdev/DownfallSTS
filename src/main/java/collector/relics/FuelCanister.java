@@ -34,7 +34,7 @@ public class FuelCanister extends CustomRelic {
                 toRetain.clear();
                 toRetain.add(q);
                 max = q.costForTurn;
-            } else if ((q.costForTurn == max) && !(q.costForTurn < -1) && !(q.isEthereal) && !(q.selfRetain)) {
+            } else if ((q.costForTurn == max) && !(q.costForTurn <= -1) && !(q.isEthereal) && !(q.selfRetain)) {
                 toRetain.add(q);
             }
         }
