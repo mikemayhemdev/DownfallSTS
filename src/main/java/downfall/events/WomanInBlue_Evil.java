@@ -5,6 +5,7 @@
 
 package downfall.events;
 
+import awakenedOne.relics.CawingCask;
 import com.badlogic.gdx.math.MathUtils;
 import com.evacipated.cardcrawl.mod.widepotions.relics.WideBeastStatue;
 import com.evacipated.cardcrawl.mod.widepotions.relics.WidePotionBelt;
@@ -85,6 +86,9 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                                 possRelics.add(new WidePotionBelt());
                             if (!AbstractDungeon.player.hasRelic(ToyOrnithopter.ID))
                                 possRelics.add(new WideToyOrnithopter());
+                            if (!AbstractDungeon.player.hasRelic(CawingCask.ID)) {
+                                possRelics.add(new CawingCask());
+                            }
                         } else {
                             if (!AbstractDungeon.player.hasRelic(WhiteBeast.ID))
                                 possRelics.add(new WhiteBeast());
@@ -92,6 +96,9 @@ public class WomanInBlue_Evil extends AbstractImageEvent {
                                 possRelics.add(new PotionBelt());
                             if (!AbstractDungeon.player.hasRelic(ToyOrnithopter.ID))
                                 possRelics.add(new ToyOrnithopter());
+                            if (!AbstractDungeon.player.hasRelic(CawingCask.ID)) {
+                                possRelics.add(new CawingCask());
+                            }
                         }
 
                         if (possRelics.size() == 0) {
