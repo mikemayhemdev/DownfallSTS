@@ -72,7 +72,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Eerie Expedition",
-    "DESCRIPTION": "Ethereal. [#e087a4]Afterlife.[] NL [#e087a4]Add[] !M! [#e087a4]random[] [#e087a4]Afterlife [#e087a4]card[] [#e087a4]to[] [#e087a4]your[] [#e087a4]drawpile[] and another to your hand."
+    "DESCRIPTION": "Add a random Ethereal card into your hand. NL It costs 0 this turn. NL Exhaust."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Crispy",
@@ -228,8 +228,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
-    "DESCRIPTION": "Exhaust 2 cards. NL If they are Attack or Skill, transform them into the opposite type.",
-    "UPGRADE_DESCRIPTION": "Exhaust 2 cards. NL If they are Attack or Skill, transform them into the opposite type and Upgrade them.",
+    "DESCRIPTION": "Exhaust 2 cards. Transform Attacks and Skills into the opposite type. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Exhaust 2 cards. Transform Attacks and Skills into the opposite type and Upgrade them. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for Worthy Sacrifice."
     ]

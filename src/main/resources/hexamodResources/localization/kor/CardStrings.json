@@ -72,7 +72,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "으스스한 탐험",
-    "DESCRIPTION": "휘발성. [#e087a4]사후세계.[] NL [#e087a4]무작위[] [#e087a4]사후세계[] [#e087a4]카드를[] !M! 장 [#e087a4]뽑을[] [#e087a4]카드[] [#e087a4]더미에[] [#e087a4]넣고[] 손에 얻습니다."
+    "DESCRIPTION": "무작위 휘발성 카드를 1장 얻습니다. NL 이번 턴 동안 그 카드의 비용이 0이 됩니다. NL 소멸."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "바싹 굽기",
@@ -228,8 +228,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "대가 지불",
-    "DESCRIPTION": "카드를 2장 소멸시킵니다. NL 그 카드를 선택한 카드의 유형과 반대되는 카드로 sneckomod:변화시킵니다.",
-    "UPGRADE_DESCRIPTION": "카드를 2장 소멸시킵니다. NL 그 카드를 선택한 카드의 유형과 반대되는 강화된 카드로 sneckomod:변화시킵니다.",
+    "DESCRIPTION": "카드를 2장 소멸시킵니다. NL 그 카드를 선택한 카드의 유형과 반대되는 카드로 sneckomod:변화시킵니다. NL 소멸.",
+    "UPGRADE_DESCRIPTION": "카드를 2장 소멸시킵니다. NL 그 카드를 선택한 카드의 유형과 반대되는 강화된 카드로 sneckomod:변화시킵니다. NL 소멸.",
     "EXTENDED_DESCRIPTION": [
       "대가 지불로 소멸시킬 카드를 선택하십시오."
     ]

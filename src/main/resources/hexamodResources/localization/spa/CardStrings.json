@@ -63,7 +63,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Expedición Fantasmal",
-    "DESCRIPTION": "Etérea. [#e087a4]Ultratumba.[] NL [#e087a4]Agrega[] !M! [#e087a4]cartas[] [#e087a4]aleatorias[] [#e087a4]de[] [#e087a4]Ultratumba[] [#e087a4]a[] [#e087a4]tu[] [#e087a4]mazo[] y otra a tu mano."
+    "DESCRIPTION": "Gana una carta aleatoria con Etérea. Cuesta 0 hasta que se juegue. NL Agota."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Bien Tostado",
@@ -200,8 +200,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Sacrificio Digno",
-    "DESCRIPTION": "Agota 2 cartas. NL Si son de tipo Ataque o Habilidad, transfórmalas al tipo opuesto.",
-    "UPGRADE_DESCRIPTION": "Agota 2 cartas. NL Si son de tipo Ataque o Habilidad, transfórmalas al tipo opuesto y Mejóralas.",
+    "DESCRIPTION": "Agota 2 cartas. NL Si son de tipo Ataque o Habilidad, transfórmalas al tipo opuesto. NL Agota.",
+    "UPGRADE_DESCRIPTION": "Agota 2 cartas. NL Si son de tipo Ataque o Habilidad, transfórmalas al tipo opuesto y Mejóralas. NL Agota.",
     "EXTENDED_DESCRIPTION": ["Agotar para Sacrificio Digno."]
   },
   "hexamod:NightmareGuise": {

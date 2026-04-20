@@ -14,7 +14,7 @@ public class NecessarySacrifice extends AbstractHexaCard {
 
     public NecessarySacrifice() {
         super(ID, 0, CardType.SKILL, CardRarity.UNCOMMON, CardTarget.SELF);
-
+        this.exhaust = true;
         HexaMod.loadJokeCardImage(this, "NecessarySacrifice.png");
     }
 
@@ -25,6 +25,7 @@ public class NecessarySacrifice extends AbstractHexaCard {
     public void upgrade() {
         if (!upgraded) {
             upgradeName();
+            //upgradeBaseCost(0);
             rawDescription = UPGRADE_DESCRIPTION;
             initializeDescription();
         }

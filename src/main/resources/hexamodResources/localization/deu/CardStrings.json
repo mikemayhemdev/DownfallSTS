@@ -71,8 +71,8 @@
     "DESCRIPTION": "Erhalte !M! hexamod:Intensität."
   },
   "hexamod:EtherealExpedition": {
-    "NAME": "Flucht zum Äther",
-    "DESCRIPTION": "Flüchtig. [#e087a4]Morbid.[] NL [#e087a4]Setze[] !M! [#e087a4]zufällige[] [#e087a4]Morbide [#e087a4]Karte[] [#e087a4]ein[] und nimm eine weitere auf die Hand."
+    "NAME": "Reise zum Äther",
+    "DESCRIPTION": "Setze !M! zufällige Flüchtig Karte auf die Hand. NL Sie kostet 0 bis du sie spielst. NL Erschöpft."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Restwärme",
@@ -228,8 +228,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Würdiges Opfer",
-    "DESCRIPTION": "Erschöpfe 2 Karten. NL Angriffe und Fertigkeiten werden in den jeweils anderen Typ expansioncontent:transformiert.",
-    "UPGRADE_DESCRIPTION": "Erschöpfe 2 Karten. NL Angriffe und Fertigkeiten werden in den jeweils anderen Typ expansioncontent:transformiert und verbessert.",
+    "DESCRIPTION": "Erschöpfe 2 Karten. NL Angriffe und Fertigkeiten werden in den jeweils anderen Typ expansioncontent:transformiert. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erschöpfe 2 Karten. NL Angriffe und Fertigkeiten werden in den jeweils anderen Typ expansioncontent:transformiert und verbessert. NL Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Erschöpfe für ein würdiges Opfer."
     ]

@@ -20,7 +20,7 @@ public class CursedStrength extends AbstractAwakenedPower implements OnLoseEnerg
     @Override
     public void LoseEnergyAction(int gained) {
         this.flash();
-        applyToSelf(new StrengthPower(AbstractDungeon.player, amount));
+        applyToSelf(new StrengthPower(AbstractDungeon.player, amount*gained));
     }
 
     @Override

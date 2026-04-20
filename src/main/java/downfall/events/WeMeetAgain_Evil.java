@@ -67,42 +67,42 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
         ArrayList<AbstractRelic> playerUncommonRelics = new ArrayList<>();
 
         for (AbstractRelic r : AbstractDungeon.player.relics) {
-            if
-                //Commons
-            ((r.relicId != Strawberry.ID) &&
-                    (r.relicId != MawBank.ID) &&
-                    (r.relicId != PickAxe.ID) &&
-                    (r.relicId != Matryoshka.ID) &&
-                    (r.relicId != WarPaint.ID) &&
-                    (r.relicId != Whetstone.ID) &&
-                    (r.relicId != SneckoCommon.ID) &&
-                    (r.relicId != PotionBelt.ID) &&
-                    //Uncommons
-                    (r.relicId != BottledFlame.ID) &&
-                    (r.relicId != BottledLightning.ID) &&
-                    (r.relicId != BottledTornado.ID) &&
-                    (r.relicId != BottledStasis.ID) &&
-                    (r.relicId != Pear.ID) &&
-                    //Rares
-                    (r.relicId != BottledCollectible.ID) &&
-                    (r.relicId != LizardTail.ID) &&
-                    (r.relicId != Mango.ID) &&
-                    (r.relicId != SignatureFinisher.ID) &&
-                    (r.relicId != WingBoots.ID) &&
-                    (r.relicId != MoonTalisman.ID) &&
-
-                    (r.relicId != BottledAnomaly.ID) &&
-                    (r.relicId != BottledCode.ID) &&
-                    (r.relicId != StasisEgg.ID) &&
-                    (r.relicId != D8.ID) &&
-
-
-                    //Boss
-                    (r.relicId != Astrolabe.ID) &&
-                    (r.relicId != ForbiddenFruit.ID) &&
-                    (r.relicId != Libra.ID) &&
-                    (r.relicId != SneckoBoss.ID) &&
-                    (r.relicId != PandorasBox.ID)) {
+//            if
+//                //Commons
+//            ((r.relicId != Strawberry.ID) &&
+//                    (r.relicId != MawBank.ID) &&
+//                    (r.relicId != PickAxe.ID) &&
+//                    (r.relicId != Matryoshka.ID) &&
+//                    (r.relicId != WarPaint.ID) &&
+//                    (r.relicId != Whetstone.ID) &&
+//                    (r.relicId != SneckoCommon.ID) &&
+//                    (r.relicId != PotionBelt.ID) &&
+//                    //Uncommons
+//                    (r.relicId != BottledFlame.ID) &&
+//                    (r.relicId != BottledLightning.ID) &&
+//                    (r.relicId != BottledTornado.ID) &&
+//                    (r.relicId != BottledStasis.ID) &&
+//                    (r.relicId != Pear.ID) &&
+//                    //Rares
+//                    (r.relicId != BottledCollectible.ID) &&
+//                    (r.relicId != LizardTail.ID) &&
+//                    (r.relicId != Mango.ID) &&
+//                    (r.relicId != SignatureFinisher.ID) &&
+//                    (r.relicId != WingBoots.ID) &&
+//                    (r.relicId != MoonTalisman.ID) &&
+//
+//                    (r.relicId != BottledAnomaly.ID) &&
+//                    (r.relicId != BottledCode.ID) &&
+//                    (r.relicId != StasisEgg.ID) &&
+//                    (r.relicId != D8.ID) &&
+//
+//
+//                    //Boss
+//                    (r.relicId != Astrolabe.ID) &&
+//                    (r.relicId != ForbiddenFruit.ID) &&
+//                    (r.relicId != Libra.ID) &&
+//                    (r.relicId != SneckoBoss.ID) &&
+//                    (r.relicId != PandorasBox.ID)) {
 
                 if (r.tier == AbstractRelic.RelicTier.COMMON) {
                     playerCommonRelics.add(r);
@@ -111,7 +111,6 @@ public class WeMeetAgain_Evil extends AbstractImageEvent {
                     playerUncommonRelics.add(r);
                 }
             }
-        }
 
         Collections.shuffle(playerCommonRelics);
         Collections.shuffle(playerUncommonRelics);

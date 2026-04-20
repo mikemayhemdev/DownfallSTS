@@ -86,8 +86,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "牺牲",
-    "DESCRIPTION": "选择 消耗 两张手牌， NL 若为 *攻击 或 *技能 牌， NL 将其类型反转。",
-    "UPGRADE_DESCRIPTION": "选择 消耗 两张手牌， NL 若为 *攻击 或 *技能 牌， NL 将其类型反转并 升级 。",
+    "DESCRIPTION": "选择 消耗 两张手牌， NL 若为 *攻击 或 *技能 牌， NL 将其类型反转。 NL 消耗 。",
+    "UPGRADE_DESCRIPTION": "选择 消耗 两张手牌， NL 若为 *攻击 或 *技能 牌， NL 将其类型反转并 升级 。 NL 消耗 。",
     "EXTENDED_DESCRIPTION": [
      "消耗作为必要的牺牲。"
     ]
@@ -169,10 +169,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "诡异探险",
-    "DESCRIPTION": "虚无 。 [#e087a4]阴世。[] NL 随机获得一张 hexamod:阴世 牌。 NL ",
-    "EXTENDED_DESCRIPTION": [
-      "随机洗入抽牌堆一 张 阴 世 牌 。"
-    ]
+    "DESCRIPTION": "随机获得一张 虚无 牌， NL 本回合其耗能为0。 NL 消耗 。"
   },
   "hexamod:PhantomCloak": {
     "NAME": "幽灵披风",

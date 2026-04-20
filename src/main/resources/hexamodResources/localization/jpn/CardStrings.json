@@ -72,7 +72,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "不気味な探索行",
-    "DESCRIPTION": "エセリアル NL [#e087a4]死後[] NL !M! [#e087a4]枚のランダムな死後カードを山札に、[] 1 枚を手札に加える。"
+    "DESCRIPTION": "エセリアル を持つランダムなカードを手札に加える。プレイするまでそのコストは0 NL 廃棄"
   },
   "hexamod:ExtraCrispy": {
     "NAME": "カリッカリ",
@@ -228,8 +228,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "価値ある犠牲",
-    "DESCRIPTION": "手札を2枚廃棄する。 NL アタック か スキル を廃棄した場合、反対の種類をランダムに手札に加える。",
-    "UPGRADE_DESCRIPTION": "手札を2枚廃棄する。 NL アタック か スキル を廃棄した場合、反対の種類をランダムに手札に加え、それらをアップグレードする。",
+    "DESCRIPTION": "手札を2枚廃棄する。 NL アタック か スキル を廃棄した場合、反対の種類をランダムに手札に加える。 NL 廃棄",
+    "UPGRADE_DESCRIPTION": "手札を2枚廃棄する。 NL アタック か スキル を廃棄した場合、反対の種類をランダムに手札に加え、それらをアップグレードする。 NL 廃棄",
     "EXTENDED_DESCRIPTION": [
       "犠牲にするカードを選択。"
     ]

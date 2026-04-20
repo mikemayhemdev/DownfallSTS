@@ -25,7 +25,7 @@ public class GhostLash extends AbstractHexaCard implements HexaPurpleTextInterfa
     private boolean trigger_by_afterlife = false;
 
     public GhostLash() {
-        super(ID, 1, CardType.ATTACK, CardRarity.UNCOMMON, CardTarget.ENEMY);
+        super(ID, 1, CardType.ATTACK, CardRarity.COMMON, CardTarget.ENEMY);
         baseDamage = 8;
         baseMagicNumber = magicNumber = 3;
         isEthereal = true;

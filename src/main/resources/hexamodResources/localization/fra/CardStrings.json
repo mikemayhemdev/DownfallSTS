@@ -72,7 +72,7 @@
   },
   "hexamod:EtherealExpedition": {
     "NAME": "Expédition sinistre",
-    "DESCRIPTION": "Éthérée. [#e087a4]Après-vie.[] NL [#e087a4]Ajoutez[] !M! [#e087a4]carte[] [#e087a4]Après-Vie [#e087a4]aléatoire[] [#e087a4]dans[] [#e087a4]votre[] [#e087a4]pioche[] et une autre dans votre main."
+    "DESCRIPTION": "Ajoutez une carte *Éthérée aléatoire dans votre main. NL Elle coûte 0 ce tour. NL Épuisement."
   },
   "hexamod:ExtraCrispy": {
     "NAME": "Extra Croustillant",
@@ -228,8 +228,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Sacrifice honorable",
-    "DESCRIPTION": "Épuisez 2 cartes. NL Si c'était des Attaques ou des Compétences, transformez-les en cartes aléatoires du type opposé.",
-    "UPGRADE_DESCRIPTION": "Épuisez 2 cartes. NL Si c'était des Attaques ou des Compétences, transformez-les en cartes aléatoires Améliorées du type opposé.",
+    "DESCRIPTION": "Épuisez 2 cartes. NL Si c'était des Attaques ou des Compétences, transformez-les en cartes aléatoires du type opposé. NL Épuisement.",
+    "UPGRADE_DESCRIPTION": "Épuisez 2 cartes. NL Si c'était des Attaques ou des Compétences, transformez-les en cartes aléatoires Améliorées du type opposé. NL Épuisement.",
     "EXTENDED_DESCRIPTION": [
       "à Épuiser pour Sacrifice honorable."
     ]
