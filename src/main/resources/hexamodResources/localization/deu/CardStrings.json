@@ -229,7 +229,7 @@
   "hexamod:NecessarySacrifice": {
     "NAME": "Würdiges Opfer",
     "DESCRIPTION": "Erschöpfe 2 Karten. NL Angriffe und Fertigkeiten werden in den jeweils anderen Typ expansioncontent:transformiert. NL Erschöpft.",
-    "UPGRADE_DESCRIPTION": "Erschöpfe 2 Karten. NL Angriffe und Fertigkeiten werden in den jeweils anderen Typ expansioncontent:transformiert und verbessert. NL Erschöpft.",
+    "UPGRADE_DESCRIPTION": "Erschöpfe 2 Karten. NL Angriffe und Fertigkeiten werden in den jeweils anderen Typ expansioncontent:transformiert und verbessert. Erschöpft.",
     "EXTENDED_DESCRIPTION": [
       "Erschöpfe für ein würdiges Opfer."
     ]
