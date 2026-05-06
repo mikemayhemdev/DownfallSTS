@@ -69,8 +69,8 @@
   },
   "hexamod:IntoShadow": {
     "NAME": "遁入暗影",
-    "DESCRIPTION": "虚无 。 NL hexamod:回退 后， NL 免费打出并 消耗 一张牌。",
-    "UPGRADE_DESCRIPTION": "hexamod:回退 后， NL 免费打出并 消耗 一张牌。",
+    "DESCRIPTION": "虚无 。 NL hexamod:回退 后， NL 下一张牌免费打出并在打出时 消耗 。",
+    "UPGRADE_DESCRIPTION": "hexamod:回退 后， NL 下一张牌免费打出并在打出时 消耗 。",
     "EXTENDED_DESCRIPTION": [
       "打出并消耗。"
       ]
