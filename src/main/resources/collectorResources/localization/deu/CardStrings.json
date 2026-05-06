@@ -691,7 +691,7 @@
   },
   "collector:CollectorCard": {
     "NAME": "Ouroboros",
-    "DESCRIPTION": "collector:Opfergabe. NL Wende !M! Schwach und !M! Verwundbar an. NL Erhalte NL !clm2! expansioncontent:temporäre_TP."
+    "DESCRIPTION": "collector:Opfergabe. NL Wende !M! Schwach und !M! Verwundbar an. NL Erhalte !clm2! expansioncontent:temporäre_TP."
   },
   "collector:Sapped": {
     "NAME": "Ausgelaugt",
