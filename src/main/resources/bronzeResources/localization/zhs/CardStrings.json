@@ -273,7 +273,7 @@
   },
   "bronze:DigitalCarnage": {
     "NAME": "数码残杀",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 ： bronze:方法 附带 虚无 。",
+    "DESCRIPTION": "造成 !D! 点伤害。 NL bronze:编译 *错误 ： bronze:方法 附带 虚无 。",
     "EXTENDED_DESCRIPTION": [
       "数码",
       "残杀"
@@ -521,7 +521,7 @@
   },
   "bronze:Assembly": {
     "NAME": "装配",
-    "DESCRIPTION": " 预见 !M! 。 NL bronze:编码 丢弃的可 bronze:编码 牌。 NL 消耗 。"
+    "DESCRIPTION": " 预见 !M! 。 NL bronze:编码 丢弃的可 bronze:编码 牌（按照选中顺序）。 NL 消耗 。"
   },
   "bronze:FineTuning": {
     "NAME": "性能调整",

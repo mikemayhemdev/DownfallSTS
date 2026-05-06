@@ -120,7 +120,7 @@
 
   "expansioncontent:TakeFlight": {
     "NAME": "复苏",
-    "DESCRIPTION": "获得 !M! 层 expansioncontent:再生 。 NL expansioncontent:吟唱 ：转而获得 !DM! 层 *再生 。"
+    "DESCRIPTION": "回复 !M! 点生命。 NL expansioncontent:吟唱 ：转而回复 !DM! 点生命。"
   },
   "expansioncontent:BeatOfDeath": {
     "NAME": "死亡律动",

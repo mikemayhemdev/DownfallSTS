@@ -274,7 +274,7 @@
   },
   "Gremlin:Pickpocket": {
     "NAME": "扒手",
-    "DESCRIPTION": "造成 !D! 点伤害。 NL 目标失去 !M! 点 力量 2 次。 NL 获得 !blamage! 灵魂。 NL 消耗 。"
+    "DESCRIPTION": "造成 !D! 点伤害。 NL 获得 !M! 灵魂。 NL 消耗 。"
   },
   "Gremlin:PinNeedle": {
     "NAME": "缝衣针",

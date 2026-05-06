@@ -665,7 +665,7 @@
   },
   "collector:TorchHeadCard": {
     "NAME": "火炬头",
-    "DESCRIPTION": "随机获得一张呼唤， NL 本回合其首次耗能为0。"
+    "DESCRIPTION": "随机获得一张火炬头之唤， NL 本回合其首次耗能为0。"
   },
   "collector:TransientCard": {
     "NAME": "倏忽魔",

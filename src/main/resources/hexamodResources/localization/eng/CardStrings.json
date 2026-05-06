@@ -228,8 +228,8 @@
   },
   "hexamod:NecessarySacrifice": {
     "NAME": "Worthy Sacrifice",
-    "DESCRIPTION": "Exhaust 2 cards. Transform Attacks and Skills into the opposite type. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Exhaust 2 cards. Transform Attacks and Skills into the opposite type and Upgrade them. NL Exhaust.",
+    "DESCRIPTION": "Exhaust 2 cards. NL For each Attack or Skill card Exhausted this way, add a random card of the opposite type to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Exhaust 2 cards. NL For each Attack or Skill card Exhausted this way, add a random upgraded card of the opposite type to your hand. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Exhaust for Worthy Sacrifice."
     ]
